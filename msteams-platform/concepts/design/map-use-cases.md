@@ -1,0 +1,78 @@
+---
+title: Asignar los casos de uso a funcionalidades de aplicación
+author: clearab
+description: Decidir cómo distribuir la aplicación
+ms.topic: conceptual
+ms.author: anclear
+ms.openlocfilehash: 5ebfa73df9b4f2c83533a33fbc6366c2c0ccffb4
+ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41676037"
+---
+# <a name="map-your-use-cases-to-teams-app-capabilities"></a><span data-ttu-id="cf9c4-103">Asignar los casos de uso a las funcionalidades de la aplicación Teams</span><span class="sxs-lookup"><span data-stu-id="cf9c4-103">Map your use cases to teams app capabilities</span></span>
+
+<span data-ttu-id="cf9c4-104">Si aún no lo ha hecho, asegúrese de que ha considerado atentamente [los casos de uso](~/concepts/design/map-use-cases.md) .</span><span class="sxs-lookup"><span data-stu-id="cf9c4-104">If you haven't already, make sure you've [considered your use cases](~/concepts/design/map-use-cases.md) carefully.</span></span> <span data-ttu-id="cf9c4-105">También debe comprender bien los [puntos de extensibilidad y los elementos](~/concepts/extensibility-points.md) de la interfaz de usuario disponibles para la aplicación.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-105">You should also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app.</span></span> <span data-ttu-id="cf9c4-106">Una vez que haya averiguado *lo* que intenta resolver y para el *que* está resolviendo, es el momento de empezar a pensar en *Cómo*hacerlo.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-106">Once you've figured out *what* your trying to solve, and *who* you're solving it for, it is time to start thinking about *how*.</span></span>
+
+<span data-ttu-id="cf9c4-107">A continuación encontrará algunos escenarios comunes y una selección de puntos de extensibilidad y elementos de la interfaz de usuario que funcionan bien con ellos.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-107">Below you'll find some common scenarios, and a selection of extensibility points and UI elements that work well with them.</span></span> <span data-ttu-id="cf9c4-108">No está pensada como una lista exhaustiva, solo para ayudarle a pensar en algunas de las posibilidades disponibles para usted y la plataforma de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-108">It isn't intended to be an exhaustive list, just to help you think through some of the possibilities available to you and the Teams platform.</span></span>
+
+## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a><span data-ttu-id="cf9c4-109">Crear, compartir y colaborar en elementos de un sistema externo</span><span class="sxs-lookup"><span data-stu-id="cf9c4-109">Create, share and collaborate on items in an external system</span></span>
+
+<span data-ttu-id="cf9c4-110">La aplicación para Microsoft Teams es una buena forma de interactuar con los datos y hay una variedad de puntos de integración entre los que elegir.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-110">App for Microsoft Teams are a great way to interact with your data, and there are a variety of integration points to choose from.</span></span>
+
+* <span data-ttu-id="cf9c4-111">Extensiones de mensajería con comandos de búsqueda: buscar sistemas externos y compartir los resultados como una tarjeta interactiva.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-111">Messaging extensions with search commands - Search external systems and share the results as an interactive card.</span></span>
+
+* <span data-ttu-id="cf9c4-112">Extensiones de mensajería con comandos de acción: recopila información para insertarla en un almacén de datos o realizar búsquedas avanzadas.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-112">Messaging extensions with action commands - Collect information to insert into a data store or perform advanced searches.</span></span>
+
+* <span data-ttu-id="cf9c4-113">Pestañas: cree experiencias Web integradas para ver, trabajar y compartir datos.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-113">Tabs - Create embedded web experiences to view, work with, and share data.</span></span>
+
+* <span data-ttu-id="cf9c4-114">Conectores y webhooks: una forma sencilla de insertar datos en el cliente de Microsoft Teams y enviar datos fuera del cliente de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-114">Connectors and webhooks - A simple way to push data into, and send data out of the Teams client.</span></span>
+
+* <span data-ttu-id="cf9c4-115">Módulos de tareas: formularios interactivos modales desde cualquier lugar en el que los necesite para recopilar o Mostrar información.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-115">Task modules - Interactive modal forms from wherever you need them to collect or display information.</span></span>
+
+## <a name="initiate-workflows-and-processes"></a><span data-ttu-id="cf9c4-116">Iniciar flujos de trabajo y procesos</span><span class="sxs-lookup"><span data-stu-id="cf9c4-116">Initiate workflows and processes</span></span>
+
+<span data-ttu-id="cf9c4-117">A veces, solo necesita una forma rápida de iniciar un proceso o un flujo de trabajo en un sistema externo.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-117">Sometimes you just need a quick way to start a process or workflow in an external system.</span></span>
+
+* <span data-ttu-id="cf9c4-118">Comandos de acción de las extensiones de mensajería: desencadenador de mensajes, lo que permite a los usuarios enviar rápidamente el contenido de un mensaje a los servicios Web.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-118">Messaging extensions action commands - Trigger from messages, allowing your users to quickly send the contents of a message to your web services.</span></span>
+
+* <span data-ttu-id="cf9c4-119">Módulos de tareas: ábralos desde una pestaña, un bot o una extensión de mensajería para recopilar información antes de iniciar un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-119">Task modules - Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow.</span></span>
+
+* <span data-ttu-id="cf9c4-120">Bots de conversación: interactúe con los usuarios a través de texto y tarjetas enriquecidas.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-120">Conversational bots - Interact with your users through text and rich cards.</span></span>
+
+* <span data-ttu-id="cf9c4-121">Webhooks salientes: una buena opción para una interacción hacia delante sencilla cuando no es necesario crear un bot conversado completo.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-121">Outgoing webhooks - A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot.</span></span>
+
+## <a name="send-notifications-and-alerts"></a><span data-ttu-id="cf9c4-122">Enviar notificaciones y alertas</span><span class="sxs-lookup"><span data-stu-id="cf9c4-122">Send notifications and alerts</span></span>
+
+<span data-ttu-id="cf9c4-123">Envíe notificaciones asincrónicas y alertas a los usuarios de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-123">Send asynchronous notifications and alerts to your users in Teams.</span></span> <span data-ttu-id="cf9c4-124">Use tarjetas interactivas para proporcionar acceso rápido a acciones de uso frecuente y vínculos a información adicional.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-124">Use interactive cards to provide quick access to commonly used actions and links to additional information.</span></span>
+
+* <span data-ttu-id="cf9c4-125">Bots de conversación: envíe mensajes proactivos a grupos, canales o usuarios individuales.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-125">Conversational bots - Send proactive messages to groups, channels, or individual users.</span></span>
+
+* <span data-ttu-id="cf9c4-126">Conectores & webhooks entrantes: permitir que un canal se suscriba para recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-126">Connectors & incoming webhooks - Allow a channel to subscribe to receive messages.</span></span> <span data-ttu-id="cf9c4-127">Con un conector permiten que los usuarios personalicen la suscripción con una página de configuración.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-127">With a connector let users tailor the subscription with a configuration page.</span></span>
+
+## <a name="ask-questions-and-get-answers"></a><span data-ttu-id="cf9c4-128">Formular preguntas y obtener respuestas</span><span class="sxs-lookup"><span data-stu-id="cf9c4-128">Ask questions and get answers</span></span>
+
+<span data-ttu-id="cf9c4-129">Las personas tienen preguntas.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-129">People have questions.</span></span> <span data-ttu-id="cf9c4-130">Probablemente, tiene muchas respuestas almacenadas en algún lugar.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-130">You've probably got a lot of the answers stored away somewhere.</span></span> <span data-ttu-id="cf9c4-131">Desafortunadamente, a menudo es bastante difícil conectar ambos.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-131">Unfortunately, its often quite difficult to connect the two together.</span></span>
+
+* <span data-ttu-id="cf9c4-132">Bots de conversación: procesamiento de lenguaje natural, AI, aprendizaje de máquina, todo el buzzwords.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-132">Conversational bots - Natural language processing, AI, machine learning, all the buzzwords.</span></span> <span data-ttu-id="cf9c4-133">Use un bot con tecnología de la nube inteligente para conectar a los usuarios a las respuestas que necesitan.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-133">Use a bot powered by the intelligent cloud to connect your users to the answers they need.</span></span>
+
+* <span data-ttu-id="cf9c4-134">Pestañas: Inserte el portal web existente en Microsoft Teams o cree una versión específica de Teams para una mayor funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-134">Tabs - Embed your existing web portal in Teams, or create a Teams-specific version for added functionality.</span></span>
+
+## <a name="get-social"></a><span data-ttu-id="cf9c4-135">Obtener social</span><span class="sxs-lookup"><span data-stu-id="cf9c4-135">Get social</span></span>
+
+<span data-ttu-id="cf9c4-136">Una plataforma de colaboración es intrínsecamente una plataforma social.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-136">A collaboration platform is inherently a social platform.</span></span> <span data-ttu-id="cf9c4-137">Permita que el lado creativo sea gratis y agréguele diversión en su lugar de trabajo.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-137">Let your creative side be free, and add some fun into your workplace.</span></span>
+
+* <span data-ttu-id="cf9c4-138">Todos ellos: enviar chistes, dar a prestigio, obtener algunos memes, descartar algunos emojis o cualquier otra cosa que llegue a su sofisticado.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-138">All of them - Send jokes, give kudos, get some memes, toss out some emoji's or whatever else strikes your fancy.</span></span>
+
+## <a name="anything-you-can-do-in-a-single-page-app-spa"></a><span data-ttu-id="cf9c4-139">Todo lo que puede hacer en una aplicación de página única (SPA)</span><span class="sxs-lookup"><span data-stu-id="cf9c4-139">Anything you can do in a Single Page App (SPA)</span></span>
+
+<span data-ttu-id="cf9c4-140">Las pestañas son páginas web incrustadas.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-140">Tabs are embedded web pages.</span></span> <span data-ttu-id="cf9c4-141">Casi todo lo que puede hacer en un SPA, puede hacer en una pestaña en Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-141">Pretty much anything you can do in a SPA, you can do in a tab in Teams.</span></span> <span data-ttu-id="cf9c4-142">No olvide prestar atención a la pestaña ámbito-grupo y canal para experiencias compartidas, las pestañas personales son para... experiencias personales.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-142">Just be sure to pay attention to scope - group and channel tabs are for shared experiences, personal tabs are for ... personal experiences.</span></span> <span data-ttu-id="cf9c4-143">La lista de materiales del equipo se encuentra en la pestaña canal, la lista de sus cosas se incluye en la pestaña personal.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-143">The team's list of stuff goes on the channel tab, the list of your stuff goes in the personal tab.</span></span>
+
+## <a name="start-small"></a><span data-ttu-id="cf9c4-144">Iniciar pequeño</span><span class="sxs-lookup"><span data-stu-id="cf9c4-144">Start small</span></span>
+
+<span data-ttu-id="cf9c4-145">¿No está seguro de dónde empezar?</span><span class="sxs-lookup"><span data-stu-id="cf9c4-145">Not sure where to start?</span></span> <span data-ttu-id="cf9c4-146">¿Se siente un poco abrumado con la gran variedad de opciones disponibles para usted?</span><span class="sxs-lookup"><span data-stu-id="cf9c4-146">Feeling a bit overwhelmed with the awesome variety of options available to you?</span></span> <span data-ttu-id="cf9c4-147">No fret, elija una característica principal de la aplicación e inicie allí.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-147">Don't fret, choose a core feature of your app and start there.</span></span> <span data-ttu-id="cf9c4-148">Una vez que se siente con el flujo de información a través de los distintos contextos de Teams, será mucho más sencillo crear una interacción más compleja.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-148">Once you get a feel for the flow of information through the various contexts in Teams, it will be a lot simpler to picture a more complex interaction.</span></span>
+
+## <a name="putting-it-all-together"></a><span data-ttu-id="cf9c4-149">En conclusión</span><span class="sxs-lookup"><span data-stu-id="cf9c4-149">Putting it all together</span></span>
+
+<span data-ttu-id="cf9c4-150">Como se dice, las mejores aplicaciones suelen combinar varias características y crear una aplicación que atraiga a los usuarios en el contexto adecuado con la funcionalidad correcta en el momento adecuado.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-150">That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time.</span></span> <span data-ttu-id="cf9c4-151">No intente forzar la funcionalidad en un punto en el que no pertenezca, solo porque tiene un bot? a de conversación de uno a uno que no significa que simplemente deba agregarlo a un equipo.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-151">Don't try to force functionality into a place it doesn't belong - just because you've got a good one-to-one conversational bot doesn't mean you should just add it to a team.</span></span> <span data-ttu-id="cf9c4-152">Los puntos de extensibilidad diferentes son buenos para cosas diferentes; Juegue a sus puntos fuertes y la aplicación se destacará.</span><span class="sxs-lookup"><span data-stu-id="cf9c4-152">Different extensibility points are good for different things; play to their strengths and your app will shine.</span></span>

@@ -1,0 +1,33 @@
+---
+title: Guía del proceso de aprobación de aplicaciones de Microsoft Teams
+description: Describe el proceso de aprobación para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
+keywords: publicación de la tienda Office de tienda de AppSource
+ms.openlocfilehash: 21089e17ca2bd9dfa5cb068d4f592e1c8ef930d3
+ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41676041"
+---
+# <a name="submit-your-app-to-appsource"></a><span data-ttu-id="6b005-104">Enviar la aplicación a AppSource</span><span class="sxs-lookup"><span data-stu-id="6b005-104">Submit your app to AppSource</span></span>
+
+## <a name="teams-app-submission"></a><span data-ttu-id="6b005-105">Envío de aplicación de Teams</span><span class="sxs-lookup"><span data-stu-id="6b005-105">Teams app submission</span></span>
+
+<span data-ttu-id="6b005-106">La publicación de la aplicación en [AppSource](https://appsource.microsoft.com) hace que esté disponible en el catálogo de aplicaciones de Microsoft Teams y en la Web.</span><span class="sxs-lookup"><span data-stu-id="6b005-106">Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web.</span></span> <span data-ttu-id="6b005-107">En un nivel alto, el proceso para enviar la aplicación a AppSource es:</span><span class="sxs-lookup"><span data-stu-id="6b005-107">At a high level, the process for submitting your app to AppSource is:</span></span>
+
+1. <span data-ttu-id="6b005-108">Desarrolle su aplicación siguiendo nuestras [pautas de diseño](~/concepts/design/understand-use-cases.md).</span><span class="sxs-lookup"><span data-stu-id="6b005-108">Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md).</span></span> <span data-ttu-id="6b005-109">Las pestañas deben seguir nuestras [instrucciones de diseño de pestañas](~/tabs/design/tabs.md).</span><span class="sxs-lookup"><span data-stu-id="6b005-109">Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md).</span></span> <span data-ttu-id="6b005-110">Los bots deben seguir las [directrices de diseño de bot](~/bots/design/bots.md).</span><span class="sxs-lookup"><span data-stu-id="6b005-110">Bots should follow the [bot design guidelines](~/bots/design/bots.md).</span></span>
+1. <span data-ttu-id="6b005-111">[Configure una cuenta de Desarrollador en el](/office/dev/store/open-a-developer-account) [centro de Partners](https://support.microsoft.com/help/4499930/partner-center-overview).</span><span class="sxs-lookup"><span data-stu-id="6b005-111">[Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview).</span></span>
+1. <span data-ttu-id="6b005-112">Prepare la aplicación para el envío siguiendo nuestra [lista de comprobación de envío](~/concepts/deploy-and-publish/appsource/prepare/overview.md).</span><span class="sxs-lookup"><span data-stu-id="6b005-112">Prepare your app for submission by following our [submission checklist](~/concepts/deploy-and-publish/appsource/prepare/overview.md).</span></span>
+1. <span data-ttu-id="6b005-113">Revise nuestras [sugerencias para obtener un envío de aplicación correcto](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).</span><span class="sxs-lookup"><span data-stu-id="6b005-113">Review our [tips for a successful app submission](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).</span></span>
+1. <span data-ttu-id="6b005-114">Envíe el paquete a [AppSource a través del centro de asociados](/office/dev/store/use-partner-center-to-submit-to-appsource).</span><span class="sxs-lookup"><span data-stu-id="6b005-114">Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).</span></span>
+1. <span data-ttu-id="6b005-115">Realice un seguimiento del proceso de aprobación en el panel del centro de asociados.</span><span class="sxs-lookup"><span data-stu-id="6b005-115">Track the approval process on your Partner Center dashboard.</span></span> <span data-ttu-id="6b005-116">*Consulte* [información general sobre el centro de Partners](https://support.microsoft.com/help/4499930/partner-center-overview).</span><span class="sxs-lookup"><span data-stu-id="6b005-116">*See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).</span></span>
+1. <span data-ttu-id="6b005-117">Post subenvío: revise nuestras instrucciones para [mantener y dar soporte a su aplicación publicada](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).</span><span class="sxs-lookup"><span data-stu-id="6b005-117">Post submission — review our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).</span></span>
+
+>[!NOTE]
+>
+> * <span data-ttu-id="6b005-118">Si la aplicación de Microsoft Teams contiene un bot, debe cumplir con el [código de conducta del marco del desarrollador de](https://aka.ms/bf-conduct)bot? n.</span><span class="sxs-lookup"><span data-stu-id="6b005-118">If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).</span></span>
+> * <span data-ttu-id="6b005-119">Si la aplicación contiene un conector de Office 365, es posible que se apliquen términos adicionales.</span><span class="sxs-lookup"><span data-stu-id="6b005-119">If your app contains an Office 365 Connector, additional terms may apply.</span></span> <span data-ttu-id="6b005-120">*Vea* [Connector Dashboard Developer's Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).</span><span class="sxs-lookup"><span data-stu-id="6b005-120">*See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).</span></span>
+
+## <a name="learn-more"></a><span data-ttu-id="6b005-121">Más información</span><span class="sxs-lookup"><span data-stu-id="6b005-121">Learn More</span></span>
+
+[<span data-ttu-id="6b005-122">Directivas de validación para las aplicaciones de Microsoft Teams enviadas a AppSource (versión 2,2)</span><span class="sxs-lookup"><span data-stu-id="6b005-122">Validation policies for Microsoft Teams apps submitted to AppSource (version 2.2)</span></span>](/office/dev/store/validation-policies#14-microsoft-teams-apps)

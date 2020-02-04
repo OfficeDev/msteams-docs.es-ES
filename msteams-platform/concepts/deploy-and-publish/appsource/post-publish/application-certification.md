@@ -1,0 +1,49 @@
+---
+title: Certificación de aplicaciones
+description: Describe el programa de autoevaluación de la tienda de aplicaciones
+keywords: Centro de cumplimiento de Microsoft Teams AppSource Store de certificación de aplicaciones
+ms.date: 05/06/2019
+ms.openlocfilehash: 11c69527e60290f908e8fd3c781a02cd26bbbe14
+ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41676051"
+---
+# <a name="microsoft-teams-app-certification"></a><span data-ttu-id="85a19-104">Certificación de aplicaciones de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="85a19-104">Microsoft Teams App Certification</span></span>
+
+<span data-ttu-id="85a19-105">El programa de certificación de aplicaciones de Microsoft Teams es un programa piloto que le permite realizar una autoevaluación voluntaria de la seguridad, la administración de datos y las prácticas de cumplimiento de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="85a19-105">The Microsoft Teams app certification program, is a pilot program that allows you to complete a voluntary self-assessment of your app's security, data handling and compliance practices.</span></span> <span data-ttu-id="85a19-106">La información que proporcione se procesará y se presentará a sus clientes potenciales para que puedan evaluar mejor su aplicación antes de habilitarla para su organización.</span><span class="sxs-lookup"><span data-stu-id="85a19-106">The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization.</span></span> <span data-ttu-id="85a19-107">Como parte del [proceso de envío de aplicaciones](~/concepts/deploy-and-publish/apps-publish.md) , tendrá la opción de completar la evaluación, que se compilará y presentará a los administradores de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="85a19-107">As part of the [app submission process](~/concepts/deploy-and-publish/apps-publish.md) you'll have the option to complete the assessment, which will then be compiled and presented to Microsoft Teams administrators.</span></span>
+
+![Certificación de aplicaciones de Microsoft Teams](~/assets/images/self-assessment.png)
+
+## <a name="program-benefits"></a><span data-ttu-id="85a19-109">Ventajas del programa</span><span class="sxs-lookup"><span data-stu-id="85a19-109">Program benefits</span></span>
+
+<span data-ttu-id="85a19-110">Una vez que haya completado la evaluación, se compilarán sus respuestas y se creará una página para la aplicación en [este sitio](https://aka.ms/AppCertification).</span><span class="sxs-lookup"><span data-stu-id="85a19-110">Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](https://aka.ms/AppCertification).</span></span> <span data-ttu-id="85a19-111">En lugar de responder a las solicitudes de información de manera individual, podrá dirigir a sus clientes aquí para obtener información completa sobre el tratamiento de datos, la seguridad y las prácticas de cumplimiento de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="85a19-111">Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app's data handling, security and compliance practices.</span></span> <span data-ttu-id="85a19-112">Se recomienda a los administradores de Microsoft teams que usen este catálogo para descubrir nuevas aplicaciones que le facilitarán la evaluación y la incorporación a sus organizaciones.</span><span class="sxs-lookup"><span data-stu-id="85a19-112">Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.</span></span>
+
+## <a name="how-to-join-the-program"></a><span data-ttu-id="85a19-113">Cómo unirse al programa</span><span class="sxs-lookup"><span data-stu-id="85a19-113">How to join the program</span></span>
+
+<span data-ttu-id="85a19-114">Completar la certificación de la aplicación es voluntario, pero muy alentador.</span><span class="sxs-lookup"><span data-stu-id="85a19-114">Completing app certification is voluntary, but highly encouraged.</span></span> <span data-ttu-id="85a19-115">Simplemente díganos que está interesado y le guiaremos a través del proceso.</span><span class="sxs-lookup"><span data-stu-id="85a19-115">Just let us know you're interested and we'll guide you through the process.</span></span>
+
+### <a name="for-existing-store-apps"></a><span data-ttu-id="85a19-116">Para aplicaciones de la tienda existentes</span><span class="sxs-lookup"><span data-stu-id="85a19-116">For existing store apps</span></span>
+
+<span data-ttu-id="85a19-117">Si ya tiene una aplicación en la tienda de aplicaciones y le gustaría unirse al programa, puede ponerse en contacto con nosotros rellenando [este formulario](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUOUgzSUtFNU8yOFpYR0oyWElHVkxHODhQUyQlQCN0PWcu).</span><span class="sxs-lookup"><span data-stu-id="85a19-117">If you already have an app in the app store and you'd like to join the program you can contact us by filling out [this form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUOUgzSUtFNU8yOFpYR0oyWElHVkxHODhQUyQlQCN0PWcu).</span></span> <span data-ttu-id="85a19-118">Alguien de nuestro equipo tendrá que realizar un seguimiento con usted para que el proceso comience.</span><span class="sxs-lookup"><span data-stu-id="85a19-118">Someone from our team will follow up with you to get the process started.</span></span>
+
+### <a name="for-new-or-updated-store-apps"></a><span data-ttu-id="85a19-119">Para aplicaciones de tienda nuevas o actualizadas</span><span class="sxs-lookup"><span data-stu-id="85a19-119">For new or updated store apps</span></span>
+
+<span data-ttu-id="85a19-120">Para las aplicaciones recién enviadas o para actualizar los envíos a las aplicaciones existentes, se le pedirá que participe durante el proceso de aprobación.</span><span class="sxs-lookup"><span data-stu-id="85a19-120">For newly submitted apps, or update submissions to existing apps, you'll be asked to participate during the approval process.</span></span> <span data-ttu-id="85a19-121">Aunque esto no es necesario, y no bloqueará la aprobación de la aplicación, recomendamos encarecidamente que Tómese tiempo para rellenar la evaluación.</span><span class="sxs-lookup"><span data-stu-id="85a19-121">While this is not required, and will not block the approval of your app, we highly suggest that you take the time to fill out the assessment.</span></span>
+
+### <a name="information-youll-need-to-provide"></a><span data-ttu-id="85a19-122">Información que necesita proporcionar</span><span class="sxs-lookup"><span data-stu-id="85a19-122">Information you'll need to provide</span></span>
+
+<span data-ttu-id="85a19-123">Cuando complete la evaluación, necesitará los siguientes tipos de información.</span><span class="sxs-lookup"><span data-stu-id="85a19-123">When you're completing the assessment, you'll need the following types of information.</span></span>
+
+#### <a name="general"></a><span data-ttu-id="85a19-124">General</span><span class="sxs-lookup"><span data-stu-id="85a19-124">General</span></span>
+
+<span data-ttu-id="85a19-125">Información básica sobre la aplicación, como detalles de licencias e información de contacto.</span><span class="sxs-lookup"><span data-stu-id="85a19-125">Basic information about your app like licensing details and contact information.</span></span>
+
+#### <a name="data-handling"></a><span data-ttu-id="85a19-126">Control de datos</span><span class="sxs-lookup"><span data-stu-id="85a19-126">Data Handling</span></span>
+
+<span data-ttu-id="85a19-127">Información sobre qué datos está recopilando la aplicación, por qué está recopilando dicha información y si el administrador tiene algún control sobre la información recopilada.</span><span class="sxs-lookup"><span data-stu-id="85a19-127">Information about what data your app is collecting, why you're collecting that information, and if the administrator has any control over the collected information.</span></span> <span data-ttu-id="85a19-128">Algunos ejemplos son los datos a los que se obtiene acceso a través de Microsoft Graph, cualquier funcionalidad de Bot y la telemetría que está recopilando.</span><span class="sxs-lookup"><span data-stu-id="85a19-128">Examples include data accessed through Microsoft Graph, any bot capabilities, and any telemetry you're collecting.</span></span>
+
+#### <a name="security--compliance"></a><span data-ttu-id="85a19-129">Seguridad y cumplimiento</span><span class="sxs-lookup"><span data-stu-id="85a19-129">Security & Compliance</span></span>
+
+<span data-ttu-id="85a19-130">Información relacionada con la seguridad y el cumplimiento de toda la aplicación (no solo la aplicación de Teams, sino también los servicios subyacentes).</span><span class="sxs-lookup"><span data-stu-id="85a19-130">Information related to security and compliance of the entire app (not just your Teams app, but the underlying services as well).</span></span> <span data-ttu-id="85a19-131">La información se almacena en el catálogo de Microsoft Cloud App Security.</span><span class="sxs-lookup"><span data-stu-id="85a19-131">The information is stored in Microsoft Cloud App Security catalog.</span></span> <span data-ttu-id="85a19-132">Para obtener más información, vea [esta página](/cloud-app-security/attest-your-app).</span><span class="sxs-lookup"><span data-stu-id="85a19-132">For more information see [this page](/cloud-app-security/attest-your-app).</span></span>
