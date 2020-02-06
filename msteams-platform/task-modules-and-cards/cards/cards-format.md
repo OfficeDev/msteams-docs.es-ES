@@ -3,12 +3,12 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 4a467c5b0b21cc3c19977bf7caa25e6790904b10
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676152"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783972"
 ---
 # <a name="card-formatting"></a>Formato de tarjeta
 
@@ -105,14 +105,16 @@ En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
     ]
 }
 ```
+
 ## <a name="mention-support-within-adaptive-cards"></a>Mencione la compatibilidad en tarjetas adaptables 
 
 > [!NOTE]
-> Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro) .
+> Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) .
 
 Los bots y las extensiones de mensajería ahora pueden incluir menciones dentro del contenido de la tarjeta en elementos FactSet y bloques de texto. 
 
 ### <a name="constructing-mentions"></a>Creación de menciones
+
 Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos:
 
 * `<at>username</at>`en los elementos de tarjeta adaptable admitidos
@@ -121,6 +123,7 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
 Tenga en cuenta que las tarjetas con menciones no se admiten en los clientes móviles por el momento.
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Ejemplo de tarjeta adaptable con mención
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",

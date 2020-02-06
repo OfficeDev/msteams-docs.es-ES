@@ -2,14 +2,17 @@
 title: Lista de comprobación de manifiesto de la aplicación
 description: La lista de comprobación del manifiesto de la aplicación para publicar su aplicación de Microsoft Teams en AppSource
 keywords: lista de comprobación de publicación de tienda Office de Microsoft Teams
-ms.openlocfilehash: e684bb4f578944c6f37eeb43541a491d42ec3479
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6186daf264f04e04d6037ddfb7d9208994cc3c57
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676049"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783881"
 ---
 # <a name="app-manifest-checklist"></a>Lista de comprobación de manifiesto de la aplicación
+
+>[!IMPORTANT]
+>Estamos migrando la administración de las soluciones de Office desde el panel de vendedores al centro de Partners. Para más información, vea[la sección moverse del panel de control del vendedor al centro de Partners ](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/)y lea el[FAQ](https://docs.microsoft.com/office/dev/store/partner-center-faq).
 
 El manifiesto de la aplicación debe cumplir con las directrices que se describen a continuación.
 
@@ -19,19 +22,19 @@ El manifiesto de la aplicación debe cumplir con las directrices que se describe
 ## <a name="tips"></a>Sugerencias
 
 * No use "Teams", "Microsoft" o "app" en el nombre de la aplicación.
-* El developerName en el manifiesto de la aplicación debe ser el mismo que el nombre del proveedor definido en el centro de Partners o el panel de vendedores.
+* El developerName del manifiesto debe ser el mismo que el nombre del proveedor definido en el centro de asociados.
 * Asegúrese de que la descripción de la aplicación, las capturas de pantallas, el texto y las imágenes promocionales solo describen la aplicación y que no contienen anuncios, promociones o nombres de marcas protegidos por copyright.
 * Si su producto requiere una cuenta en su servicio u otro servicio, enumere la descripción y asegúrese de que hay vínculos para registrarse, iniciar sesión y cerrar sesión.
 * Si su producto requiere compras adicionales para funcionar correctamente, enumere la descripción.
-* Proporcione los términos y los vínculos de la Directiva de privacidad necesarios en el manifiesto y el centro del partner o el panel de vendedores. Compruebe que los vínculos se resuelven correctamente en la documentación correcta, lo ideal es que los equipos sean específicos. Para los bots, debe proporcionar esta misma información en la sección envío de la página de registro de bot Framework.
-* Asegúrese de que los metadatos del manifiesto coinciden exactamente con los metadatos del centro del asociado o del panel de vendedores (y, en el caso de los bots, en el registro de bot Framework). Tenga en cuenta que la entrada del panel de vendedores debe contener una descripción con más detalle y con formato para su uso en la página del producto AppSource.
-* Asegúrese de que el título de la aplicación usado en el manifiesto coincide exactamente con el título de la aplicación que se especificó en el centro de Partners o el envío del panel de vendedores.
+* Proporcione los términos y los vínculos de la Directiva de privacidad necesarios en el manifiesto y en el centro del partner o el panel. Compruebe que los vínculos se resuelven correctamente en la documentación correcta, lo ideal es que los equipos sean específicos. Para los bots, debe proporcionar esta misma información en la sección envío de la página de registro de bot Framework.
+* Asegúrese de que los metadatos del manifiesto coinciden exactamente con los metadatos del centro del asociado (y, en el caso de los bots, en el registro del marco de bot). Tenga en cuenta que la entrada del centro de asociados puede contener una descripción más detallada y con formato para usarla en la página del producto AppSource.
+* Asegúrese de que el título de la aplicación usado en el manifiesto es una **coincidencia exacta** con el título de la aplicación que se especifica en el envío del centro de asociados. *Vea* [crear listas eficaces en Microsoft AppSource y en Office: Use un nombre de complemento coherente ](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name).
 
 ## <a name="metadata-requirement"></a>Requisitos de metadatos
 
 Se requieren los siguientes metadatos para la aplicación.
 
-|Datos|Tipo|Size|Manifiesto|Centro para socios|Descripción|
+|Datos|Tipo|Size|Manifiesto|Centro para socios|Description|
 |---|---|---|---|---|---|
 |Paquete de la aplicación|.zip|||✔|El paquete de la aplicación real para la carga o el envío de AppSource.|
 |Logotipo-color|.png|192&times;192 píxeles|`icon.color`||El icono para mostrar en la lista de la página del producto en la galería de Teams. Este es su logotipo de color de todo el producto.|
@@ -49,12 +52,12 @@ Se requieren los siguientes metadatos para la aplicación.
 > [!NOTE]
 > AppSource planea admitir contenido localizado para los siguientes metadatos. Actualmente, la descripción de la aplicación solo se mostrará en inglés en AppSource, pero se mostrará correctamente en el cliente de Microsoft Teams. Consulte [localización de la aplicación](~/concepts/build-and-test/apps-localization.md) para obtener más información.
 
-|Datos|Tipo|Size|Manifiesto|Centro para socios|Descripción|
+|Datos|Tipo|Size|Manifiesto|Centro para socios|Description|
 |---|---|---|---|---|---|
-|Nombre de la aplicación|String|semestre|`name.short`|✔|El nombre de la aplicación tal como debería aparecer en el escaparate y en el producto.|
-|Nombre de aplicación largo|String|semestre|`name.full`|✔|El nombre de la aplicación tal como debería aparecer en el escaparate y en el producto.|
-|La descripción breve|String|80|`description.short`|✔|Breve descripción de la aplicación.|
-|La descripción larga|String|4000|`description.full`|✔|Una descripción más detallada de la aplicación. En el archivo del manifiesto, es adecuado un resumen preciso. En el centro de Partners, puede usar una descripción con formato y más rica para la página de producto de AppSource.|
+|Nombre de la aplicación|Cadena|semestre|`name.short`|✔|El nombre de la aplicación tal como debería aparecer en el escaparate y en el producto.|
+|Nombre de aplicación largo|Cadena|semestre|`name.full`|✔|El nombre de la aplicación tal como debería aparecer en el escaparate y en el producto.|
+|La descripción breve|Cadena|80|`description.short`|✔|Breve descripción de la aplicación.|
+|La descripción larga|Cadena|4000|`description.full`|✔|Una descripción más detallada de la aplicación. En el archivo del manifiesto, es adecuado un resumen preciso. En el centro de Partners, puede usar una descripción con formato y más rica para la página de producto de AppSource.|
 |Capturas de pantalla (1-5)|. png,. jpg o. gif|1366w x 768h y menor que 1024 KB||✔|Al menos una captura de pantalla que muestra la experiencia de la aplicación. Se usa en la página de detalles de la aplicación.|
 
 ## <a name="submission-extras-for-bots"></a>Extras de envío para bots
