@@ -3,12 +3,12 @@ title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: cf720bb8193c6b61ba37e8d89fafc044555222ac
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676143"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783916"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -230,14 +230,15 @@ Para comprobar que una acción `HttpPOST` está funcionando correctamente, utili
 
 ## <a name="rate-limiting-for-connectors"></a>Limitación de velocidad para Conectores
 
-Este límite controla el tráfico que puede generar un conector o un webhook entrante en un canal.
+Este límite controla el tráfico que puede generar un conector o un webhook entrante en un canal. Las solicitudes que realiza su webhook o conector se limitarán cuando se supere el umbral del límite de velocidad. La cantidad de tiempo para el comportamiento de limitación se relaciona directamente con los parámetros de velocidad de solicitudes superada. Por ejemplo, si un conector o webhook supera 100 solicitudes de mensajes en 3600 segundos, el conector se limitará durante los próximos 3600 segundos:
 
 | Período de tiempo: (seg.)  | Máximo de solicitudes de mensaje permitidas  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 hora)  | 100  | 
 | 7200 | 150  | 
+| 86 400 (1 día) | 1800  | 
 
 Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) como la que se muestra a continuación mitigaría la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Siga los [procedimientos recomendados](../../bots/how-to/rate-limit.md#best-practices) para evitar alcanzar los límites de velocidad.
 
