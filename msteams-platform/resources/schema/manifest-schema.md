@@ -2,12 +2,12 @@
 title: Referencia de esquema de manifiesto
 description: Describe el esquema admitido por el manifiesto para Microsoft Teams.
 keywords: esquema del manifiesto de Microsoft Teams
-ms.openlocfilehash: d4a2864c18a5066673bafab42a46733a0ab5f116
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a1a690e6e382dcad3ceb200ec02286e8c9171f8
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675986"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953491"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -301,9 +301,9 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 caracteres|✔|Dirección URL de https://que se va a usar al configurar la pestaña.|
 |`canUpdateConfiguration`|Boolean|||Un valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de crearla. Predeterminada`true`|
-|`scopes`|Matriz de enum|1 |✔|Actualmente, las pestañas configurables solo admiten los `team` ámbitos y `groupchat` . |
+|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas configurables solo admiten los `team` ámbitos y `groupchat` . |
 |`sharePointPreviewImage`|String|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enum|1 ||Define cómo estará disponible la pestaña en SharePoint. Las opciones `sharePointFullPage` son y`sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo estará disponible la pestaña en SharePoint. Las opciones `sharePointFullPage` son y`sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -319,7 +319,10 @@ El objeto es una matriz (un máximo de 16 elementos) con todos los elementos del
 |`name`|String|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz de canal.|
 |`contentUrl`|String|2048 caracteres|✔|Dirección URL de https://que señala a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Microsoft Teams.|
 |`websiteUrl`|String|2048 caracteres||La dirección URL de https://para apuntar a si un usuario opta por verlo en un explorador.|
-|`scopes`|Matriz de enum|1 |✔|Actualmente, las pestañas estáticas `personal` solo admiten el ámbito, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas estáticas `personal` solo admiten el ámbito, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+
+> [!NOTE]
+> Si las pestañas requieren información dependiente del contexto para mostrar contenido relevante o para iniciar un flujo de autenticación, *vea* [obtener contexto para la pestaña de Microsoft Teams](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>transferido
 
@@ -331,11 +334,11 @@ El objeto es una matriz (un máximo de solo 1&mdash;elemento solo es posible par
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`botId`|String|64 caracteres|✔|IDENTIFICADOR único de la aplicación de Microsoft para el bot como se registra con bot Framework. Puede ser el mismo que el [identificador de aplicación](#id)general.|
-|`needsChannelSelector`|Boolean|||Describe si el bot utiliza o no una sugerencia del usuario para agregar el bot a un canal específico. Predeterminada`false`|
-|`isNotificationOnly`|Boolean|||Indica si un bot es un bot? a de solo notificaciones unidireccional, a diferencia de un bot? a de la conversación. Predeterminada`false`|
-|`supportsFiles`|Boolean|||Indica si el bot admite la capacidad de cargar o descargar archivos en un chat personal. Predeterminada`false`|
-|`scopes`|Matriz de enum|3 |✔|Especifica si bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat en grupo (`groupchat`) o una experiencia en un ámbito específico de un solo usuario (`personal`). Estas opciones no son exclusivas.|
+|`botId`|String|64 caracteres|✔|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Puede ser el mismo que el [identificador de aplicación](#id)general.|
+|`needsChannelSelector`|Boolean|||Describe si el bot usa una sugerencia del usuario para agregar el bot a un canal específico. Predeterminada`false`|
+|`isNotificationOnly`|Boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Predeterminada`false`|
+|`supportsFiles`|Booleano|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Predeterminada`false`|
+|`scopes`|Matriz de enumeración|3 |✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia específica para un solo usuario (`personal`). Estas opciones no son exclusivas.|
 
 ### <a name="botscommandlists"></a>bots. commandLists
 
@@ -343,8 +346,8 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enum|3 |✔|Especifica el ámbito para el que es válida la lista de comandos. Las opciones `team`son `personal`, y `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre del comando Bot (cadena, 32)<br>`description`: una descripción sencilla o un ejemplo de la sintaxis del comando y su argumento (String, 128)|
+|`items.scopes`|matriz de enumeración|3 |✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
+|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
 
 ## <a name="connectors"></a>Connector
 
@@ -358,7 +361,7 @@ El objeto es una matriz (un máximo de 1 elemento) con todos los elementos `obje
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 caracteres|✔|Dirección URL de https://que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔|Un identificador único para el conector que coincide con su identificador en el [panel del programador de conectores](https://aka.ms/connectorsdashboard).|
-|`scopes`|Matriz de enum|1 |✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team`o una experiencia en el ámbito de un solo usuario individual (`personal`). Actualmente, solo se `team` admite el ámbito.|
+|`scopes`|Matriz de enumeración|1 |✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team`o una experiencia en el ámbito de un solo usuario individual (`personal`). Actualmente, solo se `team` admite el ámbito.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -371,7 +374,7 @@ Define una extensión de mensajería para la aplicación.
 
 El objeto es una matriz (un máximo de 1 elemento) con todos los elementos `object`de tipo. Este bloque solo es necesario para las soluciones que proporcionan una extensión de mensajería.
 
-|Nombre| Tipo | Tamaño máximo | Necesario | Descripción|
+|Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|String|64|✔|IDENTIFICADOR único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como se registró con bot Framework. Puede ser el mismo que el identificador de aplicación general.|
 |`canUpdateConfiguration`|Boolean|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado `false`es.|
