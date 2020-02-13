@@ -3,12 +3,12 @@ title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 56ef6adc7731eadc0a799f489867d8e056248e03
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783916"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953470"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -227,18 +227,21 @@ Ahora, puede iniciar la experiencia de configuración. Tenga en cuenta que este 
 
 Para comprobar que una acción `HttpPOST` está funcionando correctamente, utilice el [webhook entrante personalizado](#setting-up-a-custom-incoming-webhook).
 
+## <a name="rate-limiting-for-connectors"></a>Limitación de velocidad para conectores
 
-## <a name="rate-limiting-for-connectors"></a>Limitación de velocidad para Conectores
+Los límites de velocidad de la aplicación controlan el tráfico que puede generar un conector o un webhook entrante en un canal. Teams realiza un seguimiento de las solicitudes a través de una ventana de velocidad fija y un contador incremental medido en segundos.  Si se hacen demasiadas solicitudes, se limita la conexión de cliente hasta que se actualice la ventana, es decir, mientras dure la velocidad fija.
 
-Este límite controla el tráfico que puede generar un conector o un webhook entrante en un canal. Las solicitudes que realiza su webhook o conector se limitarán cuando se supere el umbral del límite de velocidad. La cantidad de tiempo para el comportamiento de limitación se relaciona directamente con los parámetros de velocidad de solicitudes superada. Por ejemplo, si un conector o webhook supera 100 solicitudes de mensajes en 3600 segundos, el conector se limitará durante los próximos 3600 segundos:
+### <a name="transactions-per-second-thresholds"></a>**Umbrales de transacciones por segundo**
 
-| Período de tiempo: (seg.)  | Máximo de solicitudes de mensaje permitidas  |
+| Tiempo (segundos)  | Número máximo de solicitudes permitidas  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600 (1 hora)  | 100  | 
-| 7200 | 150  | 
-| 86 400 (1 día) | 1800  | 
+| 3600   | 100  |
+| 7200 | 150  |
+| 86400  | 1800  |
+
+*Consulte también* [Conectores de Office 365: Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
 Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) como la que se muestra a continuación mitigaría la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Siga los [procedimientos recomendados](../../bots/how-to/rate-limit.md#best-practices) para evitar alcanzar los límites de velocidad.
 
