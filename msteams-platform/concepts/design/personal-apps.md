@@ -2,12 +2,12 @@
 title: Referencia de directrices de diseño
 description: Describe las instrucciones para diseñar una aplicación personal
 keywords: guías de diseño de Microsoft Teams referencia de aplicaciones personales
-ms.openlocfilehash: 6a07b618d78a3ad79850713052c88ef178c1ecc1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675783"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228076"
 ---
 # <a name="personal-apps"></a>Aplicaciones personales
 
@@ -34,7 +34,7 @@ Una aplicación personal suele contener las siguientes pestañas:
 
 ### <a name="your-tab"></a>La pestaña
 
-Aquí es donde los usuarios verán todo su contenido. Su espacio personal. La pestaña se puede organizar como una lista, una cuadrícula, columnas o un solo lienzo... lo que mejor se adapte a su aplicación. Para obtener más información sobre el diseño de pestañas efectivas, vea: [diseño de pestañas (~/Tabs/Design/Tabs.MD).
+Aquí es donde los usuarios verán todo su contenido. Su espacio personal. La pestaña se puede organizar como una lista, una cuadrícula, columnas o un solo lienzo... lo que mejor se adapte a su aplicación. Para obtener más información sobre el diseño de pestañas efectivas, vea: [diseño de pestañas](../../tabs/design/tabs.md).
 
 Como esta pestaña puede mostrar elementos de varios canales, cada elemento debería mostrar su propio equipo, canal y pestaña para que el usuario pueda ver fácilmente dónde se originó.
 
@@ -54,7 +54,7 @@ Esta es una lista de todas las pestañas de la organización de la persona (a la
 
 Un bot no es necesario, pero es una buena forma de comunicarse directa y privadamente con los usuarios. La notificación es una de las funciones más importantes de una aplicación personal y la mejor forma de notificarla que con la comunicación directa.
 
-Los bots entregan mensajes en forma de tarjetas, que pueden proporcionar información específica (por ejemplo, una alerta de que el contenido nuevo está disponible) o actualizaciones amplias (como una lista de tareas pendientes diaria). Para obtener más información sobre el diseño de bots efectivos, consulte: [diseño de Bot (~/bots/Design/bots.MD).
+Los bots entregan mensajes en forma de tarjetas, que pueden proporcionar información específica (por ejemplo, una alerta de que el contenido nuevo está disponible) o actualizaciones amplias (como una lista de tareas pendientes diaria). Para obtener más información sobre el diseño de bots efectivos, vea: [diseño de bot](../../bots/design/bots.md).
 
 ![Saludo de bot](~/assets/images/Personal-apps-Bot.png)
 

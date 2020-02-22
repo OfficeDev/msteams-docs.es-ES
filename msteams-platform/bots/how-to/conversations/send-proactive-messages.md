@@ -4,12 +4,12 @@ author: clearab
 description: Cómo enviar mensajes proactivos con su bot de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e60fdbfb909abec2c6d64ed0d32fa1a4c4b463a6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2821e4d7ddeb74b3921be792cc55a136ab4ac5e4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675853"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228083"
 ---
 # <a name="send-proactive-messages"></a>Enviar mensajes proactivos
 
@@ -108,7 +108,7 @@ Debe proporcionar el identificador de usuario y el identificador de inquilino. S
 
 Este identificador es el identificador de conversación único de chat personal. Almacene este valor y vuelva a usarlo para interacciones futuras con el usuario.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 En este ejemplo se usa el paquete NuGet [Microsoft. bot. Connector. Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .
 
@@ -131,9 +131,9 @@ Activity newActivity = new Activity()
 await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 ```
 
-# <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-En este ejemplo se usa el paquete NPM [de botbuilder-Teams](https://www.npmjs.com/package/botbuilder-teams) .
+*Vea también* [ejemplos del marco de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ```javascript
 var address =
@@ -159,7 +159,7 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _send_proactive_message():
@@ -178,10 +178,9 @@ El bot agregado por el equipo puede exponer en un canal para crear una nueva cad
 
 Como alternativa, puede usar la API de REST y enviar una solicitud POST al [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) recurso.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 El siguiente fragmento de código es de [este ejemplo](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs).
-
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
@@ -227,13 +226,13 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
-# <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-En este ejemplo se usa el paquete NPM [de botbuilder-Teams](https://www.npmjs.com/package/botbuilder-teams) . El siguiente fragmento de código es de [teamsConversationBot. js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
+El siguiente fragmento de código es de [teamsConversationBot. js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 [!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
 

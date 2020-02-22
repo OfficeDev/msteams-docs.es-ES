@@ -2,12 +2,12 @@
 title: Iniciar acciones con extensiones de mensajería
 description: Crear extensiones de mensajería basadas en acciones para permitir que los usuarios desencadenen servicios externos
 keywords: búsqueda de extensiones de mensajería de Team Extensions
-ms.openlocfilehash: 9b7d3bd53ba45d55e80f858a3c89be265c13482b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a38b4f7bfb413defd28950ca9b97f7411cf9c09
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676000"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228034"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar acciones con extensiones de mensajería
 
@@ -496,9 +496,7 @@ La extensión de mensajes ahora tendrá que responder a dos nuevos tipos de inte
 
 Al responder a la `edit` solicitud, debe responder con una `task` respuesta con los valores que se han rellenado con la información que el usuario ya ha enviado. Al responder a la `send` solicitud, debe enviar un mensaje al canal que contiene la tarjeta adaptable que ha finalizado.
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
-
-En el ejemplo siguiente, se muestra cómo hacerlo con el [SDK de Team. js para Teams Builder](https://www.npmjs.com/package/botbuilder-teams).
+# <a name="typescriptnodejs"></a>[TypeScript/node. js](#tab/typescript)
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -558,7 +556,9 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+*Vea también* [ejemplos del marco de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 En este ejemplo se muestra este flujo mediante el [SDK de Microsoft. bot. Connector. Teams (V3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
 

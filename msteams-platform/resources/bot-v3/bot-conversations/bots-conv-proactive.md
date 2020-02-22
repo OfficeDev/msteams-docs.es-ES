@@ -2,12 +2,12 @@
 title: Mensajes proactivos
 description: Describe los bots puede iniciar una conversación en Microsoft Teams.
 keywords: escenarios de la conversación de mensajería proactiva de Teams
-ms.openlocfilehash: c5c779b7ec5733b19366ae73053ef7d45ca6c1d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2f644820da33acc885a7972b13a1f61c167d6d8f
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675762"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228069"
 ---
 # <a name="proactive-messaging-for-bots"></a>Mensajería proactiva para bots
 
@@ -130,8 +130,6 @@ await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 
 ### <a name="using-nodejs"></a>Uso de node. js
 
-En este ejemplo se usa el paquete NPM [de botbuilder-Teams](https://www.npmjs.com/package/botbuilder-teams) .
-
 ```javascript
 var address =
 {
@@ -156,13 +154,15 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
+*Vea también* [ejemplos del marco de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+
 ## <a name="creating-a-channel-conversation"></a>Crear una conversación de canal
 
 El bot agregado por el equipo puede exponer en un canal para crear una nueva cadena de respuesta. Si usa el SDK de Team. js Teams, use `startReplyChain()` que le proporcione una dirección completa con el identificador de actividad y el identificador de conversación correctos. Si usa C#, vea el ejemplo siguiente.
 
 Como alternativa, puede usar la API de REST y enviar una solicitud POST al [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) recurso.
 
-### <a name="net-example-from-this-samplehttpsgithubcomofficedevmicrosoft-teams-sample-complete-csharpblob32c39268d60078ef54f21fb3c6f42d122b97da22template-bot-master-csharpsrcdialogsexamplesteamsproactivemsgto1to1dialogcs"></a>Ejemplo de .NET (de [este ejemplo](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
+### <a name="net-example-from-this-sample"></a>Ejemplo de .NET (de [este ejemplo](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;

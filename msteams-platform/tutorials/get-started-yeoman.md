@@ -2,12 +2,12 @@
 title: Introducción al generador de Yeoman para Microsoft Teams
 description: Empezar a compilar excelentes aplicaciones con el generador de Yeoman para Microsoft Teams
 keywords: nodo introducción. js NodeJS Yeoman
-ms.openlocfilehash: b0a9ae8d526286790d266e4291ef95d4ed7ce90f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675895"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228090"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Compilar la primera aplicación de Microsoft Teams
 
@@ -118,7 +118,7 @@ Ahora debería poder ir a `http://localhost:3007/myFirstAppTab/` para asegurarse
 
 Microsoft Teams no le permite hospedar la aplicación en localhost, por lo que debe publicarla en una dirección URL pública o usar un proxy como ngrok.
 
-Una buena noticia es que el proyecto con scaffolding tiene esta integrado. Al ejecutar `gulp ngrok-serve` el servicio ngrok, se iniciará en segundo plano, con un único y una entrada DNS pública, y también empaquetará el manifiesto con esa dirección URL única y, a continuación, hará `gulp serve`exactamente lo mismo que.
+Una buena noticia es que el proyecto con scaffolding tiene esta integrado. Al ejecutar `gulp ngrok-serve` el servicio ngrok, se iniciará en segundo plano, con una única entrada DNS pública y pública, y también empaquetará el manifiesto con esa dirección URL única y, a continuación, hará `gulp serve`lo mismo con el mismo resultado.
 
 Una vez `gulp ngrok-serve`ejecutado, cree un nuevo equipo de Microsoft Teams y, cuando se haya creado, haga clic en el nombre del equipo, vaya a la configuración de Microsoft Teams y seleccione *aplicaciones*. En la esquina inferior derecha, debería ver un vínculo *cargar una aplicación personalizada*, seleccionarla y, a continuación, buscar la carpeta del proyecto y la `package`subcarpeta denominada. Seleccione el archivo zip en esa carpeta y elija Abrir. La aplicación ahora se transferirá a Microsoft Teams.
 

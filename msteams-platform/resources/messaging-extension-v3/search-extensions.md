@@ -2,13 +2,13 @@
 title: Buscar con extensiones de mensajería
 description: Describe cómo desarrollar extensiones de mensajería basadas en búsquedas
 keywords: búsqueda de extensiones de mensajería de Team Extensions
-ms.date: 05/20/2019
-ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 07/20/2019
+ms.openlocfilehash: c220d976fa3e9920c8d4bb332a793b23d9b294c4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675997"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228048"
 ---
 # <a name="search-with-messaging-extensions"></a>Buscar con extensiones de mensajería
 
@@ -125,7 +125,7 @@ Cuando un usuario realiza una consulta, Microsoft Teams envía al servicio un ob
 
 Además de las propiedades de actividad de bot estándar, la carga contiene los siguientes metadatos de solicitud:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
 |`type`| Tipo de solicitud; debe ser `invoke`. |
 |`name`| Tipo de comando que se emite para el servicio. Actualmente se admiten los siguientes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -135,11 +135,11 @@ Además de las propiedades de actividad de bot estándar, la carga contiene los 
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.channel.id`| IDENTIFICADOR de canal (si la solicitud se realizó en un canal). |
 |`channelData.team.id`| IDENTIFICADOR del equipo (si la solicitud se realizó en un canal). |
-|`clientInfo`entidad | Metadatos adicionales sobre el cliente, como la configuración regional, el idioma y el tipo de cliente. |
+|`clientInfo`|Metadatos opcionales sobre el software de cliente que se usa para enviar un mensaje de un usuario. La entidad puede contener dos propiedades:<br>El `country` campo contiene la ubicación detectada del usuario.<br>El `platform` campo describe la plataforma de cliente de mensajería. <br>Para obtener más información, *vea* [tipos de entidades que no son IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 Los propios parámetros de la solicitud se encuentran en el objeto de valor, que incluye las siguientes propiedades:
 
-| Nombre de la propiedad | Objetivo |
+| Nombre de propiedad | Finalidad |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
 | `parameters` | Matriz de parámetros. Cada objeto Parameter contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
@@ -183,11 +183,9 @@ Los propios parámetros de la solicitud se encuentran en el objeto de valor, que
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -239,7 +237,7 @@ Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP
 
 El servicio debe responder con los resultados que coincidan con la consulta de usuario. La respuesta debe indicar un código de Estado HTTP `200 OK` de y un objeto Application/JSON válido con el siguiente cuerpo:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
 |`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de los resultados de la búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería. <br>`message`: muestra un mensaje de texto sin formato |
@@ -524,10 +522,10 @@ En este momento, la ventana se cierra y el control se pasa al cliente de Teams. 
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -602,8 +600,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-Las [extensiones de Teams](https://www.npmjs.com/package/botbuilder-teams) para el SDK de bot Builder para node. js proporcionan objetos auxiliares y métodos para simplificar la recepción, el procesamiento y la respuesta a solicitudes de extensión de mensajería.
-
 #### <a name="example-code-in-nodejs"></a>Ejemplo de código en node. js
 
 ```javascript
@@ -659,3 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*Vea también* [ejemplos del marco de bot](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
