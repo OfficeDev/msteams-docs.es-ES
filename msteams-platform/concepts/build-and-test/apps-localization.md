@@ -3,12 +3,12 @@ title: Localización para las aplicaciones de equipo
 description: Describe problemas relacionados con la localización de la aplicación
 keywords: Microsoft Teams publicar AppSource de localización de Office Publishing idioma
 ms.date: 05/15/2018
-ms.openlocfilehash: b09f33e53303587e81b445c012de92b11dd90580
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675828"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279767"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localización de aplicaciones de Microsoft Teams
 
@@ -66,7 +66,7 @@ A continuación, querrá agregar la propiedad ' localizationInfo ' con el idioma
 }
 ```
 
-Puede proporcionar archivos. JSON adicionales con traducciones de todas las cadenas a las que se enfrente el usuario en el manifiesto. Estos archivos deben adherirse al [esquema JSON del archivo de localización](~/resources/schema/localization-schema.md) y deben agregarse a la propiedad ' localizationInfo ' del manifiesto. Cada archivo se correlaciona con una etiqueta de idioma que el cliente de Microsoft Teams usa para elegir las cadenas adecuadas. La etiqueta Language tiene la forma de <language> - <region> , pero se recomienda omitir la <region> parte para todas las regiones que admitan el idioma deseado.
+Puede proporcionar archivos. JSON adicionales con traducciones de todas las cadenas a las que se enfrente el usuario en el manifiesto. Estos archivos deben adherirse al [esquema JSON del archivo de localización](../../resources/schema/localization-schema.md) y deben agregarse a la propiedad ' localizationInfo ' del manifiesto. Cada archivo se correlaciona con una etiqueta de idioma que el cliente de Microsoft Teams usa para elegir las cadenas adecuadas. La etiqueta Language tiene la forma de <language> - <region> , pero se recomienda omitir la <region> parte para todas las regiones que admitan el idioma deseado.
 
 El cliente de Microsoft Teams aplicará las cadenas en este orden: cadenas de idioma predeterminadas-> cadenas de idioma del usuario solo cadenas-> idioma del usuario + cadenas de región del usuario.
 

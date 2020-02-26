@@ -4,12 +4,12 @@ author: clearab
 description: Cómo realizar unfurling de vínculos con la extensión de mensajería en una aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5b20ea303a2c3d085651a53b01af4bb449d386de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676210"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279777"
 ---
 # <a name="link-unfurling"></a>Vincular unfurling
 
@@ -25,7 +25,7 @@ La extensión de mensajería de Azure DevOps usa el vínculo unfurling para busc
 
 Para ello, agregará una nueva `messageHandlers` matriz a la `composeExtensions` sección del JSON del manifiesto de la aplicación. Puede hacerlo con la ayuda de App Studio, o bien manualmente. Las listas de dominios pueden incluir caracteres comodín, por `*.example.com`ejemplo. Esto coincide exactamente con un segmento del dominio; Si tiene que hacer coincidir `a.b.example.com` , `*.*.example.com`use.
 
-### <a name="using-app-studio"></a>Uso de App Studio
+### <a name="using-app-studio"></a>Usar App Studio
 
 1. En App Studio, en la pestaña Editor de manifiestos, cargue el manifiesto de la aplicación.
 1. En la página **extensión de mensajería** , agregue el dominio que quiera buscar en la sección **controladores de mensajes** , como se muestra en la captura de pantalla siguiente.
@@ -69,27 +69,27 @@ Se admiten los siguientes tipos de tarjeta:
 
 Consulte [¿Qué son las tarjetas](~/task-modules-and-cards/what-are-cards.md) para obtener información general).
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
 {
     //You'll use the query.link value to search your service and create a card response
-    var heroCard = new ThumbnailCard
+    var card = new HeroCard
     {
-        Title = "Thumbnail Card",
+        Title = "Hero Card",
         Text = query.Url,
         Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
     };
 
-    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, heroCard);
+    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
     var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
     return new MessagingExtensionResponse(result);
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -112,7 +112,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Este es un ejemplo del que `invoke` se ha enviado a su bot.
 

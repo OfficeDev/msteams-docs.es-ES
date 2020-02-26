@@ -3,14 +3,14 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783972"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279784"
 ---
-# <a name="card-formatting"></a>Formato de tarjeta
+# <a name="format-cards-in-teams"></a>Formato de tarjetas en Microsoft Teams
 
 Puede Agregar formato de texto enriquecido a las tarjetas con Markdown o HTML, según el tipo de tarjeta.
 
@@ -18,15 +18,17 @@ Las tarjetas admiten el formato solo en la propiedad de texto, no en las propied
 
 La compatibilidad de formato es distinta entre los distintos tipos de tarjetas y la representación de la tarjeta puede variar ligeramente entre el escritorio y los clientes de los equipos móviles, así como los equipos en el explorador de escritorio.
 
-## <a name="card-types"></a>Tipos de tarjeta
+Puede incluir una imagen incorporada en cualquier tarjeta de Teams. Imágenes a las que `.png`se les `.jpg`da formato `.gif` , o archivos y no deben exceder de 1024 × 1024 PX o 1 MB. GIF animado no es compatible oficialmente. *Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)
 
-Hay tres tipos de tarjetas que admiten Markdown en Microsoft Teams:
+## <a name="formatting-cards-with-markdown"></a>Tarjetas de formato con Markdown
 
-* **Tarjetas adaptables**: Markdown se admite en el `Textblock` campo tarjeta adaptable, `Fact.Title` así `Fact.Value`como en y. No se admite HTML en tarjetas adaptables.
-* **Tarjetas de conector de O365**: MARKDOWN y HTML limitado son compatibles con las tarjetas de conector de Office 365 en los campos de texto.
-* **Tarjetas sencillas**: se admite HTML limitado, pero Markdown no se admite en tarjetas sencillas.
+Hay dos tipos de tarjetas que admiten Markdown en Microsoft Teams:
 
-## <a name="markdown-formatting-for-adaptive-cards"></a>Formato de Markdown para tarjetas adaptables
+> [!div class="checklist"]
+> * **Tarjetas adaptables**: Markdown se admite en el `Textblock` campo tarjeta adaptable, `Fact.Title` así `Fact.Value`como en y. No se admite HTML en tarjetas adaptables.
+> * **Tarjetas de conector de O365**: MARKDOWN y HTML limitado son compatibles con las tarjetas de conector de Office 365 en los campos de texto.
+
+# <a name="markdown-formatting-adaptive-cards"></a>[**Formato de Markdown: tarjetas adaptables**](#tab/adaptive-md)
 
  Los estilos admitidos `Textblock`para `Fact.Title` y `Fact.Value` son:
 
@@ -46,7 +48,8 @@ No se admiten las siguientes etiquetas Markdown:
 * Texto con formato previo
 * Blockquotes
 
-Las tarjetas adaptables no admiten el formato HTML.
+> [!IMPORTANT]
+> Las tarjetas adaptables no admiten el formato HTML.
 
 ### <a name="newlines-for-adaptive-cards"></a>Nuevas líneas para tarjetas adaptables
 
@@ -58,17 +61,17 @@ El formato es ligeramente distinto entre el escritorio y las versiones móviles 
 
 En el escritorio, el formato de Markdown con tarjeta adaptable aparece como este en los exploradores Web y en la aplicación cliente de Teams:
 
-![Formato Markdown de tarjeta adaptable en el cliente de escritorio](~/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Formato Markdown de tarjeta adaptable en el cliente de escritorio](/assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 En iOS, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 
-![Formato Markdown de tarjeta adaptable en iOS](~/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Formato Markdown de tarjeta adaptable en iOS](/assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 
-![Formato Markdown de tarjeta adaptable en Android](~/assets/images/cards/Adaptive-markdown-Android.png)
+![Formato Markdown de tarjeta adaptable en Android](/assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="for-more-information-on-adaptive-cards"></a>Para obtener más información sobre las tarjetas adaptables
+### <a name="more-information-on-adaptive-cards"></a>Más información sobre tarjetas adaptables
 
 [Características de texto en tarjetas adaptables](/adaptive-cards/create/textfeatures) La fecha y las características de localización mencionadas en este tema no se admiten en Microsoft Teams.
 
@@ -106,12 +109,12 @@ En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 }
 ```
 
-## <a name="mention-support-within-adaptive-cards"></a>Mencione la compatibilidad en tarjetas adaptables 
+### <a name="mention-support-within-adaptive-cards"></a>Mencione la compatibilidad en tarjetas adaptables
 
 > [!NOTE]
-> Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) .
+> Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .
 
-Los bots y las extensiones de mensajería ahora pueden incluir menciones dentro del contenido de la tarjeta en elementos FactSet y bloques de texto. 
+Los bots y las extensiones de mensajería ahora pueden incluir menciones dentro del contenido de la tarjeta en elementos FactSet y bloques de texto.
 
 ### <a name="constructing-mentions"></a>Creación de menciones
 
@@ -153,7 +156,96 @@ Tenga en cuenta que las tarjetas con menciones no se admiten en los clientes mó
 }
 ```
 
-## <a name="html-formatting-for-connector-cards"></a>Formato HTML para tarjetas conectoras
+# <a name="markdown-formatting-o365-connector-cards"></a>[**Formato de Markdown: tarjetas conector de O365**](#tab/connector-md)
+
+Las tarjetas de conector admiten el formato HTML y Markdown limitados. La compatibilidad con HTML se describe en la última sección.
+
+| Style | Ejemplo | Markdown |
+| --- | --- | --- |
+| bold | **text** | `**text**` |
+| italic | *text* | `*text*` |
+| encabezado (niveles 1&ndash;3) | **Text** | `### Text`|
+| Aplique | ~~text~~ | `~~text~~` |
+| lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| texto con formato previo | `text` | ``preformatted text`` |
+| blockquote | Texto de >blockquote | `>blockquote text` |
+| hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| vínculo de imagen |![Pato en una Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+
+En las tarjetas conector, las líneas nuevas se `\n\n`representan para, pero `\n` no `\r`para o.
+
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Diferencias de escritorio y móviles para tarjetas de conector con Markdown
+
+En el escritorio, el formato de Markdown para tarjetas de conectores tiene el siguiente aspecto:
+
+![Formato de Markdown para tarjetas de conector en el cliente de escritorio](/assets/images/cards/connector-desktop-markdown-combined.png)
+
+En iOS, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:
+
+![Formato de Markdown para tarjetas conector en el cliente iOS](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+
+Problemas:
+
+* El cliente iOS para Teams no representa imágenes en línea de Markdown o HTML en tarjetas conectoras.
+* Blockquotes se representan como con sangría, pero sin fondo gris.
+
+En Android, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:
+
+![Formato de Markdown para tarjetas conector en el cliente de Android](/assets/images/cards/connector-android-markdown-combined.png)
+
+### <a name="formatting-example-for-markdown-connector-cards"></a>Ejemplo de formato para tarjetas conectoras de Markdown
+
+``` json
+{
+  "contentType": "application/vnd.microsoft.teams.card.o365connector",
+  "content": {
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "summary": "Summary",
+    "title": "Connector Card Markdown formatting",
+    "sections": [
+        {
+            "text": "This is some **bold** text"
+        },
+        {
+            "text": "This is some _italic_ text"
+        },
+        {
+            "text": "# Header 1\r## Header 2\r### Header 3"
+        },
+        {
+            "text": "- Bullet \r- List \r"
+        },
+        {
+            "text": "1. Numbered\r1. List \r"
+        },
+        {
+            "text": "Link: [Bing](https://www.bing.com)"
+        },
+        {
+            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+        },
+        {
+            "text": "`preformatted text`"
+        },
+        {
+            "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
+        },
+        {
+            "text": ">This is a blockquote"
+        }
+     ]
+  }
+}
+
+```
+
+---
+
+## <a name="formatting-cards-with-html"></a>Tarjetas de formato con HTML
+
+# <a name="html-formatting-o365-connector-cards"></a>[**Formato HTML: tarjetas conector de O365**](#tab/connector-html)
 
 Las tarjetas de conector admiten el formato HTML y Markdown limitados. Markdown se describe en la siguiente sección.
 
@@ -176,11 +268,11 @@ En las tarjetas conector, las líneas nuevas se representan en HTML `<p>` con la
 
 En el escritorio, el formato HTML de las tarjetas conector tiene el siguiente aspecto:
 
-![Formato HTML para tarjetas conector en el cliente de escritorio](~/assets/images/cards/Connector-desktop-html-combined.png)
+![Formato HTML para tarjetas conector en el cliente de escritorio](/assets/images/cards/Connector-desktop-html-combined.png)
 
 En iOS, el formato HTML tiene el siguiente aspecto:
 
-![Formato HTML para tarjetas conector en el cliente iOS](~/assets/images/cards/connector-iphone-html-combined-80.png)
+![Formato HTML para tarjetas conector en el cliente iOS](/assets/images/cards/connector-iphone-html-combined-80.png)
 
 Problemas:
 
@@ -189,7 +281,7 @@ Problemas:
 
 En Android, el formato HTML es similar a este:
 
-![Formato HTML para tarjetas conector en el cliente de Android](~/assets/images/cards/connector-android-html-combined.png)
+![Formato HTML para tarjetas conector en el cliente de Android](/assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>Ejemplo de formato para tarjetas conector de HTML
 
@@ -241,94 +333,9 @@ En Android, el formato HTML es similar a este:
 
 ```
 
-## <a name="markdown-formatting-for-connector-cards"></a>Formato de Markdown para tarjetas conectoras
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**Formato HTML: fichas de héroe y miniaturas**](#tab/simple-html)
 
-Las tarjetas de conector admiten el formato HTML y Markdown limitados. El código HTML se describe en la última sección.
-
-| Style | Ejemplo | Markdown |
-| --- | --- | --- |
-| bold | **text** | `**text**` |
-| italic | *text* | `*text*` |
-| encabezado (niveles 1&ndash;3) | **Text** | `### Text`|
-| Aplique | ~~text~~ | `~~text~~` |
-| lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| texto con formato previo | `text` | ``preformatted text`` |
-| blockquote | Texto de >blockquote | `>blockquote text` |
-| hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| vínculo de imagen |![Pato en una Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
-
-En las tarjetas conector, las líneas nuevas se `\n\n`representan para, pero `\n` no `\r`para o.
-
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Diferencias de escritorio y móviles para tarjetas de conector con Markdown
-
-En el escritorio, el formato de Markdown para tarjetas de conectores tiene el siguiente aspecto:
-
-![Formato HTML para tarjetas conector en el cliente de escritorio](~/assets/images/cards/connector-desktop-markdown-combined.png)
-
-En iOS, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:
-
-![Formato HTML para tarjetas conector en el cliente iOS](~/assets/images/cards/connector-iphone-markdown-combined-80.png)
-
-Problemas:
-
-* El cliente iOS para Teams no representa imágenes en línea de Markdown o HTML en tarjetas conectoras.
-* Blockquotes se representan como con sangría, pero sin fondo gris.
-
-En Android, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:
-
-![Formato HTML para tarjetas conector en el cliente de Android](~/assets/images/cards/connector-android-markdown-combined.png)
-
-### <a name="formatting-example-for-markdown-connector-cards"></a>Ejemplo de formato para tarjetas conectoras de Markdown
-
-``` json
-{
-  "contentType": "application/vnd.microsoft.teams.card.o365connector",
-  "content": {
-    "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
-    "summary": "Summary",
-    "title": "Connector Card Markdown formatting",
-    "sections": [
-        {
-            "text": "This is some **bold** text"
-        },
-        {
-            "text": "This is some _italic_ text"
-        },
-        {
-            "text": "# Header 1\r## Header 2\r### Header 3"
-        },
-        {
-            "text": "- Bullet \r- List \r"
-        },
-        {
-            "text": "1. Numbered\r1. List \r"
-        },
-        {
-            "text": "Link: [Bing](https://www.bing.com)"
-        },
-        {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
-        },
-        {
-            "text": "`preformatted text`"
-        },
-        {
-            "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
-        },
-        {
-            "text": ">This is a blockquote"
-        }
-     ]
-  }
-}
-
-```
-
-## <a name="html-formatting-for-simple-cards"></a>Formato HTML para tarjetas sencillas
-
-Estas etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la tarjeta en miniatura. No se admite Markdown.
+Las etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la tarjeta en miniatura. No se admite Markdown.
 
 | Style | Ejemplo | HTML |
 | --- | --- | --- |
@@ -349,11 +356,11 @@ Debido a las diferencias de resolución entre la plataforma de escritorio y la p
 
 En el escritorio, el formato HTML tiene un aspecto similar a este:
 
-![Formato HTML en el cliente de escritorio](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![Formato HTML en el cliente de escritorio](/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 En iOS, el formato HTML tiene un aspecto similar a este:
 
-![Formato HTML en el cliente de iOS](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![Formato HTML en el cliente de iOS](/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Problemas:
 
@@ -361,7 +368,7 @@ Problemas:
 
 En Android, el formato HTML tiene un aspecto similar a este:
 
-![Formato HTML en el cliente de Android](~/assets/images/cards/card-formatting-xml-android-60.png)
+![Formato HTML en el cliente de Android](/assets/images/cards/card-formatting-xml-android-60.png)
 
 El formato de caracteres, como negrita y cursiva, se muestra correctamente en Android.
 
@@ -370,3 +377,5 @@ El formato de caracteres, como negrita y cursiva, se muestra correctamente en An
 Estas capturas de pantallas se crearon con Teams AppStudio, donde la propiedad Text de una tarjeta Hero se estableció en la siguiente cadena. Puede probar el formato en sus propias tarjetas modificando este código.
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+
+---
