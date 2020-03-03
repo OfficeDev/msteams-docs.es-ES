@@ -2,12 +2,12 @@
 title: Limitación de velocidad
 description: Limitación de velocidad y procedimientos recomendados en Microsoft Teams
 keywords: limitación de velocidad de bots de equipo
-ms.openlocfilehash: 4e9efab539ec7817d259fd6c149c438ba02e3ce5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
+ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675836"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42371768"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimizar el bot: límites de velocidad y procedimientos recomendados en Microsoft Teams
 
@@ -46,26 +46,29 @@ El uso de un punto de interrupción exponencial con una vibración aleatoria es 
 
 A continuación se muestra un ejemplo que usa el punto de interrupción exponencial mediante el bloque de aplicaciones transitorio de control de errores.
 
-Puede usar el multiplicador y los reintentos mediante [bibliotecas de control de errores transitorias](/previous-versions/msp-n-p/hh680901(v=pandp.50)). Para obtener instrucciones sobre cómo obtener e instalar el paquete NuGet, vea [Agregar el bloque de aplicación de control de errores transitorio a la solución](/previous-versions/msp-n-p/hh680891(v=pandp.50)) .
+Puede realizar el multiplicador y los reintentos mediante el [control de errores transitorio](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obtener instrucciones sobre cómo obtener e instalar el paquete NuGet, vea el tema sobre cómo [Agregar el bloque de aplicaciones de control de errores transitorio a la solución](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). *Consulte también* [control de errores transitorios](/azure/architecture/best-practices/transient-faults).
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
-{
-    // List of error codes to retry on
-    List<int> transientErrorStatusCodes = new List<int>() { 429 };
-
-    public bool IsTransient(Exception ex)
     {
-        var httpOperationException = ex as HttpOperationException;
-        if (httpOperationException != null)
-        {
-            return httpOperationException.Response != null &&
-                    transientErrorStatusCodes.Contains((int) httpOperationException.Response.StatusCode);
-        }
+        // List of error codes to retry on
+        List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        return false;
+        public bool IsTransient(Exception ex)
+        {
+            if (ex.Message.Contains("429"))
+                return true;
+
+            var httpOperationException = ex as HttpOperationException;
+            if (httpOperationException != null)
+            {
+                return httpOperationException.Response != null &&
+                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
+            }
+
+            return false;
+        }
     }
-}
 ```
 
 ## <a name="example-backoff"></a>Ejemplo: multiplicador
@@ -83,10 +86,10 @@ var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSec
 
 
 // Define the Retry Policy
-var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), fixedIntervalRetryStrategy);
+var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), exponentialBackoffRetryStrategy);
 
 //Execute any bot sdk action
-await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
+await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
 También puede realizar una `System.Action` ejecución de método con la Directiva de reintentos descrita anteriormente. La biblioteca a la que se hace referencia también permite especificar un intervalo fijo o un mecanismo de interrupción lineal.
@@ -102,52 +105,48 @@ Para obtener más información, consulte esta práctica guía sobre diversos pat
 
 Este límite controla el tráfico que un bot puede generar en una sola conversación. Una conversación aquí es 1:1 entre el bot y el usuario, un grupo de chat o un canal en un equipo.
 
-| **Escenario** | **Tiempo: período (seg.)** | **Operaciones máximas permitidas** |
+| **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- | --- |
-| NewMessage | 1  | 7  |
-| NewMessage | 2  | 8  |
-| NewMessage | semestre | 60 |
-| NewMessage | 3600 | 1800 |
-| UpdateMessage | 1  | 7  |
-| UpdateMessage | 2  | 8  |
-| UpdateMessage | semestre | 60 |
-| UpdateMessage | 3600 | 1800 |
-| NewThread | 1  | 7  |
-| NewThread | 2  | 8  |
-| NewThread | semestre | 60 |
-| NewThread | 3600 | 1800 |
-| GetThreadMembers | 1  | 14  |
-| GetThreadMembers | 2  | 16  |
-| GetThreadMembers | semestre | 120 |
-| GetThreadMembers | 3600 | 3600 |
-| GetThread | 1  | 14  |
-| GetThread | 2  | 16  |
-| GetThread | semestre | 120 |
-| GetThread | 3600 | 3600 |
+|| 1 | 0,7 |
+| Enviar a conversación | segundo | 8,5 |
+| Enviar a conversación | semestre | 60 |
+| Enviar a conversación | 3600 | 1800 |
+| Crear conversación | 1 | 0,7 |
+| Crear conversación | segundo | 8,5 |
+| Crear conversación | semestre | 60 |
+| Crear conversación | 3600 | 1800 |
+| Obtener miembros de la conversación| 1 | 14  |
+| Obtener miembros de la conversación| segundo | 16  |
+| Obtener miembros de la conversación| semestre | 120 |
+| Obtener miembros de la conversación| 3600 | 3600 |
+| Obtener conversaciones | 1 | 14  |
+| Obtener conversaciones | segundo | 16  |
+| Obtener conversaciones | semestre | 120 |
+| Obtener conversaciones | 3600 | 3600 |
 
 ## <a name="per-thread-limit-for-all-bots"></a>Límite por subproceso para todos los bots
 
 Este límite controla el tráfico que pueden generar todos los bots a través de una sola conversación. Una conversación aquí es 1:1 entre el bot y el usuario, un grupo de chat o un canal en un equipo.
 
-| **Escenario** | **Tiempo: período (seg.)** | **Operaciones máximas permitidas** |
+| **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- | --- |
-| NewMessage | 1  | 14  |
-| NewMessage | 2  | 16  |
-| UpdateMessage | 1  | 14  |
-| UpdateMessage | 2  | 16  |
-| NewThread | 1  | 14  |
-| NewThread | 2  | 16  |
-| GetThreadMembers | 1  | 28 |
-| GetThreadMembers | 2  | 32 |
-| GetThread | 1  | 28 |
-| GetThread | 2  | 32 |
+| Enviar a conversación | 1 | 14  |
+| Enviar a conversación | segundo | 16  |
+| Crear conversación | 1 | 14  |
+| Crear conversación | segundo | 16  |
+| CreateConversation| 1 | 14  |
+| CreateConversation| segundo | 16  |
+| Obtener miembros de la conversación| 1 | 28 |
+| Obtener miembros de la conversación| segundo | 32 |
+| Obtener conversaciones | 1 | 28 |
+| Obtener conversaciones | segundo | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>Bot por límite de centro de datos
 
 Este límite controla el tráfico que un bot puede generar a través de todos los subprocesos de un centro de datos (en varios inquilinos).
 
-|**Tiempo: período (seg.)** | **Operaciones máximas permitidas** |
+|**Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- |
-| 1  | 20 |
+| 1 | 20 |
 | 1800 | 8000 |
 | 3600 | 15000 |

@@ -2,19 +2,19 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de las fichas de marco de trabajo
-ms.openlocfilehash: adf86678a42e2267af00734e1ef85efced882488
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675689"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365265"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
 > [!Important]
 > **Pestañas en clientes móviles**
 >
-> Siga las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas. Si su pestaña usa autenticación, debe actualizar el SDK de JavaScript de Teams a la versión 1.4.1 o posterior, o se producirá un error de autenticación.
+> Siga las [instrucciones para las pestañas de dispositivos móviles](./tabs-mobile.md) al crear las pestañas. Si su pestaña usa autenticación, debe actualizar el SDK de JavaScript de Teams a la versión 1.4.1 o posterior, o se producirá un error de autenticación.
 >
 > **Pestañas personales (estáticas) en dispositivos móviles:**
 >
@@ -40,9 +40,6 @@ Las pestañas funcionan mejor cuando se crean para satisfacer una necesidad espe
 
 Evite crear varios paneles en una pestaña, agregar capas de navegación o requerir que los usuarios se desplacen tanto vertical como horizontalmente en una pestaña. Es decir, intente no tener pestañas en la pestaña.
 
-> [!TIP]
-> Evite crear varios paneles en una pestaña, agregar capas de navegación o requerir que los usuarios se desplacen tanto vertical como horizontalmente en una pestaña.
-
 ### <a name="integration"></a>Integración
 
 Obtenga información sobre cómo notificar a los usuarios la actividad de pestañas mediante el registro de tarjetas en una conversación, por ejemplo.
@@ -55,35 +52,53 @@ Buscar una forma de facilitar la conversación alrededor de una pestaña. Esto g
 
 Asegúrese de que está concediendo acceso a las personas adecuadas en el momento adecuado. Mantener simple el proceso de inicio de sesión evitará la creación de obstáculos a la contribución y la colaboración.
 
+### <a name="responsiveness-to-window-sizing"></a>Capacidad de respuesta al tamaño de la ventana
+
+Los equipos se pueden usar en tamaños de ventana tan pequeños como 720px, por lo que es importante asegurarse de que una pestaña se puede usar en una ventana pequeña tan importante como el uso de resoluciones muy altas.
+
+### <a name="flat-navigation"></a>Navegación plana
+
+Se pide a los desarrolladores que no agreguen todo su portal a una pestaña. mantener la navegación relativamente plana ayuda a mantener un modelo de conversación más sencillo. En otras palabras, la conversación trata sobre una lista de cosas, como los elementos de trabajo clasificados o de un solo elemento, como una especificación.
+
+Hay desafíos de navegación inherentes a la jerarquía de navegación profunda en conversaciones encadenadas. Para obtener la mejor experiencia del usuario, la navegación de la pestaña debe mantenerse al mínimo y diseñarse de la siguiente manera:
+
+> [!div class="checklist"]
+>
+> * **Abre un módulo de tareas como una entidad o elemento de trabajo individual**. Esto excluye completamente el chat y es la mejor opción para mantener el chat específicamente sobre la ficha y no sobre las subentidades o la experiencia de edición.
+>* **Abre un pseudo cuadro de diálogo en un iframe**. Si se usa con un fondo con pantalla, se recomienda usar el color más claro en lugar del oscuro. La `app-gray-10 at 30%` transparencia funciona bien.
+>* **Abre una página del explorador**.
+
 ### <a name="personality"></a>Personalidad
 
-Tu lienzo de pestañas ofrece una buena oportunidad para personalizar tu experiencia. Incorpore sus propios logotipos, colores y diseños para comunicar la personalidad.
+El lienzo de pestañas ofrece una gran oportunidad para personalizar su experiencia. Su logotipo es una parte importante de su identidad y su conexión con los usuarios de, por lo que debe asegurarse de incluirlo:
 
-Su logotipo es una parte importante de su identidad y una conexión con los usuarios. Por lo tanto, asegúrese de incluirla.
+> [!div class="checklist"]
+>
+>* Poner el logotipo en la esquina izquierda o derecha o a lo largo del borde inferior
+> * Mantener el logotipo en pequeña y discreta
 
-* Poner el logotipo en la esquina izquierda o derecha o a lo largo del borde inferior
-* Mantener el logotipo en pequeña y discreta
+La incorporación de sus propios colores y diseños Twill también ayuda para comunicar la personalidad.
 
 > [!TIP]
-> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams.
+> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte*, por ejemplo, [colores de Microsoft Teams] (/Concepts/Design/Components/Typography.MD
 
 ---
 
 ## <a name="tab-layouts"></a>Diseños de pestañas
 
-[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
 
 ---
 
 ## <a name="types-of-tabs"></a>Tipos de pestañas
 
-[!include[Tab types](~/includes/design/tab-types.html)]
+[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
 
 ---
 
 ## <a name="configuration-page-height"></a>Alto de página de configuración
 
->[!NOTE]
+>[!IMPORTANT]
 >En septiembre de 2018, se incrementó el alto de la [Página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md) de pestañas mientras el ancho permaneció sin cambios. Si la aplicación está diseñada para el tamaño anterior, la página de configuración de pestañas tendrá una gran cantidad de espacio en blanco vertical. Las aplicaciones de la tienda heredadas exentas de este cambio tendrán que ponerse en contacto con Microsoft después de la actualización para acomodar las nuevas dimensiones.
 
 Las dimensiones de la página de configuración de pestañas:
@@ -116,4 +131,15 @@ Siempre que sea posible, las tarjetas y los bots deben tener un vínculo profund
 
 ### <a name="naming"></a>Poner
 
-En muchos casos, el nombre de la aplicación puede crear un nombre de pestaña excelente. Pero considere la posibilidad de asignar un nombre a las pestañas según la funcionalidad que proporcionan.
+En muchos casos, el nombre de la aplicación tomará un nombre de pestaña excelente. Pero, también considere la posibilidad de asignar un nombre a las pestañas según la funcionalidad que proporcionan.
+
+## <a name="notifications-for-tabs"></a>Notificaciones para pestañas
+
+Hay dos modos de notificación para cambios de contenido de pestañas:
+
+> [!div class="checklist"]
+>
+> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **Usar un bot**. Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
+
+  El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando hay usuarios `@mention` específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.

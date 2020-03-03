@@ -3,18 +3,18 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279784"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365251"
 ---
 # <a name="format-cards-in-teams"></a>Formato de tarjetas en Microsoft Teams
 
 Puede Agregar formato de texto enriquecido a las tarjetas con Markdown o HTML, según el tipo de tarjeta.
 
-Las tarjetas admiten el formato solo en la propiedad de texto, no en las propiedades de título o de subtítulo. El formato se puede especificar mediante un subconjunto de formato XML (HTML) o Markdown, según el tipo de tarjeta. Para las actuales tarjetas adaptables del desarrollo en el futuro de AMD se recomienda usar el formato Markdown.
+Las tarjetas admiten el formato solo en la propiedad de texto, no en las propiedades de título o de subtítulo. El formato se puede especificar mediante un subconjunto de formato XML (HTML) o Markdown, según el tipo de tarjeta. Para las tarjetas adaptables actuales y futuras del desarrollo, se recomienda usar el formato Markdown.
 
 La compatibilidad de formato es distinta entre los distintos tipos de tarjetas y la representación de la tarjeta puede variar ligeramente entre el escritorio y los clientes de los equipos móviles, así como los equipos en el explorador de escritorio.
 
