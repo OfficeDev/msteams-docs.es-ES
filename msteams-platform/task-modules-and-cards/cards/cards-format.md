@@ -3,79 +3,79 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279784"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365251"
 ---
-# <a name="format-cards-in-teams"></a><span data-ttu-id="fbf6a-104">Formato de tarjetas en Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="fbf6a-104">Format cards in Teams</span></span>
+# <a name="format-cards-in-teams"></a><span data-ttu-id="a9d12-104">Formato de tarjetas en Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="a9d12-104">Format cards in Teams</span></span>
 
-<span data-ttu-id="fbf6a-105">Puede Agregar formato de texto enriquecido a las tarjetas con Markdown o HTML, según el tipo de tarjeta.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-105">You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.</span></span>
+<span data-ttu-id="a9d12-105">Puede Agregar formato de texto enriquecido a las tarjetas con Markdown o HTML, según el tipo de tarjeta.</span><span class="sxs-lookup"><span data-stu-id="a9d12-105">You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.</span></span>
 
-<span data-ttu-id="fbf6a-106">Las tarjetas admiten el formato solo en la propiedad de texto, no en las propiedades de título o de subtítulo.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-106">Cards support formatting in the text property only, not in the title or subtitle properties.</span></span> <span data-ttu-id="fbf6a-107">El formato se puede especificar mediante un subconjunto de formato XML (HTML) o Markdown, según el tipo de tarjeta.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-107">Formatting can be specified using a subset of XML (HTML) formatting, or Markdown depending on card type.</span></span> <span data-ttu-id="fbf6a-108">Para las actuales tarjetas adaptables del desarrollo en el futuro de AMD se recomienda usar el formato Markdown.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-108">For current amd future development Adaptive cards using Markdown formatting is recommended.</span></span>
+<span data-ttu-id="a9d12-106">Las tarjetas admiten el formato solo en la propiedad de texto, no en las propiedades de título o de subtítulo.</span><span class="sxs-lookup"><span data-stu-id="a9d12-106">Cards support formatting in the text property only, not in the title or subtitle properties.</span></span> <span data-ttu-id="a9d12-107">El formato se puede especificar mediante un subconjunto de formato XML (HTML) o Markdown, según el tipo de tarjeta.</span><span class="sxs-lookup"><span data-stu-id="a9d12-107">Formatting can be specified using a subset of XML (HTML) formatting, or Markdown depending on card type.</span></span> <span data-ttu-id="a9d12-108">Para las tarjetas adaptables actuales y futuras del desarrollo, se recomienda usar el formato Markdown.</span><span class="sxs-lookup"><span data-stu-id="a9d12-108">For current and future development Adaptive cards using Markdown formatting is recommended.</span></span>
 
-<span data-ttu-id="fbf6a-109">La compatibilidad de formato es distinta entre los distintos tipos de tarjetas y la representación de la tarjeta puede variar ligeramente entre el escritorio y los clientes de los equipos móviles, así como los equipos en el explorador de escritorio.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-109">Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.</span></span>
+<span data-ttu-id="a9d12-109">La compatibilidad de formato es distinta entre los distintos tipos de tarjetas y la representación de la tarjeta puede variar ligeramente entre el escritorio y los clientes de los equipos móviles, así como los equipos en el explorador de escritorio.</span><span class="sxs-lookup"><span data-stu-id="a9d12-109">Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.</span></span>
 
-<span data-ttu-id="fbf6a-110">Puede incluir una imagen incorporada en cualquier tarjeta de Teams.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-110">You can include an inline image with any Teams card.</span></span> <span data-ttu-id="fbf6a-111">Imágenes a las que `.png`se les `.jpg`da formato `.gif` , o archivos y no deben exceder de 1024 × 1024 PX o 1 MB.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-111">Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB.</span></span> <span data-ttu-id="fbf6a-112">GIF animado no es compatible oficialmente.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-112">Animated GIF is not officially supported.</span></span> <span data-ttu-id="fbf6a-113">*Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)</span><span class="sxs-lookup"><span data-stu-id="fbf6a-113">*See* [Cards reference](./cards-reference.md#inline-card-images)</span></span>
+<span data-ttu-id="a9d12-110">Puede incluir una imagen incorporada en cualquier tarjeta de Teams.</span><span class="sxs-lookup"><span data-stu-id="a9d12-110">You can include an inline image with any Teams card.</span></span> <span data-ttu-id="a9d12-111">Imágenes a las que `.png`se les `.jpg`da formato `.gif` , o archivos y no deben exceder de 1024 × 1024 PX o 1 MB.</span><span class="sxs-lookup"><span data-stu-id="a9d12-111">Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB.</span></span> <span data-ttu-id="a9d12-112">GIF animado no es compatible oficialmente.</span><span class="sxs-lookup"><span data-stu-id="a9d12-112">Animated GIF is not officially supported.</span></span> <span data-ttu-id="a9d12-113">*Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)</span><span class="sxs-lookup"><span data-stu-id="a9d12-113">*See* [Cards reference](./cards-reference.md#inline-card-images)</span></span>
 
-## <a name="formatting-cards-with-markdown"></a><span data-ttu-id="fbf6a-114">Tarjetas de formato con Markdown</span><span class="sxs-lookup"><span data-stu-id="fbf6a-114">Formatting cards with Markdown</span></span>
+## <a name="formatting-cards-with-markdown"></a><span data-ttu-id="a9d12-114">Tarjetas de formato con Markdown</span><span class="sxs-lookup"><span data-stu-id="a9d12-114">Formatting cards with Markdown</span></span>
 
-<span data-ttu-id="fbf6a-115">Hay dos tipos de tarjetas que admiten Markdown en Microsoft Teams:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-115">There are two card types that support Markdown in Teams:</span></span>
+<span data-ttu-id="a9d12-115">Hay dos tipos de tarjetas que admiten Markdown en Microsoft Teams:</span><span class="sxs-lookup"><span data-stu-id="a9d12-115">There are two card types that support Markdown in Teams:</span></span>
 
 > [!div class="checklist"]
-> * <span data-ttu-id="fbf6a-116">**Tarjetas adaptables**: Markdown se admite en el `Textblock` campo tarjeta adaptable, `Fact.Title` así `Fact.Value`como en y.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-116">**Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`.</span></span> <span data-ttu-id="fbf6a-117">No se admite HTML en tarjetas adaptables.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-117">HTML is not supported in adaptive cards.</span></span>
-> * <span data-ttu-id="fbf6a-118">**Tarjetas de conector de O365**: MARKDOWN y HTML limitado son compatibles con las tarjetas de conector de Office 365 en los campos de texto.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-118">**O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.</span></span>
+> * <span data-ttu-id="a9d12-116">**Tarjetas adaptables**: Markdown se admite en el `Textblock` campo tarjeta adaptable, `Fact.Title` así `Fact.Value`como en y.</span><span class="sxs-lookup"><span data-stu-id="a9d12-116">**Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`.</span></span> <span data-ttu-id="a9d12-117">No se admite HTML en tarjetas adaptables.</span><span class="sxs-lookup"><span data-stu-id="a9d12-117">HTML is not supported in adaptive cards.</span></span>
+> * <span data-ttu-id="a9d12-118">**Tarjetas de conector de O365**: MARKDOWN y HTML limitado son compatibles con las tarjetas de conector de Office 365 en los campos de texto.</span><span class="sxs-lookup"><span data-stu-id="a9d12-118">**O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.</span></span>
 
-# <a name="markdown-formatting-adaptive-cards"></a>[<span data-ttu-id="fbf6a-119">**Formato de Markdown: tarjetas adaptables**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-119">**Markdown formatting: Adaptive Cards**</span></span>](#tab/adaptive-md)
+# <a name="markdown-formatting-adaptive-cards"></a>[<span data-ttu-id="a9d12-119">**Formato de Markdown: tarjetas adaptables**</span><span class="sxs-lookup"><span data-stu-id="a9d12-119">**Markdown formatting: Adaptive Cards**</span></span>](#tab/adaptive-md)
 
- <span data-ttu-id="fbf6a-120">Los estilos admitidos `Textblock`para `Fact.Title` y `Fact.Value` son:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-120">The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:</span></span>
+ <span data-ttu-id="a9d12-120">Los estilos admitidos `Textblock`para `Fact.Title` y `Fact.Value` son:</span><span class="sxs-lookup"><span data-stu-id="a9d12-120">The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:</span></span>
 
-| <span data-ttu-id="fbf6a-121">Style</span><span class="sxs-lookup"><span data-stu-id="fbf6a-121">Style</span></span> | <span data-ttu-id="fbf6a-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-122">Example</span></span> | <span data-ttu-id="fbf6a-123">Markdown</span><span class="sxs-lookup"><span data-stu-id="fbf6a-123">Markdown</span></span> |
+| <span data-ttu-id="a9d12-121">Style</span><span class="sxs-lookup"><span data-stu-id="a9d12-121">Style</span></span> | <span data-ttu-id="a9d12-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a9d12-122">Example</span></span> | <span data-ttu-id="a9d12-123">Markdown</span><span class="sxs-lookup"><span data-stu-id="a9d12-123">Markdown</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="fbf6a-124">bold</span><span class="sxs-lookup"><span data-stu-id="fbf6a-124">bold</span></span> | <span data-ttu-id="fbf6a-125">**Bold**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-125">**Bold**</span></span> | ```**Bold**``` |
-| <span data-ttu-id="fbf6a-126">italic</span><span class="sxs-lookup"><span data-stu-id="fbf6a-126">italic</span></span> | <span data-ttu-id="fbf6a-127">_Italic_</span><span class="sxs-lookup"><span data-stu-id="fbf6a-127">_Italic_</span></span> | ```_Italic_``` |
-| <span data-ttu-id="fbf6a-128">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="fbf6a-128">unordered list</span></span> | <ul><li><span data-ttu-id="fbf6a-129">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-129">text</span></span></li><li><span data-ttu-id="fbf6a-130">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-130">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| <span data-ttu-id="fbf6a-131">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="fbf6a-131">ordered list</span></span> | <ol><li><span data-ttu-id="fbf6a-132">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-132">text</span></span></li><li><span data-ttu-id="fbf6a-133">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-133">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| <span data-ttu-id="fbf6a-134">Hyperlinks</span><span class="sxs-lookup"><span data-stu-id="fbf6a-134">Hyperlinks</span></span> |[<span data-ttu-id="fbf6a-135">Bing</span><span class="sxs-lookup"><span data-stu-id="fbf6a-135">Bing</span></span>](https://www.bing.com/)| ```[Title](url)``` |
+| <span data-ttu-id="a9d12-124">bold</span><span class="sxs-lookup"><span data-stu-id="a9d12-124">bold</span></span> | <span data-ttu-id="a9d12-125">**Bold**</span><span class="sxs-lookup"><span data-stu-id="a9d12-125">**Bold**</span></span> | ```**Bold**``` |
+| <span data-ttu-id="a9d12-126">italic</span><span class="sxs-lookup"><span data-stu-id="a9d12-126">italic</span></span> | <span data-ttu-id="a9d12-127">_Italic_</span><span class="sxs-lookup"><span data-stu-id="a9d12-127">_Italic_</span></span> | ```_Italic_``` |
+| <span data-ttu-id="a9d12-128">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="a9d12-128">unordered list</span></span> | <ul><li><span data-ttu-id="a9d12-129">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-129">text</span></span></li><li><span data-ttu-id="a9d12-130">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-130">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| <span data-ttu-id="a9d12-131">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="a9d12-131">ordered list</span></span> | <ol><li><span data-ttu-id="a9d12-132">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-132">text</span></span></li><li><span data-ttu-id="a9d12-133">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-133">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| <span data-ttu-id="a9d12-134">Hyperlinks</span><span class="sxs-lookup"><span data-stu-id="a9d12-134">Hyperlinks</span></span> |[<span data-ttu-id="a9d12-135">Bing</span><span class="sxs-lookup"><span data-stu-id="a9d12-135">Bing</span></span>](https://www.bing.com/)| ```[Title](url)``` |
 
-<span data-ttu-id="fbf6a-136">No se admiten las siguientes etiquetas Markdown:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-136">The following Markdown tags are not supported:</span></span>
+<span data-ttu-id="a9d12-136">No se admiten las siguientes etiquetas Markdown:</span><span class="sxs-lookup"><span data-stu-id="a9d12-136">The following Markdown tags are not supported:</span></span>
 
-* <span data-ttu-id="fbf6a-137">Encabezados</span><span class="sxs-lookup"><span data-stu-id="fbf6a-137">Headers</span></span>
-* <span data-ttu-id="fbf6a-138">Tablas</span><span class="sxs-lookup"><span data-stu-id="fbf6a-138">Tables</span></span>
-* <span data-ttu-id="fbf6a-139">Imágenes</span><span class="sxs-lookup"><span data-stu-id="fbf6a-139">Images</span></span>
-* <span data-ttu-id="fbf6a-140">Texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-140">Preformatted text</span></span>
-* <span data-ttu-id="fbf6a-141">Blockquotes</span><span class="sxs-lookup"><span data-stu-id="fbf6a-141">Blockquotes</span></span>
+* <span data-ttu-id="a9d12-137">Encabezados</span><span class="sxs-lookup"><span data-stu-id="a9d12-137">Headers</span></span>
+* <span data-ttu-id="a9d12-138">Tablas</span><span class="sxs-lookup"><span data-stu-id="a9d12-138">Tables</span></span>
+* <span data-ttu-id="a9d12-139">Imágenes</span><span class="sxs-lookup"><span data-stu-id="a9d12-139">Images</span></span>
+* <span data-ttu-id="a9d12-140">Texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="a9d12-140">Preformatted text</span></span>
+* <span data-ttu-id="a9d12-141">Blockquotes</span><span class="sxs-lookup"><span data-stu-id="a9d12-141">Blockquotes</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="fbf6a-142">Las tarjetas adaptables no admiten el formato HTML.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-142">Adaptive cards do not support any HTML formatting.</span></span>
+> <span data-ttu-id="a9d12-142">Las tarjetas adaptables no admiten el formato HTML.</span><span class="sxs-lookup"><span data-stu-id="a9d12-142">Adaptive cards do not support any HTML formatting.</span></span>
 
-### <a name="newlines-for-adaptive-cards"></a><span data-ttu-id="fbf6a-143">Nuevas líneas para tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="fbf6a-143">Newlines for Adaptive Cards</span></span>
+### <a name="newlines-for-adaptive-cards"></a><span data-ttu-id="a9d12-143">Nuevas líneas para tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="a9d12-143">Newlines for Adaptive Cards</span></span>
 
-<span data-ttu-id="fbf6a-144">En las listas puede usar las `\r` secuencias `\n` de escape o de para las nuevas líneas.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-144">In lists you can use the `\r` or `\n` escape sequences for newlines.</span></span> <span data-ttu-id="fbf6a-145">Usar `\n\n` en una lista hará que se aplique sangría al siguiente elemento de la lista.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-145">Using `\n\n` in a list will cause the next element in the list to be indented.</span></span> <span data-ttu-id="fbf6a-146">Si necesita más líneas en cualquier lugar del TextBlock, `\n\n`use.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-146">If you need newlines elsewhere in the textblock, use `\n\n`.</span></span>
+<span data-ttu-id="a9d12-144">En las listas puede usar las `\r` secuencias `\n` de escape o de para las nuevas líneas.</span><span class="sxs-lookup"><span data-stu-id="a9d12-144">In lists you can use the `\r` or `\n` escape sequences for newlines.</span></span> <span data-ttu-id="a9d12-145">Usar `\n\n` en una lista hará que se aplique sangría al siguiente elemento de la lista.</span><span class="sxs-lookup"><span data-stu-id="a9d12-145">Using `\n\n` in a list will cause the next element in the list to be indented.</span></span> <span data-ttu-id="a9d12-146">Si necesita más líneas en cualquier lugar del TextBlock, `\n\n`use.</span><span class="sxs-lookup"><span data-stu-id="a9d12-146">If you need newlines elsewhere in the textblock, use `\n\n`.</span></span>
 
-### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a><span data-ttu-id="fbf6a-147">Diferencias de escritorio y móviles para tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="fbf6a-147">Mobile and desktop differences for Adaptive Cards</span></span>
+### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a><span data-ttu-id="a9d12-147">Diferencias de escritorio y móviles para tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="a9d12-147">Mobile and desktop differences for Adaptive Cards</span></span>
 
-<span data-ttu-id="fbf6a-148">El formato es ligeramente distinto entre el escritorio y las versiones móviles de Teams.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-148">Formatting is slightly different between the desktop and the mobile versions of Teams.</span></span>
+<span data-ttu-id="a9d12-148">El formato es ligeramente distinto entre el escritorio y las versiones móviles de Teams.</span><span class="sxs-lookup"><span data-stu-id="a9d12-148">Formatting is slightly different between the desktop and the mobile versions of Teams.</span></span>
 
-<span data-ttu-id="fbf6a-149">En el escritorio, el formato de Markdown con tarjeta adaptable aparece como este en los exploradores Web y en la aplicación cliente de Teams:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-149">On the desktop, Adaptive Card Markdown formatting appears like this in both web browsers and in the Teams client application:</span></span>
+<span data-ttu-id="a9d12-149">En el escritorio, el formato de Markdown con tarjeta adaptable aparece como este en los exploradores Web y en la aplicación cliente de Teams:</span><span class="sxs-lookup"><span data-stu-id="a9d12-149">On the desktop, Adaptive Card Markdown formatting appears like this in both web browsers and in the Teams client application:</span></span>
 
 ![Formato Markdown de tarjeta adaptable en el cliente de escritorio](/assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-<span data-ttu-id="fbf6a-151">En iOS, el formato de Markdown con tarjeta adaptable tiene este aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-151">On iOS, Adaptive Card Markdown formatting appears like this:</span></span>
+<span data-ttu-id="a9d12-151">En iOS, el formato de Markdown con tarjeta adaptable tiene este aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-151">On iOS, Adaptive Card Markdown formatting appears like this:</span></span>
 
 ![Formato Markdown de tarjeta adaptable en iOS](/assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-<span data-ttu-id="fbf6a-153">En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-153">On Android, Adaptive Card Markdown formatting appears like this:</span></span>
+<span data-ttu-id="a9d12-153">En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-153">On Android, Adaptive Card Markdown formatting appears like this:</span></span>
 
 ![Formato Markdown de tarjeta adaptable en Android](/assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="more-information-on-adaptive-cards"></a><span data-ttu-id="fbf6a-155">Más información sobre tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="fbf6a-155">More information on Adaptive Cards</span></span>
+### <a name="more-information-on-adaptive-cards"></a><span data-ttu-id="a9d12-155">Más información sobre tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="a9d12-155">More information on Adaptive Cards</span></span>
 
-<span data-ttu-id="fbf6a-156">[Características de texto en tarjetas adaptables](/adaptive-cards/create/textfeatures) La fecha y las características de localización mencionadas en este tema no se admiten en Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-156">[Text features in Adaptive cards](/adaptive-cards/create/textfeatures) The date and localization features mentioned in this topic are not supported in Teams.</span></span>
+<span data-ttu-id="a9d12-156">[Características de texto en tarjetas adaptables](/adaptive-cards/create/textfeatures) La fecha y las características de localización mencionadas en este tema no se admiten en Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="a9d12-156">[Text features in Adaptive cards](/adaptive-cards/create/textfeatures) The date and localization features mentioned in this topic are not supported in Teams.</span></span>
 
-### <a name="formatting-sample-for-adaptive-cards"></a><span data-ttu-id="fbf6a-157">Ejemplo de formato para tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="fbf6a-157">Formatting sample for Adaptive cards</span></span>
+### <a name="formatting-sample-for-adaptive-cards"></a><span data-ttu-id="a9d12-157">Ejemplo de formato para tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="a9d12-157">Formatting sample for Adaptive cards</span></span>
 
 ``` json
 {
@@ -109,23 +109,23 @@ ms.locfileid: "42279784"
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a><span data-ttu-id="fbf6a-158">Mencione la compatibilidad en tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="fbf6a-158">Mention support within Adaptive cards</span></span>
+### <a name="mention-support-within-adaptive-cards"></a><span data-ttu-id="a9d12-158">Mencione la compatibilidad en tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="a9d12-158">Mention support within Adaptive cards</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fbf6a-159">Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .</span><span class="sxs-lookup"><span data-stu-id="fbf6a-159">Mention support in cards is currently supported in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) only.</span></span>
+> <span data-ttu-id="a9d12-159">Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .</span><span class="sxs-lookup"><span data-stu-id="a9d12-159">Mention support in cards is currently supported in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) only.</span></span>
 
-<span data-ttu-id="fbf6a-160">Los bots y las extensiones de mensajería ahora pueden incluir menciones dentro del contenido de la tarjeta en elementos FactSet y bloques de texto.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-160">Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements.</span></span>
+<span data-ttu-id="a9d12-160">Los bots y las extensiones de mensajería ahora pueden incluir menciones dentro del contenido de la tarjeta en elementos FactSet y bloques de texto.</span><span class="sxs-lookup"><span data-stu-id="a9d12-160">Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements.</span></span>
 
-### <a name="constructing-mentions"></a><span data-ttu-id="fbf6a-161">Creación de menciones</span><span class="sxs-lookup"><span data-stu-id="fbf6a-161">Constructing mentions</span></span>
+### <a name="constructing-mentions"></a><span data-ttu-id="a9d12-161">Creación de menciones</span><span class="sxs-lookup"><span data-stu-id="a9d12-161">Constructing mentions</span></span>
 
-<span data-ttu-id="fbf6a-162">Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-162">To include a mention in an Adaptive Card your app needs to include the following elements</span></span>
+<span data-ttu-id="a9d12-162">Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos:</span><span class="sxs-lookup"><span data-stu-id="a9d12-162">To include a mention in an Adaptive Card your app needs to include the following elements</span></span>
 
-* <span data-ttu-id="fbf6a-163">`<at>username</at>`en los elementos de tarjeta adaptable admitidos</span><span class="sxs-lookup"><span data-stu-id="fbf6a-163">`<at>username</at>` in the supported adaptive card elements</span></span>
-* <span data-ttu-id="fbf6a-164">El `mention` objeto dentro de una `msteams` propiedad en el contenido de la tarjeta, que incluye el identificador de usuario de Teams del usuario que se está mencionando</span><span class="sxs-lookup"><span data-stu-id="fbf6a-164">The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned</span></span>
+* <span data-ttu-id="a9d12-163">`<at>username</at>`en los elementos de tarjeta adaptable admitidos</span><span class="sxs-lookup"><span data-stu-id="a9d12-163">`<at>username</at>` in the supported adaptive card elements</span></span>
+* <span data-ttu-id="a9d12-164">El `mention` objeto dentro de una `msteams` propiedad en el contenido de la tarjeta, que incluye el identificador de usuario de Teams del usuario que se está mencionando</span><span class="sxs-lookup"><span data-stu-id="a9d12-164">The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned</span></span>
 
-<span data-ttu-id="fbf6a-165">Tenga en cuenta que las tarjetas con menciones no se admiten en los clientes móviles por el momento.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-165">Note that cards with mentions aren't supported on mobile clients at the moment.</span></span>
+<span data-ttu-id="a9d12-165">Tenga en cuenta que las tarjetas con menciones no se admiten en los clientes móviles por el momento.</span><span class="sxs-lookup"><span data-stu-id="a9d12-165">Note that cards with mentions aren't supported on mobile clients at the moment.</span></span>
 
-### <a name="sample-adaptive-card-with-a-mention"></a><span data-ttu-id="fbf6a-166">Ejemplo de tarjeta adaptable con mención</span><span class="sxs-lookup"><span data-stu-id="fbf6a-166">Sample Adaptive card with a mention</span></span>
+### <a name="sample-adaptive-card-with-a-mention"></a><span data-ttu-id="a9d12-166">Ejemplo de tarjeta adaptable con mención</span><span class="sxs-lookup"><span data-stu-id="a9d12-166">Sample Adaptive card with a mention</span></span>
 
 ``` json
 {
@@ -156,45 +156,45 @@ ms.locfileid: "42279784"
 }
 ```
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[<span data-ttu-id="fbf6a-167">**Formato de Markdown: tarjetas conector de O365**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-167">**Markdown formatting: O365 Connector Cards**</span></span>](#tab/connector-md)
+# <a name="markdown-formatting-o365-connector-cards"></a>[<span data-ttu-id="a9d12-167">**Formato de Markdown: tarjetas conector de O365**</span><span class="sxs-lookup"><span data-stu-id="a9d12-167">**Markdown formatting: O365 Connector Cards**</span></span>](#tab/connector-md)
 
-<span data-ttu-id="fbf6a-168">Las tarjetas de conector admiten el formato HTML y Markdown limitados.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-168">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="fbf6a-169">La compatibilidad con HTML se describe en la última sección.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-169">HTML support is described in the last section.</span></span>
+<span data-ttu-id="a9d12-168">Las tarjetas de conector admiten el formato HTML y Markdown limitados.</span><span class="sxs-lookup"><span data-stu-id="a9d12-168">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="a9d12-169">La compatibilidad con HTML se describe en la última sección.</span><span class="sxs-lookup"><span data-stu-id="a9d12-169">HTML support is described in the last section.</span></span>
 
-| <span data-ttu-id="fbf6a-170">Style</span><span class="sxs-lookup"><span data-stu-id="fbf6a-170">Style</span></span> | <span data-ttu-id="fbf6a-171">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-171">Example</span></span> | <span data-ttu-id="fbf6a-172">Markdown</span><span class="sxs-lookup"><span data-stu-id="fbf6a-172">Markdown</span></span> |
+| <span data-ttu-id="a9d12-170">Style</span><span class="sxs-lookup"><span data-stu-id="a9d12-170">Style</span></span> | <span data-ttu-id="a9d12-171">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a9d12-171">Example</span></span> | <span data-ttu-id="a9d12-172">Markdown</span><span class="sxs-lookup"><span data-stu-id="a9d12-172">Markdown</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="fbf6a-173">bold</span><span class="sxs-lookup"><span data-stu-id="fbf6a-173">bold</span></span> | <span data-ttu-id="fbf6a-174">**text**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-174">**text**</span></span> | `**text**` |
-| <span data-ttu-id="fbf6a-175">italic</span><span class="sxs-lookup"><span data-stu-id="fbf6a-175">italic</span></span> | <span data-ttu-id="fbf6a-176">*text*</span><span class="sxs-lookup"><span data-stu-id="fbf6a-176">*text*</span></span> | `*text*` |
-| <span data-ttu-id="fbf6a-177">encabezado (niveles 1&ndash;3)</span><span class="sxs-lookup"><span data-stu-id="fbf6a-177">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="fbf6a-178">**Text**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-178">**Text**</span></span> | `### Text`|
-| <span data-ttu-id="fbf6a-179">Aplique</span><span class="sxs-lookup"><span data-stu-id="fbf6a-179">strikethrough</span></span> | <span data-ttu-id="fbf6a-180">~~text~~</span><span class="sxs-lookup"><span data-stu-id="fbf6a-180">~~text~~</span></span> | `~~text~~` |
-| <span data-ttu-id="fbf6a-181">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="fbf6a-181">unordered list</span></span> | <ul><li><span data-ttu-id="fbf6a-182">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-182">text</span></span></li><li><span data-ttu-id="fbf6a-183">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-183">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| <span data-ttu-id="fbf6a-184">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="fbf6a-184">ordered list</span></span> | <ol><li><span data-ttu-id="fbf6a-185">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-185">text</span></span></li><li><span data-ttu-id="fbf6a-186">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-186">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| <span data-ttu-id="fbf6a-187">texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-187">preformatted text</span></span> | `text` | ``preformatted text`` |
-| <span data-ttu-id="fbf6a-188">blockquote</span><span class="sxs-lookup"><span data-stu-id="fbf6a-188">blockquote</span></span> | <span data-ttu-id="fbf6a-189">Texto de >blockquote</span><span class="sxs-lookup"><span data-stu-id="fbf6a-189">>blockquote text</span></span> | `>blockquote text` |
-| <span data-ttu-id="fbf6a-190">hipervínculo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-190">hyperlink</span></span> | [<span data-ttu-id="fbf6a-191">Bing</span><span class="sxs-lookup"><span data-stu-id="fbf6a-191">Bing</span></span>](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| <span data-ttu-id="fbf6a-192">vínculo de imagen</span><span class="sxs-lookup"><span data-stu-id="fbf6a-192">image link</span></span> |![Pato en una Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| <span data-ttu-id="a9d12-173">bold</span><span class="sxs-lookup"><span data-stu-id="a9d12-173">bold</span></span> | <span data-ttu-id="a9d12-174">**text**</span><span class="sxs-lookup"><span data-stu-id="a9d12-174">**text**</span></span> | `**text**` |
+| <span data-ttu-id="a9d12-175">italic</span><span class="sxs-lookup"><span data-stu-id="a9d12-175">italic</span></span> | <span data-ttu-id="a9d12-176">*text*</span><span class="sxs-lookup"><span data-stu-id="a9d12-176">*text*</span></span> | `*text*` |
+| <span data-ttu-id="a9d12-177">encabezado (niveles 1&ndash;3)</span><span class="sxs-lookup"><span data-stu-id="a9d12-177">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="a9d12-178">**Text**</span><span class="sxs-lookup"><span data-stu-id="a9d12-178">**Text**</span></span> | `### Text`|
+| <span data-ttu-id="a9d12-179">Aplique</span><span class="sxs-lookup"><span data-stu-id="a9d12-179">strikethrough</span></span> | <span data-ttu-id="a9d12-180">~~text~~</span><span class="sxs-lookup"><span data-stu-id="a9d12-180">~~text~~</span></span> | `~~text~~` |
+| <span data-ttu-id="a9d12-181">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="a9d12-181">unordered list</span></span> | <ul><li><span data-ttu-id="a9d12-182">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-182">text</span></span></li><li><span data-ttu-id="a9d12-183">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-183">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| <span data-ttu-id="a9d12-184">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="a9d12-184">ordered list</span></span> | <ol><li><span data-ttu-id="a9d12-185">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-185">text</span></span></li><li><span data-ttu-id="a9d12-186">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-186">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| <span data-ttu-id="a9d12-187">texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="a9d12-187">preformatted text</span></span> | `text` | ``preformatted text`` |
+| <span data-ttu-id="a9d12-188">blockquote</span><span class="sxs-lookup"><span data-stu-id="a9d12-188">blockquote</span></span> | <span data-ttu-id="a9d12-189">Texto de >blockquote</span><span class="sxs-lookup"><span data-stu-id="a9d12-189">>blockquote text</span></span> | `>blockquote text` |
+| <span data-ttu-id="a9d12-190">hipervínculo</span><span class="sxs-lookup"><span data-stu-id="a9d12-190">hyperlink</span></span> | [<span data-ttu-id="a9d12-191">Bing</span><span class="sxs-lookup"><span data-stu-id="a9d12-191">Bing</span></span>](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| <span data-ttu-id="a9d12-192">vínculo de imagen</span><span class="sxs-lookup"><span data-stu-id="a9d12-192">image link</span></span> |![Pato en una Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-<span data-ttu-id="fbf6a-194">En las tarjetas conector, las líneas nuevas se `\n\n`representan para, pero `\n` no `\r`para o.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-194">In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.</span></span>
+<span data-ttu-id="a9d12-194">En las tarjetas conector, las líneas nuevas se `\n\n`representan para, pero `\n` no `\r`para o.</span><span class="sxs-lookup"><span data-stu-id="a9d12-194">In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.</span></span>
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a><span data-ttu-id="fbf6a-195">Diferencias de escritorio y móviles para tarjetas de conector con Markdown</span><span class="sxs-lookup"><span data-stu-id="fbf6a-195">Mobile and desktop differences for connector cards using Markdown</span></span>
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a><span data-ttu-id="a9d12-195">Diferencias de escritorio y móviles para tarjetas de conector con Markdown</span><span class="sxs-lookup"><span data-stu-id="a9d12-195">Mobile and desktop differences for connector cards using Markdown</span></span>
 
-<span data-ttu-id="fbf6a-196">En el escritorio, el formato de Markdown para tarjetas de conectores tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-196">On the desktop, Markdown formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="a9d12-196">En el escritorio, el formato de Markdown para tarjetas de conectores tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-196">On the desktop, Markdown formatting for connector cards looks like this:</span></span>
 
 ![Formato de Markdown para tarjetas de conector en el cliente de escritorio](/assets/images/cards/connector-desktop-markdown-combined.png)
 
-<span data-ttu-id="fbf6a-198">En iOS, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-198">On iOS, Markdown formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="a9d12-198">En iOS, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-198">On iOS, Markdown formatting for connector cards looks like this:</span></span>
 
 ![Formato de Markdown para tarjetas conector en el cliente iOS](/assets/images/cards/connector-iphone-markdown-combined-80.png)
 
-<span data-ttu-id="fbf6a-200">Problemas:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-200">Issues:</span></span>
+<span data-ttu-id="a9d12-200">Problemas:</span><span class="sxs-lookup"><span data-stu-id="a9d12-200">Issues:</span></span>
 
-* <span data-ttu-id="fbf6a-201">El cliente iOS para Teams no representa imágenes en línea de Markdown o HTML en tarjetas conectoras.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-201">The iOS client for Teams does not render Markdown or HTML inline images in Connector Cards.</span></span>
-* <span data-ttu-id="fbf6a-202">Blockquotes se representan como con sangría, pero sin fondo gris.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-202">Blockquotes are rendered as indented but without a gray background.</span></span>
+* <span data-ttu-id="a9d12-201">El cliente iOS para Teams no representa imágenes en línea de Markdown o HTML en tarjetas conectoras.</span><span class="sxs-lookup"><span data-stu-id="a9d12-201">The iOS client for Teams does not render Markdown or HTML inline images in Connector Cards.</span></span>
+* <span data-ttu-id="a9d12-202">Blockquotes se representan como con sangría, pero sin fondo gris.</span><span class="sxs-lookup"><span data-stu-id="a9d12-202">Blockquotes are rendered as indented but without a gray background.</span></span>
 
-<span data-ttu-id="fbf6a-203">En Android, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-203">On Android, Markdown formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="a9d12-203">En Android, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-203">On Android, Markdown formatting for connector cards looks like this:</span></span>
 
 ![Formato de Markdown para tarjetas conector en el cliente de Android](/assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a><span data-ttu-id="fbf6a-205">Ejemplo de formato para tarjetas conectoras de Markdown</span><span class="sxs-lookup"><span data-stu-id="fbf6a-205">Formatting example for Markdown Connector Cards</span></span>
+### <a name="formatting-example-for-markdown-connector-cards"></a><span data-ttu-id="a9d12-205">Ejemplo de formato para tarjetas conectoras de Markdown</span><span class="sxs-lookup"><span data-stu-id="a9d12-205">Formatting example for Markdown Connector Cards</span></span>
 
 ``` json
 {
@@ -243,47 +243,47 @@ ms.locfileid: "42279784"
 
 ---
 
-## <a name="formatting-cards-with-html"></a><span data-ttu-id="fbf6a-206">Tarjetas de formato con HTML</span><span class="sxs-lookup"><span data-stu-id="fbf6a-206">Formatting cards with HTML</span></span>
+## <a name="formatting-cards-with-html"></a><span data-ttu-id="a9d12-206">Tarjetas de formato con HTML</span><span class="sxs-lookup"><span data-stu-id="a9d12-206">Formatting cards with HTML</span></span>
 
-# <a name="html-formatting-o365-connector-cards"></a>[<span data-ttu-id="fbf6a-207">**Formato HTML: tarjetas conector de O365**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-207">**HTML formatting: O365 Connector Cards**</span></span>](#tab/connector-html)
+# <a name="html-formatting-o365-connector-cards"></a>[<span data-ttu-id="a9d12-207">**Formato HTML: tarjetas conector de O365**</span><span class="sxs-lookup"><span data-stu-id="a9d12-207">**HTML formatting: O365 Connector Cards**</span></span>](#tab/connector-html)
 
-<span data-ttu-id="fbf6a-208">Las tarjetas de conector admiten el formato HTML y Markdown limitados.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-208">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="fbf6a-209">Markdown se describe en la siguiente sección.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-209">Markdown is described in the next section.</span></span>
+<span data-ttu-id="a9d12-208">Las tarjetas de conector admiten el formato HTML y Markdown limitados.</span><span class="sxs-lookup"><span data-stu-id="a9d12-208">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="a9d12-209">Markdown se describe en la siguiente sección.</span><span class="sxs-lookup"><span data-stu-id="a9d12-209">Markdown is described in the next section.</span></span>
 
-| <span data-ttu-id="fbf6a-210">Style</span><span class="sxs-lookup"><span data-stu-id="fbf6a-210">Style</span></span> | <span data-ttu-id="fbf6a-211">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-211">Example</span></span> | <span data-ttu-id="fbf6a-212">HTML</span><span class="sxs-lookup"><span data-stu-id="fbf6a-212">HTML</span></span> |
+| <span data-ttu-id="a9d12-210">Style</span><span class="sxs-lookup"><span data-stu-id="a9d12-210">Style</span></span> | <span data-ttu-id="a9d12-211">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a9d12-211">Example</span></span> | <span data-ttu-id="a9d12-212">HTML</span><span class="sxs-lookup"><span data-stu-id="a9d12-212">HTML</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="fbf6a-213">bold</span><span class="sxs-lookup"><span data-stu-id="fbf6a-213">bold</span></span> | <span data-ttu-id="fbf6a-214">**text**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-214">**text**</span></span> | `<strong>text</strong>` |
-| <span data-ttu-id="fbf6a-215">italic</span><span class="sxs-lookup"><span data-stu-id="fbf6a-215">italic</span></span> | <span data-ttu-id="fbf6a-216">*text*</span><span class="sxs-lookup"><span data-stu-id="fbf6a-216">*text*</span></span> | `<em>text</em>` |
-| <span data-ttu-id="fbf6a-217">encabezado (niveles 1&ndash;3)</span><span class="sxs-lookup"><span data-stu-id="fbf6a-217">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="fbf6a-218">**Text**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-218">**Text**</span></span> | `<h3>Text</h3>` |
-| <span data-ttu-id="fbf6a-219">Aplique</span><span class="sxs-lookup"><span data-stu-id="fbf6a-219">strikethrough</span></span> | <span data-ttu-id="fbf6a-220">~~text~~</span><span class="sxs-lookup"><span data-stu-id="fbf6a-220">~~text~~</span></span> | `<strike>text</strike>` |
-| <span data-ttu-id="fbf6a-221">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="fbf6a-221">unordered list</span></span> | <ul><li><span data-ttu-id="fbf6a-222">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-222">text</span></span></li><li><span data-ttu-id="fbf6a-223">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-223">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| <span data-ttu-id="fbf6a-224">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="fbf6a-224">ordered list</span></span> | <ol><li><span data-ttu-id="fbf6a-225">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-225">text</span></span></li><li><span data-ttu-id="fbf6a-226">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-226">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| <span data-ttu-id="fbf6a-227">texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-227">preformatted text</span></span> | `text` | `<pre>text</pre>` |
-| <span data-ttu-id="fbf6a-228">blockquote</span><span class="sxs-lookup"><span data-stu-id="fbf6a-228">blockquote</span></span> | <blockquote><span data-ttu-id="fbf6a-229">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-229">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
-| <span data-ttu-id="fbf6a-230">hipervínculo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-230">hyperlink</span></span> | [<span data-ttu-id="fbf6a-231">Bing</span><span class="sxs-lookup"><span data-stu-id="fbf6a-231">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| <span data-ttu-id="fbf6a-232">vínculo de imagen</span><span class="sxs-lookup"><span data-stu-id="fbf6a-232">image link</span></span> | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| <span data-ttu-id="a9d12-213">bold</span><span class="sxs-lookup"><span data-stu-id="a9d12-213">bold</span></span> | <span data-ttu-id="a9d12-214">**text**</span><span class="sxs-lookup"><span data-stu-id="a9d12-214">**text**</span></span> | `<strong>text</strong>` |
+| <span data-ttu-id="a9d12-215">italic</span><span class="sxs-lookup"><span data-stu-id="a9d12-215">italic</span></span> | <span data-ttu-id="a9d12-216">*text*</span><span class="sxs-lookup"><span data-stu-id="a9d12-216">*text*</span></span> | `<em>text</em>` |
+| <span data-ttu-id="a9d12-217">encabezado (niveles 1&ndash;3)</span><span class="sxs-lookup"><span data-stu-id="a9d12-217">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="a9d12-218">**Text**</span><span class="sxs-lookup"><span data-stu-id="a9d12-218">**Text**</span></span> | `<h3>Text</h3>` |
+| <span data-ttu-id="a9d12-219">Aplique</span><span class="sxs-lookup"><span data-stu-id="a9d12-219">strikethrough</span></span> | <span data-ttu-id="a9d12-220">~~text~~</span><span class="sxs-lookup"><span data-stu-id="a9d12-220">~~text~~</span></span> | `<strike>text</strike>` |
+| <span data-ttu-id="a9d12-221">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="a9d12-221">unordered list</span></span> | <ul><li><span data-ttu-id="a9d12-222">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-222">text</span></span></li><li><span data-ttu-id="a9d12-223">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-223">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| <span data-ttu-id="a9d12-224">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="a9d12-224">ordered list</span></span> | <ol><li><span data-ttu-id="a9d12-225">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-225">text</span></span></li><li><span data-ttu-id="a9d12-226">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-226">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| <span data-ttu-id="a9d12-227">texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="a9d12-227">preformatted text</span></span> | `text` | `<pre>text</pre>` |
+| <span data-ttu-id="a9d12-228">blockquote</span><span class="sxs-lookup"><span data-stu-id="a9d12-228">blockquote</span></span> | <blockquote><span data-ttu-id="a9d12-229">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-229">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
+| <span data-ttu-id="a9d12-230">hipervínculo</span><span class="sxs-lookup"><span data-stu-id="a9d12-230">hyperlink</span></span> | [<span data-ttu-id="a9d12-231">Bing</span><span class="sxs-lookup"><span data-stu-id="a9d12-231">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| <span data-ttu-id="a9d12-232">vínculo de imagen</span><span class="sxs-lookup"><span data-stu-id="a9d12-232">image link</span></span> | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-<span data-ttu-id="fbf6a-233">En las tarjetas conector, las líneas nuevas se representan en HTML `<p>` con la etiqueta.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-233">In connector cards, newlines are rendered in HTML using the `<p>` tag.</span></span>
+<span data-ttu-id="a9d12-233">En las tarjetas conector, las líneas nuevas se representan en HTML `<p>` con la etiqueta.</span><span class="sxs-lookup"><span data-stu-id="a9d12-233">In connector cards, newlines are rendered in HTML using the `<p>` tag.</span></span>
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a><span data-ttu-id="fbf6a-234">Diferencias de escritorio y móviles para tarjetas de conector con HTML</span><span class="sxs-lookup"><span data-stu-id="fbf6a-234">Mobile and desktop differences for connector cards using HTML</span></span>
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a><span data-ttu-id="a9d12-234">Diferencias de escritorio y móviles para tarjetas de conector con HTML</span><span class="sxs-lookup"><span data-stu-id="a9d12-234">Mobile and desktop differences for connector cards using HTML</span></span>
 
-<span data-ttu-id="fbf6a-235">En el escritorio, el formato HTML de las tarjetas conector tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-235">On the desktop, HTML formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="a9d12-235">En el escritorio, el formato HTML de las tarjetas conector tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-235">On the desktop, HTML formatting for connector cards looks like this:</span></span>
 
 ![Formato HTML para tarjetas conector en el cliente de escritorio](/assets/images/cards/Connector-desktop-html-combined.png)
 
-<span data-ttu-id="fbf6a-237">En iOS, el formato HTML tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-237">On iOS, HTML formatting looks like this:</span></span>
+<span data-ttu-id="a9d12-237">En iOS, el formato HTML tiene el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="a9d12-237">On iOS, HTML formatting looks like this:</span></span>
 
 ![Formato HTML para tarjetas conector en el cliente iOS](/assets/images/cards/connector-iphone-html-combined-80.png)
 
-<span data-ttu-id="fbf6a-239">Problemas:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-239">Issues:</span></span>
+<span data-ttu-id="a9d12-239">Problemas:</span><span class="sxs-lookup"><span data-stu-id="a9d12-239">Issues:</span></span>
 
-* <span data-ttu-id="fbf6a-240">Las imágenes en línea no se representan en iOS con Markdown o HTML en tarjetas de conector.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-240">Inline images are not rendered on iOS using either Markdown or HTML in Connector Cards.</span></span>
-* <span data-ttu-id="fbf6a-241">El texto con formato previo se representa pero no tiene un fondo gris.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-241">Preformatted text is rendered but does not have a gray background.</span></span>
+* <span data-ttu-id="a9d12-240">Las imágenes en línea no se representan en iOS con Markdown o HTML en tarjetas de conector.</span><span class="sxs-lookup"><span data-stu-id="a9d12-240">Inline images are not rendered on iOS using either Markdown or HTML in Connector Cards.</span></span>
+* <span data-ttu-id="a9d12-241">El texto con formato previo se representa pero no tiene un fondo gris.</span><span class="sxs-lookup"><span data-stu-id="a9d12-241">Preformatted text is rendered but does not have a gray background.</span></span>
 
-<span data-ttu-id="fbf6a-242">En Android, el formato HTML es similar a este:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-242">On Android, HTML formatting looks like this:</span></span>
+<span data-ttu-id="a9d12-242">En Android, el formato HTML es similar a este:</span><span class="sxs-lookup"><span data-stu-id="a9d12-242">On Android, HTML formatting looks like this:</span></span>
 
 ![Formato HTML para tarjetas conector en el cliente de Android](/assets/images/cards/connector-android-html-combined.png)
 
-### <a name="formatting-sample-for-html-connector-cards"></a><span data-ttu-id="fbf6a-244">Ejemplo de formato para tarjetas conector de HTML</span><span class="sxs-lookup"><span data-stu-id="fbf6a-244">Formatting sample for HTML Connector Cards</span></span>
+### <a name="formatting-sample-for-html-connector-cards"></a><span data-ttu-id="a9d12-244">Ejemplo de formato para tarjetas conector de HTML</span><span class="sxs-lookup"><span data-stu-id="a9d12-244">Formatting sample for HTML Connector Cards</span></span>
 
 ``` json
 {
@@ -333,48 +333,48 @@ ms.locfileid: "42279784"
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[<span data-ttu-id="fbf6a-245">**Formato HTML: fichas de héroe y miniaturas**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-245">**HTML Formatting: hero and thumbnail cards**</span></span>](#tab/simple-html)
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[<span data-ttu-id="a9d12-245">**Formato HTML: fichas de héroe y miniaturas**</span><span class="sxs-lookup"><span data-stu-id="a9d12-245">**HTML Formatting: hero and thumbnail cards**</span></span>](#tab/simple-html)
 
-<span data-ttu-id="fbf6a-246">Las etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la tarjeta en miniatura.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-246">HTML tags are supported for simple cards such as the hero and thumbnail card.</span></span> <span data-ttu-id="fbf6a-247">No se admite Markdown.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-247">Markdown is not supported.</span></span>
+<span data-ttu-id="a9d12-246">Las etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la tarjeta en miniatura.</span><span class="sxs-lookup"><span data-stu-id="a9d12-246">HTML tags are supported for simple cards such as the hero and thumbnail card.</span></span> <span data-ttu-id="a9d12-247">No se admite Markdown.</span><span class="sxs-lookup"><span data-stu-id="a9d12-247">Markdown is not supported.</span></span>
 
-| <span data-ttu-id="fbf6a-248">Style</span><span class="sxs-lookup"><span data-stu-id="fbf6a-248">Style</span></span> | <span data-ttu-id="fbf6a-249">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-249">Example</span></span> | <span data-ttu-id="fbf6a-250">HTML</span><span class="sxs-lookup"><span data-stu-id="fbf6a-250">HTML</span></span> |
+| <span data-ttu-id="a9d12-248">Style</span><span class="sxs-lookup"><span data-stu-id="a9d12-248">Style</span></span> | <span data-ttu-id="a9d12-249">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a9d12-249">Example</span></span> | <span data-ttu-id="a9d12-250">HTML</span><span class="sxs-lookup"><span data-stu-id="a9d12-250">HTML</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="fbf6a-251">bold</span><span class="sxs-lookup"><span data-stu-id="fbf6a-251">bold</span></span> | <span data-ttu-id="fbf6a-252">**text**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-252">**text**</span></span> | `<strong>text</strong>` |
-| <span data-ttu-id="fbf6a-253">italic</span><span class="sxs-lookup"><span data-stu-id="fbf6a-253">italic</span></span> | <span data-ttu-id="fbf6a-254">*text*</span><span class="sxs-lookup"><span data-stu-id="fbf6a-254">*text*</span></span> | `<em>text</em>` |
-| <span data-ttu-id="fbf6a-255">encabezado (niveles 1&ndash;3)</span><span class="sxs-lookup"><span data-stu-id="fbf6a-255">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="fbf6a-256">**Text**</span><span class="sxs-lookup"><span data-stu-id="fbf6a-256">**Text**</span></span> | `<h3>Text</h3>` |
-| <span data-ttu-id="fbf6a-257">Aplique</span><span class="sxs-lookup"><span data-stu-id="fbf6a-257">strikethrough</span></span> | <span data-ttu-id="fbf6a-258">~~text~~</span><span class="sxs-lookup"><span data-stu-id="fbf6a-258">~~text~~</span></span> | `<strike>text</strike>` |
-| <span data-ttu-id="fbf6a-259">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="fbf6a-259">unordered list</span></span> | <ul><li><span data-ttu-id="fbf6a-260">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-260">text</span></span></li><li><span data-ttu-id="fbf6a-261">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-261">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| <span data-ttu-id="fbf6a-262">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="fbf6a-262">ordered list</span></span> | <ol><li><span data-ttu-id="fbf6a-263">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-263">text</span></span></li><li><span data-ttu-id="fbf6a-264">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-264">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| <span data-ttu-id="fbf6a-265">texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-265">preformatted text</span></span> | `text` | `<pre>text</pre>` |
-| <span data-ttu-id="fbf6a-266">blockquote</span><span class="sxs-lookup"><span data-stu-id="fbf6a-266">blockquote</span></span> | <blockquote><span data-ttu-id="fbf6a-267">text</span><span class="sxs-lookup"><span data-stu-id="fbf6a-267">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
-| <span data-ttu-id="fbf6a-268">hipervínculo</span><span class="sxs-lookup"><span data-stu-id="fbf6a-268">hyperlink</span></span> | [<span data-ttu-id="fbf6a-269">Bing</span><span class="sxs-lookup"><span data-stu-id="fbf6a-269">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| <span data-ttu-id="fbf6a-270">vínculo de imagen</span><span class="sxs-lookup"><span data-stu-id="fbf6a-270">image link</span></span> |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| <span data-ttu-id="a9d12-251">bold</span><span class="sxs-lookup"><span data-stu-id="a9d12-251">bold</span></span> | <span data-ttu-id="a9d12-252">**text**</span><span class="sxs-lookup"><span data-stu-id="a9d12-252">**text**</span></span> | `<strong>text</strong>` |
+| <span data-ttu-id="a9d12-253">italic</span><span class="sxs-lookup"><span data-stu-id="a9d12-253">italic</span></span> | <span data-ttu-id="a9d12-254">*text*</span><span class="sxs-lookup"><span data-stu-id="a9d12-254">*text*</span></span> | `<em>text</em>` |
+| <span data-ttu-id="a9d12-255">encabezado (niveles 1&ndash;3)</span><span class="sxs-lookup"><span data-stu-id="a9d12-255">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="a9d12-256">**Text**</span><span class="sxs-lookup"><span data-stu-id="a9d12-256">**Text**</span></span> | `<h3>Text</h3>` |
+| <span data-ttu-id="a9d12-257">Aplique</span><span class="sxs-lookup"><span data-stu-id="a9d12-257">strikethrough</span></span> | <span data-ttu-id="a9d12-258">~~text~~</span><span class="sxs-lookup"><span data-stu-id="a9d12-258">~~text~~</span></span> | `<strike>text</strike>` |
+| <span data-ttu-id="a9d12-259">lista sin ordenar</span><span class="sxs-lookup"><span data-stu-id="a9d12-259">unordered list</span></span> | <ul><li><span data-ttu-id="a9d12-260">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-260">text</span></span></li><li><span data-ttu-id="a9d12-261">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-261">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| <span data-ttu-id="a9d12-262">Lista ordenada</span><span class="sxs-lookup"><span data-stu-id="a9d12-262">ordered list</span></span> | <ol><li><span data-ttu-id="a9d12-263">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-263">text</span></span></li><li><span data-ttu-id="a9d12-264">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-264">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| <span data-ttu-id="a9d12-265">texto con formato previo</span><span class="sxs-lookup"><span data-stu-id="a9d12-265">preformatted text</span></span> | `text` | `<pre>text</pre>` |
+| <span data-ttu-id="a9d12-266">blockquote</span><span class="sxs-lookup"><span data-stu-id="a9d12-266">blockquote</span></span> | <blockquote><span data-ttu-id="a9d12-267">text</span><span class="sxs-lookup"><span data-stu-id="a9d12-267">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
+| <span data-ttu-id="a9d12-268">hipervínculo</span><span class="sxs-lookup"><span data-stu-id="a9d12-268">hyperlink</span></span> | [<span data-ttu-id="a9d12-269">Bing</span><span class="sxs-lookup"><span data-stu-id="a9d12-269">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| <span data-ttu-id="a9d12-270">vínculo de imagen</span><span class="sxs-lookup"><span data-stu-id="a9d12-270">image link</span></span> |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### <a name="mobile-and-desktop-differences-for-simple-cards"></a><span data-ttu-id="fbf6a-271">Diferencias entre dispositivos móviles y de escritorio para tarjetas sencillas</span><span class="sxs-lookup"><span data-stu-id="fbf6a-271">Mobile and desktop differences for simple cards</span></span>
+### <a name="mobile-and-desktop-differences-for-simple-cards"></a><span data-ttu-id="a9d12-271">Diferencias entre dispositivos móviles y de escritorio para tarjetas sencillas</span><span class="sxs-lookup"><span data-stu-id="a9d12-271">Mobile and desktop differences for simple cards</span></span>
 
-<span data-ttu-id="fbf6a-272">Debido a las diferencias de resolución entre la plataforma de escritorio y la plataforma móvil, el formato es diferente entre el escritorio y la versión móvil de Teams.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-272">Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.</span></span>
+<span data-ttu-id="a9d12-272">Debido a las diferencias de resolución entre la plataforma de escritorio y la plataforma móvil, el formato es diferente entre el escritorio y la versión móvil de Teams.</span><span class="sxs-lookup"><span data-stu-id="a9d12-272">Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.</span></span>
 
-<span data-ttu-id="fbf6a-273">En el escritorio, el formato HTML tiene un aspecto similar a este:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-273">On the desktop, HTML formatting appears like this:</span></span>
+<span data-ttu-id="a9d12-273">En el escritorio, el formato HTML tiene un aspecto similar a este:</span><span class="sxs-lookup"><span data-stu-id="a9d12-273">On the desktop, HTML formatting appears like this:</span></span>
 
 ![Formato HTML en el cliente de escritorio](/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-<span data-ttu-id="fbf6a-275">En iOS, el formato HTML tiene un aspecto similar a este:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-275">On iOS, HTML formatting appears like this:</span></span>
+<span data-ttu-id="a9d12-275">En iOS, el formato HTML tiene un aspecto similar a este:</span><span class="sxs-lookup"><span data-stu-id="a9d12-275">On iOS, HTML formatting appears like this:</span></span>
 
 ![Formato HTML en el cliente de iOS](/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-<span data-ttu-id="fbf6a-277">Problemas:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-277">Issues:</span></span>
+<span data-ttu-id="a9d12-277">Problemas:</span><span class="sxs-lookup"><span data-stu-id="a9d12-277">Issues:</span></span>
 
-* <span data-ttu-id="fbf6a-278">El formato de caracteres, como negrita y cursiva, no se representa en iOS.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-278">Character formatting like bold and italic are not rendered on iOS.</span></span>
+* <span data-ttu-id="a9d12-278">El formato de caracteres, como negrita y cursiva, no se representa en iOS.</span><span class="sxs-lookup"><span data-stu-id="a9d12-278">Character formatting like bold and italic are not rendered on iOS.</span></span>
 
-<span data-ttu-id="fbf6a-279">En Android, el formato HTML tiene un aspecto similar a este:</span><span class="sxs-lookup"><span data-stu-id="fbf6a-279">On Android, HTML formatting appears like this:</span></span>
+<span data-ttu-id="a9d12-279">En Android, el formato HTML tiene un aspecto similar a este:</span><span class="sxs-lookup"><span data-stu-id="a9d12-279">On Android, HTML formatting appears like this:</span></span>
 
 ![Formato HTML en el cliente de Android](/assets/images/cards/card-formatting-xml-android-60.png)
 
-<span data-ttu-id="fbf6a-281">El formato de caracteres, como negrita y cursiva, se muestra correctamente en Android.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-281">Character formatting like bold and italic display correctly on Android.</span></span>
+<span data-ttu-id="a9d12-281">El formato de caracteres, como negrita y cursiva, se muestra correctamente en Android.</span><span class="sxs-lookup"><span data-stu-id="a9d12-281">Character formatting like bold and italic display correctly on Android.</span></span>
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a><span data-ttu-id="fbf6a-282">Ejemplo de formato para el formato HTML en tarjetas sencillas</span><span class="sxs-lookup"><span data-stu-id="fbf6a-282">Formatting sample for HTML formatting in simple cards</span></span>
+### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a><span data-ttu-id="a9d12-282">Ejemplo de formato para el formato HTML en tarjetas sencillas</span><span class="sxs-lookup"><span data-stu-id="a9d12-282">Formatting sample for HTML formatting in simple cards</span></span>
 
-<span data-ttu-id="fbf6a-283">Estas capturas de pantallas se crearon con Teams AppStudio, donde la propiedad Text de una tarjeta Hero se estableció en la siguiente cadena.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-283">These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string.</span></span> <span data-ttu-id="fbf6a-284">Puede probar el formato en sus propias tarjetas modificando este código.</span><span class="sxs-lookup"><span data-stu-id="fbf6a-284">You can test formatting in your own cards by modifying this code.</span></span>
+<span data-ttu-id="a9d12-283">Estas capturas de pantallas se crearon con Teams AppStudio, donde la propiedad Text de una tarjeta Hero se estableció en la siguiente cadena.</span><span class="sxs-lookup"><span data-stu-id="a9d12-283">These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string.</span></span> <span data-ttu-id="a9d12-284">Puede probar el formato en sus propias tarjetas modificando este código.</span><span class="sxs-lookup"><span data-stu-id="a9d12-284">You can test formatting in your own cards by modifying this code.</span></span>
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
