@@ -2,12 +2,12 @@
 title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
+ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365272"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416855"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -38,7 +38,7 @@ Proporciona una base para crear capacidades de comunicación de destino personal
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![P + f más GIF](~/assets/images/CompanyCommunicatorCompose.png)
+![P + f más GIF](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>Preguntas más frecuentes Plus
 
@@ -61,7 +61,7 @@ Conversación-Q&los bots son una forma sencilla de proporcionar respuestas a las
 >
 >
 
-![P + f más GIF](~/assets/images/FAQPlusEndUser.gif)
+![P + f más GIF](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="hr-support"></a>Soporte de Recursos Humanos
 
@@ -69,7 +69,7 @@ El robot de soporte de recursos humanos es un bot&un bot que ofrece a un experto
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![Soporte de Recursos Humanos](~/assets/images/expert-user.png)
+![Soporte de Recursos Humanos](../assets/images/expert-user.png)
 
 ## <a name="list-search"></a>Búsqueda en listas
 
@@ -79,7 +79,7 @@ Para ayudar a aliviar este problema, nos alegramos de ofrecerle la plantilla de 
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![Aplicación de búsqueda de lista](~/assets/images/list-search-template.png)
+![Aplicación de búsqueda de lista](../assets/images/list-search-template.png)
 
 ## <a name="custom-stickers"></a>Adhesivos personalizados
 
@@ -89,7 +89,7 @@ Esta aplicación también permite compartir fácilmente imágenes/GIFs/adhesivos
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Aplicación para adhesivos](~/assets/images/stickers.png)
+![Aplicación para adhesivos](../assets/images/stickers.png)
 
 ## <a name="icebreaker"></a>Rompehielo
 
@@ -99,13 +99,13 @@ Además de fomentar las conexiones personales en todo el equipo, la aplicación 
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Aplicación IceBreaker](~/assets/images/icebreaker.png)
+![Aplicación IceBreaker](../assets/images/icebreaker.png)
 
 ## <a name="scrum-status-bot"></a>Bot de estado de Scrum
 
 Scrum status bot es un bot? a de Scrum Assistant sencillo que permitirá a los usuarios ejecutar reuniones de desactivación asincrónicas y proporcionar a los usuarios una forma fácil de compartir sus actualizaciones diarias. Está diseñada para trabajar en chats en grupo de Microsoft Teams y todos los miembros pueden contribuir al Scrum. Una puede iniciar y finalizar Scrum y puede ver las actualizaciones realizadas por otros en un Scrum en ejecución.
 
-[Git en GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[Git en GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Bot de estado de Scrum](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -135,10 +135,27 @@ Book-a-Room es un [robot de Microsoft Teams](../bots/what-are-bots.md) que permi
 
 ## <a name="attendance-app"></a>Aplicación de asistencia
 
-La aplicación de asistencia es una pestaña de [Power apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) que se puede anclar en un equipo. Está diseñado para registrar la presencia, normalmente en opciones como los entornos de aprendizaje y aprendizaje. Los usuarios pueden marcar o editar la asistencia durante un máximo de 30 días en el pasado y ver informes de asistencia resumida para un grupo completo o asistentes individuales.
+La aplicación de asistencia es una pestaña de [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) que se puede anclar en un equipo. Está diseñado para registrar la presencia, normalmente en opciones como los entornos de aprendizaje y aprendizaje. Los usuarios pueden marcar o editar la asistencia durante un máximo de 30 días en el pasado y ver informes de asistencia resumida para un grupo completo o asistentes individuales.
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![Demostración de la aplicación de asistencia](../assets/images/attendance-app.png)
+
+## <a name="associate-insights-app"></a>Aplicación asociar información
+
+Associate Insights es una plantilla de [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) que faculta a los trabajadores de Firstline para que capturen y envíen de forma directa opinión, sentimientos y percepción del cliente. A menudo, los trabajadores de Firstline son el primer representante de la compañía que se compromete con los clientes en un punto de contacto de uno a uno. Los datos recopilados se pueden compartir y usar de forma colaborativa con los equipos de empresa, por ejemplo, a través de una pestaña de Microsoft Power BI, para mejorar la experiencia del producto y mejorar la experiencia del cliente.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![Vista de comentarios de información generada por la aplicación](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Vista de Power BI de información generada por la aplicación](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 ¿Tiene una idea de una plantilla de aplicación que desearía ver? [Háganoslo saber](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
