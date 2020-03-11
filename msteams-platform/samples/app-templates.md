@@ -2,12 +2,12 @@
 title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
-ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
+ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42416855"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42587343"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -63,7 +63,7 @@ Conversación-Q&los bots son una forma sencilla de proporcionar respuestas a las
 
 ![P + f más GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>Soporte de Recursos Humanos
+## <a name="hr-support-bot"></a>Bot de soporte de RH
 
 El robot de soporte de recursos humanos es un bot&un bot que ofrece a un experto o profesional de soporte técnico del equipo de RRHH en el bucle cuando no puede ayudarle. Una puede preguntar al bot una pregunta y el bot responde con una respuesta si se encuentra en la base de conocimientos. Si no es así, el bot permite al usuario enviar una consulta que, a continuación, se publica en un equipo preconfigurado de expertos que ayudan a proporcionar soporte técnico actuando sobre las notificaciones desde dentro de su propio equipo. Además, el bot sugiere vínculos a preguntas o directivas de recursos humanos recomendadas mediante la búsqueda de etiquetas preconfiguradas en la pregunta. Estos mosaicos también se pueden encontrar en la pestaña asociada como referencia rápida. La compatibilidad con RH funciona bien para QnA de peso ligero y para proporcionar una asistencia rápida al iniciar nuevos proyectos o iniciativas en la organización.
 
@@ -71,7 +71,7 @@ El robot de soporte de recursos humanos es un bot&un bot que ofrece a un experto
 
 ![Soporte de Recursos Humanos](../assets/images/expert-user.png)
 
-## <a name="list-search"></a>Búsqueda en listas
+## <a name="list-search-app"></a>Aplicación de búsqueda de lista
 
 La colaboración en Microsoft Teams con frecuencia hace referencia a la información contenida en los elementos de una lista de SharePoint. La simple pegado de un vínculo al elemento en cuestión obliga a los usuarios a cambiar el contexto de la conversación, buscar la información necesaria y, a continuación, volver a Teams para continuar con la conversación. Como la conversación sigue por lo general, los usuarios tendrán que volver al elemento de referencia varias veces para comprobar los nuevos comentarios y actualizar sus recuerdos de la información contenida en el elemento. Este cambio de contexto crea una barrera para una colaboración fluida y es una receta para cosas que caen a través de las grietas.
 
@@ -81,7 +81,7 @@ Para ayudar a aliviar este problema, nos alegramos de ofrecerle la plantilla de 
 
 ![Aplicación de búsqueda de lista](../assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>Adhesivos personalizados
+## <a name="custom-stickers-app"></a>Aplicación de adhesivos personalizados
 
 La expresión Self es principal para una cultura de equipo correcta. Esta plantilla de aplicación es una [extensión de mensajería](~/messaging-extensions/what-are-messaging-extensions.md) que permite a los usuarios usar adhesivos personalizados y GIF en Microsoft Teams. Esta plantilla proporciona una experiencia de configuración basada en web sencilla en la que todos los usuarios con acceso a la configuración pueden cargar los archivos GIF/adhesivos/imágenes que quieren que tengan los usuarios finales, lo que permite a todo su equipo usar cualquier conjunto de adhesivos que elija.
 
@@ -91,7 +91,7 @@ Esta aplicación también permite compartir fácilmente imágenes/GIFs/adhesivos
 
 ![Aplicación para adhesivos](../assets/images/stickers.png)
 
-## <a name="icebreaker"></a>Rompehielo
+## <a name="icebreaker-bot"></a>Bot IceBreaker
 
 IceBreaker es un [Bot de Microsoft Teams](../bots/what-are-bots.md) que ayuda a su equipo a hacer más cerca dos miembros del equipo aleatorios cada semana para cumplir con ellos. El bot facilita la programación al sugerir automáticamente el horario libre que funcione para ambos miembros. Fortalezca las conexiones personales y cree una comunidad knit estrechamente con esta aplicación.
 
@@ -158,4 +158,13 @@ Associate Insights es una plantilla de [Power apps](/powerapps/maker/canvas-apps
 :::column-end:::
 :::row-end:::
 
+## <a name="incentives-app"></a>Aplicación de incentivos
+
+Incentivos es una plantilla de [Power apps](/powerapps/maker/canvas-apps/embed-teams-app) que administra y realiza un seguimiento de la participación de los empleados de incentivized en actividades designadas, como cursos e iniciativas de administración de cambios. Los administradores usan la aplicación para establecer actividades designadas, asignan puntos para la finalización y especifican los niveles de puntos de elegibilidad necesarios para premios. Los empleados usan la aplicación para ver los puntos acumulados y, al llegar a la elegibilidad, solicitar y reclamar recompensas canjeables.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+
+![Demostración de la aplicación incentivos](../assets/images/incentives-app.png)
+
 ¿Tiene una idea de una plantilla de aplicación que desearía ver? [Háganoslo saber](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
+

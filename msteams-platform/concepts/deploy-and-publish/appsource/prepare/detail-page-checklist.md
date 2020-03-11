@@ -2,12 +2,12 @@
 title: Crear una excelente página de detalles de la aplicación
 description: Describe qué páginas de detalles de la aplicación deben tener
 keywords: publicación de Microsoft Teams tienda de la Directiva de publicación de AppSource contenido
-ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 741bc7b623e97b338c54c4dcfec5b1ca75201867
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953519"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582870"
 ---
 # <a name="build-a-great-app-details-page"></a>Crear una excelente página de detalles de la aplicación
 
@@ -29,22 +29,22 @@ El nombre de una aplicación desempeña un papel crítico en el modo en que los 
 
 * No use términos genéricos o nombres similares a los nombres de aplicaciones existentes.
 * No use "Teams", "Microsoft" o "app" en el nombre de la aplicación.
-![App Name Store View](~/assets/images/store-detail-page/AppName-02.png)
-![App Name appstudio View](~/assets/images/store-detail-page/AppName-01.png)
+![Nombre de la aplicación](~/assets/images/store-detail-page/AppName-02.png)
+![Ver nombre de la aplicación vista de App Studio App](~/assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>Icono de color
 
 Es uno de los primeros elementos que ven los usuarios. Debe ser atractivo y atractivo al desplazarse por la tienda de aplicaciones. Asegúrese de que crea una buena primera impresión y de que también comunica la imagen y el propósito de la marca. AppSource tiene más sugerencias para [crear una identidad visual coherente](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
 
-![Icono de la aplicación](~/assets/images/store-detail-page/AppIcon-02.png)
-![ver el almacén del icono de la appstudio vista](~/assets/images/store-detail-page/AppIcon-01.png)
+![Vista de App del](~/assets/images/store-detail-page/AppIcon-02.png)
+![almacén de icono de aplicación View App Icon](~/assets/images/store-detail-page/AppIcon-01.png)
 
 ## <a name="outline-icon"></a>Icono de esquema
 
 Se usa en extensiones de mensajería marcadas como favoritas por el usuario y el menú de navegación izquierdo. Asegúrese de que es sencilla y reconocible. El icono del esquema solo debe contener blanco y transparencia (sin otros colores). Para conocer las especificaciones necesarias, *consulte* [crear un paquete de la aplicación para los iconos de la aplicación de Microsoft Teams](../../../build-and-test/apps-package.md#icons).
 
-![Icono de la aplicación vista](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![previa de almacén de esquema de appstudio vista de esquema](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![Icono de aplicación de almacén](~/assets/images/store-detail-page/AppIconOutline-02.png)
+![de esquema de presentación de la aplicación esquema vista de App Studio](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
 ## <a name="short-description"></a>La descripción breve
 
@@ -64,7 +64,7 @@ Este es un breve resumen de la aplicación. Tiene que ser original, interesante 
 
 Esta es una vista de [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![Descripción breve appstudio vista](~/assets/images/store-detail-page/ShortDescription-01.png)
+![Descripción breve de la vista de App Studio](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## <a name="long-description"></a>La descripción larga
 
@@ -80,6 +80,22 @@ Esto proporciona una narración atractiva que resalta las características princ
 * Use la voz activa y hable directamente con los usuarios.
 * Use viñetas para enumerar las características.
 * Incluya un vínculo de ayuda o soporte técnico para que los usuarios sepan cómo ponerse en contacto con usted si tienen preguntas.
+* Asegúrese de llamar a todas las limitaciones o restricciones para obtener una mejor orientación del usuario.
+
+
+>[!NOTE]
+>Teams admite la siguiente sintaxis Markdown:  
+> **Vínculos**. `[title](url/address/here)`.  
+>**Imágenes**. `![alt text](url/address/here)`.  
+> **Negrita**. `**bold text**`   `__bold text__`.  
+> **Cursiva**. `*italicized text*`  `_italicized text`.  
+>**[Listas ordenadas](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>**[Lista sin ordenar](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+` - short` <br>`- bulleted` <br>`- list`<br>
+>**Nueva línea**. `Place two empty spaces or a backslash \`  \
+`at the end of a line.`<br>
+ >**Eludi.** Use una barra diagonal inversa en línea para omitir caracteres especiales.. `\*asterisk`.
 
 **Logotipos**
 
@@ -89,11 +105,11 @@ Esto proporciona una narración atractiva que resalta las características princ
 
 Esta es una vista de [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![Vista de appstudio de la descripción larga de la aplicación](~/assets/images/store-detail-page/LongDescription-01.png)
+![Vista de App View de App Long Description](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## <a name="screenshots"></a>Capturas de pantalla
 
-Las capturas de pantalla que se cargan en el [Panel de vendedores](https://sellerdashboard.microsoft.com/Registration) se muestran en [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) y en la descripción de la aplicación en el cliente de Microsoft Teams. Proporcionan una vista previa visual de la aplicación junto con la descripción de la aplicación.
+Las capturas de pantalla que se cargan en el [centro de Partners](https://partner.microsoft.com) se muestran en [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) y en la descripción de la aplicación en el cliente de Microsoft Teams. Proporcionan una vista previa visual de la aplicación junto con la descripción de la aplicación.
 Puede proporcionar una a cinco capturas de pantallas formateadas como archivos. png,. jpg o. gif. Las capturas de pantallas deben ser de 1366 x 768 píxeles con un tamaño máximo de 1024 KB.
 
 **Hacer lo siguiente:**

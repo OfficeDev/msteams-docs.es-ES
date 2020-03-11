@@ -2,12 +2,12 @@
 title: Publicación posterior
 description: Qué hacer después de publicar la aplicación
 keywords: certificado de actualización de publicación de publicaciones de Teams
-ms.openlocfilehash: 05e4ea47bbf81967ccf086230bf0ad8c633f6e0b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675805"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582863"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Mantener y admitir la aplicación publicada 
 
@@ -27,7 +27,9 @@ Ejemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * No use el botón *Agregar una nueva aplicación* para volver a enviar la aplicación. En su lugar, use el icono de la aplicación en la pestaña Información general.
 * El appId del manifiesto actualizado debe ser el mismo que el del manifiesto actual, con un número de versión incrementado.
-* Aumente el número de versión en el manifiesto.
+* Aumente el número de versión en el manifiesto si realiza cambios en el manifiesto en el envío.
+* Los envíos actualizados son necesarios para someterse a un nuevo proceso de revisión y validación.
+
 
 ### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>¿Cuándo actualizar la aplicación desencadenar el flujo de consentimiento del usuario?
 
@@ -35,4 +37,4 @@ Cuando un usuario instala la aplicación, uno de los primeros elementos que conv
 
 * Adición de una nueva funcionalidad a una aplicación, como agregar un bot a una aplicación de solo pestaña.
 * Cambiar la matriz de permisos en el manifiesto.
-* Aumente el número de versión de la aplicación en el manifiesto.
+* Incrementar el número de versión de la aplicación en el manifiesto.
