@@ -4,22 +4,46 @@ author: clearab
 description: Información general sobre los bots de conversación en Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7bde886b67788a355181c83287d999a3bfb9727a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675832"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635308"
 ---
 # <a name="what-are-conversational-bots"></a>¿Qué son los bots de conversación?
 
-Los bots de conversación permiten que los usuarios interactúen con el servicio Web a través de texto, tarjetas interactivas y módulos de tareas. Son increíblemente flexibles: los bots de conversación pueden tener un ámbito de control con pocos comandos sencillos o con asistentes de inteligencia virtual complejos y artificiales y de procesamiento de lenguaje natural. Pueden ser un aspecto de una aplicación más grande o ser completamente independientes.
+Los bots de conversación permiten que los usuarios interactúen con el servicio Web a través de texto, tarjetas interactivas y módulos de tareas. Son increíblemente flexibles: los bots de la conversación pueden tener como objetivo controlar algunos comandos sencillos o asistentes virtuales de procesamiento de lenguaje natural y de inteligencia artificial Pueden ser un aspecto de una aplicación más grande o completamente independientes.
 
 El GIF siguiente muestra un usuario que conversa con un bot en una conversación de uno a uno mediante tarjetas interactivas y de texto. Buscar la combinación correcta de módulos de tarjetas, texto y tareas es clave para crear un bot útil. No olvide que los bots son mucho más que texto.
 
 ![P + f más GIF](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="what-tasks-are-best-handled-by-bots"></a>¿Qué tareas se controlan mejor mediante bots?
+## <a name="how-bots-work"></a>Cómo funcionan los bots
+
+El bot de Teams consta de tres elementos:
+
+* Un servicio web accesible públicamente que se hospeda.
+* El registro de los robots con bot Framework.
+* El paquete de la aplicación Teams con el manifiesto de la aplicación. Esto es lo que los usuarios instalarán y conectarán el cliente de Microsoft Teams al servicio Web, que se enrutará a través del servicio de bot.
+
+Los bots para Microsoft Teams se basan en [Microsoft bot Framework](https://dev.botframework.com/). Si ya tiene un bot basado en el marco de robots, puede adaptarlo fácilmente para que funcione en Microsoft Teams. Le recomendamos que use C# o node. js para aprovechar los [SDK](/microsoftteams/platform/#pivot=sdk-tools). Estos paquetes amplían las clases y los métodos del SDK de bot Builder básico de la siguiente manera:
+
+* Use tipos de tarjeta especializados como la tarjeta de conector de Office 365.
+* Consume y establece los datos de canal específicos de cada equipo en actividades.
+* Procesar las solicitudes de extensión de mensajería.
+
+> [!IMPORTANT]
+> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las [API de REST de bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) , pero debe realizar el control de los tokens de forma manual.
+
+> [!TIP]
+> Teams App Studio * le ayuda a crear y configurar el manifiesto de la aplicación, y puede registrar el servicio web como un bot en el marco de trabajo de bot. También contiene una biblioteca de controles de reAct y un generador de tarjetas interactivas. *Consulte* [Introducción a teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+## <a name="webhooks-and-connectors"></a>Webhooks y conectores
+
+Los webhooks y los conectores le permiten crear un bot sencillo para la interacción básica, como iniciar un flujo de trabajo u otros comandos sencillos. Solo residen en el equipo en el que los crea y están destinados a procesos sencillos específicos del flujo de trabajo de su empresa. *Consulte* [¿Qué son los webhooks y los conectores?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) para obtener más información.
+
+## <a name="where-bots-work-best"></a>Cómo funcionan mejor los bots
 
 Los bots en Microsoft Teams pueden formar parte de una conversación de uno a uno, de un chat en grupo o de un canal de un equipo. Cada ámbito proporcionará oportunidades y desafíos únicos para el bot conversador.
 
@@ -44,28 +68,31 @@ Los escenarios que funcionan bien en un canal suelen funcionar tan bien en un ch
 
 Esta es la forma tradicional de que un bot de conversación interactúe con un usuario. Pueden habilitar cargas de trabajo increíblemente heterogéneas. P&los bots, bots que inician flujos de trabajo en otros sistemas, bots que indican chistes y bots que toman notas son solo algunos ejemplos. No olvide tener en cuenta si una interfaz basada en conversaciones es la mejor forma de presentar la funcionalidad.
 
-## <a name="how-do-bots-work"></a>¿Cómo funcionan los bots?
+## <a name="bot-fails"></a>Error de bot
 
-El bot consta de tres partes:
+### <a name="having-multi-turn-experiences-in-chat"></a>Tener experiencia de varios turnos en el chat
 
-* Un servicio web accesible públicamente que se hospeda.
-* El registro de bot que registra el bot con el marco de bot.
-* El paquete de la aplicación teams que contiene el manifiesto de la aplicación. Esto es lo que los usuarios instalan y conectan el cliente de Microsoft Teams a su servicio Web (enrutado a través del servicio de bot).
+Un cuadro de diálogo extensivo entre su bot y el usuario es una forma lenta y demasiado compleja de realizar una tarea y también requiere que el desarrollador mantenga el estado. Para salir de este estado, un usuario debe agotar el tiempo de espera o escribir "*Cancelar*". Sobre todo, el proceso es tedioso innecesariamente:
 
-Los bots para Microsoft Teams se basan en [Microsoft bot Framework](https://dev.botframework.com/). (Si ya tiene un bot basado en el marco de robots, puede adaptarlo fácilmente para que funcione en Microsoft Teams). Le recomendamos que use C# o node. js para aprovechar los [SDK](/microsoftteams/platform/#pivot=sdk-tools). Estos paquetes amplían las clases y métodos básicos del SDK de bot Builder:
+USUARIO: programar una reunión con Nuria.
 
-* Uso de tipos de tarjeta especializados como la tarjeta de conector de Office 365.
-* Consumo y configuración de datos de canal específicos de cada equipo en actividades.
-* Procesamiento de solicitudes de extensión de mensajería.
+BOT: he encontrado 200 resultados, por lo que debe incluir un nombre y un apellido.
 
-> [!IMPORTANT]
-> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las [API de REST de bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) , pero debe realizar el control de los tokens de forma manual.
+USUARIO: programar una reunión con Nuria Bowen.
 
-*Teams App Studio* le ayuda a crear y configurar el manifiesto de la aplicación, y puede registrar el servicio web como un bot en el marco de trabajo de bot. También contiene una biblioteca de controles de reAct y un generador de tarjetas interactivas. *Consulte* [Introducción a teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
+BOT: correcto, ¿a qué hora desea reunirse con Nuria Bowen?
 
-## <a name="webhooks-and-connectors"></a>Webhooks y conectores
+USUARIO: 1:00 pm.
 
-Los webhooks y los conectores le permiten crear un bot sencillo para la interacción básica, como iniciar un flujo de trabajo u otros comandos sencillos. Solo residen en el equipo en el que los crea y están destinados a procesos sencillos específicos del flujo de trabajo de su empresa. *Consulte* [¿Qué son los webhooks y los conectores?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) para obtener más información.
+BOT: ¿en qué día?
+
+### <a name="supporting-too-many-commands"></a>Compatibilidad con demasiados comandos
+
+Un bot que admite demasiados comandos, especialmente una amplia gama de comandos, no tendrá éxito o los usuarios los verán de forma positiva. Dado que solo hay 6 comandos visibles en el menú bot actual, es poco probable que se use cualquier cosa más con cualquier frecuencia. Los bots que profundizan en un área específica en lugar de intentar ser un amplio asistente funcionarán mejor y tarifar.
+
+### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Mantener una base de conocimientos de recuperación de gran tamaño con respuestas sin clasificar
+
+Los bots son idóneos para las interacciones cortas y rápidas, no para el cribado, aunque largas que buscan una respuesta.
 
 ## <a name="get-started"></a>Introducción
 
@@ -74,5 +101,8 @@ Los webhooks y los conectores le permiten crear un bot sencillo para la interacc
 
 ## <a name="learn-more"></a>Más información
 
-* [Conceptos básicos de los bots en Teams](~/bots/bot-basics.md)
-* [Crear un bot para Teams](~/bots/how-to/create-a-bot-for-teams.md)
+> [!div class="nextstepaction"]
+> [Conceptos básicos de los bots en Teams](~/bots/bot-basics.md)
+
+> [!div class="nextstepaction"]
+> [Crear un bot para Teams](~/bots/how-to/create-a-bot-for-teams.md)

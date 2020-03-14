@@ -4,12 +4,12 @@ author: clearab
 description: Cómo enviar mensajes proactivos con su bot de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2821e4d7ddeb74b3921be792cc55a136ab4ac5e4
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: 566b93f519001cbc2470b43e4729fa8b4aa0a9d2
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228083"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635280"
 ---
 # <a name="send-proactive-messages"></a>Enviar mensajes proactivos
 
@@ -28,7 +28,7 @@ El envío de un mensaje para iniciar una nueva conversación es diferente al de 
 1. [Obtener el identificador único del usuario y el identificador de inquilino](#obtain-necessary-user-information)
 1. [Enviar el mensaje](#examples)
 
-Al crear mensajes proactivos **** a los `MicrosoftAppCredentials.TrustServiceUrl`que se debe llamar y pasar la dirección URL del `ConnectorClient` servicio antes de crear el, se usará para enviar el mensaje. Si no lo hace, la aplicación recibirá una `401: Unauthorized` respuesta. 
+Al crear mensajes proactivos **must** a los `MicrosoftAppCredentials.TrustServiceUrl`que se debe llamar y pasar la dirección URL del `ConnectorClient` servicio antes de crear el, se usará para enviar el mensaje. Si no lo hace, la aplicación recibirá una `401: Unauthorized` respuesta. 
 
 ## <a name="best-practices-for-proactive-messaging"></a>Procedimientos recomendados para la mensajería proactiva
 
@@ -68,7 +68,7 @@ Los bots pueden crear nuevas conversaciones con un usuario individual de Microso
 > [!Note]
 > La instalación de aplicaciones de forma proactiva con Graph se encuentra actualmente en versión beta.
 
-En ocasiones, es posible que sea necesario enviar un mensaje de forma proactiva a los usuarios que no hayan instalado ni interactúen con la aplicación anteriormente. Por ejemplo, desea usar el Communicator de la [compañía](~/samples/app-templates.md#company-communicator) para enviar mensajes a toda la organización. Para este escenario, puede usar la API de Graph para instalar proactivamente la aplicación para sus usuarios y, a continuación, almacenar en `conversationUpdate` caché los valores necesarios del evento que la aplicación recibirá en el momento de la instalación.
+En ocasiones, es posible que sea necesario enviar un mensaje de forma proactiva a los usuarios que no hayan instalado ni interactúen con la aplicación anteriormente. Por ejemplo, desea usar el Communicator de la [compañía](~/samples/app-templates.md#company-communicator-app) para enviar mensajes a toda la organización. Para este escenario, puede usar la API de Graph para instalar proactivamente la aplicación para sus usuarios y, a continuación, almacenar en `conversationUpdate` caché los valores necesarios del evento que la aplicación recibirá en el momento de la instalación.
 
 Solo puede instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en la tienda de aplicaciones de Teams.
 
