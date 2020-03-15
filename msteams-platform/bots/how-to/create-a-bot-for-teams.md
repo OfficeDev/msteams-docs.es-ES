@@ -5,12 +5,12 @@ description: Cómo crear un bot para Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 9e0bd603772cf4da8465a638c4a7f5b426a1fbfb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676107"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635301"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Crear un bot para Microsoft Teams
 
@@ -62,9 +62,9 @@ Situaciones en las que **debe** tener el registro del bot en Azure (ya sea creá
 
 #### <a name="using-app-studio"></a>Usar App Studio
 
-*App Studio* es una aplicación de Teams que le ayuda a crear aplicaciones de Teams, incluido el registro de su servicio web como bot, la creación de un manifiesto de la aplicación y el paquete de la aplicación. También contiene una biblioteca de control React y ejemplos configurables para tarjetas. Consulte [Introducción a Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
+*App Studio* es una aplicación de Teams que le ayuda a crear aplicaciones de Teams, incluido el registro de su servicio web como bot, la creación de un manifiesto de la aplicación y el paquete de la aplicación, y la actualización de configuraciones y opciones. También contiene una biblioteca de control React y ejemplos configurables para tarjetas. Consulte [Introducción a Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
 
-Recuerde que si usa App Studio para registrar el servicio web, tendrá que ir a https://dev.botframework.com/bots para administrar el registro. Algunas opciones de configuración (como el punto de conexión de mensajería) también pueden actualizarse en App Studio.
+Recuerde que si usa App Studio para registrar el servicio web, tendrá que ir a https://dev.botframework.com/bots para administrar el registro.
 
 #### <a name="in-the-legacy-portal"></a>En el portal heredado
 
