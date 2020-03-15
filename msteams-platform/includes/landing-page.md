@@ -1,17 +1,17 @@
 ---
 title: Plataforma para desarrolladores de Microsoft Teams
-author: clearab/laujan
+author: laujan
 description: Añadir una descripción breve
 layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
-ms.author: anclear/lajanuar
-ms.openlocfilehash: 97ec9d4a1dd7b6f03185c8fd8d68cde3f0d55dcb
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.author: lajanuar
+ms.openlocfilehash: c13530dfcd5841f6a843e8f6f94a44180a2e4927
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953512"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42638591"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -126,6 +126,330 @@ ms.locfileid: "41953512"
             <li>
                 <a href="#samples-demos-templates">Ejemplos&amp; Plantillas</a>
                 <ul id="samples-demos-templates">
+                    <li>
+                        <a href="#templates">Plantillas de aplicaciones</a>
+                        <ul id="templates" class="cardsC">
+                            <li>
+                                <div class="container intro" style="margin-top:-20px;">
+                                    <h2>Plantillas de aplicaciones listas para usar</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-company-communicator-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicación de Comunicador de la empresa</h3>
+                                                    <p>Permite a los equipos corporativos crear mensajes y enviarlos a los empleados a través del chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-celebrations-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicación de Celebraciones</h3>
+                                                    <p>Ayude a celebrar los cumpleaños y aniversarios de los miembros del equipo y otros acontecimientos periódicos</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-faqplusplus-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-faq-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot de Preguntas más frecuentes Plus</h3>
+                                                    <p>El bot de preguntas más frecuentes es un bot de preguntas y respuestas que mantiene informado al usuario cuando no puede ayudar</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-hrsupport-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot de Soporte de Recursos Humanos</h3>
+                                                    <p>Bot de preguntas y respuestas de Recursos Humanos que mantiene informado al equipo de Recursos Humanos cuando no puede ayudar</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicación de Búsqueda de lista de SharePoint</h3>
+                                                    <p>Busque en una lista de SharePoint e inserte un elemento en Teams como tarjeta adaptable</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-stickers-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicación de Adhesivos personalizados</h3>
+                                                    <p>Agregue adhesivos personalizados para el equipo o la organización</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-icebreaker-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot Rompehielo</h3>
+                                                    <p>Empareje aleatoriamente a los miembros de su equipo para que se conozcan mejor en un encuentro semanal</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-app-scrumstatus">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-scrum.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot de estado de Scrum</h3>
+                                                    <p>Permita que su equipo ejecute reuniones de Scrum asincrónicas y comparta actualizaciones.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-voice-deployment.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot de ideas</h3>
+                                                    <p>Ayude a su equipo a adquirir información consultada y de forma colaborativa con los miembros de la organización.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-expertfinder">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot buscador de expertos</h3>
+                                                    <p>Ayude a su equipo a encontrar expertos internos en función de sus aptitudes, intereses y educación.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-bookaroom">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Bot de reserva de reuniones</h3>
+                                                    <p>Ayude a su equipo a encontrar y reservar rápidamente una sala de reuniones.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-attendance">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-add-user-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Asistencia</h3>
+                                                    <p>Ayude a su equipo a registrar la asistencia y crear informes resumidos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-associateinsights">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Información de asociados</h3>
+                                                    <p>Permitir a los trabajadores de primera línea capturar comentarios de los clientes.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incentives">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Aplicación para incentivos</h3>
+                                                    <p>Administre y realice un seguimiento de incentivos por la participación en actividades y eventos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/microsoftteams/platform/moodleinstructions">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-resource-training-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Integración de Moodle en Teams</h3>
+                                                    <p>Conecte el servidor Moodle con Microsoft Teams</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#connectors">Conectores de Turnos</a>
+                        <ul id="connectors" class="cardsC">
+                            <li>
+                                <div class="container intro" style="margin-top:-20px;">
+                                    <h2>Conectores de Turnos listos para usar</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/Kronos-Shifts-Connector">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Conector de Kronos a Turnos </h3>
+                                                    <p>Permite la integración sin problemas desde el sistema Kronos WFM a los Turnos de Teams.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#samples">Ejemplos</a>
                         <ul id="samples" class="cardsI panelContent">
@@ -455,168 +779,6 @@ ms.locfileid: "41953512"
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#templates">Plantillas de aplicaciones</a>
-                        <ul id="templates" class="cardsC">
-                            <li>
-                                <div class="container intro" style="margin-top:-20px;">
-                                    <h2>Plantillas de aplicaciones listas para usar</h2>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-company-communicator-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Comunicador de la empresa</h3>
-                                                    <p>Permite a los equipos corporativos crear mensajes y enviarlos a los empleados a través del chat</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-celebrations-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Celebraciones</h3>
-                                                    <p>Ayude a celebrar los cumpleaños y aniversarios de los miembros del equipo y otros acontecimientos periódicos</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-faqplusplus-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-faq-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Preguntas más frecuentes Plus</h3>
-                                                    <p>El bot de preguntas más frecuentes es un bot de preguntas y respuestas que mantiene informado al usuario cuando no puede ayudar</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-hrsupport-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Soporte de Recursos Humanos</h3>
-                                                    <p>Bt de preguntas y respuestas de Recursos Humanos que mantiene informado al equipo de Recursos Humanos cuando no puede ayudar</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>                             
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-stickers-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Adhesivos personalizados</h3>
-                                                    <p>Agregue adhesivos personalizados para el equipo o la organización</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Búsqueda de lista de SharePoint</h3>
-                                                    <p>Busque en una lista de SharePoint e inserte un elemento en Teams como tarjeta adaptable</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-icebreaker-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Rompehielo</h3>
-                                                    <p>Empareje aleatoriamente a los miembros de su equipo para que se conozcan mejor en un encuentro semanal</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/microsoftteams/platform/moodleinstructions">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-resource-training-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Integración de Moodle en Teams</h3>
-                                                    <p>Conecte el servidor Moodle con Microsoft Teams</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
                             </li>
                         </ul>
                     </li>
