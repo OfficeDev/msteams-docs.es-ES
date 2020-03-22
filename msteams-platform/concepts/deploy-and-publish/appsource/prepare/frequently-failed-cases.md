@@ -4,12 +4,12 @@ description: Describe las sugerencias para el envío y la mayoría de las direct
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 75ac2a01f1ccd8e38977e1cd099544e7dd160733
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279791"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896523"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -51,7 +51,7 @@ En este artículo se tratan los motivos comunes de error de validación de aplic
 
 Para obtener más información acerca de la autenticación, consulte:
 
-* [Documentación de autenticación](/concepts/authentication/authentication.md)
+* [Documentación de autenticación](../../../authentication/authentication.md)
 * [Ejemplo de autenticación de bot en node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Ejemplo de autenticación de pestaña en node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Autenticación de Tab/bot en C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

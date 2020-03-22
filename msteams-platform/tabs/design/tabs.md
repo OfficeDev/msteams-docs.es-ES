@@ -2,12 +2,12 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de las fichas de marco de trabajo
-ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365265"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896502"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -139,7 +139,7 @@ Hay dos modos de notificación para cambios de contenido de pestañas:
 
 > [!div class="checklist"]
 >
-> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **Usar un bot**. Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
 
   El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando hay usuarios `@mention` específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.
