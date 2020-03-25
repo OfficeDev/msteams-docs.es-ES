@@ -4,12 +4,12 @@ author: laujan
 description: Cómo usar el SDK del cliente de Microsoft Teams para agregar funcionalidad consciente de Teams a las pestañas personalizadas
 keywords: Grupo de pestañas de Microsoft canal de grupo configurable del SDK estático personalizado JavaScript
 ms.topic: conceptual
-ms.openlocfilehash: eac5a8ec03ba12d926346afb40ca9bc6e9dda8d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676190"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928513"
 ---
 # <a name="using-the-teams-client-sdk"></a>Uso del SDK del cliente de Microsoft Teams
 
@@ -23,6 +23,8 @@ En la tabla siguiente se describen las funciones de la biblioteca de teams que s
 | -----     | -----     | -----    | -----        |
 | `microsoftTeams.initialize()` | Inicializa la biblioteca de Teams. Se debe llamar a esta función antes de cualquier otra llamada a SDK.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Obtiene el estado actual en el que se está ejecutando la página. La devolución de llamada recupera el objeto de **contexto** .|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-)<br/>[obj de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Inicializa la biblioteca de Teams y establece el [contexto de marco](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) de la pestaña según la ContentUrl y websiteUrl. Esto garantiza que la funcionalidad de ir a sitio web/recargar funciona en la dirección URL correcta.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Establece el contexto del [marco](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) de la pestaña según la ContentUrl y websiteUrl. Esto garantiza que la funcionalidad de ir a sitio web/recargar funciona en la dirección URL correcta.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |El controlador que se registra cuando el usuario cambia la vista de pantalla completa o de ventana de una pestaña.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest#isfullscreen)|
 |`microsoftTeams.registerChangeSettingsHandler()` |El controlador que se registra cuando el usuario selecciona el botón **configuración** habilitada para reconfigurar una pestaña.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Obtiene las pestañas que pertenecen a la aplicación. La devolución de llamada recupera el objeto **TabInformation** . El objeto **TabInstanceParameters** es un parámetro opcional.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-)<br/>[obj tabInfo](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest)|

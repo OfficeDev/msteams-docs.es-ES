@@ -2,12 +2,12 @@
 title: Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que suelen requerir el consentimiento del usuario
 keywords: desarrollo de pestañas de Microsoft Teams
-ms.openlocfilehash: 454466ff17ecf275f6ae6c7413df8e117335f3c8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928520"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 
@@ -57,7 +57,7 @@ Cada propiedad le permitirá pedir al usuario que pida su consentimiento
 
 | Propiedad      | Descripción   |
 | --- | --- |
-| medios         | permiso para usar la cámara, el micrófono y los altavoces |
+| Elementos multimedia         | permiso para usar la cámara, el micrófono y los altavoces |
 | geolocalización   | permiso para devolver la ubicación del usuario      |
 | notificaciones | permiso para enviar notificaciones de usuario      |
 | MIDI          | permiso para enviar y recibir información MIDI de un instrumento musical digital   |
@@ -106,3 +106,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![Pestañas del mensaje de permisos de dispositivo](~/assets/images/tabs/device-permissions-prompt.png)
+
+## <a name="permission-behavior-across-login-sessions"></a>Comportamiento de permisos en sesiones de inicio de sesión
+
+Los permisos de dispositivos nativos se almacenan por sesión de inicio de sesión. Esto significa que si inicia sesión en otra instancia de Teams (por ejemplo: en otro equipo), los permisos de dispositivo de las sesiones anteriores no estarán disponibles. En su lugar, tendrá que volver a dar su consentimiento a los permisos de dispositivo para el nuevo inicio de sesión sessoin. Esto también significa que, si sale de la sesión de Teams (o de los inquilinos de conmutador dentro de los equipos), los permisos de dispositivo se eliminarán para la sesión de inicio anterior. Tenga esto en cuenta cuando desarrolle permisos de dispositivos nativos: las capacidades nativas con las que da su consentimiento son solo para su sessoin de inicio de sesión _actual_ .
