@@ -2,12 +2,12 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: ad02795c7ab84e290b83e781ea413dd3ef797fdb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f8550070ed010d99c0c33202ada95b64c05cdc4f
+ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675685"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42982147"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -17,6 +17,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+| 03/24/2020 | Se ha agregado compatibilidad para recuperar un solo miembro de una conversación y una compatibilidad adicional para recuperar miembros paginados. | [Obtener el contexto de Teams para el bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | El `replyToId` parámetro de las cargas enviadas a un bot ya no está cifrado, lo que le permite usar este valor para crear deeplinks en estos mensajes. Las cargas de mensajes incluyen los valores cifrados en `legacy.replyToId`el parámetro.  |
 | 11/5/2019 | El inicio de sesión único con el SDK de Teams para JavaScript en una página de contenido web está en la versión preliminar para desarrolladores | [Inicio de sesión único](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Los bots de conversación y la documentación de la extensión de mensajería se han actualizado para reflejar el SDK de bot Framework de 4,6. La documentación del SDK de la versión 3 de V3 está disponible en la sección recursos. | Toda la documentación de la extensión de Bot y mensajería. |
@@ -30,7 +31,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 | 05/20/2019 | Acciones de mensaje | [Acciones de mensaje](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Link unfurling (vistas previas de direcciones URL personalizadas) | [Vincular unfurling](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | Programa de certificación de aplicaciones para aplicaciones de la tienda | [Certificación de aplicaciones](~/publishing/application-certification.md) |
-| 05/06/2019 | Las plantillas de aplicación ahora están disponibles. | [Plantillas de aplicación](~/samples/app-templates.md) |
+| 05/06/2019 | Las plantillas de aplicación ahora están disponibles. | [Plantillas de aplicaciones](~/samples/app-templates.md) |
 | 04/23/2019 | Las extensiones de mensajería basadas en acciones ya están disponibles | [Extensiones de mensajes basadas en acciones](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | La creación de vínculos profundos a un chat privado está fuera de la vista previa para desarrolladores y disponible | [Vinculación profunda a un chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Superficies SKU y licenceType información en el contexto de la pestaña | [Contexto de la pestaña](~/concepts/tabs/tabs-context.md) |
