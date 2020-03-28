@@ -2,12 +2,12 @@
 title: Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que suelen requerir el consentimiento del usuario
 keywords: desarrollo de pestañas de Microsoft Teams
-ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928520"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034039"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 
@@ -21,13 +21,10 @@ Es posible que quiera enriquecer su pestaña con características que requieran 
 ![Pantalla de configuración de permisos de dispositivo](~/assets/images/tabs/device-permissions.png)
 
 > [!IMPORTANT]
-> Actualmente, la funcionalidad de dispositivos nativos no es compatible con las pestañas de clientes móviles, pero pronto estará disponible la compatibilidad completa. Para prepararse para este cambio, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas. Las aplicaciones personales (pestañas estáticas) están disponibles actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 >
-> Cuando se publica la compatibilidad completa de pestañas:
+> Actualmente, la funcionalidad de dispositivos nativos no es compatible con las pestañas de los clientes móviles.
 >
-> * Todas las pestañas estarán siempre disponibles en dispositivos móviles
-> * El `contentUrl` **se cargará en el cliente móvil de Microsoft Teams**.
-> * En las pestañas canal/grupo, los usuarios pueden abrir la pestaña en un explorador independiente `websiteUrl`a través de `contentUrl` la, pero se cargará primero.  
+> Actualmente, la API de ubicación geográfica no es totalmente compatible con todos los clientes de escritorio.
 
 ## <a name="device-permissions"></a>Permisos de dispositivo
 
@@ -55,7 +52,7 @@ Actualice la aplicación `manifest.json` agregando `devicePermissions` y especif
 
 Cada propiedad le permitirá pedir al usuario que pida su consentimiento
 
-| Propiedad      | Descripción   |
+| Propiedad      | Description   |
 | --- | --- |
 | Elementos multimedia         | permiso para usar la cámara, el micrófono y los altavoces |
 | geolocalización   | permiso para devolver la ubicación del usuario      |
@@ -109,4 +106,4 @@ Notification.requestPermission(function(result) { /* ... */ });
 
 ## <a name="permission-behavior-across-login-sessions"></a>Comportamiento de permisos en sesiones de inicio de sesión
 
-Los permisos de dispositivos nativos se almacenan por sesión de inicio de sesión. Esto significa que si inicia sesión en otra instancia de Teams (por ejemplo: en otro equipo), los permisos de dispositivo de las sesiones anteriores no estarán disponibles. En su lugar, tendrá que volver a dar su consentimiento a los permisos de dispositivo para el nuevo inicio de sesión sessoin. Esto también significa que, si sale de la sesión de Teams (o de los inquilinos de conmutador dentro de los equipos), los permisos de dispositivo se eliminarán para la sesión de inicio anterior. Tenga esto en cuenta cuando desarrolle permisos de dispositivos nativos: las capacidades nativas con las que da su consentimiento son solo para su sessoin de inicio de sesión _actual_ .
+Los permisos de dispositivos nativos se almacenan por sesión de inicio de sesión. Esto significa que si inicia sesión en otra instancia de Teams (por ejemplo: en otro equipo), los permisos de dispositivo de las sesiones anteriores no estarán disponibles. En su lugar, tendrá que volver a dar su consentimiento a los permisos de dispositivo para la nueva sesión de inicio de sesión. Esto también significa que, si sale de la sesión de Teams (o de los inquilinos de conmutador dentro de los equipos), los permisos de dispositivo se eliminarán para la sesión de inicio anterior. Tenga esto en cuenta cuando desarrolle permisos de dispositivos nativos: las funciones nativas con las que da su consentimiento están solo para su sesión de inicio _actual_ .

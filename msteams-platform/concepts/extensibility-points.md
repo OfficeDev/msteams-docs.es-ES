@@ -4,12 +4,12 @@ author: clearab
 description: Comprenda los puntos de extensibilidad disponibles para la aplicación en el cliente de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f65a5111bf59b08347291caa15c557dc0a48e886
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675780"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034032"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>Puntos extensibles en el cliente de Microsoft Teams
 
@@ -23,11 +23,11 @@ Los equipos, canales y chats de Grupo permiten que varios usuarios colaboren. La
 
 Se pueden extender con:
 
-* Los **[bots de conversación](~/bots/what-are-bots.md)** interactúan con los miembros de la conversación a través de la charla y responden a los eventos (como un nuevo miembro que se agrega o un canal al que se cambia el nombre). Todas las conversaciones que tienen un bot en este contexto son visibles para todos los miembros del canal o grupo, por lo que tendrá que asegurarse de que la conversación es relevante para todos los usuarios.
+* Los [**bots de conversación**](~/bots/what-are-bots.md) interactúan con los miembros de la conversación a través de la charla y responden a los eventos (como un nuevo miembro que se agrega o un canal al que se cambia el nombre). Todas las conversaciones que tienen un bot en este contexto son visibles para todos los miembros del canal o grupo, por lo que tendrá que asegurarse de que la conversación es relevante para todos los usuarios.
 
-* **[Pestañas configurables](~/tabs/what-are-tabs.md)** que proporcionan una experiencia Web integrada de pantalla completa configurada para el chat de canal o de grupo en el que está instalado. Todos los miembros interactuarán en la misma aplicación web compartida, por lo que una experiencia de aplicación de una sola página sin estado es típica.
+* [**Pestañas configurables**](~/tabs/what-are-tabs.md) que proporcionan una experiencia Web integrada de pantalla completa configurada para el chat de canal o de grupo en el que está instalado. Todos los miembros interactuarán en la misma aplicación web compartida, por lo que una experiencia de aplicación de una sola página sin estado es típica.
 
-* **[Webhooks y conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** que habilitan servicios externos para publicar mensajes en la conversación y los usuarios para enviar mensajes a su servicio. Puede aprovechar las acciones de tarjetas y tarjetas para crear mensajes sofisticados y accionables.
+* [**Webhooks y conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que habilitan servicios externos para publicar mensajes en la conversación y los usuarios para enviar mensajes a su servicio. Puede aprovechar las acciones de tarjetas y tarjetas para crear mensajes sofisticados y accionables.
 
 ### <a name="personal-apps"></a>Aplicaciones personales
 
@@ -35,13 +35,13 @@ Las [aplicaciones personales](~/concepts/design/personal-apps.md) son una parte 
 
 Pueden contener:
 
-* **[Bots de conversación](~/bots/what-are-bots.md)** con una conversación de uno a uno con el usuario. Como esta es una conversación privada, si la aplicación necesita tener una conversación de varios turnos o proporcionar una notificación relevante para un solo usuario, suele ser mejor tener esa interacción en una aplicación personal.
+* [**Bots de conversación**](~/bots/what-are-bots.md) con una conversación de uno a uno con el usuario. Como esta es una conversación privada, si la aplicación necesita tener una conversación de varios turnos o proporcionar una notificación relevante para un solo usuario, suele ser mejor tener esa interacción en una aplicación personal.
 
-* **[Pestañas personales](~/tabs/what-are-tabs.md)** que proporcionan una experiencia Web integrada a pantalla completa.
+* [**Pestañas personales**](~/tabs/what-are-tabs.md)que proporcionan una experiencia Web integrada a pantalla completa.
 
 ## <a name="messages"></a>Mensajes
 
-Los mensajes son el corazón de la colaboración en Microsoft Teams. Con un **[comando de acción de extensión de mensajería](~/messaging-extensions/what-are-messaging-extensions.md)**, la aplicación puede permitir a los usuarios invocar la API de la aplicación desde un mensaje y enviar el contenido del mensaje a la aplicación para su procesamiento o acción. La aplicación puede responder presentando un formulario (un módulo de tareas) al usuario para recopilar más información, enviar una respuesta al mensaje original o enviar un mensaje directamente al usuario.
+Los mensajes son el corazón de la colaboración en Microsoft Teams. Con un [**comando de acción de extensión de mensajería**](~/messaging-extensions/what-are-messaging-extensions.md), la aplicación puede permitir a los usuarios invocar la API de la aplicación desde un mensaje y enviar el contenido del mensaje a la aplicación para su procesamiento o acción. La aplicación puede responder presentando un formulario (un módulo de tareas) al usuario para recopilar más información, enviar una respuesta al mensaje original o enviar un mensaje directamente al usuario.
 
 ## <a name="writing-messages"></a>Escribir mensajes
 
@@ -49,11 +49,11 @@ La aplicación puede ayudar a los usuarios a crear mensajes más efectivos permi
 
 Hay tres formas en que la aplicación puede ayudar a los usuarios a crear mensajes mejores:
 
-* **[Extensiones de mensajería: comandos de búsqueda](~/messaging-extensions/what-are-messaging-extensions.md)** que permiten realizar búsquedas rápidas en un sistema externo, obtener una vista previa de los resultados de la búsqueda y, a continuación, insertar el resultado en el chat como una tarjeta enriquecida.
+* [**Extensiones de mensajería: comandos de búsqueda**](~/messaging-extensions/what-are-messaging-extensions.md) que permiten realizar búsquedas rápidas en un sistema externo, obtener una vista previa de los resultados de la búsqueda y, a continuación, insertar el resultado en el chat como una tarjeta enriquecida.
 
-* **[Messaging Extension-Link unfurling](~/messaging-extensions/what-are-messaging-extensions.md)** permite que su aplicación supervise los dominios web que le interesan. Cuando se pega una dirección URL que contiene ese dominio en el cuadro de mensaje de redacción, se invocará la API de la aplicación, lo que le permitirá agregar una tarjeta enriquecida al mensaje con información adicional sobre el elemento al que se va a vincular.
+* [**Messaging Extension-Link unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) permite que su aplicación supervise los dominios web que le interesan. Cuando se pega una dirección URL que contiene ese dominio en el cuadro de mensaje de redacción, se invocará la API de la aplicación, lo que le permitirá agregar una tarjeta enriquecida al mensaje con información adicional sobre el elemento al que se va a vincular.
 
-* **[Extensión de mensajería: los comandos de acción](~/messaging-extensions/what-are-messaging-extensions.md)** presentan al usuario un formulario modal (un módulo de tareas), envían los resultados del formulario a la aplicación y, a continuación, insertan un mensaje en la conversación directamente o crean parte de un mensaje que el usuario puede editar antes de enviarlo a la conversación.
+* [**Extensión de mensajería: los comandos de acción**](~/messaging-extensions/what-are-messaging-extensions.md) presentan al usuario un formulario modal (un módulo de tareas), envían los resultados del formulario a la aplicación y, a continuación, insertan un mensaje en la conversación directamente o crean parte de un mensaje que el usuario puede editar antes de enviarlo a la conversación.
 
 ## <a name="user-interface-ui-elements"></a>Elementos de la interfaz de usuario (UI)
 

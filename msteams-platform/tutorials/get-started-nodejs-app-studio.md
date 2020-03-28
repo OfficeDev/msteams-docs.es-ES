@@ -3,12 +3,14 @@ title: Introducción a App Studio y node. js
 description: Empezar a compilar excelentes aplicaciones en Microsoft Teams con node. js y app Studio
 keywords: nodo introducción. js NodeJS App Studio
 ms.date: 11/09/2018
-ms.openlocfilehash: 36da6d7445ad7780f6bbbf52ccce3e558c76be72
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.topic: tutorial
+ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
+ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676142"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034053"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Introducción a la plataforma de Microsoft Teams con node. js y app Studio
 

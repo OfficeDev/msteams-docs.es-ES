@@ -2,12 +2,14 @@
 title: Introducción al generador de Yeoman para Microsoft Teams
 description: Empezar a compilar excelentes aplicaciones con el generador de Yeoman para Microsoft Teams
 keywords: nodo introducción. js NodeJS Yeoman
-ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.topic: tutorial
+ms.custom: scenarios:getting-started
+ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228090"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034046"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Compilar la primera aplicación de Microsoft Teams
 
