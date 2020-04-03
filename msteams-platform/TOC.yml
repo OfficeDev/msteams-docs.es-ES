@@ -15,12 +15,12 @@
       href: tutorials/get-started-yeoman.md
 - name: Ejemplos y plantillas
   items:
-    - name: Aplicaciones de ejemplo
-      href: samples/code-samples.md
     - name: Plantillas de aplicaciones listas para producción
       href: samples/app-templates.md
     - name: Conectores de turnos listos para producción
       href: samples/shifts-wfm-connectors.md
+    - name: Aplicaciones de ejemplo
+      href: samples/code-samples.md
 - name: Conceptos
   expanded: true
   items:
