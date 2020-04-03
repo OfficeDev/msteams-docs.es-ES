@@ -4,12 +4,12 @@ author: clearab
 description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de la extensión de mensajería.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 33a9388ee84dcf03a5bda59c5a5139c6f49bde6c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676025"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120265"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -39,7 +39,7 @@ En la tabla siguiente se muestran los tipos de respuestas disponibles en funció
 
 A continuación se muestran ejemplos de cómo recibir el mensaje de invocación.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -61,7 +61,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Este es un ejemplo del objeto JSON que recibirá. El `commandContext` parámetro indica desde dónde se desencadenó la extensión de mensajería. El `data` objeto contiene los campos en el formulario como parámetros y los valores enviados por el usuario. El objeto JSON se acorta para resaltar los campos más relevantes.
 
@@ -95,7 +95,7 @@ Este es un ejemplo del objeto JSON que recibirá. El `commandContext` parámetro
 
 La forma más común de responder a la `composeExtension/submitAction` solicitud es con una tarjeta insertada en el área de redacción del mensaje. A continuación, el usuario puede elegir enviar la tarjeta a la conversación. Para obtener más información sobre el uso de tarjetas [, consulte acciones de tarjetas y tarjetas](~/task-modules-and-cards/cards/cards-actions.md).
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -155,7 +155,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -204,7 +204,7 @@ El método para Response es el mismo que [responder al evento `fetchTask` inicia
 También puede responder a la acción de envío Insertando un mensaje con una tarjeta adaptable en el canal con un bot. El usuario podrá obtener una vista previa del mensaje antes de enviarlo y, potencialmente, editarlo o interactuar con él. Esto puede ser muy útil en escenarios en los que necesite recopilar información de los usuarios antes de crear una respuesta de tarjeta adaptable, o cuando vaya a necesitar actualizar la tarjeta después de que alguien interactúe con ella. El siguiente escenario muestra cómo la aplicación Polly usa este flujo para configurar un sondeo sin incluir los pasos de configuración en la conversación de canal.
 
 1. El usuario hace clic en la extensión de mensajería para desencadenar el módulo de tareas.
-2. El usuario configura el sondeo con la tarea moudule.
+2. El usuario configura el sondeo con el módulo de tareas.
 3. Después de enviar el módulo de tareas, la aplicación usa la información proporcionada para compilar el sondeo como una tarjeta adaptable y enviarla como `botMessagePreview` respuesta al cliente.
 4. A continuación, el usuario puede obtener una vista previa del mensaje de tarjeta adaptable antes de que el bot lo inserte en el canal. Si la aplicación aún no es miembro del canal, al hacer clic `Send` se agregará.
    1. El usuario también puede elegir `Edit` el mensaje, que lo devuelve al módulo de tareas original.
@@ -215,7 +215,7 @@ También puede responder a la acción de envío Insertando un mensaje con una ta
 
 Para habilitar este flujo, el módulo de tareas debe responder al `composeExtension/submitAction` mensaje inicial con una vista previa de la tarjeta que el bot enviará al canal. De esta forma, el usuario tendrá la oportunidad de comprobar la tarjeta antes de enviarla y también intentará instalar el bot en la conversación, si no está ya instalado.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -295,7 +295,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 >[!Note]
 >El `activityPreview` debe contener una `message` actividad con exactamente 1 archivo adjunto de tarjeta adaptable. El `<< Card Payload >>` valor es un marcador de posición para la tarjeta que desea enviar.
@@ -323,7 +323,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 La extensión de mensajes ahora tendrá que responder a dos nuevas variedades de la `composeExtension/submitAction` llamada, donde `value.botMessagePreviewAction = "send"`y `value.botMessagePreviewAction = "edit"`.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -357,7 +357,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -400,7 +400,7 @@ Consulte [responder al evento inicial `fetchTask` ](~/messaging-extensions/how-t
 
 Una vez que el usuario hace clic en el botón **Enviar** , recibirá `composeExtension/submitAction` una `value.botMessagePreviewAction = send`llamada con. El servicio Web tendrá que crear y enviar un mensaje proactivo con la tarjeta adaptable a la conversación y también responder a la invocación.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
@@ -427,7 +427,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -476,7 +476,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 Recibirá un mensaje nuevo `composeExtension/submitAction` similar al que se muestra a continuación.
 
@@ -511,7 +511,7 @@ Recibirá un mensaje nuevo `composeExtension/submitAction` similar al que se mue
 
 * * *
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Agregar un comando de búsqueda
 

@@ -2,12 +2,12 @@
 title: Preparar el inquilino de Office 365
 description: Introducción a teams en Office 365
 keywords: Configurar la carga de equipos del inquilino de Office 365
-ms.openlocfilehash: 634392ea3f0228aef69ff920d3b369eb49dd3965
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 35f102223a5f8e6a8e12268e22aedca07a61b1fa
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953498"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120272"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Preparar el inquilino de Office 365
 
@@ -23,7 +23,7 @@ Microsoft Teams también estará disponible para los clientes que se suscribiero
 
 ## <a name="just-need-a-development-environment"></a>¿Solo necesita un entorno de desarrollo?
 
-Si actualmente no tiene una cuenta de Office 365, puede registrarse para obtener una suscripción al [programa de desarrolladores de office 365](https://dev.office.com/devprogram) . Es *gratuita* durante 90 días y se renovará continuamente siempre que la use para la actividad de desarrollo. Si tiene una suscripción a Visual Studio *Enterprise* o *Professional* , ambos programas incluyen una suscripción gratuita al [desarrollador](https://aka.ms/MyVisualStudioBenefits)de Office 365, activa durante la vida de su suscripción a Visual Studio. *Consulte* [configurar una suscripción de desarrollador de Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+Si actualmente no tiene una cuenta de Office 365, puede registrarse para obtener una suscripción al [programa de desarrolladores de office 365](https://developer.microsoft.com/microsoft-365/dev-program) . Es *gratuita* durante 90 días y se renovará continuamente siempre que la use para la actividad de desarrollo. Si tiene una suscripción a Visual Studio *Enterprise* o *Professional* , ambos programas incluyen una suscripción gratuita al [desarrollador](https://aka.ms/MyVisualStudioBenefits)de Office 365, activa durante la vida de su suscripción a Visual Studio. *Consulte* [configurar una suscripción de desarrollador de Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>Habilitación de Microsoft Teams para la organización
 
@@ -38,6 +38,6 @@ Hay tres opciones de configuración relevantes para la habilitación de aplicaci
 
 * **Configuración** => de aplicación personalizada para toda la organización**permitir la interacción con aplicaciones** => personalizadas **: esta** configuración habilita o deshabilita las aplicaciones personalizadas para su organización. Debe estar activada. 
 * **Configuración** => de la aplicación personalizada de equipo**permitir a los miembros cargar aplicaciones** => personalizadas**activado/desactivado** : esta configuración se aplica a cada equipo individual dentro de Microsoft Teams. Si quiere instalar la aplicación para un equipo específico, esto tendrá que estar activado para ese equipo.
-* **** => El usuario de la Directiva de aplicación personalizada => **del** usuario**puede cargar aplicaciones personalizadas**: esta configuración controla los permisos de un usuario individual. Deberá habilitar esto para los usuarios que tengan permiso para cargar aplicaciones personalizadas.
+* **User custom app policy** => El usuario de la Directiva de aplicación personalizada => **del** usuario**puede cargar aplicaciones personalizadas**: esta configuración controla los permisos de un usuario individual. Deberá habilitar esto para los usuarios que tengan permiso para cargar aplicaciones personalizadas.
 
 Para obtener información completa sobre cómo interactúa esta configuración, *consulte* [administrar la configuración y las directivas de la aplicación personalizada en Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) y [administrar las directivas de configuración de aplicaciones en Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

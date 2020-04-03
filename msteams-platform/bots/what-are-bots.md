@@ -4,12 +4,12 @@ author: clearab
 description: Información general sobre los bots de conversación en Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635308"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120293"
 ---
 # <a name="what-are-conversational-bots"></a>¿Qué son los bots de conversación?
 
@@ -92,7 +92,7 @@ Un bot que admite demasiados comandos, especialmente una amplia gama de comandos
 
 ### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Mantener una base de conocimientos de recuperación de gran tamaño con respuestas sin clasificar
 
-Los bots son idóneos para las interacciones cortas y rápidas, no para el cribado, aunque largas que buscan una respuesta.
+Los bots son idóneos para las interacciones breves y rápidas, sin examinar las listas largas en busca de una respuesta.
 
 ## <a name="get-started"></a>Introducción
 
