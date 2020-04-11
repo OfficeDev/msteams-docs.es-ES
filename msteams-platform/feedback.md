@@ -1,15 +1,15 @@
 ---
-title: Enviar comentarios
-description: Enviar sus comentarios sobre la plataforma para desarrolladores de Microsoft Teams
-keywords: Preguntas y respuestas de Microsoft Teams errores contribuciones
-ms.openlocfilehash: 1f92a1f685632a9bb1bcae9e382b3b651561ead7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Soporte técnico y comentarios
+description: Soporte técnico y comentarios para desarrolladores de Microsoft Teams
+keywords: Teams comentarios para desarrolladores preguntas sobre los problemas póngase en contacto con el soporte solicitar errores contribuciones
+ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676036"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225787"
 ---
-# <a name="send-feedback-about-the-microsoft-teams-developer-platform"></a>Enviar comentarios sobre la plataforma para desarrolladores de Microsoft Teams
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Soporte técnico y comentarios para desarrolladores de Microsoft Teams  
 
 El equipo de producto de Microsoft Teams responde a la comunidad de desarrolladores en varios canales.
 

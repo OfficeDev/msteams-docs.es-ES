@@ -4,12 +4,12 @@ author: clearab
 description: Información general sobre las extensiones de mensajería en la plataforma de Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 01a038d57368826345a55358b1d628447b21f772
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676019"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225794"
 ---
 # <a name="what-are-messaging-extensions"></a>¿Qué son las extensiones de mensajería?
 
@@ -64,10 +64,10 @@ También tiene la opción de invocar el servicio cuando se pega una dirección U
 
 ¿Está listo para empezar a compilar? Pruebe con uno de nuestros tutoriales:
 
-* Tutoriales rápidos para C #
+* **C#**
   * [Extensión de mensajería con comandos basados en acciones](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
   * [Extensión de mensajería con comandos basados en la búsqueda](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* Tutoriales rápidos de JavaScript
+* **JavaScript**
   * [Extensión de mensajería con comandos basados en acciones](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extensión de mensajería con comandos basados en la búsqueda](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
