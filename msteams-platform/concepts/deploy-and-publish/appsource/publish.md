@@ -2,12 +2,12 @@
 title: Guía del proceso de aprobación de aplicaciones de Microsoft Teams
 description: Describe el proceso de aprobación para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
 keywords: publicación de la tienda Office de tienda de AppSource
-ms.openlocfilehash: 761cb69ddebac28af5ffc39401eefa9e1b424bc3
-ms.sourcegitcommit: 27789fd2e6f522f33f2135c66b0153949d9b0d64
+ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
+ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43285940"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "43509333"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -43,7 +43,15 @@ El número de teléfono tiene tres partes: el código de país, el código de á
 
 ## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>¿Por qué recibo el mensaje? "esta cuenta no es elegible para publicación" cuando intento enviar mi complemento a través del centro de asociados?
 
-Recibirá el mensaje de error anterior cuando el [Estado de verificación de cuenta](/partner-center/verification-responses) esté pendiente. Puede comprobar el estado de verificación de la cuenta en el [Panel](https://partner.microsoft.com/dashboard) del centro de asociados seleccionando la opción de **configuración** (el icono de engranaje) en la esquina superior derecha del shell de encabezado de página y eligiendo opciones de configuración de**cuenta** de**la cuenta de**  =>  **configuración** => de desarrollador. Durante el proceso de verificación de la cuenta, se mostrará el estado de cada paso necesario (propiedad del correo electrónico, verificación del empleo e comprobación de la empresa). Una vez que el proceso de comprobación se haya completado correctamente, el estado de verificación de la inscripción en la página de perfil cambiará de "pendiente" a "autorizado" y los pasos del proceso ya no se mostrarán. *Consulte a continuación*para resolver posibles problemas de comprobación.
+Recibirá el mensaje de error anterior cuando el [Estado de verificación de cuenta](/partner-center/verification-responses) esté pendiente. Puede comprobar el estado de verificación de la cuenta en el [Panel](https://partner.microsoft.com/dashboard) del centro de asociados seleccionando la opción de **configuración** (el icono de engranaje) en la esquina superior derecha del shell de encabezado de página y eligiendo opciones de configuración de**cuenta** de**la cuenta de**  =>  **configuración** => de desarrollador.
+
+![Página configuración de la cuenta del centro asociado](../../../assets/images/partner-center-accts-page.png)
+
+![Estado de comprobación del centro de asociados](../../../assets/images/partner-center-verification-status.png)
+
+Durante el proceso de verificación de la cuenta, se mostrará el estado de cada paso necesario (propiedad del correo electrónico, verificación del empleo e comprobación de la empresa). Una vez que el proceso de comprobación se haya completado correctamente, el estado de verificación de la inscripción en la página de perfil cambiará de "pendiente" a "autorizado" y los pasos del proceso ya no se mostrarán.
+
+![Error de comprobación del centro del asociado](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>¿Cómo puedo obtener más soporte para mis problemas relacionados con la cuenta?
 
