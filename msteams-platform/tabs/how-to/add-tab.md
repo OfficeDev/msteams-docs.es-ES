@@ -5,18 +5,18 @@ description: Guía para crear una pestaña
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptual
 ms.author: ''
-ms.openlocfilehash: 3f3b0ac8bc141672f25d9db2470cb71a856e0ed8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9f12f9eb39e4dfac4d5b725638bdbd2d7c2b4de6
+ms.sourcegitcommit: b8b06929981ebbeef4ae489f338271bf09d349a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675970"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43537274"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Ampliar la aplicación de Microsoft Teams con una pestaña personalizada
 
 Las pestañas personalizadas permiten servir contenido web que se hospeda en el canal, el chat en grupo y los usuarios personales. En un nivel alto, deberá completar los siguientes pasos para crear una pestaña:
 
-1. Prepare el entorno de desarrollo.
+1. Preparar el entorno de desarrollo.
 1. Cree su página o páginas.
 1. Hospedar el servicio de aplicaciones.
 1. Crear el paquete de la aplicación y cargarlo en Microsoft Teams.
@@ -38,7 +38,9 @@ Hay tres tipos de páginas de ficha. Consulte la página de documentación corre
 Independientemente del tipo de página, la pestaña tendrá que cumplir con los siguientes requisitos:
 
 * Debe permitir que las páginas se sirvan en un IFrame, a través de los encabezados de respuesta HTTP X-Frame-Options o Content-Security-Policy.
-
+  * Encabezado Set:`Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`        
+  * Para la compatibilidad con Internet Explorer 11 `X-Content-Security-Policy` , establezca también.    
+  * Como alternativa, establezca header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. Este encabezado está en desuso, pero respeta la mayoría de los exploradores.
 * Por lo general, como protección contra clics, las páginas de inicio de sesión no se representan en IFrames. Por lo tanto, la lógica de autenticación debe usar un método que no sea Redirect (por ejemplo, usar autenticación basada en tokens o basada en cookies).
 
 > [!NOTE]
@@ -56,7 +58,7 @@ El contenido debe hospedarse en una dirección URL disponible públicamente disp
 
 ## <a name="create-your-app-package-with-app-studio"></a>Crear el paquete de la aplicación con App Studio
 
-Puede usar la aplicación de App Studio desde el cliente de Microsoft Teams para ayudar a crear el manifiesto de la aplicación. Si no tiene instalado App Studio en Microsoft Teams, seleccione **** ![aplicación](/microsoftteams/platform/assets/images/tab-images/storeApp.png) de la tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busque App Studio. Una vez que encuentre el icono, selecciónelo y elija instalar en el cuadro de diálogo ventana emergente.
+Puede usar la aplicación de App Studio desde el cliente de Microsoft Teams para ayudar a crear el manifiesto de la aplicación. Si no tiene instalado App Studio en Microsoft Teams, seleccione **Apps** ![aplicación](/microsoftteams/platform/assets/images/tab-images/storeApp.png) de la tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busque App Studio. Una vez que encuentre el icono, selecciónelo y elija instalar en el cuadro de diálogo ventana emergente.
 
 1. Abrir el cliente de Microsoft Teams: el uso de la [versión basada en Web](https://teams.microsoft.com) le permitirá inspeccionar el código Front-end con las [herramientas de desarrollo](~/tabs/how-to/developer-tools.md)de su explorador.
 1. Abra App Studio y seleccione la pestaña **Editor de manifiestos** .
@@ -68,7 +70,7 @@ Puede usar la aplicación de App Studio desde el cliente de Microsoft Teams para
 1. En la sección *dominios y permisos* , los *dominios del campo de pestañas* deben contener la dirección URL de proxy o host inverso sin el prefijo https.
 1. En la pestaña **Finalizar** => **prueba y distribución** puede **Descargar** el paquete de la aplicación, **instalar** el paquete en un equipo o **enviarlo** a la tienda de aplicaciones de Microsoft Teams para su aprobación. *Si usa un proxy inverso, recibirá una advertencia en el campo **Descripción** de la derecha. Se puede omitir la advertencia mientras se prueba la pestaña*.
 
-## <a name="create-your-app-package-manually"></a>Crear el paquete de la aplicación manualmente
+## <a name="create-your-app-package-manually"></a>Crear el paquete de aplicación manualmente
 
 Al igual que con los bots y las extensiones de mensajería, se actualiza el manifiesto de la [aplicación](~/resources/schema/manifest-schema.md) para incluir las propiedades de la pestaña. Estas propiedades rigen los ámbitos en los que está disponible la pestaña, las direcciones URL que se usarán y otras propiedades.
 
@@ -79,10 +81,10 @@ El contenido que se muestra para las pestañas personales es el mismo para todos
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Un identificador único para la entidad que muestra la pestaña.|
-|`name`|String|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz de canal.|
-|`contentUrl`|String|2048 caracteres|✔|Dirección URL de https://que señala a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Microsoft Teams.|
-|`websiteUrl`|String|2048 caracteres||La dirección URL de https://para apuntar a si un usuario opta por verlo en un explorador.|
-|`scopes`|Matriz de enum|1 |✔|Las pestañas estáticas `personal` solo admiten el ámbito, lo que significa que solo se puede aprovisionar como parte de una aplicación personal.|
+|`name`|Cadena|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz de canal.|
+|`contentUrl`|Cadena|2048 caracteres|✔|Dirección URL de https://que señala a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Microsoft Teams.|
+|`websiteUrl`|Cadena|2048 caracteres||La dirección URL de https://para apuntar a si un usuario opta por verlo en un explorador.|
+|`scopes`|Matriz de enumeración|1|✔|Las pestañas estáticas `personal` solo admiten el ámbito, lo que significa que solo se puede aprovisionar como parte de una aplicación personal.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Ejemplo de manifiesto de ficha personal simple
 
@@ -107,9 +109,9 @@ Las fichas canal/grupo se agregan `configurableTabs` en la matriz. Solo puede de
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 caracteres|✔|La dirección URL de https://a la página de configuración.|
+|`configurationUrl`|Cadena|2048 caracteres|✔|La dirección URL de https://a la página de configuración.|
 |`canUpdateConfiguration`|Boolean|||Un valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de crearla. Predeterminada`true`|
-|`scopes`|Matriz de enum|1 |✔|Las pestañas configurables solo admiten los `team` ámbitos y `groupchat` . |
+|`scopes`|Matriz de enumeración|1|✔|Las pestañas configurables solo admiten los `team` ámbitos y `groupchat` . |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Ejemplo de manifiesto de ficha de grupo/canal simple
 
