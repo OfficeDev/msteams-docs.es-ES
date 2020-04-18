@@ -1,17 +1,19 @@
 ---
-title: Soporte técnico y comentarios
-description: Soporte técnico y comentarios para desarrolladores de Microsoft Teams
+title: Soporte técnico y comentarios para desarrolladores de Microsoft Teams
+description: El equipo de producto de Microsoft Teams responde a la comunidad de desarrolladores en varios canales de comentarios y soporte técnico.
 keywords: Teams comentarios para desarrolladores preguntas sobre los problemas póngase en contacto con el soporte solicitar errores contribuciones
-ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: dc152fc9445e3fc9583638d522c03e9f2052bcd9
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225787"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550948"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Soporte técnico y comentarios para desarrolladores de Microsoft Teams  
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Soporte técnico y comentarios para desarrolladores de Microsoft Teams
 
-El equipo de producto de Microsoft Teams responde a la comunidad de desarrolladores en varios canales.
+El equipo de producto de Microsoft Teams responde a la comunidad de desarrolladores en varios canales de comentarios y soporte técnico.
+
+## <a name="support-and-feedback-channels"></a>Canales de soporte y comentarios
 
 - **Preguntas generales sobre la plataforma para desarrolladores de Microsoft Teams:** Envíe un correo electrónico a [soporte técnico para desarrolladores de Microsoft Teams](mailto:microsoftteamsdev@microsoft.com). Esta dirección de correo electrónico _no_ está destinada a comentarios ni sugerencias sobre características no relacionadas con la plataforma de Microsoft Teams. Además, mientras se leen todos los correos electrónicos enviados a esta dirección, no se responde a cada uno de ellos.
 

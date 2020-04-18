@@ -4,12 +4,12 @@ author: clearab
 description: Cómo agregar la autenticación OAuth a un bot en Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: f5eae27de45cd0932e4d2ed62fa954429a48aa6d
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225801"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550983"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación a su bot de Teams
 
@@ -33,7 +33,7 @@ En este artículo, aprenderá lo siguiente:
 
 - Información sobre los [aspectos básicos][concept-basics]de los bot, la [Administración del estado][concept-state], la biblioteca de cuadros de [diálogo][concept-dialogs]y cómo implementar un [flujo de conversación secuencial][simple-dialog].
 - Conocimientos del desarrollo de Azure y OAuth 2,0.
-- Visual Studio 2017 o posterior y git.
+- Las versiones actuales de Visual Studio y git.
 - Cuenta de Azure. Si es necesario, puede crear una [cuenta gratuita de Azure](https://azure.microsoft.com/free/).
 - El siguiente ejemplo.
 

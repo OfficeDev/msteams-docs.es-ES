@@ -3,12 +3,12 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365251"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550955"
 ---
 # <a name="format-cards-in-teams"></a>Formato de tarjetas en Microsoft Teams
 
@@ -61,15 +61,15 @@ El formato es ligeramente distinto entre el escritorio y las versiones móviles 
 
 En el escritorio, el formato de Markdown con tarjeta adaptable aparece como este en los exploradores Web y en la aplicación cliente de Teams:
 
-![Formato Markdown de tarjeta adaptable en el cliente de escritorio](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Formato Markdown de tarjeta adaptable en el cliente de escritorio](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 En iOS, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 
-![Formato Markdown de tarjeta adaptable en iOS](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Formato Markdown de tarjeta adaptable en iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 
-![Formato Markdown de tarjeta adaptable en Android](/assets/images/cards/Adaptive-markdown-Android.png)
+![Formato Markdown de tarjeta adaptable en Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>Más información sobre tarjetas adaptables
 
@@ -179,11 +179,11 @@ En las tarjetas conector, las líneas nuevas se `\n\n`representan para, pero `\n
 
 En el escritorio, el formato de Markdown para tarjetas de conectores tiene el siguiente aspecto:
 
-![Formato de Markdown para tarjetas de conector en el cliente de escritorio](/assets/images/cards/connector-desktop-markdown-combined.png)
+![Formato de Markdown para tarjetas de conector en el cliente de escritorio](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 En iOS, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:
 
-![Formato de Markdown para tarjetas conector en el cliente iOS](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Formato de Markdown para tarjetas conector en el cliente iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Problemas:
 
@@ -192,7 +192,7 @@ Problemas:
 
 En Android, el formato de Markdown para tarjetas de conector tiene el siguiente aspecto:
 
-![Formato de Markdown para tarjetas conector en el cliente de Android](/assets/images/cards/connector-android-markdown-combined.png)
+![Formato de Markdown para tarjetas conector en el cliente de Android](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### <a name="formatting-example-for-markdown-connector-cards"></a>Ejemplo de formato para tarjetas conectoras de Markdown
 
@@ -268,11 +268,11 @@ En las tarjetas conector, las líneas nuevas se representan en HTML `<p>` con la
 
 En el escritorio, el formato HTML de las tarjetas conector tiene el siguiente aspecto:
 
-![Formato HTML para tarjetas conector en el cliente de escritorio](/assets/images/cards/Connector-desktop-html-combined.png)
+![Formato HTML para tarjetas conector en el cliente de escritorio](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 En iOS, el formato HTML tiene el siguiente aspecto:
 
-![Formato HTML para tarjetas conector en el cliente iOS](/assets/images/cards/connector-iphone-html-combined-80.png)
+![Formato HTML para tarjetas conector en el cliente iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Problemas:
 
@@ -281,7 +281,7 @@ Problemas:
 
 En Android, el formato HTML es similar a este:
 
-![Formato HTML para tarjetas conector en el cliente de Android](/assets/images/cards/connector-android-html-combined.png)
+![Formato HTML para tarjetas conector en el cliente de Android](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>Ejemplo de formato para tarjetas conector de HTML
 
@@ -356,11 +356,11 @@ Debido a las diferencias de resolución entre la plataforma de escritorio y la p
 
 En el escritorio, el formato HTML tiene un aspecto similar a este:
 
-![Formato HTML en el cliente de escritorio](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![Formato HTML en el cliente de escritorio](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 En iOS, el formato HTML tiene un aspecto similar a este:
 
-![Formato HTML en el cliente de iOS](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![Formato HTML en el cliente de iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Problemas:
 
@@ -368,7 +368,7 @@ Problemas:
 
 En Android, el formato HTML tiene un aspecto similar a este:
 
-![Formato HTML en el cliente de Android](/assets/images/cards/card-formatting-xml-android-60.png)
+![Formato HTML en el cliente de Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 El formato de caracteres, como negrita y cursiva, se muestra correctamente en Android.
 
