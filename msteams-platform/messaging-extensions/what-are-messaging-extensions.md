@@ -4,12 +4,12 @@ author: clearab
 description: Información general sobre las extensiones de mensajería en la plataforma de Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225794"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914605"
 ---
 # <a name="what-are-messaging-extensions"></a>¿Qué son las extensiones de mensajería?
 
@@ -56,7 +56,7 @@ Se pueden desencadenar desde el área de mensaje de redacción o el cuadro de co
 
 ![comando de búsqueda de extensiones de mensajería](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>Vincular unfurling
+### <a name="link-unfurling"></a>Apertura de vínculos
 
 También tiene la opción de invocar el servicio cuando se pega una dirección URL en el área de mensaje de redacción. Esta funcionalidad, conocida como **unfurling de vínculos**, le permite suscribirse para recibir una llamada cuando las direcciones URL que contienen un dominio en particular se pegan en el área de mensaje de redacción. El servicio web puede "unfurl" la dirección URL en una tarjeta detallada, lo que proporciona más información que la tarjeta de vista previa del sitio web estándar. Incluso puede agregar botones para permitir que los usuarios realicen acciones inmediatamente sin dejar el cliente de Microsoft Teams.
 

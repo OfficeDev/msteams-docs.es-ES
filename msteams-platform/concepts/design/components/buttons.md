@@ -2,12 +2,12 @@
 title: Referencia de directrices de diseño
 description: Describe las instrucciones para usar botones, vínculos y controles en las aplicaciones.
 keywords: Directrices de diseño de Microsoft Teams los botones de referencia enlazan colores
-ms.openlocfilehash: 09dad651fee9c97fd52e672ea055e2c24b549a59
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9325980c38048ee250ace6b00f1ed29c6cbea8d
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676038"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914591"
 ---
 # <a name="buttons-links-and-controls"></a>Botones, vínculos y controles
 
@@ -18,6 +18,10 @@ ms.locfileid: "41676038"
 La forma en que los botones están estilo ayuda a comunicar el tipo de acción que desencadenan. Mantenemos una amplia gama de botones que tienen formato para mostrar distintos niveles de énfasis.
 
 Los botones pueden tener texto, un icono o una combinación de texto y un icono. Para comunicar distintos niveles de una jerarquía, se diseñaron botones principales y secundarios dentro de cada categoría.
+
+### <a name="fluent-design-system"></a>Sistema de diseño de Fluent
+
+La interfaz de usuario de Fluent proporciona orientación para los Estados de los componentes Web y de escritorio, el estilo y la accesibilidad. Los botones de la plataforma Teams se pueden formatear para mostrar distintos niveles de énfasis. *Consulte*  [colores de botones de interfaz de usuario fluida](https://fluentsite.z22.web.core.windows.net/components/button/definition?showCode=false&showRtl=false&showTransparent=false&showVariables=true#types-emphasis) para los valores de color HTML y CSS hexadecimales.
 
 ### <a name="text-buttons"></a>Botones de texto
 
@@ -55,7 +59,7 @@ Botones radiales, casillas de verificación y modificadores de alternancia.<br/>
 
 ---
 
-## <a name="links"></a>Vínculos
+## <a name="links"></a>Links
 
 Estos son los estilos aprobados para los vínculos de texto en línea.
 [!include[Approved link styles](~/includes/design/links-image-text.html)]

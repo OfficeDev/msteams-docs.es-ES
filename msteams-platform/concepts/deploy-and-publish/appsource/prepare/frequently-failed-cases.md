@@ -4,12 +4,12 @@ description: Describe las sugerencias para el envío y la mayoría de las direct
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896523"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914577"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -30,6 +30,7 @@ En este artículo se tratan los motivos comunes de error de validación de aplic
 * La aplicación no debe descargar, instalar ni iniciar automáticamente ningún código ejecutable en el entorno del usuario. Todas las descargas deben buscar permisos explícitos del usuario.
 * Cualquier material que asocie a su experiencia, como las descripciones y la documentación de soporte técnico, debe ser preciso. La ortografía, el uso de mayúsculas y minúsculas, la puntuación y la gramática de las descripciones y materiales deben ser correctos.
 * Proporcionar información de ayuda y soporte técnico. Se recomienda encarecidamente que la aplicación incluya un vínculo de ayuda/p + f para la experiencia del usuario de primera ejecución. Para todas las aplicaciones personales, le recomendamos que proporcione su página de ayuda como una pestaña personal para una mejor experiencia del usuario.
+* Aumente el número de versión de la aplicación en el manifiesto si realiza cambios en el manifiesto en el envío.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; proporcionar una experiencia clara y simple de inicio y cierre de sesión y de suscripción
 

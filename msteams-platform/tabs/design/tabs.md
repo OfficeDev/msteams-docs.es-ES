@@ -2,12 +2,12 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de las fichas de marco de trabajo
-ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896502"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914556"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -42,7 +42,7 @@ Evite crear varios paneles en una pestaña, agregar capas de navegación o reque
 
 ### <a name="integration"></a>Integración
 
-Obtenga información sobre cómo notificar a los usuarios la actividad de pestañas mediante el registro de tarjetas en una conversación, por ejemplo.
+Obtenga información sobre cómo notificar a los usuarios la actividad de pestañas mediante el registro de [tarjetas adaptables](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) en una conversación.
 
 ### <a name="conversational"></a>Conversación
 

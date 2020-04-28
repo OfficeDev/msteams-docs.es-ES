@@ -2,12 +2,12 @@
 title: Llamadas y bots de reuniones en línea
 description: Obtenga información sobre cómo las aplicaciones de Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo mediante las API de Microsoft Graph para las llamadas y las reuniones en línea.
 keywords: llamar llamadas audio video IVR Voice online reuniones
-ms.openlocfilehash: 03bd7e085908a49f070fe84aba87138ecabafb83
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e89fc576a0688a65e86c03696619569c41b6a3a2
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675878"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914619"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Llamadas y bots de reuniones en línea
 
@@ -37,7 +37,7 @@ Aquí encontrará más información sobre cómo crear y probar llamadas y los bo
 
 * [Referencia de la API de Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
 * [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registro de un bot que admite llamadas y reuniones en línea](./registering-calling-bot.md) y [permisos de Microsoft Graph para las llamadas y los bots de reuniones en línea](/registering-calling-bot.md#add-microsoft-graph-permissions)
+* [Registro de un bot que admite llamadas y reuniones en línea](./registering-calling-bot.md) y [permisos de Microsoft Graph para las llamadas y los bots de reuniones en línea](./registering-calling-bot.md#add-microsoft-graph-permissions)
 * [Cómo desarrollar los bots de llamada y reunión en línea en su equipo local](./debugging-local-testing-calling-meeting-bots.md)
 * [Más información sobre el procesamiento de medios en tiempo real](./real-time-media-concepts.md)y [lo que se necesita para admitir medios hospedados en la aplicación](./requirements-considerations-application-hosted-media-bots.md)
 * [Información técnica sobre el control de las notificaciones de llamadas entrantes](./call-notifications.md)
