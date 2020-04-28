@@ -3,9 +3,9 @@
   items:
     - name: ¿Qué son las aplicaciones de Microsoft Teams?
       href: overview.md
-    - name: ¿Hay alguna novedad?
+    - name: Novedades
       href: whats-new.md
-- name: Introducción
+- name: Tutoriales y ejemplos de código
   items:
     - name: 'Creación de una aplicación con C#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Creación de una aplicación con el generador Yeoman
       href: tutorials/get-started-yeoman.md
-- name: Ejemplos y plantillas
+    - name: Extender el cliente de Teams con aplicaciones personalizadas
+      href: tutorials/code-samples.md
+- name: Plantillas e integraciones de la aplicación
   items:
     - name: Plantillas de aplicaciones listas para producción
       href: samples/app-templates.md
     - name: Conectores de turnos listos para producción
       href: samples/shifts-wfm-connectors.md
-    - name: Aplicaciones de ejemplo
-      href: samples/code-samples.md
 - name: Conceptos
   expanded: true
   items:
@@ -80,7 +80,7 @@
               href: concepts/deploy-and-publish/appsource/publish.md
             - name: Preparación de la aplicación
               items:
-                - name: Lista de comprobación previa de envío
+                - name: Lista de comprobación previa al envío
                   href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
                 - name: Lista de comprobación de página de detalles de la aplicación
                   href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
@@ -104,6 +104,10 @@
   items:
     - name: ¿Qué son las extensiones de mensajería?
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Diseño
+      items:
+        - name: Instrucciones de diseño de extensiones de mensajería
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: Guías de inicio rápido
       items:
         - name: Con el comando Acción
