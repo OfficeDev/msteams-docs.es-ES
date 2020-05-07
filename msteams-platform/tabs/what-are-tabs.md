@@ -4,12 +4,12 @@ author: laujan
 description: Información general sobre las pestañas personalizadas en la plataforma de Microsoft Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
+ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365258"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "44119052"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>¿Qué son las pestañas personalizadas de Microsoft Teams?
 
@@ -24,7 +24,6 @@ Hay dos tipos de fichas disponibles en Teams: Channel/Group y personal. Una pest
 
 > [!div class="checklist"]
 >
-> * Conocimiento de la lista completa de un equipo.
 > * Si se agrega una pestaña a una aplicación que también tiene un bot, el bot se agrega también al equipo.
 > * Conocimiento del identificador de AAD del usuario actual.
 > * Concienciación de la configuración regional para que el usuario indique el `en-us`idioma; por ejemplo,. 
