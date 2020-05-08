@@ -100,54 +100,70 @@
           href: concepts/authentication/authentication.md
         - name: Configuración de proveedores de identidades
           href: concepts/authentication/configure-identity-provider.md
-- name: Extensiones de mensajería
+- name: 'Pestañas: experiencias web integradas'
   items:
-    - name: ¿Qué son las extensiones de mensajería?
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Diseño
-      items:
-        - name: Instrucciones de diseño de extensiones de mensajería
-          href: messaging-extensions/design/messaging-extension-design.md
+    - name: ¿Qué son las pestañas personalizadas?
+      href: tabs/what-are-tabs.md
     - name: Guías de inicio rápido
       items:
-        - name: Con el comando Acción
+        - name: Node.js y React
           items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Con el comando Buscar
+            - name: Creación de una pestaña de canal y grupo
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+            - name: Creación de una pestaña personal
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
           items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+            - name: Creación de una pestaña de canal y grupo
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+            - name: Creación de una pestaña personal
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+            - name: Creación de una pestaña de canal y grupo
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+            - name: Creación de una pestaña personal
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: Diseño de las pestañas
+      items:
+        - name: Información general sobre diseño
+          href: tabs/design/tabs.md
+        - name: Pestañas en clientes móviles
+          href: tabs/design/tabs-mobile.md
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Crear una extensión de mensajería
-          href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: Comando basado en acciones
+        - name: Agregar pestañas a la aplicación
+          href: tabs/how-to/add-tab.md
+        - name: Crear páginas de pestañas
           items:
-            - name: Definir comandos de acción
-              href: messaging-extensions/how-to/action-commands/define-action-command.md
-            - name: Crear y enviar el módulo de tareas
-              href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: Envío de una respuesta a la acción enviar
-              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: Comandos basados en búsqueda
+            - name: Creación de una página de contenido
+              href: tabs/how-to/create-tab-pages/content-page.md
+            - name: Creación de una página de configuración
+              href: tabs/how-to/create-tab-pages/configuration-page.md
+            - name: Creación de una etiqueta de eliminación
+              href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Agregar autenticación a una pestaña
           items:
-            - name: Definición de comandos de búsqueda
-              href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: Recepción y respuesta a consultas de búsqueda
-              href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Apertura de vínculos
-          href: messaging-extensions/how-to/link-unfurling.md
-        - name: Agregar autenticación
-          href: messaging-extensions/how-to/add-authentication.md
-        - name: Agregar una página de configuración
-          href: messaging-extensions/how-to/add-configuration-page.md
-- name: Bots
+            - name: Flujo de autenticación
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: "Uso de la autenticación de Azure\_AD"
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Uso de la autenticación silenciosa
+              href: tabs/how-to/authentication/auth-silent-aad.md
+            - name: Uso de la autenticación de inicio de sesión único
+              href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: Uso del SDK para cliente de Teams
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: Obtención de contexto adicional de Teams
+          href: tabs/how-to/access-teams-context.md
+        - name: DevTools para pestañas de Microsoft Teams
+          href: tabs/how-to/developer-tools.md
+        - name: Agregar una pestaña personalizada a SharePoint
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: Solicitar permisos de dispositivo
+          href: tabs/how-to/native-device-permissions.md
+- name: 'Bots: interacciones basadas en conversación'
   items:
     - name: ¿Qué son los bots en Microsoft Teams?
       href: bots/what-are-bots.md
@@ -218,70 +234,54 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Elementos multimedia hospedados en la aplicación
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Pestañas
+- name: 'Extensiones de mensajería: interacciones orientadas a tareas'
   items:
-    - name: ¿Qué son las pestañas personalizadas?
-      href: tabs/what-are-tabs.md
+    - name: ¿Qué son las extensiones de mensajería?
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Diseño
+      items:
+        - name: Instrucciones de diseño de extensiones de mensajería
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: Guías de inicio rápido
       items:
-        - name: Node.js y React
+        - name: Con el comando Acción
           items:
-            - name: Creación de una pestaña de canal y grupo
-              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-            - name: Creación de una pestaña personal
-              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+        - name: Con el comando Buscar
           items:
-            - name: Creación de una pestaña de canal y grupo
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-            - name: Creación de una pestaña personal
-              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
-          items:
-            - name: Creación de una pestaña de canal y grupo
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-            - name: Creación de una pestaña personal
-              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Diseño de las pestañas
-      items:
-        - name: Información general sobre diseño
-          href: tabs/design/tabs.md
-        - name: Pestañas en clientes móviles
-          href: tabs/design/tabs-mobile.md
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Agregar pestañas a la aplicación
-          href: tabs/how-to/add-tab.md
-        - name: Crear páginas de pestañas
+        - name: Crear una extensión de mensajería
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: Comando basado en acciones
           items:
-            - name: Creación de una página de contenido
-              href: tabs/how-to/create-tab-pages/content-page.md
-            - name: Creación de una página de configuración
-              href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: Creación de una etiqueta de eliminación
-              href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Agregar autenticación a una pestaña
+            - name: Definir comandos de acción
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: Crear y enviar el módulo de tareas
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: Envío de una respuesta a la acción enviar
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: Comandos basados en búsqueda
           items:
-            - name: Flujo de autenticación
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: "Uso de la autenticación de Azure\_AD"
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Uso de la autenticación silenciosa
-              href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Uso de la autenticación de inicio de sesión único
-              href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Uso del SDK para cliente de Teams
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: Obtención de contexto adicional de Teams
-          href: tabs/how-to/access-teams-context.md
-        - name: DevTools para pestañas de Microsoft Teams
-          href: tabs/how-to/developer-tools.md
-        - name: Agregar una pestaña personalizada a SharePoint
-          href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Solicitar permisos de dispositivo
-          href: tabs/how-to/native-device-permissions.md
-- name: Módulos y tarjetas de tareas
+            - name: Definición de comandos de búsqueda
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: Recepción y respuesta a consultas de búsqueda
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Apertura de vínculos
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: Agregar autenticación
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: Agregar una página de configuración
+          href: messaging-extensions/how-to/add-configuration-page.md
+- name: 'Módulos de tareas y tarjetas: mensajes enriquecidos y notificaciones'
   items:
     - name: ¿Qué son los módulos de tareas?
       href: task-modules-and-cards/what-are-task-modules.md
@@ -303,7 +303,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: Desde un pestaña
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: Webhooks y conectores
+- name: 'Webhooks y conectores: mensajes programados y notificaciones'
   items:
     - name: ¿Qué son los webhooks y conectores?
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
