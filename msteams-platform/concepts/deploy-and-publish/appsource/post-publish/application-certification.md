@@ -3,12 +3,12 @@ title: Certificación de aplicaciones
 description: Describe el programa de autoevaluación de la tienda de aplicaciones
 keywords: Centro de cumplimiento de Microsoft Teams AppSource Store de certificación de aplicaciones
 ms.date: 05/06/2019
-ms.openlocfilehash: 11c69527e60290f908e8fd3c781a02cd26bbbe14
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ff159f39061dd7073a93d3270d254365db4b2228
+ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676051"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44170510"
 ---
 # <a name="microsoft-teams-app-certification"></a>Certificación de aplicaciones de Microsoft Teams
 
@@ -26,7 +26,7 @@ Completar la certificación de la aplicación es voluntario, pero muy alentador.
 
 ### <a name="for-existing-store-apps"></a>Para aplicaciones de la tienda existentes
 
-Si ya tiene una aplicación en la tienda de aplicaciones y le gustaría unirse al programa, puede ponerse en contacto con nosotros rellenando [este formulario](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUOUgzSUtFNU8yOFpYR0oyWElHVkxHODhQUyQlQCN0PWcu). Alguien de nuestro equipo tendrá que realizar un seguimiento con usted para que el proceso comience.
+Si ya tiene una aplicación en la tienda de aplicaciones y le gustaría unirse al programa, puede ponerse en contacto con nosotros rellenando [este formulario](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu). Alguien de nuestro equipo tendrá que realizar un seguimiento con usted para que el proceso comience.
 
 ### <a name="for-new-or-updated-store-apps"></a>Para aplicaciones de tienda nuevas o actualizadas
 
