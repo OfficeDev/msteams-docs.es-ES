@@ -3,12 +3,12 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550955"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210690"
 ---
 # <a name="format-cards-in-teams"></a>Formato de tarjetas en Microsoft Teams
 
@@ -18,19 +18,19 @@ Las tarjetas admiten el formato solo en la propiedad de texto, no en las propied
 
 La compatibilidad de formato es distinta entre los distintos tipos de tarjetas y la representación de la tarjeta puede variar ligeramente entre el escritorio y los clientes de los equipos móviles, así como los equipos en el explorador de escritorio.
 
-Puede incluir una imagen incorporada en cualquier tarjeta de Teams. Imágenes a las que `.png`se les `.jpg`da formato `.gif` , o archivos y no deben exceder de 1024 × 1024 PX o 1 MB. GIF animado no es compatible oficialmente. *Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)
+Puede incluir una imagen incorporada en cualquier tarjeta de Teams. Imágenes a las que se les da formato `.png` , `.jpg` o `.gif` archivos y no deben exceder de 1024 × 1024 PX o 1 MB. GIF animado no es compatible oficialmente. *Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Tarjetas de formato con Markdown
 
 Hay dos tipos de tarjetas que admiten Markdown en Microsoft Teams:
 
 > [!div class="checklist"]
-> * **Tarjetas adaptables**: Markdown se admite en el `Textblock` campo tarjeta adaptable, `Fact.Title` así `Fact.Value`como en y. No se admite HTML en tarjetas adaptables.
+> * **Tarjetas adaptables**: Markdown se admite en el campo tarjeta adaptable `Textblock` , así como en `Fact.Title` y `Fact.Value` . No se admite HTML en tarjetas adaptables.
 > * **Tarjetas de conector de O365**: MARKDOWN y HTML limitado son compatibles con las tarjetas de conector de Office 365 en los campos de texto.
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Formato de Markdown: tarjetas adaptables**](#tab/adaptive-md)
 
- Los estilos admitidos `Textblock`para `Fact.Title` y `Fact.Value` son:
+ Los estilos admitidos `Textblock` para `Fact.Title` y `Fact.Value` son:
 
 | Style | Ejemplo | Markdown |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ No se admiten las siguientes etiquetas Markdown:
 
 ### <a name="newlines-for-adaptive-cards"></a>Nuevas líneas para tarjetas adaptables
 
-En las listas puede usar las `\r` secuencias `\n` de escape o de para las nuevas líneas. Usar `\n\n` en una lista hará que se aplique sangría al siguiente elemento de la lista. Si necesita más líneas en cualquier lugar del TextBlock, `\n\n`use.
+En las listas puede usar las `\r` `\n` secuencias de escape o de para las nuevas líneas. Usar `\n\n` en una lista hará que se aplique sangría al siguiente elemento de la lista. Si necesita más líneas en cualquier lugar del TextBlock, use `\n\n` .
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Diferencias de escritorio y móviles para tarjetas adaptables
 
@@ -109,12 +109,14 @@ En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a>Mencione la compatibilidad en tarjetas adaptables
+### <a name="mention-support-within-adaptive-cards-v12"></a>Mencione la compatibilidad en las tarjetas adaptables v 1.2
+
+Las menciones basadas en tarjetas se admiten en clientes Web, de escritorio y móviles. Puede Agregar @ menciones en un cuerpo de tarjeta adaptable para bots y respuestas de extensiones de mensajería.  Para agregar @ menciones en las tarjetas, siga la misma lógica de notificación y representación que la de las [menciones basadas en mensajes en conversaciones de chat en el canal y en el grupo](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+
+Los bots y las extensiones de mensajería pueden incluir menciones dentro del contenido de la tarjeta en elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) y [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
-> Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) .
-
-Los bots y las extensiones de mensajería ahora pueden incluir menciones dentro del contenido de la tarjeta en elementos FactSet y bloques de texto.
+>Actualmente, [los elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten en las tarjetas adaptables v 1.2 en la plataforma de Microsoft Teams.
 
 ### <a name="constructing-mentions"></a>Creación de menciones
 
@@ -122,8 +124,6 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
 
 * `<at>username</at>`en los elementos de tarjeta adaptable admitidos
 * El `mention` objeto dentro de una `msteams` propiedad en el contenido de la tarjeta, que incluye el identificador de usuario de Teams del usuario que se está mencionando
-
-Tenga en cuenta que las tarjetas con menciones no se admiten en los clientes móviles por el momento.
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Ejemplo de tarjeta adaptable con mención
 
@@ -164,7 +164,7 @@ Las tarjetas de conector admiten el formato HTML y Markdown limitados. La compat
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1&ndash;3) | **Text** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
 | Aplique | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -173,7 +173,7 @@ Las tarjetas de conector admiten el formato HTML y Markdown limitados. La compat
 | hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | vínculo de imagen |![Pato en una Rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-En las tarjetas conector, las líneas nuevas se `\n\n`representan para, pero `\n` no `\r`para o.
+En las tarjetas conector, las líneas nuevas se representan para `\n\n` , pero no para `\n` o `\r` .
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Diferencias de escritorio y móviles para tarjetas de conector con Markdown
 
@@ -253,7 +253,7 @@ Las tarjetas de conector admiten el formato HTML y Markdown limitados. Markdown 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Aplique | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -262,7 +262,7 @@ Las tarjetas de conector admiten el formato HTML y Markdown limitados. Markdown 
 | hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | vínculo de imagen | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-En las tarjetas conector, las líneas nuevas se representan en HTML `<p>` con la etiqueta.
+En las tarjetas conector, las líneas nuevas se representan en HTML con la `<p>` etiqueta.
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Diferencias de escritorio y móviles para tarjetas de conector con HTML
 
@@ -341,7 +341,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la t
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Aplique | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

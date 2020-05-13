@@ -2,26 +2,22 @@
 title: Características de la versión preliminar para desarrolladores públicos
 description: Describe las características de la versión preliminar para desarrolladores públicos de Microsoft Teams.
 keywords: características para desarrolladores de Team Preview
-ms.openlocfilehash: abec097d9f3b6fb48a4a50cb26d73cf811151149
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675740"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210704"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Características de la versión preliminar para desarrolladores públicos para Microsoft Teams
 
 La vista previa para desarrolladores incluye las siguientes características nuevas:
 
-## <a name="mention-support-in-adaptive-cards"></a>Mencione la compatibilidad en tarjetas adaptables
+## <a name="adaptive-cards-v12-support"></a>Compatibilidad con tarjetas adaptables v 1.2
 
-Ahora puede Agregar @ menciones dentro de un cuerpo de tarjeta adaptable para bots y respuestas de extensiones de mensajería. las @ menciones de las tarjetas siguen la misma lógica de notificación y representación que una de las menciones normales basadas en los mensajes. Tenga en cuenta que las menciones basadas en tarjetas solo se admiten en los clientes Web y de escritorio de hoy en día, con compatibilidad para la representación en clientes móviles próximamente.
+La compatibilidad con [tarjetas adaptables v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) en Teams ya está disponible para el público en general. Sin embargo, [los elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten actualmente en las tarjetas adaptables v 1.2 en la plataforma de Microsoft Teams.
 
-## <a name="adaptive-12-support"></a>Compatibilidad adaptable de 1,2
-
-Microsoft Teams ahora es compatible con la [versión adaptable 1,2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) en Developer Preview. Tenga en cuenta que [los elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten todavía.
-
-## <a name="tabs-single-sign-on"></a>Inicio de sesión único de pestañas
+## <a name="tabs-single-sign-on-sso"></a>Inicio de sesión único (SSO) de pestañas
 
 Ahora puede usar el inicio [de sesión único (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) para iniciar sesión y autenticar a un usuario en el escritorio y en el móvil mediante el SDK de Teams para JavaScript desde una página de contenido Web. Una de las ventajas es que un usuario nunca tiene que iniciar sesión; una vez que hayan dado su consentimiento a la aplicación mediante su perfil: se iniciará sesión automáticamente en su pestaña (incluido el móvil).
 

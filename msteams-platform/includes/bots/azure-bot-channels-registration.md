@@ -22,3 +22,13 @@
 1. Vuelva a la ventana de **registro del canal de bot** y copie el identificador de *aplicación* y el secreto de *cliente* en los cuadros identificador de aplicación y **contraseña** de **Microsoft** , respectivamente.
 1. Haga clic en **Aceptar**.
 1. Por último, haga clic en **crear**.
+
+Una vez que Azure haya creado el recurso de registro, se incluirá en la lista de grupos de recursos.  
+
+![Grupo de registro de canales de aplicación de bot](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
+
+Una vez que se haya creado el registro de los canales de bot, deberá habilitar el canal de Teams.
+
+1. En [Azure portal](https://ms.portal.azure.com/#home), en servicios de Azure, seleccione el **registro del canal de bot** que acaba de crear.
+1. En el panel izquierdo, haga clic en **canales**.
+1. Haga clic en el icono de Microsoft Teams y elija **Guardar**.
