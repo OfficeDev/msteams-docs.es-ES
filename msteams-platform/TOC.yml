@@ -184,8 +184,10 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Creación de un bot para Teams
+        - name: Crear de un bot para Teams
           href: bots/how-to/create-a-bot-for-teams.md
+        - name: Integrar el chatbot de Power Virtual Agent con Teams
+          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
         - name: Conversaciones
           items:
             - name: Conceptos básicos de la conversación
@@ -318,6 +320,14 @@
           href: webhooks-and-connectors/how-to/connectors-creating.md
         - name: Envío de mensajes a conectores y webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Permisos de la API de Graph
+  items:
+    - name: Consentimiento específico de recursos (RSC)
+      href: graph-permissions/resource-specific-consent.md
+    - name: Probar permisos de consentimiento específicos de recursos
+      href: graph-permissions/test-resource-specific-consent.md
+    - name: Archivo de prueba JSON RSC
+      href: graph-permissions/test-rsc-json-file.md
 - name: Recursos
   items:
     - name: Bots - v3 SDK
