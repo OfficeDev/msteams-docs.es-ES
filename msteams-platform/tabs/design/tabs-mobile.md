@@ -2,32 +2,22 @@
 title: Pestañas en dispositivos móviles
 description: Describe las instrucciones para diseñar pestañas que funcionan en dispositivos móviles.
 keywords: guías de diseño de Microsoft Teams referencia del marco de trabajo de aplicaciones móviles
-ms.openlocfilehash: 928fb8586434eca9cc1577fd45c6b94594724d7f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675975"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455523"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
-
-> [!Important]
-> Pronto estará disponible la compatibilidad completa con las pestañas de los clientes móviles. Para prepararse para este cambio, debe seguir estas instrucciones al crear sus pestañas. Las aplicaciones personales (pestañas estáticas) están disponibles actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). y las pestañas chat de canal/grupo están `...` disponibles en el menú de desbordamiento de la pestaña.
->
-> Cuando se publica la compatibilidad completa de pestañas:
->
-> * Todas las pestañas estarán siempre disponibles en dispositivos móviles
-> * El `contentUrl` **se cargará en el cliente móvil de Microsoft Teams**.
-> * En las pestañas canal/grupo, los usuarios pueden abrir la pestaña en un explorador independiente `websiteUrl`a través de `contentUrl` la, pero se cargará primero.
-> * Si su pestaña usa autenticación, debe actualizar el SDK de JavaScript de Teams a la versión 1.4.1 o posterior, o se producirá un error de autenticación.
 
 Las pestañas personalizadas pueden formar parte de un canal, un chat en grupo o una aplicación personal (aplicaciones que contienen pestañas estáticas y/o un bot de uno a uno).
 
 Las aplicaciones personales están disponibles en los clientes móviles en el cajón de la aplicación. La aplicación solo se puede instalar desde un cliente de escritorio o Web, y puede tardar hasta 24 horas en aparecer en los clientes móviles.
 
-Las fichas grupo y canal también están disponibles en los clientes móviles. El comportamiento predeterminado es usar actualmente el `websiteUrl` para iniciar la pestaña en una ventana del explorador. Sin embargo, se pueden cargar en un cliente móvil haciendo clic en `...` el menú de desbordamiento situado junto a la pestaña y seleccionando **abrir**, `contentUrl` que usará el para cargar la pestaña en el cliente móvil de Microsoft Teams.
+Las fichas grupo y canal también están disponibles en los clientes móviles. El comportamiento predeterminado es usar actualmente el `websiteUrl` para iniciar la pestaña en una ventana del explorador. Sin embargo, se pueden cargar en un cliente móvil haciendo clic en el `...` menú de desbordamiento situado junto a la pestaña y seleccionando **abrir**, que usará el `contentUrl` para cargar la pestaña en el cliente móvil de Microsoft Teams.
 
-![alimentador de aplicaciones móviles](~/assets/images/app-drawer.png)
+![alimentador de aplicaciones móviles](../../assets/images/personal-app-mobile.png)
 
 ## <a name="developer-considerations-for-mobile-support"></a>Consideraciones para desarrolladores para la compatibilidad con dispositivos móviles
 
@@ -63,7 +53,7 @@ Este es un área de gran tamaño en la que se realiza el trabajo. La aplicación
 
 ![diseño de un solo lienzo](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Lista
+#### <a name="list"></a>List
 
 Las listas son excelentes para ordenar y filtrar grandes cantidades de datos y son excelentes para conservar las cosas más importantes en la parte superior. Es útil usar columnas que se puedan ordenar. Se pueden agregar acciones a cada elemento de lista en el menú de puntos suspensivos.
 
@@ -81,7 +71,7 @@ La siguiente es una aplicación personal de ejemplo que contiene dos pestañas e
 
 ![pestañas y bots en dispositivos móviles](~/assets/images/mobile-tab-with-bot.png)
 
-### <a name="ui-components"></a>Componentes de la interfaz de usuario
+### <a name="ui-components"></a>Componentes de UI
 
 #### <a name="color-palettes"></a>Paletas de colores
 

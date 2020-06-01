@@ -4,16 +4,16 @@ author: clearab
 description: Página de información general que describe la plataforma para desarrolladores de Microsoft Teams y cómo empezar a compilar aplicaciones para Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: cb9d91f2de29bac00f4cdcd9672adf9d7d4ee734
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676206"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455488"
 ---
 # <a name="what-are-microsoft-teams-apps"></a>¿Qué son las aplicaciones de Microsoft Teams?
 
-Microsoft Teams es un espacio de trabajo de colaboración en Office 365 que se integra con las aplicaciones y los servicios que los usuarios usan para realizar el trabajo de forma conjunta. La plataforma de desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios para mejorar la productividad, tomar decisiones con mayor rapidez, proporcionar el enfoque (reduciendo el cambio de contexto) y crear colaboración sobre el contenido existente y flujos. Las aplicaciones integradas en la plataforma Microsoft Teams son puentes entre el cliente de Microsoft Teams y los servicios y flujos de trabajo; la introducción directa en el contexto de la plataforma de colaboración.
+Microsoft Teams es un espacio de trabajo de colaboración en Office 365 que se integra con las aplicaciones y los servicios que los usuarios usan para realizar el trabajo de forma conjunta. La plataforma para desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios para mejorar la productividad, tomar decisiones con mayor rapidez, proporcionar el enfoque (reduciendo el cambio de contexto) y crear colaboración con el contenido y los flujos de trabajo existentes. Las aplicaciones integradas en la plataforma Microsoft Teams son puentes entre el cliente de Microsoft Teams y los servicios y flujos de trabajo; la introducción directa en el contexto de la plataforma de colaboración.
 
 ## <a name="what-can-teams-apps-do"></a>¿Qué pueden hacer las aplicaciones de Microsoft Teams?
 
@@ -37,22 +37,22 @@ Una aplicación de Microsoft Teams consta de tres partes principales:
 * **Paquete de la aplicación Teams** que crea la aplicación instalada por los usuarios y que contiene los metadatos y los punteros de la aplicación a sus servicios.
 * **El servicio, el flujo de trabajo o el sitio web** que realizan la lógica, el almacenamiento de datos y las llamadas API necesarios para potenciar la aplicación.
 
-Es importante tener en cuenta que cualquier funcionalidad que exponga en una aplicación de Microsoft Teams estará disponible públicamente a través de Internet, a menos que realice pasos adicionales para protegerla. Si proporciona acceso a información confidencial o protegida, le conviene que asegúrese de que los servicios se encuentran en un mínimo que autentiquen el punto de conexión que se conecta a la aplicación o que [autentiquen a los usuarios](~/concepts/authentication/authentication.md).
+Es importante tener en cuenta que cualquier funcionalidad que exponga en una aplicación de Microsoft Teams estará disponible públicamente a través de Internet, a menos que realice pasos adicionales para protegerla. Si proporciona acceso a información confidencial o protegida, le conviene que asegúrese de que los servicios se encuentran en un mínimo que autentiquen el punto de conexión que se conecta a la aplicación o que [autentiquen a los usuarios](concepts/authentication/authentication.md).
 
 ## <a name="how-can-you-share-your-teams-app"></a>¿Cómo puede compartir la aplicación de Teams?
 
 Cuando esté listo para compartir las aplicaciones de Microsoft Teams, tiene tres opciones en función de quién es la audiencia de destino.
 
-* **[Cargar la aplicación directamente](~/concepts/deploy-and-publish/apps-upload.md)** Si solo es necesario compartir la aplicación en su equipo o en algunas personas de la organización, puede compartir el paquete de la aplicación y cargarlo directamente.
-* **[Publicar en el catálogo de aplicaciones de la organización](~/concepts/deploy-and-publish/apps-publish.md)** Puede compartir su aplicación con toda la organización a través del catálogo de aplicaciones.
-* **[Publicar en la tienda de aplicaciones pública](~/concepts/deploy-and-publish/apps-publish.md)** Si la aplicación es para todos los usuarios, puede publicarla en nuestra tienda de aplicaciones pública. En función de sus objetivos, puede ser elegible para la asistencia de marketing y ventas.
+* **[Cargar la aplicación directamente](concepts/deploy-and-publish/apps-upload.md)** Si solo es necesario compartir la aplicación en su equipo o en algunas personas de la organización, puede compartir el paquete de la aplicación y cargarlo directamente.
+* **[Publicar en el catálogo de aplicaciones de la organización](concepts/deploy-and-publish/apps-upload.md)** Puede compartir su aplicación con toda la organización a través del catálogo de aplicaciones.
+* **[Publicar en la tienda de aplicaciones pública](concepts/deploy-and-publish/apps-upload.md)** Si la aplicación es para todos los usuarios, puede publicarla en nuestra tienda de aplicaciones pública. En función de sus objetivos, puede ser elegible para la asistencia de marketing y ventas.
 
 ## <a name="get-started"></a>Introducción
 
-* [Crear un bot y una aplicación de pestañas en C #](~/tutorials/get-started-dotnet-app-studio.md)
-* [Compilar una aplicación de Bot y Tab en JavaScript/node. js](~/tutorials/get-started-nodejs-app-studio.md)
+* [Crear un bot y una aplicación de pestañas en C #](tutorials/get-started-dotnet-app-studio.md)
+* [Compilar una aplicación de Bot y Tab en JavaScript/node. js](tutorials/get-started-nodejs-app-studio.md)
 
 ## <a name="learn-more"></a>Más información
 
-* [Puntos de extensibilidad en el cliente de Microsoft Teams](~/concepts/extensibility-points.md)
-* [Creación de aplicaciones para Teams](~/concepts/building-an-app.md)
+* [Puntos de extensibilidad en el cliente de Teams](concepts/extensibility-points.md)
+* [Creación de aplicaciones para Teams](concepts/building-an-app.md)

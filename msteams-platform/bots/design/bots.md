@@ -2,12 +2,12 @@
 title: Directrices de diseño para bots
 description: Describe las instrucciones para crear bots.
 keywords: Directrices de diseño de Teams referencia de los bots del marco de trabajo hablando
-ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635287"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453892"
 ---
 # <a name="start-talking-with-bots"></a>Empezar a hablar con bots
 
@@ -131,7 +131,7 @@ Agregue una pestaña que enseñe a los usuarios a comunicarse con su bot. Puede 
 
 ## <a name="bots-in-channels"></a>Bots en los canales
 
-La invocación de un bot en un canal se puede `@mention`realizar mediante. El cuadro de diálogo de bot debe ser único en los escenarios de uno a uno, y generalmente es una buena idea considerar enfoques separados. Esto es especialmente cierto en los casos siguientes:
+La invocación de un bot en un canal se puede realizar mediante `@mention` . El cuadro de diálogo de bot debe ser único en los escenarios de uno a uno, y generalmente es una buena idea considerar enfoques separados. Esto es especialmente cierto en los casos siguientes:
 
 ### <a name="sensitive-data-sent-by-a-bot"></a>Datos confidenciales enviados por un bot
 
@@ -165,4 +165,4 @@ Determine si desea que el tono sea agradable y claro, "solo los hechos" o súper
 
 Admite interacciones multiactivables, a la vez que permite preguntas completamente formadas. La planeación del siguiente paso ayudará a los usuarios a pasar por los flujos de tareas de forma mucho más fácil.
 
-Si un usuario realiza varios pasos para completar una tarea, permita que el bot los lleve a cabo a través de cada paso, pero el fin es que sugiera una ruta de acceso más rápida. Por ejemplo, si un usuario ha tomado varias vueltas de conversación para establecer una reunión (especificando primero una reunión, e identifica con quién, a continuación, indicando la hora y, a continuación, indicando el día), finalice la conversación con la siguiente sugerencia: la próxima vez, intente preguntar si puede ' programar una reunión con Bob al 1:00 mañana '.
+Si un usuario realiza varios pasos para completar una tarea, permita que el bot los lleve a cabo a través de cada paso, pero el fin es que sugiera una ruta de acceso más rápida. Por ejemplo, si un usuario ha tomado varias vueltas de conversación para establecer una reunión (especificando primero una reunión, indicando con quién, a continuación, la hora y, a continuación, el día), finalice la conversación con la siguiente sugerencia: la próxima vez, intente preguntar si puede ' programar una reunión con Bob al 1:00 mañana.

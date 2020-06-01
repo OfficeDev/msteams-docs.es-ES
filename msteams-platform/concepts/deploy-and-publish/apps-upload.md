@@ -2,12 +2,12 @@
 title: Cargar la aplicación personalizada en Microsoft Teams
 description: Describe cómo cargar la aplicación en Microsoft Teams.
 keywords: Carga de aplicaciones de Microsoft Teams
-ms.openlocfilehash: b5807644a0c9afa26b81d07c71d5f45ab3c8ba00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675804"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453885"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Cargar un paquete de aplicación en Microsoft Teams
 
@@ -20,7 +20,7 @@ Para probar la experiencia de la aplicación en Microsoft Teams, debe cargar la 
 
 Para el envío de AppSource (anteriormente tienda Office), debe crear un paquete que se pueda cargar y que contenga la información que describe su experiencia. El paquete, un archivo. zip, contiene el manifiesto de aplicación y los iconos que definen su experiencia de forma exclusiva.
 
-Para crear un paquete de carga, consulte [Create the Package for your Microsoft Teams App](~/concepts/build-and-test/apps-package.md).
+Para crear un paquete de carga, consulte [Create the Package for your Microsoft Teams App](../build-and-test/apps-package.md).
 
 Una vez creado el paquete, ahora puede cargarlo en un equipo. Una vez cargada, estará disponible para todos los usuarios del equipo seleccionado y solo para los usuarios de ese equipo.
 
@@ -40,16 +40,16 @@ Hay dos formas de cargar la aplicación a Microsoft Teams:
 
 1. En la esquina inferior izquierda de Microsoft Teams, elija el icono de tienda. En la página tienda, elija "cargar una aplicación personalizada".
 
-   ![Ver equipo](~/assets/images/store-upload-a-custom-app.png)
+   ![Ver equipo](../../assets/images/store-upload-a-custom-app.png)
 
 2. En el cuadro de diálogo *abrir* , navegue hasta el paquete que desea cargar y elija *abrir*.
 
 El paquete cargado ahora debería estar disponible para su uso en el equipo o la conversación especificados en el cuadro de diálogo de consentimiento. Si la aplicación no aparece, la causa más común es un error en el manifiesto, especialmente identificadores para las extensiones de aplicación, Bot y mensajería. Si la aplicación no tiene el ámbito de las conversaciones, esa opción no aparecerá.
 
 >[!NOTE]
-> Aplicaciones en conversaciones se encuentra actualmente en [versión preliminar para desarrolladores](~/resources/dev-preview/developer-preview-intro.md)y la opción no aparecerá si Teams no se está ejecutando en ese modo.
+> Aplicaciones en conversaciones se encuentra actualmente en [versión preliminar para desarrolladores](../../resources/dev-preview/developer-preview-intro.md)y la opción no aparecerá si Teams no se está ejecutando en ese modo.
 
-![Ejemplo de bot en la lista de bots cargados](~/assets/images/botinlist.jpg)
+![Ejemplo de bot en la lista de bots cargados](../../assets/images/botinlist.jpg)
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Cargar el paquete en un equipo mediante la pestaña aplicaciones
 
@@ -60,13 +60,13 @@ El paquete cargado ahora debería estar disponible para su uso en el equipo o la
 
 2. Seleccione la pestaña Aplicaciones y, a continuación, elija *cargar una aplicación personalizada* en la esquina inferior derecha.
 
-   ![Cargar punto de entrada](~/assets/images/uploadACustomApp.png)
+   ![Cargar punto de entrada](../../assets/images/UploadACustomApp.png)
 
 3. Busca y selecciona el paquete. zip del equipo.
 
 4. Tras una breve pausa, verá la aplicación cargada en la lista.
 
-   ![Ejemplo de bot en la lista de bots cargados](~/assets/images/botinlist.jpg)
+   ![Ejemplo de bot en la lista de bots cargados](../../assets/images/botinlist.jpg)
 
 Si la aplicación no se carga, la causa más común es un error en el manifiesto, especialmente identificadores para las extensiones de aplicación, Bot y mensajería.
 
@@ -80,9 +80,9 @@ Si la aplicación contiene pestañas, los usuarios pueden anclarlos a cualquier 
 
 3. Acepte la solicitud de consentimiento.
 
-4. Configure su pestaña mediante su [Página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md) y elija *Guardar*.
+4. Configure su pestaña mediante su [Página de configuración](../../tabs/how-to/create-tab-pages/configuration-page.md) y elija *Guardar*.
 
-  ![El cuadro de diálogo Agregar una pestaña, que incluye una galería de pestañas disponibles](~/assets/images/tab_gallery.png)
+  ![El cuadro de diálogo Agregar una pestaña, que incluye una galería de pestañas disponibles](../../assets/images/tab_gallery.png)
 
 ## <a name="accessing-your-uploaded-bot"></a>Acceso a su bot cargado
 
@@ -102,15 +102,15 @@ Con la aplicación cargada en el equipo o la conversación, los usuarios pueden 
 
 2. Seleccione el conector en la sección **subido** que se encuentra en la parte inferior.
 
-3. Configure el conector mediante su [Página de configuración](~/webhooks-and-connectors/how-to/connectors-creating.md) y elija *Guardar*.
+3. Configure el conector mediante su [Página de configuración](../../webhooks-and-connectors/how-to/connectors-creating.md) y elija *Guardar*.
 
-  ![El cuadro de diálogo Agregar una pestaña, que incluye una galería de pestañas disponibles.](~/assets/images/connector_gallery.png)
+  ![El cuadro de diálogo Agregar una pestaña, que incluye una galería de pestañas disponibles.](../../assets/images/connector_gallery.png)
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>Obtener acceso a la extensión de mensajería cargada
 
 Una aplicación cargada con una extensión de mensajería aparece automáticamente en el menú *más opciones* (*&#8943;*) en el cuadro de redacción.
 
-![Extensiones de mensajería](~/assets/images/compose-extensions/cesampleapp.png)
+![Extensiones de mensajería](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## <a name="removing-or-updating-your-app"></a>Quitar o actualizar la aplicación
 
@@ -123,5 +123,5 @@ Si cambia la información del manifiesto, primero debe quitar la aplicación y, 
 
 ## <a name="troubleshooting-notes"></a>Notas de solución de problemas
 
-* Si el manifiesto no se carga, compruebe que ha seguido todas las instrucciones de [Create the package](~/concepts/build-and-test/apps-package.md) y validad The manifest en el [esquema](~/resources/schema/manifest-schema.md).
+* Si el manifiesto no se carga, compruebe que ha seguido todas las instrucciones de [Create the package](../../concepts/build-and-test/apps-package.md) y validad The manifest en el [esquema](../../resources/schema/manifest-schema.md).
 

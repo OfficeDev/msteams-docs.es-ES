@@ -3,16 +3,16 @@ title: Introducción a App Studio para Microsoft Teams
 description: Empezar a compilar excelentes aplicaciones en Microsoft Teams con App Studio
 keywords: Introducción a teams de App Studio
 ms.date: 03/20/2019
-ms.openlocfilehash: 9a88c6be552905a1dbd41d691c160a39f0123710
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676090"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453864"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desarrollar rápidamente aplicaciones con App Studio para Microsoft Teams
 
-App Studio facilita la creación o la integración de sus propias aplicaciones de Microsoft Teams, ya sea que desarrolle aplicaciones personalizadas para sus aplicaciones empresariales o SaaS para equipos de todo el mundo mediante la optimización de la creación del manifiesto y el paquete de la aplicación y proporcionan herramientas útiles como el editor de tarjetas y una biblioteca de controles de reAct.
+App Studio facilita la creación o la integración de sus propias aplicaciones de Microsoft Teams, independientemente de si desarrolla aplicaciones personalizadas para sus aplicaciones empresariales o SaaS para equipos de todo el mundo mediante la optimización de la creación del manifiesto y el paquete de la aplicación, y proporciona herramientas útiles como el editor de tarjetas y una biblioteca de controles de reAct.
 
 ## <a name="installing-app-studio"></a>Instalación de App Studio
 

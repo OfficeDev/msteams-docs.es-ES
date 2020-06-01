@@ -4,12 +4,12 @@ author: clearab
 description: Información general sobre los bots de conversación en Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281849"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453871"
 ---
 # <a name="what-are-conversational-bots"></a>¿Qué son los bots de conversación?
 
@@ -53,7 +53,7 @@ Los bots en Microsoft Teams pueden formar parte de una conversación de uno a un
 
 ### <a name="in-a-channel"></a>En un canal
 
-Los canales contienen conversaciones encadenadas entre varias personas, potencialmente muchas personas (actualmente, hasta 2000). Esto proporciona potencialmente a su bot un alcance masivo, pero las interacciones individuales deben ser concisas. Las interacciones de varios torneados tradicionales probablemente no funcionarán correctamente. En su lugar, use tarjetas interactivas o módulos de tareas, o bien, puede mover la conversación a una conversación uno a uno si necesita recopilar mucha información. El bot también tendrá acceso a los mensajes en los que se encuentra `@mentioned` directamente, no puede recuperar mensajes adicionales de la conversación con Microsoft Graph y permisos de nivel de organización elevados.
+Los canales contienen conversaciones encadenadas entre varias personas, potencialmente muchas personas (actualmente, hasta 2000). Esto proporciona potencialmente a su bot un alcance masivo, pero las interacciones individuales deben ser concisas. Las interacciones de varios torneados tradicionales probablemente no funcionarán correctamente. En su lugar, use tarjetas interactivas o módulos de tareas, o bien, puede mover la conversación a una conversación uno a uno si necesita recopilar mucha información. El bot también tendrá acceso a los mensajes en los que se encuentra `@mentioned` directamente, aunque puede recuperar mensajes adicionales de la conversación con Microsoft Graph y permisos de nivel de organización elevados.
 
 Algunos escenarios en los que Excel de los bots en un canal son:
 

@@ -2,27 +2,19 @@
 title: Referencia de directrices de diseño
 description: Describe las instrucciones para diseñar una aplicación personal
 keywords: guías de diseño de Microsoft Teams referencia de aplicaciones personales
-ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228076"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455502"
 ---
 # <a name="personal-apps"></a>Aplicaciones personales
 
-> [!Important]
-> Pronto estará disponible la compatibilidad completa con las pestañas de los clientes móviles. Para prepararse para este cambio, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas. Las aplicaciones personales (pestañas estáticas) están disponibles actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
->
-> Cuando se publica la compatibilidad completa de pestañas:
->
-> * Todas las pestañas estarán siempre disponibles en dispositivos móviles
-> * El `contentUrl` **se cargará en el cliente móvil de Microsoft Teams**.
-> * En las pestañas canal/grupo, los usuarios pueden abrir la pestaña en un explorador independiente `websiteUrl`a través de `contentUrl` la, pero se cargará primero.
+> [!NOTE]
+> Teams admite completamente la compatibilidad con las pestañas de los clientes móviles. Debe seguir las [instrucciones para las pestañas de dispositivos móviles](../../tabs/design/tabs-mobile.md) al crear pestañas para plataformas móviles.
 
-Una aplicación personal es una aplicación con un ámbito personal. Como desarrollador de aplicaciones, tiene la opción de proporcionar una versión de la aplicación que se crea para el usuario individual. En esta versión, la colección de pestañas (y el bot, si ha incluido uno), están diseñados para la persona. De este modo, podrá crear una interacción de uno en uno con los usuarios.
-
-Una aplicación personal es donde alguien puede ver todo lo que es y todos los elementos que ha visto recientemente en la aplicación. Coloca todo en un solo punto. En la siguiente captura de pantalla, contoso es una aplicación personal en el flotante de la aplicación personal.
+Una aplicación personal es una aplicación de Microsoft Teams con un ámbito personal.  Como desarrollador de aplicaciones, tiene la opción de proporcionar una versión de la aplicación que se Centre en las interacciones con un único usuario. Puede ser un [Bot de conversación](../../bots/what-are-bots.md) para participar en conversaciones de uno a uno con un usuario o con una [pestaña personal](../../tabs/what-are-tabs.md) que proporciona una experiencia Web integrada. Las aplicaciones personales permiten a los usuarios ver su contenido seleccionado en un solo punto. En la siguiente captura de pantalla, contoso es una aplicación personal en el flotante de la aplicación personal.
 
 ![imagen del menú de desbordamiento de la aplicación](~/assets/images/Personal-apps-App-flyout.png)
 
