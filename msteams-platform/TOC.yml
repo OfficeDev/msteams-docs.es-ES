@@ -320,14 +320,14 @@
           href: webhooks-and-connectors/how-to/connectors-creating.md
         - name: Envío de mensajes a conectores y webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
-- name: Permisos de la API de Graph
+- name: 'Las API de REST de Graph para Teams '
   items:
     - name: Consentimiento específico de recursos (RSC)
-      href: graph-permissions/resource-specific-consent.md
+      href: graph-api/rsc/resource-specific-consent.md
     - name: Probar permisos de consentimiento específicos de recursos
-      href: graph-permissions/test-resource-specific-consent.md
+      href: graph-api/rsc/test-resource-specific-consent.md
     - name: Archivo de prueba JSON RSC
-      href: graph-permissions/test-rsc-json-file.md
+      href: graph-api/rsc/test-rsc-json-file.md
 - name: Recursos
   items:
     - name: Bots - v3 SDK
