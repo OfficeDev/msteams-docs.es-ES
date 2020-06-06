@@ -4,12 +4,12 @@ author: clearab
 description: Cómo agregar la autenticación OAuth a un bot en Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b5a246db1838d19d81e42e9a60efa74bb5363573
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 2b9765a2f295e85dc9b4d2c1b1ddcae4d642e268
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210721"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590875"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación a su bot de Teams
 
@@ -119,7 +119,7 @@ En este procedimiento, usará un proveedor de Azure AD; también se pueden usar 
    1. En **Client Secrets**, seleccione &#x2795; **nuevo secreto de cliente**.
    1. Agregue una descripción para identificar este secreto con respecto a otros que puede que necesite crear para esta aplicación, como *aplicación de identidad de bot en Teams*.
    1. El valor establecido **expira** en la selección.
-   1. Elija **Agregar**.
+   1. Seleccione **Agregar**.
    1. Antes de salir de esta página, **Anote el secreto**. Este valor se usará más adelante como _secreto de cliente_ al registrar la aplicación de Azure ad en el bot.
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar la conexión del proveedor de identidad y registrarla con el bot
@@ -143,11 +143,11 @@ En este procedimiento, usará un proveedor de Azure AD; también se pueden usar 
         - Si seleccionó *cuentas en cualquier directorio de la organización (cualquier espacio empresarial de AAD y cuentas personales de Microsoft, por ejemplo, Skype, Xbox, Outlook),* escriba la palabra **Common** en lugar de un identificador de inquilino. De lo contrario, la aplicación de AAD comprobará en el inquilino cuyo identificador se haya seleccionado y excluya las cuentas personales de Microsoft.
 
     h. En **dirección URL del recurso**, escriba `https://graph.microsoft.com/` . No se usa en el ejemplo de código actual.  
-    sigo. Deje los **ámbitos** en blanco. La siguiente imagen es un ejemplo:
+    i. Deje los **ámbitos** en blanco. La siguiente imagen es un ejemplo:
 
     ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 ### <a name="test-the-connection"></a>Probar la conexión
 
@@ -159,7 +159,7 @@ En este procedimiento, usará un proveedor de Azure AD; también se pueden usar 
     ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Seleccione **Aceptar**.
-1. Esto debería redirigirlo a una **conexión de prueba con \< el nombre de-conexión-nombre> Página realizada correctamente** . Actualice la página si recibe un error. La siguiente imagen es un ejemplo:
+1. Esto debería redirigirle a una **conexión de prueba para que la página se haya \<your-connection-name> realizado correctamente** . Actualice la página si recibe un error. La siguiente imagen es un ejemplo:
 
   ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -390,7 +390,7 @@ Este manifiesto contiene la información que Microsoft Teams necesita para conec
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
