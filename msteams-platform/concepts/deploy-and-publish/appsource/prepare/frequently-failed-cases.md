@@ -4,12 +4,12 @@ description: Describe las sugerencias para el envío y la mayoría de las direct
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914577"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704484"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -70,9 +70,10 @@ Para obtener más información acerca de la autenticación, consulte:
 
 * Las pestañas deben proporcionar contenido centrado y evitar elementos de interfaz de usuario innecesarios. En general, esto suele hacer referencia a una interfaz de usuario anidada o con capas innecesaria, una interfaz de usuario extraña o irrelevante junto al contenido o cualquier vínculo que lleve al usuario al contenido no relacionado. Por ejemplo, a continuación se muestra una vista de pestaña que omite los menús de navegación y que sólo exhibe el contenido principal:
 
-![Vista de pestañas de SharePoint de vista](~/assets/images/faq/web-sp.png)
-![Web de SharePoint](~/assets/images/faq/tab-sp.png)
+![Vista Web de SharePoint](~/assets/images/faq/web-sp.png)  
+![Vista de pestañas de SharePoint](~/assets/images/faq/tab-sp.png)
 
+* Las pestañas deben ser de poca naturaleza y no incluir una navegación compleja.
 * Si hay varias opciones de vista, considere la posibilidad de tener un menú de configuración de pestaña para que el usuario elija. Por ejemplo, en lugar de insertar un menú dentro de la pestaña, coloque el menú en la página de configuración para que la vista de pestaña real sea despejada y centrada.
 
 ![Página de configuración de la idea ancha](~/assets/images/faq/wideidea.png)
@@ -80,10 +81,13 @@ Para obtener más información acerca de la autenticación, consulte:
 ### <a name="9989-tab-configuration-must-happen-in-the-configuration-screen"></a>La configuración de la pestaña &#9989; debe ocurrir en la pantalla de configuración
 
 * La pantalla de configuración debe explicar con claridad el valor de la experiencia y cómo configurar la ficha.
-* El proceso de configuración no debe interrumpir la experiencia del usuario y proporcionar siempre una manera para que los usuarios puedan continuar.
+* El proceso de configuración siempre debe proporcionar una manera para que los usuarios continúen sin dejar de lado la experiencia del usuario. Por ejemplo, no muestre una tarjeta vacía después de que el usuario haya configurado la pestaña.
+* El proceso de inicio de sesión del usuario debe formar parte del proceso de configuración y debe completarse en la interfaz de usuario de la pestaña. Después de que el usuario haya completado la configuración y cargado la pestaña, no es necesario realizar ninguna otra acción.
+* No mostrar toda la página web en la ventana emergente de configuración de inicio de sesión.
 * Un usuario siempre debe poder finalizar la experiencia de configuración, incluso si no puede encontrar inmediatamente el contenido que busca.
 * La experiencia de configuración debe proporcionar opciones para que el usuario pueda buscar su contenido, anclar una dirección URL o crear contenido nuevo si no existe.
-* El usuario no debe dejar la experiencia de configuración para crear contenido y, a continuación, volver a Microsoft Teams para anclarlo.
+* La experiencia de configuración debe permanecer dentro del contexto de Teams. El usuario no debe dejar la experiencia de configuración para crear contenido y, a continuación, volver a Microsoft Teams para anclarlo.
+* Use el área de la ventanilla disponible de manera eficaz. No lo desperdicie en usar logotipos grandes en el menú emergente configuración
 
 ![OneNote permite a los usuarios pegar un vínculo de OneNote en caso de que no se encuentren notas](~/assets/images/faq/tab-onenote-config.png)
 
@@ -105,26 +109,44 @@ El bot debe responder a cualquier comando y no debe ser el usuario que no respon
 
 * **Incluir contenido de ayuda o guía cuando se pierde el bot**. Cuando el bot no puede comprender la entrada del usuario, debe sugerir una acción alternativa. Por ejemplo, *"lo siento, no entiendo. Escriba "Help" para obtener más información. "* No responda con un mensaje de error o simplemente *"no entiendo"*. Use esta oportunidad para enseñar a los usuarios.
 
-* **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona las respuestas adecuadas cuando se`@*botname*`menciona () en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o Teams, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la [Referencia del esquema del manifiesto de Microsoft Teams](~/resources/schema/manifest-schema.md#bots)).
+* **Usar tarjetas adaptables y módulos de tareas para que la respuesta de bot sea clara y accionable** 
+ Las [tarjetas adaptables con botones al invocar módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario de bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos
+
+* **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o Teams, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la [Referencia del esquema del manifiesto de Microsoft Teams](~/resources/schema/manifest-schema.md#bots)).
 
 ### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>Los bots de &#9989; deben enviar un mensaje de bienvenida en el primer inicio
 
-Los mensajes de bienvenida son la mejor forma de establecer el tono de la bot. Se trata de la primera interacción que un usuario tiene con el bot. Un buen mensaje de bienvenida puede animar al usuario a seguir explorando la aplicación. Si el mensaje de bienvenida o de introducción es confuso o confuso, los usuarios no verán el valor de la aplicación de forma inmediata y perderán sus intereses. El mensaje de bienvenida debe incluir lo siguiente:
+Los mensajes de bienvenida son la mejor forma de establecer el tono de la bot. Se trata de la primera interacción que un usuario tiene con el bot. Un buen mensaje de bienvenida puede animar al usuario a seguir explorando la aplicación. Si el mensaje de bienvenida o de introducción es confuso o confuso, los usuarios no verán el valor de la aplicación de forma inmediata y perderán sus intereses.
 
-* Un comando de ayuda.
-* La propuesta de valor
-* Todos los comandos válidos.
+### <a name="welcome-message-requirements"></a>Requisitos de mensaje de bienvenida
 
-Estas son algunas consideraciones a la hora de diseñar el mensaje de bienvenida:
+* Identificar quién agregó el bot a un canal.
+* Incluir una propuesta de valor.
+* Proporcione orientación hacia delante para usar el bot.
+* Presente texto fácil de leer y diálogo sencillo, preferiblemente una tarjeta con un botón de bienvenida que requiere una acción que carga un módulo de tareas.
+* Manténgase sencillo, evite el diálogo de palabras/chats.
+* Invocar el mensaje de bienvenida con un ping y no dos o más pings simultáneos.
+* En chat personal, el mensaje de bienvenida solo debe mostrarse al usuario que configuró la aplicación.  
+* No envíe nunca un chat personal a todos los miembros del equipo.
+* No enviar nunca el mensaje de bienvenida más de una vez. No se permite repetir el mismo mensaje de bienvenida a intervalos regulares y se considera correo no deseado.
 
-#### <a name="personal-scope"></a>Ámbito personal
+#### <a name="avoid-welcome-message-spamming"></a>Evitar el mensaje de bienvenida de correo no deseado
 
-* **Haga que el mensaje sea conciso e**informativo. Lo más probable es que las experiencias de los usuarios con el conocimiento de la aplicación varíen. Es posible que hayan usado la aplicación en otra plataforma o que no sepan nada sobre la aplicación. Desea personalizar el mensaje para todas las audiencias y en un par de frases explicar lo que hace el bot y las formas de interactuar con él. También debe explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
+* **Mensaje de canal por bot**. No envíe correo no deseado a los usuarios mediante publicaciones de chats nuevas independientes. Cree una publicación de hilo único con respuestas en el mismo subproceso.
+* **Chat personal por bot**. No enviar varios mensajes. Enviar un mensaje con la información completa.
+
+#### <a name="notification-only-bot-welcome-messages"></a>Mensajes de bienvenida de un bot de solo notificación
+
+Los bots de solo notificación deben enviar un mensaje de bienvenida que incluya un mensaje que indique *"soy un robot de solo notificación y no podrá contestar a sus chats"*.
+
+#### <a name="welcome-messages-in-the-personal-scope"></a>Mensajes de bienvenida en el ámbito personal
+
+* **Haga que el mensaje sea conciso e**informativo.  Lo más probable es que la experiencia del usuario y el conocimiento de la aplicación varíen. Un usuario puede haber usado la aplicación en otra plataforma o no ha sabido nada sobre la aplicación. Desea personalizar el mensaje para todas las audiencias y en un par de frases explicar lo que hace el bot y las formas de interactuar con él. También debe explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
 ![Cibercafé y dinning bot](~/assets/images/faq/cafe-bot.png)
 
 * **Hacer que el mensaje sea accionable**. Piense lo primero que quiere que realicen los usuarios después de instalar la aplicación. ¿Hay algún comando interesante que deben probar? ¿Hay alguna otra experiencia de incorporación que deba conocer? ¿Es necesario que inicien sesión? Puede Agregar acciones a una tarjeta adaptable o proporcionar ejemplos específicos como *"probar..."*, *"Esto es lo que puedo hacer..."*.
 
-#### <a name="team-scope"></a>Ámbito de equipo
+#### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensajes de bienvenida en el ámbito de equipo o canal
 
 Las cosas son un poco diferentes cuando el bot se agrega por primera vez a un canal. Normalmente, no debería enviar un mensaje de 1:1 a todos los usuarios del equipo, pero el bot puede enviar un mensaje de bienvenida en el canal.
 

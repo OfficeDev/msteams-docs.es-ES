@@ -2,12 +2,12 @@
 title: Mensajes proactivos
 description: Describe los bots puede iniciar una conversación en Microsoft Teams.
 keywords: escenarios de la conversación de mensajería proactiva de Teams
-ms.openlocfilehash: 30a21a15126e489ec50f8d3b7307880921d6062b
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adb677bf348065713911d576289c432f8aba3960
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635322"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704456"
 ---
 # <a name="proactive-messaging-for-bots"></a>Mensajería proactiva para bots
 
@@ -25,7 +25,7 @@ El envío de un mensaje para iniciar una nueva conversación es diferente al de 
 1. [Obtener el identificador único del usuario y el identificador de inquilino](#obtain-necessary-user-information)
 1. [Enviar el mensaje](#examples)
 
-Al crear mensajes proactivos **must** a los `MicrosoftAppCredentials.TrustServiceUrl`que se debe llamar y pasar la dirección URL del `ConnectorClient` servicio antes de crear el, se usará para enviar el mensaje. Si no lo hace, la aplicación recibirá una `401: Unauthorized` respuesta. Vea [los ejemplos siguientes](#net-example-from-this-sample).
+Al crear mensajes proactivos a los que se **debe** llamar `MicrosoftAppCredentials.TrustServiceUrl` y pasar la dirección URL del servicio antes de crear el, `ConnectorClient` se usará para enviar el mensaje. Si no lo hace, la aplicación recibirá una `401: Unauthorized` respuesta. Vea [los ejemplos siguientes](#net-example-from-this-sample).
 
 ## <a name="best-practices-for-proactive-messaging"></a>Procedimientos recomendados para la mensajería proactiva
 
@@ -65,7 +65,7 @@ Los bots pueden crear nuevas conversaciones con un usuario individual de Microso
 > [!Note]
 > La instalación de aplicaciones de forma proactiva con Graph se encuentra actualmente en versión beta.
 
-En ocasiones, es posible que sea necesario enviar un mensaje de forma proactiva a los usuarios que no hayan instalado ni interactúen con la aplicación anteriormente. Por ejemplo, desea usar el Communicator de la [compañía](~/samples/app-templates.md#company-communicator-app) para enviar mensajes a toda la organización. Para este escenario, puede usar la API de Graph para instalar proactivamente la aplicación para sus usuarios y, a continuación, almacenar en `conversationUpdate` caché los valores necesarios del evento que la aplicación recibirá en el momento de la instalación.
+En ocasiones, es posible que sea necesario enviar un mensaje de forma proactiva a los usuarios que no hayan instalado ni interactúen con la aplicación anteriormente. Por ejemplo, desea usar el Communicator de la [compañía](~/samples/app-templates.md#company-communicator) para enviar mensajes a toda la organización. Para este escenario, puede usar la API de Graph para instalar proactivamente la aplicación para sus usuarios y, a continuación, almacenar en caché los valores necesarios del `conversationUpdate` evento que la aplicación recibirá en el momento de la instalación.
 
 Solo puede instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en la tienda de aplicaciones de Teams.
 
@@ -128,7 +128,7 @@ Activity newActivity = new Activity()
 await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 ```
 
-### <a name="using-nodejs"></a>Uso de node. js
+### <a name="using-nodejs"></a>Uso de Node.js
 
 ```javascript
 var address =
@@ -158,7 +158,7 @@ bot.send(msg);
 
 ## <a name="creating-a-channel-conversation"></a>Crear una conversación de canal
 
-El bot agregado por el equipo puede exponer en un canal para crear una nueva cadena de respuesta. Si usa el SDK de Team. js Teams, use `startReplyChain()` que le proporcione una dirección completa con el identificador de actividad y el identificador de conversación correctos. Si usa C#, vea el ejemplo siguiente.
+El bot agregado por el equipo puede exponer en un canal para crear una nueva cadena de respuesta. Si usa el SDK de Node.js Teams, use `startReplyChain()` que le proporcione una dirección completa con el identificador de actividad correcto y el identificador de conversación. Si usa C#, vea el ejemplo siguiente.
 
 Como alternativa, puede usar la API de REST y enviar una solicitud POST al [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) recurso.
 
