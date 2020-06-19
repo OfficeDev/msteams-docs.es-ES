@@ -2,12 +2,12 @@
 title: Referencia de tarjetas
 description: Describe todas las tarjetas y las acciones de tarjetas disponibles para bots en Microsoft Teams.
 keywords: referencia de tarjetas de bots
-ms.openlocfilehash: 76b9cb7e2508d300deb2e3cd4f392fdb9850062d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675915"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801490"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
@@ -66,10 +66,7 @@ Vea [formato de tarjeta](~/task-modules-and-cards/cards/cards-format.md) para ob
 
 ## <a name="adaptive-card"></a>Tarjeta adaptable
 
-> [!NOTE]
-> Solo se admite la versión 1,0 de las tarjetas adaptables para todos los usuarios. La versión 1,2 solo está disponible actualmente en la versión preliminar para desarrolladores
-
-Una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada.
+Una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. *Vea* [tarjetas adaptables v 1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Compatibilidad con tarjetas adaptables
 
@@ -393,22 +390,22 @@ Cada tarjeta de conector puede mostrar un máximo de 10 secciones y cada secció
 > [!NOTE]
 > No se mostrarán secciones, imágenes o acciones adicionales en un mensaje.
 
-Todos los campos de texto admiten Markdown y HTML. Puede controlar qué secciones utilizan Markdown o HTML estableciendo la `markdown` propiedad en un mensaje. De forma predeterminada `markdown` , se establece `true`en; Si desea usar HTML en su lugar, establezca `markdown` en. `false`
+Todos los campos de texto admiten Markdown y HTML. Puede controlar qué secciones utilizan Markdown o HTML estableciendo la `markdown` propiedad en un mensaje. De forma predeterminada, `markdown` se establece en `true` ; si desea usar HTML en su lugar, establezca `markdown` en `false` .
 
 Si especifica la `themeColor` propiedad, esta invalida la `accentColor` propiedad en el manifiesto de la aplicación.
 
-Para especificar el estilo de representación de `activityImage`, puede establecer `activityImageType` lo siguiente:
+Para especificar el estilo de representación de `activityImage` , puede establecer `activityImageType` lo siguiente:
 
 | Valor | Descripción |
 | --- | --- |
-| `avatar` | Predeterminada `activityImage` se recortará como un círculo |
+| `avatar` | Predeterminada se `activityImage` recortará como un círculo |
 | `article` | `activityImage`se mostrará como un rectángulo y conservará su relación de aspecto. |
 
 Para obtener más información acerca de las propiedades de la tarjeta de conector, consulte la referencia de la [tarjeta de mensaje accionable](/outlook/actionable-messages/card-reference). Las únicas propiedades de tarjeta de conector que Microsoft Teams no admite actualmente son las siguientes:
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`(se trata siempre `true` como en Microsoft Teams)
+* `startGroup`(se trata siempre como `true` en Microsoft Teams)
 * `originator`
 * `correlationId`
 
@@ -497,7 +494,7 @@ Referencia de la estructura de bot:
 
 ## <a name="signin-card"></a>Tarjeta de inicio de sesión
 
-Tarjeta que permite a un bot solicitar que un usuario inicie sesión. Se admite en Teams de una forma ligeramente diferente a la que se encuentra en el marco de robots. La tarjeta de inicio de sesión de Microsoft Teams es similar a la tarjeta de inicio de sesión en el marco de bot, con la excepción de que la tarjeta `signin` de `openUrl`inicio de sesión de Teams solo admite dos acciones: y.
+Tarjeta que permite a un bot solicitar que un usuario inicie sesión. Se admite en Teams de una forma ligeramente diferente a la que se encuentra en el marco de robots. La tarjeta de inicio de sesión de Microsoft Teams es similar a la tarjeta de inicio de sesión en el marco de bot, con la excepción de que la tarjeta de inicio de sesión de Teams solo admite dos acciones: `signin` y `openUrl` .
 
 La *acción de inicio de sesión* se puede usar desde cualquier tarjeta en Teams, no solo desde la tarjeta de inicio de sesión. Para obtener más información sobre la autenticación, vea el tema sobre el [flujo de autenticación de Microsoft Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md) .
 
@@ -594,7 +591,7 @@ Referencia de la estructura de bot:
 
 Las colecciones de tarjetas se admiten en Microsoft Teams.
 
-Las colecciones de tarjetas las proporciona el marco de `builder.AttachmentLayout.carousel` bot `builder.AttachmentLayout.list`: y. Estas colecciones pueden contener tarjetas adaptables, de héroe o de miniaturas.
+Las colecciones de tarjetas las proporciona el marco de bot: `builder.AttachmentLayout.carousel` y `builder.AttachmentLayout.list` . Estas colecciones pueden contener tarjetas adaptables, de héroe o de miniaturas.
 
 ## <a name="carousel-collection"></a>Colección carrusel
 

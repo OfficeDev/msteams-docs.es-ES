@@ -2,20 +2,20 @@
 title: Limitación de velocidad
 description: Limitación de velocidad y procedimientos recomendados en Microsoft Teams
 keywords: limitación de velocidad de bots de equipo
-ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42371768"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801499"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimizar el bot: límites de velocidad y procedimientos recomendados en Microsoft Teams
 
 Como principio general, la aplicación debe limitar el número de mensajes que envía a un chat o a una conversación de canal individuales. Esto garantiza una experiencia óptima que no siente "correo no deseado" para los usuarios finales.
 
-Para proteger Microsoft Teams y sus usuarios, la API de bot limita la velocidad de las solicitudes entrantes. Las aplicaciones que superen este límite recibirán un `HTTP 429 Too Many Requests` estado de error. Todas las solicitudes están sujetas a la misma directiva de limitación de velocidad, como el envío de mensajes, enumeraciones de canales e recuperaciones de lista.
+Para proteger Microsoft Teams y sus usuarios, la API de bot limita la velocidad de las solicitudes entrantes. Las aplicaciones que superen este límite recibirán un `HTTP 429 Too Many Requests` Estado de error. Todas las solicitudes están sujetas a la misma directiva de limitación de velocidad, como el envío de mensajes, enumeraciones de canales e recuperaciones de lista.
 
-Como los valores exactos de los límites de velocidad están sujetos a cambios, recomendamos que la aplicación implemente el comportamiento `HTTP 429 Too Many Requests`de interrupción adecuado cuando la API vuelva.
+Como los valores exactos de los límites de velocidad están sujetos a cambios, recomendamos que la aplicación implemente el comportamiento de interrupción adecuado cuando la API vuelva `HTTP 429 Too Many Requests` .
 
 ## <a name="handling-rate-limits"></a>Límites de velocidad de manipulación
 
@@ -107,19 +107,19 @@ Este límite controla el tráfico que un bot puede generar en una sola conversac
 
 | **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- | --- |
-|| 1 | 0,7 |
-| Enviar a conversación | segundo | 8,5 |
+| Enviar a conversación | 1  | 7  |
+| Enviar a conversación | segundo | 8  |
 | Enviar a conversación | semestre | 60 |
 | Enviar a conversación | 3600 | 1800 |
-| Crear conversación | 1 | 0,7 |
-| Crear conversación | segundo | 8,5 |
+| Crear conversación | 1  | 7  |
+| Crear conversación | segundo | 8  |
 | Crear conversación | semestre | 60 |
 | Crear conversación | 3600 | 1800 |
-| Obtener miembros de la conversación| 1 | 14  |
+| Obtener miembros de la conversación| 1  | 14  |
 | Obtener miembros de la conversación| segundo | 16  |
 | Obtener miembros de la conversación| semestre | 120 |
 | Obtener miembros de la conversación| 3600 | 3600 |
-| Obtener conversaciones | 1 | 14  |
+| Obtener conversaciones | 1  | 14  |
 | Obtener conversaciones | segundo | 16  |
 | Obtener conversaciones | semestre | 120 |
 | Obtener conversaciones | 3600 | 3600 |
@@ -130,15 +130,15 @@ Este límite controla el tráfico que pueden generar todos los bots a través de
 
 | **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- | --- |
-| Enviar a conversación | 1 | 14  |
+| Enviar a conversación | 1  | 14  |
 | Enviar a conversación | segundo | 16  |
-| Crear conversación | 1 | 14  |
+| Crear conversación | 1  | 14  |
 | Crear conversación | segundo | 16  |
-| CreateConversation| 1 | 14  |
+| CreateConversation| 1  | 14  |
 | CreateConversation| segundo | 16  |
-| Obtener miembros de la conversación| 1 | 28 |
+| Obtener miembros de la conversación| 1  | 28 |
 | Obtener miembros de la conversación| segundo | 32 |
-| Obtener conversaciones | 1 | 28 |
+| Obtener conversaciones | 1  | 28 |
 | Obtener conversaciones | segundo | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>Bot por límite de centro de datos
@@ -147,6 +147,6 @@ Este límite controla el tráfico que un bot puede generar a través de todos lo
 
 |**Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- |
-| 1 | 20 |
+| 1  | 20 |
 | 1800 | 8000 |
 | 3600 | 15000 |

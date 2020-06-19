@@ -1,0 +1,183 @@
+---
+title: Consentimiento específico de recursos en Microsoft Teams
+description: Describe el consentimiento específico del recurso en Microsoft Teams y cómo aprovecharlo.
+localization_priority: Normal
+author: laujan
+ms.author: lajanuar
+ms.topic: Overview
+keywords: Gráfico RSC de OAuth SSO de OAuth para Microsoft Teams
+ms.openlocfilehash: eb6fe0e0da03b355a4fb16d8ca5b046080af0db8
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44801530"
+---
+# <a name="resource-specific-consent-rsc--developer-preview"></a>Autorización específica de recursos (RSC): vista previa para desarrolladores
+
+>[!NOTE]
+>Los permisos de consentimiento específicos de recursos solo están disponibles en los clientes de escritorio y Android después de habilitar Developer Preview. Vea [Cómo habilito la vista previa para desarrolladores](../../resources/dev-preview/developer-preview-intro.md) para obtener más información.
+
+El consentimiento específico de recursos (RSC) es una integración de Microsoft Teams y Graph API que permite a su aplicación usar puntos de conexión de API para administrar equipos específicos dentro de una organización. El modelo de permisos de autorización específica de recursos (RSC) permite a los *propietarios del equipo* conceder el consentimiento para que una aplicación acceda a los datos de un equipo o los modifique. Los permisos de RSC específicos, específicos de Teams, definen lo que una aplicación puede hacer dentro de un equipo específico:
+
+## <a name="resource-specific-permissions"></a>Permisos específicos de recursos
+
+|Permisos de aplicación| Action |
+| ----- | ----- |
+|TeamSettings. Read. Group | Obtener la configuración de este equipo.|
+|TeamSettings. Edit. Group|Actualice la configuración de este equipo.|
+|ChannelSettings. Read. Group|Obtenga los nombres de canal, las descripciones de canales y la configuración de canal para este equipo.|
+|ChannelSettings. Edit. Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
+|Channel. Create. Group|Cree canales en este equipo.|
+|Channel. Delete. Group|Eliminar los canales de este equipo.|
+|ChannelMessage. Read. Group |Obtiene los mensajes del canal de este equipo.|
+|TeamsApp. Read. Group|Obtenga una lista de las aplicaciones instaladas de este equipo.|
+|TeamsTab. Read. Group|Obtener una lista de las pestañas de este equipo.|
+|TeamsTab. Create. Group|Cree pestañas en este equipo.|
+|TeamsTab. Edit. Group|Actualice las pestañas de este equipo.|
+|TeamsTab. Delete. Group|Eliminar pestañas de este equipo.|
+|Member. Read. Group|Obtener los miembros de este equipo.|
+|Owner. Read. Group|Obtener los propietarios de este equipo.|
+
+>[!NOTE]
+>Los permisos específicos de recursos solo están disponibles para las aplicaciones de Teams instaladas en el cliente de Teams y actualmente no forman parte del portal de Azure Active Directory.
+
+## <a name="enabling-resource-specific-consent-in-your-application"></a>Habilitar el consentimiento específico de recursos en la aplicación
+
+Los pasos para habilitar RSC en la aplicación son los siguientes:
+
+1. [Configure las opciones de consentimiento del propietario del grupo en el portal de Azure Active Directory](#configure-group-owner-consent-settings-in-the-azure-ad-portal).
+1. [Registre su aplicación con la plataforma de identidad de Microsoft a través del portal de Azure ad](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+1. [Revisar los permisos de la aplicación en el portal de Azure AD](#review-your-application-permissions-in-the-azure-ad-portal)
+1. [Obtener un token de acceso desde la plataforma de identidad de Microsoft](#obtain-an-access-token-from-the-microsoft-identity-platform).
+1. [Actualizar el manifiesto de la aplicación de Teams](#update-your-teams-app-manifest).
+1. [Instale la aplicación directamente en Teams](#install-your-app-directly-in-teams).
+1. [Compruebe si la aplicación tiene permisos RSC agregados](#check-your-app-for-added-rsc-permissions).
+
+## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Configurar las opciones de consentimiento del propietario del grupo en el portal de Azure AD
+
+Puede habilitar o deshabilitar el [consentimiento del propietario del grupo](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directamente en Azure Portal:
+
+> [!div class="checklist"]
+>
+>- Inicie sesión en [Azure portal](https://portal.azure.com) como administrador [global o administrador](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)de la compañía.  
+ > - Seleccione configuración de usuario de aplicaciones empresariales de **Azure Active Directory**  => **Enterprise applications**  => **User settings**.
+> - Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado **los usuarios pueden dar su consentimiento a las aplicaciones que tienen acceso a los datos de la compañía para los grupos a los que** pertenecen (esta funcionalidad está habilitada de forma predeterminada).
+
+![configuración de RSC de Azure](../../assets/images/azure-rsc-configuration.svg)
+
+| Valor | Descripción|
+|--- | --- |
+|Sí | Habilitar el consentimiento específico del grupo para todos los propietarios del grupo.|
+|No |Deshabilitar el consentimiento específico de grupo para todos los usuarios.| 
+|Limitada | Habilitar el consentimiento específico de grupo para los miembros de un grupo seleccionado.|
+
+Para habilitar o deshabilitar el consentimiento del propietario del grupo dentro de Azure portal con PowerShell, siga los pasos descritos en [configurar el consentimiento del propietario del grupo con PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).
+
+## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>Registrar la aplicación con la plataforma de identidad de Microsoft mediante el portal de Azure AD
+
+El portal de Azure Active Directory proporciona una plataforma central para registrar y configurar las aplicaciones. La aplicación debe estar registrada en el portal de Azure AD para integrarse con la plataforma de identidad de Microsoft y las API de gráficos de llamadas. *Consulte* [registrar una aplicación con la plataforma de identidad de Microsoft](/graph/auth-register-app-v2).
+
+>[!WARNING]
+>No registre varias aplicaciones de Microsoft Teams en el mismo identificador de aplicación de Azure AD. El identificador de la aplicación debe ser único para cada aplicación. Se producirá un error si intenta instalar varias aplicaciones en el mismo identificador de la aplicación.
+
+## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Revisar los permisos de la aplicación en el portal de Azure AD
+
+Vaya a la página registros de aplicaciones **domésticas**  =>  **App registrations** y seleccione su aplicación RSC. Elija **permisos de API** en la barra de navegación izquierda y examine la lista de permisos configurados para la aplicación. Si la aplicación solo realiza llamadas de gráfico RSC, elimine todos los permisos de esa página. Si la aplicación también va a realizar llamadas que no son RSC, conserve dichos permisos según sea necesario.
+
+>[!IMPORTANT]
+>El portal de Azure AD no se puede usar para solicitar permisos RSC. Los permisos RSC actualmente son exclusivos de las aplicaciones de Teams instaladas en el cliente de Microsoft Teams y se declaran en el archivo de manifiesto de la aplicación (JSON).
+
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Obtener un token de acceso desde la plataforma de identidad de Microsoft
+
+Para realizar llamadas a la API de Graph, debe obtener un token de acceso para la aplicación desde la plataforma de identidad. Para que la aplicación pueda obtener un token de la plataforma de identidad de Microsoft, debe estar registrado en el portal de Azure AD. El token de acceso contiene información sobre la aplicación y los permisos que tiene para los recursos y las API disponibles a través de Microsoft Graph.
+
+Necesitará tener los siguientes valores del proceso de registro de Azure AD para recuperar un token de acceso de la plataforma de identidad:
+
+- IDENTIFICADOR de la **aplicación** asignado por el portal de registro de aplicaciones. Si la aplicación admite el inicio de sesión único (SSO), debe usar el mismo identificador de aplicación para la aplicación y el SSO.
+- El **secreto de cliente/contraseña** o un par de claves pública y privada (**certificado**). Esto no es necesario para las aplicaciones nativas.
+- Un **URI de redireccionamiento** (o dirección URL de respuesta) de la aplicación para recibir respuestas de Azure ad.
+
+ *Vea* [obtener acceso en nombre de un usuario](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) y [obtener acceso sin un usuario](/graph/auth-v2-service)
+
+## <a name="update-your-teams-app-manifest"></a>Actualizar el manifiesto de la aplicación de Teams
+
+Los permisos RSC se declaran en el archivo de manifiesto de la aplicación (JSON).  Agregue una clave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) al manifiesto de la aplicación con los siguientes valores:
+
+> [!div class="checklist"]
+>
+> - **ID** : el identificador de la aplicación de Azure ad. *Consulte* [registrar la aplicación en el portal de Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **recurso** : cualquier cadena. Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; se realizará cualquier cadena.
+> - **permisos de aplicación** : permisos RSC para la aplicación. *Consulte* [permisos específicos de recursos](resource-specific-consent.md#resource-specific-permissions).
+
+>
+>[!IMPORTANT]
+> Los permisos no RSC se almacenan en Azure portal. No los agregue al manifiesto de la aplicación.
+>
+
+```json
+"webApplicationInfo": {
+
+        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
+
+"resource": "https://RscBasedStoreApp",
+
+        "applicationPermissions": [
+
+    "TeamSettings.Read.Group",
+
+   "ChannelMessage.Read.Group",
+
+  "TeamSettings.Edit.Group",
+
+  "ChannelSettings.Edit.Group",
+
+  "Channel.Create.Group",
+
+  "Channel.Delete.Group",
+
+  "TeamsApp.Read.Group",
+
+  "TeamsTab.Read.Group",
+
+  "TeamsTab.Create.Group",
+
+  "TeamsTab.Edit.Group",
+
+  "TeamsTab.Delete.Group",
+
+  "Member.Read.Group",
+
+  "Owner.Read.Group"
+
+        ]
+
+    }
+```
+
+## <a name="install-your-app-directly-in-teams"></a>Instalar la aplicación directamente en Teams
+
+Una vez que haya creado la aplicación, puede [cargar el paquete de la aplicación](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directamente a un equipo específico.  Para ello, la configuración de directiva **cargar aplicaciones personalizadas** debe estar habilitada como parte de las directivas de configuración de aplicaciones personalizadas. *Consulte* [Custom App Policy Settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+## <a name="check-your-app-for-added-rsc-permissions"></a>Comprobar si la aplicación tiene permisos RSC agregados
+
+>[!IMPORTANT]
+>Los permisos RSC no se atribuyen a un usuario. Las llamadas se realizan con los permisos de aplicaciones, no con los permisos delegados de usuario. Por lo tanto, es posible que se permita a la aplicación realizar acciones que el usuario no puede, como crear un canal o eliminar una pestaña. Debe revisar la intención del propietario del equipo de su caso de uso antes de hacer llamadas a la API RSC. *Vea* [información general de la API de Microsoft Teams](/graph/teams-concept-overview).
+
+Una vez instalada la aplicación en un equipo, puede usar el [probador de Graph](https://developer.microsoft.com/graph/graph-explorer) para ver los permisos que se han concedido a la aplicación en un equipo:
+
+> [!div class="checklist"]
+>
+>- Obtenga el **GROUPID** del equipo del cliente de Teams.
+> - En el cliente de Microsoft Teams, seleccione **Teams** en la barra de navegación de la parte izquierda.
+> - Seleccione el equipo en el que se instalará la aplicación desde el menú desplegable.
+> - Seleccione el icono **más opciones** (&#8943;).
+> - Seleccione **obtener vínculo a equipo**.
+> - Copie y guarde el valor **GROUPID** de la cadena.
+> - Inicie sesión en el **probador de Graph**.
+> - Realice una llamada **Get** al siguiente punto de conexión: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . El campo clientAppId de la respuesta se asignará al appId especificado en el manifiesto de la aplicación Teams.
+
+ ![Respuesta del explorador de Graph para obtener la llamada.](../../assets/images/graph-permissions.png)
+
+ > [!div class="nextstepaction"]
+> [Probar permisos de consentimiento específicos de recursos en Microsoft Teams](test-resource-specific-consent.md)

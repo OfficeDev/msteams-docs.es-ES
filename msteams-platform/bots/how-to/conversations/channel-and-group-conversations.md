@@ -1,21 +1,21 @@
 ---
-title: Conversaciones de canales y grupos
+title: Conversaciones en canales y grupos
 author: clearab
 description: Cómo enviar, recibir y administrar mensajes para un bot en un canal o un chat en grupo.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ada2839ba41e4004b5f48449f4e057830dd841b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc27d7638820cfa3c2b7cfe12b91b3a3a9fef1d
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676111"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44801526"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversaciones de chat en grupo y en el canal con un bot de Microsoft Teams
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Al agregar el `teams` ámbito `groupchat` o al bot, puede estar disponible para instalarse en un chat de grupo o de equipo. Esto permite a todos los miembros de la conversación interactuar con el bot. Una vez instalado, también tendrá acceso a los metadatos sobre la conversación, como la lista de miembros de la conversación, y cuando se instale en un equipo detalles sobre ese equipo y la lista completa de canales.
+Al agregar el `teams` `groupchat` ámbito o al bot, puede estar disponible para instalarse en un chat de grupo o de equipo. Esto permite a todos los miembros de la conversación interactuar con el bot. Una vez instalado, también tendrá acceso a los metadatos sobre la conversación, como la lista de miembros de la conversación, y cuando se instale en un equipo detalles sobre ese equipo y la lista completa de canales.
 
 Los bots de un grupo o canal solo reciben mensajes cuando se mencionan ("@botname"), no reciben ningún otro mensaje que se envíe a la conversación.
 
@@ -30,7 +30,7 @@ Un bot debe proporcionar información que sea adecuada y relevante para todos lo
 
 Cuando se instala el bot en un equipo, a veces puede ser necesario crear una nueva secuencia de conversación en lugar de responder a una existente. Esta es una forma de [Mensajería proactiva](~/bots/how-to/conversations/send-proactive-messages.md).
 
-## <a name="working-with--mentions"></a>Trabajar con las @ menciones
+## <a name="working-with-mentions"></a>Trabajar con menciones
 
 Cada mensaje en el bot desde un grupo o canal contendrá un @mention con su propio nombre en el texto del mensaje, por lo que deberá asegurarse de que los controladores de análisis de mensajes lo hagan. El bot también puede recuperar a otros usuarios mencionados en un mensaje y agregar menciones a los mensajes que envía.
 
@@ -40,11 +40,11 @@ Es posible que necesite quitar el @mentions del texto del mensaje que el bot rec
 
 ### <a name="retrieving-mentions"></a>Recuperación de menciones
 
-Las menciones se devuelven en el objeto en la `entities` carga y contienen el identificador único del usuario y, en la mayoría de los casos, el nombre del usuario mencionado. El texto del mensaje también incluirá la mención like `<at>@John Smith<at>`. Sin embargo, no debe confiar en el texto del mensaje para recuperar la información sobre el usuario; es posible que la persona que envía el mensaje la altere. En su lugar, use `entities` el objeto.
+Las menciones se devuelven en el `entities` objeto en la carga y contienen el identificador único del usuario y, en la mayoría de los casos, el nombre del usuario mencionado. El texto del mensaje también incluirá la mención like `<at>@John Smith<at>` . Sin embargo, no debe confiar en el texto del mensaje para recuperar la información sobre el usuario; es posible que la persona que envía el mensaje la altere. En su lugar, use el `entities` objeto.
 
-Puede recuperar todas las menciones del mensaje llamando a la `GetMentions` función en el SDK del generador de robots que devuelve una `Mention` matriz de objetos.
+Puede recuperar todas las menciones del mensaje llamando a la `GetMentions` función en el SDK del generador de robots que devuelve una matriz de `Mention` objetos.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +62,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -78,7 +78,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -120,7 +120,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 @staticmethod
@@ -146,7 +146,7 @@ El `Mention` objeto tiene dos propiedades que tendrá que establecer:
 
 El SDK de bot proporciona objetos y métodos auxiliares para facilitar la creación de la mención.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +164,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,9 +183,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
-El `text` campo del objeto de la `entities` matriz debe coincidir *exactamente* con una parte del campo `text` mensaje. Si no es así, se omitirá la mención.
+El `text` campo del objeto de la `entities` matriz debe coincidir *exactamente* con una parte del `text` campo mensaje. Si no es así, se omitirá la mención.
 
 ```json
 {
@@ -227,7 +227,7 @@ El `text` campo del objeto de la `entities` matriz debe coincidir *exactamente* 
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):

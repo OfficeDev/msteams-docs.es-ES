@@ -3,15 +3,15 @@ title: Agregar acciones de tarjeta en un bot
 description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en los bots.
 keywords: acciones de las tarjetas de los equipos bots
 ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675916"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801470"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
-Las tarjetas que usan los bots y las extensiones de mensajería de Microsoft Teams son compatibles con los siguientes tipos de actividad ([`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)). Tenga en cuenta que estas acciones `potentialActions` difieren de las tarjetas conector de Office 365 cuando se usan desde conectores.
+Las tarjetas que usan los bots y las extensiones de mensajería de Microsoft Teams son compatibles con los siguientes tipos de actividad ( [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Tenga en cuenta que estas acciones difieren de las `potentialActions` tarjetas conector de Office 365 cuando se usan desde conectores.
 
 | Tipo | Action |
 | --- | --- |
@@ -45,7 +45,7 @@ El `value` campo debe contener una dirección URL completa y con formato correct
 
 ## <a name="messageback"></a>messageBack
 
-Con `messageBack`, puede crear una acción completamente personalizada con las siguientes propiedades:
+Con `messageBack` , puede crear una acción completamente personalizada con las siguientes propiedades:
 
 | Propiedad | Descripción |
 | --- | --- |
@@ -54,7 +54,7 @@ Con `messageBack`, puede crear una acción completamente personalizada con las s
 | `value` | Se envía a su bot cuando se realiza la acción. Puede codificar el contexto de la acción, como identificadores únicos o un objeto JSON. |
 | `text` | Se envía a su bot cuando se realiza la acción. Use esta propiedad para simplificar el desarrollo de los robots: el código puede comprobar una única propiedad de nivel superior para enviar la lógica del bot. |
 
-La flexibilidad de `messageBack` significa que el código puede elegir no dejar un mensaje de usuario visible en el historial simplemente por no usar `displayText`.
+La flexibilidad de `messageBack` significa que el código puede elegir no dejar un mensaje de usuario visible en el historial simplemente por no usar `displayText` .
 
 ```json
 {
@@ -140,7 +140,7 @@ El `value` campo debe contener la cadena de texto que se mostrará en el chat y,
 
 La `invoke` acción se usa para invocar [módulos de tareas](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
-La `invoke` acción contiene tres propiedades: `type`, `title`y `value`. La `value` propiedad puede contener una cadena, un objeto JSON stringified o un objeto JSON.
+La `invoke` acción contiene tres propiedades: `type` , `title` y `value` . La `value` propiedad puede contener una cadena, un objeto JSON stringified o un objeto JSON.
 
 ```json
 {
@@ -152,7 +152,7 @@ La `invoke` acción contiene tres propiedades: `type`, `title`y `value`. La `val
 }
 ```
 
-Cuando un usuario hace clic en el botón, el bot recibirá `value` el objeto con alguna información adicional. Tenga en cuenta que el tipo `invoke` de actividad será en lugar `message` de`activity.Type == "invoke"`().
+Cuando un usuario hace clic en el botón, el bot recibirá el `value` objeto con alguna información adicional. Tenga en cuenta que el tipo de actividad será `invoke` en lugar de `message` ( `activity.Type == "invoke"` ).
 
 ### <a name="example-invoke-button-definition-net"></a>Ejemplo: Invoke Button Definition (.NET)
 
@@ -167,7 +167,7 @@ var button = new CardAction()
 
 ### <a name="example-incoming-invoke-message"></a>Ejemplo: mensaje de invocación entrante
 
-La propiedad de nivel `replyToId` superior contiene el identificador del mensaje de la que proviene la acción de la tarjeta. Úselo si desea actualizar el mensaje.
+La propiedad de nivel superior `replyToId` contiene el identificador del mensaje de la que proviene la acción de la tarjeta. Úselo si desea actualizar el mensaje.
 
 ```json
 {
@@ -227,11 +227,11 @@ Las tarjetas adaptables admiten tres tipos de acciones:
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action. ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 
-Además de las acciones mencionadas anteriormente, puede modificar la carga de la `Action.Submit` tarjeta adaptable para admitir acciones de bot Framework `msteams` existentes con una `data` propiedad en `Action.Submit`el objeto de. Las secciones siguientes explican cómo usar las acciones de bot Framework existentes con tarjetas adaptables.
+Además de las acciones mencionadas anteriormente, puede modificar la carga de la tarjeta adaptable `Action.Submit` para admitir acciones de bot Framework existentes con una `msteams` propiedad en el `data` objeto de `Action.Submit` . Las secciones siguientes explican cómo usar las acciones de bot Framework existentes con tarjetas adaptables.
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Tarjetas adaptables con acción messageBack
 
-Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los siguientes detalles `msteams` en el objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales `data` en el objeto, si es necesario.
+Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
 | Propiedad | Descripción |
 | --- | --- |
@@ -259,7 +259,7 @@ Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los si
 
 ### <a name="adaptive-cards-with-imback-action"></a>Tarjetas adaptables con acción de deshacer
 
-Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguientes detalles `msteams` en el objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales `data` en el objeto, si es necesario.
+Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
 | Propiedad | Descripción |
 | --- | --- |
@@ -283,7 +283,7 @@ Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguien
 
 ### <a name="adaptive-cards-with-signin-action"></a>Tarjetas adaptables con acción de inicio de sesión
 
-Para incluir una `signin` acción con una tarjeta adaptable, incluya los siguientes detalles `msteams` en el objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales `data` en el objeto, si es necesario.
+Para incluir una `signin` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
 | Propiedad | Descripción |
 | --- | --- |

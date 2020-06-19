@@ -4,11 +4,11 @@ description: Describe el escenario de un extremo a otro de tener una conversaci�
 keywords: escenarios de conferencia de canales de Teams
 ms.date: 06/25/2019
 ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228010"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801474"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversaciones de chat en grupo y en el canal con un bot de Microsoft Teams
 
@@ -42,16 +42,16 @@ Para un bot en un grupo o canal, además del [esquema normal del mensaje](https:
 * `channelData`Consulte [Teams Data Channels](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). En un chat en grupo, contiene información específica de ese chat.
 * `conversation.id`IDENTIFICADOR de la cadena de respuesta que consta del identificador de canal más el identificador del primer mensaje en la cadena de respuesta.
 * `conversation.isGroup`Está `true` destinado a los mensajes de bot en canales o chats de grupo
-* `conversation.conversationType`Ya `groupChat` sea o`channel`
+* `conversation.conversationType`Ya sea `groupChat` o`channel`
 * `entities`Puede contener una o más menciones (vea las [menciones](#-mentions))
 
 ### <a name="replying-to-messages"></a>Responder a mensajes
 
-Para responder a un mensaje existente, llame [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) a .net o [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) a node. js. El SDK de bot Builder controla todos los detalles.
+Para responder a un mensaje existente, llame a [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) .net o a [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) Node.js. El SDK de bot Builder controla todos los detalles.
 
 Si decide usar la API de REST, también puede llamar al punto de [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) conexión.
 
-En un canal, la respuesta a un mensaje se muestra como una respuesta a la cadena de respuesta de iniciación. El `conversation.id` contiene el canal y el identificador de mensaje de nivel superior. Aunque el marco de bot se encarga de los detalles, puede almacenar en `conversation.id` la memoria caché el que, en el caso de respuestas futuras, a ese hilo de conversación según sea necesario.
+En un canal, la respuesta a un mensaje se muestra como una respuesta a la cadena de respuesta de iniciación. El `conversation.id` contiene el canal y el identificador de mensaje de nivel superior. Aunque el marco de bot se encarga de los detalles, puede almacenar en la memoria caché el que, en el `conversation.id` caso de respuestas futuras, a ese hilo de conversación según sea necesario.
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>Procedimiento recomendado: mensajes de bienvenida en Microsoft Teams
 
@@ -72,7 +72,7 @@ Debido a que los bots de un grupo o canal solo responden cuando se mencionan ("@
 
 ### <a name="retrieving-mentions"></a>Recuperación de menciones
 
-Las menciones se devuelven en el objeto en la `entities` carga y contienen el identificador único del usuario y, en la mayoría de los casos, el nombre del usuario mencionado. Puede recuperar todas las menciones del mensaje llamando a la `GetMentions` función en el SDK de bot Builder para .net, que devuelve una matriz `Mentioned` de objetos.
+Las menciones se devuelven en el `entities` objeto en la carga y contienen el identificador único del usuario y, en la mayoría de los casos, el nombre del usuario mencionado. Puede recuperar todas las menciones del mensaje llamando a la `GetMentions` función en el SDK de bot Builder para .net, que devuelve una matriz `Mentioned` de objetos.
 
 #### <a name="net-example-code-check-for-and-strip-bot-mention"></a>Código de ejemplo de .NET: comprobar y quitar @bot mención
 
@@ -93,9 +93,9 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> También puede usar la función `GetTextWithoutMentions`de extensión de Teams, que elimina todas las menciones, incluido el bot.
+> También puede usar la función de extensión de Teams `GetTextWithoutMentions` , que elimina todas las menciones, incluido el bot.
 
-#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Código de ejemplo de node. js: buscar y quitar @bot mención
+#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Código de ejemplo Node.js: buscar y quitar @bot mención
 
 ```javascript
 var text = message.text;
@@ -109,7 +109,7 @@ if (message.entities) {
 }
 ```
 
-También puede usar la función `getTextWithoutMentions`de extensión de Teams, que elimina todas las menciones, incluido el bot.
+También puede usar la función de extensión de Teams `getTextWithoutMentions` , que elimina todas las menciones, incluido el bot.
 
 ### <a name="constructing-mentions"></a>Creación de menciones
 
@@ -134,7 +134,7 @@ replyActivity.AddMentionToText(activity.From, MentionTextLocation.AppendText);
 await client.Conversations.ReplyToActivityAsync(replyActivity);
 ```
 
-#### <a name="nodejs-example"></a>Ejemplo de node. js
+#### <a name="nodejs-example"></a>Ejemplo de Node.js
 
 ```javascript
 // User to mention

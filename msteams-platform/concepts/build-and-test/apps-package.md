@@ -3,12 +3,12 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación para probarla, cargarla y publicarla en Microsoft Teams.
 keywords: empaquetado de aplicaciones de Microsoft Teams
 ms.topic: conceptual
-ms.openlocfilehash: b76041b129e766dba2b401aaac0e12958a4e9b0d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676080"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44801546"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Crear un paquete de aplicación para la aplicación de Microsoft Teams
 
@@ -16,19 +16,19 @@ Las aplicaciones en Teams se definen mediante un archivo JSON del manifiesto de 
 
 Un paquete de la aplicación Teams es un archivo. zip que contiene lo siguiente:
 
-* Un archivo de manifiesto denominado "manifest. JSON", que especifica los atributos de la aplicación y apunta a los recursos necesarios para su experiencia, como la ubicación de la página de configuración de la pestaña o el identificador de aplicación de Microsoft para su bot.
+* Un archivo de manifiesto denominado "manifest.json", que especifica los atributos de la aplicación y apunta a los recursos necesarios para su experiencia, como la ubicación de la página de configuración de la pestaña o el identificador de aplicación de Microsoft para su bot.
 * Un icono de "esquema" transparente y un icono completo de "color". Vea los [iconos](#icons) más adelante en este tema para obtener más información.
 
 ## <a name="creating-a-manifest"></a>Creación de un manifiesto
 
-*Teams App Studio* puede ayudarle a configurar el manifiesto. También contiene una biblioteca de control de reAct y ejemplos configurables para las tarjetas. Consulte [Introducción a App Studio](~/concepts/build-and-test/app-studio-overview.md).
+*Teams App Studio* puede ayudarle a configurar el manifiesto. También contiene una biblioteca de control React y ejemplos configurables para tarjetas. Consulte [Introducción a App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
-El archivo de manifiesto debe denominarse "manifest. JSON" y estar en el nivel superior del paquete de carga. Tenga en cuenta que los manifiestos y paquetes creados anteriormente podrían admitir una versión anterior del esquema. Para las aplicaciones de Teams y el envío de AppSource (anteriormente tienda Office), debe usar el [esquema del manifiesto](~/resources/schema/manifest-schema.md)actual.
+El archivo de manifiesto debe tener el nombre "manifest.json" y estar en el nivel superior del paquete de carga. Tenga en cuenta que los manifiestos y paquetes creados anteriormente podrían admitir una versión anterior del esquema. Para las aplicaciones de Teams y el envío de AppSource (anteriormente tienda Office), debe usar el [esquema del manifiesto](~/resources/schema/manifest-schema.md)actual.
 
 > [!TIP]
 > Especifique el esquema al principio del manifiesto para habilitar IntelliSense o compatibilidad similar desde el editor de código:
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>Iconos
 

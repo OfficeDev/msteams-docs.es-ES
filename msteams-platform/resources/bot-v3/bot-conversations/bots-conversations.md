@@ -3,12 +3,12 @@ title: Enviar y recibir mensajes con un bot
 description: Describe cómo enviar y recibir mensajes con bots en Microsoft Teams.
 keywords: mensajes de los bots de Microsoft Teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 864473c7f502d96987a48e5837840236c45f59c7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4a15bb9b4ae8c0ede3214d3a534649e2769baf6e
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676199"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "44801510"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación con un bot de Microsoft Teams
 
@@ -37,7 +37,7 @@ Los bots pueden participar en una conversación o iniciar una. La mayor parte de
 
 ## <a name="conversation-basics"></a>Conceptos básicos de la conversación
 
-Cada mensaje es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Microsoft Teams expone el mensaje a su bot; en concreto, envía un objeto JSON al extremo de mensajería de bot. El bot examina el mensaje para determinar su tipo y responde en consecuencia.
+Cada mensaje es un `Activity` objeto de tipo `messageType: message` . Cuando un usuario envía un mensaje, Microsoft Teams expone el mensaje a su bot; en concreto, envía un objeto JSON al extremo de mensajería de bot. El bot examina el mensaje para determinar su tipo y responde en consecuencia.
 
 Los bots también admiten mensajes de estilo de evento. Consulte [administrar eventos de bot en Microsoft Teams](~/resources/bot-v3/bots-notifications.md) para obtener más información. Actualmente no se admite la voz.
 
@@ -57,7 +57,7 @@ El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden
 | Emojis | ✖ | ✔ | Actualmente, los equipos son compatibles con emojis mediante UTF-16 (como U + 1F600 para la cara Grinning). |
 |
 
-Para obtener más información acerca de los tipos de interacción de bot admitidos por el marco de robots (en el que se basan los bots en Teams), vea la documentación sobre el [flujo](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) de la conversación y los conceptos relacionados en la documentación del [SDK de bot Builder para .net](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) y [el SDK del generador de robots para node. js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0).
+Para obtener más información acerca de los tipos de interacción de bot admitidos por el marco de robots (en el que se basan los bots en Teams), vea la documentación sobre el [flujo](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) de las conversaciones y los conceptos relacionados en la documentación del [SDK de bot Builder para .net](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) y [el SDK del generador de robots para obtener Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0).
 
 ## <a name="message-formatting"></a>Formato de mensajes
 
@@ -77,7 +77,7 @@ Las imágenes pueden tener como máximo 1024 x 1024 y 1 MB en formato PNG, JPEG 
 Le recomendamos que especifique el alto y el ancho de cada imagen utilizando XML. Si usa Markdown, el tamaño de imagen predeterminado es de 256 × 256. Por ejemplo:
 
 * Utilizados`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* No use `![Duck on a rock](http://aka.ms/Fo983c)`
+* No use`![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## <a name="receiving-messages"></a>Recibir mensajes
 
@@ -86,9 +86,9 @@ Dependiendo de los ámbitos que se declaren, el bot puede recibir mensajes en lo
 * **chat personal** Los usuarios pueden interactuar en una conversación privada con un bot seleccionando el bot agregado en el historial de chats o escribiendo su nombre o identificador de aplicación en el cuadro para: de un nuevo chat.
 * **Canales** Un bot puede mencionarse ("@_botname_") en un canal si se ha agregado al equipo. Tenga en cuenta que las respuestas adicionales a un bot en un canal requieren la mención del bot. No responderá a las respuestas en las que no se haya mencionado.
 
-Para los mensajes entrantes, el bot [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) recibe un objeto `messageType: message`de tipo. Aunque el `Activity` objeto puede contener otros tipos de información, como [las actualizaciones de canal](~/resources/bot-v3/bots-notifications.md#channel-updates) enviadas a su `message` bot, el tipo representa la comunicación entre el bot y el usuario.
+Para los mensajes entrantes, el bot recibe un [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) objeto de tipo `messageType: message` . Aunque el `Activity` objeto puede contener otros tipos de información, como [las actualizaciones de canal](~/resources/bot-v3/bots-notifications.md#channel-updates) enviadas a su bot, el `message` tipo representa la comunicación entre el bot y el usuario.
 
-El bot recibe una carga que contiene el mensaje `Text` de usuario, así como otra información sobre el usuario, el origen del mensaje y la información de los equipos. De Nota:
+El bot recibe una carga que contiene el mensaje de usuario, así `Text` como otra información sobre el usuario, el origen del mensaje y la información de los equipos. De Nota:
 
 * `timestamp`La fecha y la hora del mensaje en la hora universal coordinada (UTC)
 * `localTimestamp`La fecha y la hora del mensaje en la zona horaria del remitente
@@ -200,13 +200,13 @@ string tenantId = channelData.Tenant.Id;
 
 ## <a name="sending-replies-to-messages"></a>Enviar respuestas a mensajes
 
-Para responder a un mensaje existente, llame [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) a .net o [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) a node. js. El SDK de bot Builder controla todos los detalles.
+Para responder a un mensaje existente, llame a [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) .net o a [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) Node.js. El SDK de bot Builder controla todos los detalles.
 
 Si decide usar la API de REST, también puede llamar al punto de [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0) conexión.
 
 El contenido del mensaje puede contener texto simple o algunas de las [tarjetas y las acciones](~/task-modules-and-cards/cards/cards-actions.md)de la tarjeta suministradas con bot Framework.
 
-Tenga en cuenta que en el esquema saliente siempre debe usar el mismo `serviceUrl` que el que recibió. Tenga en cuenta que el valor `serviceUrl` de tiende a ser estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado de `serviceUrl`.
+Tenga en cuenta que en el esquema saliente siempre debe usar el mismo que `serviceUrl` el que recibió. Tenga en cuenta que el valor de `serviceUrl` tiende a ser estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado de `serviceUrl` .
 
 ## <a name="updating-messages"></a>Actualizar mensajes
 
@@ -219,7 +219,7 @@ El nuevo mensaje no tiene que coincidir con el original en el tipo. Por ejemplo,
 
 ### <a name="rest-api"></a>API REST
 
-Para emitir una actualización de mensaje, simplemente realice una solicitud PUT contra `/v3/conversations/<conversationId>/activities/<activityId>/` el extremo con un identificador de actividad determinado. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada de publicación original.
+Para emitir una actualización de mensaje, simplemente realice una solicitud PUT contra el `/v3/conversations/<conversationId>/activities/<activityId>/` extremo con un identificador de actividad determinado. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada de publicación original.
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
@@ -247,7 +247,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 }
 ```
 
-### <a name="nodejs-example"></a>Ejemplo de node. js
+### <a name="nodejs-example"></a>Ejemplo de Node.js
 
 Puede usar el `session.connector.update` método en el SDK del generador de robots para actualizar un mensaje existente.
 

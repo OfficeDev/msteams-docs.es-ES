@@ -3,11 +3,11 @@ title: Crear vínculos profundos
 description: Describe los vínculos profundos y cómo usarlos en las aplicaciones
 keywords: vínculo profundo vínculo profundo de Teams
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676075"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801462"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Crear vínculos profundos para el contenido y las características en Microsoft Teams
 
@@ -38,7 +38,7 @@ Proporcione estos campos:
 ### <a name="generating-a-deep-link-to-your-tab"></a>Creación de un vínculo profundo a su pestaña
 
 > [!NOTE]
-> Las pestañas estáticas tienen un ámbito de "personal" y las fichas configurables tienen un ámbito de "equipo". Los dos tipos de pestañas tienen una sintaxis ligeramente diferente, ya que solo la `channel` pestaña configurable tiene una propiedad asociada a su objeto Context. Vea la referencia del [manifiesto](~/resources/schema/manifest-schema.md) para obtener más información sobre los ámbitos personales y de equipo.
+> Las pestañas estáticas tienen un ámbito de "personal" y las fichas configurables tienen un ámbito de "equipo". Los dos tipos de pestañas tienen una sintaxis ligeramente diferente, ya que solo la pestaña configurable tiene una `channel` propiedad asociada a su objeto Context. Vea la referencia del [manifiesto](~/resources/schema/manifest-schema.md) para obtener más información sobre los ámbitos personales y de equipo.
 > [!NOTE]
 > Los vínculos profundos funcionan correctamente sólo si la ficha se configuró con la v 0.4 o la biblioteca posterior y debido a que tiene un identificador de entidad. Vínculos profundos a pestañas sin identificador de entidad siga navegando a la pestaña pero no puede proporcionar el identificador de subentidad a la pestaña.
 
@@ -50,8 +50,8 @@ Los parámetros de consulta son los siguientes:
 
 * `appId`&emsp;El identificador del manifiesto; por ejemplo, "fe4a8eba-2a31-4737-8E33-e5fae6fee194"
 * `entityId`&emsp;IDENTIFICADOR del elemento de la ficha, que se ha proporcionado al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md); por ejemplo, "tasklist123"
-* `entityWebUrl`o `subEntityWebUrl` &emsp;un campo opcional con una dirección URL de reserva para usar si el cliente no admite la representación de la pestaña; por ejemplo, "https://tasklist.example.com/123" o "https://tasklist.example.com/list123/task456"
-* `entityLabel`o `subEntityLabel` &emsp;una etiqueta para el elemento de la pestaña, para utilizar al mostrar el vínculo profundo; por ejemplo, "lista de tareas 123" o "tarea 456"
+* `entityWebUrl`o `subEntityWebUrl` &emsp; un campo opcional con una dirección URL de reserva para usar si el cliente no admite la representación de la pestaña; por ejemplo, " https://tasklist.example.com/123 " o " https://tasklist.example.com/list123/task456 "
+* `entityLabel`o bien `subEntityLabel` &emsp; , una etiqueta para el elemento de la ficha, para utilizarla al mostrar el vínculo en profundidad; por ejemplo, "lista de tareas 123" o "tarea 456"
 * `context`&emsp;Un objeto JSON que contiene los siguientes campos:
   * `subEntityId`&emsp;IDENTIFICADOR del elemento _dentro_ de la pestaña; por ejemplo, "task456"
   * `channelId`&emsp;El identificador de canal de Microsoft Teams (disponible desde el [contexto](~/tabs/how-to/access-teams-context.md)de la pestaña; por ejemplo, "19: cbe3683f25094106b826c9cada3afbe0@thread. Skype". Esta propiedad solo está disponible en pestañas configurables con un ámbito de "Team". No está disponible en las pestañas estáticas, que tienen un ámbito de "personal".
@@ -115,7 +115,7 @@ Los parámetros de consulta son los siguientes:
 * `topicName`&emsp;Un campo opcional para el nombre para mostrar de un chat, en el caso de un chat con 3 o más usuarios. Si no se especifica este campo, el nombre para mostrar del chat se basará en los nombres de los participantes.
 * `message`&emsp;Un campo opcional para el texto del mensaje que desea insertar en el cuadro de redacción del usuario actual mientras el chat está en estado de borrador.
 
-Para usar este vínculo profundo con el bot, puede especificarlo como destino de dirección URL en el botón de la tarjeta o en acción de `openUrl` puntear a través del tipo de acción.
+Para usar este vínculo profundo con el bot, puede especificarlo como destino de dirección URL en el botón de la tarjeta o en acción de puntear a través del `openUrl` tipo de acción.
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Vinculación al cuadro de diálogo programación
 
@@ -140,4 +140,4 @@ Los parámetros de consulta son los siguientes:
 
 Actualmente, no se admite la especificación de la ubicación. Al generar las horas de inicio y finalización, asegúrese de especificar el desplazamiento de UTC (zonas horarias).
 
-Para usar este vínculo profundo con el bot, puede especificarlo como destino de dirección URL en el botón de la tarjeta o en acción de `openUrl` puntear a través del tipo de acción.
+Para usar este vínculo profundo con el bot, puede especificarlo como destino de dirección URL en el botón de la tarjeta o en acción de puntear a través del `openUrl` tipo de acción.

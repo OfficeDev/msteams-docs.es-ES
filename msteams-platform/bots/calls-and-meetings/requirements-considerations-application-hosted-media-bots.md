@@ -4,11 +4,11 @@ description: Comprenda los requisitos y las consideraciones importantes relacion
 keywords: VM de Windows Server Azure media hospedada en la aplicación
 ms.date: 11/16/2018
 ms.openlocfilehash: f5b721edacb11e867d05c8213b74036cb51f419c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675872"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801450"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos y consideraciones para los bots de medios hospedados en la aplicación
 
@@ -19,7 +19,7 @@ No todas las instrucciones para desarrollar bots de mensajería y de respuesta i
 
 ## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>El desarrollo de robots de medios hospedados en aplicaciones requiere C#/.NET y Windows Server
 
-- Un bot? s de medios hospedado `Microsoft.Graph.Communications.Calls.Media` en aplicaciones requiere la biblioteca .net ([disponible aquí](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para obtener acceso a los flujos de medios de audio y vídeo, y el bot debe implementarse en un equipo con Windows Server o en un sistema operativo invitado de Windows Server en Azure). Por lo tanto, el bot debe desarrollarse en C# y en .NET Framework estándar y se puede implementar en Microsoft Azure. No puede usar las API de C++ o node. js para acceder a medios en tiempo real y .NET Core no se admite para un bot de medios hospedado por la aplicación.
+- Un bot? s de medios hospedado en aplicaciones requiere la `Microsoft.Graph.Communications.Calls.Media` biblioteca .net ([disponible aquí](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para obtener acceso a los flujos de medios de audio y vídeo, y el bot debe implementarse en un equipo con Windows Server o en un sistema operativo invitado de Windows Server en Azure). Por lo tanto, el bot debe desarrollarse en C# y en .NET Framework estándar y se puede implementar en Microsoft Azure. No puede usar C++ ni API de Node.js para obtener acceso a medios en tiempo real y .NET Core no se admite para un bot de medios hospedado por la aplicación.
 
 - Un bot de medios hospedados por la aplicación puede alojarse en uno de los siguientes entornos de servicio de Azure:
   - Servicio en la nube.
@@ -28,7 +28,7 @@ No todas las instrucciones para desarrollar bots de mensajería y de respuesta i
   
 - Un bot? n de medios hospedado en aplicaciones no se puede implementar como una aplicación Web de Azure.
 
-- Un bot de medios hospedado en la aplicación debe ejecutarse en una versión `Microsoft.Graph.Communications.Calls.Media` reciente de la biblioteca de .net. El bot debe usar la versión más reciente disponible del [paquete NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)o una versión que no tenga más de tres meses de antigüedad. Las versiones anteriores de la biblioteca estarán obsoletas y es posible que no funcionen después de unos meses. Mantener la `Microsoft.Graph.Communications.Calls.Media` biblioteca actualizada, garantizará la mejor interoperabilidad entre el bot y Microsoft Teams.
+- Un bot de medios hospedado en la aplicación debe ejecutarse en una versión reciente de la `Microsoft.Graph.Communications.Calls.Media` biblioteca de .net. El bot debe usar la versión más reciente disponible del [paquete NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)o una versión que no tenga más de tres meses de antigüedad. Las versiones anteriores de la biblioteca estarán obsoletas y es posible que no funcionen después de unos meses. Mantener la `Microsoft.Graph.Communications.Calls.Media` biblioteca actualizada, garantizará la mejor interoperabilidad entre el bot y Microsoft Teams.
 
 ## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>Las llamadas de medios en tiempo real permanecen en el equipo en el que se crearon
 

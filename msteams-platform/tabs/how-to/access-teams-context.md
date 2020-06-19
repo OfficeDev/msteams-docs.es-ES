@@ -3,11 +3,11 @@ title: Obtener contexto para la pestaña
 description: Describe cómo obtener el contexto del usuario a las pestañas.
 keywords: contexto de usuario de pestañas de Microsoft Teams
 ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675720"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801455"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtener contexto para la pestaña de Microsoft Teams
 
@@ -15,7 +15,7 @@ Es posible que la pestaña requiera información contextual para mostrar conteni
 
 * Es posible que su pestaña necesite información básica sobre el usuario, el equipo o la compañía.
 * Es posible que su pestaña necesite información de temas y configuraciones regionales.
-* Es posible que la pestaña necesite leer `entityId` el `subEntityId` o que identifique lo que se encuentra en esta ficha.
+* Es posible que la pestaña necesite leer el `entityId` o `subEntityId` que identifique lo que se encuentra en esta ficha.
 
 ## <a name="user-context"></a>Contexto de usuario
 
@@ -43,15 +43,15 @@ Use marcadores de posición en las direcciones URL de configuración o de conten
 * {loginHint}: un valor adecuado como sugerencia de inicio de sesión para Azure AD. Suele ser el nombre de inicio de sesión del usuario actual, en su inquilino de inicio.
 * {userPrincipalName}: el nombre principal de usuario del usuario actual, en el espacio empresarial actual.
 * {userObjectId}: el identificador de objeto de Azure AD del usuario actual, en el inquilino actual.
-* {Theme}: tema de la interfaz de usuario `default`actual `dark`como, `contrast`o.
+* {Theme}: tema de la interfaz de usuario actual como `default` , `dark` o `contrast` .
 * {groupId}: el identificador del grupo de Office 365 en el que reside la pestaña.
 * {TID}: el identificador de inquilino de Azure AD del usuario actual.
 * {locale}: la configuración regional actual del usuario con formato languageId-countryId (por ejemplo, en-US).
 
 >[!NOTE]
->El marcador `{upn}` de posición anterior ahora está en desuso. Para la compatibilidad con versiones anteriores, actualmente es un `{loginHint}`sinónimo de.
+>El `{upn}` marcador de posición anterior ahora está en desuso. Para la compatibilidad con versiones anteriores, actualmente es un sinónimo de `{loginHint}` .
 
-Por ejemplo, supongamos que en su manifiesto de `configURL` pestaña el atributo se establece en
+Por ejemplo, supongamos que en su manifiesto de pestaña el atributo se establece `configURL` en
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
@@ -68,7 +68,7 @@ Al configurar la pestaña, Teams llama a esta dirección URL:
 
 ### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Obtención de contexto mediante la biblioteca de JavaScript de Microsoft Teams
 
-También puede recuperar la información mostrada anteriormente usando el [SDK de Microsoft Teams](/javascript/api/overview/msteams-client) para cliente `microsoftTeams.getContext(function(context) { /* ... */ })`de JavaScript llamando a.
+También puede recuperar la información mostrada anteriormente usando el [SDK de Microsoft Teams para cliente de JavaScript](/javascript/api/overview/msteams-client) llamando a `microsoftTeams.getContext(function(context) { /* ... */ })` .
 
 La variable de contexto tendrá un aspecto similar al del ejemplo siguiente.
 
@@ -100,7 +100,7 @@ La variable de contexto tendrá un aspecto similar al del ejemplo siguiente.
 > [!Note]
 > Los canales privados están actualmente en versión preliminar para desarrolladores privados.
 
-Cuando la página de contenido se carga en un canal privado, los datos que recibe de `getContext` la llamada se ofuscarán para proteger la privacidad del canal. Los siguientes campos cambian cuando la página de contenido está en un canal privado. Si la página usa cualquiera de los valores siguientes, deberá comprobar el `channelType` campo para determinar si la página se ha cargado en un canal privado y responder de forma adecuada.
+Cuando la página de contenido se carga en un canal privado, los datos que recibe de la `getContext` llamada se ofuscarán para proteger la privacidad del canal. Los siguientes campos cambian cuando la página de contenido está en un canal privado. Si la página usa cualquiera de los valores siguientes, deberá comprobar el `channelType` campo para determinar si la página se ha cargado en un canal privado y responder de forma adecuada.
 
 * `groupId`-Sin definir para canales privados
 * `teamId`: Establecer en el threadId del canal privado
@@ -111,6 +111,6 @@ Cuando la página de contenido se carga en un canal privado, los datos que recib
 
 ## <a name="theme-change-handling"></a>Control de cambios de temas
 
-Puede registrar la aplicación para que se le indique si el tema cambia llamando `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`a.
+Puede registrar la aplicación para que se le indique si el tema cambia llamando a `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
 
-El `theme` argumento de la función será una cadena con un valor de `default`, `dark`o. `contrast`
+El `theme` argumento de la función será una cadena con un valor de `default` , `dark` o `contrast` .
