@@ -1,0 +1,200 @@
+### YamlMime:Hub
+title: Documentación para desarrolladores de Microsoft Teams
+brand: teams
+metadata:
+  title: Documentación para desarrolladores de plataformas de Microsoft Teams
+  description: La plataforma para desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios para mejorar la productividad, tomar decisiones con mayor rapidez, proporcionar el enfoque (reduciendo el cambio de contexto) y crear colaboración con el contenido y los flujos de trabajo existentes. .
+  ms.service: msteams
+  ms.topic: hub-page
+  ms.collection: collection
+  author: laujan
+  ms.author: lajanuar
+  ms.date: 05/29/2020
+  ms.openlocfilehash: f0cd5ae499497dad227a62f2938df2449a09dc81
+  ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 06/06/2020
+  ms.locfileid: "44801543"
+highlightedContent:
+  items:
+  - title: Aplicaciones de Microsoft Teams
+    itemType: overview
+    url: /microsoftteams/platform/overview
+  - title: 'Pestañas: experiencias web integradas'
+    itemType: overview
+    url: /microsoftteams/platform/tabs/what-are-tabs
+  - title: 'Bots: interacciones basadas en conversación'
+    itemType: overview
+    url: /microsoftteams/platform/bots/what-are-bots
+  - title: 'Extensiones de mensajería: interacciones orientadas a tareas'
+    itemType: overview
+    url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+  - title: 'Módulos de tareas y tarjetas: mensajes enriquecidos y notificaciones'
+    itemType: overview
+    url: /microsoftteams/platform/task-modules-and-cards/what-are-task-modules
+  - title: 'Webhooks y conectores: mensajes programados y notificaciones'
+    itemType: overview
+    url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+  - title: Microsoft Teams y API de Microsoft Graph
+    itemType: overview
+    url: /graph/teams-concept-overview
+conceptualContent:
+  title: Guías y recursos
+  items:
+  - title: Explorar
+    links:
+    - url: /microsoftteams/platform/concepts/building-an-app
+      itemType: concept
+      text: Crear una aplicación de Microsoft Teams
+    - url: /microsoftteams/platform/concepts/extensibility-points
+      itemType: concept
+      text: Puntos de capacidad en Microsoft Teams
+    - url: /microsoftteams/platform/concepts/design/understand-use-cases
+      itemType: concept
+      text: Descripción de los casos de uso de Microsoft Teams
+    - url: /microsoftteams/platform/concepts/design/map-use-cases
+      itemType: concept
+      text: Asignar casos de uso a funcionalidades de Microsoft Teams
+    - url: /microsoftteams/platform/whats-new
+      itemType: whats-new
+      text: Novedades
+  - title: Aprender
+    links:
+    - url: /learn/modules/intro-microsoft-teams-apps
+      itemType: learn
+      text: 'Creación de aplicaciones para Microsoft Teams: introducción'
+    - url: /learn/modules/embedded-web-experiences
+      itemType: learn
+      text: 'Pestañas: crear experiencias Web incrustadas'
+    - url: /learn/modules/msteams-conversation-bots/
+      itemType: learn
+      text: 'Bots: crear interacciones de conversación'
+    - url: /learn/modules/msteams-messaging-extensions/
+      itemType: learn
+      text: 'Extensiones de mensajería: crear interacciones orientadas a tareas'
+    - url: /learn/modules/msteams-task-modules/
+      itemType: learn
+      text: 'Módulos de tareas: recopilar información de entrada y recopilación'
+    - url: /learn/modules/msteams-webhooks-connectors/
+      itemType: learn
+      text: 'Webhooks y conectores de Office 365: conectar servicios web a canales y equipos'
+  - title: Desarrollo
+    links:
+    - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+      itemType: get-started
+      text: Crear una aplicación de Teams con JavaScript/Node.js y app Studio
+    - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+      itemType: get-started
+      text: Crear una aplicación de Teams con C#/.NET y app Studio
+  - title: Implementación
+    links:
+    - url: /microsoftteams/platform/samples/app-templates
+      itemType: deploy
+      text: 'Plantillas de aplicación de Microsoft Teams: aplicaciones listas para producción'
+    - url: /microsoftteams/platform/samples/shifts-wfm-connectors
+      itemType: deploy
+      text: Teams desplaza las integraciones de conectores listos para producción
+    - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+      itemType: deploy
+      text: Integrar el bot de Power virtual Agents con Microsoft Teams
+  - title: Connect
+    links:
+    - url: https://developer.microsoft.com/microsoft-teams/blogs/
+      itemType: overview
+      text: Blog para desarrolladores de Microsoft Teams
+    - url: https://aka.ms/microsoftteamscommunitycall
+      itemType: overview
+      text: Llamadas de la comunidad de Microsoft Teams
+    - url: /microsoftteams/platform/feedback
+      itemType: overview
+      text: Soporte & de comentarios
+tools:
+  title: SDK & herramientas
+  items:
+  - title: SDK de JavaScript para pestañas
+    imageSrc: ./assets/icons/logo_js.png
+    url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+  - title: SDK de Bot Framework Node.js para bots y extensiones de mensajería
+    imageSrc: ./assets/icons/logo_nodejs.png
+    url: https://github.com/Microsoft/botbuilder-js
+  - title: SDK de Bot Framework .NET para bots y extensiones de mensajería
+    imageSrc: ./assets/icons/logo_net.png
+    url: https://github.com/Microsoft/botbuilder-dotnet/
+  - title: SDK de Microsoft Graph
+    imageSrc: ./assets/icons/graph-icon-1.png
+    url: https://docs.microsoft.com/graph/sdks/sdks-overview
+  - title: Microsoft Teams App Studio
+    imageSrc: ./assets/icons/AppStudioIcon.png
+    url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+  - title: Generador de Yeoman para Microsoft Teams
+    imageSrc: ./assets/icons/Yeoman.png
+    url: https://github.com/OfficeDev/generator-teams
+additionalContent:
+  sections:
+  - title: Plantillas de aplicación A-H
+    summary: Aplicaciones listas para usar
+    items:
+    - title: Información de asociados
+      url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
+      summary: Permitir a los trabajadores de primera línea capturar comentarios de los clientes.
+    - title: Asistencia
+      url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
+      summary: Permita que su equipo grabe asistencia y genere informes resumidos.
+    - title: Libro a salón
+      url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
+      summary: Ayude a su equipo a encontrar y reservar rápidamente una sala de reuniones.
+    - title: Celebraciones
+      url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+      summary: Facilite la celebración de cumpleaños, aniversarios y otros acontecimientos periódicos.
+    - title: Comunicador de la empresa
+      url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+      summary: Permita que los equipos corporativos creen y envíen mensajes de chat a los empleados.
+    - title: Origen de los amontonamientos
+      url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
+      summary: Proporcionar respuestas a consultas de equipo desde información de origen colaborativa.
+    - title: Adhesivos personalizados
+      url: https://github.com/OfficeDev/microsoft-teams-stickers-app
+      summary: Agregar adhesivos personalizados dentro del equipo o la organización.
+    - title: Buscador de expertos
+      url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
+      summary: Permita que su equipo identifique a expertos internos en función de las aptitudes, los intereses y la educación.
+    - title: Preguntas más frecuentes Plus
+      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+      summary: Mejorar la productividad del equipo con un bot de preguntas y respuestas.
+    - title: Actividades de grupo
+      url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
+      summary: Cree y administre rápidamente grupos de actividades y flujos de trabajo de colaboración.
+    - title: Soporte de Recursos Humanos
+      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+      summary: Proporcionar compatibilidad con recursos humanos con un bot de preguntas y respuestas.
+  - title: Plantillas de aplicación I-Z
+    summary: Aplicaciones listas para usar
+    items:
+    - title: Rompehielo
+      url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
+      summary: Promover la colaboración al emparejar de forma aleatoria los miembros del equipo para meetups semanalmente.
+    - title: Incentivos
+      url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
+      summary: Administre y realice un seguimiento de incentivos por la participación en actividades y eventos.
+    - title: Incider Reporter
+      url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport
+      summary: Optimice la administración de incidentes en la organización.
+    - title: Distintivos abiertos
+      url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
+      summary: Realizar un seguimiento de identificadores de credenciales de aprendizaje digital y premios.
+    - title: Respuestas rápidas
+      url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
+      summary: Responda con eficacia a las preguntas más frecuentes y cree una biblioteca dinámica de respuestas.
+    - title: Soporte remoto
+      url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
+      summary: Proporcionar una interfaz enfocada con un equipo de soporte técnico interno.
+    - title: Solicitud-a-Team
+      url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
+      summary: Mejorar el flujo de creación de nuevos equipos de su organización.
+    - title: Estado de Scrum
+      url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
+      summary: Permita que su equipo ejecute reuniones de Scrum asincrónicas y comparta actualizaciones.
+    - title: Búsqueda de lista de SharePoint
+      url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+      summary: Busque en una lista de SharePoint e inserte un elemento como una tarjeta adaptable en Teams.
