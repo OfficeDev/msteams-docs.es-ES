@@ -4,12 +4,12 @@ author: clearab
 description: Agregar experiencias emergentes modales para recopilar o Mostrar información a los usuarios de las aplicaciones de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801467"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867121"
 ---
 # <a name="what-are-task-modules"></a>¿Qué son los módulos de tareas?
 
@@ -54,7 +54,7 @@ Los módulos de tareas se pueden invocar desde fichas, bots o vínculos profundo
 
 ## <a name="the-taskinfo-object"></a>El objeto TaskInfo
 
-El `TaskInfo` objeto contiene los metadatos de un módulo de tareas. A continuación se muestra la definición del objeto. **Debe** definir `url` (for en iframe incrustado) o `card` (para una tarjeta adaptable).
+El `TaskInfo` objeto contiene los metadatos de un módulo de tareas. A continuación se muestra la definición del objeto. **Debe** definir cualquiera `url` (para un iframe incrustado) o `card` (para una tarjeta adaptable).
 
 | Atributo | Tipo | Descripción |
 | --- | --- | --- |

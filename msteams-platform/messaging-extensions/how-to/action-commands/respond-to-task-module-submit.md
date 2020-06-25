@@ -4,12 +4,12 @@ author: clearab
 description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de la extensión de mensajería.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120265"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867114"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -26,7 +26,7 @@ Tiene las siguientes opciones para responder.
 * [Solicitar al usuario que se autentique](~/messaging-extensions/how-to/add-authentication.md)
 * [Solicitar al usuario que proporcione una configuración adicional](~/messaging-extensions/how-to/add-configuration-page.md)
 
-En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación`commandContext`de invocación () de la extensión de mensajería. Para la autenticación o la configuración, una vez que el usuario completa el flujo, la invocación original se volverá a enviar a su servicio Web.
+En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación de invocación ( `commandContext` ) de la extensión de mensajería. Para la autenticación o la configuración, una vez que el usuario completa el flujo, la invocación original se volverá a enviar a su servicio Web.
 
 |Tipo de respuesta | elaborar | barra de comandos | mensaje |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -194,7 +194,7 @@ Puede elegir responder al `submitAction` evento con un módulo de tareas adicion
 * Si necesita cambiar dinámicamente la información que va a recopilar en función de los datos proporcionados por el usuario
 * Si necesita validar la información enviada por el usuario y, potencialmente, volver a enviar el formulario con un mensaje de error si algo es incorrecto. 
 
-El método para Response es el mismo que [responder al evento `fetchTask` inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md). Si está usando el SDK de bot Framework, el mismo evento se activará para las acciones de envío. Esto significa que debe asegurarse de agregar una lógica que determine la respuesta correcta.
+El método para Response es el mismo que [responder al `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md). Si está usando el SDK de bot Framework, el mismo evento se activará para las acciones de envío. Esto significa que debe asegurarse de agregar una lógica que determine la respuesta correcta.
 
 ## <a name="bot-response-with-adaptive-card"></a>Respuesta de bot con tarjeta adaptable
 
@@ -209,7 +209,7 @@ También puede responder a la acción de envío Insertando un mensaje con una ta
 4. A continuación, el usuario puede obtener una vista previa del mensaje de tarjeta adaptable antes de que el bot lo inserte en el canal. Si la aplicación aún no es miembro del canal, al hacer clic `Send` se agregará.
    1. El usuario también puede elegir `Edit` el mensaje, que lo devuelve al módulo de tareas original.
 5. Interactuar con la tarjeta adaptable cambia el mensaje antes de enviarlo.
-6. Una vez que el usuario `Send` hace clic en el bot, el mensaje se envía al canal.
+6. Una vez que el usuario hace clic en `Send` el bot, el mensaje se envía al canal.
 
 ### <a name="respond-to-initial-submit-action"></a>Responder a la acción de envío inicial
 
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -321,7 +321,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>Los eventos de envío y edición de botMessagePreview
 
-La extensión de mensajes ahora tendrá que responder a dos nuevas variedades de la `composeExtension/submitAction` llamada, donde `value.botMessagePreviewAction = "send"`y `value.botMessagePreviewAction = "edit"`.
+La extensión de mensajes ahora tendrá que responder a dos nuevas variedades de la `composeExtension/submitAction` llamada, donde `value.botMessagePreviewAction = "send"` y `value.botMessagePreviewAction = "edit"` .
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -392,13 +392,13 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>Responder a la edición de botMessagePreview
 
-Si el usuario decide editar la tarjeta antes de enviarla haciendo clic en el botón **Editar** , recibirá `composeExtension/submitAction` una llamada `value.botMessagePreviewAction = edit`con el. Por lo general, debe responder devolviendo el módulo de tarea que envió como respuesta `composeExtension/fetchTask` a la invocación inicial que inició la interacción. Esto permite al usuario iniciar el proceso volviendo a introducir la información original. También debe considerar la posibilidad de usar la información que ya tiene disponible para rellenar previamente el módulo de tareas, de modo que el usuario no haya rellenado toda la información desde cero.
+Si el usuario decide editar la tarjeta antes de enviarla haciendo clic en el botón **Editar** , recibirá una `composeExtension/submitAction` llamada con el `value.botMessagePreviewAction = edit` . Por lo general, debe responder devolviendo el módulo de tarea que envió como respuesta a la `composeExtension/fetchTask` invocación inicial que inició la interacción. Esto permite al usuario iniciar el proceso volviendo a introducir la información original. También debe considerar la posibilidad de usar la información que ya tiene disponible para rellenar previamente el módulo de tareas, de modo que el usuario no haya rellenado toda la información desde cero.
 
-Consulte [responder al evento inicial `fetchTask` ](~/messaging-extensions/how-to/action-commands/create-task-module.md).
+Consulte [responder al `fetchTask` evento inicial](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### <a name="respond-to-botmessagepreview-send"></a>Responder a botMessagePreview envío
 
-Una vez que el usuario hace clic en el botón **Enviar** , recibirá `composeExtension/submitAction` una `value.botMessagePreviewAction = send`llamada con. El servicio Web tendrá que crear y enviar un mensaje proactivo con la tarjeta adaptable a la conversación y también responder a la invocación.
+Una vez que el usuario hace clic en el botón **Enviar** , recibirá una `composeExtension/submitAction` llamada con `value.botMessagePreviewAction = send` . El servicio Web tendrá que crear y enviar un mensaje proactivo con la tarjeta adaptable a la conversación y también responder a la invocación.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -421,13 +421,27 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
   };
   responseActivity.Attachments.Add(attachment);
   
+  // Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+  };
+  
   await turnContext.SendActivityAsync(responseActivity);
 
   return new MessagingExtensionActionResponse();
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -469,7 +483,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         type: 'AdaptiveCard',
         version: '1.0'
       });
-      const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+      const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+          onBehalfOf: [
+              { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
+          ]
+      }};
     
       await context.sendActivity(responseActivity);
     }
@@ -515,6 +533,6 @@ Recibirá un mensaje nuevo `composeExtension/submitAction` similar al que se mue
 
 Agregar un comando de búsqueda
 
-* [Definir comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Definición de comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

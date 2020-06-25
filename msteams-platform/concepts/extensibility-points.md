@@ -4,12 +4,12 @@ author: clearab
 description: Comprenda los puntos de extensibilidad disponibles para la aplicación en el cliente de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 0624aefa7873678b1d69c1d5796340cdac69c381
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034032"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867135"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>Puntos extensibles en el cliente de Microsoft Teams
 
@@ -37,7 +37,7 @@ Pueden contener:
 
 * [**Bots de conversación**](~/bots/what-are-bots.md) con una conversación de uno a uno con el usuario. Como esta es una conversación privada, si la aplicación necesita tener una conversación de varios turnos o proporcionar una notificación relevante para un solo usuario, suele ser mejor tener esa interacción en una aplicación personal.
 
-* [**Pestañas personales**](~/tabs/what-are-tabs.md)que proporcionan una experiencia Web integrada a pantalla completa.
+* [**Pestañas personales**](~/tabs/what-are-tabs.md) que proporcionan una experiencia Web integrada a pantalla completa.
 
 ## <a name="messages"></a>Mensajes
 
@@ -65,7 +65,7 @@ Las [tarjetas](~/task-modules-and-cards/what-are-cards.md) son contenedores de i
 
 ### <a name="task-modules"></a>Módulos de tareas
 
-Los [módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md) le permiten crear experiencias de elemento emergente modal en su aplicación de Teams. Dentro del elemento emergente puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un `<iframe>` widget como YouTube o Microsoft Stream video, o mostrar una tarjeta adaptable. Son especialmente útiles para iniciar y completar tareas o para mostrar información enriquecida como vídeos o paneles de Power BI. A menudo, una experiencia emergente es más natural para los usuarios que inician y completan tareas en comparación con una experiencia de ficha o de robot basada en conversaciones.
+Los [módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md) le permiten crear experiencias de elemento emergente modal en su aplicación de Teams. Dentro del elemento emergente puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un `<iframe>` Widget como YouTube o Microsoft Stream video, o mostrar una tarjeta adaptable. Son especialmente útiles para iniciar y completar tareas o para mostrar información enriquecida como vídeos o paneles de Power BI. A menudo, una experiencia emergente es más natural para los usuarios que inician y completan tareas en comparación con una experiencia de ficha o de robot basada en conversaciones.
 
 ### <a name="deep-links"></a>Vínculos profundos
 
@@ -77,4 +77,4 @@ Una [Página de contenido web](~/tabs/how-to/create-tab-pages/content-page.md) e
 
 * Estar hospedado en HTTPS.
 * Poder ser incrustado en un `<iframe>` por el cliente de Microsoft Teams.
-* Incluya el SDK del cliente de JavaScript de Microsoft Teams e invoque el método del `initialize()` SDK al cargar la página.
+* Incluya el SDK del cliente de JavaScript de Microsoft Teams e invoque el método del SDK `initialize()` al cargar la página.

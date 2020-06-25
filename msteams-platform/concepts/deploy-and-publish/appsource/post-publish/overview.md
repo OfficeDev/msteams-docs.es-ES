@@ -2,12 +2,12 @@
 title: Publicación posterior
 description: Qué hacer después de publicar la aplicación
 keywords: certificado de actualización de publicación de publicaciones de Teams
-ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42582863"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867106"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Mantener y admitir la aplicación publicada 
 
@@ -30,11 +30,19 @@ Ejemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 * Aumente el número de versión en el manifiesto si realiza cambios en el manifiesto en el envío.
 * Los envíos actualizados son necesarios para someterse a un nuevo proceso de revisión y validación.
 
+## <a name="app-updates-and-the-user-consent-flow"></a>Actualizaciones de aplicaciones y flujo de consentimiento del usuario
 
-### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>¿Cuándo actualizar la aplicación desencadenar el flujo de consentimiento del usuario?
+Cuando un usuario instala la aplicación, uno de los primeros elementos que conviene dar permiso a la aplicación para acceder a los servicios y la información que la aplicación necesita para realizar su trabajo. En la mayoría de los casos, después de completar una actualización de la aplicación, la nueva versión aparecerá automáticamente para los usuarios finales. Sin embargo, hay algunas actualizaciones en el [manifiesto de la aplicación Teams](../../../../resources/schema/manifest-schema.md) que requieren la aceptación del usuario para completarse y pueden volver a desencadenar este comportamiento de consentimiento:
 
-Cuando un usuario instala la aplicación, uno de los primeros elementos que conviene dar permiso a la aplicación para acceder a los servicios y la información que la aplicación necesita para realizar su trabajo. Al actualizar la aplicación, se puede volver a desencadenar este comportamiento de consentimiento, especialmente si ha realizado uno o varios de los siguientes cambios:
-
-* Adición de una nueva funcionalidad a una aplicación, como agregar un bot a una aplicación de solo pestaña.
-* Cambiar la matriz de permisos en el manifiesto.
-* Incrementar el número de versión de la aplicación en el manifiesto.
+ >[!div class="checklist"]
+>
+> * Se ha agregado o quitado un bot.
+> * El valor único de un bot existente `botId` cambió.
+> * Se ha cambiado el valor booleano de un bot existente `isNotificationOnly` .
+> * Se ha cambiado el valor booleano de un bot existente `supportsFiles` .
+> * `composeExtensions`Se ha agregado o quitado una extensión de mensajería.
+> * Se ha agregado un nuevo conector.
+> * Se ha agregado una nueva pestaña estática/personal.
+> * Se ha agregado una nueva ficha configurable de grupo o canal.
+> * Los `webApplicationInfo` valores cambiados.
+>
