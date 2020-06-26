@@ -2,12 +2,12 @@
 title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
-ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
+ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
+ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44873410"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888813"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -131,7 +131,7 @@ Conversación-Q&los bots son una forma sencilla de proporcionar respuestas a las
 >
 > &#x2714; realizar un seguimiento del historial de revisiones de Q&como.
 >
-> &#x2714; configurar una respuesta con detalles adicionales para mostrar como una [tarjeta adaptable](/task-modules-and-cards/cards/cards-reference#adaptive-card).
+> &#x2714; configurar una respuesta con detalles adicionales para mostrar como una [tarjeta adaptable](../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 >
 [**Obtener acceso a GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -296,5 +296,22 @@ Para ayudar a aliviar este problema, nos alegramos de ofrecerle la plantilla de 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Aplicación de búsqueda de lista](../assets/images/list-search-template.png)
+
+## <a name="workplace-awards-9734"></a>Premios &#9734; de trabajo
+
+El premio a los lugares de trabajo es una plantilla de aplicación de Microsoft teams que proporciona un marco positivo para fomentar el reconocimiento y fomentar la cultura de la apreciación de los empleados en el lugar de trabajo moderno. La aplicación le permite configurar y administrar un programa de reconocimiento y recompensa de los empleados (R&R) en el que los empleados pueden dar a conocer y aprobar fácilmente a sus colegas y su Coordinador R&R puede ver las nominaciones enviadas, conceder premios y anunciar a los destinatarios.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Tarjeta de nominación para premios de Workplace ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Pestaña lista de premios de área de trabajo](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 ¿Tiene una idea de una plantilla de aplicación que desearía ver? [Háganoslo saber](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
