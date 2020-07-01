@@ -2,12 +2,12 @@
 title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
-ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
+ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
+ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44943837"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -136,6 +136,23 @@ Conversación-Q&los bots son una forma sencilla de proporcionar respuestas a las
 [**Obtener acceso a GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![P + f más GIF](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="goal-tracker-9734"></a>&#9734; del rastreador de objetivos
+
+La aplicación de seguimiento de objetivos es una solución completa para que su organización admita el establecimiento de objetivos, observando el progreso y reconociendo el éxito en Microsoft Teams. La aplicación permite a los usuarios establecer, realizar un seguimiento y actualizar objetivos en un nivel profesional, personal y de equipo. Los integrantes del grupo también reciben avisos puntuales y actualizaciones de estado para que permanezcan concentrados y permanezcan al tanto de ellos.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![Establecer objetivos](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Ver objetivos establecidos](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="group-activities"></a>Actividades de grupo
 
@@ -287,6 +304,14 @@ Scrum for Group chat es un asistente de Scrum que permite a los miembros del cha
 
 ![Scrum for Group chat demo](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## <a name="share-now-9734"></a>Compartir ahora &#9734;
+
+La aplicación compartir ahora promueve el intercambio positivo de información entre compañeros, lo que permite a los usuarios compartir fácilmente contenido en el entorno de Teams. Los usuarios se dedican a la aplicación para compartir elementos de interés con los miembros del equipo, descubrir contenido compartido nuevo, establecer preferencias y marcar favoritos para su posterior lectura.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![Seleccionar vista de contenido](../assets/images/share-now-suggested-content.png)
+
 ## <a name="sharepoint-list-search"></a>Búsqueda de lista de SharePoint
 
 La colaboración en Microsoft Teams con frecuencia hace referencia a la información contenida en los elementos de una lista de SharePoint. La simple pegado de un vínculo al elemento en cuestión obliga a los usuarios a cambiar el contexto de la conversación, buscar la información necesaria y, a continuación, volver a Teams para continuar con la conversación. Como la conversación sigue por lo general, los usuarios tendrán que volver al elemento de referencia varias veces para comprobar los nuevos comentarios y actualizar sus recuerdos de la información contenida en el elemento. Este cambio de contexto crea una barrera para una colaboración fluida y es una receta para cosas que caen a través de las grietas.
@@ -296,6 +321,23 @@ Para ayudar a aliviar este problema, nos alegramos de ofrecerle la plantilla de 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Aplicación de búsqueda de lista](../assets/images/list-search-template.png)
+
+## <a name="visitor-management-9734"></a>&#9734; de administración de visitantes
+
+La aplicación de administración de visitantes permite a su organización y a los empleados administrar de forma sencilla y eficaz el proceso de visitante en el sitio, directamente desde Microsoft Teams. La aplicación permite a los empleados crear solicitudes de visitante, realizar un seguimiento de forma central de un estado de solicitud a través del panel de visitantes y recibir notificaciones en tiempo real cuando llegue un visitante.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Crear una vista de solicitud](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Notificación de llegada de visitantes](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="workplace-awards-9734"></a>Premios &#9734; de trabajo
 
