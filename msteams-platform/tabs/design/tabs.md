@@ -2,12 +2,12 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de las fichas de marco de trabajo
-ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914556"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021618"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -23,8 +23,8 @@ ms.locfileid: "43914556"
 >
 > **Pestañas de canal o grupo (configurable) en dispositivos móviles:**
 >
-> * Los clientes móviles solo muestran las pestañas que tienen `websiteUrl`un valor para. Si desea que la pestaña aparezca en los clientes móviles de Teams, debe establecer el valor de `websiteUrl`.
-> * El comportamiento predeterminado de apertura en dispositivos móviles es abrir fuera del explorador `websiteUrl`con el. En el caso de las aplicaciones publicadas en la tienda de aplicaciones públicas, si desea que la ficha de canal se abra dentro de Teams de forma predeterminada, siga las [instrucciones para las pestañas de Mobile](~/tabs/design/tabs-mobile.md)y póngase en contacto con su representante de soporte técnico para que se le solicite que se le solicite que se le pida que
+> * Los clientes móviles solo muestran las pestañas que tienen un valor para `websiteUrl` . Si desea que la pestaña aparezca en los clientes móviles de Teams, debe establecer el valor de `websiteUrl` .
+> * El comportamiento predeterminado de apertura en dispositivos móviles es abrir fuera del explorador con el `websiteUrl` . En el caso de las aplicaciones publicadas en la tienda de aplicaciones públicas, si desea que la ficha de canal se abra dentro de Teams de forma predeterminada, siga las [instrucciones para las pestañas de Mobile](~/tabs/design/tabs-mobile.md)y póngase en contacto con su representante de soporte técnico para que se le solicite que se le solicite que se le pida que
 
 Las pestañas son lienzos que se pueden usar para compartir contenido, mantener conversaciones y hospedar servicios de terceros, todo ello dentro del flujo de trabajo ecológico de un equipo. Cuando se crea una pestaña en Microsoft Teams, se coloca la aplicación web en su lugar y en el centro a la que se puede acceder fácilmente desde las conversaciones clave.
 
@@ -80,7 +80,7 @@ El lienzo de pestañas ofrece una gran oportunidad para personalizar su experien
 La incorporación de sus propios colores y diseños Twill también ayuda para comunicar la personalidad.
 
 > [!TIP]
-> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte*, por ejemplo, [colores de Microsoft Teams] (/Concepts/Design/Components/Typography.MD
+> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte*, por ejemplo, [colores de Teams](../../concepts/design/components/color.md)
 
 ---
 
@@ -108,7 +108,7 @@ Las dimensiones de la página de configuración de pestañas:
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Instrucciones para el formato de página de configuración de pestañas
 
 * Base el alto mínimo del área de contenido de la página de configuración de pestañas en elementos gráficos de altura fija.
-* Calcula el espacio vertical disponible (el alto del área de contenido en la página de configuración `window.innerHeight`) mediante. Esto devuelve el tamaño del en `<iframe>` el que reside la página de configuración, lo que puede cambiar en futuras versiones. Al usar este valor, el contenido se ajustará automáticamente a los cambios futuros.
+* Calcula el espacio vertical disponible (el alto del área de contenido en la página de configuración) mediante `window.innerHeight` . Esto devuelve el tamaño del `<iframe>` en el que reside la página de configuración, lo que puede cambiar en futuras versiones. Al usar este valor, el contenido se ajustará automáticamente a los cambios futuros.
 * Asigna espacio vertical a los elementos variable-height menos lo que se necesita para los elementos de altura fija.
 * Para el estado de *Inicio de sesión* , centrar vertical y horizontalmente el contenido.
 * Si desea una imagen de fondo, necesitará una nueva imagen, ajustada para ajustarse al área (recomendado) o puede conservar la misma imagen y elegir entre:
@@ -142,4 +142,4 @@ Hay dos modos de notificación para cambios de contenido de pestañas:
 > * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **Usar un bot**. Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
 
-  El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando hay usuarios `@mention` específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.
+  El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando `@mention` hay usuarios específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.

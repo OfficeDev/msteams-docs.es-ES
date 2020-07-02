@@ -2,20 +2,20 @@
 title: Publicación posterior
 description: Qué hacer después de publicar la aplicación
 keywords: certificado de actualización de publicación de publicaciones de Teams
-ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867106"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021576"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Mantener y admitir la aplicación publicada 
 
-Después de aprobar la aplicación y enumerarla en el catálogo de aplicaciones públicas, puede aumentar su alcance si logra la certificación de la aplicación o agrega un botón Descargar en el sitio Web.
+Después de aprobar la aplicación y enumerarla en el catálogo de aplicaciones públicas, puede aumentar su alcance completando el programa de cumplimiento de aplicaciones de Microsoft 365 o agregando un botón Descargar en el sitio Web.
 
-## <a name="application-certificate"></a>Certificado de la aplicación
+## <a name="m365-certified"></a>Certificado de M365
 
-Microsoft proporciona un [programa de certificación de aplicaciones](./application-certification.md) que compila la información de la aplicación y la presenta en la [Página seguridad y cumplimiento de aplicaciones de Microsoft Teams](https://aka.ms/AppCertification). Esta información está destinada a ayudar a los administradores a elegir aplicaciones que sean seguras para sus organizaciones.
+El [programa de cumplimiento de aplicaciones 365 de Microsoft](./application-certification.md)es un enfoque de tres niveles para la seguridad y el cumplimiento de aplicaciones. Cada nivel se basa en el siguiente, que ofrece un programa con capas para satisfacer las necesidades del cliente. Puede obtener más información sobre la postura de seguridad y cumplimiento de las aplicaciones de Microsoft Teams visitando la [Página cumplimiento](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Agregar un botón Descargar al sitio del producto
 
