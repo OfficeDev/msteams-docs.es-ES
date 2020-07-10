@@ -1,19 +1,19 @@
 ---
-title: Uso del SDK del cliente de Microsoft Teams
+title: Uso del SDK para cliente de Teams
 author: laujan
 description: Cómo usar el SDK del cliente de Microsoft Teams para agregar funcionalidad consciente de Teams a las pestañas personalizadas
 keywords: Grupo de pestañas de Microsoft canal de grupo configurable del SDK estático personalizado JavaScript
 ms.topic: conceptual
-ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: 07903d766ac67f2dbc9fc09268618ac5c2ae33c2
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928513"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091301"
 ---
-# <a name="using-the-teams-client-sdk"></a>Uso del SDK del cliente de Microsoft Teams
+# <a name="using-the-teams-client-sdk"></a>Uso del SDK para cliente de Teams
 
-El **SDK del cliente** de Microsoft Teams y la **biblioteca de JavaScript de Teams** forman parte de la [plataforma para desarrolladores de Microsoft Teams](https://msdn.microsoft.com/microsoft-teams) y proporcionan herramientas y procesos para facilitar la creación de aplicaciones de Teams. El SDK del cliente de Microsoft Teams se distribuye como un paquete NPM. Puede encontrar la versión más reciente aquí: <https://www.npmjs.com/package/@microsoft/teams-js>. La biblioteca de Microsoft Teams <https://github.com/OfficeDev/microsoft-teams-library-js>se encuentra en.
+El **SDK del cliente** de Microsoft Teams y la **biblioteca de JavaScript de Teams** forman parte de la [plataforma para desarrolladores de Microsoft Teams](/microsoftteams/platform/) y proporcionan herramientas y procesos para facilitar la creación de aplicaciones de Teams. El SDK del cliente de Microsoft Teams se distribuye como un paquete NPM. Puede encontrar la versión más reciente aquí: <https://www.npmjs.com/package/@microsoft/teams-js> . La biblioteca de Microsoft Teams se encuentra en <https://github.com/OfficeDev/microsoft-teams-library-js> .
 
 En la tabla siguiente se describen las funciones de la biblioteca de teams que se usan normalmente en el desarrollo de pestañas:
 
