@@ -2,12 +2,12 @@
 title: Registro de un bot de llamada y reunión para Microsoft Teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamada de audio y vídeo para Microsoft Teams
 keywords: llamar a medios de audio y vídeo audio de bot
-ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 9b932e6a330b495aef97e65c7bb1f297fdfc1336
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801449"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103008"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>Registro de un bot de llamada para Microsoft Teams
 
@@ -66,7 +66,7 @@ Microsoft Graph expone permisos granulares que controlan el acceso de las aplica
 
 ### <a name="assigning-permissions"></a>Asignación de permisos
 
-Debe configurar los permisos de la aplicación para su bot de antemano. Se recomienda usar el [portal de registro de aplicaciones de Microsoft](https://apps.dev.microsoft.com/) , tal y como se describe [aquí](/graph/docs/concepts/auth_register_app_v2) porque ahí es donde se configuró el bot; sin embargo, puede seguir usando [Azure portal](https://aka.ms/aadapplist) si prefiere usar el [punto de conexión de Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Debe configurar los permisos de la aplicación para su bot de antemano. Se recomienda usar el [portal de registro de aplicaciones de Microsoft](https://apps.dev.microsoft.com/) , tal y como se describe [aquí](/graph/auth_register_app_v2) porque ahí es donde se configuró el bot; sin embargo, puede seguir usando [Azure portal](https://aka.ms/aadapplist) si prefiere usar el [punto de conexión de Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="getting-tenant-administrator-consent"></a>Obtener el consentimiento del administrador de inquilinos
 
