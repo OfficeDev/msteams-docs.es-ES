@@ -1,16 +1,16 @@
 ---
-title: Crear una página de contenido
+title: Creación de una página de contenido
 author: laujan
 description: ''
 keywords: canal de grupo de pestañas de Teams configurable estático
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: ac85e000c9bdaebf28cb33143a7c82a348d3771e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675961"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137639"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -64,4 +64,28 @@ Un módulo de tareas es una experiencia modal de tipo popup que puede desencaden
 
 ### <a name="valid-domains"></a>Dominios válidos
 
-Asegúrese de que todos los dominios de dirección URL usados en las pestañas `validDomains` se incluyen en la matriz del [manifiesto](~/concepts/build-and-test/apps-package.md). Para obtener más información, vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en la referencia del esquema del manifiesto. Sin embargo, tenga en cuenta que la funcionalidad principal de su pestaña existe en Microsoft Teams y no fuera de Microsoft Teams.
+Asegúrese de que todos los dominios de dirección URL usados en las pestañas se incluyen en la `validDomains` matriz del [manifiesto](~/concepts/build-and-test/apps-package.md). Para obtener más información, vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en la referencia del esquema del manifiesto. Sin embargo, tenga en cuenta que la funcionalidad principal de su pestaña existe en Microsoft Teams y no fuera de Microsoft Teams.
+
+## <a name="showing-a-native-loading-indicator"></a>Mostrar un indicador de carga nativo
+
+Comenzando con [el esquema de manifiesto v 1.7](../../../resources/schema/manifest-schema.md), puede proporcionar un [indicador de carga nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) siempre que el contenido web se cargue en Microsoft Teams, por ejemplo, [Página de contenido](#integrate-your-code-with-teams)de la ficha, página de [configuración](configuration-page.md), [Página de eliminación](removal-page.md) y [módulos de tareas en las pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+
+> [!NOTE]
+> Si indica `"showLoadingIndicator : true` en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de la ficha y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a continuación:
+
+1. Para mostrar el indicador de carga, agregue `"showLoadingIndicator": true` al manifiesto. 
+2. Recuerde que debe llamar a `microsoftTeams.initialize();` .
+3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a`microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorio**. Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si `notifySuccess` no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
+5. Si la aplicación no se puede cargar, puede llamar `microsoftTeams.appInitialization.notifyFailure(reason);` para informar a Microsoft Teams de que se ha producido un error. A continuación, se mostrará una pantalla de error al usuario:
+
+```typescript
+``
+/* List of failure reasons */
+export const enum FailedReason {
+    AuthFailed = "AuthFailed",
+    Timeout = "Timeout",
+    Other = "Other"
+}
+```
+>

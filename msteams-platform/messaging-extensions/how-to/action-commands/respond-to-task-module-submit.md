@@ -4,12 +4,12 @@ author: clearab
 description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de la extensión de mensajería.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103018"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137664"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -531,7 +531,7 @@ Recibirá un mensaje nuevo `composeExtension/submitAction` similar al que se mue
 
 ### <a name="user-attribution-for-bots-messages"></a>Atribución de usuario para mensajes de bots 
 
-En los escenarios en los que un bot envía mensajes en nombre de un usuario, el mensaje a ese usuario puede ayudar con la contratación y exhibir un flujo de interacción más natural. Esta característica le permite enviar mensajes en nombre del usuario que inicia el mensaje.
+En los escenarios en los que un bot envía mensajes en nombre de un usuario, el mensaje a ese usuario puede ayudar con la contratación y exhibir un flujo de interacción más natural. Esta característica le permite atribuir un mensaje de su bot a un usuario en cuyo nombre se envió.
 
 En la imagen siguiente, a la izquierda se encuentra un mensaje de tarjeta enviado por un bot *sin* atribución de usuario y a la derecha es una tarjeta enviada por un bot *con* atribución de usuario.
 
@@ -580,9 +580,9 @@ A continuación se muestra una descripción de las entidades de la `OnBehalfOf` 
 |Campo|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Debe ser 0|
-|`mentionType`|String|Debe ser "persona"|
-|`mri`|String|Identificador de recursos de mensajes (resonancia magnética) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> Via \<bot name\> ".|
-|`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres de casos no esté disponible.|
+|`mentionType`|Cadena|Debe ser "persona"|
+|`mri`|Cadena|Identificador de recursos de mensajes (resonancia magnética) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> Via \<bot name\> ".|
+|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres de casos no esté disponible.|
   
 ## <a name="next-steps"></a>Siguientes pasos
 

@@ -2,12 +2,12 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453857"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137643"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -17,6 +17,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+| 07/01/2020 |Introducción a la creación de aplicaciones de Microsoft Teams con Visual Studio Code Toolkit.|[Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 | 05/20/2020 | Los permisos de consentimiento específicos de recursos que usan las API de Microsoft Graph están en Developer Preview. |[Autorización específica de recursos (RSC): vista previa para desarrolladores](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | Se ha agregado compatibilidad para recuperar un solo miembro de una conversación y una compatibilidad adicional para recuperar miembros paginados. | [Obtención del contexto de Teams para un bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | El `replyToId` parámetro de las cargas enviadas a un bot ya no está cifrado, lo que le permite usar este valor para crear deeplinks en estos mensajes. Las cargas de mensajes incluyen los valores cifrados en el parámetro. `legacy.replyToId`.  |
@@ -32,7 +33,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 | 05/20/2019 | Acciones de mensaje. | [Acciones de mensaje](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Link unfurling (vistas previas de direcciones URL personalizadas). | [Apertura de vínculos](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | Programa de certificación de aplicaciones para aplicaciones de la tienda. | [Certificación de aplicaciones](~/publishing/application-certification.md) |
-| 05/06/2019 | Las plantillas de aplicación ahora están disponibles. | [Plantillas de aplicaciones](~/samples/app-templates.md) |
+| 05/06/2019 | Las plantillas de aplicación ahora están disponibles. | [Plantillas de aplicación](~/samples/app-templates.md) |
 | 04/23/2019 | Las extensiones de mensajería basadas en acciones ya están disponibles. | [Extensiones de mensajes basadas en acciones](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | La creación de vínculos profundos a un chat privado está fuera de la vista previa para desarrolladores y disponible. | [Vinculación profunda a un chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Superficies SKU y licenceType información en el contexto de la pestaña. | [Contexto de la pestaña](~/concepts/tabs/tabs-context.md) |

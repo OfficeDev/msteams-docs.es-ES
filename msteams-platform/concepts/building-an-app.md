@@ -4,14 +4,17 @@ author: clearab
 description: Comprenda el proceso típico para compilar una aplicación para Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7ec67c52f9321579da34c490175f6becc3a8fdfd
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 748b5cf6c6bc1bf51c1f647348012057627d2679
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120258"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137650"
 ---
 # <a name="building-an-app-for-microsoft-teams"></a>Creación de una aplicación para Microsoft Teams
+
+> [!NOTE] 
+> ¿Busca empezar rápidamente? Puede crear aplicaciones de Teams con el [Kit de herramientas de Microsoft Teams y Visual Studio Code](../toolkit/visual-studio-code-overview.md).
 
 La creación y distribución de una aplicación integrada en la plataforma de Microsoft Teams implica decidir qué se va a crear, crear los servicios Web, crear un paquete de aplicaciones y distribuir ese paquete a los usuarios finales de destino. Corresponderá a los administradores de una organización decidir quién puede tener acceso e instalar la aplicación, y los usuarios tendrán que instalar la aplicación en cualquier contexto en particular.
 
@@ -36,7 +39,7 @@ Debe asegurarse de que tiene un entorno en el que puede cargar y probar la aplic
 
 Vea [preparar el entorno de O365](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obtener más información.
 
-## <a name="build-and-test-your-app"></a>Compilar y probar la aplicación
+## <a name="build-and-test-your-app"></a>Desarrollar y probar la aplicación
 
 La creación y prueba de la aplicación para Microsoft Teams no es muy diferente a la creación de cualquier otra aplicación Web. La principal diferencia es la necesidad de usar el manifiesto de la aplicación en el paquete de la aplicación para conectar el cliente de Teams a los servicios Web. Siempre que realice un cambio en el manifiesto de la aplicación, tendrá que volver a cargar el paquete de la aplicación y actualizar la aplicación en Teams volviendo a instalarlo. Cambios en el servicio Web sin embargo, no es necesario que vuelva a instalar la aplicación en el cliente de Microsoft Teams.
 
@@ -48,14 +51,14 @@ Una vez que haya decidido cómo los usuarios van a interactuar con la aplicació
 
 * Bot Framework SDK para [las extensiones de mensajería](~/messaging-extensions/what-are-messaging-extensions.md) y los [bots de conversación](~/bots/what-are-bots.md)
 * SDK del cliente de Microsoft Teams para [pestañas](~/tabs/what-are-tabs.md) y otras páginas de contenido
-* Un [generador de Yeoman](~/tutorials/get-started-yeoman.md) para la creación de aplicaciones en node. js
+* Un [generador de Yeoman](~/tutorials/get-started-yeoman.md) para crear aplicaciones en Node.js
 * **Vista previa** Un conjunto de controles de código abierto para las páginas de contenido web: [interfaz de usuario de Fluent](https://microsoft.github.io/fluent-ui-react/)
 * [Plantillas de aplicación](~/samples/app-templates.md) de producción lista para usar
 * Varios [ejemplos](~/samples/code-samples.md) que le ayudarán a empezar
 
 Recuerde que tendrá que hospedar los servicios Web de manera que puedan ser accesibles públicamente a través de Internet (normalmente en un proveedor de servicios en la nube como Azure) y servir el contenido a través de HTTPS.
 
-### <a name="create-your-app-package"></a>Crear el paquete de la aplicación
+### <a name="create-your-app-package"></a>Creación del paquete de aplicación
 
 También tendrá que crear un paquete de aplicación que se puede distribuir e instalar en Microsoft Teams. El paquete de la aplicación contiene dos iconos y un archivo de manifiesto JSON que describe los metadatos de la aplicación, los puntos de extensión que usa la aplicación y punteros a los servicios que encienden los puntos de extensión.
 
@@ -79,12 +82,8 @@ La aplicación puede aprovechar varios puntos de extensibilidad en el cliente de
 
 Por ejemplo, Imagine que la aplicación contiene un bot Conversation que funciona tanto en conversaciones personales como en el equipo, así como en una pestaña personal y una ficha canal. Cuando la aplicación está instalada, se instalará en un contexto específico; si un usuario instala la aplicación en un equipo, no tiene que instalar necesariamente la parte personal de la aplicación. Esto puede ser un poco confuso en primer lugar, solo debe recordar que todas las partes de la aplicación se instalarán y se configurarán en cualquier contexto determinado.
 
-## <a name="get-started-quickly"></a>Introducción rápida
-
-¿Desea empezar rápidamente? Consulte uno de nuestros tutoriales de introducción o un tutorial para una característica de la plataforma determinada (que se encuentra en cada sección de características de la documentación).
-
-Tutoriales de introducción:
+## <a name="getting-started-tutorials"></a>Tutoriales de introducción
 
 * [Crear un bot y una aplicación de pestañas en C #](~/tutorials/get-started-dotnet-app-studio.md)
-* [Compilar una aplicación de Bot y Tab en JavaScript/node. js](~/tutorials/get-started-nodejs-app-studio.md)
-* [Crear una aplicación con el generador de Yeoman](~/tutorials/get-started-yeoman.md)
+* [Compilar una aplicación de Bot y Tab en JavaScript o Node.js](~/tutorials/get-started-nodejs-app-studio.md)
+* [Creación de una aplicación con el generador Yeoman](~/tutorials/get-started-yeoman.md)
