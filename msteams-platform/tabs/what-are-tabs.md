@@ -4,12 +4,12 @@ author: laujan
 description: Información general sobre las pestañas personalizadas en la plataforma de Microsoft Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: d8aba99210369bf92ad1e600b13cf1d20984d06f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44119052"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145910"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>¿Qué son las pestañas personalizadas de Microsoft Teams?
 
@@ -26,7 +26,7 @@ Hay dos tipos de fichas disponibles en Teams: Channel/Group y personal. Una pest
 >
 > * Si se agrega una pestaña a una aplicación que también tiene un bot, el bot se agrega también al equipo.
 > * Conocimiento del identificador de AAD del usuario actual.
-> * Concienciación de la configuración regional para que el usuario indique el `en-us`idioma; por ejemplo,. 
+> * Concienciación de la configuración regional para que el usuario indique el idioma; por ejemplo, `en-us` . 
 > * Función SSO, si se admite.
 > * Capacidad de usar bots o notificaciones de aplicaciones para un vínculo profundo a la ficha o a una subentidad del servicio, por ejemplo, un elemento de trabajo individual.
 > * La capacidad de abrir un módulo de tareas desde los vínculos de una pestaña.
@@ -45,14 +45,14 @@ Hay dos tipos de fichas disponibles en Teams: Channel/Group y personal. Una pest
 
 ## <a name="how-do-tabs-work"></a>¿Cómo funcionan las pestañas?
 
-Una pestaña personalizada se declara en el manifiesto de la aplicación del paquete de la aplicación. Por cada página web que desee incluir como pestaña en la aplicación, defina una dirección URL y un ámbito. Además, debe agregar el SDK del [cliente de JavaScript de Teams](/javascript/api/overview/msteams-client) a la página y `microsoftTeams.initialize()` llamar después de que se cargue la página. Al hacerlo, le indicaremos a teams que muestre su página, le dará acceso a información específica de cada equipo (por ejemplo, si el cliente de Microsoft Teams ejecuta el tema oscuro) y le permitirá emprender acciones basadas en los resultados.
+Una pestaña personalizada se declara en el manifiesto de la aplicación del paquete de la aplicación. Por cada página web que desee incluir como pestaña en la aplicación, defina una dirección URL y un ámbito. Además, debe agregar el SDK del [cliente de JavaScript de Teams](/javascript/api/overview/msteams-client) a la página y llamar `microsoftTeams.initialize()` después de que se cargue la página. Al hacerlo, le indicaremos a teams que muestre su página, le dará acceso a información específica de cada equipo (por ejemplo, si el cliente de Microsoft Teams ejecuta el tema oscuro) y le permitirá emprender acciones basadas en los resultados.
 
-Tanto si elige exponer su pestaña dentro del ámbito de canal o de grupo como en el ámbito personal, tendrá que presentar una [Página de contenido](~/tabs/how-to/create-tab-pages/content-page.md) HTML iframe en la ficha. Para las pestañas personales, la dirección URL de contenido se establece directamente en `contentUrl` el manifiesto mediante `staticTabs` la propiedad en la matriz. El contenido de la pestaña será el mismo para todos los usuarios.
+Tanto si elige exponer su pestaña dentro del ámbito de canal o de grupo como en el ámbito personal, tendrá que presentar una [Página de contenido](~/tabs/how-to/create-tab-pages/content-page.md) HTML iframe en la ficha. Para las pestañas personales, la dirección URL de contenido se establece directamente en el manifiesto mediante la `contentUrl` propiedad en la `staticTabs` matriz. El contenido de la pestaña será el mismo para todos los usuarios.
 
-Para las fichas canal/grupo, también debe crear una página de configuración adicional que permita a los usuarios configurar la dirección URL de la página de contenido, normalmente mediante los parámetros de cadena de consulta de dirección URL para cargar el contenido adecuado para ese contexto. Esto se debe a que la ficha canal/grupo se puede Agregar a varios equipos o chats de grupo distintos. En cada instalación subsiguiente, los usuarios podrán configurar la pestaña que le permitirá personalizar la experiencia según sea necesario. Cuando los usuarios agregan o configuran una pestaña, se asocia una dirección URL a la ficha que se presenta en la interfaz de usuario de Microsoft Teams. La configuración de una pestaña es simplemente agregar parámetros adicionales a esa dirección URL. Por ejemplo, cuando se agrega la pestaña DevOps Board de Azure, la página de configuración permite elegir la tarjeta que se cargará. La dirección URL de la página de configuración `configurationUrl` se especifica mediante `configurableTabs` la propiedad de la matriz en el manifiesto de la aplicación.
+Para las fichas canal/grupo, también debe crear una página de configuración adicional que permita a los usuarios configurar la dirección URL de la página de contenido, normalmente mediante los parámetros de cadena de consulta de dirección URL para cargar el contenido adecuado para ese contexto. Esto se debe a que la ficha canal/grupo se puede Agregar a varios equipos o chats de grupo distintos. En cada instalación subsiguiente, los usuarios podrán configurar la pestaña que le permitirá personalizar la experiencia según sea necesario. Cuando los usuarios agregan o configuran una pestaña, se asocia una dirección URL a la ficha que se presenta en la interfaz de usuario de Microsoft Teams. La configuración de una pestaña es simplemente agregar parámetros adicionales a esa dirección URL. Por ejemplo, cuando se agrega la pestaña DevOps Board de Azure, la página de configuración permite elegir la tarjeta que se cargará. La dirección URL de la página de configuración se especifica mediante la `configurationUrl` propiedad de la `configurableTabs` matriz en el manifiesto de la aplicación.
 
 Puede tener un máximo de una (1) ficha canal/grupo y hasta dieciséis (16) pestañas personales por aplicación.
 
 ## <a name="mobile-clients"></a>Clientes móviles
 
-Si elige que la ficha canal/grupo aparezca en los clientes móviles de Teams, `setSettings()` la configuración debe tener un valor para `websiteUrl` la propiedad (vea a continuación). Las pestañas personales están actualmente disponibles en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). Pronto se ofrecerá compatibilidad completa para las pestañas en los clientes móviles. Para preparar la actualización, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas.
+Si elige que la ficha canal o grupo aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad. Las pestañas personales están actualmente disponibles en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). Pronto se ofrecerá compatibilidad completa para las pestañas en los clientes móviles. Para preparar la actualización, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas.
