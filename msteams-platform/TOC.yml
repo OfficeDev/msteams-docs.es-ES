@@ -21,6 +21,10 @@
       href: samples/app-templates.md
     - name: Conectores de turnos listos para producción
       href: samples/shifts-wfm-connectors.md
+    - name: Crear un asistente virtual para Teams
+      href: samples/virtual-assistant.md
+    - name: Integrar la potencia de agentes virtuales Chatbot con Teams
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Extensión del Kit de herramientas de Microsoft Teams
       items:
         - name: Extensión de herramientas de Microsoft Teams para Visual Studio Code
