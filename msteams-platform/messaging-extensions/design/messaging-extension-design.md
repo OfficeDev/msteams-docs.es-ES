@@ -4,12 +4,12 @@ description: Describe las instrucciones para crear extensiones de mensajería.
 keywords: Directrices de diseño de Microsoft Teams referencia sugerencias de extensiones de mensajería procedimientos recomendados
 author: EmilyyC
 ms.author: qinch
-ms.openlocfilehash: cf2862b8c8544efcab21616c420d66937fb7406a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 5d62646c5757f93cc4f6ae6e089ef3a0918f9eea
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801498"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152689"
 ---
 # <a name="start-sharing-with-powerful-messaging-extensions"></a>Empezar a compartir con eficaces extensiones de mensajería
 
@@ -46,4 +46,4 @@ No solo mostrar texto a los usuarios. Tener algo con los que puede interactuar y
 
 ### <a name="keep-users-in-the-app-context"></a>Mantener a los usuarios en el contexto de la aplicación
 
-Si una tarjeta no es suficiente y necesita proporcionar un vínculo para obtener más información, considere la posibilidad de abrir una pestaña en lugar de abrir un explorador para mejorar la experiencia del usuario. *Consulte* [extender a teams App set a Custom Tab](../../tabs/how-to/add-tab.md)
+Si una tarjeta no es suficiente y necesita proporcionar un vínculo para obtener más información, considere la posibilidad de abrir una pestaña en lugar de abrir un explorador para mejorar la experiencia del usuario. *Consulte* [extender la aplicación Teams con una pestaña personalizada](../../tabs/how-to/add-tab.md)

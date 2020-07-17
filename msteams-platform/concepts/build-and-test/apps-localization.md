@@ -3,12 +3,12 @@ title: Localización para las aplicaciones de equipo
 description: Describe problemas relacionados con la localización de la aplicación
 keywords: Microsoft Teams publicar AppSource de localización de Office Publishing idioma
 ms.date: 05/15/2018
-ms.openlocfilehash: 138b6d66808fc5ed212f1cb0eed8579faea6f764
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: 8d14da5c773bcc422081b50fc530a32163260b4a
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039275"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152682"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localización de aplicaciones de Microsoft Teams
 
@@ -20,9 +20,9 @@ Al localizar la aplicación de Microsoft Teams, hay tres áreas principales que 
 
 ## <a name="localizing-your-appsource-listing"></a>Localización de la lista de AppSource
 
-Si está publicando en la tienda de aplicaciones, debe tener en cuenta que la localización de la lista de AppSource todavía no es compatible. Sin embargo, para preparar la compatibilidad con las listas localizadas en la tienda de aplicaciones, puede agregar idiomas adicionales a la lista. Actualmente, en la lista de [sitios web de AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) de su aplicación solo se mostrará la información del idioma predeterminado (Inglés) que proporcione al [Centro para socios](/dev/store/use-partner-center-to-submit-to-appsource) .
+Si está publicando en la tienda de aplicaciones, debe tener en cuenta que la localización de la lista de AppSource todavía no es compatible. Sin embargo, para preparar la compatibilidad con las listas localizadas en la tienda de aplicaciones, puede agregar idiomas adicionales a la lista. Actualmente, en la lista de [sitios web de AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) de su aplicación solo se mostrará la información del idioma predeterminado (Inglés) que proporcione al [Centro para socios](/office/dev/store/submit-to-appsource-via-partner-center) .
 
-Para configurar un idioma adicional para la aplicación, en [centro de asociados](/dev/store/use-partner-center-to-submit-to-appsource), seleccione inglés y el idioma adicional de la aplicación. En este ejemplo se usa el francés.
+Para configurar un idioma adicional para la aplicación, en [centro de asociados](/office/dev/store/submit-to-appsource-via-partner-center), seleccione inglés y el idioma adicional de la aplicación. En este ejemplo se usa el francés.
 
 1. Agregar al idioma inglés
     * Rellene el nombre de la aplicación.
