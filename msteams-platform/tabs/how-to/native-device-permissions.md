@@ -2,29 +2,29 @@
 title: Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que suelen requerir el consentimiento del usuario
 keywords: desarrollo de pestañas de Microsoft Teams
-ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: e69c7540730307e62035c48ac64cd977419ea5f2
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034039"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434559"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 
 Es posible que quiera enriquecer su pestaña con características que requieran la funcionalidad de dispositivo nativo de Access como:
 
-* Digital
-* Micro
-* Ubicación
-* Notificaciones
-
-![Pantalla de configuración de permisos de dispositivo](~/assets/images/tabs/device-permissions.png)
+> [!div class="checklist"]
+>
+> * Digital
+> * Micro
+> * Ubicación
+> * Notificaciones
 
 > [!IMPORTANT]
 >
-> Actualmente, la funcionalidad de dispositivos nativos no es compatible con las pestañas de los clientes móviles.
->
-> Actualmente, la API de ubicación geográfica no es totalmente compatible con todos los clientes de escritorio.
+> * Actualmente, el cliente móvil de Microsoft Teams solo admite `camera` y `location` a través de capacidades de dispositivo nativas y está disponible en todas las construcciones de aplicaciones, incluidas las pestañas. </br>
+> * `camera`La [**API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-)habilita la compatibilidad con la captura de imágenes.
+> * Actualmente, la [**API de ubicación geográfica**](../../resources/schema/manifest-schema.md#devicepermissions) no es totalmente compatible con todos los clientes de escritorio.
 
 ## <a name="device-permissions"></a>Permisos de dispositivo
 
@@ -35,6 +35,28 @@ El acceso a los permisos de dispositivo de un usuario le permite crear experienc
 * Usar la información de ubicación del usuario para mostrar información relevante
 
 Aunque el acceso a estas características es estándar en la mayoría de los exploradores Web modernos, es necesario que los equipos sepan qué características desea usar al actualizar el manifiesto de la aplicación. Esto le permitirá solicitar permisos, de la misma manera que lo haría en un explorador, mientras la aplicación se ejecuta en el cliente de escritorio de Microsoft Teams.
+
+## <a name="manage-permissions"></a>Administrar permisos
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
+1. Abra Microsoft Teams.
+1. En la esquina superior derecha de la ventana, seleccione el icono de su perfil.
+1. Seleccione **Settings**  ->  **Permissions** en el menú desplegable.
+1. Elija la configuración que desee.
+
+![Pantalla Configuración del escritorio de permisos de dispositivo](../../assets/images/tabs/device-permissions.png)
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+1. Abra Microsoft Teams.
+1. En la esquina superior izquierda de la pantalla, seleccione el icono del menú &#9776;.
+1. Seleccione **configuración**de  ->  **dispositivos**.
+1. Elija la configuración que desee.
+
+![Pantalla de configuración móvil de permisos de dispositivo](../../assets/images/tabs/mobile-device-permissions-screen.png)
+
+---
 
 ## <a name="properties"></a>Propiedades
 
@@ -49,12 +71,15 @@ Actualice la aplicación `manifest.json` agregando `devicePermissions` y especif
     "openExternal"
 ],
 ```
+> [!Note]
+>
+> Los medios también se usan para los permisos de cámara en dispositivos móviles.
 
 Cada propiedad le permitirá pedir al usuario que pida su consentimiento
 
-| Propiedad      | Description   |
+| Propiedad      | Descripción   |
 | --- | --- |
-| Elementos multimedia         | permiso para usar la cámara, el micrófono y los altavoces |
+| medios         | permiso para usar la cámara, el micrófono y los altavoces |
 | geolocalización   | permiso para devolver la ubicación del usuario      |
 | notificaciones | permiso para enviar notificaciones de usuario      |
 | MIDI          | permiso para enviar y recibir información MIDI de un instrumento musical digital   |
@@ -62,7 +87,7 @@ Cada propiedad le permitirá pedir al usuario que pida su consentimiento
 
 ## <a name="checking-permissions-from-your-tab"></a>Comprobación de permisos en la pestaña
 
-Una vez que haya `devicePermissions` agregado al manifiesto de la aplicación, puede comprobar los permisos mediante la API de "permisos" de HTML5 sin que se le pida confirmación.
+Una vez que haya agregado `devicePermissions` al manifiesto de la aplicación, puede comprobar los permisos mediante la API de "permisos" de HTML5 sin que se le pida confirmación.
 
 ``` Javascript
 // Different query options:
@@ -84,16 +109,22 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="prompting-the-user"></a>Preguntar al usuario
 
-Para mostrar una solicitud para obtener consentimiento para obtener acceso a los permisos del dispositivo, necesita aprovechar la API de HTML5 adecuada. Por ejemplo, para pedir al usuario que tenga acceso a su cámara, debe llamar a`getUserMedia`
+Para mostrar una solicitud para obtener consentimiento para obtener acceso a los permisos de dispositivo necesita aprovechar la API de HTML5 o Teams adecuada. Por ejemplo, para pedir al usuario que tenga acceso a su cámara, debe llamar a`getCurrentPosition`
+
+```Javascript
+navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
+```
+
+Para usar la cámara en el escritorio o en la web, Microsoft Teams mostrará una solicitud de permiso cuando llame a getUserMedia
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-La ubicación geográfica mostrará una solicitud de permiso cuando llame a`getCurrentPosition`
+Para capturar la imagen en dispositivos móviles, Teams Mobile le pedirá permiso cuando se lo denomine captureImage ().
 
-```Javascript
-navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
+```Typescript
+function captureImage(callback: (error: SdkError, files: File[]) => void)
 ```
 
 Las notificaciones le preguntarán al usuario cuando llame a`requestPermission`

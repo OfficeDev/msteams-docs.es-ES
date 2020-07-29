@@ -2,12 +2,12 @@
 title: Guía del proceso de aprobación de aplicaciones de Microsoft Teams
 description: Describe el proceso de aprobación para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
 keywords: Teams publicar tienda de Office publicar AppSource de la cuenta del centro asociado
-ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091308"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434478"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -40,7 +40,7 @@ Hay dos formas de crear una cuenta del centro de asociados:
 
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>¿Qué ocurre si no encuentro mi cuenta de la tienda Office en el centro para socios?
 
-Abra un [vale de soporte técnico del centro de asociados](https://partner.microsoft.com/en-US/support/v2/?stage=1) y seleccione lo siguiente en los menús desplegables:
+Abra un [vale de soporte técnico del centro de asociados](https://partner.microsoft.com/support/v2/?stage=1) y seleccione lo siguiente en los menús desplegables:
 
 | Menú | Opción |
 | -------   | -------  |

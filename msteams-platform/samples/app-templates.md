@@ -3,12 +3,12 @@ title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
-ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
+ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45152710"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434541"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -359,7 +359,7 @@ Para ayudar a aliviar este problema, nos alegramos de ofrecerle la plantilla de 
 
 ## <a name="staff-check-ins-9734"></a>Protecciones del personal &#9734;
 
-Las protecciones del personal es una aplicación, basada en [Power apps](/powerapps/powerapps-overview), que permite la comunicación de supervisión de la empresa y el personal de campo. El personal puede proporcionar fácilmente información crítica de tiempo y actualizaciones de estado en una base programada o ad-hoc, directamente desde Microsoft Teams. La aplicación admite la ubicación en tiempo real, fotos y notas, así como notificaciones de aviso y flujos de trabajo automatizados.
+Las protecciones del personal es una aplicación basada en [Power apps](/powerapps/powerapps-overview)que permite la comunicación de supervisión de la empresa y el personal de campo. El personal puede proporcionar fácilmente información crítica de tiempo y actualizaciones de estado en una base programada o ad-hoc, directamente desde Microsoft Teams. La aplicación admite la ubicación en tiempo real, fotos y notas, así como notificaciones de aviso y flujos de trabajo automatizados.
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

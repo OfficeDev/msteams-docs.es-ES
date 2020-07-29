@@ -4,14 +4,14 @@ author: laujan
 description: integración de un Chatbot de agentes de Power virtual en la plataforma de Microsoft Teams
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 4f32a3c13d9288c3e733e92369645bcf9e32d586
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: 57b06fd0d3e1fae0cbfb927335fb1b5941396bb0
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44801518"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434527"
 ---
-# <a name="integrate-your-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integración de los agentes de Power Virtual Agent Chatbot con Microsoft Teams
+# <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integración de agentes de Power virtual Chatbot con Microsoft Teams
 
 [Power virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) es una solución de interfaz gráfica sin código guiada que permite a todos los miembros de su equipo crear chatbotss de conversación que se integran fácilmente con la plataforma de Microsoft Teams. Todo el contenido creado por los agentes de Power virtual se representa de forma natural en Teams y los bots de los agentes virtuales de energía, se relaciona con los usuarios del lienzo de chat nativo de Teams. Los administradores de ti, analistas de negocios, especialistas en dominios y programadores de aplicaciones cualificados pueden diseñar, desarrollar y publicar agentes virtuales inteligentes para Microsoft Teams sin tener que configurar un entorno de desarrollo, crear un servicio web o registrarse directamente con bot Framework.  *Consulte* [Create a Chatbot for Teams with Microsoft Power virtual Agents](../what-are-bots.md#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents).
 

@@ -5,12 +5,12 @@ description: ''
 keywords: canal de grupo de pestañas de Teams configurable estático
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137639"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434492"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -66,7 +66,7 @@ Un módulo de tareas es una experiencia modal de tipo popup que puede desencaden
 
 Asegúrese de que todos los dominios de dirección URL usados en las pestañas se incluyen en la `validDomains` matriz del [manifiesto](~/concepts/build-and-test/apps-package.md). Para obtener más información, vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en la referencia del esquema del manifiesto. Sin embargo, tenga en cuenta que la funcionalidad principal de su pestaña existe en Microsoft Teams y no fuera de Microsoft Teams.
 
-## <a name="showing-a-native-loading-indicator"></a>Mostrar un indicador de carga nativo
+## <a name="show-a-native-loading-indicator"></a>Mostrar un indicador de carga nativo
 
 Comenzando con [el esquema de manifiesto v 1.7](../../../resources/schema/manifest-schema.md), puede proporcionar un [indicador de carga nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) siempre que el contenido web se cargue en Microsoft Teams, por ejemplo, [Página de contenido](#integrate-your-code-with-teams)de la ficha, página de [configuración](configuration-page.md), [Página de eliminación](removal-page.md) y [módulos de tareas en las pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 

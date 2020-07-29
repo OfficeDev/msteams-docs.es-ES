@@ -2,14 +2,17 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137643"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434534"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
+
+>[!TIP]
+> Consulte nuestras plantillas listas de producción en el catálogo de plantillas de aplicaciones de Microsoft [**Teams**](samples/app-templates.md). El catálogo está ordenado alfabéticamente y las adiciones más recientes se etiquetan con una **&#9734;** de estrella.
 
 ## <a name="change-log"></a>Registro de cambios
 
@@ -17,8 +20,15 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+| 07/22/2020 |Actualizaciones de capacidad de dispositivos móviles.|[Solicitar permisos de dispositivo para la pestaña de Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
+|07/15/2020|Crear un asistente virtual para Microsoft Teams|[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
+|07/14/2020|Exposición de una documentación de indicador de carga nativa|[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 | 07/01/2020 |Introducción a la creación de aplicaciones de Microsoft Teams con Visual Studio Code Toolkit.|[Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Inicio de sesión único para pestañas GA para los clientes Web y de escritorio de Teams|[Inicio de sesión único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|06/05/2020| Esquema del manifiesto actualizado a la versión 1,7| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Los permisos de consentimiento específicos de recursos que usan las API de Microsoft Graph están en Developer Preview. |[Autorización específica de recursos (RSC): vista previa para desarrolladores](graph-api/rsc/resource-specific-consent.md) |
+|5/18/2020|Integrar agentes de Power virtual con Teams|[Integración de agentes de Power virtual Chatbot con Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|04/01/2020|Integrar sistemas WFM con el conector de cambios para Microsoft Teams|[Microsoft Teams desplaza los conectores WFM](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Se ha agregado compatibilidad para recuperar un solo miembro de una conversación y una compatibilidad adicional para recuperar miembros paginados. | [Obtención del contexto de Teams para un bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | El `replyToId` parámetro de las cargas enviadas a un bot ya no está cifrado, lo que le permite usar este valor para crear deeplinks en estos mensajes. Las cargas de mensajes incluyen los valores cifrados en el parámetro. `legacy.replyToId`.  |
 | 11/5/2019 | El inicio de sesión único con el SDK de Teams para JavaScript en una página de contenido web se encuentra en Developer Preview. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |

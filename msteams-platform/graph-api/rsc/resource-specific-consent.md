@@ -6,43 +6,44 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico RSC de OAuth SSO de OAuth para Microsoft Teams
-ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: bf449b338e8c0f42dfef776e533fb6b5ff591529
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145917"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434506"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>Autorización específica de recursos (RSC): vista previa para desarrolladores
 
 >[!NOTE]
+
 >Los permisos de consentimiento específicos de recursos están disponibles en los clientes Web y de escritorio una vez habilitada la vista previa para desarrolladores. Vea [Cómo habilito la vista previa para desarrolladores](../../resources/dev-preview/developer-preview-intro.md) para obtener más información.
 
 El consentimiento específico de recursos (RSC) es una integración de Microsoft Teams y Graph API que permite a su aplicación usar puntos de conexión de API para administrar equipos específicos dentro de una organización. El modelo de permisos de autorización específica de recursos (RSC) permite a los *propietarios del equipo* conceder el consentimiento para que una aplicación acceda a los datos de un equipo o los modifique. Los permisos de RSC específicos, específicos de Teams, definen lo que una aplicación puede hacer dentro de un equipo específico:
 
 ## <a name="resource-specific-permissions"></a>Permisos específicos de recursos
 
-|Permisos de aplicación| Action |
+|Permisos de aplicación| Acción |
 | ----- | ----- |
-|TeamSettings. Read. Group | Obtener la configuración de este equipo.|
+|TeamSettings.Read.Group | Obtener la configuración de este equipo.|
 |TeamSettings. Edit. Group|Actualice la configuración de este equipo.|
-|ChannelSettings. Read. Group|Obtenga los nombres de canal, las descripciones de canales y la configuración de canal para este equipo.|
-|ChannelSettings. Edit. Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
-|Channel. Create. Group|Cree canales en este equipo.|
-|Channel. Delete. Group|Eliminar los canales de este equipo.|
-|ChannelMessage. Read. Group |Obtiene los mensajes del canal de este equipo.|
-|TeamsApp. Read. Group|Obtenga una lista de las aplicaciones instaladas de este equipo.|
-|TeamsTab. Read. Group|Obtener una lista de las pestañas de este equipo.|
-|TeamsTab. Create. Group|Cree pestañas en este equipo.|
-|TeamsTab. Edit. Group|Actualice las pestañas de este equipo.|
-|TeamsTab. Delete. Group|Eliminar pestañas de este equipo.|
-|Member. Read. Group|Obtener los miembros de este equipo.|
-|Owner. Read. Group|Obtener los propietarios de este equipo.|
+|ChannelSettings.Read.Group|Obtenga los nombres de canal, las descripciones de canales y la configuración de canal para este equipo.|
+|ChannelSettings.Edit.Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
+|Channel.Create.Group|Crear canales en este equipo.|
+|Channel.Delete.Group|Eliminar los canales de este equipo.|
+|ChannelMessage.Read.Group |Obtiene los mensajes del canal de este equipo.|
+|TeamsApp.Read.Group|Obtenga una lista de las aplicaciones instaladas de este equipo.|
+|TeamsTab.Read.Group|Obtener una lista de las pestañas de este equipo.|
+|TeamsTab.Create.Group|Crear pestañas en este equipo.|
+|TeamsTab.Edit.Group|Actualice las pestañas de este equipo.|
+|TeamsTab.Delete.Group|Eliminar las pestañas de este equipo.|
+|Member.Read.Group|Obtener los miembros de este equipo.|
+|Owner.Read.Group|Obtener los propietarios de este equipo.|
 
 >[!NOTE]
 >Los permisos específicos de recursos solo están disponibles para las aplicaciones de Teams instaladas en el cliente de Teams y actualmente no forman parte del portal de Azure Active Directory.
 
-## <a name="enabling-resource-specific-consent-in-your-application"></a>Habilitar el consentimiento específico de recursos en la aplicación
+## <a name="enable-resource-specific-consent-in-your-application"></a>Habilitar el consentimiento específico de recursos en la aplicación
 
 Los pasos para habilitar RSC en la aplicación son los siguientes:
 
@@ -160,6 +161,14 @@ Una vez instalada la aplicación en un equipo, puede usar el [probador de Graph]
 > - Realice una llamada **Get** al siguiente punto de conexión: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . El campo clientAppId de la respuesta se asignará al appId especificado en el manifiesto de la aplicación Teams.
 
  ![Respuesta del explorador de Graph para obtener la llamada.](../../assets/images/graph-permissions.png)
+ 
+## <a name="test-resource-specific-consent"></a>Probar el consentimiento específico del recurso
+ 
+> [!div class="nextstepaction"]
+> [**Probar permisos de consentimiento específicos de recursos en Microsoft Teams**](test-resource-specific-consent.md)
+ 
+## <a name="related-topic-for-teams-administrators"></a>Tema relacionado para administradores de Microsoft Teams
 
- > [!div class="nextstepaction"]
-> [Probar permisos de consentimiento específicos de recursos en Microsoft Teams](test-resource-specific-consent.md)
+> [!div class="nextstepaction"]
+> [**Consentimiento específico de recursos en Microsoft Teams para administradores**](/MicrosoftTeams/resource-specific-consent)
+> 

@@ -2,12 +2,12 @@
 title: Referencia de tarjetas
 description: Describe todas las tarjetas y las acciones de tarjetas disponibles para bots en Microsoft Teams.
 keywords: referencia de tarjetas de bots
-ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801490"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434548"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
@@ -52,7 +52,7 @@ Las imágenes deben ser como máximo 1024 × 1024 y 1 MB en formato PNG, JPEG o 
 | Propiedad | Tipo  | Descripción |
 | --- | --- | --- |
 | url | URL | Dirección URL HTTPS a la imagen |
-| alt | String | Descripción accesible de la imagen |
+| alt | Cadena | Descripción accesible de la imagen |
 
 ### <a name="buttons"></a>Botones
 
@@ -74,6 +74,9 @@ Una tarjeta personalizable que puede contener cualquier combinación de texto, v
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+> [!NOTE]
+> Actualmente, los elementos multimedia no se admiten en las tarjetas adaptables v 1.2 en la plataforma de Microsoft Teams.
 
 ### <a name="example-adaptive-card"></a>Tarjeta adaptable de ejemplo
 
