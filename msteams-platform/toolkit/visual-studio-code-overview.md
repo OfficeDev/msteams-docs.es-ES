@@ -3,12 +3,12 @@ title: Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Vis
 description: Introducción a la creación de excelentes aplicaciones personalizadas directamente en Visual Studio Code con el kit de herramientas de Microsoft Teams
 keywords: Teams Visual Studio Code Toolkit
 ms.date: 06/30/2020
-ms.openlocfilehash: 17f21d1656b32074318030b9df9e643200f58f80
-ms.sourcegitcommit: ecf7ca8e77e77fe3f4cad1b13e3d31a825155555
-ms.translationtype: Auto
+ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45054255"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531262"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code
 
@@ -87,7 +87,7 @@ Si desea depurar la aplicación basada en pestañas en localhost mediante HTTPS,
 
 * Compilar y ejecutar la aplicación
   * Siga el instuctions en la sección **generar y ejecutar** del archivo README del proyecto para que se atienda desde https://localhost:3000/tab . Por lo general, esto implicará que se ejecute `npm install``npm start`
-  * Navegar https://localhost:3000/tab desde Google Chrome
+  * Navegue https://localhost:3000/tab desde Google Chrome o Edge cromo.
 
 * Adquirir el certificado SSL:
   * Abra la ventana herramientas de desarrollo de Chrome ( `ctrl + shift + i`  /  `cmd + option + i` ).

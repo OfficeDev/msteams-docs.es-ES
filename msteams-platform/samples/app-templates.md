@@ -3,12 +3,12 @@ title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434541"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531290"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -110,6 +110,23 @@ Esta aplicación también permite compartir fácilmente imágenes/GIFs/adhesivos
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![Aplicación para adhesivos](../assets/images/stickers.png)
+
+## <a name="e-prescriptions-9734"></a>&#9734; E-Prescriptions 
+
+Prescripciones electrónicas es una aplicación basada en [Power apps](/powerapps/maker/canvas-apps/embed-teams-app)que mejora los telemedicina y la atención virtual al automatizar el proceso de emisión de prescripciones electrónicas a pacientes. Los profesionales médicos pueden revisar rápidamente las citas, generar prescripciones electrónicas y enviar mensajes de correo electrónico con adjuntos recetados a pacientes directamente en la plataforma de Microsoft Teams.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![Captura de pantalla de la aplicación E-Prescriptions. Muestra cómo un proveedor de atención médica puede seleccionar un botón generar para solicitar una receta para un paciente.](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Captura de pantalla de la aplicación E-Prescriptions. Muestra cómo los administradores pueden administrar los proveedores de asistencia sanitaria que usan la aplicación.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="expert-finder"></a>Buscador de expertos
 
