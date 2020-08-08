@@ -3,12 +3,12 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210690"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587814"
 ---
 # <a name="format-cards-in-teams"></a>Formato de tarjetas en Microsoft Teams
 
@@ -116,7 +116,8 @@ Las menciones basadas en tarjetas se admiten en clientes Web, de escritorio y m�
 Los bots y las extensiones de mensajería pueden incluir menciones dentro del contenido de la tarjeta en elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) y [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
->Actualmente, [los elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten en las tarjetas adaptables v 1.2 en la plataforma de Microsoft Teams.
+> * Actualmente, [los elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten en las tarjetas adaptables v 1.2 en la plataforma de Microsoft Teams.
+> * Los mensajes de bot no admiten las menciones del equipo & de canal.
 
 ### <a name="constructing-mentions"></a>Creación de menciones
 
@@ -164,7 +165,7 @@ Las tarjetas de conector admiten el formato HTML y Markdown limitados. La compat
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
 | Aplique | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -253,7 +254,7 @@ Las tarjetas de conector admiten el formato HTML y Markdown limitados. Markdown 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | Aplique | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -341,7 +342,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la t
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | Aplique | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

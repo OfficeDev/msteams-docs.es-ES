@@ -2,12 +2,12 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434534"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587730"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -21,9 +21,10 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 07/22/2020 |Actualizaciones de capacidad de dispositivos móviles.|[Solicitar permisos de dispositivo para la pestaña de Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
+|07/20/2020|Herramienta de validación de aplicaciones de Microsoft Teams para envíos de AppSource.|[Herramienta de validación de aplicaciones de Microsoft Teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Crear un asistente virtual para Microsoft Teams|[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Exposición de una documentación de indicador de carga nativa|[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-| 07/01/2020 |Introducción a la creación de aplicaciones de Microsoft Teams con Visual Studio Code Toolkit.|[Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Introducción a la creación de aplicaciones de Microsoft Teams con Visual Studio Code Toolkit.|[Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Inicio de sesión único para pestañas GA para los clientes Web y de escritorio de Teams|[Inicio de sesión único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema del manifiesto actualizado a la versión 1,7| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Los permisos de consentimiento específicos de recursos que usan las API de Microsoft Graph están en Developer Preview. |[Autorización específica de recursos (RSC): vista previa para desarrolladores](graph-api/rsc/resource-specific-consent.md) |

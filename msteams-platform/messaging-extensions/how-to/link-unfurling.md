@@ -1,21 +1,24 @@
 ---
-title: Vincular unfurling
+title: Apertura de vínculos
 author: clearab
 description: Cómo realizar unfurling de vínculos con la extensión de mensajería en una aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279777"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587807"
 ---
-# <a name="link-unfurling"></a>Vincular unfurling
+# <a name="link-unfurling"></a>Apertura de vínculos
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Con unfurling de vínculos se puede registrar la aplicación para `invoke` recibir una actividad cuando se pegan direcciones URL con un dominio en particular en el área de mensaje de redacción. El `invoke` contendrá la dirección URL completa que se pegó en el área de mensaje de redacción y puede responder con una tarjeta que el usuario puede *unfurl*, lo que proporciona información o acciones adicionales. Esto funciona de manera muy similar a un [comando de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md), con la dirección URL que actúa como el término de búsqueda.
+> [!NOTE]
+> Actualmente, Link unfurling no se admite en clientes móviles.
+
+Con unfurling de vínculos se puede registrar la aplicación para recibir una `invoke` actividad cuando se pegan direcciones URL con un dominio en particular en el área de mensaje de redacción. El `invoke` contendrá la dirección URL completa que se pegó en el área de mensaje de redacción y puede responder con una tarjeta que el usuario puede *unfurl*, lo que proporciona información o acciones adicionales. Esto funciona de manera muy similar a un [comando de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md), con la dirección URL que actúa como el término de búsqueda.
 
 La extensión de mensajería de Azure DevOps usa el vínculo unfurling para buscar direcciones URL pegadas en el área de mensaje de redacción que apunta a un elemento de trabajo. En la siguiente captura de pantalla, un usuario ha pegado en una dirección URL de un elemento de trabajo en Azure DevOps que la extensión de mensajería se ha resuelto en una tarjeta.
 
@@ -23,7 +26,7 @@ La extensión de mensajería de Azure DevOps usa el vínculo unfurling para busc
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregar vínculo unfurling al manifiesto de la aplicación
 
-Para ello, agregará una nueva `messageHandlers` matriz a la `composeExtensions` sección del JSON del manifiesto de la aplicación. Puede hacerlo con la ayuda de App Studio, o bien manualmente. Las listas de dominios pueden incluir caracteres comodín, por `*.example.com`ejemplo. Esto coincide exactamente con un segmento del dominio; Si tiene que hacer coincidir `a.b.example.com` , `*.*.example.com`use.
+Para ello, agregará una nueva `messageHandlers` matriz a la `composeExtensions` sección del JSON del manifiesto de la aplicación. Puede hacerlo con la ayuda de App Studio, o bien manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com` . Esto coincide exactamente con un segmento del dominio; Si tiene que hacer coincidir `a.b.example.com` , use `*.*.example.com` .
 
 ### <a name="using-app-studio"></a>Usar App Studio
 
@@ -34,7 +37,7 @@ Para ello, agregará una nueva `messageHandlers` matriz a la `composeExtensions`
 
 ### <a name="manually"></a>Manualmente
 
-Para habilitar la extensión de mensajería para que interactúe con los vínculos de esta forma, primero tendrá `messageHandlers` que agregar la matriz al manifiesto de la aplicación, como en el ejemplo siguiente. Este ejemplo no es el manifiesto completo, vea el manifiesto [referencia](~/resources/schema/manifest-schema.md) para obtener un ejemplo completo de manifiesto.
+Para habilitar la extensión de mensajería para que interactúe con los vínculos de esta forma, primero tendrá que agregar la `messageHandlers` matriz al manifiesto de la aplicación, como en el ejemplo siguiente. Este ejemplo no es el manifiesto completo, vea el manifiesto [referencia](~/resources/schema/manifest-schema.md) para obtener un ejemplo completo de manifiesto.
 
 ```json
 ...
@@ -89,7 +92,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -114,7 +117,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Este es un ejemplo del que `invoke` se ha enviado a su bot.
+Este es un ejemplo del que se ha `invoke` enviado a su bot.
 
 ```json
 {

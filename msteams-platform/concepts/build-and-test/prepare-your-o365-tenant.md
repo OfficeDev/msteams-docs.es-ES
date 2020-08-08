@@ -2,12 +2,12 @@
 title: Preparar el inquilino de Office 365
 description: Introducción a teams en Office 365
 keywords: Configurar la carga de equipos del inquilino de Office 365
-ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 447968c9b56010e515fc1d1346eac4d8485c7f80
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914570"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587782"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Preparar el inquilino de Office 365
 
@@ -16,7 +16,7 @@ Si es suscriptor de Office 365, puede desarrollar aplicaciones para Microsoft Te
 * Empresa Essentials
 * Empresa Premium
 * Enterprise E1, E3 y E5
-* Programador
+* Developer
 * Educación, educación Plus y educación E5
 
 Microsoft Teams también estará disponible para los clientes que se suscribieron a E4 antes de su [jubilación](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
@@ -31,13 +31,25 @@ Si Microsoft Teams no se ha habilitado para su organización, deberá hacerlo pr
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Habilitar las aplicaciones personalizadas de Teams y activar la carga de aplicaciones personalizadas
 
+Active la transferencia local de aplicaciones personalizada para su inquilino de desarrollador de la siguiente manera:
+
+1. Inicie sesión en el [centro de administración de Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) con sus credenciales de administrador. 
+
+2. Seleccione **Mostrar todos los**  -->  **equipos**. 
+
+![imagen del menú de desbordamiento de la aplicación](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. Vaya a directivas de configuración global de aplicaciones de Microsoft **Teams**  -->  **Setup Policies**  -->  **(valor predeterminado para toda la organización)**  
+
+![imagen del menú de desbordamiento de la aplicación](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. Alternar **cargar aplicaciones personalizadas** en la posición **activado** .
+
+Y eso es todo. El inquilino de prueba permitirá ahora la versión de prueba de aplicaciones personalizada.
+
 > [!Note] 
-> Si usa la plataforma de desarrollador de Office 365 para compilar la aplicación, esta configuración ya debe estar configurada para permitirle crear, cargar y probar la aplicación.
+> Puede tardar hasta 24 horas antes de que se habilite la transferencia local. Durante la versión provisional, puede usar **cargar \<your tenant> para** para probar la aplicación.
 
-Hay tres opciones de configuración relevantes para la habilitación de aplicaciones personalizadas y la carga de aplicaciones personalizadas:
+![imagen del menú de desbordamiento de la aplicación](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-* **Configuración** => de aplicación personalizada para toda la organización**permitir la interacción con aplicaciones** => personalizadas **: esta** configuración habilita o deshabilita las aplicaciones personalizadas para su organización. Debe estar activada. 
-* **Configuración** => de la aplicación personalizada de equipo**permitir a los miembros cargar aplicaciones** => personalizadas**activado/desactivado** : esta configuración se aplica a cada equipo individual dentro de Microsoft Teams. Si quiere instalar la aplicación para un equipo específico, esto tendrá que estar activado para ese equipo.
-* **User custom app policy** => El usuario de la Directiva de aplicación personalizada => **del** usuario**puede cargar aplicaciones personalizadas**: esta configuración controla los permisos de un usuario individual. Deberá habilitar esto para los usuarios que tengan permiso para cargar aplicaciones personalizadas.
-
-Para obtener información completa sobre cómo interactúa esta configuración, *consulte* [administrar la configuración y las directivas de la aplicación personalizada en Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) y [administrar las directivas de configuración de aplicaciones en Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+Para obtener información completa sobre cómo interactúa esta configuración *See*, vea [Administrar directivas y configuraciones de aplicaciones personalizadas en Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) y [Administrar directivas de configuración de aplicaciones en Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

@@ -2,17 +2,14 @@
 title: Inicio de sesión único
 description: Describe el inicio de sesión único (SSO)
 keywords: API de autenticación de Microsoft Teams SSO de inicio de sesión único de AAD
-ms.openlocfilehash: 849e2c357859a1e8980aaa4662a55319cd7b2493
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021606"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587737"
 ---
 # <a name="single-sign-on-sso"></a>Inicio de sesión único (SSO)
-
-> [!NOTE]
-> * La API de inicio de sesión único (SSO) suele estar disponible en la web y en el escritorio. Mobile estará disponible próximamente. Mientras tanto, recomendamos volver correctamente a nuestra [API de autenticación clásica](auth-flow-tab.md) en dispositivos móviles.
 
 Los usuarios inician sesión en Microsoft Teams a través de sus cuentas de trabajo, centro educativo o Microsoft (Office 365, Outlook, etc.). Puede beneficiarse de esto si permite que un único inicio de sesión autorice la pestaña de Microsoft Teams (o el módulo de tareas) en clientes móviles o de escritorio. Por lo tanto, si un usuario consiente usar la aplicación, no tendrá que volver a dar su consentimiento en otro dispositivo, sino que iniciará sesión automáticamente. Además, recuperamos previamente el token de acceso para mejorar el rendimiento y los tiempos de carga.
 
@@ -87,6 +84,21 @@ Registre la aplicación en el[portal de Azure ad](https://azure.microsoft.com/fe
     * offline_access
     * OpenId
     * perfil
+
+13. Navegar a **autenticación**
+
+    Si una aplicación no ha recibido el consentimiento del administrador de ti, los usuarios tendrán que proporcionar consentimiento la primera vez que usen una aplicación.
+
+    Establezca un URI de redireccionamiento:
+    * Seleccione **Agregar una plataforma**.
+    * Seleccione **Web**.
+    * Escriba el **URI de redireccionamiento** de la aplicación. Ésta será la página a la que se redirigirá al usuario un flujo de concesión implícito correcto.
+
+    Para habilitar la concesión implícita, active las casillas siguientes:  
+    Token de identificador de ✔  
+    Token de acceso ✔  
+    
+    
 
 > [!NOTE]
 >
