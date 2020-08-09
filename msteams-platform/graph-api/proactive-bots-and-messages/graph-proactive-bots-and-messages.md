@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico de instalación de chat de mensajería proactiva de Teams
-ms.openlocfilehash: 735dbfa39222f312b4f3714b5c009dfd1bf28b05
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434499"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587744"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Habilitar la instalación proactiva de Bot y la mensajería proactiva en Teams con Microsoft Graph (vista previa pública)
 
@@ -20,9 +20,9 @@ ms.locfileid: "45434499"
 
 ## <a name="proactive-messaging-in-teams"></a>Mensajería proactiva en Microsoft Teams
 
-Los bots inician los mensajes proactivos para iniciar conversaciones con los usuarios. Tienen varios fines, entre los que se incluyen el envío de mensajes de bienvenida, la realización de encuestas o sondeos, y la difusión de notificaciones de toda la organización.  Los mensajes proactivos en Microsoft Teams se pueden entregar como conversaciones **ad-hoc** o **basadas en cuadros de diálogo** :
+Los bots inician los mensajes proactivos para iniciar conversaciones con un usuario. Tienen varios fines, entre los que se incluyen el envío de mensajes de bienvenida, la realización de encuestas o sondeos, y la difusión de notificaciones de toda la organización.  Los mensajes proactivos en Microsoft Teams se pueden entregar como conversaciones **ad-hoc** o **basadas en cuadros de diálogo** :
 
-|Tipo de mensaje | Descripción |
+|Tipo de mensaje | Description |
 |----------------|-------------- |
 |Mensaje proactivo ad-hoc| El bot interjects un mensaje sin interrumpir el flujo de conversación.|
 |Mensaje proactivo basado en cuadros de diálogo | El bot crea un nuevo subproceso de diálogo, toma el control de una conversación, entrega el mensaje proactivo, se cierra y devuelve el control al cuadro de diálogo anterior.|
@@ -37,7 +37,7 @@ Antes de que el Bot pueda enviar mensajes a un usuario de forma proactiva, debe 
 
 Los permisos de [tipo de recurso teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) de Microsoft Graph permiten administrar el ciclo de vida de la instalación de la aplicación para todos los ámbitos de usuario (personal) o de equipo (canal) dentro de la plataforma de Microsoft Teams:
 
-|Permisos de aplicación | Descripción|
+|Permisos de aplicación | Description|
 |------------------|---------------------|
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|Permite a una aplicación de Teams leer, instalar, actualizar y desinstalar para cualquier **usuario**, sin necesidad de iniciar sesión ni usar previamente.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Permite a una aplicación de Teams leer, instalar, actualizar y desinstalar en cualquier **equipo**, sin necesidad de iniciar sesión ni usar previamente.|
@@ -79,7 +79,7 @@ El `teamsAppId` puede recuperarse del catálogo de aplicaciones de su organizaci
 Solicitud **http Get** :
 
 ```http
-GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 La solicitud devolverá un `teamsApp` objeto. El objeto devuelto `id` es el identificador de aplicación generado por el catálogo de la aplicación y es diferente del "ID:" que ha proporcionado en el manifiesto de la aplicación Teams:
@@ -156,7 +156,7 @@ El `chatId` también se puede recuperar de la siguiente manera:
 
 **Referencia de Microsoft Graph:** [obtener chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** necesitará la aplicación `{teamsAppInstallationId}` si no la tiene, use lo siguiente:
+**1.** necesitará la aplicación `{teamsAppInstallationId}` . Si no la tiene, use lo siguiente:
 
 Solicitud **http Get** :
 
