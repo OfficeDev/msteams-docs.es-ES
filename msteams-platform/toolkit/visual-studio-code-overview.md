@@ -2,13 +2,12 @@
 title: Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code
 description: Introducción a la creación de excelentes aplicaciones personalizadas directamente en Visual Studio Code con el kit de herramientas de Microsoft Teams
 keywords: Teams Visual Studio Code Toolkit
-ms.date: 06/30/2020
-ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 7b8a32c099d85bec2584da2b42dcf5a524ecddbc
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531262"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651666"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code
 

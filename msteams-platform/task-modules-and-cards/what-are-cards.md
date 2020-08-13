@@ -2,12 +2,12 @@
 title: Introducción a las tarjetas
 description: Describe las tarjetas y cómo se usan en bots, conectores y extensiones de mensajería.
 keywords: mensajes de conectores de tarjetas de bots
-ms.openlocfilehash: a260313c6e9442ce7bd76524e41e6465617bafb5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6d850f83183f12fa0c228a7a89b23e58f523e15b
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675910"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651659"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -29,6 +29,15 @@ Microsoft Teams usa tarjetas en tres lugares diferentes:
 * Conectores
 * Bots
 * Extensiones de mensajería
+
+## <a name="adaptive-cards-and-incoming-webhooks"></a>Tarjetas adaptables y webhooks entrantes
+
+> [!NOTE]
+> Las tarjetas adaptables son compatibles con los webhooks entrantes como parte del [programa público de vista previa para desarrolladores](../resources/dev-preview/developer-preview-intro.md). Las vistas previas públicas están disponibles para el acceso anticipado y los comentarios. Aunque la versión es estable y ha sufrido pruebas exhaustivas, no está pensada para su uso en producción.
+>
+> ✔ En la vista previa para desarrolladores, todos los elementos nativos del esquema de tarjetas adaptables, excepto `Action.Submit` , son totalmente compatibles.
+>
+> ✔ Las acciones admitidas son [**Action. OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action. ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)y [**Action. ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 ## <a name="cards-in-connectors"></a>Tarjetas en conectores
 
