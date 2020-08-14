@@ -3,12 +3,12 @@ title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: f3b89161a908af8709334c300a8ee6218817c21f
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 16dbb99add82c26930baf22bfc2c5153fd47b2f1
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704498"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651652"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -220,6 +220,55 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
   "needsIdentity": "true"
 }
 ```
+
+## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Enviar tarjetas adaptables con un webhook entrante
+
+> [!NOTE]
+>
+> ✔ Todos los elementos de esquema de tarjetas adaptables nativas, excepto `Action.Submit`, son completamente compatibles.
+>
+> ✔ Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), y [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+
+### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>El flujo para el envío de [tarjetas adaptables](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) mediante un webhook entrante es el siguiente:
+
+**1.** [Configurar un webhook personalizado](#setting-up-a-custom-incoming-webhook) en Teams.</br></br>
+**2.** Crear el archivo JSON de la tarjeta adaptable:
+
+```json
+{
+   "type":"message",
+   "attachments":[
+      {
+         "contentType":"application/vnd.microsoft.card.adaptive",
+         "contentUrl":null,
+         "content":{
+            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+            "type":"AdaptiveCard",
+            "version":"1.2",
+            "body":[
+               {
+                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
+               }
+            ]
+         }
+      }
+   ]
+}
+```
+
+> [!div class="checklist"]
+>
+> - El campo `"type"` debe ser `"message"`.
+> - La matriz `"attachments"` contiene un conjunto de objetos de tarjeta.
+> - El campo `"contentType"` debe establecerse en tipo de tarjeta adaptable.
+> - El objeto `"content"` es la tarjeta con formato JSON.
+
+**3.** Probar la tarjeta adaptable con Postman
+
+Para probar la tarjeta adaptativa, puede usar [Postman](https://www.postman.com) para enviar una solicitud POST a la dirección URL que creó cuando configuró el webhook entrante. Pegue el archivo JSON en el cuerpo de la solicitud y vea el mensaje de la tarjeta adaptable en Teams.
+
+>[!TIP]
+> Puede usar el código de tarjeta adaptable [Ejemplos y plantillas](https://adaptivecards.io/samples) para el cuerpo de la solicitud Post de prueba.
 
 ## <a name="testing-your-connector"></a>Probar el conector
 
