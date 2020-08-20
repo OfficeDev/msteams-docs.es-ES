@@ -6,18 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Gráfico RSC de OAuth SSO de OAuth para Microsoft Teams
-ms.openlocfilehash: bf449b338e8c0f42dfef776e533fb6b5ff591529
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 7e3fc3faa111f4ba982c1c79e6b5b873b8773aef
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434506"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819185"
 ---
-# <a name="resource-specific-consent-rsc--developer-preview"></a>Autorización específica de recursos (RSC): vista previa para desarrolladores
+# <a name="resource-specific-consent-rsc"></a>Autorización específica de recursos (RSC)
 
->[!NOTE]
-
->Los permisos de consentimiento específicos de recursos están disponibles en los clientes Web y de escritorio una vez habilitada la vista previa para desarrolladores. Vea [Cómo habilito la vista previa para desarrolladores](../../resources/dev-preview/developer-preview-intro.md) para obtener más información.
+>[!IMPORTANT]
+> Estas API son accesibles en el https://graph.microsoft.com/beta punto de conexión.  El punto de conexión de la [versión beta](/graph/versioning-and-support#beta-version) incluye API que actualmente están en versión preliminar y todavía no están disponibles en general. Las API del punto de conexión beta están sujetas a cambios y no se recomienda usarlas en las aplicaciones de producción. 
 
 El consentimiento específico de recursos (RSC) es una integración de Microsoft Teams y Graph API que permite a su aplicación usar puntos de conexión de API para administrar equipos específicos dentro de una organización. El modelo de permisos de autorización específica de recursos (RSC) permite a los *propietarios del equipo* conceder el consentimiento para que una aplicación acceda a los datos de un equipo o los modifique. Los permisos de RSC específicos, específicos de Teams, definen lo que una aplicación puede hacer dentro de un equipo específico:
 
@@ -28,14 +27,14 @@ El consentimiento específico de recursos (RSC) es una integración de Microsoft
 |TeamSettings.Read.Group | Obtener la configuración de este equipo.|
 |TeamSettings. Edit. Group|Actualice la configuración de este equipo.|
 |ChannelSettings.Read.Group|Obtenga los nombres de canal, las descripciones de canales y la configuración de canal para este equipo.|
-|ChannelSettings.Edit.Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
+|ChannelSettings. ReadWrite. Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
 |Channel.Create.Group|Crear canales en este equipo.|
 |Channel.Delete.Group|Eliminar los canales de este equipo.|
 |ChannelMessage.Read.Group |Obtiene los mensajes del canal de este equipo.|
 |TeamsApp.Read.Group|Obtenga una lista de las aplicaciones instaladas de este equipo.|
 |TeamsTab.Read.Group|Obtener una lista de las pestañas de este equipo.|
 |TeamsTab.Create.Group|Crear pestañas en este equipo.|
-|TeamsTab.Edit.Group|Actualice las pestañas de este equipo.|
+|TeamsTab. ReadWrite. Group|Actualice las pestañas de este equipo.|
 |TeamsTab.Delete.Group|Eliminar las pestañas de este equipo.|
 |Member.Read.Group|Obtener los miembros de este equipo.|
 |Owner.Read.Group|Obtener los propietarios de este equipo.|
@@ -57,7 +56,7 @@ Los pasos para habilitar RSC en la aplicación son los siguientes:
 
 ## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Configurar las opciones de consentimiento del propietario del grupo en el portal de Azure AD
 
-Puede habilitar o deshabilitar el [consentimiento del propietario del grupo](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directamente en Azure Portal:
+Puede habilitar o deshabilitar el  [consentimiento del propietario del grupo](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directamente en Azure Portal:
 
 > [!div class="checklist"]
 >
@@ -96,7 +95,7 @@ Para realizar llamadas a la API de Graph, debe obtener un token de acceso para l
 Necesitará tener los siguientes valores del proceso de registro de Azure AD para recuperar un token de acceso de la plataforma de identidad:
 
 - IDENTIFICADOR de la **aplicación** asignado por el portal de registro de aplicaciones. Si la aplicación admite el inicio de sesión único (SSO), debe usar el mismo identificador de aplicación para la aplicación y el SSO.
-- El **secreto de cliente/contraseña** o un par de claves pública y privada (**certificado**). Esto no es necesario para las aplicaciones nativas.
+- El  **secreto de cliente/contraseña** o un par de claves pública y privada (**certificado**). Esto no es necesario para las aplicaciones nativas.
 - Un **URI de redireccionamiento** (o dirección URL de respuesta) de la aplicación para recibir respuestas de Azure ad.
 
  *Vea* [obtener acceso en nombre de un usuario](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) y [obtener acceso sin un usuario](/graph/auth-v2-service)
@@ -107,8 +106,8 @@ Los permisos RSC se declaran en el archivo de manifiesto de la aplicación (JSON
 
 > [!div class="checklist"]
 >
-> - **ID** : el identificador de la aplicación de Azure ad. *Consulte* [registrar la aplicación en el portal de Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **recurso** : cualquier cadena. Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; se realizará cualquier cadena.
+> - **ID**  : el identificador de la aplicación de Azure ad. *Consulte* [registrar la aplicación en el portal de Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **recurso**  : cualquier cadena. Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; se realizará cualquier cadena.
 > - **permisos de aplicación** : permisos RSC para la aplicación. *Consulte* [permisos específicos de recursos](resource-specific-consent.md#resource-specific-permissions).
 
 >
@@ -124,13 +123,13 @@ Los permisos RSC se declaran en el archivo de manifiesto de la aplicación (JSON
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
       "TeamSettings.Edit.Group",
-      "ChannelSettings.Edit.Group",
+      "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",
       "TeamsApp.Read.Group",
       "TeamsTab.Read.Group",
       "TeamsTab.Create.Group",
-      "TeamsTab.Edit.Group",
+      "TeamsTab.ReadWrite.Group",
       "TeamsTab.Delete.Group",
       "Member.Read.Group",
       "Owner.Read.Group"
@@ -147,7 +146,7 @@ Una vez que haya creado la aplicación, puede [cargar el paquete de la aplicaci�
 >[!IMPORTANT]
 >Los permisos RSC no se atribuyen a un usuario. Las llamadas se realizan con los permisos de aplicaciones, no con los permisos delegados de usuario. Por lo tanto, es posible que se permita a la aplicación realizar acciones que el usuario no puede, como crear un canal o eliminar una pestaña. Debe revisar la intención del propietario del equipo de su caso de uso antes de hacer llamadas a la API RSC. *Vea* [información general de la API de Microsoft Teams](/graph/teams-concept-overview).
 
-Una vez instalada la aplicación en un equipo, puede usar el [probador de Graph](https://developer.microsoft.com/graph/graph-explorer) para ver los permisos que se han concedido a la aplicación en un equipo:
+Una vez instalada la aplicación en un equipo, puede usar el [probador de Graph](https://developer.microsoft.com/graph/graph-explorer)  para ver los permisos que se han concedido a la aplicación en un equipo:
 
 > [!div class="checklist"]
 >
@@ -159,8 +158,7 @@ Una vez instalada la aplicación en un equipo, puede usar el [probador de Graph]
 > - Copie y guarde el valor **GROUPID** de la cadena.
 > - Inicie sesión en el **probador de Graph**.
 > - Realice una llamada **Get** al siguiente punto de conexión: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . El campo clientAppId de la respuesta se asignará al appId especificado en el manifiesto de la aplicación Teams.
-
- ![Respuesta del explorador de Graph para obtener la llamada.](../../assets/images/graph-permissions.png)
+  ![Respuesta del explorador de Graph para obtener la llamada.](../../assets/images/graph-permissions.png)
  
 ## <a name="test-resource-specific-consent"></a>Probar el consentimiento específico del recurso
  

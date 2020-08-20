@@ -2,12 +2,12 @@
 title: Características de la versión preliminar para desarrolladores públicos
 description: Describe las características de la versión preliminar para desarrolladores públicos de Microsoft Teams.
 keywords: características para desarrolladores de Team Preview
-ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: e607a6c65253a5fd94f8a805f1264a567bb8fd24
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210704"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819178"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Características de la versión preliminar para desarrolladores públicos para Microsoft Teams
 
@@ -22,12 +22,6 @@ La compatibilidad con [tarjetas adaptables v 1.2](https://github.com/microsoft/A
 Ahora puede usar el inicio [de sesión único (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) para iniciar sesión y autenticar a un usuario en el escritorio y en el móvil mediante el SDK de Teams para JavaScript desde una página de contenido Web. Una de las ventajas es que un usuario nunca tiene que iniciar sesión; una vez que hayan dado su consentimiento a la aplicación mediante su perfil: se iniciará sesión automáticamente en su pestaña (incluido el móvil).
 
 Nuestra vista previa para desarrolladores está disponible en las versiones 1,5 y posteriores del manifiesto. Nuestra implementación actual solo puede obtener una cantidad limitada de API de Graph, pero proporcionamos una solución alternativa para obtener más API de Graph con nuestra API de autenticación existente.
-
-## <a name="personal-apps-static-tabs-and-1-1-bots-enabled-on-mobile"></a>Aplicaciones personales (pestañas estáticas y bots de 1-1) habilitados en dispositivos móviles
-
-Las aplicaciones personales instaladas (pestañas estáticas y bots 1-1) ahora están disponibles en la bandeja de la aplicación en dispositivos móviles. Vea [directrices de diseño para Mobile](~/tabs/design/tabs-mobile.md) for Design Guidance. Las aplicaciones solo se pueden instalar desde un cliente de escritorio o Web, y pueden tardar hasta 4 horas en estar disponibles en dispositivos móviles después de la instalación.
-
-Esto incluye la posibilidad de que un administrador del sistema Prefije una aplicación a través de [las directivas de configuración](/microsoftteams/teams-app-setup-policies)de la aplicación. Las aplicaciones que se han anclado se mostrarán en el cajón de la aplicación.
 
 ## <a name="calls-and-online-meeting-bots"></a>Llamadas y bots de reuniones en línea
 
