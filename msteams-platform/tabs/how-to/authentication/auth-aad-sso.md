@@ -2,21 +2,31 @@
 title: Inicio de sesión único
 description: Describe el inicio de sesión único (SSO)
 keywords: API de autenticación de Microsoft Teams SSO de inicio de sesión único de AAD
-ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 503d5ff9779224d922ab0d45c6e2a3b33d7e0de7
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587737"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874859"
 ---
 # <a name="single-sign-on-sso"></a>Inicio de sesión único (SSO)
 
 Los usuarios inician sesión en Microsoft Teams a través de sus cuentas de trabajo, centro educativo o Microsoft (Office 365, Outlook, etc.). Puede beneficiarse de esto si permite que un único inicio de sesión autorice la pestaña de Microsoft Teams (o el módulo de tareas) en clientes móviles o de escritorio. Por lo tanto, si un usuario consiente usar la aplicación, no tendrá que volver a dar su consentimiento en otro dispositivo, sino que iniciará sesión automáticamente. Además, recuperamos previamente el token de acceso para mejorar el rendimiento y los tiempos de carga.
 
+>[!NOTE]
+> **Teams versiones de cliente móviles compatibles con SSO**  
+>
+> ✔ Teams para Android (1416/1.0.0.2020073101 y versiones posteriores)
+>
+> ✔ Teams para iOS (_versión_: 2.0.18 y versiones posteriores)  
+>
+> Para obtener la mejor experiencia con Microsoft Teams, use la versión más reciente de iOS y Android.
+
 ## <a name="how-sso-works-at-runtime"></a>Cómo funciona el SSO en tiempo de ejecución
 
 El siguiente diagrama muestra cómo funciona el proceso de SSO:
 
+<!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. En la pestaña, se realiza una llamada de JavaScript `getAuthToken()` . Esto indica a teams que debe obtener un token de autenticación para la aplicación de pestañas.
@@ -37,7 +47,7 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 
 ### <a name="1-create-your-azure-active-directory-azure-ad-application"></a>1. crear la aplicación de Azure Active Directory (Azure AD)
 
-Registre la aplicación en el[portal de Azure ad](https://azure.microsoft.com/features/azure-portal/). Este es un proceso de 5 a 10 minutos que incluye las siguientes tareas:
+#### <a name="registering-your-application-in-theazure-ad-portal-overview"></a>Registrar la aplicación en el[portal de Azure ad](https://azure.microsoft.com/features/azure-portal/) información general:
 
 1. Obtener el [identificador de la aplicación de Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Especifique los permisos que necesita la aplicación para el punto de conexión de Azure AD y, opcionalmente, Microsoft Graph.
@@ -52,7 +62,7 @@ Registre la aplicación en el[portal de Azure ad](https://azure.microsoft.com/fe
 > * Actualmente no se admiten varios dominios por aplicación.
 > * No se admiten aplicaciones que usan el `azurewebsites.net` dominio porque es demasiado común y pueden ser un riesgo para la seguridad. Sin embargo, estamos buscando activamente quitar esta restricción.
 
-#### <a name="steps"></a>Pasos
+#### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Registrar la aplicación a través de Azure Active Directory portal en profundidad:
 
 1. Registre una nueva aplicación en el portal de [registro de aplicaciones de Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2083908) .
 2. Seleccione **registro nuevo** y, en la *Página registrar una aplicación*, establezca los siguientes valores:
@@ -64,6 +74,8 @@ Registre la aplicación en el[portal de Azure ad](https://azure.microsoft.com/fe
 4. En **Administrar**, seleccione **Exponer una API** 
 5. Seleccione el vínculo **establecer** para generar el URI del identificador de aplicación con el formato de `api://{AppID}` . Inserte el nombre de dominio completo (con una barra diagonal "/" anexada al final) entre las dos barras diagonales y el GUID. El identificador completo debe tener el siguiente formato: `api://fully-qualified-domain-name.com/{AppID}` ²
     * por ejemplo: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
+    
+    El nombre de dominio completo es el nombre de dominio inteligible desde el que se sirve la aplicación. Si usa un servicio de túnel como ngrok, tendrá que actualizar este valor siempre que cambie el subdominio ngrok. 
 6. Seleccione el botón **Agregar un ámbito** En el panel que se abre, escriba `access_as_user` como el **Nombre de ámbito**.
 7. **¿Establecer quién puede conceder autorización?** para`Admins and users`
 8. Rellene los campos para configurar las solicitudes de consentimiento del usuario y el administrador con valores que sean apropiados para el `access_as_user` ámbito:
@@ -72,15 +84,15 @@ Registre la aplicación en el[portal de Azure ad](https://azure.microsoft.com/fe
     * **Título de consentimiento del usuario**: Microsoft Teams puede tener acceso al perfil de usuario y realizar solicitudes en nombre del usuario.
     * **Descripción del consentimiento del usuario:** Habilite Microsoft Teams para que llame a las API de esta aplicación con los mismos derechos que el usuario.
 9. Asegurarse de que el **Estado** está establecido en **habilitado**
-10. Seleccionar **Agregar ámbito**
+10. Seleccione el botón **Agregar ámbito** para guardar 
     * La parte de dominio del **nombre de ámbito** que se muestra justo debajo del campo de texto debe coincidir automáticamente con el URI del **identificador de aplicación** establecido en el paso anterior, `/access_as_user` que se ha anexado al final:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. En la sección **aplicaciones cliente autorizadas** , identifique las aplicaciones que desea autorizar para la aplicación Web de la aplicación. Debe especificarse cada uno de los siguientes identificadores:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Aplicación para equipos móviles o de escritorio)
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`(Aplicación Web de Teams)
-12. Navegue a **permisos**de la API y asegúrese de agregar los siguientes permisos:
+11. En la sección **aplicaciones cliente autorizadas** , identifique las aplicaciones que desea autorizar para la aplicación Web de la aplicación. Seleccione *Agregar una aplicación cliente*. Escriba cada uno de los siguientes identificadores de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicación para equipos móviles o de escritorio)
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicación Web de Teams)
+12. Navegue a **permisos**de la API. Seleccione *Agregar*permisos delegados de permisos de  >  *Microsoft Graph*  >  *Delegated permissions*y, a continuación, agregue los siguientes permisos:
     * User. Read (habilitado de forma predeterminada)
-    * email
+    * correo electrónico
     * offline_access
     * OpenId
     * perfil
@@ -92,13 +104,13 @@ Registre la aplicación en el[portal de Azure ad](https://azure.microsoft.com/fe
     Establezca un URI de redireccionamiento:
     * Seleccione **Agregar una plataforma**.
     * Seleccione **Web**.
-    * Escriba el **URI de redireccionamiento** de la aplicación. Ésta será la página a la que se redirigirá al usuario un flujo de concesión implícito correcto.
+    * Escriba el **URI de redireccionamiento** de la aplicación. Ésta será la página a la que se redirigirá al usuario un flujo de concesión implícito correcto. Se trata del mismo nombre de dominio completo que especificó en el paso 5 seguido de la ruta de la API donde debe enviarse una respuesta de autenticación. Si sigue alguno de los ejemplos de Teams, será: `https://subdomain.example.com/auth-end`
 
-    Para habilitar la concesión implícita, active las casillas siguientes:  
+    A continuación, habilite la concesión implícita comprobando las siguientes casillas:  
     Token de identificador de ✔  
     Token de acceso ✔  
     
-    
+¡Enhorabuena! Ha completado el registro de aplicaciones prerequsities para continuar con la aplicación SSO de pestañas.     
 
 > [!NOTE]
 >
@@ -174,11 +186,11 @@ Otro enfoque para obtener ámbitos de Microsoft Graph adicionales es presentar u
 
 1. El token recuperado con `getAuthToken()` debe intercambiarse del servidor mediante el [flujo en nombre de](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) Azure ad para obtener acceso a las API adicionales de Microsoft Graph.
     * Asegúrese de usar el punto de conexión V2 de Microsoft Graph para este intercambio
-2. Si se produce un error en el intercambio, Azure AD devolverá una excepción de concesión no válida. Suele haber un mensaje de error de dos: `invalid_grant` o`interaction_required`
+2. Si se produce un error en el intercambio, Azure AD devolverá una excepción de concesión no válida. Suele haber un mensaje de error de dos: `invalid_grant` o `interaction_required`
 3. Cuando se produzca un error en el intercambio, deberá pedir consentimiento adicional. Le recomendamos que muestre una interfaz de usuario que pida al usuario que conceda el consentimiento adicional. Esta interfaz de usuario debe incluir un botón que desencadene un cuadro de diálogo de consentimiento de Azure AD mediante nuestra [API de autenticación de Azure ad](~/concepts/authentication/auth-silent-aad.md).
 4. Al solicitar el consentimiento adicional de Azure AD, debe incluir `prompt=consent` en el parámetro de [cadena de consulta](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) a Azure ad, de lo contrario, Azure ad no pedirá los ámbitos adicionales.
-    * En lugar de:`?scope={scopes}`
-    * Use lo siguiente:`?prompt=consent&scope={scopes}`
+    * En lugar de: `?scope={scopes}`
+    * Use lo siguiente: `?prompt=consent&scope={scopes}`
     * Asegúrese de que `{scopes}` incluye todos los ámbitos que solicita al usuario (por ejemplo: mail. Read o User. Read).
 5. Una vez que el usuario haya concedido permiso adicional, vuelva a intentar el en nombre de flujo para obtener acceso a estas API adicionales.
 

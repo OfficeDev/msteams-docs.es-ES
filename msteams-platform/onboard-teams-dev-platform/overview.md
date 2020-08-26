@@ -4,12 +4,12 @@ author: clearab
 description: Información general sobre cómo los desarrolladores pueden ampliar y personalizar las características de Microsoft Teams con la plataforma de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: d127acb33212f23dff9cf0dd83a1936044c10d5e
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: 4af4d34ffa4581be6e69f6233d3eb356aa6a2a08
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652180"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874887"
 ---
 # <a name="building-for-microsoft-teams"></a>Creación para Microsoft Teams
 
@@ -84,7 +84,6 @@ La [API de REST de Microsoft Graph para Teams](https://docs.microsoft.com/graph/
 ## <a name="resources"></a>Recursos
 
 * [Agregar un recurso compartido a Microsoft Teams en el sitio web](doc-links/share-to-teams.md)
-* [Diseñar la aplicación con las instrucciones recomendadas](doc-links/designing-overview.md)
 * [Sistema de diseño de interfaz de usuario Fluent](https://fluentsite.z22.web.core.windows.net/)
 * [SDK de cliente de JavaScript de Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
 * [Bot Framework SDK para JavaScript](https://github.com/Microsoft/botbuilder-js) y [Bot Framework SDK para .net](https://github.com/Microsoft/botbuilder-dotnet/)

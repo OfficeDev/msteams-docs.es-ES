@@ -1,13 +1,13 @@
 ---
-title: Guía del proceso de aprobación de aplicaciones de Microsoft Teams
-description: Describe el proceso de aprobación para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
+title: Guía del proceso de envío de aprobación de aplicaciones de Microsoft Teams
+description: Describe el proceso de aprobación de envío para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
 keywords: Teams publicar tienda de Office publicar AppSource de la cuenta del centro asociado
-ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434478"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874873"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -28,6 +28,7 @@ La publicación de la aplicación en [AppSource](https://appsource.microsoft.com
 >
 >- Si la aplicación de Microsoft Teams contiene un bot, debe cumplir con el [código de conducta del marco del desarrollador de](https://aka.ms/bf-conduct)bot? n.
 >- Si la aplicación contiene un conector de Office 365, es posible que se apliquen términos adicionales. *Vea* [Connector Dashboard Developer's Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- Para que la aplicación esté disponible para los usuarios de GCC y evitar la duplicación de la lista de aplicaciones en la tienda, el flujo o proceso de autenticación debe identificar y enrutar al usuario a la dirección URL de contenido especificada/esperada para los usuarios de GCC.
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>Preguntas más frecuentes: las aplicaciones de Microsoft Teams y las cuentas de asociados
 
@@ -54,7 +55,7 @@ Visite nuestra [Página de soporte técnico de Publishers](https://aka.ms/market
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>¿Cómo puedo administrar mi cuenta de la tienda Office?
 
-Visite nuestra [cuenta de administración de la tienda Office en el centro de Partners](/office/dev/store/manage-account-settings-and-profile) para obtener instrucciones sobre cómo administrar la cuenta de la tienda Office a través del centro de asociados.
+Visite nuestra  [cuenta de administración de la tienda Office en el centro de Partners](/office/dev/store/manage-account-settings-and-profile) para obtener instrucciones sobre cómo administrar la cuenta de la tienda Office a través del centro de asociados.
 
 ## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>¿Cómo agrego mi número de teléfono a la sección de contacto del perfil del socio?
 
@@ -93,7 +94,7 @@ Intente lo siguiente:
 
 1. Compruebe la carpeta correo no deseado o correo no deseado.
 1. Borre la memoria caché del explorador, vaya a su panel de cuenta del centro de asociados y seleccione el vínculo **reenviar correo electrónico de comprobación** para que el correo electrónico de verificación vuelva a enviarse a su dirección de correo electrónico.
-1. Intente acceder al vínculo **reenviar correo electrónico de comprobación** desde otro explorador.
+1. Intente acceder al vínculo  **reenviar correo electrónico de comprobación** desde otro explorador.
 1. Trabaje con su Departamento de TI para asegurarse de que el servidor de correo electrónico no bloquea los correos electrónicos de verificación.
 1. Ajuste el filtro de correo no deseado del servidor para permitir o lista blanca de todos los correos electrónicos de **maccount@microsoft. <span></span> com**.
 
@@ -117,7 +118,7 @@ Para obtener más ayuda, consulte nuestra [documentación de mercado comercial](
 
 Envíe un correo electrónico a **<teamsubm@microsoft.com>** con los siguientes detalles:
 
-1. **Línea de asunto**. *Problema en la cuenta del centro asociado para <>de App_Name* (especifique el nombre de la aplicación).
+1. **Línea de asunto**. *Problema en la cuenta del centro asociado para <>de App_Name * (especifique el nombre de la aplicación).
 1. **Cuerpo del correo electrónico:**
     * Número de incidencia de soporte técnico:
     * Tu identificador de vendedor:

@@ -3,12 +3,12 @@ title: Introducción a App Studio para Microsoft Teams
 description: Empezar a compilar excelentes aplicaciones en Microsoft Teams con App Studio
 keywords: Introducción a teams de App Studio
 ms.date: 03/20/2019
-ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: b8bae38ae2a3044d87389b4bd5ee3d5a7d1e029d
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453864"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874880"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desarrollar rápidamente aplicaciones con App Studio para Microsoft Teams
 
@@ -40,7 +40,7 @@ Aquí es donde puede ver qué [cartas crea en App Studio](#card-editor) en Teams
 
 ### <a name="manifest-editor"></a>Editor de manifiestos
 
-Como se mencionó anteriormente, la parte más significativa de un paquete de la aplicación de Microsoft Teams es su archivo manifest. JSON. Este archivo, que debe cumplir el esquema de la [aplicación Teams](~/resources/schema/manifest-schema.md), contiene metadatos que permiten a los equipos presentar correctamente la aplicación a los usuarios.
+Como se mencionó anteriormente, la parte más significativa de un paquete de la aplicación de Microsoft Teams es su manifest.jsen el archivo. Este archivo, que debe cumplir el esquema de la [aplicación Teams](~/resources/schema/manifest-schema.md), contiene metadatos que permiten a los equipos presentar correctamente la aplicación a los usuarios.
 
 La pestaña del editor de manifiestos de App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de aplicaciones y generar un archivo. zip que se puede cargar fácilmente en Teams para su uso o distribución para otros usuarios. Tenga en cuenta que App Studio no produce código funcional para la aplicación ni hospeda la aplicación. La aplicación ya debe estar hospedada y en ejecución en la dirección URL que aparece en el manifiesto para el proceso de carga de la aplicación para dar como resultado una aplicación que funcione.
 
@@ -92,13 +92,16 @@ Cada comando requiere un título y un identificador. El comando puede contener o
 
 #### <a name="test-and-distribute"></a>Probar y distribuir
 
-Una vez que haya terminado de definir la aplicación, la sección probar y distribuir permite exportar la definición de la aplicación como un archivo zip que, a continuación, se puede compartir y cargar en el cliente de Microsoft Teams para realizar las pruebas. Al hacer clic en exportar se descarga el archivo zip como *AppName. zip* en el directorio de descarga predeterminado.
+Una vez que haya terminado de definir la aplicación, la sección probar y distribuir permite exportar la definición de la aplicación como un archivo zip que, a continuación, se puede compartir y cargar en el cliente de Microsoft Teams para realizar las pruebas. Al hacer clic en exportar se descarga el archivo zip como *appname.zip* en el directorio de descarga predeterminado.
+
+##### <a name="publish-your-app-to-teams"></a>Publicar la aplicación en Teams
+En la Página principal de su proyecto, puede cargar su aplicación en un equipo, enviar la aplicación a la tienda de aplicaciones personalizada de la empresa para los usuarios de su organización o bien enviar la aplicación al origen de la aplicación para todos los usuarios de Microsoft Teams. El administrador de ti consultará estos envíos. Puede volver a la página *publicar* para comprobar el estado del envío y saber si su administrador de ti aprobó o rechazó la aplicación. Aquí también puede ir a enviar actualizaciones a la aplicación o cancelar los envíos actualmente activos.
 
 ### <a name="card-editor"></a>Editor de tarjetas
 
 Una tarjeta es un contenedor de datos cortos o relacionados. Microsoft Teams admite tarjetas, que pueden tener varias propiedades y datos adjuntos. Las tarjetas son un método clave por el que los bots y conectores retransmiten información que requiere acciones a los usuarios. 
 
-Para que este proceso sea más fácil y menos propenso a errores, la ficha Editor de tarjetas le permite crear tarjetas de héroe o de miniaturas con un formulario y comprobar y probar la tarjeta resultante (exactamente como la vería un usuario) a través de un bot. También proporciona el código JSON, C# o node. js correspondiente para la tarjeta que puede copiar o pegar en el código fuente de la aplicación.
+Para que este proceso sea más fácil y menos propenso a errores, la ficha Editor de tarjetas le permite crear tarjetas de héroe o de miniaturas con un formulario y comprobar y probar la tarjeta resultante (exactamente como la vería un usuario) a través de un bot. También proporciona el código JSON, C# o Node.js correspondiente para la tarjeta que puede copiar o pegar en el código fuente de la aplicación.
 
 Si ya tiene una tarjeta que desea comprobar dentro de los equipos, puede pegar el JSON de esa tarjeta en la pestaña JSON en *Agregar información de tarjeta* y enviarla a sí mismo para ver el aspecto que tiene en un chat.
 
