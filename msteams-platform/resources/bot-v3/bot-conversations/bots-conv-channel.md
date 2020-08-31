@@ -3,12 +3,12 @@ title: Conversaciones de chat en grupo y de canal con bots
 description: Describe el escenario de un extremo a otro de tener una conversación con un bot en un canal en Microsoft Teams.
 keywords: escenarios de conferencia de canales de Teams
 ms.date: 06/25/2019
-ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f44db4a88ab5e6541c52395a58fc643cb07df606
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801474"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303727"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversaciones de chat en grupo y en el canal con un bot de Microsoft Teams
 
@@ -20,16 +20,13 @@ Los chats de canales y chats de grupo se diferencian de los chats personales en 
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Diseño de un gran robot para canales o grupos
 
-Los bots agregados a un equipo se convierten en otro miembro del equipo, que puede ser @mentioned como parte de la conversación. De hecho, los bots sólo reciben mensajes cuando se @mentioned, por lo que no se envían otras conversaciones en el canal al bot.
+Los bots agregados a un equipo se convierten en otro miembro del equipo y pueden ser @mentioned como parte de la conversación. De hecho, los bots sólo reciben mensajes cuando se @mentioned, por lo que no se envían otras conversaciones en el canal al bot.
 
-> [!NOTE]
-> Por comodidad al responder a los mensajes de bot en un canal, el nombre del bot se antepone en el cuadro de mensaje de redacción de forma automática.
+Un bot en un grupo o un canal debe proporcionar información relevante y adecuada para todos los miembros. Aunque el bot puede proporcionar toda la información relevante para la experiencia, tenga en cuenta que todos los usuarios pueden ver las conversaciones. Por lo tanto, un gran bot en un grupo o un canal debe agregar valor a todos los usuarios y, ciertamente, no compartir información más apropiadamente con una conversación de uno a uno.
 
-Un bot en un grupo o un canal debe proporcionar información relevante y adecuada para todos los miembros. Aunque el bot puede proporcionar toda la información relevante para la experiencia, tenga en cuenta que todos los usuarios pueden ver las conversaciones. Por lo tanto, un gran bot en un grupo o un canal debe agregar valor a todos los usuarios y, ciertamente, no compartir información de forma más adecuada en una conversación de uno a uno.
+El bot, al igual que es, puede ser totalmente relevante en todos los ámbitos sin necesidad de trabajo adicional. En Microsoft Teams no hay expectativa de que la función bot funcione en todos los ámbitos, pero debe asegurarse de que su bot proporciona valor de usuario en el ámbito o ámbitos que desee admitir. Para obtener más información sobre los ámbitos, consulte [aplicaciones en Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
-El bot puede ser totalmente relevante en todos los ámbitos tal y como es, y no se requiere un trabajo adicional importante para permitir que el bot funcione a través de ellos. En Microsoft Teams no hay expectativa de que la función bot funcione en todos los ámbitos, pero debe asegurarse de que su bot proporciona valor de usuario en el ámbito o ámbitos que desee admitir. Para obtener más información sobre los ámbitos, consulte [aplicaciones en Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
-
-El desarrollo de un bot que funciona en grupos o canales usa la mayor parte de la funcionalidad de las conversaciones personales. Los datos y los eventos adicionales de la carga proporcionan información sobre el grupo y el canal de Microsoft Teams. Estas diferencias, así como las diferencias clave en la funcionalidad común, se describen en las siguientes secciones.
+El desarrollo de un bot que funciona en grupos o canales usa gran parte de la misma funcionalidad que las conversaciones personales. Los datos y los eventos adicionales de la carga proporcionan información sobre el grupo y el canal de Microsoft Teams. Estas diferencias, así como las diferencias clave en la funcionalidad común, se describen en las siguientes secciones.
 
 ### <a name="creating-messages"></a>Crear mensajes
 
@@ -39,11 +36,11 @@ Para obtener más información acerca de los bots que crean mensajes en canales,
 
 Para un bot en un grupo o canal, además del [esquema normal del mensaje](https://docs.botframework.com/core-concepts/reference/#activity), el bot también recibe las siguientes propiedades:
 
-* `channelData`Consulte [Teams Data Channels](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). En un chat en grupo, contiene información específica de ese chat.
-* `conversation.id`IDENTIFICADOR de la cadena de respuesta que consta del identificador de canal más el identificador del primer mensaje en la cadena de respuesta.
-* `conversation.isGroup`Está `true` destinado a los mensajes de bot en canales o chats de grupo
-* `conversation.conversationType`Ya sea `groupChat` o`channel`
-* `entities`Puede contener una o más menciones (vea las [menciones](#-mentions))
+* `channelData` Consulte [Teams Data Channels](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). En un chat en grupo, contiene información específica de ese chat.
+* `conversation.id` IDENTIFICADOR de la cadena de respuesta que consta del identificador de canal más el identificador del primer mensaje en la cadena de respuesta.
+* `conversation.isGroup` Está `true` destinado a los mensajes de bot en canales o chats de grupo
+* `conversation.conversationType` Ya sea `groupChat` o `channel`
+* `entities` Puede contener una o más menciones (vea las [menciones](#-mentions))
 
 ### <a name="replying-to-messages"></a>Responder a mensajes
 

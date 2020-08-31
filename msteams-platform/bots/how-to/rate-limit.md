@@ -2,12 +2,12 @@
 title: Limitación de velocidad
 description: Limitación de velocidad y procedimientos recomendados en Microsoft Teams
 keywords: limitación de velocidad de bots de equipo
-ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801499"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303713"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimizar el bot: límites de velocidad y procedimientos recomendados en Microsoft Teams
 
@@ -108,19 +108,19 @@ Este límite controla el tráfico que un bot puede generar en una sola conversac
 | **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- | --- |
 | Enviar a conversación | 1  | 7  |
-| Enviar a conversación | segundo | 8  |
+| Enviar a conversación | 2  | 8  |
 | Enviar a conversación | semestre | 60 |
 | Enviar a conversación | 3600 | 1800 |
 | Crear conversación | 1  | 7  |
-| Crear conversación | segundo | 8  |
+| Crear conversación | 2  | 8  |
 | Crear conversación | semestre | 60 |
 | Crear conversación | 3600 | 1800 |
 | Obtener miembros de la conversación| 1  | 14  |
-| Obtener miembros de la conversación| segundo | 16  |
+| Obtener miembros de la conversación| 2  | 16  |
 | Obtener miembros de la conversación| semestre | 120 |
 | Obtener miembros de la conversación| 3600 | 3600 |
 | Obtener conversaciones | 1  | 14  |
-| Obtener conversaciones | segundo | 16  |
+| Obtener conversaciones | 2  | 16  |
 | Obtener conversaciones | semestre | 120 |
 | Obtener conversaciones | 3600 | 3600 |
 
@@ -131,22 +131,12 @@ Este límite controla el tráfico que pueden generar todos los bots a través de
 | **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
 | --- | --- | --- |
 | Enviar a conversación | 1  | 14  |
-| Enviar a conversación | segundo | 16  |
+| Enviar a conversación | 2  | 16  |
 | Crear conversación | 1  | 14  |
-| Crear conversación | segundo | 16  |
+| Crear conversación | 2  | 16  |
 | CreateConversation| 1  | 14  |
-| CreateConversation| segundo | 16  |
+| CreateConversation| 2  | 16  |
 | Obtener miembros de la conversación| 1  | 28 |
-| Obtener miembros de la conversación| segundo | 32 |
+| Obtener miembros de la conversación| 2  | 32 |
 | Obtener conversaciones | 1  | 28 |
-| Obtener conversaciones | segundo | 32 |
-
-## <a name="bot-per-data-center-limit"></a>Bot por límite de centro de datos
-
-Este límite controla el tráfico que un bot puede generar a través de todos los subprocesos de un centro de datos (en varios inquilinos).
-
-|**Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
-| --- | --- |
-| 1  | 20 |
-| 1800 | 8000 |
-| 3600 | 15000 |
+| Obtener conversaciones | 2  | 32 |

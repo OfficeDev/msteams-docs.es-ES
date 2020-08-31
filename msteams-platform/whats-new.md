@@ -2,17 +2,17 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587730"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303720"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
 >[!TIP]
-> Consulte nuestras plantillas listas de producción en el catálogo de plantillas de aplicaciones de Microsoft [**Teams**](samples/app-templates.md). El catálogo está ordenado alfabéticamente y las adiciones más recientes se etiquetan con una **&#9734;** de estrella.
+> Consulte nuestras plantillas listas de producción en el catálogo de plantillas de aplicaciones de Microsoft   [**Teams**](samples/app-templates.md). El catálogo está ordenado alfabéticamente y las adiciones más recientes se etiquetan con una **&#9734;** de estrella.
 
 ## <a name="change-log"></a>Registro de cambios
 
@@ -20,6 +20,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+| 08/12/2020 |La compatibilidad de tarjetas adaptables en el webhook entrante se movió a GA.|[Enviar tarjetas adaptables con un webhook entrante](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 | 07/22/2020 |Actualizaciones de capacidad de dispositivos móviles.|[Solicitar permisos de dispositivo para la pestaña de Microsoft Teams](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Herramienta de validación de aplicaciones de Microsoft Teams para envíos de AppSource.|[Herramienta de validación de aplicaciones de Microsoft Teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Crear un asistente virtual para Microsoft Teams|[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
@@ -52,7 +53,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 | 11/11/2018 | La introducción a node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección sobre el hospedaje de aplicaciones de Teams basadas en nodos en Azure. | Introducción a [la plataforma de Microsoft Teams con C#/.net y app Studio](~/get-started/get-started-dotnet-app-studio.md), Introducción [a la plataforma de Microsoft Teams con node JS y app Studio](~/get-started/get-started-nodejs-app-studio.md), [hospedar la aplicación de Teams de nodos en Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Ahora puede crear vínculos profundos a chats privados entre usuarios. | [Vinculación profunda a un chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 08/11/2018 | SharePoint Framework 1,7 ha enviado y con una nueva característica para usar la pestaña de Microsoft Teams como un elemento Web de SharePoint Framework. | [Pestañas de SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | Se ha lanzado la característica "módulo de tarea". Un módulo de tareas le permite crear experiencias de elemento emergente modal en su aplicación de Teams, desde bots y pestañas. Dentro del elemento emergente, puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un `<iframe>` widget basado en un complemento de YouTube o Microsoft Stream video, o mostrar una [tarjeta adaptable](https://docs.microsoft.com/adaptive-cards/). | [Introducción al módulo](~/concepts/task-modules/task-modules-overview.md)de tareas, [módulo de tareas en pestañas](~/concepts/task-modules/task-modules-tabs.md), [módulo de tareas en bots](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | Se ha lanzado la característica "módulo de tarea". Un módulo de tareas le permite crear experiencias de elemento emergente modal en su aplicación de Teams, desde bots y pestañas. Dentro del elemento emergente, puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un `<iframe>` widget basado en un complemento de YouTube o Microsoft Stream video, o mostrar una [tarjeta adaptable](https://docs.microsoft.com/adaptive-cards/). | [Introducción al módulo](~/concepts/task-modules/task-modules-overview.md)de tareas, [módulo de tareas en pestañas](~/concepts/task-modules/task-modules-tabs.md),  [módulo de tareas en bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | La información de formato de las tarjetas se ha actualizado y probado en los clientes de escritorio, iOS y Android para Microsoft Teams. | [Tarjetas](~/concepts/cards/cards.md), [formato de tarjeta](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | Las llamadas y las API de reuniones en línea para Microsoft Graph se lanzaron a la versión beta, y las aplicaciones de Teams ahora pueden interactuar con los usuarios de formas enriquecidas mediante voz y vídeo. | [Llamadas y reuniones en línea bots](~/concepts/calls-and-meetings/registering-calling-bot.md), [conceptos de medios en tiempo real](~/concepts/calls-and-meetings/real-time-media-concepts.md), [registro de un bot de llamada](~/concepts/calls-and-meetings/registering-calling-bot.md), [depuración y pruebas locales](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [medios hospedados por aplicaciones](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [control de notificaciones de llamadas entrantes](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Las páginas de configuración de pestañas son ahora significativamente más altas. | [Diseño de pestañas](tabs/design/tabs.md) |
