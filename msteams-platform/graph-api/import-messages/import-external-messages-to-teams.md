@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: margen de demora de los equipos mensajes de importación gráfico de API Microsoft migrar publicación de migración
-ms.openlocfilehash: 8e8b21c9a38570d7ede745e27b9316b7aba29956
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
+ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46820374"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47340952"
 ---
-# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de una plataforma de terceros a Microsoft Teams con Microsoft Graph
+# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
 >[!IMPORTANT]
 > Las vistas previas públicas de Microsoft Graph y Microsoft Teams están disponibles para el acceso anticipado y los comentarios. Aunque esta versión se ha sometido a pruebas exhaustivas, no está pensada para su uso en producción.
@@ -54,7 +54,7 @@ Como los datos existentes se migran, el mantenimiento de las marcas de tiempo de
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permisos
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descripción|Tipo|¿El consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.067Z"
 }
 ```
@@ -100,7 +100,7 @@ La creación de un canal para los mensajes importados es similar al escenario cr
 
 1. Inserte el nuevo canal en `migration mode` , un estado especial que reubique a los usuarios de la mayoría de las actividades de chat en el canal hasta que se complete el proceso de migración.  Incluya el `channelCreationMode` atributo de instancia con el `migration` valor en la solicitud post para identificar explícitamente el nuevo equipo como creado para la migración.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permisos
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descripción|Tipo|¿El consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
