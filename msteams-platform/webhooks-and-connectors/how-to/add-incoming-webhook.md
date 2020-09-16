@@ -1,16 +1,16 @@
 ---
 title: Enviar solicitudes externas a Microsoft Teams con webhooks entrantes
 author: laujan
-description: ''
+description: Cómo agregar una aplicación de webhook entrante a teams
 keywords: webhook saliente de pestañas de Teams *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: c2b3f5dd581441f89aff344c35fe7e110d4d2e68
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 3aa795170af9695fc375043c94e794f814b38646
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676144"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819070"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Publicar solicitudes externas a los equipos con webhooks entrantes
 
@@ -38,7 +38,7 @@ Los webhooks entrantes son un tipo especial de conector en Microsoft teams que p
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Agregar un webhook entrante a un canal de Teams
 
 > [!Important]  
-> Si los**permisos** => de miembro de **configuración** => del equipo**permiten a los miembros crear, actualizar y quitar conectores** está seleccionado, cualquier miembro del equipo puede Agregar, modificar o eliminar un conector.
+> Si los permisos de miembro de **configuración**del equipo  =>  **Member permissions**  =>  **permiten a los miembros crear, actualizar y quitar conectores** está seleccionado, cualquier miembro del equipo puede Agregar, modificar o eliminar un conector.
 
 1. Navegue hasta el canal donde quiera agregar el webhook y seleccione *más opciones* (&#8226;&#8226;&#8226;) de la barra de navegación superior.
 1. Elija **conectores** en el menú desplegable y busque el **webhook entrante**.

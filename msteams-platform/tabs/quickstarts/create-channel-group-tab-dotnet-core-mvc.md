@@ -3,13 +3,13 @@ title: Crear una pestaña de canal y de grupo con ASP.NET Core MVC
 author: laujan
 description: Una guía de inicio rápido para crear una ficha de canal y de grupo personalizada con ASP.NET Core MVC.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 57c22d10414eb8ec93249584219488397f0b6b33
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: cda91825ee37da94ee84747c5d2439c2940c728b
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675926"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818930"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Crear una ficha de canal y de grupo personalizada con ASP.NET Core MVC
 
@@ -37,7 +37,7 @@ Para compilar y ejecutar la aplicación, presione **F5** o elija **iniciar depur
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía de la aplicación Web de ASP.NET Core 2,2 con la casilla de verificación *Advanced-configure for https* seleccionada en la instalación. Los servicios MVC se registran mediante el método del marco `ConfigureServices()` de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de `Configure()` archivos estáticos se agrega al método:
+Este proyecto se creó a partir de una plantilla vacía de la aplicación Web de ASP.NET Core 2,2 con la casilla de verificación *Advanced-configure for https* seleccionada en la instalación. Los servicios MVC se registran mediante el método del marco de inserción de dependencias `ConfigureServices()` . Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,7 +61,7 @@ Esta carpeta contiene los siguientes archivos de paquete de la aplicación oblig
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de contorno transparente** que mide 32 x 32 píxeles.
-- Un archivo **manifest. JSON** que especifica los atributos de la aplicación.
+- Un **manifest.jsen** archivo que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams.
 
@@ -93,7 +93,7 @@ En la ventana Explorador de soluciones de Visual Studio, haga clic con el botón
 
 ### <a name="views"></a>Vistas
 
-#### <a name="home"></a>Inicio
+#### <a name="home"></a>Home
 
 ASP.NET Core trata los archivos denominados *index* como página principal o predeterminada del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, se mostrará **index. cshtml** como la Página principal de la aplicación.
 
@@ -113,13 +113,13 @@ Los controladores usan la propiedad ViewBag para transferir valores de forma din
 ngrok http https://localhost:443560 -host-header="localhost:44360"
 ```
 
-- Ngrok escuchará las solicitudes de Internet y las dirigirá a la aplicación cuando se ejecute en el puerto 44355.  Debe ser similar a `https://y8rCgT2b.ngrok.io/` donde *y8rCgT2b* se reemplaza por su dirección URL https alfanumérica de ngrok.
+- Ngrok escuchará las solicitudes de Internet y las dirigirá a la aplicación cuando se ejecute en el puerto 44355.  Debe ser similar `https://y8rCgT2b.ngrok.io/` a donde *y8rCgT2b* se reemplaza por su dirección URL https alfanumérica de ngrok.
 
 - Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome nota de la dirección URL, que lo necesitará más adelante.
 
 ## <a name="update-your-application"></a>Actualizar la aplicación
 
-Dentro de **Tab. cshtml** , la aplicación presenta al usuario dos botones de opción para mostrar la ficha con un icono rojo o gris. Al elegir el botón **seleccionar gris** o **seleccionar rojo** `saveGray()` , `saveRed()`se activa o, `settings.setValidityState(true)`respectivamente, establece y se habilita el botón **Guardar** en la página de configuración. Este código permite que los equipos sepan que ha satisfecho los requisitos de configuración y que la instalación puede continuar. Al guardar, se establecen los `settings.setSettings` parámetros de. Por último `saveEvent.notifySuccess()` , se llama a para indicar que la dirección URL del contenido se ha resuelto correctamente.
+Dentro de **Tab. cshtml** , la aplicación presenta al usuario dos botones de opción para mostrar la ficha con un icono rojo o gris. Al elegir el botón **seleccionar gris** o **seleccionar rojo** , se activa `saveGray()` o `saveRed()` , respectivamente, establece `settings.setValidityState(true)` y se habilita el botón **Guardar** en la página de configuración. Este código permite que los equipos sepan que ha satisfecho los requisitos de configuración y que la instalación puede continuar. Al guardar, se establecen los parámetros de `settings.setSettings` . Por último, `saveEvent.notifySuccess()` se llama a para indicar que la dirección URL del contenido se ha resuelto correctamente.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

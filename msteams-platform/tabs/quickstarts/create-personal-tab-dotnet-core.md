@@ -1,16 +1,6 @@
 ---
-title: Crear una pestaña personal con ASP.NET Core
-author: laujan
-description: Una guía de inicio rápido para crear una ficha personal personalizada con ASP.NET Core.
-ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: b279c96f47265fe1928ae90d661e7dc042085b39
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676174"
----
+title: "crear una pestaña personal con ASP.NET Core" autor: laujan Descripción: una guía de inicio rápido para crear una pestaña personal personalizada con ASP.NET Core.
+MS. topic: tutoriales de MS. Author: lajanuar
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Crear una ficha personal personalizada con ASP.NET Core
 
 En este tutorial rápido, vamos a crear una pestaña personal personalizada con páginas de Razor principales de C# y ASP.Net. También usaremos [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
@@ -38,7 +28,7 @@ Para compilar y ejecutar la aplicación, presione **F5** o elija **iniciar depur
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía de la aplicación Web de ASP.NET Core 2,2 con la casilla de verificación *Advanced-configure for https* seleccionada en la instalación. Los servicios MVC se registran mediante el método del marco `ConfigureServices()` de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de `Configure()` archivos estáticos se agrega al método:
+Este proyecto se creó a partir de una plantilla vacía de la aplicación Web de ASP.NET Core 2,2 con la casilla de verificación *Advanced-configure for https* seleccionada en la instalación. Los servicios MVC se registran mediante el método del marco de inserción de dependencias `ConfigureServices()` . Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -66,9 +56,9 @@ Esta carpeta contiene los siguientes archivos de paquete de la aplicación oblig
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de contorno transparente** que mide 32 x 32 píxeles.
-- Un archivo **manifest. JSON** que especifica los atributos de la aplicación.
+- Un **manifest.jsen** archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams. Microsoft Teams cargará `contentUrl` el especificado en el manifiesto, lo incrustará en un iframe y lo representará en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams. Microsoft Teams cargará el `contentUrl` especificado en el manifiesto, lo incrustará en un iframe y lo representará en la pestaña.
 
 ### <a name="csproj"></a>. csproj
 
@@ -102,7 +92,7 @@ En la ventana Explorador de soluciones de Visual Studio, haga clic con el botón
 ngrok http https://localhost:44325 -host-header="localhost:44325"
 ```
 
-- Ngrok escuchará las solicitudes de Internet y las dirigirá a la aplicación cuando se ejecute en el puerto 44325.  Debe ser similar a `https://y8rPrT2b.ngrok.io/` donde *y8rPrT2b* se reemplaza por su dirección URL https alfanumérica de ngrok.
+- Ngrok escuchará las solicitudes de Internet y las dirigirá a la aplicación cuando se ejecute en el puerto 44325.  Debe ser similar `https://y8rPrT2b.ngrok.io/` a donde *y8rPrT2b* se reemplaza por su dirección URL https alfanumérica de ngrok.
 
 - Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome nota de la dirección URL, que lo necesitará más adelante.
 

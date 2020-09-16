@@ -1,17 +1,17 @@
 ---
-title: 'Inicio rápido: crear una pestaña personal personalizada con node. js y el generador de Yeoman para Microsoft Teams'
+title: 'Inicio rápido: crear una pestaña personal personalizada con Node.js y el generador de Yeoman para Microsoft Teams'
 author: laujan
 description: Una guía de inicio rápido para crear una pestaña personal con el generador de Yeoman para Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 2d1b17360b92a161179091c1f6ba06ffa194e958
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: e39878d117b0b1b1f8c0e2450021d9238f5b7877
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675704"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818888"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Inicio rápido: crear una pestaña personal personalizada con node. js y el generador de Yeoman para Microsoft Teams
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Inicio rápido: crear una pestaña personal personalizada con Node.js y el generador de Yeoman para Microsoft Teams
 
 >[!NOTE]
 >En este tutorial, se siguen los pasos descritos en el sitio de creación de la [primera aplicación Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) wiki que se encuentra en el repositorio de github de Microsoft.
@@ -27,13 +27,13 @@ Use las teclas de dirección para seleccionar la pestaña estática.
 >[!IMPORTANT]
 >El componente de ruta de *yourDefaultTabNameTab*, al que se hace referencia en este tutorial rápido, es el valor que escribió en el generador para el nombre de la *pestaña predeterminada* más la *pestaña*de Word.
 >
->Por ejemplo: DefaultTabName: *MyTab* => */MyTabTab/*
+>Por ejemplo: DefaultTabName: *MyTab*  =>  */MyTabTab/*
 
 ## <a name="create-your-personal-tab"></a>Crear una pestaña personal
 
 Para agregar una pestaña personal a esta aplicación, deberá crear una página de contenido y actualizar los archivos existentes:
 
-- En el editor de código, cree un nuevo archivo HTML, **personal. html** y agregue el siguiente marcado:
+- En el editor de código, cree un nuevo archivo HTML, **personal.html** y agregue el siguiente marcado:
 
 ```html
 <!DOCTYPE html>
@@ -55,19 +55,19 @@ Para agregar una pestaña personal a esta aplicación, deberá crear una página
 </html>
 ```
 
-- Guarde **personal. html** en la carpeta **Web** de la aplicación:
+- Guarde **personal.html** en la carpeta **Web** de la aplicación:
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- Abra **manifest. JSON** en el editor de código:
+- Abra **manifest.js** en el editor de código:
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-Agregue lo siguiente a la matriz `staticTabs` vacía (`staticTabs":[]`) y agregue el siguiente objeto JSON:
+Agregue lo siguiente a la `staticTabs` matriz vacía ( `staticTabs":[]` ) y agregue el siguiente objeto JSON:
 
 ```json
 {
@@ -82,7 +82,7 @@ Agregue lo siguiente a la matriz `staticTabs` vacía (`staticTabs":[]`) y agregu
 
 Recuerde actualizar el componente de ruta **"contentURL"** **yourDefaultTabNameTab** con el nombre de la pestaña real.
 
-- Guarde el **manifiesto manifest. JSON**actualizado.
+- Guarde el **manifest.jsactualizado en**.
 
 - La página de contenido debe atenderse en un IFrame. Abra la **pestaña. ts** en el editor de código:
 
@@ -104,7 +104,7 @@ Abra un símbolo del sistema en el directorio del proyecto para completar las ta
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Para ver tu pestaña personal, ve a`http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+Para ver tu pestaña personal, ve a `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![captura de pantalla de pestaña personal](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -126,10 +126,10 @@ gulp ngrok-serve
 ## <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
 - Abra el cliente de Microsoft Teams. Si usa la [versión basada en Web](https://teams.microsoft.com) , puede inspeccionar el código Front-end con las [herramientas de desarrollo](~/tabs/how-to/developer-tools.md)de su explorador.
-- En el panel de *YourTeams* de la izquierda, seleccione `...` el menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo**.
+- En el panel de *YourTeams* de la izquierda, seleccione el `...` menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo**.
 - En el panel principal, seleccione **aplicaciones** en la barra de pestañas y elija **cargar una aplicación personalizada** ubicada en la esquina inferior derecha de la página.
 - Abra el directorio del proyecto, vaya a la carpeta **./Package** , seleccione la carpeta ZIP, haga clic con el botón secundario y elija **abrir**. La pestaña se cargará en Teams.
 
 ## <a name="view-your-personal-tabs"></a>Ver las pestañas personales
 
-En la barra de exploración situada en el extremo izquierdo del cliente de Microsoft Teams `...` , seleccione el menú y elija la aplicación en la lista.
+En la barra de exploración situada en el extremo izquierdo del cliente de Microsoft Teams, seleccione el `...` menú y elija la aplicación en la lista.

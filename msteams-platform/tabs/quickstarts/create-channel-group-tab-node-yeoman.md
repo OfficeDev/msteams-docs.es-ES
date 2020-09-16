@@ -1,17 +1,17 @@
 ---
-title: Crear una ficha de canal y de grupo personalizada con node. js y el generador de Yeoman para Microsoft Teams
+title: Crear una ficha de canal y de grupo personalizada con Node.js y el generador de Yeoman para Microsoft Teams
 author: laujan
 description: Una guía de inicio rápido para crear una ficha de canal y de grupo con el generador de Yeoman para Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: c5e028dcc117d729f2bf366923d03568b7f557a4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 77081f83c753f812032ccfebe2accd3cb8859f99
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675919"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818937"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crear una ficha de canal y de grupo personalizada con node. js y el generador de Yeoman para Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crear una ficha de canal y de grupo personalizada con Node.js y el generador de Yeoman para Microsoft Teams
 
 >[!NOTE]
 >En este tutorial, se siguen los pasos descritos en el sitio de creación de la [primera aplicación Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) wiki que se encuentra en el repositorio de github de Microsoft.
@@ -35,7 +35,7 @@ Seleccione **n**.
 >[!IMPORTANT]
 >El componente de ruta de **yourDefaultTabNameTab**, al que se hace referencia en este tutorial rápido, es el valor que escribió en el generador para el nombre de la **pestaña predeterminada** más la **pestaña**de Word.
 >
->Por ejemplo: DefaultTabName: **MyTab** => **/MyTabTab/**
+>Por ejemplo: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
 
 En el directorio del proyecto, vaya a lo siguiente:
 
@@ -43,7 +43,7 @@ En el directorio del proyecto, vaya a lo siguiente:
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-Es aquí donde encontrará la lógica de la pestaña. Busque el `render()` método y agregue la siguiente `<div>` etiqueta y el contenido a la parte superior `<PanelBody>` del código de contenedor:
+Es aquí donde encontrará la lógica de la pestaña. Busque el `render()` método y agregue la siguiente `<div>` etiqueta y el contenido a la parte superior del `<PanelBody>` código de contenedor:
 
 ```html
     <PanelBody>
@@ -61,7 +61,7 @@ Abra un símbolo del sistema en el directorio del proyecto para completar las ta
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Para ver la página de configuración de pestañas, vaya a `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. Debería ver lo siguiente:
+Para ver la página de configuración de pestañas, vaya a `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Debería ver lo siguiente:
 
 ![captura de pantalla de la página de configuración](~/assets/images/tab-images/configurationPage.png)
 
@@ -83,9 +83,9 @@ gulp ngrok-serve
 ## <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
 - Abra el cliente de Microsoft Teams. Si usa la [versión basada en Web](https://teams.microsoft.com) , puede inspeccionar el código Front-end con las [herramientas de desarrollo](~/tabs/how-to/developer-tools.md)de su explorador.
-- En el panel de *YourTeams* de la izquierda, seleccione `...` el menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo**.
+- En el panel de *YourTeams* de la izquierda, seleccione el `...` menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo**.
 - En el panel principal, seleccione **aplicaciones** en la barra de pestañas y elija **cargar una aplicación personalizada** ubicada en la esquina inferior derecha de la página.
 - Abra el directorio del proyecto, vaya a la carpeta **./Package** , seleccione la carpeta ZIP del paquete de la aplicación y elija **abrir**. La pestaña se cargará en Teams.
 - Vuelva a su equipo, elija el canal en el que desea mostrar la pestaña, seleccione ➕ de la barra de pestañas y elija la pestaña de la galería.
-- Siga las instrucciones para agregar una pestaña. tenga en cuenta que hay un cuadro de diálogo de configuración personalizada para la ficha canal o grupo.
+- Siga las instrucciones para agregar una pestaña. Tenga en cuenta que hay un cuadro de diálogo de configuración personalizada para la ficha canal o grupo.
 - Seleccione **Guardar** y la pestaña se agregará a la barra de pestañas del canal.

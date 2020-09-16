@@ -2,12 +2,12 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de las fichas de marco de trabajo
-ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021618"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819042"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -16,14 +16,9 @@ ms.locfileid: "45021618"
 >
 > Siga las [instrucciones para las pestañas de dispositivos móviles](./tabs-mobile.md) al crear las pestañas. Si su pestaña usa autenticación, debe actualizar el SDK de JavaScript de Teams a la versión 1.4.1 o posterior, o se producirá un error de autenticación.
 >
-> **Pestañas personales (estáticas) en dispositivos móviles:**
->
-> * Las pestañas estáticas (aplicación personal) están disponibles en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-> * Mientras crea las pestañas estáticas, asegúrese de seguir las [instrucciones para las pestañas de la móvil](~/tabs/design/tabs-mobile.md)
->
 > **Pestañas de canal o grupo (configurable) en dispositivos móviles:**
 >
-> * Los clientes móviles solo muestran las pestañas que tienen un valor para `websiteUrl` . Si desea que la pestaña aparezca en los clientes móviles de Teams, debe establecer el valor de `websiteUrl` .
+> * Los clientes móviles solo muestran pestañas configurables que tienen un valor para `websiteUrl` . Si desea que la pestaña aparezca en los clientes móviles de Teams, debe establecer el valor de `websiteUrl` .
 > * El comportamiento predeterminado de apertura en dispositivos móviles es abrir fuera del explorador con el `websiteUrl` . En el caso de las aplicaciones publicadas en la tienda de aplicaciones públicas, si desea que la ficha de canal se abra dentro de Teams de forma predeterminada, siga las [instrucciones para las pestañas de Mobile](~/tabs/design/tabs-mobile.md)y póngase en contacto con su representante de soporte técnico para que se le solicite que se le solicite que se le pida que
 
 Las pestañas son lienzos que se pueden usar para compartir contenido, mantener conversaciones y hospedar servicios de terceros, todo ello dentro del flujo de trabajo ecológico de un equipo. Cuando se crea una pestaña en Microsoft Teams, se coloca la aplicación web en su lugar y en el centro a la que se puede acceder fácilmente desde las conversaciones clave.
@@ -58,7 +53,7 @@ Los equipos se pueden usar en tamaños de ventana tan pequeños como 720px, por 
 
 ### <a name="flat-navigation"></a>Navegación plana
 
-Se pide a los desarrolladores que no agreguen todo su portal a una pestaña. mantener la navegación relativamente plana ayuda a mantener un modelo de conversación más sencillo. En otras palabras, la conversación trata sobre una lista de cosas, como los elementos de trabajo clasificados o de un solo elemento, como una especificación.
+Le pedimos a los desarrolladores que no agreguen todo su portal a una pestaña. Mantener la navegación relativamente plana ayuda a mantener un modelo de conversación más sencillo. En otras palabras, la conversación trata sobre una lista de cosas, como los elementos de trabajo clasificados o de un solo elemento, como una especificación.
 
 Hay desafíos de navegación inherentes a la jerarquía de navegación profunda en conversaciones encadenadas. Para obtener la mejor experiencia del usuario, la navegación de la pestaña debe mantenerse al mínimo y diseñarse de la siguiente manera:
 
@@ -103,7 +98,9 @@ La incorporación de sus propios colores y diseños Twill también ayuda para co
 
 Las dimensiones de la página de configuración de pestañas:
 
-<img width="450px" title="Tamaños de las pestañas de configuración" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="Tamaños de las pestañas de configuración" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Instrucciones para el formato de página de configuración de pestañas
 
@@ -117,7 +114,7 @@ Las dimensiones de la página de configuración de pestañas:
 
 Cuando esté correctamente ajustado, la página de configuración de pestaña debe tener un aspecto similar a este:
 
-<img width="450px" title="Nueva pestaña Configuración" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title="Nueva pestaña Configuración" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -139,7 +136,7 @@ Hay dos modos de notificación para cambios de contenido de pestañas:
 
 > [!div class="checklist"]
 >
-> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 > * **Usar un bot**. Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
 
-  El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando `@mention` hay usuarios específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.
+  El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando `@mention`  hay usuarios específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.

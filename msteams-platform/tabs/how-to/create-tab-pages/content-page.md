@@ -1,16 +1,16 @@
 ---
 title: Creación de una página de contenido
 author: laujan
-description: ''
+description: Cómo crear una página de contenido
 keywords: canal de grupo de pestañas de Teams configurable estático
 ms.topic: conceptual
-ms.author: v-laujan
-ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434492"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818909"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -60,7 +60,7 @@ Puede crear vínculos profundos a entidades en Microsoft Teams. Normalmente, est
 
 ### <a name="task-modules"></a>Módulos de tareas
 
-Un módulo de tareas es una experiencia modal de tipo popup que puede desencadenar desde su pestaña. normalmente, en una página de contenido no desea explorar al usuario a través de varias páginas. En su lugar, usará módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento en una lista o cualquier otro momento en que necesite presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o crearse completamente mediante tarjetas adaptables. Consulte [uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md) para obtener información completa.
+Un módulo de tareas es una experiencia modal de tipo popup que se puede desencadenar desde la ficha. Por lo general, en una página de contenido no desea desplazarse al usuario a través de varias páginas. En su lugar, usará módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento en una lista o cualquier otro momento en que necesite presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o crearse completamente mediante tarjetas adaptables. Consulte [uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md) para obtener información completa.
 
 ### <a name="valid-domains"></a>Dominios válidos
 
@@ -71,12 +71,12 @@ Asegúrese de que todos los dominios de dirección URL usados en las pestañas s
 Comenzando con [el esquema de manifiesto v 1.7](../../../resources/schema/manifest-schema.md), puede proporcionar un [indicador de carga nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) siempre que el contenido web se cargue en Microsoft Teams, por ejemplo, [Página de contenido](#integrate-your-code-with-teams)de la ficha, página de [configuración](configuration-page.md), [Página de eliminación](removal-page.md) y [módulos de tareas en las pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> Si indica `"showLoadingIndicator : true` en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de la ficha y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a continuación:
+> Si indica  `"showLoadingIndicator : true`  en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de la ficha y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a continuación:
 
 1. Para mostrar el indicador de carga, agregue `"showLoadingIndicator": true` al manifiesto. 
 2. Recuerde que debe llamar a `microsoftTeams.initialize();` .
-3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a`microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatorio**. Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si `notifySuccess` no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
+3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorio**. Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
 5. Si la aplicación no se puede cargar, puede llamar `microsoftTeams.appInitialization.notifyFailure(reason);` para informar a Microsoft Teams de que se ha producido un error. A continuación, se mostrará una pantalla de error al usuario:
 
 ```typescript

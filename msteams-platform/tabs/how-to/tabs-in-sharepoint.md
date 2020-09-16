@@ -4,13 +4,13 @@ author: laujan
 description: Cómo implementar la pestaña de Microsoft Teams existente en SharePoint como un elemento Web de SharePoint Framework.
 keywords: pestañas de Teams desarrollo de SharePoint Framework
 ms.topic: conceptual
-ms.author: ''
-ms.openlocfilehash: b29cd29891779a69a0342f10d383792b3818590a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675945"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818944"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Adición de una pestaña de Microsoft Teams en SharePoint como un elemento Web de SPFx
 
@@ -29,7 +29,7 @@ Con la versión de noviembre de Teams y SharePoint Framework v. 1,7, los desarro
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" alt="tab-in-sharepoint view"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -48,7 +48,7 @@ Con la versión de noviembre de Teams y SharePoint Framework v. 1,7, los desarro
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt="web-part-exposed-as-a-tab" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -87,37 +87,37 @@ La aplicación de ejemplo que estamos usando es una aplicación de administraci�
 
 Descargue el manifiesto de la aplicación de ejemplo desde [**aquí**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
-En Microsoft Teams, haga clic en el icono de la tienda en la esquina inferior izquierda y, a continuación, "cargar una aplicación personalizada" en la parte inferior izquierda. El archivo que se cargará se ubicará en la carpeta descargas; se denomina TalentMgmt-Azure. zip. Si todo va bien, verá la pantalla de instalación/consentimiento de la aplicación de administración del talento. Elija el equipo en el que desea instalar y haga clic en el botón instalar. Ahora tiene la libertad de experimentar con la aplicación.
+En Microsoft Teams, haga clic en el icono de la tienda en la esquina inferior izquierda y, a continuación, "cargar una aplicación personalizada" en la parte inferior izquierda. El archivo que se cargará se ubicará en la carpeta descargas; se llama TalentMgmt-Azure.zip. Si todo va bien, verá la pantalla de instalación/consentimiento de la aplicación de administración del talento. Elija el equipo en el que desea instalar y haga clic en el botón instalar. Ahora tiene la libertad de experimentar con la aplicación.
 
 ## <a name="step-2-using-the-teams-tab-in-sharepoint"></a>Paso 2: uso de la pestaña Microsoft Teams en SharePoint
 
-Para cargar e implementar el paquete de la aplicación Microsoft Teams en el `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`catálogo de aplicaciones `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`de SharePoint, visite, por ejemplo,.
+Para cargar e implementar el paquete de la aplicación Microsoft Teams en el catálogo de aplicaciones de SharePoint `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` , visite, por ejemplo, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` .
 
 Cuando se le solicite, habilite "hacer que esta solución esté disponible en todos los sitios de la organización":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+![Pestañas en la vista de SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
 En el sitio, cree una página nueva haciendo clic en el botón de engranaje situado en la esquina superior derecha y, a continuación, "agregar una página":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+![Vista de SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
 Verá la experiencia de creación de páginas de SharePoint. Asigne a la página el nombre "mi pestaña de Microsoft Teams".
 
 Abra el cuadro de herramientas del elemento Web presionando el botón + y seleccione la pestaña Microsoft Teams (denominada "Contoso HR"). Los elementos Web se ordenan alfabéticamente; Si se trata de una lista larga, puede usar la barra de búsqueda para encontrarla. Se creará un elemento Web en el lienzo que contiene la pestaña de Microsoft Teams:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+![Vista de pestaña](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
 Haga clic en el botón "publicar" cuando termine la edición.
 
 Puede que quiera hacer clic en "agregar página a navegación" para tener una referencia rápida a la página en la barra de navegación izquierda:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+![Pestaña en imagen de SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## <a name="step-3-explore-app-pages-in-sharepoint"></a>Paso 3: explorar las páginas de la aplicación en SharePoint
 
 Una vez publicada la página, puede explorar [la conversión de la aplicación de Microsoft Teams en una experiencia más completa dentro de SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Esto convierte la página actual en una página de la aplicación, que muestra el diseño de página de SharePoint normal con una experiencia de página completa para la pestaña Microsoft Teams:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+![Imagen de pestañas en SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="more-information"></a>Más información
 

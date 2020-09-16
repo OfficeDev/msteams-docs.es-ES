@@ -1,16 +1,16 @@
 ---
 title: Creación de una página de configuración
 author: laujan
-description: ''
+description: Cómo crear una página de configuración
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptualF
-ms.author: laujan
-ms.openlocfilehash: 55fe1efca4defacf10b9be34f788704b7b4491f5
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434485"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819028"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -102,7 +102,7 @@ La [interfaz de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.con
 
 1. Usar el método de [Team SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` .
 
-#### <a name="insert-placeholders-in-the-configurationurl"></a>Insertar marcadores de posición en el`configurationURL`
+#### <a name="insert-placeholders-in-the-configurationurl"></a>Insertar marcadores de posición en el `configurationURL`
 
 Los marcadores de posición de la interfaz de contexto se pueden agregar a la base `configurationUrl` . Por ejemplo:
 
@@ -162,7 +162,7 @@ Asegúrese de que todos los dominios usados en las páginas de pestañas se enum
 
 ## <a name="modify-or-remove-a-tab"></a>Modificación o eliminación de una pestaña
 
-Las opciones de eliminación admitidas pueden restringir aún más la experiencia del usuario. Puede habilitar a los usuarios para modificar, reconfigurar o cambiar el nombre de una pestaña de grupo o canal al establecer la propiedad del manifiesto `canUpdateConfiguration` en `true` .  Además, puede designar lo que ocurre con el contenido cuando se quita una pestaña incluyendo una página Opciones de eliminación en la aplicación y estableciendo un valor para la `removeUrl` propiedad en la `setSettings()` configuración (vea a continuación). Las pestañas personales no se pueden modificar, pero el usuario puede desinstalarlas. Para obtener más información, vea [crear una página de eliminación para la ficha](~/tabs/how-to/create-tab-pages/removal-page.md).
+Las opciones de eliminación admitidas pueden restringir aún más la experiencia del usuario. Puede habilitar a los usuarios para modificar, reconfigurar o cambiar el nombre de una pestaña de grupo o canal al establecer la propiedad del manifiesto `canUpdateConfiguration` en `true` .  Además, puede designar lo que ocurre con el contenido cuando se quita una pestaña incluyendo una página Opciones de eliminación en la aplicación y estableciendo un valor para la `removeUrl` propiedad en la  `setSettings()` configuración (vea a continuación). Las pestañas personales no se pueden modificar, pero el usuario puede desinstalarlas. Para obtener más información, vea [crear una página de eliminación para la ficha](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## <a name="mobile-clients"></a>Clientes móviles
 

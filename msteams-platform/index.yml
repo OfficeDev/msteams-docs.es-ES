@@ -10,12 +10,12 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 3ddefb1b0f01c5b2add719dbe61972eae405a959
-  ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+  ms.openlocfilehash: b67453a5d8f190dd03bd369dc6e019afe0950d4c
+  ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/15/2020
-  ms.locfileid: "45137671"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "47819091"
 highlightedContent:
   items:
   - title: "¿Es la novedad del desarrollo de Microsoft Teams? \U0001F680Empiece aquí."
@@ -87,7 +87,7 @@ conceptualContent:
     - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
       itemType: get-started
       text: Crear una aplicación de Teams con C#/.NET y app Studio
-  - title: Implementación
+  - title: Implementar
     links:
     - url: /microsoftteams/platform/samples/app-templates
       itemType: deploy
@@ -106,9 +106,11 @@ conceptualContent:
     - url: https://aka.ms/microsoftteamscommunitycall
       itemType: overview
       text: Llamadas de la comunidad de Microsoft Teams
+  - title: Ayuda de la comunidad
+    links:
     - url: /microsoftteams/platform/feedback
       itemType: overview
-      text: Soporte & de comentarios
+      text: Comunidad de desarrolladores de Microsoft Teams y respuesta
 tools:
   title: SDK & herramientas
   items:

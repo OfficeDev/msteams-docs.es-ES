@@ -2,17 +2,17 @@
 title: Pestañas en dispositivos móviles
 description: Describe las instrucciones para diseñar pestañas que funcionan en dispositivos móviles.
 keywords: guías de diseño de Microsoft Teams referencia del marco de trabajo de aplicaciones móviles
-ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: d47039c245b8e262af6e1f60bc0c644dc7e65bd6
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145931"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819049"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
 > [!NOTE]
-> Si elige que la ficha canal/grupo aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad (vea a continuación). Las pestañas personales están actualmente disponibles en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). Pronto se ofrecerá compatibilidad completa para las pestañas en los clientes móviles. Para preparar la actualización, debe seguir los presentados aquí cuando cree sus pestañas.
+> Si elige que la ficha canal/grupo aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad (vea a continuación).
 
 Las pestañas personalizadas pueden formar parte de un canal, un chat en grupo o una aplicación personal (aplicaciones que contienen pestañas estáticas y/o un bot de uno a uno).
 
@@ -92,7 +92,7 @@ El uso de nuestra paleta neutra aprobada para fondos, notificaciones, texto y bo
 
 La forma en que los botones están estilo ayuda a comunicar el tipo de acción que desencadenan. Mantenemos una amplia gama de botones que tienen formato para mostrar distintos niveles de énfasis. Los botones pueden tener texto, un icono o una combinación de texto y un icono. Para comunicar distintos niveles de una jerarquía, se diseñaron botones principales y secundarios dentro de cada categoría.
 
-![situados](~/assets/images/buttons.png)
+![imagen de botones](~/assets/images/buttons.png)
 
 ![controles de selección](~/assets/images/selection-controls.png)
 

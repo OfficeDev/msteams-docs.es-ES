@@ -3,13 +3,13 @@ title: Crear una pestaña personal con ASP. NET Core MVC
 author: laujan
 description: Una guía de inicio rápido para crear una ficha personal personalizada con ASP. NET Core MVC.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 3bdd23692eca5ff3f6fc3f82cdaa233d34d4c69f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 7fcb0862647dec15bc93eecf9ce637d52892825c
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675709"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818916"
 ---
 # <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>Cree una ficha personal personalizada con ASP. NET Core MVC
 
@@ -37,7 +37,7 @@ Para compilar y ejecutar la aplicación, presione **F5** o elija **iniciar depur
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de un ASP. Plantilla de la aplicación web NET Core 2,2 con la casilla de verificación *avanzadas-configurar para https* seleccionada en la instalación. Los servicios MVC se registran mediante el método del marco `ConfigureServices()` de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de `Configure()` archivos estáticos se agrega al método:
+Este proyecto se creó a partir de un ASP. Plantilla de la aplicación web NET Core 2,2 con la casilla de verificación *avanzadas-configurar para https* seleccionada en la instalación. Los servicios MVC se registran mediante el método del marco de inserción de dependencias `ConfigureServices()` . Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,9 +61,9 @@ Esta carpeta contiene los siguientes archivos de paquete de la aplicación oblig
 
 * Un **icono de color completo** que mide 192 x 192 píxeles.
 * Un **icono de contorno transparente** que mide 32 x 32 píxeles.
-* Un archivo **manifest. JSON** que especifica los atributos de la aplicación.
+* Un **manifest.jsen** archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams. Microsoft Teams cargará `contentUrl` el especificado en el manifiesto, lo incrustará en un iframe y lo representará en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams. Microsoft Teams cargará el `contentUrl` especificado en el manifiesto, lo incrustará en un iframe y lo representará en la pestaña.
 
 ### <a name="csproj"></a>. csproj
 
@@ -93,7 +93,7 @@ En la ventana Explorador de soluciones de Visual Studio, haga clic con el botón
 
 ### <a name="views"></a>Vistas
 
-#### <a name="home"></a>Inicio
+#### <a name="home"></a>Home
 
 Páginas. NET Core trata los archivos denominados *index* como página principal o predeterminada del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, se mostrará *index. cshtml* como la Página principal de la aplicación.
 
@@ -115,7 +115,7 @@ Los controladores usan la propiedad ViewBag para transferir valores de forma din
 ngrok http https://localhost:44345 -host-header="localhost:44345"
 ```
 
-* Ngrok escuchará las solicitudes de Internet y las dirigirá a la aplicación cuando se ejecute en el puerto 44325.  Debe ser similar a `https://y8rPrT2b.ngrok.io/` donde *y8rPrT2b* se reemplaza por su dirección URL https alfanumérica de ngrok.
+* Ngrok escuchará las solicitudes de Internet y las dirigirá a la aplicación cuando se ejecute en el puerto 44325.  Debe ser similar `https://y8rPrT2b.ngrok.io/` a donde *y8rPrT2b* se reemplaza por su dirección URL https alfanumérica de ngrok.
 
 * Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome nota de la dirección URL, que lo necesitará más adelante.
 
