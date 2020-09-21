@@ -1,15 +1,15 @@
 ---
 title: Descripción de las funcionalidades de la aplicación Teams
 author: heath-hamilton
-description: Información general de las capacidades y los puntos de extensión de Teams
+description: Información general sobre las capacidades de la plataforma de Microsoft Teams, que son los puntos de extensión para crear aplicaciones de Teams.
 ms.topic: overview
-ms.author: v-heha
-ms.openlocfilehash: f83cf0240b32d35028135b48e7d4c56b939777a9
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.author: lajanuar
+ms.openlocfilehash: 9bb94d2cfd5c30b2245c5ccf580d374972315e72
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819084"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964567"
 ---
 # <a name="understanding-teams-app-capabilities"></a>Descripción de las funcionalidades de la aplicación Teams
 
@@ -36,6 +36,6 @@ A medida que se familiarice con el desarrollo de aplicaciones de Microsoft Teams
 
 La elección de la combinación correcta de capacidades y convenciones, controles y elementos de la interfaz de usuario se refiere a [comprender los casos de uso de la audiencia](../concepts/design/understand-use-cases.md).
 
-## <a name="learn-more"></a>Más información
+## <a name="learn-more"></a>Obtén más información
 
 * [Empezar a planear la aplicación](../concepts/extensibility-points.md)

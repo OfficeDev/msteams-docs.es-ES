@@ -4,12 +4,12 @@ author: clearab
 description: Cómo agregar la autenticación OAuth a un bot en Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0ec80c558a34af70530175d340869895fd2fda81
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 403072efeccdd09e46ac93e2e811ee2d10131668
+ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819098"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "48097889"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación a su bot de Teams
 
@@ -81,7 +81,7 @@ Puede usar un grupo de recursos para crear recursos individuales para el marco d
 El registro de los canales de bot registra el servicio web como un bot con bot Framework, siempre que tenga un identificador de aplicación de Microsoft y una contraseña de aplicación (secreto de cliente).
 
 > [!IMPORTANT]
-> Solo tiene que registrar el bot si no está hospedado en Azure. Si ha [creado un bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0) a través de Azure portal, ya está registrado con el servicio. Si ha creado el bot a través del [marco de robots](https://dev.botframework.com/bots/new) o [AppStudio](~/concepts/build-and-test/app-studio-overview.md) , el bot no está registrado en Azure.
+> Solo tiene que registrar el bot si no está hospedado en Azure. Si ha [creado un bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) a través de Azure portal, ya está registrado con el servicio. Si ha creado el bot a través del [marco de robots](https://dev.botframework.com/bots/new) o [AppStudio](~/concepts/build-and-test/app-studio-overview.md) , el bot no está registrado en Azure.
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -124,7 +124,7 @@ En este procedimiento, usará un proveedor de Azure AD; también se pueden usar 
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar la conexión del proveedor de identidad y registrarla con el bot
 
-Nota: hay dos opciones para los proveedores de servicios aquí: Azure AD V1 y Azure AD V2.  [Aquí](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)se resumen las diferencias entre los dos proveedores, pero en general, V2 proporciona más flexibilidad con respecto al cambio de los permisos de bot.  Los permisos de la API de Graph se muestran en el campo ámbitos y, a medida que se agregan nuevos, los bots permitirán a los usuarios dar su consentimiento a los nuevos permisos en el siguiente inicio de sesión.  Para V1, el consentimiento del bot debe ser eliminado por el usuario para que se le soliciten nuevos permisos en el cuadro de diálogo de OAuth. 
+Nota: hay dos opciones para los proveedores de servicios aquí: Azure AD V1 y Azure AD V2.  [Aquí](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)se resumen las diferencias entre los dos proveedores, pero en general, V2 proporciona más flexibilidad con respecto al cambio de los permisos de bot.  Los permisos de la API de Graph se muestran en el campo ámbitos y, a medida que se agregan nuevos, los bots permitirán a los usuarios dar su consentimiento a los nuevos permisos en el siguiente inicio de sesión.  Para V1, el consentimiento del bot debe ser eliminado por el usuario para que se le soliciten nuevos permisos en el cuadro de diálogo de OAuth. 
 
 #### <a name="azure-ad-v1"></a>Azure AD v1
 
@@ -149,7 +149,7 @@ Nota: hay dos opciones para los proveedores de servicios aquí: Azure AD V1 y Az
     h. En **dirección URL del recurso**, escriba `https://graph.microsoft.com/` . No se usa en el ejemplo de código actual.  
     i. Deje los **ámbitos** en blanco. La siguiente imagen es un ejemplo:
 
-    ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1 View](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
 1. Seleccione **Guardar**.
 
@@ -183,12 +183,12 @@ Nota: hay dos opciones para los proveedores de servicios aquí: Azure AD V1 y Az
 1. La primera vez que lo haga, se abrirá una nueva ventana del explorador en la que se le pedirá que seleccione una cuenta. Seleccione el que desee usar.
 1. A continuación, se le pedirá que lo permita al proveedor de identidades para usar sus datos (credenciales). La siguiente imagen es un ejemplo:
 
-    ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+    ![Adv1 de cadena de conexión de autenticación de bot Teams](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Seleccione **Aceptar**.
 1. Esto debería redirigirle a una **conexión de prueba para que la página se haya \<your-connection-name> realizado correctamente** . Actualice la página si recibe un error. La siguiente imagen es un ejemplo:
 
-  ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+  ![conexión de la aplicación de bots de Teams Str Adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 El código de bot usa el nombre de la conexión para recuperar los tokens de autenticación de usuario.
 
@@ -391,7 +391,7 @@ Para configurar ngrok en preparación para la ejecución local de la aplicación
 1. Ejecutar, por ejemplo, `ngrok http 3978 --host-header=localhost:3978` . Reemplace el número de Puerto según sea necesario.
 Se inicia ngrok para escuchar en el puerto especificado. A cambio, le proporciona una dirección URL que se puede direccionar externamente, válida durante el tiempo que se ejecute ngrok. La siguiente imagen es un ejemplo:
 
-    ![la cadena de conexión de autenticación de la aplicación bots de Microsoft Teams Adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+    ![cadena de conexión de autenticación de la aplicación bot de Teams Adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Copie la dirección HTTPS de reenvío. Debe ser similar a la siguiente: `https://dea822bf.ngrok.io/` .
 1. Anexe `/api/messages` para obtener `https://dea822bf.ngrok.io/api/messages` . Este es el **punto de conexión de mensajes** para que el bot se ejecute localmente en el equipo y sea accesible a través de la web en un chat en Microsoft Teams.

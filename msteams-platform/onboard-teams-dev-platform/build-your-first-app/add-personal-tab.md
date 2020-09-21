@@ -3,12 +3,14 @@ title: Crear una pestaña personal para Teams
 author: heath-hamilton
 description: Obtenga información sobre cómo crear una pestaña personal en su primera aplicación de Microsoft Teams.
 ms.topic: tutorial
-ms.openlocfilehash: 1c782adce2201550d30d658907d507dc6a1337f3
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.author: lajanuar
+ms.date: 08/31/2020
+ms.openlocfilehash: 5dbe3a8314102807992b15e34a15c23f395c4d74
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652229"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964602"
 ---
 # <a name="create-a-personal-tab-for-teams"></a>Crear una pestaña personal para Teams
 
@@ -18,7 +20,7 @@ Hay dos tipos de pestañas en Teams. En este tutorial, creará una *pestaña per
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Necesita una aplicación básica que se ejecute para empezar. Si no tiene uno, vea [crear y ejecutar su aplicación primera aplicación Teams](build-and-run-with-toolkit.md).
+Necesita una pestaña personal de ejecución básica para empezar. Si no tiene uno, vea [crear y ejecutar su aplicación primera aplicación Teams](../build-your-first-app/build-and-run.md).
 
 ## <a name="your-assignment"></a>La asignación
 
@@ -29,12 +31,12 @@ Las personas de su organización tienen problemas para encontrar información de
 > [!div class="checklist"]
 >
 > * Identificar las propiedades del manifiesto de la aplicación y los scaffolding relevantes para las pestañas personales
-> * Crear contenido para la pestaña
-> * Actualizar el tema de color de la pestaña según las preferencias del usuario
+> * Crear contenido de ficha
+> * Actualizar el tema de color de una pestaña según las preferencias del usuario
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>Identificar los componentes relevantes del manifiesto de la aplicación y los componentes de scaffolding
+## <a name="identify-relevant-app-project-components"></a>Identificar los componentes relevantes del proyecto de aplicación
 
-Gran parte del manifiesto y el uso de scaffolding de la aplicación de pestaña personal se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña personal.
+La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña personal.
 
 ### <a name="app-manifest"></a>Manifiesto de la aplicación
 
@@ -108,17 +110,17 @@ Agregue la regla siguiente a para que `App.css` los vínculos de correo electró
 
 Guarde los cambios. Vaya a la pestaña de la aplicación en Microsoft Teams para ver el nuevo contenido.
 
-![Captura de pantalla de ejemplo de una pestaña personal con contenido estático](../doc-links/images/personal-tab-tutorial-content.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="Ejemplo de captura de pantalla de la pestaña personal con contenido estático.":::
 
 ## <a name="update-the-tab-theme"></a>Actualizar el tema de pestaña
 
 Las aplicaciones buenas se sienten nativas para Teams, por lo que es importante la pestaña se combina con el tema de teams que prefieren los usuarios: predeterminado (claro), oscuro o contraste alto. Como puede haber notado en la última captura de pantalla, la pestaña todavía tiene un fondo claro cuando el cliente usa el tema oscuro. Esta no es una experiencia de usuario recomendada.
 
-El [SDK del cliente de JavaScript para Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) puede hacer que su aplicación conozca y reaccione a los cambios de tema en el cliente. Vamos a examinar cómo hacerlo.
+El [SDK del cliente de JavaScript para Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) puede hacer que su aplicación conozca y reaccione a los cambios de tema en el cliente. Vamos a examinar cómo hacerlo.
 
 ### <a name="get-context-about-the-teams-client"></a>Obtener contexto sobre el cliente de Teams
 
-En el `Tab.js` archivo, hay una `microsoftTeams.getContext()` llamada que proporciona [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) información acerca del tema del cliente configurado, entre otros detalles. Gracias a la técnica scaffolding de la aplicación, use este código tal y como está para obtener acceso a la `context` interfaz y sus propiedades.
+En el `Tab.js` archivo, hay una `microsoftTeams.getContext()` llamada que proporciona [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) información acerca del tema del cliente configurado, entre otros detalles. Gracias a la técnica scaffolding de la aplicación, use este código tal y como está para obtener acceso a la `context` interfaz y sus propiedades.
 
 ```JavaScript
   componentDidMount(){
@@ -179,23 +181,22 @@ Proporcionar una lógica condicional para representar los estilos de la ficha ba
 
 Compruebe la pestaña en Microsoft Teams. La apariencia debe coincidir exactamente con el tema oscuro.
 
-![Captura de pantalla de ejemplo de una pestaña personal con contenido estático](../doc-links/images/personal-tab-tutorial-updated-theme.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-updated-theme.png" alt-text="Ejemplo de captura de pantalla de una pestaña personal con contenido estático.":::
 
 ## <a name="well-done"></a>Bien hecho
 
 ¡Enhorabuena! Tiene una aplicación de Microsoft Teams con una pestaña personal que facilita la búsqueda de contactos importantes en la organización.
 
-## <a name="next-step"></a>Paso siguiente
-
-Sabe cómo crear una pestaña para uso personal. Echemos un vistazo a lo que se necesita para crear una pestaña para los canales y chats del equipo.
-
-> [!div class="nextstepaction"]
-> [Crear una ficha de canal](add-channel-tab.md)
-
-## <a name="learn-more"></a>Más información
+## <a name="learn-more"></a>Obtén más información
 
 * [Autenticar usuarios de pestaña con SSO](../../tabs/how-to/authentication/auth-aad-sso.md): si solo quiere que los usuarios autorizados vean su pestaña, configure el inicio de sesión único (SSO) a través de Azure Active Directory (ad).
 * [Insertar contenido de una aplicación web o página web existente](../../tabs/how-to/add-tab.md#tab-requirements): le mostramos cómo crear nuevo contenido para una pestaña personal, pero también puede cargar contenido desde una dirección URL externa.
 * [Crear una experiencia sin problemas para su pestaña](../../tabs/design/tabs.md): Consulte las directrices recomendadas para diseñar pestañas de Microsoft Teams.
-* [Crear pestañas para dispositivos móviles](../../tabs/design/tabs-mobile.md): comprenda cómo desarrollar pestañas para smartphones y tabletas.
+* [Crear pestañas para móviles](../../tabs/design/tabs-mobile.md): comprenda cómo desarrollar pestañas para teléfonos y tabletas.
 
+## <a name="next-lesson"></a>Lección siguiente
+
+Sabe cómo crear una pestaña para uso personal. Echemos un vistazo a lo que se necesita para crear una pestaña para los canales y chats del equipo.
+
+> [!div class="nextstepaction"]
+> [Crear una ficha de canal](../build-your-first-app/add-channel-tab.md)

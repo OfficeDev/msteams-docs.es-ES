@@ -5,12 +5,12 @@ description: Cómo crear una página de eliminación de pestañas
 keywords: Grupo de pestañas de Teams configuración de canal quitar eliminar
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818902"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964595"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modificar o quitar una pestaña de grupo de canales
 
@@ -39,7 +39,7 @@ La página de eliminación opcional es una página HTML que se hospeda y se mues
 
 ### <a name="register-a-remove-handler"></a>Registro de un controlador de eliminación
 
-De forma opcional, dentro de la lógica de la página de eliminación, puede invocar el `registerOnRemoveHandler((RemoveEvent) => {}` controlador de eventos cuando el usuario quita una configuración de pestaña existente. El método toma la [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interfaz y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. Se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que enciende el contenido de la pestaña. Solo se puede registrar un controlador de eliminación a la vez.
+De forma opcional, dentro de la lógica de la página de eliminación, puede invocar el `registerOnRemoveHandler((RemoveEvent) => {}` controlador de eventos cuando el usuario quita una configuración de pestaña existente. El método toma la [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interfaz y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. Se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que enciende el contenido de la pestaña. Solo se puede registrar un controlador de eliminación a la vez.
 
 La `RemoveEvent` interfaz describe un objeto con dos métodos:
 
@@ -49,11 +49,11 @@ La `RemoveEvent` interfaz describe un objeto con dos métodos:
 
 #### <a name="use-the-getsettings-function"></a>Usar la `getSettings()` función
 
-Puede usar `getSettings()` para designar el contenido de la pestaña que se va a quitar. La `getSettings((Settings) =>{})` función toma el [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) y proporciona los valores de propiedad de configuración válidos que se pueden recuperar.
+Puede usar `getSettings()` para designar el contenido de la pestaña que se va a quitar. La `getSettings((Settings) =>{})` función toma el [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) y proporciona los valores de propiedad de configuración válidos que se pueden recuperar.
 
 #### <a name="use-the-getcontext-function"></a>Usar la `getContext()` función
 
-Puede usar `getContext()` para recuperar el contexto actual en el que se ejecuta el marco. La `getContext((Context) =>{})` función toma el [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) y proporciona valores de `Context` propiedad válidos que puede usar en la lógica de la página de eliminación para determinar el contenido que se muestra en la página de eliminación.
+Puede usar `getContext()` para recuperar el contexto actual en el que se ejecuta el marco. La `getContext((Context) =>{})` función toma el [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) y proporciona valores de `Context` propiedad válidos que puede usar en la lógica de la página de eliminación para determinar el contenido que se muestra en la página de eliminación.
 
 #### <a name="include-authentication"></a>Incluir autenticación
 

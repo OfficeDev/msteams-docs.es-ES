@@ -3,14 +3,14 @@ title: Creación de una página de configuración
 author: laujan
 description: Cómo crear una página de configuración
 keywords: canal de grupo de pestañas de Teams configurable
-ms.topic: conceptualF
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819028"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964609"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -22,7 +22,7 @@ Una página de configuración es un tipo especial de [Página de contenido](cont
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuración de una pestaña de chat de grupo o de canal
 
-Una página de configuración informa A la página de contenido sobre cómo debe representarse. La aplicación debe hacer referencia al [SDK del cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) y llamar a `microsoft.initialize()` . Además, las direcciones URL deben ser extremos HTTPS seguros y disponibles en la nube. A continuación se muestra un ejemplo de página de configuración.
+Una página de configuración informa A la página de contenido sobre cómo debe representarse. La aplicación debe hacer referencia al [SDK del cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) y llamar a `microsoft.initialize()` . Además, las direcciones URL deben ser extremos HTTPS seguros y disponibles en la nube. A continuación se muestra un ejemplo de página de configuración.
 
 ```html
 <head>
@@ -85,7 +85,7 @@ Aquí, al usuario se le presentan dos botones de opción, **Seleccione gris** o 
 1. `microsoftTeams.settings.registerOnSaveHandler()`Se desencadena el controlador de eventos.
 1. El botón **Guardar** de la página Configuración de la aplicación, cargado en Microsoft Teams, está habilitado.
 
-Este código permite que los equipos sepan que se han cumplido los requisitos de configuración y que la instalación puede continuar. Al **Guardar**, `settings.setSettings()` se configuran los parámetros de, tal y como se define en la `Settings` interfaz, para la instancia actual (consulte la [interfaz de configuración](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) ). Por último, `saveEvent.notifySuccess()` se llama a para indicar que la dirección URL del contenido se ha resuelto correctamente.
+Este código permite que los equipos sepan que se han cumplido los requisitos de configuración y que la instalación puede continuar. Al **Guardar**, `settings.setSettings()` se configuran los parámetros de, tal y como se define en la `Settings` interfaz, para la instancia actual (consulte la [interfaz de configuración](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Por último, `saveEvent.notifySuccess()` se llama a para indicar que la dirección URL del contenido se ha resuelto correctamente.
 
 >[!NOTE]
 >
@@ -96,11 +96,11 @@ Este código permite que los equipos sepan que se han cumplido los requisitos de
 
 Es posible que la pestaña requiera información contextual para mostrar contenido relevante. La información contextual puede mejorar aún más el atractivo de su pestaña proporcionando una experiencia de usuario más personalizada.
 
-La [interfaz de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) de Microsoft Teams define las propiedades que se pueden usar para la configuración de pestañas. Puede recopilar los valores de las variables de datos de contexto de dos maneras:
+La [interfaz de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) de Microsoft Teams define las propiedades que se pueden usar para la configuración de pestañas. Puede recopilar los valores de las variables de datos de contexto de dos maneras:
 
 1. Insertar marcadores de posición de cadena de consulta de URL en el manifiesto `configurationURL` .
 
-1. Usar el método de [Team SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` .
+1. Usar el método de [Team SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{}` .
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insertar marcadores de posición en el `configurationURL`
 
@@ -139,7 +139,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar la `getContext()` función para recuperar el contexto
 
-Cuando se invoca, la `microsoftTeams.getContext((context) => {})` función recupera la [interfaz de contexto](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest). Puede Agregar esta función a la página de configuración para recuperar los valores de contexto:
+Cuando se invoca, la `microsoftTeams.getContext((context) => {})` función recupera la [interfaz de contexto](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Puede Agregar esta función a la página de configuración para recuperar los valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->

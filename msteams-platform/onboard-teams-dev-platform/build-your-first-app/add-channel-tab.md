@@ -1,14 +1,16 @@
 ---
-title: Crear una pestaña de canal para Teams
 author: heath-hamilton
 description: Obtenga información sobre cómo crear una pestaña de canal en su primera aplicación de Microsoft Teams.
+ms.author: lajanuar
+ms.date: 08/31/2020
 ms.topic: tutorial
-ms.openlocfilehash: f0c59328219b5611efc02c9eb04db6fdc517ca08
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+title: Crear una pestaña de canal para Teams
+ms.openlocfilehash: 2346c67d10ea857bdafbfac6d29a07cb58f5c644
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652230"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964616"
 ---
 # <a name="create-a-channel-tab-for-teams"></a>Crear una pestaña de canal para Teams
 
@@ -16,7 +18,7 @@ En este tutorial, creará una ficha básica de *canal*, una página de contenido
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Necesita una aplicación básica que se ejecute para empezar. Si no tiene uno, siga las instrucciones de la [compilación y ejecute la primera aplicación de Teams](build-and-run-with-toolkit.md). Al crear el proyecto de la aplicación, elija solo la opción de la **ficha canal de grupo o de Teams** .
+Necesita una aplicación básica que se ejecute para empezar. Si no tiene una, siga la [compilación y ejecute las instrucciones de la primera aplicación de Teams](../build-your-first-app/build-and-run.md). Al crear el proyecto de la aplicación, elija solo la opción de la **ficha canal de grupo o de Teams** .
 
 ## <a name="your-assignment"></a>La asignación
 
@@ -28,15 +30,15 @@ Puede facilitar la búsqueda de esta información si crea una pestaña de canal,
 
 > [!div class="checklist"]
 >
-> * Identificar el manifiesto de la aplicación y los componentes de scaffolding relevantes para las pestañas de canal
-> * Crear contenido para la pestaña
+> * Identificar las propiedades del manifiesto de la aplicación y los scaffolding relevantes para las pestañas de canal
+> * Crear contenido de ficha
 > * Crear contenido para la página de configuración de una pestaña
-> * Permitir la configuración y la instalación de la ficha
+> * Permitir la configuración y la instalación de una pestaña
 > * Proporcionar un nombre de pestaña sugerido
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>Identificar los componentes relevantes del manifiesto de la aplicación y los componentes de scaffolding
+## <a name="identify-relevant-app-project-components"></a>Identificar los componentes relevantes del proyecto de aplicación
 
-Gran parte del manifiesto y el manifiesto de la aplicación de pestañas de canal se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña de canal.
+La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña de canal.
 
 ### <a name="app-manifest"></a>Manifiesto de la aplicación
 
@@ -141,7 +143,7 @@ Agregue contenido a la página de configuración. Vaya al directorio del proyect
 
 ## <a name="allow-the-tab-to-be-configured-and-installed"></a>Permitir la configuración y la instalación de la ficha
 
-Para que los usuarios puedan configurar e instalar correctamente la ficha canal, debe agregar la dirección URL de host que configuró al [crear y ejecutar su primera aplicación](build-and-run-with-toolkit.md) en el componente de página de configuración.
+Para que los usuarios puedan configurar e instalar correctamente la ficha canal, debe agregar la dirección URL de host que configuró al [crear y ejecutar su primera aplicación](../build-your-first-app/build-and-run.md) en el componente de página de configuración.
 
 Vaya a `TabConfig.js` y busque `microsoftTeams.settings.setSettings` . Para `"contentUrl"` , reemplace la `localhost:3000` parte de la dirección URL con el dominio en el que hospeda el contenido de la pestaña (como se muestra).
 
@@ -177,19 +179,26 @@ Para ver las páginas de contenido y configuración de la pestaña de canal, deb
 1. Elija **Agregar a un equipo** o **Agregar a un chat** y busque un canal o un chat que pueda usar para las pruebas.
 1. Seleccione **configurar una pestaña**. Aparece la página Configuración.
 
-:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Captura de pantalla de ejemplo de una página de configuración de ficha de canal":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Ejemplo de captura de pantalla de una pestaña de canal con contenido estático.":::
 
 Una vez que seleccione **Guardar** para configurar la ficha, se mostrará el contenido.
 
-![Captura de pantalla de ejemplo de una pestaña de canal con contenido estático](../doc-links/images/channel-tab-tutorial-content-installed.png)
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="Ejemplo de captura de pantalla de la ficha canal con contenido estático.":::
 
 ## <a name="well-done"></a>Bien hecho
 
 ¡Enhorabuena! Tiene una aplicación de Microsoft Teams con una pestaña de canal para mostrar contenido útil en canales y chats.
 
-## <a name="learn-more"></a>Más información
+## <a name="learn-more"></a>Obtén más información
 
 * [Autenticar usuarios de pestaña con SSO](../../tabs/how-to/authentication/auth-aad-sso.md): si solo quiere que los usuarios autorizados vean su pestaña, configure el inicio de sesión único (SSO) a través de Azure Active Directory (ad).
 * [Insertar contenido de una aplicación web o página web existente](../../tabs/how-to/add-tab.md#tab-requirements): le mostramos cómo crear nuevo contenido para una pestaña personal, pero también puede cargar contenido desde una dirección URL externa.
 * [Crear una experiencia sin problemas para su pestaña](../../tabs/design/tabs.md): Consulte las directrices recomendadas para diseñar pestañas de Microsoft Teams.
-* [Crear pestañas para dispositivos móviles](../../tabs/design/tabs-mobile.md): comprenda cómo desarrollar pestañas para smartphones y tabletas.
+* [Crear pestañas para móviles](../../tabs/design/tabs-mobile.md): comprenda cómo desarrollar pestañas para teléfonos y tabletas.
+
+## <a name="next-lesson"></a>Lección siguiente
+
+Sabe cómo crear una pestaña para la colaboración. ¿Desea intentar compilar un tipo diferente de aplicación de Teams?
+
+> [!div class="nextstepaction"]
+> [Crear un bot](../build-your-first-app/add-bot.md)
