@@ -1,17 +1,17 @@
 ---
-title: Diseño de un cuadro de diálogo de Microsoft Teams en la reunión
+title: Diseñar un cuadro de diálogo de Microsoft Teams en la reunión
 author: heath-hamilton
 description: Instrucciones y procedimientos recomendados para diseñar un cuadro de diálogo en reunión para Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 449e6cdf9aecefba9fe70099c961ab56955306f8
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 8e9671d8d284311d3d0a299573d3f0e08b195e97
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098111"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178333"
 ---
-# <a name="designing-an-in-meeting-dialog"></a>Diseño de un cuadro de diálogo en la reunión
+# <a name="design-an-in-meeting-dialog"></a>Diseñar un cuadro de diálogo en la reunión
 
 Los cuadros de diálogo en la reunión se muestran en la fase de reunión de Microsoft Teams. Requieren la atención, la confirmación o la interacción del usuario, pero son sutiles y no interrumpen la reunión.
 

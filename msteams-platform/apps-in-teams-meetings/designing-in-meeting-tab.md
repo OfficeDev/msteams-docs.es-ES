@@ -1,17 +1,17 @@
 ---
-title: Diseño de una ficha en la reunión de Microsoft Teams
+title: Diseñar una ficha en la reunión de Microsoft Teams
 author: heath-hamilton
 description: Instrucciones y procedimientos recomendados para diseñar la pestaña en la reunión de Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: ec095654f4a0816478b1b32a45c931d74dbb3209
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 91981ab79c8e50483568dd0dc750b4e9b3fdef24
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098075"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178326"
 ---
-# <a name="designing-an-in-meeting-tab"></a>Diseño de una pestaña en la reunión
+# <a name="design-an-in-meeting-tab"></a>Diseñar una pestaña en la reunión
 
 La pestaña en reunión es un lienzo para aumentar la colaboración durante las reuniones. Según la funcionalidad de la pestaña Microsoft Teams, los asistentes pueden ver e interactuar con el contenido de la aplicación en un espacio dedicado fuera de la fase de reunión a través de vistas compartidas o basadas en roles.
 
