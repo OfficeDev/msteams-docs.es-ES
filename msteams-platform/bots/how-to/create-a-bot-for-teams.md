@@ -5,12 +5,12 @@ description: Cómo crear un bot para Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635301"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178319"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Crear un bot para Microsoft Teams
 
@@ -171,7 +171,14 @@ Para crear un paquete de aplicación, debe agregar el manifiesto de la aplicaci�
 
 ## <a name="upload-your-package-to-microsoft-teams"></a>Cargar el paquete en Microsoft Teams
 
+> [!NOTE]
+> Para cargar satisfactoriamente el bot, el administrador del espacio empresarial debe antes [permitir la carga](/microsoftteams/manage-apps#manage-org-wide-app-settings) de aplicaciones de terceros o personalizadas en Teams.
+
 Si ha estado usando App Studio, puede instalar la aplicación desde la pestaña **Probar y distribuir** en el **Editor de manifiestos**. Como alternativa, puede instalar el paquete de la aplicación haciendo clic en el menú de desbordamiento `...` desde el panel de navegación izquierdo, al hacer clic en **Más aplicaciones** y el vínculo **Cargar una aplicación personalizada**. También puede importar un manifiesto de aplicación o un paquete de aplicación en App Studio para realizar actualizaciones adicionales antes de cargarlas.
+
+## <a name="bots-in-teams-meetings"></a>Bots en reuniones de Teams
+
+Teams admite la invocación de bots durante las reuniones. Cuando el bot recibe el mensaje de invocación, puede identificar el usuario y el espacio empresarial de `userId` y `tenantId`. Se puede encontrar `meetingId` como parte del objeto `channelData`. El bot puede usar el `userId` y `meetingId`  para la solicitud de la API de `GetParticipant` para recuperar roles de usuario.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
