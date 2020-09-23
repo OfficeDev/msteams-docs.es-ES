@@ -1,15 +1,15 @@
 ---
-title: Diseño de tarjetas eficaces
+title: Diseñar tarjetas eficaces
 description: Describe las instrucciones de diseño para crear tarjetas
 keywords: Directrices de diseño de Microsoft Teams tarjetas de marco de referencia adaptables ligeras
-ms.openlocfilehash: 33ee0b59a3a5a1490d6e2106f8532094ed852598
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676151"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209840"
 ---
-# <a name="designing-effective-cards"></a>Diseño de tarjetas eficaces
+# <a name="design-effective-cards"></a>Diseñar tarjetas eficaces
 
 Las tarjetas son fragmentos de código accionables que puede Agregar a una conversación a través de un bot, un conector o una aplicación. Mediante el uso de texto, gráficos y botones, las tarjetas le permiten comunicarse con una audiencia.
 

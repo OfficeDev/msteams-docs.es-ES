@@ -1,80 +1,71 @@
 ---
-title: Puntos extensibles en el cliente de Microsoft Teams
-author: clearab
-description: Comprenda los puntos de extensibilidad disponibles para la aplicación en el cliente de Microsoft Teams.
+title: Puntos de entrada para las aplicaciones de Microsoft Teams
+author: heath-hamilton
+description: Describe cómo y dónde usan la aplicación las personas en Microsoft Teams.
 ms.topic: conceptual
-ms.author: anclear
-ms.openlocfilehash: 0624aefa7873678b1d69c1d5796340cdac69c381
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: 1c68467177fc440993f059133f049f18785374b7
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867135"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209784"
 ---
-# <a name="extensible-points-in-the-teams-client"></a>Puntos extensibles en el cliente de Microsoft Teams
+# <a name="entry-points-for-teams-apps"></a>Puntos de entrada para las aplicaciones de Microsoft Teams
 
-Una aplicación integrada en la plataforma de Microsoft Teams amplía el cliente de Microsoft Teams (Web, móvil y escritorio) con los servicios web que hospeda. La plataforma de Microsoft Teams proporciona un conjunto completo y flexible de puntos de extensibilidad, construcciones de interfaz de usuario y API para que pueda aprovecharse de la creación de la aplicación. La aplicación puede ser tan sencilla como incrustar el sitio web existente en una pestaña para el equipo o una aplicación de varias facetas y con características atractivas para los usuarios en toda la amplitud del cliente de Microsoft Teams. Puede optar por integrar una aplicación existente, o bien crear una nueva experiencia creada completamente para Microsoft Teams.
+La plataforma de Microsoft Teams proporciona un conjunto flexible de puntos de entrada en los que los usuarios pueden descubrir y usar la aplicación. La aplicación puede ser tan sencilla como insertar un sitio web existente en una pestaña personal o una aplicación multifaceta con la que los usuarios interactúan en varios puntos de entrada.
 
-Hay varios lugares en los que se puede ampliar el cliente de Microsoft Teams para permitir que los usuarios interactúen con la aplicación. Según el escenario, puede elegir centrarse en un punto único de extensión (como un bot de conversación personal) o combinar varios puntos de extensión.
+Las aplicaciones más correctas se sienten de forma nativa en Teams, por lo que es importante planear cuidadosamente los puntos de entrada de la aplicación.
 
-## <a name="teams-channels-and-group-chats"></a>Equipos, canales y chats de grupo
+## <a name="teams-channels-and-group-chats"></a>Equipos, canales y chats en grupo
 
-Los equipos, canales y chats de Grupo permiten que varios usuarios colaboren. Las aplicaciones en este contexto se hacen disponibles para todos los miembros del grupo o la conversación, normalmente se centran en habilitar flujos de trabajo de colaboración adicionales o desbloquear nuevas interacciones sociales. La aplicación tendrá acceso a las API que le permitirán obtener información sobre los miembros de la conversación, los canales de un equipo y los metadatos sobre el equipo o la conversación.
+Los equipos, canales y chats de grupo son espacios de colaboración. Las aplicaciones que usan estos puntos de entrada están disponibles para todos los miembros y normalmente se centran en flujos de trabajo adicionales o desbloqueando nuevas interacciones sociales.
 
-Se pueden extender con:
+Esta es la manera en que las funcionalidades de la aplicación Teams se usan comúnmente en contextos de colaboración:
 
-* Los [**bots de conversación**](~/bots/what-are-bots.md) interactúan con los miembros de la conversación a través de la charla y responden a los eventos (como un nuevo miembro que se agrega o un canal al que se cambia el nombre). Todas las conversaciones que tienen un bot en este contexto son visibles para todos los miembros del canal o grupo, por lo que tendrá que asegurarse de que la conversación es relevante para todos los usuarios.
+* Las [**pestañas**](~/tabs/what-are-tabs.md) proporcionan una experiencia web incrustada a pantalla completa configurada para el equipo, el canal o el chat de grupo. Todos los miembros interactúan con el mismo contenido basado en Web, por lo que una experiencia de aplicación de una sola página sin estado es típica.
 
-* [**Pestañas configurables**](~/tabs/what-are-tabs.md) que proporcionan una experiencia Web integrada de pantalla completa configurada para el chat de canal o de grupo en el que está instalado. Todos los miembros interactuarán en la misma aplicación web compartida, por lo que una experiencia de aplicación de una sola página sin estado es típica.
+* [**Las extensiones de mensajería**](~/messaging-extensions/what-are-messaging-extensions.md) son accesos directos para insertar contenido externo en una conversación o realizar acciones en mensajes sin salir de Microsoft Teams. Vínculo unfurling proporciona contenido enriquecido al compartir contenido desde una dirección URL común.
 
-* [**Webhooks y conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que habilitan servicios externos para publicar mensajes en la conversación y los usuarios para enviar mensajes a su servicio. Puede aprovechar las acciones de tarjetas y tarjetas para crear mensajes sofisticados y accionables.
+* Los [**bots**](~/bots/what-are-bots.md) interactúan con los miembros de la conversación a través de chat y responden a los eventos (como agregar un nuevo miembro o cambiar el nombre de un canal). Las conversaciones con un bot en estos contextos son visibles para todos los miembros del equipo, canal o grupo, por lo que las conversaciones del robot deben ser relevantes para todos los usuarios.
 
-### <a name="personal-apps"></a>Aplicaciones personales
+* Los [**webhooks y los conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) permiten que un servicio externo publique mensajes en una conversación y los usuarios envíen mensajes a un servicio.
 
-Las [aplicaciones personales](~/concepts/design/personal-apps.md) son una parte de la aplicación de Microsoft teams que se centra en las interacciones con un solo usuario. La experiencia es única para cada usuario individual. Esta parte de la aplicación puede anclarse al RAÍL de navegación izquierdo, lo que permite el acceso con un solo clic a los usuarios.
+* [**API de REST de Microsoft Graph**](https://docs.microsoft.com/graph/teams-concept-overview) para obtener datos sobre equipos, canales y chats de grupo para ayudar a automatizar y administrar los procesos de Teams.
 
-Pueden contener:
+## <a name="personal-apps"></a>Aplicaciones personales
 
-* [**Bots de conversación**](~/bots/what-are-bots.md) con una conversación de uno a uno con el usuario. Como esta es una conversación privada, si la aplicación necesita tener una conversación de varios turnos o proporcionar una notificación relevante para un solo usuario, suele ser mejor tener esa interacción en una aplicación personal.
+Las [aplicaciones personales](~/concepts/design/personal-apps.md) se centran en las interacciones con un único usuario. La experiencia en este contexto es única para cada usuario. Los usuarios pueden anclar aplicaciones personales en el riel de navegación izquierdo para un acceso rápido.
 
-* [**Pestañas personales**](~/tabs/what-are-tabs.md) que proporcionan una experiencia Web integrada a pantalla completa.
+Esta es la forma en que las funcionalidades de Microsoft Teams se usan con frecuencia en contextos personales:
 
-## <a name="messages"></a>Mensajes
+* Los [**bots**](~/bots/what-are-bots.md) tienen conversaciones de uno en uno con un usuario. Los bots que requieren conversaciones de varios turnos o proporcionan notificaciones relevantes solo para un usuario específico son los más adecuados en contextos personales.
 
-Los mensajes son el corazón de la colaboración en Microsoft Teams. Con un [**comando de acción de extensión de mensajería**](~/messaging-extensions/what-are-messaging-extensions.md), la aplicación puede permitir a los usuarios invocar la API de la aplicación desde un mensaje y enviar el contenido del mensaje a la aplicación para su procesamiento o acción. La aplicación puede responder presentando un formulario (un módulo de tareas) al usuario para recopilar más información, enviar una respuesta al mensaje original o enviar un mensaje directamente al usuario.
+* Las [**pestañas**](~/tabs/what-are-tabs.md) proporcionan una experiencia Web integrada a pantalla completa que tiene sentido para los usuarios individuales.
 
-## <a name="writing-messages"></a>Escribir mensajes
+## <a name="ui-components"></a>Componentes de la interfaz de usuario
 
-La aplicación puede ayudar a los usuarios a crear mensajes más efectivos permitiéndoles realizar búsquedas o realizar acciones en un sistema externo e insertar los resultados en un formato enriquecido y estructurado completo con botones accionables.
+Las aplicaciones suelen mostrar uno o varios componentes estándar de la interfaz de usuario de Microsoft Teams. La creación de la aplicación con estos componentes conduce a experiencias enriquecidas que se sienten nativas para los usuarios de Teams.
 
-Hay tres formas en que la aplicación puede ayudar a los usuarios a crear mensajes mejores:
+### <a name="cards"></a>Tarjetas
 
-* [**Extensiones de mensajería: comandos de búsqueda**](~/messaging-extensions/what-are-messaging-extensions.md) que permiten realizar búsquedas rápidas en un sistema externo, obtener una vista previa de los resultados de la búsqueda y, a continuación, insertar el resultado en el chat como una tarjeta enriquecida.
+Las [tarjetas](~/task-modules-and-cards/what-are-cards.md) son contenedores de interfaz de usuario definidos por JSON que pueden contener texto con formato, medios, controles (como menús desplegables y botones de radio) y botones que activan una acción.
 
-* [**Messaging Extension-Link unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) permite que su aplicación supervise los dominios web que le interesan. Cuando se pega una dirección URL que contiene ese dominio en el cuadro de mensaje de redacción, se invocará la API de la aplicación, lo que le permitirá agregar una tarjeta enriquecida al mensaje con información adicional sobre el elemento al que se va a vincular.
-
-* [**Extensión de mensajería: los comandos de acción**](~/messaging-extensions/what-are-messaging-extensions.md) presentan al usuario un formulario modal (un módulo de tareas), envían los resultados del formulario a la aplicación y, a continuación, insertan un mensaje en la conversación directamente o crean parte de un mensaje que el usuario puede editar antes de enviarlo a la conversación.
-
-## <a name="user-interface-ui-elements"></a>Elementos de la interfaz de usuario (UI)
-
-Además de los puntos de extensibilidad, la plataforma de Microsoft Teams proporciona elementos de interfaz de usuario flexibles para que las aplicaciones aprovechen. Estos elementos le permiten crear experiencias enriquecidas que se sienten nativas para el cliente de Microsoft Teams.
-
-### <a name="cards--card-actions"></a>Acciones de tarjetas de & tarjeta
-
-Las [tarjetas](~/task-modules-and-cards/what-are-cards.md) son contenedores de interfaz de usuario definidos por JSON esquematizado, que pueden contener varias propiedades y datos adjuntos. Pueden contener texto, elementos multimedia, controles (como cuadros de lista desplegables y botones de radio) con formato y botones que desencadenan acciones de tarjetas. Las acciones de tarjeta pueden enviar cargas a la API de la aplicación, abrir un vínculo, iniciar flujos de autenticación o enviar mensajes a conversaciones. La plataforma de Microsoft Teams admite varios tipos de tarjetas, entre las que se incluyen tarjetas adaptables, tarjetas de héroe, tarjetas de miniaturas y mucho más. Se pueden combinar en colecciones de tarjetas y mostrar en una lista o carrusel.
+Las acciones de tarjeta pueden enviar cargas a la API de la aplicación, abrir un vínculo, iniciar flujos de autenticación o enviar mensajes a conversaciones. La plataforma de Microsoft Teams admite varias tarjetas, incluidas tarjetas adaptables, tarjetas de héroe, tarjetas de miniaturas y mucho más. Puede combinar colecciones de tarjetas y visualizarlas en una lista o carrusel.
 
 ### <a name="task-modules"></a>Módulos de tareas
 
-Los [módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md) le permiten crear experiencias de elemento emergente modal en su aplicación de Teams. Dentro del elemento emergente puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un `<iframe>` Widget como YouTube o Microsoft Stream video, o mostrar una tarjeta adaptable. Son especialmente útiles para iniciar y completar tareas o para mostrar información enriquecida como vídeos o paneles de Power BI. A menudo, una experiencia emergente es más natural para los usuarios que inician y completan tareas en comparación con una experiencia de ficha o de robot basada en conversaciones.
+Los [módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md) proporcionan experiencias modales en Microsoft Teams. Son especialmente útiles para iniciar flujos de trabajo, recopilar datos del usuario o Mostrar información enriquecida como vídeos o paneles de Power BI. En los módulos de tareas, puede ejecutar código Front-end personalizado, mostrar un `<iframe>` Widget o mostrar una tarjeta adaptable.
+
+A la hora de considerar cómo desea compilar la aplicación, recuerde que los modales son naturales para que los usuarios escriban información o completen tareas en comparación con una experiencia de ficha o de robot basada en conversaciones.
 
 ### <a name="deep-links"></a>Vínculos profundos
 
-La aplicación puede crear [vínculos profundos de URL](~/concepts/build-and-test/deep-links.md) para ayudar a navegar al usuario a través de la aplicación y el cliente de Microsoft Teams. Puede crear un vínculo profundo para la mayoría de las entidades de Teams, y algunos (como una nueva convocatoria de reunión) le permiten rellenar previamente la información mediante el uso de cadenas de consulta en la dirección URL. Por ejemplo, el bot? a conversación podría enviar un mensaje a un canal con un vínculo profundo a un módulo de tareas que da como resultado una tarjeta que se envía como un mensaje uno a uno a un usuario, que a su vez contiene un vínculo profundo para crear una nueva reunión con un usuario específico en una determinada fecha y hora. Use vínculos profundos para conectarse a través de los distintos puntos de extensión disponibles para la aplicación y mantenga a su usuario en el contexto correcto en todo momento.
+La aplicación puede crear [vínculos profundos de URL](~/concepts/build-and-test/deep-links.md) para ayudar a navegar al usuario a través de la aplicación y el cliente de Microsoft Teams. Puede crear un vínculo profundo para la mayoría de las entidades de Microsoft Teams, y algunos (como una nueva convocatoria de reunión) le permiten rellenar previamente la información mediante el uso de cadenas de consulta en la dirección URL.
 
-### <a name="web-content-pages"></a>Páginas de contenido web
+Por ejemplo, el bot conversante podría enviar un mensaje a un canal con un vínculo profundo a un módulo de tareas que da como resultado que una tarjeta se envíe como un mensaje uno a uno a un usuario, que a su vez contiene un vínculo profundo para crear una nueva reunión con un usuario específico en una fecha y hora determinada. Use vínculos profundos para conectarse a través de los distintos puntos de extensión disponibles para la aplicación y mantenga a su usuario en el contexto correcto en todo momento.
 
-Una [Página de contenido web](~/tabs/how-to/create-tab-pages/content-page.md) es una página web que se hospeda y que se puede incrustar en una pestaña o módulo de tareas. Para habilitar la página web para que se pueda insertar en un cliente de Microsoft Teams, debe:
+### <a name="web-based-content"></a>Contenido basado en Web
 
-* Estar hospedado en HTTPS.
-* Poder ser incrustado en un `<iframe>` por el cliente de Microsoft Teams.
-* Incluya el SDK del cliente de JavaScript de Microsoft Teams e invoque el método del SDK `initialize()` al cargar la página.
+El [contenido basado en Web](~/tabs/how-to/create-tab-pages/content-page.md) es una página web que se hospeda y que se puede incrustar en un módulo de pestaña o de tareas.

@@ -4,12 +4,12 @@ author: laujan
 description: Información general sobre las pestañas personalizadas en la plataforma de Microsoft Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c9e76d13c96c48f88b555b3d740912017a8b2d0a
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 67b509e7d4f71fe6b597a22bb9141f51dc8284ab
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818881"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209777"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>¿Qué son las pestañas personalizadas de Microsoft Teams?
 
@@ -55,4 +55,4 @@ Puede tener un máximo de una (1) ficha canal/grupo y hasta dieciséis (16) pest
 
 ## <a name="mobile-clients"></a>Clientes móviles
 
-Si elige que la pestaña de canal/grupo/ficha personal aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad. Para garantizar una experiencia del usuario óptima, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas.
+Si elige que la ficha canal o grupo aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad. Para garantizar una experiencia del usuario óptima, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas.

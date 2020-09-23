@@ -5,12 +5,12 @@ description: Información general sobre las aplicaciones de Microsoft Teams basa
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: f60f09283827ee8b22db4e77154ee986b26b54f8
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
+ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182039"
+ms.locfileid: "48204027"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Aplicaciones en reuniones de Microsoft Teams (versión preliminar)
 
@@ -62,7 +62,7 @@ Los usuarios con permisos de ✔ pueden agregar aplicaciones durante la reunión
 ✔ De una aplicación puede estar visible en dos áreas de la reunión de Microsoft Teams:
 
 &emsp;&emsp;&#9679; **panel lateral**. </br>
-> **Nota**: Si el _manifiesto_ de la aplicación especifica que la pestaña está [optimizada para el panel lateral](create-apps-for-teams-meetings.md#in-meeting), es donde se mostrará. También puedo formar parte de una experiencia de bandeja compartida, sujeta a pautas de diseño específicas.
+> **Nota**: Si el _manifiesto_ de la aplicación especifica que la pestaña está [optimizada para el panel lateral](create-apps-for-teams-meetings.md#in-meeting), es donde se mostrará. También puede formar parte de una experiencia de bandeja de recursos compartidos, sujeta a pautas de diseño específicas.
 
 &emsp;&emsp;&#9679; **cuadro de diálogo en la reunión**. Use el cuadro de diálogo de la reunión para mostrar contenido que requiere acción para los participantes en la reunión. *Consulte* [crear aplicaciones para reuniones de Microsoft Teams](create-apps-for-teams-meetings.md).
 
@@ -120,7 +120,7 @@ Puede tener acceso a la página  **Opciones de reunión** de la siguiente manera
 > Los tipos de usuario pueden unirse a las reuniones y asumir una de las funciones de participante descritas anteriormente. El tipo de usuario no se expone como parte de la API de **getParticipantRole** .
 
 1. **En el espacio empresarial**. Estos usuarios pertenecen a la organización y tienen credenciales en Azure Active Directory para el inquilino. Suelen ser empleados a tiempo completo, en el sitio o remotos.
-1. **Invitado**. Un invitado es un participante de otra organización a la que se ha invitado a tener acceso a teams u otros recursos en el inquilino de su organización. Los invitados se agregan al Active Directory de la organización y pueden tener casi todas las mismas capacidades de teams que un miembro del equipo nativo con acceso total a los chats, las reuniones y los archivos del equipo. _Consulte_ [adivinar el acceso en Microsoft Teams](/microsoftteams/guest-access)
+1. **Invitado**. Un invitado es un participante de otra organización a la que se ha invitado a tener acceso a teams u otros recursos en el inquilino de su organización. Los invitados se agregan al Active Directory de la organización y pueden tener casi todas las mismas capacidades de teams que un miembro del equipo nativo con acceso total a los chats, las reuniones y los archivos del equipo. _Consulte_ [acceso de invitado en Microsoft Teams](/microsoftteams/guest-access)
 1. **Federado/externo**. Un usuario federado es un usuario de Microsoft Teams externo de otra organización que ha sido invitado a unirse a una reunión. Como estos usuarios tienen credenciales válidas con socios federados, se tratan como autenticados por Teams, pero no tienen acceso a los equipos ni a otros recursos compartidos de su organización. Si desea que los usuarios externos tengan acceso a los equipos y canales, el acceso de invitado puede ser una opción mejor. _Consulte_ [administrar el acceso externo en Microsoft Teams](/microsoftteams/manage-external-access)
 1. **Anónima**. Los usuarios anónimos no tienen una identidad de Active Directory y no están federados con un inquilino. El participante anónimo es como un usuario externo, pero su identidad no se proyecta en la reunión. Los usuarios anónimos no podrán acceder a las aplicaciones en una ventana de reunión.
 

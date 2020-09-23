@@ -1,16 +1,16 @@
 ---
 title: Ampliar la aplicación de Microsoft Teams con una pestaña personalizada
 author: laujan
-description: Guía para crear una pestaña
+description: Cómo crear una pestaña para Microsoft Teams mediante App Studio o manualmente.
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819035"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209721"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Ampliar la aplicación de Microsoft Teams con una pestaña personalizada
 
@@ -146,7 +146,7 @@ Una vez que haya completado el `manifest.json` empaquetamiento del paquete en un
     * Vuelva a su equipo, elija el canal en el que desea mostrar la pestaña, seleccione ➕ de la barra de pestañas y elija la pestaña de la galería.
     * Siga las instrucciones para agregar una pestaña. Tenga en cuenta que hay un cuadro de diálogo de configuración personalizada para la ficha canal o grupo. Seleccione **Guardar** y la pestaña se agregará a la barra de pestañas del canal.
 
-## <a name="learn-more"></a>Más información
+## <a name="learn-more"></a>Obtén más información
 
 * [Crear una página de contenido para la pestaña](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Crear una página de configuración para la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md)
