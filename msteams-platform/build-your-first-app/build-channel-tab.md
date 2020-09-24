@@ -1,24 +1,20 @@
 ---
 author: heath-hamilton
-description: Obtenga información sobre cómo crear una pestaña de canal para su primera aplicación de Microsoft Teams.
+description: Obtenga información sobre cómo crear una pestaña de canal y de grupo para su primera aplicación de Microsoft Teams.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Crear una pestaña de canal de Teams
-ms.openlocfilehash: d0846c3af23fd9df6013f989e9f455f711d05a5f
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Crear una ficha de canal y de grupo de Teams
+ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210343"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237814"
 ---
-# <a name="build-a-teams-channel-tab"></a>Crear una pestaña de canal de Teams
+# <a name="build-a-teams-channel-and-group-tab"></a>Crear una ficha de canal y de grupo de Teams
 
-En este tutorial, creará una ficha básica de *canal*, una página de contenido a pantalla completa para un canal de equipo o un chat. A diferencia de una pestaña personal, los usuarios pueden configurar algunos aspectos de una ficha de canal (por ejemplo, cambiar el nombre de la ficha para que tenga sentido en su canal).
-
-## <a name="before-you-begin"></a>Antes de empezar
-
-Necesita una aplicación básica que se ejecute para empezar. Si no tiene una, siga la [compilación y ejecute las instrucciones de la primera aplicación de Teams](../build-your-first-app/build-and-run.md). Al crear el proyecto de la aplicación, elija solo la opción de la **ficha canal de grupo o de Teams** .
+En este tutorial, creará una ficha de *canal* básico (también conocida como una *pestaña de grupo*), que es una página en pantalla completa para un canal o un chat de equipo. A diferencia de una pestaña personal, los usuarios pueden configurar algunos aspectos de este tipo de pestaña (por ejemplo, cambiar el nombre de la ficha para que tenga sentido en su canal).
 
 ## <a name="your-assignment"></a>La asignación
 
@@ -30,19 +26,33 @@ Puede facilitar la búsqueda de esta información si crea una pestaña de canal,
 
 > [!div class="checklist"]
 >
-> * Identificar algunas de las propiedades del manifiesto de la aplicación y scaffolding relevantes para las pestañas del canal
+> * Crear un proyecto de aplicación con Microsoft Teams Toolkit para Visual Studio Code
+> * Identificar algunas de las propiedades del manifiesto de la aplicación y scaffolding relevantes para las pestañas de canal y de grupo
+> * Hospedar una aplicación localmente
 > * Crear contenido de ficha
 > * Crear contenido para la página de configuración de una pestaña
 > * Permitir la configuración y la instalación de una pestaña
 > * Proporcionar un nombre de pestaña sugerido
 
-## <a name="identify-relevant-app-project-components"></a>Identificar los componentes relevantes del proyecto de aplicación
+## <a name="1-create-your-app-project"></a>1. crear un proyecto de aplicación
 
-La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña de canal.
+El kit de herramientas de Microsoft Teams le ayudará a configurar el manifiesto de la aplicación y los scaffolding relevantes para las pestañas de canal y grupo, incluida una página de configuración básica y una página de contenido que muestra un "Hello, World!" Mensaje.
+
+> [!TIP]
+> Si no ha creado antes un proyecto de aplicación de Teams, puede resultar útil seguir [estas instrucciones](../build-your-first-app/build-and-run.md) que explican los proyectos con más detalle.
+
+1. En Visual Studio Code, seleccione **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: en la barra de actividad izquierda y elija **crear una nueva aplicación de Teams**.
+1. Escriba un nombre para la aplicación de Teams. (Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de la aplicación en el equipo local).
+1. En la pantalla **Agregar funciones** **, seleccione la pestaña luego** **grupo o grupo canal de Teams**.
+1. Seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.  
+
+## <a name="2-identify-relevant-app-project-components"></a>2. identificar los componentes relevantes del proyecto de aplicación
+
+La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una ficha de canal y de grupo.
 
 ### <a name="app-manifest"></a>Manifiesto de la aplicación
 
-El siguiente fragmento de código del manifiesto de la aplicación muestra [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , que incluye las propiedades y los valores predeterminados que son relevantes para las pestañas de canal.
+El siguiente fragmento de código del manifiesto de la aplicación muestra [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , que incluye las propiedades y los valores predeterminados pertinentes para las pestañas de canal y grupo.
 
 ```JSON
 "configurableTabs": [
@@ -65,7 +75,27 @@ El siguiente fragmento de código del manifiesto de la aplicación muestra [`con
 
 El scaffolding de la aplicación proporciona un `TabConfig.js` archivo, que se encuentra en el `src/components` directorio del proyecto, para representar la página de configuración de la pestaña (próximamente, esto es más).
 
-## <a name="create-your-tab-content"></a>Crear el contenido de la pestaña
+## <a name="3-run-your-app"></a>3. ejecutar la aplicación
+
+En aras del tiempo, se creará y se ejecutará la aplicación de forma local.
+
+1. En un terminal, vaya al directorio raíz del proyecto de aplicación y ejecute `npm install` .
+1. Ejecutar `npm start` .
+
+Una vez completada la **compilación correctamente.** mensaje en el terminal.
+
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurar un túnel seguro a la aplicación
+
+Para fines de prueba, vamos a hospedar su pestaña en un servidor Web local (puerto 3000).
+
+1. En un terminal, ejecute `ngrok http 3000` .
+1. Copie la dirección URL HTTPS que haya proporcionado.
+1. En el `.publish` directorio, Abra `Development.env` .
+1. Reemplace el `baseUrl0` valor por la dirección URL copiada. (Por ejemplo, cambie `baseUrl0=http://localhost:3000` a `baseUrl0=https://85528b2b3ca5.ngrok.io` ).
+
+El manifiesto de la aplicación apunta al lugar donde hospeda la pestaña.
+
+## <a name="5-customize-your-tab-content-page"></a>5. personalizar la página de contenido de la pestaña
 
 Abra el manifiesto de la aplicación ( `manifest.json` ) en el `.publish` Directorio y establezca las siguientes propiedades en [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , que define la página de contenido de la pestaña.
 
@@ -121,9 +151,9 @@ a {
 }
 ```
 
-## <a name="create-your-tab-configuration-page"></a>Crear la página de configuración de pestañas
+## <a name="6-create-your-tab-configuration-page"></a>6. crear la página de configuración de pestañas
 
-Cada ficha de canal tiene una página de configuración, un modal con al menos una opción de configuración que se muestra al instalar la aplicación. De forma predeterminada, la página de configuración pregunta a los usuarios si quieren notificar al canal o al chat cuando se instala la ficha.
+Cada pestaña en un canal o chat tiene una página de configuración, un modal con al menos una opción de configuración que se muestra cuando los usuarios instalan la aplicación. De forma predeterminada, la página de configuración pregunta a los usuarios si quieren notificar al canal o al chat cuando se instala la ficha.
 
 Agregue contenido a la página de configuración. Vaya al directorio del proyecto `src/components` , Abra `TabConfig.js` e inserte contenido dentro de `return()` (como se muestra).
 
@@ -141,9 +171,9 @@ return (
 > [!TIP]
 > Como mínimo, proporcione información breve sobre la aplicación en esta página, ya que esto puede ser la primera vez que los usuarios aprenden sobre ella. También puede incluir opciones de configuración personalizadas o un [flujo de trabajo de autenticación](../tabs/how-to/authentication/auth-aad-sso.md), que es común en las páginas de configuración de pestañas.
 
-## <a name="allow-the-tab-to-be-configured-and-installed"></a>Permitir la configuración y la instalación de la ficha
+## <a name="7-allow-the-tab-to-be-configured-and-installed"></a>7. permitir la configuración y la instalación de la pestaña
 
-Para que los usuarios puedan configurar e instalar correctamente la ficha canal, debe agregar la dirección URL de host que configuró al [crear y ejecutar su primera aplicación](../build-your-first-app/build-and-run.md) en el componente de página de configuración.
+Para que los usuarios puedan configurar e instalar correctamente la ficha, debe agregar la [dirección URL de host seguro que configuró](#4-set-up-a-secure-tunnel-to-your-app) en el componente de página de configuración.
 
 Vaya a `TabConfig.js` y busque `microsoftTeams.settings.setSettings` . Para `"contentUrl"` , reemplace la `localhost:3000` parte de la dirección URL con el dominio en el que hospeda el contenido de la pestaña (como se muestra).
 
@@ -155,7 +185,7 @@ microsoftTeams.settings.setSettings({
 
 Además, asegúrese de que `microsoftTeams.settings.setValidityState(true);` . De forma predeterminada, pero si se establece en `false` , el botón **Guardar** se deshabilita en la página Configuración.
 
-## <a name="provide-a-suggested-tab-name"></a>Proporcionar un nombre de pestaña sugerido
+## <a name="8-provide-a-suggested-tab-name"></a>8. proporcionar un nombre de pestaña sugerido
 
 Al instalar una pestaña para uso personal, el nombre para mostrar es la `name` propiedad en la `staticTabs` parte del manifiesto de la aplicación (por ejemplo, **mis contactos**). Al instalar una pestaña de canal, se muestra el nombre de la aplicación (por ejemplo, **primera aplicación**) de forma predeterminada.
 
@@ -170,9 +200,9 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## <a name="view-the-channel-tab"></a>Ver la ficha canal
+## <a name="9-view-the-tab"></a>9. ver la pestaña
 
-Para ver las páginas de contenido y configuración de la pestaña de canal, debe instalarla en un canal o chat.
+Para ver las páginas de contenido y configuración de la pestaña, debe instalarla en un canal o chat.
 
 1. En el cliente de Microsoft Teams, seleccione **aplicaciones**.
 1. Seleccione **cargar una aplicación personalizada** y elija la aplicación `Development.zip` .
@@ -184,9 +214,9 @@ Para ver las páginas de contenido y configuración de la pestaña de canal, deb
 
 ## <a name="well-done"></a>Bien hecho
 
-¡Enhorabuena! Tiene una aplicación de Microsoft Teams con una pestaña de canal para mostrar contenido útil en canales y chats.
+¡Enhorabuena! Tiene una aplicación de Microsoft Teams con una pestaña para mostrar contenido útil en canales y chats.
 
-## <a name="learn-more"></a>Obtén más información
+## <a name="learn-more"></a>Más información
 
 * [Autenticar usuarios de pestaña con SSO](../tabs/how-to/authentication/auth-aad-sso.md): si solo quiere que los usuarios autorizados vean su pestaña, configure el inicio de sesión único (SSO) a través de Azure Active Directory (ad).
 * [Insertar contenido de una aplicación web o página web existente](../tabs/how-to/add-tab.md#tab-requirements): le mostramos cómo crear nuevo contenido para una pestaña personal, pero también puede cargar contenido desde una dirección URL externa.

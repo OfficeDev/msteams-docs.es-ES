@@ -1,15 +1,15 @@
 ---
 title: Introducción al generador de Yeoman para Microsoft Teams
 description: Empezar a compilar excelentes aplicaciones con el generador de Yeoman para Microsoft Teams
-keywords: nodo introducción. js NodeJS Yeoman
+keywords: Introducción node.js NodeJS Yeoman
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: f9b3f165d3b5387f8e7d30563134ed4889920ca5
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034046"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237996"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Compilar la primera aplicación de Microsoft Teams
 
@@ -26,7 +26,7 @@ Debe instalar lo siguiente en su equipo antes de empezar a usar el generador de 
 
 ### <a name="install-node"></a>Nodo de instalación
 
-Debe tener NodeJS instalado en el equipo. Debe usar la última [versión de lts](https://nodejs.org/dist/latest-v8.x/).
+Debe tener NodeJS instalado en el equipo. Debe usar la última [versión de lts](https://nodejs.org).
 
 ### <a name="install-a-code-editor"></a>Instalar un editor de código
 
@@ -60,7 +60,7 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>Generar el proyecto
 
-Abra un símbolo del sistema y cree un nuevo directorio donde desee crear el proyecto y, en ese directorio, escriba el comando `yo teams`. Se iniciará el generador de aplicaciones de Microsoft Teams y se le preguntará un conjunto de preguntas.
+Abra un símbolo del sistema y cree un nuevo directorio donde desee crear el proyecto y, en ese directorio, escriba el comando `yo teams` . Se iniciará el generador de aplicaciones de Microsoft Teams y se le preguntará un conjunto de preguntas.
 
 ![Yo Teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,7 +68,7 @@ La primera pregunta trata sobre el nombre del proyecto, puede dejarlo como está
 
 En el paso siguiente se solicita un título del proyecto, este título se utilizará en el manifiesto y la descripción de la aplicación. Y, a continuación, se le pedirá el nombre de la compañía, que también se usará en el manifiesto.
 
-La quinta pregunta le pregunta qué versión del manifiesto desea usar. Para este tutorial, `v1.5`seleccione, que es el esquema actual disponible en general.
+La quinta pregunta le pregunta qué versión del manifiesto desea usar. Para este tutorial `v1.5` , seleccione, que es el esquema actual disponible en general.
 
 Después de esto, el generador le pedirá qué elementos desea agregar a su proyecto. Puede seleccionar una sola combinación de elementos o una combinación de ellos. Por ahora, solo tiene que seleccionar *una pestaña*.
 
@@ -88,7 +88,7 @@ El siguiente conjunto de preguntas se basará en la selección de elementos ante
 
 Una vez que el generador haya finalizado, podrá abrir la solución en su editor de código favorito. Tómese un minuto o dos y familiarícese con cómo se organiza el código: puede obtener más información sobre esto en la documentación sobre la [estructura del proyecto](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) .
 
-La pestaña se ubicará en el `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` archivo. Esta es la clase basada en TypeScript reAct para su pestaña. busque `render()` el método y agregue una línea de código dentro `<PanelBody>` del control para que tenga el siguiente aspecto:
+La pestaña se ubicará en el `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` archivo. Esta es la clase basada en TypeScript reAct para su pestaña. Busque el `render()` método y agregue una línea de código dentro del `<PanelBody>` control para que tenga el siguiente aspecto:
 
 ``` TypeScript
 <PanelBody>
@@ -104,9 +104,9 @@ Guarde el archivo y vuelva a la línea de comandos.
 
 Ahora puede compilar el proyecto. Esto se realiza en dos pasos (o un paso, vea a continuación).
 
-En primer lugar, debe crear el archivo de manifiesto de la aplicación Teams, que carga o transferir localmente a Microsoft Teams. Esto se realiza mediante la tarea `gulp manifest`de Gulp. Se validará el manifiesto y se creará un archivo zip `./package` en el directorio.
+En primer lugar, debe crear el archivo de manifiesto de la aplicación Teams, que carga o transferir localmente a Microsoft Teams. Esto se realiza mediante la tarea de Gulp `gulp manifest` . Se validará el manifiesto y se creará un archivo zip en el `./package` directorio.
 
-Para compilar la solución, `gulp build` use el comando. Se transpilará la solución a la `./dist` carpeta. 
+Para compilar la solución, use el `gulp build` comando. Se transpilará la solución a la `./dist` carpeta. 
 
 ## <a name="run-your-app"></a>Ejecutar la aplicación
 
@@ -120,13 +120,13 @@ Ahora debería poder ir a `http://localhost:3007/myFirstAppTab/` para asegurarse
 
 Microsoft Teams no le permite hospedar la aplicación en localhost, por lo que debe publicarla en una dirección URL pública o usar un proxy como ngrok.
 
-Una buena noticia es que el proyecto con scaffolding tiene esta integrado. Al ejecutar `gulp ngrok-serve` el servicio ngrok, se iniciará en segundo plano, con una única entrada DNS pública y pública, y también empaquetará el manifiesto con esa dirección URL única y, a continuación, hará `gulp serve`lo mismo con el mismo resultado.
+Una buena noticia es que el proyecto con scaffolding tiene esta integrado. Al ejecutar `gulp ngrok-serve` el servicio ngrok, se iniciará en segundo plano, con una única entrada DNS pública y pública, y también empaquetará el manifiesto con esa dirección URL única y, a continuación, hará lo mismo con el mismo resultado `gulp serve` .
 
-Una vez `gulp ngrok-serve`ejecutado, cree un nuevo equipo de Microsoft Teams y, cuando se haya creado, haga clic en el nombre del equipo, vaya a la configuración de Microsoft Teams y seleccione *aplicaciones*. En la esquina inferior derecha, debería ver un vínculo *cargar una aplicación personalizada*, seleccionarla y, a continuación, buscar la carpeta del proyecto y la `package`subcarpeta denominada. Seleccione el archivo zip en esa carpeta y elija Abrir. La aplicación ahora se transferirá a Microsoft Teams.
+Una vez ejecutado `gulp ngrok-serve` , cree un nuevo equipo de Microsoft Teams y, cuando se haya creado, haga clic en el nombre del equipo, vaya a la configuración de Microsoft Teams y seleccione *aplicaciones*. En la esquina inferior derecha, debería ver un vínculo *cargar una aplicación personalizada*, seleccionarla y, a continuación, buscar la carpeta del proyecto y la subcarpeta denominada `package` . Seleccione el archivo zip en esa carpeta y elija Abrir. La aplicación ahora se transferirá a Microsoft Teams.
 
 ![aplicación transferida localmente](~/assets/yeoman-images/teams-first-app-4.png)
 
-Vuelva al canal *General* y seleccione *+* agregar una nueva pestaña. Debe ver la ficha en la lista de pestañas.
+Vuelva al canal *General* y seleccione *+* Agregar una nueva pestaña. Debe ver la ficha en la lista de pestañas.
 
 ![pestaña configurar](~/assets/yeoman-images/teams-first-app-5.png)
 

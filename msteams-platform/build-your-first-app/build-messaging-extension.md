@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear una extensión de mensajerí
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 0475fcea7d865849fa60c5b3b23788bf90ee5e25
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210318"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237821"
 ---
 # <a name="build-a-teams-messaging-extension"></a>Crear una extensión de mensajería de Teams
 
@@ -36,7 +36,7 @@ El Departamento de soporte técnico de su organización se comunica con los usua
 
 Si aún no lo ha hecho, asegúrese [de que comprende e instala los requisitos previos de desarrollo de Microsoft Teams](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Crear el proyecto de la aplicación
+## <a name="1-create-your-app-project"></a>1. crear un proyecto de aplicación
 
 El kit de herramientas de Microsoft Teams le ayudará a configurar los siguientes componentes para su extensión de mensajería:
 
@@ -58,7 +58,7 @@ El kit de herramientas de Microsoft Teams le ayudará a configurar los siguiente
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Ilustración que muestra cómo, en Team Toolkit, iniciar sesión en su cuenta de Microsoft 365 para crear un nuevo bot para la extensión de mensajería.":::
 1. Seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.
 
-## <a name="identify-relevant-app-project-components"></a>Identificar los componentes relevantes del proyecto de aplicación
+## <a name="2-identify-relevant-app-project-components"></a>2. identificar los componentes relevantes del proyecto de aplicación
 
 La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams.
 
@@ -108,9 +108,9 @@ Vamos a comprender algunas de las propiedades creadas por el kit de herramientas
 
 La aplicación scaffolding incluye un `.env` archivo, ubicado en el directorio raíz del proyecto, que almacena el identificador y la contraseña del bot de la extensión de mensajería.
 
-También en el directorio raíz hay un `botActivityHandler.js` archivo para controlar cómo su extensión de mensajería (técnicamente, el [Bot de la extensión de mensajería](#configuring-the-bot-for-your-messaging-extension)) responde a las consultas de búsqueda en Microsoft Teams.
+También en el directorio raíz hay un `botActivityHandler.js` archivo para controlar cómo su extensión de mensajería (técnicamente, el [Bot de la extensión de mensajería](#4-configure-the-bot-for-your-messaging-extension)) responde a las consultas de búsqueda en Microsoft Teams.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurar un túnel seguro para la aplicación
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. configurar un túnel seguro a la aplicación
 
 Para fines de prueba, vamos a hospedar su extensión de mensajería en un servidor Web local (puerto 3978).
 
@@ -121,7 +121,7 @@ Para fines de prueba, vamos a hospedar su extensión de mensajería en un servid
 
 El manifiesto de la aplicación apunta al lugar donde se hospeda el bot usado por la extensión de mensajería.
 
-## <a name="configuring-the-bot-for-your-messaging-extension"></a>Configuración del bot para la extensión de mensajería
+## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. configurar el bot para la extensión de mensajería
 
 Las extensiones de mensajería dependen de bots para enviar y procesar solicitudes de usuario de Microsoft Teams en el servicio hospedado.
 
@@ -145,7 +145,7 @@ Debe especificar una dirección URL de punto de conexión de bot para recibir y 
 
 El bot podrá controlar las consultas en su extensión de mensajería.
 
-## <a name="run-your-app"></a>Ejecutar la aplicación
+## <a name="5-run-your-app"></a>5. ejecutar la aplicación
 
 Configuró una dirección URL para hospedar la extensión de mensajería y configurarla para controlar las búsquedas. Es el momento de poner en marcha su aplicación.
 
@@ -156,19 +156,19 @@ Si se ejecuta correctamente, verá algo parecido al siguiente mensaje que indica
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-messaging-extension-in-teams"></a>Transferir localmente la extensión de mensajería a Microsoft Teams
+## <a name="6-sideload-your-messaging-extension-in-teams"></a>6. transferir localmente la extensión de mensajería en Microsoft Teams
 
 Con la extensión de mensajería en ejecución, puede instalarla en Teams.
 
 > [!TIP]
-> Si no ha transferido localmente una aplicación de Microsoft Teams y tiene problemas, siga estas [instrucciones](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> Si no ha transferido localmente una aplicación de Microsoft Teams y tiene problemas, siga estas [instrucciones](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Inicie sesión en el cliente de Teams con su cuenta que permite la transferencia local de aplicaciones.
 1. Seleccione **aplicaciones**y, después, elija **cargar una aplicación personalizada**.
 1. Vaya a la carpeta de proyecto de la aplicación `.publish` y seleccione `Development.zip` .
 1. En el modal instalar, seleccione **Agregar** para instalar la aplicación.
 
-## <a name="test-your-messaging-extension"></a>Probar la extensión de mensajería
+## <a name="7-test-your-messaging-extension"></a>7. probar la extensión de mensajería
 
 Obtenga información sobre cómo funcionan las extensiones de mensajería en un chat de Microsoft Teams.
 
@@ -207,7 +207,7 @@ Si ha instalado la aplicación pero no funciona, asegúrese de que el bot de la 
 
 Es importante comprender que no es lo mismo que un canal en Microsoft Teams. En este caso, un canal es cómo el servicio bot de Azure conecta su bot con Teams u otra [aplicación de comunicaciones de terceros o de Microsoft compatible](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="learn-more"></a>Obtén más información
+## <a name="learn-more"></a>Más información
 
 * [Incluir una característica de unfurling de vínculos](../messaging-extensions/how-to/link-unfurling.md)
 * [Agregar autenticación](../messaging-extensions/how-to/add-authentication.md)

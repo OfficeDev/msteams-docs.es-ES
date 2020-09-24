@@ -4,12 +4,12 @@ description: Describe el esquema admitido por el manifiesto para Microsoft Teams
 keywords: esquema del manifiesto de Microsoft Teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: b67b23278a2d2bbb2b24c0e828f01cf1789c6191
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039289"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237982"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -382,10 +382,10 @@ Se usa cuando la experiencia de la aplicación tiene una experiencia de la pesta
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|Dirección URL de https://que se va a usar al configurar la pestaña.|
-|`scopes`|matriz de enumeración|1 |✔|Actualmente, las pestañas configurables solo admiten los `team` `groupchat` ámbitos y. |
+|`scopes`|matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten los `team` `groupchat` ámbitos y. |
 |`canUpdateConfiguration`|boolean|||Un valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de crearla. Valor predeterminado: **true**.|
 |`sharePointPreviewImage`|string|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|matriz de enumeración|1 ||Define cómo estará disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y`sharePointWebPart` |
+|`supportedSharePointHosts`|matriz de enumeración|1||Define cómo estará disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -401,7 +401,7 @@ Este elemento es una matriz (un máximo de 16 elementos) con todos los elementos
 |`name`|string|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz de canal.|
 |`contentUrl`|string|2048 caracteres|✔|Dirección URL de https://que señala a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Microsoft Teams.|
 |`websiteUrl`|string|2048 caracteres||La dirección URL de https://para apuntar a si un usuario opta por verlo en un explorador.|
-|`scopes`|matriz de enumeración|1 |✔|Actualmente, las pestañas estáticas solo admiten el `personal` ámbito, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el `personal` ámbito, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 
 > [!NOTE]
 > Si las pestañas requieren información dependiente del contexto para mostrar contenido relevante o para iniciar un flujo de autenticación, *vea* [obtener contexto para la pestaña de Microsoft Teams](../../tabs/how-to/access-teams-context.md).
@@ -417,10 +417,10 @@ El elemento es una matriz (un máximo solo de un elemento, &mdash; actualmente s
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Puede ser el mismo que el [identificador de aplicación](#id)general.|
-|`scopes`|matriz de enumeración|3 |✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia específica para un solo usuario (`personal`). Estas opciones no son exclusivas.|
-|`needsChannelSelector`|boolean|||Describe si el bot usa una sugerencia del usuario para agregar el bot a un canal específico. Predeterminada**`false`**|
-|`isNotificationOnly`|boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Predeterminada`**false**`|
-|`supportsFiles`|boolean|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Predeterminada**`false`**|
+|`scopes`|matriz de enumeración|3|✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia específica para un solo usuario (`personal`). Estas opciones no son exclusivas.|
+|`needsChannelSelector`|boolean|||Describe si el bot usa una sugerencia del usuario para agregar el bot a un canal específico. Predeterminada **`false`**|
+|`isNotificationOnly`|boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Predeterminada `**false**`|
+|`supportsFiles`|boolean|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Predeterminada **`false`**|
 
 ### <a name="botscommandlists"></a>bots. commandLists
 
@@ -428,7 +428,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumeración|3 |✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
+|`items.scopes`|matriz de enumeración|3|✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots. commandLists. Commands
@@ -436,7 +436,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 |Nombre| Tipo| Tamaño máximo | Necesario | Description|
 |---|---|---|---|---|
 |title|string|12 |✔|El nombre del comando bot|
-|description|cadena|128 caracteres|✔|Una descripción de texto simple o un ejemplo de la sintaxis del comando y sus argumentos.|
+|description|string|128 caracteres|✔|Una descripción de texto simple o un ejemplo de la sintaxis del comando y sus argumentos.|
 
 ## <a name="connectors"></a>Connector
 
@@ -449,7 +449,7 @@ El objeto es una matriz (un máximo de 1 elemento) con todos los elementos de ti
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|Dirección URL de https://que se va a usar al configurar el conector.|
-|`scopes`|matriz de enumeración|1 |✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia en el ámbito de un solo usuario individual ( `personal` ). Actualmente, solo `team` se admite el ámbito.|
+|`scopes`|matriz de enumeración|1|✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia en el ámbito de un solo usuario individual ( `personal` ). Actualmente, solo `team` se admite el ámbito.|
 |`connectorId`|string|64 caracteres|✔|Un identificador único para el conector que coincide con su identificador en el [panel del programador de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -463,12 +463,12 @@ Define una extensión de mensajería para la aplicación.
 
 El elemento es una matriz (un máximo de 1 elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan una extensión de mensajería.
 
-|Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
+|Nombre| Tipo | Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|IDENTIFICADOR único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como se registró con bot Framework. Puede ser el mismo que el identificador de aplicación general.|
 |`commands`|matriz de objetos|10 |✔|matriz de comandos que admite la extensión de mensajería|
 |`canUpdateConfiguration`|boolean|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
-|`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar las aplicaciones cuando se cumplen ciertas condiciones. Los dominios también deben aparecer en`validDomains`|
+|`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar las aplicaciones cuando se cumplen ciertas condiciones. Los dominios también deben aparecer en `validDomains`|
 |`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||matriz de dominios para los que el controlador de mensajes de vínculo puede registrarse.|
 
@@ -485,7 +485,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`type`|string|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
 |`description`|string|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|boolean|||Un valor booleano que indica si el comando se debe ejecutar inicialmente sin ningún parámetro. Valor predeterminado: **false**.|
-|`context`|matriz de cadenas|3 ||Define desde dónde se puede invocar la extensión de mensajes. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
+|`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensajes. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
 |`fetchTask`|boolean|||Un valor booleano que indica si debe recuperar el módulo de tarea de forma dinámica. Valor predeterminado: **false**.|
 |`taskInfo`|object|||Especifique el módulo de tarea que se cargará previamente cuando se use un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
@@ -556,7 +556,10 @@ Especifique la información del grafo y el identificador de la aplicación de AA
 
 **Opcional** : Boolean
 
-Indica dónde mostrar o no el indicador de carga cuando se carga una aplicación o pestaña. Valor predeterminado: **false**.
+Indica si se va a mostrar el indicador de carga cuando se cargue una aplicación o pestaña. Valor predeterminado: **false**.
+>[!NOTE]
+>Si establece "showLoadingIndicator: true" en el manifiesto de la aplicación, para que la página se cargue correctamente, debe modificar las páginas de contenido de sus fichas y módulos de tareas según el protocolo que se describe en [Mostrar un documento de indicador de carga nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) .
+
 
 ## <a name="isfullscreen"></a>isFullScreen
 

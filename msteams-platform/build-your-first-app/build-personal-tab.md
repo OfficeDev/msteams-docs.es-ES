@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear una pestaña personal para s
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3b54efa9b7ed8019b5d4901eeaaf0864e1afc7ac
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210313"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237807"
 ---
 # <a name="build-a-teams-personal-tab"></a>Crear una ficha personal de Teams
 
@@ -34,7 +34,7 @@ Las personas de su organización tienen problemas para encontrar información de
 > * Crear contenido de ficha
 > * Actualizar el tema de color de una pestaña según las preferencias del usuario
 
-## <a name="identify-relevant-app-project-components"></a>Identificar los componentes relevantes del proyecto de aplicación
+## <a name="1-identify-relevant-app-project-components"></a>1. identificar los componentes relevantes del proyecto de aplicación
 
 La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña personal.
 
@@ -65,7 +65,7 @@ El scaffolding de la aplicación proporciona los componentes para representar la
 * `Tab.js` archivo en el `src/components` directorio del proyecto
 * SDK para cliente de JavaScript de Microsoft Teams, que viene previamente cargado en los componentes front-end del proyecto
 
-## <a name="create-your-tab-content"></a>Crear el contenido de la pestaña
+## <a name="2-customize-your-tab-content-page"></a>2. personalizar la página de contenido de la pestaña
 
 Compile una lista de contactos importantes en la organización. Copie y actualice el siguiente fragmento de código con información que sea relevante para usted o, por el momento, use el código tal y como está.
 
@@ -112,7 +112,7 @@ Guarde los cambios. Vaya a la pestaña de la aplicación en Microsoft Teams para
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="Captura de pantalla de una pestaña personal con contenido estático.":::
 
-## <a name="update-the-tab-theme"></a>Actualizar el tema de pestaña
+## <a name="3-update-the-tab-theme"></a>3. actualizar el tema de ficha
 
 Las aplicaciones buenas se sienten nativas para Teams, por lo que es importante la pestaña se combina con el tema de teams que prefieren los usuarios: predeterminado (claro), oscuro o contraste alto. Como puede haber notado en la última captura de pantalla, la pestaña todavía tiene un fondo claro cuando el cliente usa el tema oscuro. Esta no es una experiencia de usuario recomendada.
 
@@ -187,7 +187,7 @@ Compruebe la pestaña en Microsoft Teams. La apariencia debe coincidir exactamen
 
 ¡Enhorabuena! Tiene una aplicación de Microsoft Teams con una pestaña personal que facilita la búsqueda de contactos importantes en la organización.
 
-## <a name="learn-more"></a>Obtén más información
+## <a name="learn-more"></a>Más información
 
 * [Autenticar usuarios de pestaña con SSO](../tabs/how-to/authentication/auth-aad-sso.md): si solo quiere que los usuarios autorizados vean su pestaña, configure el inicio de sesión único (SSO) a través de Azure Active Directory (ad).
 * [Insertar contenido de una aplicación web o página web existente](../tabs/how-to/add-tab.md#tab-requirements): le mostramos cómo crear nuevo contenido para una pestaña personal, pero también puede cargar contenido desde una dirección URL externa.

@@ -5,18 +5,18 @@ description: Cree y ejecute su primera aplicación de Microsoft Teams, una pesta
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 5be2e8f2932a91ed11137f3a7be544e12bd65559
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210338"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237835"
 ---
 # <a name="build-a-hello-world-teams-app"></a>Crear un "Hello, World!" Aplicación de Teams
 
 Puede ir directamente a desarrollo de la plataforma Microsoft Teams creando una pestaña personal que muestre "Hola a todos".
 
-## <a name="create-your-app-project"></a>Crear el proyecto de la aplicación
+## <a name="1-create-your-app-project"></a>1. crear un proyecto de aplicación
 
 Use el kit de herramientas de Microsoft Teams en Visual Studio Code para configurar su primer proyecto de aplicación.
 
@@ -27,7 +27,7 @@ Use el kit de herramientas de Microsoft Teams en Visual Studio Code para configu
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de pantalla que muestra cómo configurar el proyecto de aplicación con Visual Studio Code Teams Toolkit.":::
 1. Compruebe la opción de la **ficha personal** y seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.
 
-## <a name="understand-important-app-project-components"></a>Comprender los componentes importantes del proyecto de aplicación
+## <a name="2-understand-important-app-project-components"></a>2. comprender los componentes importantes del proyecto de aplicación
 
 Una vez que el kit de herramientas configura el proyecto, tiene los componentes para crear una pestaña básica personal para Teams. Los archivos y directorios del proyecto se muestran en el área del explorador de Visual Studio Code.
 
@@ -57,7 +57,7 @@ Estos son algunos detalles sobre los archivos del paquete de la aplicación:
 |**Logotipo-color**|`.png`|192 &times; 192 píxeles|`icon.color`|`.publish/color.png`|
 |**Logotipo de contorno**|`.png`|32 &times; 32 píxeles|`icon.outline`|`.publish/outline.png`|
 
-## <a name="run-your-app"></a>Ejecutar la aplicación
+## <a name="3-run-your-app"></a>3. ejecutar la aplicación
 
 En aras del tiempo, se creará y se ejecutará la aplicación de forma local.
 
@@ -68,7 +68,7 @@ En aras del tiempo, se creará y se ejecutará la aplicación de forma local.
 1. Abra un explorador y vaya a `https://localhost:3000` para ver una página web en blanco denominada **pestaña de Microsoft Teams**. (No se preocupe porque no puede ver ningún contenido en la página).<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Captura de pantalla que muestra el aspecto que tiene para ver la aplicación que se está ejecutando en un explorador.":::
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurar un túnel seguro para la aplicación
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurar un túnel seguro a la aplicación
 
 La aplicación está en funcionamiento en el servidor Web local. Para ejecutar la aplicación en Microsoft Teams, debe ser `localhost` accesible a través de HTTPS.
 
@@ -82,7 +82,7 @@ Instale [ngrok](https://ngrok.com/download) si todavía no lo ha hecho. Al ejecu
 
 El manifiesto de la aplicación ahora apunta al lugar donde se hospeda la aplicación.
 
-## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Microsoft Teams
+## <a name="5-sideload-your-app-in-teams"></a>5. transferir localmente la aplicación en Microsoft Teams
 
 Una vez que la aplicación se ejecute y sea accesible a través de HTTPS, estará listo para cargarla a teams.
 

@@ -2,12 +2,12 @@
 title: Ejemplos de código de Microsoft Teams
 description: Vínculos y descripciones de aplicaciones de ejemplo para la plataforma de desarrolladores de Microsoft Teams
 keywords: Ejemplos para desarrolladores de Microsoft Teams
-ms.openlocfilehash: 955588608fde694b163104d0a9e9e94289719003
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7a81494d7808c27c495c660b5d58f7779ba87c83
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801487"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237961"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Tutoriales y ejemplos de código para la plataforma de desarrolladores de Microsoft Teams
 
@@ -30,7 +30,7 @@ Para descargar nuestros ejemplos de GitHub:
 1. Seleccione uno de los proyectos que aparecen a continuación y abra el proyecto en GitHub.
 2. Elija el botón **clonar o descargar** y copie la dirección URL.
 3. Abra un símbolo del sistema en el directorio principal en el que desea instalar el proyecto de ejemplo
-4. Realizar`git clone <pasted url>`
+4. Realizar `git clone <pasted url>`
 
 ### <a name="for-netc-samples"></a>Para ejemplos de .NET/C#
 
@@ -55,10 +55,12 @@ Como siempre, el archivo Léame del proyecto debe tener más información sobre 
 
 | Muestra | Descripción | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
-| Comando Buscar | Extensión de mensajería simple con un comando de búsqueda | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/50.teams-messaging-extension-search)|
-| Comando de acción | Extensión de mensajería simple con un comando de acción. Respuesta insertada en el área de mensaje de redacción. | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/51.teams-messaging-extensions-action)|
-| Comando de acción con respuesta de bot | Extensión de mensajería con un comando de acción. Respuesta insertada en la conversación por el bot. | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/53.teams-messaging-extensions-action-preview)|
-| Comando Buscar | extensión de mensajería con un comando de búsqueda y autenticación y configuración | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/52.teams-messaging-extensions-search-auth-config)|
+| Extensiones de mensajería: búsqueda | Extensión de mensajería que acepta solicitudes de búsqueda y devuelve resultados. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Extensiones de mensajería: acción | Extensión de mensajería que acepta parámetros y devuelve una tarjeta. Además, cómo recibir un mensaje reenviado como parámetro en una extensión de mensajería. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Extensiones de mensajería: auth y config | La extensión de mensajería que tiene una página de configuración, acepta solicitudes de búsqueda y devuelve resultados después de que el usuario haya iniciado sesión. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| Extensiones de mensajería: vista previa de la acción | Muestra cómo crear una vista previa y editar el flujo de una extensión de mensajería. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
+| Apertura de vínculos | Extensión de mensajería que realiza unfurling de vínculos. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
+
 
 ## <a name="outgoing-webhooks"></a>Webhooks salientes
 

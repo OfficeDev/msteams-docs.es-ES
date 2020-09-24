@@ -2,12 +2,12 @@
 title: Autenticación para pestañas con Azure Active Directory
 description: Describe la autenticación en Microsoft Teams y cómo usarla en las pestañas.
 keywords: pestañas de autenticación de Teams AAD
-ms.openlocfilehash: 211c08ce1a51a8f0f13e622856a808661dc97b39
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: a1d3a96e23706012b643b5827701b49e2306d847
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801469"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237786"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una pestaña de Microsoft Teams
 
@@ -136,10 +136,10 @@ Este código analiza los pares clave-valor recibidos de Azure AD `window.locatio
 
 ### <a name="notes"></a>Notas
 
-`NotifyFailure()`tiene los siguientes motivos de error predefinidos:
+`NotifyFailure()` tiene los siguientes motivos de error predefinidos:
 
-* `CancelledByUser`el usuario ha cerrado la ventana del elemento emergente antes de completar el flujo de autenticación.
-* `FailedToOpenWindow`no se pudo abrir la ventana emergente. Cuando se ejecuta Microsoft Teams en un explorador, suele significar que la ventana fue bloqueada por un bloqueador de elementos emergentes.
+* `CancelledByUser` el usuario ha cerrado la ventana del elemento emergente antes de completar el flujo de autenticación.
+* `FailedToOpenWindow` no se pudo abrir la ventana emergente. Cuando se ejecuta Microsoft Teams en un explorador, suele significar que la ventana fue bloqueada por un bloqueador de elementos emergentes.
 
 Si se ejecuta correctamente, puede actualizar o volver a cargar la página y mostrar contenido relevante para el usuario autenticado ahora. Si se produce un error en la autenticación, mostrar un mensaje de error.
 
@@ -147,6 +147,9 @@ La aplicación puede establecer su propia cookie de sesión para que el usuario 
 
 > [!NOTE]
 > Chrome 80, programado para su lanzamiento en principios de 2020, presenta nuevos valores de cookies e impone directivas de cookies de forma predeterminada. Se recomienda establecer el uso previsto para las cookies en lugar de basarse en el comportamiento predeterminado del explorador. *Consulte* [SameSite cookie Attribute (2020 Update)](../../../resources/samesite-cookie-update.md).
+
+>[!NOTE]
+>Para obtener el token correcto para los usuarios gratuitos y de invitado de Microsoft Teams, es importante que las aplicaciones usen el punto de conexión específico del espacio empresarial https://login.microsoftonline.com/ **{tenantId}**. Puede obtener tenantId en el contexto de mensaje o la pestaña del bot. Si se usan las aplicaciones https://login.microsoftonline.com/common , los usuarios obtendrán tokens incorrectos y iniciarán sesión en el inquilino "principal" en lugar del inquilino en el que estén actualmente en sesión.
 
 Para obtener más información sobre el inicio de sesión único (SSO), vea el artículo [autenticación silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

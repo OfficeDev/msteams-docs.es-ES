@@ -5,12 +5,12 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: 83e0a5b53e363a090935b4afa9840dd96c5f7381
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182036"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237989"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>Creación de aplicaciones para reuniones de Microsoft Teams (versión preliminar)
 
@@ -27,7 +27,7 @@ ms.locfileid: "48182036"
 
 1. Algunas API de reunión, como `GetParticipant` requerirán un [registro de Bot y un identificador de aplicación de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para generar tokens de autenticación.
 
-1. Los desarrolladores deben adherirse a las directrices generales de diseño de la pestaña de Microsoft [Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como las [directrices de diálogo en reunión](designing-in-meeting-dialog.md) para los diálogos que se desencadenan durante la reunión de Microsoft Teams.
+1. Los desarrolladores deben adherirse a las directrices generales de diseño de la pestaña de Microsoft [Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como durante las reuniones (consulte las instrucciones de diseño de las [pestañas](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) [en reunión](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) y de las reuniones).
 
 ## <a name="meeting-apps-api-reference"></a>Referencia de API de las aplicaciones de reunión
 
@@ -141,7 +141,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-**conversationId**: el identificador de la conversación. Obligatorio
+**conversationId**: el identificador de la conversación. Necesario
 
 #### <a name="request-payload"></a>Carga de solicitud
 
@@ -269,7 +269,7 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 #### <a name="in-meeting-dialog"></a>**cuadro de diálogo en la reunión**
 
-✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](designing-in-meeting-dialog.md).
+✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
 
 ✔ Consulte el [flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md).
 

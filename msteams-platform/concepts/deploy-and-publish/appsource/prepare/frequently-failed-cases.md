@@ -4,12 +4,12 @@ description: Describe las sugerencias para el envío y la mayoría de las direct
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 93b772f6868c50df6810c09f06bc9d1c99a00896
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704484"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237863"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -114,19 +114,22 @@ El bot debe responder a cualquier comando y no debe ser el usuario que no respon
 
 * **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o Teams, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la [Referencia del esquema del manifiesto de Microsoft Teams](~/resources/schema/manifest-schema.md#bots)).
 
-### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>Los bots de &#9989; deben enviar un mensaje de bienvenida en el primer inicio
+### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots personales deben enviar un mensaje de bienvenida en el primer inicio
 
-Los mensajes de bienvenida son la mejor forma de establecer el tono de la bot. Se trata de la primera interacción que un usuario tiene con el bot. Un buen mensaje de bienvenida puede animar al usuario a seguir explorando la aplicación. Si el mensaje de bienvenida o de introducción es confuso o confuso, los usuarios no verán el valor de la aplicación de forma inmediata y perderán sus intereses.
+Un mensaje de bienvenida es la mejor forma de establecer el tono de su bot personal/chat. Se trata de la primera interacción que un usuario tiene con el bot. Un buen mensaje de bienvenida puede animar al usuario a seguir explorando la aplicación. Si el mensaje de bienvenida o de introducción es confuso o confuso, los usuarios no verán el valor de la aplicación de forma inmediata y perderán sus intereses.
+
+> [!Note]
+> Un mensaje de bienvenida es opcional para un bot de canal.
 
 ### <a name="welcome-message-requirements"></a>Requisitos de mensaje de bienvenida
 
-* Identificar quién agregó el bot a un canal.
-* Incluir una propuesta de valor.
-* Proporcione orientación hacia delante para usar el bot.
-* Presente texto fácil de leer y diálogo sencillo, preferiblemente una tarjeta con un botón de bienvenida que requiere una acción que carga un módulo de tareas.
+* Incluya una propuesta de valor con el paseo de bienvenida.
+* Proporcionar instrucciones de avance para usar el bot.
+* Presente texto fácil de leer y diálogo directo, preferiblemente una tarjeta con un botón de bienvenida que requiere una acción que carga un módulo de tareas.
 * Manténgase sencillo, evite el diálogo de palabras/chats.
+* Incluya tarjetas adaptables y botones para que el mensaje de bienvenida sea más fácil de usar.
 * Invocar el mensaje de bienvenida con un ping y no dos o más pings simultáneos.
-* En chat personal, el mensaje de bienvenida solo debe mostrarse al usuario que configuró la aplicación.  
+* Un mensaje de bienvenida solo debe mostrarse al usuario que configuró la aplicación, preferiblemente en un chat personal de 1:1.
 * No envíe nunca un chat personal a todos los miembros del equipo.
 * No enviar nunca el mensaje de bienvenida más de una vez. No se permite repetir el mismo mensaje de bienvenida a intervalos regulares y se considera correo no deseado.
 

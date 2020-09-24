@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear un bot para su primera aplic
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7d3d1b63aace7fda971fb6ccaddddf631b4b2ad9
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210305"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237828"
 ---
 # <a name="build-a-teams-bot"></a>Crear un bot de Teams
 
@@ -34,7 +34,7 @@ El área de trabajo ha estado usando [pestañas](../build-your-first-app/build-p
 
 Si aún no lo ha hecho, asegúrese [de que comprende e instala los requisitos previos de desarrollo de Microsoft Teams](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Crear el proyecto de la aplicación
+## <a name="1-create-your-app-project"></a>1. crear un proyecto de aplicación
 
 El kit de herramientas de Microsoft Teams le ayudará a configurar los siguientes componentes de la aplicación:
 
@@ -53,7 +53,7 @@ El kit de herramientas de Microsoft Teams le ayudará a configurar los siguiente
 1. Opcional Escriba un nombre personalizado para el bot y seleccione **crear**. Recuerde que este es el nombre de su bot y no el nombre de la aplicación de teams que ya ha especificado.
 1. Seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.
 
-## <a name="identify-relevant-app-project-components"></a>Identificar los componentes relevantes del proyecto de aplicación
+## <a name="2-identify-relevant-app-project-components"></a>2. identificar los componentes relevantes del proyecto de aplicación
 
 La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear un bot.
 
@@ -105,7 +105,7 @@ El scaffolding de la aplicación proporciona un `botActivityHandler.js` archivo,
 
 El `.env` archivo, también en el directorio raíz, almacena el identificador de Bot y la contraseña.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurar un túnel seguro para la aplicación
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. configurar un túnel seguro a la aplicación
 
 Para fines de prueba, vamos a hospedar su bot en un servidor Web local (puerto 3978).
 
@@ -116,7 +116,7 @@ Para fines de prueba, vamos a hospedar su bot en un servidor Web local (puerto 3
 
 El manifiesto de la aplicación apunta al lugar donde se hospeda el bot.
 
-## <a name="configuring-your-bot"></a>Configurar el bot
+## <a name="4-configure-your-bot"></a>4. configurar el bot
 
 Para usar un bot en Teams, debe registrarlo con el servicio de bot de Azure. Por suerte, esto se realiza automáticamente al configurar la aplicación con el kit de herramientas de Teams.
 
@@ -140,7 +140,7 @@ Debe especificar una dirección URL de punto de conexión para recibir y procesa
 
 El bot podrá responder a los mensajes de Microsoft Teams.
 
-## <a name="run-your-app"></a>Ejecutar la aplicación
+## <a name="5-run-your-app"></a>5. ejecutar la aplicación
 
 Ha configurado una dirección URL para hospedar el bot y configurarlo para administrar mensajes. Es el momento de poner el bot en marcha.
 
@@ -151,19 +151,19 @@ Si se ejecuta correctamente, verá algo parecido al siguiente mensaje que indica
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-bot-in-teams"></a>Transferir localmente el bot en Microsoft Teams
+## <a name="6-sideload-your-bot-in-teams"></a>6. transferir localmente el bot a Microsoft Teams
 
 Con el bot ejecutándose, puede instalarlo en Teams.
 
 > [!TIP]
-> Si no ha transferido localmente una aplicación de Microsoft Teams y tiene problemas, siga estas [instrucciones](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> Si no ha transferido localmente una aplicación de Microsoft Teams y tiene problemas, siga estas [instrucciones](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Inicie sesión en el cliente de Teams con su cuenta que permite la transferencia local de aplicaciones.
 1. Seleccione **aplicaciones**y, después, elija **cargar una aplicación personalizada**.
 1. Vaya a la carpeta de proyecto de la aplicación `.publish` y seleccione `Development.zip` .
 1. En el modal instalar, seleccione **Agregar** para instalar la aplicación.
 
-## <a name="test-your-bot"></a>Probar el bot
+## <a name="7-test-your-bot"></a>7. probar el bot
 
 Ahora es la parte divertida: digamos "Hola" a su bot en un chat de uno a uno.
 
@@ -199,7 +199,7 @@ Si ha instalado la aplicación pero el bot no funciona, asegúrese de que el bot
 
 Es importante comprender que no es lo mismo que un canal en Microsoft Teams. En este caso, un canal es cómo el servicio bot de Azure conecta su bot con Teams u otra [aplicación de comunicaciones de terceros o de Microsoft compatible](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="learn-more"></a>Obtén más información
+## <a name="learn-more"></a>Más información
 
 * [Ver qué otros bots de Teams pueden hacer con una de nuestras muestras](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Conceptos básicos de las conversaciones de bot](../bots/how-to/conversations/conversation-basics.md)
