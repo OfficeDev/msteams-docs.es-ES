@@ -3,12 +3,12 @@ title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: 16dbb99add82c26930baf22bfc2c5153fd47b2f1
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: bfcee2c00d30517522621f61142324b4f81a93f8
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651652"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237968"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -154,7 +154,7 @@ Los siguientes pasos usan [cURL](https://curl.haxx.se/). Damos por sentado que l
 
    ```bash
    // on Windows
-   curl.exe -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
+   curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
 2. Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `curl`.
@@ -246,9 +246,10 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
             "type":"AdaptiveCard",
             "version":"1.2",
             "body":[
-               {
-                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
-               }
+                {
+                "type": "TextBlock",
+                "text": "For Samples and Templates, see https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                }
             ]
          }
       }
