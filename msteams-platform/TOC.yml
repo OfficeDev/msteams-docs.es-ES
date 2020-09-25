@@ -1,10 +1,25 @@
 - name: Información general
   expanded: true
   items:
-    - name: ¿Qué son las aplicaciones de Microsoft Teams?
+    - name: Desarrollar aplicaciones para Microsoft Teams
       href: overview.md
     - name: Novedades
       href: whats-new.md
+- name: Desarrollar su primera aplicación
+  expanded: true
+  items:
+    - name: Introducción y prerrequisitos
+      href: build-your-first-app/build-first-app-overview.md
+    - name: 'Crear un "Hola, mundo" aplicación'
+      href: build-your-first-app/build-and-run.md
+    - name: Crear una pestaña personal
+      href: build-your-first-app/build-personal-tab.md
+    - name: Crear una pestaña de canal
+      href: build-your-first-app/build-channel-tab.md
+    - name: Crear un bot
+      href: build-your-first-app/build-bot.md
+    - name: Crear una extensión de mensajería
+      href: build-your-first-app/build-messaging-extension.md
 - name: Tutoriales y ejemplos de código
   items:
     - name: Creación de una aplicación con C#
@@ -17,6 +32,10 @@
       href: tutorials/code-samples.md
 - name: Plantillas e integraciones
   items:
+    - name: Integrar aplicaciones web
+      href: samples/integrating-web-apps.md
+    - name: Crear aplicaciones de poco código
+      href: samples/teams-low-code-solutions.md
     - name: Plantillas de aplicaciones listas para producción
       href: samples/app-templates.md
     - name: Conectores de turnos listos para producción
@@ -31,12 +50,22 @@
           href: toolkit/visual-studio-code-overview.md
         - name: Extensión del kit de herramientas de equipos para Visual Studio
           href: toolkit/visual-studio-overview.md
+- name: Aplicaciones en las reuniones
+  items:
+    - name: Aplicaciones de Teams en las reuniones
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: Crear aplicaciones para reuniones de equipos
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Diseñar un diálogo dentro de la reunión
+      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+    - name: Diseñar una pestaña dentro de la reunión
+      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: Conceptos
   expanded: true
   items:
-    - name: Creación de aplicaciones para Microsoft Teams
-      href: concepts/building-an-app.md
-    - name: Puntos de extensibilidad en el cliente de Teams
+    - name: Capacidades de la aplicación
+      href: concepts/capabilities-overview.md
+    - name: Puntos de entrada de la aplicación
       href: concepts/extensibility-points.md
     - name: Diseño de la aplicación
       items:
@@ -157,15 +186,15 @@
           items:
             - name: Flujo de autenticación
               href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: "Uso de la autenticación de Azure\_AD"
+            - name: "Usar autenticación de Azure\_AD"
               href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Uso de la autenticación silenciosa
+            - name: Usar autenticación silenciosa
               href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Uso de la autenticación de inicio de sesión único
+            - name: Usar autenticación de inicio de sesión único
               href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Uso del SDK para cliente de Teams
+        - name: Usar el SDK del cliente de Teams
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Obtención de contexto adicional de Teams
+        - name: Obtener contexto adicional de Teams
           href: tabs/how-to/access-teams-context.md
         - name: DevTools para pestañas de Microsoft Teams
           href: tabs/how-to/developer-tools.md
@@ -238,7 +267,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Conceptos multimedia en tiempo real
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Registro de un bot de llamadas
+        - name: Registrar un bot de llamadas
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notificaciones de llamadas entrantes
           href: bots/calls-and-meetings/call-notifications.md
@@ -301,9 +330,9 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: Tarjetas
       items:
-        - name: Diseño de tarjetas efectivas
+        - name: Diseñar tarjetas efectivas
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formato del texto de la tarjeta
+        - name: Formatear el texto de la tarjeta
           href: task-modules-and-cards/cards/cards-format.md
         - name: Agregar y responder a acciones de la tarjeta
           href: task-modules-and-cards/cards/cards-actions.md
@@ -328,8 +357,16 @@
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: Creación de un conector de O365
           href: webhooks-and-connectors/how-to/connectors-creating.md
-        - name: Envío de mensajes a conectores y webhooks
+        - name: Enviar mensajes a los conectores y webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Aplicaciones en las reuniones
+  items:
+    - name: Diseño de la aplicación
+      items:
+        - name: Diálogo en la reunión
+          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+        - name: Pestaña en la reunión
+          href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: 'Las API de REST de Graph para Teams '
   items:
     - name: Consentimiento específico de recursos (RSC)
@@ -372,7 +409,7 @@
           href: resources/bot-v3/bots-notifications.md
         - name: Contexto para bots
           href: resources/bot-v3/bots-context.md
-        - name: Envío y recepción de archivos
+        - name: Enviar y recibir archivos
           href: resources/bot-v3/bots-files.md
         - name: Bots de solo notificación
           href: resources/bot-v3/bots-notification-only.md
@@ -380,7 +417,7 @@
           href: resources/bot-v3/bots-menus.md
         - name: Bots con pestañas
           href: resources/bot-v3/bots-with-tabs.md
-        - name: Dar formato a los mensajes de bots
+        - name: Formatear los mensajes del bot
           href: resources/bot-v3/bots-text-formats.md
         - name: Probar un bot
           href: resources/bot-v3/bots-test.md
