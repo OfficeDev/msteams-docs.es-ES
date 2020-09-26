@@ -3,12 +3,12 @@ title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531290"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279799"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -22,6 +22,18 @@ Las plantillas de aplicación son aplicaciones de producción listas para Micros
 * **Código preparado para la producción:** Las plantillas de aplicación cumplen con los procedimientos recomendados para la seguridad y la infraestructura, y todos los cambios enviados por la comunidad se revisan para garantizar una conformidad continua.
 * **Personalizable y extensible:** Aunque todas las plantillas de aplicación están preparadas para implementarse tal y como están, proporcionamos la base de código completa y los scripts de implementación para que pueda personalizarlas fácilmente o ampliarlas para que se ajusten a sus necesidades específicas.
 * **Documentación detallada & soporte técnico:** Todas las plantillas de aplicación están acompañadas de la documentación de un extremo a otro sobre la arquitectura de la solución, la implementación y los pasos de configuración. Los repositorios también se supervisan, por lo que puede informar de los problemas que encuentre al emitir un problema en GitHub.
+
+## <a name="ask-away-9734"></a>Preguntar &#9734;
+
+Pregúntese es un [Bot de Microsoft Teams](../bots/what-are-bots.md) que permite a los usuarios realizar sesiones de Q&a (pregunta y respuesta) en Teams. Con el bot Ask Away, los miembros del equipo pueden enviar y recibir preguntas de voto compartido por los compañeros, lo que permite a los hosts de preguntas&un host recopilar fácilmente preguntas de la parte principal dentro de un canal o chat. El bot se puede usar para realizar preguntas en tiempo real de Q&una sesión en una reunión de Microsoft Teams y permite a los asistentes enviar preguntas en directo a través del chat.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+
+:::row:::
+  :::column span="2":::
+    ![Ver el cuadro de di? logo emergente de los usuarios para que vote en preguntas](../assets/images/ask-away-app.png)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="associate-insights"></a>Información de asociados
 
@@ -74,7 +86,7 @@ Proporciona una base para crear capacidades de comunicación de destino personal
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![P + f más GIF](../assets/images/CompanyCommunicatorCompose.png)
+![vista de cuadro de redacción de jCompany Communicator](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="contact-group-lookup-9734"></a>&#9734; de búsqueda de grupo de contactos
 
@@ -155,7 +167,7 @@ Conversación-Q&los bots son una forma sencilla de proporcionar respuestas a las
 
 ![P + f más GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="goal-tracker-9734"></a>&#9734; del rastreador de objetivos
+## <a name="goal-tracker"></a>Rastreador de objetivos
 
 La aplicación de seguimiento de objetivos es una solución completa para que su organización admita el establecimiento de objetivos, observando el progreso y reconociendo el éxito en Microsoft Teams. La aplicación permite a los usuarios establecer, realizar un seguimiento y actualizar objetivos en un nivel profesional, personal y de equipo. Los integrantes del grupo también reciben avisos puntuales y actualizaciones de estado para que permanezcan concentrados y permanezcan al tanto de ellos.
 
@@ -172,7 +184,7 @@ La aplicación de seguimiento de objetivos es una solución completa para que su
 :::column-end:::
 :::row-end:::
 
-## <a name="great-ideas-9734"></a>Ideas excelentes &#9734;
+## <a name="great-ideas"></a>Ideas grandes
 
 La aplicación de ideas excelentes admite y permite la innovación y la creatividad dentro de la organización. La aplicación permite a los empleados compartir ideas con colegas y liderazgo, descubrir nuevos envíos, destacar contribuciones para la consideración de los colegas y convertir su voto en las mejores propuestas en Microsoft Teams.
 
@@ -206,7 +218,7 @@ Actividades de grupo es una aplicación de Microsoft teams que facilita a los pr
 :::column-end:::
 :::row-end:::
 
-## <a name="grow-your-skills-9734"></a>Aumente sus conocimientos &#9734;
+## <a name="grow-your-skills"></a>Ampliar sus habilidades
 
 La aplicación de crecimiento de sus habilidades admite el crecimiento y el desarrollo profesionales al permitir a los empleados colaborar en proyectos adicionales para su organización mientras aprenden a la vez nuevas habilidades. Los empleados pueden usar la aplicación para localizar oportunidades que se ajusten a sus intereses, disfrutar de una colaboración significativa con los colegas y adquirir nuevos niveles de conocimientos y capacidades, todo dentro del entorno de Teams.
 
@@ -249,9 +261,9 @@ Incentivos es una plantilla de [Power apps](/powerapps/maker/canvas-apps/embed-t
 
 ![Demostración de la aplicación incentivos](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter-9734"></a>&#9734; de inincidenciar Reporter
+## <a name="incident-reporter"></a>Incider Reporter 
 
-Incident Reporter es un [Bot de Microsoft Teams](../bots/what-are-bots.md) que optimiza la administración de incidentes en la organización. El bot facilita la recopilación automatizada de datos de incidentes, los informes de incidentes personalizados, las notificaciones de los participantes relevantes y el seguimiento de incidentes de un extremo a otro.
+Incident Reporter es un [Bot de Microsoft Teams](../bots/what-are-bots.md)  que optimiza la administración de incidentes en la organización. El bot facilita la recopilación automatizada de datos de incidentes, los informes de incidentes personalizados, las notificaciones de los participantes relevantes y el seguimiento de incidentes de un extremo a otro.
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
 
@@ -291,7 +303,7 @@ Respuestas rápidas es una aplicación de Microsoft teams que ofrece una soluci�
 
 ![Vista de ejemplo de respuestas](../assets/images/quick-responses.png)
 
-## <a name="remote-support-9734"></a>&#9734; de soporte remoto
+## <a name="remote-support"></a>Soporte remoto
 
 El soporte remoto es un [robot de Microsoft Teams](../bots/what-are-bots.md) que proporciona una interfaz específica entre los solicitantes de soporte técnico de toda la organización y el equipo de soporte técnico interno.  Los usuarios finales pueden enviar, editar o retirar solicitudes de soporte técnico y el equipo de soporte técnico puede responder, administrar y actualizar todas las solicitudes dentro de la plataforma de Teams.
 
@@ -308,7 +320,7 @@ El soporte remoto es un [robot de Microsoft Teams](../bots/what-are-bots.md) que
 :::column-end:::
 :::row-end:::
 
-## <a name="request-a-team-9734"></a>&#9734; de solicitud-a-equipo
+## <a name="request-a-team"></a>Solicitud-a-Team
 
 Solicitud: un equipo es una aplicación de Microsoft teams que optimiza la creación de nuevos equipos para la organización de la empresa. La aplicación admite la normalización y los procedimientos recomendados al crear nuevas instancias de equipo a través de la integración de un formulario de solicitud guiada por un asistente, un proceso de aprobación incrustado, un panel de estado de la solicitud y compilaciones automatizadas del equipo.
 
@@ -325,14 +337,14 @@ Solicitud: un equipo es una aplicación de Microsoft teams que optimiza la creac
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-channels-9734"></a>Scrum para canales &#9734;
+## <a name="scrums-for-channels"></a>Scrum para canales
 
 Scrum for Channels es una aplicación de asistente de Scrum que permite a los usuarios programar y ejecutar Scrum en canales dentro de Microsoft Teams. La aplicación es ideal para los equipos remotos y los equipos que se componen de miembros de distintas ubicaciones geográficas y zonas horarias para compartir actualizaciones diarias y garantizar la participación en las reuniones de soporte de Scrum.
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> Para realizar reuniones de Scrum en un chat en grupo, vea nuestra plantilla [de aplicación de chat en grupo](#scrums-for-group-chat-) .
+> Para realizar reuniones de Scrum en un chat en grupo, vea nuestra plantilla [de aplicación de chat en grupo](#scrums-for-group-chat) .
 
 :::row:::
   :::column span="2":::
@@ -345,7 +357,7 @@ Scrum for Channels es una aplicación de asistente de Scrum que permite a los us
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-group-chat-9734"></a>Scrum para &#9734; de chat en grupo
+## <a name="scrums-for-group-chat"></a>Scrum para el chat en grupo
 
 > [!NOTE]
 > La plantilla de aplicación de estado de Scrum se ha actualizado y ahora es Scrum for Group chat.
@@ -374,7 +386,7 @@ Para ayudar a aliviar este problema, nos alegramos de ofrecerle la plantilla de 
 
 ![Aplicación de búsqueda de lista](../assets/images/list-search-template.png)
 
-## <a name="staff-check-ins-9734"></a>Protecciones del personal &#9734;
+## <a name="staff-check-ins"></a>Protecciones del personal
 
 Las protecciones del personal es una aplicación basada en [Power apps](/powerapps/powerapps-overview)que permite la comunicación de supervisión de la empresa y el personal de campo. El personal puede proporcionar fácilmente información crítica de tiempo y actualizaciones de estado en una base programada o ad-hoc, directamente desde Microsoft Teams. La aplicación admite la ubicación en tiempo real, fotos y notas, así como notificaciones de aviso y flujos de trabajo automatizados.
 

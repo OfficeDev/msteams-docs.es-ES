@@ -5,12 +5,12 @@ description: Información general sobre las aplicaciones de Microsoft Teams basa
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237891"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279716"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Aplicaciones en reuniones de Microsoft Teams (versión preliminar)
 
@@ -129,4 +129,4 @@ Puede tener acceso a la página  **Opciones de reunión** de la siguiente manera
 ## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
-> [Habilitar aplicaciones en reuniones de Microsoft Teams] (apps-in-Teams-reuniones/enable-apps-in-Meets. MD
+> [Creación de aplicaciones para reuniones de Microsoft Teams](create-apps-for-teams-meetings.md)

@@ -4,12 +4,12 @@ author: clearab
 description: Información general sobre las extensiones de mensajería en la plataforma de Microsoft Teams
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7eb734258aa34c69fa34d1413b2d3dab88e0113a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 89cf92260418701ef4809f5a13750b991b9f7acb
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675770"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279679"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de la extensión de mensajería
 
@@ -43,7 +43,7 @@ Si elige crear el módulo de tareas con una lista estática de parámetros, la p
 
 En la mayoría de los casos, el comando de acción dará como resultado una tarjeta insertada en el cuadro de mensaje de redacción. A continuación, el usuario puede decidir enviarlo al canal o al chat. El mensaje en este caso procede del usuario y el bot no podrá editar ni actualizar la tarjeta.
 
-Si la extensión de mensajería se desencadena desde el cuadro de redacción o directamente desde un mensaje, el servicio web puede insertar la respuesta final directamente en el canal o el chat. En este caso, la tarjeta adaptable procede del bot, el bot podrá actualizarlo y el bot también puede responder al hilo de conversación si es necesario. Tendrá que agregar el `bot` objeto al manifiesto de la aplicación con el mismo identificador y definir los ámbitos apropiados.
+Si la extensión de mensajería se desencadena desde el cuadro de redacción o directamente desde un mensaje, el servicio web puede insertar la respuesta final directamente en el canal o el chat. En este caso, la tarjeta adaptable procede del bot, el bot podrá actualizarlo, y el bot también puede responder al hilo de conversación si es necesario. Tendrá que agregar el `bot` objeto al manifiesto de la aplicación con el mismo identificador y definir los ámbitos apropiados.
 
 ## <a name="add-the-command-to-your-app-manifest"></a>Agregar el comando al manifiesto de la aplicación
 
@@ -68,27 +68,27 @@ En los pasos siguientes se da por sentado que ya ha [creado una extensión de me
 
 Para agregar manualmente el comando de extensión de mensajería basada en acciones al manifiesto de la aplicación, deberá agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos.
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | IDENTIFICADOR único que asigna a este comando. La solicitud del usuario incluirá este identificador. | Sí | 1.0 |
 | `title` | Nombre del comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
-| `type` | Debe ser`action` | No | 1.4 |
-| `fetchTask` | `true`para una tarjeta adaptable o una vista Web incrustada para el `false` módulo de tareas, para una lista estática de parámetros o cuando se carga la vista Web mediante un`taskInfo` | No | 1.4 |
-| `context` | Matriz opcional de valores que define dónde se puede invocar la extensión de mensajería. Los valores posibles `message`son `compose`, o `commandBox`. El valor predeterminado es `["compose", "commandBox"]`. | No | 1,5 |
+| `type` | Debe ser `action` | No | 1.4 |
+| `fetchTask` | `true` para una tarjeta adaptable o una vista Web incrustada para el módulo de tareas, `false` para una lista estática de parámetros o cuando se carga la vista Web mediante un `taskInfo` | No | 1.4 |
+| `context` | Matriz opcional de valores que define dónde se puede invocar la extensión de mensajería. Los valores posibles son `message` , `compose` o `commandBox` . El valor predeterminado es `["compose", "commandBox"]`. | No | 1,5 |
 
 Si usa una lista de parámetros estática, también los agregará.
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `parameters` | Lista estática de parámetros para el comando. Usar solo cuando `fetchTask` es`false` | No | 1.0 |
+| `parameters` | Lista estática de parámetros para el comando. Usar solo cuando `fetchTask` es `false` | No | 1.0 |
 | `parameter.name` | Nombre del parámetro. Se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
 | `parameter.description` | Describe los propósitos de este parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
 | `parameter.title` | Nombre corto o etiqueta del parámetro sencillo para el usuario. | Sí | 1.0 |
-| `parameter.inputType` | Se establece en el tipo de entrada requerido. Los valores posibles `text`son `textarea`: `number`, `date`, `time`, `toggle`,. El valor predeterminado está establecido en`text` | No | 1.4 |
+| `parameter.inputType` | Se establece en el tipo de entrada requerido. Los valores posibles son `text` : `textarea` , `number` , `date` , `time` , `toggle` . El valor predeterminado está establecido en `text` | No | 1.4 |
 
-Si usa una vista Web incrustada, puede agregar opcionalmente el `taskInfo` objeto para recuperar la vista Web sin llamar a su bot directamente. Si decide usar esta opción, el comportamiento es similar al uso de una lista estática de parámetros en que la primera interacción con el bot [responderá a la acción de envío del módulo de tarea](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto, asegúrese de establecer también el `fetchTask` parámetro en. `false`
+Si usa una vista Web incrustada, puede agregar opcionalmente el `taskInfo` objeto para recuperar la vista Web sin llamar a su bot directamente. Si decide usar esta opción, el comportamiento es similar al uso de una lista estática de parámetros en que la primera interacción con el bot [responderá a la acción de envío del módulo de tarea](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto, asegúrese de establecer también el `fetchTask` parámetro en `false` .
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 |`taskInfo`|Especificar el módulo de tarea para cargar previamente cuando se usa un comando de extensión de mensajería| No | 1.4 |
 |`taskInfo.title`|Título del módulo de tarea inicial|No | 1.4 |
@@ -98,7 +98,7 @@ Si usa una vista Web incrustada, puede agregar opcionalmente el `taskInfo` objet
 
 #### <a name="app-manifest-example"></a>Ejemplo de manifiesto de la aplicación
 
-A continuación, se muestra un ejemplo `composeExtensions` de un objeto que define dos comandos de acción. No es un ejemplo del manifiesto completo, para el esquema completo del manifiesto de la aplicación, vea: [esquema del manifiesto](~/resources/schema/manifest-schema.md)de la aplicación.
+A continuación, se muestra un ejemplo de un `composeExtensions` objeto que define dos comandos de acción. No es un ejemplo del manifiesto completo, para el esquema completo del manifiesto de la aplicación, vea: [esquema del manifiesto](~/resources/schema/manifest-schema.md)de la aplicación.
 
 ```json
 ...
@@ -148,7 +148,7 @@ A continuación, se muestra un ejemplo `composeExtensions` de un objeto que defi
 ...
 ```
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 Si usa una tarjeta adaptable o una vista Web incrustada sin un `taskInfo` objeto, querrá:
 

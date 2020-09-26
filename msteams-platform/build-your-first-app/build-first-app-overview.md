@@ -5,14 +5,14 @@ description: Información general y requisitos previos para crear la primera apl
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: bcfbcaa9de85f4b7135483aed3d1d11bf8bffad6
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210300"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279711"
 ---
-# <a name="building-your-first-teams-app-overview"></a>Información general sobre la creación de su primera aplicación de Microsoft Teams
+# <a name="build-your-first-teams-app-overview"></a>Información general sobre la creación de su primera aplicación de Microsoft Teams
 
 En la lección **compilar la primera aplicación** , puede crear aplicaciones básicas de Teams. En cada tutorial se explica cómo crear una aplicación sencilla y real de Teams, a la vez que se presentan herramientas comunes, conceptos fundamentales y características más avanzadas.
 

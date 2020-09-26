@@ -2,12 +2,12 @@
 title: Guía del proceso de envío de aprobación de aplicaciones de Microsoft Teams
 description: Describe el proceso de aprobación de envío para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
 keywords: Teams publicar tienda de Office publicar AppSource de la cuenta del centro asociado
-ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874873"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279685"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -30,7 +30,7 @@ La publicación de la aplicación en [AppSource](https://appsource.microsoft.com
 >- Si la aplicación contiene un conector de Office 365, es posible que se apliquen términos adicionales. *Vea* [Connector Dashboard Developer's Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 >- Para que la aplicación esté disponible para los usuarios de GCC y evitar la duplicación de la lista de aplicaciones en la tienda, el flujo o proceso de autenticación debe identificar y enrutar al usuario a la dirección URL de contenido especificada/esperada para los usuarios de GCC.
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>Preguntas más frecuentes: las aplicaciones de Microsoft Teams y las cuentas de asociados
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>Preguntas más frecuentes: proceso de comprobación de cuentas de asociados y aplicaciones de Microsoft en el centro de Partners
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>¿Cómo se crea una cuenta del centro del asociado?
 
@@ -49,11 +49,11 @@ Abra un [vale de soporte técnico del centro de asociados](https://partner.micro
 | Tema | Ayuda general de Marketplace y preguntas sobre procedimientos |
 | Tema secundario| Complemento de Office |
 
-## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>¿Dónde puedo obtener soporte para mis problemas con el centro de Partners?
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>¿Dónde puedo obtener soporte técnico para los problemas con la cuenta del centro de asociados?
 
 Visite nuestra [Página de soporte técnico de Publishers](https://aka.ms/marketplacepublishersupport) para buscar su tema de problemas y buscar instrucciones. Si las instrucciones proporcionadas no le resultan útiles, [abra un vale de soporte técnico del centro de asociados](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
-## <a name="how-do-i-manage-my-office-store-account"></a>¿Cómo puedo administrar mi cuenta de la tienda Office?
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>¿Cómo puedo administrar mi cuenta de la tienda Office en el centro para socios?
 
 Visite nuestra  [cuenta de administración de la tienda Office en el centro de Partners](/office/dev/store/manage-account-settings-and-profile) para obtener instrucciones sobre cómo administrar la cuenta de la tienda Office a través del centro de asociados.
 
@@ -77,12 +77,12 @@ Durante el proceso de verificación de la cuenta, se mostrará el estado de cada
 
 ![Error de comprobación del centro del asociado](../../../assets/images/partner-center-acct-verification-error.png)
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>El estado de comprobación de mi cuenta no se ha avanzado más allá de la propiedad del correo electrónico. ¿Cómo debo continuar?
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>El estado de comprobación de mi cuenta no se ha avanzado más allá de la propiedad de correo en el centro de asociados. ¿Cómo debo continuar?
 
 Durante el proceso de comprobación de la **propiedad del correo electrónico** , se envía un correo electrónico de verificación a la dirección de correo electrónico de contacto principal. Consulte la bandeja de entrada del contacto principal para ver si hay un correo electrónico de **maccount@<span>Microsoft</span>. com** con la acción de línea de asunto *necesaria: Compruebe su cuenta de correo electrónico con Microsoft*y solicite que complete el proceso de comprobación de correo electrónico. El correo electrónico de comprobación se enviará a la dirección de correo electrónico que aparece en la página Configuración de la cuenta del centro de asociados.
 
 > [!NOTE]
- >El vínculo de comprobación de correo electrónico solo es válido durante 7 días. Puede solicitar que se le reenvíe el correo electrónico visitando la página de Perfil de socio y seleccionar el vínculo **reenviar correo electrónico de verificación** . Para asegurarse de que se recibe el correo electrónico, consulte el correo electrónico de la lista blanca de microsoft.com como un dominio seguro y compruebe las carpetas de correo no deseado.
+ >El vínculo de comprobación de correo electrónico solo es válido durante 7 días. Puede solicitar que se le reenvíe el correo electrónico visitando la página de Perfil de socio y seleccionar el vínculo **reenviar correo electrónico de verificación** . Para asegurarse de que se recibe el correo electrónico, envíe un correo electrónico de lista segura desde microsoft.com como un dominio seguro y compruebe las carpetas de correo no deseado.
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>¿Cómo puedo obtener más soporte para mis problemas relacionados con la cuenta?
 
@@ -96,7 +96,7 @@ Intente lo siguiente:
 1. Borre la memoria caché del explorador, vaya a su panel de cuenta del centro de asociados y seleccione el vínculo **reenviar correo electrónico de comprobación** para que el correo electrónico de verificación vuelva a enviarse a su dirección de correo electrónico.
 1. Intente acceder al vínculo  **reenviar correo electrónico de comprobación** desde otro explorador.
 1. Trabaje con su Departamento de TI para asegurarse de que el servidor de correo electrónico no bloquea los correos electrónicos de verificación.
-1. Ajuste el filtro de correo no deseado del servidor para permitir o lista blanca de todos los correos electrónicos de **maccount@microsoft. <span></span> com**.
+1. Ajuste el filtro de correo no deseado del servidor para permitir/safelist todos los correos electrónicos de **maccount@microsoft. <span></span> com**.
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>¿Cuánto tiempo tarda el proceso de verificación de empleo?
 
