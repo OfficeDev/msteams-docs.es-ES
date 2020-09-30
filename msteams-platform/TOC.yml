@@ -50,16 +50,6 @@
           href: toolkit/visual-studio-code-overview.md
         - name: Extensión del kit de herramientas de equipos para Visual Studio
           href: toolkit/visual-studio-overview.md
-- name: Aplicaciones en las reuniones
-  items:
-    - name: Aplicaciones de Teams en las reuniones
-      href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Crear aplicaciones para reuniones de equipos
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: Diseñar un diálogo dentro de la reunión
-      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
-    - name: Diseñar una pestaña dentro de la reunión
-      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: Conceptos
   expanded: true
   items:
@@ -361,12 +351,16 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Aplicaciones en las reuniones
   items:
-    - name: Diseño de la aplicación
+    - name: Aplicaciones de Teams en las reuniones
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: Crear aplicaciones para reuniones de Teams
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Diseñar la aplicación en la reunión
       items:
         - name: Diálogo en la reunión
-          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: Pestaña en la reunión
-          href: apps-in-teams-meetings/designing-in-meeting-tab.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: 'Las API de REST de Graph para Teams '
   items:
     - name: Consentimiento específico de recursos (RSC)
