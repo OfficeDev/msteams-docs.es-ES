@@ -157,7 +157,7 @@
       items:
         - name: Información general sobre diseño
           href: tabs/design/tabs.md
-        - name: Pestañas en clientes móviles
+        - name: Pestañas en dispositivos móviles
           href: tabs/design/tabs-mobile.md
     - name: Guías de procedimientos
       expanded: true
