@@ -3,12 +3,12 @@ title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279799"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326367"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -67,6 +67,21 @@ Book-a-Room es un [robot de Microsoft Teams](../bots/what-are-bots.md) que permi
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![Demostración de libro a salón](../assets/images/book-a-room.png)
+
+## <a name="building-access-9734"></a>Crear &#9734; de acceso
+
+El acceso de creación es una aplicación basada en la plataforma de Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)que admite la administración de los umbrales de ocupación y las normas de distancing social al permitir que los directores administren, controlen y reporten la presencia de los empleados en el sitio. La aplicación, creada con Microsoft [Power apps](/powerapps/powerapps-overview)y [Power Automate](/power-automate/getting-started), se integra profundamente con Microsoft Teams y permite a las organizaciones determinar la preparación para la creación, establecer criterios de elegibilidad para el acceso a domicilio y recopilar información para la planeación futura.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![Creación de tarjeta de reserva de acceso](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![Crear una vista de clave de acceso](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="celebrations"></a>Celebraciones
 

@@ -5,17 +5,17 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: a489a2a439c8aaacc2900e4c62084f13b34b3e30
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279673"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326308"
 ---
-# <a name="create-apps-for-teams-meetings-preview"></a>Creación de aplicaciones para reuniones de Microsoft Teams (versión preliminar)
+# <a name="create-apps-for-teams-meetings-release-preview"></a>Creación de aplicaciones para reuniones de Microsoft Teams (versión preliminar)
 
 >[!IMPORTANT]
-> Las características incluidas en Microsoft Teams Preview se proporcionan solo para fines de acceso anticipado, pruebas y comentarios. Pueden sufrir cambios antes de que estén disponibles en la versión pública y no deben usarse en las aplicaciones de producción.
+> Las características resaltadas en la versión preliminar de Microsoft Teams se proporcionan solo con fines de conocimiento anticipado y comentarios. Pueden someterse a cambios antes de que se puedan habilitar.
 
 ## <a name="prerequisites-and-considerations"></a>Requisitos previos y consideraciones
 
@@ -27,11 +27,11 @@ ms.locfileid: "48279673"
 
 1. Algunas API de reunión, como `GetParticipant` requerirán un [registro de Bot y un identificador de aplicación de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para generar tokens de autenticación.
 
-1. Los desarrolladores deben adherirse a las directrices generales de diseño de la pestaña de Microsoft [Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como durante las reuniones (consulte las instrucciones de diseño de las [pestañas](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) [en reunión](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) y de las reuniones).
+1. Los desarrolladores deben adherirse a las directrices generales de diseño de la pestaña de Microsoft [Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como las [directrices de diálogo en reunión](design/designing-in-meeting-dialog.md) para los diálogos que se desencadenan durante la reunión de Microsoft Teams.
 
 ## <a name="meeting-apps-api-reference"></a>Referencia de API de las aplicaciones de reunión
 
-|API|Descripción|Solicitud|Origen|
+|API|Description|Solicitud|Origen|
 |---|---|----|---|
 |**GetUserContext**| Obtener información contextual para mostrar contenido relevante en una pestaña de Microsoft Teams. |_**Microsoft Teams. getContext (() => {/*...* / } )**_|SDK del cliente de Microsoft Teams|
 |**GetParticipant**|Esta API permite que un bot obtenga información de un participante por el identificador de la reunión y el identificador del participante.|**Get** _ **/v1/Meetings/{meetingId}/participants/{participantId}? tenantid = {tenantid}**_ |SDK de Microsoft bot Framework|
@@ -98,11 +98,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
+    "meetingRole":"Presenter",
+    "conversation":{
+            "isGroup": true,
+            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+        }
 }
 ```
 
@@ -112,10 +112,10 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Attendee",
+   "meetingRole":"Presenter",
    "conversation":{
       "isGroup":true,
-      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
    }
 }
 ```
@@ -141,7 +141,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-**conversationId**: el identificador de la conversación. Necesario
+**conversationId**: el identificador de la conversación. Obligatorio
 
 #### <a name="request-payload"></a>Carga de solicitud
 
@@ -149,17 +149,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-   "type":"message",
-   "text":"John Phillips assigned you a weekly todo",
-   "summary":"Don't forget to meet with Marketing next week",
-   "channelData":{
-      "notification":{
-         "alert":true,
-         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-      }
-   },
-   "replyToId":"1493070356924"
-}
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+    "notification": {
+    "alertInMeeting": true,
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+    }
+},
+    "replyToId": "1493070356924"
+    }
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -210,6 +210,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 Las funcionalidades de la aplicación reuniones se declaran en el **configurableTabs**manifiesto de la aplicación a través de los  ->  **ámbitos** configurableTabs y los matrices de **contexto** . *Scope* define quién y *Context* define dónde estará disponible la aplicación.
 
+> [!NOTE]
+> Use el [esquema del manifiesto de vista previa de desarrollador](../resources/schema/manifest-schema-dev-preview.md) para probar esto en el manifiesto de la aplicación.
+
 ```json
 "configurableTabs": [
     {
@@ -232,7 +235,7 @@ Las funcionalidades de la aplicación reuniones se declaran en el **configurable
 
 ### <a name="context-property"></a>Propiedad context
 
-La pestaña `context` y `scopes` las propiedades funcionan en armonía para permitirle determinar dónde quiere que aparezca la aplicación. Aunque las pestañas en el `personal` ámbito solo pueden tener un contexto, es decir, `personalTab` o las  `team` `groupchat` pestañas con ámbito pueden tener más de un contexto. Los valores posibles para la propiedad context son los siguientes:
+La pestaña `context` y `scopes` las propiedades funcionan en armonía para permitirle determinar dónde quiere que aparezca la aplicación. Las pestañas `team` del `groupchat` ámbito o pueden tener más de un contexto. Los valores posibles para la propiedad context son los siguientes:
 
 * **channelTab**: una pestaña en el encabezado de un canal de equipo.
 * **privateChatTab**: una pestaña en el encabezado de un grupo de chats entre un conjunto de usuarios que no están en el contexto de un equipo o una reunión.
@@ -257,9 +260,9 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 ### <a name="in-meeting"></a>En reunión
 
-#### <a name="side-panel"></a>**panel lateral**
+#### <a name="sidepanel"></a>**sidePanel**
 
-✔ En el manifiesto de la aplicación agregue **sidePanel** a la matriz **meetingSurfaces** como se ha descrito anteriormente.
+✔ En el manifiesto de la aplicación, agregue **sidePanel** a la matriz de **contexto** , como se ha descrito anteriormente.
 
 ✔ En la reunión y en todos los escenarios, la aplicación se representará en una pestaña en la reunión que se 320 PX en ancho. La pestaña debe estar optimizada para esto. *Consulte*la [interfaz FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -269,7 +272,7 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 #### <a name="in-meeting-dialog"></a>**cuadro de diálogo en la reunión**
 
-✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
+✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](design/designing-in-meeting-dialog.md).
 
 ✔ Consulte el [flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -278,7 +281,10 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 ✔ Como parte de la carga de la solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
 
 > [!NOTE]
-> Estas notificaciones son persistentes en su naturaleza. Debe invocar la función [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automáticamente una vez que un usuario realiza una acción en la vista Web. Este es un requisito para el envío de aplicaciones. *Vea también*, [Teams SDK: módulo de tareas](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * Estas notificaciones son persistentes en su naturaleza. Debe invocar la función [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automáticamente una vez que un usuario realiza una acción en la vista Web. Este es un requisito para el envío de aplicaciones. *Vea también*, [Teams SDK: módulo de tareas](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * Si quiere que la aplicación admita usuarios anónimos, su carga de solicitud de invocación inicial debe basarse en el `from.id`  objeto (ID del usuario) request Metadata in the `from` Object, no el `from.aadObjectId` (ID de Azure Active Directory del usuario) request Metadata. *Consulte* [using Task modules in Tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y [Create and Send The Task Module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="post-meeting"></a>Después de la reunión
 

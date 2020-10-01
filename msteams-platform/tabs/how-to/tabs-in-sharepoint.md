@@ -5,17 +5,14 @@ description: Cómo implementar la pestaña de Microsoft Teams existente en Share
 keywords: pestañas de Teams desarrollo de SharePoint Framework
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: d7f617f0967743eab84423cd31f78d4700db1c1c
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818944"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326350"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Adición de una pestaña de Microsoft Teams en SharePoint como un elemento Web de SPFx
-
-> [!IMPORTANT]
-> Esta característica se encuentra en versión preliminar en este momento y está sujeta a cambios. No es compatible con el uso en entornos de producción. Sus comentarios y sugerencias sobre esta función son bienvenidos en la [lista de problemas de SharePoint Dev Docs](https://github.com/SharePoint/sp-dev-docs/issues).
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Integración enriquecida entre Teams y SharePoint
 
