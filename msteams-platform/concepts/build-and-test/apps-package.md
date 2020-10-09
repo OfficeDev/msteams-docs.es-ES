@@ -3,12 +3,12 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación para probarla, cargarla y publicarla en Microsoft Teams.
 keywords: empaquetado de aplicaciones de Microsoft Teams
 ms.topic: conceptual
-ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801546"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397704"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Crear un paquete de aplicación para la aplicación de Microsoft Teams
 
@@ -45,6 +45,11 @@ El `color` icono se usa en todo Microsoft Teams (en galerías de aplicaciones y 
 
 El `outline` icono se usa en estos lugares: la barra de la aplicación y las extensiones de mensajería que el usuario ha marcado como "favorito". Este icono debe ser de 32 x 32 píxeles. El icono del esquema solo debe contener blanco y transparencia (sin otros colores). El icono puede ser blanco con fondo transparente o transparente con un fondo blanco. El icono de esquema no debe tener espaciado adicional alrededor del icono y debe estar tan bien recortado como sea posible y mantener al mismo tiempo las dimensiones 32x32. Estos son algunos ejemplos buenos:
 
+> [!TIP]
+>  * El color debe ser "blanco" en RGB, (rojo: 255, verde: 255, azul: 255).
+>  * El icono de todos los demás elementos debe ser transparente.
+>  * Para pasarlo, el icono pequeño debe ser completamente transparente, el canal alfa es 0 y cualquier otro valor es un error.
+
 ![Iconos de esquema de ejemplo](~/assets/images/icons/sample20x20s.png)
 
 Por ejemplo, supongamos que su compañía es contoso. Debe enviar dos iconos:
@@ -59,8 +64,8 @@ Esta es la forma en que los iconos aparecerán en la interfaz de usuario:
 
 #### <a name="flyout"></a>Flotante
 
-![Ejemplos de iconos de Contoso](~/assets/images/icons/flyout.png)
+![Ejemplo de flotante de Contoso](~/assets/images/icons/flyout.png)
 
 #### <a name="app-bar-and-home-screen"></a>Barra de la aplicación y pantalla de inicio
 
-![Ejemplos de iconos de Contoso](~/assets/images/icons/appbarhomescreen.png)
+![Ejemplo de barra de la aplicación de Contoso HomeScreen](~/assets/images/icons/appbarhomescreen.png)

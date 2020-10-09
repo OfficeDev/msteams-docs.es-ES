@@ -4,12 +4,12 @@ author: laujan
 description: integración de un Chatbot de agentes de Power virtual en la plataforma de Microsoft Teams
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 0a85738857015e4bce9627333ed6f1a74e489c43
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279692"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397690"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Integración de agentes de Power virtual Chatbot con Microsoft Teams
 
@@ -39,11 +39,12 @@ Si la [carga de aplicaciones personalizadas está habilitada](/microsoftteams/ad
 
   * Seleccione el icono de la tienda de aplicaciones en la parte inferior de la barra de navegación izquierda de la instancia de Teams y busque **App Studio**.
 >
-&emsp;&emsp; <img  width="450px" title="Buscar App Studio en la tienda" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * Seleccione el icono de **App Studio** y elija **instalar** en el cuadro de diálogo emergente.
 >
-&emsp;&emsp; <img  width="450px" title="Instalación de App Studio" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **Cree el manifiesto de la aplicación Teams en App Studio**.  Los bots en Teams se definen mediante un archivo de manifiesto de la aplicación (JSON) que proporciona información básica sobre el bot y sus funciones. En el editor de **manifiestos**de **App Studio** , haga clic en   =>  **crear una nueva aplicación**.
 3. **Agregue los detalles del bot**. Para obtener una descripción completa de cada campo, consulte [definición del esquema del manifiesto](../../resources/schema/manifest-schema.md). Asegúrese de completar todos los campos obligatorios.

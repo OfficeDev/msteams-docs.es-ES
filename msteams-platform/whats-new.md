@@ -2,12 +2,12 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279658"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397669"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -21,7 +21,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |09/22/2020|Nueva guía de introducción a Microsoft Teams|[Información general sobre la creación de su primera aplicación de Microsoft Teams](build-your-first-app/build-first-app-overview.md)|
-|9/18/2020|Soporte para aplicaciones de Teams en la reunión (vista previa pública)|[Creación de aplicaciones para reuniones](apps-in-teams-meetings/create-apps-for-teams-meetings.md) y aplicaciones de Microsoft Teams [en reuniones de Microsoft Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|9/18/2020|Compatibilidad con aplicaciones de Teams en la reunión (versión preliminar)|[Creación de aplicaciones para reuniones](apps-in-teams-meetings/create-apps-for-teams-meetings.md) y aplicaciones de Microsoft Teams [en reuniones de Microsoft Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |8/19/2020|Importar mensajes de Microsoft Teams con Microsoft Graph|[Importar mensajes de plataformas de terceros a Teams con Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |La compatibilidad de tarjetas adaptables en el webhook entrante se movió a GA.|[Enviar tarjetas adaptables con un webhook entrante](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Empezar a crear aplicaciones de Teams con el kit de herramientas de Visual Studio.|[Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-overview.md) |
@@ -32,7 +32,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 |07/15/2020|Crear un asistente virtual para Microsoft Teams|[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Exposición de una documentación de indicador de carga nativa|[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Introducción a la creación de aplicaciones de Microsoft Teams con Visual Studio Code Toolkit.|[Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
-|07/01/2020|Inicio de sesión único para pestañas GA para los clientes Web y de escritorio de Teams|[Inicio de sesión único (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|07/01/2020|Inicio de sesión único para pestañas GA para los clientes Web y de escritorio de Teams|[Sign-On única (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema del manifiesto actualizado a la versión 1,7| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Los permisos de consentimiento específicos de recursos que usan las API de Microsoft Graph están en Developer Preview. |[Autorización específica de recursos (RSC): vista previa para desarrolladores](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|Integrar agentes de Power virtual con Teams|[Integración de agentes de Power virtual Chatbot con Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

@@ -2,12 +2,12 @@
 title: Cargar la aplicación personalizada en Microsoft Teams
 description: Describe cómo cargar la aplicación en Microsoft Teams.
 keywords: Carga de aplicaciones de Microsoft Teams
-ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: 6fbcd7a81c113d25a26ee6db15865929a53def0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103029"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397711"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Cargar un paquete de aplicación en Microsoft Teams
 
@@ -40,9 +40,11 @@ Hay dos formas de cargar la aplicación a Microsoft Teams:
 
 1. En la esquina inferior izquierda de Microsoft Teams, elija el icono de tienda. En la página tienda, elija "cargar una aplicación personalizada".
 
-   ![Ver equipo](../../assets/images/store-upload-a-custom-app.png)
+  ![Ver equipo](../../assets/images/store-upload-a-custom-app2.png)
 
 2. En el cuadro de diálogo *abrir* , navegue hasta el paquete que desea cargar y elija *abrir*.
+
+   ![Agregar menú](../../assets/images/NewappAddmenudropdown.png)
 
 El paquete cargado ahora debería estar disponible para su uso en el equipo o la conversación especificados en el cuadro de diálogo de consentimiento. Si la aplicación no aparece, la causa más común es un error en el manifiesto, especialmente identificadores para las extensiones de aplicación, Bot y mensajería. Si la aplicación no tiene el ámbito de las conversaciones, esa opción no aparecerá.
 

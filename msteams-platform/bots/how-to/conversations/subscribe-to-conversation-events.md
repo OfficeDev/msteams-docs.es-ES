@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Cómo suscribirse a eventos de conversación desde su bot de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: c678690b1dc2c948cceacdf42c95f169fff753bb
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801453"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397683"
 ---
 # <a name="subscribe-to-conversation-events"></a>Suscribirse a eventos de conversación
 
@@ -432,7 +432,9 @@ async def on_teams_members_added_activity(
 
 ### <a name="team-members-removed"></a>Miembros del equipo quitados
 
-El `teamMemberRemoved` evento se envía a su bot si se quita de un equipo y cada vez que se quita un usuario de un equipo del que es miembro el bot. Puede determinar si el nuevo miembro quitado era el propio bot o un usuario mirando en el `Activity` objeto del `turnContext` .  Si el `Id` campo del `MembersRemoved` objeto es el mismo que el `Id` campo del `Recipient` objeto, el miembro quitado es el bot; de lo contrario, es un usuario.  Normalmente, el bot será `Id` :`28:<MicrosoftAppId>`
+El `teamMemberRemoved` evento se envía a su bot si se quita de un equipo y cada vez que se quita un usuario de un equipo del que es miembro el bot. Puede determinar si el nuevo miembro quitado era el propio bot o un usuario mirando en el `Activity` objeto del `turnContext` .  Si el `Id` campo del `MembersRemoved` objeto es el mismo que el `Id` campo del `Recipient` objeto, el miembro quitado es el bot; de lo contrario, es un usuario.  Normalmente, el bot será `Id` : `28:<MicrosoftAppId>`
+
+[!Note] Cuando un usuario se elimina permanentemente de un espacio empresarial, `membersRemoved conversationUpdate` se desencadena un evento.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

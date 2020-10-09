@@ -3,12 +3,12 @@ title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326367"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397732"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -90,6 +90,18 @@ Celebrations es una aplicación de Microsoft teams que ayuda a los miembros del 
 La aplicación proporciona una interfaz sencilla para que todos los miembros del equipo puedan agregar y ver sus eventos personalmente y también permite al usuario seleccionar los equipos en los que se comparten los eventos.
 
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+
+## <a name="checklist-9734"></a>Lista de comprobación &#9734;
+
+Checklist es una aplicación personalizada de [extensiones de mensajería](../messaging-extensions/what-are-messaging-extensions.md) de Microsoft teams que le permite colaborar con su equipo creando una lista de comprobación compartida en un chat o en un canal. La aplicación se admite en todos los clientes de la plataforma Teams (escritorio, explorador, iOS y Android) y está lista para la implementación como parte de su suscripción a Microsoft 365.  
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![Crear lista de comprobación en la vista de Teams](../assets/images/checklist-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="company-communicator"></a>Comunicador de la empresa
 
@@ -276,7 +288,7 @@ Incentivos es una plantilla de [Power apps](/powerapps/maker/canvas-apps/embed-t
 
 ![Demostración de la aplicación incentivos](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>Incider Reporter 
+## <a name="incident-reporter"></a>Incider Reporter
 
 Incident Reporter es un [Bot de Microsoft Teams](../bots/what-are-bots.md)  que optimiza la administración de incidentes en la organización. El bot facilita la recopilación automatizada de datos de incidentes, los informes de incidentes personalizados, las notificaciones de los participantes relevantes y el seguimiento de incidentes de un extremo a otro.
 
@@ -307,6 +319,18 @@ Open Badges es una aplicación de Microsoft teams que permite que los usuarios o
 :::row:::
 :::column span="2":::
     ![Vista de distintivos premiados](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="poll-9734"></a>Sondeo &#9734;
+
+Sondeo es una aplicación de [extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) de Microsoft Teams personalizada que permite crear y enviar rápidamente sondeos en un chat o en un canal para recopilar las opiniones y preferencias del equipo. La aplicación se admite en todos los clientes de la plataforma Teams (escritorio, explorador, iOS y Android) y está lista para la implementación como parte de su suscripción a Microsoft 365.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![Crear sondeo en la vista de Teams](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -408,6 +432,18 @@ Las protecciones del personal es una aplicación basada en [Power apps](/powerap
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![Crear una vista de protección](../assets/images/staff-check-ins-create.png)
+
+## <a name="survey-9734"></a>&#9734; de encuesta
+
+La encuesta es una aplicación de [extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) de Microsoft Teams personalizada que permite crear una encuesta en un chat o un canal para recopilar datos y obtener una visión que requiere acción.  La aplicación se admite en todos los clientes de la plataforma Teams (escritorio, explorador, iOS y Android) y está lista para la implementación como parte de su suscripción a Microsoft 365.  
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+:::row:::
+  :::column span="2":::
+    ![Crear encuesta en la vista de Teams](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## <a name="visitor-management-9734"></a>&#9734; de administración de visitantes
 
