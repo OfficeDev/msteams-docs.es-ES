@@ -1,20 +1,20 @@
 ---
-title: Compilar y ejecutar una "Hello, World!" Aplicación de Teams
+title: 'Introducción: creación y ejecución de la primera aplicación'
 author: heath-hamilton
-description: Cree y ejecute su primera aplicación de Microsoft Teams, una pestaña personal que muestra "Hola a todos".
+description: Cree rápidamente una aplicación de Microsoft teams que muestre un "Hola a todos". mensaje mediante el kit de herramientas de Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 20c9eee14649cda23e1d682940f489e78cba24b9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237835"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452648"
 ---
-# <a name="build-a-hello-world-teams-app"></a>Crear un "Hello, World!" Aplicación de Teams
+# <a name="build-and-run-your-first-microsoft-teams-app"></a>Crear y ejecutar su primera aplicación de Microsoft Teams
 
-Puede ir directamente a desarrollo de la plataforma Microsoft Teams creando una pestaña personal que muestre "Hola a todos".
+Puede ir directamente a desarrollo de Microsoft Teams creando una pestaña personal que muestre "Hola a todos".
 
 ## <a name="1-create-your-app-project"></a>1. crear un proyecto de aplicación
 
@@ -24,14 +24,14 @@ Use el kit de herramientas de Microsoft Teams en Visual Studio Code para configu
 :::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 1. Escriba un nombre para la aplicación de Teams. (Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de la aplicación en el equipo local).
 1. En la pantalla **Agregar funciones** , seleccione la **pestaña** **siguiente**.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de pantalla que muestra cómo configurar el proyecto de aplicación con Visual Studio Code Teams Toolkit.":::
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 1. Compruebe la opción de la **ficha personal** y seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.
 
 ## <a name="2-understand-important-app-project-components"></a>2. comprender los componentes importantes del proyecto de aplicación
 
 Una vez que el kit de herramientas configura el proyecto, tiene los componentes para crear una pestaña básica personal para Teams. Los archivos y directorios del proyecto se muestran en el área del explorador de Visual Studio Code.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Captura de pantalla que muestra archivos de proyecto de aplicación para una pestaña personal en Visual Studio Code.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 
 Dedique un momento a comprender algunos de los archivos principales con los que trabajan los desarrolladores de aplicaciones.
 
@@ -66,7 +66,7 @@ En aras del tiempo, se creará y se ejecutará la aplicación de forma local.
 1. En un terminal, vaya al directorio raíz del proyecto de aplicación y ejecute `npm install` .
 1. Ejecutar `npm start` . Una vez completada la **compilación correctamente.** mensaje en el terminal.
 1. Abra un explorador y vaya a `https://localhost:3000` para ver una página web en blanco denominada **pestaña de Microsoft Teams**. (No se preocupe porque no puede ver ningún contenido en la página).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Captura de pantalla que muestra el aspecto que tiene para ver la aplicación que se está ejecutando en un explorador.":::
+   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 
 ## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurar un túnel seguro a la aplicación
 
@@ -76,7 +76,7 @@ Instale [ngrok](https://ngrok.com/download) si todavía no lo ha hecho. Al ejecu
 
 1. Abra un nuevo terminal y ejecute `ngrok http 3000` .
 1. Copie la dirección URL HTTPS que ha proporcionado (vea el siguiente ejemplo).
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Captura de pantalla que muestra un terminal con ngrok en ejecución.":::
+:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 1. En el `.publish` directorio, Abra `Development.env` .
 1. Reemplace el `baseUrl0` valor por la dirección URL copiada. (Por ejemplo, cambie `baseUrl0=http://localhost:3000` a `baseUrl0=https://85528b2b3ba5.ngrok.io` ).
 
@@ -92,9 +92,9 @@ Una vez que la aplicación se ejecute y sea accesible a través de HTTPS, estar�
 1. Inicie sesión en el cliente de Teams con su cuenta que permite la transferencia local de aplicaciones. (Si no está seguro de ello, obtenga información sobre cómo obtener una cuenta de desarrollo de Microsoft [Teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)).
 1. Seleccione **aplicaciones**y, después, elija **cargar una aplicación personalizada**.
 1. Vaya a la carpeta de proyecto de la aplicación `.publish` y seleccione `Development.zip` . Se muestra un modal de instalación.
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de pantalla que muestra un ejemplo de una instalación de aplicación de Teams modal.":::
+:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 1. Seleccione **Agregar** para instalar la aplicación.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Captura de pantalla que muestra un ejemplo de la aplicación de pestaña personal ' Hello, World! ' en Teams.":::
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Captura de pantalla que muestra cómo crear una nueva aplicación con el kit de herramientas de Visual Studio Code Teams.":::
 
 ¡ Felicidades 🎉! La aplicación se está ejecutando en Teams.
 
@@ -105,6 +105,6 @@ Amplíe en la pestaña personal que acaba de crear o compile otro tipo de aplica
 > [!div class="nextstepaction"]
 > [Agregar a la pestaña personal](../build-your-first-app/build-personal-tab.md)
 > [!div class="nextstepaction"]
-> [Crear una ficha de canal](../build-your-first-app/build-channel-tab.md)
+> [Crear una pestaña de canal](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
 > [Crear un bot](../build-your-first-app/build-bot.md)

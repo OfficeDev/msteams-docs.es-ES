@@ -1,18 +1,18 @@
 ---
-title: Crear una extensión de mensajería de Teams
+title: 'Introducción: compilación de una extensión de mensajería'
 author: heath-hamilton
-description: Obtenga información sobre cómo crear una extensión de mensajería para su primera aplicación de Microsoft Teams.
+description: Cree rápidamente una extensión de mensajería de Microsoft Teams con el kit de herramientas de Microsoft Teams.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237821"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452837"
 ---
-# <a name="build-a-teams-messaging-extension"></a>Crear una extensión de mensajería de Teams
+# <a name="build-a-messaging-extension-for-microsoft-teams"></a>Crear una extensión de mensajería para Microsoft Teams
 
 Hay dos tipos de extensiones de *Mensajería*de Teams: [comandos de búsqueda](../messaging-extensions/how-to/search-commands/define-search-command.md) y [comandos de acciones](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
@@ -173,9 +173,9 @@ Con la extensión de mensajería en ejecución, puede instalarla en Teams.
 Obtenga información sobre cómo funcionan las extensiones de mensajería en un chat de Microsoft Teams.
 
 1. Inicie un nuevo chat. En el cuadro de redacción, seleccione **más** :::image type="icon" source="../assets/icons/teams-client-more.png"::: y elija la aplicación de extensión de mensajería que acaba de transferirá localmente.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Ilustración que muestra cómo se puede tener acceso a una extensión de mensajería basada en búsquedas en el cuadro de redacción de Teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Ilustración que muestra cómo, en Team Toolkit, iniciar sesión en su cuenta de Microsoft 365 para crear un nuevo bot para la extensión de mensajería.":::
 1. Intente buscar algo (por ejemplo, "vales"). Si la aplicación funciona, verá los resultados de la búsqueda de ejemplo (puede Agregar los suyos propios más adelante).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Una captura de pantalla que muestra cómo se usa una extensión de mensajería basada en búsquedas en el cuadro de redacción de Teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Ilustración que muestra cómo, en Team Toolkit, iniciar sesión en su cuenta de Microsoft 365 para crear un nuevo bot para la extensión de mensajería.":::
 
 ## <a name="well-done"></a>Bien hecho
 

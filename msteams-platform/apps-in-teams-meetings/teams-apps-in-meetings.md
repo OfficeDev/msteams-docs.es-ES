@@ -1,21 +1,21 @@
 ---
-title: Reuniones de aplicaciones a Microsoft Teams
+title: Aplicaciones en reuniones de Microsoft Teams
 author: laujan
 description: Información general sobre las aplicaciones de Microsoft Teams basadas en participantes y roles de usuario
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: dbf12523d609d47193fb3c07bde2acd184292f64
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326315"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452641"
 ---
-# <a name="apps-in-teams-meetings-release-preview"></a>Aplicaciones en reuniones de Microsoft Teams (versión preliminar)
+# <a name="apps-in-teams-meetings-developer-preview"></a>Aplicaciones en reuniones de Microsoft Teams (vista previa para desarrolladores)
 
 >[!IMPORTANT]
-> Las características resaltadas en la versión preliminar de Microsoft Teams se proporcionan solo con fines de conocimiento anticipado y comentarios. Pueden someterse a cambios antes de que se puedan habilitar.
+> Las características incluidas en Microsoft Teams Developer Preview se proporcionan solo para fines de acceso anticipado, pruebas y comentarios. Pueden sufrir cambios antes de que estén disponibles en la versión pública y no deben usarse en las aplicaciones de producción.
 
 Las reuniones son clave para la productividad en Microsoft Teams. Permiten la colaboración, la asociación, la comunicación informada y los comentarios compartidos en un foro activo y integrado. Como desarrollador, puede crear aplicaciones de [pestaña](../tabs/what-are-tabs.md#how-do-tabs-work), [Bot](../bots/what-are-bots.md)y extensión de [mensajes](../messaging-extensions/what-are-messaging-extensions.md) que se pueden configurar para mejorar y enriquecer una experiencia de reunión de Microsoft Teams. Los usuarios de la reunión pueden tener acceso a las aplicaciones a través de la galería de pestañas, para habilitar escenarios relevantes como preensayar un panel Kanban, iniciar un cuadro de diálogo que requiere acción en la reunión o crear un sondeo posterior a la reunión. La aplicación de la reunión puede proporcionar una experiencia de usuario para cada fase del ciclo de vida de la reunión en función del estado del asistente.
 

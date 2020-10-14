@@ -1,20 +1,23 @@
 ---
-title: Ampliar la aplicación de Microsoft Teams con una pestaña personalizada
+title: Crear una pestaña para Teams
 author: laujan
-description: Cómo crear una pestaña para Microsoft Teams mediante App Studio o manualmente.
+description: Obtener información sobre cómo crear una pestaña de Microsoft Teams
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209721"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452760"
 ---
-# <a name="extend-your-teams-app-with-a-custom-tab"></a>Ampliar la aplicación de Microsoft Teams con una pestaña personalizada
+# <a name="create-a-tab-for-microsoft-teams"></a>Crear una pestaña para Microsoft Teams
 
-Las pestañas personalizadas permiten servir contenido web que se hospeda en el canal, el chat en grupo y los usuarios personales. En un nivel alto, deberá completar los siguientes pasos para crear una pestaña:
+> [!TIP]
+> ¿Busca una forma más rápida de empezar? Cree una ficha [personal](../../build-your-first-app/build-personal-tab.md) o de [canal y de grupo](../../build-your-first-app/build-channel-tab.md) con el kit de herramientas de Microsoft Teams.
+
+Las pestañas le permiten servir contenido web que se hospeda en el canal, el chat en grupo y los usuarios personales. En un nivel alto, deberá completar los siguientes pasos para crear una pestaña:
 
 1. Preparar el entorno de desarrollo.
 1. Cree su página o páginas.
@@ -84,7 +87,7 @@ El contenido que se muestra para las pestañas personales es el mismo para todos
 |`name`|Cadena|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz de canal.|
 |`contentUrl`|Cadena|2048 caracteres|✔|Dirección URL de https://que señala a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Microsoft Teams.|
 |`websiteUrl`|Cadena|2048 caracteres||La dirección URL de https://para apuntar a si un usuario opta por verlo en un explorador.|
-|`scopes`|Matriz de enumeración|1 |✔|Las pestañas estáticas solo admiten el `personal` ámbito, lo que significa que solo se puede aprovisionar como parte de una aplicación personal.|
+|`scopes`|Matriz de enumeración|1|✔|Las pestañas estáticas solo admiten el `personal` ámbito, lo que significa que solo se puede aprovisionar como parte de una aplicación personal.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Ejemplo de manifiesto de ficha personal simple
 
@@ -110,8 +113,8 @@ Las fichas canal/grupo se agregan en la `configurableTabs` matriz. Solo puede de
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|La dirección URL de https://a la página de configuración.|
-|`canUpdateConfiguration`|Boolean|||Un valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de crearla. Predeterminada `true`|
-|`scopes`|Matriz de enumeración|1 |✔|Las pestañas configurables solo admiten los `team` `groupchat` ámbitos y. |
+|`canUpdateConfiguration`|Booleano|||Un valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de crearla. Predeterminada `true`|
+|`scopes`|Matriz de enumeración|1|✔|Las pestañas configurables solo admiten los `team` `groupchat` ámbitos y. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Ejemplo de manifiesto de ficha de grupo/canal simple
 
@@ -146,7 +149,7 @@ Una vez que haya completado el `manifest.json` empaquetamiento del paquete en un
     * Vuelva a su equipo, elija el canal en el que desea mostrar la pestaña, seleccione ➕ de la barra de pestañas y elija la pestaña de la galería.
     * Siga las instrucciones para agregar una pestaña. Tenga en cuenta que hay un cuadro de diálogo de configuración personalizada para la ficha canal o grupo. Seleccione **Guardar** y la pestaña se agregará a la barra de pestañas del canal.
 
-## <a name="learn-more"></a>Obtén más información
+## <a name="learn-more"></a>Más información
 
 * [Crear una página de contenido para la pestaña](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Crear una página de configuración para la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md)

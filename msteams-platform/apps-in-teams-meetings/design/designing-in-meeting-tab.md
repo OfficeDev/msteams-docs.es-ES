@@ -1,17 +1,17 @@
 ---
-title: Diseñar una ficha en la reunión de Microsoft Teams
+title: Diseñar una pestaña dentro de la reunión
 author: heath-hamilton
-description: Instrucciones y procedimientos recomendados para diseñar la pestaña en la reunión de Microsoft Teams.
+description: Obtenga información sobre cómo diseñar eficazmente una pestaña en la reunión para Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4f75591468de41b5d4d3ac62a25b93412b3fccaa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: a5c4d0cc0d2c61f422ea9bc189f164d02b28aae0
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243342"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452662"
 ---
-# <a name="design-an-in-meeting-tab"></a>Diseñar una pestaña en la reunión
+# <a name="design-an-in-meeting-tab"></a>Diseñar una pestaña dentro de la reunión
 
 La pestaña en reunión es un lienzo para aumentar la colaboración durante las reuniones. Según la funcionalidad de la pestaña Microsoft Teams, los asistentes pueden ver e interactuar con el contenido de la aplicación en un espacio dedicado fuera de la fase de reunión a través de vistas compartidas o basadas en roles.
 
@@ -40,7 +40,7 @@ La pestaña en la reunión muestra el contenido de la aplicación con las siguie
 * **Width**: 280 píxeles para el área WebView. Hay 20 píxeles de relleno en los lados izquierdo y derecho de la WebView.
 * **Altura**: sangrado completo hacia la parte inferior de la pestaña. Hay 20 píxeles de relleno entre el área WebView y el encabezado de pestaña.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña en la reunión de la extensión de reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 1. **Icono**de la aplicación: el punto de entrada a la pestaña en reunión.
 1. **Header**: incluye el nombre de la pestaña.
@@ -62,13 +62,13 @@ Esto es lo que debe saber sobre el desplazamiento en la pestaña en la reunión:
 * Solo puede ver el contenido al que se ha desplazado (nada anterior o posterior).
 * La barra de desplazamiento es parte del contenido de WebView.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Ilustración que muestra cómo funciona el desplazamiento del contenido de WebView en la pestaña en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 ### <a name="navigation"></a>Navegación
 
 Para los escenarios con capas de navegación o contenido pesado, se recomienda permitir que los usuarios naveguen a una capa secundaria. Los usuarios deben poder volver a la capa anterior.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Ilustración que muestra cómo funciona la navegación a una capa secundaria de la pestaña en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 ## <a name="components"></a>Componentes
 
@@ -100,7 +100,7 @@ Los diseños de pestañas en la reunión deben poder escalarse a varios tamaños
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Ilustración que muestra que el contenido de la pestaña en la reunión es similar a una pestaña de pantalla completa antes y después de una reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="before-the-meeting"></a>Antes de la reunión
 
@@ -108,7 +108,7 @@ Asegúrese de que el diseño de la pestaña se puede adaptar a un diseño derech
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Ilustración que muestra cómo el contenido de la ficha anterior a la reunión se comprime en la pestaña en reunión durante una reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="during-the-meeting"></a>Durante la reunión
 
@@ -121,7 +121,7 @@ El contenido de la pestaña se ajusta en el diseño y la ubicación de la pesta�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Ilustración que muestra cómo diseñar la pestaña en reunión para el tema oscuro usado en reuniones de Microsoft Teams." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="do-design-for-a-dark-theme"></a>Do: diseñar un tema oscuro
 
@@ -129,7 +129,7 @@ Las reuniones de Microsoft Teams están optimizadas para el modo oscuro para ayu
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Ilustración que muestra que no se deben usar colores que no resultan favorables para el tema de Teams oscuro." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>No: usar colores no habituales
 
@@ -142,7 +142,7 @@ Los colores que entran en conflicto con el entorno de la reunión pueden distrae
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Ilustración que muestra solo se debe permitir el desplazamiento vertical en la pestaña en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="do-scroll-vertically"></a>Hacer: desplazarse verticalmente
 
@@ -150,7 +150,7 @@ Los usuarios anticipan los desplazamientos verticales en Teams (y en cualquier o
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Ilustración en la que se muestra que se muestra que no se permite el desplazamiento horizontal en la pestaña en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>No: desplazar horizontalmente
 
@@ -163,7 +163,7 @@ El desplazamiento horizontal no es un comportamiento esperado en Microsoft Teams
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Ilustración que muestra el diseño de columna única recomendada en la pestaña en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="do-single-columns"></a>Do: columnas únicas
 
@@ -171,7 +171,7 @@ Dada la naturaleza estrecha de las pestañas de la reunión, se recomienda encar
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Ilustración que muestra cómo no es ideal un diseño de dos columnas en la pestaña de la reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="dont-multiple-columns"></a>No: varias columnas
 
@@ -184,7 +184,7 @@ Debido al espacio limitado de la pestaña en reunión, no se recomiendan los dis
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Ilustración que muestra que siempre debe proporcionar un botón atrás si la aplicación de pestañas en la reunión tiene más de un nivel de navegación." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="do-have-a-back-button"></a>Do: tener un botón atrás
 
@@ -192,7 +192,7 @@ Si tiene más de una capa de navegación, los usuarios deben poder volver a su v
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Ilustración que muestra que agregar otro botón cerrar en la pestaña de la reunión para la navegación es redundante y podría causar problemas." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="dont-include-another-close-button"></a>No: incluir otro botón cerrar
 
@@ -205,7 +205,7 @@ Ofrecer una opción para cerrar el contenido de la pestaña en la reunión puede
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Ilustración que muestra que debe tener cuidado al usar modales (es decir, módulos de tareas) en la ficha en la reunión que se proporciona el espacio limitado." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Ejemplo muestra el aspecto que puede tener la ficha reunión en la reunión desde el punto de vista del organizador de la reunión." border="false":::
 
 #### <a name="caution-using-dialogs-in-a-narrow-space"></a>PRECAUCIÓN: uso de cuadros de diálogo en un espacio estrecho
 

@@ -1,17 +1,20 @@
 ---
-title: Crear una extensión de mensajería
+title: Crear una extensión de mensajería para Microsoft Teams
 author: clearab
-description: Cómo crear una extensión de mensajería para una aplicación de Microsoft Teams.
+description: Obtenga información sobre cómo crear una extensión de mensajería de Teams
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178312"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452599"
 ---
-# <a name="create-a-messaging-extension-in-microsoft-teams"></a>Crear una extensión de mensajería en Microsoft Teams
+# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Crear una extensión de mensajería para Microsoft Teams
+
+> [!TIP]
+> ¿Busca una forma más rápida de empezar? Cree una [extensión de mensajería](../../build-your-first-app/build-messaging-extension.md) mediante el kit de herramientas de Microsoft Teams.
 
 En un nivel alto, deberá completar los siguientes pasos para crear una extensión de mensajería.
 
@@ -128,9 +131,9 @@ Una vez iniciada una reunión, los participantes de Microsoft Teams pueden inter
 
 1. **Location**. La extensión de mensajería se puede invocar desde el área redactar mensaje, el cuadro de comando o @mentioned del chat de reuniones.
 
-1. **Metadatos**. Cuando se llama a la extensión de mensajería, puede identificar el usuario y el inquilino de `userId` y `tenantId` . El `meetingId` puede encontrarse como parte del `channelData` objeto. La aplicación puede usar `userId` y `meetingId`  para la solicitud de la `GetParticipant` API para recuperar roles de usuario.
+1. **Metadatos**. Cuando se llama a la extensión de mensajería, puede identificar el usuario y el inquilino de `userId` y `tenantId` . Se puede encontrar `meetingId` como parte del objeto `channelData`. La aplicación puede usar `userId` y `meetingId`  para la solicitud de la `GetParticipant` API para recuperar roles de usuario.
 
-1. **Tipo de comando**. Si su extensión de mensaje usa [comandos basados en acciones](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), debe seguir la autenticación de [Inicio de sesión único de](../../tabs/how-to/authentication/auth-aad-sso.md) las pestañas. 
+1. **Tipo de comando**. Si su extensión de mensaje usa [comandos basados en acciones](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), debe seguir la autenticación de [Inicio de sesión único de](../../tabs/how-to/authentication/auth-aad-sso.md) las pestañas.
 
 1. **Experiencia del usuario**. Debe determinar el propósito de la experiencia del usuario final para las extensiones de mensajería invocadas durante un chat de reuniones.
 
@@ -140,7 +143,7 @@ Una vez iniciada una reunión, los participantes de Microsoft Teams pueden inter
 * [Crear comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Apertura de vínculos](~/messaging-extensions/how-to/link-unfurling.md)
 
-## <a name="learn-more"></a>Obtén más información
+## <a name="learn-more"></a>Más información
 
 Pruébelo en un inicio rápido:
 

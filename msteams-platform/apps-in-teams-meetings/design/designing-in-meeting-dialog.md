@@ -1,17 +1,17 @@
 ---
-title: Diseñar un cuadro de diálogo de Microsoft Teams en la reunión
+title: Diseñar un diálogo dentro de la reunión
 author: heath-hamilton
-description: Instrucciones y procedimientos recomendados para diseñar un cuadro de diálogo en reunión para Microsoft Teams.
+description: Obtenga información sobre cómo diseñar eficazmente un cuadro de diálogo en reunión para Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 89e532e6dbd83e54269606f6e051fa377de68f62
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f2ac0df3ce28293d9e3f61f45dd2d460dc01f2e9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243336"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452676"
 ---
-# <a name="design-an-in-meeting-dialog"></a>Diseñar un cuadro de diálogo en la reunión
+# <a name="design-an-in-meeting-dialog"></a>Diseñar un diálogo dentro de la reunión
 
 Los cuadros de diálogo en la reunión se muestran en la fase de reunión de Microsoft Teams. Requieren la atención, la confirmación o la interacción del usuario, pero son sutiles y no interrumpen la reunión.
 
@@ -36,7 +36,7 @@ En el ejemplo siguiente se muestra el aspecto que puede tener el cuadro de diál
 
 ## <a name="anatomy"></a>Anatomía
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Anatomía de la interfaz de usuario de una vista de diálogo en la reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 1. **Icono de aplicación**
 1. **Nombre de la aplicación**
@@ -51,7 +51,7 @@ Los cuadros de diálogo en la reunión pueden variar en tamaño para tener en cu
 * **Height**: el alto del cuadro de diálogo depende del contenido de la vista WebView. El desplazamiento vertical toma el control del contenido que supera el alto máximo especificado.
 * **Width**: el ancho de la vista WebView es un valor absoluto dentro del intervalo especificado.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Ilustración que muestra las dimensiones posibles de un cuadro de diálogo en la reunión. Height: el alto del cuadro de diálogo depende del contenido de la vista WebView. El desplazamiento vertical toma el control del contenido que supera la altura máxima (definido por el usuario). Min: ninguno. Máx: 400 píxeles (320 píxeles WebView). Width: el ancho de la vista WebView es un valor absoluto dentro del intervalo especificado. Min.: 288 píxeles (256 píxeles WebView). Máx: 468 píxeles (436 píxeles WebView)." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 ## <a name="behavior"></a>Comportamiento
 
@@ -61,7 +61,7 @@ Vea comportamiento general del cuadro de diálogo de reunión en la reunión, co
 
 Los diálogos en la reunión se alinean en el centro de la fase de reunión. No se pueden arrastrar y trabajar en el marco de las notificaciones de nivel de sistema de Teams.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un cuadro de diálogo en la reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 ### <a name="aggregation"></a>Cronológica
 
@@ -76,7 +76,7 @@ El desplazamiento se produce en la parte de WebView de un cuadro de diálogo en 
 * Solo debe poder desplazarse verticalmente.
 * Solo puede ver el contenido al que se ha desplazado (nada anterior o posterior).
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Ilustración que muestra cómo funciona el desplazamiento del contenido de WebView en el cuadro de diálogo de la reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 ### <a name="buttons"></a>Botones
 
@@ -114,7 +114,7 @@ Aunque los cuadros de diálogo en la reunión pueden hacer que las llamadas sean
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Ilustración que muestra cómo limitar el contenido del cuadro de diálogo de reunión en una sola pantalla para que los usuarios puedan centrarse en la reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="do-keep-it-contained"></a>Do: Keep it contenida
 
@@ -122,7 +122,7 @@ Limite el contenido del cuadro de diálogo de reunión a una sola pantalla para 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Ilustración que muestra cómo los cuadros de diálogo en la reunión no deben requerir que los usuarios naveguen por el contenido." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="dont-include-multiple-steps"></a>No: incluir varios pasos
 
@@ -135,18 +135,18 @@ Los cuadros de diálogo en la reunión no deben requerir que los usuarios navegu
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Ilustración que muestra por qué debe quitar contenido innecesario que no ayude a los usuarios a realizar algo rápidamente." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Otra ilustración que muestra por qué debe quitar contenido innecesario que no ayude a los usuarios a realizar algo rápidamente." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Ilustración que muestra que, si necesita interacciones complejas, se recomienda que use una sola columna en el panel derecho de la reunión en su lugar." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="do-limit-number-of-interactions"></a>Do: limitar el número de interacciones
 
@@ -154,7 +154,7 @@ Quite el contenido innecesario que no ayude a los usuarios a realizar algo rápi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Ilustración que muestra que demasiadas interacciones en el cuadro de diálogo de la reunión distrae de la reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>No: introducir elementos innecesarios
 
@@ -167,7 +167,7 @@ Es posible que pueda diseñar un único cuadro de diálogo en reunión con varia
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Ilustración que muestra un diseño ideal para los cuadros de diálogo en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="do-use-single-column-layouts"></a>Do: usar diseños de columna única
 
@@ -175,7 +175,7 @@ Como los cuadros de diálogo están en el centro de la fase de reunión, la fina
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Ilustración que muestra el diseño de los cuadros de diálogo en reunión que no se recomienda." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="dont-clutter-the-space"></a>No: desorden el espacio
 
@@ -188,7 +188,7 @@ Un contenido denso o con gran estructura puede ser molesto y abrumador, especial
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Ilustración que muestra cómo el tamaño del cuadro de diálogo en la reunión siempre debe ser el mismo." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="do-keep-it-consistent"></a>Do: mantener la coherencia
 
@@ -196,7 +196,7 @@ Esto es importante porque los cuadros de diálogo en la reunión siempre se mues
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Ilustración que muestra cómo no se deben usar diferentes tamaños de cuadro de diálogo." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="dont-always-fit-to-the-content"></a>No: siempre se ajusta al contenido
 
@@ -209,7 +209,7 @@ Es posible que esté intentando evitar el desplazamiento horizontal, pero varios
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Ilustración que muestra dónde situar botones en el cuadro de diálogo en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="do-right-align-the-primary-action"></a>Haga lo siguiente: alinear a la derecha la acción principal
 
@@ -217,7 +217,7 @@ Le recomendamos que sitúe la acción más intensa visualmente en la posición m
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Ilustración que muestra dónde no desea situar botones en el cuadro de diálogo en reunión." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Ejemplo muestra el aspecto que puede tener el cuadro de diálogo en la reunión desde el punto de vista de un participante de la reunión." border="false":::
 
 #### <a name="dont-left-or-center-align-actions"></a>No: acciones alineadas a la izquierda o al centro
 

@@ -1,18 +1,18 @@
 ---
-title: Crear una ficha personal de Teams
+title: 'Introducción: creación de una pestaña personal'
 author: heath-hamilton
-description: Obtenga información sobre cómo crear una pestaña personal para su primera aplicación de Microsoft Teams.
+description: Cree rápidamente una pestaña personal de Microsoft Teams mediante el kit de herramientas de Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237807"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452746"
 ---
-# <a name="build-a-teams-personal-tab"></a>Crear una ficha personal de Teams
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>Crear una pestaña personal para Microsoft Teams
 
 Las pestañas son una forma sencilla de exponer contenido en la aplicación básicamente mediante la inserción de una página web en Teams.
 
@@ -181,7 +181,7 @@ if (isTheme === "default") {
 
 Compruebe la pestaña en Microsoft Teams. La apariencia debe coincidir exactamente con el tema oscuro.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de pantalla de una pestaña personal con vista de contenido estático.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de pantalla de una pestaña personal con contenido estático.":::
 
 ## <a name="well-done"></a>Bien hecho
 
@@ -201,4 +201,4 @@ Compruebe la pestaña en Microsoft Teams. La apariencia debe coincidir exactamen
 Sabe cómo crear una pestaña para uso personal. Echemos un vistazo a lo que se necesita para crear una pestaña para los canales y chats del equipo.
 
 > [!div class="nextstepaction"]
-> [Crear una ficha de canal](../build-your-first-app/build-channel-tab.md)
+> [Crear una pestaña de canal](../build-your-first-app/build-channel-tab.md)

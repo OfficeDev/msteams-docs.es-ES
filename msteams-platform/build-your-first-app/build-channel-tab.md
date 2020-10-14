@@ -1,18 +1,18 @@
 ---
+title: 'Introducción: crear una pestaña de canal y de grupo'
 author: heath-hamilton
-description: Obtenga información sobre cómo crear una pestaña de canal y de grupo para su primera aplicación de Microsoft Teams.
+description: Cree rápidamente una ficha de canal y de grupo de Microsoft Teams mediante el kit de herramientas de Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: Crear una ficha de canal y de grupo de Teams
-ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f890754cdf4ca43f39c25e3ba24fcf47b08c5a9f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237814"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452858"
 ---
-# <a name="build-a-teams-channel-and-group-tab"></a>Crear una ficha de canal y de grupo de Teams
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Crear una pestaña de canal y de grupo para Microsoft Teams
 
 En este tutorial, creará una ficha de *canal* básico (también conocida como una *pestaña de grupo*), que es una página en pantalla completa para un canal o un chat de equipo. A diferencia de una pestaña personal, los usuarios pueden configurar algunos aspectos de este tipo de pestaña (por ejemplo, cambiar el nombre de la ficha para que tenga sentido en su canal).
 
@@ -210,7 +210,7 @@ Para ver las páginas de contenido y configuración de la pestaña, debe instala
 1. Seleccione **configurar una pestaña**. Aparece la página Configuración.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Captura de pantalla de una página de configuración de ficha de canal.":::
 1. Seleccione **Guardar** para configurar la pestaña. Se muestra el contenido.<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de pantalla de una pestaña de canal con vista de contenido estático.":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de pantalla de una página de configuración de ficha de canal.":::
 
 ## <a name="well-done"></a>Bien hecho
 

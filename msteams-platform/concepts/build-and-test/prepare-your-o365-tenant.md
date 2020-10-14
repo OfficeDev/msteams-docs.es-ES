@@ -1,20 +1,20 @@
 ---
-title: Preparar el inquilino de Office 365
-description: Introducción a teams en Office 365
-keywords: Configurar la carga de equipos del inquilino de Office 365
-ms.openlocfilehash: a246b13ae3a12a486a06ff9d98d37d4d147e4ed4
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+title: Preparar el inquilino de Microsoft 365
+description: Introducción a teams en Microsoft 365
+keywords: Configuración de la carga de equipos del inquilino de 365 de Microsoft
+ms.openlocfilehash: 67a0342a7e8605097eed53dd1b0bdf273d537c0e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874866"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452768"
 ---
-# <a name="prepare-your-office-365-tenant"></a>Preparar el inquilino de Office 365
+# <a name="prepare-your-microsoft-365-tenant"></a>Preparar el inquilino de Microsoft 365
 
-Si es suscriptor de Office 365, puede desarrollar aplicaciones para Microsoft Teams con uno de los siguientes [planes](https://products.office.com/business/compare-more-office-365-for-business-plans):
+Si es suscriptor de Microsoft 365, puede desarrollar aplicaciones para Microsoft Teams con uno de los siguientes [planes](https://products.office.com/business/compare-more-office-365-for-business-plans):
 
-* Empresa Essentials
-* Empresa Premium
+* Basic
+* Estándar
 * Enterprise E1, E3 y E5
 * Developer
 * Educación, educación Plus y educación E5
@@ -23,7 +23,7 @@ Microsoft Teams también estará disponible para los clientes que se suscribiero
 
 ## <a name="just-need-a-development-environment"></a>¿Solo necesita un entorno de desarrollo?
 
-Si actualmente no tiene una cuenta de Office 365, puede registrarse para obtener una suscripción al [programa de desarrolladores de Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program) . Es *gratuita* durante 90 días y se renovará continuamente siempre que la use para la actividad de desarrollo. Si tiene una suscripción de Visual Studio *Enterprise* o *Professional* , ambos programas incluyen una suscripción gratuita al [desarrollador](https://aka.ms/MyVisualStudioBenefits)de Microsoft 365, activa durante la vida de su suscripción a Visual Studio. *Consulte* [configurar una suscripción de desarrollador de Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+Si actualmente no tiene una cuenta de Microsoft 365, puede registrarse para obtener una suscripción del [programa de desarrolladores de microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program) . Es *gratuita* durante 90 días y se renovará continuamente siempre que la use para la actividad de desarrollo. Si tiene una suscripción de Visual Studio *Enterprise* o *Professional* , ambos programas incluyen una suscripción gratuita al [desarrollador](https://aka.ms/MyVisualStudioBenefits)de Microsoft 365, activa durante la vida de su suscripción a Visual Studio. *Consulte* [configurar una suscripción de desarrollador de Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>Habilitación de Microsoft Teams para la organización 
 

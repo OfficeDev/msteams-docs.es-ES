@@ -1,18 +1,18 @@
 ---
-title: Introducción a la creación de la aplicación primera Teams
+title: 'Introducción: compilar la primera introducción a la aplicación y requisitos previos'
 author: heath-hamilton
-description: Información general y requisitos previos para crear la primera aplicación de Microsoft Teams
+description: Obtenga información sobre cómo empezar a trabajar con el desarrollo de aplicaciones de Microsoft Teams y configurar el entorno.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397697"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452606"
 ---
-# <a name="build-your-first-teams-app-overview"></a>Información general sobre la creación de su primera aplicación de Microsoft Teams
+# <a name="build-your-first-microsoft-teams-app-overview"></a>Crear su primera información general de la aplicación Microsoft Teams
 
 En la lección **compilar la primera aplicación** , puede crear aplicaciones básicas de Teams. En cada tutorial se explica cómo crear una aplicación sencilla y real de Teams, a la vez que se presentan herramientas comunes, conceptos fundamentales y características más avanzadas.
 
