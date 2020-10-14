@@ -164,7 +164,7 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Agregar pestañas a la aplicación
+        - name: Creación de una pestaña para Teams
           href: tabs/how-to/add-tab.md
         - name: Crear páginas de pestañas
           items:
@@ -215,7 +215,7 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Crear de un bot para Teams
+        - name: Creación de un bot para Teams
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Integrar el chatbot de Power Virtual Agent con Teams
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Crear una extensión de mensajería
+        - name: Crear una extensión de mensajería para Teams
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Comando basado en acciones
           items:
