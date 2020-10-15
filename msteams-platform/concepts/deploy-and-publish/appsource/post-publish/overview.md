@@ -1,13 +1,13 @@
 ---
 title: Publicación posterior
 description: Qué hacer después de publicar la aplicación
-keywords: certificado de actualización de publicación de publicaciones de Teams
-ms.openlocfilehash: d2cc6c5427c5b4f7320f0ec2e022f2c69467a33d
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+keywords: manifiesto de actualización de la aplicación publicar actualización de Teams post
+ms.openlocfilehash: 58e81688ab9a8b55d2b035fc9b43cb58dddb6133
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819157"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465918"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Ofrecer mantenimiento y soporte técnico de su aplicación publicada 
 
@@ -19,7 +19,7 @@ El [programa de cumplimiento de aplicaciones 365 de Microsoft](./application-cer
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Agregar un botón Descargar al sitio del producto
 
-Si la aplicación está en la tienda Microsoft Teams, puede generar un vínculo para su sitio web que inicie Teams y que muestre un cuadro de diálogo de consentimiento e instalación para que los usuarios agreguen la aplicación.
+Si la aplicación está en el almacén global de Microsoft Teams, puede generar un vínculo para el sitio web que inicia Teams y que muestra un cuadro de diálogo de consentimiento e instalación para que los usuarios agreguen la aplicación.
 El formato es:  `https://teams.microsoft.com/l/app/<appId>` donde appID es el GUID que declaran en el manifiesto enviado.
 Ejemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` es el vínculo para instalar Trello.
 
@@ -27,7 +27,7 @@ Ejemplo: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * No use el botón *Agregar una nueva aplicación* para volver a enviar la aplicación. En su lugar, use el icono de la aplicación en la pestaña Información general.
 * El appId del manifiesto actualizado debe ser el mismo que el del manifiesto actual, con un número de versión incrementado.
-* Aumente el número de versión en el manifiesto si realiza cambios en el manifiesto en el envío.
+* Aumente el número de versión en el manifiesto si realiza cambios en el envío, incluido el nombre de la aplicación o cualquier metadato del manifiesto.
 * Los envíos actualizados son necesarios para someterse a un nuevo proceso de revisión y validación.
 
 ## <a name="app-updates-and-the-user-consent-flow"></a>Actualizaciones de aplicaciones y flujo de consentimiento del usuario

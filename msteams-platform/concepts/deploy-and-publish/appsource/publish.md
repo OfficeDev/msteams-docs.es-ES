@@ -1,13 +1,13 @@
 ---
 title: Guía del proceso de envío de aprobación de aplicaciones de Microsoft Teams
 description: Describe el proceso de aprobación de envío para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
-keywords: Teams publicar tienda de Office publicar AppSource de la cuenta del centro asociado
-ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+keywords: equipos de publicación de publicaciones de Office publicar publicación de AppSource de la cuenta del centro asociado la cuenta de aplicaciones no publica elegible
+ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279685"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465932"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -76,6 +76,11 @@ Recibirá el mensaje de error anterior cuando el [Estado de verificación de cue
 Durante el proceso de verificación de la cuenta, se mostrará el estado de cada paso necesario (propiedad del correo electrónico, verificación del empleo e comprobación de la empresa). Una vez que el proceso de comprobación se haya completado correctamente, el estado de verificación de la inscripción en la página de perfil cambiará de "pendiente" a "autorizado" y los pasos del proceso ya no se mostrarán.
 
 ![Error de comprobación del centro del asociado](../../../assets/images/partner-center-acct-verification-error.png)
+
+## <a name="what-is-verified-in-partner-center-account-verification-process-and-how-to-respond"></a>¿Qué se comprueba en el proceso de comprobación de cuenta del centro de asociados y cómo responder?
+Hay tres áreas de comprobación: la propiedad del correo electrónico, el empleo y la empresa. Consulte los detalles de [lo que se comprueba y cómo responder](/partner-center/verification-responses#what-is-verified-and-how-to-respond) si es el contacto principal (administrador global o administrador de la cuenta), le recomendamos que vaya a su perfil de socio para supervisar el estado de la verificación y realizar un seguimiento del progreso.
+
+Una vez finalizado el proceso de comprobación, el estado de verificación de la inscripción en la página de perfil cambiará de *pendiente* a *autorizado* y los pasos del proceso con el estado, que se muestran en esa página, desaparecerán. El contacto principal recibirá un correo electrónico de Microsoft en unos pocos días laborables después de que se complete la comprobación.
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>El estado de comprobación de mi cuenta no se ha avanzado más allá de la propiedad de correo en el centro de asociados. ¿Cómo debo continuar?
 
