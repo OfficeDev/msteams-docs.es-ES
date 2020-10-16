@@ -1,18 +1,21 @@
 ---
-title: Crear un bot para Microsoft Teams
+title: Creación de un bot para Teams
 author: clearab
-description: Cómo crear un bot para Microsoft Teams mediante App Studio, Yeoman Generator y otras herramientas.
+description: Información sobre cómo crear un bot de Teams
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 03196c32e5e1a4b2714a4c916a71c80fc10a5edc
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 86ef162ceee07b1f66992d6943b22336d717c9f7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209833"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452802"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Crear un bot para Microsoft Teams
+
+> [!TIP]
+> ¿Busca una forma más rápida de empezar? Cree un [bot](../../build-your-first-app/build-bot.md) con el kit de herramientas de Microsoft Teams.
 
 Debe completar los pasos siguientes para crear un bot de conversación:
 
