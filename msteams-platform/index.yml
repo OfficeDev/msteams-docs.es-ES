@@ -10,12 +10,12 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 0595dff854382c2a5e95c551f93d76ca3b8616fa
-  ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+  ms.openlocfilehash: b49635a0bfc927e4c9323985842ef470fa895340
+  ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/25/2020
-  ms.locfileid: "48279724"
+  ms.lasthandoff: 10/16/2020
+  ms.locfileid: "48487850"
 highlightedContent:
   items:
   - title: "¿Es la novedad del desarrollo de Microsoft Teams? \U0001F680Empiece aquí."
@@ -117,6 +117,12 @@ conceptualContent:
 tools:
   title: SDK & herramientas
   items:
+  - title: Extensión del kit de herramientas de Microsoft Teams para Visual Studio Code
+    imageSrc: /media/logos/logo_vs-code.svg
+    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+  - title: Extensión de Microsoft Team Toolkit para Visual Studio
+    imageSrc: /media/logos/logo_vs-ide.svg
+    url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: SDK de JavaScript para pestañas
     imageSrc: ./assets/icons/logo_js.png
     url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
@@ -135,71 +141,3 @@ tools:
   - title: Generador de Yeoman para Microsoft Teams
     imageSrc: ./assets/icons/Yeoman.png
     url: https://github.com/OfficeDev/generator-teams
-additionalContent:
-  sections:
-  - title: Plantillas de aplicación A-H
-    summary: Aplicaciones listas para usar
-    items:
-    - title: Información de asociados
-      url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
-      summary: Permitir a los trabajadores de primera línea capturar comentarios de los clientes.
-    - title: Asistencia
-      url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
-      summary: Permita que su equipo grabe asistencia y genere informes resumidos.
-    - title: Libro a salón
-      url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
-      summary: Ayude a su equipo a encontrar y reservar rápidamente una sala de reuniones.
-    - title: Celebraciones
-      url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-      summary: Facilite la celebración de cumpleaños, aniversarios y otros acontecimientos periódicos.
-    - title: Comunicador de la empresa
-      url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-      summary: Permita que los equipos corporativos creen y envíen mensajes de chat a los empleados.
-    - title: Origen de los amontonamientos
-      url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
-      summary: Proporcionar respuestas a consultas de equipo desde información de origen colaborativa.
-    - title: Adhesivos personalizados
-      url: https://github.com/OfficeDev/microsoft-teams-stickers-app
-      summary: Agregar adhesivos personalizados dentro del equipo o la organización.
-    - title: Buscador de expertos
-      url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
-      summary: Permita que su equipo identifique a expertos internos en función de las aptitudes, los intereses y la educación.
-    - title: Preguntas más frecuentes Plus
-      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-      summary: Mejorar la productividad del equipo con un bot de preguntas y respuestas.
-    - title: Actividades de grupo
-      url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
-      summary: Cree y administre rápidamente grupos de actividades y flujos de trabajo de colaboración.
-    - title: Soporte de Recursos Humanos
-      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-      summary: Proporcionar compatibilidad con recursos humanos con un bot de preguntas y respuestas.
-  - title: Plantillas de aplicación I-Z
-    summary: Aplicaciones listas para usar
-    items:
-    - title: Rompehielo
-      url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
-      summary: Promover la colaboración al emparejar de forma aleatoria los miembros del equipo para meetups semanalmente.
-    - title: Incentivos
-      url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
-      summary: Administre y realice un seguimiento de incentivos por la participación en actividades y eventos.
-    - title: Incider Reporter
-      url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport
-      summary: Optimice la administración de incidentes en la organización.
-    - title: Distintivos abiertos
-      url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
-      summary: Realizar un seguimiento de identificadores de credenciales de aprendizaje digital y premios.
-    - title: Respuestas rápidas
-      url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
-      summary: Responda con eficacia a las preguntas más frecuentes y cree una biblioteca dinámica de respuestas.
-    - title: Soporte remoto
-      url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
-      summary: Proporcionar una interfaz enfocada con un equipo de soporte técnico interno.
-    - title: Solicitud-a-Team
-      url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
-      summary: Mejorar el flujo de creación de nuevos equipos de su organización.
-    - title: Estado de Scrum
-      url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
-      summary: Permita que su equipo ejecute reuniones de Scrum asincrónicas y comparta actualizaciones.
-    - title: Búsqueda de lista de SharePoint
-      url: https://github.com/OfficeDev/microsoft-teams-list-search-app
-      summary: Busque en una lista de SharePoint e inserte un elemento como una tarjeta adaptable en Teams.
