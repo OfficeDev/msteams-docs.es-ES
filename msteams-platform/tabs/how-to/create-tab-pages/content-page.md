@@ -5,12 +5,12 @@ description: Cómo crear una página de contenido
 keywords: canal de grupo de pestañas de Teams configurable estático
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818909"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796319"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -28,7 +28,7 @@ El objetivo general de su pestaña debe ser proporcionar acceso a contenido sign
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar el código con Microsoft Teams
 
-Para que la página se muestre en Microsoft Teams, debe incluir el [SDK del cliente de JavaScript para Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) e incluir una llamada a `microsoftTeams.initialize()` después de que se cargue la página. Así es como se comunican la página y el cliente de Microsoft Teams:
+Para que la página se muestre en Microsoft Teams, debe incluir el [SDK del cliente de JavaScript para Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) e incluir una llamada a `microsoftTeams.initialize()` después de que se cargue la página. Así es como se comunican la página y el cliente de Microsoft Teams:
 
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ Para que la página se muestre en Microsoft Teams, debe incluir el [SDK del clie
 
 ### <a name="using-the-sdk-to-interact-with-teams"></a>Uso del SDK para interactuar con Microsoft Teams
 
-El [SDK de JavaScript del cliente de Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md) proporciona muchas funciones adicionales que puede que le resulten útiles mientras se programa la página de contenido.
+El [SDK de JavaScript del cliente de Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md) proporciona muchas funciones adicionales que pueden resultarle útiles al desarrollar su página de contenido.
 
 ### <a name="deep-links"></a>Vínculos profundos
 
@@ -75,8 +75,8 @@ Comenzando con [el esquema de manifiesto v 1.7](../../../resources/schema/manife
 
 1. Para mostrar el indicador de carga, agregue `"showLoadingIndicator": true` al manifiesto. 
 2. Recuerde que debe llamar a `microsoftTeams.initialize();` .
-3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatorio**. Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
+3. **Opcional** . Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorio** . Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
 5. Si la aplicación no se puede cargar, puede llamar `microsoftTeams.appInitialization.notifyFailure(reason);` para informar a Microsoft Teams de que se ha producido un error. A continuación, se mostrará una pantalla de error al usuario:
 
 ```typescript

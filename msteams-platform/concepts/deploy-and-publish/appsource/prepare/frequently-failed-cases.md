@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validación de las aplicaciones de Teams más errores de prueba de AppSource de aprobación rápida publicar
-ms.openlocfilehash: 97130f7b943fb95b76356aa853e2fddd55d69a83
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465939"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796340"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -60,9 +60,9 @@ Para obtener más información acerca de la autenticación, consulte:
 
 ### <a name="9989-response-times-must-be-reasonable"></a>Los tiempos de respuesta &#9989; deben ser razonables
 
-* **Pestañas**. Si una respuesta a una acción tarda más de tres segundos, debe proporcionar un mensaje de carga o advertencia.
-* **Bots**. Una respuesta a un comando de usuario debe producirse en dos segundos. Si se requiere un procesamiento más largo, la aplicación debe mostrar un indicador de escritura.
-* **Crear extensiones**. Una respuesta a un comando de usuario debe producirse en cinco segundos.
+* **Pestañas** . Si una respuesta a una acción tarda más de tres segundos, debe proporcionar un mensaje de carga o advertencia.
+* **Bots** . Una respuesta a un comando de usuario debe producirse en dos segundos. Si se requiere un procesamiento más largo, la aplicación debe mostrar un indicador de escritura.
+* **Crear extensiones** . Una respuesta a un comando de usuario debe producirse en cinco segundos.
 
 > [!TIP]
 > Asegúrese de que la aplicación muestra un indicador de carga o algún tipo de advertencia cuando la aplicación tarda más de lo esperado en responder.
@@ -75,6 +75,8 @@ Para obtener más información acerca de la autenticación, consulte:
 ![Vista de pestañas de SharePoint](~/assets/images/faq/tab-sp.png)
 
 * Las pestañas deben ser de poca naturaleza y no incluir una navegación compleja.
+* Las pestañas no deben presentar una barra de aplicaciones con iconos en el carril de la izquierda que entran en conflicto con la navegación principal de Microsoft Teams.
+* Las pestañas que tienen capacidades de edición complejas en la aplicación deben abrir la vista del editor en varias ventanas en lugar de en la ficha.
 * Si hay varias opciones de vista, considere la posibilidad de tener un menú de configuración de pestaña para que el usuario elija. Por ejemplo, en lugar de insertar un menú dentro de la pestaña, coloque el menú en la página de configuración para que la vista de pestaña real sea despejada y centrada.
 
 ![Página de configuración de la idea ancha](~/assets/images/faq/wideidea.png)
@@ -100,20 +102,20 @@ Para obtener más información acerca de la autenticación, consulte:
 
 El bot debe responder a cualquier comando y no debe ser el usuario que no responde. Estas son algunas sugerencias para ayudar a que su bot responda de manera inteligente a los usuarios:
 
-* **Usar listas de comandos**. Es difícil analizar la entrada del usuario o predecir la intención del usuario. En lugar de dejar que los usuarios adivinen lo que el bot puede hacer, proporcione una lista de comandos que comprenda el bot.
+* **Usar listas de comandos** . Es difícil analizar la entrada del usuario o predecir la intención del usuario. En lugar de dejar que los usuarios adivinen lo que el bot puede hacer, proporcione una lista de comandos que comprenda el bot.
 
 ![Lista de comandos de flujo](~/assets/images/faq/flow-bot.png)
 
-* **Incluir un comando de ayuda**. Es probable que los usuarios escriban "ayuda" cuando se pierden o cuando el bot no responde como se esperaba. Incluya un comando help que describa cómo se experimentará el valor de la aplicación junto con todos los comandos válidos.
+* **Incluir un comando de ayuda** . Es probable que los usuarios escriban "ayuda" cuando se pierden o cuando el bot no responde como se esperaba. Incluya un comando help que describa cómo se experimentará el valor de la aplicación junto con todos los comandos válidos.
 
 ![Comando Flow Help](~/assets/images/faq/flow-help.png)
 
-* **Incluir contenido de ayuda o guía cuando se pierde el bot**. Cuando el bot no puede comprender la entrada del usuario, debe sugerir una acción alternativa. Por ejemplo, *"lo siento, no entiendo. Escriba "Help" para obtener más información. "* No responda con un mensaje de error o simplemente *"no entiendo"*. Use esta oportunidad para enseñar a los usuarios.
+* **Incluir contenido de ayuda o guía cuando se pierde el bot** . Cuando el bot no puede comprender la entrada del usuario, debe sugerir una acción alternativa. Por ejemplo, *"lo siento, no entiendo. Escriba "Help" para obtener más información. "* No responda con un mensaje de error o simplemente *"no entiendo"* . Use esta oportunidad para enseñar a los usuarios.
 
 * **Usar tarjetas adaptables y módulos de tareas para que la respuesta de bot sea clara y accionable** 
  Las [tarjetas adaptables con botones al invocar módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario de bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos
 
-* **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o Teams, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la [Referencia del esquema del manifiesto de Microsoft Teams](~/resources/schema/manifest-schema.md#bots)).
+* **Piense en todos los ámbitos** . Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o Teams, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la [Referencia del esquema del manifiesto de Microsoft Teams](~/resources/schema/manifest-schema.md#bots)).
 
 ### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; bots personales deben enviar un mensaje de bienvenida en el primer inicio
 
@@ -136,19 +138,19 @@ Un mensaje de bienvenida es la mejor forma de establecer el tono de su bot perso
 
 #### <a name="avoid-welcome-message-spamming"></a>Evitar el mensaje de bienvenida de correo no deseado
 
-* **Mensaje de canal por bot**. No envíe correo no deseado a los usuarios mediante publicaciones de chats nuevas independientes. Cree una publicación de hilo único con respuestas en el mismo subproceso.
-* **Chat personal por bot**. No enviar varios mensajes. Enviar un mensaje con la información completa.
+* **Mensaje de canal por bot** . No envíe correo no deseado a los usuarios mediante publicaciones de chats nuevas independientes. Cree una publicación de hilo único con respuestas en el mismo subproceso.
+* **Chat personal por bot** . No enviar varios mensajes. Enviar un mensaje con la información completa.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Mensajes de bienvenida de un bot de solo notificación
 
-Los bots de solo notificación deben enviar un mensaje de bienvenida que incluya un mensaje que indique *"soy un robot de solo notificación y no podrá contestar a sus chats"*.
+Los bots de solo notificación deben enviar un mensaje de bienvenida que incluya un mensaje que indique *"soy un robot de solo notificación y no podrá contestar a sus chats"* .
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Mensajes de bienvenida en el ámbito personal
 
-* **Haga que el mensaje sea conciso e**informativo.  Lo más probable es que la experiencia del usuario y el conocimiento de la aplicación varíen. Un usuario puede haber usado la aplicación en otra plataforma o no ha sabido nada sobre la aplicación. Desea personalizar el mensaje para todas las audiencias y en un par de frases explicar lo que hace el bot y las formas de interactuar con él. También debe explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
+* **Haga que el mensaje sea conciso e** informativo.  Lo más probable es que la experiencia del usuario y el conocimiento de la aplicación varíen. Un usuario puede haber usado la aplicación en otra plataforma o no ha sabido nada sobre la aplicación. Desea personalizar el mensaje para todas las audiencias y en un par de frases explicar lo que hace el bot y las formas de interactuar con él. También debe explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
 ![Cibercafé y dinning bot](~/assets/images/faq/cafe-bot.png)
 
-* **Hacer que el mensaje sea accionable**. Piense lo primero que quiere que realicen los usuarios después de instalar la aplicación. ¿Hay algún comando interesante que deben probar? ¿Hay alguna otra experiencia de incorporación que deba conocer? ¿Es necesario que inicien sesión? Puede Agregar acciones a una tarjeta adaptable o proporcionar ejemplos específicos como *"probar..."*, *"Esto es lo que puedo hacer..."*.
+* **Hacer que el mensaje sea accionable** . Piense lo primero que quiere que realicen los usuarios después de instalar la aplicación. ¿Hay algún comando interesante que deben probar? ¿Hay alguna otra experiencia de incorporación que deba conocer? ¿Es necesario que inicien sesión? Puede Agregar acciones a una tarjeta adaptable o proporcionar ejemplos específicos como *"probar..."* , *"Esto es lo que puedo hacer..."* .
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensajes de bienvenida en el ámbito de equipo o canal
 

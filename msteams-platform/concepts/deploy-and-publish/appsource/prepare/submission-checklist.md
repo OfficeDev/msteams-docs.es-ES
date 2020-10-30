@@ -2,19 +2,20 @@
 title: Lista de comprobación de envíos
 description: La lista de comprobación que se debe usar antes de publicar la aplicación de Microsoft Teams en AppSource
 keywords: Teams publicar lista de comprobación de publicación de Office Teams Teams AppSource validación de aplicaciones
-ms.openlocfilehash: 4bbf5adb8594db0f7163db610b192dd8aaec37fb
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 1b25a449901c303269334e5cea6de46fa3b6f6e5
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465925"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796305"
 ---
 # <a name="prepare-for-appsource-submission"></a>Preparar el envío de AppSource  
 
 Para que aparezcan en AppSource, la aplicación debe pasar por un proceso de aprobación. Este es un servicio gratuito proporcionado por el grupo de Microsoft teams que comprueba que la aplicación funciona como se describe, contiene todos los metadatos adecuados y proporciona contenido que sería valioso para un usuario final. Para ayudarle a conseguir una aprobación rápida, asegúrese de que su aplicación cumple los siguientes requisitos y directrices:
 
 * **Método de distribución:** Asegúrese de que la aplicación está diseñada para su publicación en una plataforma de tienda. Hay [otras opciones](../../overview.md) para distribuir la aplicación sin publicarla en AppSource.
-* **Directivas de validación:** La aplicación debe pasar todas [las directivas de validación de AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)actuales. Compruebe la aplicación con la [herramienta de validación](#teams-app-validation-tool) antes del envío. Tenga en cuenta que estas directivas están sujetas a cambios.
+* **Directivas de validación:** La aplicación debe pasar todas [las directivas de validación de AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) actuales antes de enviarse. Tenga en cuenta que estas directivas están sujetas a cambios. 
+* * * Autoprueba la aplicación con la [herramienta de validación del manifiesto](#teams-app-validation-tool) .
 * **Página de detalles de la aplicación:** La aplicación debe alinearse con la  [lista de comprobación de página de detalles](detail-page-checklist.md)de la aplicación.
 * **Sugerencias y casos con errores frecuentes:** Preste especial atención a las sugerencias de la lista y a los [casos con errores frecuentes](frequently-failed-cases.md)  para mejorar el tiempo de envío y aprobación de la aplicación.
 * **Manifiesto de la aplicación:** Compruebe el manifiesto de la aplicación con la [lista de comprobación del manifiesto](app-manifest-checklist.md)de la aplicación.
@@ -82,10 +83,10 @@ Por ejemplo, incluya lo siguiente:
 
 * Puede elegir cargar las notas de prueba en SharePoint. Si es así, indique un vínculo público al archivo.
 
-* **Cuentas de prueba**. Se requiere una cuenta de prueba si la aplicación solo permite cuentas con licencia o safelisting del back-end. Además, si hay un ámbito de chat de equipo o grupo permitido en la aplicación, se necesitan dos cuentas de prueba en el mismo inquilino para validar el escenario de colaboración del equipo.
+* **Cuentas de prueba** . Se requiere una cuenta de prueba si la aplicación solo permite cuentas con licencia o safelisting del back-end. Además, si hay un ámbito de chat de equipo o grupo permitido en la aplicación, se necesitan dos cuentas de prueba en el mismo inquilino para validar el escenario de colaboración del equipo.
 
-* **Pasos de integración**. Si se requiere la configuración previa de un administrador de inquilinos para usar la aplicación, incluya los pasos o proporcione cuentas de administrador y de no administrador para la validación. Nota: puede registrarse para obtener una suscripción al [programa de desarrolladores de Office 365](https://developer.microsoft.com/microsoft-365/dev-program) . Es *gratuita* durante 90 días y se renovará continuamente siempre que la use para la actividad de desarrollo.
+* **Pasos de integración** . Si se requiere la configuración previa de un administrador de inquilinos para usar la aplicación, incluya los pasos o proporcione cuentas de administrador y de no administrador para la validación. Nota: puede registrarse para obtener una suscripción al [programa de desarrolladores de Office 365](https://developer.microsoft.com/microsoft-365/dev-program) . Es *gratuita* durante 90 días y se renovará continuamente siempre que la use para la actividad de desarrollo.
 
-* **Notas sobre las características de la aplicación en Microsoft Teams**: detalle todas las funcionalidades que ofrece la aplicación en Microsoft Teams y los pasos para probar cada característica.
+* **Notas sobre las características de la aplicación en Microsoft Teams** : detalle todas las funcionalidades que ofrece la aplicación en Microsoft Teams y los pasos para probar cada característica.
 
-* **Vídeo que muestra la funcionalidad de la aplicación (opcional)**: puede proporcionar una grabación de vídeo del producto para que podamos comprender completamente la funcionalidad de la aplicación.
+* **Vídeo que muestra la funcionalidad de la aplicación (opcional)** : puede proporcionar una grabación de vídeo del producto para que podamos comprender completamente la funcionalidad de la aplicación.

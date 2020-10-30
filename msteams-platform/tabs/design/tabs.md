@@ -1,13 +1,13 @@
 ---
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
-keywords: Directrices de diseño de Microsoft Teams referencia de las fichas de marco de trabajo
-ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+keywords: Directrices de diseño de Microsoft Teams referencia de marco de trabajo de configuración ficha estática ficha de canal de diseño de ficha sencillo
+ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819042"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796214"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -59,9 +59,9 @@ Hay desafíos de navegación inherentes a la jerarquía de navegación profunda 
 
 > [!div class="checklist"]
 >
-> * **Abre un módulo de tareas como una entidad o elemento de trabajo individual**. Esto excluye completamente el chat y es la mejor opción para mantener el chat específicamente sobre la ficha y no sobre las subentidades o la experiencia de edición.
->* **Abre un pseudo cuadro de diálogo en un iframe**. Si se usa con un fondo con pantalla, se recomienda usar el color más claro en lugar del oscuro. La `app-gray-10 at 30%` transparencia funciona bien.
->* **Abre una página del explorador**.
+> * **Abre un módulo de tareas como una entidad o elemento de trabajo individual** . Esto excluye completamente el chat y es la mejor opción para mantener el chat específicamente sobre la ficha y no sobre las subentidades o la experiencia de edición.
+>* **Abre un pseudo cuadro de diálogo en un iframe** . Si se usa con un fondo con pantalla, se recomienda usar el color más claro en lugar del oscuro. La `app-gray-10 at 30%` transparencia funciona bien.
+>* **Abre una página del explorador** .
 
 ### <a name="personality"></a>Personalidad
 
@@ -75,7 +75,7 @@ El lienzo de pestañas ofrece una gran oportunidad para personalizar su experien
 La incorporación de sus propios colores y diseños Twill también ayuda para comunicar la personalidad.
 
 > [!TIP]
-> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte*, por ejemplo, [colores de Teams](../../concepts/design/components/color.md)
+> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte* , por ejemplo, [colores de Teams](../../concepts/design/components/color.md)
 
 ---
 
@@ -136,7 +136,7 @@ Hay dos modos de notificación para cambios de contenido de pestañas:
 
 > [!div class="checklist"]
 >
-> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Usar un bot**. Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
+> * **Use la API de aplicaciones para notificar a los usuarios los cambios** . Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+> * **Usar un bot** . Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
 
   El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando `@mention`  hay usuarios específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.

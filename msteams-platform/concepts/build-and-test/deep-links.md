@@ -3,11 +3,11 @@ title: Crear vínculos profundos
 description: Describe los vínculos profundos y cómo usarlos en las aplicaciones
 keywords: vínculo profundo vínculo profundo de Teams
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801462"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796333"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Crear vínculos profundos para el contenido y las características en Microsoft Teams
 
@@ -27,7 +27,7 @@ Como alternativa, también puede generar vínculos profundos mediante programaci
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Mostrar un vínculo profundo a un elemento dentro de la pestaña
 
-Para mostrar un cuadro de diálogo que contenga un vínculo profundo a un elemento dentro de la pestaña, llame a`microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
+Para mostrar un cuadro de diálogo que contenga un vínculo profundo a un elemento dentro de la pestaña, llame a `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
 Proporcione estos campos:
 
@@ -58,10 +58,10 @@ Los parámetros de consulta son los siguientes:
 
 Ejemplos:
 
-* Vincular a una pestaña configurable en sí:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Vínculo a un elemento de tarea dentro de la pestaña configurable:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Vínculo a una pestaña estática en sí:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Vínculo a un elemento de tarea dentro de la pestaña estática:`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Vincular a una pestaña configurable en sí: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Vínculo a un elemento de tarea dentro de la pestaña configurable: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Vínculo a una pestaña estática en sí: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+* Vínculo a un elemento de tarea dentro de la pestaña estática: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
 
 > [!IMPORTANT]
 > Asegúrese de que todos los parámetros de consulta están codificados con URI correctamente. Por motivos de legibilidad, los ejemplos anteriores no lo son, pero debe hacerlo. Con el último ejemplo:
@@ -126,7 +126,7 @@ Puede crear vínculos profundos al cuadro de diálogo de programación integrada
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Generar un vínculo profundo al cuadro de diálogo de programación
 
-Use este formato para un vínculo profundo que puede usar en una tarjeta de bot, conector o extensión de mensajería:`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Use este formato para un vínculo profundo que puede usar en una tarjeta de bot, conector o extensión de mensajería: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Ejemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 

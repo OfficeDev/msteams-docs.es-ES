@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: mensajes de importación de Teams gráfico de API de Microsoft migrar publicación de migración
-ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 934e00541773140c90c270a616d6bc50aacac6e1
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465911"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796298"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
@@ -50,11 +50,11 @@ Como los datos existentes se migran, el mantenimiento de las marcas de tiempo de
 
 > [Cree un nuevo equipo](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) con una marca de tiempo de fondo con la propiedad de recurso de equipo  `createdDateTime`  . Ponga el nuevo equipo en `migration mode` , un estado especial que reubique a los usuarios de la mayoría de las actividades del equipo hasta que se complete el proceso de migración. Incluya el `teamCreationMode` atributo de instancia con el `migration` valor en la solicitud post para identificar explícitamente el nuevo equipo como creado para la migración.  
 
-> **Nota**: el `createdDateTime` campo solo se rellenará para las instancias de un equipo o canal que se hayan migrado.
+> **Nota** : el `createdDateTime` campo solo se rellenará para las instancias de un equipo o canal que se hayan migrado.
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permisos
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descripción|Tipo|¿El consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
@@ -98,7 +98,7 @@ La creación de un canal para los mensajes importados es similar al escenario cr
 
 > [Cree un canal nuevo](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) con una marca de tiempo de fondo con la propiedad de recurso Channel `createdDateTime` . Inserte el nuevo canal en `migration mode` , un estado especial que reubique a los usuarios de la mayoría de las actividades de chat en el canal hasta que se complete el proceso de migración.  Incluya el `channelCreationMode` atributo de instancia con el `migration` valor en la solicitud post para identificar explícitamente el nuevo equipo como creado para la migración.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permisos
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descripción|Tipo|¿El consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
@@ -136,8 +136,9 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
-#### Error message
+#### <a name="error-message"></a>Mensaje de error
 
 ```http
 400 Bad Request
@@ -148,7 +149,7 @@ HTTP/1.1 202 Accepted
 
 ## <a name="step-three-import-messages"></a>Paso tres: importar mensajes
 
-Una vez que se han creado el equipo y el canal, puede empezar a enviar mensajes en tiempo de inactividad con las `createdDateTime` `from`  claves y en el cuerpo de la solicitud. **Nota**: `createdDateTime` `createdDateTime` no se admiten los mensajes importados con anterioridad que el hilo del mensaje.
+Una vez que se han creado el equipo y el canal, puede empezar a enviar mensajes en tiempo de inactividad con las `createdDateTime` `from`  claves y en el cuerpo de la solicitud. **Nota** : `createdDateTime` `createdDateTime` no se admiten los mensajes importados con anterioridad que el hilo del mensaje.
 
 > [!NOTE]
 > createdDateTime debe ser único entre los mensajes del mismo subproceso.
@@ -224,7 +225,7 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>Solicitud (publicar un mensaje con una imagen en línea)
 
-> **Nota**: no hay ámbitos de permisos especiales en este escenario, ya que la solicitud es parte de chatMessage; los ámbitos para chatMessage también se aplican aquí.
+> **Nota** : no hay ámbitos de permisos especiales en este escenario, ya que la solicitud es parte de chatMessage; los ámbitos para chatMessage también se aplican aquí.
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -349,7 +350,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Puede importar mensajes de usuarios que no están en Microsoft Teams. **Nota**: los mensajes importados para los usuarios que no están presentes en el inquilino no se podrán buscar en el cliente de Microsoft Teams ni en los portales de cumplimiento durante la versión preliminar pública.
+* Puede importar mensajes de usuarios que no están en Microsoft Teams. **Nota** : los mensajes importados para los usuarios que no están presentes en el inquilino no se podrán buscar en el cliente de Microsoft Teams ni en los portales de cumplimiento durante la versión preliminar pública.
 
 * Una vez que `completeMigration` se haya realizado la solicitud, no podrá importar más mensajes al equipo.
 

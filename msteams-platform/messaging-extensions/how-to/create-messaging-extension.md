@@ -1,17 +1,17 @@
 ---
-title: Crear una extensión de mensajería para Microsoft Teams
+title: Crear una extensión de mensajería con App Studio
 author: clearab
-description: Obtenga información sobre cómo crear una extensión de mensajería de Teams
+description: Obtenga información sobre cómo crear una extensión de mensajería de Microsoft Teams con App Studio.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452599"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796186"
 ---
-# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Crear una extensión de mensajería para Microsoft Teams
+# <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería con App Studio
 
 > [!TIP]
 > ¿Busca una forma más rápida de empezar? Cree una [extensión de mensajería](../../build-your-first-app/build-messaging-extension.md) mediante el kit de herramientas de Microsoft Teams.
@@ -129,15 +129,15 @@ Cuando los usuarios desencadenen la extensión de mensajería, deberá controlar
 
 Una vez iniciada una reunión, los participantes de Microsoft Teams pueden interactuar directamente con la extensión de mensajería durante una llamada activa. Tenga en cuenta lo siguiente al crear la extensión de mensajería en la reunión:
 
-1. **Location**. La extensión de mensajería se puede invocar desde el área redactar mensaje, el cuadro de comando o @mentioned del chat de reuniones.
+1. **Location** . La extensión de mensajería se puede invocar desde el área redactar mensaje, el cuadro de comando o @mentioned del chat de reuniones.
 
-1. **Metadatos**. Cuando se llama a la extensión de mensajería, puede identificar el usuario y el inquilino de `userId` y `tenantId` . Se puede encontrar `meetingId` como parte del objeto `channelData`. La aplicación puede usar `userId` y `meetingId`  para la solicitud de la `GetParticipant` API para recuperar roles de usuario.
+1. **Metadatos** . Cuando se llama a la extensión de mensajería, puede identificar el usuario y el inquilino de `userId` y `tenantId` . Se puede encontrar `meetingId` como parte del objeto `channelData`. La aplicación puede usar `userId` y `meetingId`  para la solicitud de la `GetParticipant` API para recuperar roles de usuario.
 
-1. **Tipo de comando**. Si su extensión de mensaje usa [comandos basados en acciones](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), debe seguir la autenticación de [Inicio de sesión único de](../../tabs/how-to/authentication/auth-aad-sso.md) las pestañas.
+1. **Tipo de comando** . Si su extensión de mensaje usa [comandos basados en acciones](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), debe seguir la autenticación de [Inicio de sesión único de](../../tabs/how-to/authentication/auth-aad-sso.md) las pestañas.
 
-1. **Experiencia del usuario**. Debe determinar el propósito de la experiencia del usuario final para las extensiones de mensajería invocadas durante un chat de reuniones.
+1. **Experiencia del usuario** . La extensión de mensajería debe tener el mismo aspecto y comportarse de la misma manera que fuera una reunión.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 * [Crear comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Crear comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
@@ -154,7 +154,7 @@ Pruébelo en un inicio rápido:
   * [Extensión de mensajería con comandos basados en acciones](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extensión de mensajería con comandos basados en la búsqueda](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Obtenga más información acerca de los conceptos de extensiones de mensajería:
+Obtenga más información sobre los conceptos de desarrollo de Microsoft Teams:
 
-* [¿Conoce las funcionalidades de la aplicación Teams?](~/concepts/extensibility-points.md)
+* [Descripción de las funcionalidades de la aplicación Teams](../../concepts/capabilities-overview.md)
 * [¿Qué son las extensiones de mensajería?](~/messaging-extensions/what-are-messaging-extensions.md)

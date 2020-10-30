@@ -1,18 +1,18 @@
 ---
-title: Crear una pestaña para Teams
+title: Crear una ficha con App Studio
 author: laujan
-description: Obtener información sobre cómo crear una pestaña de Microsoft Teams
+description: Obtenga información sobre cómo crear una pestaña de Microsoft Teams con App Studio.
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 4e6554a3fdba2ee53bf6d76cd6e25a55b14f7bdd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452760"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796158"
 ---
-# <a name="create-a-tab-for-microsoft-teams"></a>Crear una pestaña para Microsoft Teams
+# <a name="create-a-tab-using-app-studio"></a>Crear una ficha con App Studio
 
 > [!TIP]
 > ¿Busca una forma más rápida de empezar? Cree una ficha [personal](../../build-your-first-app/build-personal-tab.md) o de [canal y de grupo](../../build-your-first-app/build-channel-tab.md) con el kit de herramientas de Microsoft Teams.
@@ -67,11 +67,11 @@ Puede usar la aplicación de App Studio desde el cliente de Microsoft Teams para
 1. Abra App Studio y seleccione la pestaña **Editor de manifiestos** .
 1. Elija el icono **crear una nueva aplicación** .
 1. Agregue los detalles de la aplicación (vea la [definición del esquema del manifiesto](~/resources/schema/manifest-schema.md) para obtener una descripción completa de cada campo).
-1. En la sección capacidades, seleccione **pestañas**.
-    * Para una pestaña personal, elija *Agregar una pestaña personal* y seleccione **Agregar**. Aparecerá una ventana de cuadro de diálogo emergente en la que podrá agregar los detalles de su pestaña.
-    * Para una ficha canal/grupo, en la *ficha equipo* , seleccione **Agregar** y rellene los campos detalles de la pestaña en la ventana emergente de la pestaña equipo. Asegúrese de que la *configuración puede actualizarse. * Los cuadros equipo y *grupo de chat* están seleccionados y seleccione **Guardar**.
+1. En la sección capacidades, seleccione **pestañas** .
+    * Para una pestaña personal, elija *Agregar una pestaña personal* y seleccione **Agregar** . Aparecerá una ventana de cuadro de diálogo emergente en la que podrá agregar los detalles de su pestaña.
+    * Para una ficha canal/grupo, en la *ficha equipo* , seleccione **Agregar** y rellene los campos detalles de la pestaña en la ventana emergente de la pestaña equipo. Asegúrese de que la *configuración puede actualizarse.* Los cuadros equipo y *grupo de chat* están seleccionados y seleccione **Guardar** .
 1. En la sección *dominios y permisos* , los *dominios del campo de pestañas* deben contener la dirección URL de proxy o host inverso sin el prefijo https.
-1. En la pestaña **Finalizar**la  =>  **prueba y distribución** puede **Descargar** el paquete de la aplicación, **instalar** el paquete en un equipo o **enviarlo** a la tienda de aplicaciones de Microsoft Teams para su aprobación. *Si usa un proxy inverso, recibirá una advertencia en el campo **Descripción** de la derecha. Se puede omitir la advertencia mientras se prueba la pestaña*.
+1. En la pestaña **Finalizar** la  =>  **prueba y distribución** puede **Descargar** el paquete de la aplicación, **instalar** el paquete en un equipo o **enviarlo** a la tienda de aplicaciones de Microsoft Teams para su aprobación. *Si usa un proxy inverso, recibirá una advertencia en el campo **Descripción** de la derecha. Se puede omitir la advertencia mientras se prueba la pestaña* .
 
 ## <a name="create-your-app-package-manually"></a>Crear el paquete de aplicación manualmente
 
@@ -136,9 +136,9 @@ Una vez que haya completado el `manifest.json` empaquetamiento del paquete en un
 ### <a name="upload-app-package-directly-to-a-team"></a>Cargar el paquete de la aplicación directamente a un equipo
 
 1. Abra el cliente de Microsoft Teams. Si usa la [versión basada en Web](https://teams.microsoft.com) , puede inspeccionar el código Front-end con las [herramientas de desarrollo](~/tabs/how-to/developer-tools.md)de su explorador.
-1. En el panel de *YourTeams* de la izquierda, seleccione el `...` menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo**.
+1. En el panel de *YourTeams* de la izquierda, seleccione el `...` menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo** .
 1. En el panel principal, seleccione **aplicaciones** en la barra de pestañas y elija **cargar una aplicación personalizada** ubicada en la esquina inferior derecha de la página.
-1. Abra el directorio del proyecto, vaya a la carpeta **./Package** , seleccione la carpeta ZIP del paquete de la aplicación y elija **abrir**. La pestaña se cargará en Teams.
+1. Abra el directorio del proyecto, vaya a la carpeta **./Package** , seleccione la carpeta ZIP del paquete de la aplicación y elija **abrir** . La pestaña se cargará en Teams.
 
 ### <a name="view-your-tab-in-teams"></a>Ver la pestaña en Teams
 

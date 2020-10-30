@@ -2,12 +2,12 @@
 title: Guía del proceso de envío de aprobación de aplicaciones de Microsoft Teams
 description: Describe el proceso de aprobación de envío para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
 keywords: equipos de publicación de publicaciones de Office publicar publicación de AppSource de la cuenta del centro asociado la cuenta de aplicaciones no publica elegible
-ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 2879717aebd9d295cdf37cc0371b68f5f695b86b
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465932"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796312"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -16,7 +16,8 @@ ms.locfileid: "48465932"
 La publicación de la aplicación en [AppSource](https://appsource.microsoft.com) hace que esté disponible en el catálogo de aplicaciones de Microsoft Teams y en la Web. En un nivel alto, el proceso para enviar la aplicación a AppSource es:
 
 1. Desarrolle su aplicación siguiendo nuestras [pautas de diseño](~/concepts/design/understand-use-cases.md). Las pestañas deben seguir nuestras [instrucciones de diseño de pestañas](~/tabs/design/tabs.md). Los bots deben seguir las [directrices de diseño de bot](~/bots/design/bots.md).
-1. Asegúrese de que su aplicación cumple las [directivas de validación](/legal/marketplace/certification-policies) de aplicaciones de Microsoft Teams.
+1. Asegúrese de que su aplicación cumple las [directivas de validación](/legal/marketplace/certification-policies) de aplicaciones de Microsoft Teams. 
+1. Autoprobar la aplicación con la [herramienta de validación del manifiesto](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool) .
 1. [Configure una cuenta de Desarrollador en el](/office/dev/store/open-a-developer-account) [centro de Partners](https://support.microsoft.com/help/4499930/partner-center-overview). *Consulte también* [Cómo crear una cuenta del centro de asociados](#how-do-i-create-a-partner-center-account) en la sección Preguntas más frecuentes, a continuación.
 1. Prepare la aplicación para el envío siguiendo nuestra [lista de comprobación de envío](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 1. Revise nuestras [sugerencias para obtener un envío de aplicación correcto](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
@@ -84,7 +85,7 @@ Una vez finalizado el proceso de comprobación, el estado de verificación de la
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>El estado de comprobación de mi cuenta no se ha avanzado más allá de la propiedad de correo en el centro de asociados. ¿Cómo debo continuar?
 
-Durante el proceso de comprobación de la **propiedad del correo electrónico** , se envía un correo electrónico de verificación a la dirección de correo electrónico de contacto principal. Consulte la bandeja de entrada del contacto principal para ver si hay un correo electrónico de **maccount@<span>Microsoft</span>. com** con la acción de línea de asunto *necesaria: Compruebe su cuenta de correo electrónico con Microsoft*y solicite que complete el proceso de comprobación de correo electrónico. El correo electrónico de comprobación se enviará a la dirección de correo electrónico que aparece en la página Configuración de la cuenta del centro de asociados.
+Durante el proceso de comprobación de la **propiedad del correo electrónico** , se envía un correo electrónico de verificación a la dirección de correo electrónico de contacto principal. Consulte la bandeja de entrada del contacto principal para ver si hay un correo electrónico de **maccount@ <span>Microsoft</span>. com** con la acción de línea de asunto *necesaria: Compruebe su cuenta de correo electrónico con Microsoft* y solicite que complete el proceso de comprobación de correo electrónico. El correo electrónico de comprobación se enviará a la dirección de correo electrónico que aparece en la página Configuración de la cuenta del centro de asociados.
 
 > [!NOTE]
  >El vínculo de comprobación de correo electrónico solo es válido durante 7 días. Puede solicitar que se le reenvíe el correo electrónico visitando la página de Perfil de socio y seleccionar el vínculo **reenviar correo electrónico de verificación** . Para asegurarse de que se recibe el correo electrónico, envíe un correo electrónico de lista segura desde microsoft.com como un dominio seguro y compruebe las carpetas de correo no deseado.
@@ -101,7 +102,7 @@ Intente lo siguiente:
 1. Borre la memoria caché del explorador, vaya a su panel de cuenta del centro de asociados y seleccione el vínculo **reenviar correo electrónico de comprobación** para que el correo electrónico de verificación vuelva a enviarse a su dirección de correo electrónico.
 1. Intente acceder al vínculo  **reenviar correo electrónico de comprobación** desde otro explorador.
 1. Trabaje con su Departamento de TI para asegurarse de que el servidor de correo electrónico no bloquea los correos electrónicos de verificación.
-1. Ajuste el filtro de correo no deseado del servidor para permitir/safelist todos los correos electrónicos de **maccount@microsoft. <span></span> com**.
+1. Ajuste el filtro de correo no deseado del servidor para permitir/safelist todos los correos electrónicos de **maccount@microsoft. <span></span> com** .
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>¿Cuánto tiempo tarda el proceso de verificación de empleo?
 
@@ -123,7 +124,7 @@ Para obtener más ayuda, consulte nuestra [documentación de mercado comercial](
 
 Envíe un correo electrónico a **<teamsubm@microsoft.com>** con los siguientes detalles:
 
-1. **Línea de asunto**. *Problema en la cuenta del centro asociado para <>de App_Name * (especifique el nombre de la aplicación).
+1. **Línea de asunto** . *Problema en la cuenta del centro asociado para <>de App_Name* (especifique el nombre de la aplicación).
 1. **Cuerpo del correo electrónico:**
     * Número de incidencia de soporte técnico:
     * Tu identificador de vendedor:

@@ -3,12 +3,13 @@ title: Controlar eventos de bot
 description: Describe cómo controlar eventos en bots para Microsoft Teams.
 keywords: eventos de bots de Teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 06da5e6b0668e86012d87af3184493cdeb70aecd
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+author: laujan
+ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801458"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796179"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Controlar eventos de bot en Microsoft Teams
 
@@ -133,7 +134,7 @@ bot.on('conversationUpdate', (msg) => {
 El bot recibe un `conversationUpdate` con `membersAdded` cuando un usuario lo agrega directamente al chat personal. En este caso, la carga que el bot recibe no contiene el `channelData.team` objeto. Debe usarlo como filtro en caso de que desee que el bot ofrezca un [mensaje de bienvenida](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) diferente según el ámbito.
 
 > [!NOTE]
-> En el caso de los bots de ámbito personal, el bot solo recibirá el `conversationUpdate` evento una sola vez, incluso si el bot se quita y se vuelve a agregar. Para el desarrollo y las pruebas, puede que le resulte útil agregar una función auxiliar que le permita restablecer su bot por completo. Vea un [ejemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) o un [ejemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obtener más información sobre la implementación de esto.
+> En el caso de los bots de ámbito personal, el bot solo recibirá el `conversationUpdate` evento una sola vez, incluso si el bot se quita y se vuelve a agregar. Para el desarrollo y las pruebas, puede que le resulte útil agregar una función auxiliar que le permita restablecer su bot por completo. Vea un [ ejemplo deNode.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) o un [ejemplo de C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) para obtener más información sobre la implementación de esto.
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>Ejemplo de esquema: bot agregado a contexto personal
 
@@ -154,11 +155,11 @@ El bot recibe un `conversationUpdate` con `membersAdded` cuando un usuario lo ag
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -264,7 +265,7 @@ El bot recibe una notificación cuando se crea, se cambia el nombre o se elimina
 
 Los eventos de canal son los siguientes:
 
-* **channelCreated** &emsp; Un usuario agrega un nuevo canal al equipo
+_ **channelCreated** &emsp; un usuario agrega un canal nuevo al equipo
 * **channelRenamed** &emsp; Un usuario cambia el nombre de un canal existente
 * **channelDeleted** &emsp; Un usuario quita un canal
 
@@ -348,7 +349,7 @@ Los eventos de canal son los siguientes:
 
 ## <a name="reactions"></a>Comunicar
 
-El `messageReaction` evento se envía cuando un usuario agrega o quita su reacción a un mensaje enviado originalmente por el bot. `replyToId`contiene el identificador del mensaje específico.
+El `messageReaction` evento se envía cuando un usuario agrega o quita su reacción a un mensaje enviado originalmente por el bot. `replyToId` contiene el identificador del mensaje específico.
 
 ### <a name="schema-example-a-user-likes-a-message"></a>Ejemplo de esquema: un usuario le gusta un mensaje
 

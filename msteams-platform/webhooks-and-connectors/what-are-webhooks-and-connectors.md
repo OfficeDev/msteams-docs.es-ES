@@ -4,12 +4,12 @@ author: clearab
 description: Comprenda cómo los conectores y webhooks pueden conectar sus servicios web con el cliente de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2be6f82bba0efe05a22a8da9da0acc1e0ad6fa00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6a2453cb7d0c2d55a8df938849313f47702e5585
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675700"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796375"
 ---
 # <a name="what-are-webhooks-and-connectors"></a>¿Qué son los webhooks y los conectores?
 

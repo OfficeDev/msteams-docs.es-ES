@@ -1,17 +1,17 @@
 ---
 title: Probar el consentimiento específico de los recursos en Microsoft Teams
-description: Detalles de prueba del consentimiento específico del recurso en Microsoft Teams con Postman
+description: Cómo probar el consentimiento específico de los recursos en Microsoft Teams mediante Postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: How-to
 keywords: Gráfico de autorización de equipo de OAuth de OAuth SSO de AAD de Microsoft Teams
-ms.openlocfilehash: e659a4e3e7ee4d316867f969358f8a3f15e9b122
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 63b2b708cf775816c5e6c0bb39a36537c2f20722
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44801531"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796151"
 ---
 # <a name="test-rsc-postman-collection-json"></a>Probar el JSON de la colección Postman de RSC
 
@@ -396,7 +396,7 @@ ms.locfileid: "44801531"
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "{\r\n  \"displayName\": \"ChannelCreatedThruRsc\",\r\n  \"description\": \"This channel was ceated using RSC\",\r\n  \"membershipType\": \"standard\"\r\n}",
+                    "raw": "{\r\n  \"displayName\": \"ChannelCreatedThruRsc\",\r\n  \"description\": \"This channel was created using RSC\",\r\n  \"membershipType\": \"standard\"\r\n}",
                     "options": {
                         "raw": {
                             "language": "json"
