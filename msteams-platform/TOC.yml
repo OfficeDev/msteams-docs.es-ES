@@ -164,7 +164,7 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Creación de una pestaña para Teams
+        - name: Crear una pestaña con App Studio
           href: tabs/how-to/add-tab.md
         - name: Crear páginas de pestañas
           items:
@@ -215,7 +215,7 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Creación de un bot para Teams
+        - name: Crear un bot usando App Studio
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Integrar el chatbot de Power Virtual Agent con Teams
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: Guías de procedimientos
       expanded: true
       items:
-        - name: Crear una extensión de mensajería para Teams
+        - name: Crear una extensión de mensajería usando App Studio
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Comando basado en acciones
           items:
@@ -363,7 +363,7 @@
           href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: Pestaña en la reunión
           href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: 'Las API de REST de Graph para Teams '
+- name: Integración de la API de REST de Microsoft Graph
   items:
     - name: Consentimiento específico de recursos (RSC)
       items:
