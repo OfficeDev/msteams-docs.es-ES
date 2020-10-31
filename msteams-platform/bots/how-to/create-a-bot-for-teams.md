@@ -1,18 +1,18 @@
 ---
-title: Creación de un bot para Teams
+title: Crear un bot usando App Studio
 author: clearab
-description: Información sobre cómo crear un bot de Teams
+description: Obtenga información sobre cómo crear un bot de Microsoft Teams usando App Studio.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 86ef162ceee07b1f66992d6943b22336d717c9f7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 3d4f954afd56bf6ee442b57961c9d6b736ffa4d8
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452802"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796354"
 ---
-# <a name="create-a-bot-for-microsoft-teams"></a>Crear un bot para Microsoft Teams
+# <a name="create-a-bot-using-app-studio"></a>Crear un bot usando App Studio
 
 > [!TIP]
 > ¿Busca una forma más rápida de empezar? Cree un [bot](../../build-your-first-app/build-bot.md) con el kit de herramientas de Microsoft Teams.
@@ -83,7 +83,7 @@ También puede registrar el servicio web creando un recurso de registro de canal
 
 El [portal de Bot Framework](https://dev.botframework.com) se ha optimizado para el registro de bots en Microsoft Azure. Estos son algunos aspectos que debe tener en cuenta:
 
-* El canal de Microsoft Teams para bots registrados en Azure es **gratuito**. Los mensajes que se envían a través del canal de Teams no se contabilizarán como mensajes consumidos para el bot.
+* El canal de Microsoft Teams para bots registrados en Azure es **gratuito** . Los mensajes que se envían a través del canal de Teams no se contabilizarán como mensajes consumidos para el bot.
 * Si registra el bot con Microsoft Azure, no es necesario que el código del bot se *hospede* en Microsoft Azure.
 * Si registra un bot con Microsoft Azure Portal, debe tener una cuenta de Microsoft Azure. Puede [crear una de forma gratuita](https://azure.microsoft.com/free/). Para comprobar su identidad al crear una cuenta de Azure, debe proporcionar una tarjeta de crédito, pero no se realizará ningún cargo. Siempre es gratuito crear y usar bots con Microsoft Teams.
 
@@ -94,14 +94,14 @@ El [manifiesto de la aplicación](~/resources/schema/manifest-schema.md) define 
 ### <a name="add-using-app-studio"></a>Agregar con App Studio
 
 1. En el cliente de Teams, abra App Studio en el menú de desbordamiento **...** del raíl de navegación izquierdo. Si App Studio aún no está instalado, puede instalarlo si lo busca.
-2. En la pestaña **Editor de manifiestos**, seleccione **Crear una nueva aplicación** (o bien, si está agregando un bot a una aplicación existente, puede importar el paquete de la aplicación).
+2. En la pestaña **Editor de manifiestos** , seleccione **Crear una nueva aplicación** (o bien, si está agregando un bot a una aplicación existente, puede importar el paquete de la aplicación).
 3. Agregue los detalles de la aplicación (consulte [definición de esquema de manifiesto](~/resources/schema/manifest-schema.md) para obtener las descripciones completas de cada campo).
-4. En la pestaña **Bots**, haga clic en el botón **Configuración**.
-5. Puede crear un nuevo registro de un servicio web (**Nuevo bot**), o bien, si ya ha registrado uno, seleccione **Bot existente**.
+4. En la pestaña **Bots** , haga clic en el botón **Configuración** .
+5. Puede crear un nuevo registro de un servicio web ( **Nuevo bot** ), o bien, si ya ha registrado uno, seleccione **Bot existente** .
 6. Seleccione las funciones y el alcance que necesitará el bot.
 7. Si es necesario, actualice la dirección del extremo del bot para que apunte a su bot. Debería tener un aspecto similar a `https://someplace.com/api/messages`.
 8. Si quiere, agregue [comandos de bot](~/bots/how-to/create-a-bot-commands-menu.md).
-9. De forma opcional, puede descargar el paquete de la aplicación finalizado desde la pestaña **Probar y distribuir**.
+9. De forma opcional, puede descargar el paquete de la aplicación finalizado desde la pestaña **Probar y distribuir** .
 
 ### <a name="create-it-manually"></a>Crearlo manualmente
 
@@ -177,7 +177,7 @@ Para crear un paquete de aplicación, debe agregar el manifiesto de la aplicaci�
 > [!NOTE]
 > Para cargar satisfactoriamente el bot, el administrador del espacio empresarial debe antes [permitir la carga](/microsoftteams/manage-apps#manage-org-wide-app-settings) de aplicaciones de terceros o personalizadas en Teams.
 
-Si ha estado usando App Studio, puede instalar la aplicación desde la pestaña **Probar y distribuir** en el **Editor de manifiestos**. Como alternativa, puede instalar el paquete de la aplicación haciendo clic en el menú de desbordamiento `...` desde el panel de navegación izquierdo, al hacer clic en **Más aplicaciones** y el vínculo **Cargar una aplicación personalizada**. También puede importar un manifiesto de aplicación o un paquete de aplicación en App Studio para realizar actualizaciones adicionales antes de cargarlas.
+Si ha estado usando App Studio, puede instalar la aplicación desde la pestaña **Probar y distribuir** en el **Editor de manifiestos** . Como alternativa, puede instalar el paquete de la aplicación haciendo clic en el menú de desbordamiento `...` desde el panel de navegación izquierdo, al hacer clic en **Más aplicaciones** y el vínculo **Cargar una aplicación personalizada** . También puede importar un manifiesto de aplicación o un paquete de aplicación en App Studio para realizar actualizaciones adicionales antes de cargarlas.
 
 ## <a name="bots-in-teams-meetings"></a>Bots en reuniones de Teams
 
