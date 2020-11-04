@@ -5,18 +5,18 @@ description: Cree rápidamente una extensión de mensajería de Microsoft Teams 
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 68f2bf7c71182499dc8f6f50e03ea3d97f03ded2
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452837"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877087"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Crear una extensión de mensajería para Microsoft Teams
 
-Hay dos tipos de extensiones de *Mensajería*de Teams: [comandos de búsqueda](../messaging-extensions/how-to/search-commands/define-search-command.md) y [comandos de acciones](../messaging-extensions/how-to/action-commands/define-action-command.md).
+Hay dos tipos de extensiones de *Mensajería* de Teams: [comandos de búsqueda](../messaging-extensions/how-to/search-commands/define-search-command.md) y [comandos de acciones](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
-En esta lección, creará un *comando de búsqueda* (también conocido como *extensión de mensajería basada en búsquedas*), que es un método abreviado para buscar contenido externo y compartirlo en Microsoft Teams. Los usuarios pueden tener acceso a los comandos de búsqueda desde el [cuadro redactar o comando de Teams](../messaging-extensions/what-are-messaging-extensions.md).
+En esta lección, creará un *comando de búsqueda* (también conocido como *extensión de mensajería basada en búsquedas* ), que es un método abreviado para buscar contenido externo y compartirlo en Microsoft Teams. Los usuarios pueden tener acceso a los comandos de búsqueda desde el [cuadro redactar o comando de Teams](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="your-assignment"></a>La asignación
 
@@ -164,7 +164,7 @@ Con la extensión de mensajería en ejecución, puede instalarla en Teams.
 > Si no ha transferido localmente una aplicación de Microsoft Teams y tiene problemas, siga estas [instrucciones](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Inicie sesión en el cliente de Teams con su cuenta que permite la transferencia local de aplicaciones.
-1. Seleccione **aplicaciones**y, después, elija **cargar una aplicación personalizada**.
+1. Seleccione **aplicaciones** y, después, elija **cargar una aplicación personalizada**.
 1. Vaya a la carpeta de proyecto de la aplicación `.publish` y seleccione `Development.zip` .
 1. En el modal instalar, seleccione **Agregar** para instalar la aplicación.
 
@@ -172,10 +172,9 @@ Con la extensión de mensajería en ejecución, puede instalarla en Teams.
 
 Obtenga información sobre cómo funcionan las extensiones de mensajería en un chat de Microsoft Teams.
 
-1. Inicie un nuevo chat. En el cuadro de redacción, seleccione **más** :::image type="icon" source="../assets/icons/teams-client-more.png"::: y elija la aplicación de extensión de mensajería que acaba de transferirá localmente.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Ilustración que muestra cómo, en Team Toolkit, iniciar sesión en su cuenta de Microsoft 365 para crear un nuevo bot para la extensión de mensajería.":::
+1. Inicie un nuevo chat. En el cuadro redactar, seleccione **más** :::image type="icon" source="../assets/icons/teams-client-more.png"::: y elija la aplicación de extensión de mensajería que acaba de transferirá localmente.
 1. Intente buscar algo (por ejemplo, "vales"). Si la aplicación funciona, verá los resultados de la búsqueda de ejemplo (puede Agregar los suyos propios más adelante).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Ilustración que muestra cómo, en Team Toolkit, iniciar sesión en su cuenta de Microsoft 365 para crear un nuevo bot para la extensión de mensajería.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Una captura de pantalla que muestra cómo se usa una extensión de mensajería basada en búsquedas en el cuadro de redacción de Teams.":::
 
 ## <a name="well-done"></a>Bien hecho
 
@@ -203,7 +202,7 @@ Podría ser un problema de autenticación. Siga estos pasos para finalizar la co
 
 ### <a name="bot-isnt-connected-to-teams"></a>Bot no está conectado a Microsoft Teams
 
-Si ha instalado la aplicación pero no funciona, asegúrese de que el bot de la extensión de mensajería esté [conectado al *canal*de Teams del servicio de robots de Azure](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
+Si ha instalado la aplicación pero no funciona, asegúrese de que el bot de la extensión de mensajería esté [conectado al *canal* de Teams del servicio de robots de Azure](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
 
 Es importante comprender que no es lo mismo que un canal en Microsoft Teams. En este caso, un canal es cómo el servicio bot de Azure conecta su bot con Teams u otra [aplicación de comunicaciones de terceros o de Microsoft compatible](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 

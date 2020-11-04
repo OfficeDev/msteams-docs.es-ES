@@ -1,15 +1,15 @@
 ---
-title: Inicio de sesión único
+title: Compatibilidad de inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 keywords: API de autenticación de Microsoft Teams SSO de inicio de sesión único de AAD
-ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796382"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877060"
 ---
-# <a name="single-sign-on-sso"></a>Sign-On única (SSO)
+# <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad de inicio de sesión único (SSO) para pestañas
 
 Los usuarios inician sesión en Microsoft Teams a través de sus cuentas de trabajo, centro educativo o Microsoft (Office 365, Outlook, etc.). Puede beneficiarse de esto si permite que un único inicio de sesión autorice la pestaña de Microsoft Teams (o el módulo de tareas) en clientes móviles o de escritorio. Por lo tanto, si un usuario consiente usar la aplicación, no tendrá que volver a dar su consentimiento en otro dispositivo, sino que se iniciará sesión automáticamente. Además, recuperamos previamente el token de acceso para mejorar el rendimiento y los tiempos de carga.
 
@@ -52,7 +52,7 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 1. Obtener el [identificador de la aplicación de Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Especifique los permisos que necesita la aplicación para el punto de conexión de Azure AD y, opcionalmente, Microsoft Graph.
 3. [Conceda permisos](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) para equipos de escritorio, Web y aplicaciones móviles de Microsoft Teams.
-4. Autorice previamente a los equipos seleccionando el botón **Agregar un ámbito** y, en el panel que se abre, escriba `access_as_user` como **nombre del ámbito** .
+4. Autorice previamente a los equipos seleccionando el botón **Agregar un ámbito** y, en el panel que se abre, escriba `access_as_user` como **nombre del ámbito**.
 
 > [!NOTE]
 > Hay algunas restricciones importantes que debe tener en cuenta:
@@ -69,14 +69,14 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
     * Establezca el **nombre** en el nombre de la aplicación.
     * Elija los **tipos de cuenta admitidos** (funcionará cualquier tipo de cuenta) ¹
     * Deje **URI de redireccionamiento** vacía.
-    * Elija **Registrar** .
-3. En la página información general, copie y guarde el identificador de la **aplicación (cliente)** . Lo necesitará más adelante al actualizar el manifiesto de aplicación de Teams.
+    * Elija **Registrar**.
+3. En la página información general, copie y guarde el identificador de la **aplicación (cliente)**. Lo necesitará más adelante al actualizar el manifiesto de aplicación de Teams.
 4. En **Administrar** , seleccione **Exponer una API** 
 5. Seleccione el vínculo **establecer** para generar el URI del identificador de aplicación con el formato de `api://{AppID}` . Inserte el nombre de dominio completo (con una barra diagonal "/" anexada al final) entre las dos barras diagonales y el GUID. El identificador completo debe tener el siguiente formato: `api://fully-qualified-domain-name.com/{AppID}` ²
     * por ejemplo: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
     
     El nombre de dominio completo es el nombre de dominio inteligible desde el que se sirve la aplicación. Si usa un servicio de túnel como ngrok, tendrá que actualizar este valor siempre que cambie el subdominio ngrok. 
-6. Seleccione el botón **Agregar un ámbito** En el panel que se abre, escriba `access_as_user` como el **Nombre de ámbito** .
+6. Seleccione el botón **Agregar un ámbito** En el panel que se abre, escriba `access_as_user` como el **Nombre de ámbito**.
 7. **¿Establecer quién puede conceder autorización?** para`Admins and users`
 8. Rellene los campos para configurar las solicitudes de consentimiento del usuario y el administrador con valores que sean apropiados para el `access_as_user` ámbito:
     * **Título de consentimiento de administración:** Los equipos pueden tener acceso al perfil del usuario.
@@ -87,7 +87,7 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 10. Seleccione el botón **Agregar ámbito** para guardar 
     * La parte de dominio del **nombre de ámbito** que se muestra justo debajo del campo de texto debe coincidir automáticamente con el URI del **identificador de aplicación** establecido en el paso anterior, `/access_as_user` que se ha anexado al final:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. En la sección **aplicaciones cliente autorizadas** , identifique las aplicaciones que desea autorizar para la aplicación Web de la aplicación. Seleccione *Agregar una aplicación cliente* . Escriba cada uno de los siguientes identificadores de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
+11. En la sección **aplicaciones cliente autorizadas** , identifique las aplicaciones que desea autorizar para la aplicación Web de la aplicación. Seleccione *Agregar una aplicación cliente*. Escriba cada uno de los siguientes identificadores de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicación para equipos móviles o de escritorio)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicación Web de Teams)
 12. Navegue a **permisos** de la API. Seleccione *Agregar* permisos delegados de permisos de  >  *Microsoft Graph*  >  *Delegated permissions* y, a continuación, agregue los siguientes permisos:
@@ -102,8 +102,8 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
     Si una aplicación no ha recibido el consentimiento del administrador de ti, los usuarios tendrán que proporcionar consentimiento la primera vez que usen una aplicación.
 
     Establezca un URI de redireccionamiento:
-    * Seleccione **Agregar una plataforma** .
-    * Seleccione **Web** .
+    * Seleccione **Agregar una plataforma**.
+    * Seleccione **Web**.
     * Escriba el **URI de redireccionamiento** de la aplicación. Ésta será la página a la que se redirigirá al usuario un flujo de concesión implícito correcto. Se trata del mismo nombre de dominio completo que especificó en el paso 5 seguido de la ruta de la API donde debe enviarse una respuesta de autenticación. Si sigue alguno de los ejemplos de Teams, será: `https://subdomain.example.com/auth-end`
 
     A continuación, habilite la concesión implícita comprobando las siguientes casillas:  
