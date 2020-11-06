@@ -2,12 +2,12 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de marco de trabajo de configuración ficha estática ficha de canal de diseño de ficha sencillo
-ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796214"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931802"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -59,9 +59,9 @@ Hay desafíos de navegación inherentes a la jerarquía de navegación profunda 
 
 > [!div class="checklist"]
 >
-> * **Abre un módulo de tareas como una entidad o elemento de trabajo individual** . Esto excluye completamente el chat y es la mejor opción para mantener el chat específicamente sobre la ficha y no sobre las subentidades o la experiencia de edición.
->* **Abre un pseudo cuadro de diálogo en un iframe** . Si se usa con un fondo con pantalla, se recomienda usar el color más claro en lugar del oscuro. La `app-gray-10 at 30%` transparencia funciona bien.
->* **Abre una página del explorador** .
+> * **Abre un módulo de tareas como una entidad o elemento de trabajo individual**. Esto excluye completamente el chat y es la mejor opción para mantener el chat específicamente sobre la ficha y no sobre las subentidades o la experiencia de edición.
+>* **Abre un pseudo cuadro de diálogo en un iframe**. Si se usa con un fondo con pantalla, se recomienda usar el color más claro en lugar del oscuro. La `app-gray-10 at 30%` transparencia funciona bien.
+>* **Abre una página del explorador**.
 
 ### <a name="personality"></a>Personalidad
 
@@ -130,13 +130,71 @@ Siempre que sea posible, las tarjetas y los bots deben tener un vínculo profund
 
 En muchos casos, el nombre de la aplicación tomará un nombre de pestaña excelente. Pero, también considere la posibilidad de asignar un nombre a las pestañas según la funcionalidad que proporcionan.
 
+### <a name="multi-window"></a>Varias ventanas
+
+Las pestañas de canal que tienen capacidades de edición complejas deben abrir la vista del editor en varias ventanas en lugar de en una pestaña.
+
+### <a name="no-horizontal-scrolling"></a>Sin desplazamiento horizontal
+
+La pestaña no debe tener desplazamiento horizontal.
+
+### <a name="easy-navigation"></a>Navegación sencilla
+
+La navegación dentro de una aplicación de pestaña debe ser fácil de seguir, es decir, las páginas tienen lo siguiente en caso necesario o aplicable:
+* Botones atrás
+* Encabezados de página
+* Las rutas
+* Menús de hamburguesa
+
+### <a name="undo-last-action"></a>Deshacer la última acción
+
+El usuario debe poder deshacer la última acción de la aplicación.
+
+### <a name="share-content"></a>Compartir contenido
+
+Las aplicaciones personales deben permitir a los usuarios compartir contenido de una experiencia de la aplicación personal con otros miembros del equipo. La ficha canal debe proporcionar navegación que complemente la navegación principal de los equipos, en lugar de entrar en conflicto con ella (por ejemplo, barras de navegación de carril izquierda).
+
+### <a name="single-view"></a>Vista única
+
+Las aplicaciones personales deben presentar contenido de instancias de ámbito de chat de equipo o grupo de esa aplicación en una sola vista, por ejemplo, un usuario de Trello debe poder ver todas las instancias de las placas de Trello en las que participan en el nivel de equipo en su aplicación personal.
+
+### <a name="no-app-bar"></a>Sin barra de aplicaciones
+
+Las pestañas no deben proporcionar una barra de aplicaciones con iconos en el carril de la izquierda que entran en conflicto con la navegación principal de los equipos.
+
+### <a name="navigation"></a>Navegación
+
+Las pestañas no deben tener más de 3 niveles de navegación dentro de la aplicación.
+
+### <a name="l2l3-view"></a>Vista L2/L3
+
+Las páginas secundarias y terciarias de una ficha deben abrirse en una vista L2/L3 en el área de la pestaña principal que se desplaza a través de la ruta de navegación.
+
+### <a name="no-link-to-external-browser"></a>Sin vínculo al explorador externo
+
+Los destinos de vínculo de las pestañas no deben vincularse a un explorador externo, sino que deben vincularse a los elementos div contenidos dentro de los equipos, por ejemplo, dentro de módulos de tareas, pestañas, etc.
+
 ## <a name="notifications-for-tabs"></a>Notificaciones para pestañas
 
 Hay dos modos de notificación para cambios de contenido de pestañas:
 
 > [!div class="checklist"]
 >
-> * **Use la API de aplicaciones para notificar a los usuarios los cambios** . Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Usar un bot** . Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
+> * **Use la API de aplicaciones para notificar a los usuarios los cambios**. Este mensaje se mostrará en la fuente de actividad del usuario y un vínculo profundo a la ficha. *consulte*  [Create deep links to Content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 
-  El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando `@mention`  hay usuarios específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.
+> * **Usar un bot**. Este método es preferible especialmente si el subproceso de la pestaña es de destino. El resultado será que la conversación encadenada de la pestaña se desplazará a la vista como activa recientemente. Este método también permite una sofisticación en el modo en que se envía la notificación.
+
+El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de la actividad a todos los usuarios sin notificar explícitamente a todos los usuarios. Se trata de un reconocimiento sin ruido. Además, cuando `@mention`  hay usuarios específicos, la misma notificación se colocará en la fuente, lo que hará que se vinculen directamente al hilo de la pestaña.
+
+### <a name="tab-design-best-practices"></a>Procedimientos recomendados de diseño de pestañas
+
+* Las pestañas personales/estáticas deben permitir a los usuarios compartir contenido de una experiencia de la aplicación personal con otros miembros del equipo.
+* Las pestañas personales/estáticas pueden presentar contenido de instancias de ámbito de chat de equipo o grupo de esa aplicación en una sola vista.
+* Los destinos de vínculo de las pestañas no deben vincularse a un explorador externo, sino que deben vincularse a los elementos div incluidos en Teams (ejemplo: en los módulos de tareas, pestañas, etc.).
+* Las pestañas deben responder a los temas del equipo. Cuando se cambia el tema de Teams, el tema de la aplicación también debe cambiar para reflejar ese tema.
+* Las pestañas deben usar componentes con estilo de equipo siempre que sea posible. Significa adoptar las fuentes de Microsoft Teams, las rampas de tipos, las paletas de colores, el sistema de cuadrícula, el movimiento, el tono de la voz, etc.
+* Las pestañas deben usar los comportamientos de interacción de Microsoft Teams para la navegación en las páginas, la posición y el uso de cuadros de diálogo, jerarquías de información, etc.
+* Las pestañas deben usar el menú hamburguesa de los equipos estándar o la ruta de navegación para la navegación en la aplicación. Las pestañas no deben proporcionar una barra de aplicaciones con iconos en el carril de la izquierda que entran en conflicto con la navegación principal de los equipos.
+* Las pestañas no deben tener más de tres niveles de navegación dentro de la aplicación.
+* Las páginas secundarias y terciarias de una ficha deben abrirse en una vista L2/L3 en el área de la pestaña principal que se desplaza a través de la ruta de navegación.
+* Las pestañas que tienen capacidades de edición complejas en la aplicación deben abrir la vista del editor en varias ventanas en lugar de en una pestaña (para escritorio y Web).

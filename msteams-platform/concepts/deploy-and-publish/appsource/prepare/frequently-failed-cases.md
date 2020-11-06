@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validación de las aplicaciones de Teams más errores de prueba de AppSource de aprobación rápida publicar
-ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 6e3f6e09de68cdb00743c6954b999c35ceefcdf7
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877074"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931809"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -33,6 +33,10 @@ En este artículo se tratan los motivos comunes de error de validación de aplic
 * Proporcionar información de ayuda y soporte técnico. Se recomienda encarecidamente que la aplicación incluya un vínculo de ayuda/p + f para la experiencia del usuario de primera ejecución. Para todas las aplicaciones personales, le recomendamos que proporcione su página de ayuda como una pestaña personal para una mejor experiencia del usuario.
 * Las aplicaciones no deben sacar al usuario de Microsoft Teams para los escenarios de usuario principales. Uso de módulos de tareas se recomienda que las pestañas AMD muestren información al usuario dentro de Microsoft Teams.
 * Aumente el número de versión de la aplicación en el manifiesto si realiza cambios en el manifiesto en el envío.
+* La aplicación no debe sacar a los usuarios de Microsoft Teams para los escenarios de usuario principales. Los destinos de vínculo en las aplicaciones no deben vincularse a un explorador externo, pero deben vincularse a los elementos div contenidos en Teams, por ejemplo, dentro de los módulos de tareas y las pestañas.
+* Las aplicaciones personales permiten a los usuarios compartir contenido desde una experiencia de la aplicación personal con otros miembros del equipo.
+* Las pestañas de canal no deben proporcionar una barra de aplicaciones con iconos en el raíl izquierdo que entran en conflicto con la navegación principal de Microsoft Teams.
+* Las pestañas de canal que tienen capacidades de edición complejas en la aplicación deben abrir la vista del editor en varias ventanas en lugar de en una pestaña.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; proporcionar una experiencia clara y simple de inicio y cierre de sesión y de suscripción
 
@@ -50,6 +54,7 @@ En este artículo se tratan los motivos comunes de error de validación de aplic
   * Autorice una cuenta/servicio => desautorizar o denegar una cuenta o servicio.
   * Registrar una cuenta/servicio => anular la suscripción a una cuenta o un servicio.
 * Si la aplicación requiere una cuenta o servicio, debe proporcionar un método para que el usuario pueda registrarse o crear una solicitud de suscripción. Se puede conceder una excepción si la aplicación es una aplicación de empresa.
+* Asegúrese de proporcionar a un nuevo usuario orientación para el modo de desplazamientos sobre cómo registrarse para usar los servicios de la aplicación. Si no hay disponible un vínculo de inicio de sesión listo, es posible que se proporcione una dirección transparente en la página Descripción de la aplicación, mensaje de bienvenida, mensaje de ayuda y la ventana de inicio de sesión donde se pide a un usuario que inicie sesión en sus servicios. Las aplicaciones que no tienen un flujo de registro sencillo también pueden incluir una pestaña de ayuda o un vínculo a una página web en la que un usuario nuevo puede ver instrucciones detalladas sobre cómo configurar la aplicación con Microsoft Teams.  Esto es para garantizar que un nuevo usuario no se muestre un obstáculo al intentar la aplicación por primera vez.
 * La funcionalidad de inicio y cierre de sesión debe funcionar en clientes móviles. Asegúrese de que está usando [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) versión 1.4.1 o posterior.
 
 Para obtener más información acerca de la autenticación, consulte:
@@ -114,9 +119,13 @@ El bot debe responder a cualquier comando y no debe ser el usuario que no respon
 * **Incluir contenido de ayuda o guía cuando se pierde el bot**. Cuando el bot no puede comprender la entrada del usuario, debe sugerir una acción alternativa. Por ejemplo, *"lo siento, no entiendo. Escriba "Help" para obtener más información. "* No responda con un mensaje de error o simplemente *"no entiendo"*. Use esta oportunidad para enseñar a los usuarios.
 
 * **Usar tarjetas adaptables y módulos de tareas para que la respuesta de bot sea clara y accionable** 
- Las [tarjetas adaptables con botones al invocar módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario de bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos
+ Las [tarjetas adaptables con botones al invocar módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario de bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil, en lugar de que el usuario escriba los comandos. Además, las respuestas de bot no deben ser textuales con texto largo. Los bots deben usar tarjetas adaptables & módulos de tareas en lugar de la interfaz de usuario basada en chats de conversación y las respuestas de texto largas
 
 * **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o Teams, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la [Referencia del esquema del manifiesto de Microsoft Teams](~/resources/schema/manifest-schema.md#bots)).
+
+* **No se insertan datos confidenciales**. Los bots no deben insertar datos confidenciales en un equipo, un chat en grupo o una conversación de 1:1 donde hay una audiencia que no debe poder ver los datos
+
+* **Proporcionar un mensaje de bienvenida**. Bot debe proporcionar un mensaje de bienvenida de FRE que incluya un tutorial interactivo con tarjetas de carrusel o botones "pruébelos" para alentar la contratación.
 
 ### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; bots personales siempre deben enviar un mensaje de bienvenida en el primer inicio
 

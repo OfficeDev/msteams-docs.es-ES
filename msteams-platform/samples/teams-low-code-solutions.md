@@ -4,12 +4,12 @@ author: laujan
 description: Detalle de soluciones de código bajo y sin código de Microsoft disponibles para Microsoft Teams
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 4b112a674df76d0bd33e1b461d6b2f194f764f7b
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210347"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931760"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Crear aplicaciones personalizadas de bajo código para Microsoft Teams
 
@@ -94,3 +94,8 @@ Los [equipos cambian los conectores de administración](../samples/shifts-wfm-co
 [Anuncio de las actualizaciones de plataformas de energía y Teams para ayudar a los clientes a adaptarse a la tarea remota](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams está modelando el futuro del trabajo con características de bajo código para mejorar el área de trabajo digital](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### <a name="-managing-power-platform-apps"></a>✔ Administración de aplicaciones de plataforma de alimentación
+
+> [!div class="nextstepaction"]
+> [Administrar aplicaciones de Microsoft Power Platform en el centro de administración de Microsoft Teams](/microsoftteams/manage-power-platform-apps)

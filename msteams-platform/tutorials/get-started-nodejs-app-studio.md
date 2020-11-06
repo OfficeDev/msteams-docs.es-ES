@@ -1,18 +1,17 @@
 ---
-title: Introducción a App Studio y node. js
-description: Empezar a compilar excelentes aplicaciones en Microsoft Teams con node. js y app Studio
-keywords: nodo introducción. js NodeJS App Studio
-ms.date: 11/09/2018
+title: Introducción a App Studio y Node.js
+description: Empezar a compilar excelentes aplicaciones en Microsoft Teams con Node.js y app Studio
+keywords: Introducción node.js NodeJS App Studio
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 3d86738d32c049d31a84c6c47746e275db5e6349
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034053"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931816"
 ---
-# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Introducción a la plataforma de Microsoft Teams con node. js y app Studio
+# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Introducción a la plataforma de Microsoft Teams con Node.js y app Studio
 
 La plataforma de desarrolladores de [Microsoft Teams](/microsoftteams/) facilita la tarea de ampliar Teams e integrar sus propias aplicaciones y servicios sin problemas en el área de trabajo de Microsoft Teams. A continuación, estas aplicaciones pueden distribuirse a su empresa o a equipos de todo el mundo.
 
@@ -33,10 +32,10 @@ Siga estos pasos para descargar y hospedar una aplicación "Hola a todos" sencil
 Para completar este tutorial, necesitará las siguientes herramientas. Si todavía no los tiene, puede instalarlas desde estos vínculos.
 
 - [Git](https://git-scm.com/downloads)
-- [Node. js y NPM](https://nodejs.org/)
+- [Node.js y NPM](https://nodejs.org/)
 - Obtenga cualquier editor de texto o IDE. Puede instalar y usar [Visual Studio Code](https://code.visualstudio.com/download) de forma gratuita.
 
-Si ve opciones para `git`agregar, `node`, `npm`y `code` a la ruta de acceso durante la instalación, elija esta opción. Será útil.
+Si ve opciones para agregar `git` , `node` , `npm` y `code` a la ruta de acceso durante la instalación, elija esta opción. Será útil.
 
 Compruebe que las herramientas están disponibles al ejecutar lo siguiente en una ventana de terminal:
 
@@ -54,7 +53,8 @@ $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 4.0.2
+CLI version 2.3.0
+Local version 4.0.2
 ```
 
 Es posible que tenga una versión diferente de estas aplicaciones. Esto no debería ser un problema, excepto para Gulp. Para Gulp tendrá que usar la versión 4.0.0 o posterior.
@@ -124,7 +124,7 @@ En este punto, puede abrir una ventana del explorador y navegar a las siguientes
 
 Recuerde que las aplicaciones de Microsoft Teams son aplicaciones web que exponen una o más capacidades. Para que la plataforma de Microsoft Teams cargue la aplicación, la aplicación debe ser accesible desde Internet. Para hacer que la aplicación sea accesible desde Internet, debe *hospedar* la aplicación.
 
-Para las pruebas locales, puede ejecutar la aplicación en el equipo local y crear un túnel con un punto de conexión Web. [ngrok](https://ngrok.com) es una herramienta gratuita que le permite hacer justamente eso. Con *ngrok* puede obtener una dirección web como `https://d0ac14a5.ngrok.io` (esta dirección URL es solo un ejemplo). Puede [Descargar e instalar](https://ngrok.com/download) *ngrok* para su entorno. Asegúrese de agregarlo a una ubicación en el `PATH`.
+Para las pruebas locales, puede ejecutar la aplicación en el equipo local y crear un túnel con un punto de conexión Web. [ngrok](https://ngrok.com) es una herramienta gratuita que le permite hacer justamente eso. Con *ngrok* puede obtener una dirección web como `https://d0ac14a5.ngrok.io` (esta dirección URL es solo un ejemplo). Puede [Descargar e instalar](https://ngrok.com/download) *ngrok* para su entorno. Asegúrese de agregarlo a una ubicación en el `PATH` .
 
 Una vez instalado, puede abrir una nueva ventana de terminal y ejecutar el siguiente comando para crear un túnel. En el ejemplo se usa el puerto 3333, por lo que debe asegurarse de especificarlo aquí.
 
@@ -132,7 +132,7 @@ Una vez instalado, puede abrir una nueva ventana de terminal y ejecutar el sigui
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok* escuchará solicitudes de Internet y las enrutará a la aplicación que se ejecuta en el puerto 3333. `https://d0ac14a5.ngrok.io/hello` Para comprobarlo, abra el explorador y vaya a para cargar la página Hello de la aplicación. Asegúrese de usar la dirección de reenvío que muestra *ngrok* en la sesión de consola en lugar de esta dirección URL.
+*Ngrok* escuchará solicitudes de Internet y las enrutará a la aplicación que se ejecuta en el puerto 3333. Para comprobarlo, abra el explorador y vaya a `https://d0ac14a5.ngrok.io/hello` para cargar la página Hello de la aplicación. Asegúrese de usar la dirección de reenvío que muestra *ngrok* en la sesión de consola en lugar de esta dirección URL.
 
 > [!NOTE]
 > Si ha usado un puerto diferente en el paso de [compilación y ejecutar](#build-and-run-the-sample) anterior, asegúrese de usar el mismo número de puerto para configurar el túnel *ngrok* .
@@ -195,21 +195,21 @@ NODE_DEBUG le mostrarán lo que está sucediendo en su bot en la consola de depu
 NODE_CONFIG_DIR apunta al directorio de la raíz del repositorio (de forma predeterminada, cuando la aplicación se ejecuta de forma local, la busca en la carpeta src).
 
 > [!Note]
-> Si no ha detenido NPM de anteriormente en el tutorial, deberá ejecutar `npm stop` para que Visual Studio Code devuelva las variables de configuración de inicio correctamente.
+> Si no ha detenido NPM de anteriormente en el tutorial, deberá ejecutar para que `npm stop` Visual Studio Code devuelva las variables de configuración de inicio correctamente.
 
 <a name="ConfigureTheAppTab"></a>
 
 ## <a name="configure-the-app-tab"></a>Configurar la pestaña de la aplicación
 
-Una vez que haya instalado la aplicación en un equipo, tendrá que configurarla para mostrar el contenido. Vaya a un canal del equipo y haga clic en el botón **"+"** para agregar una nueva pestaña. A continuación, puede `Hello World` elegir en la lista **Agregar una pestaña** . A continuación, se mostrará un cuadro de diálogo de configuración. Este cuadro de diálogo le permitirá elegir la pestaña que desea mostrar en este canal. Una vez que seleccione la pestaña y haga `Save` clic en, puede `Hello World` ver la ficha cargada con la pestaña que eligió.
+Una vez que haya instalado la aplicación en un equipo, tendrá que configurarla para mostrar el contenido. Vaya a un canal del equipo y haga clic en el botón **"+"** para agregar una nueva pestaña. A continuación, puede elegir `Hello World` en la lista **Agregar una pestaña** . A continuación, se mostrará un cuadro de diálogo de configuración. Este cuadro de diálogo le permitirá elegir la pestaña que desea mostrar en este canal. Una vez que seleccione la pestaña y haga clic en `Save` , puede ver la `Hello World` ficha cargada con la pestaña que eligió.
 
-<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Captura de pantalla de configurar" />
+<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Screenshot of configure" />
 
 ### <a name="test-your-bot-in-teams"></a>Probar el bot en Microsoft Teams
 
-Ahora puede interactuar con el bot en Teams. Elija un canal del equipo en el que haya registrado la aplicación y escriba `@your-bot-name`, seguido del mensaje. Esto se denomina una ** \@mención**. Cualquier mensaje que envíe al bot se le enviará como respuesta.
+Ahora puede interactuar con el bot en Teams. Elija un canal del equipo en el que haya registrado la aplicación y escriba `@your-bot-name` , seguido del mensaje. Esto se denomina una **\@ mención**. Cualquier mensaje que envíe al bot se le enviará como respuesta.
 
-<img width="450px" title="Respuestas de bot" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 <a name="ComposeRichMessages"></a>
 
@@ -217,10 +217,10 @@ Ahora puede interactuar con el bot en Teams. Elija un canal del equipo en el que
 
 Para probar la extensión de mensajería, puede hacer clic en los tres puntos situados debajo del cuadro de entrada en la vista de conversación. Se mostrará un menú con la aplicación **"Hola a todos"** . Al hacer clic en él, verá un número de textos aleatorios. Puede elegir una de ellas y se insertará en la conversación.
 
-<img width="430px" title="Menú de extensiones de mensajería" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="430px" title="Resultado de la extensión de mensajería" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Elija uno de los textos aleatorios y verá una tarjeta con formato y lista para enviar con su propio mensaje en la parte inferior.
 
-<img width="430px" title="Envío de extensiones de mensajería" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

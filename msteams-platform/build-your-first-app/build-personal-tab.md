@@ -3,20 +3,20 @@ title: 'Introducción: creación de una pestaña personal'
 author: heath-hamilton
 description: Cree rápidamente una pestaña personal de Microsoft Teams mediante el kit de herramientas de Microsoft Teams.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452746"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931732"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Crear una pestaña personal para Microsoft Teams
 
 Las pestañas son una forma sencilla de exponer contenido en la aplicación básicamente mediante la inserción de una página web en Teams.
 
-Hay dos tipos de pestañas en Teams. En este tutorial, creará una *pestaña personal*básica, una página de contenido a pantalla completa para usuarios individuales. (Las pestañas personales son lo más cercano a una experiencia de sitio web tradicional en Microsoft Teams).
+Hay dos tipos de pestañas en Teams. En este tutorial, creará una *pestaña personal* básica, una página de contenido a pantalla completa para usuarios individuales. (Las pestañas personales son lo más cercano a una experiencia de sitio web tradicional en Microsoft Teams).
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
@@ -30,40 +30,26 @@ Las personas de su organización tienen problemas para encontrar información de
 
 > [!div class="checklist"]
 >
-> * Identificar algunas de las propiedades del manifiesto de la aplicación y scaffolding relevantes para las pestañas personales
+> * Identificar algunas de las configuraciones de la aplicación y scaffolding relevantes para las pestañas personales
 > * Crear contenido de ficha
 > * Actualizar el tema de color de una pestaña según las preferencias del usuario
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. identificar los componentes relevantes del proyecto de aplicación
 
-La gran parte del manifiesto de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña personal.
+Una gran parte de la configuración de la aplicación y el scaffolding se configuran automáticamente al crear el proyecto con el kit de herramientas de Teams. Echemos un vistazo a los componentes principales para crear una pestaña personal.
 
-### <a name="app-manifest"></a>Manifiesto de la aplicación
+### <a name="app-configurations"></a>Configuraciones de aplicaciones
 
-El siguiente fragmento de código del manifiesto de la aplicación (el `manifest.json` archivo del `.publish` directorio del proyecto) muestra [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , que incluye las propiedades y los valores predeterminados relacionados con las pestañas personales.
+Puede ver y actualizar las configuraciones de la aplicación mediante App Studio, que se incluye en el kit de herramientas.
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`: Un identificador único para la página que se muestra en la pestaña.
-* `name`: El nombre para mostrar de la ficha (por ejemplo, "mis contactos").
-* `contentUrl`: La dirección URL del host la página de contenido de la ficha (debe ser HTTPS).
-* `scopes`: Especifica que la pestaña es solo para uso personal.
+Durante la configuración, el kit de herramientas configuró inicialmente la página de contenido de la pestaña, que es donde se muestra el contenido principal. En el kit de herramientas, vaya a **App Studio** y seleccione **pestañas** para ver la configuración.
 
 ### <a name="app-scaffolding"></a>Scaffolding de la aplicación
 
-El scaffolding de la aplicación proporciona los componentes para representar la pestaña en Teams. Hay muchas cosas con las que puede trabajar, pero por ahora solo necesita centrarse en lo siguiente:
+El scaffolding de la aplicación proporciona los componentes para representar la pestaña personal en Teams. Hay muchas cosas con las que puede trabajar, pero por ahora solo necesita centrarse en lo siguiente:
 
-* `Tab.js` archivo en el `src/components` directorio del proyecto
-* SDK para cliente de JavaScript de Microsoft Teams, que viene previamente cargado en los componentes front-end del proyecto
+* `Tab.js` archivo en el `src/components` directorio del proyecto. Esto es para para representar la página de contenido de la pestaña.
+* SDK cliente de JavaScript de Microsoft Teams, que viene precargado en los componentes front-end del proyecto.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. personalizar la página de contenido de la pestaña
 
@@ -181,7 +167,7 @@ if (isTheme === "default") {
 
 Compruebe la pestaña en Microsoft Teams. La apariencia debe coincidir exactamente con el tema oscuro.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de pantalla de una pestaña personal con contenido estático.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Captura de pantalla de una pestaña personal con vista de contenido estático.":::
 
 ## <a name="well-done"></a>Bien hecho
 
@@ -193,7 +179,7 @@ Compruebe la pestaña en Microsoft Teams. La apariencia debe coincidir exactamen
 * [Insertar contenido de una aplicación web o página web existente](../tabs/how-to/add-tab.md#tab-requirements): le mostramos cómo crear nuevo contenido para una pestaña personal, pero también puede cargar contenido desde una dirección URL externa.
 * [Crear una experiencia sin problemas para su pestaña](../tabs/design/tabs.md): Consulte las directrices recomendadas para diseñar pestañas de Microsoft Teams.
 * [Crear pestañas para móviles](../tabs/design/tabs-mobile.md): comprenda cómo desarrollar pestañas para teléfonos y tabletas.
-* [Integración con la API de Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Uso de datos de Teams con la API de Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Crear una ficha sin el kit de herramientas](../tabs/how-to/add-tab.md)
 
 ## <a name="next-lesson"></a>Lección siguiente
