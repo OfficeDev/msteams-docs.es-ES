@@ -2,12 +2,12 @@
 title: Directrices de diseño para bots
 description: Describe las instrucciones para crear bots.
 keywords: Directrices de diseño de Teams referencia de los bots del marco de trabajo hablando
-ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137678"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992641"
 ---
 # <a name="start-talking-with-bots"></a>Empezar a hablar con bots
 
@@ -16,6 +16,20 @@ Los bots son aplicaciones de conversación que realizan un conjunto de tareas es
 ---
 
 ## <a name="guidelines"></a>Instrucciones
+
+### <a name="bot-design-guidelines"></a>Directrices de diseño de bot
+
+* Los bots deben proporcionar las notificaciones relevantes cuando haya una actividad.
+* Los bots no deben insertar datos confidenciales en un equipo, un chat grupal o una conversación de 1:1 a una audiencia que no debe ver los datos.
+* Las notificaciones de bot deben incluir datos significativos para informar a los usuarios de la relevancia de la notificación.
+* El tono del bot debe reflejar la voz de Teams, tal como se define en las instrucciones.
+* Los bots deben proporcionar un mensaje de bienvenida de primera ejecución que resalte el valor del bot y cuáles son sus funciones principales, esto podría ser "realizar un paseo", un tutorial interactivo con tarjetas de carrusel o botones "probar".
+* El texto de bot no debe tener errores ortográficos ni gramaticales.
+* Los bots deben proporcionar un conjunto de comandos de bot predefinidos que se pueden accionar.
+* Los mensajes de bot deben ser fáciles de comprender y accionable.
+* Los bots deben proporcionar comandos de ayuda de retroceso cuando no se comprenda un mensaje.
+* Los formularios, incrustados en tarjetas, enviados por un bot deben proporcionar entradas deterministas que no requieran actualizaciones secuenciales.
+* Las notificaciones de bot deben estar en el ámbito de un equipo, un chat de grupo o una conversación de 1:1 con contenido relevante para la audiencia.
 
 ### <a name="avatars"></a>Avatares
 
@@ -37,17 +51,18 @@ Es fundamental que los bots se presenten y transmitan lo que pueden hacer para l
 
 #### <a name="welcome-messages"></a>Mensajes de bienvenida
 
-Los mensajes de bienvenida son la mejor forma de establecer el tono de la bot y deben usarse en escenarios personales y de equipo o grupo. El mensaje indica lo que hace el bot y algunas formas comunes de interactuar con él. Use ejemplos de funciones específicas como "*probar preguntando....*" en una lista con viñetas. Siempre que sea posible, estas sugerencias deben devolver respuestas almacenadas. Es fundamental que los ejemplos de funciones funcionen sin que los usuarios inicien sesión.
+Los mensajes de bienvenida son la mejor forma de establecer el tono de la bot y deben usarse en escenarios personales y de equipo o grupo. El mensaje indica lo que hace el bot y algunas formas comunes de interactuar con él. Use ejemplos de funciones específicas como " *probar preguntando....* " en una lista con viñetas. Siempre que sea posible, estas sugerencias deben devolver respuestas almacenadas. Es fundamental que los ejemplos de funciones funcionen sin que los usuarios inicien sesión.
+*Consulte* [los requisitos del mensaje de bienvenida](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) para obtener más información.
 
 #### <a name="tours"></a>Viajes
 
-Incluya un atributo de *echar un paseo* con mensajes de bienvenida y respuestas a la entrada del usuario equivalente a "*ayuda*". Esta es la forma más eficaz de informar a los usuarios sobre lo que puede hacer un bot. Los carruseles en la experiencia de uno a uno son una forma excelente de decir este caso e incluso *pruébelos, pruebe que* los botones que se vinculan a ejemplos de respuestas posibles son recomendables. Los paseos también son lugares estupendos para hablar de otras características de la aplicación. Por ejemplo, puede incluir capturas de pantallas de las extensiones de mensajería y las pestañas de Microsoft Teams.  Los usuarios no deben tener que iniciar sesión para tener acceso y usar un paseo.
+Incluya un atributo de *echar un paseo* con mensajes de bienvenida y respuestas a la entrada del usuario equivalente a " *ayuda* ". Esta es la forma más eficaz de informar a los usuarios sobre lo que puede hacer un bot. Los carruseles en la experiencia de uno a uno son una forma excelente de decir este caso e incluso *pruébelos, pruebe que* los botones que se vinculan a ejemplos de respuestas posibles son recomendables. Los paseos también son lugares estupendos para hablar de otras características de la aplicación. Por ejemplo, puede incluir capturas de pantallas de las extensiones de mensajería y las pestañas de Microsoft Teams.  Los usuarios no deben tener que iniciar sesión para tener acceso y usar un paseo.
 
 Cuando se usan paseos en escenarios de equipo o grupo, deben abrirse en un módulo de tareas para que no se pueda agregar más ruido de tarjeta a las conversaciones en curso entre los usuarios.
 
 ### <a name="responding-to-users-and-failing-gracefully"></a>Responder a los usuarios y conmutar por error
 
-El bot también debe ser capaz de responder a cosas como "*Hola*", "*ayuda*" y "*gracias*" mientras se toman errores y coloquialess comunes en la cuenta. Por ejemplo:
+El bot también debe ser capaz de responder a cosas como " *Hola* ", " *ayuda* " y " *gracias* " mientras se toman errores y coloquialess comunes en la cuenta. Por ejemplo:
 
 #### <a name="x2713-hello"></a>&#x2713; Hello
 
@@ -67,7 +82,7 @@ El bot debe ser capaz de administrar los siguientes tipos de consultas y entrada
 >
 > * **Preguntas reconocidas**. Estas son las preguntas del "escenario de mejor caso" que esperaría de los usuarios.
 > * **Personas sin preguntas reconocidas**. Consultas sobre la funcionalidad no admitida o las entradas aleatorias, no relacionadas o blasfemas.
-> * **Preguntas no reconocidas**: entradas o entradas que son ininteligibles, sin significado o sin sentido.
+> * **Preguntas no reconocidas** : entradas o entradas que son ininteligibles, sin significado o sin sentido.
 
 Ejemplos de tipos de personalidad y respuesta de bot:
 

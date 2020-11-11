@@ -4,14 +4,14 @@ author: laujan
 description: Una guía de inicio rápido para crear una ficha personal personalizada con ASP.NET Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: c6b58ffd09f952a6237b765e5457fe7a8e943390
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097882"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992634"
 ---
-# <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Crear una ficha personal personalizada con ASP.NET Core
+# <a name="create-a-personal-tab-with-aspnet-core"></a>Crear una pestaña personal con ASP.NET Core
 
 En este tutorial rápido, vamos a crear una pestaña personal personalizada con páginas de Razor principales de C# y ASP.Net. También usaremos [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
 
