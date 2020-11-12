@@ -3,17 +3,17 @@ title: Contribuir a la documentación de Microsoft Teams
 description: pasos para crear y publicar la documentación de Microsoft Teams
 author: laujan
 ms.author: lajanuar
-ms.topic: how to
-ms.openlocfilehash: 5e76c6521792d7db1b589d7e6ad3fe0ac2bd8479
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.topic: contributor-guide
+ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "44801445"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995019"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Contribuir a la documentación de Microsoft Teams
 
-La [documentación de Teams](/microsoftteams/platform/overview) forma parte de la biblioteca de documentación técnica de [Microsoft docs](https://docs.microsoft.com/) . El contenido se organiza en grupos denominados docsets, cada uno de los cuales representa un grupo de documentos relacionados que se administran como una entidad única. Los artículos de la misma docset tienen la misma extensión de ruta de dirección URL después de *docs <span></span> . Microsoft.com*.  Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el comienzo de la ruta de acceso del archivo docset de Teams. Los artículos de Microsoft Teams se escriben en la sintaxis de [MarkDown](#markdown-reference) y se hospedan en [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+La [documentación de Teams](/microsoftteams/platform/overview) forma parte de la biblioteca de documentación técnica de [Microsoft docs](https://docs.microsoft.com/) . El contenido se organiza en grupos denominados docsets, cada uno de los cuales representa un grupo de documentos relacionados que se administran como una entidad única. Los artículos de la misma docset tienen la misma extensión de ruta de dirección URL después de *docs <span></span> . Microsoft.com*.  Por ejemplo,  `/docs.microsoft.com/microsoftteams/...`   es el comienzo de la ruta de acceso del archivo docset de Teams. Los artículos de Microsoft Teams se escriben en la sintaxis de  [MarkDown](#markdown-reference) y se hospedan en [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
 ## <a name="set-up-your-workspace"></a>Configurar el área de trabajo
 
@@ -22,7 +22,7 @@ La [documentación de Teams](/microsoftteams/platform/overview) forma parte de l
 > * Instale [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Instale [Visual Studio Code](https://code.visualstudio.com/) (vs Code).
 > * Instalar el [paquete de creación de documentos](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directamente desde el Marketplace de código vs
-<br>&emsp;&emsp;o
+<br>&emsp;&emsp; o
 
 > [!div class="checklist"]
 >
@@ -34,7 +34,7 @@ La [documentación de Teams](/microsoftteams/platform/overview) forma parte de l
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisión de la guía de colaboradores de Microsoft docs
 
-La [Guía de colaboradores](/contribute) ofrece dirección para crear, publicar y actualizar contenido técnico en Microsoft/docs. *Consulte también*, [estilo docs y inicio rápido de voz](/contribute/style-quick-start) .
+La [Guía de colaboradores](/contribute) ofrece dirección para crear, publicar y actualizar contenido técnico en Microsoft/docs. *Consulte también* , [estilo docs y inicio rápido de voz](/contribute/style-quick-start) .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guías de escritura, estilo y contenido de Microsoft
 
@@ -58,10 +58,10 @@ Para obtener más información acerca de los hipervínculos y las rutas de archi
 > Para hacer referencia a un artículo que forma *parte de* la plataforma de Teams docset:<br>
 > &emsp;&#x2714; usar una ruta de acceso relativa sin una barra diagonal inicial.<br>
 > &emsp;&#x2714; incluir la extensión de archivo de Markdown.<br>
->Por ejemplo: **directorio principal/directorio/ruta de acceso-a-article. MD** : >`[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+>Por ejemplo:  **directorio principal/directorio/ruta de acceso-a-article. MD** : > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
 > Para hacer referencia a un artículo de la biblioteca de Microsoft docs ( <https://docs.microsoft.com/> ) que *no forma parte de* la plataforma de Teams docset:<br>
 > &emsp;&#x2714; usar una ruta de acceso relativa que comience con una barra diagonal.<br>
-> &emsp;&#x2714; no incluya la extensión de archivo. <br> Por ejemplo: **/docset/Address-to-file-Location** : >`[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
+> &emsp;&#x2714; no incluya la extensión de archivo. <br> Por ejemplo:  **/docset/Address-to-file-Location** : > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
 >
 
 ## <a name="code-samples-and-snippets"></a>Ejemplos de código y fragmentos de código

@@ -2,12 +2,12 @@
 title: Iniciar acciones con extensiones de mensajería
 description: Crear extensiones de mensajería basadas en acciones para permitir que los usuarios desencadenen servicios externos
 keywords: búsqueda de extensiones de mensajería de Team Extensions
-ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801550"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997996"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar acciones con extensiones de mensajería
 
@@ -29,7 +29,7 @@ Para iniciar acciones desde una extensión de mensajería, establezca el `type` 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -226,7 +226,7 @@ A continuación se muestra un ejemplo del `value` objeto que contiene los detall
 
 Puede probar la extensión de mensajería cargando la aplicación. Consulte [cargar la aplicación en un equipo](~/concepts/deploy-and-publish/apps-upload.md) para obtener más información.
 
-Para abrir la extensión de mensajería, navegue a cualquiera de sus chats o canales. Elija el botón **más opciones** (**&#8943;**) en el cuadro de redacción y elija su extensión de mensajería.
+Para abrir la extensión de mensajería, navegue a cualquiera de sus chats o canales. Elija el botón **más opciones** ( **&#8943;** ) en el cuadro de redacción y elija su extensión de mensajería.
 
 ## <a name="collecting-input-from-users"></a>Recopilar la entrada de los usuarios
 

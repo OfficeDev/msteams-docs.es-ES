@@ -3,12 +3,12 @@ title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: bfcee2c00d30517522621f61142324b4f81a93f8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237968"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998010"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -135,7 +135,7 @@ Para obtener más información sobre las acciones de la tarjeta conector, consul
 
 Siga estos pasos para ver cómo se envía una tarjeta simple a un conector.
 
-1. En Microsoft Teams, elija **Más opciones** (**&#8943;**) junto al nombre del canal y elija **Conectores**.
+1. En Microsoft Teams, elija **Más opciones** ( **&#8943;** ) junto al nombre del canal y elija **Conectores**.
 2. Desplácese por la lista de conectores hasta **Webhook entrante** y elija **Agregar**.
 3. Escriba un nombre para el webhook, cargue una imagen para asociarla a los datos del webhook y elija **Crear**.
 4. Copie el webhook en el portapapeles y guárdelo. Necesitará la dirección URL del webhook para enviar información a Microsoft Teams.
@@ -185,7 +185,7 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",

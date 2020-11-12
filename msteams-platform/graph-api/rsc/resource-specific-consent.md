@@ -4,14 +4,14 @@ description: Describe el consentimiento específico del recurso en Microsoft Tea
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: Gráfico RSC de OAuth SSO de OAuth para Microsoft Teams
-ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796196"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995026"
 ---
 # <a name="resource-specific-consent-rsc"></a>Autorización específica de recursos (RSC)
 
@@ -25,18 +25,18 @@ El consentimiento específico de recursos (RSC) es una integración de Microsoft
 |Permisos de aplicación| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtener la configuración de este equipo.|
-|TeamSettings. ReadWrite. Group|Actualice la configuración de este equipo.|
+|TeamSettings.ReadWrite.Group|Actualizar la configuración de este equipo.|
 |ChannelSettings.Read.Group|Obtenga los nombres de canal, las descripciones de canales y la configuración de canal para este equipo.|
-|ChannelSettings. ReadWrite. Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
+|ChannelSettings.ReadWrite.Group|Actualice los nombres de canal, las descripciones de canal y la configuración de canal para este equipo.|
 |Channel.Create.Group|Crear canales en este equipo.|
 |Channel.Delete.Group|Eliminar los canales de este equipo.|
 |ChannelMessage.Read.Group |Obtiene los mensajes del canal de este equipo.|
-|TeamsAppInstallation. Read. Group|Obtenga una lista de las aplicaciones instaladas de este equipo.|
+|TeamsAppInstallation.Read.Group|Obtenga una lista de las aplicaciones instaladas de este equipo.|
 |TeamsTab.Read.Group|Obtener una lista de las pestañas de este equipo.|
 |TeamsTab.Create.Group|Crear pestañas en este equipo.|
-|TeamsTab. ReadWrite. Group|Actualice las pestañas de este equipo.|
+|TeamsTab.ReadWrite.Group|Actualizar las pestañas de este equipo.|
 |TeamsTab.Delete.Group|Eliminar las pestañas de este equipo.|
-|TeamMember. Read. Group|Obtener los miembros de este equipo.|
+|TeamMember.Read.Group|Obtener los miembros de este equipo.|
 
 >[!NOTE]
 >Los permisos específicos de recursos solo están disponibles para las aplicaciones de Teams instaladas en el cliente de Teams y actualmente no forman parte del portal de Azure Active Directory.
@@ -60,7 +60,7 @@ Puede habilitar o deshabilitar el [consentimiento del propietario del grupo](/az
 > [!div class="checklist"]
 >
 >- Inicie sesión en [Azure portal](https://portal.azure.com) como administrador [global o administrador](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)de la compañía.  
- > - [Seleccione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) permisos de consentimiento del usuario de **Azure Active Directory**  =>  **Enterprise Applications**  =>  **y permisos**  =>  **User consent settings** .
+ > - [Seleccione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) permisos de consentimiento del usuario de **Azure Active Directory**  =>  **Enterprise Applications**  =>  **y permisos**  =>  **User consent settings**.
 > - Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado como **consentimiento de propietario de grupo para las aplicaciones que obtienen acceso a los datos** (el valor predeterminado es **permitir el consentimiento del propietario del grupo para todos los propietarios del grupo** ). Para que el propietario de un equipo Instale una aplicación con RSC, el consentimiento del propietario del grupo debe estar habilitado para ese usuario.
 
 ![configuración de RSC de Azure](../../assets/images/azure-rsc-configuration.png)
@@ -147,9 +147,9 @@ Una vez instalada la aplicación en un equipo, puede usar el [probador de Graph]
 > - En el cliente de Microsoft Teams, seleccione **Teams** en la barra de navegación de la parte izquierda.
 > - Seleccione el equipo en el que se instalará la aplicación desde el menú desplegable.
 > - Seleccione el icono **más opciones** (&#8943;).
-> - Seleccione **obtener vínculo a equipo** .
+> - Seleccione **obtener vínculo a equipo**.
 > - Copie y guarde el valor **GROUPID** de la cadena.
-> - Inicie sesión en el **probador de Graph** .
+> - Inicie sesión en el **probador de Graph**.
 > - Realice una llamada **Get** al siguiente punto de conexión: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . El campo clientAppId de la respuesta se asignará al appId especificado en el manifiesto de la aplicación Teams.
   ![Respuesta del explorador de Graph para obtener la llamada.](../../assets/images/graph-permissions.png)
  

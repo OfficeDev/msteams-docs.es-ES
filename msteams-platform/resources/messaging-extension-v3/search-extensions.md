@@ -3,12 +3,12 @@ title: Buscar con extensiones de mensajería
 description: Describe cómo desarrollar extensiones de mensajería basadas en búsquedas
 keywords: búsqueda de extensiones de mensajería de Team Extensions
 ms.date: 07/20/2019
-ms.openlocfilehash: b791e7cc8f9a311d0610573f2fa3659578c29c7d
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f46548d2e7e03ecebd8bc0fb6685aeb82b8eec6e
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801547"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998003"
 ---
 # <a name="search-with-messaging-extensions"></a>Buscar con extensiones de mensajería
 
@@ -30,7 +30,7 @@ Para la extensión de mensajería basada en búsquedas establezca el `type` par�
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -87,7 +87,7 @@ Para la extensión de mensajería basada en búsquedas establezca el `type` par�
 
 Puede probar la extensión de mensajería cargando la aplicación.
 
-Para abrir la extensión de mensajería, navegue a cualquiera de sus chats o canales. Elija el botón **más opciones** (**&#8943;**) en el cuadro de redacción y elija su extensión de mensajería.
+Para abrir la extensión de mensajería, navegue a cualquiera de sus chats o canales. Elija el botón **más opciones** ( **&#8943;** ) en el cuadro de redacción y elija su extensión de mensajería.
 
 ## <a name="add-event-handlers"></a>Agregar controladores de eventos
 
@@ -125,7 +125,7 @@ Cuando un usuario realiza una consulta, Microsoft Teams envía al servicio un ob
 
 Además de las propiedades de actividad de bot estándar, la carga contiene los siguientes metadatos de solicitud:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
 |`type`| Tipo de solicitud; debe ser `invoke` . |
 |`name`| Tipo de comando que se emite para el servicio. Actualmente se admiten los siguientes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -139,7 +139,7 @@ Además de las propiedades de actividad de bot estándar, la carga contiene los 
 
 Los propios parámetros de la solicitud se encuentran en el objeto de valor, que incluye las siguientes propiedades:
 
-| Nombre de propiedad | Objetivo |
+| Nombre de propiedad | Finalidad |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
 | `parameters` | Matriz de parámetros. Cada objeto Parameter contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
@@ -237,7 +237,7 @@ Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP
 
 El servicio debe responder con los resultados que coincidan con la consulta de usuario. La respuesta debe indicar un código de Estado HTTP de `200 OK` y un objeto Application/JSON válido con el siguiente cuerpo:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
 |`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de los resultados de la búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería. <br>`message`: muestra un mensaje de texto sin formato |

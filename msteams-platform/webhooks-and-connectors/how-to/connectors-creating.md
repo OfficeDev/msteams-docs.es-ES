@@ -3,12 +3,12 @@ title: Conectores de Office 365
 description: Describe cómo empezar a trabajar con conectores de Office 365 en Microsoft Teams
 keywords: teams o365 conector
 ms.date: 04/19/2019
-ms.openlocfilehash: 9c89463830d46512e622dcf4c256a867d419de83
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137657"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998024"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Creación de conectores de Office 365 para Microsoft Teams
 
@@ -42,16 +42,16 @@ Puede volver a usar su experiencia de configuración web existente o crear una v
 5. Llamar `microsoftTeams.settings.getSettings()` a las propiedades de webhook de Fetch, incluida la propia dirección URL. Debe llamar a este método además de durante el evento Save, también debe llamar a este método cuando la página se cargue por primera vez en el caso de una nueva configuración.
 6. Opcional Registrar un `microsoftTeams.settings.registerOnRemoveHandler()` controlador de eventos, al que se llama cuando el usuario quita el conector. Este evento le da al servicio la oportunidad de realizar cualquier acción de limpieza.
 
-#### <a name="getsettings-response-properties"></a>`GetSettings()`propiedades de respuesta
+#### <a name="getsettings-response-properties"></a>`GetSettings()` propiedades de respuesta
 
 >[!Note]
->Los parámetros devueltos por la `getSettings` llamada aquí son diferentes de si se va a invocar este método desde una pestaña y son distintos de los que se documentan [aquí](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest).
+>Los parámetros devueltos por la `getSettings` llamada aquí son diferentes de si se va a invocar este método desde una pestaña y son distintos de los que se documentan [aquí](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parámetro   | Detalles |
 |-------------|---------|
 | `entityId`       | IDENTIFICADOR de entidad, tal y como lo ha establecido el código cuando se llama `setSettings()` . |
 | `configName`  | El nombre de la configuración, tal como lo ha establecido el código cuando se llama `setSettings()` . |
-| `contentUrl` | La dirección URL de la página de configuración, tal y como lo establece el código al llamar a`setSettings()` |
+| `contentUrl` | La dirección URL de la página de configuración, tal y como lo establece el código al llamar a `setSettings()` |
 | `webhookUrl` | La URL de webhook creada para este conector. Conserve la dirección URL del webhook y Úsela para exponer el JSON estructurado para enviar tarjetas al canal. El elemento `webhookUrl` se devuelve únicamente si la aplicación vuelve correctamente. |
 | `appType` | Los valores devueltos pueden ser `mail`, `groups` o `teams`, que corresponden al correo de Office 365, a Grupos de Office 365 o a Microsoft Teams respectivamente. |
 | `userObjectId` | Se trata del identificador único correspondiente al usuario de Office 365 que ha iniciado la instalación del conector. Debe estar protegido. Este valor puede servir para asociar el usuario de Office 365 que define la configuración con el usuario de su servicio. |
@@ -65,9 +65,9 @@ Si necesita autenticar al usuario como parte de la carga de la página en el pas
 
 El código debe controlar a los usuarios que vuelvan a editar una configuración de conector existente. Para ello, realice una llamada `microsoftTeams.settings.setSettings()` durante la configuración inicial con los siguientes parámetros:
 
-- `entityId`es el identificador personalizado que el servicio entiende y que representa lo que ha configurado el usuario.
-- `configName`es un nombre descriptivo que el código de configuración puede recuperar
-- `contentUrl`es una dirección URL personalizada que se carga cuando un usuario edita una configuración de conector existente. Puede usar esta dirección URL para facilitar que el código controle el caso de edición.
+- `entityId` es el identificador personalizado que el servicio entiende y que representa lo que ha configurado el usuario.
+- `configName` es un nombre descriptivo que el código de configuración puede recuperar
+- `contentUrl` es una dirección URL personalizada que se carga cuando un usuario edita una configuración de conector existente. Puede usar esta dirección URL para facilitar que el código controle el caso de edición.
 
 Normalmente, esta llamada se realiza como parte del controlador del evento Save. A continuación, cuando `contentUrl` se carga el código anterior, el código debe llamar `getSettings()` para rellenar previamente cualquier configuración o formulario en la interfaz de usuario de configuración.
 
@@ -91,7 +91,7 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",

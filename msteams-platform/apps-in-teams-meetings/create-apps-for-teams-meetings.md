@@ -5,12 +5,12 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: cf42d660c9b4a82f8e28d4d4379194c1bcc681e1
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796172"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997975"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Creación de aplicaciones para reuniones de Microsoft Teams (vista previa para desarrolladores)
 
@@ -27,7 +27,9 @@ ms.locfileid: "48796172"
 
 1. Algunas API de reunión, como `GetParticipant` requerirán un [registro de Bot y un identificador de aplicación de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para generar tokens de autenticación.
 
-1. Los desarrolladores deben adherirse a las directrices generales de diseño de la pestaña de Microsoft [Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como las [directrices de diálogo en reunión](design/designing-in-meeting-dialog.md) para los diálogos que se desencadenan durante la reunión de Microsoft Teams.
+1. Como desarrollador, debe adherirse a las directrices generales de [diseño de pestañas de Microsoft Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como las directrices de [diálogo en reunión](design/designing-in-meeting-dialog.md) para los diálogos que se desencadenan durante la reunión de Microsoft Teams.
+
+1. Tenga en cuenta que para que su aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar en el cuadro de diálogo de la reunión (consulte parámetro de finalización `bot Id` en `Notification Signal API` ) y otras superficies en el ciclo de vida de la reunión.
 
 ## <a name="meeting-apps-api-reference"></a>Referencia de API de las aplicaciones de reunión
 
@@ -52,6 +54,7 @@ Consulte nuestro [contexto de obtención de la documentación de la pestaña de 
 > * Actualmente, Microsoft Teams no admite listas de distribución de gran tamaño o tamaños de lista de más de 350 participantes para la `GetParticipant` API.
 >
 > * La compatibilidad con bot Framework SDK estará disponible próximamente.
+
 
 #### <a name="request"></a>Solicitud
 
@@ -97,7 +100,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>Carga de respuesta
 <!-- markdownlint-disable MD036 -->
 
-el **rol** de "reunión" puede ser *organizador* , *moderador* o *Asistente* .
+el **rol** de "reunión" puede ser *organizador* , *moderador* o *Asistente*.
 
 **Ejemplo 1**
 
@@ -128,10 +131,15 @@ el **rol** de "reunión" puede ser *organizador* , *moderador* o *Asistente* .
 ```
 #### <a name="response-codes"></a>Códigos de respuesta
 
-**403** : la aplicación no tiene permiso para obtener información sobre los participantes. Esta será la respuesta de error más común y se desencadenará cuando la aplicación no se instale en la reunión, por ejemplo, cuando la aplicación está deshabilitada por el administrador de inquilinos o bloqueada durante la mitigación del sitio activo.  
-**200** : la información del participante se recuperó correctamente  
-**401** : token no válido  
-**404** : la reunión no existe o el participante no se encuentra.
+**403** : la aplicación no tiene permiso para obtener información sobre los participantes. Esta será la respuesta de error más común y se desencadenará cuando la aplicación no se instale en la reunión, como cuando la administración de inquilinos la ha deshabilitado o bloqueada durante la migración de sitios activos.  
+**200** : la información del participante se recuperó correctamente.  
+**401** : token no válido.  
+**404** : no se encuentra el participante. 
+**500** : la reunión ha expirado (más de 60 días desde la finalización de la reunión) o el participante no tiene permisos basados en su rol.
+
+**Próximamente**
+
+**404** : la reunión ha expirado o el participante no se encuentra. 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>API de NotificationSignal
@@ -155,7 +163,10 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> El completionBotId de externalResourceUrl en la carga de la solicitud siguiente es un parámetro opcional. Se trata del identificador de bot que se declara en el manifiesto. El bot recibirá un objeto de resultado.
+> *  En la carga solicitada siguiente, el `completionBotId` parámetro del `externalResourceUrl` es un opcional. Es el `Bot ID` que se declara en el manifiesto. El bot recibirá un objeto de resultado.
+> * Los parámetros width y height de externalResourceUrl deben estar en píxeles. Consulte las [directrices de diseño](design/designing-in-meeting-dialog.md) para asegurarse de que las dimensiones están dentro de los límites permitidos.
+> * La dirección URL es la página que se carga como `<iframe>` dentro del cuadro de diálogo en reunión. El dominio de la dirección URL debe estar en la matriz de la aplicación `validDomains` en el manifiesto de la aplicación.
+
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -167,7 +178,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -181,7 +192,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -198,7 +209,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);
@@ -261,13 +272,13 @@ La pestaña `context` y `scopes` las propiedades funcionan en armonía para perm
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurar la aplicación para escenarios de reuniones
 
 > [!NOTE]
-> * Para que la aplicación esté visible en la galería de pestañas, necesita **admitir las pestañas configurables** y el **ámbito de chat en grupo** .
+> * Para que la aplicación esté visible en la galería de pestañas, necesita **admitir las pestañas configurables** y el **ámbito de chat en grupo**.
 >
 > * Los clientes móviles solo admiten fichas en las superficies anteriores y posteriores a la reunión. Pronto estarán disponibles las experiencias en reunión (el panel y el cuadro de diálogo en reunión) en dispositivos móviles. Siga las [instrucciones para las pestañas de dispositivos móviles](../tabs/design/tabs-mobile.md) al crear las pestañas para dispositivos móviles. 
 
 ### <a name="pre-meeting"></a>Reunión previa
 
-Los usuarios con roles de organizador o moderador agregan pestañas a una reunión con el botón más ➕ de las páginas de **chat** de reuniones y **detalles** de reuniones. Las extensiones de mensajería se agregan a a través del menú de puntos suspensivos/desbordamiento &#x25CF;&#x25CF;&#x25CF; situada debajo del área redactar mensaje en el chat. Los bots se agregan a un chat mediante la **@** clave "" y seleccionando **obtener bots** .
+Los usuarios con roles de organizador o moderador agregan pestañas a una reunión con el botón más ➕ de las páginas de **chat** de reuniones y **detalles** de reuniones. Las extensiones de mensajería se agregan a a través del menú de puntos suspensivos/desbordamiento &#x25CF;&#x25CF;&#x25CF; situada debajo del área redactar mensaje en el chat. Los bots se agregan a un chat mediante la **@** clave "" y seleccionando **obtener bots**.
 
 ✔ La identidad del usuario *debe* confirmarse mediante el [SSO de pestañas](../tabs/how-to/authentication/auth-aad-sso.md). Tras esta autenticación, la aplicación puede recuperar el rol de usuario a través de la API de GetParticipant.
 
