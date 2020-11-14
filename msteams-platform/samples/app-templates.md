@@ -3,12 +3,14 @@ title: Plantillas de aplicación de Microsoft Teams
 description: Vínculos y descripciones de plantillas de aplicación para la plataforma de Microsoft Teams
 ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
-ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.author: lajanuar
+author: laujan
+ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
+ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397732"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "49019621"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -302,6 +304,23 @@ Incident Reporter es un [Bot de Microsoft Teams](../bots/what-are-bots.md)  que 
 :::row:::
 :::column span="2":::
     ![Vista de ámbito personal de Incident Reporter](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="new-employee-onboarding9734"></a>&#9734; de incorporación de nuevos empleados
+
+La incorporación de nuevos empleados es una solución integrada de Microsoft Teams y SharePoint para la [incorporación de nuevos empleados](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) que permite a su organización proporcionar una experiencia de incorporación coherente y de gran calidad a los empleados en su viaje de nuevo contrato. La aplicación puede ser usada por los equipos de recursos humanos y los responsables de contratación para proporcionar información relevante a través de la orientación y proceso de inducción y por nuevas contrataciones para compartir comentarios, proporcionar introducciones y completar tareas de incorporación.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    Tarjeta de bienvenida para **nuevos empleados** ![ Imagen de la tarjeta de bienvenida a nuevos empleados](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Lista de comprobación** ![ de nuevos empleados Imagen de la lista de comprobación de nuevos empleados](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
