@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Obtenga información sobre cómo diseñar eficazmente una pestaña en la reunión para Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: fc10c5b60672d243ac2e330ce93b4e01c2e7a278
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877032"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346675"
 ---
 # <a name="design-an-in-meeting-tab"></a>Diseñar una pestaña dentro de la reunión
 
@@ -37,16 +37,16 @@ El siguiente ejemplo muestra la pestaña en la reunión que muestra el contenido
 
 La pestaña en la reunión muestra el contenido de la aplicación con las siguientes dimensiones:
 
-* **Width** : 280 píxeles para el área WebView. Hay 20 píxeles de relleno en los lados izquierdo y derecho de la WebView.
-* **Altura** : sangrado completo hacia la parte inferior de la pestaña. Hay 20 píxeles de relleno entre el área WebView y el encabezado de pestaña.
+* **Width**: 280 píxeles para el área WebView. Hay 20 píxeles de relleno en los lados izquierdo y derecho de la WebView.
+* **Altura**: sangrado completo hacia la parte inferior de la pestaña. Hay 20 píxeles de relleno entre el área WebView y el encabezado de pestaña.
 
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña en la reunión de la extensión de reunión." border="false":::
 
 1. **Icono** de la aplicación: el punto de entrada a la pestaña en reunión.
-1. **Header** : incluye el nombre de la pestaña.
-1. **Name** : el nombre de la instancia de la pestaña.
-1. **Dismiss** : descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.
-1. **Vista WebView** : muestra todo el contenido de aplicaciones de terceros.
+1. **Header**: incluye el nombre de la pestaña.
+1. **Name**: el nombre de la instancia de la pestaña.
+1. **Dismiss**: descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.
+1. **Vista WebView**: muestra todo el contenido de aplicaciones de terceros.
 
 ## <a name="behavior"></a>Comportamiento
 
@@ -125,7 +125,7 @@ El contenido de la pestaña se ajusta en el diseño y la ubicación de la pesta�
 
 #### <a name="do-design-for-a-dark-theme"></a>Do: diseñar un tema oscuro
 
-Las reuniones de Microsoft Teams están optimizadas para el modo oscuro para ayudar a reducir el ruido visual y cognitivo para que los usuarios puedan centrarse en la discusión y en el contenido compartido.
+Las reuniones de Microsoft Teams están optimizadas para el modo oscuro para ayudar a reducir el ruido visual y cognitivo para que los usuarios puedan centrarse en la discusión y en el contenido compartido. La ficha en la reunión debe aplicar un tema oscuro y debe seguir las instrucciones de temas.
 
    :::column-end:::
    :::column span="":::

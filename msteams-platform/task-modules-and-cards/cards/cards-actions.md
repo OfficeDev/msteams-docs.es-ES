@@ -2,12 +2,12 @@
 title: Agregar acciones de tarjeta en un bot
 description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en los bots.
 keywords: acciones de las tarjetas de los equipos bots
-ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801470"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346780"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -24,7 +24,7 @@ Las tarjetas que usan los bots y las extensiones de mensajería de Microsoft Tea
 > [!NOTE]
 >* Teams no admite `CardAction` tipos que no aparecen en la tabla anterior.
 >* Teams no admite la `potentialActions` propiedad.
->* Las acciones de tarjeta son diferentes de [las acciones sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) en el servicio de bot Framework/Azure bot. Las acciones sugeridas no son compatibles con Microsoft Teams: Si desea que aparezcan botones en un mensaje de bot de Teams, use una tarjeta.
+>* Las acciones de tarjeta son diferentes de [las acciones sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en el servicio de bot Framework/Azure bot. Las acciones sugeridas no son compatibles con Microsoft Teams: Si desea que aparezcan botones en un mensaje de bot de Teams, use una tarjeta.
 >* Si está usando una acción de tarjeta como parte de una extensión de mensajería, las acciones no funcionarán hasta que la tarjeta se envíe al canal (no funcionarán mientras la tarjeta se encuentra en el cuadro de mensaje de redacción).
 
 Teams también admite [acciones de tarjetas adaptables](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que solo se usan en tarjetas adaptables. Estas acciones se enumeran en su propia sección al final de esta referencia.
@@ -47,7 +47,7 @@ El `value` campo debe contener una dirección URL completa y con formato correct
 
 Con `messageBack` , puede crear una acción completamente personalizada con las siguientes propiedades:
 
-| Propiedad | Descripción |
+| Propiedad | Description |
 | --- | --- |
 | `title` | Aparece como etiqueta del botón. |
 | `displayText` | Opcional. El usuario los repite en la secuencia de chat cuando se realiza la acción. Este texto *no* se envía a su bot. |
@@ -74,7 +74,7 @@ La `value` propiedad puede ser una cadena JSON serializada o un objeto JSON.
 
 ### <a name="inbound-message-example"></a>Ejemplo de mensaje entrante
 
-`replyToId`contiene el identificador del mensaje del que procedía la acción de la tarjeta. Úselo si desea actualizar el mensaje.
+`replyToId` contiene el identificador del mensaje del que procedía la acción de la tarjeta. Úselo si desea actualizar el mensaje.
 
 ```json
 {
@@ -229,13 +229,16 @@ Las tarjetas adaptables admiten tres tipos de acciones:
 
 Además de las acciones mencionadas anteriormente, puede modificar la carga de la tarjeta adaptable `Action.Submit` para admitir acciones de bot Framework existentes con una `msteams` propiedad en el `data` objeto de `Action.Submit` . Las secciones siguientes explican cómo usar las acciones de bot Framework existentes con tarjetas adaptables.
 
+> [!NOTE]
+> `msteams`La adición a datos, con una acción de bot Framework, no funciona con un módulo de tareas de tarjeta adaptable.
+
 ### <a name="adaptive-cards-with-messageback-action"></a>Tarjetas adaptables con acción messageBack
 
 Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
-| Propiedad | Descripción |
+| Propiedad | Description |
 | --- | --- |
-| `type` | Establece en`messageBack` |
+| `type` | Establece en `messageBack` |
 | `displayText` | Opcional. El usuario los repite en la secuencia de chat cuando se realiza la acción. Este texto *no* se envía a su bot. |
 | `value` | Se envía a su bot cuando se realiza la acción. Puede codificar el contexto de la acción, como identificadores únicos o un objeto JSON. |
 | `text` | Se envía a su bot cuando se realiza la acción. Use esta propiedad para simplificar el desarrollo de los robots: el código puede comprobar una única propiedad de nivel superior para enviar la lógica del bot. |
@@ -261,9 +264,9 @@ Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los si
 
 Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
-| Propiedad | Descripción |
+| Propiedad | Description |
 | --- | --- |
-| `type` | Establece en`imBack` |
+| `type` | Establece en `imBack` |
 | `value` | Cadena que debe volver a mostrarse en el chat |
 
 #### <a name="example"></a>Ejemplo
@@ -285,9 +288,9 @@ Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguien
 
 Para incluir una `signin` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
-| Propiedad | Descripción |
+| Propiedad | Description |
 | --- | --- |
-| `type` | Establece en`signin` |
+| `type` | Establece en `signin` |
 | `value` | Establezca en la dirección URL a la que desea redirigir  |
 
 #### <a name="example"></a>Ejemplo

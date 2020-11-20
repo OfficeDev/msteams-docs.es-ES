@@ -2,12 +2,12 @@
 title: Referencia de tarjetas
 description: Describe todas las tarjetas y las acciones de tarjetas disponibles para bots en Microsoft Teams.
 keywords: referencia de tarjetas de bots
-ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7c37d05ae4cfd07049eaec6dec5eda0f3312cefa
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452613"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346745"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
@@ -28,7 +28,7 @@ Puede encontrar información adicional sobre cómo usar las tarjetas en la docum
 
 En esta tabla se muestran los tipos de tarjetas disponibles.
 
-| Tipo de tarjeta | Descripción |
+| Tipo de tarjeta | Description |
 | --- | --- |
 | [Tarjeta adaptable](#adaptive-card) | Tarjeta altamente personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. |
 | [Tarjeta Hero](#hero-card) | Normalmente contiene una sola imagen grande, uno o más botones y una pequeña cantidad de texto. |
@@ -47,12 +47,12 @@ La tarjeta puede contener una imagen incorporada incluyendo un vínculo a la ima
 
 Las imágenes se escalan hacia arriba o hacia abajo en el tamaño, a la vez que mantienen la relación de aspecto para cubrir el área de la imagen y, a continuación, se cortan del centro para obtener la relación de aspecto adecuada para la tarjeta.
 
-Las imágenes deben ser como máximo 1024 × 1024 y 1 MB en formato PNG, JPEG o GIF; GIF animado no es compatible oficialmente.
+Las imágenes deben tener un formato de 1024 × 1024 como máximo en formato PNG, JPEG o GIF; GIF animado no es compatible oficialmente.
 
-| Propiedad | Tipo  | Descripción |
+| Propiedad | Tipo  | Description |
 | --- | --- | --- |
 | url | URL | Dirección URL HTTPS a la imagen |
-| alt | Cadena | Descripción accesible de la imagen |
+| alt | String | Descripción accesible de la imagen |
 
 ### <a name="buttons"></a>Botones
 
@@ -299,7 +299,7 @@ La tarjeta de lista se ha agregado por Microsoft Teams para proporcionar funcion
 | Propiedad | Tipo  | Description |
 | --- | --- | --- |
 | title | Texto enriquecido  | Título de la tarjeta. 2 líneas como máximo.|
-| elementos | Matriz de elementos de lista  ||
+| items | Matriz de elementos de lista  ||
 | situados | Matriz de objetos Action | Conjunto de acciones que se aplican a la tarjeta actual. Máximo 6. |
 
 ### <a name="example-list-card"></a>Tarjeta de lista de ejemplo
@@ -398,7 +398,7 @@ Si especifica la `themeColor` propiedad, esta invalida la `accentColor` propieda
 
 Para especificar el estilo de representación de `activityImage` , puede establecer `activityImageType` lo siguiente:
 
-| Valor | Descripción |
+| Valor | Description |
 | --- | --- |
 | `avatar` | Predeterminada se `activityImage` recortará como un círculo |
 | `article` | `activityImage` se mostrará como un rectángulo y conservará su relación de aspecto. |

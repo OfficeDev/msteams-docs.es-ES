@@ -5,17 +5,14 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997975"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358017"
 ---
-# <a name="create-apps-for-teams-meetings-developer-preview"></a>Creación de aplicaciones para reuniones de Microsoft Teams (vista previa para desarrolladores)
-
->[!IMPORTANT]
-> Las características incluidas en Microsoft Teams Developer Preview se proporcionan solo para fines de acceso anticipado, pruebas y comentarios. Pueden sufrir cambios antes de que estén disponibles en la versión pública y no deben usarse en las aplicaciones de producción.
+# <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
 ## <a name="prerequisites-and-considerations"></a>Requisitos previos y consideraciones
 
@@ -33,9 +30,9 @@ ms.locfileid: "48997975"
 
 ## <a name="meeting-apps-api-reference"></a>Referencia de API de las aplicaciones de reunión
 
-|API|Descripción|Solicitud|Origen|
+|API|Description|Solicitud|Origen|
 |---|---|----|---|
-|**GetUserContext**| Obtener información contextual para mostrar contenido relevante en una pestaña de Microsoft Teams. |_**Microsoft Teams. getContext (() => {/ *...* / } )**_|SDK del cliente de Microsoft Teams|
+|**GetUserContext**| Obtener información contextual para mostrar contenido relevante en una pestaña de Microsoft Teams. |_**Microsoft Teams. getContext (() => {/*...* / } )**_|SDK del cliente de Microsoft Teams|
 |**GetParticipant**|Esta API permite que un bot obtenga información de un participante por el identificador de la reunión y el identificador del participante.|**Get** _**/v1/Meetings/{meetingId}/participants/{participantId}? tenantid = {tenantid}**_ |SDK de Microsoft bot Framework|
 |**NotificationSignal** |Las señales de reunión se entregarán con la siguiente API de notificación de conversación existente (para el chat de bot? o del usuario). Esta API permite que los desarrolladores señalen según la acción del usuario final para mostrar-caso de un burbuja de diálogo en la reunión.|**Publicar** _**/V3/Conversations/{conversationId}/Activities**_|SDK de Microsoft bot Framework|
 
@@ -43,7 +40,7 @@ ms.locfileid: "48997975"
 
 Consulte nuestro [contexto de obtención de la documentación de la pestaña de Microsoft Teams](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) para obtener instrucciones sobre cómo identificar y recuperar información contextual para el contenido de la pestaña. Como parte de la extensibilidad de las reuniones, se ha agregado un nuevo valor a la carga de respuesta:
 
-✔ **meetingId** : usada por una tabulación cuando se ejecuta en el contexto de la reunión.
+✔ **meetingId**: usada por una tabulación cuando se ejecuta en el contexto de la reunión.
 
 ### <a name="getparticipant-api"></a>API de GetParticipant
 
@@ -91,7 +88,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Necesario|Description|
 |---|---|----|---|
 |**meetingId**| string | Sí | El identificador de la reunión está disponible a través de la invocación de bots y Team Client SDK.|
 |**participantId**| string | Sí | Este campo es el identificador de usuario y está disponible en la pestaña SSO, Bot invocación y el SDK del cliente de Microsoft Teams. El SSO de pestaña es muy recomendable|
@@ -100,7 +97,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>Carga de respuesta
 <!-- markdownlint-disable MD036 -->
 
-el **rol** de "reunión" puede ser *organizador* , *moderador* o *Asistente*.
+el **rol** de "reunión" puede ser *organizador*, *moderador* o *Asistente*.
 
 **Ejemplo 1**
 
@@ -131,15 +128,15 @@ el **rol** de "reunión" puede ser *organizador* , *moderador* o *Asistente*.
 ```
 #### <a name="response-codes"></a>Códigos de respuesta
 
-**403** : la aplicación no tiene permiso para obtener información sobre los participantes. Esta será la respuesta de error más común y se desencadenará cuando la aplicación no se instale en la reunión, como cuando la administración de inquilinos la ha deshabilitado o bloqueada durante la migración de sitios activos.  
-**200** : la información del participante se recuperó correctamente.  
-**401** : token no válido.  
-**404** : no se encuentra el participante. 
-**500** : la reunión ha expirado (más de 60 días desde la finalización de la reunión) o el participante no tiene permisos basados en su rol.
+**403**: la aplicación no tiene permiso para obtener información sobre los participantes. Esta será la respuesta de error más común y se desencadenará cuando la aplicación no se instale en la reunión, como cuando la administración de inquilinos la ha deshabilitado o bloqueada durante la migración de sitios activos.  
+**200**: la información del participante se recuperó correctamente.  
+**401**: token no válido.  
+**404**: no se encuentra el participante. 
+**500**: la reunión ha expirado (más de 60 días desde la finalización de la reunión) o el participante no tiene permisos basados en su rol.
 
 **Próximamente**
 
-**404** : la reunión ha expirado o el participante no se encuentra. 
+**404**: la reunión ha expirado o el participante no se encuentra. 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>API de NotificationSignal
@@ -155,7 +152,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Necesario|Description|
 |---|---|----|---|
 |**conversationId**| string | Sí | El identificador de conversación está disponible como parte de la invocación de bot |
 
@@ -222,10 +219,10 @@ await context.sendActivity(replyActivity);
 
 #### <a name="response-codes"></a>Códigos de respuesta
 
-**201** : la actividad con señal se ha enviado correctamente  
-**401** : token no válido  
-**403** : la aplicación no puede enviar la señal. En este caso, la carga debe contener un mensaje de error más detallado. Puede haber varios motivos: la aplicación está deshabilitada por el administrador de inquilinos, bloqueada durante la mitigación de sitios activos, etc.  
-**404** : el chat de reuniones no existe  
+**201**: la actividad con señal se ha enviado correctamente  
+**401**: token no válido  
+**403**: la aplicación no puede enviar la señal. En este caso, la carga debe contener un mensaje de error más detallado. Puede haber varios motivos: la aplicación está deshabilitada por el administrador de inquilinos, bloqueada durante la mitigación de sitios activos, etc.  
+**404**: el chat de reuniones no existe  
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Habilitar la aplicación para reuniones de Microsoft Teams
 
@@ -260,11 +257,11 @@ Las funcionalidades de la aplicación reuniones se declaran en el **configurable
 
 La pestaña `context` y `scopes` las propiedades funcionan en armonía para permitirle determinar dónde quiere que aparezca la aplicación. Las pestañas `team` del `groupchat` ámbito o pueden tener más de un contexto. Los valores posibles para la propiedad context son los siguientes:
 
-* **channelTab** : una pestaña en el encabezado de un canal de equipo.
-* **privateChatTab** : una pestaña en el encabezado de un grupo de chats entre un conjunto de usuarios que no están en el contexto de un equipo o una reunión.
-* **meetingChatTab** : una pestaña en el encabezado de un grupo de chats entre un conjunto de usuarios en el contexto de una reunión programada.
-* **meetingDetailsTab** : una pestaña en el encabezado de la vista de detalles de la reunión del calendario.
-* **meetingSidePanel** : un panel en reunión que se abre a través de la barra unificada (barra u).
+* **channelTab**: una pestaña en el encabezado de un canal de equipo.
+* **privateChatTab**: una pestaña en el encabezado de un grupo de chats entre un conjunto de usuarios que no están en el contexto de un equipo o una reunión.
+* **meetingChatTab**: una pestaña en el encabezado de un grupo de chats entre un conjunto de usuarios en el contexto de una reunión programada.
+* **meetingDetailsTab**: una pestaña en el encabezado de la vista de detalles de la reunión del calendario.
+* **meetingSidePanel**: un panel en reunión que se abre a través de la barra unificada (barra u).
 
 > [!NOTE]
 > La propiedad "context" actualmente no se admite y, por lo tanto, se omitirá en clientes móviles
@@ -284,7 +281,7 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
  ✔ Basándose en el rol de usuario, la aplicación ahora tendrá la capacidad de presentar experiencias específicas de roles. Por ejemplo, una aplicación de sondeo puede permitir que solo los organizadores y los moderadores creen un nuevo sondeo.
 
-> **Nota** : las asignaciones de roles se pueden cambiar mientras una reunión está en curso.  *Vea* [roles en una reunión de Microsoft Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
+> **Nota**: las asignaciones de roles se pueden cambiar mientras una reunión está en curso.  *Vea* [roles en una reunión de Microsoft Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
 ### <a name="in-meeting"></a>En reunión
 
@@ -298,6 +295,10 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 ✔ Consulte el [flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación para pestañas es muy similar al flujo de autenticación de los sitios Web. Por lo tanto, las pestañas pueden usar OAuth 2,0 directamente. *Vea también* el [flujo de código de autorización de Microsoft Identity platform y OAuth 2,0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
+✔ Extensión de mensaje debe funcionar como se esperaba cuando un usuario está en una vista en la reunión y debe poder publicar tarjetas de extensión de mensaje de redacción.
+
+✔ AppName en-reunión-información sobre herramientas debe indicar el nombre de la aplicación en la barra U-Meeting.
+
 #### <a name="in-meeting-dialog"></a>**cuadro de diálogo en la reunión**
 
 ✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](design/designing-in-meeting-dialog.md).
@@ -308,9 +309,11 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 ✔ Como parte de la carga de la solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
 
+✔ Cuadro de diálogo de reunión no debe usar el módulo de tareas.
+
 > [!NOTE]
 >
-> * Estas notificaciones son persistentes en su naturaleza. Debe invocar la función [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automáticamente una vez que un usuario realiza una acción en la vista Web. Este es un requisito para el envío de aplicaciones. *Vea también* , [Teams SDK: módulo de tareas](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * Estas notificaciones son persistentes en su naturaleza. Debe invocar la función [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) para descartar automáticamente una vez que un usuario realiza una acción en la vista Web. Este es un requisito para el envío de aplicaciones. *Vea también*, [Teams SDK: módulo de tareas](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 >
 > * Si quiere que la aplicación admita usuarios anónimos, su carga de solicitud de invocación inicial debe basarse en el `from.id`  objeto (ID del usuario) request Metadata in the `from` Object, no el `from.aadObjectId` (ID de Azure Active Directory del usuario) request Metadata. *Consulte* [using Task modules in Tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y [Create and Send The Task Module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 

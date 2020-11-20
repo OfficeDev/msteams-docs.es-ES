@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo empezar a trabajar con el desarrol
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931795"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346815"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Crear su primera información general de la aplicación Microsoft Teams
 
@@ -22,11 +22,11 @@ Esta es una idea de lo que sabrá después de pasar por las lecciones.
 
 > [!div class="checklist"]
   >
-  > * **Póngase en marcha rápidamente con Team Toolkit** : el kit de herramientas de Microsoft Teams para Visual Studio Code se encarga de crear el proyecto de la aplicación y el scaffolding para que pueda tener una aplicación en ejecución en minutos.
-  > * **Configurar la aplicación con App Studio** : especificar las capacidades y los servicios que usa la aplicación de Microsoft Teams.
-  > * **Alcance la audiencia de la aplicación** : cree una aplicación de Microsoft Teams para uso personal, colaboración o ambos.
+  > * **Póngase en marcha rápidamente con Team Toolkit**: el kit de herramientas de Microsoft Teams para Visual Studio Code se encarga de crear el proyecto de la aplicación y el scaffolding para que pueda tener una aplicación en ejecución en minutos.
+  > * **Configurar la aplicación con App Studio**: especificar las capacidades y los servicios que usa la aplicación de Microsoft Teams.
+  > * **Alcance la audiencia de la aplicación**: cree una aplicación de Microsoft Teams para uso personal, colaboración o ambos.
   > * **Obtenga experiencia con las herramientas y los SDK** de Microsoft: Personalice la aplicación (por ejemplo, cambie su combinación de colores para que sea igual que la del tema de Microsoft Teams) con la ayuda del SDK de Microsoft Teams. Además, obtenga información sobre las herramientas comunes para crear y administrar bots.
-  > * **Expandir en la aplicación** : en todas las lecciones, encontrará temas relacionados que probablemente le interesan (como las directrices de autenticación y de diseño).
+  > * **Expandir en la aplicación**: en todas las lecciones, encontrará temas relacionados que probablemente le interesan (como las directrices de autenticación y de diseño).
 
 ## <a name="teams-app-fundamentals"></a>Conceptos básicos de las aplicaciones de Microsoft Teams
 
@@ -74,6 +74,9 @@ Puede obtener una cuenta gratuita de prueba de Microsoft teams que permite la tr
 1. Compruebe si ahora tiene la opción **cargar una aplicación personalizada** .
 
 </details>
+
+> [!Note]
+> Si sigue sin poder transferir localmente aplicaciones, consulte [Habilitar aplicaciones personalizadas de Teams y activar la carga de aplicaciones personalizadas](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ### <a name="install-your-development-tools"></a>Instalar las herramientas de desarrollo
 

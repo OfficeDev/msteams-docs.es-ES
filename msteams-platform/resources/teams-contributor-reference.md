@@ -4,12 +4,12 @@ description: pasos para crear y publicar la documentación de Microsoft Teams
 author: laujan
 ms.author: lajanuar
 ms.topic: contributor-guide
-ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 18aae61a674cf9c4c94831f22149cd4b9e7ebeda
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995019"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366899"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Contribuir a la documentación de Microsoft Teams
 
@@ -34,7 +34,7 @@ La [documentación de Teams](/microsoftteams/platform/overview) forma parte de l
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisión de la guía de colaboradores de Microsoft docs
 
-La [Guía de colaboradores](/contribute) ofrece dirección para crear, publicar y actualizar contenido técnico en Microsoft/docs. *Consulte también* , [estilo docs y inicio rápido de voz](/contribute/style-quick-start) .
+La [Guía de colaboradores](/contribute) ofrece dirección para crear, publicar y actualizar contenido técnico en la plataforma de Microsoft docs. *Consulte también*, [estilo docs y inicio rápido de voz](/contribute/style-quick-start) .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guías de escritura, estilo y contenido de Microsoft
 
@@ -59,10 +59,10 @@ Para obtener más información acerca de los hipervínculos y las rutas de archi
 > &emsp;&#x2714; usar una ruta de acceso relativa sin una barra diagonal inicial.<br>
 > &emsp;&#x2714; incluir la extensión de archivo de Markdown.<br>
 >Por ejemplo:  **directorio principal/directorio/ruta de acceso-a-article. MD** : > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> Para hacer referencia a un artículo de la biblioteca de Microsoft docs ( <https://docs.microsoft.com/> ) que *no forma parte de* la plataforma de Teams docset:<br>
+> Para hacer referencia a un artículo de la biblioteca de Microsoft docs que *no forma parte de* la plataforma de Teams docset:<br>
 > &emsp;&#x2714; usar una ruta de acceso relativa que comience con una barra diagonal.<br>
-> &emsp;&#x2714; no incluya la extensión de archivo. <br> Por ejemplo:  **/docset/Address-to-file-Location** : > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
->
+> &emsp;&#x2714; no incluya la extensión de archivo. <br> Por ejemplo:  **/docset/Address-to-file-Location** : > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> Para hacer referencia a una página externa a la biblioteca de Microsoft docs, como GitHub, use la ruta de acceso completa del `https` archivo.<br>
 
 ## <a name="code-samples-and-snippets"></a>Ejemplos de código y fragmentos de código
 

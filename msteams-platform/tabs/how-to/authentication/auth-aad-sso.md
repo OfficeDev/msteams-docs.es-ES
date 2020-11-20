@@ -2,12 +2,12 @@
 title: Compatibilidad de inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 keywords: API de autenticación de Microsoft Teams SSO de inicio de sesión único de AAD
-ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877060"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346794"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad de inicio de sesión único (SSO) para pestañas
 
@@ -18,7 +18,7 @@ Los usuarios inician sesión en Microsoft Teams a través de sus cuentas de trab
 >
 > ✔ Teams para Android (1416/1.0.0.2020073101 y versiones posteriores)
 >
-> ✔ Teams para iOS ( _versión_ : 2.0.18 y versiones posteriores)  
+> ✔ Teams para iOS (_versión_: 2.0.18 y versiones posteriores)  
 >
 > Para obtener la mejor experiencia con Microsoft Teams, use la versión más reciente de iOS y Android.
 
@@ -65,13 +65,13 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 #### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Registrar la aplicación a través de Azure Active Directory portal en profundidad:
 
 1. Registre una nueva aplicación en el portal de [registro de aplicaciones de Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2083908) .
-2. Seleccione **registro nuevo** y, en la *Página registrar una aplicación* , establezca los siguientes valores:
+2. Seleccione **registro nuevo** y, en la *Página registrar una aplicación*, establezca los siguientes valores:
     * Establezca el **nombre** en el nombre de la aplicación.
     * Elija los **tipos de cuenta admitidos** (funcionará cualquier tipo de cuenta) ¹
     * Deje **URI de redireccionamiento** vacía.
     * Elija **Registrar**.
 3. En la página información general, copie y guarde el identificador de la **aplicación (cliente)**. Lo necesitará más adelante al actualizar el manifiesto de aplicación de Teams.
-4. En **Administrar** , seleccione **Exponer una API** 
+4. En **Administrar**, seleccione **Exponer una API** 
 5. Seleccione el vínculo **establecer** para generar el URI del identificador de aplicación con el formato de `api://{AppID}` . Inserte el nombre de dominio completo (con una barra diagonal "/" anexada al final) entre las dos barras diagonales y el GUID. El identificador completo debe tener el siguiente formato: `api://fully-qualified-domain-name.com/{AppID}` ²
     * por ejemplo: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
     
@@ -80,8 +80,8 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 7. **¿Establecer quién puede conceder autorización?** para`Admins and users`
 8. Rellene los campos para configurar las solicitudes de consentimiento del usuario y el administrador con valores que sean apropiados para el `access_as_user` ámbito:
     * **Título de consentimiento de administración:** Los equipos pueden tener acceso al perfil del usuario.
-    * **Descripción del consentimiento del administrador** : permite a los equipos llamar a las API Web de la aplicación como el usuario actual.
-    * **Título de consentimiento del usuario** : Microsoft Teams puede tener acceso al perfil de usuario y realizar solicitudes en nombre del usuario.
+    * **Descripción del consentimiento del administrador**: permite a los equipos llamar a las API Web de la aplicación como el usuario actual.
+    * **Título de consentimiento del usuario**: Microsoft Teams puede tener acceso al perfil de usuario y realizar solicitudes en nombre del usuario.
     * **Descripción del consentimiento del usuario:** Habilite Microsoft Teams para que llame a las API de esta aplicación con los mismos derechos que el usuario.
 9. Asegurarse de que el **Estado** está establecido en **habilitado**
 10. Seleccione el botón **Agregar ámbito** para guardar 
@@ -90,9 +90,9 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 11. En la sección **aplicaciones cliente autorizadas** , identifique las aplicaciones que desea autorizar para la aplicación Web de la aplicación. Seleccione *Agregar una aplicación cliente*. Escriba cada uno de los siguientes identificadores de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicación para equipos móviles o de escritorio)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicación Web de Teams)
-12. Navegue a **permisos** de la API. Seleccione *Agregar* permisos delegados de permisos de  >  *Microsoft Graph*  >  *Delegated permissions* y, a continuación, agregue los siguientes permisos:
+12. Navegue a **permisos** de la API. Seleccione *Agregar* permisos  >  *Microsoft Graph*  >  *delegados* de permisos de Microsoft Graph y, a continuación, agregue los siguientes permisos a la API de Microsoft Graph:
     * User. Read (habilitado de forma predeterminada)
-    * email
+    * correo electrónico
     * offline_access
     * OpenId
     * perfil
@@ -147,7 +147,7 @@ Esto es lo que la API de autenticación tiene como:
 ```javascript
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```

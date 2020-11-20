@@ -6,19 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: Gráfico RSC de OAuth SSO de OAuth para Microsoft Teams
-ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 3cafbb090c4e4bc44a814c840a7a297357341bba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995026"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366864"
 ---
 # <a name="resource-specific-consent-rsc"></a>Autorización específica de recursos (RSC)
 
 >[!IMPORTANT]
 > Estas API son accesibles en el https://graph.microsoft.com/beta punto de conexión.  El punto de conexión de la [versión beta](/graph/versioning-and-support#beta-version) incluye API que actualmente están en versión preliminar y todavía no están disponibles en general. Las API del punto de conexión beta están sujetas a cambios y no se recomienda usarlas en las aplicaciones de producción. 
 
-El consentimiento específico de recursos (RSC) es una integración de Microsoft Teams y Graph API que permite a su aplicación usar puntos de conexión de API para administrar equipos específicos dentro de una organización. El modelo de permisos de autorización específica de recursos (RSC) permite a los *propietarios del equipo* conceder el consentimiento para que una aplicación acceda a los datos de un equipo o los modifique. Los permisos de RSC específicos, específicos de Teams, definen lo que una aplicación puede hacer dentro de un equipo específico:
+El consentimiento específico de recursos (RSC) es una integración de Microsoft Teams y de la API de Microsoft Graph que permite a la aplicación usar puntos de conexión de API para administrar equipos específicos dentro de una organización. El modelo de permisos de autorización específica de recursos (RSC) permite a los *propietarios del equipo* conceder el consentimiento para que una aplicación acceda a los datos de un equipo o los modifique. Los permisos de RSC específicos, específicos de Teams, definen lo que una aplicación puede hacer dentro de un equipo específico:
 
 ## <a name="resource-specific-permissions"></a>Permisos específicos de recursos
 
@@ -47,7 +47,7 @@ Los pasos para habilitar RSC en la aplicación son los siguientes:
 
 1. [Configure las opciones de consentimiento del propietario del grupo en el portal de Azure Active Directory](#configure-group-owner-consent-settings-in-the-azure-ad-portal).
 1. [Registre su aplicación con la plataforma de identidad de Microsoft a través del portal de Azure ad](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-1. [Revisar los permisos de la aplicación en el portal de Azure AD](#review-your-application-permissions-in-the-azure-ad-portal)
+1. [Revise los permisos de la aplicación en el portal de Azure ad](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtener un token de acceso desde la plataforma de identidad de Microsoft](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Actualizar el manifiesto de la aplicación de Teams](#update-your-teams-app-manifest).
 1. [Instale la aplicación directamente en Teams](#install-your-app-directly-in-teams).
@@ -61,7 +61,7 @@ Puede habilitar o deshabilitar el [consentimiento del propietario del grupo](/az
 >
 >- Inicie sesión en [Azure portal](https://portal.azure.com) como administrador [global o administrador](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)de la compañía.  
  > - [Seleccione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) permisos de consentimiento del usuario de **Azure Active Directory**  =>  **Enterprise Applications**  =>  **y permisos**  =>  **User consent settings**.
-> - Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado como **consentimiento de propietario de grupo para las aplicaciones que obtienen acceso a los datos** (el valor predeterminado es **permitir el consentimiento del propietario del grupo para todos los propietarios del grupo** ). Para que el propietario de un equipo Instale una aplicación con RSC, el consentimiento del propietario del grupo debe estar habilitado para ese usuario.
+> - Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado como **consentimiento de propietario de grupo para las aplicaciones que obtienen acceso a los datos** (el valor predeterminado es **permitir el consentimiento del propietario del grupo para todos los propietarios del grupo**). Para que el propietario de un equipo Instale una aplicación con RSC, el consentimiento del propietario del grupo debe estar habilitado para ese usuario.
 
 ![configuración de RSC de Azure](../../assets/images/azure-rsc-configuration.png)
 
@@ -69,14 +69,14 @@ Para habilitar o deshabilitar el consentimiento del propietario del grupo dentro
 
 ## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>Registrar la aplicación con la plataforma de identidad de Microsoft mediante el portal de Azure AD
 
-El portal de Azure Active Directory proporciona una plataforma central para registrar y configurar las aplicaciones. La aplicación debe estar registrada en el portal de Azure AD para integrarse con la plataforma de identidad de Microsoft y las API de gráficos de llamadas. *Consulte* [registrar una aplicación con la plataforma de identidad de Microsoft](/graph/auth-register-app-v2).
+El portal de Azure Active Directory proporciona una plataforma central para registrar y configurar las aplicaciones. La aplicación debe estar registrada en el portal de Azure AD para integrarse con la plataforma de identidad de Microsoft y llamar a las API de Microsoft Graph. *Consulte* [registrar una aplicación con la plataforma de identidad de Microsoft](/graph/auth-register-app-v2).
 
 >[!WARNING]
 >No registre varias aplicaciones de Microsoft Teams en el mismo identificador de aplicación de Azure AD. El identificador de la aplicación debe ser único para cada aplicación. Se producirá un error si intenta instalar varias aplicaciones en el mismo identificador de la aplicación.
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Revisar los permisos de la aplicación en el portal de Azure AD
 
-Vaya a la página registros de aplicaciones **domésticas**  =>  **App registrations** y seleccione su aplicación RSC. Elija **permisos de API** en la barra de navegación izquierda y examine la lista de permisos configurados para la aplicación. Si la aplicación solo realiza llamadas de gráfico RSC, elimine todos los permisos de esa página. Si la aplicación también va a realizar llamadas que no son RSC, conserve dichos permisos según sea necesario.
+Vaya a la página registros de aplicaciones **domésticas**  =>  **App registrations** y seleccione su aplicación RSC. Elija **permisos de API** en la barra de navegación izquierda y examine la lista de permisos configurados para la aplicación. Si la aplicación solo va a realizar llamadas a la API de gráficos RSC, elimine todos los permisos de esa página. Si la aplicación también va a realizar llamadas que no son RSC, conserve dichos permisos según sea necesario.
 
 >[!IMPORTANT]
 >El portal de Azure AD no se puede usar para solicitar permisos RSC. Los permisos RSC actualmente son exclusivos de las aplicaciones de Teams instaladas en el cliente de Microsoft Teams y se declaran en el archivo de manifiesto de la aplicación (JSON).
@@ -88,7 +88,7 @@ Para realizar llamadas a la API de Graph, debe obtener un token de acceso para l
 Necesitará tener los siguientes valores del proceso de registro de Azure AD para recuperar un token de acceso de la plataforma de identidad:
 
 - IDENTIFICADOR de la **aplicación** asignado por el portal de registro de aplicaciones. Si la aplicación admite el inicio de sesión único (SSO), debe usar el mismo identificador de aplicación para la aplicación y el SSO.
-- El  **secreto de cliente/contraseña** o un par de claves pública y privada ( **certificado** ). Esto no es necesario para las aplicaciones nativas.
+- El  **secreto de cliente/contraseña** o un par de claves pública y privada (**certificado**). Esto no es necesario para las aplicaciones nativas.
 - Un **URI de redireccionamiento** (o dirección URL de respuesta) de la aplicación para recibir respuestas de Azure ad.
 
  *Vea* [obtener acceso en nombre de un usuario](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) y [obtener acceso sin un usuario](/graph/auth-v2-service)

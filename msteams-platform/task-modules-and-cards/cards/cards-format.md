@@ -3,12 +3,12 @@ title: Formato del texto en las tarjetas
 description: Describe el formato del texto de las tarjetas en Microsoft Teams
 keywords: formato de las tarjetas de bots de Microsoft Teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587814"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346710"
 ---
 # <a name="format-cards-in-teams"></a>Formato de tarjetas en Microsoft Teams
 
@@ -18,7 +18,7 @@ Las tarjetas admiten el formato solo en la propiedad de texto, no en las propied
 
 La compatibilidad de formato es distinta entre los distintos tipos de tarjetas y la representación de la tarjeta puede variar ligeramente entre el escritorio y los clientes de los equipos móviles, así como los equipos en el explorador de escritorio.
 
-Puede incluir una imagen incorporada en cualquier tarjeta de Teams. Imágenes a las que se les da formato `.png` , `.jpg` o `.gif` archivos y no deben exceder de 1024 × 1024 PX o 1 MB. GIF animado no es compatible oficialmente. *Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)
+Puede incluir una imagen incorporada en cualquier tarjeta de Teams. Imágenes a las que se les da formato  `.png` , `.jpg` o `.gif` archivos y no deben exceder de 1024 × 1024 PX o 1 MB. GIF animado no es compatible oficialmente. *Consulte* [referencia de tarjetas](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Tarjetas de formato con Markdown
 
@@ -32,7 +32,7 @@ Hay dos tipos de tarjetas que admiten Markdown en Microsoft Teams:
 
  Los estilos admitidos `Textblock` para `Fact.Title` y `Fact.Value` son:
 
-| Style | Ejemplo | Markdown |
+| Estilo | Ejemplo | Markdown |
 | --- | --- | --- |
 | bold | **Bold** | ```**Bold**``` |
 | italic | _Italic_ | ```_Italic_``` |
@@ -79,7 +79,7 @@ En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -103,7 +103,7 @@ En Android, el formato de Markdown con tarjeta adaptable tiene este aspecto:
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -123,7 +123,7 @@ Los bots y las extensiones de mensajería pueden incluir menciones dentro del co
 
 Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos:
 
-* `<at>username</at>`en los elementos de tarjeta adaptable admitidos
+* `<at>username</at>` en los elementos de tarjeta adaptable admitidos
 * El `mention` objeto dentro de una `msteams` propiedad en el contenido de la tarjeta, que incluye el identificador de usuario de Teams del usuario que se está mencionando
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Ejemplo de tarjeta adaptable con mención
@@ -139,7 +139,7 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -161,11 +161,11 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
 
 Las tarjetas de conector admiten el formato HTML y Markdown limitados. La compatibilidad con HTML se describe en la última sección.
 
-| Style | Ejemplo | Markdown |
+| Estilo | Ejemplo | Markdown |
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
 | Aplique | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -202,7 +202,7 @@ En Android, el formato de Markdown para tarjetas de conector tiene el siguiente 
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -225,7 +225,7 @@ En Android, el formato de Markdown para tarjetas de conector tiene el siguiente 
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -250,18 +250,18 @@ En Android, el formato de Markdown para tarjetas de conector tiene el siguiente 
 
 Las tarjetas de conector admiten el formato HTML y Markdown limitados. Markdown se describe en la siguiente sección.
 
-| Style | Ejemplo | HTML |
+| Estilo | Ejemplo | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Aplique | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texto con formato previo | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| vínculo de imagen | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| vínculo de imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 En las tarjetas conector, las líneas nuevas se representan en HTML con la `<p>` etiqueta.
 
@@ -291,7 +291,7 @@ En Android, el formato HTML es similar a este:
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -317,7 +317,7 @@ En Android, el formato HTML es similar a este:
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -338,18 +338,18 @@ En Android, el formato HTML es similar a este:
 
 Las etiquetas HTML son compatibles con tarjetas sencillas, como el héroe y la tarjeta en miniatura. No se admite Markdown.
 
-| Style | Ejemplo | HTML |
+| Estilo | Ejemplo | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Aplique | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texto con formato previo | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| vínculo de imagen |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| vínculo de imagen |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferencias entre dispositivos móviles y de escritorio para tarjetas sencillas
 
@@ -377,6 +377,6 @@ El formato de caracteres, como negrita y cursiva, se muestra correctamente en An
 
 Estas capturas de pantallas se crearon con Teams AppStudio, donde la propiedad Text de una tarjeta Hero se estableció en la siguiente cadena. Puede probar el formato en sus propias tarjetas modificando este código.
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---

@@ -4,31 +4,31 @@ author: laujan
 description: Detalle de soluciones de código bajo y sin código de Microsoft disponibles para Microsoft Teams
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 089e436d43819f9aabe3ceb47760f521b014d93f
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 1166de0ae6e5512f4943ca1a3a7e74c62a0d5cf1
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995005"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366892"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Crear aplicaciones personalizadas de bajo código para Microsoft Teams
 
 [Microsoft Teams](/microsoftteams/platform) es tanto extensible como adaptable. Esto significa que tiene la libertad de crear aplicaciones personalizadas para Teams que cumplan las distintas necesidades de los usuarios. Aunque puede crear aplicaciones desde cero, con la demanda actual de soluciones rápidas, una opción de bajo código puede ser tan solo lo que necesita para crear aplicaciones elegantes en un intervalo de tiempo comprimido.
 
-Las plataformas de código de bajo rendimiento proporcionan un enfoque intuitivo para el desarrollo de software y requieren poca o ninguna codificación para crear aplicaciones y procesos. Los desarrolladores de ciudadanos están habilitados para crear fácilmente aplicaciones personalizadas y desarrolladores profesionales que puedan acelerar el proceso de implementación y desarrollo de aplicaciones exponencialmente. La mayoría de las plataformas de código insuficiente constan de una interfaz visual, conectores para servicios back-end y un sistema de administración del ciclo de vida de aplicaciones integrado para crear, depurar, implementar y mantener aplicaciones. Microsoft proporciona varias puertas de enlace innovadoras para crear rápidamente aplicaciones compatibles con Teams con atributos de bajo código:
+Las plataformas de código de bajo rendimiento proporcionan un enfoque intuitivo para el desarrollo de software y requieren poca o ninguna codificación para crear aplicaciones y procesos. Los programadores principiantes están habilitados para crear fácilmente aplicaciones personalizadas y desarrolladores profesionales que puedan acelerar el proceso de implementación y desarrollo de aplicaciones exponencialmente. La mayoría de las plataformas de código insuficiente constan de una interfaz visual, conectores para servicios back-end y un sistema de administración del ciclo de vida de aplicaciones integrado para crear, depurar, implementar y mantener aplicaciones. Microsoft proporciona varias puertas de enlace innovadoras para crear rápidamente aplicaciones compatibles con Teams con atributos de bajo código:
 
 1. [Plataforma de energía de Microsoft](#teams-and-microsoft-power-platform)
 1. [Plantillas de aplicación de Microsoft Teams](#teams-app-templates)
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams y Microsoft Power Platform
 
-Microsoft Power Platform (/Power-Platform) combina cuatro tecnologías sólidas de Microsoft en una sola plataforma de aplicaciones eficaz. Power BI, Power Apps, Power automaticing (anteriormente Microsoft Flow) y Power virtual Agents le permiten crear soluciones, automatizar procesos, analizar datos y crear agentes virtuales en un entorno unificado e integrado:
+[Microsoft Power Platform](/power-platform) combina cuatro tecnologías sólidas de Microsoft en una sola plataforma de aplicaciones eficaz. Power BI, Power Apps, Power automaticing (anteriormente Microsoft Flow) y Power virtual Agents le permiten crear soluciones, automatizar procesos, analizar datos y crear agentes virtuales en un entorno unificado e integrado:
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Servicios de plataforma de alimentación":::
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams y Power BI
 
-La [pestaña Power BI para Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) agrega compatibilidad con informes en el área de trabajo de Microsoft Teams y permite a los usuarios [compartir contenido interactivo de Power BI](/power-bi/collaborate-share/service-embed-report-microsoft-teams) y [colaborar con otros](/power-bi/collaborate-share/service-collaborate-microsoft-teams) canales y chats de equipos interactivos. Puede crear contenido empaquetado de [aplicaciones de Power BI](/power-bi/collaborate-share/service-create-distribute-apps) desde cero y distribuirlo como una aplicación o puede [crear una aplicación de plantilla en Power BI](/connect-data/service-template-apps-create). Además, use la nueva [aplicación de Power BI en Teams](https://go.microsoft.com/fwlink/?linkid=2143643) para llevar toda la experiencia básica del servicio de Power BI a Microsoft Teams.
+La [pestaña Power BI para Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) agrega compatibilidad con informes en el área de trabajo de Teams y permite a los usuarios [compartir contenido interactivo de Power BI](/power-bi/collaborate-share/service-embed-report-microsoft-teams) y [colaborar con otros en](/power-bi/collaborate-share/service-collaborate-microsoft-teams) canales y chats de Microsoft Teams. Puede crear contenido empaquetado de [aplicaciones de Power BI](/power-bi/collaborate-share/service-create-distribute-apps) desde cero y distribuirlo como una aplicación o puede [crear una aplicación de plantilla en Power BI](/connect-data/service-template-apps-create). Además, use la nueva [aplicación de Power BI en Teams](https://go.microsoft.com/fwlink/?linkid=2143643) para llevar toda la experiencia básica del servicio de Power BI a Microsoft Teams.
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams y Power apps
 
@@ -52,7 +52,7 @@ Con la nueva [aplicación de agentes de Power Virtual Agent](https://aka.ms/pva-
 
 ### <a name="-app-template-catalog"></a>Catálogo de plantillas de aplicaciones de ✔
 
-[Las plantillas de aplicación](../samples/app-templates.md) son aplicaciones de producción listas para Microsoft teams que se pueden controlar desde la comunidad, desde código abierto y están disponibles en github. Cada plantilla contiene instrucciones detalladas para implementar e instalar esa aplicación en su organización, ya que proporciona una aplicación lista para usar que puede instalar y empezar a usar inmediatamente. También está disponible el código fuente completo, de modo que puede explorarlo en detalle o bifurcar el código y modificarlo para satisfacer sus necesidades específicas.
+[Las plantillas de aplicación](../samples/app-templates.md) son aplicaciones de producción listas para Microsoft teams que se pueden controlar desde la comunidad, desde código abierto y están disponibles en github. Cada plantilla contiene instrucciones detalladas para implementar e instalar la aplicación para su organización, ya que proporciona una aplicación lista para usar que puede instalar y empezar a usar inmediatamente. También está disponible el código fuente completo, de modo que puede explorarlo en detalle o bifurcar el código y modificarlo para satisfacer sus necesidades específicas.
 
 ### <a name="-virtual-assistant-for-teams"></a>✔ Asistente virtual para Teams
 
@@ -75,7 +75,7 @@ Los [equipos cambian los conectores de administración](../samples/shifts-wfm-co
 |[Power BI para desarrolladores](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |**Power Apps**|
 |[Power apps para los responsables de la aplicación](/learn/browse/?products=power-apps&roles=maker)|
-|[Power apps para desarrolladores de aplicaciones](/learn/browse/?products=power-apps)|
+|[Power apps para desarrolladores](/learn/browse/?products=power-apps)|
 |**Power Automate**|
 |[Automatizar la alimentación para los responsables de la aplicación](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)|
 |[Automatizar la alimentación para desarrolladores](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
@@ -85,7 +85,7 @@ Los [equipos cambian los conectores de administración](../samples/shifts-wfm-co
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale (versión preliminar)
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) es una nueva plataforma de datos de bajo código para la próxima vez en Microsoft Teams. Permitirá a los desarrolladores crear soluciones de plataforma de energía directamente en Microsoft Teams. *Vea* la [Página de Microsoft Project Oakdale del blog de Microsoft Teams](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams) para obtener más información.
+) es una nueva plataforma de datos de bajo código que estará próximamente en Microsoft Teams. Permitirá a los desarrolladores crear soluciones de plataforma de energía directamente en Microsoft Teams. *Consulte* el [blog de Teams Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### <a name="-microsoft-blog-insights"></a>✔ De información del blog de Microsoft
 

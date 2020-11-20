@@ -2,12 +2,12 @@
 title: Obtener contexto para la pestaña
 description: Describe cómo obtener el contexto del usuario a las pestañas.
 keywords: contexto de usuario de pestañas de Microsoft Teams
-ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 8c94c4fd895896186ddda20bfaafd1d6ccdc1e73
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801455"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346801"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtener contexto para la pestaña de Microsoft Teams
 
@@ -47,6 +47,36 @@ Use marcadores de posición en las direcciones URL de configuración o de conten
 * {groupId}: el identificador del grupo de Office 365 en el que reside la pestaña.
 * {TID}: el identificador de inquilino de Azure AD del usuario actual.
 * {locale}: la configuración regional actual del usuario con formato languageId-countryId (por ejemplo, en-US).
+* {osLocaleInfo}: información de configuración regional más detallada del sistema operativo del usuario si está disponible. Se puede usar junto con:
+    * el paquete de @microsoft/Globe NPM para garantizar que la aplicación respeta la fecha del sistema operativo del usuario y
+    * configuración de formato de hora.
+* {Idsesión}: identificador único de la sesión actual de teams que se usa en correlacionar los datos de telemetría.
+* {channelId}: identificador de Microsoft Teams para el canal al que está asociado el contenido.
+* {channelName}: el nombre del canal al que está asociado el contenido.
+* {chatId}: el identificador de Microsoft Teams para el chat con el que está asociado el contenido.
+* {URL}: dirección URL de contenido de esta pestaña.
+* {websiteUrl}: dirección URL del sitio web de esta pestaña.
+* {favoriteChannelsOnly}: marca que permite seleccionar solo canales favoritos.
+* {favoriteTeamsOnly}: marca que permite seleccionar solo equipos favoritos.
+* {userTeamRole}: rol del usuario actual en el equipo.
+* {teamType}: el tipo de equipo.
+* {isTeamLocked}: el estado de bloqueo del equipo.
+* {isTeamArchived}: el estado archivado del equipo.
+* {isFullScreen}: indicación de si la pestaña está en modo de pantalla completa.
+* {teamSiteUrl}: el sitio de SharePoint raíz asociado con el equipo.
+* {teamSiteDomain}: el dominio del sitio de SharePoint raíz asociado con el equipo.
+* {teamSitePath}: ruta de acceso relativa al sitio de SharePoint asociado con el equipo.
+* {channelRelativeUrl}: ruta de acceso relativa a la carpeta de SharePoint asociada con el canal.
+* {tenantSKU}: el tipo de licencia para el inquilino de usuarios actual.
+* {ringId}: identificador de timbre actual.
+* {appSessionId}: identificador único de la sesión actual que se usa en correlacionar los datos de telemetría.
+* {completionBotId}: especifica un identificador de bot para enviar el resultado de la interacción del usuario con el módulo de tareas.
+* {conversationId}: el identificador de la conversación.
+* {hostClientType}: tipo de cliente de host. (Los valores posibles son: Android, iOS, Web, escritorio y Rigel).
+* {frameContext}: el contexto en el que se carga la dirección URL de la pestaña (contenido, tarea, configuración, quitar, sidePanel).
+* {SharePoint}: solo está disponible cuando se hospeda en SharePoint.
+* {meetingId}: lo usa la pestaña cuando se ejecuta en el contexto de la reunión.
+* {userLicenseType} El tipo de licencia para el usuario actual.
 
 >[!NOTE]
 >El `{upn}` marcador de posición anterior ahora está en desuso. Para la compatibilidad con versiones anteriores, actualmente es un sinónimo de `{loginHint}` .
@@ -102,12 +132,12 @@ La variable de contexto tendrá un aspecto similar al del ejemplo siguiente.
 
 Cuando la página de contenido se carga en un canal privado, los datos que recibe de la `getContext` llamada se ofuscarán para proteger la privacidad del canal. Los siguientes campos cambian cuando la página de contenido está en un canal privado. Si la página usa cualquiera de los valores siguientes, deberá comprobar el `channelType` campo para determinar si la página se ha cargado en un canal privado y responder de forma adecuada.
 
-* `groupId`-Sin definir para canales privados
-* `teamId`: Establecer en el threadId del canal privado
-* `teamName`-Establecido en el nombre del canal privado
-* `teamSiteUrl`-Establecido en la dirección URL de un sitio de SharePoint único y único para el canal privado
-* `teamSitePath`-Establecido en la ruta de un sitio de SharePoint único e independiente para el canal privado
-* `teamSiteDomain`-Establecido en el dominio de un dominio de sitio de SharePoint distinto y único para el canal privado
+* `groupId` -Sin definir para canales privados
+* `teamId` : Establecer en el threadId del canal privado
+* `teamName` -Establecido en el nombre del canal privado
+* `teamSiteUrl` -Establecido en la dirección URL de un sitio de SharePoint único y único para el canal privado
+* `teamSitePath` -Establecido en la ruta de un sitio de SharePoint único e independiente para el canal privado
+* `teamSiteDomain` -Establecido en el dominio de un dominio de sitio de SharePoint distinto y único para el canal privado
 
 ## <a name="theme-change-handling"></a>Control de cambios de temas
 

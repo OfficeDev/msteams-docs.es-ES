@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
-ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
+ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "49019621"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358031"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -307,7 +307,7 @@ Incident Reporter es un [Bot de Microsoft Teams](../bots/what-are-bots.md)  que 
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding9734"></a>&#9734; de incorporación de nuevos empleados
+## <a name="new-employee-onboarding-9734"></a>&#9734; de incorporación de nuevos empleados
 
 La incorporación de nuevos empleados es una solución integrada de Microsoft Teams y SharePoint para la [incorporación de nuevos empleados](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) que permite a su organización proporcionar una experiencia de incorporación coherente y de gran calidad a los empleados en su viaje de nuevo contrato. La aplicación puede ser usada por los equipos de recursos humanos y los responsables de contratación para proporcionar información relevante a través de la orientación y proceso de inducción y por nuevas contrataciones para compartir comentarios, proporcionar introducciones y completar tareas de incorporación.
 
@@ -360,6 +360,20 @@ Respuestas rápidas es una aplicación de Microsoft teams que ofrece una soluci�
 [Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![Vista de ejemplo de respuestas](../assets/images/quick-responses.png)
+
+## <a name="reflect-9734"></a>Reflejar &#9734;
+
+Reflect es una aplicación de [extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) de Microsoft Teams personalizada que proporciona un recurso seguro y seguro para que los integrantes del grupo compartan el estado de su emoción con colegas y/o jefes de grupo directamente en Microsoft Teams. La aplicación está disponible en canales, grupos, reuniones y 1:1 chats y la respuesta de protección se puede establecer como pública, privada a remitente o completamente anónima.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **Sondeo correcto**
+    
+    ![Refleje la encuesta del usuario de la aplicación](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="remote-support"></a>Soporte remoto
 

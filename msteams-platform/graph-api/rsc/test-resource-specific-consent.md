@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Gráfico de autorización de equipo de OAuth de OAuth SSO de AAD de Microsoft Teams
-ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995012"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366857"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Probar permisos de consentimiento específicos de recursos en Microsoft Teams
 
@@ -91,4 +91,5 @@ Ejecutar toda la colección de permisos para cada llamada a la API. Los permisos
 
 > [!div class="nextstepaction"]
 >
-> [Obtenga más información sobre la API de Graph y Microsoft Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [Más información: Microsoft Graph API y Microsoft Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+
