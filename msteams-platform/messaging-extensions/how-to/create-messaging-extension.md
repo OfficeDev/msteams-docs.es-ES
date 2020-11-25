@@ -1,17 +1,17 @@
 ---
-title: Crear una extensión de mensajería con App Studio
+title: Crear una extensión de mensajería usando App Studio
 author: clearab
 description: Obtenga información sobre cómo crear una extensión de mensajería de Microsoft Teams con App Studio.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 24d5736fcc7c88d903d30c6f1103a95154143058
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796186"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409060"
 ---
-# <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería con App Studio
+# <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería usando App Studio
 
 > [!TIP]
 > ¿Busca una forma más rápida de empezar? Cree una [extensión de mensajería](../../build-your-first-app/build-messaging-extension.md) mediante el kit de herramientas de Microsoft Teams.
@@ -127,17 +127,20 @@ Cuando los usuarios desencadenen la extensión de mensajería, deberá controlar
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Extensiones de mensajería en reuniones de Microsoft Teams
 
+> [!NOTE]
+> Si una reunión o un chat de grupo tiene usuarios federados en la lista, Microsoft Teams suprime el acceso a las extensiones de mensajería para todos los usuarios, incluido el organizador.
+
 Una vez iniciada una reunión, los participantes de Microsoft Teams pueden interactuar directamente con la extensión de mensajería durante una llamada activa. Tenga en cuenta lo siguiente al crear la extensión de mensajería en la reunión:
 
-1. **Location** . La extensión de mensajería se puede invocar desde el área redactar mensaje, el cuadro de comando o @mentioned del chat de reuniones.
+1. **Location**. La extensión de mensajería se puede invocar desde el área redactar mensaje, el cuadro de comando o @mentioned del chat de reuniones.
 
-1. **Metadatos** . Cuando se llama a la extensión de mensajería, puede identificar el usuario y el inquilino de `userId` y `tenantId` . Se puede encontrar `meetingId` como parte del objeto `channelData`. La aplicación puede usar `userId` y `meetingId`  para la solicitud de la `GetParticipant` API para recuperar roles de usuario.
+1. **Metadatos**. Cuando se llama a la extensión de mensajería, puede identificar el usuario y el inquilino de `userId` y `tenantId` . Se puede encontrar `meetingId` como parte del objeto `channelData`. La aplicación puede usar `userId` y `meetingId`  para la solicitud de la `GetParticipant` API para recuperar roles de usuario.
 
-1. **Tipo de comando** . Si su extensión de mensaje usa [comandos basados en acciones](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), debe seguir la autenticación de [Inicio de sesión único de](../../tabs/how-to/authentication/auth-aad-sso.md) las pestañas.
+1. **Tipo de comando**. Si su extensión de mensaje usa [comandos basados en acciones](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), debe seguir la autenticación de [Inicio de sesión único de](../../tabs/how-to/authentication/auth-aad-sso.md) las pestañas.
 
-1. **Experiencia del usuario** . La extensión de mensajería debe tener el mismo aspecto y comportarse de la misma manera que fuera una reunión.
+1. **Experiencia del usuario**. La extensión de mensajería debe tener el mismo aspecto y comportarse de la misma manera que fuera una reunión.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 * [Crear comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Crear comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)

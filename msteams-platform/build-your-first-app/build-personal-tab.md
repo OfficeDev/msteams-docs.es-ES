@@ -5,12 +5,12 @@ description: Cree rápidamente una pestaña personal de Microsoft Teams mediante
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346808"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409074"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Crear una pestaña personal para Microsoft Teams
 
@@ -48,7 +48,7 @@ Durante la configuración, el kit de herramientas configuró inicialmente la pá
 
 El scaffolding de la aplicación proporciona los componentes para representar la pestaña personal en Teams. Hay muchas cosas con las que puede trabajar, pero por ahora solo necesita centrarse en lo siguiente:
 
-* `Tab.js` archivo en el `src/components` directorio del proyecto. Esto es para para representar la página de contenido de la pestaña.
+* `Tab.js` archivo en el `src/components` directorio del proyecto. Esto es para representar la página de contenido de la pestaña.
 * SDK cliente de JavaScript de Microsoft Teams, que viene precargado en los componentes front-end del proyecto.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. personalizar la página de contenido de la pestaña

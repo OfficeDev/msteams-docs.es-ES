@@ -2,12 +2,12 @@
 title: Referencia de directrices de diseño
 description: Describe las directrices para usar el color en las aplicaciones
 keywords: Directrices de diseño de Microsoft Teams color de componentes de referencia
-ms.openlocfilehash: c6c0a421abbfc23959c7873d95aa89ca7cc685f2
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dab223891e88615b52386d3692d4a98607d6d449
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675819"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409067"
 ---
 # <a name="color"></a>Color
 
@@ -52,6 +52,9 @@ Vea las [guías de diseño de Microsoft Teams: rampa de colores del tema oscuro]
 
 <iframe height='798' scrolling='no' title='Directrices de diseño de Microsoft Teams: rampa de colores del tema oscuro' src='//codepen.io/msteams/embed/BmBwjx/?height=846&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Vea las <a href='https://codepen.io/msteams/pen/BmBwjx/'>guías de diseño de Microsoft Teams: rampa de colores del tema oscuro</a> de Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+> **Nota:** La biblioteca msteams-UI-Styles-Core tiene los valores reales codificados como variables. Estas variables serán útiles si los colores se actualizan en algún momento.
+
 
 ### <a name="other-dark-theme-colors"></a>Otros colores del tema oscuro
 

@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Validación de las aplicaciones de Teams más errores de prueba de AppSource de aprobación rápida publicar
-ms.openlocfilehash: 180a12563d11f9089f8350521a40937edb2e6b3e
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: b1333448eb8b8e1e2310114bf95404b74aa95b58
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992653"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409109"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Sugerencias para un envío de aplicación correcto
 
@@ -176,7 +176,7 @@ Los bots de solo notificación deben enviar un mensaje de bienvenida que incluya
 * **Haga que el mensaje sea conciso e** informativo.  Lo más probable es que la experiencia del usuario y el conocimiento de la aplicación varíen. Un usuario puede haber usado la aplicación en otra plataforma o no ha sabido nada sobre la aplicación. Desea personalizar el mensaje para todas las audiencias y en un par de frases explicar lo que hace el bot y las formas de interactuar con él. También debe explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
 ![Cibercafé y dinning bot](../../../../assets/images/faq/cafe-bot.png)
 
-* **Hacer que el mensaje sea accionable**. Piense lo primero que quiere que realicen los usuarios después de instalar la aplicación. ¿Hay algún comando interesante que deben probar? ¿Hay alguna otra experiencia de incorporación que deba conocer? ¿Es necesario que inicien sesión? Puede Agregar acciones a una tarjeta adaptable o proporcionar ejemplos específicos como *"probar..."* , *"Esto es lo que puedo hacer..."*.
+* **Hacer que el mensaje sea accionable**. Piense lo primero que quiere que realicen los usuarios después de instalar la aplicación. ¿Hay algún comando interesante que deben probar? ¿Hay alguna otra experiencia de incorporación que deba conocer? ¿Es necesario que inicien sesión? Puede Agregar acciones a una tarjeta adaptable o proporcionar ejemplos específicos como *"probar..."*, *"Esto es lo que puedo hacer..."*.
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Mensajes de bienvenida en el ámbito de equipo o canal
 
@@ -209,19 +209,6 @@ Avise a los usuarios antes de que la aplicación descargue archivos o ejecutable
 * Los módulos de tareas deben incluir un icono y un nombre corto en los que estén contenidos o creados desde la aplicación.
 * Los ejecutables de extensión de mensajes `@mention` deben ser claros, fáciles de comprender y fáciles de leer.
 ![Extensión de mensajes](../../../../assets/images/faq/message-extension.png)
-
-## <a name="app-category-mapping"></a>Asignación de categoría de aplicación
-
-| Categoría Teams       | Categorías de PC  |
-|:---------------------|:---------------|
-| Análisis y BI | Análisis, visualización de datos y BI |
-| Desarrollador y TI | Herramientas de desarrollo, administrador de ti |
-| Educación | Educación |
-| Recursos humanos | Recursos humanos y reclutamiento |
-| Productividad | Administración de contenido, archivos y documentos, productividad, formación y tutoriales, y herramientas |
-| Administración de proyectos | Comunicación, administración de proyectos, flujo de trabajo y administración empresarial |
-| Ventas y soporte técnico | Administración de clientes y contactos, soporte al cliente, administración financiera, ventas y marketing |
-| Social y divertido | Galerías de imágenes y vídeo, estilo de vida, noticias y tiempo, redes sociales, viajes y navegación |
 
 > [!div class="nextstepaction"]
 > [Obtenga más información sobre las directivas de aprobación de aplicaciones de Teams](/legal/marketplace/certification-policies#1140-teams)

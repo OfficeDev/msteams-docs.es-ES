@@ -2,12 +2,12 @@
 title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bot puede usar una tarjeta de inicio de sesión o el servicio de robots de Azure con la tarjeta de OAuth.
 keywords: token de usuario, compatibilidad con SSO para bots
-ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346857"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409102"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -48,13 +48,16 @@ Los pasos siguientes: son necesarios para desarrollar un bot de Microsoft Teams 
 
 Este paso es similar al [flujo de SSO de pestañas](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
-1. Obtener el [identificador de la aplicación de Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+1. Obtenga el [identificador de la aplicación de Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) para el cliente de escritorio, web o móvil de Teams.
 2. Especifique los permisos que necesita la aplicación para el punto de conexión de Azure AD y, opcionalmente, Microsoft Graph.
 3. [Conceda permisos](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) para equipos de escritorio, Web y aplicaciones móviles de Microsoft Teams.
-4. Autorice previamente a los equipos seleccionando el botón **Agregar un ámbito** y, en el panel que se abre, escriba `access_as_user` como **nombre del ámbito**.
+4. Para agregar una aplicación cliente, seleccione el botón **Agregar un ámbito** y, en el panel que se abre, escriba `access_as_user` como **nombre de ámbito**.
+
+>[!NOTE]
+> El ámbito "access_as_user" que se usa para agregar una aplicación cliente es "administradores y usuarios".
 
 > [!IMPORTANT]
-> * Si está creando un bot independiente, establezca el URI del identificador de aplicación en `api://botid-{YourBotId}` .
+> * Si va a crear un bot independiente, establezca el URI del identificador de aplicación en `api://botid-{YourBotId}` aquí, **YourBotId** hace referencia al identificador de la aplicación de Azure ad.
 > * Si va a compilar una aplicación con un bot y una ficha, establezca el URI del identificador de aplicación en `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 ### <a name="update-your-app-manifest"></a>Actualizar el manifiesto de la aplicación
@@ -78,6 +81,9 @@ Agregue nuevas propiedades al manifiesto de Microsoft Teams:
 ### <a name="request-a-bot-token"></a>Solicitar un token de bot
 
 La solicitud para obtener el token es una solicitud de mensaje POST normal (usando el esquema de mensaje existente). Se incluye en los datos adjuntos de un OAuthCard. El esquema de la clase OAuthCard se define en el [esquema de Bot 4,0 de Microsoft](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) y es muy similar a una tarjeta de inicio de sesión. Si la `TokenExchangeResource` propiedad se rellena en la tarjeta, Microsoft Teams tratará esta solicitud como una adquisición de token silencioso. Para el canal de Teams, se respeta solo la `Id` propiedad, que identifica de forma única una solicitud de token.
+
+>[!NOTE]
+> El marco de bot `OAuthPrompt` o el `MultiProviderAuthDialog` es compatible con la autenticación de inicio de sesión único (SSO).
 
 Si es la primera vez que el usuario usa la aplicación y el consentimiento del usuario es necesario, se muestra al usuario un cuadro de diálogo para continuar con la experiencia de consentimiento similar a la siguiente. Cuando el usuario selecciona **continuar**, ocurren dos cosas diferentes en función de si el bot está definido o no y un botón de inicio de sesión en el OAuthCard.
 
@@ -116,14 +122,14 @@ La respuesta con el token se envía a través de una actividad Invoke con el mis
 **Código de C# que responde para controlar la actividad de invocación**:
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivity
+protected override async Task<InvokeResponse> OnInvokeActivityAsync
   (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
                 if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
                 {
-                    await OnTokenResponse(turnContext, cancellationToken);
+                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
                     return new InvokeResponse() { Status = 200 };
                 }
                 else
@@ -155,6 +161,10 @@ El `turnContext.activity.value` es del tipo [TokenExchangeInvokeRequest](/dotnet
 > * Escriba un nombre para la nueva configuración de conexión. Este será el nombre al que se hace referencia en la configuración del código del servicio de bot en el **paso 5**.
 > * En la lista desplegable proveedor de servicios, seleccione **Azure Active Directory V2**.
 >* Escriba las credenciales de cliente de la aplicación AAD.
+
+>[!NOTE]
+> La **concesión implícita** puede ser necesaria en la aplicación AAD.
+
 >* Para la dirección URL de intercambio de tokens, use el valor de ámbito definido en el paso anterior de la aplicación de AAD. La presencia de la dirección URL de Exchange token indica al SDK que esta aplicación de AAD está configurada para SSO.
 >* Especifique "Common" como el **identificador de inquilino**.
 >* Agregue todos los ámbitos configurados al especificar permisos para las API de flujo descendente de la aplicación de AAD. Con el identificador de cliente y el secreto de cliente proporcionados, el almacén de tokens intercambiará el token de un token de Graph con los permisos definidos.
