@@ -227,10 +227,8 @@
               href: bots/how-to/conversations/subscribe-to-conversation-events.md
             - name: Conversaciones en canales y grupos
               href: bots/how-to/conversations/channel-and-group-conversations.md
-            - name: Envío de mensajes proactivos
+            - name: Enviar mensajes proactivos
               href: bots/how-to/conversations/send-proactive-messages.md
-            - name: Envío y recepción de archivos
-              href: bots/how-to/conversations/send-and-receive-files.md
         - name: Depuración de un bot
           items:
             - name: Depuración de forma local con un IDE
