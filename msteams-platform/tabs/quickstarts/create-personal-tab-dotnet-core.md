@@ -4,16 +4,16 @@ author: laujan
 description: Una guía de inicio rápido para crear una ficha personal personalizada con ASP.NET Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: 39f45dd79606d1416f3924d01f75c5bedc11bfba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992634"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49476942"
 ---
 # <a name="create-a-personal-tab-with-aspnet-core"></a>Crear una pestaña personal con ASP.NET Core
 
-En este tutorial rápido, vamos a crear una pestaña personal personalizada con páginas de Razor principales de C# y ASP.Net. También usaremos [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
+En este tutorial, veremos cómo crear una pestaña personal personalizada con páginas principales de Razor y C# y ASP.Net. También usaremos [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -68,7 +68,7 @@ Esta carpeta contiene los siguientes archivos de paquete de la aplicación oblig
 - Un **icono de contorno transparente** que mide 32 x 32 píxeles.
 - Un **manifest.jsen** archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams. Microsoft Teams cargará el `contentUrl` especificado en el manifiesto, lo incrustará en un iframe y lo representará en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación que se usará para cargar la pestaña en Teams. Microsoft Teams cargará el `contentUrl` especificado en el manifiesto, lo incrustará en un <iframe \> y lo representará en la pestaña.
 
 ### <a name="csproj"></a>. csproj
 

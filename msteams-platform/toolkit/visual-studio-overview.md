@@ -3,14 +3,15 @@ title: Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Vis
 description: Introducción a la creación de excelentes aplicaciones personalizadas directamente en Visual Studio con el kit de herramientas de Microsoft Teams
 keywords: Teams Visual Studio Toolkit
 ms.topic: overview
-ms.openlocfilehash: 79ea22cfd154313247132c22684d444c0813c66f
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.author: lajanuar
+ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
+ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819206"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "49476989"
 ---
-# <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio"></a>Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio
 
 El kit de herramientas de Microsoft Teams permite crear aplicaciones de Team personalizadas directamente en el entorno de desarrollo integrado (IDE) de Visual Studio. El kit de herramientas de Microsoft Teams le guiará por el proceso y le proporciona todo lo que necesita para crear, depurar e iniciar la aplicación de Teams.
 
@@ -18,7 +19,7 @@ El kit de herramientas de Microsoft Teams permite crear aplicaciones de Team per
 
 1. [Habilitar la vista previa para desarrolladores](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Asegúrese de que ** <span>ASP.ne</span>T y el módulo de desarrollo web** se hayan agregado a la instancia de Visual Studio. Puede comprobarlo siguiendo los pasos descritos en la documentación sobre [Cómo modificar Visual Studio agregando o quitando cargas de trabajo y componentes](/visualstudio/install/modify-visual-studio?view=vs-2019) .
+1. Asegúrese de que **<span>ASP.ne</span>T y el módulo de desarrollo web** se hayan agregado a la instancia de Visual Studio. Puede comprobarlo siguiendo los pasos descritos en la documentación sobre [Cómo modificar Visual Studio agregando o quitando cargas de trabajo y componentes](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) .
 
 ![módulo de Visual Studio asp.net](../assets/images/visual-studio-web-dev-module.png)
 
@@ -43,7 +44,7 @@ El kit de herramientas de Microsoft Teams para Visual Studio está disponible pa
 
 1. Seleccione **crear un nuevo proyecto**.
 1. Elija **aplicación de Microsoft Teams** y seleccione **siguiente**.
-1. Llegará a la pantalla **configurar el nuevo proyecto** , donde podrá elegir el **nombre del proyecto**, la **Ubicación**y el nombre de la **solución**.
+1. Llegará a la pantalla **configurar el nuevo proyecto** , donde podrá elegir el **nombre del proyecto**, la **Ubicación** y el nombre de la **solución**.
 1. Active la casilla etiquetar la **solución y el proyecto en el mismo directorio**.
 1. Una ventana emergente con la etiqueta **Agregar funciones** le permitirá elegir una o más funcionalidades para la configuración del proyecto.
 1. Seleccione el botón **siguiente** para completar el proceso de configuración.
@@ -77,7 +78,7 @@ Cuando se instala una aplicación, el cliente de Microsoft Teams analiza el arch
 1. Para configurar la aplicación, en la página de aterrizaje de **Microsoft Teams Toolkit** , seleccione **Editar paquete** de la aplicación.
 1. En el menú desplegable **mis entornos** , seleccione **desarrollo**.
 1. Encontrarás en la página de detalles de la **aplicación** donde puedes editar los campos de propiedades de la aplicación.
-1. Al editar los campos en la página de detalles de la aplicación, se actualiza el contenido del manifest.jsen el archivo que se entregará como parte del paquete de la aplicación. [Más información](https://aka.ms/teams-toolkit-manifest)
+1. Al editar los campos en la página de detalles de la aplicación, se actualiza el contenido del manifest.jsen el archivo que se entregará como parte del paquete de la aplicación. [Obtener más información](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>Empaquetar la aplicación
 
