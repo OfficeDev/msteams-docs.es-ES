@@ -3,12 +3,12 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación para probarla, cargarla y publicarla en Microsoft Teams.
 keywords: empaquetado de aplicaciones de Microsoft Teams
 ms.topic: conceptual
-ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997989"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552573"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Crear un paquete de aplicación para la aplicación de Microsoft Teams
 
@@ -45,12 +45,13 @@ El `color` icono se usa en todo Microsoft Teams (en galerías de aplicaciones y 
 
 El `outline` icono se usa en estos lugares: la barra de la aplicación y las extensiones de mensajería que el usuario ha marcado como "favorito". Este icono debe ser de 32 x 32 píxeles. El icono del esquema solo debe contener blanco y transparencia (sin otros colores). El icono puede ser blanco con fondo transparente o transparente con un fondo blanco. El icono de esquema no debe tener espaciado adicional alrededor del icono y debe estar tan bien recortado como sea posible y mantener al mismo tiempo las dimensiones 32x32. Estos son algunos ejemplos buenos:
 
-> [!TIP]
->  * El color debe ser "blanco" en RGB, (rojo: 255, verde: 255, azul: 255).
->  * El icono de todos los demás elementos debe ser transparente.
->  * Para pasarlo, el icono pequeño debe ser completamente transparente, el canal alfa es 0 y cualquier otro valor es un error.
-
 ![Iconos de esquema de ejemplo](~/assets/images/icons/sample20x20s.png)
+
+[! SUGERENCIA para crear un icono transparente]
+
+* El color debe ser "blanco" en RGB, (rojo: 255, verde: 255, azul: 255).
+* El icono de todos los demás elementos debe ser transparente.
+* Para pasarlo, el icono pequeño debe ser completamente transparente con un valor 0 para el canal alfa; cualquier otro valor es un error.
 
 Por ejemplo, supongamos que su compañía es contoso. Debe enviar dos iconos:
 

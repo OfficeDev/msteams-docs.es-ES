@@ -2,12 +2,12 @@
 title: Flujo de autenticación para pestañas
 description: Describe el flujo de autenticación en las pestañas
 keywords: pestañas de flujo de autenticación de Teams
-ms.openlocfilehash: de5e0312e4523c3adef211dc03b0349c205f92cb
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346682"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552545"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flujo de autenticación de Microsoft Teams para pestañas
 
@@ -17,7 +17,7 @@ ms.locfileid: "49346682"
 
 OAuth 2,0 es un estándar abierto para la autenticación y autorización usado por Azure AD y muchos otros proveedores de identidades. Una descripción básica de OAuth 2,0 es un requisito previo para trabajar con la autenticación en Microsoft Teams. [esta es una buena introducción](https://aaronparecki.com/oauth-2-simplified/) que es más fácil de seguir que la [especificación formal](https://oauth.net/2/). El flujo de autenticación para fichas y bots es un poco diferente porque las pestañas son muy similares a los sitios web para que puedan usar OAuth 2,0 directamente; los bots no son y deben hacer algunas cosas de manera diferente, pero los conceptos básicos son idénticos.
 
-para obtener un ejemplo que muestra el flujo de autenticación para pestañas y bots mediante node usando el [tipo de concesión implícito 2,0 de OAuth](https://oauth.net/2/grant-types/implicit/).
+*Consulte* [iniciar el flujo de autenticación para pestañas](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) para obtener un ejemplo de flujo de autenticación para pestañas y bots con el nodo y el [tipo de concesión implícita OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
 
 ![Diagrama de secuencia de autenticación de pestaña](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -35,7 +35,7 @@ para obtener un ejemplo que muestra el flujo de autenticación para pestañas y 
 
 ## <a name="treat-tab-context-as-hints"></a>Tratar el contexto de la pestaña como sugerencias
 
-Aunque el contexto de la pestaña proporciona información útil acerca del usuario, no use esta información para autenticar al usuario si los obtiene como parámetros URL en la dirección URL de contenido de la pestaña o mediante una llamada a la `microsoftTeams.getContext()` función en el SDK del cliente de Microsoft Teams. Un actor malintencionado podría invocar la dirección URL de contenido de pestaña con sus propios parámetros y una página web que suplanta a Microsoft Teams podría cargar la URL de contenido de la pestaña en un iframe y devolver sus propios datos a la `getContext()` función. Debe tratar la información relacionada con la identidad en el contexto de pestañas simplemente como sugerencias y validarlas antes de usarlas.
+Aunque el contexto de la pestaña proporciona información útil acerca del usuario, no use esta información para autenticar al usuario si los obtiene como parámetros URL en la dirección URL de contenido de la pestaña o mediante una llamada a la `microsoftTeams.getContext()` función en el SDK del cliente de Microsoft Teams. Un actor malintencionado podría invocar la dirección URL de contenido de pestaña con sus propios parámetros y una página web que suplanta a Microsoft Teams podría cargar la URL de contenido de la pestaña en un iframe y devolver sus propios datos a la `getContext()` función. Debe tratar la información relacionada con la identidad en el contexto de pestañas simplemente como sugerencias y validarlas antes de usarlas. Consulte las notas en [navegar a la página autorización en la página emergente](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
 ## <a name="samples"></a>Ejemplos
 

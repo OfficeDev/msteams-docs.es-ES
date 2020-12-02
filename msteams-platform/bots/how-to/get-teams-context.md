@@ -4,12 +4,12 @@ author: laujan
 description: Cómo obtener el contexto específico del equipo de Microsoft para su bot, incluidos la lista de conversaciones, los detalles y la lista de canales.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796347"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552475"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtener el contexto específico del equipo para el bot
 
@@ -19,7 +19,7 @@ Un bot puede tener acceso a datos de contexto adicionales sobre un equipo o un c
 
 ## <a name="fetching-the-roster-or-user-profile"></a>Obtención de la lista o el perfil de usuario
 
-El bot puede consultar la lista de miembros y sus perfiles básicos, incluidos los identificadores de usuario de Microsoft Teams y la información de Azure Active Directory (Azure AD), como Name y objectId. Puede usar esta información para correlacionar identidades de usuario, por ejemplo, para comprobar si un usuario, conectado a una pestaña a través de las credenciales de Azure AD, es miembro del equipo. En el código de ejemplo siguiente se usa el punto de conexión paginado para recuperar la lista. Aunque puede seguir usando la versión no paginada, no será confiable en equipos grandes y no debe usarse. Consulte [este artículo](~/resources/team-chat-member-api-changes.md) para obtener más información.
+El bot puede consultar la lista de miembros y sus perfiles básicos, incluidos los identificadores de usuario de Microsoft Teams y la información de Azure Active Directory (Azure AD), como Name y objectId. Puede usar esta información para correlacionar identidades de usuario, por ejemplo, para comprobar si un usuario, conectado a una pestaña a través de las credenciales de Azure AD, es miembro del equipo. En el código de ejemplo siguiente se usa el punto de conexión paginado para recuperar la lista. Para obtener los miembros de la conversación, el tamaño de página mínimo o máximo depende de la implementación. El tamaño de página es inferior a 50, se trata como 50 y el tamaño de página es mayor que 500, se retrasan en 500. Aunque puede seguir usando la versión no paginada, no será confiable en equipos grandes y no debe usarse. *Consulte* [cambios en las API de bot de Teams para obtener información adicional sobre los miembros del equipo o chat](~/resources/team-chat-member-api-changes.md) .
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

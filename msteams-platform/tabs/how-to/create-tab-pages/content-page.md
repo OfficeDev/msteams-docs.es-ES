@@ -5,12 +5,12 @@ description: Cómo crear una página de contenido
 keywords: canal de grupo de pestañas de Teams configurable estático
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796319"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552538"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -71,12 +71,14 @@ Asegúrese de que todos los dominios de dirección URL usados en las pestañas s
 Comenzando con [el esquema de manifiesto v 1.7](../../../resources/schema/manifest-schema.md), puede proporcionar un [indicador de carga nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) siempre que el contenido web se cargue en Microsoft Teams, por ejemplo, [Página de contenido](#integrate-your-code-with-teams)de la ficha, página de [configuración](configuration-page.md), [Página de eliminación](removal-page.md) y [módulos de tareas en las pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> Si indica  `"showLoadingIndicator : true`  en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de la ficha y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a continuación:
+> 1. El indicador de carga nativa todavía no se admite en dispositivos móviles.
+> 2. Si indica  `"showLoadingIndicator : true`  en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de la ficha y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a continuación:
+
 
 1. Para mostrar el indicador de carga, agregue `"showLoadingIndicator": true` al manifiesto. 
 2. Recuerde que debe llamar a `microsoftTeams.initialize();` .
-3. **Opcional** . Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatorio** . Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
+3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorio**. Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
 5. Si la aplicación no se puede cargar, puede llamar `microsoftTeams.appInitialization.notifyFailure(reason);` para informar a Microsoft Teams de que se ha producido un error. A continuación, se mostrará una pantalla de error al usuario:
 
 ```typescript

@@ -4,12 +4,12 @@ author: clearab
 description: Cómo crear un menú de comandos para su bot de Microsoft Teams
 ms.topic: overview, command menu
 ms.author: anclear
-ms.openlocfilehash: 81efb94fc882aa4653ab162863d5d973aeae87b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675850"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552489"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos de bot
 
@@ -48,7 +48,7 @@ En estas instrucciones se da por sentado que va a editar un manifiesto de aplica
 
     ![Botón Agregar del menú de comandos de App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Crear un menú de comandos para el bot editando **manifest. JSON**
+### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Crear un menú de comandos para el bot editando **Manifest.js**
 
 Otro enfoque válido para crear un menú de comandos es crearlo directamente en el archivo de manifiesto mientras se desarrolla el código fuente de bot. Estas son algunas de las cosas que debe tener en cuenta al usar este enfoque:
 
@@ -148,26 +148,28 @@ Otro enfoque válido para crear un menú de comandos es crearlo directamente en 
 
 Los bots de un grupo o canal solo responden cuando se mencionan ("@botname") en un mensaje. Como resultado, cada mensaje recibido por un bot cuando se encuentre en un ámbito de grupo o de canal contendrá su propio nombre en el texto del mensaje devuelto. Debe asegurarse de que los controladores de análisis de mensajes antes de controlar el comando que se devuelve.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+> **Nota:** Para controlar los comandos en el código, estos se envían al bot como un mensaje normal. Por lo tanto, debe controlarlos como lo haría con cualquier otro mensaje de sus usuarios. Se trata exclusivamente de un tratamiento de interfaz de usuario que inserta texto preconfigurado en el cuadro de texto. A continuación, el usuario debe enviar el texto tal y como lo haría con cualquier otro mensaje.
 
-Puede analizar la `Activity` `RemoveRecipientMention` ** \@parte de menciones** del texto del mensaje usando un método estático proporcionado con Microsoft bot Framework, un método de la clase denominada.
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+Puede analizar la parte de **\@ menciones** del texto del mensaje usando un método estático proporcionado con Microsoft bot Framework, un método de la `Activity` clase denominada `RemoveRecipientMention` .
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-Puede analizar la `TurnContext` `removeMentionText` ** \@parte de menciones** del texto del mensaje usando un método estático proporcionado con Microsoft bot Framework, un método de la clase denominada.
+Puede analizar la parte de **\@ menciones** del texto del mensaje usando un método estático proporcionado con Microsoft bot Framework, un método de la `TurnContext` clase denominada `removeMentionText` .
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 
-Puede analizar la parte **@Mention** del texto del mensaje usando un método estático proporcionado con Microsoft bot Framework, un método de la `TurnContext` clase denominada. `remove_recipient_mention`
+Puede analizar la parte **@Mention** del texto del mensaje usando un método estático proporcionado con Microsoft bot Framework, un método de la `TurnContext` clase denominada `remove_recipient_mention` .
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -180,3 +182,5 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 * **Manténgase sencillo**: el menú bot tiene como objetivo presentar las capacidades clave de su bot.
 * **Tenga en Resumen**: las opciones de menú no deben ser muy largas y complejas con instrucciones de lenguaje natural, sino que deben ser comandos simples.
 * **Guardar invokable**: los comandos o acciones del menú bot siempre deben estar disponibles, independientemente del estado de la conversación o el cuadro de diálogo en el que se encuentra el bot.
+
+> **Nota:** Si quita algún comando del manifiesto, tendrá que volver a implementar la aplicación para que los cambios surtan efecto. En general, los cambios en el manifiesto requieren esto.

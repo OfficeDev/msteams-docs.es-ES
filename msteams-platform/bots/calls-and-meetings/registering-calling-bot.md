@@ -2,12 +2,12 @@
 title: Registro de un bot de llamada y reunión para Microsoft Teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamada de audio y vídeo para Microsoft Teams
 keywords: llamar a medios de audio y vídeo audio de bot
-ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5a832646d4fa622f746f88a3a969ae4ad3ce69a6
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346850"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552448"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Registrar un bot de llamada para Microsoft Teams
 
@@ -46,20 +46,20 @@ Microsoft Graph expone permisos granulares que controlan el acceso de las aplica
 
 ### <a name="application-permissions-calls"></a>Permisos de aplicación: llamadas
 
-|Permiso    |Cadena para mostrar   |Description |Se requiere el consentimiento del administrador |
+|Permiso    |Cadena para mostrar   |Descripción |Se requiere el consentimiento del administrador |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|Iniciar llamadas salientes de 1:1 desde la aplicación (versión preliminar)|Permite a la aplicación realizar llamadas a un único usuario y transferir las llamadas a usuarios en el directorio de su organización, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
 |_Calls.InitiateGroupCall.All_|Iniciar llamadas de grupo salientes desde la aplicación (versión preliminar)|Permite a la aplicación realizar llamadas a varios usuarios y agregar a participantes a las reuniones de su organización, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
-|_Calls.JoinGroupCall.All_|Unirse a llamadas y reuniones de grupo como una aplicación (versión preliminar)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|Sí|
-|_Calls.JoinGroupCallasGuest.All_|Unirse a llamadas y reuniones de grupo como invitado (versión preliminar)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|Sí|
+|_Calls.JoinGroupCall.All_|Unirse a llamadas y reuniones de grupo como una aplicación (versión preliminar)|Permite a la aplicación unirse a llamadas de grupo y reuniones programadas de la organización, sin que el usuario haya iniciado sesión en la aplicación. La aplicación se combinará con los privilegios de un usuario del directorio a las reuniones en su espacio empresarial.|Sí|
+|_Calls.JoinGroupCallasGuest.All_|Unirse a llamadas y reuniones de grupo como invitado (versión preliminar)|Permite a la aplicación unirse a llamadas de grupo y reuniones programadas de la organización de forma anónima, sin que el usuario haya iniciado sesión en la aplicación. La aplicación se unirá como invitado a las reuniones de su espacio empresarial.|Sí|
 |_Calls. AccessMedia. All_ <sup> _vea más adelante_</sup>|Accede a los flujos de medios en una llamada como aplicación (versión preliminar)|Permite a la aplicación obtener acceso directo a los flujos de medios en una llamada, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
 
 > [!IMPORTANT]
-> **No puede** usar la API Microsoft. Graph. calls. media para grabar o conservar el contenido multimedia de las llamadas o reuniones a las que tiene acceso el bot.
+> **No puede** usar la API de acceso a medios para grabar o conservar el contenido multimedia de llamadas o reuniones a las que accede su aplicación, o los datos derivados de ese contenido multimedia ("registro" o "grabación"), sin llamar primero a la [ `updateRecordingStatus` API](/graph/api/call-updaterecordingstatus) para indicar que la grabación ha comenzado y recibir una respuesta correcta desde esa API. Si la aplicación empieza a grabar una reunión o llamada, debe finalizar la grabación antes de llamar a la `updateRecordingStatus` API para indicar que la grabación ha finalizado.
 
 ### <a name="application-permissions-online-meetings"></a>Permisos de aplicación: reuniones en línea
 
-|Permiso    |Cadena para mostrar   |Description |Se requiere el consentimiento del administrador |
+|Permiso    |Cadena para mostrar   |Descripción |Se requiere el consentimiento del administrador |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_OnlineMeetings.Read.All_|Leer detalles de la reunión en línea desde la aplicación (versión preliminar)|Permite a la aplicación leer los detalles de las reuniones en línea de la organización, sin que un usuario haya iniciado sesión.|Sí|
 |_OnlineMeetings.ReadWrite.All_|Leer y crear reuniones en línea desde la aplicación (versión preliminar) en nombre de un usuario|Permite a la aplicación crear reuniones en línea dentro de la organización en nombre de un usuario, sin que un usuario haya iniciado sesión.|Sí|

@@ -2,12 +2,12 @@
 title: Crear vínculos profundos
 description: Describe los vínculos profundos y cómo usarlos en las aplicaciones
 keywords: vínculo profundo vínculo profundo de Teams
-ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: a3d5dac3fc83510ae47d91bd70390b9ca2860120
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796333"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552566"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Crear vínculos profundos para el contenido y las características en Microsoft Teams
 
@@ -15,6 +15,22 @@ Puede crear vínculos a información y características dentro del cliente de Mi
 
 * Navegar al usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la ficha para que el usuario pueda ver más detalles sobre la actividad.
 * La aplicación automatiza o simplifica determinadas tareas de usuario, como la creación de un chat o la programación de una reunión, rellenando previamente los vínculos profundos con los parámetros necesarios. Esto evita la necesidad de que los usuarios escriban información manualmente.
+
+> [!NOTE]
+>
+> Un vínculo profundo inicia primero el explorador antes de navegar al contenido y la información de la siguiente manera:
+>
+> **Pestaña**:  
+> ✔ Se desplaza directamente a la dirección URL de vínculo profundo.
+>
+> **Bot**:  
+> ✔ Vínculo profundo en cuerpo de tarjeta: se abre primero en el explorador.  
+> ✔ Vínculo profundo agregado a la acción OpenURL en tarjeta adaptable, navega directamente a la dirección URL de vínculo profundo.  
+> ✔ Texto de Markdown de hipervínculo en la tarjeta-se abre primero en el explorador.  
+>
+> **Chat**:  
+> Hipervínculo de mensaje de texto ✔ Markdown: directamente se desplaza a la dirección URL de vínculo profundo.  
+> Vínculo ✔ pegado en la conversación general de chat: navega directamente a la dirección URL de vínculo profundo.
 
 ## <a name="deep-linking-to-your-tab"></a>Vínculo profundo a su pestaña
 
@@ -24,6 +40,9 @@ Como alternativa, también puede generar vínculos profundos mediante programaci
 
 > [!NOTE]
 > Esto es diferente de los vínculos que proporciona el elemento de menú **Copiar vínculo a ficha** , que solo genera un vínculo profundo que apunta a esta pestaña.
+
+>[!NOTE]
+> Actualmente, shareDeepLink no funciona en plataformas móviles.
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Mostrar un vínculo profundo a un elemento dentro de la pestaña
 
@@ -45,6 +64,10 @@ Proporcione estos campos:
 Use este formato para un vínculo profundo que puede usar en una tarjeta de bot, conector o extensión de mensajería:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+
+> [!NOTE]
+> Si el bot envía un mensaje que contiene un `TextBlock` con un vínculo profundo, se abre una nueva pestaña del explorador cuando el usuario selecciona el vínculo. Esto ocurre en Chrome y en la aplicación de escritorio de Microsoft Teams, que se ejecutan en Linux.
+> Si el bot envía la misma dirección URL de vínculo profundo a un `Action.OpenUrl` , se abre la pestaña Microsoft Teams en la ficha del explorador actual cuando el usuario hace clic en el vínculo. No se abre una nueva pestaña del explorador.
 
 Los parámetros de consulta son los siguientes:
 

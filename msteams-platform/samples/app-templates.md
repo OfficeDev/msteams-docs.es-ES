@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358031"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552580"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -166,6 +166,23 @@ Prescripciones electrónicas es una aplicación basada en [Power apps](/powerapp
 :::row:::
 :::column span="2":::
     ![Captura de pantalla de la aplicación E-Prescriptions. Muestra cómo los administradores pueden administrar los proveedores de asistencia sanitaria que usan la aplicación.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="employee-training-9734"></a>&#9734; de formación de los empleados
+
+La formación de los empleados es una aplicación de Microsoft teams que permite a los organizadores publicar, realizar un seguimiento y promover eventos de aprendizaje y formación para su organización de forma sencilla.  Con la aplicación, los planificadores de eventos pueden enviar avisos y notificaciones a los suscriptores de eventos y los empleados pueden indicar su interés en próximos eventos, mantenerse actualizados en los eventos actuales y compartir detalles de eventos con colegas a través de la extensión de mensajería de Teams.
+
+[Obtener acceso a GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **Ver eventos de formación de los empleados** ![ Imagen de la pestaña entrenamiento del empleado](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Crear evento** ![ de formación para empleados Formulario de creación de eventos de formación de empleados](../assets/images/employee-training-create-event.jpg)
 :::column-end:::
 :::row-end:::
 

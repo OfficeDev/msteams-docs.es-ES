@@ -2,12 +2,12 @@
 title: Compatibilidad de inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 keywords: API de autenticación de Microsoft Teams SSO de inicio de sesión único de AAD
-ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346794"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552454"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad de inicio de sesión único (SSO) para pestañas
 
@@ -21,6 +21,12 @@ Los usuarios inician sesión en Microsoft Teams a través de sus cuentas de trab
 > ✔ Teams para iOS (_versión_: 2.0.18 y versiones posteriores)  
 >
 > Para obtener la mejor experiencia con Microsoft Teams, use la versión más reciente de iOS y Android.
+
+>[!NOTE]
+> **Inicio rápido**  
+>
+> La ruta más sencilla para empezar con el SSO de pestañas es con el kit de herramientas de Microsoft Teams para Visual Studio Code. [Más información](../../../toolkit/visual-studio-code-tab-sso.md)
+
 
 ## <a name="how-sso-works-at-runtime"></a>Cómo funciona el SSO en tiempo de ejecución
 
@@ -92,7 +98,7 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicación Web de Teams)
 12. Navegue a **permisos** de la API. Seleccione *Agregar* permisos  >  *Microsoft Graph*  >  *delegados* de permisos de Microsoft Graph y, a continuación, agregue los siguientes permisos a la API de Microsoft Graph:
     * User. Read (habilitado de forma predeterminada)
-    * correo electrónico
+    * email
     * offline_access
     * OpenId
     * perfil

@@ -2,12 +2,12 @@
 title: Directrices de diseño para pestañas
 description: Describe las instrucciones para crear pestañas de contenido y colaboración
 keywords: Directrices de diseño de Microsoft Teams referencia de marco de trabajo de configuración ficha estática ficha de canal de diseño de ficha sencillo
-ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931802"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552552"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenido y conversaciones, todos a la vez mediante pestañas
 
@@ -75,7 +75,7 @@ El lienzo de pestañas ofrece una gran oportunidad para personalizar su experien
 La incorporación de sus propios colores y diseños Twill también ayuda para comunicar la personalidad.
 
 > [!TIP]
-> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte* , por ejemplo, [colores de Teams](../../concepts/design/components/color.md)
+> Trabaje con nuestro estilo visual para que su servicio se sienta como parte de Microsoft Teams. *Consulte*, por ejemplo, [colores de Teams](../../concepts/design/components/color.md)
 
 ---
 
@@ -172,7 +172,7 @@ Las páginas secundarias y terciarias de una ficha deben abrirse en una vista L2
 
 ### <a name="no-link-to-external-browser"></a>Sin vínculo al explorador externo
 
-Los destinos de vínculo de las pestañas no deben vincularse a un explorador externo, sino que deben vincularse a los elementos div contenidos dentro de los equipos, por ejemplo, dentro de módulos de tareas, pestañas, etc.
+Los destinos de vínculo de las pestañas no deben vincularse a un explorador externo, pero deben vincularse a los elementos div incluidos en Teams. Por ejemplo, dentro de módulos de tareas, pestañas, etc.
 
 ## <a name="notifications-for-tabs"></a>Notificaciones para pestañas
 
@@ -198,3 +198,4 @@ El envío de un mensaje a un subproceso de tabulación aumenta la conciencia de 
 * Las pestañas no deben tener más de tres niveles de navegación dentro de la aplicación.
 * Las páginas secundarias y terciarias de una ficha deben abrirse en una vista L2/L3 en el área de la pestaña principal que se desplaza a través de la ruta de navegación.
 * Las pestañas que tienen capacidades de edición complejas en la aplicación deben abrir la vista del editor en varias ventanas en lugar de en una pestaña (para escritorio y Web).
+* Para mejorar la experiencia del usuario se incluye un bot? a personal que envía un mensaje de bienvenida al usuario en el primer proceso y responde a los comandos **HI**, **Help** y **Hello** . Puede consultar la documentación de los [bots de conversación](../../bots/what-are-bots#in-a-one-to-one-chat) para obtener ayuda.
