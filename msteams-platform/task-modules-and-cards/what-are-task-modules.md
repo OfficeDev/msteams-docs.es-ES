@@ -4,12 +4,12 @@ author: clearab
 description: Agregar experiencias emergentes modales para recopilar o Mostrar información a los usuarios de las aplicaciones de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 44d4e308614763b9da36c2abb7dd150778484c56
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867121"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576858"
 ---
 # <a name="what-are-task-modules"></a>¿Qué son los módulos de tareas?
 
@@ -214,7 +214,7 @@ Esta es la información sobre `APP_ID` y `BOT_APP_ID` :
 | Valor | Tipo | ¿Necesario? | Descripción |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Sí | El [identificador](~/resources/schema/manifest-schema.md#id) de la aplicación que invoca el módulo de tareas. La [matriz validDomains](~/resources/schema/manifest-schema.md#validdomains) del manifiesto `APP_ID` debe contener el dominio para `url` si `url` se encuentra en la dirección URL. (El identificador de la aplicación ya se conoce cuando se invoca un módulo de tareas desde una pestaña o un bot, que es el motivo por el que no se incluye en `TaskInfo` ). |
-| `BOT_APP_ID` | string | No | Si se especifica un valor para `completionBotId` , el `result` objeto se envía a través de un `task/submit invoke` mensaje al bot especificado. `BOT_APP_ID`debe especificarse como un bot en el manifiesto de la aplicación, es decir, no puede simplemente enviarlo a ningún bot. |
+| `BOT_APP_ID` | string | No | Si se especifica un valor para `completionBotId` , el `result` objeto se envía a través de un `task/submit invoke` mensaje al bot especificado. `BOT_APP_ID` debe especificarse como un bot en el manifiesto de la aplicación, es decir, no puede simplemente enviarlo a ningún bot. |
 
 Tenga en cuenta que es válido `APP_ID` tanto para como `BOT_APP_ID` para ser el mismo y, en muchos casos, si una aplicación tiene un bot, ya que se recomienda usarlo como el identificador de una aplicación, en caso de existir.
 
@@ -238,5 +238,11 @@ Microsoft Teams garantizará que la navegación mediante teclado funciona correc
 
 ## <a name="task-module-samples"></a>Ejemplos de módulos de tareas
 
-* [EjemploNode.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
+* [ EjemploNode.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
 * [Ejemplo/.NET de C#](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
+> [!div class="nextstepaction"]
+> [Más información: solicitar permisos de dispositivo](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[Más información: permisos de galería de imágenes y cámaras](/concepts/device-capabilities/mobile-camera-image-permissions.md)

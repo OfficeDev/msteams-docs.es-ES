@@ -5,12 +5,12 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: fba22dfeb9d05a186ef836d058d88ef6fc8879cc
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552426"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576830"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -66,21 +66,8 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 **Ejemplo de C#**
 
 ```csharp
-string meetingId = "meetingid?";
-string participantId = "participantidhere";
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage();
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-request.Method = new HttpMethod("GET");
-request.RequestUri = new System.Uri(Path.Combine(connectorClient.BaseUri.OriginalString, $"/meetings/{meetingId}/participants/{participantId}"));
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
-if (response.StatusCode == System.Net.HttpStatusCode.OK)
-{
-    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-    var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
-}
+   // Get role for the user who sent a message to your bot
+   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
 ```
 
 * * *
@@ -88,7 +75,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**meetingId**| string | Sí | El identificador de la reunión está disponible a través de la invocación de bots y Team Client SDK.|
 |**participantId**| string | Sí | Este campo es el identificador de usuario y está disponible en la pestaña SSO, Bot invocación y el SDK del cliente de Microsoft Teams. El SSO de pestaña es muy recomendable|
@@ -150,7 +137,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**conversationId**| string | Sí | El identificador de conversación está disponible como parte de la invocación de bot |
 
@@ -184,14 +171,14 @@ POST /v3/conversations/{conversationId}/activities
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-MeetingNotification notification = new MeetingNotification
-  {
-    AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-  };
+
 activity.ChannelData = new TeamsChannelData
   {
-    Notification = notification
+    Notification = new NotificationInfo()
+                    {
+                        AlertInMeeting = true,
+                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+                    }
   };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
