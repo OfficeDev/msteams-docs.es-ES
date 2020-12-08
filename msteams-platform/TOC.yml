@@ -132,8 +132,14 @@
       items:
         - name: Información general de la autenticación
           href: concepts/authentication/authentication.md
-        - name: Configuración de proveedores de identidades
+        - name: Configurar de proveedores de identidades
           href: concepts/authentication/configure-identity-provider.md
+    - name: Habilitar funcionalidades de dispositivo
+      items:
+        - name: Solicitar permisos de dispositivo
+          href: concepts/device-capabilities/native-device-permissions.md
+        - name: Cámara y galería
+          href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: 'Pestañas: experiencias web integradas'
   items:
     - name: ¿Qué son las pestañas personalizadas?
@@ -195,8 +201,6 @@
           href: tabs/how-to/developer-tools.md
         - name: Agregar una pestaña personalizada a SharePoint
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Solicitar permisos de dispositivo
-          href: tabs/how-to/native-device-permissions.md
 - name: 'Bots: interacciones basadas en conversación'
   items:
     - name: ¿Qué son los bots en Microsoft Teams?
