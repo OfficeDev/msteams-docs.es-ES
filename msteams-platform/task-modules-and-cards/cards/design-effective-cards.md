@@ -1,135 +1,138 @@
 ---
-title: Diseñar tarjetas eficaces
-description: Describe las instrucciones de diseño para crear tarjetas
-keywords: Directrices de diseño de Microsoft Teams tarjetas de marco de referencia adaptables ligeras
-ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Diseño de tarjetas adaptables para la aplicación
+description: Obtenga información sobre cómo diseñar tarjetas adaptables para Teams y obtener el kit de la interfaz de usuario de Microsoft Teams.
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209840"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604557"
 ---
-# <a name="design-effective-cards"></a>Diseñar tarjetas eficaces
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de tarjetas adaptables para su aplicación de Microsoft Teams
 
-Las tarjetas son fragmentos de código accionables que puede Agregar a una conversación a través de un bot, un conector o una aplicación. Mediante el uso de texto, gráficos y botones, las tarjetas le permiten comunicarse con una audiencia.
+Una tarjeta adaptable contiene un cuerpo de forma libre de elementos de tarjeta y un conjunto opcional de acciones. Las tarjetas adaptables son fragmentos de código accionables que puede Agregar a una conversación a través de un bot o una extensión de mensajería. Mediante el uso de texto, gráficos y botones, estas tarjetas proporcionan una comunicación enriquecida a la audiencia.
 
-Nuestro marco de tarjeta elimina la carga de diseñar una experiencia de usuario completamente funcional. Hemos desarrollado varios tipos de tarjetas estándar y cada una se ajusta a las plataformas admitidas. Esto significa que el diseño se ha realizado por completo y que no necesitará desarrollar distintas iteraciones de tarjeta entre plataformas. En su lugar, puede centrarse en marcar el contenido.
+El marco de tarjeta adaptable se usa en muchos productos de Microsoft, incluidos Teams. Puede enviar tarjetas dentro de los mensajes a los usuarios a través de bots o extensiones de mensajería. Los usuarios pueden realizar acciones en las tarjetas cuando están presentes.
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-## <a name="guidelines"></a>Instrucciones
+## <a name="microsoft-teams-ui-kit"></a>Kit de IU de Microsoft Teams
 
-Piense en una tarjeta como una respuesta a una pregunta de un usuario o una configuración. Una tarjeta puede responder a una pregunta directa (como, por ejemplo, "¿cuántos errores abiertos tengo?") o a una condición (como, "enviar una lista de mis errores abiertos en 9 a.m. todos los días").
+Puede encontrar directrices de diseño más completas para las tarjetas adaptables en Microsoft Teams, incluidos los elementos que puede captar y modificar según sea necesario, en el kit de interfaz de usuario de Microsoft Teams. El kit de la interfaz de usuario también cubre temas esenciales como temas de temas, accesibilidad y ajuste de tamaño.
 
-> [!TIP]
-> Usar uno de los tipos de tarjetas estándar significa que ya sabrá que todas las respuestas se representarán de forma agradable en cada plataforma compatible.
+> [!div class="nextstepaction"]
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-Una tarjeta puede incluir cualquiera de los siguientes elementos:<br />
+## <a name="adaptive-cards-designer"></a>Diseñador de tarjetas adaptables
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+También puede empezar a diseñar sus tarjetas adaptables directamente en el explorador.
 
-1. **Texto sobre**: se usa mejor para los mensajes de chat. Por ejemplo, si desea que un bot diga: "Esto es lo que me he encontrado". o "tiempo para el Resumen de noticias de 1:00", el mensaje se muestra mejor en el texto sobre.
+> [!div class="nextstepaction"]
+> [Pruebe el diseñador de tarjetas adaptables](https://adaptivecards.io/designer/)
 
-   El texto sobre es una excelente forma de inyectar un poco de personalidad en su servicio, simplemente Recuerde que debe mantenerlo relativamente corto.
-
-2. **Título**: el título siempre será el texto más grande de la tarjeta. También sirve como "enlace", por lo que debe intentar mantener el título corto, memorable y fácil de examinar.
-
-3. **Subtítulo**: se usa mejor para la atribución, las consignaciones o como una directiva secundaria. Este componente aparece justo debajo del título.
-
-4. **Imagen**: la escala de las imágenes se ajusta a su contenedor. Las tarjetas de Hero tienen un ancho máximo de 420px, las miniaturas tienen un ancho máximo de 100px y las vistas de lista solo permiten 32 en el modo de escritorio.
-
-5. **Text**: el mejor uso para texto sin formato en el cuerpo de la tarjeta. La longitud máxima depende del tipo de tarjeta que haya seleccionado.
-
-6. **Botones**: se usa mejor para abrir páginas web, pestañas o contenido adicional de chat. Asegúrese de mantener el texto del botón corto y en el punto.
-
-   Puede incluir hasta 6 botones por tarjeta, pero recomendamos seguir una filosofía de "menor es más".
-
-7. **Pulse región**: es la región en la que se hace clic de la tarjeta. La mayoría de los usuarios querrán hacer clic en las imágenes de forma automática, así que pruebe y diseñe el texto para que sepan dónde deben puntear o haga clic.
-
-> [!TIP]
-> No es necesario incluir todos los elementos de cada tarjeta que cree. Permita que el contenido dicte sus elementos.
-
----
-
-## <a name="types-of-cards"></a>Tipos de tarjetas
+## <a name="types-of-adaptive-cards"></a>Tipos de tarjetas adaptables
 
 ### <a name="hero"></a>Elemento principal
 
-Nuestra tarjeta más grande. Se usa mejor para artículos, descripciones largas o escenarios en los que la imagen está indicando la mayor parte del artículo.
+Nuestra tarjeta más grande. Use para compartir artículos o escenarios en los que una imagen indica la mayor parte del artículo.
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
 ### <a name="thumbnail"></a>Thumbnail
 
-Corta y agradable. Estas tarjetas son ideales para respuestas breves o si desea devolver varias tarjetas a la vez para que el usuario pueda elegir entre varias opciones. Creemos que estos son una estupenda manera de crear un vínculo profundo a otra pestaña o un servicio Web.
+Usar para enviar un mensaje accionable sencillo.
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-### <a name="sign-in"></a>Iniciar sesión
+### <a name="list"></a>Lista
 
-Algunos servicios requieren que los usuarios inicien sesión independientemente de la autenticación. En ese caso, deberá presentar una tarjeta de inicio de sesión antes de que el usuario pueda conectarse a su servicio.
+Úselo en escenarios donde desea que el usuario seleccione un elemento de una lista, pero los elementos no necesitan mucha explicación.
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
-
-> [!TIP]
-> Limite las repeticiones de una tarjeta de inicio de sesión adicional, ya que constituyen una rugosidad de velocidad significativa para los nuevos usuarios.
-
----
-
-## <a name="card-collections"></a>Colecciones de tarjetas
-
-También tenemos tipos de tarjeta estándar que se usan mejor cuando desea presentar varias partes de contenido a la vez o en una sucesión rápida. Para ello, tenemos un carrusel, un resumen, una lista y lo que llamamos "combinación de burbujas".
-
-### <a name="carousel"></a>Carrusel
-
-Se usa mejor para artículos, compras y examen de tarjetas.
-
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
-
-> [!TIP]
-> El carrusel será el alto máximo de la tarjeta más grande. Se recomienda usar el mismo tipo de tarjeta y los mismos campos de contenido en el mismo.
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
 ### <a name="digest"></a>Digest
 
-Se usa mejor para noticias, resúmenes y siempre que quiera que el usuario vea varias tarjetas a la vez. Se recomienda usar tarjetas de miniaturas para los resúmenes.
+Se usa para resúmenes de noticias y entradas de redondeo. Nota: se recomienda usar la tarjeta en miniatura para un solo elemento de actualización o de noticias.
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-### <a name="lists"></a>Listas
+### <a name="media"></a>Audiovisual
 
-Las listas son una buena forma de presentar un conjunto de objetos que se pueden analizar en un escenario "Elija uno de estos". Las listas se usan mejor para los elementos que no necesitan mucha explicación.
+Se usa cuando se desea combinar texto y medios, como audio o vídeo.
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-### <a name="bubble-merge"></a>Combinación de burbujas
+### <a name="people"></a>Contactos
 
-Se pueden obtener efectos interesantes mediante el envío de un héroe y varias miniaturas en una sucesión rápida. Recomendamos este enfoque cuando desee servir un resultado principal, pero incluya algunos elementos más relacionados.
+Se usa mejor para transmitir con eficacia quién está implicado en una tarea.
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
----
+### <a name="request-ticket"></a>Vale de solicitud
+
+Usar para obtener entradas rápidas de un usuario para crear automáticamente una tarea o un vale.
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
+
+### <a name="imageset"></a>ImageSet
+
+Use para enviar varias miniaturas de imagen.
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
+
+### <a name="actionset"></a>ActionSet
+
+Use esta opción cuando quiera que el usuario seleccione un botón y, a continuación, reúna los datos proporcionados por el usuario desde la misma tarjeta.
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
+
+### <a name="choiceset"></a>ChoiceSet
+
+Usar para recopilar varias entradas del usuario.
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
+
+## <a name="anatomy"></a>Anatomía
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una tarjeta adaptable." border="false":::
+
+Las tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta:
+
+|Counter|Descripción|
+|----------|-----------|
+|A|**Header**: hacer que los encabezados sean claros y concisos, pero descriptivos.|
+|B|**Copia del cuerpo**: Use para transmitir detalles que sean demasiado largos o que no sean lo suficientemente grandes como para incluirlos en el encabezado.|
+|C|**Acciones principales**: como procedimiento recomendado, incluya las acciones principales de 1-3. Se permiten seis como máximo.|
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-### <a name="keep-the-noise-down"></a>Mantener el ruido hacia abajo
+### <a name="primary-and-secondary-actions"></a>Acciones principales y secundarias
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
+
+#### <a name="do-use-up-to-six-primary-actions"></a>Do: usar hasta seis acciones principales
+
+Aunque las tarjetas adaptables pueden admitir seis acciones principales, la mayoría de las cartas no las necesitan. Las acciones deben ser claras, concisas y directas. Menos es más.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
+
+#### <a name="dont-use-more-than-six-primary-actions"></a>No: usar más de seis acciones principales
+
+Las tarjetas adaptables deben presentar contenido rápido y accionable. Muchas acciones pueden sobrecargar a un usuario.
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="frequency"></a>Frecuencia
+
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
+
+#### <a name="do-be-concise"></a>Do: ser conciso
 
 Es fácil enviar varias tarjetas a una conversación, pero una vez que las tarjetas se desplazan fuera de la vista, se vuelven menos útiles. Intente limitarse a los conceptos básicos. Esto es especialmente cierto en un canal en el que los usuarios tienen menos tolerancia para lo que perciben como "ruido".
-
-### <a name="test-on-mobile"></a>Probar en dispositivos móviles
-
-Los entornos móviles tienen limitaciones de espacio y ancho de banda, por lo que debe tener cuidado con la inclusión de imágenes de gran tamaño y conjuntos de datos de gran tamaño en listas y carruseles. Además, los anchos de los títulos y las longitudes del texto se truncarán en dispositivos móviles, por lo que es otro aspecto que debe tener en vista.
-
-### <a name="check-your-graphics"></a>Comprobar los gráficos
-
-Los gráficos van a escalarse, así que asegúrese de obtener una vista previa de ellos en todas las plataformas.
-
-### <a name="avoid-including-text-in-a-graphic"></a>Evitar incluir texto en un gráfico
-
-Todo lo que deba leer un usuario debe incluirse en un campo de texto. Una vez que se escala dinámicamente una imagen, cualquier texto que agregue a un gráfico puede volverse ininteligible.
-
-### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a>Use menciones si desea la atención de usuarios específicos
-
-> [!NOTE]
-> Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) .
-
-Las menciones son una excelente manera de notificar a usuarios específicos en un equipo o un chat en grupo. Puede incluir una mención en tarjeta en escenarios como, una tarea que está asignada a un usuario o conceder prestigio a un compañero. Obtenga información sobre cómo incluir menciones en tarjetas en la [Página formato de tarjeta](~/task-modules-and-cards/cards/cards-format.md). 

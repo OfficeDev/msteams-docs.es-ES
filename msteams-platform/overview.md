@@ -5,18 +5,21 @@ description: Información general sobre cómo los desarrolladores pueden ampliar
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 6f5f3454885320669ef42383529d39fcfcfdfee8
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209816"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604790"
 ---
-# <a name="build-apps-for-microsoft-teams"></a>Crear aplicaciones para Microsoft Teams
+# <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
 Las aplicaciones de Microsoft Teams aportan información clave, herramientas comunes y procesos de confianza a los que los usuarios recopilan, aprenden y funcionan cada vez más.
 
 Las aplicaciones son cómo extender Teams para ajustarse a sus necesidades. Cree algo nuevo para Teams o integre una aplicación existente.
+
+> [!div class="nextstepaction"]
+> [Comenzar aquí](build-your-first-app/build-first-app-overview.md)
 
 ## <a name="what-are-teams-apps"></a>¿Qué son las aplicaciones de Microsoft Teams?
 
@@ -38,7 +41,7 @@ Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras s
 
 ### <a name="messaging-extensions"></a>Extensiones de mensajería
 
-**Simplificar la tarea**en varias tareas: con [las extensiones de mensajería](messaging-extensions/what-are-messaging-extensions.md), puede compartir rápidamente información externa en una conversación. También puede actuar en un mensaje, como la creación de un vale de ayuda basado en el contenido de una publicación de canal.
+**Simplificar la tarea** en varias tareas: con [las extensiones de mensajería](messaging-extensions/what-are-messaging-extensions.md), puede compartir rápidamente información externa en una conversación. También puede actuar en un mensaje, como la creación de un vale de ayuda basado en el contenido de una publicación de canal.
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="Representación conceptual de las extensiones de mensajería que tienen el mismo aspecto en el cliente de Microsoft Teams." border="false":::
 
@@ -139,7 +142,7 @@ Vaya directamente con nuestros tutoriales de primera aplicación o descubra cóm
 ## <a name="resources"></a>Recursos
 
 * [Agregar un recurso compartido a Microsoft Teams en el sitio web](concepts/build-and-test/share-to-teams.md)
-* [Sistema de diseño de Fluent](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Interfaz de usuario Fluent</a>
 * [SDK de cliente de JavaScript de Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK para JavaScript](https://github.com/Microsoft/botbuilder-js) y [Bot Framework SDK para .net](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publicar la aplicación en una organización o AppSource](concepts/deploy-and-publish/overview.md)

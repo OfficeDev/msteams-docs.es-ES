@@ -4,12 +4,12 @@ description: Introducción a la creación de excelentes aplicaciones personaliza
 keywords: Teams Visual Studio Code Toolkit
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 41b0eeaeef1c7094fc9c8cbdc05c2db899245fc6
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: 350da030d15e72e2cad51c5967afab9b6f29fe9e
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476933"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604476"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code
 
@@ -70,7 +70,9 @@ Cuando se instala una aplicación, el cliente de Microsoft Teams analiza el arch
 
 ## <a name="package-your-app"></a>Empaquetar la aplicación
 
-Al modificar la página de detalles de la **aplicación** o actualizar el **manifiesto**, o los archivos **. env** en la carpeta  **. Publish** de la aplicación, se generará automáticamente el archivo de **Development.zip** . Deberá incluir [dos iconos](../concepts/build-and-test/apps-package.md#icons) en la misma carpeta.
+Al modificar la página de detalles de la **aplicación** , el **manifiesto** o los archivos **. env** en la carpeta  **. Publish** de la aplicación, se generará automáticamente el archivo de **Development.zip** . Deberá incluir [dos iconos](../concepts/build-and-test/apps-package.md#app-icons) en la misma carpeta.
+
+## <a name="install-and-run-your-app-locally"></a>Instalar y ejecutar la aplicación de forma local
 
 ## <a name="run-your-app"></a>Ejecutar la aplicación
 

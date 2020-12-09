@@ -5,16 +5,16 @@ description: Cree rápidamente una ficha de canal y de grupo de Microsoft Teams 
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 46b5410a1ae7c866f8998362765dfe5462df94cb
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: bb87d34974469057287cf63725e7722125c57c34
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931767"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605248"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Crear una pestaña de canal y de grupo para Microsoft Teams
 
-En este tutorial, creará una ficha de *canal* básico (también conocida como una *pestaña de grupo* ), que es una página en pantalla completa para un canal o un chat de equipo. A diferencia de una pestaña personal, los usuarios pueden configurar algunos aspectos de este tipo de pestaña (por ejemplo, cambiar el nombre de la ficha para que tenga sentido en su canal).
+En este tutorial, creará una ficha de *canal* básico (también conocida como una *pestaña de grupo*), que es una página en pantalla completa para un canal o un chat de equipo. A diferencia de una pestaña personal, los usuarios pueden configurar algunos aspectos de este tipo de pestaña (por ejemplo, cambiar el nombre de la ficha para que tenga sentido en su canal).
 
 ## <a name="your-assignment"></a>La asignación
 
@@ -62,8 +62,8 @@ Puede ver y actualizar las configuraciones de la aplicación mediante App Studio
 
 Durante la configuración, el kit de herramientas configuró inicialmente dos componentes básicos de las fichas de canal y de Grupo:
 
-* **Página de configuración** : el cuadro de diálogo para agregar una pestaña a un canal o a un chat. (En App Studio, puede encontrar esta página yendo a **pestañas > ficha equipo** ).
-* **Página de contenido** : donde se muestra el contenido principal. (En App Studio, puede encontrar esta página yendo a las **pestañas > agregar una pestaña personal** ).
+* **Página de configuración**: modal para agregar una pestaña a un canal o un chat. (En App Studio, puede encontrar esta página yendo a **pestañas > ficha equipo**).
+* **Página de contenido**: donde se muestra el contenido principal. (En App Studio, puede encontrar esta página yendo a las **pestañas > agregar una pestaña personal**).
 
 ### <a name="app-scaffolding"></a>Scaffolding de la aplicación
 
@@ -119,7 +119,7 @@ a {
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. personalizar la página de configuración de pestañas
 
-Cada pestaña en un canal o chat tiene una página de configuración, un cuadro de diálogo con al menos una opción de configuración que se muestra cuando los usuarios agregan la aplicación. De forma predeterminada, la página de configuración pregunta a los usuarios si quieren notificar al canal o al chat cuando se instala la ficha.
+Cada pestaña en un canal o chat tiene una página de configuración, un modal con al menos una opción de configuración que se muestra cuando los usuarios agregan la aplicación. De forma predeterminada, la página de configuración pregunta a los usuarios si quieren notificar al canal o al chat cuando se instala la ficha.
 
 Agregue contenido personalizado a la página de configuración. Vaya al directorio del proyecto `src/components` , Abra `TabConfig.js` y actualice el contenido del marcador de posición dentro de `return()` (como se muestra en el siguiente ejemplo).
 
@@ -139,9 +139,9 @@ return (
 
 ## <a name="5-provide-a-suggested-tab-name"></a>5. proporcionar un nombre de pestaña sugerido
 
-Cuando se agrega una pestaña de canal o de grupo, se muestra el nombre de la aplicación (por ejemplo, la **primera aplicación** ) de forma predeterminada.
+Cuando se agrega una pestaña de canal o de grupo, se muestra el nombre de la aplicación (por ejemplo, la **primera aplicación**) de forma predeterminada.
 
-Esto puede ser adecuado, en función de lo que llame a su aplicación, pero puede que desee proporcionar un nombre que sea más lógico en el contexto de la colaboración en grupo (por ejemplo, los **contactos del equipo** ).
+Esto puede ser adecuado, en función de lo que llame a su aplicación, pero puede que desee proporcionar un nombre que sea más lógico en el contexto de la colaboración en grupo (por ejemplo, los **contactos del equipo**).
 
 En `TabConfig.js` , vaya a `microsoftTeams.settings.setSettings` . Agregue la `suggestedDisplayName` propiedad con el nombre de la pestaña que desee mostrar de forma predeterminada (como se muestra). Use el nombre proporcionado o cree el suyo propio. (De forma predeterminada, los usuarios pueden cambiar el nombre si lo desean).
 
@@ -171,8 +171,8 @@ La aplicación está lista para realizar pruebas en Microsoft Teams. Para ello, 
 1. Para mostrar el contenido de la aplicación en Teams, especifique que la aplicación en ejecución ( `localhost` ) sea de confianza:
    1. Abrir una nueva pestaña en la misma ventana del explorador (Google Chrome de forma predeterminada) que se abre después de presionar **F5**.
    1. Vaya a `https://localhost:3000/tab` la página y continúe con ella.
-1. Vuelva a teams. En el cuadro de diálogo, seleccione **Agregar a un equipo** o **Agregar a un chat** y busque un canal o un chat que pueda usar para las pruebas.
-1. Seleccione **configurar una pestaña**. La página de configuración se muestra en un cuadro de diálogo.<br/>
+1. Vuelva a teams. En el modal, seleccione **Agregar a un equipo** o **Agregar a un chat** y busque un canal o un chat que pueda usar para las pruebas.
+1. Seleccione **configurar una pestaña**. La página de configuración se muestra en un modal.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Captura de pantalla de una página de configuración de ficha de canal.":::
 1. Seleccione **Guardar** para configurar la pestaña. Se muestra la página de contenido.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de pantalla de una pestaña de canal con vista de contenido estático.":::

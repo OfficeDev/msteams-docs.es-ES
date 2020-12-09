@@ -5,12 +5,12 @@ description: Información general sobre las aplicaciones de Microsoft Teams basa
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: db14049d3150eaaa9634b4fa535a989528b1c6a2
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 8a1b5b7d95e91273c794a2aa86a51e0ddeb1c610
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358024"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605187"
 ---
 # <a name="apps-in-teams-meetings"></a>Aplicaciones en reuniones de Microsoft Teams
 
@@ -68,7 +68,7 @@ Los usuarios con permisos de ✔ pueden agregar aplicaciones durante la reunión
 &emsp;&emsp;&#9679; **panel lateral**. </br>
 
 > [!NOTE]
-> Si el _manifiesto_ de la aplicación especifica que la pestaña está [optimizada para el panel lateral](create-apps-for-teams-meetings.md#in-meeting), es decir, donde se mostrará. También puede formar parte de una experiencia de bandeja de recursos compartidos, sujeta a pautas de diseño específicas.
+> Si el _manifiesto_ de la aplicación especifica que la pestaña está [optimizada para el panel lateral](create-apps-for-teams-meetings.md#during-a-meeting), es decir, donde se mostrará. También puede formar parte de una experiencia de bandeja de recursos compartidos, sujeta a pautas de diseño específicas.
 
 &emsp;&emsp;&#9679; **cuadro de diálogo en la reunión**. Use el cuadro de diálogo de la reunión para mostrar contenido que requiere acción para los participantes en la reunión. *Consulte* [crear aplicaciones para reuniones de Microsoft Teams](create-apps-for-teams-meetings.md).
 

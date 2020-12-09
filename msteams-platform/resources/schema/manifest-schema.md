@@ -4,12 +4,12 @@ description: Describe el esquema del manifiesto para Microsoft Teams
 keywords: esquema del manifiesto de Microsoft Teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 26c6ca0ed6edceb9b34c84c28a43a63f65a348de
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: e25f50fc8da357553c1f0a8b01dc51af079ed2bb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552559"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604616"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -376,7 +376,7 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 **Obligatorio** : Object
 
-Iconos usados en la aplicación Microsoft Teams. Los archivos de icono deben incluirse como parte del paquete de carga. Vea [iconos](~/concepts/build-and-test/apps-package.md#icons) para obtener más información.
+Iconos usados en la aplicación Microsoft Teams. Los archivos de icono deben incluirse como parte del paquete de carga. Vea [iconos](../../concepts/build-and-test/apps-package.md#app-icons) para obtener más información.
 
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
@@ -452,7 +452,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeraciones|3 |✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.commands`|matriz de objetos|10  |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots. commandLists. Commands
 
@@ -486,10 +486,10 @@ Define una extensión de mensajería para la aplicación.
 
 El elemento es una matriz (un máximo de 1 elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan una extensión de mensajería.
 
-|Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
+|Nombre| Tipo | Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|IDENTIFICADOR único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como se registró con bot Framework. Puede ser el mismo que el identificador de aplicación general.|
-|`commands`|matriz de objetos|10 |✔|matriz de comandos que admite la extensión de mensajería|
+|`commands`|matriz de objetos|10  |✔|matriz de comandos que admite la extensión de mensajería|
 |`canUpdateConfiguration`|boolean|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar las aplicaciones cuando se cumplen ciertas condiciones. Los dominios también deben aparecer en `validDomains`|
 |`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|

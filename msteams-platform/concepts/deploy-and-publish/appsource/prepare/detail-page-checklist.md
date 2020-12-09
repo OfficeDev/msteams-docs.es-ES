@@ -2,12 +2,12 @@
 title: Crear una excelente página de detalles de la aplicación
 description: Describe los requisitos para la página de detalles de la aplicación
 keywords: Teams tienda de Office publicar Directiva de publicación de AppSource de contenido de la aplicación Descripción del logotipo Descripción de nombre de la aplicación iconos breves
-ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: aa12cab0bb89349b4d9d613a9c533773fa593283
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465946"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605321"
 ---
 # <a name="build-a-great-app-details-page"></a>Crear una excelente página de detalles de la aplicación
 
@@ -65,7 +65,7 @@ Es uno de los primeros elementos que ven los usuarios. Debe ser atractivo y atra
 
 ## <a name="outline-icon"></a>Icono de esquema
 
-Se usa en extensiones de mensajería, aplicaciones marcadas como favoritas por el usuario y el menú de navegación izquierdo. Asegúrese de que es sencilla y reconocible. El icono de esquema solo debe contener color blanco y ser transparente. Para conocer las especificaciones necesarias, *consulte* [crear un paquete de la aplicación para los iconos de la aplicación de Microsoft Teams](../../../build-and-test/apps-package.md#icons).
+Este icono se usa para las extensiones de mensajería ancladas y cuando la aplicación se muestra a la izquierda de los equipos. Vea [Guía de diseño para el icono de esquema](../../../../concepts/build-and-test/apps-package.md#outline-icon).
 
 ![Icono de aplicación de almacén de esquema de presentación de la ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
  ![ aplicación esquema vista de App Studio](../../../../assets/images/store-detail-page/AppIconOutline-01.png)

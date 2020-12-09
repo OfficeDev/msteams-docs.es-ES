@@ -5,12 +5,12 @@ description: Cómo crear una página de configuración
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964609"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605328"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -166,7 +166,7 @@ Las opciones de eliminación admitidas pueden restringir aún más la experienci
 
 ## <a name="mobile-clients"></a>Clientes móviles
 
-Si elige que la ficha canal/grupo aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad (vea a continuación). Pronto se ofrecerá compatibilidad completa para las pestañas en los clientes móviles. Para preparar la actualización, debe seguir las [instrucciones para las pestañas de dispositivos móviles](~/tabs/design/tabs-mobile.md) al crear las pestañas.
+Si elige que la ficha canal/grupo aparezca en los clientes móviles de Teams, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad (vea a continuación). Vea las [instrucciones para las pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md).
 
 Configuración de Microsoft Teams setSettings () para la página de eliminación o los clientes móviles:
 

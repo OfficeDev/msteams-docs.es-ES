@@ -1,23 +1,22 @@
 ---
 title: Empaquetar la aplicación
-description: Obtenga información sobre cómo empaquetar la aplicación para probarla, cargarla y publicarla en Microsoft Teams.
-keywords: empaquetado de aplicaciones de Microsoft Teams
+description: Obtenga información sobre cómo empaquetar su aplicación de Microsoft Teams para probarlas, cargarlas y almacenar publicaciones.
 ms.topic: conceptual
-ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 6929375c8d6a1602f01d83d15bfa0dab7f02a664
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552573"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605291"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Crear un paquete de aplicación para la aplicación de Microsoft Teams
 
-Las aplicaciones en Teams se definen mediante un archivo JSON del manifiesto de la aplicación y se incluyen en un paquete de la aplicación con sus iconos. Necesitará un paquete de aplicaciones para cargar e instalar la aplicación en Teams, y para publicar en el catálogo de aplicaciones de línea de negocio o en AppSource.
+Las aplicaciones en Teams se definen mediante un archivo JSON del manifiesto de la aplicación y se incluyen en un paquete de la aplicación con sus iconos. Necesitará un paquete de aplicaciones para cargar e instalar la aplicación en Teams y publicar en el catálogo de aplicaciones de línea de negocio o en AppSource.
 
 Un paquete de la aplicación Teams es un archivo. zip que contiene lo siguiente:
 
-* Un archivo de manifiesto denominado "manifest.json", que especifica los atributos de la aplicación y apunta a los recursos necesarios para su experiencia, como la ubicación de la página de configuración de la pestaña o el identificador de aplicación de Microsoft para su bot.
-* Un icono de "esquema" transparente y un icono completo de "color". Vea los [iconos](#icons) más adelante en este tema para obtener más información.
+* Un archivo de manifiesto denominado `manifest.json` , que especifica los atributos de la aplicación y apunta a los recursos necesarios para su experiencia, como la ubicación de la página de configuración de la pestaña o el identificador de aplicación de Microsoft para su bot.
+* [Iconos de colores y contornos de la aplicación](#app-icons).
 
 ## <a name="creating-a-manifest"></a>Creación de un manifiesto
 
@@ -30,43 +29,65 @@ El archivo de manifiesto debe tener el nombre "manifest.json" y estar en el nive
 >
 > `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="icons"></a>Iconos
+## <a name="app-icons"></a>Iconos de la aplicación
+
+El paquete de la aplicación debe incluir dos versiones de PNG del icono de la aplicación: un icono en color y un icono de esquema. Para que la aplicación pase la revisión de AppSource, estos iconos deben cumplir los siguientes requisitos de tamaño.
 
 > [!Note]
-> Si la aplicación contiene un bot o una extensión de mensajería, los iconos usados serán los iconos cargados en el registro de bot en el marco de robots.
+> Si la aplicación tiene una extensión de bot ó n de mensajería, los iconos también se incluirán en el registro del servicio de bot de Microsoft Azure.
 
-Microsoft Teams requiere dos iconos para la experiencia de la aplicación, que se usarán en el producto. Los iconos deben incluirse en el paquete y se hace referencia a ellos mediante rutas relativas en el manifiesto. La longitud máxima de cada ruta de acceso es de 2048 bytes y el formato del icono es. png.
+### <a name="color-icon"></a>Icono de color
 
-### <a name="color"></a>color
+La versión de color del icono se muestra en la mayoría de los escenarios de Teams y debe ser de 192x192 píxeles. El símbolo de icono (96x96 píxeles) puede tener cualquier color o colores, pero debe sentarse en un fondo cuadrado sólido o totalmente transparente.
 
-El `color` icono se usa en todo Microsoft Teams (en galerías de aplicaciones y pestañas, bots, controles flotantes, etc.). Este icono debe ser de 192x192 píxeles. El icono puede tener cualquier color (o colores), pero el fondo debe ser el color de énfasis de la marca. También debe tener una pequeña cantidad de espacio alrededor del icono para acomodar el recorte hexagonal para la versión del bot del icono.
+Microsoft Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en los escenarios de bot. Incluya 48 píxeles de relleno alrededor del símbolo para que estos cultivos puedan realizarse sin perder detalle.
 
-### <a name="outline"></a>outline
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Guía de diseño de iconos de color de Microsoft Teams." border="false":::
 
-El `outline` icono se usa en estos lugares: la barra de la aplicación y las extensiones de mensajería que el usuario ha marcado como "favorito". Este icono debe ser de 32 x 32 píxeles. El icono del esquema solo debe contener blanco y transparencia (sin otros colores). El icono puede ser blanco con fondo transparente o transparente con un fondo blanco. El icono de esquema no debe tener espaciado adicional alrededor del icono y debe estar tan bien recortado como sea posible y mantener al mismo tiempo las dimensiones 32x32. Estos son algunos ejemplos buenos:
+### <a name="outline-icon"></a>Icono de esquema
 
-![Iconos de esquema de ejemplo](~/assets/images/icons/sample20x20s.png)
+Un icono de esquema se muestra en dos escenarios:
 
-[! SUGERENCIA para crear un icono transparente]
+* Cuando la aplicación esté en uso y "activada" en la barra de la aplicación a la izquierda de Teams.
+* Cuando un usuario ancla la extensión de mensajería de la aplicación.
 
-* El color debe ser "blanco" en RGB, (rojo: 255, verde: 255, azul: 255).
-* El icono de todos los demás elementos debe ser transparente.
-* Para pasarlo, el icono pequeño debe ser completamente transparente con un valor 0 para el canal alfa; cualquier otro valor es un error.
+El icono debe ser de 32 x 32 píxeles. Puede ser blanca con un fondo transparente o transparente con un fondo blanco (no se permiten otros colores). El icono de esquema no debe tener ningún relleno adicional alrededor del símbolo.
 
-Por ejemplo, supongamos que su compañía es contoso. Debe enviar dos iconos:
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Guía de diseño de iconos de color de Microsoft Teams." border="false":::
 
-![Escaparate de iconos](~/assets/images/framework/framework_submit_icon.png)
+### <a name="best-practices"></a>Procedimientos recomendados
 
-Esta es la forma en que los iconos aparecerán en la interfaz de usuario:
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Ilustración que muestra cómo diseñar los iconos de la aplicación." border="false":::
 
-#### <a name="bot-and-chiclet-in-channel-view"></a>Bot y chiclet en la vista de canal
+#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Do: siga las instrucciones del icono de esquema preciso
 
-![Bot y chiclet UX](~/assets/images/icons/botandchiclet.png)
+Los valores RGB de blanco usados en el icono deben tener el color rojo: 255, verde: 255, azul: 255. Todas las demás partes del icono de esquema deben ser completamente transparentes, con el canal alfa establecido en 0.
 
-#### <a name="flyout"></a>Flotante
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Ilustración que muestra cómo no diseñar los iconos de la aplicación." border="false":::
 
-![Ejemplo de flotante de Contoso](~/assets/images/icons/flyout.png)
+#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>No: recortar en una forma cuadrada circular o redondeada
 
-#### <a name="app-bar-and-home-screen"></a>Barra de la aplicación y pantalla de inicio
+El icono de color enviado en el paquete de la aplicación debe ser cuadrado. No Redondee las esquinas del icono. Microsoft Teams ajusta automáticamente el radio de la esquina.
 
-![Ejemplo de barra de la aplicación de Contoso HomeScreen](~/assets/images/icons/appbarhomescreen.png)
+   :::column-end:::
+:::row-end:::
+
+### <a name="examples"></a>Ejemplos
+
+Así es cómo aparecen los iconos de la aplicación en diferentes capacidades y contextos de Teams.
+
+#### <a name="personal-app"></a>Aplicación personal
+
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Ejemplo que muestra cómo se ve un icono de aplicación en una aplicación personal." border="false":::
+
+#### <a name="bot-channel"></a>Bot (canal)
+
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Ejemplo que muestra cómo un icono de aplicación se busca en un bot dentro de un canal." border="false":::
+
+#### <a name="messaging-extension"></a>Extensión de mensajería
+
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texto alternativo>" border="false":::

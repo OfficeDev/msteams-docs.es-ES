@@ -4,12 +4,12 @@ description: Introducción a la creación de excelentes aplicaciones personaliza
 keywords: Teams Visual Studio Toolkit
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: a1221945659b2dd0f45bdd3a966d9b029ddcde09
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476989"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604490"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Compilar aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio
 
@@ -78,11 +78,11 @@ Cuando se instala una aplicación, el cliente de Microsoft Teams analiza el arch
 1. Para configurar la aplicación, en la página de aterrizaje de **Microsoft Teams Toolkit** , seleccione **Editar paquete** de la aplicación.
 1. En el menú desplegable **mis entornos** , seleccione **desarrollo**.
 1. Encontrarás en la página de detalles de la **aplicación** donde puedes editar los campos de propiedades de la aplicación.
-1. Al editar los campos en la página de detalles de la aplicación, se actualiza el contenido del manifest.jsen el archivo que se entregará como parte del paquete de la aplicación. [Obtener más información](https://aka.ms/teams-toolkit-manifest)
+1. Al editar los campos en la página de detalles de la aplicación, se actualiza el contenido del manifest.jsen el archivo que se entregará como parte del paquete de la aplicación. [Más información](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>Empaquetar la aplicación
 
-Al modificar la página de detalles de la **aplicación** o actualizar el **manifiesto**, o los archivos **. env** en la carpeta  **. Publish** de la aplicación, se generará automáticamente el archivo de **Development.zip** . El archivo de Development.zip incluye tres archivos necesarios: el **manifest.jsen** y [dos archivos de icono](../concepts/build-and-test/apps-package.md#icons).
+Al modificar la página de detalles de la **aplicación** o actualizar el **manifiesto**, o los archivos **. env** en la carpeta  **. Publish** de la aplicación, se generará automáticamente el archivo de **Development.zip** . El archivo de Development.zip incluye tres archivos necesarios: el **manifest.jsen** y [dos iconos](../concepts/build-and-test/apps-package.md#app-icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar y ejecutar la aplicación de forma local
 

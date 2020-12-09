@@ -5,12 +5,12 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576830"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605234"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -24,7 +24,7 @@ ms.locfileid: "49576830"
 
 1. Algunas API de reunión, como `GetParticipant` requerirán un [registro de Bot y un identificador de aplicación de bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) para generar tokens de autenticación.
 
-1. Como desarrollador, debe adherirse a las directrices generales de [diseño de pestañas de Microsoft Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como las directrices de [diálogo en reunión](design/designing-in-meeting-dialog.md) para los diálogos que se desencadenan durante la reunión de Microsoft Teams.
+1. Como desarrollador, debe adherirse a las directrices generales de [diseño de pestañas de Microsoft Teams](../tabs/design/tabs.md) para los escenarios anteriores y posteriores a la reunión, así como las directrices de [diálogo en reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) para los diálogos que se desencadenan durante la reunión de Microsoft Teams.
 
 1. Tenga en cuenta que para que su aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar en el cuadro de diálogo de la reunión (consulte parámetro de finalización `bot Id` en `Notification Signal API` ) y otras superficies en el ciclo de vida de la reunión.
 
@@ -111,6 +111,7 @@ el **rol** de "reunión" puede ser *organizador*, *moderador* o *Asistente*.
    }
 }
 ```
+
 #### <a name="response-codes"></a>Códigos de respuesta
 
 **403**: la aplicación no tiene permiso para obtener información sobre los participantes. Esta será la respuesta de error más común y se desencadenará cuando la aplicación no se instale en la reunión, como cuando la administración de inquilinos la ha deshabilitado o bloqueada durante la migración de sitios activos.  
@@ -146,7 +147,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > *  En la carga solicitada siguiente, el `completionBotId` parámetro del `externalResourceUrl` es un opcional. Es el `Bot ID` que se declara en el manifiesto. El bot recibirá un objeto de resultado.
-> * Los parámetros width y height de externalResourceUrl deben estar en píxeles. Consulte las [directrices de diseño](design/designing-in-meeting-dialog.md) para asegurarse de que las dimensiones están dentro de los límites permitidos.
+> * Los parámetros width y height de externalResourceUrl deben estar en píxeles. Consulte las [directrices de diseño](design/designing-apps-in-meetings.md) para asegurarse de que las dimensiones están dentro de los límites permitidos.
 > * La dirección URL es la página que se carga como `<iframe>` dentro del cuadro de diálogo en reunión. El dominio de la dirección URL debe estar en la matriz de la aplicación `validDomains` en el manifiesto de la aplicación.
 
 
@@ -256,9 +257,9 @@ La pestaña `context` y `scopes` las propiedades funcionan en armonía para perm
 > [!NOTE]
 > * Para que la aplicación esté visible en la galería de pestañas, necesita **admitir las pestañas configurables** y el **ámbito de chat en grupo**.
 >
-> * Los clientes móviles solo admiten fichas en las superficies anteriores y posteriores a la reunión. Pronto estarán disponibles las experiencias en reunión (el panel y el cuadro de diálogo en reunión) en dispositivos móviles. Siga las [instrucciones para las pestañas de dispositivos móviles](../tabs/design/tabs-mobile.md) al crear las pestañas para dispositivos móviles. 
+> * Los clientes móviles solo admiten fichas en las superficies anteriores y posteriores a la reunión. Las experiencias en reunión (pestaña y cuadro de diálogo en reunión) en dispositivos móviles estarán disponibles próximamente. Siga las [instrucciones para las pestañas de dispositivos móviles](../tabs/design/tabs-mobile.md) al crear las pestañas para dispositivos móviles.
 
-### <a name="pre-meeting"></a>Reunión previa
+### <a name="before-a-meeting"></a>Antes de una reunión
 
 Los usuarios con roles de organizador o moderador agregan pestañas a una reunión con el botón más ➕ de las páginas de **chat** de reuniones y **detalles** de reuniones. Las extensiones de mensajería se agregan a a través del menú de puntos suspensivos/desbordamiento &#x25CF;&#x25CF;&#x25CF; situada debajo del área redactar mensaje en el chat. Los bots se agregan a un chat mediante la **@** clave "" y seleccionando **obtener bots**.
 
@@ -268,7 +269,7 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 > **Nota**: las asignaciones de roles se pueden cambiar mientras una reunión está en curso.  *Vea* [roles en una reunión de Microsoft Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-### <a name="in-meeting"></a>En reunión
+### <a name="during-a-meeting"></a>Durante una reunión
 
 #### <a name="sidepanel"></a>**sidePanel**
 
@@ -285,9 +286,9 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 
 ✔ AppName en-reunión-información sobre herramientas debe indicar el nombre de la aplicación en la barra U-Meeting.
 
-#### <a name="in-meeting-dialog"></a>**cuadro de diálogo en la reunión**
+#### <a name="in-meeting-dialog"></a>**Diálogo en la reunión**
 
-✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](design/designing-in-meeting-dialog.md).
+✔ Debe adherirse a las [instrucciones de diseño del cuadro de diálogo en reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 ✔ Consulte el [flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -303,7 +304,7 @@ Los usuarios con roles de organizador o moderador agregan pestañas a una reuni�
 >
 > * Si quiere que la aplicación admita usuarios anónimos, su carga de solicitud de invocación inicial debe basarse en el `from.id`  objeto (ID del usuario) request Metadata in the `from` Object, no el `from.aadObjectId` (ID de Azure Active Directory del usuario) request Metadata. *Consulte* [using Task modules in Tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y [Create and Send The Task Module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-### <a name="post-meeting"></a>Después de la reunión
+### <a name="after-a-meeting"></a>Después de una reunión
 
 Las configuraciones posteriores a la reunión y antes de la reunión son equivalentes.
 

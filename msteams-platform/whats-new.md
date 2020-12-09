@@ -2,12 +2,12 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576837"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604469"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -23,7 +23,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 |11/30/2020|Nuevo: integración de la plataforma de identidad con Team Toolkit y Visual Studio Code for Tabs|[Autenticación de inicio de sesión único con Team Toolkit y Visual Studio Code para pestañas](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|El manifiesto de la aplicación Teams se actualizó a la versión 1,8|Referencia: esquema de manifiesto para Microsoft Teams|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/11/2020| Esquema del manifiesto actualizado a la versión 1,8| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
-|11/10/2020|Directrices de diseño de robots de Teams|[Directrices de diseño de bot](bots/design/bots.md#bot-design-guidelines)|
+|11/10/2020|Directrices de diseño de robots de Teams|[Directrices de diseño de bot](bots/design/bots.md)|
 |9/30/2020|Ahora se admite el envío y la recepción de archivos en bots en dispositivos móviles.|[Enviar y recibir archivos a través de su bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nueva guía de introducción a Microsoft Teams|[Información general sobre la creación de su primera aplicación de Microsoft Teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Compatibilidad con aplicaciones de Teams en la reunión (versión preliminar)|[Creación de aplicaciones para reuniones](apps-in-teams-meetings/create-apps-for-teams-meetings.md) y aplicaciones de Microsoft Teams [en reuniones de Microsoft Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -75,7 +75,7 @@ El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y
 | 08/06/2018 | Ahora, el bot puede enviar y recibir archivos.| [Enviar y recibir archivos a través de su bot](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | La vista previa para desarrolladores ahora admite varios comandos en las extensiones de mensajería. | [Se han ampliado las extensiones de mensajería](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | Se ha agregado información sobre la nueva certificación de la aplicación a la sección publicación. |[Permisos del manifiesto](resources/schema/manifest-schema.md#permissions)|
-| 07/16/2018 | En la vista previa para desarrolladores, se ha asignado más espacio a la página de configuración de la pestaña. | [La página de configuración de la ficha es significativamente más alta](tabs/design/tabs.md#configuration-page-height)|
+| 07/16/2018 | En la vista previa para desarrolladores, se ha asignado más espacio a la página de configuración de la pestaña. | [La página de configuración de la ficha es significativamente más alta](tabs/design/tabs.md)|
 | 07/12/2018 | Información sobre el acceso de invitado. | [Acceso de invitado en Microsoft Teams](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Se ha agregado la información de la versión preliminar del catálogo de aplicaciones del espacio empresarial de Microsoft Teams. | [Publicar la aplicación de Microsoft Teams](~/publishing/apps-publish.md)|
 | 05/31/2018 | La versión preliminar para desarrolladores de Microsoft Teams (llamada 3,6) se ha actualizado para incluir la capacidad de agregar bots y fichas a un chat en grupo. | [Características de la vista previa para desarrolladores](~/resources/dev-preview/developer-preview-features.md), [Developer Preview Schema](~/resources/schema/manifest-schema-dev-preview.md)|
