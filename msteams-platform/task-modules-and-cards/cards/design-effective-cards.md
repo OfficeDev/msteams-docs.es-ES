@@ -1,135 +1,138 @@
 ---
-title: Diseñar tarjetas eficaces
-description: Describe las instrucciones de diseño para crear tarjetas
-keywords: Directrices de diseño de Microsoft Teams tarjetas de marco de referencia adaptables ligeras
-ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Diseño de tarjetas adaptables para la aplicación
+description: Obtenga información sobre cómo diseñar tarjetas adaptables para Teams y obtener el kit de la interfaz de usuario de Microsoft Teams.
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209840"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604557"
 ---
-# <a name="design-effective-cards"></a><span data-ttu-id="29f47-104">Diseñar tarjetas eficaces</span><span class="sxs-lookup"><span data-stu-id="29f47-104">Design effective cards</span></span>
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a><span data-ttu-id="87278-103">Diseño de tarjetas adaptables para su aplicación de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="87278-103">Designing Adaptive Cards for your Microsoft Teams app</span></span>
 
-<span data-ttu-id="29f47-105">Las tarjetas son fragmentos de código accionables que puede Agregar a una conversación a través de un bot, un conector o una aplicación.</span><span class="sxs-lookup"><span data-stu-id="29f47-105">Cards are actionable snippets of content that you can add to a conversation through a bot, a connector, or app.</span></span> <span data-ttu-id="29f47-106">Mediante el uso de texto, gráficos y botones, las tarjetas le permiten comunicarse con una audiencia.</span><span class="sxs-lookup"><span data-stu-id="29f47-106">Using text, graphics, and buttons, cards allow you to communicate with an audience.</span></span>
+<span data-ttu-id="87278-104">Una tarjeta adaptable contiene un cuerpo de forma libre de elementos de tarjeta y un conjunto opcional de acciones.</span><span class="sxs-lookup"><span data-stu-id="87278-104">An Adaptive Card contains a freeform body of card elements and optional set of actions.</span></span> <span data-ttu-id="87278-105">Las tarjetas adaptables son fragmentos de código accionables que puede Agregar a una conversación a través de un bot o una extensión de mensajería.</span><span class="sxs-lookup"><span data-stu-id="87278-105">Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or messaging extension.</span></span> <span data-ttu-id="87278-106">Mediante el uso de texto, gráficos y botones, estas tarjetas proporcionan una comunicación enriquecida a la audiencia.</span><span class="sxs-lookup"><span data-stu-id="87278-106">Using text, graphics, and buttons, these cards provide rich communication to your audience.</span></span>
 
-<span data-ttu-id="29f47-107">Nuestro marco de tarjeta elimina la carga de diseñar una experiencia de usuario completamente funcional.</span><span class="sxs-lookup"><span data-stu-id="29f47-107">Our card framework eliminates the burden of designing a fully functional UX.</span></span> <span data-ttu-id="29f47-108">Hemos desarrollado varios tipos de tarjetas estándar y cada una se ajusta a las plataformas admitidas.</span><span class="sxs-lookup"><span data-stu-id="29f47-108">We developed several standard card types and each one fits within our supported platforms.</span></span> <span data-ttu-id="29f47-109">Esto significa que el diseño se ha realizado por completo y que no necesitará desarrollar distintas iteraciones de tarjeta entre plataformas.</span><span class="sxs-lookup"><span data-stu-id="29f47-109">This means layout is completely taken care of, and you won’t need to develop different card iterations across platforms.</span></span> <span data-ttu-id="29f47-110">En su lugar, puede centrarse en marcar el contenido.</span><span class="sxs-lookup"><span data-stu-id="29f47-110">Instead, you can focus on dialing in your content.</span></span>
+<span data-ttu-id="87278-107">El marco de tarjeta adaptable se usa en muchos productos de Microsoft, incluidos Teams.</span><span class="sxs-lookup"><span data-stu-id="87278-107">The Adaptive Card framework is used across many Microsoft products, including Teams.</span></span> <span data-ttu-id="87278-108">Puede enviar tarjetas dentro de los mensajes a los usuarios a través de bots o extensiones de mensajería.</span><span class="sxs-lookup"><span data-stu-id="87278-108">You can send cards inside messages to users via bots or messaging extensions.</span></span> <span data-ttu-id="87278-109">Los usuarios pueden realizar acciones en las tarjetas cuando están presentes.</span><span class="sxs-lookup"><span data-stu-id="87278-109">Users can take actions on cards when present.</span></span>
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-## <a name="guidelines"></a><span data-ttu-id="29f47-111">Instrucciones</span><span class="sxs-lookup"><span data-stu-id="29f47-111">Guidelines</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="87278-111">Kit de IU de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="87278-111">Microsoft Teams UI Kit</span></span>
 
-<span data-ttu-id="29f47-112">Piense en una tarjeta como una respuesta a una pregunta de un usuario o una configuración.</span><span class="sxs-lookup"><span data-stu-id="29f47-112">Think of a card as a response to a user question or a setting.</span></span> <span data-ttu-id="29f47-113">Una tarjeta puede responder a una pregunta directa (como, por ejemplo, "¿cuántos errores abiertos tengo?") o a una condición (como, "enviar una lista de mis errores abiertos en 9 a.m. todos los días").</span><span class="sxs-lookup"><span data-stu-id="29f47-113">A card can respond to a direct question (like, “How many open bugs do I have?”) or to a condition (like, “Send a list of my open bugs at 9 am every day”).</span></span>
+<span data-ttu-id="87278-112">Puede encontrar directrices de diseño más completas para las tarjetas adaptables en Microsoft Teams, incluidos los elementos que puede captar y modificar según sea necesario, en el kit de interfaz de usuario de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="87278-112">You can find more comprehensive design guidelines for Adaptive Cards in Teams, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="87278-113">El kit de la interfaz de usuario también cubre temas esenciales como temas de temas, accesibilidad y ajuste de tamaño.</span><span class="sxs-lookup"><span data-stu-id="87278-113">The UI kit also covers essential topics such as theming, accessibility, and responsive sizing.</span></span>
 
-> [!TIP]
-> <span data-ttu-id="29f47-114">Usar uno de los tipos de tarjetas estándar significa que ya sabrá que todas las respuestas se representarán de forma agradable en cada plataforma compatible.</span><span class="sxs-lookup"><span data-stu-id="29f47-114">Using one of our standard card types means you’ll already know that all your responses will render nicely across each supported platform.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="87278-114">Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)</span><span class="sxs-lookup"><span data-stu-id="87278-114">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-<span data-ttu-id="29f47-115">Una tarjeta puede incluir cualquiera de los siguientes elementos:</span><span class="sxs-lookup"><span data-stu-id="29f47-115">A card could include any of the following elements:</span></span><br />
+## <a name="adaptive-cards-designer"></a><span data-ttu-id="87278-115">Diseñador de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="87278-115">Adaptive Cards designer</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+<span data-ttu-id="87278-116">También puede empezar a diseñar sus tarjetas adaptables directamente en el explorador.</span><span class="sxs-lookup"><span data-stu-id="87278-116">You also can start designing your Adaptive Cards directly in the browser.</span></span>
 
-1. <span data-ttu-id="29f47-116">**Texto sobre**: se usa mejor para los mensajes de chat.</span><span class="sxs-lookup"><span data-stu-id="29f47-116">**Envelope text**: Best used for chat messages.</span></span> <span data-ttu-id="29f47-117">Por ejemplo, si desea que un bot diga: "Esto es lo que me he encontrado".</span><span class="sxs-lookup"><span data-stu-id="29f47-117">For example, if you want a bot to say: “Here’s what I found!”</span></span> <span data-ttu-id="29f47-118">o "tiempo para el Resumen de noticias de 1:00", el mensaje se muestra mejor en el texto sobre.</span><span class="sxs-lookup"><span data-stu-id="29f47-118">or “Time for your 1:00 news digest”, that message is best displayed in envelope text.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="87278-117">Pruebe el diseñador de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="87278-117">Try the Adaptive Cards designer</span></span>](https://adaptivecards.io/designer/)
 
-   <span data-ttu-id="29f47-119">El texto sobre es una excelente forma de inyectar un poco de personalidad en su servicio, simplemente Recuerde que debe mantenerlo relativamente corto.</span><span class="sxs-lookup"><span data-stu-id="29f47-119">Envelope text is a great way to inject a little personality into your service—just remember to keep it relatively short.</span></span>
+## <a name="types-of-adaptive-cards"></a><span data-ttu-id="87278-118">Tipos de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="87278-118">Types of Adaptive Cards</span></span>
 
-2. <span data-ttu-id="29f47-120">**Título**: el título siempre será el texto más grande de la tarjeta.</span><span class="sxs-lookup"><span data-stu-id="29f47-120">**Title**: Your title will always be the largest text in your card.</span></span> <span data-ttu-id="29f47-121">También sirve como "enlace", por lo que debe intentar mantener el título corto, memorable y fácil de examinar.</span><span class="sxs-lookup"><span data-stu-id="29f47-121">It also serves as your “hook”, so try to keep the title short, memorable, and easy to scan.</span></span>
+### <a name="hero"></a><span data-ttu-id="87278-119">Elemento principal</span><span class="sxs-lookup"><span data-stu-id="87278-119">Hero</span></span>
 
-3. <span data-ttu-id="29f47-122">**Subtítulo**: se usa mejor para la atribución, las consignaciones o como una directiva secundaria.</span><span class="sxs-lookup"><span data-stu-id="29f47-122">**Subtitle**: Best used for attribution, taglines, or as a secondary directive.</span></span> <span data-ttu-id="29f47-123">Este componente aparece justo debajo del título.</span><span class="sxs-lookup"><span data-stu-id="29f47-123">This component appears just below your title.</span></span>
+<span data-ttu-id="87278-120">Nuestra tarjeta más grande.</span><span class="sxs-lookup"><span data-stu-id="87278-120">Our largest card.</span></span> <span data-ttu-id="87278-121">Use para compartir artículos o escenarios en los que una imagen indica la mayor parte del artículo.</span><span class="sxs-lookup"><span data-stu-id="87278-121">Use for sharing articles or scenarios where an image tells most of the story.</span></span>
 
-4. <span data-ttu-id="29f47-124">**Imagen**: la escala de las imágenes se ajusta a su contenedor.</span><span class="sxs-lookup"><span data-stu-id="29f47-124">**Image**: Images scale to fit their container.</span></span> <span data-ttu-id="29f47-125">Las tarjetas de Hero tienen un ancho máximo de 420px, las miniaturas tienen un ancho máximo de 100px y las vistas de lista solo permiten 32 en el modo de escritorio.</span><span class="sxs-lookup"><span data-stu-id="29f47-125">Hero cards have a max width of 420px, thumbnails have a max width of 100px, and list views only allow for 32px in desktop mode.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-5. <span data-ttu-id="29f47-126">**Text**: el mejor uso para texto sin formato en el cuerpo de la tarjeta.</span><span class="sxs-lookup"><span data-stu-id="29f47-126">**Text**: Best used for plain text in the body of your card.</span></span> <span data-ttu-id="29f47-127">La longitud máxima depende del tipo de tarjeta que haya seleccionado.</span><span class="sxs-lookup"><span data-stu-id="29f47-127">Your max length depends on the card type you’ve selected.</span></span>
+### <a name="thumbnail"></a><span data-ttu-id="87278-123">Thumbnail</span><span class="sxs-lookup"><span data-stu-id="87278-123">Thumbnail</span></span>
 
-6. <span data-ttu-id="29f47-128">**Botones**: se usa mejor para abrir páginas web, pestañas o contenido adicional de chat.</span><span class="sxs-lookup"><span data-stu-id="29f47-128">**Buttons**: Best used to open web pages, tabs, or additional chat content.</span></span> <span data-ttu-id="29f47-129">Asegúrese de mantener el texto del botón corto y en el punto.</span><span class="sxs-lookup"><span data-stu-id="29f47-129">Make sure to keep your button text short and to the point.</span></span>
+<span data-ttu-id="87278-124">Usar para enviar un mensaje accionable sencillo.</span><span class="sxs-lookup"><span data-stu-id="87278-124">Use for sending a simple actionable message.</span></span>
 
-   <span data-ttu-id="29f47-130">Puede incluir hasta 6 botones por tarjeta, pero recomendamos seguir una filosofía de "menor es más".</span><span class="sxs-lookup"><span data-stu-id="29f47-130">You can include up to 6 buttons per card, but we’d recommend following a ‘less is more’ philosophy here.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-7. <span data-ttu-id="29f47-131">**Pulse región**: es la región en la que se hace clic de la tarjeta.</span><span class="sxs-lookup"><span data-stu-id="29f47-131">**Tap region**: This is the clickable region of your card.</span></span> <span data-ttu-id="29f47-132">La mayoría de los usuarios querrán hacer clic en las imágenes de forma automática, así que pruebe y diseñe el texto para que sepan dónde deben puntear o haga clic.</span><span class="sxs-lookup"><span data-stu-id="29f47-132">Most users will want to click on images automatically, so try and craft your text so they know where they should tap or click.</span></span>
+### <a name="list"></a><span data-ttu-id="87278-126">Lista</span><span class="sxs-lookup"><span data-stu-id="87278-126">List</span></span>
 
-> [!TIP]
-> <span data-ttu-id="29f47-133">No es necesario incluir todos los elementos de cada tarjeta que cree.</span><span class="sxs-lookup"><span data-stu-id="29f47-133">There’s no need to include every element in each card you create.</span></span> <span data-ttu-id="29f47-134">Permita que el contenido dicte sus elementos.</span><span class="sxs-lookup"><span data-stu-id="29f47-134">Let your content dictate your elements.</span></span>
+<span data-ttu-id="87278-127">Úselo en escenarios donde desea que el usuario seleccione un elemento de una lista, pero los elementos no necesitan mucha explicación.</span><span class="sxs-lookup"><span data-stu-id="87278-127">Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanation.</span></span>
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-## <a name="types-of-cards"></a><span data-ttu-id="29f47-135">Tipos de tarjetas</span><span class="sxs-lookup"><span data-stu-id="29f47-135">Types of cards</span></span>
+### <a name="digest"></a><span data-ttu-id="87278-129">Digest</span><span class="sxs-lookup"><span data-stu-id="87278-129">Digest</span></span>
 
-### <a name="hero"></a><span data-ttu-id="29f47-136">Elemento principal</span><span class="sxs-lookup"><span data-stu-id="29f47-136">Hero</span></span>
+<span data-ttu-id="87278-130">Se usa para resúmenes de noticias y entradas de redondeo.</span><span class="sxs-lookup"><span data-stu-id="87278-130">Use for news digests and round-up posts.</span></span> <span data-ttu-id="87278-131">Nota: se recomienda usar la tarjeta en miniatura para un solo elemento de actualización o de noticias.</span><span class="sxs-lookup"><span data-stu-id="87278-131">Note: We recommend the thumbnail card for a single update or news item.</span></span>
 
-<span data-ttu-id="29f47-137">Nuestra tarjeta más grande.</span><span class="sxs-lookup"><span data-stu-id="29f47-137">Our largest card.</span></span> <span data-ttu-id="29f47-138">Se usa mejor para artículos, descripciones largas o escenarios en los que la imagen está indicando la mayor parte del artículo.</span><span class="sxs-lookup"><span data-stu-id="29f47-138">Best used for articles, long descriptions, or scenarios where your image is telling most of the story.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+### <a name="media"></a><span data-ttu-id="87278-133">Audiovisual</span><span class="sxs-lookup"><span data-stu-id="87278-133">Media</span></span>
 
-### <a name="thumbnail"></a><span data-ttu-id="29f47-139">Thumbnail</span><span class="sxs-lookup"><span data-stu-id="29f47-139">Thumbnail</span></span>
+<span data-ttu-id="87278-134">Se usa cuando se desea combinar texto y medios, como audio o vídeo.</span><span class="sxs-lookup"><span data-stu-id="87278-134">Use when you want to combine text and media, like audio or video.</span></span>
 
-<span data-ttu-id="29f47-140">Corta y agradable.</span><span class="sxs-lookup"><span data-stu-id="29f47-140">Short and sweet.</span></span> <span data-ttu-id="29f47-141">Estas tarjetas son ideales para respuestas breves o si desea devolver varias tarjetas a la vez para que el usuario pueda elegir entre varias opciones.</span><span class="sxs-lookup"><span data-stu-id="29f47-141">These cards are ideal for short answers, or if you want to return several cards at once so the user can choose from a bunch of options.</span></span> <span data-ttu-id="29f47-142">Creemos que estos son una estupenda manera de crear un vínculo profundo a otra pestaña o un servicio Web.</span><span class="sxs-lookup"><span data-stu-id="29f47-142">We think these are a great way to deep link to another tab or a web service.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+### <a name="people"></a><span data-ttu-id="87278-136">Contactos</span><span class="sxs-lookup"><span data-stu-id="87278-136">People</span></span>
 
-### <a name="sign-in"></a><span data-ttu-id="29f47-143">Iniciar sesión</span><span class="sxs-lookup"><span data-stu-id="29f47-143">Sign in</span></span>
+<span data-ttu-id="87278-137">Se usa mejor para transmitir con eficacia quién está implicado en una tarea.</span><span class="sxs-lookup"><span data-stu-id="87278-137">Best used when you to efficiently convey who's involved with a task.</span></span>
 
-<span data-ttu-id="29f47-144">Algunos servicios requieren que los usuarios inicien sesión independientemente de la autenticación.</span><span class="sxs-lookup"><span data-stu-id="29f47-144">Some services require users to sign in independently of our authentication.</span></span> <span data-ttu-id="29f47-145">En ese caso, deberá presentar una tarjeta de inicio de sesión antes de que el usuario pueda conectarse a su servicio.</span><span class="sxs-lookup"><span data-stu-id="29f47-145">In that event, you would present a sign-in card before the user can connect to your service.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
+### <a name="request-ticket"></a><span data-ttu-id="87278-139">Vale de solicitud</span><span class="sxs-lookup"><span data-stu-id="87278-139">Request ticket</span></span>
 
-> [!TIP]
-> <span data-ttu-id="29f47-146">Limite las repeticiones de una tarjeta de inicio de sesión adicional, ya que constituyen una rugosidad de velocidad significativa para los nuevos usuarios.</span><span class="sxs-lookup"><span data-stu-id="29f47-146">Limit the occurrences of an additional sign-in card since they pose a significant speed bump for new users.</span></span>
+<span data-ttu-id="87278-140">Usar para obtener entradas rápidas de un usuario para crear automáticamente una tarea o un vale.</span><span class="sxs-lookup"><span data-stu-id="87278-140">Use to get quick inputs from a user to automatically create a task or ticket.</span></span>
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-## <a name="card-collections"></a><span data-ttu-id="29f47-147">Colecciones de tarjetas</span><span class="sxs-lookup"><span data-stu-id="29f47-147">Card collections</span></span>
+### <a name="imageset"></a><span data-ttu-id="87278-142">ImageSet</span><span class="sxs-lookup"><span data-stu-id="87278-142">ImageSet</span></span>
 
-<span data-ttu-id="29f47-148">También tenemos tipos de tarjeta estándar que se usan mejor cuando desea presentar varias partes de contenido a la vez o en una sucesión rápida.</span><span class="sxs-lookup"><span data-stu-id="29f47-148">We also have standard card types that are best used when you want to present several pieces of content at once or in quick succession.</span></span> <span data-ttu-id="29f47-149">Para ello, tenemos un carrusel, un resumen, una lista y lo que llamamos "combinación de burbujas".</span><span class="sxs-lookup"><span data-stu-id="29f47-149">For that purpose, we have a carousel, a digest, a list, and what we call a ‘bubble merge’.</span></span>
+<span data-ttu-id="87278-143">Use para enviar varias miniaturas de imagen.</span><span class="sxs-lookup"><span data-stu-id="87278-143">Use to send multiple image thumbnails.</span></span>
 
-### <a name="carousel"></a><span data-ttu-id="29f47-150">Carrusel</span><span class="sxs-lookup"><span data-stu-id="29f47-150">Carousel</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-<span data-ttu-id="29f47-151">Se usa mejor para artículos, compras y examen de tarjetas.</span><span class="sxs-lookup"><span data-stu-id="29f47-151">Best used for articles, shopping, and browsing through cards.</span></span>
+### <a name="actionset"></a><span data-ttu-id="87278-145">ActionSet</span><span class="sxs-lookup"><span data-stu-id="87278-145">ActionSet</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
+<span data-ttu-id="87278-146">Use esta opción cuando quiera que el usuario seleccione un botón y, a continuación, reúna los datos proporcionados por el usuario desde la misma tarjeta.</span><span class="sxs-lookup"><span data-stu-id="87278-146">Use when you want to the user to select a button, then gather addition user input from the same card.</span></span>
 
-> [!TIP]
-> <span data-ttu-id="29f47-152">El carrusel será el alto máximo de la tarjeta más grande.</span><span class="sxs-lookup"><span data-stu-id="29f47-152">The carousel will be the max height of your largest card.</span></span> <span data-ttu-id="29f47-153">Se recomienda usar el mismo tipo de tarjeta y los mismos campos de contenido en el mismo.</span><span class="sxs-lookup"><span data-stu-id="29f47-153">We recommend using the same card type and content fields throughout.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-### <a name="digest"></a><span data-ttu-id="29f47-154">Digest</span><span class="sxs-lookup"><span data-stu-id="29f47-154">Digest</span></span>
+### <a name="choiceset"></a><span data-ttu-id="87278-148">ChoiceSet</span><span class="sxs-lookup"><span data-stu-id="87278-148">ChoiceSet</span></span>
 
-<span data-ttu-id="29f47-155">Se usa mejor para noticias, resúmenes y siempre que quiera que el usuario vea varias tarjetas a la vez.</span><span class="sxs-lookup"><span data-stu-id="29f47-155">Best used for news, digests, and whenever you want the user to view multiple cards at once.</span></span> <span data-ttu-id="29f47-156">Se recomienda usar tarjetas de miniaturas para los resúmenes.</span><span class="sxs-lookup"><span data-stu-id="29f47-156">We recommend using thumbnail cards for digests.</span></span>
+<span data-ttu-id="87278-149">Usar para recopilar varias entradas del usuario.</span><span class="sxs-lookup"><span data-stu-id="87278-149">Use to gather multiple inputs from the user.</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Ejemplo muestra una tarjeta adaptable." border="false":::
 
-### <a name="lists"></a><span data-ttu-id="29f47-157">Listas</span><span class="sxs-lookup"><span data-stu-id="29f47-157">Lists</span></span>
+## <a name="anatomy"></a><span data-ttu-id="87278-151">Anatomía</span><span class="sxs-lookup"><span data-stu-id="87278-151">Anatomy</span></span>
 
-<span data-ttu-id="29f47-158">Las listas son una buena forma de presentar un conjunto de objetos que se pueden analizar en un escenario "Elija uno de estos".</span><span class="sxs-lookup"><span data-stu-id="29f47-158">Lists are a great way to present a scannable set of objects in a “pick one of these” scenario.</span></span> <span data-ttu-id="29f47-159">Las listas se usan mejor para los elementos que no necesitan mucha explicación.</span><span class="sxs-lookup"><span data-stu-id="29f47-159">Lists are best used for items that don’t need a lot of explanation.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una tarjeta adaptable." border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+<span data-ttu-id="87278-153">Las tarjetas adaptables tienen mucha flexibilidad.</span><span class="sxs-lookup"><span data-stu-id="87278-153">Adaptive Cards have a lot of flexibility.</span></span> <span data-ttu-id="87278-154">Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta:</span><span class="sxs-lookup"><span data-stu-id="87278-154">But at a minimum, we strongly suggest including the following components in every card:</span></span>
 
-### <a name="bubble-merge"></a><span data-ttu-id="29f47-160">Combinación de burbujas</span><span class="sxs-lookup"><span data-stu-id="29f47-160">Bubble merge</span></span>
+|<span data-ttu-id="87278-155">Counter</span><span class="sxs-lookup"><span data-stu-id="87278-155">Counter</span></span>|<span data-ttu-id="87278-156">Descripción</span><span class="sxs-lookup"><span data-stu-id="87278-156">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="87278-157">A</span><span class="sxs-lookup"><span data-stu-id="87278-157">A</span></span>|<span data-ttu-id="87278-158">**Header**: hacer que los encabezados sean claros y concisos, pero descriptivos.</span><span class="sxs-lookup"><span data-stu-id="87278-158">**Header**: Make headers clear and concise, yet descriptive.</span></span>|
+|<span data-ttu-id="87278-159">B</span><span class="sxs-lookup"><span data-stu-id="87278-159">B</span></span>|<span data-ttu-id="87278-160">**Copia del cuerpo**: Use para transmitir detalles que sean demasiado largos o que no sean lo suficientemente grandes como para incluirlos en el encabezado.</span><span class="sxs-lookup"><span data-stu-id="87278-160">**Body copy**: Use to convey detail that is either too long or not important enough to include in the header.</span></span>|
+|<span data-ttu-id="87278-161">C</span><span class="sxs-lookup"><span data-stu-id="87278-161">C</span></span>|<span data-ttu-id="87278-162">**Acciones principales**: como procedimiento recomendado, incluya las acciones principales de 1-3.</span><span class="sxs-lookup"><span data-stu-id="87278-162">**Primary actions**: As a best practice, include 1-3 primary actions.</span></span> <span data-ttu-id="87278-163">Se permiten seis como máximo.</span><span class="sxs-lookup"><span data-stu-id="87278-163">A maximum of six are allowed.</span></span>|
 
-<span data-ttu-id="29f47-161">Se pueden obtener efectos interesantes mediante el envío de un héroe y varias miniaturas en una sucesión rápida.</span><span class="sxs-lookup"><span data-stu-id="29f47-161">Some interesting effects can be achieved by sending one hero and several thumbnails in quick succession.</span></span> <span data-ttu-id="29f47-162">Recomendamos este enfoque cuando desee servir un resultado principal, pero incluya algunos elementos más relacionados.</span><span class="sxs-lookup"><span data-stu-id="29f47-162">We recommend this approach when you want to serve a main result but include a few more related items.</span></span>
+## <a name="best-practices"></a><span data-ttu-id="87278-164">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="87278-164">Best practices</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+### <a name="primary-and-secondary-actions"></a><span data-ttu-id="87278-165">Acciones principales y secundarias</span><span class="sxs-lookup"><span data-stu-id="87278-165">Primary and secondary actions</span></span>
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
 
-## <a name="best-practices"></a><span data-ttu-id="29f47-163">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="29f47-163">Best practices</span></span>
+#### <a name="do-use-up-to-six-primary-actions"></a><span data-ttu-id="87278-167">Do: usar hasta seis acciones principales</span><span class="sxs-lookup"><span data-stu-id="87278-167">Do: Use up to six primary actions</span></span>
 
-### <a name="keep-the-noise-down"></a><span data-ttu-id="29f47-164">Mantener el ruido hacia abajo</span><span class="sxs-lookup"><span data-stu-id="29f47-164">Keep the noise down</span></span>
+<span data-ttu-id="87278-168">Aunque las tarjetas adaptables pueden admitir seis acciones principales, la mayoría de las cartas no las necesitan.</span><span class="sxs-lookup"><span data-stu-id="87278-168">While Adaptive Cards can support six primary actions, most cards don’t need that.</span></span> <span data-ttu-id="87278-169">Las acciones deben ser claras, concisas y directas.</span><span class="sxs-lookup"><span data-stu-id="87278-169">Actions should be clear, concise, and straight forward.</span></span> <span data-ttu-id="87278-170">Menos es más.</span><span class="sxs-lookup"><span data-stu-id="87278-170">Less is more.</span></span>
 
-<span data-ttu-id="29f47-165">Es fácil enviar varias tarjetas a una conversación, pero una vez que las tarjetas se desplazan fuera de la vista, se vuelven menos útiles.</span><span class="sxs-lookup"><span data-stu-id="29f47-165">It’s easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful.</span></span> <span data-ttu-id="29f47-166">Intente limitarse a los conceptos básicos.</span><span class="sxs-lookup"><span data-stu-id="29f47-166">Try to limit yourself to the essentials.</span></span> <span data-ttu-id="29f47-167">Esto es especialmente cierto en un canal en el que los usuarios tienen menos tolerancia para lo que perciben como "ruido".</span><span class="sxs-lookup"><span data-stu-id="29f47-167">This is especially true in a channel where users have less tolerance for what they perceive as “noise”.</span></span>
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
 
-### <a name="test-on-mobile"></a><span data-ttu-id="29f47-168">Probar en dispositivos móviles</span><span class="sxs-lookup"><span data-stu-id="29f47-168">Test on mobile</span></span>
+#### <a name="dont-use-more-than-six-primary-actions"></a><span data-ttu-id="87278-172">No: usar más de seis acciones principales</span><span class="sxs-lookup"><span data-stu-id="87278-172">Don't: Use more than six primary actions</span></span>
 
-<span data-ttu-id="29f47-169">Los entornos móviles tienen limitaciones de espacio y ancho de banda, por lo que debe tener cuidado con la inclusión de imágenes de gran tamaño y conjuntos de datos de gran tamaño en listas y carruseles.</span><span class="sxs-lookup"><span data-stu-id="29f47-169">Mobile environments are space- and bandwidth-constrained, so be cautious about including oversized images and large data sets in lists and carousels.</span></span> <span data-ttu-id="29f47-170">Además, los anchos de los títulos y las longitudes del texto se truncarán en dispositivos móviles, por lo que es otro aspecto que debe tener en vista.</span><span class="sxs-lookup"><span data-stu-id="29f47-170">Also, title widths and text lengths will truncate on mobile, so that’s another thing to keep an eye on.</span></span>
+<span data-ttu-id="87278-173">Las tarjetas adaptables deben presentar contenido rápido y accionable.</span><span class="sxs-lookup"><span data-stu-id="87278-173">Adaptive Cards should present quick, actionable content.</span></span> <span data-ttu-id="87278-174">Muchas acciones pueden sobrecargar a un usuario.</span><span class="sxs-lookup"><span data-stu-id="87278-174">Too many actions can overwhelm a user.</span></span>
 
-### <a name="check-your-graphics"></a><span data-ttu-id="29f47-171">Comprobar los gráficos</span><span class="sxs-lookup"><span data-stu-id="29f47-171">Check your graphics</span></span>
+   :::column-end:::
+:::row-end:::
 
-<span data-ttu-id="29f47-172">Los gráficos van a escalarse, así que asegúrese de obtener una vista previa de ellos en todas las plataformas.</span><span class="sxs-lookup"><span data-stu-id="29f47-172">Graphics are going to scale, so be sure to preview them on all platforms.</span></span>
+### <a name="frequency"></a><span data-ttu-id="87278-175">Frecuencia</span><span class="sxs-lookup"><span data-stu-id="87278-175">Frequency</span></span>
 
-### <a name="avoid-including-text-in-a-graphic"></a><span data-ttu-id="29f47-173">Evitar incluir texto en un gráfico</span><span class="sxs-lookup"><span data-stu-id="29f47-173">Avoid including text in a graphic</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
 
-<span data-ttu-id="29f47-174">Todo lo que deba leer un usuario debe incluirse en un campo de texto.</span><span class="sxs-lookup"><span data-stu-id="29f47-174">Anything that needs to be read by a user should be included in a text field.</span></span> <span data-ttu-id="29f47-175">Una vez que se escala dinámicamente una imagen, cualquier texto que agregue a un gráfico puede volverse ininteligible.</span><span class="sxs-lookup"><span data-stu-id="29f47-175">Once an image is dynamically scaled, any text you add to a graphic may become unintelligible.</span></span>
+#### <a name="do-be-concise"></a><span data-ttu-id="87278-177">Do: ser conciso</span><span class="sxs-lookup"><span data-stu-id="87278-177">Do: Be concise</span></span>
 
-### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a><span data-ttu-id="29f47-176">Use menciones si desea la atención de usuarios específicos</span><span class="sxs-lookup"><span data-stu-id="29f47-176">Use mentions if you want the attention of specific users</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="29f47-177">Mencione que la compatibilidad en tarjetas solo se admite actualmente en [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) .</span><span class="sxs-lookup"><span data-stu-id="29f47-177">Mention support in cards is currently supported in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) only.</span></span>
-
-<span data-ttu-id="29f47-178">Las menciones son una excelente manera de notificar a usuarios específicos en un equipo o un chat en grupo.</span><span class="sxs-lookup"><span data-stu-id="29f47-178">Mentions are a great way to notify specific users in a Team or group chat.</span></span> <span data-ttu-id="29f47-179">Puede incluir una mención en tarjeta en escenarios como, una tarea que está asignada a un usuario o conceder prestigio a un compañero.</span><span class="sxs-lookup"><span data-stu-id="29f47-179">You can include a mention in card in scenarios like, a task thats assigned to a user or giving Kudos to a teammate.</span></span> <span data-ttu-id="29f47-180">Obtenga información sobre cómo incluir menciones en tarjetas en la [Página formato de tarjeta](~/task-modules-and-cards/cards/cards-format.md).</span><span class="sxs-lookup"><span data-stu-id="29f47-180">Learn how to include mentions in cards in the [card formatting page](~/task-modules-and-cards/cards/cards-format.md).</span></span> 
+<span data-ttu-id="87278-178">Es fácil enviar varias tarjetas a una conversación, pero una vez que las tarjetas se desplazan fuera de la vista, se vuelven menos útiles.</span><span class="sxs-lookup"><span data-stu-id="87278-178">It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful.</span></span> <span data-ttu-id="87278-179">Intente limitarse a los conceptos básicos.</span><span class="sxs-lookup"><span data-stu-id="87278-179">Try to limit yourself to the essentials.</span></span> <span data-ttu-id="87278-180">Esto es especialmente cierto en un canal en el que los usuarios tienen menos tolerancia para lo que perciben como "ruido".</span><span class="sxs-lookup"><span data-stu-id="87278-180">This is especially true in a channel where users have less tolerance for what they perceive as "noise".</span></span>
