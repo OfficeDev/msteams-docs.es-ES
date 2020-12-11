@@ -3,12 +3,12 @@ title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998010"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604483"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -135,7 +135,7 @@ Para obtener más información sobre las acciones de la tarjeta conector, consul
 
 Siga estos pasos para ver cómo se envía una tarjeta simple a un conector.
 
-1. En Microsoft Teams, elija **Más opciones** ( **&#8943;** ) junto al nombre del canal y elija **Conectores**.
+1. En Microsoft Teams, elija **Más opciones** (**&#8943;**) junto al nombre del canal y elija **Conectores**.
 2. Desplácese por la lista de conectores hasta **Webhook entrante** y elija **Agregar**.
 3. Escriba un nombre para el webhook, cargue una imagen para asociarla a los datos del webhook y elija **Crear**.
 4. Copie el webhook en el portapapeles y guárdelo. Necesitará la dirección URL del webhook para enviar información a Microsoft Teams.
@@ -173,7 +173,7 @@ Los siguientes pasos usan PowerShell. Damos por sentado que lo tiene instalado y
 2. Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `Invoke-RestMethod`.
 3. Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook. Debería ver la nueva tarjeta publicada en el canal.
 
-- Incluya dos iconos, siguiendo las instrucciones de [Iconos](~/concepts/build-and-test/apps-package.md#icons).
+- [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifique la parte `icons` del manifiesto para hacer referencia a los nombres de archivo de los iconos en lugar de a las direcciones URL.
 
 El archivo manifest.json siguiente contiene los elementos básicos necesarios para probar y enviar la aplicación.
