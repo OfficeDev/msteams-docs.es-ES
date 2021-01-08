@@ -2,18 +2,18 @@
 title: Agregar acciones de tarjeta en un bot
 description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en los bots.
 keywords: acciones de las tarjetas de los equipos bots
-ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 2bee1072405d91cd29d1aa227884516a87d10bde
+ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346780"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49768077"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
-Las tarjetas que usan los bots y las extensiones de mensajería de Microsoft Teams son compatibles con los siguientes tipos de actividad ( [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Tenga en cuenta que estas acciones difieren de las `potentialActions` tarjetas conector de Office 365 cuando se usan desde conectores.
+Las tarjetas que usan los bots y las extensiones de mensajería de Microsoft Teams son compatibles con los siguientes tipos de actividad ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ). Tenga en cuenta que estas acciones difieren de las `potentialActions` tarjetas conector de Office 365 cuando se usan desde conectores.
 
-| Tipo | Action |
+| Tipo | Acción |
 | --- | --- |
 | `openUrl` | Abre una dirección URL en el explorador predeterminado. |
 | `messageBack` | Envía un mensaje y una carga al bot (del usuario que hizo clic en el botón o ahusado la tarjeta) y envía un mensaje independiente al flujo de chat. |
@@ -24,7 +24,7 @@ Las tarjetas que usan los bots y las extensiones de mensajería de Microsoft Tea
 > [!NOTE]
 >* Teams no admite `CardAction` tipos que no aparecen en la tabla anterior.
 >* Teams no admite la `potentialActions` propiedad.
->* Las acciones de tarjeta son diferentes de [las acciones sugeridas](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en el servicio de bot Framework/Azure bot. Las acciones sugeridas no son compatibles con Microsoft Teams: Si desea que aparezcan botones en un mensaje de bot de Teams, use una tarjeta.
+>* Las acciones de tarjeta son diferentes de [las acciones sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en el servicio de bot Framework/Azure bot. Las acciones sugeridas no son compatibles con Microsoft Teams: Si desea que aparezcan botones en un mensaje de bot de Teams, use una tarjeta.
 >* Si está usando una acción de tarjeta como parte de una extensión de mensajería, las acciones no funcionarán hasta que la tarjeta se envíe al canal (no funcionarán mientras la tarjeta se encuentra en el cuadro de mensaje de redacción).
 
 Teams también admite [acciones de tarjetas adaptables](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), que solo se usan en tarjetas adaptables. Estas acciones se enumeran en su propia sección al final de esta referencia.
@@ -47,7 +47,7 @@ El `value` campo debe contener una dirección URL completa y con formato correct
 
 Con `messageBack` , puede crear una acción completamente personalizada con las siguientes propiedades:
 
-| Propiedad | Description |
+| Propiedad | Descripción |
 | --- | --- |
 | `title` | Aparece como etiqueta del botón. |
 | `displayText` | Opcional. El usuario los repite en la secuencia de chat cuando se realiza la acción. Este texto *no* se envía a su bot. |
@@ -236,7 +236,7 @@ Además de las acciones mencionadas anteriormente, puede modificar la carga de l
 
 Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
-| Propiedad | Description |
+| Propiedad | Descripción |
 | --- | --- |
 | `type` | Establece en `messageBack` |
 | `displayText` | Opcional. El usuario los repite en la secuencia de chat cuando se realiza la acción. Este texto *no* se envía a su bot. |
@@ -264,7 +264,7 @@ Para incluir una `messageBack` acción con una tarjeta adaptable, incluya los si
 
 Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
-| Propiedad | Description |
+| Propiedad | Descripción |
 | --- | --- |
 | `type` | Establece en `imBack` |
 | `value` | Cadena que debe volver a mostrarse en el chat |
@@ -288,7 +288,7 @@ Para incluir una `imBack` acción con una tarjeta adaptable, incluya los siguien
 
 Para incluir una `signin` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
 
-| Propiedad | Description |
+| Propiedad | Descripción |
 | --- | --- |
 | `type` | Establece en `signin` |
 | `value` | Establezca en la dirección URL a la que desea redirigir  |
@@ -304,6 +304,44 @@ Para incluir una `signin` acción con una tarjeta adaptable, incluya los siguien
         "type": "signin",
         "value": "https://signin.com"
     }
+  }
+}
+```
+
+### <a name="adaptive-cards-with-invoke-action"></a>Tarjetas adaptables con acción Invoke
+ 
+Para incluir una `invoke` acción con una tarjeta adaptable, incluya los siguientes detalles en el `msteams` objeto. Tenga en cuenta que puede incluir propiedades ocultas adicionales en el `data` objeto, si es necesario.
+
+| Propiedad | Descripción |
+| --- | --- |
+| `type` | Establece en `task/fetch` |
+| `data` | Establecer el valor  |
+
+#### <a name="example"></a>Ejemplo
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    }
+  }
+}
+```
+
+#### <a name="example-2-with-additional-payload-data"></a>Ejemplo 2 (con datos de carga adicional)
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    },
+    "Value1": "some value"
   }
 }
 ```

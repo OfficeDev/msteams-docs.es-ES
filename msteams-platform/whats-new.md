@@ -2,12 +2,12 @@
 title: Novedades
 description: Describe todas las nuevas características para desarrolladores de Microsoft Teams
 keywords: Teams novedades más recientes
-ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: da2378446f39ab8398cdc569987d14f5c6095330
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604469"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739045"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -18,11 +18,10 @@ ms.locfileid: "49604469"
 
 El registro de cambios muestra los cambios en la plataforma de Microsoft Teams y en este conjunto de documentos. A veces, se pueden usar entradas para llamar la atención sobre una nueva característica que sólo es de interés para los desarrolladores de Microsoft Teams.
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Nuevo: integración de la plataforma de identidad con Team Toolkit y Visual Studio Code for Tabs|[Autenticación de inicio de sesión único con Team Toolkit y Visual Studio Code para pestañas](toolkit/visual-studio-code-tab-sso.md)|
-|11/16/2020|El manifiesto de la aplicación Teams se actualizó a la versión 1,8|Referencia: esquema de manifiesto para Microsoft Teams|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
-|11/11/2020| Esquema del manifiesto actualizado a la versión 1,8| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
+|11/16/2020|El manifiesto de la aplicación Teams se actualizó a la versión 1,8|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Directrices de diseño de robots de Teams|[Directrices de diseño de bot](bots/design/bots.md)|
 |9/30/2020|Ahora se admite el envío y la recepción de archivos en bots en dispositivos móviles.|[Enviar y recibir archivos a través de su bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nueva guía de introducción a Microsoft Teams|[Información general sobre la creación de su primera aplicación de Microsoft Teams](build-your-first-app/build-first-app-overview.md)|

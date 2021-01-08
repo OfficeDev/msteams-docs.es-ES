@@ -5,12 +5,12 @@ description: creación de aplicaciones para reuniones de Microsoft Teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de las aplicaciones de Microsoft Teams rol de participante de usuario
-ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: e768c2dc6722d006c89927adfe60e03243a076d0
+ms.sourcegitcommit: f0dfae429385ef02f61896ad49172c4803ef6622
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605234"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "49740874"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -49,56 +49,72 @@ Consulte nuestro [contexto de obtención de la documentación de la pestaña de 
 > * No almacene en caché roles de participantes, ya que el organizador de la reunión puede cambiar un rol en cualquier punto en el tiempo.
 >
 > * Actualmente, Microsoft Teams no admite listas de distribución de gran tamaño o tamaños de lista de más de 350 participantes para la `GetParticipant` API.
->
-> * La compatibilidad con bot Framework SDK estará disponible próximamente.
 
+#### <a name="query-parameters"></a>Parámetros de consulta
 
-#### <a name="request"></a>Solicitud
+|Valor|Tipo|Obligatorio|Descripción|
+|---|---|----|---|
+|**meetingId**| string | Sí | El identificador de la reunión está disponible a través de la invocación de bot? o Teams Client SDK.|
+|**participantId**| string | Sí | ParticipantId es el identificador de usuario. Está disponible en el SSO del cliente de pestañas, Bot invocación y el SDK del cliente de Microsoft Teams. Se recomienda encarecidamente obtener un participantId desde el SSO de pestaña. |
+|**tenantId**| string | Sí | El tenantId es necesario para los usuarios del inquilino. Está disponible en el SSO del cliente de pestañas, Bot invocación y el SDK del cliente de Microsoft Teams. Se recomienda encarecidamente obtener un tenantId desde el SSO de pestaña. |
+
+#### <a name="example"></a>Ejemplo
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsChannelAccount member = participant.User;
+  MeetingParticipantInfo meetingInfo = participant.Meeting;
+  ConversationAccount conversation = participant.Conversation;
+
+  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
+}
+
+```
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            let member = participant.user;
+            let meetingInfo = participant.meeting;
+            let conversation = participant.conversation;
+            
+            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+            await next();
+        });
+    }
+}
+
+```
+
+# <a name="json"></a>[JSON](#tab/json)
 
 ```http
 GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-*Vea* la [referencia de la API de bot Framework](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).
-
-<!-- markdownlint-disable MD025 -->
-
-**Ejemplo de C#**
-
-```csharp
-   // Get role for the user who sent a message to your bot
-   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
-```
-
-* * *
-<!-- markdownlint-disable MD001 -->
-
-#### <a name="query-parameters"></a>Parámetros de consulta
-
-|Valor|Tipo|Necesario|Descripción|
-|---|---|----|---|
-|**meetingId**| string | Sí | El identificador de la reunión está disponible a través de la invocación de bots y Team Client SDK.|
-|**participantId**| string | Sí | Este campo es el identificador de usuario y está disponible en la pestaña SSO, Bot invocación y el SDK del cliente de Microsoft Teams. El SSO de pestaña es muy recomendable|
-|**tenantId**| string | Sí | Esto es necesario para los usuarios del inquilino. Está disponible en el SSO del cliente de pestañas, Bot invocación y el SDK del cliente de Microsoft Teams. El SSO de pestaña es muy recomendable|
-
-#### <a name="response-payload"></a>Carga de respuesta
-<!-- markdownlint-disable MD036 -->
-
-el **rol** de "reunión" puede ser *organizador*, *moderador* o *Asistente*.
-
-**Ejemplo 1**
+El cuerpo de la respuesta es:
 
 ```json
 {
    "user":{
       "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name":"Allan Deyoung",
-      "givenName":"Allan",
-      "surname":"Deyoung",
-      "email":"Allan.Deyoung@microsoft.com",
-      "userPrincipalName":"Allan.Deyoung@microsoft.com",
-      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "aadObjectId":"e236c4bf-88b1-4f3a-b1d7-8891dfc332b5",
+      "name":"Bob Young",
+      "givenName":"Bob",
+      "surname":"Young",
+      "email":"Bob.young@microsoft.com",
+      "userPrincipalName":"Bob.young@microsoft.com",
+      "tenantId":"2fe477ab-0efc-4dfd-bde2-484374e2c373",
       "userRole":"user"
    },
    "meeting":{
@@ -112,61 +128,40 @@ el **rol** de "reunión" puede ser *organizador*, *moderador* o *Asistente*.
 }
 ```
 
+* * *
+
 #### <a name="response-codes"></a>Códigos de respuesta
 
-**403**: la aplicación no tiene permiso para obtener información sobre los participantes. Esta será la respuesta de error más común y se desencadenará cuando la aplicación no se instale en la reunión, como cuando la administración de inquilinos la ha deshabilitado o bloqueada durante la migración de sitios activos.  
-**200**: la información del participante se recuperó correctamente.  
-**401**: token no válido.  
-**404**: no se encuentra el participante. 
-**500**: la reunión ha expirado (más de 60 días desde la finalización de la reunión) o el participante no tiene permisos basados en su rol.
+* **403**: la aplicación no tiene permiso para obtener información sobre los participantes.  Esta es la respuesta de error más común y se desencadena si la aplicación no está instalada en la reunión. Por ejemplo, si la aplicación está deshabilitada por el administrador de inquilinos o se bloquea durante la migración de sitios activos.
+* **200**: la información del participante se recuperó correctamente.
+* **401**: token no válido.
+* **404**: no se encuentra el participante.
+* **500**: la reunión ha expirado (más de 60 días desde la finalización de la reunión) o el participante no tiene permisos basados en su rol.
+
 
 **Próximamente**
 
-**404**: la reunión ha expirado o el participante no se encuentra. 
+* **404**: la reunión ha expirado o el participante no se encuentra.
 
-<!-- markdownlint-disable MD024 -->
+
 ### <a name="notificationsignal-api"></a>API de NotificationSignal
 
 > [!NOTE]
 > Cuando se invoca un cuadro de diálogo en la reunión, el mismo contenido también se presentará como un mensaje de chat.
 
-#### <a name="request"></a>Solicitud
-
-```http
-POST /v3/conversations/{conversationId}/activities
-```
-
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**conversationId**| string | Sí | El identificador de conversación está disponible como parte de la invocación de bot |
 
-#### <a name="request-payload"></a>Carga de solicitud
+#### <a name="example"></a>Ejemplo
 
 > [!NOTE]
 >
-> *  En la carga solicitada siguiente, el `completionBotId` parámetro del `externalResourceUrl` es un opcional. Es el `Bot ID` que se declara en el manifiesto. El bot recibirá un objeto de resultado.
+El `completionBotId` parámetro de `externalResourceUrl` es opcional en el ejemplo de carga solicitada. `Bot ID` se declara en el manifiesto y el bot recibe un objeto de resultado.
 > * Los parámetros width y height de externalResourceUrl deben estar en píxeles. Consulte las [directrices de diseño](design/designing-apps-in-meetings.md) para asegurarse de que las dimensiones están dentro de los límites permitidos.
-> * La dirección URL es la página que se carga como `<iframe>` dentro del cuadro de diálogo en reunión. El dominio de la dirección URL debe estar en la matriz de la aplicación `validDomains` en el manifiesto de la aplicación.
-
-
-# <a name="json"></a>[JSON](#tab/json)
-
-```json
-{
-    "type": "message",
-    "text": "John Phillips assigned you a weekly todo",
-    "summary": "Don't forget to meet with Marketing next week",
-    "channelData": {
-        "notification": {
-            "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-        }
-    },
-    "replyToId": "1493070356924"
-}
-```
+> * La dirección URL es la página que se carga como una `<iframe>` en el cuadro de diálogo en la reunión. El dominio debe estar en la matriz de la aplicación `validDomains` en el manifiesto de la aplicación.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -198,28 +193,48 @@ replyActivity.channelData = {
 await context.sendActivity(replyActivity);
 ```
 
-* * *
+# <a name="json"></a>[JSON](#tab/json)
 
-> [!IMPORTANT]
-> La dirección URL de la burbuja de contenido (URL de taskInfo) debe incluirse en la lista de [dominios válidos](../resources/schema/manifest-schema.md#validdomains) que se incluye en el manifiesto de la aplicación Teams.
+```http
+POST /v3/conversations/{conversationId}/activities
+
+{
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+        }
+    },
+    "replyToId": "1493070356924"
+}
+```
+
+* * *
 
 #### <a name="response-codes"></a>Códigos de respuesta
 
-**201**: la actividad con señal se ha enviado correctamente  
-**401**: token no válido  
-**403**: la aplicación no puede enviar la señal. En este caso, la carga debe contener un mensaje de error más detallado. Puede haber varios motivos: la aplicación está deshabilitada por el administrador de inquilinos, bloqueada durante la mitigación de sitios activos, etc.  
-**404**: el chat de reuniones no existe  
+* **201**: la actividad con señal se ha enviado correctamente  
+* **401**: token no válido  
+* **201**: la actividad con señal se ha enviado correctamente. 
+* **401**: token no válido.
+* **403**: la aplicación no puede enviar la señal. Esto puede ocurrir debido a diversos motivos como, por ejemplo, que el administrador del espacio empresarial deshabilita la aplicación, la aplicación se bloquea durante la migración de sitios activos y así sucesivamente. En este caso, la carga contiene un mensaje de error detallado. 
+* **404**: el chat de reuniones no existe.
+ 
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Habilitar la aplicación para reuniones de Microsoft Teams
 
 ### <a name="update-your-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
-Las funcionalidades de la aplicación reuniones se declaran en el **configurableTabs** manifiesto de la aplicación a través de los  ->  **ámbitos** configurableTabs y los matrices de **contexto** . *Scope* define quién y *Context* define dónde estará disponible la aplicación.
+Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de la aplicación a través de los  ->  **ámbitos** configurableTabs y los matrices de **contexto** . *Scope* define quién y *Context* define dónde estará disponible la aplicación.
 
 > [!NOTE]
-> * Use el [esquema del manifiesto de vista previa de desarrollador](../resources/schema/manifest-schema-dev-preview.md) para probar esto en el manifiesto de la aplicación.
+> Use el [esquema del manifiesto de vista previa de desarrollador](../resources/schema/manifest-schema-dev-preview.md) para probar esto en el manifiesto de la aplicación.
 
 ```json
+
 "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",

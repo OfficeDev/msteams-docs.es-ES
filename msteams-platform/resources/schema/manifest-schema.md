@@ -4,12 +4,12 @@ description: Describe el esquema del manifiesto para Microsoft Teams
 keywords: esquema del manifiesto de Microsoft Teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: e25f50fc8da357553c1f0a8b01dc51af079ed2bb
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: c66add190b0492170acf9756980ee16fb1fdf1fd
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604616"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739059"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -440,7 +440,7 @@ El elemento es una matriz (un máximo solo de un elemento, &mdash; actualmente s
 |`botId`|string|64 caracteres|✔|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Puede ser el mismo que el [identificador de aplicación](#id)general.|
 |`scopes`|matriz de enumeraciones|3 |✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia específica para un solo usuario (`personal`). Estas opciones no son exclusivas.|
 |`needsChannelSelector`|boolean|||Describe si el bot usa una sugerencia del usuario para agregar el bot a un canal específico. Predeterminada **`false`**|
-|`isNotificationOnly`|boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Predeterminada `**false**`|
+|`isNotificationOnly`|boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Predeterminada **`false`**|
 |`supportsFiles`|boolean|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Predeterminada **`false`**|
 |`supportsCalling`|boolean|||Un valor que indica dónde es compatible un bot con las llamadas de audio. **Importante**: esta propiedad es experimental actualmente. Es posible que las propiedades experimentales no estén completas y puedan sufrir cambios antes de que estén completamente disponibles.  Se proporciona solo para fines de prueba y exploración y no debe usarse en aplicaciones de producción. Predeterminada **`false`**|
 |`supportsVideo`|boolean|||Un valor que indica dónde es compatible una llamada de vídeo con un bot. **Importante**: esta propiedad es experimental actualmente. Es posible que las propiedades experimentales no estén completas y puedan sufrir cambios antes de que estén completamente disponibles.  Se proporciona solo para fines de prueba y exploración y no debe usarse en aplicaciones de producción. Predeterminada **`false`**|
@@ -452,7 +452,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeraciones|3 |✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
-|`items.commands`|matriz de objetos|10  |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots. commandLists. Commands
 
@@ -486,10 +486,10 @@ Define una extensión de mensajería para la aplicación.
 
 El elemento es una matriz (un máximo de 1 elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan una extensión de mensajería.
 
-|Nombre| Tipo | Tamaño máximo | Necesario | Descripción|
+|Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|IDENTIFICADOR único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como se registró con bot Framework. Puede ser el mismo que el identificador de aplicación general.|
-|`commands`|matriz de objetos|10  |✔|matriz de comandos que admite la extensión de mensajería|
+|`commands`|matriz de objetos|10 |✔|matriz de comandos que admite la extensión de mensajería|
 |`canUpdateConfiguration`|boolean|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar las aplicaciones cuando se cumplen ciertas condiciones. Los dominios también deben aparecer en `validDomains`|
 |`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|

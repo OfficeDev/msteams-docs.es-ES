@@ -2,12 +2,12 @@
 title: Compatibilidad de inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 keywords: API de autenticación de Microsoft Teams SSO de inicio de sesión único de AAD
-ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 3eff1cd1d73573c8eaade63580516f432fe082a1
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552454"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731989"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad de inicio de sesión único (SSO) para pestañas
 
@@ -96,7 +96,7 @@ En esta sección se describen las tareas necesarias para crear una pestaña de M
 11. En la sección **aplicaciones cliente autorizadas** , identifique las aplicaciones que desea autorizar para la aplicación Web de la aplicación. Seleccione *Agregar una aplicación cliente*. Escriba cada uno de los siguientes identificadores de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicación para equipos móviles o de escritorio)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicación Web de Teams)
-12. Navegue a **permisos** de la API. Seleccione *Agregar* permisos  >  *Microsoft Graph*  >  *delegados* de permisos de Microsoft Graph y, a continuación, agregue los siguientes permisos a la API de Microsoft Graph:
+12. Navegue a **permisos** de la API. Seleccione *Agregar* permisos  >    >  *delegados* de permisos de Microsoft Graph y, a continuación, agregue los siguientes permisos a la API de Microsoft Graph:
     * User. Read (habilitado de forma predeterminada)
     * email
     * offline_access
@@ -168,7 +168,7 @@ Una vez que haya recibido el token de acceso en la devolución de llamada correc
 
 ## <a name="sample-code"></a>Código de ejemplo
 
-Visite nuestra aplicación de ejemplo: [MSTeams de SSO de ejemplo de pestañas-NodeJS](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+Visite nuestra aplicación de ejemplo: [MSTeams PNP de ejemplo de PNP](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 En el archivo Léame se explica cómo configurar el entorno de desarrollo y cómo configurar la aplicación en Azure AD. También puede encontrar más información sobre cómo se estructura la muestra en la [sección estructura](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) de la aplicación para que le resulte más fácil familiarizarse con el código base.
 

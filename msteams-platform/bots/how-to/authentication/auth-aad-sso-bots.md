@@ -2,16 +2,16 @@
 title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bot puede usar una tarjeta de inicio de sesión o el servicio de robots de Azure con la tarjeta de OAuth.
 keywords: token de usuario, compatibilidad con SSO para bots
-ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: ee9dbee063acf90f5596fc95d002caf53f88a08a
+ms.sourcegitcommit: 0a9e91c65d88512eda895c21371b3cd4051dca0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409102"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "49729081"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
-La autenticación de inicio de sesión único en Azure Active Directory (Azure AD) minimiza el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión mediante la actualización automática del token de autenticación. Si los usuarios acuerdan usar la aplicación, no tendrán que volver a dar su consentimiento en otro dispositivo y se iniciará sesión automáticamente. El flujo es muy similar al soporte de SSO de la pestaña de Microsoft [Teams]( ../../../tabs/how-to/authentication/auth-aad-sso.md). La diferencia es el protocolo de cómo un bot solicita tokens y recibe respuestas.
+La autenticación de inicio de sesión único en Azure Active Directory (Azure AD) minimiza el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión mediante la actualización automática del token de autenticación. Si los usuarios están de acuerdo en usar la aplicación, no tendrán que volver a dar su consentimiento en otro dispositivo y se iniciará sesión automáticamente. El flujo es muy similar al soporte de SSO de la pestaña de Microsoft [Teams]( ../../../tabs/how-to/authentication/auth-aad-sso.md). La diferencia es el protocolo de cómo un bot solicita tokens y recibe respuestas.
 
 OAuth 2,0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y muchos otros proveedores de identidades. Una descripción básica de OAuth 2,0 es un requisito previo para trabajar con la autenticación en Microsoft Teams.
 
@@ -21,10 +21,10 @@ OAuth 2,0 es un estándar abierto para la autenticación y autorización usado p
 
 1. El bot envía un mensaje con un OAuthCard que contiene la `tokenExchangeResource` propiedad. Indica a teams que obtenga un token de autenticación para la aplicación bot. El usuario recibe mensajes en todos los extremos activos del usuario.
 
-> [!NOTE]
->* Un usuario puede tener más de un punto de conexión activo a la vez.  
->* El token de bot se recibe de todos los extremos activos del usuario.
->* Actualmente, la compatibilidad con el inicio de sesión único requiere que la aplicación esté instalada en el ámbito personal.
+    > [!NOTE]
+    >* Un usuario puede tener más de un punto de conexión activo a la vez.  
+    >* El token de bot se recibe de todos los extremos activos del usuario.
+    >* Actualmente, la compatibilidad con el inicio de sesión único requiere que la aplicación esté instalada en el ámbito personal.
 
 2. Si es la primera vez que el usuario actual ha usado la aplicación de bot, habrá una solicitud de confirmación para el consentimiento (si se requiere consentimiento) o para controlar la autenticación de paso a paso (por ejemplo, la autenticación en dos fases).
 
@@ -38,7 +38,7 @@ OAuth 2,0 es un estándar abierto para la autenticación y autorización usado p
   
 ## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a>Desarrollar un bot? n de inicio de sesión único de Microsoft Teams
   
-Los pasos siguientes: son necesarios para desarrollar un bot de Microsoft Teams de SSO:
+Los siguientes pasos son necesarios para desarrollar un bot de Microsoft Teams de SSO:
 
 1. [Crear una cuenta gratuita de Azure](#create-an-azure-account)
 2. [Actualizar el manifiesto de la aplicación de Teams](#update-your-app-manifest)
@@ -48,17 +48,18 @@ Los pasos siguientes: son necesarios para desarrollar un bot de Microsoft Teams 
 
 Este paso es similar al [flujo de SSO de pestañas](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
-1. Obtenga el [identificador de la aplicación de Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) para el cliente de escritorio, web o móvil de Teams.
+1. Obtenga el [identificador de la aplicación de Azure ad](/graph/concepts/auth-register-app-v2) para el cliente de escritorio, web o móvil de Teams.
 2. Especifique los permisos que necesita la aplicación para el punto de conexión de Azure AD y, opcionalmente, Microsoft Graph.
-3. [Conceda permisos](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) para equipos de escritorio, Web y aplicaciones móviles de Microsoft Teams.
-4. Para agregar una aplicación cliente, seleccione el botón **Agregar un ámbito** y, en el panel que se abre, escriba `access_as_user` como **nombre de ámbito**.
+3. [Conceda permisos](/azure/active-directory/develop/v2-permissions-and-consent) para equipos de escritorio, Web y aplicaciones móviles de Microsoft Teams.
+4. Seleccione **Agregar un ámbito**.
+5. En el panel que se abre, agregue una aplicación cliente especificando `access_as_user` como **nombre del ámbito**.
 
->[!NOTE]
-> El ámbito "access_as_user" que se usa para agregar una aplicación cliente es "administradores y usuarios".
+    >[!NOTE]
+    > El ámbito "access_as_user" que se usa para agregar una aplicación cliente es "administradores y usuarios".
 
-> [!IMPORTANT]
-> * Si va a crear un bot independiente, establezca el URI del identificador de aplicación en `api://botid-{YourBotId}` aquí, **YourBotId** hace referencia al identificador de la aplicación de Azure ad.
-> * Si va a compilar una aplicación con un bot y una ficha, establezca el URI del identificador de aplicación en `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+    > [!IMPORTANT]
+    > * Si va a crear un bot independiente, establezca el URI del identificador de aplicación en `api://botid-{YourBotId}` aquí, **YourBotId** hace referencia al identificador de la aplicación de Azure ad.
+    > * Si va a compilar una aplicación con un bot y una ficha, establezca el URI del identificador de aplicación en `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 ### <a name="update-your-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
@@ -80,7 +81,7 @@ Agregue nuevas propiedades al manifiesto de Microsoft Teams:
 
 ### <a name="request-a-bot-token"></a>Solicitar un token de bot
 
-La solicitud para obtener el token es una solicitud de mensaje POST normal (usando el esquema de mensaje existente). Se incluye en los datos adjuntos de un OAuthCard. El esquema de la clase OAuthCard se define en el [esquema de Bot 4,0 de Microsoft](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) y es muy similar a una tarjeta de inicio de sesión. Si la `TokenExchangeResource` propiedad se rellena en la tarjeta, Microsoft Teams tratará esta solicitud como una adquisición de token silencioso. Para el canal de Teams, se respeta solo la `Id` propiedad, que identifica de forma única una solicitud de token.
+La solicitud para obtener el token es una solicitud de mensaje POST normal (usando el esquema de mensaje existente). Se incluye en los datos adjuntos de un OAuthCard. El esquema de la clase OAuthCard se define en el [esquema de Bot 4,0 de Microsoft](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) y es muy similar a una tarjeta de inicio de sesión. Si la `TokenExchangeResource` propiedad se rellena en la tarjeta, Microsoft Teams tratará esta solicitud como una adquisición de token silencioso. Para el canal de Teams, respetamos solo la `Id` propiedad, que identifica de forma única una solicitud de token.
 
 >[!NOTE]
 > El marco de bot `OAuthPrompt` o el `MultiProviderAuthDialog` es compatible con la autenticación de inicio de sesión único (SSO).
@@ -152,25 +153,25 @@ El `turnContext.activity.value` es del tipo [TokenExchangeInvokeRequest](/dotnet
 
 2. Cambie a la hoja de **configuración** y elija **Agregar configuración** en la sección configuración de la conexión OAuth.
 
-![Vista SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
+    ![Vista SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
 3. Complete el formulario de **configuración de conexión** :
 
-> [!div class="checklist"]
->
-> * Escriba un nombre para la nueva configuración de conexión. Este será el nombre al que se hace referencia en la configuración del código del servicio de bot en el **paso 5**.
-> * En la lista desplegable proveedor de servicios, seleccione **Azure Active Directory V2**.
->* Escriba las credenciales de cliente de la aplicación AAD.
+    > [!div class="checklist"]
+    >
+    > * Escriba un nombre para la nueva configuración de conexión. Este será el nombre al que se hace referencia en la configuración del código del servicio de bot en el **paso 5**.
+    > * En la lista desplegable proveedor de servicios, seleccione **Azure Active Directory V2**.
+    >* Escriba las credenciales de cliente de la aplicación AAD.
 
->[!NOTE]
-> La **concesión implícita** puede ser necesaria en la aplicación AAD.
+    >[!NOTE]
+    > La **concesión implícita** puede ser necesaria en la aplicación AAD.
 
->* Para la dirección URL de intercambio de tokens, use el valor de ámbito definido en el paso anterior de la aplicación de AAD. La presencia de la dirección URL de Exchange token indica al SDK que esta aplicación de AAD está configurada para SSO.
->* Especifique "Common" como el **identificador de inquilino**.
->* Agregue todos los ámbitos configurados al especificar permisos para las API de flujo descendente de la aplicación de AAD. Con el identificador de cliente y el secreto de cliente proporcionados, el almacén de tokens intercambiará el token de un token de Graph con los permisos definidos.
->* Haga clic en **Guardar**.
+    >* Para la dirección URL de intercambio de tokens, use el valor de ámbito definido en el paso anterior de la aplicación de AAD. La presencia de la dirección URL de Exchange token indica al SDK que esta aplicación de AAD está configurada para SSO.
+    >* Especifique "Common" como el **identificador de inquilino**.
+    >* Agregue todos los ámbitos configurados al especificar permisos para las API de flujo descendente de la aplicación de AAD. Con el identificador de cliente y el secreto de cliente proporcionados, el almacén de tokens intercambiará el token de un token de Graph con los permisos definidos.
+    >* Seleccione **Guardar**.
 
-![Vista de configuración de VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+    ![Vista de configuración de VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 
 ### <a name="update-the-auth-sample"></a>Actualizar la muestra de autenticación
 
@@ -179,7 +180,7 @@ Comience con el [ejemplo de auth de Teams](https://github.com/microsoft/BotBuild
 1. Actualice la TeamsBot para incluir lo siguiente. Para controlar el deduping de la solicitud entrante, vea a continuación:
 
 ```csharp
- protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+     protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
         }
@@ -195,8 +196,8 @@ Comience con el [ejemplo de auth de Teams](https://github.com/microsoft/BotBuild
 
 #### <a name="additional-code-samples"></a>Ejemplos de código adicionales
 
-* [Ejemplo de C# con bot Framework SDK](https://microsoft-my.sharepoint-df.com/:u:/p/vul/ETZQfeTViDlCv-frjgTIincB7dvk2HOnma1TLvcoeGGIxg?e=uPq62c).
+* [Ejemplo de C# con bot Framework SDK](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).
 
 * [Ejemplo de C# con bot Framework SDK para desduplicar la solicitud de token](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).
 
-* [Ejemplo de C# sin usar el almacén de tokens del SDK de bot Framework](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)
+* [Ejemplo de C# sin usar el almacén de tokens del SDK de bot Framework](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw).

@@ -5,12 +5,12 @@ description: Cómo crear una página de configuración
 keywords: canal de grupo de pestañas de Teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: c041c311245bb5bfc5e2655ef8d596b2839fdb70
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605328"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731968"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -85,7 +85,7 @@ Aquí, al usuario se le presentan dos botones de opción, **Seleccione gris** o 
 1. `microsoftTeams.settings.registerOnSaveHandler()`Se desencadena el controlador de eventos.
 1. El botón **Guardar** de la página Configuración de la aplicación, cargado en Microsoft Teams, está habilitado.
 
-Este código permite que los equipos sepan que se han cumplido los requisitos de configuración y que la instalación puede continuar. Al **Guardar**, `settings.setSettings()` se configuran los parámetros de, tal y como se define en la `Settings` interfaz, para la instancia actual (consulte la [interfaz de configuración](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Por último, `saveEvent.notifySuccess()` se llama a para indicar que la dirección URL del contenido se ha resuelto correctamente.
+Este código permite que los equipos sepan que se han cumplido los requisitos de configuración y que la instalación puede continuar. Al **Guardar**, los parámetros de `settings.setSettings()` se establecen, tal y como lo define la `Settings` interfaz de, de la instancia actual. Para obtener más información, consulte [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Por último, `saveEvent.notifySuccess()` se llama a para indicar que la dirección URL del contenido se ha resuelto correctamente.
 
 >[!NOTE]
 >
