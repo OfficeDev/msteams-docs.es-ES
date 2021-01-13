@@ -5,12 +5,12 @@ description: Cree rápidamente un canal y una pestaña de grupo de Microsoft Tea
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ad0474859118f302a39e823f7669dc54061d525
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: ae06217cf9ffd99ce94aff981fbbec19136d4aeb
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795457"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797879"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Crear una pestaña de canal y grupo para Microsoft Teams
 
@@ -36,16 +36,16 @@ Puedes hacer que esta información sea más fácil de encontrar mediante la crea
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Si aún no lo ha hecho, asegúrese de comprender [e instalar los requisitos previos de](build-first-app-overview.md#get-prerequisites)desarrollo de Teams.
+Si aún no lo ha hecho, asegúrese de comprender [e instalar los requisitos previos de desarrollo de Teams.](build-first-app-overview.md#get-prerequisites)
 
 ## <a name="1-create-your-app-project"></a>1. Crear el proyecto de aplicación
 
-Microsoft Teams Toolkit ayuda a configurar la aplicación y a configurar scaffolding relevante para las pestañas de canal y grupo, incluida una página de configuración básica y una página de contenido que muestra un mensaje de "Hola a todos". Mensaje.
+Microsoft Teams Toolkit ayuda a configurar la aplicación y a configurar scaffolding relevante para las pestañas de canal y grupo, incluida una página de configuración básica y una página de contenido que muestra un mensaje "Hola a todos". Mensaje.
 
 > [!TIP]
 > Si no ha creado un proyecto de aplicación de Teams [](../build-your-first-app/build-and-run.md) antes, es posible que le sea útil seguir estas instrucciones que explican los proyectos con más detalle.
 
-1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Create a new Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
+1. En Visual Studio, seleccione **Microsoft Teams** en la barra de actividades de la izquierda y elija Crear una nueva aplicación :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: de **Teams.**
 1. Cuando se le solicite, inicie sesión con su cuenta de desarrollo de Microsoft 365.
 1. En la **pantalla Agregar funcionalidades,** seleccione **Pestaña** y, a **continuación, Siguiente.**
 1. Escriba un nombre para su aplicación de Teams. (Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de aplicación en el equipo local). Seleccione **la pestaña De grupo o canal de Teams.**
@@ -129,7 +129,7 @@ return (
 ```
  
 > [!TIP]
-> Como mínimo, proporciona información breve sobre la aplicación en esta página, ya que puede que sea la primera vez que los usuarios aprendan sobre ella. También puede incluir opciones de configuración personalizadas o un flujo [de trabajo de](../tabs/how-to/authentication/auth-aad-sso.md)autenticación, que es común en las páginas de configuración de pestañas.
+> Como mínimo, proporciona información breve sobre la aplicación en esta página, ya que esta puede ser la primera vez que los usuarios estén informando sobre ella. También puede incluir opciones de configuración personalizadas o un flujo [de trabajo de](../tabs/how-to/authentication/auth-aad-sso.md)autenticación, que es común en las páginas de configuración de tabulación.
 
 ## <a name="5-provide-a-suggested-tab-name"></a>5. Proporcionar un nombre de pestaña sugerido
 
@@ -161,13 +161,13 @@ Una vez completado, se compila **correctamente.** en el terminal. La aplicación
 
 ## <a name="7-sideload-your-app-in-teams"></a>7. Instalación local de la aplicación en Teams
 
-La aplicación está lista para probarse en Teams. Para ello, debes tener una cuenta que permita la instalación de prueba de la aplicación. (Si no está seguro de que lo tiene, obtenga información sobre cómo obtener una cuenta [de desarrollo de Teams).](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
+La aplicación está lista para probarse en Teams. Para ello, debes tener una cuenta que permita la instalación de prueba de la aplicación. (Si no está seguro de que lo tiene, obtenga información sobre cómo obtener una cuenta de desarrollo [de Teams).](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
 
 1. En Visual Studio, presione la tecla **F5** para iniciar un cliente web de Teams.
 1. Para mostrar el contenido de la aplicación en Teams, especifique que el lugar donde se ejecuta la aplicación ( `localhost` ) es de confianza:
    1. Abra una nueva pestaña en la misma ventana del explorador (Google Chrome de forma predeterminada) que se abrió después de presionar **F5**.
    1. Vaya a `https://localhost:3000/tab` la página y continúe.
-1. Vuelva a Teams. En el modal, seleccione **Agregar a un** equipo o Agregar a un **chat** y busque un canal o chat que pueda usar para las pruebas.
+1. Vuelva a Teams. En el modal, seleccione **Agregar a un** equipo o Agregar a un **chat** y busque un canal o chat que pueda usar para realizar pruebas.
 1. Seleccione **Configurar una pestaña.** La página de configuración se muestra en un modal.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Captura de pantalla de una página de configuración de pestaña de canal.":::
 1. Seleccione **Guardar** para configurar la pestaña. Se muestra la página de contenido.<br/>
@@ -183,8 +183,8 @@ La aplicación está lista para probarse en Teams. Para ello, debes tener una cu
 * [Insertar contenido de una aplicación web](../tabs/how-to/add-tab.md#tab-requirements)o página web existente: le mostramos cómo crear contenido nuevo para una pestaña, pero también puede cargar contenido desde una dirección URL externa.
 * [Cree una experiencia de pestaña sin problemas:](../tabs/design/tabs.md)vea las directrices recomendadas para diseñar pestañas de Teams.
 * [Crear pestañas para móviles:](../tabs/design/tabs-mobile.md)comprenda cómo desarrollar pestañas para teléfonos y tabletas.
-* [Usar datos de Teams con la API de Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Crear una pestaña sin el kit de herramientas](../tabs/how-to/add-tab.md)
+* [Crear una pestaña sin el kit de herramientas](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* [Usar datos de Teams con Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## <a name="next-lesson"></a>Siguiente lección
 

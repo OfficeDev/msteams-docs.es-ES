@@ -2,64 +2,64 @@
 title: Creación de una etiqueta de eliminación
 author: laujan
 description: Cómo crear una página de eliminación de pestañas
-keywords: Grupo de pestañas de Teams configuración de canal quitar eliminar
+keywords: Eliminar eliminación configurable del canal de grupo de pestañas de teams
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: 49e2df47095999e9f9eea76ea341a44215bfacb3
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964595"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797886"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modificar o quitar una pestaña de grupo de canales
 
-Puede ampliar y mejorar la experiencia del usuario si admite opciones de eliminación y modificación en la aplicación. Teams permite a los usuarios cambiar el nombre o quitar una ficha canal o grupo y permitir que los usuarios vuelvan a configurar la pestaña después de la instalación. Además, la experiencia de eliminación de pestañas puede incluir designar lo que ocurre con el contenido cuando se quita la pestaña o conceder a los usuarios opciones posteriores a la eliminación, como eliminar o archivar el contenido.
+Puedes ampliar y mejorar la experiencia del usuario si admites opciones de eliminación y modificación en la aplicación. Teams permite a los usuarios cambiar el nombre o quitar una pestaña de canal o grupo y puede permitir que los usuarios vuelvan a configurar la pestaña después de la instalación. Además, la experiencia de eliminación de la pestaña puede incluir la designación de lo que sucede con el contenido cuando se quita la pestaña o proporcionar a los usuarios opciones posteriores a la eliminación, como eliminar o archivar el contenido.
 
-## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar la reconfiguración de la ficha después de la instalación
+## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar la pestaña para que se vuelva a configurar después de la instalación
 
-El **manifest.jsen** define las características y capacidades de la pestaña. La propiedad de instancia Tab `canUpdateConfiguration` toma un valor booleano que indica si un usuario puede modificar o volver a configurar la pestaña una vez creada:
+El **manifest.jsen** define las características y capacidades de la pestaña. La propiedad de instancia de pestaña toma un valor booleano que indica si un usuario puede modificar o volver a configurar la pestaña `canUpdateConfiguration` después de crearla:
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Booleano|||Un valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de crearla. Predeterminada `true`|
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
 
-Cuando se cargue la pestaña en un chat de grupo o de canal, Microsoft Teams agregará un menú desplegable con el botón secundario para la ficha. Las opciones disponibles están determinadas por la `canUpdateConfiguration` Configuración:
+Cuando la pestaña se carga en un canal o chat de grupo, Teams agregará un menú desplegable con el botón secundario para la pestaña. Las opciones disponibles están determinadas por la `canUpdateConfiguration` configuración:
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Configuración            |   √    |       |La `configurationUrl` página se vuelve a cargar en un iframe, lo que permite al usuario volver a configurar la ficha.  |
+|     Configuración            |   √    |       |La página se vuelve a cargar en un IFrame, lo que permite al usuario volver a `configurationUrl` configurar la pestaña.  |
 |     Cambiar nombre              |   √    |   √   | El usuario puede cambiar el nombre de la pestaña tal como aparece en la barra de pestañas.          |
-|     Eliminar               |   √    |   √   |  Si la  `removeURL` propiedad y el valor se incluyen en la **Página de configuración**, la página de **eliminación** se carga en un iframe y se presenta al usuario. Si no se incluye una página de eliminación, se muestra al usuario un cuadro de diálogo confirmar.          |
+|     Eliminar               |   √    |   √   |  Si la propiedad y el valor se incluyen en la página de configuración, la página de eliminación se carga en un IFrame y `removeURL` se presenta al usuario.   Si no se incluye una página de eliminación, el usuario aparece con un cuadro de diálogo de confirmación.          |
 |||||
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Crear una página de eliminación de pestañas para la aplicación
 
-La página de eliminación opcional es una página HTML que se hospeda y se muestra cuando se quita la pestaña. La dirección URL de la página de eliminación se designa mediante el `setSettings()` método dentro de la página de configuración. Como con todas las páginas de la aplicación, la página de eliminación debe cumplir con los requisitos de la pestaña de Microsoft [Teams](~/tabs/how-to/add-tab.md).
+La página de eliminación opcional es una página HTML que hospeda y se muestra cuando se quita la pestaña. La dirección URL de la página de eliminación se designa mediante `setSettings()` el método de la página de configuración. Al igual que con todas las páginas de la aplicación, la página de eliminación debe cumplir con los requisitos [de la pestaña de Teams.](../../../tabs/how-to/tab-requirements.md)
 
-### <a name="register-a-remove-handler"></a>Registro de un controlador de eliminación
+### <a name="register-a-remove-handler"></a>Registrar un controlador de eliminación
 
-De forma opcional, dentro de la lógica de la página de eliminación, puede invocar el `registerOnRemoveHandler((RemoveEvent) => {}` controlador de eventos cuando el usuario quita una configuración de pestaña existente. El método toma la [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interfaz y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. Se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que enciende el contenido de la pestaña. Solo se puede registrar un controlador de eliminación a la vez.
+Opcionalmente, dentro de la lógica de la página de eliminación, puede invocar el controlador de eventos cuando el usuario `registerOnRemoveHandler((RemoveEvent) => {}` quita una configuración de pestaña existente. El método toma la interfaz y ejecuta el código en el controlador cuando un [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) usuario intenta quitar contenido. Se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que activa el contenido de la pestaña. Solo se puede registrar un controlador de eliminación a la vez.
 
 La `RemoveEvent` interfaz describe un objeto con dos métodos:
 
-* `notifySuccess()`Se requiere la función. Indica que la eliminación del recurso subyacente se ha realizado correctamente y que se puede quitar su contenido.
+* La `notifySuccess()` función es necesaria. Indica que la eliminación del recurso subyacente se ha hecho correctamente y se puede quitar su contenido.
 
-* La `notifyFailure(string)` función es opcional. Indica que se ha producido un error en la eliminación del recurso subyacente y no se puede quitar su contenido. El parámetro de cadena opcional especifica un motivo del error. Si se proporciona, esta cadena se muestra al usuario; de lo contrario, se muestra un error genérico.
+* La `notifyFailure(string)` función es opcional. Indica que se ha fallado la eliminación del recurso subyacente y su contenido no se puede quitar. El parámetro de cadena opcional especifica un motivo del error. Si se proporciona, esta cadena se muestra al usuario; de lo contrario, se muestra un error genérico.
 
 #### <a name="use-the-getsettings-function"></a>Usar la `getSettings()` función
 
-Puede usar `getSettings()` para designar el contenido de la pestaña que se va a quitar. La `getSettings((Settings) =>{})` función toma el [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) y proporciona los valores de propiedad de configuración válidos que se pueden recuperar.
+Puede usar para `getSettings()` designar el contenido de la pestaña que se va a quitar. La función toma los valores de propiedad de configuración válidos que se pueden recuperar y `getSettings((Settings) =>{})` [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) proporciona.
 
 #### <a name="use-the-getcontext-function"></a>Usar la `getContext()` función
 
-Puede usar `getContext()` para recuperar el contexto actual en el que se ejecuta el marco. La `getContext((Context) =>{})` función toma el [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) y proporciona valores de `Context` propiedad válidos que puede usar en la lógica de la página de eliminación para determinar el contenido que se muestra en la página de eliminación.
+Puede usar para `getContext()` recuperar el contexto actual en el que se ejecuta el marco. La función toma los valores de propiedad válidos que puede usar en la lógica de la página de eliminación para determinar el contenido que se va a mostrar `getContext((Context) =>{})` en la página de [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) `Context` eliminación.
 
 #### <a name="include-authentication"></a>Incluir autenticación
 
-Es posible que necesite autenticación antes de permitir que un usuario elimine el contenido de la pestaña. La información de contexto se puede usar para crear solicitudes de autenticación y direcciones URL de la página de autorización. Vea [flujo de autenticación de Microsoft Teams para pestañas](~/tabs/how-to/authentication/auth-flow-tab.md). Asegúrese de que todos los dominios usados en las páginas de pestañas se enumeran en la `manifest.json` `validDomains` matriz.
+Es posible que necesite autenticación antes de permitir que un usuario elimine el contenido de la pestaña. La información de contexto se puede usar para ayudar a crear solicitudes de autenticación y direcciones URL de página de autorización. Vea [el flujo de autenticación de Microsoft Teams para ver las pestañas.](~/tabs/how-to/authentication/auth-flow-tab.md) Asegúrese de que todos los dominios usados en las páginas de pestañas se enumeran en la `manifest.json` `validDomains` matriz.
 
-A continuación se muestra un bloque de código de eliminación de pestañas:
+A continuación se muestra un bloque de código de eliminación de pestañas de ejemplo:
 
 ```html
 <body>
@@ -82,11 +82,11 @@ A continuación se muestra un bloque de código de eliminación de pestañas:
 
 ```
 
-Cuando un usuario selecciona **quitar** en el menú desplegable de la pestaña, Microsoft Teams cargará la `removeUrl` Página opcional (designada en la **Página de configuración**) en un iframe. Aquí, se presenta al usuario un botón cargado con la `onClick()` función que llama `microsoftTeams.settings.setValidityState(true)` y habilita el botón **quitar** situado cerca de la parte inferior de la página iframe de eliminación.
+Cuando un usuario selecciona **Quitar** del menú desplegable de la pestaña, Teams cargará la página opcional (designada en la página de `removeUrl` configuración) en un IFrame. Aquí, se muestra al usuario un botón cargado con la función que llama y habilita el botón Quitar situado cerca de la parte inferior del IFrame de la `onClick()` `microsoftTeams.settings.setValidityState(true)` página de eliminación. 
 
-Seguir la ejecución del controlador de eliminación `removeEvent.notifySuccess()` o `removeEvent.notifyFailure()` notifica a teams sobre el resultado de la eliminación de contenido.
+Después de la ejecución del controlador de eliminación, `removeEvent.notifySuccess()` o notifica a Teams el resultado de la `removeEvent.notifyFailure()` eliminación de contenido.
 
 >[!NOTE]
->Para asegurarse de que no se inhibi el control de un usuario autorizado en una ficha, Microsoft Teams quitará la pestaña tanto en casos correctos como erróneos. \
->Teams habilita el botón **quitar** después de 5 segundos, incluso si la ficha no ha sido llamada `setValidityState()` . \
->Cuando el usuario selecciona **quitar** Teams, la tecla Tab se quita después de 30 segundos, independientemente de si se han completado las acciones.
+>Para asegurarse de que el control de un usuario autorizado sobre una pestaña no está inhibido, Teams quitará la pestaña en los casos de éxito y error.\
+>Teams habilita el **botón** Quitar después de 5 segundos, incluso si la pestaña no ha llamado `setValidityState()` .\
+>Cuando el usuario selecciona **Quitar** Teams, se quita la pestaña después de 30 segundos, independientemente de si las acciones se han completado.
