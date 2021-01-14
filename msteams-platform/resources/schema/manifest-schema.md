@@ -4,12 +4,12 @@ description: Describe el esquema de manifiesto de Microsoft Teams
 keywords: Esquema de manifiesto de teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797055"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845633"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -489,11 +489,11 @@ El elemento es una matriz (máximo de 1 elemento) con todos los elementos de tip
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|El identificador de aplicación de Microsoft único para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. Esto puede ser igual que el identificador general de la aplicación.|
-|`commands`|matriz de objetos|10 |✔|matriz de comandos que admite la extensión de mensajería|
+|`commands`|matriz de objetos|10 |✔|Matriz de comandos que admite la extensión de mensajería|
 |`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
-|`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen ciertas condiciones. Los dominios también deben aparecer en `validDomains`|
+|`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen ciertas condiciones.|
 |`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|
-|`messageHandlers.value.domains`|matriz de cadenas|||matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
+|`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
