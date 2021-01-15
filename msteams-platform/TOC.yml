@@ -34,19 +34,19 @@
       items:
         - name: Bot de chat con C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Bot de chat con JavaScript (GitHub)
+        - name: Bot de chat con Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Bot de chat con Python (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: Ejemplos de extensión de mensajería
       items:
-        - name: Comandos de acción con C#/.NET (GitHub)
+        - name: Comandos de acción con C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Comandos de acción con TypeScript/Node.js (GitHub)
+        - name: Comandos de acción con Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Comandos de búsqueda con C#/.NET(GitHub)
+        - name: Comandos de búsqueda con C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Comandos de búsqueda con TypeScript/Node.js (GitHub)
+        - name: Comandos de búsqueda con Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
 - name: Conceptos básicos de aplicación
   items:
@@ -76,7 +76,7 @@
       href: samples/shifts-wfm-connectors.md
     - name: Instalar Moodle LMS
       href: resources/moodleInstructions.md
-    - name: Crear un botón Compartir en Teams
+    - name: Crear un botón de Compartir en Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Añadir una pestaña de Teams a SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
@@ -126,12 +126,14 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: SDK para cliente de JavaScript en Teams
+      href: tabs/how-to/using-teams-client-sdk.md
     - name: Bot Framework de Node.js para bots y extensiones de mensajería (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: Bot Framework de .NET para bots y extensiones de mensajería (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: SDK de Microsoft Graph
-      href: 'https://docs.microsoft.com/en-us/graph/sdks/sdks-overview'
+      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - name: SDK heredados
       items:
         - name: SDK de bots (V3)
@@ -182,17 +184,17 @@
       href: tabs/what-are-tabs.md
     - name: Guías de inicio rápido
       items:
-        - name: Pestaña personal con Node.js/React
+        - name: Pestaña personal con Node.js
           href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: Pestaña personal con C#/ASP.NET Core
           href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Pestaña personal con C#/ASP.NET MVC
+        - name: Pestaña personal con C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Pestaña de canal con Node.js/React
+        - name: Pestaña de canal con Node.js
           href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
         - name: Pestaña de canal con C#/ASP.NET Core
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Pestaña de canal con C#/ASP.NET MVC
+        - name: Pestaña de canal con C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
     - name: Creación de una página de contenido
       href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Crear una página de eliminación
       href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Uso de SDK para cliente de JavaScript de Teams
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: Obtener contexto adicional
+    - name: Obtención del contexto de Teams para la pestaña
       href: tabs/how-to/access-teams-context.md
 - name: Crear bots
   items:
