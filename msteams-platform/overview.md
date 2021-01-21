@@ -5,12 +5,12 @@ description: Obtenga información general sobre cómo los desarrolladores pueden
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 45be2dd7d0e421ac331cfc02703f0b81eab3dfe5
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 9f043fd5bab441ce88b0e04b4254b925aff25aad
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797774"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911887"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -23,7 +23,7 @@ Las aplicaciones son la forma en que amplía Teams para adaptarse a sus necesida
 
 ## <a name="what-are-teams-apps"></a>¿Qué son las aplicaciones de Teams?
 
-Las aplicaciones de Teams son una combinación de [funcionalidades](concepts/capabilities-overview.md) y [puntos de entrada.](concepts/extensibility-points.md) Por ejemplo, los usuarios pueden chatear con el bot (funcionalidad) de la *aplicación* en un *canal* (punto de entrada).
+Las aplicaciones de Teams son una combinación de [funcionalidades](concepts/capabilities-overview.md) y [puntos de entrada.](concepts/extensibility-points.md) Por ejemplo, los usuarios pueden chatear con el bot (funcionalidad) de la *aplicación* en *un canal* (punto de entrada).
 
 Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras son complejas (administrar registros de pacientes). Al planear la aplicación, recuerde que Teams es un centro de colaboración. Las mejores aplicaciones de Teams ayudan a los usuarios a expresarse y a trabajar mejor juntos.
 
@@ -107,7 +107,7 @@ Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras s
 :::row:::
    :::column span="2":::
 
-## <a name="integrate-with-teams"></a>Integrar con Teams
+## <a name="integrate-with-teams"></a>Integración con Teams
 
    Combine las características que les gustan a los usuarios sobre una aplicación web, un servicio o un sistema existentes con las características de colaboración de Teams.
 
@@ -139,7 +139,7 @@ Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras s
 ## <a name="resources"></a>Recursos
 
 * [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
-* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Interfaz de usuario Fluent</a>
+* [Diseñar la aplicación de Teams](concepts/design/design-teams-app-overview.md)
 * [SDK de cliente de JavaScript de Microsoft Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [SDK de Bot Framework para JavaScript](https://github.com/Microsoft/botbuilder-js) y [SDK de Bot Framework para .NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publicar la aplicación en una organización o AppSource](concepts/deploy-and-publish/overview.md)
+* SDK de Bot Framework para [JavaScript](https://github.com/Microsoft/botbuilder-js) y [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Publicar la aplicación de Teams](concepts/deploy-and-publish/overview.md)

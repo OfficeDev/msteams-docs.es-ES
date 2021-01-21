@@ -5,16 +5,16 @@ description: Cree rápidamente una pestaña personal de Microsoft Teams con Micr
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797809"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911915"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Crear una pestaña personal para Microsoft Teams
 
-Las pestañas son una forma sencilla de ver el contenido de la aplicación insertando básicamente una página web en Teams.
+Las pestañas son una forma sencilla de hacer que el contenido de la aplicación se inserte básicamente en Una página web en Teams.
 
 Hay dos tipos de pestañas en Teams. En este tutorial, compilará una pestaña *personal* básica, una página de contenido de pantalla completa para usuarios individuales. (Las pestañas personales son lo más cercano a una experiencia de sitio web tradicional en Teams).
 
@@ -84,7 +84,7 @@ render() {
 }
 ```
 
-Agregue la siguiente regla para `App.css` que los vínculos de correo electrónico sean más fáciles de leer, independientemente del tema que se utilice.
+Agregue la siguiente regla para que los vínculos de correo electrónico sean más fáciles `App.css` de leer, independientemente del tema que se utilice.
 
 ```CSS
 a {
@@ -98,7 +98,7 @@ Guarde los cambios. Vaya a la pestaña de la aplicación en Teams para ver el nu
 
 ## <a name="3-update-the-tab-theme"></a>3. Actualizar el tema de la pestaña
 
-Las aplicaciones buenas se sienten nativas de Teams, por lo que es importante que la pestaña se combine con el tema de Teams que prefieran los usuarios: predeterminado (claro), oscuro o contraste alto. Como puede que hayas observado en la última captura de pantalla, la pestaña aún tiene un fondo claro cuando el cliente usa el tema oscuro. Esta no es una experiencia de usuario recomendada.
+Las aplicaciones buenas se sienten nativas de Teams, por lo que es importante que la pestaña se combine con el tema de Teams que prefieran los usuarios: predeterminado (claro), oscuro o contraste alto. Como podría haber observado en la última captura de pantalla, la pestaña aún tiene un fondo claro cuando el cliente usa el tema oscuro. Esta no es una experiencia de usuario recomendada.
 
 El [SDK del cliente de JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) de Teams puede hacer que su aplicación conozca y reaccione a los cambios de tema en el cliente. Veamos cómo hacerlo.
 
@@ -132,7 +132,7 @@ Necesitas un controlador para que el estado de la aplicación cambie con el tema
   });
 ```
 
-### <a name="match-theme-styles"></a>Estilos de temas de coincidencia
+### <a name="match-theme-styles"></a>Coincidencia de estilos de tema
 
 El controlador de cambios de tema está en su lugar, pero necesitas código que responda a esos cambios y alinee los colores de la pestaña con el tema actual.
 
@@ -176,12 +176,11 @@ Compruebe la pestaña en Teams. La apariencia debe coincidir estrechamente con e
 
 ## <a name="learn-more"></a>Más información
 
-* [Autenticar usuarios de](../tabs/how-to/authentication/auth-aad-sso.md)pestaña con SSO: si solo quiere que los usuarios autorizados visualice la pestaña, configure el inicio de sesión único (SSO) a través de Azure Active Directory (AD).
-* [Insertar contenido de una aplicación web](../tabs/how-to/tab-requirements.md)o página web existente: le mostramos cómo crear contenido nuevo para una pestaña personal, pero también puede cargar contenido desde una dirección URL externa.
-* [Cree una experiencia perfecta para su pestaña:](../tabs/design/tabs.md)vea las directrices recomendadas para diseñar pestañas de Teams.
-* [Crear pestañas para móviles:](../tabs/design/tabs-mobile.md)comprenda cómo desarrollar pestañas para teléfonos y tabletas.
-* [Usar datos de Teams con Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Crear una pestaña sin el kit de herramientas](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* Sigue nuestras [directrices de diseño](../tabs/design/tabs.md) y compila con [plantillas de interfaz](../concepts/design/design-teams-app-ui-templates.md) de usuario listas para producción para crear una experiencia sin problemas.
+* Comprenda [las consideraciones móviles para](../tabs/design/tabs-mobile.md) las pestañas.
+* [Agregue la autenticación SSO a la pestaña.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Usar datos de Teams con [Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Crea una pestaña sin el kit de herramientas.](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Siguiente lección
 
