@@ -5,12 +5,12 @@ description: introducción a las aplicaciones en reuniones de Teams basadas en e
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de roles de participantes de usuario de reuniones de aplicaciones de teams
-ms.openlocfilehash: 217737cbbf73104d4d78cf817e6df0244229c53c
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 63c383f1bc7eaa92e2bd4ff378756064ee85ed70
+ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797760"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49917600"
 ---
 # <a name="apps-in-teams-meetings"></a>Aplicaciones en reuniones de Teams
 
@@ -49,17 +49,17 @@ La extensibilidad de la aplicación para reuniones de Teams se centra en tres co
 
 &emsp;&emsp;&#9679; a través de la **pestaña Chat de** la reunión en una reunión existente.</br> </br>
 
-✔ las aplicaciones de pestañas son **accesibles** en las páginas de detalles y **chats** de reuniones con un botón de icono más (➕).|
+✔ las aplicaciones de pestañas  son **accesibles** en las páginas de detalles y chats de reuniones con un botón de icono más (➕).|
 
 ✔ diseño de la pestaña debe estar organizado si hay más de diez sondeos o encuestas.
 
 ### <a name="in-meeting-app-experience"></a>Experiencia de la aplicación en la reunión
 
-✔ aplicaciones de reunión se hospedarán en la barra superior superior de la ventana de chat y como experiencia de pestaña en la reunión a través de la pestaña en la reunión. Cuando los usuarios agregan una pestaña a una  reunión a través de la galería de pestañas, se mostrarán las aplicaciones que están durante las experiencias de reunión.
+✔ aplicaciones de reunión se hospedarán en la barra superior superior de la ventana de chat y como experiencia de pestaña en la reunión a través de la pestaña en la reunión. Cuando los usuarios agregan una pestaña a una  reunión a través de la galería de pestañas, se mostrarán las aplicaciones que se encuentran durante las experiencias de reunión.
 
-✔ usuarios con permisos pueden agregar aplicaciones mientras están en la reunión.
+✔ usuarios con permisos pueden agregar aplicaciones durante la reunión.
 
-✔ Cuando se cargue en el contexto de una reunión, las aplicaciones podrán aprovechar el SDK de cliente de Teams para obtener acceso a la experiencia y representar `meetingId` `userMri` la experiencia `frameContext` correctamente.
+✔ Cuando se cargue en el contexto de una reunión, las aplicaciones podrán aprovechar el SDK de cliente de Teams para obtener acceso a `meetingId` la experiencia y `userMri` `frameContext` representarla adecuadamente.
 
 ✔ exportar un resultado de una encuesta o sondeos debe notificar a los usuarios que "los resultados se descargaron correctamente".
 
@@ -88,7 +88,7 @@ La extensibilidad de la aplicación para reuniones de Teams se centra en tres co
 
 ![vista posterior a la reunión](../assets/images/apps-in-meetings/PostMeeting.png)
 
-✔ el escenario de la aplicación posterior a la reunión es similar a la experiencia posterior a la reunión actual con la ventaja añadida de tener pestañas que existen en la superficie. 
+✔ el escenario de la aplicación posterior a la reunión es similar a la experiencia posterior a la reunión actual con la ventaja adicional de tener pestañas que existen en la superficie. 
 
 ✔ usuarios con permisos pueden agregar aplicaciones desde la galería  de pestañas a una reunión a través de la pestaña Detalles en el formulario de programación de Teams y la pestaña **Chat** de reunión en una reunión existente.
 
@@ -100,7 +100,7 @@ Para la implementación de bots, consulte la documentación [de bots en reunione
 
 ### <a name="messaging-extensions"></a>Extensiones de mensajería
 
-Para la implementación de la extensión de mensajería, consulte nuestra [documentación de extensiones de mensajería en reuniones de Teams.](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings)
+Para la implementación de extensiones de mensajería, consulte nuestra [documentación de extensiones de mensajería en reuniones de Teams.](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings)
 
 ## <a name="participant-roles-and-user-types-in-a-meeting"></a>Roles de participante y tipos de usuario en una reunión
 
@@ -116,7 +116,7 @@ Puedes diseñar la aplicación con autorización específica de los participante
 
 _Ver_ [ **roles en una reunión de Teams**](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
-Puede obtener acceso a la  **página Opciones de** reunión de la siguiente manera:
+Puede acceder a la  **página Opciones de** reunión de la siguiente manera:
 
 &#11200; En Teams, vaya **al** logotipo calendario del calendario, seleccione una reunión ![ y, a ](../assets/images/apps-in-meetings/calendar-logo.png) continuación, opciones **de reunión.**
 
@@ -134,9 +134,9 @@ Puede obtener acceso a la  **página Opciones de** reunión de la siguiente mane
 1. **Federated/External**. Un usuario federado es un usuario externo de Teams en otra organización al que se ha invitado a unirse a una reunión. Dado que estos usuarios tienen credenciales válidas con socios federados, Teams los considera autenticados, pero no tienen acceso a sus equipos u otros recursos compartidos de su organización. Si desea que los usuarios externos tengan acceso a equipos y canales, el acceso de invitado puede ser una mejor opción. _Consulte_ [Administrar el acceso externo en Microsoft Teams](/microsoftteams/manage-external-access)
 1. **Anónimo**. Los usuarios anónimos no tienen una identidad de Active Directory y no están federados con un inquilino. El participante anónimo es como un usuario externo, pero su identidad no se proyecta en la reunión. Los usuarios anónimos no podrán acceder a las aplicaciones en una ventana de reunión.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
-> [Diseño de la aplicación](create-apps-for-teams-meetings.md)
+> [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 > [!div class="nextstepaction"]
 > [Crear una aplicación](create-apps-for-teams-meetings.md)
