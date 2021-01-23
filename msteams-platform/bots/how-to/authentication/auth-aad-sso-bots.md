@@ -3,16 +3,16 @@ title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio de bot de Azure con la compatibilidad con la tarjeta OAuth.
 keywords: token, token de usuario, compatibilidad con SSO para bots
 ms.topic: conceptual
-ms.openlocfilehash: 8537cf41cdd7218b9bf7618fccf0e1704ac6b815
-ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
+ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
+ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "49917592"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "49935257"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
-La autenticación de inicio de sesión único en Azure Active Directory (AAD) minimiza el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión actualizando silenciosamente el token de autenticación. Si los usuarios aceptan usar la aplicación, no necesitan volver a proporcionar su consentimiento en otro dispositivo y pueden iniciar sesión automáticamente. El flujo es similar al de la compatibilidad con SSO de la pestaña de [Microsoft Teams,](../../../tabs/how-to/authentication/auth-aad-sso.md)pero la diferencia está en el protocolo de cómo un bot solicita [tokens](#request-a-bot-token) y [recibe respuestas.](#receive-the-bot-token)
+La autenticación de inicio de sesión único en Azure Active Directory (AAD) minimiza el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión actualizando silenciosamente el token de autenticación. Si los usuarios aceptan usar la aplicación, no necesitan volver a proporcionar su consentimiento en otro dispositivo y pueden iniciar sesión automáticamente. El flujo es similar al de la compatibilidad con SSO de la pestaña de [Microsoft Teams;](../../../tabs/how-to/authentication/auth-aad-sso.md)sin embargo, la diferencia está en el protocolo de cómo un bot solicita [tokens](#request-a-bot-token) y [recibe respuestas.](#receive-the-bot-token)
 
 >[!NOTE]
 > OAuth 2.0 es un estándar abierto para la autenticación y autorización que usa AAD y muchos otros proveedores de identidades. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams.
@@ -26,11 +26,11 @@ Complete los siguientes pasos para obtener tokens de aplicación de bot y autent
 1. El bot envía un mensaje con un OAuthCard que contiene la `tokenExchangeResource` propiedad. Indica a Teams que obtenga un token de autenticación para la aplicación bot. El usuario recibe mensajes en todos los extremos de usuario activos.
 
     > [!NOTE]
-    >* Un usuario puede tener más de un punto de conexión activo a la vez.
-    >* El token de bot se recibe de cada extremo de usuario activo.
+    >* Un usuario puede tener más de un extremo activo a la vez.
+    >* El token de bot se recibe de todos los extremos de usuario activos.
     >* La aplicación debe instalarse en el ámbito personal para admitir SSO.
 
-2. Si el usuario actual usa la aplicación de bot por primera vez, aparece un mensaje de solicitud solicitando al usuario que realice una de las siguientes acciones:
+2. Si el usuario actual usa la aplicación bot por primera vez, aparece un mensaje de solicitud solicitando al usuario que realice una de las siguientes acciones:
     * Proporcionar consentimiento, si es necesario.
     * Controlar la autenticación paso a paso, como la autenticación en dos fases.
 
@@ -62,7 +62,7 @@ Los pasos para registrar la aplicación a través del portal de AAD son similare
 
         > [!NOTE]
         >
-        > No se pide consentimiento a los usuarios y se les conceden tokens de acceso inmediatamente, si la aplicación AAD está registrada en el mismo inquilino donde están realizando una solicitud de autenticación en Teams. Sin embargo, los usuarios deben dar su consentimiento a los permisos, si la aplicación AAD está registrada en un inquilino diferente.
+        > No se pide consentimiento a los usuarios y se les conceden tokens de acceso inmediatamente, si la aplicación de AAD está registrada en el mismo inquilino en el que están realizando una solicitud de autenticación en Teams. Sin embargo, los usuarios deben dar su consentimiento a los permisos, si la aplicación AAD está registrada en un inquilino diferente.
 
     3. Elija **Registrar**.
 4. En la página de información general, copie y guarde el identificador **de aplicación (cliente).** Lo necesitará más adelante al actualizar el manifiesto de la aplicación de Teams.
@@ -82,7 +82,7 @@ Los pasos para registrar la aplicación a través del portal de AAD son similare
     >
     > Debe conocer las siguientes restricciones importantes:
     >
-    > * Solo se admiten permisos de la API de Microsoft Graph de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita obtener acceso a otros ámbitos de Microsoft Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
+    > * Solo se admiten permisos de api de Microsoft Graph de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita obtener acceso a otros ámbitos de Microsoft Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
     > * El nombre de dominio de la aplicación debe ser el mismo que el nombre de dominio registrado para la aplicación de AAD.
     > * Actualmente, no se admiten varios dominios por aplicación.
     > * Las aplicaciones que usan `azurewebsites.net` el dominio no son compatibles porque es común y puede ser un riesgo para la seguridad.
@@ -143,7 +143,7 @@ Si la aplicación contiene un bot y una pestaña, use el siguiente código para 
 **webApplicationInfo** es el elemento principal de los siguientes elementos:
 
 * **id:** id. de cliente de la aplicación. Este es el identificador de aplicación que obtuvo como parte del registro de la aplicación con AAD.
-* **recurso:** el dominio y el subdominio de la aplicación. Este es el mismo URI, incluido el protocolo que registró al crear la aplicación en Registrar la aplicación a través `api://` `scope` del portal de [AAD.](#register-your-app-through-the-aad-portal) No debe incluir la ruta `access_as_user` de acceso en el recurso. La parte de dominio de este URI debe coincidir con el dominio y los subdominios usados en las direcciones URL del manifiesto de la aplicación de Teams.
+* **recurso:** el dominio y el subdominio de la aplicación. Este es el mismo URI, incluido el protocolo que registró al crear la aplicación en Registrar su aplicación a través `api://` `scope` del portal de [AAD.](#register-your-app-through-the-aad-portal) No debe incluir la ruta `access_as_user` de acceso en el recurso. La parte de dominio de este URI debe coincidir con el dominio y los subdominios usados en las direcciones URL del manifiesto de la aplicación de Teams.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Agregar el código para solicitar y recibir un token de bot
 
@@ -164,7 +164,7 @@ Cuando el usuario selecciona **Continuar**, se producen los siguientes eventos:
 
 * Si el bot no proporciona un botón de inicio de sesión en la tarjeta OAuth, se requiere el consentimiento del usuario para un conjunto mínimo de permisos. Este token es útil para la autenticación básica y para obtener la dirección de correo electrónico del usuario.
 
-##### <a name="c-token-request-without-a-sign-in-button"></a>Solicitud de token de C# sin un botón de inicio de sesión
+##### <a name="c-token-request-without-a-sign-in-button"></a>Solicitud de token C# sin un botón de inicio de sesión
 
 ```csharp
     var attachment = new Attachment
@@ -244,7 +244,3 @@ Abra [el ejemplo de autenticación de Teams](https://github.com/microsoft/BotBui
 #### <a name="additional-code-samples"></a>Ejemplos de código adicionales
 
 * [Ejemplo de C# con el SDK de Bot Framework](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).
-
-* [Ejemplo de C# con el SDK de Bot Framework para desduplicar la solicitud de token.](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)
-
-* [Ejemplo de C# sin usar el almacén](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)de tokens del SDK de Bot Framework .
