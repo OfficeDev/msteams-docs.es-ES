@@ -1,14 +1,14 @@
 ---
-title: Guía del proceso de envío de aprobación de aplicaciones de Microsoft Teams
+title: Descripción del proceso de envío al almacén de Teams
 description: Describe el proceso de envío de aprobación para publicar la aplicación en la tienda de aplicaciones de Microsoft Teams
-ms.topic: conceptual
-keywords: Teams publicar la publicación de la tienda de office publicar la cuenta de verificación de la cuenta del Centro de partners de AppSource cuenta no publicar envío de aplicación elegible
-ms.openlocfilehash: 3dac91e8591edec597f6435fdc2bab989820661a
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.topic: overview
+keywords: Teams publicar la publicación de la tienda de publicación de la cuenta del Centro de partners de AppSource cuenta de aplicaciones de verificación no publicar envío de aplicación elegible
+ms.openlocfilehash: d2dc624c6dd13896397041c5c69ce5c5eb471a5b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886754"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014414"
 ---
 # <a name="submit-your-app-to-appsource"></a>Enviar la aplicación a AppSource
 
@@ -30,7 +30,7 @@ Haga que la aplicación esté disponible en el catálogo de aplicaciones de Micr
 >
 >- La aplicación de Teams debe ser dinámica para dispositivos móviles y no cumplir con [los](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) requisitos de ventas en el sistema operativo móvil (iOS y Android). 
 >- Si la aplicación de Teams contiene un bot, debe cumplir con el código de conducta de Bot Developer [Framework.](https://aka.ms/bf-conduct)
->- Si la aplicación contiene un conector de Office 365, pueden aplicarse términos adicionales. Vea [El Panel del programador de conectores](https://aka.ms/connectorsdashboard) y el Acuerdo para [desarrolladores de aplicaciones.](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)
+>- Si la aplicación contiene un conector de Office 365, pueden aplicarse términos adicionales. Vea [El panel del programador de conectores](https://aka.ms/connectorsdashboard) y el acuerdo para [desarrolladores de aplicaciones.](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)
 >- Para que la aplicación esté disponible para los usuarios de Government Community Cloud (GCC) y para evitar des listados de aplicaciones duplicados en la tienda, el flujo o proceso de autenticación debe identificar y enrutar al usuario a la dirección URL de contenido especificada o esperada para los usuarios de GCC.
 
 ## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>Preguntas más frecuentes: proceso de comprobación de aplicaciones de Teams y cuenta de partner en el Centro de partners
@@ -66,11 +66,11 @@ El número de teléfono tiene tres partes, código de país, código de área y 
 
 ## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>¿Cómo puedo administrar la configuración de mi cuenta y mi perfil de partner en el Centro de partners?
 
-Visita la [página Administrar la configuración de la](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) cuenta y la información de perfil para obtener instrucciones sobre cómo administrar la configuración de tu cuenta del Centro de partners.
+Visita la [página Administrar la configuración de la](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) cuenta y la información de perfil para obtener instrucciones sobre cómo administrar la configuración de la cuenta del Centro de partners.
 
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>¿Por qué recibo el mensaje "Esta cuenta no es apta para la publicación" cuando intento enviar el complemento a través del Centro de partners?
 
-Recibirá el mensaje de error anterior cuando el estado [de comprobación de su](/partner-center/verification-responses) cuenta esté pendiente. Comprueba el estado de comprobación de tu cuenta en el panel del Centro de [partners.](https://partner.microsoft.com/dashboard) Seleccione **Configuración**, el icono de engranaje en la esquina superior derecha del shell de encabezado de página. Elija configuración **de la cuenta de la**  =>  **cuenta** de configuración del   =>  **desarrollador.**
+Recibirá el mensaje de error anterior cuando el estado [de comprobación de su](/partner-center/verification-responses) cuenta esté pendiente. Comprueba el estado de comprobación de tu cuenta en el panel del Centro de [partners.](https://partner.microsoft.com/dashboard) Seleccione **Configuración**, el icono de engranaje en la esquina superior derecha del shell de encabezado de página. Elija configuración **de la cuenta de la** cuenta de configuración del  =>     =>  **desarrollador.**
 
 ![Página de configuración de la cuenta del Centro de partners](../../../assets/images/partner-center-accts-page.png)
 
@@ -78,7 +78,7 @@ Recibirá el mensaje de error anterior cuando el estado [de comprobación de su]
 
 El estado de cada paso necesario, como propiedad del correo **electrónico,** verificación de empleo y verificación **empresarial,** se muestra en el proceso de comprobación de la cuenta. Una vez completado el proceso de verificación, el estado de comprobación de la inscripción en la página de perfil cambia de *pendiente* a *autorizado.* Los pasos del proceso ya no se muestran.
 
-![Error de comprobación del Centro de partners](../../../assets/images/partner-center-acct-verification-error.png)
+![Error de verificación del Centro de partners](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## <a name="what-is-verified-in-the-partner-center-account-verification-process-and-how-to-respond"></a>¿Qué se comprueba en el proceso de verificación de la cuenta del Centro de partners y cómo responder?
 Hay tres áreas de verificación: **Propiedad del** correo electrónico, **Empleo** y **Empresa.** Para obtener más información sobre el proceso de comprobación, vea [Qué se comprueba y cómo responder.](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
@@ -92,23 +92,23 @@ Durante el proceso **de comprobación de la** propiedad del correo electrónico,
 
 > [!NOTE]
 > * El vínculo de verificación de correo electrónico solo es válido durante siete días. 
-> * Puedes solicitarnos que vuelvas a enviar el correo electrónico visitando la página de perfil de partner y seleccionando el vínculo volver a enviar el correo **electrónico de verificación.**
+> * Puedes solicitarnos que vuelvas a enviar el correo electrónico visitando la página de perfil de tu partner y seleccionando el **vínculo** de correo electrónico de comprobación volver a enviar.
 > * Para asegurarse de que se recibe el correo electrónico, enume el correo electrónico de microsoft.com como dominio seguro y compruebe las carpetas de correo no deseado.
 
 ## <a name="how-do-i-get-further-support-for-my-account-related-issues"></a>¿Cómo puedo obtener soporte técnico adicional para problemas relacionados con mi cuenta?
 
-Visita la [página Soporte técnico del programa Mercado](/azure/marketplace/partner-center-portal/support) comercial en el Centro de partners para obtener instrucciones y pasos para crear un vale de soporte técnico.
+Visita la [página Soporte técnico del programa Mercado comercial](/azure/marketplace/partner-center-portal/support) en el Centro de partners para obtener instrucciones y pasos para crear un vale de soporte técnico.
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what-must-i-do-next"></a>He comprobado mis carpetas de correo y no he recibido el correo electrónico de verificación. ¿Qué debo hacer a continuación?
 
 Pruebe a hacer lo siguiente:
 * Compruebe su carpeta de correo no deseado o correo no deseado.
 * Borra la memoria caché del explorador, ve al  panel de la cuenta del Centro de partners y selecciona el vínculo de correo electrónico volver a enviar la verificación para que el correo electrónico de verificación se reenvia a tu dirección de correo electrónico.
-* Intente acceder al vínculo **de correo electrónico de verificación Volver** a enviar desde otro explorador.
+* Intente obtener acceso al **vínculo de correo electrónico de verificación Volver** a enviar desde otro explorador.
 * Trabaje con su departamento de TI para asegurarse de que el servidor de correo electrónico no bloquee los correos electrónicos de verificación.
 * Ajuste el filtro de correo no deseado del servidor para permitir o enumerar de forma segura todos los correos electrónicos de **maccount@microsoft. <span></span> com**.
 
-## <a name="how-long-does-the-employment-verification-process-usually-take"></a>¿Cuánto tiempo suele tardar el proceso de comprobación del empleo?
+## <a name="how-long-does-the-employment-verification-process-usually-take"></a>¿Cuánto tiempo suele tardar el proceso de verificación de empleo?
 
 Si todos los detalles enviados son correctos, el proceso de comprobación del empleo tarda aproximadamente dos horas en completarse.
 

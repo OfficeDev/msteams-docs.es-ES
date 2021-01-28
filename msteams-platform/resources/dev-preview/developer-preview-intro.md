@@ -1,55 +1,56 @@
 ---
-title: Vista previa para desarrolladores
-description: Describe las características de la versión preliminar para desarrolladores públicos de Microsoft Teams.
-keywords: características para desarrolladores de Team Preview
-ms.openlocfilehash: a09e715e4e2d4aba72726cc96c4d248c550a3ab1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Developer Preview
+description: Describe las características de la versión preliminar para desarrolladores públicos de Microsoft Teams
+ms.topic: conceptual
+keywords: Características para desarrolladores de vista previa de teams
+ms.openlocfilehash: b8e8847d71ec3a571d434f952c79f3dd6a8f5bf1
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676003"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014078"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar para desarrolladores públicos para Microsoft Teams
+# <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar para desarrolladores públicos de Microsoft Teams
 
 >[!NOTE]
->Las características incluidas en la versión preliminar pueden no estar completas y pueden sufrir cambios antes de que estén disponibles en la versión pública. Se proporcionan solo con fines de prueba y exploración. No deben usarse en las aplicaciones de producción.
+>Es posible que las características incluidas en la versión preliminar no estén completas y que se someta a cambios antes de estar disponibles en la versión pública. Solo se proporcionan con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
 
-Developer Preview es un programa público para desarrolladores que proporciona acceso anticipado a características no publicadas en Microsoft Teams. Esto le permite explorar y probar las próximas características para obtener una inclusión potencial en su aplicación de Microsoft Teams. También le damos la bienvenida a [comentarios](~/feedback.md) sobre cualquier característica en Developer Preview. La vista previa para desarrolladores está habilitada por el cliente de Microsoft Teams, por lo que no tiene que preocuparse por afectar a toda la organización.
+Developer Preview es un programa público para desarrolladores que proporciona acceso anticipado a las características no publicados en Microsoft Teams. Esto le permite explorar y probar las próximas características para su posible inclusión en su aplicación de Microsoft Teams. También agradecemos los [comentarios sobre](~/feedback.md) cualquier característica de la versión preliminar del desarrollador. La vista previa del desarrollador está habilitada para cada cliente de Microsoft Teams, por lo que no es necesario preocuparse por afectar a toda la organización.
 
-## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de vista previa para desarrolladores
+## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de vista previa del desarrollador
 
-Muchas de las características que se habilitan en la vista previa para desarrolladores requerirán alteraciones en el archivo JSON del manifiesto de la aplicación. Para ello, necesitará usar el esquema del [manifiesto de vista previa de desarrollador](~/resources/schema/manifest-schema-dev-preview.md) si usa este esquema, no podrá usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para realizar estos cambios, ni podrá usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, deberá hacer clic en el `More apps` icono de la barra de la aplicación y, `Upload a custom app link`a continuación, seleccionar el. Con este método solo puede cargar una versión comprimida del paquete de la aplicación.
+Muchas características habilitadas en la vista previa del desarrollador requerirán modificaciones en el archivo JSON del manifiesto de la aplicación. Para ello, tendrás que usar [](~/resources/schema/manifest-schema-dev-preview.md) el esquema de manifiesto de versión preliminar del desarrollador Si usas este esquema, no podrás usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para realizar estos cambios, ni podrás usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrás que hacer clic en el icono de la barra de la aplicación y, a `More apps` continuación, seleccionar el archivo `Upload a custom app link` . Con este método solo puedes cargar una versión comprimida del paquete de la aplicación.
 
-Puede que le resulte útil usar App Studio para crear las partes no de vista previa para desarrolladores del paquete de la aplicación, exportar el paquete y editar `manifest.json` manualmente el archivo para agregar las características de vista previa para desarrolladores que desea usar. Una vez que haya agregado las características de vista `manifest.json` previa para desarrolladores al archivo, no podrá volver a importar el paquete en App Studio.
+Es posible que te sea útil usar App Studio para crear las partes de vista previa que no son para desarrolladores del paquete de la aplicación y, a continuación, exportar ese paquete y editar manualmente el archivo para agregar las características de vista previa para desarrolladores que quieras `manifest.json` usar. Una vez que hayas agregado características de vista previa de desarrollador al archivo, no podrás volver a importar `manifest.json` el paquete a App Studio.
 
-## <a name="enable-developer-preview"></a>Habilitar la vista previa para desarrolladores
+## <a name="enable-developer-preview"></a>Habilitar la vista previa del desarrollador
 
-La vista previa para desarrolladores está habilitada para cada cliente, pero la opción de activar la vista previa para desarrolladores se controla en el nivel de la organización. Para habilitar la opción de activar la vista previa para desarrolladores para un usuario individual, debe asegurarse de que tienen la capacidad de cargar aplicaciones personalizadas. Consulte [configuración del espacio empresarial](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obtener información adicional.
+La vista previa del desarrollador está habilitada para cada cliente, pero la opción para activar la vista previa del desarrollador se controla en el nivel de la organización. Para habilitar la opción de activar la vista previa del desarrollador para una persona, debes asegurarte de que tienen la capacidad de cargar aplicaciones personalizadas. Vea [la configuración del espacio empresarial](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obtener información adicional.
 
-El uso de una aplicación que contiene características de vista previa para desarrolladores puede hacer que los clientes que no hayan habilitado la vista previa para desarrolladores se comporten de manera inesperada. Si no ve una entrada para Developer Preview, la razón más probable es que su organización no esté configurada para la carga de aplicaciones.
+El uso de una aplicación que contiene características de vista previa para desarrolladores puede provocar que los clientes que no han habilitado la vista previa de desarrollador se comporten de forma inesperada. Si no ves una entrada para la vista previa del desarrollador, lo más probable es que la organización no esté configurada para la carga de aplicaciones.
 
-### <a name="on-a-desktop-or-web-client"></a>En un cliente de escritorio o Web
+### <a name="on-a-desktop-or-web-client"></a>En un cliente web o de escritorio
 
-Para habilitar la vista previa para desarrolladores públicos en un cliente de escritorio o Web, debe hacer lo siguiente:
+Para habilitar la vista previa del desarrollador público en un cliente de escritorio o web, debe hacer lo siguiente:
 
-1. Habilitar la carga de aplicaciones en la consola de administración del inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Haga clic en su perfil (ya sea en la esquina superior derecha o en la parte inferior izquierda de la interfaz de Teams) para mostrar el menú de Microsoft Teams.
-1. Seleccione información sobre → vista previa para desarrolladores.
-1. Seleccione **cambiar a vista previa para desarrolladores**.
+1. Habilitar la carga de aplicaciones en la consola de administración de su espacio empresarial, como se [describe aquí.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+1. Haga clic en su perfil (en la parte superior derecha o inferior izquierda de la interfaz de Teams) para mostrar el menú de Teams.
+1. Selecciona Acerca de → versión preliminar del desarrollador.
+1. Seleccione **Cambiar a la vista previa del programador.**
 
 ### <a name="on-a-mobile-client"></a>En un cliente móvil
 
-Para habilitar la vista previa para desarrolladores públicos en un cliente móvil, debe hacer lo siguiente:
+Para habilitar la vista previa del desarrollador público en un cliente móvil, debe hacer lo siguiente:
 
-1. Habilitar la carga de aplicaciones en la consola de administración del inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Abra el menú hamburguesa en la parte superior izquierda y, a continuación, seleccione **configuración**.
-1. Seleccione **acerca de**.
-1. Haga clic en el botón de alternancia vista previa para desarrolladores.
+1. Habilitar la carga de aplicaciones en la consola de administración de su espacio empresarial, como se [describe aquí.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+1. Abra el menú hamburguesa en la parte superior izquierda y, a continuación, **seleccione Configuración.**
+1. Seleccione **Acerca de**.
+1. Haga clic en el botón de alternancia de vista previa del programador.
 
-## <a name="disable-developer-preview"></a>Deshabilitar la vista previa para desarrolladores
+## <a name="disable-developer-preview"></a>Deshabilitar la vista previa del desarrollador
 
-Use el mismo elemento de menú en about → Developer Preview y haga clic en él para desactivarlo.
+Usa el mismo elemento de menú en Acerca de → Vista previa del desarrollador y haz clic en él para desactivarlo.
 
-## <a name="features-available-in-developer-preview"></a>Características disponibles en la vista previa para desarrolladores
+## <a name="features-available-in-developer-preview"></a>Características disponibles en la versión preliminar para desarrolladores
 
-Para obtener una lista completa de las características actualmente habilitadas en Developer Preview, vea: [Features in Public Developer Preview](../../resources/dev-preview/developer-preview-features.md).
+Para obtener una lista completa de las características habilitadas actualmente en la versión preliminar del desarrollador, vea: [Características en la versión preliminar pública para desarrolladores.](../../resources/dev-preview/developer-preview-features.md)

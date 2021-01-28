@@ -1,13 +1,14 @@
 ---
-title: Lista de comprobación de envíos
+title: Lista de comprobación de envío de la Tienda
 description: Lista de comprobación que se debe usar antes de publicar la aplicación de Microsoft Teams en AppSource
+ms.topic: reference
 keywords: Teams publicar la validación de la aplicación de envío de aplicaciones de Teams de envío de la tienda de office
-ms.openlocfilehash: 8d20d0106c1b2d8da38c5802b977634925afffcc
-ms.sourcegitcommit: db19fee033b41152267bb524d67aee5b7f64b04a
+ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797478"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014218"
 ---
 # <a name="prepare-for-appsource-submission"></a>Preparar el envío de AppSource  
 

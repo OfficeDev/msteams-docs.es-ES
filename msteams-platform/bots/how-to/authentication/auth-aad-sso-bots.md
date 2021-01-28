@@ -3,16 +3,16 @@ title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio de bot de Azure con la compatibilidad con la tarjeta OAuth.
 keywords: token, token de usuario, compatibilidad con SSO para bots
 ms.topic: conceptual
-ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
-ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
+ms.openlocfilehash: 8669e00fcfcfb69844c4d63c9e7aa06b47567705
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49935257"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014498"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
-La autenticación de inicio de sesión único en Azure Active Directory (AAD) minimiza el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión actualizando silenciosamente el token de autenticación. Si los usuarios aceptan usar la aplicación, no necesitan volver a proporcionar su consentimiento en otro dispositivo y pueden iniciar sesión automáticamente. El flujo es similar al de la compatibilidad con SSO de la pestaña de [Microsoft Teams;](../../../tabs/how-to/authentication/auth-aad-sso.md)sin embargo, la diferencia está en el protocolo de cómo un bot solicita [tokens](#request-a-bot-token) y [recibe respuestas.](#receive-the-bot-token)
+La autenticación de inicio de sesión único en Azure Active Directory (AAD) minimiza el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión actualizando silenciosamente el token de autenticación. Si los usuarios aceptan usar la aplicación, no necesitan volver a proporcionar su consentimiento en otro dispositivo y pueden iniciar sesión automáticamente. El flujo es similar al de la compatibilidad con SSO de la pestaña de [Microsoft Teams,](../../../tabs/how-to/authentication/auth-aad-sso.md)pero la diferencia está en el protocolo de cómo un bot solicita [tokens](#request-a-bot-token) y [recibe respuestas.](#receive-the-bot-token)
 
 >[!NOTE]
 > OAuth 2.0 es un estándar abierto para la autenticación y autorización que usa AAD y muchos otros proveedores de identidades. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams.
@@ -26,7 +26,7 @@ Complete los siguientes pasos para obtener tokens de aplicación de bot y autent
 1. El bot envía un mensaje con un OAuthCard que contiene la `tokenExchangeResource` propiedad. Indica a Teams que obtenga un token de autenticación para la aplicación bot. El usuario recibe mensajes en todos los extremos de usuario activos.
 
     > [!NOTE]
-    >* Un usuario puede tener más de un extremo activo a la vez.
+    >* Un usuario puede tener más de un punto de conexión activo a la vez.
     >* El token de bot se recibe de todos los extremos de usuario activos.
     >* La aplicación debe instalarse en el ámbito personal para admitir SSO.
 
@@ -78,20 +78,20 @@ Los pasos para registrar la aplicación a través del portal de AAD son similare
 8. En el panel que se abre, agregue una aplicación cliente; para ello, escriba `access_as_user` el nombre **del ámbito.**
 
     >[!NOTE]
-    > El ámbito "access_as_user" usado para agregar una aplicación cliente es para "Administradores y usuarios".
+    > El ámbito "access_as_user" que se usa para agregar una aplicación cliente es para "Administradores y usuarios".
     >
     > Debe conocer las siguientes restricciones importantes:
     >
-    > * Solo se admiten permisos de api de Microsoft Graph de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita obtener acceso a otros ámbitos de Microsoft Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
+    > * Solo se admiten permisos de la API de Microsoft Graph de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita obtener acceso a otros ámbitos de Microsoft Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)
     > * El nombre de dominio de la aplicación debe ser el mismo que el nombre de dominio registrado para la aplicación de AAD.
     > * Actualmente, no se admiten varios dominios por aplicación.
-    > * Las aplicaciones que usan `azurewebsites.net` el dominio no son compatibles porque es común y puede ser un riesgo para la seguridad.
+    > * Las aplicaciones que usan `azurewebsites.net` el dominio no son compatibles porque es común y puede ser un riesgo de seguridad.
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>Actualizar Azure Portal con la conexión de OAuth
 
 Complete los siguientes pasos para actualizar Azure Portal con la conexión de OAuth:
 
-1. En Azure Portal, vaya a **Registro de canales de bot.**
+1. En Azure Portal, vaya a **Registros de aplicaciones.**
 
 2. Vaya a **Permisos de API.** Seleccione **Agregar permisos delegados** de Microsoft Graph y, a continuación, agregue los siguientes  >    >  permisos de la API de Microsoft Graph:
     * User.Read (habilitado de forma predeterminada)
@@ -100,11 +100,13 @@ Complete los siguientes pasos para actualizar Azure Portal con la conexión de O
     * OpenId
     * perfil
 
-3. Seleccione **Configuración en** el panel izquierdo y elija Agregar configuración **en** la sección Configuración de conexión **de OAuth.**
+3. En Azure Portal, vaya a **Registro de canales de bot.**
+
+4. Seleccione **Configuración** en el panel izquierdo y elija **Agregar configuración en** la sección Configuración de conexión de **OAuth.**
 
     ![Vista SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-4. Realice los pasos siguientes para completar el formulario **Nueva configuración de** conexión:
+5. Realice los pasos siguientes para completar el formulario **Nueva configuración de** conexión:
 
     >[!NOTE]
     > **La concesión** implícita puede ser necesaria en la aplicación AAD.
@@ -113,7 +115,7 @@ Complete los siguientes pasos para actualizar Azure Portal con la conexión de O
     2. En la **lista desplegable Proveedor** de servicios, seleccione Azure Active Directory **v2**.
     3. Escriba las credenciales de cliente, como id. **de** cliente y secreto **de** cliente para la aplicación de AAD.
     4. Para la **dirección URL de Exchange de token,** use el valor de ámbito definido en Actualizar el manifiesto de la aplicación de Teams para el [bot.](#update-your-teams-application-manifest-for-your-bot) La dirección URL de Token Exchange indica al SDK que esta aplicación de AAD está configurada para SSO.
-    5. En el **cuadro Id. de** inquilino, *escriba common*.
+    5. En el **cuadro Id. de** inquilino, *escriba común*.
     6. Agregue todos los **ámbitos configurados** al especificar permisos para las API de bajada de la aplicación de AAD. Con el identificador de cliente y el secreto de cliente proporcionados, el almacén de tokens intercambia el token por un token de gráfico con permisos definidos.
     7. Seleccione **Guardar**.
 

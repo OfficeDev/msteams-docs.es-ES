@@ -1,18 +1,19 @@
 ---
 title: Referencia del esquema JSON del archivo de localización
-description: Describe el esquema de localización compatible con el archivo de localización de Microsoft Teams.
-keywords: localización del esquema del manifiesto de Microsoft Teams
+description: Describe el esquema de localización admitido por el archivo de localización para Microsoft Teams
+ms.topic: reference
+keywords: localización del esquema de manifiesto de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 2c0f449ef0b018e0ed377ea8f5d79b285b36e829
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 696a65de70a63e767f8fcdb040364fe90cde8716
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997969"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014603"
 ---
 # <a name="reference-localization-file-json-schema"></a>Referencia: esquema JSON del archivo de localización
 
-El archivo de localización de Microsoft Teams describe las traducciones de idiomas que se servirán en función de la configuración de idioma del cliente. El archivo debe ajustarse al esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obtener más información, consulte localización de la [aplicación](~/concepts/build-and-test/apps-localization.md).
+El archivo de localización de Microsoft Teams describe las traducciones de idioma que se ofrecerán en función de la configuración de idioma del cliente. El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obtener información adicional, consulta [localización de la aplicación.](~/concepts/build-and-test/apps-localization.md)
 
 ## <a name="sample"></a>Muestra
 
@@ -37,91 +38,91 @@ El esquema define las siguientes propiedades:
 
 **URI**
 
-La dirección URL de https://que hace referencia al esquema JSON del manifiesto.
+La https:// URL que hace referencia al esquema JSON del manifiesto.
 
 > [!TIP]
-> Especifique el esquema al principio del manifiesto para habilitar IntelliSense o compatibilidad similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Especifique el esquema al principio del manifiesto para habilitar la compatibilidad IntelliSense o similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="nameshort"></a>nombre. Short
+## <a name="nameshort"></a>name.short
 
 **Cadena, longitud máxima 30**
 
-Reemplaza la cadena correspondiente del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="namefull"></a>nombre. Full
+## <a name="namefull"></a>name.full
 
 **Cadena, longitud máxima 100**
 
-Reemplaza la cadena correspondiente del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="descriptionshort"></a>Descripción. Short
+## <a name="descriptionshort"></a>description.short
 
 **Cadena, longitud máxima 80**
 
-Reemplaza la cadena correspondiente del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="descriptionfull"></a>Descripción. Full
+## <a name="descriptionfull"></a>description.full
 
 **Cadena, longitud máxima 4000**
 
-Reemplaza la cadena correspondiente del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9] | 1 [0-5]) \\ ] \\ . nombre
+## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9]|1[0-5]) \\ ] \\ .name
 
 **Cadena, longitud máxima 128**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="bots0commandlists0-2commands0-9title"></a>bots \\ [0 \\ ] \\ . commandLists \\ [[0-2] \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . title
+## <a name="bots0commandlists0-2commands0-9title"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
 
 **Cadena, longitud máxima 32**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="bots0commandlists0-2commands0-9description"></a>bots \\ [0 \\ ] \\ . commandLists \\ [[0-2] \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . Descripción
+## <a name="bots0commandlists0-2commands0-9description"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
 
 **Cadena, longitud máxima 128**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9title"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . title
+## <a name="composeextensions0commands0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
 
 **Cadena, longitud máxima 32**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9description"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . Description
+## <a name="composeextensions0commands0-9description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
 
 **Cadena, longitud máxima 128**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9parameters0-4title"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . title
+## <a name="composeextensions0commands0-9parameters0-4title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .title
 
 **Cadena, longitud máxima 32**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9parameters0-4description"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Description
+## <a name="composeextensions0commands0-9parameters0-4description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .description
 
 **Cadena, longitud máxima 128**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9parameters0-4value"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Value
+## <a name="composeextensions0commands0-9parameters0-4value"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .value
 
 **Cadena, longitud máxima 512**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . Parameters \\ [[0-4] \\ ] \\ . Choices [ \\ [0-9] \\ \\ ]. title
+## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .choices \\ [[0-9] \\ ] \\ .title
 
 **Cadena, longitud máxima 128**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.
 
-## <a name="composeextensions0commands0-9taskinfotitle"></a>composeExtensions \\ [0 \\ ] \\ . comandos \\ [[0-9] \\ ] \\ . taskInfo \\ . title
+## <a name="composeextensions0commands0-9taskinfotitle"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .taskInfo \\ .title
 
 **Cadena, longitud máxima 64**
 
-Reemplaza la cadena o cadenas correspondientes del manifiesto de la aplicación con el valor proporcionado aquí.
+Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor que se proporciona aquí.

@@ -1,13 +1,14 @@
 ---
-title: Ejemplos de código de Microsoft Teams
-description: Vínculos y descripciones de aplicaciones de ejemplo para la plataforma de desarrolladores de Microsoft Teams
+title: Ejemplos de código de aplicación
+description: Vínculos y descripciones de aplicaciones de ejemplo para la plataforma para desarrolladores de Microsoft Teams
+ms.topic: reference
 keywords: Ejemplos de desarrolladores de Microsoft Teams
-ms.openlocfilehash: 665d3565f4f453d263fef6a17cb27f5060111468
-ms.sourcegitcommit: 6d9c60cce1f2e5204e680c074ce77a8376233b59
+ms.openlocfilehash: f51ffb22a5e6b3b757d1971422adf955d95fb223
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49912319"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014113"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Tutoriales y ejemplos de código para la plataforma para desarrolladores de Microsoft Teams
 
@@ -15,13 +16,13 @@ Aquí encontrará una lista de tutoriales y ejemplos de código que muestran có
 
 ## <a name="getting-started-with-microsoft-learn"></a>Introducción a Microsoft Learn
 
-| Funcionalidad| Módulo Learn|
+| Funcionalidad| Módulo learn|
 |--------|-------------|
 | Pestañas: experiencias web incrustadas  |  [Crear experiencias web incrustadas con pestañas para Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
 | Webhooks y conectores  |  [Conectar servicios web a Microsoft Teams con webhooks y conectores de Office 365](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
 |Extensiones de mensajería  | [Interacciones orientadas a tareas en Microsoft Teams con extensiones de mensajería](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
 | Módulos de tareas |  [Recopilar entradas en Microsoft Teams con módulos de tareas](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
-| Bots conversacionales  | [Crear bots interactivos de conversación para Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
+| Bots conversacionales  | [Crear bots interactivos conversacionales para Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
 
 ## <a name="getting-started-with-code-samples"></a>Introducción a los ejemplos de código
 
@@ -38,7 +39,7 @@ Cada uno de nuestros ejemplos de .NET incluye un Visual Studio de solución que 
 
 ### <a name="for-nodejs-samples"></a>Para Node.js ejemplos
 
-Proporcionamos una packages.jsen el archivo que enumera todos los paquetes necesarios para un ejemplo. Simplemente ejecute `npm install` desde la línea de comandos en el Node.js del proyecto para instalar los paquetes necesarios. Ya estás listo para abrir el proyecto en Visual Studio código y empezar a experimentar.
+Proporcionamos una packages.jsen el archivo que enumera todos los paquetes necesarios para un ejemplo. Simplemente ejecute `npm install` desde la línea de comandos del Node.js del proyecto para instalar los paquetes necesarios. Ya estás listo para abrir el proyecto en Visual Studio código y empezar a experimentar.
 
 ### <a name="for-other-samples"></a>Para otras muestras
 

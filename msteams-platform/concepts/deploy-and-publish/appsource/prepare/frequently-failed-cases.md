@@ -4,12 +4,13 @@ description: Describe sugerencias para un envío correcto de la tienda de Teams 
 author: laujan
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f4226bdae94db073711cb1e126a7991804b050ac
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+keywords: Publicación rápida de appsource de validación de aplicaciones de Teams con la mayoría de los casos de prueba con errores
+ms.openlocfilehash: ad1818bbe2f085f5f1dc1bbef5f6a7b7b9ba08af
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797837"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014449"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío de aplicación de Microsoft Teams correcto
 
@@ -26,16 +27,16 @@ En este artículo se abordan los motivos comunes por los que las aplicaciones en
 
 * Asegúrese de que está usando la versión 1.4.1 o posterior del [SDK de Microsoft Teams.](https://www.npmjs.com/package/@microsoft/teams-js)
 * No realices cambios en la aplicación mientras el proceso de validación esté en curso. Si lo haces, necesitarás una revalidación completa de la aplicación.
-* La aplicación no debe dejar de responder, finalizar inesperadamente ni contener errores de programación. Si se produce un problema, la aplicación debería producir un error correctamente y proporcionar un mensaje de avance válido al usuario.
+* La aplicación no debe dejar de responder, finalizar inesperadamente o contener errores de programación. Si se produce un problema, la aplicación debería producir un error correctamente y proporcionar un mensaje de avance válido al usuario.
 * La aplicación no debe descargar, instalar ni iniciar automáticamente ningún código ejecutable en el entorno del usuario. Todas las descargas deben solicitar permiso explícito al usuario.
 * Cualquier material que asocie con su experiencia, como descripciones y documentación de soporte técnico, debe ser preciso. La ortografía, el uso de mayúsculas y minúsculas, la puntuación y la gramática de las descripciones y materiales deben ser correctos.
 * Proporcionar información de ayuda y soporte técnico. Se recomienda encarecidamente que la aplicación incluya un vínculo de ayuda o preguntas más frecuentes para la experiencia del usuario de primera ejecución. Para todas las aplicaciones personales, te recomendamos que proporciones tu página de ayuda como una pestaña personal para mejorar la experiencia del usuario.
-* Las aplicaciones no deben sacar al usuario de Teams para los escenarios de usuario principales. Se recomienda usar módulos o pestañas de tareas para mostrar información a los usuarios de Teams.
+* Las aplicaciones no deben sacar al usuario de Teams para escenarios de usuario principales. Se recomienda usar módulos o pestañas de tareas para mostrar información a los usuarios de Teams.
 * Incrementa el número de versión de la aplicación en el manifiesto si realizas cambios en el manifiesto en el envío.
-* La aplicación no debe sacar a los usuarios de Teams para escenarios de usuario principales. Los destinos de vínculos de las aplicaciones no deben vincularse a un explorador externo, sino que deben vincularse a elementos div contenidos en Teams, por ejemplo, dentro de las pestañas y módulos de tareas.
+* La aplicación no debe sacar a los usuarios de Teams para escenarios de usuario principales. Los destinos de vínculos de las aplicaciones no deben vincularse a un explorador externo, sino que deben vincularse a elementos div contenidos en Teams, por ejemplo, dentro de módulos de tareas y pestañas.
 * Las aplicaciones personales permiten a los usuarios compartir contenido de una experiencia de aplicación personal con otros miembros del equipo.
 
-### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; proporcionar una experiencia clara y sencilla de inicio/salida y registro
+### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; proporcionar una experiencia clara y sencilla de inicio y cerrar sesión y registro
 
 *Vea también la* [sección 1100.5: Control de clientes](/legal/marketplace/certification-policies#11005-customer-control)
 
@@ -58,30 +59,30 @@ En este artículo se abordan los motivos comunes por los que las aplicaciones en
 > * dentro de las secciones de descripción de la aplicación;
 > * en el mensaje de bienvenida de la aplicación;
 > * en el mensaje de ayuda de la aplicación;
-> * en la ventana donde le pide a un usuario que inicie sesión en sus servicios;
+> * en la ventana donde se pide a un usuario que inicie sesión en sus servicios;
 
 * Las aplicaciones que no tienen un flujo de registro fácil también pueden incluir una pestaña de ayuda o un vínculo a una página web donde un nuevo usuario puede ver instrucciones detalladas sobre cómo configurar la aplicación con Microsoft Teams.  Esto es para garantizar que un nuevo usuario no se bloquee al probar la aplicación por primera vez.
-* La funcionalidad de inicio y salida de sesión debe funcionar en clientes móviles. Asegúrese de que está usando el SDK de [Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js) versión 1.4.1 o posterior.
+* La funcionalidad de inicio y salida de sesión debe funcionar en clientes móviles. Asegúrese de que usa la versión 1.4.1 o posterior del SDK de [Microsoft Teams.](https://www.npmjs.com/package/@microsoft/teams-js)
 
 Para obtener información adicional sobre la autenticación, vea:
 
 * [Documentación de autenticación](../../../authentication/authentication.md)
 * [Ejemplo de autenticación de bot en Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Ejemplo de autenticación de pestañas en Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Autenticación de tabulación/bot en C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Autenticación de pestaña/bot en C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 ### <a name="9989-response-times-must-be-reasonable"></a>&#9989; tiempos de respuesta deben ser razonables
 
 * **Fichas**. Si una respuesta a una acción tarda más de tres segundos, debe proporcionar un mensaje o advertencia de carga.
 * **Bots**. Una respuesta a un comando de usuario debe producirse en un plazo de dos segundos. Si se requiere un procesamiento más largo, la aplicación debe mostrar un indicador de escritura.
-* **Extensiones de redacción**. Una respuesta a un comando de usuario debe producirse en un plazo de cinco segundos.
+* **Extensiones de redacción**. Una respuesta a un comando de usuario debe producirse en cinco segundos.
 
 > [!TIP]
 > Asegúrate de que la aplicación muestra un indicador de carga o algún tipo de advertencia cuando la aplicación tarda más de lo esperado en responder.
 
-### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989; contenido de la pestaña no debe tener un cromo excesivo ni una navegación en capas
+### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989; contenido de la pestaña no debe tener un cromo excesivo o una navegación en capas
 
-* Las pestañas deben proporcionar contenido centrado y evitar los elementos de interfaz de usuario necesarios. En general, esto suele hacer referencia a una navegación anidada o en capas innecesaria, una interfaz de usuario irrelevante o innecesaria junto al contenido o cualquier vínculo que lleve al usuario a contenido no relacionado. Por ejemplo, a continuación se muestra una vista de pestaña que omite los menús de navegación y solo muestra el contenido principal:
+* Las pestañas deben proporcionar contenido centrado y evitar los elementos de interfaz de usuario necesarios. En general, esto suele hacer referencia a la navegación anidada o en capas innecesaria, una interfaz de usuario irrelevante o innecesaria junto al contenido o cualquier vínculo que lleve al usuario a contenido no relacionado. Por ejemplo, a continuación se muestra una vista de pestaña que omite los menús de navegación y solo muestra el contenido principal:
 
 ![Vista web de SharePoint](../../../../assets/images/faq/web-sp.png)  
 ![Vista de pestaña de SharePoint](../../../../assets/images/faq/tab-sp.png)
@@ -91,7 +92,7 @@ Para obtener información adicional sobre la autenticación, vea:
 * Las pestañas de canal no deben proporcionar una barra de aplicaciones con iconos en la barra izquierda que entre en conflicto con la navegación principal de Teams.
 * Las pestañas no deben presentar una barra de aplicaciones con iconos en la barra izquierda que entren en conflicto con la navegación principal de Teams.
 * Las pestañas que tienen funciones de edición complejas dentro de la aplicación deben abrir la vista de editor en una ventana múltiple en lugar de en la pestaña.
-* Si hay varias opciones de vista, considere la posibilidad de tener un menú de configuración de pestañas para que el usuario pueda elegir. Por ejemplo, en lugar de insertar un menú dentro de la pestaña, coloque el menú en la página de configuración para que la vista de pestaña real esté limpia y centrada.
+* Si hay varias opciones de vista, considere la posibilidad de tener un menú de configuración de pestaña para que el usuario pueda elegir. Por ejemplo, en lugar de insertar un menú dentro de la pestaña, coloque el menú en la página de configuración para que la vista de pestaña real esté limpia y centrada.
 * Incluya una pestaña *de* Ayuda como una pestaña estática para informar a los usuarios sobre cómo configurar, registrarse y usar la aplicación.
 * Incluya una pestaña *Configuración* que esté disponible desde el encabezado de la aplicación.
 
@@ -124,14 +125,14 @@ El bot debe responder a cualquier comando y no al usuario. Estas son algunas sug
 
 * **Incluya un comando de ayuda.** Es probable que los usuarios escriban "Ayuda" cuando se pierden o cuando el bot no responde según lo esperado. Incluye un comando de ayuda que describa cómo se experimentará el valor de la aplicación junto con todos los comandos válidos.
 
-![Comando de ayuda de Flow](../../../../assets/images/faq/flow-help.png)
+![Comando de ayuda de flujo](../../../../assets/images/faq/flow-help.png)
 
 * **Incluya contenido de ayuda o instrucciones cuando se pierda el bot.** Cuando el bot no puede comprender la entrada del usuario, debe sugerir una acción alternativa. Por ejemplo, *"Lo sentimos, no lo sé. Escriba "ayuda" para obtener más información".* No responda con un mensaje de error o *simplemente, "No lo entenderé".* Use esta oportunidad para enseñar a los usuarios.
 
 * **Usar tarjetas adaptables y módulos de tareas para que la respuesta del bot sea clara y fácil de usar** 
- [Las tarjetas adaptables con botones que invocan módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario del bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos. Además, las respuestas de bot no deben ser textuales con texto largo. Los bots deben usar tarjetas adaptables & módulos de tareas en lugar de interfaz de usuario basada en chat conversacional y respuestas de texto largas
+ [Las tarjetas adaptables con botones que invocan módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario del bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos. Además, las respuestas del bot no deben ser textuales con texto largo. Los bots deben usar tarjetas adaptables & módulos de tareas en lugar de interfaz de usuario basada en chat conversacional y respuestas de texto largas
 
-* **Piense en todos los ámbitos.** Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona contexto significativo dentro del ámbito personal o de equipos, deshabilite dicho ámbito a través del manifiesto. (Vea el bloque en la referencia del esquema de `bots` [manifiesto de Microsoft Teams).](../../../../resources/schema/manifest-schema.md#bots)
+* **Piense en todos los ámbitos.** Asegúrese de que el bot proporciona las respuestas adecuadas cuando se menciona ( ) en `@*botname*` un canal y en conversaciones personales. Si el bot no proporciona contexto significativo dentro del ámbito personal o de equipos, deshabilite dicho ámbito a través del manifiesto. (Vea el bloque en la referencia del esquema de `bots` [manifiesto de Microsoft Teams).](../../../../resources/schema/manifest-schema.md#bots)
 
 * **Incluir el equipo, el chat en grupo o la conversación 1:1**. Las notificaciones de bot deben incluir un equipo, un chat en grupo o una conversación uno a uno con contenido relevante para su audiencia.
 
@@ -164,15 +165,15 @@ Consulte la sección siguiente para ver los requisitos de los mensajes de bienve
 #### <a name="avoid-welcome-message-spamming"></a>Evitar el correo no deseado de mensajes de bienvenida
 
 * **Mensaje de canal por bot**. No enviar correo no deseado a los usuarios mediante la creación de nuevas publicaciones de chat independientes. Cree una publicación de subproceso único con respuestas en el mismo hilo.
-* **Chat personal por bot**. No envíes varios mensajes. Envíe un mensaje con información completa. No se permite repetir el mismo mensaje de bienvenida en intervalos regulares y se considera correo no deseado.
+* **Chat personal por bot.** No envíes varios mensajes. Envíe un mensaje con información completa. No se permite repetir el mismo mensaje de bienvenida en intervalos regulares y se considera correo no deseado.
 
-#### <a name="notification-only-bot-welcome-messages"></a>Mensajes de bienvenida de bot solo de notificación
+#### <a name="notification-only-bot-welcome-messages"></a>Mensajes de bienvenida del bot de solo notificación
 
 Los bots de solo notificación deben enviar un mensaje de bienvenida que incluya un mensaje que transmita: "Soy un bot de solo notificación y no podrá responder *a los chats".*
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Mensajes de bienvenida en el ámbito personal
 
-* **Haga que el mensaje sea conciso e informativo.**  Lo más probable es que la experiencia del usuario y el conocimiento de la aplicación variarán. Un usuario puede haber usado la aplicación en otra plataforma o no saber nada sobre la aplicación. Desea adaptar el mensaje a todas las audiencias y, en un par de oraciones, explicar lo que hace el bot y las formas de interactuar con él. También debes explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
+* **Haga que el mensaje sea conciso e informativo.**  Lo más probable es que la experiencia del usuario y el conocimiento de la aplicación variarán. Un usuario puede haber usado la aplicación en otra plataforma o no saber nada sobre la aplicación. Quiere adaptar el mensaje a todas las audiencias y en un par de frases explicar lo que hace el bot y las formas de interactuar con él. También debes explicar el valor de la aplicación y cómo los usuarios se beneficiarán de su uso.
 ![Bot de café y dinning](../../../../assets/images/faq/cafe-bot.png)
 
 * **Haga que el mensaje sea que se puede realizar una acción.** Piensa en lo primero que quieres que hagan los usuarios después de instalar la aplicación. ¿Hay un comando interesante que deberían probar? ¿Hay otra experiencia de incorporación que deban conocer? ¿Necesitan iniciar sesión? Puede agregar acciones en una tarjeta adaptable o proporcionar ejemplos específicos como *"Intente preguntar...",*"Esto es *lo que puedo hacer...".*
@@ -213,8 +214,8 @@ Advierto a los usuarios antes de que la aplicación descargue archivos o archivo
 
 ### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; completar la atestación del editor en el Centro de partners
 
-* Consulta la documentación [del programa de atestación completa de](/microsoft-365-app-certification/docs/attestation) Publisher para obtener más información.
-* Siga los pasos de la sección Flujo de [trabajo de atestación](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) de editor para completar el proceso de atestación del editor. Escriba en appcert@microsoft.com para cualquier pregunta.
+* Consulte la documentación [del programa de atestación completa de](/microsoft-365-app-certification/docs/attestation) Publisher para obtener más información.
+* Siga los pasos de la sección Flujo de [trabajo de atestación](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) de editor para completar el proceso de atestación del editor. Escribe en appcert@microsoft.com para cualquier pregunta.
 * Consulte la guía [de solución de problemas](/azure/active-directory/develop/troubleshoot-publisher-verification) para obtener información adicional.
 * Completa la autoaestación a través del Centro de partners. Rellene el cuestionario Self-Assessment en **Cumplimiento de la aplicación.**
 

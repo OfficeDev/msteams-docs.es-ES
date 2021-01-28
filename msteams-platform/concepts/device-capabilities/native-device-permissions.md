@@ -1,13 +1,14 @@
 ---
-title: Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
+title: Solicitar permisos de dispositivo para la pestaña
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario
+ms.topic: how-to
 keywords: desarrollo de pestañas de teams
-ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: a2893fb2905584eac4b398287d431f406c23b12b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886747"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014533"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Solicitar permisos de dispositivo para la pestaña de Microsoft Teams
 
@@ -26,7 +27,7 @@ Es posible que quieras enriquecer la pestaña con características que requieren
 > [!IMPORTANT]
 >
 > * Actualmente, el cliente móvil de Teams solo admite el acceso a , y a través de las capacidades de dispositivo nativo y está disponible en todas las construcciones de `camera` `gallery` `mic` `location` aplicaciones, incluidas las pestañas. </br>
-> * Compatibilidad con `camera` , y se habilita a través de la API `gallery` `mic` [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Para la captura de imagen única, puede usar [**la API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
+> * Compatibilidad con `camera` , y se habilita a través de la API de `gallery` `mic` [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Para la captura de imagen única, puede usar [**la API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
 > * La compatibilidad con `location` se habilita a través de la API [**getLocation**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Se recomienda usar esta API, ya que la [**API de geolocalización**](../../resources/schema/manifest-schema.md#devicepermissions) no es totalmente compatible actualmente con todos los clientes de escritorio.
 
 ## <a name="device-permissions"></a>Permisos de dispositivo
@@ -45,7 +46,7 @@ Aunque el acceso a estas características es estándar en la mayoría de los exp
 
 1. Abra Teams.
 1. En la esquina superior derecha de la ventana, seleccione el icono de perfil.
-1. Seleccione **Permisos**  ->  **de configuración en** el menú desplegable.
+1. Seleccione **Permisos**  ->  **de configuración** en el menú desplegable.
 1. Elige la configuración que quieras.
 
 ![Pantalla de configuración de escritorio de permisos de dispositivo](../../assets/images/tabs/device-permissions.png)
@@ -80,12 +81,12 @@ Actualiza las aplicaciones agregando y especificando cuál de las cinco propieda
 
 Cada propiedad te permitirá pedir al usuario que solicite su consentimiento:
 
-| Propiedad      | Description   |
+| Propiedad      | Descripción   |
 | --- | --- |
-| Elementos multimedia         | permiso para usar la cámara, el micrófono, los altavoces y la galería multimedia de acceso |
+| medios         | permiso para usar la cámara, el micrófono, los altavoces y la galería multimedia de acceso |
 | geolocalización   | permiso para devolver la ubicación del usuario      |
 | notifications | permiso para enviar notificaciones de usuario      |
-| midi          | permiso para enviar y recibir información midi de un instrumento música digital   |
+| midi          | permiso para enviar y recibir información midi de un instrumento digital   |
 | openExternal  | permiso para abrir vínculos en aplicaciones externas  |
 
 ## <a name="checking-permissions-from-your-tab"></a>Comprobar los permisos de la pestaña

@@ -1,42 +1,43 @@
 ---
-title: Certificación de aplicaciones
-description: Describe el programa de cumplimiento de aplicaciones de Microsoft 365 desde la tienda apps
-keywords: Centro de cumplimiento de Microsoft Teams AppSource Store de certificación de aplicaciones
+title: Certificación de aplicaciones de Microsoft 365
+description: Describe el programa Cumplimiento de aplicaciones de Microsoft 365 desde aplicaciones de la Tienda
+ms.topic: overview
+keywords: Centro de partners de certificación de aplicaciones para la tienda de cumplimiento de teams
 ms.date: 05/06/2019
-ms.openlocfilehash: 37fc472ea357e594b52e9fe7fc904b1a5a6d856d
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 7214acf8b9d6469d01bdf3d4141c563fa2795720
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819198"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014435"
 ---
-# <a name="microsoft-365-app-compliance"></a>Cumplimiento de Microsoft 365 App 
+# <a name="microsoft-365-app-compliance"></a>Cumplimiento de Aplicaciones de Microsoft 365 
 
-La creación de un ecosistema de aplicaciones seguro y confiable es una de las principales prioridades para Microsoft. Varias inversiones pretenden asegurarse de que las aplicaciones disponibles en Microsoft Store son válidas, seguras y seguras. 
+La creación de un ecosistema de aplicaciones seguro y de confianza es una prioridad para Microsoft. Varias inversiones tienen como objetivo garantizar que las aplicaciones disponibles en Microsoft Store sean válidas, seguras y seguras. 
 
-  ![3 niveles de cumplimiento de la aplicación](../../../../assets/images/Three_Tiers.png) 
+  ![Enfoque de 3 niveles para el cumplimiento de aplicaciones](../../../../assets/images/Three_Tiers.png) 
 
--   [Verificación de editor](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview)  : permite a los desarrolladores con una cuenta de [red asociada de Microsoft](https://partner.microsoft.com/membership) (MPN) comprobada asociar una identidad organizativa con sus aplicaciones registradas mediante la [plataforma de identidad de Microsoft](https://docs.microsoft.com/azure/active-directory/develop/).
--   [Atestación de Publisher](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) : los desarrolladores realizan una autoevaluación de las prácticas de seguridad, cumplimiento y administración de datos de su organización. Esta información está disponible para que los administradores de ti la revisen. 
--   [Certificación M365](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) – Microsoft emplea a un evaluador de terceros para revisar y validar las normas de seguridad y cumplimiento de la organización. Se trata de nuestro nivel más alto de certificación y proporciona a los administradores de TI de seguridad que la aplicación y la organización que la reciben operarán de manera que promuevan el uso seguro y el almacenamiento de datos.
+-   [Verificación del](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview) editor: permite a los desarrolladores con una cuenta de [Microsoft Partner Network](https://partner.microsoft.com/membership) (MPN) verificada asociar una identidad organizativa con sus aplicaciones registradas a través de la plataforma de identidad de [Microsoft.](https://docs.microsoft.com/azure/active-directory/develop/)
+-   [Atestación de editor:](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) los desarrolladores completan una autoevaluación de las prácticas de seguridad, cumplimiento y tratamiento de datos de su organización. Esta información está disponible para que los administradores de TI la revisen. 
+-   [Certificación M365:](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) Microsoft emplea un asesor externo para revisar y validar los estándares de seguridad y cumplimiento de la organización. Este es nuestro mayor nivel de certificación y garantiza a los administradores de TI que la aplicación y la organización que la recibe opera de maneras que promueven el uso seguro y el almacenamiento de datos.
 
 
-## <a name="program-benefits"></a>Ventajas del programa
+## <a name="program-benefits"></a>Beneficios del programa
 
-Cada nivel del programa de cumplimiento de aplicaciones de Microsoft 365 ofrece un nivel de seguridad diferente a los clientes. Al completar la verificación del editor, le asegura a sus clientes que su compañía es el publicador de la aplicación. La atestación del publicador reduce la necesidad de ir hacia atrás y hacia adelante con los clientes sobre las prácticas de seguridad de la aplicación. Publicamos sus respuestas en preguntas comunes sobre seguridad y cumplimiento en una sola ubicación en un formato coherente que los clientes pueden revisar. El último nivel es la certificación 365 de Microsoft. Tras la finalización, los clientes sabrán que sigue los procedimientos de seguridad y la administración de datos seguros. Otras ventajas del programa de cumplimiento incluyen:
--   Gratuito: Actualmente, Microsoft cubre este costo
--   Obtenga un distintivo en AppSource y en [documentos de desarrollo de cumplimiento](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
--   Diferenciación de otras aplicaciones en la tienda
--   Menor tiempo para la adopción de aplicaciones para sus clientes
--   Reducir la cantidad de tiempo que pasa para rellenar RFPs
--   Se agregó confianza a las medidas de seguridad y cumplimiento de la aplicación
+Cada nivel del Programa de cumplimiento de aplicaciones de Microsoft 365 ofrece un nivel de garantía diferente a los clientes. Al completar la verificación del editor, estás asegurando a los clientes que tu empresa es el editor de la aplicación. La atestación de Publisher reduce la necesidad de ir y volver con los clientes sobre las prácticas de seguridad de la aplicación. Publicamos sus respuestas a preguntas comunes sobre seguridad y cumplimiento en una ubicación en un formato coherente para que los clientes los revisen. El nivel final es la certificación de Microsoft 365. Una vez completados, los clientes sabrán que sigues prácticas seguras de control de datos y seguridad. Otras ventajas del programa de cumplimiento son:
+-   Gratuito: Microsoft cubre actualmente este costo
+-   Obtener un distintivo en AppSource y en documentos [de desarrollo de cumplimiento](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+-   Diferenciación de otras aplicaciones de la tienda
+-   Tiempo reducido para la adopción de aplicaciones para los clientes
+-   Reducir la cantidad de tiempo que se dedica a rellenar las RFP
+-   Se ha agregado confianza en las medidas de seguridad y cumplimiento de la aplicación
 
-## <a name="qualifying-application-types"></a>Tipos de aplicación de calificación 
-### <a name="publisher-verification-applies-to-apps-which"></a>La comprobación del publicador se aplica a las aplicaciones: 
-- Uso de [OAuth 2,0 y OpenID Connect](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) para iniciar sesión en los usuarios y solicitar acceso a datos mediante las API del servicio, como [Microsoft Graph](https://developer.microsoft.com/graph/). 
+## <a name="qualifying-application-types"></a>Tipos de aplicación calificados 
+### <a name="publisher-verification-applies-to-apps-which"></a>La verificación del editor se aplica a las aplicaciones que: 
+- Usar [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) y OpenID Connect para iniciar sesión a los usuarios y solicitar acceso a los datos mediante API del lado del servicio, como Microsoft [Graph.](https://developer.microsoft.com/graph/) 
 - Registrado en Azure AD como multiinquilino. 
 
-### <a name="publisher-attestation"></a>Atestación de publicador
+### <a name="publisher-attestation"></a>Atestación de editor
 -   Teams
 -   Word
 -   Excel
@@ -44,12 +45,12 @@ Cada nivel del programa de cumplimiento de aplicaciones de Microsoft 365 ofrece 
 -   Outlook
 - Próximamente: SharePoint
 
-### <a name="microsoft-365-certification"></a>Certificación 365 de Microsoft
+### <a name="microsoft-365-certification"></a>Certificación de Microsoft 365
 -   Teams
--   Próximamente: ofrecerá la misma cobertura de tipo de aplicación que la atestación de Publisher.
+-   Próximamente: ofrecerá la misma cobertura de tipo de aplicación que la Atestación de Publisher
 
 ## <a name="how-to-start-the-program"></a>Cómo iniciar el programa
 
-La finalización del programa Microsoft 365 App Compliance es voluntario, pero se recomienda encarecidamente. Puede unirse al programa sin importar dónde se encuentre una aplicación recién agregada o si ha estado en la tienda durante años. 
+Completar el Programa de cumplimiento de aplicaciones de Microsoft 365 es voluntaria, pero muy alentada. Puedes unirte al programa independientemente de dónde seas una aplicación recién agregada o si has estado en la tienda durante años. 
 
-El primer paso consiste en completar la [comprobación del publicador](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview). El paso siguiente es completar la [atestación de Publisher](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation). Una vez completada la atestación de Publisher, le haremos llegar a los pasos siguientes para comenzar la certificación 365 de Microsoft.
+El primer paso es completar la comprobación [del editor.](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview) El siguiente paso es completar la [atestación del editor.](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation) Una vez que complete la atestación del editor, nos pondrámos en contacto con usted con los pasos siguientes para comenzar la certificación de Microsoft 365.

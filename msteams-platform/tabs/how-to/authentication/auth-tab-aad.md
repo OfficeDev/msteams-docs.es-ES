@@ -1,13 +1,14 @@
 ---
 title: Autenticación para pestañas con Azure Active Directory
 description: Describe la autenticación en Teams y cómo usarla en las pestañas
+ms.topic: how-to
 keywords: pestañas de autenticación de teams AAD
-ms.openlocfilehash: f6df2dbf84583488ddc0c57798d423b6288af16d
-ms.sourcegitcommit: 23ceb25d07a76f03ffe92cf1ac578b7c50b0bafc
+ms.openlocfilehash: 1502d2634b39230e0428863383bf97ada0be0359
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "49777934"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014568"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una pestaña de Microsoft Teams
 
@@ -18,7 +19,7 @@ Hay muchos servicios que puede que quiera usar dentro de la aplicación de Teams
 
 OAuth 2.0 es un estándar abierto para la autenticación que usan Azure AD y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. Los ejemplos siguientes usan el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información de perfil del usuario de Azure AD y Microsoft Graph.
 
-El código de este artículo proviene de la aplicación de ejemplo microsoft Teams ejemplo de autenticación de [pestaña (Nodo).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual de Azure AD.
+El código de este artículo proviene de la aplicación de ejemplo microsoft Teams muestra de autenticación de [pestañas (Nodo).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información de perfil básica del usuario actual de Azure AD.
 
 Para obtener información general sobre el flujo de autenticación de las pestañas, consulte el tema [Flujo de autenticación en pestañas.](~/tabs/how-to/authentication/auth-flow-tab.md)
 
@@ -56,11 +57,11 @@ microsoftTeams.authentication.authenticate({
 
 * El flujo de autenticación debe iniciarse en una página que se encuentra en su dominio. Este dominio también debe aparecer en la [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) sección del manifiesto. Si no lo hace, se mostrará una ventana emergente vacía.
 
-* Si no se usa, se produce un problema con que el elemento emergente no se cierre al `microsoftTeams.authentication.authenticate()` final del proceso de inicio de sesión.
+* Si no se `microsoftTeams.authentication.authenticate()` usa, se produce un problema con que el elemento emergente no se cierre al final del proceso de inicio de sesión.
 
 ## <a name="navigate-to-the-authorization-page-from-your-popup-page"></a>Vaya a la página de autorización desde la página emergente
 
-Cuando se muestra la página emergente ( `/tab-auth/simple-start` ) se ejecuta el siguiente código. El objetivo principal de esta página es redirigir al proveedor de identidades para que el usuario pueda iniciar sesión. Este redireccionamiento podría realizarse en el lado del servidor mediante HTTP 302, pero en este caso se realiza en el lado cliente mediante una llamada a `window.location.assign()` . Esto también permite `microsoftTeams.getContext()` usarse para recuperar información de sugerencias que se puede pasar a Azure AD.
+Cuando se muestra la página emergente ( `/tab-auth/simple-start` ) se ejecuta el siguiente código. El objetivo principal de esta página es redirigir al proveedor de identidades para que el usuario pueda iniciar sesión. Este redireccionamiento podría realizarse en el lado del servidor mediante HTTP 302, pero en este caso se realiza en el lado cliente mediante una llamada a `window.location.assign()` . Esto también permite usarse para recuperar información de `microsoftTeams.getContext()` sugerencias que se puede pasar a Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -92,7 +93,7 @@ Una vez que el usuario completa la autorización, se redirige al usuario a la p�
 ### <a name="notes"></a>Notas
 
 * Vea [obtener información de contexto de usuario](~/tabs/how-to/access-teams-context.md) para obtener ayuda para crear solicitudes de autenticación y direcciones URL. Por ejemplo, puede usar el nombre de inicio de sesión del usuario como valor para el inicio de sesión de Azure AD, lo que significa que es posible que el usuario tenga `login_hint` que escribir menos. Recuerde que no debe usar este contexto directamente como prueba de identidad, ya que un atacante podría cargar la página en un explorador malintencionado y proporcionarle la información que quiera.
-* Aunque el contexto de la pestaña proporciona información útil sobre el usuario, no use esta información para autenticar al usuario, ya sea que la obtenga como parámetros de dirección URL a la dirección URL de contenido de la pestaña o llamando a la función en el SDK del cliente de `microsoftTeams.getContext()` Microsoft Teams. Un actor malintencionado podría invocar la dirección URL de contenido de la pestaña con sus propios parámetros, y una página web que suplanta Microsoft Teams podría cargar la dirección URL de contenido de la pestaña en un iframe y devolver sus propios datos a la `getContext()` función. Debe tratar la información relacionada con la identidad en el contexto de la pestaña simplemente como sugerencias y validarla antes de usarla.
+* Aunque el contexto de pestaña proporciona información útil sobre el usuario, no use esta información para autenticar al usuario, ya sea que la obtenga como parámetros de dirección URL a la dirección URL de contenido de la pestaña o llamando a la función en el SDK del cliente de `microsoftTeams.getContext()` Microsoft Teams. Un actor malintencionado podría invocar la dirección URL de contenido de la pestaña con sus propios parámetros, y una página web que suplanta Microsoft Teams podría cargar la dirección URL de contenido de la pestaña en un iframe y devolver sus propios datos a la `getContext()` función. Debe tratar la información relacionada con la identidad en el contexto de la pestaña simplemente como sugerencias y validarla antes de usarla.
 * El parámetro se usa para confirmar que el servicio que llama al URI de devolución de `state` llamada es el servicio al que llamó. Si el parámetro de la devolución de llamada no coincide con el parámetro enviado durante la llamada, la llamada de devolución no se comprueba `state` y debe finalizarse.
 * No es necesario incluir el dominio del proveedor de identidades en la lista en el archivo de manifest.js`validDomains` aplicación.
 
@@ -143,7 +144,7 @@ Este código analiza los pares clave-valor recibidos de Azure AD `window.locatio
 
 Si se realiza correctamente, puede actualizar o volver a cargar la página y mostrar el contenido relevante para el usuario ahora autenticado. Si se produce un error en la autenticación, muestre un mensaje de error.
 
-La aplicación puede establecer su propia cookie de sesión para que el usuario no vuelva a iniciar sesión cuando vuelva a la pestaña en el dispositivo actual.
+La aplicación puede establecer su propia cookie de sesión para que el usuario no tenga que volver a iniciar sesión cuando vuelva a la pestaña en el dispositivo actual.
 
 > [!NOTE]
 > Chrome 80, programado para su lanzamiento a principios de 2020, introduce nuevos valores de cookies e impone directivas de cookies de forma predeterminada. Se recomienda establecer el uso previsto para las cookies en lugar de basarse en el comportamiento predeterminado del explorador. *Vea* [el atributo de cookie SameSite (actualización de 2020).](../../../resources/samesite-cookie-update.md)
