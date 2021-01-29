@@ -230,6 +230,8 @@
           href: bots/how-to/update-and-delete-bot-messages.md
     - name: Obtener contexto para un bot
       href: bots/how-to/get-teams-context.md
+    - name: Envío y recepción de archivos
+      href: bots/how-to/bots-filesv4.md
     - name: Control de la limitación de volumen de bot
       href: bots/how-to/rate-limit.md
     - name: Bots de llamadas y reuniones
