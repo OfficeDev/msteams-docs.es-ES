@@ -1,43 +1,126 @@
 ---
 title: Crear y enviar el módulo de tareas
 author: clearab
-description: Cómo controlar la acción de invocación inicial y responder con un módulo de tareas desde un comando de extensión de mensajería de acción
+description: Cómo controlar la acción de invocación inicial y responder con un módulo de tarea desde un comando de extensión de mensajería de acciones
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f5f96e71517d45f52d17d2d70c583ec1eec3babd
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 58fb7e1ff5690b33c2e23f68529f05869afa9016
+ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676027"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50072878"
 ---
 # <a name="create-and-send-the-task-module"></a>Crear y enviar el módulo de tareas
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Si no va a rellenar el módulo de tareas con los parámetros definidos en el manifiesto de la aplicación, deberá crear el módulo de tarea que se va a presentar a los usuarios. Puede usar tanto una tarjeta adaptable como una vista Web incrustada.
+Si no va a rellenar el módulo de tareas con parámetros definidos en el manifiesto de la aplicación, debe crear el módulo de tareas para los usuarios. Usa una tarjeta adaptable o una vista web incrustada.
 
 ## <a name="the-initial-invoke-request"></a>La solicitud de invocación inicial
 
-Con este método, el servicio recibirá `Activity` un objeto de `composeExtension/fetchTask`tipo y tendrá que responder con un `task` objeto que contenga la tarjeta adaptable o una dirección URL a la vista Web incrustada. Además de las propiedades de actividad de bot estándar, la carga de invocación inicial contiene los siguientes metadatos de solicitud:
+Con este método, el servicio recibirá un objeto de tipo y debe responder con un objeto que contenga la tarjeta adaptable o una dirección URL a la `Activity` `composeExtension/fetchTask` vista web `task` incrustada. Junto con las propiedades de actividad de bot estándar, la carga inicial de invocación contiene los siguientes metadatos de solicitud:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
-|`type`| Tipo de solicitud; debe ser `invoke`. |
-|`name`| Tipo de comando que se emite para el servicio. Será `composeExtension/fetchTask`. |
-|`from.id`| IDENTIFICADOR del usuario que envió la solicitud. |
+|`type`| Tipo de solicitud. Debe ser `invoke` . |
+|`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
+|`from.id`| Identificador del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
 |`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
-|`channelData.channel.id`| IDENTIFICADOR de canal (si la solicitud se realizó en un canal). |
-|`channelData.team.id`| IDENTIFICADOR del equipo (si la solicitud se realizó en un canal). |
-|`value.commandId` | Contiene el identificador del comando que se ha invocado. |
-|`value.commandContext` | Contexto que desencadenó el evento. Será `compose`. |
-|`value.context.theme` | El tema del cliente del usuario, útil para el formato de vista Web incrustado. `default`Será `contrast` o `dark`. |
+|`channelData.channel.id`| Id. de canal (si la solicitud se realizó en un canal). |
+|`channelData.team.id`| Identificador de equipo (si la solicitud se realizó en un canal). |
+|`value.commandId` | Contiene el identificador del comando que se invocó. |
+|`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose` . |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default` o `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-11-chat-are-listed-in-the-following-section"></a>Las propiedades de actividad de carga cuando se invoca un módulo de tarea desde el chat 1:1 se enumeran en la siguiente sección:
+
+|Nombre de propiedad|Finalidad|
+|---|---|
+|`type`| Tipo de solicitud. Debe ser `invoke` . |
+|`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
+|`from.id`| Identificador del usuario que envió la solicitud. |
+|`from.name`| Nombre del usuario que envió la solicitud. |
+|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
+|`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
+|`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje al que este mensaje es una respuesta. |
+|`value.commandId` | Contiene el identificador del comando que se invocó. |
+|`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose` . |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default` o `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-group-chat-are-listed-in-the-following-section"></a>Las propiedades de actividad de carga cuando se invoca un módulo de tarea desde un chat de grupo se enumeran en la siguiente sección:
+
+|Nombre de propiedad|Finalidad|
+|---|---|
+|`type`| Tipo de solicitud. Debe ser `invoke` . |
+|`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
+|`from.id`| Identificador del usuario que envió la solicitud. |
+|`from.name`| Nombre del usuario que envió la solicitud. |
+|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
+|`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
+|`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje al que este mensaje es una respuesta. |
+|`value.commandId` | Contiene el identificador del comando que se invocó. |
+|`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose` . |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default` o `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-channel-new-post-are-listed-in-the-following-section"></a>Las propiedades de actividad de carga cuando se invoca un módulo de tarea desde un canal (nueva publicación) se enumeran en la siguiente sección:
+
+|Nombre de propiedad|Finalidad|
+|---|---|
+|`type`| Tipo de solicitud. Debe ser `invoke` . |
+|`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
+|`from.id`| Identificador del usuario que envió la solicitud. |
+|`from.name`| Nombre del usuario que envió la solicitud. |
+|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
+|`channelData.channel.id`| Id. de canal (si la solicitud se realizó en un canal). |
+|`channelData.team.id`| Identificador de equipo (si la solicitud se realizó en un canal). |
+|`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
+|`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje al que este mensaje es una respuesta. |
+|`value.commandId` | Contiene el identificador del comando que se invocó. |
+|`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose` . |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default` o `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-channel-reply-to-thread-are-listed-in-the-following-section"></a>Las propiedades de actividad de carga cuando se invoca un módulo de tarea desde un canal (responder a subproceso) se enumeran en la siguiente sección:
+
+|Nombre de propiedad|Finalidad|
+|---|---|
+|`type`| Tipo de solicitud. Debe ser `invoke` . |
+|`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
+|`from.id`| Identificador del usuario que envió la solicitud. |
+|`from.name`| Nombre del usuario que envió la solicitud. |
+|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
+|`channelData.channel.id`| Id. de canal (si la solicitud se realizó en un canal). |
+|`channelData.team.id`| Identificador de equipo (si la solicitud se realizó en un canal). |
+|`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
+|`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje al que este mensaje es una respuesta. |
+|`value.commandId` | Contiene el identificador del comando que se invocó. |
+|`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose` . |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default` o `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-command-box-are-listed-in-the-following-section"></a>Las propiedades de actividad de carga cuando se invoca un módulo de tarea desde un cuadro de comando se enumeran en la siguiente sección:
+
+|Nombre de propiedad|Finalidad|
+|---|---|
+|`type`| Tipo de solicitud. Debe ser `invoke` . |
+|`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
+|`from.id`| Identificador del usuario que envió la solicitud. |
+|`from.name`| Nombre del usuario que envió la solicitud. |
+|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
+|`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
+|`value.commandId` | Contiene el identificador del comando que se invocó. |
+|`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose` . |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default` o `contrast` `dark` . |
 
 ### <a name="example-fetchtask-request"></a>Ejemplo de solicitud fetchTask
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -46,7 +129,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
@@ -56,7 +139,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -119,9 +202,9 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## <a name="initial-invoke-request-from-a-message"></a>Solicitud de invocación inicial de un mensaje
 
-Cuando se invoca el bot desde un mensaje en lugar de desde el área de redacción o la barra de `value` comandos, el objeto en la solicitud inicial contendrá los detalles del mensaje desde el que se invocó a la extensión de mensajería. A continuación se muestra un ejemplo de este objeto. Las `reactions` matrices `mentions` y son opcionales, y no estarán presentes si no hay reacciones o menciones en el mensaje original.
+Cuando se invoca el bot desde un mensaje en lugar del área de redacción o la barra de comandos, el objeto de la solicitud inicial debe contener los detalles del mensaje desde el que se invoca la extensión `value` de mensajería. Vea la sección siguiente para ver el ejemplo de este objeto. Las matrices y son opcionales y no están presentes si no hay ninguna reacción o `reactions` `mentions` mención en el mensaje original.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -133,7 +216,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -145,7 +228,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -217,35 +300,35 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Responder a la fetchTask
+## <a name="respond-to-the-fetchtask"></a>Responder a fetchTask
 
-Responda a la solicitud de invocación `task` con un objeto que contenga un `taskInfo` objeto con la tarjeta adaptable o la dirección URL de la web, o bien un mensaje de cadena simple.
+Responda a la solicitud de invocación con un objeto que contenga un objeto con la tarjeta adaptable o la dirección URL web, o `task` un mensaje de cadena `taskInfo` simple.
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
-|`type`| Puede ser `continue` para presentar un formulario o `message` para un elemento emergente sencillo. |
-|`value`| Un `taskInfo` objeto para un formulario o un `string` para un mensaje. |
+|`type`| Puede ser `continue` para presentar un formulario o para un elemento emergente `message` simple. |
+|`value`| Un objeto `taskInfo` de un formulario o un `string` mensaje. |
 
 El esquema del objeto taskInfo es:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
-|`title`| Título del módulo de tarea.|
-|`height`| Puede ser un número entero (en píxeles), o `small`bien, `medium` `large`.|
-|`width`| Puede ser un número entero (en píxeles), o `small`bien, `medium` `large`.|
-|`card`| Tarjeta adaptable que define el formulario (si se usa uno).
-|`url`| Dirección URL que se va a abrir dentro del módulo de tarea como una vista Web incrustada.|
-|`fallbackUrl`| Si un cliente no admite la característica de módulo de tareas, esta dirección URL se abre en una pestaña del explorador. |
+|`title`| Título del módulo de tareas.|
+|`height`| Debe ser un entero (en píxeles) o `small` `medium` , `large` .|
+|`width`| Debe ser un entero (en píxeles) o `small` `medium` , `large` .|
+|`card`| La tarjeta adaptable que define el formulario (si se usa uno).
+|`url`| Dirección URL que se abrirá dentro del módulo de tareas como una vista web incrustada.|
+|`fallbackUrl`| Si un cliente no admite la característica del módulo de tareas, esta dirección URL se abre en una pestaña del explorador. |
 
 ### <a name="with-an-adaptive-card"></a>Con una tarjeta adaptable
 
-Cuando use una tarjeta adaptable, deberá responder con un `task` objeto con el `value` objeto que contiene una tarjeta adaptable.
+Al usar una tarjeta adaptable, debes responder con un `task` objeto con el objeto que contiene una tarjeta `value` adaptable.
 
-#### <a name="example-fetchtask-response-with-an-adaptive-card"></a>Respuesta de ejemplo fetchTask con una tarjeta adaptable
+#### <a name="example-fetchtask-response-with-an-adaptive-card"></a>Ejemplo de respuesta fetchTask con una tarjeta adaptable
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-En este ejemplo se usa el [paquete de NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) además del SDK de bot Framework.
+En este ejemplo se usa [el paquete NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) además del SDK de Bot Framework.
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -296,7 +379,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -344,15 +427,18 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
-{
+ {
   "task": {
     "type": "continue",
     "value": {
-      "card":
-      {
+      "title": "Task module title",
+      "height": 500,
+      "width": "medium",
+      "card": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
         "version": "1.0",
         "body": [
@@ -381,8 +467,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               }
             ]
           }
-        ],
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+        ]
       }
     }
   }
@@ -391,11 +476,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="with-an-embedded-web-view"></a>Con una vista Web incrustada
+### <a name="with-an-embedded-web-view"></a>Con una vista web incrustada
 
-Cuando se usa una vista Web incrustada, es necesario responder con un `task` objeto con el `value` objeto que contiene la dirección URL al formulario web que se desea cargar. Los dominios de cualquier dirección URL que desee cargar deben incluirse en la `validDomains` matriz del manifiesto de la aplicación. Consulte la [documentación del módulo de tareas](~/task-modules-and-cards/what-are-task-modules.md) para obtener información completa sobre cómo crear la vista Web incrustada.
+Al usar una vista web incrustada, debe responder con un objeto con el objeto que contiene la dirección URL del formulario web que `task` `value` desea cargar. Los dominios de cualquier dirección URL que quiera cargar deben incluirse en la `validDomains` matriz en el manifiesto de la aplicación. Consulte la documentación [del módulo de tareas](~/task-modules-and-cards/what-are-task-modules.md) para obtener información completa sobre cómo crear la vista web incrustada.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -427,7 +512,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -448,7 +533,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -467,9 +552,88 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="next-steps"></a>Siguientes pasos
+### <a name="request-to-install-your-conversational-bot"></a>Solicitud para instalar el bot de conversación
 
-Si permite que los usuarios envíen una respuesta de vuelta desde el módulo de tareas, deberá controlar la acción de envío.
+Si la aplicación contiene un bot de conversación, instale el bot en la conversación antes de cargar el módulo de tareas. Es útil obtener contexto adicional para el módulo de tareas. Un ejemplo típico de este escenario es capturar la lista para rellenar un control de selector de personas o la lista de canales de un equipo.
+
+Cuando la extensión de mensajería reciba la invocación, compruebe si el bot está instalado `composeExtension/fetchTask` en el contexto actual para facilitar el flujo. Por ejemplo, compruebe el flujo con una llamada de lista de obtener. Si el bot no está instalado, devuelve una tarjeta adaptable con una acción que solicita al usuario que instale el bot. Vea la acción en el ejemplo siguiente. El usuario debe tener permiso para instalar las aplicaciones en esa ubicación para su comprobación. Si la instalación de la aplicación no se realiza correctamente, el usuario recibe un mensaje para ponerse en contacto con el administrador.
+
+#### <a name="example-of-the-response"></a>Ejemplo de la respuesta:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Looks like you haven't used Disco in this team/chat"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Continue",
+      "data": {
+        "msteams": {
+          "justInTimeInstall": true
+        }
+      }
+    }
+  ],
+  "version": "1.0"
+}
+```
+
+Después de la instalación, el bot recibe otro mensaje de invocación con `name = composeExtension/submitAction` y `value.data.msteams.justInTimeInstall = true` .
+
+#### <a name="example-of-the-invoke"></a>Ejemplo de la invocación:
+
+```json
+{
+  "value": {
+    "commandId": "giveKudos",
+    "commandContext": "compose",
+    "context": {
+      "theme": "default"
+    },
+    "data": {
+      "msteams": {
+        "justInTimeInstall": true
+      }
+    }
+  },
+  "conversation": {
+    "id": "19:7705841b240044b297123ad7f9c99217@thread.skype"
+  },
+  "name": "composeExtension/submitAction",
+  "imdisplayname": "Bob Smith"
+}
+```
+
+La respuesta de tarea a la invocación debe ser similar a la del bot instalado.
+
+#### <a name="example-of-just-in-time-installation-of-app-with-adaptive-card"></a>Ejemplo de instalación just-in-time de la aplicación con tarjeta adaptable: 
+
+```csharp
+private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
+  {
+      //Read the card json and create attachment.
+         string[] paths = { ".", "Resources", fileName };
+         var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
+         var adaptiveCardAttachment = new Attachment()
+            {
+                ContentType = "application/vnd.microsoft.card.adaptive",
+                Content = JsonConvert.DeserializeObject(adaptiveCardJson),
+            };
+            return adaptiveCardAttachment;
+        }
+```
+
+* * *
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Si permite que los usuarios envíen una respuesta desde el módulo de tareas, debe controlar la acción de envío.
 
 * [Crear y responder con un módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 

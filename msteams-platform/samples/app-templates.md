@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
+ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795499"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50072892"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -214,6 +214,18 @@ E-Prescriptions es una aplicación basada en [Power Apps](/powerapps/maker/canva
     ![Captura de pantalla de la aplicación E-Prescriptions. Muestra cómo los administradores pueden administrar los proveedores de servicios de salud que usan la aplicación.](../assets/images/e-prescriptions-app-template-admin.png)
 :::column-end:::
 :::row-end:::
+
+
+## <a name="emergency-button-power-9734"></a>Botón de inicio/apagado de emergencia &#9734;
+
+Las organizaciones que usan Microsoft Teams pueden usar la aplicación de botón de emergencia power para permitir que cualquier conjunto de usuarios solicite asistencia a los supervisores. Esta aplicación incluye varias características, como:
+-   Solicitar asistencia en distintas categorías desde una Power App
+-   Notificaciones enviadas a los solicitantes en las que se les informa de quién se ha asignado 
+-   Notificaciones enviadas a supervisores asignados en las que se les informa de quién necesita asistencia 
+-   Ver las rutas de auditoría que se mantienen en SharePoint
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
+
 
 ## <a name="employee-training"></a>Formación para empleados 
 
