@@ -3,18 +3,18 @@ title: Compatibilidad con inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: 9392c3c01a7fa6dffc673cd01f57d0eab1720efe
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: ed8b52416dd1499f50d561ceb2c1edf03e5457d3
+ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014127"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093277"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
 Los usuarios inician sesión en Microsoft Teams a través de sus cuentas profesionales, educativas o de Microsoft (Office 365, Outlook, etc.). Puede aprovechar esto si permite que un inicio de sesión único autorice la pestaña (o módulo de tareas) de Microsoft Teams en clientes móviles o de escritorio. Por lo tanto, si un usuario da su consentimiento para usar la aplicación, no tendrá que volver a dar su consentimiento en otro dispositivo, sino que se iniciará sesión automáticamente. Además, se realiza una captura previa del token de acceso para mejorar el rendimiento y los tiempos de carga.
 
->[!NOTE]
+> [!NOTE]
 > **Versiones de cliente móvil de Teams compatibles con SSO**  
 >
 > ✔Teams para Android (1416/1.0.0.2020073101 y versiones posteriores)
@@ -23,11 +23,10 @@ Los usuarios inician sesión en Microsoft Teams a través de sus cuentas profesi
 >
 > Para obtener la mejor experiencia con Teams, use la versión más reciente de iOS y Android.
 
->[!NOTE]
+> [!NOTE]
 > **Inicio rápido**  
 >
 > La ruta de acceso más sencilla para empezar a trabajar con SSO de pestaña es con Microsoft Teams Toolkit para Visual Studio código. [Más información](../../../toolkit/visual-studio-code-tab-sso.md)
-
 
 ## <a name="how-sso-works-at-runtime"></a>Cómo funciona el SSO en tiempo de ejecución
 
@@ -54,9 +53,9 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
 
 ### <a name="1-create-your-azure-active-directory-azure-ad-application"></a>1. Crear la aplicación de Azure Active Directory (Azure AD)
 
-#### <a name="registering-your-application-in-theazure-ad-portal-overview"></a>Introducción al registro de la aplicación en[el portal de Azure AD:](https://azure.microsoft.com/features/azure-portal/)
+#### <a name="registering-your-application-in-theazure-ad-portal-overview"></a>Información general sobre el registro de la aplicación[en el portal de Azure AD:](https://azure.microsoft.com/features/azure-portal/)
 
-1. Obtenga el [id. de aplicación de Azure AD.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)
+1. Obtenga su [id. de aplicación de Azure AD.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)
 2. Especifique los permisos que la aplicación necesita para el punto de conexión de Azure AD y, opcionalmente, Microsoft Graph.
 3. [Conceda permisos para](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) aplicaciones móviles, web y de escritorio de Teams.
 4. Autorizar previamente Teams seleccionando el botón Agregar **un** ámbito y, en el panel que se abre, escriba `access_as_user` como el nombre del **ámbito.**
@@ -82,7 +81,7 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
 5. Seleccione el **vínculo Establecer** para generar el URI de id. de aplicación con el formato `api://{AppID}` de . Inserte el nombre de dominio completo (con una barra diagonal "/" anexada al final) entre las barras diagonales dobles y el GUID. El identificador completo debe tener el formato: `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
     
-    El nombre de dominio completo es el nombre de dominio legible humano desde el que se sirve la aplicación. Si usa un servicio de túnel como ngrok, deberá actualizar este valor siempre que cambie su subdominio ngrok. 
+    El nombre de dominio completo es el nombre de dominio legible para humanos desde el que se sirve la aplicación. Si usa un servicio de túnel como ngrok, deberá actualizar este valor siempre que cambie su subdominio ngrok. 
 6. Seleccione el botón **Agregar un ámbito** En el panel que se abre, escriba `access_as_user` como el **Nombre de ámbito**.
 7. Establecer **quién puede dar su consentimiento**`Admins and users`
 8. Rellene los campos para configurar los mensajes de consentimiento del administrador y el usuario con valores adecuados para el `access_as_user` ámbito:
@@ -91,11 +90,11 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
     * **Título de consentimiento del** usuario: Teams puede acceder al perfil de usuario y realizar solicitudes en nombre del usuario.
     * **Descripción del consentimiento del usuario:** Permitir que Teams llame a las API de esta aplicación con los mismos derechos que el usuario.
 9. Asegurarse de **que el estado** está establecido en **Habilitado**
-10. Seleccione el **botón Agregar ámbito** para guardar 
+10. Seleccionar el **botón Agregar ámbito** para guardar 
     * La parte de  dominio del nombre de ámbito que se muestra justo debajo del campo de texto debe coincidir automáticamente con el **URI** de id. de aplicación establecido en el paso anterior, con anexado `/access_as_user` al final:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
 11. En la **sección Aplicaciones cliente autorizadas,** identifique las aplicaciones que desea autorizar para la aplicación web de la aplicación. Seleccione *Agregar una aplicación cliente.* Escriba cada uno de los siguientes IDs de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicación de escritorio o móvil de Teams)
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Aplicación móvil o de escritorio de Teams)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Aplicación web de Teams)
 12. Vaya a **Permisos de API.** Seleccione *Agregar permisos delegados* de Microsoft Graph y, a continuación, agregue los siguientes  >    >  permisos de la API de Microsoft Graph:
     * User.Read (habilitado de forma predeterminada)
@@ -104,7 +103,7 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
     * OpenId
     * perfil
 
-13. Ir a **Autenticación**
+13. Navegar a la **autenticación**
 
     Si no se ha concedido el consentimiento de administrador de TI a una aplicación, los usuarios tendrán que dar su consentimiento la primera vez que usen una aplicación.
 
@@ -122,7 +121,7 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
 > [!NOTE]
 >
 > * ¹ Si la aplicación de  Azure AD está registrada en el mismo espacio empresarial en el que realiza una solicitud de autenticación en Teams, no se le pedirá al usuario su consentimiento y se le concederá un token de acceso inmediatamente. Los usuarios solo necesitan dar su consentimiento a estos permisos si la aplicación de Azure AD está registrada en un inquilino diferente.
-> * Si recibe un error que indica que el dominio ya es propiedad y es el propietario, siga el procedimiento de [Inicio rápido:](/azure/active-directory/fundamentals/add-custom-domain) Agregar un nombre de dominio personalizado a Azure Active Directory para registrar el dominio y, a continuación, repita el paso 5 anterior. (Este error también puede producirse si no ha iniciado sesión con credenciales de administrador en el arrendamiento de Office 365).
+> * ² Si recibe un error que indica que el dominio ya es propiedad y usted es el propietario, siga el procedimiento de [Inicio rápido:](/azure/active-directory/fundamentals/add-custom-domain) Agregar un nombre de dominio personalizado a Azure Active Directory para registrar el dominio y, a continuación, repita el paso 5 anterior. (Este error también puede producirse si no ha iniciado sesión con credenciales de administrador en el arrendamiento de Office 365).
 > * Si no recibe el UPN (nombre principal de usuario) en el token de acceso devuelto, puede agregarlo como una notificación opcional [en](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) Azure AD.
 
 ### <a name="2-update-your-microsoft-teams-application-manifest"></a>2. Actualizar el manifiesto de la aplicación de Microsoft Teams
@@ -189,7 +188,7 @@ Una forma sencilla de dar su consentimiento en nombre de una organización (como
 
 #### <a name="asking-for-additional-consent-using-the-auth-api"></a>Solicitar consentimiento adicional mediante la API de autenticación
 
-Otro enfoque para obtener ámbitos adicionales de Microsoft Graph es presentar un cuadro de diálogo de consentimiento mediante nuestro enfoque de autenticación de [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) basado en web existente, que implica abrir un cuadro de diálogo de consentimiento de Azure AD. Hay algunas adiciones notables:
+Otro enfoque para obtener ámbitos adicionales de Microsoft Graph es presentar un cuadro de diálogo de consentimiento mediante nuestro enfoque de autenticación de [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) basado en web existente que implica abrir un cuadro de diálogo de consentimiento de Azure AD. Hay algunas adiciones notables:
 
 1. El token recuperado con el uso debe intercambiarse del lado servidor con el flujo en nombre de Azure AD para obtener acceso a esas API de `getAuthToken()` Microsoft Graph [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) adicionales.
     * Asegúrese de usar el punto de conexión v2 de Microsoft Graph para este intercambio
@@ -204,3 +203,6 @@ Otro enfoque para obtener ámbitos adicionales de Microsoft Graph es presentar u
 ### <a name="non-azure-ad-authentication"></a>Autenticación que no es de Azure AD
 
 La solución de autenticación descrita anteriormente solo funciona para aplicaciones y servicios que admiten Azure AD como proveedor de identidades. Las aplicaciones que quieran autenticarse con servicios no basados en Azure AD deben seguir usando el flujo de autenticación [web basado en elementos emergentes.](~/concepts/authentication.md)
+
+> [!NOTE] 
+> SSO es compatible con aplicaciones pertenecientes al cliente dentro de los inquilinos de Azure AD B2C.

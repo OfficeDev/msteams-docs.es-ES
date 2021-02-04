@@ -3,12 +3,12 @@ title: Preparar el espacio empresarial de Microsoft 365
 description: Cómo empezar a trabajar con Teams en Microsoft 365
 ms.topic: how-to
 keywords: Configurar la carga de Microsoft 365 Tenant Teams
-ms.openlocfilehash: bfeb1a5d39b8a6ad8d1dd4d631f984ecec4e26f1
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 50765271b93edd380d1c23672289b618baf1d346
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014456"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093946"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar el espacio empresarial de Microsoft 365
 
@@ -22,7 +22,7 @@ Si está suscrito a Microsoft 365, puede desarrollar aplicaciones para Microsoft
 
 Microsoft Teams también estará disponible para los clientes que se suscriban a E4 antes de su [retirada.](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)
 
-## <a name="just-need-a-development-environment"></a>¿Solo necesita un entorno de desarrollo?
+## <a name="just-need-a-development-environment"></a>¿Solo necesitas un entorno de desarrollo?
 
 Si actualmente no tiene una cuenta de Microsoft 365, puede registrarse para obtener una suscripción al Programa de desarrolladores de [Microsoft 365.](https://developer.microsoft.com/microsoft-365/dev-program) Es gratuito *durante* 90 días y se renovará continuamente siempre que lo use para la actividad de desarrollo. Si tiene una suscripción a Visual Studio *Enterprise* o *Professional,* ambos programas incluyen una suscripción gratuita de desarrollador de Microsoft 365, activa durante el período de vida de su Visual Studio suscripción. [](https://aka.ms/MyVisualStudioBenefits) *Consulte* [Configurar una suscripción de desarrollador de Microsoft 365.](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
 
@@ -41,13 +41,15 @@ Active la instalación de instalación local de aplicaciones personalizadas para
 ![imagen del menú del centro de administración](~/assets/images/prepare-test-tenant/admin-center.png)
 
 > [!Note] 
-> La opción "Teams" puede tardar hasta 24 horas en aparecer. Durante la fase provisional, puede [cargar la aplicación personalizada en un entorno de Teams](/microsoftteams/upload-custom-apps#validate) para pruebas y validación.
+> La opción "Teams" puede tardar hasta 24 horas en aparecer. Durante el período provisional, puede [cargar la aplicación personalizada en un entorno de Teams](/microsoftteams/upload-custom-apps#validate) para pruebas y validación.
 
 3. Navegar a las **directivas de configuración** de aplicaciones de Teams global  -->    -->  **(configuración predeterminada para toda la organización)**  
 
-![activar la vista de instalación de instalación de instalación de local](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+![activar la vista de instalación de instalación local](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
 4. Alterna **la carga de aplicaciones personalizadas** en la **posición** de posición.
+
+5. Seleccione **Guardar** para guardar los cambios.
 
 Y eso es todo. El inquilino de prueba ahora permitirá la instalación de prueba de aplicaciones personalizadas.
 

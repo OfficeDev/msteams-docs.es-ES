@@ -5,20 +5,21 @@ description: Cree rápidamente una aplicación de Microsoft Teams que muestre un
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: bc5d18dd887cbdbf56b8d6d013f53c21d1540370
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 46a92f54cdbf68e28510c0bd4cc0b7018cfaae3c
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795471"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093953"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>Crear y ejecutar la primera aplicación de Microsoft Teams
 
-Puede acceder directamente al desarrollo de Microsoft Teams creando una pestaña personal que muestre "Hello, World!".
+Inicie el desarrollo de Microsoft Teams creando una pestaña personal que muestre "Hello, World!".
+Cree y ejecute su primera aplicación de Teams siguiendo estos pasos:
 
 ## <a name="1-create-your-app-project"></a>1. Crear el proyecto de aplicación
 
-Use Microsoft Teams Toolkit en Visual Studio code para configurar su primer proyecto de aplicación.
+Use Microsoft Teams Toolkit en Visual Studio code para configurar su primer proyecto de aplicación. Cree el proyecto de aplicación siguiendo estos pasos:
 
 1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Create a new Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
 1. Cuando se le solicite, inicie sesión con su cuenta de desarrollo de Microsoft 365.
@@ -41,13 +42,11 @@ Si creas una pestaña durante la instalación, por ejemplo, el archivo del direc
 
 ### <a name="app-id"></a>Identificador de la aplicación
 
-El identificador de aplicación de Teams es necesario para configurar la aplicación con App Studio. Puede encontrar el identificador en el `teamsAppId` objeto, que se encuentra en el archivo del `package.json` proyecto.
+Configure su aplicación con App Studio con el id. de aplicación de Teams. Busque el identificador en el `teamsAppId` objeto, que se encuentra en el archivo del `package.json` proyecto.
 
 ## <a name="3-build-and-run-your-app"></a>3. Compilar y ejecutar la aplicación
 
-En interés del tiempo, compilarás y ejecutarás la aplicación localmente.
-
-(Esta información también está disponible en el kit de `README` herramientas).
+Compila y ejecuta la aplicación localmente para ahorrar tiempo. Esta información también está disponible en el kit de `README` herramientas. Compila y ejecuta la aplicación mediante los siguientes pasos:
 
 1. En un terminal, vaya al directorio raíz del proyecto de aplicación y ejecute `npm install` .
 1. Ejecute `npm start` .
@@ -56,12 +55,17 @@ Una vez completado, se compila **correctamente.** en el terminal. La aplicación
 
 ## <a name="4-sideload-your-app-in-teams"></a>4. Instalación local de la aplicación en Teams
 
-La aplicación está lista para probarse en Teams. Para ello, debes tener una cuenta que permita la instalación de prueba de la aplicación. (Si no está seguro de que lo tiene, obtenga información sobre cómo obtener una cuenta [de desarrollo de Teams).](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
+La aplicación está lista para probarse en Teams. Para ello, debe tener una cuenta de desarrollo de Microsoft 365 que permita la instalación de prueba de aplicaciones. Para obtener más información sobre la apertura de cuentas, consulte [Cuenta de desarrollo de Teams.](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account) 
 
 > [!TIP]
-> Antes de realizar la instalación de prueba de la aplicación, comprueba si hay problemas con la característica de validación de [App Studio,](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)que se incluye en el kit de herramientas. Los errores deben corregirse para realizar una instalación de prueba correcta de la aplicación.
+> Comprueba si hay problemas antes de realizar la instalación de prueba de la aplicación, mediante la característica de validación [de App Studio,](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)que se incluye en el kit de herramientas. Se solucionan los errores para que la aplicación se trascargue correctamente.
 
-1. En Visual Studio, presione la tecla **F5** para iniciar un cliente web de Teams.
+Haga una instalación de instalación local de la aplicación en Teams siguiendo estos pasos:
+
+> [!NOTE]
+> Para habilitar la instalación de instalación de local antes de realizar la instalación de local de la aplicación en Teams, siga los pasos descritos en [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+
+1. Seleccione la **tecla F5** para iniciar un cliente web de Teams en Visual Studio código.
 1. Para mostrar el contenido de la aplicación en Teams, especifique que el lugar donde se ejecuta la aplicación ( `localhost` ) es de confianza:
    1. Abra una nueva pestaña en la misma ventana del explorador (Google Chrome de forma predeterminada) que se abrió después de presionar **F5**.
    1. Vaya a `https://localhost:3000/tab` la página y continúe.

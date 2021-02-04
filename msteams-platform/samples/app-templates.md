@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
-ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
+ms.openlocfilehash: 401d1e5878a026b2ff066114e4d41a0a54c0cf09
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50072892"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093967"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -24,6 +24,12 @@ Las plantillas de aplicación son aplicaciones preparadas para producción para 
 * **Código listo para producción:** Las plantillas de aplicación se ajustan a los procedimientos recomendados en materia de seguridad e infraestructura, y se revisan todos los cambios enviados por la comunidad para garantizar una conformidad continua.
 * **Personalizable y extensible:** Aunque todas las plantillas de aplicación están listas para implementarse tal como están, proporcionamos la base de código completa y los scripts de implementación para que puedas personalizarlas o ampliarlas fácilmente para adaptarlas a tus necesidades únicas.
 * **Documentación detallada & soporte técnico:** Todas las plantillas de aplicación van acompañadas de documentación de un extremo a otro sobre la arquitectura de la solución, la implementación y los pasos de configuración. Los repositorios también se supervisan, así que informe de cualquier problema que encuentre generando un problema en GitHub.
+
+## <a name="adoption-bot-9734"></a>Adopción de bot &#9734;
+
+Bot de adopción es un bot de chat de atención al usuario creado con Power Virtual Agent para Teams (PVA). Se puede considerar como la versión PVA de FAQPlus. El bot de adopción responde a más de 100 preguntas comunes sobre Microsoft 365 y Teams. Puede editar los temas incluidos, agregar sus propios temas e ingerir preguntas frecuentes existentes. Si los usuarios necesitan ayuda adicional, el bot de adopción puede conectarlos a expertos o incluso extenderse para abrir vales de servicio con conectores de flujo premium.
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
 ## <a name="appointment-manager-9734"></a>Administrador de citas &#9734;
 

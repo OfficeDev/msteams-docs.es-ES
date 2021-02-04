@@ -1,14 +1,14 @@
 ---
 title: Lista de comprobación de envío de la Tienda
-description: Lista de comprobación que se debe usar antes de publicar la aplicación de Microsoft Teams en AppSource
+description: La lista de comprobación que se usará antes de publicar la aplicación de Microsoft Teams en AppSource
 ms.topic: reference
 keywords: Teams publicar la validación de la aplicación de envío de aplicaciones de Teams de envío de la tienda de office
-ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 02490d7a020b8887589c65840a0abe597887527f
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014218"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093939"
 ---
 # <a name="prepare-for-appsource-submission"></a>Preparar el envío de AppSource  
 
@@ -21,7 +21,7 @@ Para que aparezca en AppSource, la aplicación debe pasar por un proceso de apro
 * **Preparación para dispositivos móviles:** La aplicación debe ser dinámica para dispositivos móviles. Si la aplicación contiene pestañas, [](~/tabs/design/tabs-mobile.md) deben seguir las directrices de diseño móvil y la aplicación [no](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) debe cumplir los requisitos de ventas en el sistema operativo móvil (iOS y Android).
 * **Prueba tu aplicación de forma independiente:** Pruebe la aplicación con la herramienta [de validación de manifiesto.](#teams-app-validation-tool)
 * **Página de detalles de la aplicación:** La aplicación debe alinearse con la lista [de comprobación de la página de detalles de la aplicación.](detail-page-checklist.md)
-* **Sugerencias y casos con errores frecuentes:** Presta especial atención a las sugerencias [enumeradas y a los casos](frequently-failed-cases.md)  con más errores para mejorar el tiempo de envío y aprobación de la aplicación.
+* **Sugerencias y casos con errores frecuentes:** Presta especial atención a las sugerencias [enumeradas y a los casos](frequently-failed-cases.md)  con frecuencia fallidos para mejorar el tiempo de envío y aprobación de la aplicación.
 * **Manifiesto de la aplicación:** Compruebe el manifiesto de la aplicación con la lista [de comprobación del manifiesto de la aplicación.](app-manifest-checklist.md)
 * **Pruebas y depuración:** Asegúrate de que has probado [y depurado completamente la aplicación.](../../../build-and-test/debug.md)
 * **Notas de prueba:** Incluir las notas [de la prueba para la validación](#test-notes-for-validation)
@@ -37,7 +37,7 @@ La herramienta de validación de aplicaciones consta de un [validador de aplicac
 >
 > * [**Página principal del validador de aplicaciones**](https://dev.teams.microsoft.com/appvalidation.html)
 > * [**Kit de herramientas Visual Studio código de equipo de Teams**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
 
 ### <a name="teams-app-validator"></a>Validador de aplicaciones de Teams
 
@@ -60,7 +60,7 @@ Directrices de directiva de privacidad:
 > [!div class="checklist"]
 >
 > * La directiva de privacidad puede ser específica de la aplicación o una directiva general para todos los servicios.
-> * Si usa una directiva de privacidad genérica, debe hacer referencia a "servicios", "aplicaciones" y "plataformas" para incluir la aplicación de Teams, así como su sitio web.
+> * Si usa una directiva de privacidad genérica, debe hacer referencia a "servicios", "aplicaciones" y "plataformas" para incluir la aplicación teams, así como su sitio web.
 > * Debe incluir cómo controlar el almacenamiento de datos de usuario, la retención de datos de usuario, la eliminación y los controles de seguridad.
 > * Debe incluir su información de contacto.
 > * No debe contener vínculos rotos, direcciones URL beta ni direcciones URL provisionales.
@@ -81,13 +81,13 @@ Incluya lo siguiente:
 
 * Con fines de comprobación, las cuentas que proporcione deben tener suficientes datos rellenados previamente.
 
-* Para las aplicaciones empresariales, las aplicaciones en las que se requiere una suscripción o las aplicaciones en las que hay una dependencia de inquilino o dominio de Office 365, debe proporcionar una tercera cuenta en el mismo dominio que no esté preconfigurado para la aplicación para que podamos validar la experiencia de usuario de primera ejecución.
+* Para las aplicaciones empresariales, las aplicaciones en las que se requiere una suscripción o las aplicaciones en las que hay una dependencia de inquilino o dominio de Office 365, debe proporcionar una tercera cuenta en el mismo dominio que no esté configurada previamente para la aplicación para que podamos validar la experiencia del usuario de primera ejecución.
 
 * Si la aplicación tiene características premium o actualizadas, debe proporcionarse una cuenta con el acceso necesario para probar esa experiencia.
 
 * Puede elegir cargar las notas de prueba en SharePoint. Si es así, proporcione un vínculo público al archivo.
 
-* **Probar cuentas**. Se requiere una cuenta de prueba si la aplicación solo permite cuentas con licencia o listas seguras desde el back-end. Además, si se permite un ámbito de chat de grupo o equipo en la aplicación, se necesitan dos cuentas de prueba en el mismo inquilino para validar el escenario de colaboración en equipo.
+* **Probar cuentas**. Se requiere una cuenta de prueba si la aplicación solo permite cuentas con licencia o listas seguras desde el back-end. Además, si se permite un ámbito de chat de grupo o equipo en la aplicación, se necesitan dos cuentas de prueba en el mismo espacio empresarial para validar el escenario de colaboración en equipo.
 
 * **Pasos de integración.** Si se requiere una configuración previa por parte de un administrador de inquilinos para usar la aplicación, incluya los pasos o proporcione cuentas configuradas de administrador y no administrador para la validación. Nota: puede registrarse para obtener una suscripción al Programa de desarrolladores de [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Es gratuito *durante* 90 días y se renovará continuamente siempre que lo use para la actividad de desarrollo.
 

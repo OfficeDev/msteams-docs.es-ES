@@ -3,12 +3,12 @@ title: Pestañas en dispositivos móviles
 description: Describe las directrices para diseñar pestañas que funcionan en dispositivos móviles.
 ms.topic: conceptual
 keywords: Las directrices de diseño de teams hacen referencia a las pestañas móviles de aplicaciones personales del marco de trabajo
-ms.openlocfilehash: 462228daa2179482110e2deb42f0f16ab2f5d5ec
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 70ff46e446b146b134f34830e8867133cbeeca14
+ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014176"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093291"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
@@ -73,7 +73,7 @@ El siguiente ejemplo es una aplicación personal que tiene pestañas y un bot.
 
 ### <a name="color-palettes"></a>Paletas de colores
 
-Usar nuestra paleta neutra aprobada para fondos, notificaciones, texto y botones ayudará a su aplicación a sentirse más como en casa en Teams. Dado que Teams mobile tiene dos temas de colores (claro y oscuro), es una buena idea asegurarse de que la aplicación tenga un aspecto excelente en ambos.
+Usar nuestra paleta neutra aprobada para fondos, notificaciones, texto y botones ayudará a su aplicación a sentirse más como en casa en Teams. Dado que Teams para dispositivos móviles tiene dos temas de colores (claro y oscuro), es una buena idea asegurarse de que la aplicación tenga un aspecto excelente en ambos.
 
 #### <a name="light-color"></a>Color claro
 
@@ -85,7 +85,7 @@ Usar nuestra paleta neutra aprobada para fondos, notificaciones, texto y botones
 
 ### <a name="buttons-and-controls"></a>Botones y controles
 
-El estilo de los botones ayuda a comunicar el tipo de acción que desencadenan. Mantenemos una amplia gama de botones con formato para mostrar diferentes niveles de énfasis. Los botones pueden tener texto, un icono o una combinación de texto y un icono. Para comunicar diferentes niveles en una jerarquía, hemos diseñado botones principales y secundarios dentro de cada categoría.
+El estilo de los botones ayuda a comunicar el tipo de acción que desencadenan. Mantenemos una amplia gama de botones con formato para mostrar diferentes niveles de énfasis. Los botones pueden tener texto, un icono o una combinación de texto y un icono. Para comunicar distintos niveles en una jerarquía, hemos diseñado botones principales y secundarios dentro de cada categoría.
 
 #### <a name="buttons"></a>Botones
 
@@ -101,7 +101,7 @@ Botones de radio, casillas y alternancias.
 
 #### <a name="chiclets-and-pills"></a>Gotalets y receptaciones
 
-![folletolets y resaltos](../../assets/images/chiclets-and-pills.png)
+![receptlets y receptaciones](../../assets/images/chiclets-and-pills.png)
 
 ### <a name="typography"></a>Tipografía
 
@@ -135,4 +135,7 @@ Para que la autenticación funcione en clientes móviles, debe actualizar el SDK
 
 ### <a name="low-bandwidth-and-intermittent-connections"></a>Ancho de banda bajo y conexiones intermitentes
 
-Los clientes móviles necesitan funcionar periódicamente con ancho de banda bajo y conexiones intermitentes. La aplicación debe controlar los tiempos de espera correctamente proporcionando un mensaje contextual al usuario. También debes usar indicadores de progreso del usuario para proporcionar comentarios a los usuarios sobre los procesos de larga ejecución.
+Los clientes móviles necesitan funcionar regularmente con ancho de banda bajo y conexiones intermitentes. La aplicación debe controlar los tiempos de espera correctamente proporcionando un mensaje contextual al usuario. También debe incluir indicadores de progreso del usuario para proporcionar comentarios a los usuarios sobre los procesos de larga ejecución.
+
+> [!NOTE]
+> Las pestañas se habilitan en dispositivos móviles solo después de agregar la aplicación a una lista de permitidos, según la entrada del equipo de aprobación. Para comprobar la capacidad de respuesta de los dispositivos móviles, teamsubm@microsoft.com. 
