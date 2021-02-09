@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 401d1e5878a026b2ff066114e4d41a0a54c0cf09
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+ms.openlocfilehash: 43181f6de30cfd811701edf22e4bd7aefd467027
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093967"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140484"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
@@ -221,18 +221,6 @@ E-Prescriptions es una aplicación basada en [Power Apps](/powerapps/maker/canva
 :::column-end:::
 :::row-end:::
 
-
-## <a name="emergency-button-power-9734"></a>Botón de inicio/apagado de emergencia &#9734;
-
-Las organizaciones que usan Microsoft Teams pueden usar la aplicación de botón de emergencia power para permitir que cualquier conjunto de usuarios solicite asistencia a los supervisores. Esta aplicación incluye varias características, como:
--   Solicitar asistencia en distintas categorías desde una Power App
--   Notificaciones enviadas a los solicitantes en las que se les informa de quién se ha asignado 
--   Notificaciones enviadas a supervisores asignados en las que se les informa de quién necesita asistencia 
--   Ver las rutas de auditoría que se mantienen en SharePoint
-
-[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
-
-
 ## <a name="employee-training"></a>Formación para empleados 
 
 La formación de los empleados es una aplicación de Microsoft Teams que permite a los organizadores publicar, realizar un seguimiento y promover fácilmente eventos de aprendizaje y aprendizaje para su organización.  Con la aplicación, los organizadores de eventos pueden enviar avisos y notificaciones a los registradores de eventos y los empleados pueden indicar interés en los próximos eventos, mantenerse actualizados sobre los eventos actuales y compartir detalles de eventos con compañeros a través de la extensión de mensajería de Teams.
@@ -276,6 +264,18 @@ Las preguntas conversacionales&Bots A son una forma sencilla de proporcionar res
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![Preguntas más frecuentes y gif](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="get-support-app-9734"></a>Obtener la aplicación de soporte &#9734;
+
+Las organizaciones que usan Microsoft Teams pueden usar la aplicación Obtener soporte técnico para permitir que cualquier conjunto de usuarios solicite asistencia a los supervisores. Esta aplicación incluye varias características, como:
+-   Solicitar asistencia en distintas categorías desde una Power App
+-   Notificaciones enviadas a los solicitantes en las que se les informa de quién se ha asignado 
+-   Notificaciones enviadas a supervisores asignados en las que se les informa de quién necesita asistencia 
+-   Análisis de escalaciones y patrones en SharePoint y PowerBI
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
+
+![Obtener gif de soporte técnico](../assets/images/get-support.gif)
 
 ## <a name="goal-tracker"></a>Rastreador de objetivos
 

@@ -5,12 +5,12 @@ description: Cree rápidamente un bot de Microsoft Teams con Microsoft Teams Too
 ms.author: lajanuar
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: fbabd5130f0b7eb648a980f5f143792cc4c17933
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 3e07c148e1b03431dc419a4e3679abac0229ff72
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911950"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140471"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>Crear un bot para Microsoft Teams
 
@@ -44,7 +44,7 @@ Microsoft Teams Toolkit le ayuda a configurar los siguientes componentes para su
 > [!TIP]
 > Si no ha creado un proyecto de aplicación de Teams [](../build-your-first-app/build-and-run.md) antes, es posible que le sea útil seguir estas instrucciones que explican los proyectos con más detalle.
 
-1. En Visual Studio, seleccione **Microsoft Teams** en la barra de actividades de la izquierda y elija Crear una nueva aplicación :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: de **Teams.**
+1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Create a new Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
 1. Cuando se le solicite, inicie sesión con su cuenta de desarrollo de Microsoft 365.
 1. En la **pantalla Agregar funcionalidades,** seleccione **Bot** y, a **continuación, Siguiente.**
 1. Escriba un nombre para su aplicación de Teams. (Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de aplicación en el equipo local).
@@ -61,7 +61,7 @@ Para ver o actualizar las configuraciones del bot, seleccione **App Studio** en 
 
 ### <a name="app-scaffolding"></a>Scaffolding de aplicaciones
 
-El scaffolding de la aplicación proporciona un archivo, ubicado en el directorio raíz del proyecto, para controlar cómo el bot procesa las actividades en Teams (por ejemplo, cómo responde el bot a mensajes específicos como `botActivityHandler.js` "Hola").
+El scaffolding de la aplicación proporciona un archivo, ubicado en el directorio raíz del proyecto, para controlar cómo procesa las actividades del bot en Teams (por ejemplo, cómo responde el bot a mensajes específicos como `botActivityHandler.js` "Hola").
 
 ## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. Configurar un túnel seguro para la aplicación
 
@@ -75,7 +75,7 @@ Con esta dirección URL, Teams (que requiere conexiones HTTPS) podrá túnel has
 
 ## <a name="4-configure-your-bot"></a>4. Configurar el bot
 
-Para usar un bot en Teams, debe registrarlo con el servicio de bots de Azure. Para usted, esto se realiza automáticamente al configurar la aplicación con el Kit de herramientas de Teams.
+Para usar un bot en Teams, debe registrarlo con el servicio de bots de Azure. Para usted, esto se realiza automáticamente cuando configura la aplicación con El kit de herramientas de Teams.
 
 Debe especificar una dirección de extremo para recibir y procesar mensajes de usuario (es decir, solicitudes) enviados al bot. Normalmente, la dirección URL tiene el aspecto `https://HOST_URL/api/messages` . Puedes configurarlo rápidamente en el kit de herramientas.
 
@@ -127,9 +127,9 @@ La siguiente información puede resultar útil si tiene problemas para completar
 
 ### <a name="bot-isnt-connected-to-teams"></a>El bot no está conectado a Teams
 
-Si ha instalado la aplicación pero el bot no funciona, asegúrese de que el bot está conectado al canal de Teams del Servicio de [bots de Azure.](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)
+Si ha instalado la aplicación pero el bot no funciona, asegúrese de que el bot está conectado al canal de Teams del servicio de bot [de Azure. ](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)
 
-Es importante comprender que esto no es lo mismo que un canal en Teams. En este caso, un canal es cómo el Servicio de bots de Azure conecta el bot a Teams u otra aplicación de comunicaciones de Microsoft o de [terceros compatible.](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
+Es importante comprender que esto no es lo mismo que un canal en Teams. En este caso, un canal es cómo el servicio de bots de Azure conecta el bot a Teams u otra aplicación de comunicaciones de Microsoft o de [terceros compatible.](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
 
 ## <a name="learn-more"></a>Más información
 
@@ -138,4 +138,4 @@ Es importante comprender que esto no es lo mismo que un canal en Teams. En este 
 * Sigue nuestras [directrices de diseño](../bots/design/bots.md) y compila con [plantillas de interfaz](../concepts/design/design-teams-app-ui-templates.md) de usuario listas para producción para crear una experiencia sin problemas.
 * [Autenticación de bots en Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [Crear un bot sin el kit de herramientas](../bots/how-to/create-a-bot-for-teams.md)
+* [Crear un bot sin el kit de herramientas](../resources/bot-v3/bots-create.md)
