@@ -5,12 +5,12 @@ description: Cree rápidamente una pestaña personal de Microsoft Teams con Micr
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 083d1425fe43a9b150732aa35bef34e2349c6ea6
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911915"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162904"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Crear una pestaña personal para Microsoft Teams
 
@@ -20,7 +20,7 @@ Hay dos tipos de pestañas en Teams. En este tutorial, compilará una pestaña *
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Necesita una pestaña personal básica en ejecución para empezar. Si no tiene uno, consulte [compilar y ejecutar la primera aplicación de Teams.](../build-your-first-app/build-and-run.md)
+Necesita una pestaña personal básica en ejecución para empezar. Si no tiene uno, vea [compilar y ejecutar la primera aplicación de Teams.](../build-your-first-app/build-and-run.md)
 
 ## <a name="your-assignment"></a>Su asignación
 
@@ -98,7 +98,7 @@ Guarde los cambios. Vaya a la pestaña de la aplicación en Teams para ver el nu
 
 ## <a name="3-update-the-tab-theme"></a>3. Actualizar el tema de la pestaña
 
-Las aplicaciones buenas se sienten nativas de Teams, por lo que es importante que la pestaña se combine con el tema de Teams que prefieran los usuarios: predeterminado (claro), oscuro o contraste alto. Como podría haber observado en la última captura de pantalla, la pestaña aún tiene un fondo claro cuando el cliente usa el tema oscuro. Esta no es una experiencia de usuario recomendada.
+Las buenas aplicaciones se sienten nativas de Teams, por lo que es importante que la pestaña se combine con el tema de Teams que prefieran los usuarios: predeterminado (claro), oscuro o contraste alto. Como puede que hayas observado en la última captura de pantalla, la pestaña aún tiene un fondo claro cuando el cliente usa el tema oscuro. Esta no es una experiencia de usuario recomendada.
 
 El [SDK del cliente de JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) de Teams puede hacer que su aplicación conozca y reaccione a los cambios de tema en el cliente. Veamos cómo hacerlo.
 
@@ -148,7 +148,7 @@ En la `render()` función, almacene el estado proporcionado por el controlador d
 Después de almacenar el estado proporcionado por el controlador de cambios de tema, proporciona lógica condicional para representar los estilos de la pestaña en función del tema actual. En el siguiente ejemplo se muestra una forma básica de hacerlo:
 1. Compruebe el tema actual en `isTheme` .
 2. Cree un `newTheme` objeto con propiedades CSS relevantes para el tema actual.
-3. Aplicar el CSS al elemento HTML raíz del contenido de la pestaña ( `<div>` ).
+3. Aplicar el CSS al elemento HTML raíz del contenido de la pestaña ( `<div style={newTheme}>` ).
 
 ```JavaScript
 let newTheme
@@ -179,7 +179,7 @@ Compruebe la pestaña en Teams. La apariencia debe coincidir estrechamente con e
 * Sigue nuestras [directrices de diseño](../tabs/design/tabs.md) y compila con [plantillas de interfaz](../concepts/design/design-teams-app-ui-templates.md) de usuario listas para producción para crear una experiencia sin problemas.
 * Comprenda [las consideraciones móviles para](../tabs/design/tabs-mobile.md) las pestañas.
 * [Agregue la autenticación SSO a la pestaña.](../tabs/how-to/authentication/auth-aad-sso.md)
-* Usar datos de Teams con [Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
+* Use los datos de Teams [con Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Crea una pestaña sin el kit de herramientas.](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Siguiente lección
