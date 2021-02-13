@@ -1,20 +1,20 @@
 ---
 title: 'Tutorial: crear la primera aplicación con C #'
-description: Obtenga información sobre cómo empezar a compilar aplicaciones de Microsoft Teams con C#/.NET.
+description: Obtenga información sobre cómo empezar a compilar aplicaciones de Microsoft Teams con C# o .NET.
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: c28c4d00c375b8e37f82c343eec2c5405ae0c1c8
-ms.sourcegitcommit: fa64b83c0b534bf7a89f256880d5b5ca193e4b04
+ms.openlocfilehash: b37a8d555117e38383504dc99d82d564439a3ebf
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "50037042"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231534"
 ---
-# <a name="create-your-first-microsoft-teams-app-using-c"></a>Crear la primera aplicación de Microsoft Teams con C #
+# <a name="create-your-first-teams-app-using-c-or-net"></a>Crear la primera aplicación de Teams con C# o .NET
 
-Este tutorial le ayuda a empezar a crear una aplicación de Microsoft Teams con C# en .NET.
+Este tutorial le ayuda a crear una aplicación de Microsoft Teams con C# o .NET.
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -27,11 +27,9 @@ Para completar este tutorial, debe obtener las siguientes herramientas:
 - [Instalar Git](https://git-scm.com/downloads)
 - [Instalar Visual Studio](https://www.visualstudio.com/downloads/). Puedes instalar la edición gratuita de la comunidad.
 
-Si ve una opción para agregar a PATH durante la `git` instalación, elija hacerlo. Será útil.
+Durante la instalación, si hay una opción para agregar `git` a PATH, eligréla.
 
-Compruebe la `git` instalación ejecutando lo siguiente en una ventana de terminal:
-> [!NOTE]
-> Usa la ventana de terminal con la que te sientas más cómodo en tu plataforma. Estos ejemplos usan Bash, pero se ejecutarán en la mayoría de las plataformas.
+En una ventana de terminal, ejecute el siguiente comando para comprobar la `git` instalación:
 
 ```bash
 $ git --version
@@ -39,67 +37,73 @@ git version 2.17.1.windows.2
 
 ```
 
-Asegúrate de iniciar la versión más reciente de Visual Studio e instalar las actualizaciones si se muestran.
+> [!NOTE]
+> Usa una ventana de terminal adecuada en tu plataforma. Estos ejemplos usan Bash, pero se ejecutan en la mayoría de las plataformas.
 
-Puede seguir usando esta ventana de terminal para ejecutar los comandos siguientes en este tutorial.
+Asegúrate de iniciar la versión más reciente de Visual Studio e instalar las actualizaciones.
+
+Puede usar la misma ventana de terminal para ejecutar los comandos de este tutorial.
 
 <a name="DownloadSample"></a>
 
 ## <a name="download-the-sample"></a>Descargar el ejemplo
 
-Hemos proporcionado un saludo [sencillo, World!](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) muestra en C# para empezar. En una ventana de terminal, ejecute el siguiente comando para clonar el repositorio de muestra en el equipo local:
+Puedes empezar con un sencillo [Hello, World!](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) muestra en C#. En una ventana de terminal, ejecute el siguiente comando para clonar el repositorio de muestra en el equipo local:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 ```
 
 > [!TIP]
-> Puede [bifurcar este](https://help.github.com/articles/fork-a-repo/) [repositorio si](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) desea modificar y comprobar los cambios en GitHub para consultarlos en el futuro.
+> Puede [bifurcar este](https://help.github.com/articles/fork-a-repo/) [repositorio para](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) modificar y guardar los cambios en GitHub como referencia.
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>Compilar y ejecutar el ejemplo
 
-Una vez clonado el repositorio, use Visual Studio para abrir el archivo de solución desde el directorio raíz del ejemplo y haga clic `Microsoft.Teams.Samples.HelloWorld.sln` `Build Solution` en el `Build` menú. Puede ejecutar la muestra presionando `F5` o eligiendo `Start Debugging` en el `Debug` menú.
+Después de clonar el repositorio, use Visual Studio para abrir el archivo de solución desde el directorio raíz del ejemplo y `Microsoft.Teams.Samples.HelloWorld.sln` `Build Solution` seleccionarlo en el `Build` menú. Para ejecutar la muestra, `F5` pulse o elija en el `Start Debugging` `Debug` menú.
 
-Cuando se inicia la aplicación, verás una ventana del explorador abierta con la raíz de la aplicación iniciada. Puedes navegar a las siguientes direcciones URL para comprobar que se están cargando todas las direcciones URL de la aplicación:
+Cuando se inicia la aplicación, se abre una ventana del explorador con la raíz de la aplicación iniciada. Puedes navegar a las siguientes direcciones URL para comprobar que se están cargando todas las direcciones URL de la aplicación:
 
-- [http://localhost:3333](http://localhost:3333)
-- [http://localhost:3333/hello](http://localhost:3333/hello)
-- [http://localhost:3333/first](http://localhost:3333/first)
-- [http://localhost:3333/second](http://localhost:3333/second)
+- [https://localhost:44327/](https://localhost:44327/)
+- [https://localhost:44327/hello](https://localhost:44327/hello)
+- [https://localhost:44327/first](https://localhost:44327/first)
+- [https://localhost:44327/second]https://localhost:44327/second)
 
 <a name="HostSample"></a>
 
 > [!Note]
-> Si recibe un error como `Could not find a part of the path … bin\roslyn\csc.exe` , pruebe a actualizar el paquete con el comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` . Consulta [esta pregunta en StackOverflow para](https://stackoverflow.com/questions/32780315) obtener más detalles.
+> Si recibe un `Could not find a part of the path … bin\roslyn\csc.exe` error, actualice el paquete con el comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` . Para obtener más información, [vea esta pregunta en StackOverflow](https://stackoverflow.com/questions/32780315).
 
 ## <a name="host-the-sample-app"></a>Hospedar la aplicación de ejemplo
 
-Recuerde que las aplicaciones de Microsoft Teams son aplicaciones web que exponen una o más funcionalidades. Para que la plataforma de Teams cargue la aplicación, debe ser accesible desde Internet. Para que la aplicación sea accesible desde Internet, debes hospedarla. Puede hospedarlo en Microsoft Azure de forma gratuita o crear un túnel al proceso local en el equipo de desarrollo mediante `ngrok` . Cuando termines de hospedar la aplicación, toma nota de su dirección URL raíz. Tendrá un aspecto como: `https://yourteamsapp.ngrok.io` o `https://yourteamsapp.azurewebsites.net` .
+Las aplicaciones de Microsoft Teams son aplicaciones web que proporcionan una o más funcionalidades. Para que la plataforma de Teams cargue la aplicación, debe ser accesible desde Internet. Para que la aplicación sea accesible desde Internet, debes hospedarla. Puede hospedarlo en Microsoft Azure de forma gratuita o crear un túnel al proceso local en el equipo de desarrollo mediante `ngrok` . Cuando termine de hospedar la aplicación, anote su dirección URL raíz. Por ejemplo, `https://yourteamsapp.ngrok.io` o `https://yourteamsapp.azurewebsites.net` .
 
 ### <a name="tunnel-using-ngrok"></a>Túnel con ngrok
 
-Para realizar pruebas rápidas, puedes ejecutar la aplicación en el equipo local y crear un túnel a ella a través de un punto de conexión web. [ngrok](https://ngrok.com) es una herramienta gratuita que te permite hacerlo. Con ngrok puede obtener una dirección web como `https://d0ac14a5.ngrok.io` (esta dirección URL es solo un ejemplo). Puede descargar [e instalar](https://ngrok.com/download) ngrok para su entorno. Asegúrese de agregarlo a una ubicación en el `PATH` archivo .
+Para realizar pruebas rápidas, puedes ejecutar la aplicación en el equipo local y crear un túnel a ella a través de un punto de conexión web. [ngrok](https://ngrok.com) es una herramienta gratuita con la que puede obtener una dirección web como `https://d0ac14a5.ngrok.io` . Puede descargar [e instalar](https://ngrok.com/download) ngrok. Asegúrese de agregarlo a una ubicación en el `PATH` archivo .
 
-Una vez instalado, puede abrir una nueva ventana de terminal y ejecutar el siguiente comando para crear un túnel. El ejemplo usa el puerto 3333, así que asegúrate de especificarlo aquí.
+Después de instalar ngrok, abra una nueva ventana de terminal y ejecute el siguiente comando para crear un túnel:
 
 ```bash
-ngrok http 3333 -host-header=localhost:3333
+ngrok http 44327 -host-header=localhost:44327
 ```
 
-Ngrok escuchará las solicitudes de Internet y las enrutará a la aplicación que se ejecuta en el puerto 3333. Para comprobarlo, abre el explorador y vas a `https://d0ac14a5.ngrok.io/hello` cargar la página hello de la aplicación. Asegúrese de usar la dirección de reenvío mostrada por ngrok en la sesión de la consola en lugar de esta dirección URL.
+El ejemplo usa el puerto 44327 para asegurarse de especificarlo.
+
+Ngrok escucha las solicitudes de Internet y las enruta a la aplicación que se ejecuta en el puerto 44327. Para comprobarlo, abre el explorador y ve `https://d0ac14a5.ngrok.io/hello` a cargar la página hello de la aplicación. En lugar de esta dirección URL, usa la dirección de reenvío que muestra ngrok en la sesión de la consola.
 
 > [!NOTE]
-> Si ha usado un puerto [](#build-and-run-the-sample) diferente en la compilación y ejecuta el paso anterior, asegúrese de usar el mismo número de puerto para configurar el `ngrok` túnel.
-> [!TIP]
-> Es una buena idea ejecutarse en una ventana de terminal diferente para mantenerla en funcionamiento sin interferir con la aplicación que más adelante podría tener que detener, recompilar y `ngrok` volver a ejecutar. La `ngrok` sesión devolverá información de depuración útil en esta ventana.
+> Si ha usado un puerto [](#build-and-run-the-sample) diferente en el paso de compilación y ejecución, asegúrese de usar el mismo número de puerto para configurar el `ngrok` túnel.
 
-La aplicación solo estará disponible durante la sesión actual en el equipo de desarrollo. Si la máquina se apaga o deja de estar en modo de suspensión, el servicio ya no estará disponible. Recuerda esto al compartir la aplicación para pruebas por parte de otros usuarios. Si tiene que reiniciar el servicio, devolverá una nueva dirección y tendrá que actualizar cada lugar que use esa dirección. La versión de pago de Ngrok no tiene esta limitación.
+> [!TIP]
+> Es una buena idea ejecutarse `ngrok` en una ventana de terminal diferente. Esto se hace para evitar que ngrok se ejecute sin interferir con la aplicación, que tienes que detener, recompilar y volver a ejecutar. La `ngrok` sesión proporciona información de depuración útil en esta ventana.
+
+La aplicación solo está disponible durante la sesión actual en el equipo de desarrollo. Si la máquina se apaga o se queda en modo de suspensión, el servicio ya no está disponible. Recuerda esto cuando compartas la aplicación para realizar pruebas a otros usuarios. Si tienes que reiniciar el servicio, la aplicación devuelve una nueva dirección y debes actualizar cada ubicación que use esa dirección. La versión de pago de ngrok no tiene esta limitación.
 
 ### <a name="host-in-azure"></a>Host en Azure
 
-Microsoft Azure le permite hospedar la aplicación .NET en un nivel gratuito mediante la infraestructura compartida. Esto será suficiente para ejecutar este `Hello World` ejemplo. Vea [la creación de una nueva cuenta gratuita](https://azure.microsoft.com/free/) para obtener más información.
+Microsoft Azure hospeda la aplicación .NET en un nivel gratuito mediante la infraestructura compartida. Esto es suficiente para ejecutar el `Hello World` ejemplo. Para obtener más información, [vea crear una nueva cuenta gratuita.](https://azure.microsoft.com/free/)
 
 Visual Studio compatibilidad integrada para la implementación de aplicaciones en diferentes proveedores, incluido Azure.
 
@@ -131,7 +135,7 @@ Ahora puede interactuar con el bot en Teams. Elija un canal en el equipo donde r
 
 ### <a name="test-your-messaging-extension"></a>Probar la extensión de mensajería
 
-Para probar la extensión de mensajería, puedes hacer clic en los tres puntos debajo del cuadro de entrada en la vista de conversación. Aparecerá un menú con la **aplicación "Hola** a todos". Al hacer clic en él, verás un montón de textos aleatorios que se muestran. Puede elegir cualquiera de ellos y se insertará en la conversación.
+Para probar la extensión de mensajería, puedes hacer clic en los tres puntos debajo del cuadro de entrada en la vista de conversación. Aparecerá un menú con la **aplicación "Hola** a todos". Al hacer clic en él, verás un montón de textos aleatorios que se muestran. Puede elegir cualquiera de ellos y se inserta en la conversación.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 

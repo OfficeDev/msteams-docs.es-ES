@@ -5,25 +5,28 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 43181f6de30cfd811701edf22e4bd7aefd467027
-ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
+ms.openlocfilehash: 21721848ba7893380ac217b5f47ce6a6e669e869
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "50140484"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231641"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicación para Microsoft Teams
 
-Las plantillas de aplicación son aplicaciones preparadas para producción para Microsoft Teams controladas por la comunidad, de código abierto y disponibles en GitHub. Cada una contiene instrucciones detalladas para implementar e instalar esa aplicación para la organización, proporcionando una aplicación lista para usar que puedes instalar y empezar a usar inmediatamente. El código fuente completo también está disponible, por lo que puede explorarlo en detalle, o bifurcar el código y modificarlo para satisfacer sus necesidades específicas.
+Las plantillas de aplicación son ejemplos de aplicaciones completas para Microsoft Teams que son de código abierto y están disponibles en GitHub. Cada plantilla de aplicación contiene instrucciones detalladas para implementar e instalar esa aplicación para la organización. También proporciona una aplicación de ejemplo que puedes instalar y empezar a usar inmediatamente. El código fuente completo también está disponible, lo que le permite explorarlo en detalle o bifurcar el código y modificarlo para satisfacer sus requisitos específicos.
+Todas las plantillas de aplicación se proporcionan según los términos [de licencia de MIT.](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE)
+>[!NOTE] 
+>You, not Microsoft must license and support apps created from app templates for your users and organizations.
 
 **&#9734; indica las plantillas de aplicación recién publicadas.**
 
 ### <a name="key-benefits"></a>Ventajas clave
 
-* **Experiencia de plug and play:** Todas las plantillas de aplicación incluyen scripts de implementaciones que le permitirán hospedar todos los servicios necesarios en Microsoft Azure. No se requiere codificación para implementar las aplicaciones.
-* **Código listo para producción:** Las plantillas de aplicación se ajustan a los procedimientos recomendados en materia de seguridad e infraestructura, y se revisan todos los cambios enviados por la comunidad para garantizar una conformidad continua.
-* **Personalizable y extensible:** Aunque todas las plantillas de aplicación están listas para implementarse tal como están, proporcionamos la base de código completa y los scripts de implementación para que puedas personalizarlas o ampliarlas fácilmente para adaptarlas a tus necesidades únicas.
-* **Documentación detallada & soporte técnico:** Todas las plantillas de aplicación van acompañadas de documentación de un extremo a otro sobre la arquitectura de la solución, la implementación y los pasos de configuración. Los repositorios también se supervisan, así que informe de cualquier problema que encuentre generando un problema en GitHub.
+* **Implemente directamente en la nube:** Todas las plantillas de aplicación incluyen scripts de implementación que le permiten hospedar todos los servicios necesarios en Microsoft Azure o power platform. 
+* **Código de ejemplo recomendado:** Las plantillas de aplicación se ajustan a los procedimientos recomendados para la seguridad y la infraestructura. Todos los cambios enviados por la comunidad a las plantillas de aplicación se revisan para garantizar la conformidad.
+* **Personalizable y extensible:** Aunque todas las plantillas de aplicación se pueden implementar con una configuración mínima, proporcionamos la base de código completa y los scripts de implementación para que puedas personalizarlas o ampliarlas fácilmente para adaptarlas a tus necesidades únicas.
+* **Documentación detallada:** Todas las plantillas de aplicación van acompañadas de documentación de un extremo a otro sobre la arquitectura de la solución, la implementación y los pasos de configuración.  
 
 ## <a name="adoption-bot-9734"></a>Adopción de bot &#9734;
 
