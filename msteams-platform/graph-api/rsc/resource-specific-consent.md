@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: OAuth SSO AAD rsc Graph de autorización de teams
-ms.openlocfilehash: 1b5c0f645d93ed33c11bf3279e70133f35f53a2c
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+ms.openlocfilehash: 97f642b203a1f7fb4cd9332b61265c0b27788e2b
+ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093932"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "50270801"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimiento específico de recursos (RSC)
 
@@ -19,7 +19,7 @@ El consentimiento específico de los recursos (RSC) es una integración de Micro
 
 ## <a name="resource-specific-permissions"></a>Permisos específicos de recursos
 
-|Permisos de aplicación| Acción |
+|Permisos de aplicación| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtenga la configuración de este equipo.|
 |TeamSettings.ReadWrite.Group|Actualizar la configuración de este equipo.|
@@ -48,7 +48,7 @@ Los pasos para habilitar RSC en la aplicación son los siguientes:
 1. [Obtenga un token de acceso de la plataforma de Identidad de Microsoft.](#obtain-an-access-token-from-the-microsoft-identity-platform)
 1. [Actualice el manifiesto de la aplicación de Teams.](#update-your-teams-app-manifest)
 1. [Instale la aplicación directamente en Teams.](#install-your-app-directly-in-teams)
-1. [Compruebe la aplicación para obtener permisos RSC agregados.](#check-your-app-for-added-rsc-permissions)
+1. [Compruebe la aplicación para obtener permisos de RSC agregados.](#check-your-app-for-added-rsc-permissions)
 
 ## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Configurar las opciones de consentimiento del propietario del grupo en el portal de Azure AD
 
@@ -88,7 +88,7 @@ Deberá tener los siguientes valores del proceso de registro de Azure AD para re
 - El  **secreto de cliente/contraseña** o un par de claves pública y privada (**Certificado**). Esto no es necesario para las aplicaciones nativas.
 - Un **URI de redireccionamiento** (o dirección URL de respuesta) para que la aplicación reciba respuestas de Azure AD.
 
- *Consulta* [Obtener acceso en nombre de un usuario y](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) Obtener acceso sin un [usuario](/graph/auth-v2-service)
+ *Vea* [Obtener acceso en nombre de un usuario y](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) Obtener acceso sin un [usuario](/graph/auth-v2-service)
 
 ## <a name="update-your-teams-app-manifest"></a>Actualizar el manifiesto de la aplicación de Teams
 
@@ -149,7 +149,12 @@ Una vez instalada la aplicación en un equipo, puede usar el Explorador de [Grap
 > - Inicie sesión en **el Explorador de Graph.**
 > - Realice una **llamada GET** al siguiente punto de conexión: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . El campo clientAppId de la respuesta se asignará al appId especificado en el manifiesto de la aplicación de Teams.
   ![Respuesta del explorador de Graph a la llamada GET.](../../assets/images/graph-permissions.png)
- 
+
+## <a name="code-sample"></a>Ejemplo de código
+| **Nombre de ejemplo** | **Descripción** | **C#** |
+|-----------------|-----------------|----------------|
+| Consentimiento específico de recursos (RSC) | Use RSC para llamar a las API de Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
+
 ## <a name="test-resource-specific-consent"></a>Probar el consentimiento específico del recurso
  
 > [!div class="nextstepaction"]
@@ -160,3 +165,4 @@ Una vez instalada la aplicación en un equipo, puede usar el Explorador de [Grap
 > [!div class="nextstepaction"]
 > [**Consentimiento específico de recursos en Microsoft Teams para administradores**](/MicrosoftTeams/resource-specific-consent)
 > 
+
