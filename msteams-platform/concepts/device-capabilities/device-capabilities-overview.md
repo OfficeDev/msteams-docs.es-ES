@@ -1,40 +1,40 @@
 ---
 title: Información general sobre las funcionalidades del dispositivo
-description: Información general sobre las funcionalidades de dispositivo nativo.
-keywords: Permisos de dispositivo nativo de capacidades de micrófono multimedia de imagen de cámara
+description: Información general sobre las capacidades nativas del dispositivo.
+keywords: Cámara image media microphone mic qr code qrcode bar code barcode scan scanner capabilities native device permissions
 ms.topic: overview
-ms.openlocfilehash: 8b2f92cb4586d646bde02742883122bb009847ea
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 03ce0267f7160772e30ec88de2c29f81886b5280
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50232852"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294729"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo 
 
-La plataforma de Microsoft Teams está mejorando continuamente las capacidades de los desarrolladores que se alinean con experiencias integradas propias. La plataforma mejorada de Teams permite a los partners integrar funcionalidades de dispositivos, como cámara, galería de fotos, micrófono y ubicación, con sus aplicaciones web. Esta integración reduce la barrera al desarrollo de aplicaciones, acelera el ciclo de desarrollo y crea nuevos escenarios o casos de uso para la comunidad de desarrolladores.
+La plataforma de Microsoft Teams mejora continuamente las capacidades de los desarrolladores y se alinea con las experiencias integradas de primera persona. La plataforma mejorada de Teams permite a los partners integrar las capacidades del dispositivo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación con sus aplicaciones web. Esta integración reduce la barrera para el desarrollo de aplicaciones, acelera el ciclo de desarrollo y crea nuevos escenarios o casos de uso para la comunidad de desarrolladores.
 
 ## <a name="native-device-capabilities"></a>Funcionalidades de dispositivo nativo
 
-Un dispositivo móvil o de escritorio tiene dispositivos integrados, como una cámara y un micrófono, llamados funcionalidades. Puede acceder a las siguientes funcionalidades de dispositivo en dispositivos móviles o de escritorio a través de api dedicadas disponibles en el SDK de [cliente de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)de Microsoft Teams:
+Un dispositivo móvil o de escritorio tiene dispositivos integrados, como una cámara y un micrófono, denominados funcionalidades. Puedes acceder a las siguientes funcionalidades de dispositivo en dispositivos móviles o de escritorio a través de API dedicadas disponibles en microsoft [Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
 * Funcionalidades multimedia, como
     * Cámara
     * Micrófono
     * Galería
+    * Escáner qr o de código de barras
 * Ubicación
 
-Después de obtener acceso a las funcionalidades del dispositivo, puede integrarlas con la plataforma de Teams para mejorar la experiencia de colaboración. 
+Después de obtener acceso a las capacidades del dispositivo, puedes integrarlas con la plataforma de Teams para mejorar la experiencia de colaboración. 
 
 ## <a name="request-device-permissions"></a>Solicitar permisos de dispositivo
 
-Use las herramientas presentes en el SDK de [cliente de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) de Microsoft Teams para solicitar los permisos  [necesarios para](native-device-permissions.md) obtener acceso a las funcionalidades de dispositivo nativo. Aunque el acceso a estas funcionalidades es estándar en exploradores web modernos, debe informar a Teams sobre las funcionalidades que está usando mediante la actualización del manifiesto de la aplicación. Esta actualización le permite solicitar permisos mientras la aplicación se ejecuta en clientes móviles o de escritorio de Teams.
+Use las herramientas presentes en el SDK de [cliente javaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) de Microsoft Teams para solicitar los permisos  [necesarios para](native-device-permissions.md) obtener acceso a las funcionalidades de dispositivo nativo. Aunque el acceso a estas funcionalidades es estándar en exploradores web modernos, debes informar a Teams sobre las funcionalidades que usas actualizando el manifiesto de la aplicación. Esta actualización te permite solicitar permisos mientras la aplicación se ejecuta en clientes móviles o de escritorio de Teams.
  
  ## <a name="integrate-device-capabilities"></a>Integrar funcionalidades de dispositivos
 
-Después de obtener acceso a las funcionalidades [](mobile-camera-image-permissions.md) del dispositivo, use las API de capacidad multimedia de **Teams** para integrar las capacidades con la plataforma de Teams para mejorar la experiencia del usuario. Estas funcionalidades integradas permiten que la aplicación:
+Después de obtener acceso a las funcionalidades [](mobile-camera-image-permissions.md) del dispositivo, usa las API de capacidad multimedia de Teams para integrar las capacidades multimedia con la plataforma de Teams para mejorar la experiencia del usuario. Estas funcionalidades integradas permiten a la aplicación:
 
 * Capturar y compartir imágenes
+* Digitalizar QR o código de barras con [control de escáner](qr-barcode-scanner-capability.md)
 * Grabar audio a través del micrófono
 * Compartir la información de ubicación
-
-
