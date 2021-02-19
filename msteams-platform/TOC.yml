@@ -74,6 +74,8 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: Integrar capacidades multimedia
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+        - name: Integrar la función de escáner de código QR o de códigos de barras
+          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: Diseño de la aplicación
   items:
     - name: Información general
