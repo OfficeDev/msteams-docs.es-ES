@@ -4,12 +4,12 @@ author: clearab
 description: Cómo agregar autenticación a una extensión de mensajería
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4ebe65af06240d13ceb99fe3b7640ab402d716c5
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: d673f52e63ba845675f6631470af68d65c7297ad
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911873"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449573"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Agregar autenticación a la extensión de mensajería
 
@@ -31,16 +31,16 @@ Se `id` garantiza que los valores y son los del usuario `aadObjectId` autenticad
 
 ## <a name="authentication"></a>Autenticación
 
-Si el servicio requiere autenticación de usuario, debe iniciar sesión en el usuario para poder usar la extensión de mensajería. Si ha escrito un bot o una pestaña que inicia sesión en el usuario, esta sección debe ser familiar.
+Si el servicio requiere autenticación de usuario, debe iniciar sesión en el usuario antes de poder usar la extensión de mensajería. Si ha escrito un bot o una pestaña que inicia sesión en el usuario, esta sección debe ser familiar.
 
 La secuencia es la siguiente:
 
 1. El usuario emite una consulta o la consulta predeterminada se envía automáticamente al servicio.
 2. El servicio comprueba si el usuario se ha autenticado primero inspeccionando el identificador de usuario de Teams.
 3. Si el usuario no se ha autenticado, envíe una respuesta con `auth` una `openUrl` acción sugerida, incluida la dirección URL de autenticación.
-4. El cliente de Microsoft Teams inicia una ventana emergente que hospeda su página web con la dirección URL de autenticación especificada.
+4. El cliente de Microsoft Teams inicia una ventana emergente que hospeda la página web mediante la dirección URL de autenticación determinada.
 5. Después de que el usuario inicia sesión, debe cerrar la ventana y enviar un "código de autenticación" al cliente de Teams.
-6. A continuación, el cliente de Teams devuelve la consulta al servicio, que incluye el código de autenticación pasado en el paso 5.
+6. A continuación, el cliente de Teams reedita la consulta al servicio, que incluye el código de autenticación pasado en el paso 5.
 
 El servicio debe comprobar que el código de autenticación recibido en el paso 6 coincide con el del paso 5. Esto garantiza que un usuario malintencionado no intente suplantar o poner en peligro el flujo de inicio de sesión. Esto "cierra el bucle" para finalizar la secuencia de autenticación segura.
 
@@ -68,13 +68,13 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 ```
 
 > [!NOTE]
-> Para que la experiencia de inicio de sesión se hospeda en una ventana emergente de Teams, la parte de dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. (Vea [validDomains en](~/resources/schema/manifest-schema.md#validdomains) el esquema del manifiesto).
+> Para que la experiencia de inicio de sesión se hospeda en una ventana emergente de Teams, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. (Vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto).
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar el flujo de inicio de sesión
 
-La experiencia de inicio de sesión debe ser dinámica y cabe dentro de una ventana emergente. Debe integrarse con el SDK de [cliente de JavaScript](/javascript/api/overview/msteams-client)de Microsoft Teams, que usa el paso de mensajes.
+La experiencia de inicio de sesión debe responder y caber dentro de una ventana emergente. Debe integrarse con el SDK de [cliente de JavaScript](/javascript/api/overview/msteams-client)de Microsoft Teams, que usa el paso de mensajes.
 
-Al igual que con otras experiencias incrustadas que se ejecutan dentro de Microsoft Teams, el código dentro de la ventana debe llamar `microsoftTeams.initialize()` primero. Si el código realiza un flujo de OAuth, puede pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
+Al igual que con otras experiencias incrustadas que se ejecutan dentro de Microsoft Teams, el código dentro de la ventana debe llamar `microsoftTeams.initialize()` primero. Si el código realiza un flujo de OAuth, puedes pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Completar el flujo de inicio de sesión
 
@@ -83,7 +83,7 @@ Cuando la solicitud de inicio de sesión se completa y vuelve a redirigir a la p
 1. Generar un código de seguridad. (Puede ser un número aleatorio). Debe almacenar en caché este código en el servicio, junto con las credenciales obtenidas a través del flujo de inicio de sesión (como tokens de OAuth 2.0).
 2. Llama `microsoftTeams.authentication.notifySuccess` y pasa el código de seguridad.
 
-En este punto, la ventana se cierra y el control se pasa al cliente de Teams. El cliente ahora puede volver a emitir la consulta de usuario original, junto con el código de seguridad de la `state` propiedad. El código puede usar el código de seguridad para buscar las credenciales almacenadas anteriormente para completar la secuencia de autenticación y, a continuación, completar la solicitud del usuario.
+En este momento, la ventana se cierra y el control se pasa al cliente de Teams. El cliente ahora puede volver a emitir la consulta de usuario original, junto con el código de seguridad de la `state` propiedad. El código puede usar el código de seguridad para buscar las credenciales almacenadas anteriormente para completar la secuencia de autenticación y, a continuación, completar la solicitud de usuario.
 
 #### <a name="reissued-request-example"></a>Ejemplo de solicitud ree emitida
 
@@ -134,9 +134,9 @@ En este punto, la ventana se cierra y el control se pasa al cliente de Teams. El
 }
 ```
 
-## <a name="samples"></a>Ejemplos
-Para obtener código de ejemplo que muestra el proceso de autenticación de extensiones de mensajería, vea:
-
-[Ejemplo de autenticación de extensiones de mensajería de Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)
+## <a name="code-sample"></a>Ejemplo de código
+|**Nombre de ejemplo** | **Descripción** |**.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Extensiones de mensajería: autenticación y configuración | Una extensión de mensajería que tiene una página de configuración, acepta solicitudes de búsqueda y devuelve resultados después de que el usuario haya iniciado sesión. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

@@ -3,20 +3,21 @@ title: Solicitar permisos de dispositivo para la aplicación de Microsoft Teams
 keywords: permisos de capacidades de aplicaciones de teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario
 ms.topic: how-to
-ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294750"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449440"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para la aplicación de Microsoft Teams
 
-Puedes enriquecer la aplicación de Teams con capacidades de dispositivo nativas, como cámara, micrófono y ubicación. Este documento le guía sobre cómo solicitar el consentimiento del usuario y obtener acceso a los permisos de dispositivo nativo.
+Puedes enriquecer la aplicación de Teams con funcionalidades de dispositivo nativas, como cámara, micrófono y ubicación. Este documento le guía sobre cómo solicitar el consentimiento del usuario y obtener acceso a los permisos de dispositivo nativo.
 
 > [!NOTE]
 > * Para integrar las funcionalidades multimedia dentro de la aplicación móvil de Microsoft Teams, consulta [Integrar capacidades multimedia.](mobile-camera-image-permissions.md)
 > * Para integrar la funcionalidad de escáner qr o de código de barras en la aplicación móvil de Microsoft Teams, consulta Integrar la funcionalidad [del escáner de códigos](qr-barcode-scanner-capability.md) de barras o QR en Teams
+> * Para integrar las funcionalidades de ubicación dentro de la aplicación móvil de Microsoft Teams, consulta [Integrar capacidades de ubicación.](location-capability.md)
 
 ## <a name="native-device-permissions"></a>Permisos de dispositivo nativo
 
@@ -185,10 +186,13 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 > [!NOTE]
 > Cuando da su consentimiento a los permisos de dispositivo nativo, solo es válido para la _sesión de_ inicio de sesión actual.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Integrar capacidades multimedia en Teams](mobile-camera-image-permissions.md)
 
 > [!div class="nextstepaction"]
 > [Integrar la funcionalidad del escáner de códigos DE BARRAS o QR en Teams](qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrar capacidades de ubicación en Teams](location-capability.md)

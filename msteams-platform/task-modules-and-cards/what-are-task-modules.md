@@ -4,12 +4,12 @@ author: clearab
 description: Agrega experiencias emergentes modales para recopilar o mostrar información a los usuarios desde tus aplicaciones de Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bd353e8330f2587e2504d6c00346feeff89d6a4d
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294736"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449552"
 ---
 # <a name="what-are-task-modules"></a>¿Qué son los módulos de tareas?
 
@@ -36,7 +36,7 @@ Vamos a recorrerlo:
 3. El título del módulo de tareas especificado en la `title` propiedad del [objeto TaskInfo](#the-taskinfo-object).
 4. Botón cerrar/cancelar del módulo de tareas. Si el usuario presiona esto, la aplicación recibirá un `err` evento como se describe [aquí](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module). (**Nota:** Actualmente no es posible detectar este evento cuando se invoca un módulo de tareas desde un bot).
 5. El rectángulo azul es el lugar donde aparece la página web si está cargando su propia página web mediante la propiedad `url` del [objeto TaskInfo](#the-taskinfo-object). Encontrará más detalles en la sección de tamaño [del módulo de](#task-module-sizing) tareas que se muestra a continuación.
-6. Si está mostrando una tarjeta adaptable a través de la propiedad del objeto TaskInfo, el relleno se agrega automáticamente, de lo contrario tendrá que `card` [controlarlo usted mismo.](#task-module-css-for-htmljavascript-task-modules) [](#the-taskinfo-object)
+6. Si va a mostrar una tarjeta adaptable a través de la propiedad del objeto TaskInfo, el relleno se agrega automáticamente, de lo contrario tendrá que `card` [controlarlo usted mismo.](#task-module-css-for-htmljavascript-task-modules) [](#the-taskinfo-object)
 7. Aquí se representarán los botones de tarjeta adaptable. Si usa su propia página, debe crear sus propios botones.
 
 ## <a name="overview-of-invoking-and-dismissing-task-modules"></a>Información general sobre invocar y descartar módulos de tareas
@@ -46,7 +46,7 @@ Los módulos de tareas se pueden invocar desde pestañas, bots o vínculos profu
 | **Invocado a través de...** | **El módulo de tareas es HTML/JavaScript** | **El módulo de tareas es tarjeta adaptable** |
 | --- | --- | --- |
 | **JavaScript en una pestaña** | 1. Use la función SDK de cliente de Teams `tasks.startTask()` con una función de devolución de llamada `submitHandler(err, result)` opcional <br/><br/> 2. En el código del módulo de tareas, cuando el usuario haya terminado, llame a la función SDK de Teams `tasks.submitTask()` con un objeto como `result` parámetro. Si se `submitHandler` especificó una devolución de llamada en `tasks.startTask()` , Teams la llama con como `result` parámetro.<br/><br/> 3. Si se produjo un error al invocar , se llama a la `tasks.startTask()` función con una cadena en su `submitHandler` `err` lugar. <br/><br/> 4. También puede especificar un al llamar; en `completionBotId` `teams.startTask()` ese caso, se envía al bot en `result` su lugar. | 1. Llame a la función DEL SDK del cliente de Teams con un objeto TaskInfo y que contenga el JSON de la tarjeta adaptable para que se muestre en el elemento emergente `tasks.startTask()` del módulo de [](#the-taskinfo-object) `TaskInfo.card` tareas. <br/><br/> 2. Si se especificó una devolución de llamada en , Teams la llama con una cadena si se produjo un error al invocar o si el usuario cierra el elemento emergente del módulo de tareas con la X en la parte superior `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` derecha. <br/><br/> 3. Si el usuario presiona un botón Action.Submit, su `data` objeto se devuelve como el valor de `result` . |
-| **Botón de tarjeta bot** | 1. Los botones de tarjeta bot, según el tipo de botón, pueden invocar módulos de tareas de dos maneras: una dirección URL de vínculo profundo o mediante el envío de un `task/fetch` mensaje. Vea a continuación cómo funcionan las direcciones URL de vínculos profundos. <br/><br/> 2. Si la acción del botón es ( tipo de botón para tarjetas adaptables), se envía un evento (un HTTP POST debajo de las portadas) al bot y el bot responde al POST con `type` `task/fetch` HTTP `Action.Submit` `task/fetch invoke` 200 [](#the-taskinfo-object)y al cuerpo de la respuesta que contiene un contenedor alrededor del objeto TaskInfo . Esto se explica detalladamente al [invocar un módulo de tareas mediante task/fetch](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch).<br/><br/> 3. Teams muestra el módulo de tareas; cuando el usuario haya terminado, llame a la función SDK de Teams `tasks.submitTask()` con un objeto como `result` parámetro. <br/><br/> 4. El bot recibe un `task/submit invoke` mensaje que contiene el `result` objeto. Tiene tres formas diferentes de responder al mensaje: no hacer nada (la tarea se completó correctamente), mostrar un mensaje al usuario en una ventana emergente o invocar otra ventana del módulo de tareas (es decir, crear una experiencia de `task/submit` asistente). Estas tres opciones se debaten más en [la discusión detallada sobre tarea/envío](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). | 1. Al igual que los botones de las tarjetas de Bot Framework, los botones de las tarjetas adaptables admiten dos formas de invocar módulos de tareas: las direcciones URL de vínculo profundo con botones y el uso de `Action.openUrl` `task/fetch` `Action.Submit` botones. <br/><br/> 2. Los módulos de tareas con tarjetas adaptables funcionan de forma muy similar al caso HTML/JavaScript (vea la izquierda). La principal diferencia es que, dado que no hay JavaScript cuando se usan tarjetas adaptables, no hay forma de llamar a `tasks.submitTask()` . En su lugar, Teams toma el objeto y lo devuelve como la carga `data` `Action.Submit` del `task/submit` evento, como se describe [aquí](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). |
+| **Botón de tarjeta bot** | 1. Los botones de tarjeta bot, según el tipo de botón, pueden invocar módulos de tareas de dos maneras: una dirección URL de vínculo profundo o mediante el envío de un `task/fetch` mensaje. Vea a continuación cómo funcionan las direcciones URL de vínculo profundo. <br/><br/> 2. Si la acción del botón es ( tipo de botón para tarjetas adaptables), se envía un evento (un HTTP POST debajo de las portadas) al bot y el bot responde al POST con `type` `task/fetch` HTTP `Action.Submit` `task/fetch invoke` 200 [](#the-taskinfo-object)y al cuerpo de la respuesta que contiene un contenedor alrededor del objeto TaskInfo . Esto se explica detalladamente al [invocar un módulo de tareas mediante task/fetch](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch).<br/><br/> 3. Teams muestra el módulo de tareas; cuando el usuario haya terminado, llame a la función SDK de Teams `tasks.submitTask()` con un objeto como `result` parámetro. <br/><br/> 4. El bot recibe un `task/submit invoke` mensaje que contiene el `result` objeto. Tiene tres formas diferentes de responder al mensaje: no hacer nada (la tarea se completó correctamente), mostrar un mensaje al usuario en una ventana emergente o invocar otra ventana del módulo de tareas (es decir, crear una experiencia de `task/submit` asistente). Estas tres opciones se debaten más en [la discusión detallada sobre tarea/envío](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). | 1. Al igual que los botones de las tarjetas de Bot Framework, los botones de las tarjetas adaptables admiten dos formas de invocar módulos de tareas: las direcciones URL de vínculo profundo con botones y el uso de `Action.openUrl` `task/fetch` `Action.Submit` botones. <br/><br/> 2. Los módulos de tareas con tarjetas adaptables funcionan de forma muy similar al caso HTML/JavaScript (vea la izquierda). La principal diferencia es que, dado que no hay JavaScript cuando se usan tarjetas adaptables, no hay forma de llamar a `tasks.submitTask()` . En su lugar, Teams toma el objeto y lo devuelve como la carga `data` `Action.Submit` del `task/submit` evento, como se describe [aquí](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). |
 | **URL de vínculo profundo** <br/>[sintaxis URL](#task-module-deep-link-syntax) | 1. Teams invoca el módulo de tareas; la dirección URL que aparece dentro `<iframe>` del especificado en el parámetro del vínculo `url` profundo. No hay `submitHandler` devolución de llamada. <br/><br/> 2. Dentro del JavaScript de la página del módulo de tareas, llame para cerrarlo con un objeto como parámetro, lo mismo que al invocarlo desde una pestaña o un botón de tarjeta `tasks.submitTask()` `result` de bot. Sin embargo, la lógica de finalización es ligeramente diferente. Si la lógica de finalización reside en el cliente (es decir, si no hay bot) no hay devolución de llamada, por lo que cualquier lógica de finalización debe estar en el código anterior a la llamada `submitHandler` a `tasks.submitTask()` . Los errores de invocación solo se notifican a través de la consola. Si tiene un bot, puede especificar un parámetro en el vínculo profundo para `completionBotId` enviar el objeto a través de un `result` `task/submit` evento. | 1. Teams invoca el módulo de tareas; el cuerpo de la tarjeta JSON de la tarjeta adaptable se especifica como un valor codificado en URL del `card` parámetro del vínculo profundo. <br/><br/> 2. El usuario cierra el módulo de tareas haciendo clic en la X en la parte superior derecha del módulo de tareas o presionando un `Action.Submit` botón en la tarjeta. Dado que no hay que llamar, debe tener un bot al que enviar el valor de `submitHandler` los campos de tarjeta adaptable. Use el parámetro en el vínculo profundo para especificar el bot al que `completionBotId` se enviarán los datos a través de un `task/submit invoke` evento. |
 
 > [!NOTE]
@@ -79,7 +79,7 @@ Los módulos de tareas invocados desde una pestaña se pueden cambiar dinámicam
 
 ## <a name="task-module-css-for-htmljavascript-task-modules"></a>CSS del módulo de tareas para módulos de tareas HTML/JavaScript
 
-Los módulos de tareas basados en HTML/JavaScript tienen acceso a todo el área del módulo de tareas debajo del encabezado. Aunque eso ofrece una gran flexibilidad, si quieres que el relleno alrededor de los bordes se alinee con los elementos de encabezado y evite barras de desplazamiento innecesarias, tendrás que proporcionar el CSS correcto. Estos son algunos ejemplos para algunos casos de uso.
+Los módulos de tareas basados en HTML/JavaScript tienen acceso a todo el área del módulo de tareas debajo del encabezado. Aunque esto ofrece una gran flexibilidad, si quieres que el relleno alrededor de los bordes se alinee con los elementos de encabezado y evite barras de desplazamiento innecesarias, tendrás que proporcionar el CSS correcto. Estos son algunos ejemplos para algunos casos de uso.
 
 ### <a name="example-1---youtube-video"></a>Ejemplo 1: vídeo de YouTube
 
@@ -236,10 +236,13 @@ Con los módulos de tareas basados en HTML/JavaScript, es tu responsabilidad gar
 
 Microsoft Teams se asegurará de que la navegación por el teclado funcione correctamente desde el encabezado del módulo de tareas al HTML y viceversa.
 
-## <a name="task-module-samples"></a>Ejemplos de módulos de tareas
+## <a name="code-sample"></a>Ejemplo de código
+|**Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Ejemplo de módulo de tareas (Bots-V4) | Ejemplos para crear módulos de tareas. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Ejemplo de módulo de tareas (Tabs + Bots-V3) | Ejemplos para crear módulos de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
-* [Node.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
-* [Ejemplo C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
 
 > [!div class="nextstepaction"]
 > [Más información: Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
@@ -249,3 +252,6 @@ Microsoft Teams se asegurará de que la navegación por el teclado funcione corr
 
 > [!div class="nextstepaction"]
 > [Más información: Integrar la funcionalidad del escáner de códigos de barras o QR en Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Más información: Integrar las funcionalidades de ubicación en Teams](../concepts/device-capabilities/location-capability.md)

@@ -1,29 +1,29 @@
 ---
-title: Actualizar y eliminar los mensajes enviados desde el bot
+title: Actualizar y eliminar mensajes enviados desde el bot
 author: WashingtonKayaker
-description: Cómo actualizar y eliminar los mensajes enviados desde su bot de Microsoft Teams
+description: Cómo actualizar y eliminar mensajes enviados desde el bot de Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 46994c6810197002ef1c108af4f725426395b37f
-ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
+ms.openlocfilehash: 664bd531bdee0093c6766bc23e35d2bf10307eb4
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "43957190"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449503"
 ---
-# <a name="update-and-delete-messages-sent-from-your-bot"></a>Actualizar y eliminar los mensajes enviados desde el bot
+# <a name="update-and-delete-messages-sent-from-your-bot"></a>Actualizar y eliminar mensajes enviados desde el bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-## <a name="updating-messages"></a>Actualizar mensajes
+## <a name="update-messages"></a>Actualizar mensajes
 
-En lugar de que los mensajes sean instantáneas estáticas de los datos, el bot puede actualizar de forma dinámica los mensajes después de enviarlos. Puede usar actualizaciones de mensajes dinámicas para escenarios como sondeos de actualizaciones, modificación de acciones disponibles después de presionar un botón o cualquier otro cambio de estado asincrónico.
+El bot puede actualizar dinámicamente los mensajes después de enviarlos. Puede usar actualizaciones dinámicas de mensajes para escenarios como las actualizaciones de sondeo, la modificación de acciones disponibles después de presionar un botón o cualquier otro cambio de estado asincrónico.
 
-El nuevo mensaje no tiene que coincidir con el original en el tipo. Por ejemplo, si el mensaje original contenía datos adjuntos, el nuevo mensaje puede ser un mensaje de texto simple.
+El nuevo mensaje no necesita coincidir con el tipo original. Por ejemplo, si el mensaje original contenía datos adjuntos, el nuevo mensaje puede ser un mensaje de texto simple.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Para actualizar un mensaje existente, pase un nuevo `Activity` objeto con el identificador de actividad existente al `UpdateActivityAsync` método de la `TurnContext` clase. *Consulte* [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable)
+Para actualizar un mensaje existente, pase un nuevo objeto con el identificador de actividad `Activity` existente al método de la `UpdateActivityAsync` `TurnContext` clase. Vea [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 
 ```csharp
 var newActivity = MessageFactory.Text("The new text for the activity");
@@ -33,7 +33,7 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 
 # <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
-Para actualizar un mensaje existente, pase un nuevo `Activity` objeto con el identificador de actividad existente al `updateActivity` método del `TurnContext` objeto. *Consulte* [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--)
+Para actualizar un mensaje existente, pase un nuevo objeto con el identificador de actividad `Activity` existente al método del `updateActivity` `TurnContext` objeto. Vea [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 
 ```typescript
 const newActivity = MessageFactory.text('The new text for the activity');
@@ -43,7 +43,7 @@ await turnContext.updateActivity(newActivity);
 
 # <a name="python"></a>[Python](#tab/python)
 
-Para actualizar un mensaje existente, pase un nuevo `Activity` objeto con el identificador de actividad existente al `update_activity` método de la `TurnContext` clase. Consulte [TurnContextClass](link to Python API ref docs).
+Para actualizar un mensaje existente, pase un nuevo objeto con el identificador de actividad `Activity` existente al método de la `update_activity` `TurnContext` clase. Vea [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
 
 ```python
 
@@ -56,9 +56,9 @@ update_result = await context.update_activity(new_activity)
 # <a name="rest-api"></a>[API de REST](#tab/rest)
 
 >[!NOTE]
->Puede desarrollar las aplicaciones de Microsoft Teams en cualquier tecnología de programación web y llamar directamente a las [API de REST del servicio de conector de bot](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). Para ello, deberá implementar los procedimientos de seguridad de [autenticación](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) con sus solicitudes de API.
+>Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio [Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes de API.
 
-Para actualizar una actividad existente dentro de una conversación, incluya `conversationId` el `activityId` y en el punto de conexión de la solicitud. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada de publicación original.
+Para actualizar una actividad existente dentro de una conversación, incluya y `conversationId` en el extremo de `activityId` solicitud. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada POST original.
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
@@ -66,19 +66,52 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 | | |
 |----|----|
-| **Cuerpo de la solicitud** | Un objeto [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) |
-| **Devuelve** | Un objeto [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) |
+| **Cuerpo de la solicitud** | Un [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) |
+| **Devuelve** | Un [objeto ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
 
 ---
 
-## <a name="deleting-messages"></a>Eliminación de mensajes
+## <a name="update-cards"></a>Actualizar tarjetas
 
-En el marco de bot, todos los mensajes tienen su propio identificador de actividad único.
-Los mensajes se pueden eliminar mediante el método del `DeleteActivity` marco de trabajo de bot, como se muestra aquí.
+Para actualizar la tarjeta existente en la selección de botón, puede usar `ReplyToId` la actividad entrante.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Para eliminar ese mensaje, pase el `DeleteActivityAsync` identificador de la actividad al método de la `TurnContext` clase. *Consulte* [método TurnContext. DeleteActivityAsync](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable)
+Para actualizar la tarjeta existente en un clic de botón, pase un nuevo objeto con la tarjeta actualizada y como identificador de actividad `Activity` al método de la `ReplyToId` `UpdateActivityAsync` `TurnContext` clase. Vea [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+```csharp
+var activity = MessageFactory.Attachment(card.ToAttachment());
+activity.Id = turnContext.Activity.ReplyToId;
+await turnContext.UpdateActivityAsync(activity, cancellationToken);
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+Para actualizar la tarjeta existente en un clic de botón, pase un nuevo objeto con la tarjeta actualizada y como identificador de actividad al `Activity` `replyToId` método del `updateActivity` `TurnContext` objeto. Vea [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+```typescript
+const message = MessageFactory.attachment(card);
+message.id = context.activity.replyToId;
+await context.updateActivity(message);
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+Para actualizar la tarjeta existente en un clic de botón, pase un nuevo objeto con la tarjeta actualizada y como identificador de actividad `Activity` al método de la `reply_to_id` `update_activity` `TurnContext` clase. Vea [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
+
+```python
+updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
+updated_activity.id = turn_context.activity.reply_to_id
+await turn_context.update_activity(updated_activity)
+
+```
+
+## <a name="delete-messages"></a>Eliminar mensajes
+
+En Bot Framework, cada mensaje tiene su propio identificador de actividad único.
+Los mensajes se pueden eliminar con el método de Bot `DeleteActivity` Framework, como se muestra aquí.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+Para eliminar ese mensaje, pase el identificador de esa actividad al `DeleteActivityAsync` método de la `TurnContext` clase. Consulta [TurnContext.DeleteActivityAsync (método).](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ```csharp
 foreach (var activityId in _list)
@@ -89,7 +122,7 @@ foreach (var activityId in _list)
 
 # <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
-Para eliminar ese mensaje, pase el `deleteActivity` identificador de la actividad al método del `TurnContext` objeto. *Consulte* [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
+Para eliminar ese mensaje, pase el identificador de esa actividad al `deleteActivity` método del `TurnContext` objeto. Vea [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
@@ -99,7 +132,7 @@ for (let i = 0; i < activityIds.length; i++) {
 
 # <a name="python"></a>[Python](#tab/python)
 
-Para eliminar ese mensaje, pase el `delete_activity` identificador de la actividad al método del `TurnContext` objeto. Consulte [Activity-Update-and-Delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
+Para eliminar ese mensaje, pase el identificador de esa actividad al `delete_activity` método del `TurnContext` objeto. Vea [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
 
 ```python
 for each activity_id in _list:
@@ -108,7 +141,7 @@ for each activity_id in _list:
 
 # <a name="rest-api"></a>[API de REST](#tab/rest)
 
- Para eliminar una actividad existente dentro de una conversación, incluya `conversationId` el `activityId` y en el extremo de la solicitud.
+ Para eliminar una actividad existente dentro de una conversación, incluya y `conversationId` en el extremo de `activityId` solicitud.
 
 ```http
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
@@ -116,7 +149,15 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 | | |
 |----|----|
-| **Cuerpo de la solicitud** | N/D |
-| **Devuelve** | Código de Estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
+| **Cuerpo de la solicitud** | n/a |
+| **Devuelve** | Código de estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
 
 ---
+
+## <a name="code-samples"></a>Ejemplos de código
+
+Los conceptos básicos de la conversación oficial son los siguientes:
+
+| Nombre de ejemplo           | Descripción                                                                      | .NET    | JavaScript   | Python  |
+|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluida la actualización y eliminación de mensajes.|[.NET &nbsp; Core](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|

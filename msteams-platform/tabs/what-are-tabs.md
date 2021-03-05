@@ -4,12 +4,12 @@ author: laujan
 description: Información general sobre las pestañas personalizadas en la plataforma de Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 547042297491d508c146a87fb9511bb4c643e7f5
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: af6d0a87fbbb87ae4abf09a2ff53319299f452df
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294722"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449223"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>¿Qué son las pestañas de Microsoft Teams?
 
@@ -77,3 +77,5 @@ Si decide que la pestaña canal o grupo aparezca en los clientes móviles de Tea
 > [!div class="nextstepaction"]
 > [Más información: Integrar la funcionalidad del escáner de códigos de barras o QR en Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 
+> [!div class="nextstepaction"]
+> [Más información: Integrar las funcionalidades de ubicación en Teams](../concepts/device-capabilities/location-capability.md)
