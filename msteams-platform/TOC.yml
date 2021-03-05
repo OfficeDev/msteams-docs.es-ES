@@ -24,12 +24,14 @@
   items:
     - name: Tutoriales
       href: tutorials/code-samples.md
-    - name: Crear una aplicación con C#
+    - name: Crear una aplicación con C# o .NET
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Crear una aplicación con Node.js
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Crear una aplicación con el generador de Yeoman
       href: tutorials/get-started-yeoman.md
+    - name: Actualizar Microsoft Teams mediante el generador de Yeoman
+      href: tutorials/UpgradeTeamsUsingYeoman.md
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Conceptos básicos de aplicación
@@ -76,6 +78,8 @@
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: Integrar la función de escáner de código QR o de códigos de barras
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+        - name: Integrar capacidades de ubicación
+          href: concepts/device-capabilities/location-capability.md
 - name: Diseño de la aplicación
   items:
     - name: Información general
@@ -334,7 +338,7 @@
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Habilitar el consentimiento específico del recurso
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Habilitar la instalación y mensajería proactivas de bots
+    - name: Instalación proactiva de aplicaciones usando la API de Graph y el envío de mensajes
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importar mensajes de terceros
       href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -408,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Características
           href: resources/dev-preview/developer-preview-features.md
+    - name: Cambios del margen de pestaña
+      href: resources/removing-tab-margins.md
     - name: Atributo de cookies SameSite (actualización de 2020)
       href: resources/samesite-cookie-update.md
     - name: Colaborar en documentos de Teams
