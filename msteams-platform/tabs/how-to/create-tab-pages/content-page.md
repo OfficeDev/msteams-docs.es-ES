@@ -1,34 +1,34 @@
 ---
 title: Creación de una página de contenido
 author: laujan
-description: Cómo crear una página de contenido
-keywords: canal de grupo de pestañas de Teams configurable estático
+description: cómo crear una página de contenido
+keywords: Canal de grupo de pestañas de teams configurable estático
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
+ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552538"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50479875"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
-Una página de contenido es una página web que se representa dentro del cliente de Teams. Normalmente son parte de:
+Una página de contenido es una página web que se representa en el cliente de Teams. Por lo general, estos son parte de:
 
-* Una ficha personalizada con ámbito personal en esta instancia la página de contenido es la primera página que encuentra el usuario.
-* Una pestaña personalizada de canal o Grupo: después de que el usuario PIN y configure la pestaña en el contexto adecuado, se muestra la página de contenido.
-* Un [módulo de tareas](~/task-modules-and-cards/what-are-task-modules.md) : puede crear una página de contenido e incrustarla como WebView dentro de un módulo de tareas. La página se representará dentro del elemento emergente modal.
+* Pestaña personalizada de ámbito personal: en este caso, la página de contenido es la primera página que encuentra el usuario.
+* Una pestaña personalizada de canal o grupo: después de que el usuario anclar y configure la pestaña en el contexto adecuado, se muestra la página de contenido.
+* Un [módulo de](~/task-modules-and-cards/what-are-task-modules.md) tareas: puede crear una página de contenido e insertarla como vista web dentro de un módulo de tareas. La página se representará dentro del elemento emergente modal.
 
-Este artículo es específico para usar páginas de contenido como fichas; sin embargo, la mayoría de las instrucciones aquí aplicadas se aplican independientemente de cómo se presente la página de contenido al usuario final.
+Este artículo es específico para usar páginas de contenido como pestañas; sin embargo, la mayoría de las instrucciones aquí se aplicarían independientemente de cómo se presente la página de contenido al usuario final.
 
-## <a name="tab-content-and-style-guidelines"></a>Contenido de la pestaña y directrices de estilo
+## <a name="tab-content-and-style-guidelines"></a>Directrices de estilo y contenido de tabulación
 
-El objetivo general de su pestaña debe ser proporcionar acceso a contenido significativo y atractivo que tenga un valor práctico y un propósito claro. Esto no significa que deba prepararse con un estilo agradable, pero debe centrarse en minimizar la confusión haciendo que el diseño de pestaña sea limpio, navegación intuitiva y contenido envolvente. Ver [contenido y conversaciones, todos a la vez mediante pestañas](~/tabs/design/tabs.md) y [Guía del proceso de aprobación de aplicaciones de Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+El objetivo general de la pestaña debe ser proporcionar acceso a contenido significativo y atractivo que tenga un valor práctico y un propósito evidente. Eso no significa que debas renunciar a un estilo agradable, pero debes centrarte en minimizar el desorden haciendo que el diseño de pestaña sea limpio, intuitivo de navegación y que el contenido sea envolvente. Consulta [Contenido y conversaciones, todo a la vez](~/tabs/design/tabs.md) con pestañas y instrucciones del proceso de aprobación de aplicaciones de Microsoft [Teams](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
 
-## <a name="integrate-your-code-with-teams"></a>Integrar el código con Microsoft Teams
+## <a name="integrate-your-code-with-teams"></a>Integrar el código con Teams
 
-Para que la página se muestre en Microsoft Teams, debe incluir el [SDK del cliente de JavaScript para Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) e incluir una llamada a `microsoftTeams.initialize()` después de que se cargue la página. Así es como se comunican la página y el cliente de Microsoft Teams:
+Para que la página se muestre en Teams, debe incluir el SDK de cliente [de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) de Microsoft Teams e incluir una llamada después `microsoftTeams.initialize()` de que se cargue la página. Así se comunican su página y el cliente de Teams:
 
 ```html
 <!DOCTYPE html>
@@ -48,38 +48,60 @@ Para que la página se muestre en Microsoft Teams, debe incluir el [SDK del clie
 </body>
 ```
 
-## <a name="accessing-additional-content"></a>Obtener acceso a contenido adicional
+## <a name="accessing-additional-content"></a>Acceso a contenido adicional
 
-### <a name="using-the-sdk-to-interact-with-teams"></a>Uso del SDK para interactuar con Microsoft Teams
+### <a name="using-the-sdk-to-interact-with-teams"></a>Uso del SDK para interactuar con Teams
 
-El [SDK de JavaScript del cliente de Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md) proporciona muchas funciones adicionales que pueden resultarle útiles al desarrollar su página de contenido.
+El [SDK de JavaScript del cliente de Teams](~/tabs/how-to/using-teams-client-sdk.md) proporciona muchas funciones adicionales que puede resultar útiles al desarrollar la página de contenido.
 
 ### <a name="deep-links"></a>Vínculos profundos
 
-Puede crear vínculos profundos a entidades en Microsoft Teams. Normalmente, estos se usan para crear vínculos que naveguen a contenido e información dentro de la pestaña. Consulte [crear vínculos detallados para el contenido y las características de Microsoft Teams](~/concepts/build-and-test/deep-links.md).
+Puede crear vínculos profundos a entidades en Teams. Normalmente, se usan para crear vínculos que naveguen al contenido y a la información de la pestaña. Consulte [Crear vínculos profundos al contenido y las características en Microsoft Teams](~/concepts/build-and-test/deep-links.md).
 
 ### <a name="task-modules"></a>Módulos de tareas
 
-Un módulo de tareas es una experiencia modal de tipo popup que se puede desencadenar desde la ficha. Por lo general, en una página de contenido no desea desplazarse al usuario a través de varias páginas. En su lugar, usará módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento en una lista o cualquier otro momento en que necesite presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o crearse completamente mediante tarjetas adaptables. Consulte [uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md) para obtener información completa.
+Un módulo de tareas es una experiencia emergente modal que se puede desencadenar desde la pestaña. Normalmente, en una página de contenido no desea navegar por el usuario a través de varias páginas. En su lugar, usará módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento en una lista o en cualquier otro momento que necesite presentar al usuario información adicional. Los módulos de tareas pueden ser páginas de contenido adicionales o crearse completamente con tarjetas adaptables. Consulte [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md) para obtener información completa.
 
 ### <a name="valid-domains"></a>Dominios válidos
 
-Asegúrese de que todos los dominios de dirección URL usados en las pestañas se incluyen en la `validDomains` matriz del [manifiesto](~/concepts/build-and-test/apps-package.md). Para obtener más información, vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en la referencia del esquema del manifiesto. Sin embargo, tenga en cuenta que la funcionalidad principal de su pestaña existe en Microsoft Teams y no fuera de Microsoft Teams.
+Asegúrese de que todos los dominios url usados en las pestañas se incluyen en la `validDomains` matriz del [manifiesto](~/concepts/build-and-test/apps-package.md). Para obtener más información, [vea validDomains](~/resources/schema/manifest-schema.md#validdomains) en la referencia del esquema de manifiesto. Sin embargo, tenga en cuenta que la funcionalidad principal de la pestaña existe dentro de Teams y no fuera de Teams.
+
+## <a name="reorder-static-personal-tabs"></a>Reordenar pestañas personales estáticas
+
+A partir de la versión 1.7 del manifiesto, los desarrolladores pueden reorganizar todas las pestañas de su aplicación personal. En concreto, un desarrollador puede mover la pestaña de chat del *bot,* que siempre se sitúa de forma predeterminada en la primera posición, en cualquier lugar del encabezado de pestaña de la aplicación personal. Hemos declarado dos palabras clave entityId de pestaña reservadas, *conversaciones* y *acerca de*.
+
+Si creas un bot con un *ámbito personal,* aparecerá en la primera posición de pestaña de una aplicación personal de forma predeterminada. Si desea moverlo a otra posición, debe agregar un objeto tab estático al manifiesto con la palabra clave reservada, *conversaciones*. La *pestaña de* conversación aparece en la web o en el escritorio en función de dónde agregue la pestaña *de* conversación en la `staticTabs` matriz. 
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
 
 ## <a name="show-a-native-loading-indicator"></a>Mostrar un indicador de carga nativo
 
-Comenzando con [el esquema de manifiesto v 1.7](../../../resources/schema/manifest-schema.md), puede proporcionar un [indicador de carga nativo](../../../resources/schema/manifest-schema.md#showloadingindicator) siempre que el contenido web se cargue en Microsoft Teams, por ejemplo, [Página de contenido](#integrate-your-code-with-teams)de la ficha, página de [configuración](configuration-page.md), [Página de eliminación](removal-page.md) y [módulos de tareas en las pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+A partir del esquema de manifiesto [v1.7,](../../../resources/schema/manifest-schema.md)puede proporcionar un indicador de carga nativo donde se cargue el contenido web en Teams, por [ejemplo,](#integrate-your-code-with-teams)página de contenido de [pestaña,](configuration-page.md)página de [configuración,](removal-page.md) página de eliminación y módulos de tareas en [pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md). [](../../../resources/schema/manifest-schema.md#showloadingindicator)
 
 > [!NOTE]
-> 1. El indicador de carga nativa todavía no se admite en dispositivos móviles.
-> 2. Si indica  `"showLoadingIndicator : true`  en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de la ficha y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a continuación:
+> 1. El indicador de carga nativa aún no es compatible con dispositivos móviles.
+> 2. Si indicas en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de pestañas y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a  `"showLoadingIndicator : true`  continuación:
 
 
 1. Para mostrar el indicador de carga, agregue `"showLoadingIndicator": true` al manifiesto. 
-2. Recuerde que debe llamar a `microsoftTeams.initialize();` .
-3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar perezosos el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga mediante una llamada a `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatorio**. Por último, llame `microsoftTeams.appInitialization.notifySuccess()` a para notificar a los equipos que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama a en el plazo de 30 segundos, se asumirá que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
-5. Si la aplicación no se puede cargar, puede llamar `microsoftTeams.appInitialization.notifyFailure(reason);` para informar a Microsoft Teams de que se ha producido un error. A continuación, se mostrará una pantalla de error al usuario:
+2. Recuerde llamar `microsoftTeams.initialize();` a .
+3. **Opcional**. Si está listo para imprimir en la pantalla y desea cargar de forma diferida el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga llamando a `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatorio**. Por último, llama `microsoftTeams.appInitialization.notifySuccess()` para notificar a Teams que la aplicación se ha cargado correctamente. Teams ocultará el indicador de carga si procede. Si  `notifySuccess`  no se llama en 30 segundos, se supone que la aplicación ha pasado el tiempo de espera y aparecerá una pantalla de error con una opción de reintento.
+5. Si la aplicación no se carga, puede llamar para que `microsoftTeams.appInitialization.notifyFailure(reason);` Teams sepa que hubo un error. A continuación, se mostrará al usuario una pantalla de error:
 
 ```typescript
 ``

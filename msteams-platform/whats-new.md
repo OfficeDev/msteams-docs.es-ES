@@ -3,12 +3,12 @@ title: Novedades
 description: Describe todas las nuevas características de desarrollador en Microsoft Teams
 ms.topic: reference
 keywords: teams what's new latest
-ms.openlocfilehash: c8271a1d3cd442301016874fbb364b697c4f7c73
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
+ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455388"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50479860"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores de Microsoft Teams
 
@@ -21,6 +21,9 @@ El registro de cambios enumera los cambios realizados en la plataforma de Micros
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
+|03/05/2021 | El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|Reordenar pestañas de aplicaciones personales|[Reordenar la pestaña de chat en aplicaciones personales](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|El enmascaramiento de información en tarjetas adaptables se encuentra en la vista previa del desarrollador.| [Enmascaramiento de información en tarjetas adaptables](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Nuevo: Se agregaron funcionalidades de ubicación. <br/> Actualización: la información sobre las capacidades de ubicación se agrega en la información general sobre las capacidades del dispositivo, los permisos de dispositivo nativos, la integración de capacidades multimedia y los archivos de funcionalidad de escáner de códigos de barras o QR.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Nuevo: Se agregó la funcionalidad de escáner de códigos QR o de código de barras. <br/> Actualización: la información sobre la funcionalidad del escáner de códigos de barras o QR se agrega en la información general sobre las capacidades del dispositivo, los permisos de dispositivo nativos y los archivos de capacidades multimedia.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
