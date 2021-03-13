@@ -5,12 +5,12 @@ description: Describe cómo la eliminación de márgenes de tabulación mejorar�
 keywords: tab removing margins padding
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: 87766a40730fdaa2da80c2e0031eab655a993c33
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: 57e6b15999ffc41c0a3e09897ba565f9b3bf3705
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479964"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753521"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -26,7 +26,7 @@ La eliminación de los márgenes alrededor de todas las pestañas permitirá a l
 
 ## <a name="guidelines"></a>Instrucciones
 
-Las aplicaciones de Microsoft Teams que usan pestañas se verán afectadas por este cambio. Los desarrolladores deben cambiar [a Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) para determinar cómo se ven afectadas sus pestañas y realizar los cambios necesarios.
+Las aplicaciones de Microsoft Teams que usan pestañas se verán afectadas por este cambio. Los desarrolladores deben cambiar a [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) para determinar cómo se ven afectadas sus pestañas y realizar los cambios necesarios.
 
 Los desarrolladores de pestañas no deben depender de Teams para proporcionar márgenes alrededor de sus pestañas. Se recomienda a los desarrolladores que agreguen márgenes alrededor de sus diseños de pestañas cuando sea necesario. Los diseños de aplicaciones en producción pueden parecer que hay un relleno adicional, es decir, los márgenes proporcionados por Teams y los márgenes proporcionados por la pestaña. Sin embargo, el relleno adicional es solo temporal y desaparecerá en unas semanas, dejando solo el relleno proporcionado por la aplicación.
 

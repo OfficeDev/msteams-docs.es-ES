@@ -3,12 +3,12 @@ title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio de bots de Azure con la compatibilidad con la tarjeta OAuth.
 keywords: token, token de usuario, compatibilidad con SSO para bots
 ms.topic: conceptual
-ms.openlocfilehash: a023c232186ce855c0b262f8cb535ec9d05db95a
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449489"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753535"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -82,7 +82,7 @@ Los pasos para registrar la aplicación a través del portal de AAD son similare
     >
     > Debe tener en cuenta las siguientes restricciones importantes:
     >
-    > * Solo se admiten permisos de api de Microsoft Graph de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita acceso a otros ámbitos de Microsoft Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
+    > * Solo se admiten permisos de api de Microsoft Graph de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita acceso a otros ámbitos de Microsoft Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes).
     > * El nombre de dominio de la aplicación debe ser el mismo que el nombre de dominio que se ha registrado para la aplicación de AAD.
     > * Actualmente, no se admiten varios dominios por aplicación.
     > * Las aplicaciones que usan `azurewebsites.net` el dominio no se admiten porque es común y pueden ser un riesgo de seguridad.
@@ -95,7 +95,7 @@ Siga estos pasos para actualizar Azure Portal con la conexión de OAuth:
 
 2. Vaya a **Permisos de API**. Seleccione **Agregar permisos delegados** de Microsoft Graph y, a continuación,  >    >  agregue los siguientes permisos de la API de Microsoft Graph:
     * User.Read (habilitado de forma predeterminada)
-    * correo electrónico
+    * email
     * offline_access
     * OpenId
     * perfil

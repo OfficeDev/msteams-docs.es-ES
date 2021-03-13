@@ -3,17 +3,17 @@ title: Novedades
 description: Describe todas las nuevas características de desarrollador en Microsoft Teams
 ms.topic: reference
 keywords: teams what's new latest
-ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479860"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753549"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores de Microsoft Teams
 
 >[!TIP]
-> Consulte nuestras plantillas listas para producción en el catálogo [**plantillas de aplicaciones de Teams.**](samples/app-templates.md) El catálogo está alfabético y las adiciones más nuevas se etiquetan con una estrella **&#9734;**.
+> Echa un vistazo a soluciones de ejemplo para escenarios de equipo comunes en el catálogo [**de plantillas de aplicación de Teams.**](samples/app-templates.md) El catálogo está alfabético y las adiciones más nuevas se etiquetan con una estrella ..
 
 ## <a name="change-log"></a>Registro de cambios
 
