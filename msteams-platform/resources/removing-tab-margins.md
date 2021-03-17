@@ -5,12 +5,12 @@ description: Describe cómo la eliminación de márgenes de tabulación mejorar�
 keywords: tab removing margins padding
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: 57e6b15999ffc41c0a3e09897ba565f9b3bf3705
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753521"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827931"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -22,7 +22,7 @@ La eliminación de los márgenes alrededor de todas las pestañas permitirá a l
 ## <a name="timelines"></a>Escalas de tiempo
 
 * 5 de marzo de 2021: Márgenes eliminados en [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-* 1 de mayo de 2021: los márgenes se quitarán en producción.
+* 15 de junio de 2021: los márgenes se quitarán en producción.
 
 ## <a name="guidelines"></a>Instrucciones
 

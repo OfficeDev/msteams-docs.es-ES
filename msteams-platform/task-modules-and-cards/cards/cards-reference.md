@@ -1,29 +1,30 @@
 ---
 title: Referencia de tarjetas
 description: Describe todas las tarjetas y acciones de tarjeta disponibles para bots en Teams
-keywords: Referencia de tarjetas bots
+keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: 839430baa5ce5e8950a21a1472036c6fd96f4edf
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 5cb289738f379dedf53f3a96a7dcff61b908e901
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911899"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827938"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
-Las tarjetas enumeradas en esta sección son compatibles con bots para Microsoft Teams. Se basan en tarjetas definidas por Bot Framework, pero Teams no admite todas las tarjetas de Bot Framework y ha agregado algunas de sus propias tarjetas. Las diferencias se llaman en las referencias de este documento.
+Las tarjetas enumeradas en esta sección se admiten en bots para Microsoft Teams. Se basan en tarjetas definidas por Bot Framework, pero Teams no admite todas las tarjetas de Bot Framework y ha agregado algunas de sus propias. Las diferencias se llaman en las referencias de este documento.
 
 ## <a name="card-examples"></a>Ejemplos de tarjetas
 
-Puede encontrar información adicional sobre cómo usar tarjetas en la documentación del SDK de Bot Builder (v3). Los ejemplos de código también están disponibles en el repositorio de Microsoft/BotBuilder-Samples en GitHub.
+Encontrará información adicional sobre cómo usar tarjetas en la documentación del SDK de Bot Builder (v3). Los ejemplos de código también están disponibles en el repositorio de Microsoft/BotBuilder-Samples en GitHub.
 
 * .NET
-  * [Agregar tarjetas como datos adjuntos a los mensajes](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [Código de ejemplo de tarjetas (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/CSharp/cards-RichCards)
+  * [Agregar tarjetas como datos adjuntos a los mensajes](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+  * [Código de ejemplo de tarjetas (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+
 * Node.js
-  * [Agregar tarjetas como datos adjuntos a los mensajes](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [Código de ejemplo de tarjetas (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
+  * [Agregar tarjetas como datos adjuntos a los mensajes](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+  * [Código de ejemplo de tarjetas (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -32,23 +33,23 @@ En esta tabla se muestran los tipos de tarjetas disponibles:
 | Tipo de tarjeta | Description |
 | --- | --- |
 | [Tarjeta adaptable](#adaptive-card) | Tarjeta altamente personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. |
-| [Tarjeta principal](#hero-card) | Normalmente contiene una sola imagen grande, uno o más botones y una pequeña cantidad de texto. |
+| [Tarjeta de héroe](#hero-card) | Normalmente contiene una sola imagen grande, uno o varios botones y una pequeña cantidad de texto. |
 | [Tarjeta de lista](#list-card) | Una lista de desplazamiento de elementos. |
 | [Tarjeta de conector de Office 365](#office-365-connector-card) | Diseño flexible con varias secciones, campos, imágenes y acciones. |
-| [Tarjeta de recibo](#receipt-card) | Proporciona una confirmación al usuario. |
+| [Tarjeta de recibo](#receipt-card) | Proporciona un recibo al usuario. |
 | [Tarjeta de inicio de sesión](#signin-card) | Permite que un bot solicite que un usuario inicie sesión. |
-| [Tarjeta en miniatura](#thumbnail-card) | Normalmente contiene una sola imagen en miniatura, texto corto y uno o más botones. |
+| [Tarjeta miniatura](#thumbnail-card) | Normalmente contiene una sola imagen en miniatura, texto corto y uno o más botones. |
 | [Colecciones de tarjetas](#card-collections) | Se usa para devolver varios elementos en una sola respuesta. |
 
 ## <a name="common-properties-for-all-cards"></a>Propiedades comunes para todas las tarjetas
 
 ### <a name="inline-card-images"></a>Imágenes de tarjetas en línea
 
-La tarjeta puede contener una imagen en línea incluyendo un vínculo a la imagen disponible públicamente. Por motivos de rendimiento, se recomienda encarecidamente hospedar la imagen en una red de entrega de contenido (CDN) pública.
+La tarjeta puede contener una imagen en línea al incluir un vínculo a la imagen disponible públicamente. Por motivos de rendimiento, se recomienda hospedar la imagen en una red pública de entrega de contenido (CDN).
 
-Las imágenes se escalan hacia arriba o hacia abajo en tamaño mientras se mantiene la relación de aspecto para cubrir el área de la imagen y, a continuación, se recortan desde el centro para lograr la relación de aspecto adecuada para la tarjeta.
+Las imágenes se escalan hacia arriba o hacia abajo en tamaño mientras se mantiene la relación de aspecto para cubrir el área de imagen y, a continuación, recortadas desde el centro para lograr la relación de aspecto adecuada para la tarjeta.
 
-Las imágenes deben tener como máximo 1024×1024, en formato PNG, JPEG o GIF, y no se admite gif animado.
+Las imágenes deben tener como máximo 1024×1024, en formato PNG, JPEG o GIF, y gif animado no es compatible.
 
 | Propiedad | Tipo  | Description |
 | --- | --- | --- |
@@ -57,9 +58,9 @@ Las imágenes deben tener como máximo 1024×1024, en formato PNG, JPEG o GIF, y
 
 ### <a name="buttons"></a>Botones
 
-Los botones se muestran apilados en la parte inferior de la tarjeta. El texto del botón siempre está en una sola línea y se truncará si el texto supera el ancho del botón. No se mostrarán botones adicionales más allá del número máximo admitido por la tarjeta.
+Los botones se muestran apilados en la parte inferior de la tarjeta. El texto del botón siempre está en una sola línea y se truncará si el texto supera el ancho del botón. No se mostrarán los botones adicionales que supere el número máximo admitido por la tarjeta.
 
-Vea [Acciones de tarjeta](~/task-modules-and-cards/cards/cards-actions.md) para obtener más información.
+Consulta [Acciones de tarjeta](~/task-modules-and-cards/cards/cards-actions.md) para obtener más información.
 
 ### <a name="card-formatting"></a>Formato de tarjeta
 
@@ -67,7 +68,7 @@ Consulta [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.m
 
 ## <a name="adaptive-card"></a>Tarjeta adaptable
 
-Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. Consulta [tarjetas adaptables v1.2.0.](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)
+Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. Vea [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Compatibilidad con tarjetas adaptables
 
@@ -76,8 +77,8 @@ Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * La plataforma de Teams admite la versión 1.2 o anterior de las características de tarjeta adaptable.
-> * Actualmente, los elementos multimedia no se admiten en la tarjeta adaptable v1.2 en la plataforma teams.
+> * La plataforma de Teams admite v1.2 o versiones anteriores de características de tarjeta adaptable.
+> * Actualmente, los elementos multimedia no se admiten en la tarjeta adaptable v1.2 en la plataforma de Teams.
 
 ### <a name="example-of-an-adaptive-card"></a>Ejemplo de una tarjeta adaptable
 
@@ -218,33 +219,35 @@ Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier
 
 #### <a name="additional-information-on-adaptive-cards"></a>Información adicional sobre tarjetas adaptables
 
-* [Introducción a las tarjetas adaptables](/adaptive-cards/)
-* [Acciones de tarjeta adaptable en Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+Referencia de Bot Framework:
 
-## <a name="hero-card"></a>Tarjeta principal
+* [Nodo de tarjetas adaptables](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Tarjeta adaptable C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
-Una tarjeta que normalmente contiene una sola imagen grande, uno o más botones y texto.
+## <a name="hero-card"></a>Tarjeta de héroe
 
-### <a name="support-for-hero-cards"></a>Compatibilidad con tarjetas de imagen principal
+Una tarjeta que normalmente contiene una sola imagen grande, uno o varios botones y texto.
+
+### <a name="support-for-hero-cards"></a>Compatibilidad con tarjetas de héroe
 
 | Bots en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-### <a name="properties-of-a-hero-card"></a>Propiedades de una tarjeta principal
+### <a name="properties-of-a-hero-card"></a>Propiedades de una tarjeta de héroe
 
 | Propiedad | Tipo  | Description |
 | --- | --- | --- |
 | title | Texto enriquecido  | Título de la tarjeta. Máximo de 2 líneas. |
 | subtitle | Texto enriquecido  | Subtítulo de la tarjeta. Máximo de 2 líneas.|
-| text | Texto enriquecido  | El texto aparece justo debajo del subtítulo; vea [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) obtener más información sobre las opciones de formato. |
-| imágenes | Matriz de imágenes | Imagen que se muestra en la parte superior de la tarjeta. Relación de aspecto 16:9. |
+| text | Texto enriquecido  | El texto aparece debajo del subtítulo; vea [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) las opciones de formato. |
+| imágenes | Matriz de imágenes | Imagen mostrada en la parte superior de la tarjeta. Relación de aspecto 16:9. |
 | botones | Matriz de objetos de acción | Conjunto de acciones aplicables a la tarjeta actual. Máximo 6. |
 | pulsación | Action (objeto) | Esta acción se activará cuando el usuario pulse en la propia tarjeta. |
 
-### <a name="example-of-a-hero-card"></a>Ejemplo de una tarjeta principal
+### <a name="example-of-a-hero-card"></a>Ejemplo de una tarjeta de héroe
 
-![Ejemplo de una tarjeta principal](~/assets/images/cards/hero.png)
+![Ejemplo de una tarjeta de héroe](~/assets/images/cards/hero.png)
 
 ```json
 {
@@ -275,16 +278,16 @@ Una tarjeta que normalmente contiene una sola imagen grande, uno o más botones 
 
 ```
 
-### <a name="additional-information-on-hero-cards"></a>Información adicional sobre las tarjetas de identificación principal
+### <a name="additional-information-on-hero-cards"></a>Información adicional sobre tarjetas de héroe
 
 Referencia de Bot Framework:
 
-* [Nodo de tarjeta principal](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Tarjeta principal C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Nodo de tarjeta de héroe](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Tarjeta de héroe C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>Tarjeta de lista
 
-Teams ha agregado la tarjeta de lista para proporcionar funciones más allá de lo que puede proporcionar la colección de listas. La tarjeta de lista proporciona una lista de elementos de desplazamiento.
+Teams ha agregado la tarjeta de lista para proporcionar funciones más allá de lo que la colección de listas puede proporcionar. La tarjeta de lista proporciona una lista de desplazamiento de elementos.
 
 ### <a name="support-for-list-cards"></a>Compatibilidad con tarjetas de lista
 
@@ -356,7 +359,7 @@ Teams ha agregado la tarjeta de lista para proporcionar funciones más allá de 
 
 ## <a name="office-365-connector-card"></a>Tarjeta de conector de Office 365
 
-La tarjeta del conector de Office 365 se admite en Teams, no en Bot Framework. Esta tarjeta proporciona un diseño flexible con varias secciones, campos, imágenes y acciones. Esta tarjeta encapsula una tarjeta de conector para que la puedan usar los bots. Vea la sección de notas para ver las diferencias entre las tarjetas de conector y la tarjeta O365.
+La tarjeta del conector de Office 365 se admite en Teams, no en Bot Framework. Esta tarjeta proporciona un diseño flexible con varias secciones, campos, imágenes y acciones. Esta tarjeta encapsula una tarjeta de conector para que la puedan usar los bots. Consulta la sección notas para ver las diferencias entre las tarjetas de conector y la tarjeta O365.
 
 ### <a name="support-for-office-365-connector-cards"></a>Compatibilidad con tarjetas de conector de Office 365
 
@@ -370,12 +373,12 @@ La tarjeta del conector de Office 365 se admite en Teams, no en Bot Framework. E
 | --- | --- | --- |
 | title | Texto enriquecido  | Título de la tarjeta. Máximo de 2 líneas. |
 | summary | Texto enriquecido  | Resumen de la tarjeta. Máximo de 2 líneas. |
-| text | Texto enriquecido  | El texto aparece justo debajo del subtítulo; vea [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) obtener más información sobre las opciones de formato. |
+| text | Texto enriquecido  | El texto aparece debajo del subtítulo; vea [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) las opciones de formato. |
 | themeColor | Cadena HEX | Color que reemplaza el accentColor proporcionado desde el manifiesto de la aplicación. |
 
-### <a name="notes-on-the-office-365-connector-card"></a>Notas en la tarjeta de conector de Office 365
+### <a name="notes-on-the-office-365-connector-card"></a>Notas sobre la tarjeta de conector de Office 365
 
-Las tarjetas de conector de Office 365 funcionan correctamente en Microsoft Teams, incluidas [las acciones actionCard](/outlook/actionable-messages/card-reference#actioncard-action).
+Las tarjetas de conector de Office 365 funcionan correctamente en Microsoft Teams, incluidas [las acciones actioncard](/outlook/actionable-messages/card-reference#actioncard-action).
 
 Una diferencia importante entre el uso de tarjetas de conector desde un conector y el uso de tarjetas de conector en el bot es el control de las acciones de tarjeta.
 
@@ -389,7 +392,7 @@ Cada tarjeta de conector puede mostrar un máximo de 10 secciones y cada secció
 
 Todos los campos de texto admiten Markdown y HTML. Puede controlar qué secciones usan Markdown o HTML estableciendo la `markdown` propiedad en un mensaje. De forma predeterminada, `markdown` se establece en ; si desea usar HTML en su `true` lugar, establezca en `markdown` `false` .
 
-Si especificas la `themeColor` propiedad, esta invalida la `accentColor` propiedad en el manifiesto de la aplicación.
+Si especifica la `themeColor` propiedad, invalida la `accentColor` propiedad en el manifiesto de la aplicación.
 
 Para especificar el estilo de representación `activityImage` para , puede establecer lo `activityImageType` siguiente:
 
@@ -398,11 +401,11 @@ Para especificar el estilo de representación `activityImage` para , puede estab
 | `avatar` | Valor predeterminado; `activityImage` se recortará como un círculo. |
 | `article` | `activityImage` se mostrará como un rectángulo y conservará su relación de aspecto. |
 
-Para obtener todos los demás detalles acerca de las propiedades de la tarjeta de conector, vea la [referencia de tarjeta de mensaje que puede acción.](/outlook/actionable-messages/card-reference) Las únicas propiedades de tarjeta de conector que Microsoft Teams no admite actualmente son las siguientes:
+Para obtener todos los demás detalles acerca de las propiedades de la tarjeta de conector, consulte [referencia de tarjeta de mensaje de acción.](/outlook/actionable-messages/card-reference) Las únicas propiedades de tarjeta de conector que Microsoft Teams no admite actualmente son las siguientes:
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup` (siempre se trata como `true` en Teams)
+* `startGroup` (siempre tratado como `true` en Teams)
 * `originator`
 * `correlationId`
 
@@ -471,7 +474,7 @@ Para obtener todos los demás detalles acerca de las propiedades de la tarjeta d
 
 ## <a name="receipt-card"></a>Tarjeta de recibo
 
-Teams admite la tarjeta de recibo. Es una tarjeta que permite a un bot proporcionar un recibo al usuario. Normalmente contiene la lista de elementos que se deben incluir en el recibo, como los impuestos y la información total.
+Teams admite tarjeta de recibo. Es una tarjeta que permite a un bot proporcionar un recibo al usuario. Normalmente contiene la lista de elementos que se deben incluir en el recibo, como impuestos y la información total.
 
 ### <a name="support-for-receipt-cards"></a>Compatibilidad con tarjetas de recibo
 
@@ -530,18 +533,18 @@ Teams admite la tarjeta de recibo. Es una tarjeta que permite a un bot proporcio
 }
 ```
 
-### <a name="additional-information-on-receipt-cards"></a>Información adicional sobre las tarjetas de recibo
+### <a name="additional-information-on-receipt-cards"></a>Información adicional sobre tarjetas de recibo
 
 Referencia de Bot Framework:
 
-* [Nodo de tarjeta de recibo](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Tarjeta de recibo C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Nodo de tarjeta de recibo](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Tarjeta de recibo C #](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="signin-card"></a>Tarjeta de inicio de sesión
 
-La tarjeta de inicio de sesión permite a un bot solicitar a un usuario que inicie sesión. Se admite en Teams de una forma ligeramente diferente a la que se encuentra en Bot Framework. La tarjeta de inicio de sesión en Teams es similar a la tarjeta de inicio de sesión en Bot Framework, excepto que la tarjeta de inicio de sesión en Teams solo admite dos acciones: `signin` y `openUrl` .
+La tarjeta de inicio de sesión permite que un bot solicite a un usuario que inicie sesión. Se admite en Teams de una forma ligeramente diferente a la que se encuentra en Bot Framework. La tarjeta de inicio de sesión en Teams es similar a la tarjeta de inicio de sesión en Bot Framework, excepto que la tarjeta de inicio de sesión en Teams solo admite dos `signin` acciones: y `openUrl` .
 
-La *acción de inicio de* sesión se puede usar desde cualquier tarjeta de Teams, no solo desde la tarjeta de inicio de sesión. Para obtener más información sobre la autenticación, vea [el flujo de autenticación de Microsoft Teams para bots.](~/bots/how-to/authentication/auth-flow-bot.md)
+La **acción de inicio de** sesión se puede usar desde cualquier tarjeta de Teams, no solo desde la tarjeta de inicio de sesión. Para obtener más información sobre la autenticación, vea [Flujo de autenticación de Microsoft Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### <a name="support-for-signin-cards"></a>Compatibilidad con tarjetas de inicio de sesión
 
@@ -549,16 +552,16 @@ La *acción de inicio de* sesión se puede usar desde cualquier tarjeta de Teams
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
-### <a name="additional-information-on-signin-cards"></a>Información adicional sobre las tarjetas de inicio de sesión
+### <a name="additional-information-on-signin-cards"></a>Información adicional sobre tarjetas de inicio de sesión
 
 Referencia de Bot Framework:
 
 * [Nodo de tarjeta de inicio de sesión](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [Tarjeta de inicio de sesión C #](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Tarjeta de inicio de sesión C #](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## <a name="thumbnail-card"></a>Tarjeta en miniatura
+## <a name="thumbnail-card"></a>Tarjeta miniatura
 
-Una tarjeta que normalmente contiene una sola imagen en miniatura, uno o más botones y texto.
+Una tarjeta que normalmente contiene una sola imagen en miniatura, uno o varios botones y texto.
 
 ### <a name="support-for-thumbnail-cards"></a>Compatibilidad con tarjetas en miniatura
 
@@ -574,8 +577,8 @@ Una tarjeta que normalmente contiene una sola imagen en miniatura, uno o más bo
 | --- | --- | --- |
 | title | Texto enriquecido  | Título de la tarjeta. Máximo de 2 líneas.|
 | subtitle | Texto enriquecido  | Subtítulo de la tarjeta. Máximo de 2 líneas.|
-| text | Texto enriquecido  | El texto aparece justo debajo del subtítulo; vea [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) obtener más información sobre las opciones de formato. |
-| imágenes | Matriz de imágenes | Imagen que se muestra en la parte superior de la tarjeta. Relación de aspecto 1:1 (cuadrado). |
+| text | Texto enriquecido  | El texto aparece debajo del subtítulo; vea [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) las opciones de formato. |
+| imágenes | Matriz de imágenes | Imagen mostrada en la parte superior de la tarjeta. Relación de aspecto 1:1 (cuadrado). |
 | botones | Matriz de objetos de acción | Conjunto de acciones aplicables a la tarjeta actual. Máximo 6. |
 | pulsación | Action (objeto) | Esta acción se activará cuando el usuario pulse en la propia tarjeta. |
 
@@ -626,18 +629,18 @@ Una tarjeta que normalmente contiene una sola imagen en miniatura, uno o más bo
 
 Referencia de Bot Framework:
 
-* [Nodo de tarjeta en miniatura](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Tarjeta en miniatura C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Nodo de tarjeta de miniatura](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Tarjeta de miniatura C #](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="card-collections"></a>Colecciones de tarjetas
 
 Teams admite colecciones de tarjetas.
 
-Colecciones de tarjetas: `builder.AttachmentLayout.carousel` y `builder.AttachmentLayout.list` . Estas colecciones contienen tarjetas adaptables, de imagen principal o en miniatura.
+Colecciones de tarjetas: `builder.AttachmentLayout.carousel` y `builder.AttachmentLayout.list` . Estas colecciones contienen tarjetas adaptables, de héroe o en miniatura.
 
-## <a name="carousel-collection"></a>Carrusel (colección)
+## <a name="carousel-collection"></a>Colección Carousel
 
-El [diseño de carrusel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) muestra un carrusel de tarjetas, opcionalmente con botones de acción asociados.
+El [diseño del carrusel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) muestra un carrusel de tarjetas, opcionalmente con botones de acción asociados.
 
 ### <a name="support-for-carousel-collections"></a>Compatibilidad con colecciones de carrusel
 
@@ -650,7 +653,7 @@ El [diseño de carrusel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-c
 
 ### <a name="properties-of-a-carousel-card"></a>Propiedades de una tarjeta de carrusel
 
-Las propiedades de una tarjeta de carrusel son las mismas que las de las tarjetas Hero y Thumbnail.
+Las propiedades de una tarjeta carrusel son las mismas que las de las tarjetas Hero y Thumbnail.
 
 ### <a name="example-of-a-carousel-collection"></a>Ejemplo de una colección de carrusel
 
@@ -825,11 +828,11 @@ Las propiedades de una tarjeta de carrusel son las mismas que las de las tarjeta
 
 `builder.AttachmentLayoutTypes.Carousel`
 
-## <a name="list-collection"></a>Colección de listas
+## <a name="list-collection"></a>Colección List
 
 ### <a name="support-for-list-collections"></a>Compatibilidad con colecciones de listas
 
-El diseño de lista muestra una lista apilada verticalmente de tarjetas, opcionalmente con botones de acción asociados.
+El diseño de lista muestra una lista verticalmente apilada de tarjetas, opcionalmente con botones de acción asociados.
 
 | Bots en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
@@ -839,12 +842,12 @@ El diseño de lista muestra una lista apilada verticalmente de tarjetas, opciona
 
 ![Ejemplo de una lista de tarjetas](~/assets/images/cards/list.png)
 
-Las propiedades son las mismas que para la tarjeta principal o en miniatura.
+Las propiedades son las mismas que para la tarjeta de miniatura o de héroe.
 
 Una lista puede mostrar un máximo de 10 tarjetas por mensaje.
 
 > [!NOTE]
-> Algunas combinaciones de tarjetas de lista aún no se admiten en iOS y Android.
+> Algunas combinaciones de tarjetas de lista aún no son compatibles con iOS y Android.
 
 ### <a name="syntax-for-list-collections"></a>Sintaxis para colecciones de listas
 
@@ -852,7 +855,7 @@ Una lista puede mostrar un máximo de 10 tarjetas por mensaje.
 
 ## <a name="cards-not-supported-in-teams"></a>Tarjetas no admitidas en Teams
 
-Bot Framework implementa las siguientes tarjetas, pero Teams no las admite.
+Teams no admite las siguientes tarjetas.
 
 * Tarjetas de animación
 * Tarjetas de audio
