@@ -5,12 +5,12 @@ description: cómo crear una página de contenido
 keywords: Canal de grupo de pestañas de teams configurable estático
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c33f58197e8b49ac7122178e154724cc5186bcb1
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479875"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034701"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -28,7 +28,7 @@ El objetivo general de la pestaña debe ser proporcionar acceso a contenido sign
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar el código con Teams
 
-Para que la página se muestre en Teams, debe incluir el SDK de cliente [de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) de Microsoft Teams e incluir una llamada después `microsoftTeams.initialize()` de que se cargue la página. Así se comunican su página y el cliente de Teams:
+Para que la página se muestre en Teams, debe incluir el SDK de cliente [de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) de Microsoft Teams e incluir una llamada después `microsoftTeams.initialize()` de que se cargue la página. Así se comunican su página y el cliente de Teams:
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +93,7 @@ Si creas un bot con un *ámbito personal,* aparecerá en la primera posición de
 A partir del esquema de manifiesto [v1.7,](../../../resources/schema/manifest-schema.md)puede proporcionar un indicador de carga nativo donde se cargue el contenido web en Teams, por [ejemplo,](#integrate-your-code-with-teams)página de contenido de [pestaña,](configuration-page.md)página de [configuración,](removal-page.md) página de eliminación y módulos de tareas en [pestañas](../../../task-modules-and-cards/task-modules/task-modules-tabs.md). [](../../../resources/schema/manifest-schema.md#showloadingindicator)
 
 > [!NOTE]
-> 1. El indicador de carga nativa aún no es compatible con dispositivos móviles.
+> 1. El comportamiento de los clientes móviles no se puede configurar a través de esta propiedad de manifiesto. Los clientes móviles muestran un indicador de carga nativo de forma predeterminada en las páginas de contenido y los módulos de tareas basados en iframe. Este indicador en el móvil se muestra cuando se realiza una solicitud para capturar contenido y se descarta en cuanto se completa la solicitud.
 > 2. Si indicas en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de pestañas y todos los módulos de tareas basados en iframe deben seguir el protocolo obligatorio, a  `"showLoadingIndicator : true`  continuación:
 
 

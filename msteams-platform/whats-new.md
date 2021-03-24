@@ -3,12 +3,12 @@ title: Novedades
 description: Describe todas las nuevas características de desarrollador en Microsoft Teams
 ms.topic: reference
 keywords: teams what's new latest
-ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e166cbed4b8fb7849cee71d75fa1751b23da3df2
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753549"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034729"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores de Microsoft Teams
 
@@ -21,6 +21,7 @@ El registro de cambios enumera los cambios realizados en la plataforma de Micros
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|03/18/2021|Aviso: **Actualice a la versión 4.10** o posterior del SDK de Bot Framework tal como hemos empezado con el proceso de desuso para y `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 |03/05/2021 | El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |03/05/2021|Reordenar pestañas de aplicaciones personales|[Reordenar la pestaña de chat en aplicaciones personales](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|

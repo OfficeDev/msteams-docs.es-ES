@@ -4,12 +4,12 @@ author: laujan
 description: Información general sobre las pestañas personalizadas en la plataforma de Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: af6d0a87fbbb87ae4abf09a2ff53319299f452df
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449223"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034652"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>¿Qué son las pestañas de Microsoft Teams?
 
@@ -57,16 +57,16 @@ Puedes tener un máximo de una (1) pestaña canal/grupo y hasta dieciséis (16) 
 
 Si decide que la pestaña canal o grupo aparezca en los clientes móviles de Teams, la configuración `setSettings()` debe tener un valor para la `websiteUrl` propiedad. Para garantizar una experiencia de usuario óptima, debe seguir las instrucciones para las [pestañas](~/tabs/design/tabs-mobile.md) en el móvil al crear las pestañas. Las aplicaciones [distribuidas a través de Appsource](~/concepts/deploy-and-publish/appsource/publish.md) tienen un proceso de aprobación independiente para clientes móviles. El comportamiento predeterminado de estas aplicaciones es el siguiente:
 
-| **Funcionalidad de la aplicación** | **Comportamiento si la aplicación está aprobada** | **Comportamiento si la aplicación no está aprobada** |
-| --- | --- | --- |
-| **Pestañas estáticas** | La aplicación aparece en la barra inferior de los clientes móviles. Las pestañas se abren en el cliente de Teams. | La aplicación no aparece en la barra inferior de los clientes móviles. |
-| **Pestañas configurables** | La pestaña se abre en el cliente de Teams mediante `contentUrl` . | La pestaña se abre en un explorador fuera del cliente de Teams mediante `websiteUrl` . |
+| **Tipo de tabulación** | **Comportamiento de la aplicación si está optimizada para clientes móviles** | **Comportamiento de la aplicación si no está optimizada para clientes móviles** |
+|:-----|:-----|:-----|
+| **Pestañas estáticas** o **pestañas personales**|La aplicación aparece en la barra inferior de los clientes móviles. Las pestañas se abren en una vista web desde la aplicación dentro del cliente de Teams. | La aplicación no aparece en clientes móviles. |
+| **Pestañas configurables** | Las pestañas se abren en una vista web desde la aplicación dentro del cliente de Teams mediante `contentUrl` el . | Si selecciona **Tab,** se abre el contenido con `websiteUrl` el explorador web predeterminado del dispositivo. |
 
 
->[!NOTE]
+> [!NOTE]
 >
->- El comportamiento predeterminado de las aplicaciones solo es aplicable si se distribuyen a través de la tienda de Teams (AppSource). No hay ningún proceso de aprobación para las aplicaciones distribuidas a través de otros [métodos de distribución.](~/concepts/deploy-and-publish/overview.md) De forma predeterminada, todas las pestañas se abren en el cliente de Teams.
->- Para iniciar una evaluación de la aplicación para la facilidad de uso móvil, teamsubm@microsoft.com con los detalles de la aplicación.
+> * [Las aplicaciones enviadas a AppSource para su publicación en Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) se evalúan automáticamente para la capacidad de respuesta móvil. Para cualquier consulta, llegue a teamsubm@microsoft.com.
+> * Para todas las aplicaciones que no se distribuyen a través de [AppSource](../concepts/deploy-and-publish/overview.md), las pestañas se abren en una vista web desde la aplicación dentro de los clientes de Teams de forma predeterminada y no se requiere ningún proceso de aprobación independiente.
 
 > [!div class="nextstepaction"]
 > [Más información: Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
