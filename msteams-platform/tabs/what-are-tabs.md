@@ -4,12 +4,12 @@ author: laujan
 description: Información general sobre las pestañas personalizadas en la plataforma de Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: d72d70ac97a7da427f22ef7e84c73f235dc395c6
+ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034652"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51176966"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>¿Qué son las pestañas de Microsoft Teams?
 
@@ -51,7 +51,7 @@ Independientemente de si elige exponer la pestaña dentro del ámbito de canal o
 
 Para las pestañas de canal o grupo, también debe crear una página de configuración adicional que permita a los usuarios configurar la dirección URL de la página de contenido, normalmente mediante parámetros de cadena de consulta url para cargar el contenido adecuado para ese contexto. Esto se debe a que la pestaña canal o grupo se puede agregar a varios equipos o chats de grupo diferentes. En cada instalación posterior, los usuarios podrán configurar la pestaña, lo que le permitirá adaptar la experiencia según sea necesario. Cuando los usuarios agregan o configuran una pestaña, se asocia una dirección URL a la pestaña que se presenta en la interfaz de usuario de Teams. Configurar una pestaña es simplemente agregar parámetros adicionales a esa dirección URL. Por ejemplo, cuando agrega la pestaña Azure Boards, la página de configuración le permite elegir qué placa se cargará la pestaña. La dirección URL de la página de configuración la especifica la  `configurationUrl` propiedad en la `configurableTabs` matriz del manifiesto de la aplicación.
 
-Puedes tener un máximo de una (1) pestaña canal/grupo y hasta dieciséis (16) pestañas personales por aplicación.
+Puedes tener varios canales o pestañas de grupo y hasta dieciséis pestañas personales por aplicación.
 
 ## <a name="mobile-clients"></a>Clientes móviles
 
