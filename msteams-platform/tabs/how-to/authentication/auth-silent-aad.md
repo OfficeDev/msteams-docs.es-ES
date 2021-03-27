@@ -3,12 +3,12 @@ title: Autenticación silenciosa
 description: Describe la autenticación silenciosa
 ms.topic: conceptual
 keywords: AAD silencioso de SSO de autenticación de teams
-ms.openlocfilehash: db8409cd4a6edface6d5dc3b3de6698852eaaa24
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449231"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382348"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 
@@ -67,7 +67,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Autenticar
 
-Si ADAL tiene un token no explorado almacenado en caché para el usuario, use el token. Como alternativa, intente obtener un token de forma silenciosa llamando a `acquireToken(resource, callback)` . ADAL.js llamará a la función de devolución de llamada con el token solicitado o dará un error si se produce un error en la autenticación.
+Si ADAL tiene un token almacenado en caché para el usuario que no ha expirado, use ese token. Como alternativa, intente obtener un token de forma silenciosa llamando a `acquireToken(resource, callback)` . ADAL.js llama a la función de devolución de llamada con el token solicitado o genera un error si se produce un error en la autenticación.
 
 Si recibe un error en la función de devolución de llamada, muestre un botón de inicio de sesión y vuelva a un inicio de sesión explícito.
 
@@ -116,5 +116,19 @@ if (authContext.isCallback(window.location.hash)) {
             microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
         }
     }
+}
+```
+
+### <a name="handle-sign-out-flow"></a>Controlar el flujo de salida
+
+Use el siguiente código para controlar el flujo de salida en AAD Auth:
+
+> [!NOTE]
+> Mientras se realiza el cierre de sesión de la pestaña o bot de Teams, también se borra la sesión actual.
+
+```javascript
+function logout() {
+localStorage.clear();
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```

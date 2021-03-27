@@ -3,12 +3,12 @@ title: Crear vínculos profundos al contenido
 description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: ec6357998c5d5aa60d0f512bf35514f8aa76a0ed
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753514"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378332"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Crear vínculos profundos al contenido y las características en Microsoft Teams
 
@@ -141,6 +141,23 @@ Los parámetros de consulta son:
 * `message`: un campo opcional para el texto del mensaje que desea insertar en el cuadro de redacción del usuario actual mientras el chat está en un estado de borrador.
 
 Para usar este vínculo profundo con el bot, puedes especificarlo como el destino de la dirección URL en el botón de la tarjeta o pulsar en la acción a través del `openUrl` tipo de acción.
+
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>Vínculos profundos para pestañas de SharePoint Framework
+
+El siguiente formato de vínculo profundo se puede usar en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> Cuando un bot envía un mensaje TextBlock con un vínculo profundo, se abre una nueva pestaña del explorador cuando los usuarios seleccionan el vínculo. Esto sucede en Chrome y la aplicación de escritorio de Microsoft Teams que se ejecuta en Linux.
+> Si el bot envía la misma dirección URL de vínculo profundo a un , la pestaña Teams se abre en el explorador actual cuando el usuario `Action.OpenUrl` selecciona el vínculo. No se abre ninguna nueva pestaña del explorador.
+
+Los parámetros de consulta son:
+
+* `appID` - Su identificador de **manifiesto fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `entityID` - El identificador de elemento que proporcionaste [al configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md). Por ejemplo, **tasklist123**.
+* `entityWebUrl` - Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña - https://tasklist.example.com/123 o https://tasklist.example.com/list123/task456 .
+* `entityName` - Una etiqueta para el elemento de la pestaña, que se usará al mostrar el vínculo profundo, la lista de tareas 123 o la tarea 456.
+
+Ejemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Vinculación al cuadro de diálogo de programación
 

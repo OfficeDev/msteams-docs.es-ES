@@ -5,12 +5,12 @@ description: cómo crear una página de configuración
 keywords: Canal de grupo de pestañas de teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b6da8437b6988f863288d77aedc1acb786c12d4b
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034687"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382379"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -22,7 +22,15 @@ Una página de configuración es un tipo especial de [página de contenido](cont
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuración de una pestaña de chat de grupo o canal
 
-La aplicación debe hacer referencia al [SDK de cliente javaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) de Microsoft Teams y llamar a `microsoft.initialize()` . Además, las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube. El siguiente código es un ejemplo de una página de configuración:
+La aplicación debe hacer referencia al [SDK de cliente javaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) de Microsoft Teams y llamar a `microsoft.initialize()` . Además, las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube. 
+
+### <a name="example"></a>Ejemplo
+
+En la siguiente imagen se muestra un ejemplo de una página de configuración: 
+
+<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+
+El código correspondiente para la página de configuración se muestra en la siguiente sección:
 
 ```html
 <head>
@@ -79,7 +87,17 @@ La aplicación debe hacer referencia al [SDK de cliente javaScript](/javascript/
 ...
 ```
 
-Elija seleccionar **el botón Gris** o **Seleccionar** rojo en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo. Elegir el botón relativo se desavoca `saveGray()` o , e invoca lo `saveRed()` siguiente:
+Elija seleccionar **el botón Gris** o **Seleccionar** rojo en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo. 
+
+La siguiente imagen muestra el contenido de la pestaña con el icono gris:
+
+<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+
+La siguiente imagen muestra el contenido de la pestaña con el icono rojo:
+
+<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+
+Elegir el botón relativo desencadena `saveGray()` o , e invoca lo `saveRed()` siguiente:
 
 1. Se `settings.setValidityState(true)` establece en true.
 1. Se `microsoftTeams.settings.registerOnSaveHandler()` desencadena el controlador de eventos.
