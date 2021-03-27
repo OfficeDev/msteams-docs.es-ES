@@ -4,12 +4,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
-ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
+ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50073092"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382334"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -132,10 +132,12 @@ La acción `ActionCard` admite tres tipos de entrada:
 
 Si quiere que se muestre inicialmente una lista de selección múltiple en el estilo compacto, debe especificar `"isMultiSelect": true` y `"style": true`.
 
+Para obtener más información sobre las acciones de tarjetas de conector, consulte **[Acciones]**(/outlook/actionable-messages/card-reference#actions) en la referencia de tarjeta de mensajes accionables.
+
 > [!NOTE]
 > Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.
-
-Para obtener más información sobre las acciones de la tarjeta conector, consulte **[Acciones](/outlook/actionable-messages/card-reference#actions)** en la referencia de la tarjeta de mensaje accionable.
+> 
+> Para la acción HttpPOST, el token de usuario se incluye con las solicitudes. Este token incluye la identidad de Azure AD del usuario de Office 365 que realizó la acción.
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configurar un webhook de entrada personalizado
 
