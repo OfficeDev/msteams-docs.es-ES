@@ -1,27 +1,27 @@
 ---
 title: Obtener el contexto específico del equipo para el bot
 author: laujan
-description: Cómo obtener el contexto específico del equipo de Microsoft para su bot, incluidos la lista de conversaciones, los detalles y la lista de canales.
+description: Cómo obtener el contexto específico de Microsoft Team para el bot, incluida la lista de conversaciones, los detalles y la lista de canales.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: dfbf5e1638a2397492714b1e1945721450428d63
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552475"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378339"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a><span data-ttu-id="1b483-103">Obtener el contexto específico del equipo para el bot</span><span class="sxs-lookup"><span data-stu-id="1b483-103">Get Team's specific context for your bot</span></span>
+# <a name="get-teams-specific-context-for-your-bot"></a><span data-ttu-id="a27df-103">Obtener el contexto específico del equipo para el bot</span><span class="sxs-lookup"><span data-stu-id="a27df-103">Get Team's specific context for your bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="1b483-104">Un bot puede tener acceso a datos de contexto adicionales sobre un equipo o un chat en los que está instalado.</span><span class="sxs-lookup"><span data-stu-id="1b483-104">A bot can access additional context data about a team or chat it is installed in.</span></span> <span data-ttu-id="1b483-105">Esta información puede usarse para enriquecer la funcionalidad del bot y proporcionar una experiencia más personalizada.</span><span class="sxs-lookup"><span data-stu-id="1b483-105">This information can be used to enrich the bot's functionality and provide a more personalized experience.</span></span>
+<span data-ttu-id="a27df-104">Un bot puede tener acceso a datos de contexto adicionales sobre un equipo o chat en el que está instalado.</span><span class="sxs-lookup"><span data-stu-id="a27df-104">A bot can access additional context data about a team or chat it is installed in.</span></span> <span data-ttu-id="a27df-105">Esta información se puede usar para enriquecer la funcionalidad del bot y proporcionar una experiencia más personalizada.</span><span class="sxs-lookup"><span data-stu-id="a27df-105">This information can be used to enrich the bot's functionality and provide a more personalized experience.</span></span>
 
-## <a name="fetching-the-roster-or-user-profile"></a><span data-ttu-id="1b483-106">Obtención de la lista o el perfil de usuario</span><span class="sxs-lookup"><span data-stu-id="1b483-106">Fetching the roster or user profile</span></span>
+## <a name="fetching-the-roster-or-user-profile"></a><span data-ttu-id="a27df-106">Recuperación de la lista o perfil de usuario</span><span class="sxs-lookup"><span data-stu-id="a27df-106">Fetching the roster or user profile</span></span>
 
-<span data-ttu-id="1b483-107">El bot puede consultar la lista de miembros y sus perfiles básicos, incluidos los identificadores de usuario de Microsoft Teams y la información de Azure Active Directory (Azure AD), como Name y objectId.</span><span class="sxs-lookup"><span data-stu-id="1b483-107">Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId.</span></span> <span data-ttu-id="1b483-108">Puede usar esta información para correlacionar identidades de usuario, por ejemplo, para comprobar si un usuario, conectado a una pestaña a través de las credenciales de Azure AD, es miembro del equipo.</span><span class="sxs-lookup"><span data-stu-id="1b483-108">You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team.</span></span> <span data-ttu-id="1b483-109">En el código de ejemplo siguiente se usa el punto de conexión paginado para recuperar la lista.</span><span class="sxs-lookup"><span data-stu-id="1b483-109">The sample code below uses the paged endpoint for retrieving the roster.</span></span> <span data-ttu-id="1b483-110">Para obtener los miembros de la conversación, el tamaño de página mínimo o máximo depende de la implementación.</span><span class="sxs-lookup"><span data-stu-id="1b483-110">For get conversation members, minimum or maximum page size depends on the implementation.</span></span> <span data-ttu-id="1b483-111">El tamaño de página es inferior a 50, se trata como 50 y el tamaño de página es mayor que 500, se retrasan en 500.</span><span class="sxs-lookup"><span data-stu-id="1b483-111">Page size less than 50, are treated as 50, and page size greater than 500, are capped at 500.</span></span> <span data-ttu-id="1b483-112">Aunque puede seguir usando la versión no paginada, no será confiable en equipos grandes y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="1b483-112">Although you may still use the non-paged version, it will be unreliable in large teams and should not be used.</span></span> <span data-ttu-id="1b483-113">*Consulte* [cambios en las API de bot de Teams para obtener información adicional sobre los miembros del equipo o chat](~/resources/team-chat-member-api-changes.md) .</span><span class="sxs-lookup"><span data-stu-id="1b483-113">*See* [Changes to Teams Bot APIs for Fetching Team/Chat Members](~/resources/team-chat-member-api-changes.md) for additional information.</span></span>
+<span data-ttu-id="a27df-107">El bot puede consultar la lista de miembros y sus perfiles básicos, incluidos los id. de usuario de Teams y la información de Azure Active Directory (Azure AD), como name y objectId.</span><span class="sxs-lookup"><span data-stu-id="a27df-107">Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId.</span></span> <span data-ttu-id="a27df-108">Puede usar esta información para correlacionar identidades de usuario, por ejemplo, para comprobar si un usuario, que ha iniciado sesión en una pestaña a través de credenciales de Azure AD, es miembro del equipo.</span><span class="sxs-lookup"><span data-stu-id="a27df-108">You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team.</span></span> <span data-ttu-id="a27df-109">El siguiente código de ejemplo usa el extremo paginado para recuperar la lista.</span><span class="sxs-lookup"><span data-stu-id="a27df-109">The sample code below uses the paged endpoint for retrieving the roster.</span></span> <span data-ttu-id="a27df-110">Para obtener miembros de conversación, el tamaño mínimo o máximo de la página depende de la implementación.</span><span class="sxs-lookup"><span data-stu-id="a27df-110">For get conversation members, minimum or maximum page size depends on the implementation.</span></span> <span data-ttu-id="a27df-111">El tamaño de página inferior a 50, se trata como 50 y el tamaño de página mayor que 500, se recorta en 500.</span><span class="sxs-lookup"><span data-stu-id="a27df-111">Page size less than 50, are treated as 50, and page size greater than 500, are capped at 500.</span></span> <span data-ttu-id="a27df-112">Aunque todavía puede usar la versión no paginada, no será confiable en equipos grandes y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="a27df-112">Although you may still use the non-paged version, it will be unreliable in large teams and should not be used.</span></span> <span data-ttu-id="a27df-113">*Consulta* Cambios en las API de [bots de Teams para obtener miembros de equipo o chat](~/resources/team-chat-member-api-changes.md) para obtener información adicional.</span><span class="sxs-lookup"><span data-stu-id="a27df-113">*See* [Changes to Teams Bot APIs for Fetching Team/Chat Members](~/resources/team-chat-member-api-changes.md) for additional information.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="1b483-114">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="1b483-114">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a27df-114">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a27df-114">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -42,7 +42,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="1b483-115">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="1b483-115">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="a27df-115">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a27df-115">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -68,7 +68,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="1b483-116">Python</span><span class="sxs-lookup"><span data-stu-id="1b483-116">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="a27df-116">Python</span><span class="sxs-lookup"><span data-stu-id="a27df-116">Python</span></span>](#tab/python)
 
 ```python
 async def _show_members(
@@ -77,9 +77,9 @@ async def _show_members(
     members = await TeamsInfo.get_team_members(turn_context)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="1b483-117">JSON</span><span class="sxs-lookup"><span data-stu-id="1b483-117">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a27df-117">JSON</span><span class="sxs-lookup"><span data-stu-id="a27df-117">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="1b483-118">Puede emitir directamente una solicitud GET `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` usando el valor de `serviceUrl` como punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="1b483-118">You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="1b483-119">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="1b483-119">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="1b483-120">Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="1b483-120">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="1b483-121">La carga de respuesta también indicará si el usuario es un usuario anónimo o normal.</span><span class="sxs-lookup"><span data-stu-id="1b483-121">The response payload will also indicate if the user is a regular or anonymous user.</span></span>
+<span data-ttu-id="a27df-118">Puede emitir directamente una solicitud GET en `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` , usando el valor de como punto de `serviceUrl` conexión.</span><span class="sxs-lookup"><span data-stu-id="a27df-118">You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="a27df-119">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="a27df-119">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="a27df-120">Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="a27df-120">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="a27df-121">La carga de respuesta también indicará si el usuario es un usuario normal o anónimo.</span><span class="sxs-lookup"><span data-stu-id="a27df-121">The response payload will also indicate if the user is a regular or anonymous user.</span></span>
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -120,11 +120,11 @@ Response body
 
 * * *
 
-## <a name="get-single-member-details"></a><span data-ttu-id="1b483-122">Obtener detalles de un solo miembro</span><span class="sxs-lookup"><span data-stu-id="1b483-122">Get single member details</span></span>
+## <a name="get-single-member-details"></a><span data-ttu-id="a27df-122">Obtener detalles de un solo miembro</span><span class="sxs-lookup"><span data-stu-id="a27df-122">Get single member details</span></span>
 
-<span data-ttu-id="1b483-123">También puede recuperar los detalles de un usuario concreto mediante su identificador de usuario de equipo, UPN o identificador de objeto de AAD.</span><span class="sxs-lookup"><span data-stu-id="1b483-123">You can also retrieve the details of a particular user using their Teams user Id, UPN, or AAD Object Id.</span></span>
+<span data-ttu-id="a27df-123">También puede recuperar los detalles de un usuario determinado con su id. de usuario de Teams, UPN o id. de objeto de AAD.</span><span class="sxs-lookup"><span data-stu-id="a27df-123">You can also retrieve the details of a particular user using their Teams user Id, UPN, or AAD Object Id.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="1b483-124">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="1b483-124">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a27df-124">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a27df-124">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -136,7 +136,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="1b483-125">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="1b483-125">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="a27df-125">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a27df-125">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -153,7 +153,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="1b483-126">Python</span><span class="sxs-lookup"><span data-stu-id="1b483-126">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="a27df-126">Python</span><span class="sxs-lookup"><span data-stu-id="a27df-126">Python</span></span>](#tab/python)
 
 ```python
 async def _show_members(
@@ -162,11 +162,11 @@ async def _show_members(
     member = TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="1b483-127">JSON</span><span class="sxs-lookup"><span data-stu-id="1b483-127">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a27df-127">JSON</span><span class="sxs-lookup"><span data-stu-id="a27df-127">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="1b483-128">Puede emitir directamente una solicitud GET `/v3/conversations/{conversationId}/members/{userId}` usando el valor de `serviceUrl` como punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="1b483-128">You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="1b483-129">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="1b483-129">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="1b483-130">Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="1b483-130">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="1b483-131">Esto puede usarse para usuarios de regulares y usuarios anónimos.</span><span class="sxs-lookup"><span data-stu-id="1b483-131">This can be used for regualr users and anonymous users.</span></span>
+<span data-ttu-id="a27df-128">Puede emitir directamente una solicitud GET en `/v3/conversations/{conversationId}/members/{userId}` , usando el valor de como punto de `serviceUrl` conexión.</span><span class="sxs-lookup"><span data-stu-id="a27df-128">You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="a27df-129">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="a27df-129">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="a27df-130">Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="a27df-130">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="a27df-131">Esto se puede usar para usuarios normales y usuarios anónimos.</span><span class="sxs-lookup"><span data-stu-id="a27df-131">This can be used for regular users and anonymous users.</span></span>
 
-<span data-ttu-id="1b483-132">A continuación se muestra un ejemplo de respuesta para un usuario normal.</span><span class="sxs-lookup"><span data-stu-id="1b483-132">Below is a response sample for regular user</span></span>
+<span data-ttu-id="a27df-132">A continuación se muestra un ejemplo de respuesta para el usuario normal</span><span class="sxs-lookup"><span data-stu-id="a27df-132">Below is a response sample for regular user</span></span>
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -184,7 +184,7 @@ Response body
 }
 ```
 
-<span data-ttu-id="1b483-133">A continuación se muestra la respuesta para un usuario anónimo</span><span class="sxs-lookup"><span data-stu-id="1b483-133">Below is response for anonymous user</span></span>
+<span data-ttu-id="a27df-133">A continuación se muestra una respuesta para el usuario anónimo</span><span class="sxs-lookup"><span data-stu-id="a27df-133">Below is response for anonymous user</span></span>
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -200,11 +200,11 @@ Response body
 
 * * *
 
-## <a name="get-teams-details"></a><span data-ttu-id="1b483-134">Obtener detalles del equipo</span><span class="sxs-lookup"><span data-stu-id="1b483-134">Get team's details</span></span>
+## <a name="get-teams-details"></a><span data-ttu-id="a27df-134">Obtener los detalles del equipo</span><span class="sxs-lookup"><span data-stu-id="a27df-134">Get team's details</span></span>
 
-<span data-ttu-id="1b483-135">Cuando se instala en un equipo, el bot puede consultar los metadatos de ese equipo, incluido el groupId de Azure AD.</span><span class="sxs-lookup"><span data-stu-id="1b483-135">When installed in a team, your bot can query for metadata about that team including the Azure AD groupId.</span></span>
+<span data-ttu-id="a27df-135">Cuando se instala en un equipo, el bot puede consultar metadatos sobre ese equipo, incluido el groupId de Azure AD.</span><span class="sxs-lookup"><span data-stu-id="a27df-135">When installed in a team, your bot can query for metadata about that team including the Azure AD groupId.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="1b483-136">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="1b483-136">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a27df-136">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a27df-136">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -222,7 +222,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="1b483-137">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="1b483-137">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="a27df-137">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a27df-137">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -245,7 +245,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="1b483-138">Python</span><span class="sxs-lookup"><span data-stu-id="1b483-138">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="a27df-138">Python</span><span class="sxs-lookup"><span data-stu-id="a27df-138">Python</span></span>](#tab/python)
 
 ```python
 async def _show_details(self, turn_context: TurnContext):
@@ -254,9 +254,9 @@ async def _show_details(self, turn_context: TurnContext):
     await turn_context.send_activity(reply)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="1b483-139">JSON</span><span class="sxs-lookup"><span data-stu-id="1b483-139">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a27df-139">JSON</span><span class="sxs-lookup"><span data-stu-id="a27df-139">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="1b483-140">Puede emitir directamente una solicitud GET `/v3/teams/{teamId}` usando el valor de `serviceUrl` como punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="1b483-140">You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="1b483-141">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="1b483-141">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="1b483-142">Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="1b483-142">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="a27df-140">Puede emitir directamente una solicitud GET en `/v3/teams/{teamId}` , usando el valor de como punto de `serviceUrl` conexión.</span><span class="sxs-lookup"><span data-stu-id="a27df-140">You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="a27df-141">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="a27df-141">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="a27df-142">Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="a27df-142">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -271,16 +271,16 @@ Response body
 
 * * *
 
-## <a name="get-the-list-of-channels-in-a-team"></a><span data-ttu-id="1b483-143">Obtener la lista de canales en un equipo</span><span class="sxs-lookup"><span data-stu-id="1b483-143">Get the list of channels in a team</span></span>
+## <a name="get-the-list-of-channels-in-a-team"></a><span data-ttu-id="a27df-143">Obtener la lista de canales de un equipo</span><span class="sxs-lookup"><span data-stu-id="a27df-143">Get the list of channels in a team</span></span>
 
-<span data-ttu-id="1b483-144">El bot puede consultar la lista de canales de un equipo.</span><span class="sxs-lookup"><span data-stu-id="1b483-144">Your bot can query the list of channels in a team.</span></span>
+<span data-ttu-id="a27df-144">El bot puede consultar la lista de canales de un equipo.</span><span class="sxs-lookup"><span data-stu-id="a27df-144">Your bot can query the list of channels in a team.</span></span>
 
 > [!NOTE]
 >
->* <span data-ttu-id="1b483-145">El nombre del canal general predeterminado se devuelve como `null` permitir para la localización.</span><span class="sxs-lookup"><span data-stu-id="1b483-145">The name of the default General channel is returned as `null` to allow for localization.</span></span>
->* <span data-ttu-id="1b483-146">El identificador de canal para el canal general coincide siempre con el identificador del equipo.</span><span class="sxs-lookup"><span data-stu-id="1b483-146">The channel ID for the General channel always matches the team ID.</span></span>
+>* <span data-ttu-id="a27df-145">El nombre del canal general predeterminado se devuelve como `null` para permitir la localización.</span><span class="sxs-lookup"><span data-stu-id="a27df-145">The name of the default General channel is returned as `null` to allow for localization.</span></span>
+>* <span data-ttu-id="a27df-146">El identificador de canal del canal general siempre coincide con el id. de equipo.</span><span class="sxs-lookup"><span data-stu-id="a27df-146">The channel ID for the General channel always matches the team ID.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="1b483-147">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="1b483-147">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a27df-147">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a27df-147">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -294,7 +294,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="1b483-148">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="1b483-148">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="a27df-148">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a27df-148">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -314,7 +314,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="1b483-149">Python</span><span class="sxs-lookup"><span data-stu-id="1b483-149">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="a27df-149">Python</span><span class="sxs-lookup"><span data-stu-id="a27df-149">Python</span></span>](#tab/python)
 
 ```python
 async def _show_channels(
@@ -325,9 +325,9 @@ async def _show_channels(
     await turn_context.send_activity(reply)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="1b483-150">JSON</span><span class="sxs-lookup"><span data-stu-id="1b483-150">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a27df-150">JSON</span><span class="sxs-lookup"><span data-stu-id="a27df-150">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="1b483-151">Puede emitir directamente una solicitud GET `/v3/teams/{teamId}/conversations` usando el valor de `serviceUrl` como punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="1b483-151">You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="1b483-152">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="1b483-152">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="1b483-153">Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="1b483-153">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="a27df-151">Puede emitir directamente una solicitud GET en `/v3/teams/{teamId}/conversations` , usando el valor de como punto de `serviceUrl` conexión.</span><span class="sxs-lookup"><span data-stu-id="a27df-151">You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="a27df-152">El valor de `serviceUrl` tiende a ser estable, pero puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="a27df-152">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="a27df-153">Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl` .</span><span class="sxs-lookup"><span data-stu-id="a27df-153">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
