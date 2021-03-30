@@ -5,12 +5,12 @@ keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ededd0800c7f789469e79e2a475c125b7fc37795
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: ee90d07b9616d130f4c418427762f9531c203672
+ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449391"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "51403979"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>Crear la primera aplicación de Teams con C# o .NET
 
@@ -74,7 +74,7 @@ Cuando se inicia la aplicación, se abre una ventana del explorador con la raíz
 - [https://localhost:44327/](https://localhost:44327/)
 - [https://localhost:44327/hello](https://localhost:44327/hello)
 - [https://localhost:44327/first](https://localhost:44327/first)
-- [https://localhost:44327/second]https://localhost:44327/second)
+- [https://localhost:44327/second](https://localhost:44327/second)
 
 <a name="HostSample"></a>
 
