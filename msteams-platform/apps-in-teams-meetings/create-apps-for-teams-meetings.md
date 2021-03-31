@@ -5,12 +5,12 @@ description: crear aplicaciones para reuniones de teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
+ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382355"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51435039"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -289,6 +289,8 @@ Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones
     ![Experiencia previa a la reunión](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. En la galería de pestañas, selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
+    > [!NOTE] 
+    > Actualmente, en la pestaña reuniones, no se admite la obtención de detalles de la reunión y la información de los participantes.
 
 **Para agregar una extensión de mensajería a una reunión**
 

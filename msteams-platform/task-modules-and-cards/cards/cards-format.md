@@ -3,12 +3,12 @@ title: Formato de texto en tarjetas
 description: Describe el formato de texto de tarjeta en Microsoft Teams
 keywords: formato de tarjetas de bots de teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455402"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421628"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a tarjetas en Teams
 
@@ -159,12 +159,14 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
 
 
 ### <a name="information-masking-in-adaptive-cards"></a>Enmascaramiento de información en tarjetas adaptables
-Use la propiedad information masking para enmascarar información específica, como contraseña o información confidencial de los usuarios.
+Use la propiedad information masking para enmascarar información específica, como contraseña o información confidencial de los usuarios dentro del elemento de entrada de [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) tarjeta adaptable. 
+
+> [!NOTE]
+> La característica solo admite el enmascaramiento de información del lado [cliente,](../../build-your-first-app/build-bot.md#4-configure-your-bot)el texto de entrada enmascarado se envía como texto sin formato a la dirección del extremo https que se especificó durante la configuración del bot . 
 
 > [!NOTE]
 > La propiedad de enmascaramiento de información está disponible actualmente solo en la versión preliminar del desarrollador.
 
-#### <a name="mask-information"></a>Información de máscara
 Para enmascarar la información en tarjetas adaptables, agregue la `isMasked` propiedad **al tipo** y establezca su valor `Input.Text` en *true*.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Tarjeta adaptable de ejemplo con la propiedad masking
@@ -203,7 +205,7 @@ Además, la aplicación debe incluir los siguientes elementos:
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -216,7 +218,60 @@ Una tarjeta adaptable de ancho completo aparece de la siguiente manera: ![ Vista
 
 Si no ha establecido la propiedad en Full , la vista predeterminada de la tarjeta adaptable es la siguiente: Vista de tarjeta adaptable `width` de ancho  ![ pequeño](../../assets/images/cards/small-width-adaptive-card.png)
 
+### <a name="typeahead-support"></a>Compatibilidad con Typeahead
 
+Dentro del elemento de esquema, pedir a los usuarios que filtren y seleccionen a través de un número considerable de opciones puede ralentizar significativamente la finalización [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) de tareas. La compatibilidad con la punta de tipo dentro de las tarjetas adaptables puede simplificar la selección de entrada limitando o filtrando el conjunto de opciones de entrada cuando un usuario escribe la entrada. 
+
+#### <a name="enable-typeahead-in-adaptive-cards"></a>Habilitar el cabezal de tipo en tarjetas adaptables
+
+Para habilitar typeahead dentro del `Input.Choiceset` conjunto en y asegurarse de que está establecido en `style` `filtered` `isMultiSelect` `false` . 
+
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>Tarjeta adaptable de ejemplo con compatibilidad con membrete
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### <a name="stage-view-for-images-in-adaptive-cards"></a>Vista de fase para imágenes en tarjetas adaptables
+En una tarjeta adaptable, puedes usar la propiedad para agregar la capacidad de mostrar imágenes en la vista de fase `msteams` de forma selectiva. Cuando los usuarios mantienen el mouse sobre las imágenes, verían un icono de expansión, para el que `allowExpand` el atributo está establecido en `true` . Para obtener información sobre cómo usar la propiedad, vea el siguiente ejemplo:
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+Cuando los usuarios mantienen el mouse sobre la imagen, aparece un icono expandir en la esquina superior derecha de la imagen: ![ tarjeta adaptable con imagen expandible](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+La imagen aparece en la vista de fase cuando el usuario selecciona el botón expandir: ![ Imagen expandida a vista de fase](../../assets/images/cards/adaptivecard-expand-image.png)
+
+En la vista de fase, los usuarios pueden acercar y alejar la imagen. Puedes seleccionar qué imágenes de la tarjeta adaptable deben tener esta funcionalidad.
+
+> [!NOTE]
+> La funcionalidad acercar y alejar solo se aplica a los elementos de imagen (tipo Image) de una tarjeta adaptable.
+
+> [!NOTE]
+> En el caso de las aplicaciones móviles de Teams, la funcionalidad de vista de fase para imágenes en tarjetas adaptables está disponible de forma predeterminada y los usuarios podrán ver imágenes de tarjeta adaptables en la vista de fase simplemente pulsando en la imagen, independientemente de si el atributo está presente o `allowExpand` no.
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Formato markdown: tarjetas de conector de O365**](#tab/connector-md)
 
@@ -226,7 +281,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. La compatibil
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -315,7 +370,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. Markdown se d
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -403,7 +458,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como la tarjeta de mi
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
