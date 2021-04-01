@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: fffacb567f4b74f282020d61aea07e142256c84a
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: ac2062e8f62ee52a53c6e129301e2a5615110789
+ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034742"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475966"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -468,6 +468,19 @@ Respuestas rápidas es una aplicación de Microsoft Teams que ofrece una soluci�
 
 ![Vista de ejemplo de las respuestas](../assets/images/quick-responses.png)
 
+
+## <a name="quiz--9734"></a>Cuestionario &#9734;
+
+Quiz es una aplicación de extensión de mensajería personalizada de [Teams](../messaging-extensions/what-are-messaging-extensions.md) que te permite crear un cuestionario dentro de un chat o un canal para comprobar el conocimiento y obtener resultados instantáneos. Puedes usar Quiz para exámenes en clase y sin conexión, comprobación de conocimientos dentro del equipo y para cuestionarios divertidos dentro de un equipo. La aplicación de cuestionario se admite en varias plataformas, como clientes de escritorio, explorador, iOS y Android de Teams. Esta aplicación está lista para su implementación como parte de la suscripción a Microsoft 365 existente.
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Crear cuestionario en la vista Teams](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
+
 ## <a name="rapid-assist"></a>Asistencia rápida
 
 Rapid Assist es una aplicación basada en Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) que permite a los asociados que se enfrentan al cliente conectarse rápidamente con los expertos para obtener respuestas rápidas, buscar información, realizar un seguimiento de las solicitudes abiertas y permitir que los expertos reciban notificaciones para obtener rápidamente una llamada para ayudar a responder preguntas. La aplicación creada con Microsoft [Power Apps](/powerapps/powerapps-overview) y [Power Automate,](/power-automate/getting-started)se integra profundamente con Microsoft Teams para permitir que las organizaciones conecten fácilmente a los trabajadores de primera línea con vínculos corporativos para resolver las consultas de los clientes y ofrecer una excelente experiencia de cliente. 
@@ -608,6 +621,18 @@ Un proyecto puede incluir varias tareas y varios proyectos se pueden asignar a l
 
 ![Recuento de horas](../assets/images/11zon_gif.gif)
 
+
+## <a name="training--9734"></a>Aprendizaje &#9734;
+
+El aprendizaje es una aplicación de extensión de mensajería personalizada de [Teams](../messaging-extensions/what-are-messaging-extensions.md) que permite a los usuarios publicar un aprendizaje dentro de un chat o un canal para compartir y mejorar el conocimiento sin conexión. La aplicación se admite en varios clientes de plataforma de Teams, como escritorio, explorador, iOS y Android. Esta aplicación está lista para su implementación como parte de la suscripción a Microsoft 365.
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Crear aprendizaje en la vista Teams](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="virtual-rounding"></a>Redondeo virtual
 
