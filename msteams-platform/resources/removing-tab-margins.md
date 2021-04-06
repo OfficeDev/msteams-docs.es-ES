@@ -5,12 +5,12 @@ description: Describe cómo la eliminación de márgenes de tabulación mejorar�
 keywords: tab removing margins padding
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827931"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585823"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -18,6 +18,9 @@ En este documento se describe cómo la eliminación de márgenes alrededor de to
 La eliminación de los márgenes alrededor de todas las pestañas permitirá a los desarrolladores crear aplicaciones que parezcan más nativas de Teams. Esto también se alineará con nuestros diseños [de kit de interfaz de usuario.](~/tabs/design/tabs.md) La mayoría de las aplicaciones ya se ven mejor sin los márgenes que rodean sus experiencias. Sin embargo, algunas pestañas se ven afectadas visualmente por este cambio y los desarrolladores deben realizar los cambios necesarios.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Inteligencia de tabulación y sin márgenes" border="false":::
+
+> [!NOTE]
+> Esta característica no se aplica a los clientes móviles, ya que las pestañas vistas en los clientes móviles no tienen márgenes. 
 
 ## <a name="timelines"></a>Escalas de tiempo
 

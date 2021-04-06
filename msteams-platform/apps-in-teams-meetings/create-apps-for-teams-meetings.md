@@ -5,12 +5,12 @@ description: crear aplicaciones para reuniones de teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
-ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
+ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51435039"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585851"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -233,6 +233,7 @@ Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de 
 
 > [!NOTE]
 > Intente actualizar el manifiesto de la aplicación con el [esquema de manifiesto](../resources/schema/manifest-schema-dev-preview.md).
+> Las aplicaciones de las reuniones necesitan *ámbito groupchat.* El *ámbito de* equipo solo funciona para pestañas en canales.
 
 ```json
 
@@ -249,11 +250,14 @@ Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de 
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+> [!NOTE]
+> `meetingStage` actualmente solo está disponible en versión preliminar del desarrollador.
 
 ### <a name="context-property"></a>Context (propiedad)
 
@@ -266,6 +270,7 @@ La pestaña y las propiedades te permiten determinar dónde debe aparecer `conte
 | **meetingChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios en el contexto de una reunión programada. |
 | **meetingDetailsTab** | Pestaña en el encabezado de la vista de detalles de la reunión del calendario. |
 | **meetingSidePanel** | Un panel en la reunión abierto a través de la barra unificada (barra U). |
+| **meetingStage** | Una aplicación del panel lateral se puede compartir en la fase de reunión. |
 
 > [!NOTE]
 > `Context` actualmente no se admite en clientes móviles.
@@ -326,6 +331,18 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 > [!NOTE]
 > * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, vea [Módulo de tareas del SDK de Teams](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de solicitud del objeto, no en `from.id` `from` los `from.aadObjectId` metadatos de la solicitud. `from.id` es el identificador de usuario y es el identificador de `from.aadObjectId` Azure Active Directory (AAD) del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+#### <a name="share-to-stage"></a>Compartir en fase 
+
+> [!NOTE]
+> Esta funcionalidad solo se puede obtener en la vista previa de desarrollo de insider
+
+
+Esta funcionalidad ofrece a los desarrolladores la capacidad de compartir una aplicación en la fase de reunión. Al habilitar el recurso compartido en la fase de reunión, los participantes de la reunión pueden colaborar en tiempo real. 
+
+El contexto necesario es meetingStage en el manifiesto de la aplicación. Un requisito previo para esto es tener el contexto meetingSidePanel. Esto habilitará el botón "Compartir" en el panel lateral como se indica a continuación
+
+
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 
