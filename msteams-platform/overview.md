@@ -5,12 +5,12 @@ description: Obtenga información general sobre cómo los desarrolladores pueden
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e40d2b0d8b0d12e6275b97f79d103310d22f9720
-ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
+ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475931"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596213"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -74,9 +74,8 @@ Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras s
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
-   :::column-end:::
-:::row-end:::
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para Teams
 
@@ -85,25 +84,20 @@ Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras s
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams." border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-:::row:::
-   :::column span="2":::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
-## <a name="build-solutions-for-microsoft-teams-apps"></a>Crear soluciones para aplicaciones de Microsoft Teams
- 
-Microsoft ofrece un libro de aspecto extensibilidad, una biblioteca de escenarios para aplicaciones de Teams organizadas por el sector. Este libro te ayuda a crear aplicaciones en la plataforma de Teams y a comprender diferentes escenarios posibles mediante diversas funcionalidades de plataforma de Teams. Los escenarios del libro de apariencias comienzan con un problema de negocio, las personas implicadas junto con sus desafíos y terminan con una solución de aplicación de Teams que aborda las necesidades empresariales.
-
-Cada escenario de esta biblioteca va acompañado de un conjunto de simulacros de concepto de diseño de alta fidelidad, que pueden servir de inspiración para diseñar tus aplicaciones y mejorar la experiencia del usuario. Además, el libro de apariencias destaca los procedimientos recomendados de diseño y arquitectura seguidos en la creación de cada aplicación. Para obtener más información, vea el libro de aspecto extensibilidad. Para obtener más información, vea [extensibilidad look book](https://adoption.microsoft.com/extensibility-look-book/scenarios/). 
+:::row:::
+   :::column span="2":::
 
 ## <a name="start-building"></a>Iniciar la creación
 
-Familiarícese rápidamente con la creación de Teams mediante la creación de una aplicación sencilla y la adición de algunas funcionalidades de uso común.
+Familiarícese rápidamente con la creación de Teams configurando su entorno y creando una aplicación sencilla.
 
 > [!div class="nextstepaction"]
-> [Crear la primera aplicación ahora](build-your-first-app/build-first-app-overview.md)
+> [Compilar una aplicación por primera vez](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -143,7 +137,23 @@ No es necesario ser un programador experto para crear una gran aplicación de Te
    :::column-end:::
 :::row-end:::
 
-## <a name="resources"></a>Recursos
+:::row:::
+   :::column span="2":::
+
+## <a name="get-ideas-for-your-app"></a>Obtener ideas para tu aplicación
+
+¿Está buscando inspiración para el desarrollo de aplicaciones? Explore nuestra lista de escenarios reales y soluciones del sector con simulacros de concepto de alta fidelidad para comprender las distintas formas en que las aplicaciones de Teams pueden ayudar a los usuarios.
+
+> [!div class="nextstepaction"]
+> [Ver escenarios de aplicaciones](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>Ver también
 
 * [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
 * [Diseñar la aplicación de Teams](concepts/design/design-teams-app-overview.md)

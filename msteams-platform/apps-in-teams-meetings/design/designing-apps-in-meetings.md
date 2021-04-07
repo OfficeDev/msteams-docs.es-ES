@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Aprende a diseñar aplicaciones en reuniones de Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827952"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596255"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión de reunión de Microsoft Teams
 
@@ -152,11 +152,10 @@ Hay dos variantes de encabezado. Cuando sea posible, usa la variante con el avat
 
 Los cuadros de diálogo en reunión pueden variar en tamaño para tener en cuenta diferentes escenarios. Asegúrese de mantener el relleno y los tamaños de los componentes.
 
-* **Width:** el ancho del iframe del cuadro de diálogo es un valor absoluto dentro del intervalo especificado.
-* **Height:** el alto del iframe del cuadro de diálogo es un valor absoluto dentro del intervalo especificado.
+* **Width:** puede especificar el ancho del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido.
+* **Alto:** puede especificar el alto del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido. También puedes permitir que los usuarios se desplacen verticalmente si el contenido de la aplicación supera el alto máximo.
 
-> [!NOTE]
-> Los valores que defina para el ancho y alto se usan en el cuadro de diálogo `externalResourceURL` en la reunión.
+Para implementar, especifique el ancho y el alto con la [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) clave.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="En el ejemplo se muestra el cuadro de diálogo en la reunión. Ancho: Min-280 píxeles (248 píxeles iframe). Máximo: 460 píxeles (428 píxeles de iframe). Alto: 300 píxeles (iframe)." border="false":::
 
@@ -164,7 +163,7 @@ Los cuadros de diálogo en reunión pueden variar en tamaño para tener en cuent
 
 Puedes volver a una reunión después de que finalice y ver el contenido de la aplicación. En este ejemplo, el organizador de la reunión puede ver los resultados del sondeo en la pestaña **Contoso.** (Nota: Desde el punto de vista del diseño, no hay diferencia entre una experiencia de pestaña anterior y posterior a la reunión).
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="En el ejemplo se muestra una pestaña posterior a la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="La ilustración de ejemplo muestra una pestaña posterior a la reunión." border="false":::
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 

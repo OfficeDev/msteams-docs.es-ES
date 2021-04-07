@@ -4,12 +4,12 @@ description: describe formas de tener una conversación con un bot de Microsoft 
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 3cf11b5b96a1504ddb3fb8c9fc5814c5131d072f
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 193a93dbf775389383e0385207fa4112440bffe5
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585858"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596677"
 ---
 # <a name="conversation-basics"></a>Conceptos básicos de la conversación
 
@@ -283,6 +283,9 @@ También puede agregar notificaciones al mensaje mediante la `Notification.Alert
 
 Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o lo que deben ver insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadene desde el mensaje del bot, establezca la `TeamsChannelData` propiedad `Notification.Alert` objects en true. Si se genera o no una notificación depende de la configuración de Teams del usuario individual y no se puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
 
+> [!NOTE]
+> El **campo Resumen** muestra cualquier texto del usuario como un mensaje de notificación en la fuente.
+
 El siguiente código muestra un ejemplo de cómo agregar notificaciones al mensaje:
 
 # <a name="c"></a>[C#](#tab/dotnet)
@@ -430,7 +433,7 @@ A continuación se muestran los ejemplos de código para el bot de conversación
 |----------------|-----------------|--------------|----------------|-----------|
 | Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 > [!div class="nextstepaction"]
 > [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)

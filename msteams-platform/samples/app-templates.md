@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 098325d973ad1fa5306761cd60c6504d808cea9d
-ms.sourcegitcommit: 0628a85293f7e26de3490e4dd23a54e586cdfeca
+ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "51493058"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596691"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
 Las plantillas de aplicación son ejemplos de aplicaciones completas para Microsoft Teams que son de código abierto y están disponibles en GitHub. Cada plantilla de aplicación contiene instrucciones detalladas para implementar e instalar esa aplicación para la organización. También proporciona una aplicación de ejemplo que puedes instalar y empezar a usar inmediatamente. El código fuente completo también está disponible, lo que le permite explorarlo en detalle o bifurcar el código y modificarlo para satisfacer sus requisitos específicos.
 Todas las plantillas de aplicación se proporcionan en los términos [de licencia mit.](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE)
->[!NOTE] 
->You, not Microsoft must license and support apps created from app templates for your users and organizations.
+> [!NOTE] 
+> Debes licenciar y admitir aplicaciones creadas a partir de plantillas de aplicación para tus usuarios y organizaciones. Microsoft no es responsable de las licencias y el soporte técnico.
 
 **&#9734; indica las plantillas de aplicación recién publicadas.**
 
@@ -28,13 +28,29 @@ Todas las plantillas de aplicación se proporcionan en los términos [de licenci
 * **Personalizable y extensible:** Aunque todas las plantillas de aplicación se pueden implementar con una configuración mínima, proporcionamos toda la base de código y los scripts de implementación para que puedas personalizarlas o ampliarlas fácilmente para que se ajusten a tus necesidades únicas.
 * **Documentación detallada:** Todas las plantillas de aplicación van acompañadas de documentación completa sobre los pasos de configuración, implementación y arquitectura de soluciones.  
 
-## <a name="adoption-bot-9734"></a>Bot de adopción &#9734;
+## <a name="adoption-bot"></a>Bot de adopción 
 
 Bot de adopción es un bot de chat de atención al usuario creado con Power Virtual Agent para Teams (PVA). Puede considerarse como la versión PVA de FAQPlus. Bot de adopción responde a más de 100 preguntas comunes sobre Microsoft 365 y Teams. Puede editar los temas existentes, agregar sus propios temas e ingerir preguntas frecuentes existentes. Si los usuarios necesitan ayuda adicional, el Bot de adopción puede conectarlos a expertos o incluso extenderse para abrir vales de servicio con conectores de flujo premium. Este bot se puede instalar por su cuenta o estar integrado en una aplicación personalizada como el Centro [de adopción.](https://github.com/akporzondek/adoption_hub)
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="appointment-manager-9734"></a>Administrador de &#9734;
+## <a name="adoption-tool-9734"></a>Herramientas de adopción &#9734;
+
+La herramienta de adopción consta de las dos plantillas de aplicación siguientes:
+
+### <a name="champion-management-platform"></a>Plataforma de administración de Champion
+
+La plantilla de aplicación Champion Management Platform (CMP) te ayuda a administrar, escalar e inspirar a los campeones del trabajo en equipo para lograr más. Esta plantilla de aplicación se basa en SharePoint Framework y se carga en una pestaña dentro de un equipo. Los grupos pueden aprovechar esta herramienta para ayudar a administrar la pertenencia al programa, proporcionar una tabla de clasificación y tipos de eventos para el registro y herramientas para superponer distintivos digitales a los participantes del programa.
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
+
+### <a name="get-started"></a>Introducción
+
+La plantilla de aplicación Introducción te permite aportar la potencia de las rutas de aprendizaje de Microsoft 365 dentro de Microsoft Teams. Esta plantilla de aplicación te permite conceder un fácil acceso a páginas de aprendizaje específicas u otros activos de intranet y cargar el contenido directamente en Teams. También puedes cambiar el nombre o el logotipo de la aplicación para que coincida con la personalción de marca de tu empresa.
+
+[Obtenerlo en GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
+
+## <a name="appointment-manager"></a>Administrador de citas 
 
 Appointment Manager es una plantilla de aplicación de Teams para ayudar a las empresas a crear, administrar y llevar a cabo citas virtuales con consumidores a través de Teams. Las nuevas solicitudes de cita de los consumidores son visibles en los canales de Teams, donde se pueden asignar y reasignar rápidamente al personal de un equipo. Las solicitudes de cita se pueden ver en los niveles de equipo o personal a través de pestañas personalizadas. Cada cita está asociada a una reunión en línea de Teams, por lo que el personal y los consumidores pueden unirse fácilmente a la reunión en el momento programado.
 
@@ -125,7 +141,7 @@ Lista de comprobación es una aplicación de extensión [de](../messaging-extens
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>Classroom Drop-in &#9734;
+## <a name="classroom-drop-in"></a>Classroom Drop-in 
 
 Classroom Drop-in es una aplicación basada en Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)que permite a los líderes del sistema encontrar equipos de clase (aulas virtuales) y agregarse a sí mismos u otros a estos equipos de clase durante un período de entrega especificado, según sea necesario. La aplicación creada con Microsoft [Power Apps](/powerapps/powerapps-overview) y [Power Automate](/power-automate/getting-started)se integra profundamente con Microsoft Teams para garantizar que los institutos educativos puedan optimizar sus operaciones en un entorno de aprendizaje híbrido proporcionando acceso a partes interesadas relevantes para los equipos de clase por requisitos empresariales.
 
@@ -162,7 +178,7 @@ La aplicación Búsqueda de grupos de contactos proporciona un enfoque práctico
 :::column-end:::
 :::row-end:::
 
-## <a name="co-worker-appreciation-9734"></a>Apreciación de compañeros de trabajo &#9734;
+## <a name="co-worker-appreciation"></a>Apreciación del compañero de trabajo 
 
 Con la plantilla de apreciación de compañeros de trabajo en Microsoft Teams, los usuarios pueden reconocer los logros de sus compañeros en el contexto de Teams. Cuando los compañeros de trabajo seleccionan recompensar a un compañero, los destinatarios y otros miembros del equipo se etiquetan en una conversación de canal y reciben una notificación sobre los detalles de la concesión del canal. Los galardones se registran en la aplicación teams, que es segura, portátil y fácilmente compartible. Esto se puede considerar como la versión basada en PowerApps de la plantilla de la aplicación Open Badges, con una tabla de clasificación.
 
@@ -268,7 +284,7 @@ Preguntas conversacionales&Bots son una forma sencilla de proporcionar respuesta
 
 ![Gif de preguntas más frecuentes](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="get-support-app-9734"></a>Obtener la aplicación de soporte &#9734;
+## <a name="get-support-app"></a>Obtener aplicación de soporte técnico
 
 Las organizaciones que usan Microsoft Teams pueden usar la aplicación Obtener soporte técnico para permitir que cualquier conjunto de usuarios solicite asistencia a los supervisores. Esta aplicación incluye varias características, como:
 -   Solicitar asistencia en distintas categorías desde una Power App
@@ -391,7 +407,7 @@ Incident Reporter es un [bot de Microsoft Teams](../bots/what-are-bots.md)  que 
 :::column-end:::
 :::row-end:::
 
-## <a name="inspection-9734"></a>Inspección &#9734;
+## <a name="inspection"></a>Inspección 
 
  Inspección es una aplicación de Microsoft Teams que permite a los trabajadores de primera línea inspeccionar cualquier cosa, desde ubicaciones hasta activos y equipos. Por ejemplo, una tienda comercial, una planta de fabricación o vehículos y máquinas. Hay dos aplicaciones en esta solución, cada una destinada a diferentes tipos de usuarios.
 
@@ -601,7 +617,7 @@ Survey es una aplicación de extensión de mensajería de Microsoft [Teams](../m
 :::column-end:::
 :::row-end:::
 
-## <a name="time-tally-9734"></a>Time Tally &#9734;
+## <a name="time-tally"></a>Recuento de horas 
 
 Un proyecto puede incluir varias tareas y varios proyectos se pueden asignar a los empleados. Los administradores deben comprender el progreso del proyecto durante el tiempo invertido por los empleados en estas tareas. Puede ser una actividad engorrosa, ya que los empleados deben rellenar los partes de horas. La aplicación Time Tally permite a los empleados rellenar sus partes de horas rápidamente, con el dispositivo móvil, y los administradores no tienen que realizar un seguimiento con los empleados en la entrada del parte de horas. Los administradores pueden ver el uso del proyecto en función de los recursos y pueden aprobar o rechazar las entradas. Las notificaciones de aviso se envían para garantizar el cumplimiento del parte de horas. Además, los datos históricos y los usos están disponibles para el análisis.
 

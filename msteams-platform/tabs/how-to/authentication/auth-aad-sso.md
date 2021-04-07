@@ -3,12 +3,12 @@ title: Compatibilidad con inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: e5f79aaf62d195144dd9b34cfbce601c94478191
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753542"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596684"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -85,8 +85,8 @@ En esta sección se describen las tareas relacionadas con la creación de una pe
 9. Escriba los detalles en los cuadros para configurar los mensajes de consentimiento de usuario y administrador con los valores adecuados para el `access_as_user` ámbito:
     * **Título del consentimiento de administrador:** Teams puede tener acceso al perfil del usuario.
     * **Descripción del consentimiento de administrador:** Teams puede llamar a las API web de la aplicación como el usuario actual.
-    * **Título de consentimiento de** usuario: Teams puede tener acceso al perfil de usuario y realizar solicitudes en nombre del usuario.
-    * **Descripción del consentimiento del usuario:** Teams puede llamar a las API de esta aplicación con los mismos derechos que el usuario.
+    * **Título de consentimiento de** usuario: Teams puede tener acceso a su perfil y realizar solicitudes en su nombre.
+    * **Descripción del consentimiento del usuario:** Teams puede llamar a las API de esta aplicación con los mismos derechos que tú.
 10. Asegúrese de que **Estado** se establece en **Habilitado**.
 11. Seleccione **Agregar ámbito** para guardar los detalles. La parte de dominio del **nombre de** ámbito que se muestra debajo del campo de texto debe coincidir automáticamente con el URI de **id.** de aplicación establecido en el paso anterior, con `/access_as_user` anexado al final `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` .
 12. En la **sección Aplicaciones cliente autorizadas,** identifique las aplicaciones que desea autorizar para la aplicación web de la aplicación. Seleccione **Agregar una aplicación cliente**. Escriba cada uno de los siguientes IDs de cliente y seleccione el ámbito autorizado que creó en el paso anterior:
