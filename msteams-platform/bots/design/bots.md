@@ -1,198 +1,198 @@
 ---
-title: Diseño de un bot
-description: Obtenga información sobre cómo diseñar un bot de Teams y obtener el kit de interfaz de usuario de Microsoft Teams.
+title: Cómo diseñar su bot
+description: Obtenga información sobre cómo diseñar un bot para Teams y obtener el Kit de UI de Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: d1a7470f4986de22ecca7071823b620cb0234abb
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
-ms.translationtype: MT
+ms.openlocfilehash: 1323d1070d29a501a6a87812a666c3a08b76ae74
+ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605496"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "49713598"
 ---
-# <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot de Microsoft Teams
+# <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
-Los bots son aplicaciones de conversación que realizan un conjunto específico de tareas. Basado en <a href="https://dev.botframework.com/" target="_blank">Microsoft bot Framework</a>, los bots se comunican con los usuarios, responden a sus preguntas y les notifican de forma proactiva sobre los cambios y otros eventos. Son una buena forma de llegar.
+Los bots son aplicaciones de conversación que realizan un conjunto específico de tareas. Basándose en <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, los bots se comunican con los usuarios, responden a sus preguntas y les notifican de forma proactiva sobre cambios y otros eventos. Son una herramienta excelente de comunicación.
 
-Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar bots en Teams.
+A modo de guía en el diseño de su aplicación, a continuación se describe e ilustra cómo pueden los usuarios agregar, usar y administrar bots en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de IU de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Puede encontrar pautas de diseño de bot más completas, incluidos los elementos que puede captar y modificar según sea necesario, en el kit de interfaz de usuario de Microsoft Teams.
+En el Kit de UI de Microsoft Teams encontrará instrucciones de diseño de bot más completas, que incluyen elementos que puede usar y modificar como quiera.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-bot"></a>Agregar un bot
 
-Los bots están disponibles en chats, canales y aplicaciones personales. Puede Agregar un bot de una de las siguientes maneras:
+Los bots están disponibles para chats, canales y aplicaciones personales. Puede agregar un bot de una de las siguientes maneras:
 
-* De la tienda Teams (AppSource).
-* Mediante el control flotante de la aplicación seleccionando el icono **más** en el lado izquierdo de Teams.
-* Con una @mention en el cuadro nuevo chat o redacción (en el ejemplo siguiente, se muestra cómo puede hacerlo en un chat en grupo).
+* En la tienda de Teams (AppSource)
+* En el menú desplegable de la aplicación, seleccione el icono **Más** en el lado izquierdo de Teams.
+* Con una @mención en el nuevo cuadro de chat o redacción (en el siguiente ejemplo se muestra cómo puede hacerlo en un chat de grupo).
 
-:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="En el ejemplo se muestra cómo agregar un bot en un chat de grupo mediante un @mention." border="false":::
+:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="En el ejemplo se muestra cómo agregar un bot en un chat de grupo con una @mención." border="false":::
 
-## <a name="introduce-a-bot"></a>Presentar un bot
+## <a name="introduce-a-bot"></a>La presentación del bot
 
-Es fundamental que el bot se presente a sí mismo y describa lo que puede hacer. Este intercambio inicial ayuda a los usuarios a comprender qué hacer con el bot, descubrir sus limitaciones y, lo que es más importante, familiarizarse con la interacción con él.
+Es fundamental que el bot se presente y describa lo que puede hacer. Esta comunicación inicial ayuda a los usuarios a comprender qué pueden hacer con el bot, a conocer sus limitaciones y, lo que es más importante, a sentirse cómodos interactuando con él.
 
-### <a name="welcome-message-in-a-one-on-one-chat"></a>Mensaje de bienvenida en un chat de uno a uno
+### <a name="welcome-message-in-a-one-on-one-chat"></a>Mensaje de bienvenida en un chat uno a uno
 
-En los contextos personales, los mensajes de bienvenida establecen el tono de la bot. El mensaje incluye un saludo, lo que el bot puede hacer y algunas sugerencias para interactuar (por ejemplo, "preguntarme sobre..."). Si es posible, estas sugerencias deben devolver respuestas almacenadas sin tener que iniciar sesión.
+En contextos personales, los mensajes de bienvenida marcan el tono del bot. El mensaje incluye un saludo, explica qué puede hacer el bot y da algunas sugerencias sobre cómo interactuar con él (por ejemplo, "Pregúnteme sobre..."). Cuando sea posible, estas sugerencias deben devolver respuestas almacenadas sin necesidad de iniciar sesión.
 
-:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Ejemplo muestra una introducción a un bot en una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="El ejemplo muestra una introducción a un bot en una aplicación personal." border="false":::
 
-### <a name="introductions-in-group-chats-and-channels"></a>Introducciones en chats y canales de grupo
+### <a name="introductions-in-group-chats-and-channels"></a>Introducción para chats en grupo y canales
 
-La introducción de la utilidad debe ser ligeramente diferente en los chats de grupo y en los canales, en comparación con un contexto personal (como una aplicación personal). En la vida real, si ha entrado en un salón lleno de personas; se introdujo en lugar de la bienvenida a todos los usuarios que ya están allí. Lleve a cabo este pensamiento en el diseño de bot.
+La introducción de su bot para chats de grupo y canales debería ser ligeramente diferente a la de un contexto personal (como una aplicación personal). En la vida real, si entra en una sala llena de gente, no dará la bienvenida a las personas que ya están allí sino que será usted quien se presente. Lo mismo vale para el diseño de un bot.
 
-:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Ejemplo muestra una introducción de bot en un contexto de colaboración." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="El ejemplo muestra una introducción a un bot en un contexto de colaboración." border="false":::
 
 ### <a name="bot-authentication-with-single-sign-on"></a>Autenticación de bot con inicio de sesión único
 
-Cuando una persona mensaje un bot, puede que sea necesario iniciar sesión use todas sus características. Puede simplificar el proceso de autenticación con el inicio de sesión único (SSO).
+Cuando alguien envía un mensaje a un bot, es posible que deba iniciar sesión para acceder a todas sus características. El inicio de sesión único (SSO) puede simplificar el proceso de autenticación.
 
-No se olvide: en el menú de comandos de Bot (**¿Qué puedo hacer?**), también debe proporcionar un comando para cerrar la sesión.
+No olvide que en el menú de comandos del bot (**¿Qué puedo hacer?**), también debe proporcionar un comando para cerrar sesión.
 
-:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Ejemplo muestra un bot con un botón de inicio de sesión." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="En el ejemplo se muestra un bot con un botón de inicio de sesión." border="false":::
 
-### <a name="tours"></a>Viajes
+### <a name="tours"></a>Paseos
 
-Puede incluir un paseo con mensajes de bienvenida y si el bot responde a algo como un comando "ayuda". Un paseo es la forma más eficaz de describir lo que puede hacer el bot. Si es aplicable, también son excelentes para describir otras características de la aplicación (por ejemplo, incluir capturas de pantallas de la extensión de mensajería).
+Puede incluir un paseo con mensajes de bienvenida y para cuando el bot responda a un comando de "ayuda" o algo parecido. Un paseo es la forma más eficaz de describir lo que puede hacer su bot. En algunos casos, también es ideal para describir otras características de la aplicación (por ejemplo, incluir capturas de pantalla de su extensión de mensajería).
 
 > [!IMPORTANT]
-> Los paseos deben ser accesibles sin tener que iniciar sesión.
+> Los viajes deben ser accesibles sin tener que iniciar sesión.
 
 #### <a name="one-on-one-chats"></a>Chats uno a uno
 
-En una aplicación personal, un carrusel puede proporcionar una introducción eficaz a su bot y otras características de la aplicación. Incluir botones el procedimiento para que los usuarios prueben comandos de Bot (por ejemplo, **crear una tarea**).
+En una aplicación personal, un carrusel puede ofrecer información general eficaz sobre el bot y otras características de la aplicación. Se recomienda incluir botones para que los usuarios prueben comandos del bot (por ejemplo, **Crear una tarea**).
 
-:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Ejemplo muestra un paseo de bot en un chat de uno a uno." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="El ejemplo muestra un paseo de bots en un chat uno a uno." border="false":::
 
-#### <a name="channels-and-group-chats"></a>Canales y chats de grupo
+#### <a name="channels-and-group-chats"></a>Canales y chats en grupo
 
-En los canales y los chats de grupos, un tour debe abrirse en un modal (también conocido como [módulo de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) , por lo que no interrumpe las conversaciones en curso). Esto también le ofrece la opción de implementar vistas basadas en roles para su tour.
+En canales y chats de grupo, los paseos deben abrirse en un modal (también denominado [módulo de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) para no interrumpir las conversaciones en curso). Esto también le ofrece la opción de implementar vistas basadas en roles para su paseo.
 
-:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Ejemplo muestra un paseo de bot en un canal." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="El ejemplo muestra un paseo de bots en un canal." border="false":::
 
 ## <a name="chat-with-a-bot"></a>Chatear con un bot
 
-Los bots se integran directamente en el marco de mensajería del equipo. Los usuarios pueden chatear con un bot para obtener respuestas a sus preguntas o escribir comandos para hacer que el bot realice un conjunto de tareas limitado o específico. Los bots pueden notificar de forma proactiva a los usuarios sobre cambios o actualizaciones de la aplicación mediante chat.
+Los bots se integran directamente en el marco de mensajería de Team. Los usuarios pueden chatear con un bot para obtener respuesta a sus preguntas o escribir comandos para que el bot realice un conjunto de tareas reducido o específico. Los bots pueden usar el chat para notificar a los usuarios frecuentemente de los cambios o actualizaciones que se realicen en la aplicación.
 
 ### <a name="chat-with-a-bot-in-different-contexts"></a>Chatear con un bot en diferentes contextos
 
 Puede usar bots en los siguientes contextos:
 
-* **Aplicaciones personales**: en una aplicación personal, un bot tiene una pestaña dedicada de chat.
-* **Chat de uno en uno**: un usuario puede iniciar una conversación privada con un bot. Tiene la misma experiencia que el uso de un bot en una aplicación personal.
-* **Chat en grupo**: los usuarios pueden interactuar con un bot en un chat grupal por @mentioning el bot.
-* **Canal**: los usuarios pueden interactuar con un bot en un canal. @mentioning el nombre del bot en el cuadro de redacción. Recuerde que, en este contexto, el bot está disponible para todo el equipo, no solo para el canal.
+* **Aplicaciones personal**: en una aplicación personal, un bot tiene una pestaña de chat dedicada.
+* **Chat uno a uno**: un usuario puede iniciar una conversación privada con un bot. Es la misma experiencia que usar un bot en una aplicación personal.
+* **Chat de grupo**: los usuarios pueden interactuar con un bot en un chat de grupo si @mencionan el bot.
+* **Canal**: los usuarios pueden interactuar con un bot en un canal. Para ello, deben @mencionar el nombre del bot en el cuadro para redactar. Recuerde que, en este contexto, el bot está disponible para todo el equipo, no solo para el canal.
 
 ### <a name="anatomy"></a>Anatomía
 
-:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Ejemplo muestra una anatomía estructural de un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="El ejemplo muestra el sistema estructural de un bot." border="false":::
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
-|1|**Nombre y icono de la aplicación**|
-|2 |**Pestaña chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
-|3 |**Pestañas personalizadas**: abre otro contenido relacionado con la aplicación.|
-|4 |**Ficha acerca** de: muestra información básica sobre la aplicación.|
-|5 |**Burbuja de chat**: conversaciones de robot use el marco de mensajería de Teams.|
-|6 |**Tarjeta adaptable**: si las respuestas de su bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
-|7 |**Menú de comandos**: muestra los comandos estándar del bot (definidos por el usuario).
+|1|**Icono y nombre de la aplicación**|
+|2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
+|3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
+|4|**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
+|5|**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
+|6|**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
+|7|**Menú de comandos**: muestra los comandos estándar de su bot (definidos por usted).
 
 ### <a name="command-menu"></a>Menú de comandos
 
-El menú comando proporciona una lista de palabras o frases a las que desea que el bot responda siempre. El menú comando se muestra encima del cuadro de redacción cuando alguien está conversando con un bot. Cuando se selecciona un comando, se inserta en un mensaje.
+En el menú de comandos se proporciona una lista de palabras o frases que quiere que el bot siempre responda. El menú de comandos se muestra encima del cuadro de redacción cuando alguien habla con un bot. Cuando se selecciona un comando, este se inserta en un mensaje.
 
-La lista de comandos debe ser breve. El menú solo está destinado a resaltar las características principales del bot. Mantener también los comandos concisos. Por ejemplo, cree un comando llamado **ayuda** en lugar de, **por lo que puede ayudarme**?
-El menú de comandos debe estar siempre disponible independientemente del estado de la conversación.
+La lista de comandos debería ser breve. El menú solo está pensado para resaltar las características principales del bot. Además, los comandos deben ser concisos. Por ejemplo, cree un comando llamado **Ayuda** en lugar de **¿Puede ayudarme, por favor?**
+El menú de comandos siempre debe estar disponible independientemente del estado de la conversación.
 
-:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Ejemplo muestra el menú de comandos de un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="En el ejemplo se muestra el menú de comandos de un bot." border="false":::
 
-## <a name="understand-what-people-are-saying"></a>Conocer lo que dicen los usuarios
+## <a name="understand-what-people-are-saying"></a>Entender qué dice la gente
 
-Use un diccionario de sinónimos y obtenga personas de tantos fondos diferentes como sea posible para ayudarle a generar diferentes interpretaciones de consultas estándar.
+Use un diccionario de sinónimos y la ayuda de personas tan diversas como le sea posible encontrar para ayudarle a generar distintas formulaciones de consultas estándar.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="Ilustración que muestra cómo un bot puede interpretar ' Hello '." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="Ilustración que muestra cómo un bot puede interpretar &quot;Hola&quot;." border="false":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="Ilustración que muestra cómo un bot puede interpretar &quot;ayuda&quot;." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="Ilustración que muestra cómo un bot puede interpretar &quot;Ayuda&quot;." border="false":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="Ilustración que muestra cómo un bot puede interpretar &quot;gracias&quot;." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="Ilustración que muestra cómo un bot puede interpretar &quot;Gracias&quot;." border="false":::
    :::column-end:::
 :::row-end:::
 
-### <a name="extract-intent-and-data-from-messages"></a>Extraer el propósito y los datos de los mensajes
+### <a name="extract-intent-and-data-from-messages"></a>Extraer la intención y los datos de los mensajes
 
-Diseñar el bot para que reconozca la intención, que captura lo que alguien quiere desde un bot en respuesta a un mensaje o consulta. Intención clasifica un mensaje o una consulta como una sola acción con uno o varios objetos de datos que se ven afectados por la acción. 
+Diseñe el bot para reconocer la intención del usuario. La idea es capturar lo que alguien quiere de un bot como respuesta a un mensaje o una consulta. La intención clasifica un mensaje o consulta como una acción única con uno o varios objetos de datos afectados por la acción. 
 
-En los ejemplos siguientes se describen la intención del usuario y los datos de los mensajes enviados a los bots.
+En los ejemplos siguientes se describe la intención del usuario y los datos de mensajes enviados a bots.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="Ejemplo que muestra que en la oración ' reservar un vuelo para Seattle ', la intención del usuario es ' libro a vuelo ' y datos es ' Seattle '." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="Ejemplo que muestra la frase &quot;Reservar un vuelo a Seattle&quot;. La intención del usuario es &quot;reservar un vuelo&quot; y los datos son &quot;Seattle&quot;." border="false":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="Ejemplo que muestra en la oración ' ¿Cuándo está abierto el almacén? ', el intento del usuario es ' When ' y los datos son ' Open '." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="Ejemplo que muestra la frase &quot;Cuándo abre la tienda&quot;. La intención del usuario es &quot;cuándo&quot; y los datos son &quot;abrir&quot;." border="false":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="Ejemplo que muestra en la oración ' programar una reunión a las 13:00 con Bob en distribución ', la intención del usuario es &quot;programar una reunión&quot; y los datos son ' 13:00 ' y ' Bob en distribución '." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="Ejemplo con la frase &quot;Concertar una reunión a la 13:00 con Bob en el área de distribución&quot;. La intención del usuario es &quot;programar una reunión&quot; y los datos son &quot;13:00&quot; y &quot;Bob en el área de distribución&quot;." border="false":::
    :::column-end:::
 :::row-end:::
 
 ### <a name="analyze-and-improve"></a>Analizar y mejorar
 
-Obtenga información sobre lo que dicen los usuarios al chatear con el bot. Este será un proceso iterativo continuo a medida que crece la base de usuarios en distintas ubicaciones y organizaciones. Puede ajustar el reconocimiento de idioma y la asignación de intenciones de bot con la descripción de idioma de Microsoft (LUIS).
+Descubra qué dicen los usuarios al chatear con el bot. Este será un proceso iterativo que evoluciona continuamente a medida que su base de usuarios crece en distintas ubicaciones y organizaciones. Puede ajustar la asignación de intenciones y el reconocimiento de idiomas del bot con Microsoft Language Understanding (LUIS).
 
-* [Descripción de Luis](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Descubra cómo Luis usa AI para proporcionar una comprensión de lenguaje natural (NLU) a los datos de la aplicación.
-* [Integración con Luis](https://www.luis.ai/): Agregue capacidades de lenguaje natural a su bot sin el complejo proceso de crear modelos de aprendizaje automático.
+* [Descripción de LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): descubra cómo LUIS usa la IA para aplicar métodos de comprensión del lenguaje natural (NLU) con los datos de su aplicación.
+* [Integración con LUIS](https://www.luis.ai/): agregue capacidades de lenguaje natural al bot mientras evita el proceso complejo de crear modelos de aprendizaje automático.
 
 ## <a name="use-cases"></a>Casos de uso
 
 ### <a name="simple-queries"></a>Consultas sencillas
 
-Los bots pueden proporcionar una coincidencia exacta a una consulta o grupo de coincidencias relacionadas para ayudar con la anulación de ambigüedades. Para obtener coincidencias relacionadas, agrupe el contenido con una tarjeta de lista.
+Cuando reciben una consulta, los bots pueden proporcionar una coincidencia exacta o un grupo de coincidencias relacionadas para ayudar con la desambiguación. En el caso de las coincidencias relacionadas, agrupe el contenido con una tarjeta de lista.
 
-:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Ejemplo muestra una interacción de consulta simple con un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="El ejemplo muestra una interacción de consulta simple con un bot." border="false":::
 
-### <a name="multi-turn-interactions"></a>Interacciones de múltiples torneados
+### <a name="multi-turn-interactions"></a>Interacciones de varios turnos
 
-Aunque el bot puede admitir solicitudes y preguntas completas, también debe ser capaz de controlar las interacciones de varios turnos. Anticiparse a los posibles pasos siguientes hace que sea mucho más fácil para los usuarios realizar un flujo de tareas completo (en lugar de esperar que se diseñe una solicitud completa).
+Su bot no solo debe poder admitir solicitudes y preguntas completas, sino también lidiar con interacciones de varios turnos. Anticipar los posibles pasos siguientes facilita mucho a los usuarios completar el flujo de tareas (les evita elaborar una solicitud exhaustiva).
 
-En el siguiente ejemplo, el bot responde a cada mensaje con opciones para lo que es posible que quiera hacer a continuación.
+En el ejemplo siguiente, el bot responde a cada mensaje con opciones sobre lo que quiere hacer a continuación.
 
-:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Ejemplo muestra una interacción de varios turnos con un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="El ejemplo muestra una interacción multiturno con un bot." border="false":::
 
-### <a name="reach-out-to-users"></a>Ponerse en contacto con los usuarios
+### <a name="reach-out-to-users"></a>Llegue a sus usuarios
 
-Con la mensajería proactiva, el bot puede actuar como un resumen que envía las notificaciones relevantes a un individuo, un chat en grupo o un canal a una frecuencia específica. Un bot puede enviar un mensaje cuando algo ha cambiado en un documento o se cierra un elemento de trabajo.
+Con la mensajería dinámica, el bot puede actuar como un boletín que envía notificaciones relevantes a un canal, chat de grupo o usuario con una frecuencia específica. Un bot puede enviar un mensaje cuando se ha hecho cambios en un documento o cuando se cierra un elemento de trabajo.
 
-En el siguiente ejemplo, un usuario recibe una notificación del sistema que un bot ha puesto en un mensaje en otro canal.
+En el ejemplo siguiente, una notificación del sistema informa al usuario de que un bot le ha enviado un mensaje en otro canal.
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Ejemplo muestra que una notificación de un bot es una mensajería proactiva de un usuario de otro canal." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="En el ejemplo se muestra una notificación del sistema en la que un bot informa de forma dinámica a un usuario desde otro canal." border="false":::
 
-Ahora, en ese canal, el usuario puede leer su mensaje desde el bot.
+Ahora, en ese canal, el usuario puede leer su mensaje del bot.
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Ejemplo muestra el usuario que mira el mensaje proactivo del bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="El ejemplo muestra a un usuario que observa el mensaje dinámico del bot." border="false":::
 
 ### <a name="use-tabs-with-bots"></a>Usar pestañas con bots
 
-Una pestaña puede hacer que el bot sea más fácil de usar. Por ejemplo, si el bot puede crear elementos de trabajo, sería estupendo Mostrar todos esos elementos en una ubicación central dentro de una pestaña. Vea más información sobre el [diseño de pestañas](../../tabs/design/tabs.md).
+Una pestaña puede facilitar el uso del bot. Por ejemplo, si el bot puede crear elementos de trabajo, sería útil mostrar todos esos elementos en una ubicación central dentro de una pestaña. Más información sobre las [pestañas de diseño](../../tabs/design/tabs.md).
 
-:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Ejemplo muestra cómo una pestaña puede ayudar a organizar el contenido de los robots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="El ejemplo muestra cómo una pestaña puede ayudar a organizar el contenido del bot." border="false":::
 
 ## <a name="manage-a-bot"></a>Administrar un bot
 
-Los usuarios deben poder cambiar la configuración de un bot. Puede proporcionar esta funcionalidad con comandos de bot, pero normalmente es más eficaz incluir toda la configuración en un [módulo de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (como se muestra en el ejemplo siguiente).
+Los usuarios deberían poder cambiar la configuración de un bot. Puede proporcionar esta funcionalidad con comandos de bot, pero normalmente es más eficaz incluir toda la configuración en un [módulo de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (como se muestra en el siguiente ejemplo).
 
-:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Ejemplo muestra un módulo de tareas para configurar las opciones de un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Un ejemplo muestra un módulo de tareas para configurar las opciones de un bot." border="false":::
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -200,27 +200,27 @@ Los usuarios deben poder cambiar la configuración de un bot. Puede proporcionar
 
 :::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="do-establish-a-clear-persona"></a>Do: establecer un rol claro
+#### <a name="do-establish-a-clear-persona"></a>Práctica recomendada: cree un rol coherente para el bot
 
-¿La luz y el tono de su bot, "solo los hechos" o la anomalía? ¿Cómo debe responder en escenarios diferentes? La planeación y documentación del rol de un bot facilita la escritura de respuestas que parecen naturales y coherentes.
+¿Quiere que el tono del bot sea descriptivo y claro (que simplemente dé información) o que sea más simpático? ¿Cómo debe responder en distintos escenarios? Planear y documentar el rol del bot facilita la escritura de respuestas que parezcan naturales y cohesivas.
 
-Vea más información sobre cómo escribir para bots en el <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Kit de interfaz de usuario de Microsoft Teams (Figma).</a>
+Encontrará más información sobre cómo escribir para los bots en el <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Kit de UI de Microsoft Teams (Figma).</a>
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="do-clearly-convey-what-your-bot-can-do"></a>Do: transmitir claramente lo que puede hacer su bot
+#### <a name="do-clearly-convey-what-your-bot-can-do"></a>Práctica recomendada: transmita claramente qué puede hacer el bot
 
-Los mensajes de bienvenida y los paseos ayudan a los usuarios a comprender lo que pueden hacer con el bot.
+Los mensajes de bienvenida y los paseos ayudan a los usuarios a comprender qué pueden hacer con el bot.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="dont-obscure-your-bots-features"></a>No: ocultar las características de la bot
+#### <a name="dont-obscure-your-bots-features"></a>Práctica a evitar: ocultar las características del bot
 
-Primera impresión importa. Es probable que los usuarios sean confusos o sospechosos cuando se les presente un mensaje de inicio de sesión de nondescript.
+Las primeras impresiones son importantes. Es probable que los usuarios se confundan o sientan sospechas cuando vean un mensaje de inicio de sesión indefinido.
 
    :::column-end:::
 :::row-end:::
@@ -229,17 +229,17 @@ Primera impresión importa. Es probable que los usuarios sean confusos o sospech
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="do-recognize-non-questions"></a>Do: reconocer no preguntas
+#### <a name="do-recognize-non-questions"></a>Práctica recomendada: que el bot reconozca mensajes que no son preguntas
 
-El bot debe ser capaz de responder a mensajes como "HI", "Help" y "Agradecimientos", además de tener en cuenta los errores y coloquialess comunes.
+El bot debería poder responder a mensajes como "Hola", "Ayuda" y "Gracias", así como sus variaciones coloquiales y las versiones con faltas de ortografía.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="dont-miss-out-on-opportunities-to-delight"></a>No: no se pierdan las oportunidades de alegría
+#### <a name="dont-miss-out-on-opportunities-to-delight"></a>Práctica a evitar: perder oportunidades para una charla agradable
 
-Algunos usuarios esperan que las conversaciones fluyan naturalmente como lo harían con una persona real. Intente evitar las respuestas más difíciles a los mensajes sencillos.
+Algunas personas esperan que las conversaciones fluyan de forma natural como lo harían con una persona. Intente evitar respuestas torpes a mensajes sencillos.
 
    :::column-end:::
 :::row-end:::
@@ -250,17 +250,17 @@ Algunos usuarios esperan que las conversaciones fluyan naturalmente como lo har�
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="do-provide-help"></a>Do: proporcionar ayuda
+#### <a name="do-provide-help"></a>Práctica recomendada: proporcione ayuda
 
-Si el bot no puede satisfacer una solicitud, proporcione medios para que un usuario se enseñe a interactuar con el bot.
+Si el bot no puede satisfacer una solicitud, dé al usuario una manera de aprender por sí mismo a interactuar con el bot.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="dont-leave-users-stranded"></a>No: dejar a los usuarios en desuso
+#### <a name="dont-leave-users-stranded"></a>Práctica a evitar: dejar a los usuarios sin ayuda
 
-Los usuarios abandonarán rápidamente el bot si no pueden solucionar los problemas.
+Los usuarios abandonarán rápidamente el bot si no pueden solucionar problemas con él.
 
    :::column-end:::
 :::row-end:::
@@ -271,17 +271,17 @@ Los usuarios abandonarán rápidamente el bot si no pueden solucionar los proble
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="do-use-task-modules-or-tabs"></a>Do: usar módulos de tareas o pestañas
+#### <a name="do-use-task-modules-or-tabs"></a>Práctica recomendada: use pestañas o módulos de tareas
 
-Si el bot proporciona una respuesta que requiere algunos pasos más, puede vincular a un módulo de tarea o a una pestaña para completar la tarea o el flujo.
+Si su bot proporciona una respuesta que requiere pasos adicionales, puede vincular a un módulo de tareas o a una pestaña para completar la tarea o el flujo.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="dont-make-multi-turn-interactions-tedious"></a>No: hacer que las interacciones de varios turnos sean tediosas
+#### <a name="dont-make-multi-turn-interactions-tedious"></a>Práctica a evitar: hacer interacciones multiuso tediosas
 
-Una conversación extensa para completar una tarea única es lenta y demasiado compleja. También se requiere que el desarrollador tenga en cuenta los cambios de estado (por ejemplo, el tiempo de espera de la conversación o el envío de un mensaje de "cancelación").
+Una conversación extensa para completar una tarea simple ralentiza y complica el proceso. También obliga al desarrollador a tener en cuenta cambios de estado (por ejemplo, tiempos de espera para la conversación o el envío de un mensaje de cancelación).
 
    :::column-end:::
 :::row-end:::
@@ -292,32 +292,32 @@ Una conversación extensa para completar una tarea única es lenta y demasiado c
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do: mostrar solo información confidencial en un contexto personal
+#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Práctica recomendada: muestre información confidencial solo en un contexto personal
 
-Si el bot está en un canal o en un chat de grupo, se recomienda dirigir a los usuarios a una ubicación privada (como un módulo de tareas, una ficha o un explorador) para ver la información confidencial.
+Si el bot está en un chat o canal de grupo, le recomendamos que dirija a los usuarios a una ubicación privada (por ejemplo, un módulo de tareas, una pestaña o un explorador) para ver la información confidencial.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
 
-#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>No: algún contenido no está diseñado para ser visto por todos los usuarios
+#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Práctica a evitar: presentar a todo el mundo contenido confidencial
 
-El bot no debe revelar información confidencial a un grupo de personas.
+El bot no debería revelar información confidencial a un grupo de personas.
 
    :::column-end:::
 :::row-end:::
 
 ## <a name="learn-more"></a>Más información
 
-Estas otras instrucciones pueden ayudarle con el diseño de su bot:
+A continuación, tiene guías adicionales que le pueden ayudar con el diseño del bot:
 
-* [Diseño de la aplicación personal](../../concepts/design/personal-apps.md)
+* [Diseño de su aplicación personal](../../concepts/design/personal-apps.md)
 * [Diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [Diseño de módulos de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
-## <a name="validate-your-design"></a>Validar el diseño
+## <a name="validate-your-design"></a>Valide su diseño
 
-Si planea publicar la aplicación en AppSource, debe comprender los problemas de diseño que suelen hacer que las aplicaciones fallen durante el envío.
+Si tiene previsto publicar la aplicación en AppSource, debe comprender los problemas de diseño que habitualmente provocan errores en las aplicaciones durante el envío.
 
 > [!div class="nextstepaction"]
-> [Comprobar las instrucciones de validación del diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Comprobar las instrucciones de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

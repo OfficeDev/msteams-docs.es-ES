@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
+ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596691"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51612647"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -34,17 +34,13 @@ Bot de adopción es un bot de chat de atención al usuario creado con Power Virt
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="adoption-tool-9734"></a>Herramientas de adopción &#9734;
-
-La herramienta de adopción consta de las dos plantillas de aplicación siguientes:
-
-### <a name="champion-management-platform"></a>Plataforma de administración de Champion
+## <a name="adoption-tool--champion-management-platform-9734"></a>Herramienta de adopción: plataforma de administración de campeones &#9734;
 
 La plantilla de aplicación Champion Management Platform (CMP) te ayuda a administrar, escalar e inspirar a los campeones del trabajo en equipo para lograr más. Esta plantilla de aplicación se basa en SharePoint Framework y se carga en una pestaña dentro de un equipo. Los grupos pueden aprovechar esta herramienta para ayudar a administrar la pertenencia al programa, proporcionar una tabla de clasificación y tipos de eventos para el registro y herramientas para superponer distintivos digitales a los participantes del programa.
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-### <a name="get-started"></a>Introducción
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Herramienta de adopción: rutas de aprendizaje de Microsoft 365 (introducción) &#9734;
 
 La plantilla de aplicación Introducción te permite aportar la potencia de las rutas de aprendizaje de Microsoft 365 dentro de Microsoft Teams. Esta plantilla de aplicación te permite conceder un fácil acceso a páginas de aprendizaje específicas u otros activos de intranet y cargar el contenido directamente en Teams. También puedes cambiar el nombre o el logotipo de la aplicación para que coincida con la personalción de marca de tu empresa.
 
