@@ -1,34 +1,39 @@
 ---
-title: Características de la versión preliminar pública para desarrolladores
-description: Detalles de las características de la versión preliminar para desarrolladores públicos de Microsoft Teams
+title: Características de la versión preliminar de desarrolladores públicos
+description: Detalles de las características de Microsoft Teams Public Developer Preview
 ms.topic: reference
-keywords: Características para desarrolladores de vista previa de teams
-ms.openlocfilehash: 3275ef7ac0d4ba052f417f6e852f48e2fdf267f5
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+keywords: Características para desarrolladores de teams preview
+ms.openlocfilehash: 05954383931444cd0fb53dc37d9f790257f7dd39
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014358"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634519"
 ---
-# <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Características de la versión preliminar para desarrolladores públicos de Microsoft Teams
+# <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Características de public developer preview para Microsoft Teams
 
 La vista previa del desarrollador incluye las siguientes características nuevas:
 
+## <a name="app-customization"></a>Personalización de aplicaciones
+
+Ahora puede definir un conjunto selecto de propiedades, que un administrador de Teams puede personalizar o cambiar de marca en función de las necesidades de su organización. Para obtener más información, consulta [característica de personalización de aplicaciones](~/concepts/design/design-teams-app-overview.md).
+
 ## <a name="tabs-single-sign-on-sso"></a>Inicio de sesión único (SSO) de pestañas
 
-Ahora puede usar el inicio de sesión único [(SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) para iniciar sesión y autenticar a un usuario en dispositivos móviles y de escritorio con el SDK de JavaScript de Teams desde una página de contenido web. Una de las ventajas es que un usuario nunca tiene que iniciar sesión; y una vez que haya dado su consentimiento a la aplicación con su perfil: iniciará sesión automáticamente en su pestaña (incluido el móvil).
+Ahora puede usar el inicio de sesión único [(SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) para iniciar sesión y autenticar un usuario en escritorio y móvil mediante el SDK de JavaScript de Teams desde una página de contenido web. Una de las ventajas es que un usuario nunca tiene que iniciar sesión; y una vez que han dado su consentimiento a la aplicación con su perfil: iniciarán sesión automáticamente en su pestaña (incluido el móvil).
 
-Nuestra versión preliminar para desarrolladores está disponible en las versiones de manifiesto 1.5 y posteriores. Nuestra implementación actual solo puede obtener una cantidad limitada de API de Graph, pero proporcionamos una solución alternativa para obtener API de Graph adicionales mediante nuestra API de autenticación existente.
+Nuestra vista previa para desarrolladores está disponible en las versiones 1.5 y posteriores del manifiesto. Nuestra implementación actual solo puede obtener una cantidad limitada de API de Graph, pero proporcionamos una solución alternativa para obtener API de Graph adicionales mediante nuestra API de autenticación existente.
 
-## <a name="calls-and-online-meeting-bots"></a>Bots de llamadas y reuniones en línea
+## <a name="calls-and-online-meeting-bots"></a>Llamadas y bots de reunión en línea
 
-Con la adición de las API de [Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta)para llamadas y reuniones en línea, las aplicaciones de Microsoft Teams ahora pueden interactuar con los usuarios de formas enriquecciones mediante voz y vídeo. Estas API le permiten agregar nuevas características de la aplicación, como la respuesta interactiva de voz (IVR), el control de llamadas y el acceso a secuencias de audio o vídeo en tiempo real para llamadas y reuniones, incluido el uso compartido de aplicaciones y escritorio.
+Con la adición de API de [Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)para llamadas y reuniones en línea, las aplicaciones de Microsoft Teams ahora pueden interactuar con los usuarios de formas enriquecciones mediante voz y vídeo. Estas API te permiten agregar nuevas características de la aplicación, como la respuesta de voz interactiva (IVR), el control de llamadas y el acceso a secuencias de audio o vídeo en tiempo real para llamadas y reuniones, incluido el uso compartido de aplicaciones y escritorio.
 
-Hemos agregado una nueva sección sobre cómo crear y desarrollar bots de llamadas y reuniones en línea, empezando por la [introducción.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+Hemos agregado una nueva sección sobre cómo crear y desarrollar bots de llamadas y reuniones en línea, empezando por la [introducción](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+
 
 ## <a name="image-enlarge-support"></a>Compatibilidad con ampliación de imagen
 
-Ahora es posible que los bots indiquen qué imágenes compartidas en tarjetas adaptables en Teams se pueden ampliar. Esto es útil para escenarios como compartir guías visuales detalladas paso a paso a través de bots que podrían resultar difíciles de leer para los usuarios de lo contrario. Para que una imagen se expanda, solo tienes que `allowExpand: true` marcarla como se muestra a continuación.
+Ahora es posible que los bots indiquen qué imágenes compartidas en tarjetas adaptables en Teams se pueden ampliar. Esto es útil para escenarios como compartir guías visuales detalladas paso a paso a través de bots que podrían ser difíciles de leer para los usuarios de lo contrario. Para que una imagen se expanda, simplemente marcala `allowExpand: true` como se muestra a continuación.
 
 ```json
     {
@@ -39,5 +44,5 @@ Ahora es posible que los bots indiquen qué imágenes compartidas en tarjetas ad
       }
     }
 ```
-Esto hará que el cliente web o de escritorio de Teams represente un elemento al pasar sobre la imagen para permitir al usuario expandir la imagen.
+Esto hará que el cliente web o de escritorio de Teams represente un elemento al pasar el puntero sobre la imagen para permitir que el usuario expanda la imagen.
 

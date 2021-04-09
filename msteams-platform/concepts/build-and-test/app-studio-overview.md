@@ -3,12 +3,12 @@ title: Introducción a App Studio para Microsoft Teams
 description: Comience a crear aplicaciones increíbles en Microsoft Teams a través de App Studio
 keywords: introducción a app studio de teams
 ms.topic: overview
-ms.openlocfilehash: ca7d777458c8c8f9646d7e862f7a5b83059c21f3
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713399"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634512"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desarrolle aplicaciones rápidamente con App Studio para Microsoft Teams
 
@@ -34,6 +34,8 @@ Una vez en App Studio, haga clic en la pestaña *Editor de manifiesto*, donde po
 
 ## <a name="app-studio-features"></a>Características de App Studio
 
+En esta sección se tratan las características, como la conversación, el editor de manifiestos, los detalles y las capacidades. Puedes personalizar tus capacidades mediante la personalización de la aplicación.
+
 ### <a name="conversation"></a>Conversación
 
 Aquí puede ver el aspecto en Teams de las [tarjetas que puede crear en App Studio](#card-editor) cuando las pruebe enviándoselas a usted mismo.
@@ -52,6 +54,12 @@ La sección de detalles del Editor de manifiesto define la descripción de alto 
 
 La sección de funciones del Editor de manifiesto es donde están definidas las funcionalidades de la aplicación y donde se muestran los detalles de cada una de esas funcionalidades.
 
+> [!NOTE]
+> La característica de personalización de la aplicación está disponible actualmente solo en la versión preliminar del desarrollador.
+> 
+> Como práctica recomendada, debes proporcionar directrices de personalización para que los usuarios de la aplicación y los clientes puedan seguir al personalizar la aplicación. Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+
 ##### <a name="tabs"></a>Pestañas
 
 * **Pestañas del equipo.** Una pestaña de equipo forma parte de un canal y proporciona acceso rápido a la información y los recursos del equipo. Por ejemplo, la pestaña Planificador de un canal contiene un único plan; la pestaña Power BI se asigna a un informe específico. Los usuarios pueden explorar en profundidad el contexto correspondiente, pero no deberían poder navegar fuera de la pestaña. La pestaña Power BI, por ejemplo, no habilita la navegación a otros informes de Power BI, aunque habilita el botón *Ir al sitio web*, que inicia el informe en el sitio web principal de Power BI.
@@ -68,13 +76,17 @@ Esta sección le permite agregar un [bot de conversación](~/bots/what-are-bots.
 
 Si todavía no ha registrado ningún bot con Bot Framework, haga clic en *Registrarse* para crear uno nuevo. Cuando haya terminado de registrar el bot, vuelva a esta sección del Editor de manifiesto para escribir su nombre y el id. de Bot Framework.
 
-Una vez que haya proporcionado la información del bot, ahora puede definir de manera opcional una lista de comandos que el bot puede sugerir a los usuarios. Agregue el nombre del comando, una descripción del comando que indique su sintaxis y argumentos, y el ámbito al que debe aplicarse este comando.
+Después de proporcionar la información del bot, ahora puedes definir opcionalmente una lista de comandos que el bot pueda sugerir a los usuarios. Agregue el nombre del comando, una descripción del comando que indique su sintaxis y argumentos, y el ámbito al que debe aplicarse este comando.
 
 Tenga en cuenta que, si ha definido que el bot solo sea compatible con un ámbito, los comandos especificados para un ámbito no compatible serán ignorados. Puede editar el ámbito con el que admite el bot en cualquier momento.
 
 ##### <a name="connectors"></a>Conectores
 
 Esta sección le permite agregar un conector a la aplicación. Si ya registró un Conector de Office 365, elija *Configurar* y escriba el nombre y el id. del conector. Si desea un conector nuevo haga clic en *Registrarse* para ir al Panel del desarrollador de conectores en el explorador.
+
+> [!NOTE]
+> La personalización de aplicaciones permite a los administradores cambiar la apariencia de las aplicaciones cargadas a través de bots, extensiones de mensajería, pestañas y conectores. Por ejemplo, si el administrador de Teams personaliza el nombre de una aplicación de *Contoso* a *Contoso Agent,* la aplicación aparecerá con el nuevo nombre *Agente Contoso* para los usuarios. Sin embargo, al agregar un conector a un chat, en la lista los conectores seguirán mostrándole el nombre de la aplicación como *Contoso*.
+
 
 ##### <a name="messaging-extensions"></a>Extensiones de mensajería
 

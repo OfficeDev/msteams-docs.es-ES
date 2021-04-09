@@ -4,12 +4,12 @@ description: Describe el esquema de manifiesto de Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585844"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634526"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -277,7 +277,11 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -658,5 +662,5 @@ Define las propiedades que usa la aplicación para publicar una fuente de activi
 ```
 
 ***
->
->
+
+
