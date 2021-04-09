@@ -350,9 +350,11 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Probar la aplicación
   items:
+    - name: Información general
+      href: concepts/build-and-test/test-app-overview.md
     - name: Preparar el espacio empresarial de Microsoft 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: Elegir una configuración de pruebas
+    - name: Elegir una configuración de prueba
       href: concepts/build-and-test/debug.md
     - name: Añadir datos de prueba al entorno
       href: concepts/build-and-test/test-data.md
