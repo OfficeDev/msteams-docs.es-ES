@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo también puede usar ngrok para des
 ms.topic: how-to
 keywords: túnel ngrok de desarrollo local
 ms.date: 11/18/2018
-ms.openlocfilehash: d61c380fda941618a769ad3fffa053b2a4800de9
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634730"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654289"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desarrollar bots de llamadas y reuniones en línea en el equipo local
 
@@ -19,7 +19,7 @@ Los bots de mensajería usan HTTP, pero las llamadas y los bots de reunión en l
 
 ## <a name="configure-ngrokyml"></a>Configurar ngrok.yml
 
-Vaya a [ngrok](https://ngrok.com) y regístrese para obtener una cuenta gratuita o inicie sesión en su cuenta existente. Después de haber iniciado sesión, vaya al [panel](https://dashboard.ngrok.com) y obtenga el authtoken.
+Vaya a [ngrok](https://ngrok.com) y regístrese para obtener una cuenta gratuita o inicie sesión en su cuenta existente. Después de haber iniciado sesión, vaya al [panel y](https://dashboard.ngrok.com) obtenga el token de autenticación.
 
 Cree un archivo de configuración de ngrok `ngrok.yml` y agregue la siguiente línea. Para obtener más información sobre dónde se puede encontrar el archivo, [vea ngrok](https://ngrok.com/docs#config):
 
@@ -46,7 +46,7 @@ tunnels:
 Los medios hospedados en aplicaciones usan certificados y túneles TCP. Se requieren los siguientes pasos:
 
 1. Los puntos de conexión TCP públicos de Ngrok tienen direcciones URL fijas. Son `0.tcp.ngrok.io` , `1.tcp.ngrok.io` y así sucesivamente. Debe tener una entrada CNAME DNS para el servicio que apunta a estas direcciones URL. Por ejemplo, supongamos que hace `0.bot.contoso.com` referencia a , hace referencia a , y así `0.tcp.ngrok.io` `1.bot.contoso.com` `1.tcp.ngrok.io` sucesivamente.
-2. Se requiere un certificado SSL para las direcciones URL. Para facilitar la tarea, use un certificado SSL emitido a un dominio de comodín. En este caso, sería `*.bot.contoso.com` . El SDK multimedia valida este certificado SSL, por lo que debe coincidir con la dirección URL pública del bot. Tenga en cuenta la huella digital e instálesla en los certificados de la máquina.
+2. Se requiere un certificado SSL para las direcciones URL. Para facilitarlo, use un certificado SSL emitido a un dominio de comodín. En este caso, sería `*.bot.contoso.com` . El SDK multimedia valida este certificado SSL, por lo que debe coincidir con la dirección URL pública del bot. Tenga en cuenta la huella digital e instálesla en los certificados de la máquina.
 3. Ahora, configure un túnel TCP para reenviar el tráfico a localhost. Escriba las siguientes líneas en su ngrok.yml:
 
     ```yaml

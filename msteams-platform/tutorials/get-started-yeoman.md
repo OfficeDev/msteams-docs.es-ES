@@ -1,40 +1,40 @@
 ---
 title: 'Tutorial: crear la primera aplicación con el generador de Yeoman'
-description: Obtenga información sobre cómo empezar a compilar aplicaciones de Microsoft Teams con el generador de Yeoman.
+description: Obtén información sobre cómo empezar a crear aplicaciones de Microsoft Teams con el generador de Yeoman.
 keywords: introducción a node.js nodejs yeoman
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: f7f0fb3ba1be28dfa7d343be3af9d122b4ad090d
-ms.sourcegitcommit: fa64b83c0b534bf7a89f256880d5b5ca193e4b04
+ms.openlocfilehash: 81cbdbfa213f415eebae9bb63d76c39599b56c01
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "50037007"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654415"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Crear la primera aplicación de Microsoft Teams con el generador de Yeoman
 
->[!Note]
->Este tutorial procede del generador [de Yeoman para la wiki de Teams.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
+> [!Note]
+> Este tutorial proviene del generador [de Yeoman para la wiki de Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
 
-En este tutorial, le mostraremos cómo crear su primera aplicación de Microsoft Teams con el generador de Yeoman de Microsoft Teams. Se supone que tiene una cuenta de Teams que permite [la instalación de prueba de la aplicación.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+En este tutorial, le mostraremos cómo crear su primera aplicación de Microsoft Teams con el generador Yeoman de Microsoft Teams. También le guiará a través del proceso de actualización de Teams con el generador de Yeoman. El requisito previo para empezar con este tutorial es que tienes una cuenta de Teams que permite la [instalación local de aplicaciones.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
-![yeoman generator git](~/assets/yeoman-demo.gif)
+![git generador de yeoman](~/assets/yeoman-demo.gif)
 
 ## <a name="setup-and-prepare-your-machine"></a>Configurar y preparar el equipo
 
-Debes instalar lo siguiente en el equipo antes de empezar a usar el generador de Yeoman.
+Debe instalar lo siguiente en el equipo antes de empezar a usar el generador de Yeoman.
 
 ### <a name="install-nodejs"></a>Instalar Node.js
 
-Debes tener Node.js instalado en el equipo. Debe usar la versión más reciente [de LTS](https://nodejs.org).
+Debe tener Node.js instalado en el equipo. Debe usar la versión [lts más reciente](https://nodejs.org).
 
 ### <a name="install-a-code-editor"></a>Instalar un editor de código
 
-También necesitas un editor de código, no dudes en usar el editor de texto que prefieras. Sin embargo, la mayoría de esta documentación y capturas de pantalla hacen referencia al [uso Visual Studio código.](https://code.visualstudio.com)
+Necesita un editor de código. La mayoría de esta documentación e imágenes hacen referencia al [uso de Visual Studio Code](https://code.visualstudio.com). Sin embargo, no dude en usar el editor de texto que prefiera.
 
-### <a name="install-yeoman-and-gulp-cli"></a>Instalar la CLI de Yeoman y Gulp
+### <a name="install-yeoman-and-gulp-cli"></a>Instalar Yeoman y Gulp CLI
 
-Para poder realizar scaffolding en proyectos con el generador de Teams, debe instalar la herramienta Yeoman, así como el administrador de tareas de la CLI de Gulp.
+Para scaffolding de proyectos con el generador, debe instalar la herramienta Yeoman y el administrador de tareas de la CLI de Gulp.
 
 Abra un símbolo del sistema y escriba lo siguiente:
 
@@ -44,13 +44,13 @@ npm install yo gulp-cli --global
 
 ## <a name="install-the-generator"></a>Instalar el generador
 
-Instale el generador de Yeoman de Teams con el siguiente comando:
+Instale el generador de Teams Yeoman con el siguiente comando:
 
 ```bash
 npm install generator-teams --global
 ```
 
-Para instalar versiones preliminares del generador, ejecute este comando:
+Instale la versión preliminar del generador con el siguiente comando:
 
 ```bash
 npm install generator-teams@preview --global
@@ -58,37 +58,47 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>Generar el proyecto
 
-Abra un símbolo del sistema y cree un directorio donde quiera crear el proyecto y, en ese directorio, ejecute el `yo teams` comando.
+En esta sección se le guían los pasos para generar el proyecto.
 
-Esto inicia el generador, que le pedirá un conjunto de preguntas.
+**Para generar el proyecto**
 
-![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
+1. Abra un símbolo del sistema y cree un nuevo directorio donde desee crear el proyecto y, en ese directorio, ejecute el comando `yo teams` . Se inicia el generador.
+1. Responda al conjunto de preguntas que le pida el generador.
 
-La primera pregunta es sobre el nombre del proyecto, puede dejarlo tal como está presionando ENTRAR. La siguiente pregunta le pregunta si desea crear un nuevo directorio o usar el actual. Como ya estamos en el directorio que queremos, simplemente presionamos ENTRAR.
+   ![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
-En el siguiente paso se pide un título del proyecto, este título se usará en el manifiesto y la descripción de la aplicación. Y, a continuación, se le pedirá un nombre de compañía, que también se usará en el manifiesto.
+   1. La primera pregunta es sobre el nombre del proyecto, puede dejarlo tal como está presionando entrar.
+   1. La siguiente pregunta le pregunta si desea crear un directorio nuevo o usar el actual. Como ya está en el directorio que desea, simplemente presione ENTRAR.
+   1. En la siguiente pregunta, escriba el título del proyecto. Este título se usará en el manifiesto y la descripción de la aplicación. 
+   1. A continuación, se le pedirá un nombre de empresa, que también se usará en el manifiesto.
+   1. La quinta pregunta le pregunta qué versión del manifiesto desea usar. Para este tutorial, `v1.5` seleccione , que es el esquema disponible general actual.
+   1. A continuación, el generador le preguntará qué elementos desea agregar al proyecto. Puede seleccionar una sola o cualquier combinación de elementos. Para estos tutoriales, solo tiene que *seleccionar una pestaña*.
 
-La quinta pregunta le pregunta qué versión del manifiesto desea usar. Para este tutorial, seleccione `v1.5` , que es el esquema disponible general actual.
+    ![selección de elementos](~/assets/yeoman-images/teams-first-app-2.png)
 
-Después, el generador le preguntará qué elementos desea agregar a su proyecto. Puede seleccionar una sola o cualquier combinación de elementos. Por ahora, solo tiene que *seleccionar una pestaña*.
+1. Responda al siguiente conjunto de preguntas de seguimiento que aparecen en función de los elementos seleccionados en el paso 2.
+1. Escriba una dirección URL de dónde hospedará la solución. 
 
-![selección de elemento](~/assets/yeoman-images/teams-first-app-2.png)
+   > [!NOTE]
+   > La dirección URL puede ser cualquier dirección URL, pero de forma predeterminada el generador sugiere una dirección URL de sitio web de Azure.
 
-En función de los elementos que seleccione, se le hará un conjunto de preguntas de seguimiento.
+1. En la siguiente pregunta, confirme si desea incluir pruebas unitarias para la solución. La respuesta predeterminada es *sí*. Si decide incluir pruebas unitarias, el proyecto generado tendrá un marco de pruebas unitarias y algunas pruebas unitarias predeterminadas para los distintos elementos que se van a scaffolding. 
+   > [!NOTE]
+   > * Para este tutorial, elija no incluir un marco de prueba.
+   > * El generador tiene una gran cantidad de características avanzadas integradas de las que puede participar o no participar.
 
-Ahora debe escribir una dirección URL donde hospedará la solución. Puede ser cualquier dirección URL, pero de forma predeterminada el generador sugiere una dirección URL de Sitios web de Azure.
+1. Para facilitar el inicio de sesión, también se le preguntará si desea usar Azure Application Insights para iniciar sesión. Si elige *Sí,* deberá proporcionar una clave de Azure Application Insights. 
 
-El generador tiene una gran cantidad de características avanzadas integradas que puede optar por participar o no participar. Si sigue la pregunta de dirección URL que se le hará si desea incluir pruebas unitarias para la solución, el valor predeterminado es sí. Si eliges esto, el proyecto generado tendrá un marco de pruebas unitarias y algunas pruebas unitarias predeterminadas para los distintos elementos que se van a scaffolding. Para este tutorial, elija no incluir un marco de prueba.
+   > [!NOTE]
+   > En este tutorial no se puede usar Application Insights.
 
-Para facilitar el registro, también se le preguntará si desea usar Azure Application Insights para el registro. Si elige Sí, deberá proporcionar una clave de Azure Application Insights. En este tutorial no se puede usar Application Insights.
-
-El siguiente conjunto de preguntas se basará en la selección de elementos previamente. Para una pestaña solo necesita proporcionar un nombre y, opcionalmente, elegir si desea poder usar esta aplicación como un elemento web de SharePoint Online. Una vez que haya proporcionado este nombre, el generador generará el proyecto e instalará todas las dependencias. Esto puede tardar uno o dos minutos.
+El siguiente conjunto de preguntas se basará en los elementos seleccionados anteriormente. Para una pestaña, solo necesita proporcionar un nombre y, opcionalmente, elegir si desea poder usar esta aplicación como un elemento web de SharePoint Online. Después de proporcionar el nombre, el generador generará el proyecto e instalará todas las dependencias. Esto llevará uno o dos minutos.
 
 ## <a name="add-some-code-to-your-tab"></a>Agregar código a la pestaña
 
-Una vez que haya terminado el generador, puede abrir la solución en su editor de código favorito. Tómese uno o dos minutos y familiarícese con cómo se organiza el código; puede leer más sobre esto en la documentación de la estructura [del](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) proyecto.
+Una vez terminado el generador, puede abrir la solución en el editor de código favorito. Tómese uno o dos minutos y familiarícese con cómo se organiza el código. Para obtener más información, consulte [documentación sobre la estructura del](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) proyecto.
 
-La pestaña se encontrará en el `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` archivo. Esta es la clase basada en TypeScript React para la pestaña. Busque el método y agregue una línea de código dentro del control para que se vea `render()` `<PanelBody>` así:
+La pestaña está en el `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` archivo. Esta es la clase basada en TypeScript React para la pestaña. Busque el `render()` método y agregue una línea de código dentro del control para que se vea `<PanelBody>` así:
 
 ``` TypeScript
 <PanelBody>
@@ -102,36 +112,72 @@ Guarde el archivo y vuelva al símbolo del sistema.
 
 ## <a name="build-your-app"></a>Crear una aplicación
 
-Ahora puede compilar el proyecto. Esto se realiza en dos pasos (o un paso, consulta a continuación).
+Ahora puede crear el proyecto. Esto se realiza en dos pasos (o un paso, vea a continuación).
 
-En primer lugar, debe crear el archivo de manifiesto de la aplicación de Teams que cargue o cargue localmente en Microsoft Teams. Esto se realiza mediante la tarea de Gulp `gulp manifest` . Esto validará el manifiesto y creará un archivo zip en el `./package` directorio.
+En primer lugar, debe crear el archivo de manifiesto de Teams App, que se carga o se carga localmente en Microsoft Teams. Esto se realiza mediante la tarea Gulp `gulp manifest` . Esto validará el manifiesto y creará un archivo zip en el `./package` directorio.
 
 Para crear la solución, use el `gulp build` comando. Esto transpilará la solución en la `./dist` carpeta. 
 
 ## <a name="run-your-app"></a>Ejecutar la aplicación
 
-Para ejecutar la aplicación, usas el `gulp serve` comando. Esto compilará e iniciará un servidor web local para que pruebe la aplicación. El comando también volverá a generar la aplicación siempre que guarde un archivo en el proyecto. 
+Para ejecutar la aplicación, usas el `gulp serve` comando. Esto compilará e iniciará un servidor web local para que pruebe la aplicación. El comando también reconstruirá la aplicación siempre que guarde un archivo en el proyecto. 
 
-Ahora debería poder explorar para asegurarse de `http://localhost:3007/myFirstAppTab/` que se está representando la pestaña. Sin embargo, aún no está en Microsoft Teams.
+Ahora debería poder buscar para asegurarse de que `http://localhost:3007/myFirstAppTab/` la pestaña se está representando. Sin embargo, todavía no está en Microsoft Teams.
 
 ![ver el sitio en un explorador](~/assets/yeoman-images/teams-first-app-3.png)
 
 ## <a name="run-your-app-in-microsoft-teams"></a>Ejecutar la aplicación en Microsoft Teams
 
-Microsoft Teams no le permite tener la aplicación hospedada en localhost, por lo que necesita publicarla en una dirección URL pública o usar un proxy como ngrok.
+Microsoft Teams no te permite hospedar la aplicación en localhost, por lo que debes publicarla en una dirección URL pública o usar un proxy como ngrok.
 
-Una buena noticia es que el proyecto con scaffolding tiene esto integrado. Cuando ejecute el servicio ngrok se iniciará en segundo plano, con una entrada DNS única y pública, y también empaquetará el manifiesto con esa dirección URL única y, a continuación, hará exactamente lo mismo que `gulp ngrok-serve` `gulp serve` .
+Una buena noticia es que el proyecto scaffolded tiene este proyecto integrado. Cuando ejecute el servicio ngrok se iniciará en segundo plano, con una entrada DNS única y pública y también empaquetará el manifiesto con esa dirección URL única y, a continuación, hará exactamente lo mismo que `gulp ngrok-serve` `gulp serve` .
 
-Después de ejecutar , cree un nuevo equipo de Microsoft Teams y, cuando se cree, haga clic en el nombre del equipo, para ir a la configuración de teams y, `gulp ngrok-serve` a continuación, *seleccione Aplicaciones.* En la esquina inferior derecha debería ver un vínculo Cargar una aplicación personalizada, selecciónelo y, a continuación, vaya *a* la carpeta del proyecto y a la subcarpeta llamada `package` . Seleccione el archivo zip de esa carpeta y elija Abrir. La aplicación ahora se ha instalado localmente en Microsoft Teams.
+Después de ejecutar , cree un nuevo equipo de Microsoft Teams y cuando se cree haga clic en el nombre del equipo, vaya a la configuración de equipos y, `gulp ngrok-serve` a continuación, seleccione *Aplicaciones*. En la esquina inferior derecha debería ver un vínculo Cargar una aplicación personalizada, selecciónelo y, a continuación, vaya *a* la carpeta del proyecto y a la subcarpeta denominada `package` . Seleccione el archivo zip en esa carpeta y elija abrir. La aplicación ahora se ha descargado localmente en Microsoft Teams.
 
-![aplicación de instalación de local](~/assets/yeoman-images/teams-first-app-4.png)
+![aplicación de sideloaded](~/assets/yeoman-images/teams-first-app-4.png)
 
 Vuelva al canal *General* y seleccione *+* agregar una nueva pestaña. Debería ver la pestaña en la lista de pestañas.
 
-![pestaña configurar](~/assets/yeoman-images/teams-first-app-5.png)
+![ficha configurar](~/assets/yeoman-images/teams-first-app-5.png)
 
-Elija la pestaña y siga las instrucciones para agregarla. Observe que tiene un cuadro de diálogo de configuración personalizado para el que puede editar el origen. Seleccione *Guardar* para agregar la pestaña al canal. Una vez que haya terminado, la pestaña debe cargarse dentro de Microsoft Teams.
+Elija la pestaña y siga las instrucciones para agregarla. Tenga en cuenta que tiene un cuadro de diálogo de configuración personalizado para el que puede editar el origen. Seleccione *Guardar* para agregar la pestaña al canal. Una vez hecho esto, la pestaña debe cargarse dentro de Microsoft Teams.
 
 ![ejecutar pestaña en teams](~/assets/yeoman-images/teams-first-app-6.png)
 
-**¡Congraciaciones! Ha creado e implementado su primera aplicación de Microsoft Teams**
+## <a name="upgrade-microsoft-teams"></a>Actualizar Microsoft Teams
+
+También puede actualizar la versión actual de Microsoft Teams a la versión más reciente con el generador Yeoman de Microsoft Teams.
+
+**Para actualizar Microsoft Teams**
+
+1. Obtenga la versión actual de Teams con el siguiente comando:
+
+   ```PowerShell
+    yo teams --version
+   ```
+2. Use el siguiente comando para seleccionar actualizar el generador:
+
+   ```PowerShell
+    yo
+   ```
+3. Use las teclas de flecha para elegir **Actualizar los generadores**.
+
+   ![imagen de YoSelectUpdatGen](~/assets/images/Update-Teams/YoSelectUpdateGen.png)
+
+4. Seleccione el generador que desee de la lista de generadores.
+   > [!NOTE]
+   > Use la barra espaciador para seleccionar o borrar una versión de Teams seleccionada de las opciones disponibles.
+
+    ![imagen de UseSpaceToSelectGenerators](~/assets/images/Update-Teams/UseSpaceToSelectGenerators.png)
+    
+
+   > [!NOTE]
+   > La instalación de Teams tarda unos segundos y minutos en completarse.
+
+5. Una vez completada la instalación, use el siguiente comando para comprobar la versión instalada:
+
+   ```PowerShell
+    yo teams --version
+   ```
+   
+**¡Felicidades! Has creado e implementado la primera aplicación de Microsoft Teams. También ha actualizado Microsoft Teams.**

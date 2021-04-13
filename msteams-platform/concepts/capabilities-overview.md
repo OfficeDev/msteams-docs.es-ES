@@ -1,22 +1,24 @@
 ---
-title: Descripción de las capacidades de la aplicación de Teams
+title: Comprender las funcionalidades de la aplicación
 author: heath-hamilton
 description: Características de la aplicación de Teams explicadas
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5336b36b52cf81be414f18ccaaf9e235c079e626
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034708"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654436"
 ---
-# <a name="understanding-teams-app-capabilities"></a>Descripción de las capacidades de la aplicación de Teams
+# <a name="understand-microsoft-teams-app-capabilities"></a>Comprender las capacidades de la aplicación de Microsoft Teams
 
-*Las funcionalidades* son los puntos de extensión para crear aplicaciones en la plataforma de Microsoft Teams.
+La extensibilidad o los puntos de entrada son diferentes formas en las que una aplicación puede manifestarse a un usuario. Por ejemplo, un usuario puede interactuar con una aplicación en una pestaña de lienzo para realizar una actividad o puede optar por hacer lo mismo con un bot de conversación. Las distintas funcionalidades usadas para crear la aplicación de Teams te permiten aumentar su ámbito de uso.
 
-Hay varias formas de extender Teams, por lo que cada aplicación es única: algunas solo tienen una funcionalidad (como un webhook), mientras que otras tienen algunas para dar opciones a los usuarios. Por ejemplo, la aplicación podría mostrar datos en una ubicación central (pestaña) y presentar esa misma información a través de una interfaz conversacional (bot).
+Hay varias formas de extender Teams, por lo que cada aplicación es única. Algunos solo tienen una funcionalidad, como un webhook, mientras que otros tienen más de una característica para ofrecer a los usuarios varias opciones. Por ejemplo, la aplicación puede mostrar datos en  una ubicación central, es decir, la pestaña y presentar esa misma información a través de una interfaz conversacional, es decir, el **bot**.
+
+## <a name="app-capabilities"></a>Capacidades de la aplicación
 
 La aplicación de Teams tiene una o todas las siguientes funcionalidades principales:
 
@@ -27,12 +29,20 @@ La aplicación de Teams tiene una o todas las siguientes funcionalidades princip
 
 La aplicación también puede aprovechar las capacidades avanzadas, como la API de [Microsoft Graph para Teams](https://docs.microsoft.com/graph/teams-concept-overview).
 
-Consulta la siguiente ilustración para obtener una idea de qué capacidades proporcionarían las características que quieres en la aplicación.
+La siguiente ilustración te ofrece una idea de qué funcionalidades proporcionarán las características que quieras en la aplicación.
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mapa de la mente que ilustra las funcionalidades de la aplicación de Teams.":::
 
-## <a name="doing-whats-best-for-your-users"></a>Hacer lo mejor para los usuarios
+## <a name="always-consider-your-user"></a>Tenga en cuenta siempre al usuario
 
-A medida que te familiarices con el desarrollo de aplicaciones de Teams, empezarás a comprender sus sutilezas. Hay más de una forma de crear determinadas características (como recopilar la entrada del usuario). Por ejemplo, puede insertar un formulario basado en web en una pestaña mediante un `<iframe>` . También puedes hacerlo en una pestaña con un módulo de tareas, una convención de la interfaz de usuario de Teams, para una experiencia más nativa que los usuarios prefieran.
+A medida que te familiarices con el desarrollo de aplicaciones de Teams, comprendes sus fundamentos básicos. Comprende que hay más de una forma de crear determinadas características. En estos escenarios, considere cómo puede proporcionar una experiencia más nativa al usuario.
+Por ejemplo, puedes recopilar la entrada del usuario en un formulario creado como una pestaña en la aplicación. También puede hacerlo con un módulo de tareas sin cambiar las vistas y interrumpir el flujo de trabajo del usuario. Es importante elegir puntos de extensión que proporcionen una desviación mínima del flujo de trabajo normal de un usuario.
 
-Elegir las capacidades y el diseño adecuados se debe a comprender primero [los casos de uso de la audiencia.](../concepts/design/understand-use-cases.md)
+## <a name="see-also"></a>Recursos adicionales
+
+> [!div class="nextstepaction"]
+> [Crear aplicaciones para Teams](../overview.md)
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Puntos de entrada de la aplicación de Teams](../concepts/extensibility-points.md)

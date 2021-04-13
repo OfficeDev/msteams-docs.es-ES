@@ -4,12 +4,12 @@ author: clearab
 description: Probar y depurar el bot localmente con un IDE
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 449d6dd5e10a72538e6443c9d17f998ebc662379
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 5a35419564f87617ee5d590e2a604e970caa16b3
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634772"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654467"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -20,7 +20,7 @@ Al probar el bot, debes tener en cuenta tanto los contextos en los que quieres q
 La forma más completa de probar el bot es crear un paquete de aplicación y cargarlo en Teams. Este es el único método para probar la funcionalidad completa disponible para el bot, en todos los ámbitos.
 
 Hay dos métodos para cargar la aplicación:
-* Usar [App Studio](~/concepts/build-and-test/app-studio-overview.md)
+* Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Crea un paquete de aplicación](~/concepts/build-and-test/apps-package.md) manualmente y, a continuación, carga la [aplicación](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
@@ -92,7 +92,7 @@ Para impedir que el bot reciba mensajes, vaya al **Panel de bots** y edite el ca
 
 Para quitar el bot completamente de Teams, vaya al **Panel de bots** y edite el canal de Microsoft Teams. Elija el **botón** Eliminar en la parte inferior. Esto evita que los usuarios detecten, agreguen e interactúen con el bot. Esto no quita el bot de las instancias de Teams de otros usuarios, pero también deja de funcionar para ellas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 > [!div class=nextstep]
 > [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)

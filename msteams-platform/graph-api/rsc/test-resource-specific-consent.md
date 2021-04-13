@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorización de teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634715"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654429"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos de recursos en Teams
 
@@ -21,7 +21,7 @@ El consentimiento específico de los recursos (RSC) es una integración de Micro
 > Para probar los permisos de RSC, el archivo de manifiesto de la aplicación teams debe incluir una clave **webApplicationInfo** rellenada con los campos siguientes:
 >
 > - **id:** El identificador de la aplicación de Azure AD, consulte [Registrar la aplicación en el Portal de Azure AD](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **permisos de aplicación:** permisos RSC para la aplicación, consulta [Permisos específicos de recursos](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -54,18 +54,16 @@ El consentimiento específico de los recursos (RSC) es una integración de Micro
 
 Para comprobar si la carga de solicitud de API está respetando los permisos RSC, debe copiar el código de prueba JSON de [RSC](test-rsc-json-file.md) en el entorno local y actualizar los siguientes valores:
 
-* `azureADAppId`: Id. de aplicación de Azure AD de la aplicación
-* `azureADAppSecret`: El secreto de la aplicación de Azure AD (contraseña)
-* `token_scope`: El ámbito es necesario para obtener un token: establezca el valor en https://graph.microsoft.com/.default
+* `azureADAppId`: Id. de aplicación de Azure AD de la aplicación.
+* `azureADAppSecret`: la contraseña de la aplicación de Azure AD.
+* `token_scope`: el ámbito es necesario para obtener un token. establezca el valor en https://graph.microsoft.com/.default .
 * `teamGroupId`: Puede obtener el identificador de grupo de grupo del cliente de Teams de la siguiente manera:
 
-  > [!div class="checklist"]
-  >
-  > * En el cliente de Teams, seleccione **Teams en** la barra de navegación de la izquierda.
-  > * Selecciona el equipo donde está instalada la aplicación en el menú desplegable.
-  > * Seleccione el **icono Más opciones** (&#8943;)
-  > * Seleccionar **Obtener vínculo al equipo** 
-  > * Copie y guarde el **valor groupId** de la cadena.
+    1. En el cliente de Teams, seleccione **Teams en** la barra de navegación de la izquierda.
+    2. Selecciona el equipo donde está instalada la aplicación en el menú desplegable.
+    3. Seleccione el **icono Más opciones** (&#8943;).
+    4. Seleccione **Obtener vínculo al equipo**. 
+    5. Copie y guarde el **valor groupId** de la cadena.
 
 ### <a name="use-postman"></a>Usar Postman
 
@@ -85,7 +83,7 @@ Ejecute toda la colección de permisos para cada llamada a la API. Los permisos 
 2. Siga los pasos para probar los permisos [RSC agregados mediante Postman](#test-added-rsc-permissions-using-the-postman-app).
 3. Compruebe todos los códigos de estado de respuesta para confirmar que las llamadas API específicas, correctamente, han fallado con un código de estado **HTTP 403**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 > [!div class="nextstepaction"]
 > [API de Microsoft Graph y Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)

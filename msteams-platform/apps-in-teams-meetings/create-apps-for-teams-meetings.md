@@ -5,12 +5,12 @@ description: crear aplicaciones para reuniones de teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596234"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654378"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -335,12 +335,35 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 #### <a name="share-to-stage"></a>Compartir en fase 
 
 > [!NOTE]
-> Esta funcionalidad solo se puede obtener en la vista previa de desarrollo de insider
+> * Esta funcionalidad está disponible actualmente solo en la versión preliminar del desarrollador.
+> * Para usar esta característica, la aplicación debe admitir un panel lateral en la reunión.
 
 
 Esta funcionalidad ofrece a los desarrolladores la capacidad de compartir una aplicación en la fase de reunión. Al habilitar el recurso compartido en la fase de reunión, los participantes de la reunión pueden colaborar en tiempo real. 
 
-El contexto necesario es meetingStage en el manifiesto de la aplicación. Un requisito previo para esto es tener el contexto meetingSidePanel. Esto habilitará el botón "Compartir" en el panel lateral como se indica a continuación
+El contexto necesario está `meetingStage` en el manifiesto de la aplicación. Un requisito previo para ello es tener el `meetingSidePanel` contexto. Esto habilita el **botón** Compartir en el panel lateral como depecited en la siguiente imagen:
+
+  ![share_to_stage_during_meeting experiencia](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+El cambio de manifiesto necesario para habilitar esta funcionalidad es el siguiente: 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
 
 
 
@@ -355,7 +378,7 @@ Las configuraciones posteriores a la reunión y previas a la reunión son equiva
 | Extensibilidad de reuniones | Ejemplo de extensibilidad de reuniones de Microsoft Teams para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
 | Bot de burbuja de contenido de reunión | Ejemplo de extensibilidad de reuniones de Microsoft Teams para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Recursos adicionales
 
 > [!div class="nextstepaction"]
 > [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)

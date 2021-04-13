@@ -3,12 +3,12 @@ title: DevTools para pestañas de Microsoft Teams
 description: Describe cómo llegar a DevTools al usar el cliente de escritorio de Microsoft Teams
 ms.topic: how-to
 keywords: herramientas de desarrollo de depuración de herramientas para desarrolladores de cliente de escritorio chrome móvil
-ms.openlocfilehash: 1c540c94adc080d9495097f8e3b427eeb14c56d8
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 7bd9403a74fd33619a2f8ac1b4b3a4c74a21175d
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634744"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654394"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 
@@ -19,17 +19,17 @@ Cuando Teams se ejecuta en un explorador, es fácil acceder a DevTools del explo
 1. Agregue puntos de interrupción al código JavaScript y realice la depuración interactiva.
 
 > [!NOTE]
-> La característica solo está disponible en clientes de escritorio y Android una vez habilitada la **vista previa** de desarrollador. Para obtener más información, [vea How do I enable developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> La característica solo está disponible para clientes de escritorio y Android después de habilitar **la vista previa** de desarrollador. Para obtener más información, [vea How do I enable developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="access-devtools-in-the-desktop"></a>Access DevTools en el escritorio
 
-Aunque la versión web y la versión de escritorio de Teams son casi exactamente iguales, existen algunas diferencias con respecto a la autenticación. A veces, la única forma de averiguar lo que está sucediendo es usar DevTools. Para usar DevTools en el cliente de escritorio, debe:
+Aunque la versión web y la versión de escritorio de Teams son casi las mismas, existen algunas diferencias con respecto a la autenticación. A veces, la única forma de averiguar lo que está sucediendo es usar DevTools. Para usar DevTools en el cliente de escritorio, debe:
 
 1. Asegúrese de que ha habilitado [la vista previa del desarrollador](~/resources/dev-preview/developer-preview-intro.md).
 1. Abra una pestaña para que tenga algo que inspeccionar con DevTools.
 1. Abra DevTools de una de las siguientes maneras:
     * **Windows:** selecciona el icono de Teams en la bandeja de escritorio.
-    * **MacOS:** seleccione el icono de Teams en dock.
+    * **macOS:** seleccione el icono de Teams en dock.
  
    La siguiente imagen muestra DevTools inspeccionando un elemento en un cuadro de diálogo de configuración de tabulación:
 

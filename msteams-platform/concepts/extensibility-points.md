@@ -4,49 +4,52 @@ author: heath-hamilton
 description: Describe dónde pueden los usuarios descubrir y usar su aplicación en Teams.
 ms.topic: conceptual
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 72ce2620160f854bbe458821db01e91d2d9f62cd
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: f61e5b5c05855c0a3a766920095cf46f699f08a6
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713630"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654359"
 ---
 # <a name="entry-points-for-teams-apps"></a>Puntos de entrada para aplicaciones de Teams
 
-La plataforma de Teams ofrece un conjunto flexible de puntos de entrada en los que los usuarios pueden descubrir y usar su aplicación. Su aplicación puede ser tan simple como incrustar contenido web existente en una pestaña o una aplicación con varias facetas con la que los usuarios interactúen en varios contextos.
+La plataforma de Teams proporciona un conjunto flexible de puntos de entrada, como equipo, canal y chat donde las personas pueden descubrir y usar la aplicación. Su aplicación puede ser tan simple como incrustar contenido web existente en una pestaña o una aplicación con varias facetas con la que los usuarios interactúen en varios contextos.
+Las aplicaciones más exitosas son nativas de Teams, por lo que elige cuidadosamente los puntos de entrada de la aplicación.
 
-Las aplicaciones de mayor éxito son las que parecen nativas de Teams, por lo que es importante planificar cuidadosamente los puntos de entrada de su aplicación.
+## <a name="shared-app-experiences"></a>Experiencias de aplicaciones compartidas
 
-## <a name="teams-channels-and-chats"></a>Equipos, canales y chats
+El equipo, el canal y el chat son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para todos los usuarios de ese espacio. Los espacios de colaboración suelen centrarse en flujos de trabajo adicionales o en desbloquear nuevas interacciones sociales.
 
-Los equipos, canales y chats son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para cualquier usuario en dicho espacio y se suelen centrar en flujos de trabajo adicionales o en establecer nuevas interacciones sociales.
+En la siguiente lista se muestra cómo se usan habitualmente las funcionalidades de la aplicación de Teams en contextos de colaboración:
 
-Aquí tiene una explicación sobre cómo se suelen usar las funciones de la aplicación de Teams en los contextos colaborativos:
+* Las [**pestañas**](~/tabs/what-are-tabs.md) ofrecen una experiencia web insertada en pantalla completa configurada para el equipo, canal o chat de grupo. Todos los miembros interactúan con el mismo contenido basado en web, por lo que es habitual una experiencia de aplicación sin estado de una sola página.
 
-* Las [**pestañas**](~/tabs/what-are-tabs.md) ofrecen una experiencia web insertada en pantalla completa configurada para el equipo, canal o chat de grupo. Todos los miembros interactúan con el mismo contenido basado en la web, por lo que es habitual una experiencia de aplicación de una sola página sin estado.
+* Las [**extensiones de mensajería**](~/messaging-extensions/what-are-messaging-extensions.md) son accesos directos para insertar contenido externo en una conversación o para tomar acciones en mensajes sin salir de Teams. [La eliminación de vínculos](~/messaging-extensions/how-to/link-unfurling.md) proporciona contenido enriquecido al compartir contenido desde una dirección URL común.
 
-* Las [**extensiones de mensajería**](~/messaging-extensions/what-are-messaging-extensions.md) son accesos directos para insertar contenido externo en una conversación o para tomar acciones en mensajes sin salir de Teams. El despliegue de vínculos proporciona contenido enriquecido al compartir contenido desde una dirección URL común.
-
-* Los [**bots**](~/bots/what-are-bots.md) interactúan con los miembros de la conversación a través del chat y responden a eventos (como agregar un nuevo miembro o cambiar el nombre de un canal). Las conversaciones con un bot en estos contextos son visibles para todos los miembros del equipo, canal o grupo, por lo que las conversaciones con bots deberían ser relevantes para todos.
+* [**Los bots**](~/bots/what-are-bots.md) interactúan con los miembros de la conversación a través del chat y responden a eventos, como agregar un nuevo miembro o cambiar el nombre de un canal. 
+   > [!NOTE]
+   > Las conversaciones con un bot en estos contextos son visibles para todos los miembros del equipo, canal o grupo, por lo que las conversaciones de bot deben ser relevantes para todos.
 
 * Los [**webhooks y conectores**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) permiten a un servicio externo publicar mensajes en una conversación y a los usuarios enviar mensajes a un servicio.
 
 * La [**API de REST de Microsoft Graph**](https://docs.microsoft.com/graph/teams-concept-overview) obtiene datos sobre equipos, canales y chats de grupo para ayudar a automatizar y a administrar procesos de Teams.
 
-## <a name="personal-apps"></a>Aplicaciones personales
+## <a name="personal-app-experiences"></a>Experiencias de aplicaciones personales
 
-Las [aplicaciones personales](~/concepts/design/personal-apps.md) se centran en las interacciones con un solo usuario. La experiencia en este contexto es única para cada usuario.
+Las [aplicaciones personales](../concepts/design/personal-apps.md) se centran en las interacciones con un solo usuario. La experiencia en este contexto es única para cada usuario.
 
-Aquí tiene una explicación sobre cómo se suelen usar las funciones de Teams en los contextos personales:
+En la siguiente lista se muestra cómo se usan normalmente las capacidades de Teams en contextos personales:
 
 * Los [**bots**](~/bots/what-are-bots.md) mantienen conversaciones individuales con un usuario. Los bots que requieren conversaciones de varios turnos o que proporcionan notificaciones relevantes solo para un usuario específico son más adecuados en las aplicaciones personales.
 
-* Las [**pestañas**](~/tabs/what-are-tabs.md) ofrecen una experiencia web insertada de pantalla completa que resulta significativa para el usuario que la ve.
+* [**Las pestañas**](~/tabs/what-are-tabs.md) proporcionan una experiencia web incrustada a pantalla completa que es significativa para el usuario que la está viendo.
 
-## <a name="examples"></a>Ejemplos
-
-Las directrices de diseño de aplicaciones de Teams proporcionan elementos visuales detallados que muestran dónde pueden los usuarios encontrar y usar aplicaciones de Teams.
+## <a name="see-also"></a>Recursos adicionales
 
 > [!div class="nextstepaction"]
-> [Ver las directrices de diseño de aplicaciones de Teams](../concepts/design/design-teams-app-overview.md)
+> [Directrices de diseño de aplicaciones de Teams](../concepts/design/design-teams-app-overview.md)
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Comprender casos de uso](../concepts/design/understand-use-cases.md)

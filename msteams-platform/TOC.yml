@@ -30,17 +30,17 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Crear una aplicación con el generador de Yeoman
       href: tutorials/get-started-yeoman.md
-    - name: Actualizar Microsoft Teams mediante el generador de Yeoman
-      href: tutorials/upgrade-using-yeoman.md
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Conceptos básicos de aplicación
   items:
+    - name: Información general
+      href: concepts/app-fundamentals-overview.md
     - name: Funciones de la aplicación de Teams
       href: concepts/capabilities-overview.md
     - name: Puntos de entrada de la aplicación de Teams
       href: concepts/extensibility-points.md
-    - name: Información sobre los casos de uso
+    - name: Entender los casos de uso
       href: concepts/design/understand-use-cases.md
     - name: Asignación de casos de uso a las funciones de la aplicación de Teams
       href: concepts/design/map-use-cases.md
