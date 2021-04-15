@@ -1,34 +1,35 @@
 ---
-title: Agregar un menú de bot
-description: Describe cómo crear menús para bots en Microsoft Teams.
-keywords: creación de menús bots de Microsoft Teams
+title: Agregar un menú bot
+description: Describe cómo crear menús para bots en Microsoft Teams
+keywords: creación de menús de bots de teams
+ms.topic: how-to
 ms.date: 05/20/2019
-ms.openlocfilehash: 36a224dc21cccc5fcd1047e45e3d749e7ca19ea7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3623d85c1531b9942633af940c5e41ac1c574441
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675748"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696146"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a><span data-ttu-id="f7cdf-104">Agregar un menú de bot en Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="f7cdf-104">Add a bot menu in Microsoft Teams</span></span>
+# <a name="add-a-bot-menu-in-microsoft-teams"></a><span data-ttu-id="15896-104">Agregar un menú bot en Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="15896-104">Add a bot menu in Microsoft Teams</span></span>
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-<span data-ttu-id="f7cdf-105">Para ayudarle en el descubrimiento y para ayudar a los usuarios a formar la funcionalidad del bot, ahora puede Agregar menús que se muestran cada vez que el usuario interactúa con el bot.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-105">To aid discovery and to help educate users about your bot’s functionality, you can now add menus that surface whenever the user interacts with your bot.</span></span> <span data-ttu-id="f7cdf-106">El menú mostrará el texto del comando y también proporcionará texto de ayuda, como un ejemplo de uso o una descripción de la finalidad del comando.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-106">The menu will show the command text and also provide help text, such as a usage example or description of the command’s purpose.</span></span>
+<span data-ttu-id="15896-105">Para ayudar a la detección y ayudar a educar a los usuarios sobre la funcionalidad del bot, ahora puedes agregar menús que superen cada vez que el usuario interactúe con el bot.</span><span class="sxs-lookup"><span data-stu-id="15896-105">To aid discovery and to help educate users about your bot’s functionality, you can now add menus that surface whenever the user interacts with your bot.</span></span> <span data-ttu-id="15896-106">El menú mostrará el texto del comando y también proporcionará texto de ayuda, como un ejemplo de uso o una descripción del propósito del comando.</span><span class="sxs-lookup"><span data-stu-id="15896-106">The menu will show the command text and also provide help text, such as a usage example or description of the command’s purpose.</span></span>
 
-![Captura de pantalla del menú de bot](~/assets/images/bots/bot-menus-bot-menu-sample.png)
+![Captura de pantalla del menú bot](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
-<span data-ttu-id="f7cdf-108">Cuando un usuario selecciona un elemento de menú, la cadena de comandos se inserta en el cuadro de texto para ayudar a completar el mensaje del bot.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-108">When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.</span></span>
+<span data-ttu-id="15896-108">Cuando un usuario selecciona un elemento de menú, la cadena de comandos se inserta en el cuadro de texto para ayudar al usuario a completar el mensaje del bot.</span><span class="sxs-lookup"><span data-stu-id="15896-108">When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.</span></span>
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a><span data-ttu-id="f7cdf-109">Compatibilidad con menús de bot en la aplicación móvil de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="f7cdf-109">Bot menu support on Teams mobile app</span></span>
+## <a name="bot-menu-support-on-teams-mobile-app"></a><span data-ttu-id="15896-109">Compatibilidad con menú bot en la aplicación móvil de Teams</span><span class="sxs-lookup"><span data-stu-id="15896-109">Bot menu support on Teams mobile app</span></span>
 > [!NOTE] 
-> <span data-ttu-id="f7cdf-110">Los menús de bot no se muestran en dispositivos móviles</span><span class="sxs-lookup"><span data-stu-id="f7cdf-110">Bot menus are not displayed on mobile devices</span></span>
+> <span data-ttu-id="15896-110">Los menús del bot no se muestran en dispositivos móviles</span><span class="sxs-lookup"><span data-stu-id="15896-110">Bot menus are not displayed on mobile devices</span></span>
 
-## <a name="app-manifest"></a><span data-ttu-id="f7cdf-111">Manifiesto de la aplicación</span><span class="sxs-lookup"><span data-stu-id="f7cdf-111">App manifest</span></span>
+## <a name="app-manifest"></a><span data-ttu-id="15896-111">Manifiesto de la aplicación</span><span class="sxs-lookup"><span data-stu-id="15896-111">App manifest</span></span>
 
-<span data-ttu-id="f7cdf-112">Para crear un menú de bot, agregue un [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) nuevo objeto al manifiesto de la aplicación en la sección de bot.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-112">To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) object to your app manifest under the bot section.</span></span> <span data-ttu-id="f7cdf-113">Puede declarar menús individuales con comandos separados para cada ámbito que admita el bot (`personal` `groupChat` o bien `team`) cada menú admite hasta 10 comandos.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-113">You can declare individual menus with separate commands for each scope your bot supports (`personal`, `groupChat` or `team`) Each menu supports up to 10 commands.</span></span>
+<span data-ttu-id="15896-112">Para crear un menú bot, agrega un nuevo objeto al manifiesto [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) de la aplicación en la sección bot.</span><span class="sxs-lookup"><span data-stu-id="15896-112">To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) object to your app manifest under the bot section.</span></span> <span data-ttu-id="15896-113">Puede declarar menús individuales con comandos independientes para cada ámbito que el bot admite ( , o ) Cada menú admite hasta `personal` `groupChat` `team` 10 comandos.</span><span class="sxs-lookup"><span data-stu-id="15896-113">You can declare individual menus with separate commands for each scope your bot supports (`personal`, `groupChat` or `team`) Each menu supports up to 10 commands.</span></span>
 
-### <a name="manifest-excerpt---single-menu-for-both-scopes"></a><span data-ttu-id="f7cdf-114">Extracto de manifiesto-menú único para ambos ámbitos</span><span class="sxs-lookup"><span data-stu-id="f7cdf-114">Manifest excerpt - single menu for both scopes</span></span>
+### <a name="manifest-excerpt---single-menu-for-both-scopes"></a><span data-ttu-id="15896-114">Extracto de manifiesto: menú único para ambos ámbitos</span><span class="sxs-lookup"><span data-stu-id="15896-114">Manifest excerpt - single menu for both scopes</span></span>
 
 ```json
 {
@@ -72,7 +73,7 @@ ms.locfileid: "41675748"
 }
 ```
 
-### <a name="manifest-excerpt---separate-menu-per-scope"></a><span data-ttu-id="f7cdf-115">Menú independiente de fragmentos de manifiestos por ámbito</span><span class="sxs-lookup"><span data-stu-id="f7cdf-115">Manifest excerpt - separate menu per scope</span></span>
+### <a name="manifest-excerpt---separate-menu-per-scope"></a><span data-ttu-id="15896-115">Extracto de manifiesto: menú independiente por ámbito</span><span class="sxs-lookup"><span data-stu-id="15896-115">Manifest excerpt - separate menu per scope</span></span>
 
 ```json
 {
@@ -114,8 +115,8 @@ ms.locfileid: "41675748"
 }
 ```
 
-## <a name="best-practices"></a><span data-ttu-id="f7cdf-116">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="f7cdf-116">Best practices</span></span>
+## <a name="best-practices"></a><span data-ttu-id="15896-116">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="15896-116">Best practices</span></span>
 
-* <span data-ttu-id="f7cdf-117">Manténgase sencillo: el menú bot tiene como objetivo presentar las capacidades clave de su bot.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-117">Keep it simple: The bot menu is meant to present the key capabilities of your bot.</span></span>
-* <span data-ttu-id="f7cdf-118">Sea breve: las opciones de menú no deben ser muy largas y complejas con instrucciones de lenguaje natural, ya que deben ser comandos simples.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-118">Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.</span></span>
-* <span data-ttu-id="f7cdf-119">Siempre disponible: las acciones o comandos del menú bot siempre deben invokablese, independientemente del estado de la conversación o el cuadro de diálogo en el que se encuentra el bot.</span><span class="sxs-lookup"><span data-stu-id="f7cdf-119">Always available: Bot menu actions/commands should be always invokable, regardless of the state of the conversation or the dialog the bot is in.</span></span>
+* <span data-ttu-id="15896-117">Mantenlo sencillo: el menú del bot está diseñado para presentar las funciones clave del bot.</span><span class="sxs-lookup"><span data-stu-id="15896-117">Keep it simple: The bot menu is meant to present the key capabilities of your bot.</span></span>
+* <span data-ttu-id="15896-118">Tenga en cuenta que las opciones de menú no deben ser instrucciones de lenguaje natural extremadamente largas y complejas; deben ser comandos simples.</span><span class="sxs-lookup"><span data-stu-id="15896-118">Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.</span></span>
+* <span data-ttu-id="15896-119">Siempre disponible: las acciones o comandos del menú Bot deben ser siempre invokables, independientemente del estado de la conversación o del cuadro de diálogo en el que se encuentra el bot.</span><span class="sxs-lookup"><span data-stu-id="15896-119">Always available: Bot menu actions/commands should be always invokable, regardless of the state of the conversation or the dialog the bot is in.</span></span>

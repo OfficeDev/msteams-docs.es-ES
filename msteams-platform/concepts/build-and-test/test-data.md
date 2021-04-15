@@ -4,35 +4,43 @@ description: Configurar la suscripción del programa para desarrolladores de Off
 ms.topic: how-to
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634723"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696867"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a><span data-ttu-id="8354c-104">Agregar datos de prueba al inquilino de prueba de Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="8354c-104">Add test data to your Microsoft 365 test tenant</span></span>
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a><span data-ttu-id="95a8a-104">Agregar datos de prueba al inquilino de prueba de Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="95a8a-104">Add test data to your Microsoft 365 test tenant</span></span>
 
-<span data-ttu-id="8354c-105">Con una suscripción de desarrollador de Microsoft 365, puedes usar la aplicación de Microsoft Teams con equipos de prueba, canales y usuarios.</span><span class="sxs-lookup"><span data-stu-id="8354c-105">With a Microsoft 365 developer subscription, you can use your Microsoft Teams app with test teams, channels, and users.</span></span>
+<span data-ttu-id="95a8a-105">Con una suscripción de desarrollador de Microsoft 365, puedes usar la aplicación de Microsoft Teams con equipos de prueba, canales y usuarios.</span><span class="sxs-lookup"><span data-stu-id="95a8a-105">With a Microsoft 365 developer subscription, you can use your Microsoft Teams app with test teams, channels, and users.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="8354c-106">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="8354c-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="95a8a-106">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="95a8a-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="8354c-107">[Únase al Programa para desarrolladores de Microsoft 365,](/office/developer-program/office-365-developer-program)si no tiene un inquilino de prueba.</span><span class="sxs-lookup"><span data-stu-id="8354c-107">[Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.</span></span>
-2. <span data-ttu-id="8354c-108">[Configurar una suscripción para desarrolladores de Microsoft 365](/office/developer-program/office-365-developer-program-get-started).</span><span class="sxs-lookup"><span data-stu-id="8354c-108">[Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).</span></span>
-3. <span data-ttu-id="8354c-109">Use paquetes de datos de ejemplo con su suscripción de desarrollador de [Microsoft 365 para instalar el paquete de contenido Usuarios.](/office/developer-program/install-sample-packs)</span><span class="sxs-lookup"><span data-stu-id="8354c-109">[Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).</span></span>
-4. <span data-ttu-id="8354c-110">[Instale el módulo de PowerShell de Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span><span class="sxs-lookup"><span data-stu-id="8354c-110">[Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span></span>
-5. <span data-ttu-id="8354c-111">[Instale el módulo de PowerShell de Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="8354c-111">[Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span></span>
+1. <span data-ttu-id="95a8a-107">[Únase al Programa para desarrolladores de Microsoft 365,](/office/developer-program/office-365-developer-program)si no tiene un inquilino de prueba.</span><span class="sxs-lookup"><span data-stu-id="95a8a-107">[Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.</span></span>
+2. <span data-ttu-id="95a8a-108">[Configurar una suscripción para desarrolladores de Microsoft 365](/office/developer-program/office-365-developer-program-get-started).</span><span class="sxs-lookup"><span data-stu-id="95a8a-108">[Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).</span></span>
+3. <span data-ttu-id="95a8a-109">Use paquetes de datos de ejemplo con su suscripción de desarrollador de [Microsoft 365 para instalar el paquete de contenido Usuarios.](/office/developer-program/install-sample-packs)</span><span class="sxs-lookup"><span data-stu-id="95a8a-109">[Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).</span></span>
+4. <span data-ttu-id="95a8a-110">[Instale el módulo de PowerShell de Teams](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span><span class="sxs-lookup"><span data-stu-id="95a8a-110">[Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span></span>
+5. <span data-ttu-id="95a8a-111">[Instale el módulo de PowerShell de Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="95a8a-111">[Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8354c-112">Para cualquier inquilino que use, debe obtener los permisos de administrador global para ejecutar los scripts.</span><span class="sxs-lookup"><span data-stu-id="8354c-112">For any tenant that you use, you must get the global administrator permissions to run the scripts.</span></span>
+> <span data-ttu-id="95a8a-112">Para cualquier inquilino que use, debe obtener los permisos de administrador global para ejecutar los scripts.</span><span class="sxs-lookup"><span data-stu-id="95a8a-112">For any tenant that you use, you must get the global administrator permissions to run the scripts.</span></span>
 
-## <a name="enable-custom-app-sideloading"></a><span data-ttu-id="8354c-113">Habilitar la instalación local de aplicaciones personalizadas</span><span class="sxs-lookup"><span data-stu-id="8354c-113">Enable custom app sideloading</span></span>
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a><span data-ttu-id="95a8a-113">Paso opcional para permitir la carga de aplicaciones personalizadas</span><span class="sxs-lookup"><span data-stu-id="95a8a-113">Optional step to allow upload of custom apps</span></span>
 
-<span data-ttu-id="8354c-114">Habilitar la instalación local de aplicaciones personalizadas es opcional.</span><span class="sxs-lookup"><span data-stu-id="8354c-114">Enabling custom app sideloading is optional.</span></span> <span data-ttu-id="8354c-115">De forma predeterminada, solo los administradores globales o los administradores de servicio de Teams pueden cargar aplicaciones personalizadas en el catálogo de aplicaciones de inquilino.</span><span class="sxs-lookup"><span data-stu-id="8354c-115">By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog.</span></span> <span data-ttu-id="8354c-116">También puedes permitir que los usuarios carguen aplicaciones personalizadas en Teams.</span><span class="sxs-lookup"><span data-stu-id="8354c-116">You can also allow users to upload custom apps to Teams.</span></span> <span data-ttu-id="8354c-117">Para obtener más información, consulta [Administrar directivas de configuración de aplicaciones en Teams](/microsoftteams/teams-app-setup-policies).</span><span class="sxs-lookup"><span data-stu-id="8354c-117">For more information, see [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).</span></span>
+<span data-ttu-id="95a8a-114">De forma predeterminada, solo los administradores globales o los administradores de servicio de teams pueden cargar aplicaciones personalizadas en el catálogo de aplicaciones de inquilino.</span><span class="sxs-lookup"><span data-stu-id="95a8a-114">By default, only global admins or teams service admins can upload custom apps into the tenant app catalog.</span></span> <span data-ttu-id="95a8a-115">También puedes permitir que todos los usuarios carguen aplicaciones personalizadas para su propio uso o en equipos para realizar pruebas.</span><span class="sxs-lookup"><span data-stu-id="95a8a-115">You can also enable all users to upload custom apps for their own use or to teams for testing.</span></span>
 
-## <a name="create-teams-and-channels"></a><span data-ttu-id="8354c-118">Crear equipos y canales</span><span class="sxs-lookup"><span data-stu-id="8354c-118">Create teams and channels</span></span>
+<span data-ttu-id="95a8a-116">Para habilitar esta configuración, tendrás que actualizar la directiva global de configuración de aplicaciones en el Portal de administración de Teams.</span><span class="sxs-lookup"><span data-stu-id="95a8a-116">To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.</span></span>
 
-1. <span data-ttu-id="8354c-119">Guarde el siguiente fragmento de código como **un archivo .xml** y anote la ruta de acceso del archivo.</span><span class="sxs-lookup"><span data-stu-id="8354c-119">Save the following snippet as a **.xml** file and note the file path.</span></span> <span data-ttu-id="8354c-120">Este XML define la estructura del equipo y el canal que se crea junto con sus miembros:</span><span class="sxs-lookup"><span data-stu-id="8354c-120">This XML defines the structure of the team and channel that is created along with its members:</span></span>
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a><span data-ttu-id="95a8a-117">Paso opcional para habilitar la instalación local de aplicaciones personalizadas</span><span class="sxs-lookup"><span data-stu-id="95a8a-117">Optional step to enable custom app sideloading</span></span>
+
+<span data-ttu-id="95a8a-118">Habilitar la instalación local de aplicaciones personalizadas es opcional.</span><span class="sxs-lookup"><span data-stu-id="95a8a-118">Enabling custom app sideloading is optional.</span></span> <span data-ttu-id="95a8a-119">De forma predeterminada, solo los administradores globales o los administradores de servicio de Teams pueden cargar aplicaciones personalizadas en el catálogo de aplicaciones de inquilino.</span><span class="sxs-lookup"><span data-stu-id="95a8a-119">By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog.</span></span> <span data-ttu-id="95a8a-120">También puedes permitir que los usuarios carguen aplicaciones personalizadas en Teams.</span><span class="sxs-lookup"><span data-stu-id="95a8a-120">You can also allow users to upload custom apps to Teams.</span></span> <span data-ttu-id="95a8a-121">Para obtener más información, consulta [Administrar directivas de configuración de aplicaciones en Teams](/microsoftteams/teams-app-setup-policies).</span><span class="sxs-lookup"><span data-stu-id="95a8a-121">For more information, see [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).</span></span>
+
+## <a name="create-teams-and-channels"></a><span data-ttu-id="95a8a-122">Crear equipos y canales</span><span class="sxs-lookup"><span data-stu-id="95a8a-122">Create teams and channels</span></span>
+
+1. <span data-ttu-id="95a8a-123">Guarde el siguiente fragmento de código como **un archivo .xml** y anote la ruta de acceso del archivo.</span><span class="sxs-lookup"><span data-stu-id="95a8a-123">Save the following snippet as a **.xml** file and note the file path.</span></span> <span data-ttu-id="95a8a-124">Este XML define la estructura del equipo y el canal que se crea junto con sus miembros:</span><span class="sxs-lookup"><span data-stu-id="95a8a-124">This XML defines the structure of the team and channel that is created along with its members:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -146,7 +154,7 @@ ms.locfileid: "51634723"
     </Teams>
     ```
 
-2. <span data-ttu-id="8354c-121">Guarde el siguiente fragmento de código como un script de PowerShell (.ps1) y anote dónde lo guardó.</span><span class="sxs-lookup"><span data-stu-id="8354c-121">Save the following snippet as a PowerShell script (.ps1) and note where you have saved it.</span></span> <span data-ttu-id="8354c-122">Este script ejecuta los pasos para crear el equipo y el canal y agregar miembros a ellos:</span><span class="sxs-lookup"><span data-stu-id="8354c-122">This script executes the steps to create the team and channel, and add members to them:</span></span>
+2. <span data-ttu-id="95a8a-125">Guarde el siguiente fragmento de código como un script de PowerShell (.ps1) y anote dónde lo guardó.</span><span class="sxs-lookup"><span data-stu-id="95a8a-125">Save the following snippet as a PowerShell script (.ps1) and note where you have saved it.</span></span> <span data-ttu-id="95a8a-126">Este script ejecuta los pasos para crear el equipo y el canal y agregar miembros a ellos:</span><span class="sxs-lookup"><span data-stu-id="95a8a-126">This script executes the steps to create the team and channel, and add members to them:</span></span>
 
     ```powershell
     Param(
@@ -237,22 +245,22 @@ ms.locfileid: "51634723"
     }
     ```
 
-3. <span data-ttu-id="8354c-123">Abra una Windows PowerShell sesión en modo administrador y ejecute el script que acaba de guardar.</span><span class="sxs-lookup"><span data-stu-id="8354c-123">Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.</span></span>
-4. <span data-ttu-id="8354c-124">Cuando se le pida que proporcione las credenciales, escriba las credenciales de administrador global que recibió cuando se inscribió por primera vez para la suscripción de desarrollador.</span><span class="sxs-lookup"><span data-stu-id="8354c-124">When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
+3. <span data-ttu-id="95a8a-127">Abra una Windows PowerShell sesión en modo administrador y ejecute el script que acaba de guardar.</span><span class="sxs-lookup"><span data-stu-id="95a8a-127">Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.</span></span>
+4. <span data-ttu-id="95a8a-128">Cuando se le pida que proporcione las credenciales, escriba las credenciales de administrador global que recibió cuando se inscribió por primera vez para la suscripción de desarrollador.</span><span class="sxs-lookup"><span data-stu-id="95a8a-128">When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
 
     > [!Note]
-    > <span data-ttu-id="8354c-125">No cierre la sesión de PowerShell, ya que el script tarda varios minutos en ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="8354c-125">Do not close your PowerShell session as the script takes several minutes to execute.</span></span> <span data-ttu-id="8354c-126">Si ha modificado los usuarios de la suscripción a partir de lo que se crea en el paquete de contenido predeterminado, es posible que algunos usuarios no se agregó a Teams.</span><span class="sxs-lookup"><span data-stu-id="8354c-126">If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams.</span></span> <span data-ttu-id="8354c-127">Cuando el script se ejecuta, muestra acciones correctas o con errores.</span><span class="sxs-lookup"><span data-stu-id="8354c-127">As the script executes it displays successful or failed actions.</span></span>
+    > <span data-ttu-id="95a8a-129">No cierre la sesión de PowerShell, ya que el script tarda varios minutos en ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="95a8a-129">Do not close your PowerShell session as the script takes several minutes to execute.</span></span> <span data-ttu-id="95a8a-130">Si ha modificado los usuarios de la suscripción a partir de lo que se crea en el paquete de contenido predeterminado, es posible que algunos usuarios no se agregó a Teams.</span><span class="sxs-lookup"><span data-stu-id="95a8a-130">If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams.</span></span> <span data-ttu-id="95a8a-131">Cuando el script se ejecuta, muestra acciones correctas o con errores.</span><span class="sxs-lookup"><span data-stu-id="95a8a-131">As the script executes it displays successful or failed actions.</span></span>
 
-5. <span data-ttu-id="8354c-128">Una vez que el script haya finalizado la ejecución, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.</span><span class="sxs-lookup"><span data-stu-id="8354c-128">After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.</span></span>
+5. <span data-ttu-id="95a8a-132">Una vez que el script haya finalizado la ejecución, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.</span><span class="sxs-lookup"><span data-stu-id="95a8a-132">After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8354c-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="8354c-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95a8a-133">Consulte también</span><span class="sxs-lookup"><span data-stu-id="95a8a-133">See also</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8354c-130">Depurar la pestaña</span><span class="sxs-lookup"><span data-stu-id="8354c-130">Debug your tab</span></span>](~/tabs/how-to/developer-tools.md)
+> [<span data-ttu-id="95a8a-134">Depurar la pestaña</span><span class="sxs-lookup"><span data-stu-id="95a8a-134">Debug your tab</span></span>](~/tabs/how-to/developer-tools.md)
  
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8354c-131">Depurar los bots</span><span class="sxs-lookup"><span data-stu-id="8354c-131">Debug your bots</span></span>](~/bots/how-to/debug/locally-with-an-ide.md)
+> [<span data-ttu-id="95a8a-135">Depurar los bots</span><span class="sxs-lookup"><span data-stu-id="95a8a-135">Debug your bots</span></span>](~/bots/how-to/debug/locally-with-an-ide.md)
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8354c-132">Probar permisos de RSC</span><span class="sxs-lookup"><span data-stu-id="8354c-132">Test RSC permissions</span></span>](~/graph-api/rsc/test-resource-specific-consent.md)
+> [<span data-ttu-id="95a8a-136">Probar permisos de RSC</span><span class="sxs-lookup"><span data-stu-id="95a8a-136">Test RSC permissions</span></span>](~/graph-api/rsc/test-resource-specific-consent.md)
 
