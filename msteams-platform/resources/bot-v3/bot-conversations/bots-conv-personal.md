@@ -1,29 +1,30 @@
 ---
-title: conversaciones 1 a 1 con bots
-description: Describe el escenario de un extremo a otro de tener una conversación de 1 en 1 con un bot en Microsoft Teams.
-keywords: escenarios de Microsoft Teams 1on1 de 1to1 de conversación
+title: Conversaciones 1 a 1 con bots
+description: Describe el escenario completo de tener una conversación 1 a 1 con un bot en Microsoft Teams
+keywords: teams scenarios 1on1 1to1 conversation bot
+ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: e23bb98160125d7fdbb4521467e2f522d6b6ce40
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 43b44d15b675db2fa6c38d6661858c4e0a595039
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801461"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696671"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación personal (uno a uno) con un bot de Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams permite a los usuarios participar en conversaciones directas con bots integrados en [Microsoft bot Framework](/azure/bot-service/?view=azure-bot-service-3.0). Los usuarios pueden encontrar bots en la galería de aplicaciones de Discover y agregarlos a la experiencia de Microsoft Teams para conversaciones personales. Los propietarios de equipo y los usuarios con los permisos adecuados también pueden agregar bots como miembros del equipo (consulte [interactuar en un canal de equipo](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)), lo que no solo los hace disponibles en los canales del equipo, sino también para chats personales para todos los usuarios.
+Microsoft Teams permite a los usuarios participar en conversaciones directas con bots integrados en [Microsoft Bot Framework.](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) Los usuarios pueden encontrar bots en la galería Descubrir aplicaciones y agregarlos a su experiencia de Teams para conversaciones personales. Los propietarios del equipo y los usuarios con los permisos adecuados también pueden agregar bots como miembros del equipo (consulta [Interactuar](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)en un canal de grupo), lo que no solo los hace disponibles en los canales de ese equipo, sino también para chat personal para todos esos usuarios.
 
-Chat personal difiere de chat en los canales en el que el usuario no necesita @mention el bot. Si se usa un bot en varios contextos (personales, groupChat o Channel), tendrá que detectar si el bot se encuentra en un canal o un chat de grupo y procesar los mensajes de forma un poco diferente. Para obtener más información, consulte [interactuar en un canal de equipo o un chat en grupo](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) .
+El chat personal difiere del chat en canales en que el usuario no necesita @mention el bot. Si un bot se usa en varios contextos (personal, groupChat o canal), deberá detectar si el bot está en un canal o chat de grupo y procesar mensajes de forma un poco diferente. Consulta [Interactuar en un chat de grupo o canal de grupo](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) para obtener más información.
 
-## <a name="designing-a-great-personal-bot"></a>Diseño de un gran robot personal
+## <a name="designing-a-great-personal-bot"></a>Diseño de un gran bot personal
 
-Un gran bot en Microsoft Teams ayuda a los usuarios a obtener la información que necesitan, todo ello en el contexto de la experiencia de Microsoft Teams. Las conversaciones personales con un bot son intercambios privados entre un bot y su usuario; son una buena forma de proporcionar información específica y relevante para ese usuario en el contexto personal. Un bot en chat personal es, en realidad, un cuadro de diálogo entre su servicio y el individuo, donde un bot en un canal o un chat de grupo difunde todo a un grupo de personas.
+Un excelente bot en Microsoft Teams ayuda a los usuarios a obtener la información que necesitan, todo dentro del contexto de la experiencia de Teams. Las conversaciones personales con un bot son intercambios privados entre un bot y su usuario; son una excelente manera de proporcionar información específica y relevante para ese usuario en el contexto personal. Un bot en el chat personal es realmente un cuadro de diálogo entre el servicio y el individuo, donde un bot en un chat de grupo o canal transmite todo a un grupo de personas.
 
-En función de la experiencia que desee crear, es posible que el bot deba funcionar en varios ámbitos: personal, groupChat o Team. El trabajo para admitir más de un ámbito es mínimo. No existe ninguna expectativa en Teams de que su bot funcione en todos los ámbitos, pero debe asegurarse de que su bot tiene sentido y proporciona valor de usuario en el ámbito o los ámbitos que desee admitir.
+Según la experiencia que quieras crear, es posible que el bot necesite trabajar en varios ámbitos: personal, groupChat o equipo. El trabajo para admitir más de un ámbito es mínimo. En Teams no hay ninguna expectativa de que el bot funcione en todos los ámbitos, pero debe asegurarse de que el bot tiene sentido y proporciona valor de usuario en los ámbitos que elija admitir.
 
-## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Procedimiento recomendado: mensajes de bienvenida en conversaciones personales
+## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Procedimiento recomendado: Recibir mensajes en conversaciones personales
 
-El bot debe [enviar de forma proactiva](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un mensaje de bienvenida a un chat personal la primera vez (y sólo la primera vez) que un usuario inicie un chat personal con su bot. (Esta recomendación no se aplica a los contactos por primera vez en un canal).
+El bot debe [enviar de](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) forma proactiva un mensaje de bienvenida a un chat personal la primera vez (y solo la primera vez) que un usuario inicie un chat personal con el bot. (Esta recomendación no se aplica a los contactos por primera vez en un canal).

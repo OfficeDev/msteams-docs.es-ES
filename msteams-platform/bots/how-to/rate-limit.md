@@ -1,25 +1,28 @@
 ---
-title: Limitación de tasas
+title: Optimizar el bot con limitación de velocidad en Teams
 description: Limitación de tasas y procedimientos recomendados en Microsoft Teams
+ms.topic: conceptual
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 840737178234bcd6e2da1925b0031083717e2b91
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 245c51fc736e5f888299535c3e50ec6232183623
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034689"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697000"
 ---
-# <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimizar el bot: limitación de velocidad y procedimientos recomendados en Microsoft Teams
+# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar el bot con limitación de velocidad en Teams
 
-Como principio general, la aplicación debe limitar el número de mensajes que publica a una conversación de canal o chat individual. Esto garantiza una experiencia óptima que no se sienta "correo no deseado" para los usuarios finales.
+La limitación de velocidad es un método para limitar los mensajes a una frecuencia máxima determinada. Como principio general, la aplicación debe limitar el número de mensajes que publica a una conversación de canal o chat individual. Esto garantiza una experiencia óptima y los mensajes no aparecen como correo no deseado para los usuarios.
 
-Para proteger Microsoft Teams y sus usuarios, las API de bot limitan la velocidad de las solicitudes entrantes. Las aplicaciones que superen este límite reciben un `HTTP 429 Too Many Requests` estado de error. Todas las solicitudes están sujetas a la misma directiva de limitación de tasas, incluido el envío de mensajes, enumeraciones de canales y recuperaciones de listas.
+Para proteger Microsoft Teams y sus usuarios, las API de bot proporcionan un límite de velocidad para las solicitudes entrantes. Las aplicaciones que superen este límite reciben un `HTTP 429 Too Many Requests` estado de error. Todas las solicitudes están sujetas a la misma directiva de limitación de tasas, incluido el envío de mensajes, enumeraciones de canales y recuperaciones de listas.
 
-Dado que los valores exactos de los límites de tasa están sujetos a cambios, se recomienda que la aplicación implemente el comportamiento de devolución adecuado cuando la API devuelva `HTTP 429 Too Many Requests` .
+Como los valores exactos de los límites de tasa están sujetos a cambios, la aplicación debe implementar el comportamiento de devolución adecuado cuando la API devuelva `HTTP 429 Too Many Requests` .
 
-## <a name="handling-rate-limits"></a>Control de límites de velocidad
+## <a name="handle-rate-limits"></a>Controlar límites de velocidad
 
 Al emitir una operación del SDK de Bot Builder, puede controlar `Microsoft.Rest.HttpOperationException` y comprobar el código de estado.
+
+El siguiente código muestra un ejemplo de control de límites de velocidad:
 
 ```csharp
 try
@@ -36,17 +39,19 @@ catch (HttpOperationException ex)
 }
 ```
 
-## <a name="best-practices"></a>Procedimientos recomendados
+Después de controlar los límites de velocidad de los bots, puedes controlar `HTTP 429` las respuestas con un retroceso exponencial.
 
-En general, debe tomar precauciones simples para evitar recibir `HTTP 429` respuestas. Por ejemplo, evite emitir varias solicitudes a la misma conversación personal o de canal. En su lugar, considere la posibilidad de procesar por lotes las solicitudes de API.
+## <a name="handle-http-429-responses"></a>Controlar `HTTP 429` respuestas
+
+En general, debe tomar precauciones simples para evitar recibir `HTTP 429` respuestas. Por ejemplo, evite emitir varias solicitudes a la misma conversación personal o de canal. En su lugar, cree un lote de las solicitudes api.
 
 El uso de un retroceso exponencial con un vibración aleatoria es la forma recomendada de controlar 429s. Esto garantiza que varias solicitudes no introduzcan colisiones en los reintentos.
 
-## <a name="example-detecting-transient-exceptions"></a>Ejemplo: detección de excepciones transitorias
+Después de controlar `HTTP 429` las respuestas, puede seguir el ejemplo para detectar excepciones transitorias.
 
-Este es un ejemplo con retroceso exponencial a través del bloque de aplicaciones de control de errores transitorios.
+## <a name="detect-transient-exceptions-example"></a>Ejemplo de detección de excepciones transitorias
 
-Puede realizar backoff y reintentos mediante [el control de errores transitorios](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obtener instrucciones sobre cómo obtener e instalar el paquete NuGet, vea [Adding the Transient Fault Handling Application Block to Your Solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)). *Vea también Control* [de errores transitorios](/azure/architecture/best-practices/transient-faults).
+El siguiente código muestra un ejemplo de uso de retroceso exponencial mediante el bloque de aplicación de control de errores transitorios:
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -71,9 +76,15 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-## <a name="example-backoff"></a>Ejemplo: backoff
+Puede realizar backoff y reintentos mediante [el control de errores transitorios](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obtener instrucciones sobre cómo obtener e instalar el paquete NuGet, vea agregar el bloque de aplicación de control de [errores transitorios a la solución](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Vea también [control de errores transitorios](/azure/architecture/best-practices/transient-faults).
+
+Después de pasar por el ejemplo para detectar excepciones transitorias, vaya a través del ejemplo de retroceso exponencial. Puede usar retroceso exponencial en lugar de reintentar errores.
+
+## <a name="backoff-example"></a>Ejemplo de copia de seguridad
 
 Además de detectar límites de velocidad, también puede realizar un retroceso exponencial.
+
+El código siguiente muestra un ejemplo de retroceso exponencial:
 
 ```csharp
 /**
@@ -92,20 +103,24 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-También puede realizar una ejecución `System.Action` de método con la directiva de reintentos descrita anteriormente. La biblioteca a la que se hace referencia también permite especificar un intervalo fijo o un mecanismo de desuso lineal.
+También puede realizar una ejecución `System.Action` de método con la directiva de reintentos descrita en esta sección. La biblioteca a la que se hace referencia también permite especificar un intervalo fijo o un mecanismo de desuso lineal.
 
-Se recomienda almacenar el valor y la estrategia en un archivo de configuración para ajustar y ajustar los valores en tiempo de ejecución.
+Almacena el valor y la estrategia en un archivo de configuración para ajustar y ajustar los valores en tiempo de ejecución.
 
-Para obtener más información, consulte esta guía práctica sobre varios patrones de reintentos: [Patrón de reintentos](/azure/architecture/patterns/retry).
+Para obtener más información, vea [retry patterns](/azure/architecture/patterns/retry).
+
+También puedes controlar el límite de velocidad usando el límite por bot por subproceso.
 
 ## <a name="per-bot-per-thread-limit"></a>Por bot por límite de subprocesos
 
 >[!NOTE]
->La división de mensajes en el nivel de servicio dará como resultado solicitudes superiores a las esperadas por segundo (RPS). Si le preocupa acercarse a los límites, debe implementar la estrategia de backoff descrita anteriormente. Los valores proporcionados a continuación son solo para estimación.
+> La división de mensajes en el nivel de servicio da como resultado solicitudes superiores a las esperadas por segundo (RPS). Si le preocupa acercarse a los límites, debe implementar la [estrategia de despegar](#backoff-example). Los valores proporcionados en esta sección son solo para estimación.
 
-Este límite controla el tráfico que un bot puede generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat en grupo o un canal en un equipo.
+El límite por bot por subproceso controla el tráfico que un bot puede generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat de grupo o un canal en un equipo.
 
-| **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
+En la tabla siguiente se proporcionan los límites por bot por subproceso:
+
+| Escenario | Período de tiempo en segundos | Operaciones máximas permitidas |
 | --- | --- | --- |
 | Enviar a conversación | 1 | 7  |
 | Enviar a conversación | 2 | 8  |
@@ -125,21 +140,31 @@ Este límite controla el tráfico que un bot puede generar en una sola conversac
 | Obtener conversaciones | 3600 | 3600 |
 
 >[!NOTE]
-> Las versiones anteriores `TeamsInfo.getMembers` de y las API están en `TeamsInfo.GetMembersAsync` desuso. Se limitarán a 5 solicitudes por minuto y devolverán un máximo de 10.000 miembros por equipo. Para actualizar el SDK de Bot Framework y el código para usar los extremos de API paginados más recientes, consulte [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
+> Las versiones anteriores `TeamsInfo.getMembers` de y las API están en `TeamsInfo.GetMembersAsync` desuso. Se limitan a cinco solicitudes por minuto y devuelven un máximo de 10.000 miembros por equipo. Para actualizar el SDK de Bot Framework y el código para usar los extremos de API paginados más recientes, consulte [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
+
+También puede controlar el límite de velocidad usando el límite por subproceso para todos los bots.
 
 ## <a name="per-thread-limit-for-all-bots"></a>Límite por subproceso para todos los bots
 
-Este límite controla el tráfico que todos los bots pueden generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat en grupo o un canal en un equipo.
+El límite por subproceso para todos los bots controla el tráfico que todos los bots pueden generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat de grupo o un canal en un equipo.
 
-| **Escenario** | **Período de tiempo: (seg.)** | **Operaciones máximas permitidas** |
+En la tabla siguiente se proporciona el límite por subproceso para todos los bots:
+
+| Escenario | Período de tiempo en segundos | Operaciones máximas permitidas |
 | --- | --- | --- |
 | Enviar a conversación | 1 | 14  |
 | Enviar a conversación | 2 | 16  |
 | Crear conversación | 1 | 14  |
 | Crear conversación | 2 | 16  |
-| CreateConversation| 1 | 14  |
-| CreateConversation| 2 | 16  |
+| Crear conversación| 1 | 14  |
+| Crear conversación| 2 | 16  |
 | Obtener miembros de conversación| 1 | 28 |
 | Obtener miembros de conversación| 2 | 32 |
 | Obtener conversaciones | 1 | 28 |
 | Obtener conversaciones | 2 | 32 |
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+

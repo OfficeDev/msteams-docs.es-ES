@@ -4,76 +4,97 @@ author: clearab
 description: Definir comandos de búsqueda de extensión de mensajería para aplicaciones de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 18bac3049fec8fead168c12f2832bfbbb72cf609
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449272"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696808"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Los comandos de búsqueda de extensión de mensajería permiten a los usuarios buscar en sistemas externos e insertar los resultados de esa búsqueda en un mensaje en forma de tarjeta.
+Los comandos de búsqueda de extensión de mensajería permiten a los usuarios buscar sistemas externos e insertar los resultados de esa búsqueda en un mensaje en forma de tarjeta. Este documento le guía sobre cómo seleccionar ubicaciones de invocar comandos de búsqueda y agregar el comando de búsqueda al manifiesto de la aplicación.
 
 > [!NOTE]
-> El límite de tamaño de la tarjeta de resultados es de 28 KB. La tarjeta no se envía si su tamaño supera los 28 KB. 
+> El límite de tamaño de la tarjeta de resultados es de 28 KB. La tarjeta no se envía si su tamaño supera los 28 KB.
 
-## <a name="choose-messaging-extension-invoke-locations"></a>Elegir ubicaciones de invocación de extensión de mensajería
+## <a name="select-search-command-invoke-locations"></a>Seleccionar ubicaciones de invocación de comandos de búsqueda
 
-Lo primero que debe decidir es desde dónde se puede desencadenar el comando de búsqueda (o, específicamente, *invocarlo).* El comando de búsqueda se puede invocar desde una o ambas de las siguientes ubicaciones:
+El comando de búsqueda se invoca desde una o ambas de las siguientes ubicaciones:
 
-* Los botones de la parte inferior del área del mensaje de redacción
-* Por @mentioning en el cuadro de comandos
+* Área de redacción de mensajes: los botones situados en la parte inferior del área del mensaje de redacción.
+* Cuadro de comando: @mentioning en el cuadro de comandos.
 
-Cuando se invoca desde el área del mensaje de redacción, el usuario tendrá la opción de enviar los resultados a la conversación. Cuando se invoca desde el cuadro de comandos, el usuario puede interactuar con la tarjeta resultante o copiarla para usarla en otro lugar.
+Cuando se invoca el comando de búsqueda desde el área del mensaje de redacción, el usuario envía los resultados a la conversación. Cuando se invoca desde el cuadro de comandos, el usuario interactúa con la tarjeta resultante o la copia para su uso en otro lugar.
 
-## <a name="add-the-command-to-your-app-manifest"></a>Agregar el comando al manifiesto de la aplicación
+En la siguiente imagen se muestran las ubicaciones de invocación del comando de búsqueda:
 
-Ahora que has decidido cómo interactuarán los usuarios con el comando de búsqueda, es el momento de agregarlo al manifiesto de la aplicación. Para ello, agregarás un nuevo objeto al nivel superior del JSON del `composeExtension` manifiesto de la aplicación. Puedes hacerlo con la ayuda de App Studio o manualmente.
+![Ubicaciones de invocar comandos de búsqueda](~/assets/images/messaging-extension/search-command-invoke-locations.png)
 
-### <a name="create-a-command-using-app-studio"></a>Crear un comando con App Studio
+## <a name="add-the-search-command-to-your-app-manifest"></a>Agregar el comando de búsqueda al manifiesto de la aplicación
 
-El requisito previo para crear un comando de búsqueda es que ya debe crear una extensión de mensajería. Para obtener información sobre cómo crear una extensión de mensajería, vea [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+Para agregar el comando de búsqueda al manifiesto de la aplicación, debes agregar un nuevo objeto al nivel superior del JSON del `composeExtension` manifiesto de la aplicación. Puedes agregar el comando de búsqueda con la ayuda de App Studio o manualmente.
+
+### <a name="create-a-search-command-using-app-studio"></a>Crear un comando de búsqueda con App Studio
+
+El requisito previo para crear un comando de búsqueda es que ya debe haber creado una extensión de mensajería. Para obtener información sobre cómo crear una extensión de mensajería, vea [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **Para crear un comando de búsqueda**
 
-1. En el cliente de Microsoft Teams, abra **App Studio** y seleccione la pestaña Editor **de manifiestos.**
-1. Si ya creaste un paquete de aplicación en **App Studio,** eligelo en la lista. Si no has creado un paquete de aplicación, importa uno existente.
-1. Después de importar un paquete de aplicación, selecciona **Extensiones de mensajería en** **Funcionalidades**.
-1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensajería.
-1. Elija **Permitir que los usuarios consulten su servicio para** obtener información e insertarla en un mensaje .
+1. Abre **App Studio** desde el cliente de Microsoft Teams y selecciona la pestaña Editor **de** manifiestos.
+1.  Si ya creaste el paquete de la aplicación **en App Studio,** selecciona de la lista. Si no has creado un paquete de aplicación, importa uno existente.
+1. Después de importar el paquete de la aplicación, selecciona **Extensiones de mensajería en** **Funcionalidades**. Obtiene una ventana emergente para configurar la extensión de mensajería.
+1. Selecciona **Configurar en la** ventana para incluir la extensión de mensajería en la experiencia de la aplicación. En la siguiente imagen se muestra la página de configuración de extensión de mensajería: 
+
+    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+
+1. Para crear la extensión de mensajería, necesita un bot registrado de Microsoft. Puede usar un bot existente o crear un bot nuevo. Seleccione **Crear nueva opción de bot,** asigne un nombre al nuevo bot y seleccione **Crear**. En la siguiente imagen se muestra la creación de bots para la extensión de mensajería:
+
+    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+
+1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensajería para incluir los comandos que deciden el comportamiento de la extensión de mensajería.   
+La siguiente imagen muestra la adición de comandos para la extensión de mensajería:
+
+   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+1. Seleccione **Permitir que los usuarios consulten su servicio para obtener información e insertarla en un mensaje**. La siguiente imagen muestra la selección del parámetro de comando de búsqueda:
+
+    <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
+
 1. Agregue un **identificador de comando** y un **título**.
-1. Seleccione la ubicación desde la que se debe desencadenar el comando de búsqueda. Seleccionar mensaje **no** modifica actualmente el comportamiento del comando de búsqueda.
+1. Seleccione la ubicación desde la que se debe invocar el comando de búsqueda. Seleccionar mensaje **no** modifica actualmente el comportamiento del comando de búsqueda. La siguiente imagen muestra la ubicación de invocación del comando de búsqueda:
+
+    <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
+
 1. Agregue el parámetro de búsqueda y **seleccione Guardar**.
- 
-### <a name="manually-create-a-command"></a>Crear manualmente un comando
 
-Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, tendrás que agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos.
+### <a name="create-a-search-command-manually"></a>Crear un comando de búsqueda manualmente 
 
-| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
+Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, debes agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
+
+| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `id` | Identificador único que se asigna a este comando. La solicitud de usuario incluirá este identificador. | Sí | 1.0 |
-| `title` | Nombre del comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
-| `description` | Texto de ayuda que indica lo que hace este comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
-| `type` | Debe ser `query` | No | 1.4 |
-|`initialRun` | Si se establece en **true,** indica que este comando debe ejecutarse tan pronto como el usuario elija este comando en la interfaz de usuario. | No | 1.0 |
-| `context` | Matriz opcional de valores que define el contexto en el que está disponible la acción de búsqueda. Los valores posibles `message` `compose` son , o `commandBox` . El valor predeterminado es `["compose", "commandBox"]`. | No | 1,5 |
+| `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
+| `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
+| `description` | Esta propiedad es un texto de ayuda que indica lo que hace este comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
+| `type` | Esta propiedad debe ser `query` un . | No | 1.4 |
+|`initialRun` | Si esta propiedad se establece en **true,** indica que este comando debe ejecutarse tan pronto como el usuario seleccione este comando en la interfaz de usuario. | No | 1.0 |
+| `context` | Esta propiedad es una matriz opcional de valores que define el contexto en el que está disponible la acción de búsqueda. Los valores posibles son`message`, `compose` o `commandBox`. El valor predeterminado es `["compose", "commandBox"]` . | No | 1,5 |
 
-También tendrás que agregar los detalles del parámetro de búsqueda, que definirá el texto visible para el usuario en el cliente de Teams.
+Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el cliente de Teams.
 
-| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `parameters` | Lista estática de parámetros para el comando. | No | 1.0 |
-| `parameter.name` | Nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
-| `parameter.description` | Describe los propósitos de este parámetro o un ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
-| `parameter.title` | Título o etiqueta de parámetros fáciles de usar cortos. | Sí | 1.0 |
-| `parameter.inputType` | Se establece en el tipo de entrada necesario. Los valores posibles `text` incluyen , , , , , `textarea` `number` `date` `time` `toggle` . El valor predeterminado está establecido en `text` | No | 1.4 |
+| `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
+| `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
+| `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
+| `parameter.title` | Esta propiedad es un título o etiqueta de parámetros fáciles de usar. | Sí | 1.0 |
+| `parameter.inputType` | Esta propiedad se establece en el tipo de entrada necesaria. Los valores posibles `text` incluyen , , , , , `textarea` `number` `date` `time` `toggle` . El valor predeterminado se establece en `text` . | No | 1.4 |
 
-#### <a name="app-manifest-example"></a>Ejemplo de manifiesto de la aplicación
+#### <a name="example"></a>Ejemplo
 
-A continuación se muestra un ejemplo `composeExtensions` de un objeto que define un comando de búsqueda. No es un ejemplo del manifiesto completo, para el esquema de manifiesto de aplicación completo vea: [Esquema de manifiesto de aplicación](~/resources/schema/manifest-schema.md).
+En la siguiente sección se muestra un ejemplo del manifiesto de aplicación simple del `composeExtensions` objeto que define un comando de búsqueda: 
 
 ```json
 {
@@ -99,9 +120,17 @@ A continuación se muestra un ejemplo `composeExtensions` de un objeto que defin
 ...
 }
 ```
+Para ver el manifiesto completo de la aplicación, consulta [Esquema de manifiesto de la aplicación](~/resources/schema/manifest-schema.md).
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="code-sample"></a>Ejemplo de código
 
-Ahora que ha agregado el comando de búsqueda, tendrá que controlar [la solicitud de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Responder a los comandos de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+

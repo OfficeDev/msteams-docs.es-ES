@@ -4,12 +4,12 @@ description: Configurar la suscripción del programa para desarrolladores de Off
 ms.topic: how-to
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634723"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696867"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino de prueba de Microsoft 365
 
@@ -26,7 +26,15 @@ Con una suscripción de desarrollador de Microsoft 365, puedes usar la aplicaci�
 > [!NOTE]
 > Para cualquier inquilino que use, debe obtener los permisos de administrador global para ejecutar los scripts.
 
-## <a name="enable-custom-app-sideloading"></a>Habilitar la instalación local de aplicaciones personalizadas
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a>Paso opcional para permitir la carga de aplicaciones personalizadas
+
+De forma predeterminada, solo los administradores globales o los administradores de servicio de teams pueden cargar aplicaciones personalizadas en el catálogo de aplicaciones de inquilino. También puedes permitir que todos los usuarios carguen aplicaciones personalizadas para su propio uso o en equipos para realizar pruebas.
+
+Para habilitar esta configuración, tendrás que actualizar la directiva global de configuración de aplicaciones en el Portal de administración de Teams.
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>Paso opcional para habilitar la instalación local de aplicaciones personalizadas
 
 Habilitar la instalación local de aplicaciones personalizadas es opcional. De forma predeterminada, solo los administradores globales o los administradores de servicio de Teams pueden cargar aplicaciones personalizadas en el catálogo de aplicaciones de inquilino. También puedes permitir que los usuarios carguen aplicaciones personalizadas en Teams. Para obtener más información, consulta [Administrar directivas de configuración de aplicaciones en Teams](/microsoftteams/teams-app-setup-policies).
 
@@ -245,7 +253,7 @@ Habilitar la instalación local de aplicaciones personalizadas es opcional. De f
 
 5. Una vez que el script haya finalizado la ejecución, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Depurar la pestaña](~/tabs/how-to/developer-tools.md)

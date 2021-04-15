@@ -1,47 +1,54 @@
 ---
-title: Detalles técnicos sobre el control de las notificaciones de llamadas entrantes
+title: Notificaciones de llamadas entrantes
 description: Información técnica detallada sobre cómo controlar las notificaciones de llamadas entrantes
-keywords: llamar a las notificaciones de llamadas afinidad de región de devolución de llamada
+ms.topic: conceptual
+keywords: afinidad de región de devolución de llamada de llamadas de llamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: be8860ff70cd7dff4fd9599079ea7aab4f454174
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1ab28f898d2b51b4c1c643006ecac06ca79b2d14
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676130"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696405"
 ---
-# <a name="incoming-call-notifications-technical-details"></a>Notificaciones de llamadas entrantes: detalles técnicos
+# <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
-Al [registrar un bot de llamadas y reuniones para Microsoft Teams](./registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), mencionamos la URL del **webhook (para llamadas)** : el punto de conexión de webhook para todas las llamadas entrantes a su bot. En este tema se describen los detalles técnicos que necesitará para responder a estas notificaciones.
+Al registrar un bot de llamadas y reuniones para [Microsoft Teams,](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)se menciona el webhook para la dirección URL de llamada. Esta dirección URL es el extremo de webhook para todas las llamadas entrantes al bot.
 
-## <a name="protocol-determination"></a>Determinación de protocolo
+## <a name="protocol-determination"></a>Determinación del protocolo
 
-La notificación entrante se proporciona en el formato heredado para la compatibilidad con el [Protocolo de Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0)anterior. Para convertir la llamada al Protocolo de Microsoft Graph, el bot debe determinar si la notificación está en formato heredado y responder con:
+La notificación entrante se proporciona en un formato heredado para la compatibilidad con el protocolo [de Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para convertir la llamada al protocolo de Microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporcionar la siguiente respuesta:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-El bot recibirá la notificación de nuevo, pero esta vez en el protocolo Microsoft Graph.
+El bot recibe la notificación de nuevo, pero esta vez en el protocolo de Microsoft Graph.
 
-En una versión futura de la plataforma de medios en tiempo real, le permitirá configurar el protocolo que admite la aplicación para evitar recibir la devolución de llamada inicial en el formato heredado.
+En una versión futura de la Plataforma multimedia en tiempo real, puede configurar el protocolo que admite la aplicación para evitar recibir la devolución de llamada inicial en el formato heredado.
 
-## <a name="redirects-for-region-affinity"></a>Redireccionamientos para la afinidad regional
+En la siguiente sección se proporcionan detalles sobre las notificaciones de llamadas entrantes redirigidas por afinidad de región a la implementación.
 
-Llamará a su webhook desde el centro de datos que hospeda la llamada. La llamada puede iniciarse en cualquier centro de datos y no se toma en cuenta las afinidades de región. La notificación se enviará a su implementación en función de la resolución de GeoDNS. Si la aplicación determina, mediante la inspección de la carga de notificación inicial o de otro modo, que debe ejecutarse en una implementación distinta, la aplicación puede responder con:
+## <a name="redirects-for-region-affinity"></a>Redirecciones para afinidad de región
+
+Se llama al webhook desde el centro de datos que hospeda la llamada. La llamada se inicia en cualquier centro de datos y no tiene en cuenta las afinidades de región. La notificación se envía a la implementación en función de la resolución de GeoDNS. Si la aplicación determina, mediante la inspección de la carga de notificación inicial o de otro modo, que debe ejecutarse en una implementación diferente, la aplicación proporciona la siguiente respuesta:
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Permita que el bot conteste una llamada entrante mediante la API de [respuesta](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) . Puede especificar el `callbackUri` para controlar esta llamada en particular. Esto es útil para las instancias de _Estado_ en las que la llamada se controla con una partición determinada y se desea incrustar esta `callbackUri` información en el para el enrutamiento a la instancia correcta.
+Habilite el bot para responder a una llamada entrante mediante la API [de respuesta.](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) Puede especificar el para `callbackUri` controlar esta llamada en particular. Esto es útil para instancias con estado en las que una partición determinada controla la llamada y desea insertar esta información en el enrutamiento a `callbackUri` la instancia correcta.
 
-## <a name="authenticating-the-callback"></a>Autenticación de la devolución de llamada
+La siguiente sección proporciona detalles sobre la autenticación de la devolución de llamada inspeccionando el token publicado en el webhook.
 
-El bot debe inspeccionar el token publicado en el webhook para validar la solicitud. Siempre que la API publique en el webhook, el mensaje HTTP POST contiene un token de OAuth en el encabezado Authorization como token de portador, con la audiencia como identificador de aplicación de la aplicación.
+## <a name="authenticate-the-callback"></a>Autenticar la devolución de llamada
+
+El bot debe inspeccionar el token publicado en el webhook para validar la solicitud. Cada vez que la API se publica en el webhook, el mensaje HTTP POST contiene un token OAuth en el encabezado Authorization como token portador, con la audiencia como id. de aplicación de la aplicación.
 
 La aplicación debe validar este token antes de aceptar la solicitud de devolución de llamada.
+
+El siguiente código de ejemplo se usa para autenticar la devolución de llamada:
 
 ```http
 POST https://bot.contoso.com/api/calls
@@ -60,7 +67,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-El token de OAuth tendrá valores como los siguientes y será firmado por Skype. La configuración de OpenID publicada <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> en puede usarse para comprobar el token.
+El token OAuth tiene los siguientes valores y está firmado por Skype:
 
 ```json
 {
@@ -73,10 +80,17 @@ El token de OAuth tendrá valores como los siguientes y será firmado por Skype.
 }
 ```
 
-* la audiencia de **500 AUD** es el URI de identificador de aplicación especificado para la aplicación.
-* **TID** es el identificador de inquilino de contoso.com.
-* **ISS** es el emisor de tokens `https://api.botframework.com`.
+La configuración de OpenID publicada en <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> se puede usar para comprobar el token. Cada valor de token de OAuth se usa de la siguiente manera:
 
-El código que controla el webhook debe validar el token, asegurarse de que no ha expirado y comprobar si la configuración de OpenID publicada está firmada. También debe comprobar si **AUD** coincide con el identificador de la aplicación antes de aceptar la solicitud de devolución de llamada.
+* `aud` donde audiencia es el URI de id. de aplicación especificado para la aplicación.
+* `tid` es el identificador de inquilino para Contoso.com.
+* `iss` es el emisor de tokens, `https://api.botframework.com` .
 
-[Ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs) se muestra cómo validar las solicitudes entrantes.
+Para el control de código, el webhook debe validar el token, asegurarse de que no ha expirado y comprobar si ha sido firmado por la configuración de OpenID publicada. También debes comprobar si aud coincide con tu id. de aplicación antes de aceptar la solicitud de devolución de llamada.
+
+Para obtener más información, vea [validate inbound requests](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

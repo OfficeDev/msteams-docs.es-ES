@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
-ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
+ms.openlocfilehash: 58e7e1711ef4075841d1c3c41d184ad0e861b194
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "51612647"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696286"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -480,6 +480,17 @@ Respuestas rápidas es una aplicación de Microsoft Teams que ofrece una soluci�
 
 ![Vista de ejemplo de las respuestas](../assets/images/quick-responses.png)
 
+## <a name="quiz--9734"></a>Cuestionario &#9734;
+
+Quiz es una aplicación de extensión de mensajería personalizada de [Teams](../messaging-extensions/what-are-messaging-extensions.md) que te permite crear un cuestionario dentro de un chat o un canal para comprobar el conocimiento y obtener resultados instantáneos. Puedes usar Quiz para exámenes en clase y sin conexión, comprobación de conocimientos dentro del equipo y para cuestionarios divertidos dentro de un equipo. La aplicación de cuestionario se admite en varias plataformas, como clientes de escritorio, explorador, iOS y Android de Teams. Esta aplicación está lista para su implementación como parte de la suscripción a Microsoft 365 existente.
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Crear cuestionario en la vista Teams](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="rapid-assist"></a>Asistencia rápida
 
@@ -620,6 +631,18 @@ Un proyecto puede incluir varias tareas y varios proyectos se pueden asignar a l
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-timetally)
 
 ![Recuento de horas](../assets/images/11zon_gif.gif)
+
+## <a name="training--9734"></a>Aprendizaje &#9734;
+
+El aprendizaje es una aplicación de extensión de mensajería personalizada de [Teams](../messaging-extensions/what-are-messaging-extensions.md) que permite a los usuarios publicar un aprendizaje dentro de un chat o un canal para compartir y mejorar el conocimiento sin conexión. La aplicación se admite en varios clientes de plataforma de Teams, como escritorio, explorador, iOS y Android. Esta aplicación está lista para su implementación como parte de la suscripción a Microsoft 365.
+
+[Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Crear aprendizaje en la vista Teams](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="virtual-rounding"></a>Redondeo virtual
 

@@ -1,34 +1,36 @@
 ---
-title: Comando responder a búsqueda
+title: Responder al comando de búsqueda
 author: clearab
 description: Cómo responder al comando de búsqueda desde una extensión de mensajería en una aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e8b40dd8f422ffbd2537e8fa76a38c15eb6208de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676207"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696195"
 ---
-# <a name="respond-to-the-search-command"></a>Responder al comando de búsqueda
+# <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Su servicio web recibirá un `composeExtension/query` mensaje de invocación que `value` contiene un objeto con los parámetros de búsqueda. Se desencadena esta Invocación:
+Después de que el usuario envíe el comando de búsqueda, el servicio web recibe un mensaje de invocación `composeExtension/query` que contiene un objeto con los parámetros de `value` búsqueda. Esta invocación se desencadena con las siguientes condiciones:
 
-* A medida que se escriben caracteres en el cuadro de búsqueda.
-* Si `initialRun` se establece en true en el manifiesto de la aplicación, recibirá el mensaje de invocación en cuanto se invoque el comando de búsqueda. Vea [consulta predeterminada](#default-query).
+* A medida que se introducen caracteres en el cuadro de búsqueda.
+* `initialRun` se establece en true en el manifiesto de la aplicación, recibirá el mensaje de invocación en cuanto se invoque el comando de búsqueda. Para obtener más información, vea [consulta predeterminada](#default-query).
 
-Los propios parámetros de la solicitud se encuentran `value` en el objeto de la solicitud, que incluye las siguientes propiedades:
+Este documento le guía sobre cómo responder a solicitudes de usuario en forma de tarjetas y vistas previas, y las condiciones en las que Microsoft Teams emite una consulta predeterminada.
 
-| Nombre de la propiedad | Objetivo |
+Los parámetros de solicitud se encuentran en el `value` objeto de la solicitud, que incluye las siguientes propiedades:
+
+| Nombre de propiedad | Objetivo |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
-| `parameters` | Matriz de parámetros. Cada objeto Parameter contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
-| `queryOptions` | Parámetros de paginación: <br>`skip`: recuento de omitidos para esta consulta <br>`count`: número de elementos que se devolverá |
+| `parameters` | Matriz de parámetros. Cada objeto de parámetro contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
+| `queryOptions` | Parámetros de paginación: <br>`skip`: Recuento de omitir para esta consulta <br>`count`: número de elementos que se devolverán. |
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
@@ -37,7 +39,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
@@ -47,9 +49,9 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
-El JSON siguiente se acorta para resaltar las secciones más relevantes.
+El JSON siguiente se abrevia para resaltar las secciones más relevantes.
 
 ```json
 {
@@ -76,44 +78,44 @@ El JSON siguiente se acorta para resaltar las secciones más relevantes.
 
 ## <a name="respond-to-user-requests"></a>Responder a solicitudes de usuario
 
-Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP sincrónica a su servicio. En ese momento, el código tiene 5 segundos para proporcionar una respuesta HTTP a la solicitud. Durante este tiempo, el servicio puede realizar búsquedas adicionales o cualquier otra lógica empresarial necesaria para atender la solicitud.
+Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP sincrónica al servicio. En ese momento, el código tiene `5` segundos para proporcionar una respuesta HTTP a la solicitud. Durante este tiempo, el servicio puede realizar búsquedas adicionales o cualquier otra lógica empresarial necesaria para atender la solicitud.
 
-El servicio debe responder con los resultados que coincidan con la consulta de usuario. La respuesta debe indicar un código de Estado HTTP `200 OK` de y un objeto Application/JSON válido con el siguiente cuerpo:
+El servicio debe responder con los resultados que coincidan con la consulta del usuario. La respuesta debe indicar un código de estado HTTP y una aplicación válida `200 OK` o un objeto JSON con las siguientes propiedades:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Objetivo|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
-|`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de los resultados de la búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería. <br>`message`: muestra un mensaje de texto sin formato |
-|`composeExtension.attachmentLayout`|Especifica el diseño de los datos adjuntos. Se usa para las respuestas `result`de tipo. <br>Actualmente se admiten los siguientes tipos: <br>`list`: una lista de objetos Card que contiene miniaturas, títulos y campos de texto <br>`grid`: una cuadrícula de imágenes en miniatura |
-|`composeExtension.attachments`|Matriz de objetos Attachment válidos. Se usa para las respuestas `result`de tipo. <br>Actualmente se admiten los siguientes tipos: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|Acciones sugeridas. Se usa para las respuestas `auth` de `config`tipo o. |
-|`composeExtension.text`|Mensaje que se va a mostrar. Se usa para las respuestas `message`de tipo. |
+|`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería <br>`message`: muestra un mensaje de texto sin formato |
+|`composeExtension.attachmentLayout`|Especifica el diseño de los datos adjuntos. Se usa para respuestas de tipo `result` . <br>Actualmente, se admiten los siguientes tipos: <br>`list`: una lista de objetos de tarjeta que contienen miniaturas, título y campos de texto <br>`grid`: una cuadrícula de imágenes en miniatura |
+|`composeExtension.attachments`|Matriz de objetos de datos adjuntos válidos. Se usa para respuestas de tipo `result` . <br>Actualmente, se admiten los siguientes tipos: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|Acciones sugeridas. Se usa para respuestas de tipo `auth` o `config` . |
+|`composeExtension.text`|Mensaje que se mostrará. Se usa para respuestas de tipo `message` . |
 
-### <a name="response-card-types-and-previews"></a>Tipos y vistas previas de las tarjetas de respuesta
+### <a name="response-card-types-and-previews"></a>Tipos y vistas previas de tarjetas de respuesta
 
-Se admiten los siguientes tipos de datos adjuntos:
+Teams admite los siguientes tipos de tarjeta:
 
-* [Tarjeta en miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Tarjeta Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Tarjeta miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Tarjeta de conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Consulte [¿Qué son las tarjetas](~/task-modules-and-cards/what-are-cards.md) para obtener información general).
+Para tener una mejor comprensión e información general sobre las tarjetas, vea [qué son las tarjetas](~/task-modules-and-cards/what-are-cards.md).
 
-Para obtener información sobre cómo usar los tipos de tarjetas en miniatura y Heroes, consulte [Add Cards and Card Actions](~/task-modules-and-cards/cards/cards-actions.md).
+Para obtener información sobre cómo usar los tipos de miniatura y de tarjeta de héroe, consulta [Agregar tarjetas y acciones de tarjeta](~/task-modules-and-cards/cards/cards-actions.md).
 
-Para obtener documentación adicional sobre la tarjeta de conector de Office 365, consulte [using office 365 Connector Cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Para obtener información adicional acerca de la tarjeta del conector de Office 365, vea [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-La lista de resultados se muestra en la interfaz de usuario de Microsoft Teams con una vista previa de cada elemento. La vista previa se genera de una de estas dos maneras:
+La lista de resultados se muestra en la interfaz de usuario de Microsoft Teams con una vista previa de cada elemento. La vista previa se genera de una de las dos maneras:
 
-* Uso de `preview` la propiedad en `attachment` el objeto. El `preview` archivo adjunto solo puede ser un héroe o una tarjeta de miniaturas.
-* Se extraen de `title`las `text`propiedades Basic `image` , y de los datos adjuntos. Solo se usan si la `preview` propiedad no está establecida y estas propiedades están disponibles.
+* Uso de `preview` la propiedad dentro del `attachment` objeto. Los `preview` datos adjuntos solo pueden ser una tarjeta Hero o Thumbnail.
+* Extraído de las propiedades `title` `text` básicas , y `image` de los datos adjuntos. Solo se usan si la `preview` propiedad no está establecida y estas propiedades están disponibles.
 
-Puede mostrar una vista previa de una tarjeta adaptable o una tarjeta de conexión de Office 365 en la lista de resultados simplemente por su propiedad Preview. Esto no es necesario si los resultados ya son un héroe o tarjetas en miniatura. Si usa la vista previa de datos adjuntos, debe ser un héroe o una tarjeta en miniatura. Si no se especifica ninguna propiedad de vista previa, se producirá un error en la vista previa de la tarjeta y no se mostrará nada.
+Puede mostrar una vista previa de una tarjeta adaptable o una tarjeta de Conector de Office 365 en la lista de resultados mediante su propiedad de vista previa. La propiedad preview no es necesaria si los resultados ya son tarjetas Hero o Thumbnail. Si usas los datos adjuntos de vista previa, debe ser una tarjeta hero o thumbnail. Si no se especifica ninguna propiedad de vista previa, se produce un error en la vista previa de la tarjeta y no se muestra nada.
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -147,7 +149,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node. js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
@@ -174,7 +176,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -188,14 +190,14 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -310,9 +312,9 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>Consulta predeterminada
 
-Si establece `initialRun` en `true` en el manifiesto, Microsoft Teams emite una consulta "predeterminada" cuando el usuario abre por primera vez la extensión de mensajería. El servicio puede responder a esta consulta con un conjunto de resultados rellenados previamente. Esto puede ser útil si el comando de búsqueda requiere autenticación o configuración, Mostrar elementos vistos recientemente, favoritos o cualquier otra información que no dependa de los datos proporcionados por el usuario.
+Si se establece en en el manifiesto, Microsoft Teams emite una consulta predeterminada cuando el usuario abre por primera vez `initialRun` `true` la extensión de mensajería.  El servicio puede responder a esta consulta con un conjunto de resultados rellenados previamente. Esto resulta útil cuando el comando de búsqueda requiere autenticación o configuración, mostrando elementos vistos recientemente, favoritos o cualquier otra información que no dependa de la entrada del usuario.
 
-La consulta predeterminada tiene la misma estructura que cualquier consulta de usuario normal, con `name` el campo establecido `initialRun` en `value` y establecido `true` en como en el siguiente objeto.
+La consulta predeterminada tiene la misma estructura que cualquier consulta de usuario normal, con el campo establecido en y establecido en como se muestra `name` `initialRun` en el siguiente `value` `true` objeto:
 
 ```json
 {
@@ -335,15 +337,22 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 }
 ```
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="code-sample"></a>Ejemplo de código
 
-Agregar autenticación o configuración
+| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-* [Adición de autenticación a una extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)
-* [Agregar configuración a una extensión de mensajería](~/messaging-extensions/how-to/add-configuration-page.md)
+## <a name="see-also"></a>Consulte también
 
-Implementar configuración
+> [!div class="nextstepaction"]
+> [Agregar configuración a una extensión de mensajería](~/messaging-extensions/how-to/add-configuration-page.md)
+ 
+## <a name="next-step"></a>Paso siguiente
 
-* [Implementar el paquete de la aplicación](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [Agregar autenticación a una extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
+

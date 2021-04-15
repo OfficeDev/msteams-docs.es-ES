@@ -2,13 +2,14 @@
 title: Integrar capacidades de ubicación
 description: Cómo usar el SDK de cliente de JavaScript de Teams para aprovechar las capacidades de ubicación
 keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b941080eaece2cd2346bfa046ae97f855195ff20
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596199"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696860"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -100,7 +101,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Integrar capacidades multimedia en Teams](mobile-camera-image-permissions.md)

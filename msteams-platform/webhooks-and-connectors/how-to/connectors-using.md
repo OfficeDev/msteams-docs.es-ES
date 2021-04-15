@@ -4,12 +4,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 localization_priority: Priority
 keywords: teams o365 conector
-ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 28c1a6e68a0ac83a2eb4785d71596814d5a859d3
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382334"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696020"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -307,7 +307,7 @@ Los límites de velocidad de la aplicación controlan el tráfico que puede gene
 
 *Consulte también* [Conectores de Office 365: Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
-Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) como la que se muestra a continuación mitigaría la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Siga los [procedimientos recomendados](../../bots/how-to/rate-limit.md#best-practices) para evitar alcanzar los límites de velocidad.
+Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) como la que se muestra a continuación mitigaría la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Consulte las [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar superar los límites de velocidad.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

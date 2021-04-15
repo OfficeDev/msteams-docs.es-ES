@@ -4,12 +4,12 @@ description: Describe el esquema de manifiesto de Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634526"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696048"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -313,7 +313,7 @@ Esta cadena de versión debe seguir el [estándar de semver](http://semver.org/)
 
 **Obligatorio:** id. de aplicación de Microsoft
 
-El identificador es un identificador único generado por Microsoft para la aplicación. Tienes un identificador si el bot está registrado a través de Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft. Debe escribir el identificador aquí. De lo contrario, debe generar un nuevo identificador en el Portal de registro de aplicaciones de Microsoft ([Mis aplicaciones](https://apps.dev.microsoft.com)). Use el mismo identificador si agrega un bot.
+El identificador es un identificador único generado por Microsoft para la aplicación. Tienes un identificador si el bot está registrado a través de Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft. Debe escribir el identificador aquí. De lo contrario, debe generar un nuevo identificador en el Portal de [registro de aplicaciones de Microsoft](https://aka.ms/appregistrations). Use el mismo identificador si agrega un bot.
 
 > [!NOTE]
 > Si vas a enviar una actualización a la aplicación existente en AppSource, no se debe modificar el identificador del manifiesto.

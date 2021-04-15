@@ -1,44 +1,45 @@
 ---
 title: Obtener contexto para el bot de Microsoft Teams
 description: Describe cómo obtener contexto para bots en Microsoft Teams
-keywords: Contexto de bots de teams
+keywords: contexto de bots de teams
+ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: 1465e6624b4eaadd73e2d4d9cf87fccedc002e52
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: e46dde7d30e8d3074fbfbc2a6f050290827f5ccb
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231557"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696650"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtener contexto para el bot de Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-El bot puede acceder a contexto adicional sobre el equipo o chat, como el perfil de usuario. Esta información se puede usar para enriquecer la funcionalidad del bot y proporcionar una experiencia más personalizada.
+El bot puede tener acceso a contexto adicional sobre el equipo o el chat, como el perfil de usuario. Esta información se puede usar para enriquecer la funcionalidad del bot y proporcionar una experiencia más personalizada.
 
 > [!NOTE]
 >
-> * Se puede acceder mejor a las API de bot específicas de Microsoft Teams a través de nuestras extensiones para el SDK de Bot Builder.
-> * Para C# o .NET, descargue nuestro [paquete NuGet Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
-> * Para Node.js desarrollo, la funcionalidad del Generador de bots para Teams se incorpora al SDK de [Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
+> * Las API de bot específicas de Microsoft Teams tienen mejor acceso a través de nuestras extensiones para el SDK de Bot Builder.
+> * Para C# o .NET, descargue nuestro [paquete NuGet de Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
+> * Para Node.js desarrollo, la funcionalidad del Generador de bots para Teams se incorpora al [SDK de Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
 
-## <a name="fetch-the-team-roster"></a>Obtener la lista del equipo
+## <a name="fetch-the-team-roster"></a>Capturar la lista de equipos
 
-El bot puede consultar la lista de miembros del equipo y sus perfiles básicos. Los perfiles básicos incluyen identificadores de usuario de Teams e información de Azure Active Directory (AAD), como el nombre y el id. de objeto. Puede usar esta información para correlacionar las identidades de usuario. Por ejemplo, compruebe si un usuario que ha iniciado sesión en una pestaña a través de las credenciales de AAD es un miembro del equipo.
+El bot puede consultar la lista de miembros del equipo y sus perfiles básicos. Los perfiles básicos incluyen identificadores de usuario de Teams e información de Azure Active Directory (AAD), como el nombre y el identificador de objeto. Puede usar esta información para correlacionar identidades de usuario. Por ejemplo, compruebe si un usuario que ha iniciado sesión en una pestaña a través de las credenciales de AAD es un miembro del equipo.
 
 ### <a name="rest-api-example"></a>Ejemplo de API de REST
 
-Emitir directamente una solicitud GET [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) en , usando el valor como el punto de `serviceUrl` conexión.
+Emita directamente una solicitud GET en [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) , usando el valor como punto de `serviceUrl` conexión.
 
-Puede `teamId` encontrarse en el objeto de la carga de actividad que el bot recibe en los siguientes `channeldata` escenarios:
+Se `teamId` puede encontrar en el objeto de la carga de actividad que el bot recibe en los siguientes `channeldata` escenarios:
 
-* Cuando un usuario mensajes o interactúa con el bot en un contexto de equipo. Para obtener más información, vea [la recepción de mensajes.](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)
-* Cuando se agrega un nuevo usuario o bot a un equipo. Para obtener más información, vea [bot o usuario agregado a un equipo.](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)
+* Cuando un usuario mensajes o interactúa con el bot en un contexto de equipo. Para obtener más información, vea [recibir mensajes](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages).
+* Cuando se agrega un nuevo usuario o bot a un equipo. Para obtener más información, vea [bot or user added to a team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team).
 
 > [!NOTE]
 >
 >* Use siempre el identificador de equipo al llamar a la API.
->* El `serviceUrl` valor tiende a ser estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor `serviceUrl` almacenado.
+>* El `serviceUrl` valor tiende a ser estable, pero puede cambiar. Cuando llega un mensaje nuevo, el bot debe comprobar su valor `serviceUrl` almacenado.
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -70,7 +71,7 @@ Response body
 
 ### <a name="net-example"></a>Ejemplo de .NET
 
-Llamada `GetConversationMembersAsync` que se usa para devolver una lista de `Team.Id` id. de usuario.
+Llamar `GetConversationMembersAsync` a using para devolver una lista de `Team.Id` id. de usuario.
 
 ```csharp
 // Fetch the members in the current conversation
@@ -116,31 +117,31 @@ connector.fetchMembers(
 );
 ```
 
-Vea también ejemplos [de Bot Framework.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+Además, vea [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
-## <a name="fetch-user-profile-or-roster-in-personal-or-group-chat"></a>Obtener perfil de usuario o lista en chat personal o de grupo
+## <a name="fetch-user-profile-or-roster-in-personal-or-group-chat"></a>Capturar perfil de usuario o lista en chat personal o de grupo
 
-Puede realizar la llamada API de cualquier chat personal para obtener la información de perfil del usuario que chatea con su bot.
+Puedes realizar la llamada api para cualquier chat personal para obtener la información de perfil del usuario que chatea con el bot.
 
-La llamada API, los métodos sdk y el objeto de respuesta son idénticos a recuperar la lista de equipo. La única diferencia es que se pasa el `conversationId` archivo en lugar del archivo `teamId` .
+La llamada a la API, los métodos sdk y el objeto de respuesta son idénticos a la captura de la lista de equipos. La única diferencia es que se pasa el `conversationId` en lugar de `teamId` .
 
-## <a name="fetch-the-list-of-channels-in-a-team"></a>Obtener la lista de canales de un equipo
+## <a name="fetch-the-list-of-channels-in-a-team"></a>Capturar la lista de canales de un equipo
 
 El bot puede consultar la lista de canales de un equipo.
 
 > [!NOTE]
 >
->* Se devuelve el nombre del canal general predeterminado para `null` permitir la localización.
->* El identificador de canal para el canal General siempre coincide con el identificador de equipo.
+>* El nombre del canal general predeterminado se devuelve como `null` para permitir la localización.
+>* El identificador de canal del canal general siempre coincide con el id. de equipo.
 
 ### <a name="rest-api-example"></a>Ejemplo de API de REST
 
-Emitir directamente una solicitud GET `/teams/{teamId}/conversations/` en , usando el valor como el punto de `serviceUrl` conexión.
+Emita directamente una solicitud GET en `/teams/{teamId}/conversations/` , usando el valor como punto de `serviceUrl` conexión.
 
-El único origen es `teamId` un mensaje del contexto del equipo. El mensaje es un mensaje de un usuario o el mensaje que el bot recibe cuando se agrega a un equipo. Para obtener más información, vea [bot o usuario agregado a un equipo.](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)
+El único origen es `teamId` un mensaje del contexto del equipo. El mensaje es un mensaje de un usuario o el mensaje que el bot recibe cuando se agrega a un equipo. Para obtener más información, vea [bot or user added to a team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 > [!NOTE]
-> El `serviceUrl` valor tiende a ser estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor `serviceUrl` almacenado.
+> El `serviceUrl` valor tiende a ser estable, pero puede cambiar. Cuando llega un mensaje nuevo, el bot debe comprobar su valor `serviceUrl` almacenado.
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -165,7 +166,7 @@ Response body
 
 #### <a name="net-example"></a>Ejemplo de .NET
 
-En el siguiente ejemplo se `FetchChannelList` usa la llamada de las extensiones de Teams para el SDK de Bot Builder para [.NET:](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
+En el ejemplo siguiente se usa la llamada desde las extensiones de Teams para `FetchChannelList` el SDK de Bot Builder para [.NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -173,7 +174,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js ejemplo
 
-En el ejemplo siguiente se `fetchChannelList` usa la llamada de las extensiones de Teams para el SDK de Bot Builder [Node.js: ](https://www.npmjs.com/package/botbuilder-teams)
+En el ejemplo siguiente se usa una llamada desde las extensiones de Teams para el `fetchChannelList` SDK de Bot Builder para [Node.js](https://www.npmjs.com/package/botbuilder-teams):
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
@@ -193,7 +194,7 @@ connector.fetchChannelList(
 
 ## <a name="get-clientinfo-in-your-bot-context"></a>Obtener clientInfo en el contexto del bot
 
-Puede capturar clientInfo dentro de la actividad del bot. ClientInfo contiene las siguientes propiedades:
+Puede capturar el clientInfo dentro de la actividad del bot. El clientInfo contiene las siguientes propiedades:
 
 * Locale
 * País
@@ -214,7 +215,7 @@ Puede capturar clientInfo dentro de la actividad del bot. ClientInfo contiene la
 ]
 ```
 
-### <a name="c-example"></a>Ejemplo de C#
+### <a name="c-example"></a>C# ejemplo
 
 ```csharp
 var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));

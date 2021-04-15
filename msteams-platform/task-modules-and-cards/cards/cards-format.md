@@ -2,13 +2,14 @@
 title: Formato de texto en tarjetas
 description: Describe el formato de texto de tarjeta en Microsoft Teams
 keywords: formato de tarjetas de bots de teams
+ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
-ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
+ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475002"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696538"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a tarjetas en Teams
 
@@ -111,7 +112,7 @@ En Android, el formato de markdown de tarjeta adaptable aparece de la siguiente 
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>Mencione la compatibilidad con tarjetas adaptables v1.2
 
-Las menciones basadas en tarjetas se admiten en clientes web, de escritorio y móviles. Puede agregar menciones @ dentro de un cuerpo de tarjeta adaptable para bots y respuestas de extensión de mensajería.  Para agregar menciones @ en tarjetas, siga la misma lógica de notificación y representación que las [menciones basadas](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )en mensajes en conversaciones de chat de canal y grupo.
+Las menciones basadas en tarjetas se admiten en clientes web, de escritorio y móviles. Puede agregar menciones @ dentro de un cuerpo de tarjeta adaptable para bots y respuestas de extensión de mensajería. Para agregar menciones @ en tarjetas, siga la misma lógica de notificación y representación que las [menciones basadas](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)en mensajes en conversaciones de chat de canal y grupo.
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
@@ -285,7 +286,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. La compatibil
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -374,7 +375,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. Markdown se d
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -462,7 +463,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como la tarjeta de mi
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

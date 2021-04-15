@@ -1,72 +1,73 @@
 ---
-title: Formato de mensaje de bot
-description: Describe los detalles de formato de los mensajes de bot
-keywords: mensaje de robot de conversación de canales de escenarios de Teams
+title: Formato de mensaje bot
+description: Describe los detalles del formato de los mensajes de bot
+keywords: Escenarios de teams canaliza el mensaje del bot de conversación
+ms.topic: reference
 ms.date: 05/20/2019
-ms.openlocfilehash: eb0d0303d2b414ff84beab73055be5f057fff11c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41676192"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696622"
 ---
-# <a name="message-formatting-for-bots"></a>Formato de mensajes para bots
+# <a name="message-formatting-for-bots"></a>Formato de mensaje para bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Puede establecer la propiedad opcional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) para controlar cómo se representa el contenido de texto del mensaje.
+Puede establecer la propiedad opcional para controlar cómo se representa el contenido de texto [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) del mensaje.
 
 Microsoft Teams admite las siguientes opciones de formato:
 
-| VALOR TextFormat | Descripción |
+| Valor TextFormat | Descripción |
 | --- | --- |
-| Plain | El texto debe tratarse como texto sin procesar sin aplicar ningún formato |
-| Markdown | El texto debe tratarse como formato Markdown y representarse en el canal según corresponda; vea [dar formato al contenido de texto](#formatting-text-content) para estilos compatibles |
-| XML | El texto es marcado XML sencillo; vea [dar formato al contenido de texto](#formatting-text-content) para estilos compatibles |
+| plain | El texto debe tratarse como texto sin formato aplicado en absoluto |
+| markdown | El texto debe tratarse como formato Markdown y representarse en el canal según corresponda; vea [Formatting text content for](#formatting-text-content) supported styles |
+| xml | El texto es un marcado XML simple; vea [Formatting text content for](#formatting-text-content) supported styles |
 
-## <a name="formatting-text-content"></a>Formato de contenido de texto
+## <a name="formatting-text-content"></a>Formato del contenido de texto
 
-Microsoft Teams admite un subconjunto de las etiquetas de formato de Markdown y XML (HTML).
+Microsoft Teams admite un subconjunto de etiquetas de formato Markdown y XML (HTML).
 
 Actualmente, se aplican las siguientes limitaciones:
 
-* Los mensajes de solo texto no admiten el formato de tabla
-* Las tarjetas enriquecidas admiten el formato solo en la propiedad de texto, no en las propiedades título o subtítulo
-* Las tarjetas enriquecidas no admiten el formato de tablas o de Markdown
+* Los mensajes de solo texto no admiten formato de tabla
+* Las tarjetas enriquecciones admiten el formato solo en la propiedad de texto, no en las propiedades de título o subtítulo
+* Las tarjetas enriquecciones no admiten markdown ni formato de tabla
 
 ## <a name="cross-platform-support"></a>Compatibilidad entre plataformas
 
-Para asegurarse de que el formato funciona en todas las plataformas compatibles con Microsoft Teams, tenga en cuenta que algunos estilos no se admiten actualmente en todas las plataformas.
+Para asegurarse de que el formato funciona en todas las plataformas admitidas por Microsoft Teams, tenga en cuenta que algunos estilos no se admiten actualmente en todas las plataformas.
 
-| Style                     | Mensajes de solo texto | Tarjetas enriquecidas (solo XML) |
+| Estilo                     | Mensajes de solo texto | Tarjetas enriquecciones (solo XML) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
-| encabezado (niveles 1&ndash;3) | ✖ | ✔ |
-| Aplique             | ✖ | ✔ |
+| encabezado (niveles 1 &ndash; 3) | ✖ | ✔ |
+| strikethrough             | ✖ | ✔ |
 | regla horizontal           | ✖ | ✖ |
 | lista sin ordenar            | ✖ | ✔ |
-| Lista ordenada              | ✖ | ✔ |
+| lista ordenada              | ✖ | ✔ |
 | texto con formato previo         | ✔ | ✔ |
 | blockquote                | ✔ | ✔ |
 | hipervínculo                 | ✔ | ✔ |
 | vínculo de imagen                | ✔ | ✖ |
 
-## <a name="support-by-individual-platform"></a>Soporte por plataforma individual
+## <a name="support-by-individual-platform"></a>Compatibilidad con plataformas individuales
 
-La compatibilidad con el formato del texto varía en función del tipo de mensaje y de la plataforma.
+La compatibilidad con el formato de texto varía según el tipo de mensaje y por plataforma.
 
 ### <a name="text-only-messages"></a>Mensajes de solo texto
 
-| Style                     | Desktop | iOS | Android |
+| Estilo                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |
-| encabezado (niveles 1&ndash;3) | ✖ | ✖ | ✖ |
-| Aplique             | ✔ | ✔ | ✖ |
+| encabezado (niveles 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| strikethrough             | ✔ | ✔ | ✖ |
 | regla horizontal           | ✖ | ✖ | ✖ |
 | lista sin ordenar            | ✔ | ✖ | ✖ |
-| Lista ordenada              | ✔ | ✖ | ✖ |
+| lista ordenada              | ✔ | ✖ | ✖ |
 | texto con formato previo         | ✔ | ✔ | ✔ |
 | blockquote                | ✔ | ✔ | ✔ |
 | hipervínculo                 | ✔ | ✔ | ✔ |
@@ -74,4 +75,4 @@ La compatibilidad con el formato del texto varía en función del tipo de mensaj
 
 ### <a name="cards"></a>Tarjetas
 
-Vea [formato de tarjeta](~/task-modules-and-cards/cards/cards-format.md) para la compatibilidad en tarjetas.
+Consulta [Formato de tarjeta para](~/task-modules-and-cards/cards/cards-format.md) obtener compatibilidad con tarjetas.

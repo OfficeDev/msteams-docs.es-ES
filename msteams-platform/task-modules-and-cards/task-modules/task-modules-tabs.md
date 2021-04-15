@@ -1,13 +1,14 @@
 ---
 title: Uso de módulos de tareas en pestañas de Microsoft Teams
 description: Explica cómo invocar módulos de tareas desde pestañas de Teams mediante el SDK de cliente de Microsoft Teams.
+ms.topic: how-to
 keywords: sdk de cliente de pestañas de teams de módulos de tareas
-ms.openlocfilehash: 3f1da4d5eec31638d69adc01a45831534d015f41
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: dbcc6ce0ba31bae43335334dfb1c354acc33a2a0
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449559"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696034"
 ---
 # <a name="using-task-modules-in-tabs"></a>Uso de módulos de tareas en pestañas
 
@@ -106,7 +107,7 @@ function validateForm() {
 }
 ```
 
-## <a name="task-module-invocation-errors"></a>Errores de invocación del módulo de tareas
+## <a name="task-module-invocation-errors"></a>Errores de invocación de módulos de tareas
 
 Estos son los posibles valores `err` que puede recibir su `submitHandler` :
 

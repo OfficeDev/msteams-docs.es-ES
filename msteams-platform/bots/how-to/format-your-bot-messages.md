@@ -1,76 +1,89 @@
 ---
-title: Dar formato a los mensajes de bot
+title: Dar formato a los mensajes del bot
 author: clearab
-description: Agregar formato enriquecido a los mensajes de bot
-ms.topic: overview
+description: Agregar formato enriquecido a los mensajes del bot
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a11d01233481371c66562e0fa27ab805b06e9391
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675855"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697007"
 ---
-# <a name="format-your-bot-messages"></a>Dar formato a los mensajes de bot
+# <a name="format-your-bot-messages"></a>Dar formato a los mensajes del bot
 
-Puede establecer la propiedad opcional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) para controlar cómo se representa el contenido de texto del mensaje.
+El formato de mensaje le permite sacar lo mejor de los mensajes de bot. Puedes dar formato a los mensajes del bot para que incluyan tarjetas enriquecciones que sean datos adjuntos que contengan elementos interactivos, como botones, texto, imágenes, audio, vídeo, entre otros.
+
+## <a name="format-text-content"></a>Dar formato al contenido de texto
+
+Para dar formato a los mensajes de bot, puede establecer la propiedad opcional para controlar cómo se representa el contenido de texto del mensaje [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) de bot.
 
 Microsoft Teams admite las siguientes opciones de formato:
 
-| VALOR TextFormat | Descripción |
+| `TextFormat` value | Descripción |
 | --- | --- |
-| Plain | El texto debe tratarse como texto sin formato sin aplicar ningún formato.|
-| Markdown | El texto debe tratarse como formato Markdown y representarse en el canal según corresponda. *Vea* [dar formato al contenido del texto](#formatting-text-content) para los estilos admitidos. |
-| XML | El texto es marcado XML simple. *Vea* [dar formato al contenido del texto](#formatting-text-content) para los estilos admitidos. |
+| plain | El texto debe tratarse como texto sin formato aplicado.|
+| markdown | El texto debe tratarse como formato markdown y representarse en el canal según corresponda. |
+| xml | El texto es un marcado XML simple. |
 
-## <a name="formatting-text-content"></a>Formato de contenido de texto
+Teams admite un subconjunto de etiquetas de markdown y de formato XML o HTML.
 
-Microsoft Teams admite un subconjunto de las etiquetas de formato de Markdown y XML (HTML).
-
-Actualmente, se aplican las siguientes limitaciones:
+Actualmente, las siguientes limitaciones se aplican al formato:
 
 * Los mensajes de solo texto no admiten el formato de tabla.
-* Las tarjetas enriquecidas admiten el formato solo en la propiedad de texto, no en las propiedades de título o de subtítulo.
-* Las tarjetas enriquecidas no admiten el formato de tablas o de Markdown.
+* Las tarjetas enriquecciones solo admiten el formato en la propiedad de texto, no en las propiedades de título o subtítulo.
+* Las tarjetas enriquecciones no admiten markdown ni formato de tabla.
+
+Después de dar formato al contenido de texto, asegúrese de que el formato funciona en todas las plataformas admitidas por Microsoft Teams.
 
 ## <a name="cross-platform-support"></a>Compatibilidad entre plataformas
 
-Para asegurarse de que el formato funciona en todas las plataformas compatibles con Microsoft Teams, tenga en cuenta que algunos estilos no se admiten actualmente en todas las plataformas.
+Actualmente, algunos estilos no se admiten en todas las plataformas. En la tabla siguiente se proporciona una lista de estilos y cuáles de estos estilos se admiten en mensajes de solo texto y tarjetas enriquecciones:
 
-| Style                     | Mensajes de solo texto | Tarjetas enriquecidas (solo XML) |
+| Estilo                     | Mensajes de solo texto | Tarjetas enriquecciones: solo XML |
 | ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| encabezado (niveles 1&ndash;3) | ✖ | ✔ |
-| Aplique             | ✖ | ✔ |
-| regla horizontal           | ✖ | ✖ |
-| lista sin ordenar            | ✖ | ✔ |
+| Negrita                      | ✔ | ✖ |
+| Italic                    | ✔ | ✔ |
+| Encabezado (niveles 1 &ndash; 3) | ✖ | ✔ |
+| Tachado             | ✖ | ✔ |
+| Regla horizontal           | ✖ | ✖ |
+| Lista no ordenada            | ✖ | ✔ |
 | Lista ordenada              | ✖ | ✔ |
-| texto con formato previo         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| hipervínculo                 | ✔ | ✔ |
-| vínculo de imagen                | ✔ | ✖ |
+| Texto con formato previo         | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ |
+| Hipervínculo                 | ✔ | ✔ |
+| Vínculo imagen                | ✔ | ✖ |
 
-## <a name="support-by-individual-platform"></a>Soporte por plataforma individual
+Después de comprobar la compatibilidad entre plataformas, asegúrese de que la compatibilidad con plataformas individuales también esté disponible.
 
-La compatibilidad con el formato del texto varía en función del tipo de mensaje y de la plataforma.
+## <a name="support-by-individual-platform"></a>Compatibilidad con plataformas individuales
+
+La compatibilidad con el formato de texto varía según el tipo de mensaje y la plataforma.
 
 ### <a name="text-only-messages"></a>Mensajes de solo texto
 
-| Style                     | Desktop | iOS | Android |
+En la tabla siguiente se proporciona una lista de estilos y cuáles de estos estilos se admiten en escritorio, iOS y Android:
+
+| Estilo                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| encabezado (niveles 1&ndash;3) | ✖ | ✖ | ✖ |
-| Aplique             | ✔ | ✔ | ✖ |
-| regla horizontal           | ✖ | ✖ | ✖ |
-| lista sin ordenar            | ✔ | ✖ | ✖ |
+| Negrita                      | ✔ | ✔ | ✔ |
+| Italic                    | ✔ | ✔ | ✔ |
+| Encabezado (niveles 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| Tachado             | ✔ | ✔ | ✖ |
+| Regla horizontal           | ✖ | ✖ | ✖ |
+| Lista no ordenada            | ✔ | ✖ | ✖ |
 | Lista ordenada              | ✔ | ✖ | ✖ |
-| texto con formato previo         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| hipervínculo                 | ✔ | ✔ | ✔ |
-| vínculo de imagen                | ✔ | ✔ | ✔ |
+| Texto con formato previo         | ✔ | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ | ✔ |
+| Hipervínculo                 | ✔ | ✔ | ✔ |
+| Vínculo imagen                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Tarjetas
 
-Vea [formato de tarjeta](~/task-modules-and-cards/cards/cards-format.md) para la compatibilidad en tarjetas.
+Para obtener compatibilidad con tarjetas, consulte [formato de tarjeta](~/task-modules-and-cards/cards/cards-format.md).
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Actualizar y eliminar mensajes de bot](~/bots/how-to/update-and-delete-bot-messages.md)

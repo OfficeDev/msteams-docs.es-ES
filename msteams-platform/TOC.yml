@@ -202,21 +202,25 @@
   items:
     - name: Información general
       href: bots/what-are-bots.md
-    - name: Cómo funcionan los bots
+    - name: Bots y SDK
+      href: bots/bot-features.md
+    - name: Controladores de actividad de bots
       href: bots/bot-basics.md
     - name: Conversaciones de bot
       items:
-        - name: Conceptos básicos de la conversación
+        - name: Información general
           href: bots/how-to/conversations/conversation-basics.md
+        - name: Mensajes en conversaciones de bot
+          href: bots/how-to/conversations/conversation-messages.md
         - name: Crear un menú de comandos para el bot
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: Conversaciones de canal y grupo
           href: bots/how-to/conversations/channel-and-group-conversations.md
-        - name: Suscribirse a eventos de conversación
+        - name: Eventos de conversación en el bot de Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Enviar mensajes proactivos
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: Dar formato a los mensajes de bot
+        - name: Formatear los mensajes del bot
           href: bots/how-to/format-your-bot-messages.md
         - name: Actualizar y eliminar mensajes de bot
           href: bots/how-to/update-and-delete-bot-messages.md
@@ -224,13 +228,13 @@
       href: bots/how-to/get-teams-context.md
     - name: Envío y recepción de archivos
       href: bots/how-to/bots-filesv4.md
-    - name: Control de la limitación de volumen de bot
+    - name: Optimizar un bot con la limitación de volumen en Teams
       href: bots/how-to/rate-limit.md
-    - name: Bots de llamadas y reuniones
+    - name: Llamadas y reuniones en el bot
       items:
         - name: Información general
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: Conceptos multimedia en tiempo real
+        - name: Llamadas y reuniones multimedia en tiempo real
           href: bots/calls-and-meetings/real-time-media-concepts.md
         - name: Registrar un bot de llamadas
           href: bots/calls-and-meetings/registering-calling-bot.md
@@ -246,7 +250,7 @@
   items:
     - name: Información general
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Crear comandos de acción
+    - name: Comandos de acción
       items:
         - name: Definir comandos de acción
           href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +258,13 @@
           href: messaging-extensions/how-to/action-commands/create-task-module.md
         - name: Responder a comandos de acción
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-    - name: Crear comandos de búsqueda
+    - name: Comandos de búsqueda
       items:
         - name: Añadir una página de configuración
           href: messaging-extensions/how-to/add-configuration-page.md
         - name: Definición de comandos de búsqueda
           href: messaging-extensions/how-to/search-commands/define-search-command.md
-        - name: Recepción y respuesta a consultas de búsqueda
+        - name: Responder a comandos de búsqueda
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Añadir una extensión de enlace
       href: messaging-extensions/how-to/link-unfurling.md

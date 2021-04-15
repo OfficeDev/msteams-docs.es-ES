@@ -5,30 +5,30 @@ keywords: Recomendaciones sobre extensiones de mensajería de referencia de dire
 author: heath-hamilton
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 747b48e3aeb803f91cfb8d4412c98cb6d52c1fd1
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176980"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697014"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Diseño de la extensión de mensajería de Microsoft Teams
 
 Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o actuar en un mensaje sin salir de la conversación.
 Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar extensiones de mensajería en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Puedes encontrar instrucciones completas de diseño de extensión de mensajería, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>Agregar una extensión de mensajería
 
 Puede agregar una extensión de mensajería en los siguientes contextos de Teams:
 
-* Desde la tienda de Teams (AppSource).
+* En la tienda de Teams (AppSource)
 * En un canal, chat o reunión (antes, durante y después) cerca del cuadro de redacción. Vale la pena tener en cuenta que si agregas una extensión de mensajería en uno de estos lugares, solo puedes usarla en ese contexto.
 
 En el ejemplo siguiente se muestra cómo agregar una extensión de mensajería en un canal.
@@ -55,7 +55,7 @@ Con los comandos de búsqueda, los usuarios pueden usar la extensión de mensaje
 
 #### <a name="compose-box-layout-options"></a>Opciones de diseño de cuadro de redacción
 
-Tiene algunas opciones para mostrar los resultados de búsqueda de extensión de mensajería, incluidas [las vistas de lista y cuadrícula.](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
+Tiene algunas opciones para mostrar los resultados de búsqueda de extensión de mensajería, incluidas [las vistas de lista y cuadrícula.](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Ilustraciones que muestran las opciones de diseño para los resultados de búsqueda de extensión de mensajería." border="false":::
 
@@ -112,7 +112,7 @@ En los siguientes escenarios se muestran las formas principales en que los usuar
 
 **2. Complete la acción**. La aplicación puede recibir y procesar cualquier contenido o datos enviados por la acción del mensaje. Esto permite a los usuarios permanecer en su conversación y, en el ejemplo siguiente, no preocuparse por escribir información directamente en la aplicación.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="En el ejemplo se muestra un usuario que busca contenido para insertar desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Ejemplo sobre cómo realizar acciones en un mensaje." border="false":::
 
 ### <a name="preview-links"></a>Vínculos de vista previa
 
@@ -138,7 +138,7 @@ El siguiente ejemplo es una extensión de mensajería abierta desde el cuadro de
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción." border="false":::
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
 |1|**Logotipo de la aplicación:** icono de color del logotipo de la aplicación.|
 |2|**Nombre de la** aplicación: nombre completo de la aplicación.|
@@ -153,7 +153,7 @@ El siguiente ejemplo es una extensión de mensajería abierta desde el cuadro de
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de administración de extensiones de mensajería." border="false":::
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
 |1|**Desanclar:** disponible si el usuario ha anclado la aplicación.|
 |2|**Quitar:** quita la extensión de mensajería del canal, chat o reunión.|
@@ -164,7 +164,7 @@ El siguiente ejemplo es una extensión de mensajería abierta desde el cuadro de
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Ejemplo sobre configuración y uso general." border="false":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Hacer: integrar con el inicio de sesión único
 
@@ -172,7 +172,7 @@ SSO hace que el proceso de inicio de sesión sea más fácil, rápido y seguro. 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Ejemplo de integración con inicio de sesión único." border="false":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>No: alejar a los usuarios de la conversación
 
@@ -189,7 +189,7 @@ Las extensiones de mensajería no siempre son fáciles de encontrar. Incluye cap
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Ejemplo de templating." border="false":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Hacer: permitir que Teams controle parte del trabajo de diseño si es posible
 
@@ -197,7 +197,7 @@ Si tiene sentido para los casos de uso, considere la posibilidad de crear una ex
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Ejemplo sobre cómo controlar el trabajo de diseño." border="false":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>No: insertar toda la aplicación en un módulo de tareas
 
@@ -210,7 +210,7 @@ Si la extensión de mensajería requiere comandos de acción, mantenga el módul
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Ejemplo en el uso de los mismos." border="false":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Hacer: Aprovechar los tokens de color de Teams
 
@@ -218,7 +218,7 @@ Cada tema de Teams tiene su propia combinación de colores. Para controlar los c
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Ejemplo en tokens de color." border="false":::
 
 #### <a name="dont-hard-code-color-values"></a>No: valores de color de código duro
 
@@ -231,7 +231,7 @@ Si no usa tokens de color de Teams, sus diseños serán menos escalables y tendr
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Ejemplo de acciones." border="false":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Hacer: incluir comandos de acción que tienen sentido en contexto
 
@@ -239,7 +239,7 @@ Las acciones del mensaje deben estar relacionadas con lo que un usuario está vi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Ejemplo de comandos de acción." border="false":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>No: incluir comandos de acciones que no son contextuales
 
@@ -262,9 +262,9 @@ Puedes hacer que los usuarios presionen una tecla o seleccione un botón para en
 
 Por ejemplo, antes de que un usuario escriba algo en el cuadro de búsqueda, muestre lo que ha visto por última vez en la aplicación. Es posible que quieran insertar ese contenido en su conversación.
 
-## <a name="validate-your-design"></a>Validar el diseño
+## <a name="validate-your-design"></a>Valide su diseño
 
-Si planeas publicar la aplicación en AppSource, debes comprender los problemas de diseño que normalmente provocan que las aplicaciones fallen durante el envío.
+Si tiene previsto publicar la aplicación en AppSource, debe comprender los problemas de diseño que habitualmente provocan errores en las aplicaciones durante el envío.
 
 > [!div class="nextstepaction"]
-> [Comprobar las directrices de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Comprobar las instrucciones de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

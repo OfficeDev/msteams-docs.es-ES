@@ -3,12 +3,12 @@ title: Introducción a App Studio para Microsoft Teams
 description: Comience a crear aplicaciones increíbles en Microsoft Teams a través de App Studio
 keywords: introducción a app studio de teams
 ms.topic: overview
-ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d275e78909fe35a6032bf67cb7454396f3dbd7af
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634512"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696307"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desarrolle aplicaciones rápidamente con App Studio para Microsoft Teams
 
@@ -101,6 +101,9 @@ Cada comando necesita un título y un id. De manera opcional, el comando puede c
 * El nombre del parámetro tal como aparece en el cliente de Teams y se incluye en la solicitud del usuario
 * Un título descriptivo
 * Una descripción opcional
+
+> [!NOTE]
+> Para crear una extensión de mensajería con app studio, consulta [crear una extensión de mensajería con app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### <a name="test-and-distribute"></a>Prueba y distribución
 

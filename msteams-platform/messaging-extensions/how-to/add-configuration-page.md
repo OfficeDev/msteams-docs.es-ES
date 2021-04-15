@@ -4,20 +4,26 @@ author: clearab
 description: Cómo agregar una página de configuración a una extensión de mensajería
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4d3ccf000f5a0a0296f970650d63bd978b1eaaa5
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: e927e9753ad998ecc748e7b71fddd230f0b264d1
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896516"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696209"
 ---
 # <a name="add-a-configuration-page-to-your-messaging-extension"></a>Agregar una página de configuración a la extensión de mensajería
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-## <a name="bot-framework-samples"></a>Ejemplos del marco de bot
+Este documento le guía sobre cómo crear extensiones de mensajería que incluyan una página de configuración y la autenticación del servicio de bot con ejemplos de configuración de autenticación de búsqueda de Bot Framework Teams. Los ejemplos también muestran cómo crear extensiones de mensaje que acepten solicitudes de búsqueda y devuelvan los resultados después de que el usuario haya iniciado sesión.
 
-Los proyectos de ejemplo de Microsoft Teams Search config for [**JavaScript/node. js**](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) y [**C-Sharp/DotNetCore**](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) , que se encuentran en Github, demuestran cómo crear extensiones de mensajería que incluyan una página de configuración y autenticación del servicio de bot. Los ejemplos también muestran cómo crear extensiones de mensaje que acepten solicitudes de búsqueda y devuelven los resultados después de que el usuario haya iniciado sesión.
+## <a name="code-sample"></a>Ejemplo de código
+
+| Nombre de ejemplo | Descripción | .NET | Node.js|   
+|:---------------------|:--------------|:---------|:--------|
+| Ejemplos de configuración de autenticación de búsqueda de Bot Framework Teams  | Muestra cómo crear extensiones de mensajería que incluyen una página de configuración y la autenticación del servicio bot. Los ejemplos también muestran cómo crear extensiones de mensaje que acepten solicitudes de búsqueda y devuelvan los resultados después de que el usuario haya iniciado sesión.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+
+## <a name="additional-code-sample"></a>Ejemplo de código adicional
 
 > [!div class="nextstepaction"]
-> [Ver más ejemplos de Framework de bot en GitHub](https://github.com/microsoft/BotBuilder-Samples)
+> [Ver más ejemplos de Bot Framework en GitHub](https://github.com/microsoft/BotBuilder-Samples)
