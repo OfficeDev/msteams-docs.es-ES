@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Cómo trabajar con eventos de conversación desde el bot de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696349"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762035"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -1060,10 +1060,10 @@ El evento se envía cuando un usuario agrega o quita las reacciones a un mensaje
 
 | EventType       | Payload (objeto)   | Descripción                                                             | Ámbito |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reacciones a un mensaje de bot](#reactions-to-a-bot-message)                   | Todo   |
-| messageReaction | reactionsRemoved | [Reacciones eliminadas del mensaje de bot](#reactions-removed-from-bot-message) | Todo   |
+| messageReaction | reactionsAdded   | [Reacciones agregadas al mensaje de bot](#reactions-added-to-bot-message).           | Todo   |
+| messageReaction | reactionsRemoved | [Reacciones eliminadas del mensaje de bot](#reactions-removed-from-bot-message). | Todo |
 
-### <a name="reactions-to-a-bot-message"></a>Reacciones a un mensaje de bot
+### <a name="reactions-added-to-bot-message"></a>Reacciones agregadas al mensaje de bot
 
 El código siguiente muestra un ejemplo de las reacciones a un mensaje de bot:
 
@@ -1283,13 +1283,104 @@ async def on_reactions_removed(
 
 * * *
 
+## <a name="installation-update-event"></a>Evento de actualización de instalación
+
+El bot recibe un `installationUpdate` evento al instalar un bot en un subproceso de conversación. La desinstalación del bot del subproceso también desencadena el evento. Al instalar un bot, el campo **de** acción del evento se establece  en *agregar* y, cuando se desinstala el bot, el campo de acción se establece en *quitar*.
+ 
+> [!NOTE]
+> Al actualizar una aplicación y, a continuación, agregar o quitar un bot, la acción también desencadena el `installationUpdate` evento. El **campo** de acción se establece en *add-upgrade* si agrega un bot o *remove-upgrade* si quita un bot. 
+
+> [!IMPORTANT]
+> Los eventos de actualización de instalación están en versión preliminar del desarrollador hoy y estarán disponibles generalmente (GA) en marzo de 2021. Para ver los eventos de actualización de instalación, puedes mover el cliente de Teams a la vista previa del desarrollador público y agregar la aplicación personalmente o a un equipo o un chat.
+
+### <a name="install-update-event"></a>Evento Install update
+Use el `installationUpdate` evento para enviar un mensaje introductorio desde el bot durante la instalación. Este evento le ayuda a cumplir los requisitos de privacidad y retención de datos. También puede limpiar y eliminar datos de usuario o subproceso cuando se desinstala el bot.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
+var activity = turnContext.Activity; if
+(string.Equals(activity.Action, "Add",
+StringComparison.InvariantCultureIgnoreCase)) {
+// TO:DO Installation workflow }
+else
+{ // TO:DO Uninstallation workflow
+} return; }
+```
+
+También puede usar un controlador dedicado para *agregar* *o* quitar escenarios como método alternativo para capturar un evento.
+
+```csharp
+protected override async Task
+OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
+turnContext, CancellationToken cancellationToken) {
+// TO:DO Installation workflow return;
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+  "action": "add", 
+  "type": "installationUpdate", 
+  "timestamp": "2020-10-20T22:08:07.869Z", 
+  "id": "f:3033745319439849398", 
+  "channelId": "msteams", 
+  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+  "from": { 
+    "id": "sample id", 
+    "aadObjectId": "sample AAD Object ID" 
+  },
+  "conversation": { 
+    "isGroup": true, 
+    "conversationType": "channel", 
+    "tenantId": "sample tenant ID", 
+    "id": "sample conversation Id@thread.skype" 
+  }, 
+
+  "recipient": { 
+    "id": "sample reciepent bot ID", 
+    "name": "bot name" 
+  }, 
+  "entities": [ 
+    { 
+      "locale": "en", 
+      "platform": "Windows", 
+      "type": "clientInfo" 
+    } 
+  ], 
+  "channelData": { 
+    "settings": { 
+      "selectedChannel": { 
+        "id": "sample channel ID@thread.skype" 
+      } 
+    }, 
+    "channel": { 
+      "id": "sample channel ID" 
+    }, 
+    "team": { 
+      "id": "sample team ID" 
+    }, 
+    "tenant": { 
+      "id": "sample tenant ID" 
+    }, 
+    "source": { 
+      "name": "message" 
+    } 
+  }, 
+  "locale": "en" 
+}
+```
+* * *
+
 ## <a name="code-sample"></a>Ejemplo de código
 
-En la tabla siguiente se proporciona un ejemplo de código simple que incorpora eventos de conversación de bots en una aplicación de Teams:
-
-| Muestra | Descripción | .NET Core |
-|--------|------------- |---|
-| Ejemplo de eventos de conversación de bots de Teams | Ejemplo del bot de conversación de Bot Framework v4 para Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
+| **Nombre de ejemplo** | **Descripción** | **.NET** |
+|-----------------|-----------------|---------|
+|Eventos de conversación de bots de Microsoft Teams | Ejemplo de eventos de bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 
