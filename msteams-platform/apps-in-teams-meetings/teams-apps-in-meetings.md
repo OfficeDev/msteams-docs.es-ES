@@ -5,12 +5,12 @@ description: información general sobre las aplicaciones en reuniones de Teams b
 ms.topic: overview
 ms.author: lajanuar
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: ac4e270090dd89d370d37de88b8cba552b77a5cb
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382341"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885083"
 ---
 # <a name="apps-in-teams-meetings"></a>Aplicaciones en reuniones de Teams
 
@@ -78,7 +78,7 @@ Las pestañas permiten a los miembros del equipo tener acceso a servicios y cont
 
 ✔ exportar un resultado de una encuesta o sondeo notifica a los usuarios que los resultados se descargaron correctamente.
 
-✔ Una aplicación está visible en una reunión de Teams en el panel lateral o en el cuadro de diálogo en la reunión. Use el cuadro de diálogo en la reunión para mostrar el contenido que se puede usar para los participantes de la reunión. *Consulta* [Crear aplicaciones para reuniones de Teams](create-apps-for-teams-meetings.md).
+✔ Una aplicación está visible en una reunión de Teams en el panel lateral o en el cuadro de diálogo en la reunión. Use el cuadro de diálogo en la reunión para mostrar el contenido que se puede usar para los participantes de la reunión. Para obtener más información, consulta [Crear aplicaciones para reuniones de Teams.](create-apps-for-teams-meetings.md)
 
    > [!NOTE]
    > El manifiesto de la aplicación especifica que la pestaña está optimizada para [el panel lateral,](create-apps-for-teams-meetings.md#during-a-meeting)que es donde se muestra. También puede formar parte de una experiencia de bandeja de uso compartido, sujeto a las directrices de diseño especificadas.
@@ -145,7 +145,18 @@ Los siguientes tipos de usuario identifican lo que cada usuario puede hacer y a 
 * **In-tenant:** los usuarios del espacio empresarial pertenecen a la organización y tienen credenciales en Azure Active Directory (AAD) para el inquilino. Normalmente son empleados a tiempo completo, in situ o remotos. Un usuario en el espacio empresarial puede ser organizador, moderador o asistente.
 * **Invitado:** un invitado es un participante de otra organización invitado a tener acceso a Teams u otros recursos en el inquilino de la organización. Los invitados se agregan al AAD de la organización y tienen las mismas capacidades de Teams que un miembro nativo del equipo con acceso a chats de equipo, reuniones y archivos. Un usuario invitado puede ser organizador, moderador o asistente. Para obtener más información, vea [acceso de invitado en Teams](/microsoftteams/guest-access).
 * **Federado o externo:** un usuario federado es un usuario externo de Teams en otra organización al que se ha invitado a unirse a una reunión. Estos usuarios tienen credenciales válidas con socios federados y están autorizados por Teams. No tienen acceso a los equipos ni a otros recursos compartidos de la organización. El acceso de invitado es una mejor opción para que los usuarios externos tengan acceso a equipos y canales. Para obtener más información, vea [manage external access in Teams](/microsoftteams/manage-external-access).
-* **Anónimo:** los usuarios anónimos no tienen una identidad de AAD y no están federados con un inquilino. El participante anónimo es como un usuario externo, pero su identidad no se proyecta en la reunión. Los usuarios anónimos no pueden acceder a aplicaciones en una ventana de reunión. Un usuario anónimo no puede ser un organizador, pero puede ser moderador o asistente.
+* **Anónimo:** los usuarios anónimos no tienen una identidad de AAD y no están federados con un inquilino. El participante anónimo es como un usuario externo, pero su identidad no se proyecta en la reunión. Un usuario anónimo no puede ser un organizador, pero puede ser un moderador o un asistente.
+
+> [!NOTE]
+> Los usuarios anónimos heredan la directiva de permisos de aplicación predeterminada global. Para obtener más información, consulta [Administrar aplicaciones](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
+
+En la tabla siguiente se proporcionan los tipos de usuario y las características a las que puede tener acceso cada usuario:
+
+| Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
+| Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar ni eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
+| Federado | No disponible | No disponible | No disponible | No disponible | No disponible | No disponible |
 
 ## <a name="see-also"></a>Vea también
 

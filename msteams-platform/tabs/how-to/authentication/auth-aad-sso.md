@@ -3,12 +3,12 @@ title: Compatibilidad con inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596684"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885069"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -66,7 +66,6 @@ En esta sección se describen las tareas relacionadas con la creación de una pe
 > * Solo se admiten permisos de api de Graph de nivel de usuario, es decir, correo electrónico, perfil, offline_access, OpenId. Si debe tener acceso a otros ámbitos de Graph, como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada](#apps-that-require-additional-graph-scopes).
 > * Es importante que el nombre de dominio de la aplicación sea el mismo que el nombre de dominio registrado para la aplicación de AAD.
 > * Actualmente, no se admiten varios dominios por aplicación.
-> * Las aplicaciones que usan `azurewebsites.net` el dominio no se admiten porque es demasiado común y pueden ser un riesgo de seguridad.
 
 **Para registrar la aplicación a través del portal de AAD**
 
