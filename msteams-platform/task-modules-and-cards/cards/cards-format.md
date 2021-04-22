@@ -2,14 +2,15 @@
 title: Formato de texto en tarjetas
 description: Describe el formato de texto de tarjeta en Microsoft Teams
 keywords: formato de tarjetas de bots de teams
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696538"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922520"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a tarjetas en Teams
 
@@ -122,10 +123,11 @@ Bots and messaging extensions can include mentions within the card content in [T
 
 #### <a name="constructing-mentions"></a>Menciones de construcción
 
-Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos
+Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos:
 
-* `<at>username</at>` en los elementos de tarjeta adaptable compatibles
-* El objeto dentro de una propiedad en el contenido de la tarjeta, que incluye el identificador de usuario `mention` de Teams del usuario `msteams` mencionado
+* `<at>username</at>` en los elementos de tarjeta adaptable compatibles.
+* El objeto dentro de una propiedad en el contenido de la tarjeta, que incluye el identificador de usuario `mention` de Teams del usuario `msteams` mencionado.
+* El `userId` es único para el identificador del bot y un usuario en particular. Se puede usar para @mention un usuario determinado. Se `userId` puede recuperar mediante una de las opciones mencionadas en obtener el identificador de [usuario](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Tarjeta adaptable de ejemplo con una mención
 
@@ -157,7 +159,6 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
   }
 }
 ```
-
 
 ### <a name="information-masking-in-adaptive-cards"></a>Enmascaramiento de información en tarjetas adaptables
 Use la propiedad information masking para enmascarar información específica, como contraseña o información confidencial de los usuarios dentro del elemento de entrada de [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) tarjeta adaptable. 

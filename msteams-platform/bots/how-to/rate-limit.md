@@ -1,16 +1,16 @@
 ---
-title: Optimizar el bot con limitación de velocidad en Teams
+title: Optimizar un bot con la limitación de volumen en Teams
 description: Limitación de tasas y procedimientos recomendados en Microsoft Teams
 ms.topic: conceptual
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 245c51fc736e5f888299535c3e50ec6232183623
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697000"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922506"
 ---
-# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar el bot con limitación de velocidad en Teams
+# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
 La limitación de velocidad es un método para limitar los mensajes a una frecuencia máxima determinada. Como principio general, la aplicación debe limitar el número de mensajes que publica a una conversación de canal o chat individual. Esto garantiza una experiencia óptima y los mensajes no aparecen como correo no deseado para los usuarios.
 
@@ -113,10 +113,12 @@ También puedes controlar el límite de velocidad usando el límite por bot por 
 
 ## <a name="per-bot-per-thread-limit"></a>Por bot por límite de subprocesos
 
->[!NOTE]
-> La división de mensajes en el nivel de servicio da como resultado solicitudes superiores a las esperadas por segundo (RPS). Si le preocupa acercarse a los límites, debe implementar la [estrategia de despegar](#backoff-example). Los valores proporcionados en esta sección son solo para estimación.
+El límite por bot por subproceso controla el tráfico que un bot puede generar en una sola conversación. Una conversación es 1:1 entre bot y usuario, un chat de grupo o un canal de un equipo. Por lo tanto, si la aplicación envía un mensaje de bot a cada usuario, el límite de subprocesos no limita.
 
-El límite por bot por subproceso controla el tráfico que un bot puede generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat de grupo o un canal en un equipo.
+>[!NOTE]
+> * El límite de subprocesos de 3600 segundos y 1800 operaciones solo se aplica si se envían varios mensajes de bot a un solo usuario. 
+> * El límite global por aplicación por inquilino es de 30 solicitudes por segundo (RPS). Por lo tanto, el número total de mensajes de bot por segundo no debe cruzar el límite de subprocesos.
+> * La división de mensajes en el nivel de servicio da como resultado rps superior a lo esperado. Si le preocupa acercarse a los límites, debe implementar la [estrategia de despegar](#backoff-example). Los valores proporcionados en esta sección son solo para estimación.
 
 En la tabla siguiente se proporcionan los límites por bot por subproceso:
 
@@ -166,5 +168,5 @@ En la tabla siguiente se proporciona el límite por subproceso para todos los bo
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+> [Llamadas y reuniones en el bot](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 
