@@ -4,12 +4,12 @@ description: Describe cómo cargar la aplicación en Microsoft Teams
 ms.topic: how-to
 ms.author: lajanuar
 keywords: carga de aplicaciones de teams
-ms.openlocfilehash: 3ca086cf8dbb992de84b22b7499f739d7c80b9d6
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c9102fa5b7056dda0db8d3e260bfb3e94b7f4e56
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479888"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946483"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Cargar un paquete de aplicación en Microsoft Teams
 
@@ -116,21 +116,6 @@ Una aplicación cargada con una extensión de mensajería aparece automáticamen
 
 ![Extensiones de mensajería](../../assets/images/compose-extensions/cesampleapp.png)
 
-## <a name="add-a-default-install-scope-and-group-capability"></a>Agregar un ámbito de instalación predeterminado y una funcionalidad de grupo
-
-> [!NOTE]
-> Actualmente, el ámbito de instalación predeterminado y la funcionalidad de grupo solo están disponibles en la versión preliminar del desarrollador.
-
-Aunque la instalación de una aplicación en el ámbito personal funciona para la mayoría de las aplicaciones, algunas de las aplicaciones de la Tienda Teams admiten ámbitos personales y de equipo.
-Algunas de estas aplicaciones están diseñadas para trabajar en un equipo, reuniones o un chat en grupo, con una experiencia de aplicación personal secundaria.
-La selección predeterminada del ámbito de instalación te ayuda a especificar las `defaultInstallScope` aplicaciones que publicas. La experiencia de instalación de la aplicación hace que las opciones predeterminadas estén disponibles para el usuario, mientras que el resto se mueve debajo del galón como se resalta en la imagen.
-
-![Agregar una aplicación](../../assets/images/compose-extensions/addanapp.png)
-
-La `defaultInstallScope` propiedad admite valores, como personal, team, groupchat o reuniones.
-
-> [!NOTE]
->`defaultGroupCapability` proporciona la funcionalidad predeterminada que se agrega al equipo, el chat de grupo o las reuniones. Elige una pestaña, bot o conector como la funcionalidad predeterminada de la aplicación, pero debes asegurarte de que has proporcionado la funcionalidad seleccionada en la definición de la aplicación.
 
 ## <a name="remove-or-update-your-app"></a>Quitar o actualizar la aplicación
 

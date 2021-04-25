@@ -3,12 +3,12 @@ title: Novedades
 description: Describe todas las nuevas características de desarrollador en Microsoft Teams
 ms.topic: reference
 keywords: teams what's new latest
-ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 8d38c5a4f79b557209eedab6747517e689248874
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634533"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946462"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores de Microsoft Teams
 
@@ -22,9 +22,9 @@ El registro de cambios enumera los cambios realizados en la plataforma de Micros
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |04/08/2021| La característica de personalización de aplicaciones ya está disponible en la vista previa del desarrollador.|[Introducción a la aplicación de Equipos de diseño,](concepts/design/design-teams-app-overview.md#app-customization) [Introducción a App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y Esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021|Aviso: **Actualice a la versión 4.10** o posterior del SDK de Bot Framework tal como hemos empezado con el proceso de desuso para y `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
+|03/18/2021|Aviso: Actualice a la versión 4.10 o posterior del SDK de Bot Framework, tal como hemos empezado con el proceso de desuso para `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
-|03/05/2021 | El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Reordenar pestañas de aplicaciones personales|[Reordenar la pestaña de chat en aplicaciones personales](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|El enmascaramiento de información en tarjetas adaptables se encuentra en la vista previa del desarrollador.| [Enmascaramiento de información en tarjetas adaptables](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Nuevo: Se agregaron funcionalidades de ubicación. <br/> Actualización: la información sobre las capacidades de ubicación se agrega en la información general sobre las capacidades del dispositivo, los permisos de dispositivo nativos, la integración de capacidades multimedia y los archivos de funcionalidad de escáner de códigos de barras o QR.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
@@ -57,7 +57,7 @@ El registro de cambios enumera los cambios realizados en la plataforma de Micros
 | 10/31/2019 | Bots conversacionales y documentación de extensión de mensajería actualizada para reflejar el SDK de Bot Framework 4.6. La documentación del SDK de v3 está disponible en la sección Recursos. | Toda la documentación sobre bots y extensiones de mensajería. |
 | 10/31/2019 | Nueva estructura de documentación y refactorización de artículos principales. Por favor, informe de los vínculos muertos o 404 creando un problema de GitHub. | Todos ellos! |
 | 9/13/2019 | El bot de solicitud se instala desde la extensión de mensajería basada en acciones. | [Iniciar acciones con extensiones de mensajería](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 8/28/2019 | Compatibilidad con canales privados en pestañas y conectores. | [Obtener contexto para su pestaña](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 8/28/2019 | Compatibilidad con canales privados en pestañas y conectores. | [Obtención del contexto de Teams para la pestaña](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
 | 06/20/2019 | Compartir un sitio web externo, desde un sitio web externo, en un canal de Teams. | [Compartir con Teams](~/share-to-teams.md) |
 | 05/25/2019 | Responder con el mensaje del bot desde el módulo de tareas. | [Responder con el mensaje del bot desde el módulo de tareas](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots en chats de grupo. | [Interactuar con un bot en un canal o chat en grupo](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
