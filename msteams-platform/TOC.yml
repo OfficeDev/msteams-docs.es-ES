@@ -238,7 +238,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Llamadas y reuniones multimedia en tiempo real
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Registrar un bot de llamadas
+        - name: Registro de llamadas y bots de reuniones
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notificaciones de llamadas entrantes
           href: bots/calls-and-meetings/call-notifications.md
