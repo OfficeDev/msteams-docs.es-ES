@@ -4,12 +4,12 @@ description: Describe cómo enviar y recibir archivos a través del bot
 keywords: bots teams bots files send receive
 ms.date: 05/20/2019
 ms.topic: how-to
-ms.openlocfilehash: 81799e3079026a678d78a9e20b8dd3a026d2a4a6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: bc2cbaeedcc770f82e3fc1f6cfbbf1beda3948fd
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697076"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996047"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar y recibir archivos a través del bot
 
@@ -318,11 +318,13 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Nombre de ejemplo | Descripción | . NETCore | Javascript | Python |
+En el ejemplo de código siguiente se muestra cómo obtener el consentimiento de archivos y cargar archivos en Teams desde un bot:
+
+|**Nombre de ejemplo** | **Descripción** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | Muestra cómo obtener el consentimiento de archivos y cargar archivos en Teams desde un bot. Además, cómo recibir un archivo enviado a un bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Optimizar el bot con limitación de velocidad en Teams](~/bots/how-to/rate-limit.md)
+> [Optimizar un bot con la limitación de volumen en Teams](~/bots/how-to/rate-limit.md)

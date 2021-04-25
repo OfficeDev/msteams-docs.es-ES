@@ -4,12 +4,12 @@ author: clearab
 description: Cómo responder al comando de búsqueda desde una extensión de mensajería en una aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696195"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996012"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -110,6 +110,7 @@ La lista de resultados se muestra en la interfaz de usuario de Microsoft Teams c
 
 * Uso de `preview` la propiedad dentro del `attachment` objeto. Los `preview` datos adjuntos solo pueden ser una tarjeta Hero o Thumbnail.
 * Extraído de las propiedades `title` `text` básicas , y `image` de los datos adjuntos. Solo se usan si la `preview` propiedad no está establecida y estas propiedades están disponibles.
+* No se admiten en la tarjeta de vista previa el botón de la tarjeta De héroe o miniatura ni las acciones de pulsación, excepto invocar.
 
 Puede mostrar una vista previa de una tarjeta adaptable o una tarjeta de Conector de Office 365 en la lista de resultados mediante su propiedad de vista previa. La propiedad preview no es necesaria si los resultados ya son tarjetas Hero o Thumbnail. Si usas los datos adjuntos de vista previa, debe ser una tarjeta hero o thumbnail. Si no se especifica ninguna propiedad de vista previa, se produce un error en la vista previa de la tarjeta y no se muestra nada.
 
@@ -344,7 +345,7 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 |Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 > [!div class="nextstepaction"]
 > [Agregar configuración a una extensión de mensajería](~/messaging-extensions/how-to/add-configuration-page.md)

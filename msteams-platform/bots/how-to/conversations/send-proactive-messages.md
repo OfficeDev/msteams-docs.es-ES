@@ -4,12 +4,12 @@ description: Describe cómo enviar mensajes proactivos con el bot de Microsoft T
 ms.topic: conceptual
 ms.author: anclear
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 25d5c6a1b51240c87ff0d8610a965d30f6b01095
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 44e8f3335b7ade4f4a8b1e6192802d932cbd39ed
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697056"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995844"
 ---
 # <a name="send-proactive-messages"></a>Enviar mensajes proactivos
 
@@ -31,6 +31,8 @@ Enviar un mensaje proactivo es diferente del envío de un mensaje normal. No hay
 1. [Cree la conversación](#create-the-conversation), si es necesario.
 1. [Obtener el identificador de conversación](#get-the-conversation-id).
 1. [Enviar el mensaje](#send-the-message).
+
+Los fragmentos de código de la [sección samples](#samples) son para crear una conversación uno a uno. Para ver los vínculos a ejemplos de trabajo completos para conversaciones uno a uno y grupos o canales, vea [el ejemplo de código](#code-sample).
 
 Para usar mensajes proactivos de forma eficaz, vea [procedimientos recomendados para la mensajería proactiva.](#best-practices-for-proactive-messaging) Para determinados escenarios, debes instalar [proactivamente la aplicación con Graph](#proactively-install-your-app-using-graph). Los fragmentos de código de la [sección samples](#samples) son para crear una conversación uno a uno. Para obtener ejemplos de trabajo completos para conversaciones uno a uno y grupos o canales, vea [el ejemplo de código](#code-sample).
 
@@ -63,6 +65,8 @@ Use el `conversationReference` objeto o y envíe el `conversationId` `tenantId` 
 Después de obtener la información de dirección adecuada, puede enviar el mensaje.
 
 ## <a name="send-the-message"></a>Enviar el mensaje
+
+Ahora que tiene la información de dirección correcta, puede enviar el mensaje. Si usas el SDK, lo harás con el método y con y para realizar `continueConversation` una llamada directa a la `conversationId` `tenantId` API. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje. Vea la [sección de](#samples) ejemplos o use uno de los ejemplos enumerados en la sección de [ejemplo de](#code-sample) código.
 
 Si usa el SDK, debe usar el método y la llamada a la API directa `continueConversation` `conversationId` para enviar el `tenantId` mensaje. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje.
 
@@ -98,8 +102,8 @@ Para enviar mensajes a un gran grupo de usuarios, por ejemplo, a su organizació
 
 Al usar la mensajería proactiva para enviar mensajes programados a los usuarios, compruebe que la zona horaria se actualiza a su zona horaria. Esto garantiza que los mensajes se entreguen a los usuarios en el momento correspondiente. Por lo general, los mensajes de programación incluyen:
 
-* **Por qué el usuario recibe el mensaje:** Facilita que los usuarios comprendan el motivo por el que están recibiendo el mensaje.
-* **Qué puede hacer el usuario a continuación:** los usuarios pueden realizar la acción necesaria en función del contenido del mensaje.
+* ¿Por qué recibe el usuario el mensaje?: Haga que sea fácil para los usuarios comprender el motivo por el que están recibiendo el mensaje.
+* Qué puede hacer el usuario a continuación: los usuarios pueden realizar la acción necesaria en función del contenido del mensaje.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Instalar proactivamente la aplicación con Graph
 
@@ -262,10 +266,10 @@ Debe proporcionar el identificador de usuario y el identificador de inquilino. S
 
 En la tabla siguiente se proporciona un ejemplo de código simple que incorpora el flujo básico de conversación en una aplicación de Teams y cómo crear un nuevo hilo de conversación en un canal en Teams:
 
-| Nombre de ejemplo           | Descripción                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluido el envío de mensajes proactivos de uno a uno.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
-|Iniciar nuevo subproceso en un canal     | Muestra la creación de un nuevo subproceso en un canal. |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|--------|
+| Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluido el envío de mensajes proactivos de uno a uno.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Iniciar nuevo subproceso en un canal | Muestra la creación de un nuevo subproceso en un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
 ### <a name="additional-code-sample"></a>Ejemplo de código adicional
 
@@ -275,4 +279,5 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Dar formato a los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)
+> [**Ejemplos de código de mensajería proactiva de**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
+>  Teams [Dar formato a los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)

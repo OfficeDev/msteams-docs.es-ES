@@ -3,12 +3,12 @@ title: Flujo de autenticación para pestañas
 description: Describe el flujo de autenticación en pestañas
 ms.topic: conceptual
 keywords: pestañas de flujo de autenticación de teams
-ms.openlocfilehash: ddd9ea1ee907b154005445613fd3d09de2158766
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449566"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995851"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flujo de autenticación de Microsoft Teams para pestañas
 
@@ -27,7 +27,7 @@ Para obtener un ejemplo de flujo de autenticación para pestañas y bots que usa
 
 1. El usuario interactúa con el contenido de la página de contenido o configuración de pestañas, normalmente un botón **Iniciar** **sesión o Iniciar** sesión.
 2. La pestaña construye la dirección URL de su página de inicio de autenticación. Opcionalmente, usa información de marcadores de posición de dirección URL o llama al método SDK de cliente de Teams para `microsoftTeams.getContext()` simplificar la experiencia de autenticación del usuario. Por ejemplo, al autenticar con AAD, si el parámetro está establecido en la dirección de correo electrónico del usuario, el usuario no tiene que iniciar sesión si lo ha hecho `login_hint` recientemente. Esto se debe a que AAD usa las credenciales almacenadas en caché del usuario. La ventana emergente se muestra brevemente y, a continuación, desaparece.
-3. A continuación, la pestaña llama `microsoftTeams.authentication.authenticate()` al método y registra las funciones `successCallback` `failureCallback` y.
+3. A continuación, la pestaña llama al método `microsoftTeams.authentication.authenticate()` y registra las funciones `successCallback` y `failureCallback`.
 4. Teams abre la página de inicio en un iframe en una ventana emergente. La página de inicio genera datos aleatorios, los guarda para la validación futura y redirige al extremo del proveedor de `state` `/authorize` identidades, como Azure `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` AD. Reemplace `<tenant id>` por su propio identificador de inquilino que sea context.tid.
 De forma similar a otros flujos de autenticación de aplicaciones en Teams, la página de inicio debe estar en un dominio que esté en su lista y en el mismo dominio que la página de redireccionamiento de inicio `validDomains` de sesión.
 
@@ -44,12 +44,13 @@ De forma similar a otros flujos de autenticación de aplicaciones en Teams, la p
 
 Aunque el contexto de pestaña proporciona información útil sobre el usuario, no use esta información para autenticar al usuario. Autentique al usuario incluso si obtiene la información como parámetros de dirección URL en la dirección URL de contenido de la pestaña o llamando a la función en el SDK de `microsoftTeams.getContext()` cliente de Microsoft Teams. Un actor malintencionado puede invocar la dirección URL de contenido de la pestaña con sus propios parámetros. El actor también puede invocar una página web que suplanta Microsoft Teams para cargar la dirección URL de contenido de la pestaña en un iframe y devolver sus propios datos a la `getContext()` función. Debe tratar la información relacionada con la identidad en el contexto de la pestaña simplemente como sugerencias y validarlas antes de su uso. Consulte las notas de [navegar a la página de autorización desde la página emergente](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
-## <a name="samples"></a>Ejemplos
+## <a name="code-sample"></a>Ejemplo de código
 
-Para ver el código de ejemplo que muestra el proceso de autenticación de tabulación, vea:
+Código de ejemplo que muestra el proceso de autenticación de tabulación.
 
-* [Ejemplo de autenticación de pestañas de Teams (nodo)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Ejemplo de autenticación de pestañas de Teams (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+| **Nombre de ejemplo** | **Descripción** | **C#** | **Node.js** |
+|-----------------|-----------------|-------------|------------|
+| Autenticación de pestañas de Teams | Proceso de autenticación para pestañas con AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="more-details"></a>Más detalles
 

@@ -3,12 +3,12 @@ title: Optimizar un bot con la limitación de volumen en Teams
 description: Limitación de tasas y procedimientos recomendados en Microsoft Teams
 ms.topic: conceptual
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922506"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995858"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
@@ -48,6 +48,9 @@ En general, debe tomar precauciones simples para evitar recibir `HTTP 429` respu
 El uso de un retroceso exponencial con un vibración aleatoria es la forma recomendada de controlar 429s. Esto garantiza que varias solicitudes no introduzcan colisiones en los reintentos.
 
 Después de controlar `HTTP 429` las respuestas, puede seguir el ejemplo para detectar excepciones transitorias.
+
+> [!NOTE]
+> Además de volver a seleccionar el código de error **429**, también se deben volver a seleccionar los códigos de error **412**, **502** y **504.**
 
 ## <a name="detect-transient-exceptions-example"></a>Ejemplo de detección de excepciones transitorias
 

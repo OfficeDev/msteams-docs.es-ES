@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Cómo trabajar con eventos de conversación desde el bot de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762035"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996033"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -1296,7 +1296,7 @@ El bot recibe un `installationUpdate` evento al instalar un bot en un subproceso
 ### <a name="install-update-event"></a>Evento Install update
 Use el `installationUpdate` evento para enviar un mensaje introductorio desde el bot durante la instalación. Este evento le ayuda a cumplir los requisitos de privacidad y retención de datos. También puede limpiar y eliminar datos de usuario o subproceso cuando se desinstala el bot.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task
@@ -1378,9 +1378,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** |
-|-----------------|-----------------|---------|
-|Eventos de conversación de bots de Microsoft Teams | Ejemplo de eventos de bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+|----------|-----------------|----------|
+| Bot de conversación | Código de ejemplo para eventos de conversación de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 

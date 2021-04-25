@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Cómo actualizar y eliminar mensajes enviados desde el bot de Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3b94c3f0851c62adb905121afb47389144bccffd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a2836d59c22b9784f1f1a0c84306072bb6a97d3e
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696321"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996005"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Actualizar y eliminar mensajes enviados desde el bot
 
@@ -45,20 +45,19 @@ await turnContext.updateActivity(newActivity);
 
 # <a name="python"></a>[Python](#tab/python)
 
-Para actualizar un mensaje existente, pase un nuevo objeto con el identificador de actividad `Activity` existente al método de la `update_activity` `TurnContext` clase. Para obtener más información, [vea TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
+Para actualizar un mensaje existente, pase un nuevo objeto con el identificador de actividad `Activity` existente al método de la `update_activity` `TurnContext` clase. Vea [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
 
 ```python
-
 new_activity = MessageFactory.text("The new text for the activity")
 new_activity.id = activity_id
 update_result = await context.update_activity(new_activity)
-
 ```
 
 # <a name="rest-api"></a>[API de REST](#tab/rest)
 
 > [!NOTE]
-> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio de conector de [bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes DE API.
+
+> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio [Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes de API.
 
 Para actualizar una actividad existente dentro de una conversación, incluya y `conversationId` en el extremo de `activityId` solicitud. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada posterior original.
 
@@ -66,7 +65,7 @@ Para actualizar una actividad existente dentro de una conversación, incluya y `
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|Cuerpo de la solicitud | Valores devueltos |
+| **Solicitud y responce** | **Descripción** |
 |----|----|
 | Un [objeto activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | Un [objeto ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
 
@@ -79,7 +78,7 @@ Ahora que ha actualizado los mensajes, actualice la tarjeta existente en la sele
 
 Para actualizar la tarjeta existente en la selección de botón, puede usar `ReplyToId` la actividad entrante.
 
-# <a name="c"></a>[C#](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 Para actualizar la tarjeta existente en una selección de botón, pase un nuevo objeto con la tarjeta actualizada y como identificador de actividad `Activity` al método de la `ReplyToId` `UpdateActivityAsync` `TurnContext` clase. Vea [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 
@@ -101,13 +100,12 @@ await context.updateActivity(message);
 
 # <a name="python"></a>[Python](#tab/python)
 
-Para actualizar la tarjeta existente en una selección de botón, pase un nuevo objeto con la tarjeta actualizada y como identificador de actividad `Activity` al método de la `reply_to_id` `update_activity` `TurnContext` clase. Vea [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
+Para actualizar la tarjeta existente en un clic de botón, pase un nuevo objeto con la tarjeta actualizada y como identificador de actividad `Activity` al método de la `reply_to_id` `update_activity` `TurnContext` clase. Vea [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
 
 ```python
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
 updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
-
 ```
 
 # <a name="rest-api"></a>[API de REST](#tab/rest)
@@ -171,7 +169,7 @@ Para eliminar una actividad existente dentro de una conversación, incluya y `co
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|Solicitud |Respuesta |
+| **Solicitud y responce** | **Descripción** |
 |----|----|
 | N/D | Código de estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
 
@@ -181,12 +179,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 En el ejemplo de código siguiente se muestran los conceptos básicos de las conversaciones:
 
-| Nombre de ejemplo           | Descripción                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluida la actualización y eliminación de mensajes.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+|----------------------|-----------------|--------|-------------|--------|
+| Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluida la actualización y eliminación de mensajes. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Obtener contexto de Teams](~/bots/how-to/get-teams-context.md)
-
