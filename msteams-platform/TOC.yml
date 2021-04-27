@@ -46,6 +46,8 @@
       href: concepts/design/map-use-cases.md
 - name: Integración con Teams
   items:
+    - name: Información general
+      href: samples/integrate-web-apps-overview.md
     - name: Aplicaciones web
       href: samples/integrating-web-apps.md
     - name: Aplicaciones de Power Platform
@@ -62,7 +64,7 @@
       href: samples/shifts-wfm-connectors.md
     - name: Instalar Moodle LMS
       href: resources/moodleInstructions.md
-    - name: Crear un botón de Compartir en Teams
+    - name: Crear un botón Compartir en Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Añadir una pestaña de Teams a SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
