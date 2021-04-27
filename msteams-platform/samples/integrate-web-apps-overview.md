@@ -1,0 +1,119 @@
+---
+title: Integrar aplicaciones web
+author: Rajeshwari-v
+description: Una introducción a la integración de aplicaciones web y funcionalidades de dispositivos con la aplicación de Microsoft Teams.
+ms.topic: conceptual
+ms.author: surbhigupta
+ms.openlocfilehash: 6493f493b2bfc67a23aebfb5142aff60cf0afe93
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020245"
+---
+# <a name="integrate-web-apps"></a><span data-ttu-id="83d6d-103">Integrar aplicaciones web</span><span class="sxs-lookup"><span data-stu-id="83d6d-103">Integrate web apps</span></span>
+
+<span data-ttu-id="83d6d-104">Puede proporcionar una experiencia de usuario enriquecida integrando las características de una aplicación web existente en la plataforma de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-104">You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform.</span></span> <span data-ttu-id="83d6d-105">Asegúrate de seguir las [instrucciones de diseño de Teams](~/concepts/design/understand-use-cases.md) para que tu aplicación sea nativa de Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-105">Ensure to follow [Teams design guidelines](~/concepts/design/understand-use-cases.md) to make your app native to Teams.</span></span>
+<span data-ttu-id="83d6d-106">En este documento se proporciona información general sobre los requisitos previos para integrar aplicaciones web con Teams, la plataforma Power para crear power apps, agentes virtuales, asistente virtual, plantillas de aplicaciones, conectores de turnos, LMS de Moodle, creación de un botón Compartir con Teams para su sitio web, agregar una pestaña de Microsoft Teams en SharePoint, crear vínculos profundos e integrar las capacidades del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="83d6d-106">This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Microsoft Teams tab in SharePoint, creating deep links, and integrating device capabilities.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="83d6d-107">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="83d6d-107">Prerequisites</span></span>   
+
+<span data-ttu-id="83d6d-108">Para una integración eficaz, asegúrese de comprender mejor los siguientes requisitos previos:</span><span class="sxs-lookup"><span data-stu-id="83d6d-108">For effective integration, ensure to have a better understanding of the following prerequisites:</span></span>
+* <span data-ttu-id="83d6d-109">Capacidades de Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-109">Teams capabilities.</span></span> 
+* <span data-ttu-id="83d6d-110">Requisitos de SharePoint para el almacenamiento de archivos y datos.</span><span class="sxs-lookup"><span data-stu-id="83d6d-110">SharePoint requirements for file and data storage.</span></span>
+* <span data-ttu-id="83d6d-111">Requisitos de api.</span><span class="sxs-lookup"><span data-stu-id="83d6d-111">API requirements.</span></span>
+* <span data-ttu-id="83d6d-112">Autenticación.</span><span class="sxs-lookup"><span data-stu-id="83d6d-112">Authentication.</span></span>
+* <span data-ttu-id="83d6d-113">Vinculación profunda de la aplicación con Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-113">Deep linking of your app with Teams.</span></span>
+* <span data-ttu-id="83d6d-114">Asigna los casos de uso de la aplicación a las funcionalidades de la plataforma de Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-114">Map your app's use cases to Teams platform capabilities.</span></span>
+* <span data-ttu-id="83d6d-115">Determina los puntos de entrada de la aplicación, como el uso personal, la colaboración o ambos.</span><span class="sxs-lookup"><span data-stu-id="83d6d-115">Determine your app's entry points, such as personal use, collaboration, or both.</span></span>
+
+## <a name="low-code-platforms"></a><span data-ttu-id="83d6d-116">Plataformas de código bajo</span><span class="sxs-lookup"><span data-stu-id="83d6d-116">Low code platforms</span></span>
+
+<span data-ttu-id="83d6d-117">Las plataformas de código bajos proporcionan un enfoque intuitivo para el desarrollo de software y requieren poca o ninguna codificación para crear aplicaciones y procesos.</span><span class="sxs-lookup"><span data-stu-id="83d6d-117">Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes.</span></span> <span data-ttu-id="83d6d-118">Puedes crear aplicaciones personalizadas fácilmente con plataformas de código bajo.</span><span class="sxs-lookup"><span data-stu-id="83d6d-118">You can create custom apps easily with low code platforms.</span></span> <span data-ttu-id="83d6d-119">Estas plataformas constan de una interfaz visual, conectores para servicios back-end y un sistema integrado de administración del ciclo de vida de aplicaciones para crear, depurar, implementar y mantener aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="83d6d-119">These platforms consist of a visual interface, connectors to back end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications.</span></span> <span data-ttu-id="83d6d-120">Microsoft proporciona las siguientes puertas de enlace innovadoras para crear rápidamente aplicaciones compatibles con Teams con atributos de código bajos:</span><span class="sxs-lookup"><span data-stu-id="83d6d-120">Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:</span></span>
+* <span data-ttu-id="83d6d-121">Plataforma de Microsoft Power</span><span class="sxs-lookup"><span data-stu-id="83d6d-121">Microsoft Power platform</span></span>
+* <span data-ttu-id="83d6d-122">Plantillas de aplicación de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="83d6d-122">Microsoft Teams app templates</span></span>
+
+## <a name="microsoft-power-platform"></a><span data-ttu-id="83d6d-123">Plataforma de Microsoft Power</span><span class="sxs-lookup"><span data-stu-id="83d6d-123">Microsoft Power platform</span></span>
+
+<span data-ttu-id="83d6d-124">La plataforma Microsoft Power combina cuatro tecnologías sólidas de Microsoft, como Power BI, Power Apps, Power Automate y Power Virtual Agents en una plataforma de aplicaciones eficaz.</span><span class="sxs-lookup"><span data-stu-id="83d6d-124">Microsoft Power platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, and Power Virtual Agents in one powerful application platform.</span></span> <span data-ttu-id="83d6d-125">Estas tecnologías le permiten crear soluciones, automatizar procesos, analizar datos y crear agentes virtuales en un entorno unificado e integrado.</span><span class="sxs-lookup"><span data-stu-id="83d6d-125">These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment.</span></span>
+
+### <a name="power-apps"></a><span data-ttu-id="83d6d-126">Power Apps</span><span class="sxs-lookup"><span data-stu-id="83d6d-126">Power Apps</span></span>
+
+<span data-ttu-id="83d6d-127">Con Power Apps, puedes crear aplicaciones empresariales que se conecten a los datos de tu empresa y se adapten a las necesidades de tu organización.</span><span class="sxs-lookup"><span data-stu-id="83d6d-127">With Power Apps, you can build business apps that connect to your business data and are tailored to your organization's needs.</span></span> <span data-ttu-id="83d6d-128">Power Apps permite una amplia variedad de escenarios de aplicaciones para resolver desafíos empresariales a través de aplicaciones de lienzo.</span><span class="sxs-lookup"><span data-stu-id="83d6d-128">Power Apps enable a wide range of app scenarios to solve business challenges through canvas apps.</span></span> <span data-ttu-id="83d6d-129">Después de crear la aplicación, puedes exportarla desde el portal del fabricante de Power Apps e insertarla en Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-129">After building the app, you can export it from the Power Apps maker portal and embed in Microsoft Teams.</span></span>
+
+### <a name="power-virtual-agents"></a><span data-ttu-id="83d6d-130">Power Virtual Agents</span><span class="sxs-lookup"><span data-stu-id="83d6d-130">Power Virtual Agents</span></span>
+
+<span data-ttu-id="83d6d-131">Power Virtual Agent es una solución de interfaz gráfica guiada sin código.</span><span class="sxs-lookup"><span data-stu-id="83d6d-131">Power Virtual Agent is a no code, guided graphical interface solution.</span></span> <span data-ttu-id="83d6d-132">Se basa en Microsoft Power Platform y bot Framework.</span><span class="sxs-lookup"><span data-stu-id="83d6d-132">It is built on the Microsoft Power Platform and the Bot Framework.</span></span> <span data-ttu-id="83d6d-133">Permite a todos los miembros del equipo crear y mantener bots de chat conversacionales enriquecidos que se integran fácilmente con la plataforma de Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-133">It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform.</span></span> <span data-ttu-id="83d6d-134">Puede diseñar, desarrollar y publicar agentes virtuales inteligentes para Teams sin tener que configurar un entorno de desarrollo, crear un servicio web o registrarse directamente con Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="83d6d-134">You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.</span></span>
+
+### <a name="create-virtual-assistant"></a><span data-ttu-id="83d6d-135">Crear asistente virtual</span><span class="sxs-lookup"><span data-stu-id="83d6d-135">Create Virtual Assistant</span></span>
+
+<span data-ttu-id="83d6d-136">Virtual Assistant es una plantilla de código abierto de Microsoft que le permite crear una solución conversacional sólida y mantener el control total de la experiencia del usuario, la personalidad de marca de la organización y los datos necesarios.</span><span class="sxs-lookup"><span data-stu-id="83d6d-136">Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data.</span></span> 
+
+## <a name="app-templates"></a><span data-ttu-id="83d6d-137">Plantillas de aplicación</span><span class="sxs-lookup"><span data-stu-id="83d6d-137">App templates</span></span>
+
+<span data-ttu-id="83d6d-138">Puedes usar la plantilla de aplicación para crear aplicaciones personalizadas que se adapten a tus necesidades organizativas.</span><span class="sxs-lookup"><span data-stu-id="83d6d-138">You can use app template to create custom made apps to suit your organizational needs.</span></span> <span data-ttu-id="83d6d-139">Se trata de aplicaciones preparadas para producción para Microsoft Teams que están controladas por la comunidad, de código abierto y disponibles en GitHub.</span><span class="sxs-lookup"><span data-stu-id="83d6d-139">These are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub.</span></span> <span data-ttu-id="83d6d-140">Cada plantilla contiene instrucciones detalladas para implementar e instalar la aplicación para su organización.</span><span class="sxs-lookup"><span data-stu-id="83d6d-140">Each template contains detailed instructions to deploy and install the app for your organization.</span></span> <span data-ttu-id="83d6d-141">Proporciona una aplicación lista para usar que puede instalar y empezar a usar inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="83d6d-141">It provides a ready-to-use application that you can install and start using immediately.</span></span> 
+
+## <a name="teams-shifts-work-force-management-connectors"></a><span data-ttu-id="83d6d-142">Conectores de administración de fuerza de trabajo de turnos de Teams</span><span class="sxs-lookup"><span data-stu-id="83d6d-142">Teams Shifts Work Force Management connectors</span></span>
+
+<span data-ttu-id="83d6d-143">Los conectores de administración de fuerza de trabajo de Teams Shifts son integraciones preparadas para producción, de código abierto e impulsadas por la comunidad.</span><span class="sxs-lookup"><span data-stu-id="83d6d-143">Teams Shifts Work Force Management connectors are production-ready, open-source, and community-driven integrations.</span></span> <span data-ttu-id="83d6d-144">Ofrecen una experiencia perfecta y un proceso rápido para la transformación digital de los trabajadores de primera línea con Teams Shifts.</span><span class="sxs-lookup"><span data-stu-id="83d6d-144">They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts.</span></span>
+
+## <a name="install-moodle-lms"></a><span data-ttu-id="83d6d-145">Instalar Moodle LMS</span><span class="sxs-lookup"><span data-stu-id="83d6d-145">Install Moodle LMS</span></span>
+
+<span data-ttu-id="83d6d-146">Moodle es un popular sistema de administración de aprendizaje de código abierto (LMS).</span><span class="sxs-lookup"><span data-stu-id="83d6d-146">Moodle is a popular open-source Learning Management System (LMS).</span></span> <span data-ttu-id="83d6d-147">Ahora está integrado con Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-147">It is now integrated with Microsoft Teams.</span></span> <span data-ttu-id="83d6d-148">Esta integración ayuda a los formadores y profesores a colaborar en torno a los cursos de Moodle, hacer preguntas sobre calificaciones y asignaciones y mantenerse actualizados con las notificaciones directamente en Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-148">This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.</span></span>
+
+## <a name="create-a-share-to-teams-button-for-your-website"></a><span data-ttu-id="83d6d-149">Creación de un botón Compartir en Teams para el sitio web</span><span class="sxs-lookup"><span data-stu-id="83d6d-149">Create a Share-to-Teams button for your website</span></span>
+
+<span data-ttu-id="83d6d-150">Los sitios web de terceros pueden usar el script del iniciador para insertar los botones Compartir en Teams en sus páginas web.</span><span class="sxs-lookup"><span data-stu-id="83d6d-150">Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages.</span></span> <span data-ttu-id="83d6d-151">Al seleccionar el botón, se inicia la experiencia Compartir en Teams en una ventana emergente.</span><span class="sxs-lookup"><span data-stu-id="83d6d-151">When you select the button, it launches the Share to Teams experience in a pop-up window.</span></span> <span data-ttu-id="83d6d-152">Esto le permite compartir un vínculo directamente con cualquier persona o canal de Microsoft Teams sin cambiar de contexto.</span><span class="sxs-lookup"><span data-stu-id="83d6d-152">This allows you to share a link directly to any person or Microsoft Teams channel without switching context.</span></span>
+
+## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a><span data-ttu-id="83d6d-153">Agregar una pestaña de Microsoft Teams en SharePoint</span><span class="sxs-lookup"><span data-stu-id="83d6d-153">Add a Microsoft Teams tab in SharePoint</span></span>
+
+<span data-ttu-id="83d6d-154">Puede obtener una amplia experiencia de integración entre Microsoft Teams y SharePoint agregando una pestaña de Microsoft Teams en SharePoint como un elemento web de SPFx.</span><span class="sxs-lookup"><span data-stu-id="83d6d-154">You can get a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as an SPFx web part.</span></span> 
+
+## <a name="create-deep-link"></a><span data-ttu-id="83d6d-155">Crear vínculo profundo</span><span class="sxs-lookup"><span data-stu-id="83d6d-155">Create deep link</span></span>
+
+<span data-ttu-id="83d6d-156">Puede crear vínculos profundos a las entidades de Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-156">You can create deep links to the entities in Teams.</span></span> <span data-ttu-id="83d6d-157">Puede crear vínculos a información y características dentro de Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-157">You can create links to information and features within Teams.</span></span> <span data-ttu-id="83d6d-158">Estos vínculos profundos navegan al contenido y a la información de la pestaña. Puedes usar vínculos profundos para vincular la aplicación con Teams a medida que unen varias partes de una aplicación para una experiencia de Teams más nativa.</span><span class="sxs-lookup"><span data-stu-id="83d6d-158">These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.</span></span>
+
+## <a name="integrate-device-capabilities"></a><span data-ttu-id="83d6d-159">Integrar funcionalidades de dispositivos</span><span class="sxs-lookup"><span data-stu-id="83d6d-159">Integrate device capabilities</span></span>
+
+<span data-ttu-id="83d6d-160">La plataforma de Microsoft Teams mejora continuamente las capacidades de los desarrolladores y se alinea con experiencias integradas de primera persona.</span><span class="sxs-lookup"><span data-stu-id="83d6d-160">Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences.</span></span> <span data-ttu-id="83d6d-161">La plataforma mejorada de Teams permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente javaScript de Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="83d6d-161">The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.</span></span> 
+
+## <a name="see-also"></a><span data-ttu-id="83d6d-162">Consulte también</span><span class="sxs-lookup"><span data-stu-id="83d6d-162">See also</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-163">Asignar los casos de uso de la aplicación a las funcionalidades de la plataforma teams</span><span class="sxs-lookup"><span data-stu-id="83d6d-163">Map your app's use cases to Teams platform capabilities</span></span>](~/concepts/design/map-use-cases.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-164">Determinar los puntos de entrada de la aplicación</span><span class="sxs-lookup"><span data-stu-id="83d6d-164">Determine your app's entry points</span></span>](~/concepts/extensibility-points.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-165">Integrar aplicaciones web</span><span class="sxs-lookup"><span data-stu-id="83d6d-165">Integrate web apps</span></span>](~/samples/integrating-web-apps.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-166">Crear aplicaciones personalizadas de código bajo para Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="83d6d-166">Create low-code custom apps for Microsoft Teams</span></span>](~/samples/teams-low-code-solutions.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-167">Añadir un bot de chat de Power Virtual Agents</span><span class="sxs-lookup"><span data-stu-id="83d6d-167">Add a Power Virtual Agents chatbot</span></span>](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-168">Crear asistente virtual</span><span class="sxs-lookup"><span data-stu-id="83d6d-168">Create virtual assistant</span></span>](~/samples/virtual-assistant.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-169">Plantillas de aplicaciones para Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="83d6d-169">App templates for Microsoft Teams</span></span>](~/samples/app-templates.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-170">Conectores de turnos listos para producción</span><span class="sxs-lookup"><span data-stu-id="83d6d-170">Production-ready Shift Connectors</span></span>](~/samples/shifts-wfm-connectors.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-171">Instalar Moodle LMS</span><span class="sxs-lookup"><span data-stu-id="83d6d-171">Install Moodle LMS</span></span>](~/resources/moodleinstructions.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-172">Crear un botón de Compartir en Teams</span><span class="sxs-lookup"><span data-stu-id="83d6d-172">Create a Share-to-Teams button</span></span>](~/concepts/build-and-test/share-to-teams.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-173">Añadir una pestaña de Teams a SharePoint</span><span class="sxs-lookup"><span data-stu-id="83d6d-173">Add a Teams tab to SharePoint</span></span>](~/tabs/how-to/tabs-in-sharepoint.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-174">Crear vínculos profundos</span><span class="sxs-lookup"><span data-stu-id="83d6d-174">Create deep links</span></span>](~/concepts/build-and-test/deep-links.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="83d6d-175">Funciones del dispositivo</span><span class="sxs-lookup"><span data-stu-id="83d6d-175">Device capabilities</span></span>](~/concepts/device-capabilities/device-capabilities-overview.md)
