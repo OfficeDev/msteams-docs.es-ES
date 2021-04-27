@@ -2,14 +2,15 @@
 title: Responder a la acción de envío del módulo de tareas
 author: clearab
 description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensajería
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af2bbbbe6ffff224f5b74c9b1472ba3cb21effc0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696222"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019835"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -586,9 +587,9 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 |Field|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|String|Describe la mención de una "persona".|
-|`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
-|`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
+|`mentionType`|Cadena|Describe la mención de una "persona".|
+|`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
+|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
 ## <a name="code-sample"></a>Ejemplo de código
 

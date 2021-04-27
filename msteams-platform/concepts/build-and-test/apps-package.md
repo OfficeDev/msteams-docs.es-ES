@@ -1,13 +1,14 @@
 ---
 title: Empaquetar la aplicación
 description: Obtén información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y almacenar la publicación.
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 222ea5459b3496c00b1186f15a68c3288ce419f7
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: c8341f3d83b5e6610e44276d6732affa1d1c1e91
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922513"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020143"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Crear un paquete de aplicación para la aplicación de Microsoft Teams
 
@@ -42,7 +43,7 @@ La versión de color del icono se muestra en la mayoría de los escenarios de Te
 
 Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bot. Incluye 48 píxeles de relleno alrededor del símbolo para que estos recortes se puedan realizar sin perder ningún detalle.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Instrucciones de diseño de iconos de color de Teams." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Icono de color de Teams y instrucciones de diseño." border="false":::
 
 ### <a name="outline-icon"></a>Icono esquema
 

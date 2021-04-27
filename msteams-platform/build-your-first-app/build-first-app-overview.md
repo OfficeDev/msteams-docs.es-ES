@@ -3,14 +3,15 @@ title: 'Introducción: crear la primera introducción a la aplicación y los req
 author: heath-hamilton
 description: Obtén información sobre cómo empezar con el desarrollo de aplicaciones de Microsoft Teams y cómo configurar el entorno.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762042"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019996"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Crear la primera introducción a la aplicación de Microsoft Teams
 

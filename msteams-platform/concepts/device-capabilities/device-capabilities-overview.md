@@ -1,16 +1,19 @@
 ---
-title: Información general sobre las funcionalidades del dispositivo
+title: 'Funcionalidades del dispositivo: información general'
+author: Rajeshwari-v
 description: Información general sobre las capacidades nativas del dispositivo.
+ms.author: surbhigupta
 keywords: Cámara image media microphone mic qr code qrcode bar code barcode scan scanner location capabilities native device permissions
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7d214e5011abdc83d2f6b5b49c2261359259035e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449594"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020754"
 ---
-# <a name="device-capabilities"></a>Funciones del dispositivo 
+# <a name="device-capabilities---overview"></a>Funcionalidades del dispositivo: información general
 
 La plataforma de Microsoft Teams mejora continuamente las capacidades de los desarrolladores y se alinea con experiencias integradas de primera persona. La plataforma mejorada de Teams permite a los partners integrar las capacidades del dispositivo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación con sus aplicaciones web. Esta integración reduce la barrera para el desarrollo de aplicaciones, acelera el ciclo de desarrollo y crea nuevos escenarios o casos de uso para la comunidad de desarrolladores.
 

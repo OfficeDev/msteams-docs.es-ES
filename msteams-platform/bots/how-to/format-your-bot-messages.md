@@ -1,17 +1,18 @@
 ---
-title: Dar formato a los mensajes del bot
+title: Formatear los mensajes del bot
 author: clearab
 description: Agregar formato enriquecido a los mensajes del bot
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697007"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020908"
 ---
-# <a name="format-your-bot-messages"></a>Dar formato a los mensajes del bot
+# <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
 El formato de mensaje le permite sacar lo mejor de los mensajes de bot. Puedes dar formato a los mensajes del bot para que incluyan tarjetas enriquecciones que sean datos adjuntos que contengan elementos interactivos, como botones, texto, imágenes, audio, vídeo, entre otros.
 

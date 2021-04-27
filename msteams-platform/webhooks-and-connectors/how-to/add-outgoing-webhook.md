@@ -3,13 +3,14 @@ title: Agregar bots personalizados a Microsoft Teams con webhooks salientes
 description: describe cómo agregar un webhook saliente
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams tabs outgoing webhook actionable message verify webhook
-ms.openlocfilehash: b7c587816a32e650009cdbfcd4dcf9028fb87392
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: cfa8bd550eaf1f198b83cdcc1ee699c75ac1d34d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449545"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020214"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>Agregar bots personalizados a Teams con webhooks salientes
 
@@ -120,7 +121,7 @@ Las respuestas de los webhooks salientes aparecen en la misma cadena de respuest
 >* El webhook saliente está disponible para los usuarios del equipo, solo si la dirección URL es válida y los tokens de autenticación de servidor y cliente son iguales, por ejemplo, un protocolo de enlace HMAC.
 
 ## <a name="code-sample"></a>Ejemplo de código
-|**Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** |
+|**Nombre de ejemplo** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Webhooks salientes | Ejemplos para crear **bots personalizados** que se usarán en Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 

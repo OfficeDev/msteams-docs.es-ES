@@ -1,14 +1,15 @@
 ---
 title: Comentarios y soporte técnico para desarrolladores de Microsoft Teams
 description: El equipo de producto de Microsoft Teams responde a la comunidad de desarrolladores en varios canales de soporte técnico y comentarios.
+localization_priority: Normal
 ms.topic: reference
 keywords: preguntas de los desarrolladores de comentarios de teams problemas de solicitudes de soporte técnico de contactos contribuciones de la comunidad
-ms.openlocfilehash: 49dfe06dd1e343b04e8c15c7cc3bdb6957946706
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 08fb6908eeb4a79e5da622e7bc698111e2eba46a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034722"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020733"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Canales de la comunidad de desarrolladores de Microsoft Teams
 
@@ -34,7 +35,7 @@ En la tabla siguiente se enumeran los canales de soporte técnico para enviar co
 |         **Problemas y errores del producto de Microsoft Teams**          | El administrador de inquilinos puede comunicarse con el Soporte [técnico de Productos de Microsoft 365.](/microsoft-365/admin/contact-support-for-business-products)                                                            |
 |        **Preguntas generales sobre Microsoft Teams**        |  Envíe sus preguntas en [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).               |                                                           
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Referencia del SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

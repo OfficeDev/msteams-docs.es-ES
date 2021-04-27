@@ -1,14 +1,15 @@
 ---
 title: Referencia de tarjetas
 description: Describe todas las tarjetas y acciones de tarjeta disponibles para bots en Teams
+localization_priority: Normal
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: b9e11a6a6cb6de370323a3b07e2451a3abc41f12
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 1e8cf2e474b8a74f6cab1cd6ef3439924b91892d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634540"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019534"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
@@ -54,7 +55,7 @@ Las imágenes deben tener como máximo 1024×1024, en formato PNG, JPEG o GIF, y
 | Propiedad | Tipo  | Descripción |
 | --- | --- | --- |
 | url | URL | DIRECCIÓN URL HTTPS a la imagen. |
-| alt | String | Descripción accesible de la imagen. |
+| alt | Cadena | Descripción accesible de la imagen. |
 
 > [!NOTE]
 > Si una tarjeta incluye una dirección URL de imagen que pasa por un redireccionamiento antes de la imagen final, no se admite el redireccionamiento en la dirección URL de la imagen. Esto ocurre para las imágenes compartidas en la nube pública.

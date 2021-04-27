@@ -2,13 +2,14 @@
 title: Optimizar un bot con la limitación de volumen en Teams
 description: Limitación de tasas y procedimientos recomendados en Microsoft Teams
 ms.topic: conceptual
+localization_priority: Normal
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995858"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020901"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 

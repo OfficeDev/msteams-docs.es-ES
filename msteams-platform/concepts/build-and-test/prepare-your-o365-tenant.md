@@ -2,13 +2,14 @@
 title: Preparar el espacio empresarial de Microsoft 365
 description: Cómo empezar a trabajar con Teams en Microsoft 365
 ms.topic: how-to
+localization_priority: Normal
 keywords: Configurar la carga de Microsoft 365 tenant Teams
-ms.openlocfilehash: 4fbe1dcc7ba202aff0b46c7fc50d9aebc0278c38
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946469"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019947"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar el espacio empresarial de Microsoft 365
 

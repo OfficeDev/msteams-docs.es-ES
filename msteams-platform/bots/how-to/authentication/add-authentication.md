@@ -3,13 +3,14 @@ title: Agregar autenticación al bot de Teams
 author: clearab
 description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Teams.
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 71a24dad47b3686d207df3f4e3521bbe46508cb9
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585872"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020953"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 

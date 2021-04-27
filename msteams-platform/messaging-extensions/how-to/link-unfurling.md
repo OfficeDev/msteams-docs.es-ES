@@ -2,14 +2,15 @@
 title: Apertura de vínculos
 author: clearab
 description: Cómo realizar la implementación de vínculos con la extensión de mensajería en una aplicación de Microsoft Teams.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2037e1e9a903cfe90d0dd8866722b0d10fa156b2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696236"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019821"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 

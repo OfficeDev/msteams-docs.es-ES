@@ -3,13 +3,14 @@ title: Búsqueda con extensiones de mensajería
 description: Describe cómo desarrollar extensiones de mensajería basadas en búsquedas
 keywords: Búsqueda de extensiones de mensajería de extensiones de mensajería de teams
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 07/20/2019
-ms.openlocfilehash: 7a4074fe4f3a15621729f4c549d31dc90d98e714
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 89b8a42f0a9ec86d22d194d2fe5145fba5489f20
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696111"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019730"
 ---
 # <a name="search-with-messaging-extensions"></a>Búsqueda con extensiones de mensajería
 

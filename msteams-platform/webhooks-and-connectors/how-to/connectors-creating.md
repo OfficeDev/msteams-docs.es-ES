@@ -2,14 +2,15 @@
 title: Conectores de Office 365
 description: Describe cómo empezar a usar Office 365 Connectors en Microsoft Teams
 keywords: teams o365 conector
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: d0fe380cd168b8dcbddc5af0de96160e0bc259a9
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 8091f71e22fcbdc297e2f7b54665b47e597e670e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827924"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018400"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Creación de conectores de Office 365 para Microsoft Teams
 
@@ -17,7 +18,7 @@ ms.locfileid: "50827924"
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>Agregar un conector a la aplicación de Teams
 
-Puedes distribuir el conector registrado como parte del paquete de la aplicación de Teams. Ya sea como una solución independiente o como una de [](~/concepts/build-and-test/apps-package.md) las [](~/concepts/deploy-and-publish/apps-publish.md) varias funcionalidades que su experiencia habilita en Teams, puede empaquetar y publicar el conector como parte del envío de AppSource, o puede proporcionarlo a los usuarios directamente para cargarlo en Teams. [](~/concepts/extensibility-points.md)
+Puede distribuir el conector registrado como parte del paquete de la aplicación de Teams. Ya sea como una solución independiente o como una de [](~/concepts/build-and-test/apps-package.md) las [](~/concepts/deploy-and-publish/apps-publish.md) varias funcionalidades que su experiencia habilita en Teams, puede empaquetar y publicar el conector como parte del envío de AppSource, o puede proporcionarlo a los usuarios directamente para cargarlo en Teams. [](~/concepts/extensibility-points.md)
 
 Para distribuir el conector, debe registrarse mediante el Panel de desarrolladores de [conectores.](https://outlook.office.com/connectors/home/login/#/publish) De forma predeterminada, una vez registrado un conector, se supone que el conector funcionará en todos los productos de Office 365 compatibles con ellos, incluidos Outlook y Teams. Si ese no _es el_ caso y necesita crear un conector que solo funcione en Microsoft Teams, póngase en contacto con nosotros directamente en Microsoft Teams [App Submissions](mailto:teamsubm@microsoft.com).
 
@@ -36,7 +37,7 @@ Los usuarios completarán toda la experiencia de configuración de Connector sin
 
 Puede reutilizar la experiencia de configuración web existente o crear una versión independiente para hospedarse específicamente en Teams. El código debe:
 
-1. Incluye el SDK de JavaScript de Microsoft Teams. Esto proporciona acceso de código a las API para realizar operaciones comunes, como obtener el contexto actual de usuario,canal/equipo e iniciar flujos de autenticación. Inicializar el SDK llamando a `microsoftTeams.initialize()` .
+1. Incluye el SDK de JavaScript de Microsoft Teams. Esto proporciona acceso de código a las API para realizar operaciones comunes, como obtener el contexto actual de usuario,canal/equipo e iniciar flujos de autenticación. Para inicializar el SDK, llame a `microsoftTeams.initialize()`.
 2. Llama `microsoftTeams.settings.setValidityState(true)` cuando quieras habilitar el botón Guardar. Debe hacerlo como una respuesta a la entrada válida del usuario, como una actualización de campo o selección.
 3. Registrar un `microsoftTeams.settings.registerOnSaveHandler()` controlador de eventos, al que se llama cuando el usuario hace clic en Guardar.
 4. Llama `microsoftTeams.settings.setSettings()` para guardar la configuración del conector. Lo que se guarda aquí también es lo que se mostrará en el cuadro de diálogo de configuración si el usuario intenta actualizar una configuración existente para el conector.
@@ -121,7 +122,7 @@ Si necesita autenticar al usuario como parte de la carga de [](~/tabs/how-to/aut
 
 #### <a name="handling-edits"></a>Control de ediciones
 
-El código debe controlar los usuarios que vuelvan a editar una configuración de conector existente. Para ello, llame `microsoftTeams.settings.setSettings()` durante la configuración inicial con los siguientes parámetros:
+El código debe controlar los usuarios que vuelven a editar una configuración de conector existente. Para ello, llame `microsoftTeams.settings.setSettings()` durante la configuración inicial con los siguientes parámetros:
 
 - `entityId` es el identificador personalizado que entiende el servicio y representa lo que el usuario ha configurado.
 - `configName` es un nombre descriptivo que el código de configuración puede recuperar
@@ -213,7 +214,7 @@ Una vez cargado el paquete de la aplicación, para configurar y usar el conector
 1. Para configurar o modificar el conector, seleccione la **barra Configurar.**
 
 ## <a name="code-sample"></a>Ejemplo de código
-|**Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** |
+|**Nombre de ejemplo** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Conectores    | Ejemplo de Office 365 Connector que genera notificaciones al canal de teams.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Ejemplo de conectores genéricos |Código de ejemplo para un conector genérico que es fácil de personalizar para cualquier sistema que admita webhooks.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

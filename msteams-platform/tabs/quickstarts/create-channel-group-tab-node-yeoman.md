@@ -1,39 +1,40 @@
 ---
-title: Crear una ficha de canal y de grupo personalizada con Node.js y el generador de Yeoman para Microsoft Teams
+title: Crear un canal personalizado y una pestaña de grupo con Node.js y el generador de Yeoman para Microsoft Teams
 author: laujan
-description: Una guía de inicio rápido para crear una ficha de canal y de grupo con el generador de Yeoman para Microsoft Teams.
+description: Guía de inicio rápido para crear una pestaña de canal y grupo con el Generador de Yeoman para Microsoft Teams.
+localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 77081f83c753f812032ccfebe2accd3cb8859f99
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 962a558014a3bc84010860082df6891bb48c7715
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818937"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020306"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crear una ficha de canal y de grupo personalizada con Node.js y el generador de Yeoman para Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Crear una pestaña de canal y grupo personalizada con Node.js y el generador de Yeoman para Microsoft Teams
 
 >[!NOTE]
->En este tutorial, se siguen los pasos descritos en el sitio de creación de la [primera aplicación Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) wiki que se encuentra en el repositorio de github de Microsoft.
+>Esta guía de inicio rápido sigue los pasos descritos en el wiki crear la primera aplicación de [Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) que se encuentra en el repositorio de GitHub de Microsoft OfficeDev.
 
-En este tutorial rápido, vamos a crear una pestaña de canal y de grupo personalizados mediante el [generador Yeoman de Teams](https://github.com/OfficeDev/generator-teams/).
+En esta guía de inicio rápido, crearemos un canal personalizado y una pestaña de grupo con el generador [Yeoman de Teams](https://github.com/OfficeDev/generator-teams/).
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**¿Desea crear una pestaña configurable o una etiqueta estática?**
+**¿Desea crear una pestaña configurable o estática?**
 
-Use las teclas de dirección para seleccionar la pestaña configurable.
+Use las teclas de flecha para seleccionar la pestaña configurable.
 
-**¿Qué ámbitos desea usar para la pestaña?**
+**¿Qué ámbitos tiene previsto usar para la pestaña?**
 
-Puede seleccionar un equipo o un chat en grupo
+Puede seleccionar un equipo o un chat de grupo
 
-**¿Desea que esta pestaña esté disponible en SharePoint Online? (S/n)** 
+**¿Desea que esta pestaña esté disponible en SharePoint Online? (Y/n)** 
 
 Seleccione **n**.
 
 >[!IMPORTANT]
->El componente de ruta de **yourDefaultTabNameTab**, al que se hace referencia en este tutorial rápido, es el valor que escribió en el generador para el nombre de la **pestaña predeterminada** más la **pestaña**de Word.
+>El componente de ruta de acceso **yourDefaultTabNameTab**, al que se hace referencia en esta guía de inicio rápido, es el valor que escribió en el generador para **Default Tab Name** más la palabra **Tab**.
 >
 >Por ejemplo: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
 
@@ -43,7 +44,7 @@ En el directorio del proyecto, vaya a lo siguiente:
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-Es aquí donde encontrará la lógica de la pestaña. Busque el `render()` método y agregue la siguiente `<div>` etiqueta y el contenido a la parte superior del `<PanelBody>` código de contenedor:
+Ahí es donde encontrará la lógica de tabulación. Busque el `render()` método y agregue la siguiente etiqueta y contenido a la parte superior del código `<div>` `<PanelBody>` contenedor:
 
 ```html
     <PanelBody>
@@ -55,21 +56,21 @@ Es aquí donde encontrará la lógica de la pestaña. Busque el `render()` méto
 
 Asegúrese de guardar el archivo actualizado.
 
-## <a name="build-and-run-your-application"></a>Compilar y ejecutar la aplicación
+## <a name="build-and-run-your-application"></a>Crear y ejecutar la aplicación
 
-Abra un símbolo del sistema en el directorio del proyecto para completar las tareas siguientes.
+Abra un símbolo del sistema en el directorio del proyecto para completar las siguientes tareas.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
 Para ver la página de configuración de pestañas, vaya a `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Debería ver lo siguiente:
 
-![captura de pantalla de la página de configuración](~/assets/images/tab-images/configurationPage.png)
+![captura de pantalla de página de configuración](~/assets/images/tab-images/configurationPage.png)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro a la pestaña
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro en la pestaña
 
-Microsoft Teams es un producto basado en la nube completamente y requiere que el contenido de la pestaña esté disponible en la nube con puntos de conexión HTTPS. Teams no permite el hospedaje local, por lo tanto, debe publicar su ficha en una dirección URL pública o usar un proxy que expondrá el puerto local a una dirección URL con conexión a Internet.
+Microsoft Teams es un producto totalmente basado en la nube y requiere que el contenido de la pestaña esté disponible desde la nube mediante puntos de conexión HTTPS. Teams no permite el hospedaje local, por lo tanto, debe publicar la pestaña en una dirección URL pública o usar un proxy que exponga el puerto local a una dirección URL orientada a Internet.
 
-Para probar la extensión de pestañas, usará [ngrok](https://ngrok.com/docs), que está integrado en esta aplicación. Ngrok es una herramienta de software de proxy inverso que creará un túnel a los puntos de conexión HTTPS disponibles públicamente del servidor Web que se ejecutan de forma local. Los puntos de conexión web del servidor estarán disponibles durante la sesión actual en el equipo local. Cuando el equipo se apaga o entra en suspensión, el servicio dejará de estar disponible.
+Para probar la extensión de pestaña, usará [ngrok](https://ngrok.com/docs), que está integrado en esta aplicación. Ngrok es una herramienta de software de proxy inverso que creará un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Los puntos de conexión web del servidor estarán disponibles durante la sesión actual en el equipo local. Cuando la máquina se apaga o se queda en modo de suspensión, el servicio ya no estará disponible.
 
 En el símbolo del sistema, salga de localhost y escriba lo siguiente:
 
@@ -78,14 +79,14 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Una vez cargada la pestaña en Microsoft Teams y guardada correctamente, puede verla en la galería de pestañas, agregarla a la barra de pestañas e interactuar con ella hasta que finalice la sesión de túnel ngrok. Si reinicia la sesión de ngrok, tendrá que actualizar la aplicación con la nueva dirección URL.
+> Después de cargar la pestaña en Microsoft teams y guardarla correctamente, puede verlo en la galería de pestañas, agregarla a la barra de pestañas e interactuar con ella hasta que finalice la sesión del túnel ngrok. Si reinicias la sesión de ngrok, tendrás que actualizar la aplicación con la nueva dirección URL.
 
 ## <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
-- Abra el cliente de Microsoft Teams. Si usa la [versión basada en Web](https://teams.microsoft.com) , puede inspeccionar el código Front-end con las [herramientas de desarrollo](~/tabs/how-to/developer-tools.md)de su explorador.
-- En el panel de *YourTeams* de la izquierda, seleccione el `...` menú situado junto al equipo que está usando para probar la pestaña y elija **administrar equipo**.
-- En el panel principal, seleccione **aplicaciones** en la barra de pestañas y elija **cargar una aplicación personalizada** ubicada en la esquina inferior derecha de la página.
-- Abra el directorio del proyecto, vaya a la carpeta **./Package** , seleccione la carpeta ZIP del paquete de la aplicación y elija **abrir**. La pestaña se cargará en Teams.
-- Vuelva a su equipo, elija el canal en el que desea mostrar la pestaña, seleccione ➕ de la barra de pestañas y elija la pestaña de la galería.
-- Siga las instrucciones para agregar una pestaña. Tenga en cuenta que hay un cuadro de diálogo de configuración personalizada para la ficha canal o grupo.
-- Seleccione **Guardar** y la pestaña se agregará a la barra de pestañas del canal.
+- Abra el cliente de Microsoft Teams. Si usa la versión [basada en web,](https://teams.microsoft.com) puede inspeccionar el código front-end con las herramientas de desarrollo [del explorador.](~/tabs/how-to/developer-tools.md)
+- En el panel *YourTeams* de la izquierda, seleccione el menú situado junto al equipo que está usando para probar la pestaña y `...` elija Administrar **equipo**.
+- En el panel principal, selecciona **Aplicaciones** en la barra de pestañas y elige **Cargar** una aplicación personalizada ubicada en la esquina inferior derecha de la página.
+- Abra el directorio del proyecto, vaya a **la carpeta ./package,** seleccione la carpeta zip del paquete de la aplicación y elija **Abrir**. La pestaña se cargará en Teams.
+- Vuelva a su equipo, elija el canal en el que desea mostrar la pestaña, seleccione ➕ en la barra de pestañas y elija la pestaña de la galería.
+- Siga las instrucciones para agregar una pestaña. Tenga en cuenta que hay un cuadro de diálogo de configuración personalizado para la pestaña canal o grupo.
+- Selecciona **Guardar** y la pestaña se agregará a la barra de pestañas del canal.

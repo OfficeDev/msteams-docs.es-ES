@@ -2,14 +2,14 @@
 title: Envío de mensajes a conectores y webhooks
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
-localization_priority: Priority
+localization_priority: Normal
 keywords: teams o365 conector
-ms.openlocfilehash: 28c1a6e68a0ac83a2eb4785d71596814d5a859d3
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
-ms.translationtype: HT
+ms.openlocfilehash: 1a625524f4c0bd278bd19b3adecdf6a59bd818a6
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696020"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020207"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -299,7 +299,7 @@ Los límites de velocidad de la aplicación controlan el tráfico que puede gene
 
 | Tiempo (segundos)  | Número máximo de solicitudes permitidas  |
 |---|---|
-| 1   | 4  |  
+| 1   | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |

@@ -2,13 +2,14 @@
 title: Flujo de autenticación de Microsoft Teams para bots
 description: Describe el flujo de autenticación de Microsoft Teams en bots
 keywords: bots de flujo de autenticación de teams
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: e76b318f11e651bbf1c20131c5d0d482c2494b60
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: ede626fe7f531c42d83cf9e74d93b93d70e162c3
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995914"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020045"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flujo de autenticación para bots en Microsoft Teams
 
@@ -51,7 +52,7 @@ Consulte el ejemplo de autenticación de [Microsoft Teams](https://github.com/Of
 
 Código de ejemplo que muestra el proceso de autenticación del bot:
 
-| **Nombre de ejemplo** | **Descripción** | **Node.js** | **.NET** | **Python** |
+| **Nombre de ejemplo** | **Description** | **Node.js** | **.NET** | **Python** |
 |-----------------|----------------|--------------|----------|-----------|
 | Autenticación de Teams | En este ejemplo se muestra la autenticación en aplicaciones de Microsoft Teams. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
 | Autenticación de bot | En este ejemplo se muestra cómo usar la autenticación para un bot que se ejecuta en Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)

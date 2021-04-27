@@ -2,13 +2,14 @@
 title: Compatibilidad con inicio de sesión único para pestañas
 description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
+localization_priority: Normal
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 65e8d5e5387ec727e9ce02967516d8672bf67931
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885069"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019611"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -161,7 +162,7 @@ Después de recibir el token de acceso en la devolución de llamada correcta, pu
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|**Nombre de ejemplo**|**Descripción**|**C#**|**Node.js**|
+|**Nombre de ejemplo**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | Tab SSO |Aplicación de ejemplo de Microsoft Teams para pestañas SSO de Azure AD| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Kit de herramientas de Teams](../../../toolkit/visual-studio-code-tab-sso.md)|
 

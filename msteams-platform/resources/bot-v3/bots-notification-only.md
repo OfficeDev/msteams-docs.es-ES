@@ -3,13 +3,14 @@ title: Bots de solo notificación
 description: Describe qué bots de solo notificación están en Microsoft Teams
 keywords: notificación de bots de teams
 ms.topic: conceptual
+localization_priority: Normal
 ms.date: 01/29/2020
-ms.openlocfilehash: 39ba25893623d6b963b44363b8458db6def58b60
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 42a0b9acecbc1821ea492cb6c850c7a9b11bbbfe
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696076"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019765"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Bots de solo notificación en Microsoft Teams
 

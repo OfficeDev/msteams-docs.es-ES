@@ -3,13 +3,14 @@ title: Entender los casos de uso
 author: clearab
 description: Entender los casos de uso
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a873c3030ee4ed5f5fc98229c058583e64c38de5
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 748e40c712af7fb0095edd4f6ffe67ed253decec
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654282"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019870"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -76,7 +77,7 @@ Sobre todo, recuerde que a nadie le gusta el correo no deseado. La limpieza de m
 
 Identifique qué nuevas características prefiere tener el usuario en la solución actual. Si tienes una guía básica para nuevas características que agregar a la aplicación, el diseño y la arquitectura se verán afectados.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Elegir cómo distribuir la aplicación](../deploy-and-publish/overview.md)

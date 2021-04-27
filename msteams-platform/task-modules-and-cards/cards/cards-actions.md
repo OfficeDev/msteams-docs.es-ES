@@ -1,14 +1,15 @@
 ---
 title: Agregar acciones de tarjeta en un bot
 description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en los bots
+localization_priority: Normal
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de teams
-ms.openlocfilehash: f02e195f619fdfa2ebbc4b2ef00669a1cb5b38f6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696027"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019541"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 

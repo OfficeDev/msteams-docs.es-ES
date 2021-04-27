@@ -3,13 +3,14 @@ title: Cómo diseñar su bot
 description: Obtenga información sobre cómo diseñar un bot para Teams y obtener el Kit de UI de Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 1323d1070d29a501a6a87812a666c3a08b76ae74
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713598"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020136"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
@@ -99,10 +100,10 @@ Puede usar bots en los siguientes contextos:
 |1|**Icono y nombre de la aplicación**|
 |2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
 |3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
-|4|**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
-|5|**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
-|6|**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
-|7|**Menú de comandos**: muestra los comandos estándar de su bot (definidos por usted).
+|4 |**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
+|5 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
+|6 |**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
+|7 |**Menú de comandos**: muestra los comandos estándar de su bot (definidos por usted).
 
 ### <a name="command-menu"></a>Menú de comandos
 
@@ -208,7 +209,7 @@ Encontrará más información sobre cómo escribir para los bots en el <a href="
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra los procedimientos recomendados de bots." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Práctica recomendada: transmita claramente qué puede hacer el bot
 
@@ -216,7 +217,7 @@ Los mensajes de bienvenida y los paseos ayudan a los usuarios a comprender qué 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ejemplo es mostrar un procedimiento recomendado de bot." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Práctica a evitar: ocultar las características del bot
 
@@ -227,7 +228,7 @@ Las primeras impresiones son importantes. Es probable que los usuarios se confun
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Muestra de cómo mostrar un procedimiento recomendado de bot." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Práctica recomendada: que el bot reconozca mensajes que no son preguntas
 
@@ -235,7 +236,7 @@ El bot debería poder responder a mensajes como "Hola", "Ayuda" y "Gracias", as�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de bot." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Práctica a evitar: perder oportunidades para una charla agradable
 
@@ -248,7 +249,7 @@ Algunas personas esperan que las conversaciones fluyan de forma natural como lo 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo de procedimiento recomendado de bot." border="false":::
 
 #### <a name="do-provide-help"></a>Práctica recomendada: proporcione ayuda
 
@@ -256,7 +257,7 @@ Si el bot no puede satisfacer una solicitud, dé al usuario una manera de aprend
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de bot." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Práctica a evitar: dejar a los usuarios sin ayuda
 
@@ -277,7 +278,7 @@ Si su bot proporciona una respuesta que requiere pasos adicionales, puede vincul
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Vea el ejemplo de un procedimiento recomendado de bot." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Práctica a evitar: hacer interacciones multiuso tediosas
 
@@ -290,7 +291,7 @@ Una conversación extensa para completar una tarea simple ralentiza y complica e
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de bot." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Práctica recomendada: muestre información confidencial solo en un contexto personal
 
@@ -298,7 +299,7 @@ Si el bot está en un chat o canal de grupo, le recomendamos que dirija a los us
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Ilustración que muestra un procedimiento recomendado de bot." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Práctica a evitar: presentar a todo el mundo contenido confidencial
 

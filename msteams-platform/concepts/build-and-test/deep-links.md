@@ -1,25 +1,26 @@
 ---
-title: Crear vínculos profundos al contenido
+title: Crear vínculos profundos
 description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
+localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: afcb079873f97055c4af43323d12846294861f74
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885062"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020838"
 ---
-# <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Crear vínculos profundos al contenido y las características en Microsoft Teams
+# <a name="create-deep-links"></a>Crear vínculos profundos 
 
-Puede crear vínculos a información y características dentro de Teams. Los ejemplos en los que crear vínculos profundos son útiles son los siguientes:
+Puede crear vínculos a información y características dentro de Teams. Los escenarios en los que la creación de vínculos profundos son útiles son los siguientes:
 
 * Navegar por el usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la pestaña para que el usuario pueda ver más detalles sobre la actividad.
 * La aplicación automatiza o simplifica determinadas tareas del usuario, como crear un chat o programar una reunión, mediante la rellenar previamente los vínculos profundos con los parámetros necesarios. Esto evita la necesidad de que los usuarios escriban manualmente información.
 
 > [!NOTE]
 >
-> Un vínculo profundo inicia el explorador primero antes de navegar a contenido e información de la siguiente manera:
+> Un vínculo profundo inicia el explorador primero antes de navegar al contenido. El comportamiento de los vínculos profundos en las entidades de Teams es el siguiente:
 >
 > **Tab**:  
 > ✔ Navega directamente a la dirección URL de vínculo profundo.
@@ -35,9 +36,9 @@ Puede crear vínculos a información y características dentro de Teams. Los eje
 
 ## <a name="deep-linking-to-your-tab"></a>Vinculación profunda a la pestaña
 
-Puede crear vínculos profundos a entidades en Teams. Normalmente, esto se usa para crear vínculos que naveguen al contenido y a la información de la pestaña. Por ejemplo, si la pestaña contiene una lista de tareas, los miembros del equipo pueden crear y compartir vínculos a tareas individuales. Al seleccionar el vínculo, se desplaza a la pestaña que se centra en el elemento específico. Para implementar esto, agregas una acción de "copiar vínculo" a cada elemento, de la forma que mejor se adapte a tu interfaz de usuario. Cuando el usuario realiza esta acción, llama para mostrar un cuadro de diálogo que contiene un vínculo que el usuario `shareDeepLink()` puede copiar en el Portapapeles. Al realizar esta llamada, también pasas un identificador para el [](~/tabs/how-to/access-teams-context.md) elemento, que vuelves al contexto cuando se sigue el vínculo y se vuelve a cargar la pestaña.
+Puede crear vínculos profundos a entidades en Teams. Esto se usa para crear vínculos que naveguen a contenido e información dentro de la pestaña. Por ejemplo, si la pestaña contiene una lista de tareas, los miembros del equipo pueden crear y compartir vínculos a tareas individuales. Al seleccionar el vínculo, se desplaza a la pestaña que se centra en el elemento específico. Para implementar esto, agregas una **acción de vínculo de** copia a cada elemento, de la forma que mejor se adapte a tu interfaz de usuario. Cuando el usuario realiza esta acción, llama para mostrar un cuadro de diálogo que contiene un vínculo que el usuario `shareDeepLink()` puede copiar en el Portapapeles. Al realizar esta llamada, también pasas un identificador para el [](~/tabs/how-to/access-teams-context.md) elemento, que vuelves al contexto cuando se sigue el vínculo y se vuelve a cargar la pestaña.
 
-Como alternativa, también puede generar vínculos profundos mediante programación, con el formato especificado más adelante en este tema. Puede usarlos en mensajes [de bot](~/bots/what-are-bots.md) [y conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informan a los usuarios acerca de los cambios realizados en la pestaña o en los elementos dentro de ella.
+Como alternativa, también puede generar vínculos profundos mediante programación, con el formato especificado más adelante en este tema. Puede usar vínculos profundos en [mensajes de bot](~/bots/what-are-bots.md) y [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informan a los usuarios sobre los cambios realizados en la pestaña o en los elementos que contiene.
 
 > [!NOTE]
 > Este vínculo profundo es diferente de  los vínculos proporcionados por el elemento de menú Copiar vínculo a pestaña, que solo genera un vínculo profundo que apunta a esta pestaña.
@@ -49,11 +50,11 @@ Como alternativa, también puede generar vínculos profundos mediante programaci
 
 Para mostrar un cuadro de diálogo que contiene un vínculo profundo a un elemento dentro de la pestaña, llame `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
-Proporcione estos campos:
+Proporcione los campos siguientes:
 
-* `subEntityId`&emsp;Un identificador único para el elemento de la pestaña al que está vinculando profundamente
-* `subEntityLabel`&emsp;Una etiqueta para el elemento que se usará para mostrar el vínculo profundo
-* `subEntityWebUrl`&emsp;Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña
+* `subEntityId`: un identificador único para el elemento dentro de la pestaña a la que está vinculando profundamente.
+* `subEntityLabel`: etiqueta para el elemento que se usará para mostrar el vínculo profundo.
+* `subEntityWebUrl`: un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña.
 
 ### <a name="generating-a-deep-link-to-your-tab"></a>Generación de un vínculo profundo a la pestaña
 
@@ -61,7 +62,7 @@ Proporcione estos campos:
 > Las pestañas personales tienen un ámbito, mientras que las pestañas de canal `personal` y grupo usan o `team` `group` ámbitos. Los dos tipos de pestaña tienen una sintaxis ligeramente diferente, ya que solo la pestaña configurable tiene una `channel` propiedad asociada con su objeto de contexto. Vea la [referencia del manifiesto](~/resources/schema/manifest-schema.md) para obtener más información sobre los ámbitos de tabulación.
 
 > [!NOTE]
-> Los vínculos profundos solo funcionan correctamente si la pestaña se configuró mediante la biblioteca v0.4 o posterior y debido a ello tiene un identificador de entidad. Los vínculos profundos a pestañas sin identificadores de entidad siguen navegando a la pestaña, pero no pueden proporcionar el identificador de sub entity a la pestaña.
+> Los vínculos profundos solo funcionan correctamente si la pestaña se configuró mediante la biblioteca v0.4 o posterior y debido a ello tiene un identificador de entidad. Los vínculos profundos a pestañas sin identificadores de entidad siguen navegando a la pestaña, pero no pueden proporcionar el identificador de la sub entidad a la pestaña.
 
 Use el siguiente formato para un vínculo profundo que puede usar en un bot, conector o tarjeta de extensión de mensajería:
 
@@ -69,17 +70,19 @@ Use el siguiente formato para un vínculo profundo que puede usar en un bot, con
 
 > [!NOTE]
 > Si el bot envía un mensaje que contiene un vínculo con un vínculo profundo, se abre una nueva pestaña del explorador cuando el usuario `TextBlock` selecciona el vínculo. Esto sucede en Chrome y en la aplicación de escritorio de Microsoft Teams, que se ejecutan en Linux.
-> Si el bot envía la misma dirección URL de vínculo profundo a un , la pestaña Teams se abre en la pestaña del explorador actual cuando el usuario `Action.OpenUrl` selecciona el vínculo. No se abre ninguna nueva pestaña del explorador.
+> Si el bot envía la misma dirección URL de vínculo profundo a un , la pestaña Teams se abre en la pestaña del explorador actual cuando el usuario `Action.OpenUrl` selecciona el vínculo. No se abre una nueva pestaña del explorador.
 
 Los parámetros de consulta son:
 
-* `appId`&emsp;El identificador del manifiesto; por ejemplo, "fe4a8eba-2a31-4737-8e33-e5fae6fee194"
-* `entityId`&emsp;El identificador del elemento de la pestaña, que proporcionaste al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md); por ejemplo, "tasklist123"
-* `entityWebUrl`o Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña; por `subEntityWebUrl` &emsp; ejemplo, " https://tasklist.example.com/123 " o " https://tasklist.example.com/list123/task456 "
-* `entityLabel`o Una etiqueta para el elemento de la pestaña, que se usará al mostrar el vínculo profundo; por ejemplo, "Lista de tareas `subEntityLabel` &emsp; 123" o "Tarea 456"
-* `context`&emsp;Un objeto JSON que contiene los campos siguientes:
-  * `subEntityId`&emsp;Un identificador para el elemento _dentro de_ la pestaña; por ejemplo, "task456"
-  * `channelId`&emsp;El identificador de canal de Microsoft Teams que está disponible en el contexto de [pestaña](~/tabs/how-to/access-teams-context.md); por ejemplo, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". Esta propiedad solo está disponible en pestañas configurables con un ámbito de "equipo". No está disponible en pestañas estáticas, que tienen un ámbito de "personal".
+| Nombre del parámetro | Descripción | Ejemplo |
+|:------------|:--------------|:---------------------|
+| `appId`&emsp; | El identificador del manifiesto. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `entityId`&emsp; | El identificador del elemento de la pestaña, que proporcionaste al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
+| `entityWebUrl` o `subEntityWebUrl`&emsp; | Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | https://tasklist.example.com/123 o https://tasklist.example.com/list123/task456 |
+| `entityLabel` o `subEntityLabel`&emsp; | Una etiqueta para el elemento de la pestaña, que se usará al mostrar el vínculo profundo. | Lista de tareas 123 o "Tarea 456 |
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Un objeto JSON que contiene los siguientes campos</br></br> * Un identificador para el elemento dentro de la pestaña. </br></br> * El identificador de canal de Microsoft Teams que está disponible en el contexto de [pestaña](~/tabs/how-to/access-teams-context.md). | 
+| `subEntityId`&emsp; | Un identificador para el elemento dentro de la pestaña. |Task456 |
+| `channelId`&emsp; | El identificador de canal de Microsoft Teams que está disponible en el contexto de [pestaña](~/tabs/how-to/access-teams-context.md). Esta propiedad solo está disponible en pestañas configurables con un ámbito de **equipo**. No está disponible en pestañas estáticas, que tienen un ámbito **de personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 Ejemplos:
 
@@ -90,6 +93,7 @@ Ejemplos:
 
 > [!IMPORTANT]
 > Asegúrese de que todos los parámetros de consulta estén codificados correctamente en URI. Debe seguir los ejemplos de preceeding con el último ejemplo:
+
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -136,11 +140,11 @@ Ejemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 Los parámetros de consulta son:
 
-* `users`: lista separada por comas de id. de usuario que representa a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario es compatible con UserPrincipalName de Azure AD, normalmente solo una dirección de correo electrónico.
+* `users`: lista separada por comas de id. de usuario que representa a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario admite userPrincipalName de Azure AD, como solo una dirección de correo electrónico.
 * `topicName`: un campo opcional para el nombre para mostrar del chat, en el caso de un chat con 3 o más usuarios. Si no se especifica este campo, el nombre para mostrar del chat se basa en los nombres de los participantes.
 * `message`: un campo opcional para el texto del mensaje que desea insertar en el cuadro de redacción del usuario actual mientras el chat está en un estado de borrador.
 
-Para usar este vínculo profundo con el bot, puedes especificarlo como el destino de la dirección URL en el botón de la tarjeta o pulsar en la acción a través del `openUrl` tipo de acción.
+Para usar este vínculo profundo con el bot, especifique esto como destino de dirección URL en el botón de la tarjeta o pulse en la acción a través del `openUrl` tipo de acción.
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Generar vínculos profundos al archivo en el canal
 
@@ -184,7 +188,8 @@ El siguiente formato de vínculo profundo se puede usar en un bot, conector o ta
 
 Los parámetros de consulta son:
 
-* `appID`: Su identificador de manifiesto fe4a8eba-2a31-4737-8e33-e5fae6fee194.
+* `appID`: Su identificador de **manifiesto fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+
 * `entityID`: El identificador de elemento que proporcionaste [al configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md). Por ejemplo, **tasklist123**.
 * `entityWebUrl`: un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña - https://tasklist.example.com/123 o https://tasklist.example.com/list123/task456 .
 * `entityName`: una etiqueta para el elemento de la pestaña, que se usará al mostrar el vínculo profundo, la lista de tareas 123 o la tarea 456.
@@ -193,10 +198,10 @@ Ejemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee1
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Vinculación al cuadro de diálogo de programación
 
-> [!Note]
+> [!NOTE]
 > Esta característica se encuentra actualmente en versión preliminar del desarrollador.
 
-Puede crear vínculos profundos al cuadro de diálogo de programación integrada de Teams. Esto es especialmente útil si la aplicación ayuda al usuario a completar tareas relacionadas con el calendario o la programación.
+Puede crear vínculos profundos al cuadro de diálogo de programación integrada de Teams. Esto es especialmente útil si la aplicación ayuda al usuario a completar el calendario o programar tareas relacionadas.
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Generar un vínculo profundo al cuadro de diálogo de programación
 
@@ -216,3 +221,8 @@ Los parámetros de consulta son:
 > Actualmente, no se admite la especificación de la ubicación. Debe especificar el desplazamiento UTC, significa zonas horarias al generar las horas de inicio y finalización.
 
 Para usar este vínculo profundo con el bot, puedes especificarlo como el destino de la dirección URL en el botón de la tarjeta o pulsar en la acción a través del `openUrl` tipo de acción.
+
+## <a name="see-also"></a>Consulte también
+
+> [!div class="nextstepaction"]
+> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

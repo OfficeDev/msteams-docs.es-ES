@@ -3,13 +3,14 @@ title: Referencia de esquema de manifiesto de versión preliminar de desarrollad
 description: Describe el esquema admitido por el manifiesto para Microsoft Teams
 ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: adb178000d909c9031e4b4df187bbf6f74f6e783
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946476"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019702"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifiesto de vista previa de desarrollador para Microsoft Teams
 
@@ -247,7 +248,7 @@ Un identificador único para esta aplicación en la notación de dominio inverso
 
 Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSource (anteriormente Tienda Office), estos valores deben coincidir con la información de la entrada de AppSource.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`name`|32 caracteres|✔|Nombre para mostrar del desarrollador.|
 |`websiteUrl`|2048 caracteres|✔|La https:// url del sitio web del desarrollador. Este vínculo debe llevar a los usuarios a su empresa o página de aterrizaje específica del producto.|
@@ -261,7 +262,7 @@ Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSo
 
 Permite la especificación de un idioma predeterminado, así como punteros a archivos de idioma adicionales. Vea [localización](~/concepts/build-and-test/apps-localization.md).
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`defaultLanguageTag`|4 caracteres|✔|La etiqueta de idioma de las cadenas de este archivo de manifiesto de nivel superior.|
 
@@ -269,7 +270,7 @@ Permite la especificación de un idioma predeterminado, así como punteros a arc
 
 Una matriz de objetos que especifica traducciones de idioma adicionales.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`languageTag`|4 caracteres|✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
 |`file`|4 caracteres|✔|Una ruta de acceso de archivo relativa a un archivo .json que contiene las cadenas traducidas.|
@@ -280,7 +281,7 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la experiencia de Teams. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y no deben ser los `full` mismos.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
@@ -293,7 +294,7 @@ Describe la aplicación a los usuarios. Para las aplicaciones enviadas a AppSour
 
 Asegúrese de que su descripción describe con precisión su experiencia y proporciona información para ayudar a los clientes potenciales a comprender lo que hace su experiencia. También debe tener en cuenta, en la descripción completa, si se requiere una cuenta externa para su uso. Los valores de `short` y no deben ser los `full` mismos.  La descripción breve no debe repetirse dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|80 caracteres|✔|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔|Descripción completa de la aplicación.|
@@ -304,7 +305,7 @@ Asegúrese de que su descripción describe con precisión su experiencia y propo
 
 Iconos usados dentro de la aplicación de Teams. Los archivos de icono deben incluirse como parte del paquete de carga.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`outline`|2048 caracteres|✔|Una ruta de acceso de archivo relativa a un icono de esquema PNG transparente de 32 x 32.|
 |`color`|2048 caracteres|✔|Una ruta de acceso de archivo relativa a un icono PNG de color completo de 192 x 192.|

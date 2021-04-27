@@ -3,13 +3,14 @@ title: Puntos de entrada para aplicaciones de Teams
 author: heath-hamilton
 description: Describe dónde pueden los usuarios descubrir y usar su aplicación en Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: f61e5b5c05855c0a3a766920095cf46f699f08a6
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: f3f4af191400b6c04c41827ce689b4250c105ce0
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654359"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019842"
 ---
 # <a name="entry-points-for-teams-apps"></a>Puntos de entrada para aplicaciones de Teams
 
@@ -44,7 +45,7 @@ En la siguiente lista se muestra cómo se usan normalmente las capacidades de Te
 
 * [**Las pestañas**](~/tabs/what-are-tabs.md) proporcionan una experiencia web incrustada a pantalla completa que es significativa para el usuario que la está viendo.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Directrices de diseño de aplicaciones de Teams](../concepts/design/design-teams-app-overview.md)

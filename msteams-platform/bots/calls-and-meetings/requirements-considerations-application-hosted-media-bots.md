@@ -2,14 +2,15 @@
 title: Requisitos y consideraciones para bots multimedia hospedados en aplicaciones
 description: Comprender los requisitos y consideraciones importantes relacionados con la creación de bots multimedia hospedados en aplicaciones para Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Máquina virtual de Azure de Windows Server multimedia hospedada por la aplicación
 ms.date: 11/16/2018
-ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995956"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020059"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos y consideraciones para bots multimedia hospedados en aplicaciones
 
@@ -64,12 +65,12 @@ Los bots multimedia hospedados en aplicaciones requieren las siguientes consider
 
 Los ejemplos de bots multimedia hospedados en la aplicación son los siguientes:
 
-| **Nombre de ejemplo** | **Descripción** | **Graph** |
+| **Nombre de ejemplo** | **Description** | **Graph** |
 |------------|-------------|-----------|
 | Ejemplo de medios locales | Ejemplos que ilustran diferentes escenarios de medios locales. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Ejemplo de medios remotos | Ejemplos que ilustran diferentes escenarios multimedia remotos. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Documentación del SDK de llamadas de Graph](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Los bots requieren más capacidad de procesamiento y ancho de banda de red que los bots de mensajería e incurren en costos operativos significativamente más altos. Un desarrollador de bots multimedia en tiempo real debe medir cuidadosamente la escalabilidad del bot y asegurarse de que el bot no acepta más llamadas simultáneas de las que puede administrar. Un bot habilitado para vídeo solo puede soportar una o dos sesiones multimedia simultáneas por núcleo de CPU si usa los formatos de vídeo RGB24 o NV12 sin procesar.

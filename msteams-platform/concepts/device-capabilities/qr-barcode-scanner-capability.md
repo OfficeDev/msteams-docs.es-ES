@@ -1,15 +1,17 @@
 ---
 title: Integrar la función de escáner de código QR o de códigos de barras
+author: Rajeshwari-v
 description: Cómo usar el SDK de cliente de JavaScript de Teams para aprovechar la funcionalidad del escáner de códigos de barras o QR
 keywords: Cámara media qr code qrcode bar code barcode scanner scan capabilities native device permissions
+localization_priority: Normal
 ms.topic: conceptual
-ms.author: lajanuar
-ms.openlocfilehash: 956d56c9d52785820f95ca2df323d61dcacc586b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.author: surbhigupta
+ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696293"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020740"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar la función de escáner de código QR o de códigos de barras 
 
@@ -75,7 +77,7 @@ La **API scanBarCode()** admite los siguientes tipos de código de barras:
 
 Debes asegurarte de controlar estos errores correctamente en la aplicación de Teams. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|

@@ -2,13 +2,14 @@
 title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio de bots de Azure con la compatibilidad con la tarjeta OAuth.
 keywords: token, token de usuario, compatibilidad con SSO para bots
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 8da2591c3685b5bd3dffd272abd77babe94ab04c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753535"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020052"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -300,6 +301,6 @@ Abra [el ejemplo de autenticación de Teams](https://github.com/microsoft/BotBui
 4. Zip the manifest with the profile images and install it in Teams.
 
 ## <a name="code-sample"></a>Ejemplo de código
-|**Nombre de ejemplo** | **Descripción** |**.NET** | 
+|**Nombre de ejemplo** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
 |SDK de marco de bots | Ejemplo para usar el SDK del marco de bots. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|

@@ -2,14 +2,15 @@
 title: Diseño de la aplicación personalizada
 author: heath-hamilton
 description: Aprende a diseñar aplicaciones de Microsoft Teams. Los recursos incluyen el Kit de interfaz de usuario de Microsoft Teams, procedimientos recomendados, ejemplos y mucho más.
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 7a6786cdf9091b04f89ebd6c8bb03799eb7d127a
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d7f3e89ce5ad51fb1a8cecddf0b22d59544ecc09
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634498"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019884"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la aplicación de Microsoft Teams
 

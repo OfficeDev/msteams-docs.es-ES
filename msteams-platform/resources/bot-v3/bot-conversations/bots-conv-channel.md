@@ -2,14 +2,15 @@
 title: Conversaciones de chat de canal y grupo con bots
 description: Describe el escenario completo de tener una conversación con un bot en un canal de Microsoft Teams
 keywords: escenarios de teams canaliza bot de conversación
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: be4610f45ab5891edcc6a9683ec994d2ba5c505c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2eac067a75fc75c9991e8b30ec5d693d89ed8228
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696181"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019800"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversaciones de chat de canal y grupo con un bot de Microsoft Teams
 

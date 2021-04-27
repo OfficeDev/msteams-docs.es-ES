@@ -2,13 +2,14 @@
 title: Mantenimiento y soporte técnico de la aplicación publicada
 description: Qué hacer después de publicar la aplicación
 ms.topic: how-to
+localization_priority: Normal
 keywords: manifiesto de actualización de la aplicación de certificación de actualización de publicación de teams
-ms.openlocfilehash: 8644db5e329e15d77062553eda4a41a36b2740ee
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585837"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020803"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Ofrecer mantenimiento y soporte técnico de su aplicación publicada 
 

@@ -1,65 +1,76 @@
 ---
-title: Conectores de turnos de Teams
-description: Conectores de turnos de administración de recursos para Teams
+title: Conectores de turnos listos para producción
+description: Conectores de turnos de administración de personal para Teams
 ms.topic: reference
 author: laujan
 ms.date: 03/09/2020
-keywords: Conectores de Microsoft Teams
+localization_priority: Normal
+keywords: Kronos de conectores de Microsoft Teams
 ms.author: lajanuar
-ms.openlocfilehash: 9d32c9e1aa3baba660440492df55bb00f677baa4
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 94e0b2b61998510ea9dd054d118e856eadc49b2d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014596"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019620"
 ---
-# <a name="microsoft-teams-shifts-wfm-connectors"></a>Microsoft Teams cambia los conectores WFM  
+# <a name="production-ready-shifts-connectors"></a>Conectores de turnos listos para producción  
 
-## <a name="workforce-management-connectors-wfm-for-firstline-workers"></a>Conectores de administración de recursos (WFM) para trabajadores de primera línea 
+Los conectores de administración de fuerza de trabajo (WFM) de Teams Shifts son integraciones basadas en la comunidad, listas para producción y de código abierto, útiles para los trabajadores de primera línea. Ofrecen una experiencia perfecta y un proceso rápido para la transformación digital de los trabajadores de primera línea con Teams Shifts. 
 
-Los conectores WFM de turnos de Teams son integraciones preparadas para producción, de código abierto y controladas por la comunidad que ofrecen una experiencia sin problemas y un proceso rápido para la transformación digital de los trabajadores de primera línea con Teams Shifts. 
+Cada conector proporciona instrucciones detalladas para la implementación e integración en la organización. El código fuente completo está disponible en el repositorio de GitHub. Puede explorar en detalle o bifurcar, y personalizar para satisfacer sus necesidades específicas.   
 
-Cada conector proporciona instrucciones detalladas para la implementación e integración en su organización. El código fuente completo está disponible en nuestro repositorio de GitHub, donde se puede explorar en detalle y/o bifurcarse y adaptarse para satisfacer sus necesidades específicas.
+En este documento se ofrece información general sobre las principales ventajas de los conectores WFM de Turnos de Teams, el conector de turnos de Kronos a Teams y el conector de turnos de JDA a Teams.
 
-## <a name="key-benefits-teams-shifts-wfm-connectors"></a>Ventajas clave: Teams cambia los conectores WFM
+## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Ventajas clave de los conectores WFM de Teams Shifts
 
-* **Experiencia plug and play.** Todos los conectores de WFM de turnos ARM scripts de implementación de Azure que le permiten hospedar todos los servicios necesarios en Microsoft Azure. No se requiere codificación para implementar las aplicaciones.
+A continuación se desconocien las principales ventajas de los conectores WFM de Teams Shifts:
 
-* **Código listo para producción.** Todos los conectores Shifts se ajustan a los procedimientos recomendados de seguridad e infraestructura y se revisan todos los cambios enviados por la comunidad para garantizar una conformidad continua.
+* **Experiencia de plug and play:** Todos los conectores WFM de shifts incluyen ARM scripts de implementación de Azure que le permiten hospedar todos los servicios necesarios en Microsoft Azure. No se requiere codificación para implementar las aplicaciones.
 
-* **Personalizable y extensible.**  Aunque todos los conectores de WFM de turnos están listos para implementarse para su uso inmediato, proporcionamos la base de código completa y los scripts de implementación para que pueda personalizarlos o ampliarlos fácilmente para adaptarlos a sus necesidades únicas.
+* **Código listo para producción:** Todos los conectores Shifts se ajustan a los procedimientos recomendados de seguridad e infraestructura y se revisan todos los cambios enviados por la comunidad para garantizar la conformidad continua.
 
-* **Documentación detallada & soporte técnico.**  Todos los conectores de WFM de turnos van acompañados de documentación de un extremo a otro para los pasos de arquitectura, implementación y configuración de la solución. Los repositorios del conector se supervisan, así que informe de cualquier problema, desafío o dificultad que encuentre a través del rastreador de problemas de GitHub del repositorio.
+* **Personalizable y extensible:**   Mientras que todos los conectores DE WFM de turnos están listos para implementarse para su uso inmediato, con la base de código completa y los scripts de implementación disponibles. Puede personalizarlos o ampliarlos fácilmente para que se ajusten a sus necesidades únicas.
 
-* **Integración perfecta.** La integración entre las soluciones WFM y Turnos de Teams permite a los trabajadores de primera línea usar la aplicación Turnos de Teams para ver/administrar sus horarios y horas de turnos, y usar todas las demás características de colaboración enriquez proporcionadas en Teams directamente desde su dispositivo móvil o escritorio sin tener que cambiar de contexto a otra aplicación.
+* **Documentación detallada & soporte técnico:**   Todos los conectores DE WFM de turnos se acompañan de documentación completa para los pasos de configuración, implementación y arquitectura de soluciones. Los repositorios del conector se supervisan, de modo que pueda informar de los problemas, desafíos o dificultades que encuentre a través del rastreador de problemas de GitHub del repositorio.
 
-**Abrir la vista turnos en Teams**  
+* **Integración perfecta:** La integración entre las soluciones WFM y Teams Shifts permite a los trabajadores de primera línea usar la aplicación Teams Shifts para ver o administrar sus horarios y turnos de trabajo, y usar todas las demás características de colaboración enriquecciones proporcionadas en Teams directamente desde su dispositivo móvil o escritorio sin tener que cambiar el contexto a otra aplicación.  
+
+**Vista Abrir turnos en Teams** 
+
+La vista turnos de Teams se muestra en la siguiente imagen: 
+
 ![Turnos abiertos en Teams](../assets/images/teams-open-shifts-view.png)
 
-## <a name="kronos-to-teams-shifts-connector"></a>Conector de turnos de Kronos a Teams
+## <a name="kronos-to-teams-shifts-connector"></a>Conector de cambios de Kronos a Teams
 
-Con el código de código abierto, puede integrar Kronos Workforce Central Versión 8.1 y posteriores, con Teams Shifts (aplicación de Teams de escritorio/móvil) para los siguientes escenarios de administrador y trabajo de primera línea:
+Con el código de código abierto, puedes integrar Kronos Workforce Central Versión 8.1 y versiones posteriores, con cambios de Teams como, aplicaciones de escritorio o móviles de Teams para los siguientes escenarios de administrador y trabajador de primera línea:
 
-1. Ver programación.
+* Ver programación.
 
-1. Publicar y solicitar turnos abiertos.
+* Publicar y solicitar turnos abiertos.
 
-1. Turnos de intercambio.
+* Turnos de intercambio.
 
-1. Solicitar tiempo libre.
+* Solicitar tiempo de espera.
 
-1. Ofrecer turnos.
+* Turnos de oferta.
 
-[Obtenerlo en GitHub]( https://aka.ms/KronosShiftsConnector)
+Para obtener más información sobre la implementación del conector de cambios de Kronos a Teams, consulte [Get it on GitHub](https://aka.ms/KronosShiftsConnector).
 
 ## <a name="jda-to-teams-shifts-connector"></a>Conector de turnos de JDA a Teams
 
-Con el código de código abierto, puede integrar JDA (BlueYonder) versión 17.2 y versiones posteriores, con Teams Shifts (aplicación teams de escritorio/móvil) para los siguientes escenarios de administrador y trabajador de primera línea:
+Con el código de código abierto, puedes integrar JDA, como BlueYonder versión 17.2 y versiones posteriores, con cambios de Teams como, aplicaciones de teams móviles o de escritorio para los siguientes escenarios de administrador y trabajador de primera línea:
 
-1. Publicar turnos y programar grupos en JDA y ver en Teams.
+* Publicar turnos y programar grupos en JDA y verlos en Teams.
 
-1. Habilita escenarios de programación enriquecidos, incluida la solicitud de intercambios de turnos y el tiempo libre.
+* Habilitar escenarios de programación enriquecidos, incluida la solicitud de intercambios de turnos y el tiempo de espera.
 
-1. Establecer la disponibilidad del usuario mediante la [API de Microsoft Graph para turnos](/graph/api/resources/shift?view=graph-rest-beta) .
+* Establecer la disponibilidad del usuario mediante la [API de Microsoft Graph para turnos](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
 
-[Obtenerlo en GitHub](https://aka.ms/JDAShiftsConnector)</br></br>
+Para obtener más información sobre la contribución y la sugerencia, vea [Get it on GitHub](https://aka.ms/JDAShiftsConnector).</br></br>
+
+## <a name="see-also"></a>Consulte también
+
+> [!div class="nextstepaction"]
+> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

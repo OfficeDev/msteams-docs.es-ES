@@ -2,13 +2,14 @@
 title: Uso del servicio de bot de Azure para la autenticación en Teams
 description: Describe la OAuthCard del servicio de bot de Azure y cómo se usa para la autenticación
 ms.topic: conceptual
+localization_priority: Normal
 keywords: OAuthCard OAuth card Azure Bot Service de autenticación de teams
-ms.openlocfilehash: 6e609daba1374f4e971e1634810d3b217ce55371
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 3d0df4f04625c5be3468d12319b54096ae06de90
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696678"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020684"
 ---
 # <a name="using-azure-bot-service-for-authentication-in-teams"></a>Uso del servicio de bot de Azure para la autenticación en Teams
 

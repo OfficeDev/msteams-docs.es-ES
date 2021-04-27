@@ -1,22 +1,25 @@
 ---
-title: Agregar una pestaña de Microsoft Teams en SharePoint como elemento web de SPFx
+title: Pestaña Agregar Teams a SharePoint
 author: laujan
-description: Cómo implementar la pestaña de Teams existente en SharePoint como un elemento web de SharePoint Framework.
-keywords: Desarrollo de SharePoint Framework con pestañas de teams
+description: Cómo implementar la pestaña teams existente en SharePoint como un elemento web de SharePoint Framework.
+keywords: desarrollo de sharepoint framework de pestañas de teams
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2e5d1b01aa5f7566e25c7720d6a0539386226576
-ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
+ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "50270794"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020350"
 ---
-# <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Agregar una pestaña de Microsoft Teams en SharePoint como elemento web de SPFx
+# <a name="add-teams-tab-to-sharepoint"></a>Pestaña Agregar Teams a SharePoint 
+
+Puede obtener una amplia experiencia de integración entre Microsoft Teams y SharePoint agregando una pestaña de Microsoft Teams en SharePoint como un elemento web de SPFx. Este documento le guía sobre cómo tomar una pestaña de una aplicación de ejemplo de Microsoft Teams y usarla en SharePoint. 
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Integración enriquecte entre Teams y SharePoint
 
-Con la versión de noviembre de Teams y SharePoint Framework v. 1.7, los desarrolladores tienen dos capacidades eficaces:
+Con la versión de noviembre de Teams y SharePoint Framework v.1.7, los desarrolladores tienen dos funciones eficaces:
 
 <ul  class="panelContent cardsC">
 <li>
@@ -31,7 +34,7 @@ Con la versión de noviembre de Teams y SharePoint Framework v. 1.7, los desarro
                     </div>
                     <div class="cardText">
                         <h3>Pestañas de Teams en SharePoint</h3>
-                        <p>Cree experiencias de aplicación enriqueciendo su aplicación de Teams en SharePoint (este artículo).</p>
+                        <p>Cree experiencias de aplicación enriquecciones en SharePoint llevando la aplicación de Teams a Sharepoint (en este artículo).</p>
                     </div>
                 </div>
             </div>
@@ -50,7 +53,7 @@ Con la versión de noviembre de Teams y SharePoint Framework v. 1.7, los desarro
                     </div>
                     <div class="cardText">
                         <h3>SharePoint Framework en Teams</h3>
-                        <p>Bring your SharePoint web parts to Teams and let SharePoint manage the hosting for you.</p>
+                        <p>Lleve los elementos web de SharePoint a Teams y deje que SharePoint administre el hospedaje por usted.</p>
                     </div>
                 </div>
             </div>
@@ -61,67 +64,90 @@ Con la versión de noviembre de Teams y SharePoint Framework v. 1.7, los desarro
 
 ### <a name="teams-tabs-in-sharepoint"></a>Pestañas de Teams en SharePoint
 
-Con SharePoint Framework v.1.7, ahora se admite la capacidad para que los desarrolladores tomen sus pestañas de Teams y la alomen en SharePoint. A medida que las pestañas hospedadas en SharePoint obtienen una experiencia de "página completa" similar, exponiendo todas las características de las pestañas de Teams a la vez que conservan el contexto y la familiaridad de un sitio de SharePoint.
+Con SharePoint Framework v.1.7, puede hospedar las pestañas de Teams en SharePoint. A medida que las pestañas hospedadas en SharePoint obtienen una experiencia de página completa **similar,** exponiendo todas las características de las pestañas de Teams a la vez que conservan el contexto y la familiaridad de un sitio de SharePoint.
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint Framework en Teams
 
-También puede implementar las pestañas de Microsoft Teams con SharePoint Framework. Para los desarrolladores de SharePoint, esto simplifica significativamente el proceso de desarrollo para las pestañas de Teams porque los elementos web de SharePoint Framework se hospedan en SharePoint sin necesidad de servicios externos como Azure. [Obtenga más información sobre cómo usar SharePoint Framework en Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+También puede implementar las pestañas de Microsoft Teams con SharePoint Framework. Los elementos web de SharePoint Framework se hospedan en SharePoint sin necesidad de servicios externos, como Azure. Para los desarrolladores de SharePoint, esto simplifica significativamente el proceso de desarrollo de las pestañas de Teams. Para obtener más información sobre SharePoint Framework en Teams, vea [cómo usar SharePoint Framework en Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Introducción
 
-Estas instrucciones explicarán cómo puede tomar una pestaña de una aplicación de ejemplo de Microsoft Teams y usarla en SharePoint. Usaremos una pestaña que ya está hospedada en Azure para centrarse en el trabajo de integración necesario.
+La pestaña usada aquí ya está hospedada en Azure, para centrarse en el trabajo de integración necesario.
 
-La aplicación de ejemplo que estamos usando es una aplicación de administración de talento. Administra el proceso de contratación de candidatos para puestos abiertos en un equipo. (La propia aplicación, aunque tiene un aspecto agradable, no hace nada en realidad. Queremos centrarnos en crear una aplicación de Teams y cargarla en Teams, no crear una aplicación de administración de talento real).
+La aplicación de ejemplo que se usa es una aplicación de administración de talento. Administra el proceso de contratación de candidatos para puestos abiertos en un equipo. Crea una aplicación de Teams de ejemplo y cárbala en Teams. No cree una aplicación de administración de talento real.
 
 ### <a name="benefits-of-this-approach"></a>Ventajas de este enfoque
 
-- Llegar a los usuarios de SharePoint con la pestaña de Teams existente
-- Cargue el manifiesto de la aplicación directamente en el catálogo de aplicaciones de SharePoint. [Los paquetes de](~/concepts/build-and-test/apps-package.md) aplicaciones de Teams ahora son compatibles con SharePoint
-- Los usuarios finales configuran la pestaña en una página como cualquier otro elemento web de SharePoint
-- La pestaña puede acceder a su [contexto de](~/tabs/how-to/access-teams-context.md) la mismo forma que cuando se ejecuta dentro de Teams
+* Llegue a los usuarios de SharePoint con la pestaña Teams existente.
+* Cargue el manifiesto de la aplicación directamente en el catálogo de aplicaciones de SharePoint. [Los paquetes de](~/concepts/build-and-test/apps-package.md) aplicaciones de Teams ahora son compatibles con SharePoint.
+* Los usuarios configuran la pestaña en una página como cualquier otro elemento web de SharePoint.
+* La pestaña puede tener acceso a [su contexto](~/tabs/how-to/access-teams-context.md) del mismo modo que cuando se ejecuta dentro de Teams.
 
-## <a name="step-1-testing-the-sample-app"></a>Paso 1: Probar la aplicación de ejemplo
+**Para agregar la pestaña Teams a SharePoint**
 
-Descargue el manifiesto de la aplicación de ejemplo [**desde aquí.**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip)
+Realice los siguientes pasos para agregar la pestaña Teams a SharePoint:
 
-En Microsoft Teams, haga clic en el icono de la Tienda en la esquina inferior izquierda y, a continuación, en "Cargar una aplicación personalizada" en la parte inferior izquierda. El archivo que se va a cargar se ubicará en la carpeta Descargas; se denomina TalentMgmt-Azure.zip. Si todo va bien, verás la pantalla de instalación o consentimiento de la aplicación de administración de talento. Elija el equipo en el que desea instalar y haga clic en el botón Instalar. Ahora puedes experimentar con la aplicación.
+## <a name="1-test-the-sample-app"></a>1. Probar la aplicación de ejemplo
 
-## <a name="step-2-using-the-teams-tab-in-sharepoint"></a>Paso 2: Usar la pestaña Teams en SharePoint
+Descargue el [manifiesto de la aplicación de ejemplo](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
-Cargue e implemente el paquete de la aplicación de Teams en el Catálogo de aplicaciones de SharePoint visitando `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` , por ejemplo. `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`
+1. Abra Microsoft Teams.
+1. Seleccione el **icono de la Appstore** en la parte inferior izquierda de la ficha lateral.
+1. Selecciona **Cargar una aplicación personalizada** en la parte inferior izquierda. La siguiente imagen muestra la pantalla correspondiente:  
 
-Cuando se le pida, habilite "Hacer que esta solución esté disponible para todos los sitios de la organización":
+    ![cargar una aplicación personalizada](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-![Pestañas en la vista de SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+1. El archivo que se va a cargar se encuentra en la **carpeta Descargas.** Se denomina TalentMgmt-Azure.zip. La siguiente imagen muestra la pantalla correspondiente:
+ 
+    ![TalentMgmt en Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
-En el sitio, cree una nueva página haciendo clic en el botón de engranaje situado en la esquina superior derecha y, a continuación, haga clic en "Agregar una página":
+1. Puedes ver la pantalla de instalación o consentimiento de la aplicación de administración de talento. Seleccione el equipo que desea instalar. 
+1. Selecciona **instalar** e iniciar la experimentación con la aplicación.
 
-![Vista de SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+## <a name="2-use-teams-tab-in-sharepoint"></a>2. Usar la pestaña Teams en SharePoint
 
-Verá la experiencia de creación de páginas de SharePoint. Asigne a su página el nombre "Pestaña Mis equipos".
+1. Cargue e implemente el paquete de la aplicación de Teams en el Catálogo de aplicaciones de SharePoint visitando `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` . Por ejemplo, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
 
-Abra el cuadro de herramientas del elemento web presionando el botón + y seleccione la pestaña Teams (denominada "Contoso HR"). Los elementos web se ordenan alfabéticamente; si es una lista larga, puede usar la barra de búsqueda para encontrarla. Esto creará un elemento web en el lienzo que contiene la pestaña de Teams:
+1. Cuando se le solicite, habilite **Hacer que esta solución esté disponible para todos los sitios de la organización**.
+La siguiente imagen muestra la pantalla correspondiente:
 
-![Vista de pestaña](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+   ![Pestañas en la vista sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
-Presione el botón "Publicar" cuando haya terminado de editar.
+1. En el sitio, cree una nueva página seleccionando el botón de engranaje situado en la parte superior derecha y, a continuación, **seleccione Agregar una página**.
+La siguiente imagen muestra la pantalla correspondiente:
 
-Es posible que desee hacer clic en "Agregar página a la navegación" para tener una referencia rápida a la página en la barra de navegación izquierda:
+   ![Vista de Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-![Pestaña en la imagen de SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+1. Puede ver la experiencia de creación de páginas de SharePoint. Asigne un nombre a su página **como Pestaña Mis equipos**.
 
-## <a name="step-3-explore-app-pages-in-sharepoint"></a>Paso 3: Explorar páginas de aplicación en SharePoint
+1. Abra el cuadro de herramientas del elemento web presionando el botón y seleccione la pestaña `+` Teams, denominada **Contoso HR**. Los elementos web se ordenan alfabéticamente. Si es una lista larga, puede usar la barra de búsqueda para buscarla. Esto crea un elemento web en el lienzo que contiene la pestaña Teams. La siguiente imagen muestra la vista de tabulación:
 
-Una vez publicada la página, puede explorar cómo convertir la aplicación teams en una [experiencia más completa dentro de SharePoint.](/sharepoint/dev/spfx/web-parts/single-part-app-pages) Esto convierte la página actual en una página de aplicación, que muestra el diseño de página normal de SharePoint con una experiencia de página completa para la pestaña Teams:
+   ![Vista de tabulación](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
-![Imagen de pestañas en SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+1. Presione el **botón Publicar** después de finalizar la edición.
+
+1. Seleccione **Agregar página a la navegación** para tener una referencia rápida a la página en la barra de navegación izquierda. La siguiente imagen muestra la pestaña en Sharepoint: 
+
+   ![Ficha en la imagen de Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+
+## <a name="3-explore-app-pages-in-sharepoint"></a>3. Explorar páginas de aplicaciones en SharePoint
+
+Después de publicar la página, puede explorar cómo convertir la aplicación de Teams en una [experiencia más completa dentro de SharePoint.](/sharepoint/dev/spfx/web-parts/single-part-app-pages) Esto convierte la página actual en una página de aplicación, que muestra el diseño de página normal de SharePoint con una experiencia de página completa para la pestaña Teams. 
+
+La siguiente imagen muestra la experiencia completa de la aplicación de Teams en Sharepoint: ![ Imagen de pestañas en Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>Ejemplo de código
-| **Nombre de ejemplo** | **Descripción** | **SPFx** |
+| **Nombre de ejemplo** | **Description** | **SPFx** |
 |-----------------|-----------------|----------|
-| Elemento web de SPFx | Ejemplos de elementos web de SPFx para pestañas, canales y grupos. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+| Elemento web spfx | Ejemplos de elementos web de SPFx para pestañas, canales y grupos. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
-## <a name="more-information"></a>Más información
+## <a name="see-also"></a>Vea también
 
-- [Creación de la pestaña de Microsoft Teams con SharePoint Framework: tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-- [Usar páginas de aplicación de elemento único en SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+> [!div class="nextstepaction"]
+> [Creación de la pestaña de Microsoft Teams con SharePoint Framework: tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+
+> [!div class="nextstepaction"]
+> [Usar páginas de aplicación de elemento único en SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+
+> [!div class="nextstepaction"]
+> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

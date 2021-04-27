@@ -1,14 +1,15 @@
 ---
 title: Obtener contexto para su pestaña
 description: Describe cómo obtener el contexto del usuario para las pestañas
+localization_priority: Normal
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 88a9c8ac5b2bca539b931147e6f6feb1483a3b6c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696482"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020404"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtener contexto para la pestaña Microsoft Teams
 

@@ -1,17 +1,18 @@
 ---
-title: Controladores de actividad bot
+title: Controladores de actividad de bots
 author: clearab
 description: Comprender los controladores de actividad del bot en Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 22f4c3f3addcf87b3fb34a1b7b3d40d2092b8a44
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: da770d930ca6d00503c0102f1e683a60161636fd
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696433"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020193"
 ---
-# <a name="bot-activity-handlers"></a>Controladores de actividad bot
+# <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
 Este documento se basa en el artículo sobre cómo funcionan los [bots](https://aka.ms/how-bots-work) en la documentación básica [de Bot Framework](https://aka.ms/azure-bot-service-docs). La diferencia principal entre los bots desarrollados para Microsoft Teams y el bot framework principal se encuentra en las características proporcionadas en Teams.
 

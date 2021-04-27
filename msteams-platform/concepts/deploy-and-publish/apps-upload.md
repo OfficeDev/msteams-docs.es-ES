@@ -2,14 +2,15 @@
 title: Cargar la aplicación personalizada
 description: Describe cómo cargar la aplicación en Microsoft Teams
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 keywords: carga de aplicaciones de teams
-ms.openlocfilehash: c9102fa5b7056dda0db8d3e260bfb3e94b7f4e56
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946483"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020810"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Cargar un paquete de aplicación en Microsoft Teams
 

@@ -4,13 +4,14 @@ author: laujan
 description: información general sobre las aplicaciones en reuniones de Teams basadas en el rol de participante y usuario
 ms.topic: overview
 ms.author: lajanuar
+localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 29a24b70921e51d63d804e7a3edd901f607d3148
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885083"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018386"
 ---
 # <a name="apps-in-teams-meetings"></a>Aplicaciones en reuniones de Teams
 
@@ -158,7 +159,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y las característica
 | Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar ni eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
 | Federado | No disponible | No disponible | No disponible | No disponible | No disponible | No disponible |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
@@ -172,7 +173,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y las característica
 > [!div class="nextstepaction"]
 > [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Crear una aplicación](create-apps-for-teams-meetings.md)

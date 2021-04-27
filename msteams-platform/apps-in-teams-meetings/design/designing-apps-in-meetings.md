@@ -3,24 +3,25 @@ title: Diseño de la extensión de reunión
 author: heath-hamilton
 description: Aprende a diseñar aplicaciones en reuniones de Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596255"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018477"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión de reunión de Microsoft Teams
 
 Puedes crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una llamada o envíen un aviso rápido que no interrumpa el flujo de la reunión.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Puedes encontrar instrucciones de diseño más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Agregar una extensión de reunión
 
@@ -48,7 +49,7 @@ Antes de la reunión, puede agregar contenido en la pestaña. En el siguiente ej
 
 :::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de una pestaña de reunión antes y después de una reunión." border="false":::
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña:** etiqueta de navegación para la pestaña.|
 |2|**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.|
@@ -83,7 +84,7 @@ Las personas pueden usar la pestaña en la reunión para:
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de una pestaña en reunión." border="false":::
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
 |1|**Icono de aplicación (seleccionado):** logotipo de aplicación transparente de 16 píxeles.|
 |2|**Nombre de la aplicación**|
@@ -129,7 +130,7 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de un cuadro de diálogo en reunión." border="false":::
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
 |1|**Encabezado:** incluye el icono de la aplicación, el nombre, la cadena de acción y el icono cerrar.|
 |2|**iframe:** muestra el contenido de la aplicación.|
@@ -140,7 +141,7 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 
 Hay dos variantes de encabezado. Cuando sea posible, usa la variante con el avatar para reforzar que el cuadro de diálogo viene de una persona.
 
-|Counter|Descripción|
+|Contador|Descripción|
 |----------|-----------|
 |1|**Avatar:** persona que inicia el cuadro de diálogo en la reunión.|
 |2|**Icono de aplicación**|
@@ -346,9 +347,9 @@ Los modales (también conocidos como módulos de tareas) en la pestaña ya estre
    :::column-end:::
 :::row-end:::
 
-## <a name="validate-your-design"></a>Validar el diseño
+## <a name="validate-your-design"></a>Valide su diseño
 
-Si planeas publicar la aplicación en AppSource, debes comprender los problemas de diseño que normalmente provocan que las aplicaciones fallen durante el envío.
+Si tiene previsto publicar la aplicación en AppSource, debe comprender los problemas de diseño que habitualmente provocan errores en las aplicaciones durante el envío.
 
 > [!div class="nextstepaction"]
-> [Comprobar las directrices de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Comprobar las instrucciones de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

@@ -1,26 +1,27 @@
 ---
 title: ¿Qué son los módulos de tareas?
 author: clearab
-description: Agrega experiencias emergentes modales para recopilar o mostrar información a los usuarios desde tus aplicaciones de Microsoft Teams.
+description: Agregar experiencias emergentes modales para recopilar o mostrar información a los usuarios desde las aplicaciones de Microsoft Teams
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 5472f07a8183e6f06ce6cb4fa2a9c048e083dcca
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449552"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019520"
 ---
 # <a name="what-are-task-modules"></a>¿Qué son los módulos de tareas?
 
-Los módulos de tareas permiten crear experiencias emergentes modales en la aplicación de Teams. Dentro del elemento emergente puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un widget basado en youtube o vídeo de Microsoft Stream o mostrar `<iframe>` una [tarjeta adaptable.](/adaptive-cards/) Son especialmente útiles para iniciar y completar tareas o para mostrar información enriquecid como vídeos o paneles de Power BI. Una experiencia emergente suele ser más natural para los usuarios que inician y completan tareas en comparación con una pestaña o una experiencia de bot basada en conversación.
+Los módulos de tareas le permiten crear experiencias emergentes modales en su aplicación de Teams. Dentro del elemento emergente puede ejecutar su propio código HTML/JavaScript personalizado, mostrar un widget basado en youtube o vídeo de Microsoft Stream o mostrar `<iframe>` una [tarjeta adaptable.](/adaptive-cards/) Son especialmente útiles para iniciar y completar tareas o para mostrar información enriquecid como vídeos o paneles de Power BI. Una experiencia emergente suele ser más natural para los usuarios que inician y completan tareas en comparación con una pestaña o una experiencia de bot basada en conversación.
 
 Los módulos de tareas se crean sobre la base de las pestañas de Microsoft Teams; son esencialmente una pestaña dentro de una ventana emergente. Usan el mismo SDK, por lo que si has creado una pestaña ya estás en el 90 % de la forma de crear un módulo de tareas.
 
-Los módulos de tareas se pueden invocar de tres maneras:
+Los módulos de tarea pueden invocarse de tres maneras:
 
 * **Pestañas de canal o personales.** Con el SDK de pestañas de Microsoft Teams, puede invocar módulos de tareas desde botones, vínculos o menús de la pestaña. Esto [se trata detalladamente aquí.](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
-* **Bots.** Botones en [las tarjetas](~/task-modules-and-cards/cards/cards-reference.md) enviadas desde el bot. Esto es especialmente útil cuando no necesita que todos los usuarios de un canal vean lo que está haciendo con un bot. Por ejemplo, cuando los usuarios responden a un sondeo en un canal, no resulta muy útil ver un registro de esa encuesta que se está creando. [Esto se trata detalladamente aquí.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* **Bots.** Botones en [las tarjetas](~/task-modules-and-cards/cards/cards-reference.md) enviadas desde el bot. Esto es especialmente útil cuando no necesita que todos los usuarios de un canal vean lo que está haciendo con un bot. Por ejemplo, cuando los usuarios responden a un sondeo de un canal, no resulta útil ver un registro de ese sondeo que se está creando. [Esto se trata detalladamente aquí.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * **Fuera de Teams desde un vínculo profundo.** También puede crear direcciones URL para invocar un módulo de tareas desde cualquier lugar. [Esto se trata detalladamente aquí.](#task-module-deep-link-syntax)
 
 ## <a name="what-a-task-module-looks-like"></a>Cómo es un módulo de tareas
@@ -237,7 +238,7 @@ Con los módulos de tareas basados en HTML/JavaScript, es tu responsabilidad gar
 Microsoft Teams se asegurará de que la navegación por el teclado funcione correctamente desde el encabezado del módulo de tareas al HTML y viceversa.
 
 ## <a name="code-sample"></a>Ejemplo de código
-|**Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js**|
+|**Nombre de ejemplo** | **Description** | **.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 |Ejemplo de módulo de tareas (Bots-V4) | Ejemplos para crear módulos de tareas. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 |Ejemplo de módulo de tareas (Tabs + Bots-V3) | Ejemplos para crear módulos de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|

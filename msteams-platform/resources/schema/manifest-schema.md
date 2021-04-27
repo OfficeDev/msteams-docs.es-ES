@@ -3,13 +3,14 @@ title: Referencia de esquema de manifiesto
 description: Describe el esquema de manifiesto de Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
+localization_priority: Normal
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: d4dd299a9e848820e81f87361460b5b8b14f15b7
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 03740bb12e849126dcd43b8628521928d060a80f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946448"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019695"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -324,7 +325,7 @@ El identificador es un identificador único generado por Microsoft para la aplic
 
 Proporciona información sobre su empresa. Para las aplicaciones enviadas a AppSource (anteriormente Tienda Office), estos valores deben coincidir con la información de la entrada de AppSource. Consulte las [directrices de publicación](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) para obtener información adicional.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`name`|32 caracteres|✔|Nombre para mostrar del desarrollador.|
 |`websiteUrl`|2048 caracteres|✔|La https:// url del sitio web del desarrollador. Este vínculo debe llevar a los usuarios a su empresa o página de aterrizaje específica del producto.|
@@ -338,7 +339,7 @@ Proporciona información sobre su empresa. Para las aplicaciones enviadas a AppS
 
 El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la experiencia de Teams. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y `full` deben ser diferentes.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
@@ -351,7 +352,7 @@ Describe la aplicación a los usuarios. Para las aplicaciones enviadas a AppSour
 
 Asegúrese de que su descripción describe con precisión su experiencia y proporciona información para ayudar a los clientes potenciales a comprender lo que hace su experiencia. Debe tener en cuenta en la descripción completa, si se requiere una cuenta externa para su uso. Los valores de `short` y `full` deben ser diferentes. La descripción breve no debe repetirse dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|80 caracteres|✔|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔|Descripción completa de la aplicación.|
@@ -368,7 +369,7 @@ Un identificador único para la aplicación en la notación de dominio inverso; 
 
 Permite la especificación de un idioma predeterminado, así como punteros a archivos de idioma adicionales. Vea [localización](~/concepts/build-and-test/apps-localization.md).
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|La etiqueta de idioma de las cadenas de este archivo de manifiesto de nivel superior.|
 
@@ -376,7 +377,7 @@ Permite la especificación de un idioma predeterminado, así como punteros a arc
 
 Una matriz de objetos que especifica traducciones de idioma adicionales.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`languageTag`||✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
 |`file`||✔|Una ruta de acceso de archivo relativa a un archivo .json que contiene las cadenas traducidas.|
@@ -387,7 +388,7 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 Iconos usados dentro de la aplicación de Teams. Los archivos de icono deben incluirse como parte del paquete de carga. Consulta [Iconos](../../concepts/build-and-test/apps-package.md#app-icons) para obtener más información.
 
-|Name| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`outline`|32 x 32 píxeles|✔|Una ruta de acceso de archivo relativa a un icono de esquema PNG transparente de 32 x 32.|
 |`color`|192 x 192 píxeles|✔|Una ruta de acceso de archivo relativa a un icono PNG de color completo de 192 x 192.|

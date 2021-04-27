@@ -1,14 +1,15 @@
 ---
 title: Iniciar acciones con extensiones de mensajería
 description: Crear extensiones de mensajería basadas en acciones para permitir a los usuarios desencadenar servicios externos
+localization_priority: Normal
 ms.topic: how-to
 keywords: Búsqueda de extensiones de mensajería de extensiones de mensajería de teams
-ms.openlocfilehash: c95139cea22569901e04effb0b1283c6979454b9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a3122dbaf79f57054cfec2e8aef2ed4f687338be
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696097"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019737"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar acciones con extensiones de mensajería
 

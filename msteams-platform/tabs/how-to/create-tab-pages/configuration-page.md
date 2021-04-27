@@ -3,14 +3,15 @@ title: Creación de una página de configuración
 author: laujan
 description: cómo crear una página de configuración
 keywords: Canal de grupo de pestañas de teams configurable
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 0866d11442f79cee33d4454dbd4ed4d6b4b1a840
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382379"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019597"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -112,7 +113,7 @@ El código de página de configuración informa a Teams de que los requisitos de
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obtener datos de contexto para la configuración de la pestaña
 
-La pestaña puede requerir información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de la pestaña al proporcionar una experiencia de usuario más personalizada.
+Puede que su pestaña necesite información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de la pestaña al proporcionar una experiencia de usuario más personalizada.
 
 Para obtener más información sobre las propiedades usadas para la configuración de pestañas, vea [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
 

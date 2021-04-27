@@ -2,13 +2,14 @@
 title: Autenticación para pestañas con Azure Active Directory
 description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
+localization_priority: Normal
 keywords: fichas de autenticación de teams AAD
-ms.openlocfilehash: f2429653fe875406870ba82e27fce3d643ff69f6
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 2fdfc4448abb6980cca97e90951d7772611108da
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995907"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020390"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una pestaña de Microsoft Teams
 

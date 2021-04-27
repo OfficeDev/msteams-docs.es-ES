@@ -2,14 +2,15 @@
 title: Crear y enviar el módulo de tareas
 author: clearab
 description: Cómo controlar la acción de invocación inicial y responder con un módulo de tarea desde un comando de extensión de mensajería de acción
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 12af2d788c0579414b544e7e2fd7f07a77d45919
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696279"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019849"
 ---
 # <a name="create-and-send-the-task-module"></a>Crear y enviar el módulo de tareas
 

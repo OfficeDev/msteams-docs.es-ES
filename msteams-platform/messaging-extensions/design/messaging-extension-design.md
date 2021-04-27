@@ -3,14 +3,15 @@ title: Diseño de la extensión de mensajería
 description: Aprende a diseñar una extensión de mensajería de Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
 keywords: Recomendaciones sobre extensiones de mensajería de referencia de directrices de diseño de teams
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697014"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020726"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Diseño de la extensión de mensajería de Microsoft Teams
 

@@ -1,15 +1,17 @@
 ---
 title: Integrar capacidades de ubicación
+author: Rajeshwari-v
 description: Cómo usar el SDK de cliente de JavaScript de Teams para aprovechar las capacidades de ubicación
 keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696860"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019863"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -64,7 +66,7 @@ Debes usar el siguiente conjunto de API para habilitar las capacidades de ubicac
 
 Debes asegurarte de controlar estos errores correctamente en la aplicación de Teams. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|

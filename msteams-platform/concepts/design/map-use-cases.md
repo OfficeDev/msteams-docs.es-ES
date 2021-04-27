@@ -3,13 +3,14 @@ title: Asignar los casos de uso a las funcionalidades de la aplicación de Teams
 author: clearab
 description: Elegir el ámbito de aplicación correcto
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 3ade254d4042e80ea13201bd5936fd6bd326a0b2
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 693adaae96cdf65a04c591d51c57d4bf7fe972b1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654303"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019877"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a las funcionalidades de la aplicación de Teams
 
@@ -102,7 +103,7 @@ Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que pu
 
 Dicho esto, las mejores aplicaciones suelen combinar varias características, creando una aplicación que involucre a los usuarios en el contexto correcto con la funcionalidad adecuada en el momento adecuado. No debe forzar ninguna funcionalidad en un lugar al que no pertenezca. El hecho de que tenga un buen bot de conversación uno a uno no significa que lo agregue a ningún equipo. Los distintos puntos de extensibilidad son buenos para diferentes cosas y juegan a sus puntos fuertes para crear una aplicación correcta.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Desarrollar aplicaciones para Microsoft Teams](../../overview.md)

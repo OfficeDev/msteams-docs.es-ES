@@ -1,15 +1,17 @@
 ---
 title: Integrar capacidades multimedia
+author: Rajeshwari-v
 description: Cómo usar el SDK de cliente de JavaScript de Teams para habilitar funcionalidades multimedia
 keywords: Medios de permisos de dispositivo nativos de las capacidades de micrófono de imagen de cámara
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 375d68c7c712b7a8d2f7114b47aae61c889b4197
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 9e4ccf2dfd2c8743621ea44f340ca7a41e302adc
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449586"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020747"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
 
@@ -79,7 +81,7 @@ Debes usar el siguiente conjunto de API para habilitar las capacidades multimedi
 Debes asegurarte de controlar estos errores correctamente en la aplicación de Teams. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **404** | FILE_NOT_FOUND | El archivo especificado no se encuentra en la ubicación determinada.|
@@ -253,7 +255,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Integrar la funcionalidad del escáner de códigos DE BARRAS o QR en Teams](qr-barcode-scanner-capability.md)

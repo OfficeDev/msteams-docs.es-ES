@@ -1,16 +1,17 @@
 ---
-title: Diseñar webhooks y conectores de Microsoft Teams
+title: Diseño de webhooks y conectores de Microsoft Teams
 author: heath-hamilton
 description: Instrucciones y procedimientos recomendados para diseñar webhooks y conectores para Microsoft Teams.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34d7f5dd993dfb8a4de32d49d58ed47be09d92e2
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: cdf52398626f726ccd908ee5e2bf0861a81e5757
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797939"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020221"
 ---
-# <a name="design-webhooks-and-connectors"></a>Diseñar webhooks y conectores
+# <a name="design-webhooks-and-connectors"></a>Diseño de webhooks y conectores
 
 Próximamente...

@@ -2,13 +2,14 @@
 title: Llamadas multimedia en tiempo real y reuniones en línea con Microsoft Teams
 description: Comprender conceptos clave en la creación de bots que pueden realizar llamadas de audio y vídeo en tiempo real y reuniones en línea.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media hosted media service-hosted media
-ms.openlocfilehash: 997fcedd2cd2d536a4c413c8f8ef2dd355d5a7e3
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: deedc47f67fe6848cf7f84457247d2271257e3f0
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697091"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020158"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Llamadas y reuniones multimedia en tiempo real con Microsoft Teams
 

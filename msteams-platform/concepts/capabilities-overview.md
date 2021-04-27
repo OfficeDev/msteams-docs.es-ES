@@ -3,14 +3,15 @@ title: Comprender las funcionalidades de la aplicación
 author: heath-hamilton
 description: Características de la aplicación de Teams explicadas
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: d1c6916c9433b15ddcd13e9128b25170dd990dd4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654436"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019933"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprender las capacidades de la aplicación de Microsoft Teams
 
@@ -38,7 +39,7 @@ La siguiente ilustración te ofrece una idea de qué funcionalidades proporciona
 A medida que te familiarices con el desarrollo de aplicaciones de Teams, comprendes sus fundamentos básicos. Comprende que hay más de una forma de crear determinadas características. En estos escenarios, considere cómo puede proporcionar una experiencia más nativa al usuario.
 Por ejemplo, puedes recopilar la entrada del usuario en un formulario creado como una pestaña en la aplicación. También puede hacerlo con un módulo de tareas sin cambiar las vistas y interrumpir el flujo de trabajo del usuario. Es importante elegir puntos de extensión que proporcionen una desviación mínima del flujo de trabajo normal de un usuario.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Crear aplicaciones para Teams](../overview.md)

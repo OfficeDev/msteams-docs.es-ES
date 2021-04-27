@@ -3,13 +3,14 @@ title: Eventos de conversación
 author: WashingtonKayaker
 description: Cómo trabajar con eventos de conversación desde el bot de Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996033"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020031"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -1378,7 +1379,7 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | Bot de conversación | Código de ejemplo para eventos de conversación de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

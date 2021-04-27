@@ -3,13 +3,14 @@ title: 'Tutorial: crea la primera aplicación con Node.js'
 description: Obtén información sobre cómo empezar a crear aplicaciones de Microsoft Teams con Node.js.
 keywords: introducción a node.js nodejs App Studio
 ms.topic: tutorial
+localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 61be1056a07952c6cf166dbe183fa257ceaf7227
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: ae1b8b2b5b671488ff6f86a3a3295f448ebb6006
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294764"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020964"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>Crear la primera aplicación de Microsoft Teams con Node.js
 
@@ -109,7 +110,7 @@ Cuando se inicia la aplicación hello-world, se muestra `App started listening o
 > [!NOTE]
 > Si ve un número de puerto diferente que se muestra en el mensaje anterior, es porque tiene un conjunto de variables de entorno PORT. Puede seguir usando ese puerto o cambiar la variable de entorno a 3333.
 
-En este punto, puede abrir una ventana del explorador y navegar a las siguientes direcciones URL para comprobar que todas las direcciones URL de la aplicación se están cargando:
+En este punto, puede abrir una ventana del explorador y navegar a las siguientes direcciones URL para comprobar que se están cargando todas las direcciones URL de la aplicación:
 
 - [http://localhost:3333](http://localhost:3333)
 - [http://localhost:3333/hello](http://localhost:3333/hello)
@@ -199,7 +200,7 @@ NODE_CONFIG_DIR apunta al directorio en la raíz del repositorio (de forma prede
 
 ## <a name="configure-the-app-tab"></a>Configurar la pestaña aplicación
 
-Una vez que instales la aplicación en un equipo, deberás configurarla para mostrar contenido. Vaya a un canal del equipo y haga clic en el **botón "+"** para agregar una nueva pestaña. A continuación, puede `Hello World` elegir entre la lista Agregar **una** pestaña. A continuación, se le mostrará un cuadro de diálogo de configuración. Este cuadro de diálogo le permitirá elegir qué pestaña mostrar en este canal. Una vez que seleccione la pestaña y haga clic `Save` en, puede ver la `Hello World` pestaña cargada con la pestaña que eligió.
+Una vez que instales la aplicación en un equipo, deberás configurarla para mostrar contenido. Vaya a un canal del equipo y haga clic en el **botón "+"** para agregar una nueva pestaña. A continuación, puede `Hello World` elegir entre la lista Agregar **una** pestaña. A continuación, se le mostrará un cuadro de diálogo de configuración. Este cuadro de diálogo le permitirá elegir qué pestaña mostrar en este canal. Una vez que seleccione la pestaña y haga clic `Save` en, podrá ver la `Hello World` pestaña cargada con la pestaña que eligió.
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 

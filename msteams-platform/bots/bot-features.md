@@ -3,13 +3,14 @@ title: Bots y SDK
 author: clearab
 description: Bots y SDK en Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995977"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020186"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 

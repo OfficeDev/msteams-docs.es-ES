@@ -3,13 +3,14 @@ title: Introducción a los conceptos básicos de desarrollo de aplicaciones
 author: heath-hamilton
 description: Describir los conceptos básicos del desarrollo de plataformas de Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4af23e06cbf7a3f630b77ee1693e0931c9c9c03e
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: b52eebf2b8e0884cd225298ae557bb7ac65d4a68
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654275"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020866"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Conceptos básicos de desarrollo de aplicaciones de Microsoft Teams
 
@@ -32,7 +33,7 @@ Puede reconocer problemas de usuario e identificar las respuestas a algunos prob
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Se proporciona información para compartir la aplicación y colaborar en elementos de un sistema externo. También puede aprender a iniciar flujos de trabajo y enviar notificaciones a los usuarios. Obtén sugerencias adicionales sobre dónde empezar, cómo crear redes sociales con los usuarios, bots de conversación y combinar varias características.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)

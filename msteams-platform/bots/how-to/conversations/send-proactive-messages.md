@@ -3,13 +3,14 @@ title: Enviar mensajes proactivos
 description: Describe cómo enviar mensajes proactivos con el bot de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
+localization_priority: Normal
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 44e8f3335b7ade4f4a8b1e6192802d932cbd39ed
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: ae651ac94b1b092374f6fae284b67070036b561f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995844"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020922"
 ---
 # <a name="send-proactive-messages"></a>Enviar mensajes proactivos
 
@@ -266,7 +267,7 @@ Debe proporcionar el identificador de usuario y el identificador de inquilino. S
 
 En la tabla siguiente se proporciona un ejemplo de código simple que incorpora el flujo básico de conversación en una aplicación de Teams y cómo crear un nuevo hilo de conversación en un canal en Teams:
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
 | Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluido el envío de mensajes proactivos de uno a uno.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar nuevo subproceso en un canal | Muestra la creación de un nuevo subproceso en un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |

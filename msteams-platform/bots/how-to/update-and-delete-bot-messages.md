@@ -3,13 +3,14 @@ title: Actualizar y eliminar mensajes enviados desde el bot
 author: WashingtonKayaker
 description: Cómo actualizar y eliminar mensajes enviados desde el bot de Microsoft Teams
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a2836d59c22b9784f1f1a0c84306072bb6a97d3e
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996005"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019989"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Actualizar y eliminar mensajes enviados desde el bot
 
@@ -65,7 +66,7 @@ Para actualizar una actividad existente dentro de una conversación, incluya y `
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Solicitud y responce** | **Descripción** |
+| **Solicitud y responce** | **Description** |
 |----|----|
 | Un [objeto activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | Un [objeto ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
 
@@ -169,9 +170,9 @@ Para eliminar una actividad existente dentro de una conversación, incluya y `co
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Solicitud y responce** | **Descripción** |
+| **Solicitud y responce** | **Description** |
 |----|----|
-| N/D | Código de estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
+| N/A | Código de estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
 
 ---
 
@@ -179,7 +180,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 En el ejemplo de código siguiente se muestran los conceptos básicos de las conversaciones:
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
 | Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluida la actualización y eliminación de mensajes. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
