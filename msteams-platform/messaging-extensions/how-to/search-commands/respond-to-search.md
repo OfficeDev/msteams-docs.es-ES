@@ -4,12 +4,12 @@ author: clearab
 description: Cómo responder al comando de búsqueda desde una extensión de mensajería en una aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 044c6eebe9489ed404c9fa89b29c306cde8c7363
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996012"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058589"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -340,15 +340,14 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
+| Nombre de ejemplo           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Agregar configuración a una extensión de mensajería](~/messaging-extensions/how-to/add-configuration-page.md)
+- [Agregar configuración a una extensión de mensajería](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## <a name="next-step"></a>Paso siguiente
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f224ad8b97cd5dd1a4349039824abaf551ef362e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020817"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058470"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino de prueba de Microsoft 365
 
@@ -254,14 +254,11 @@ Habilitar la instalación local de aplicaciones personalizadas es opcional. De f
 
 5. Una vez que el script haya finalizado la ejecución, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
+- [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 

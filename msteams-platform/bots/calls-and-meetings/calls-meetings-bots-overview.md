@@ -4,12 +4,12 @@ description: Obtén información sobre cómo las aplicaciones de Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: llamadas de audio vídeo IVR reuniones en línea de voz
-ms.openlocfilehash: 52a7e1e24fdc0a2c17264087e4f4461b7c43a50a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020172"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058316"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de llamadas y reuniones en línea
 
@@ -89,26 +89,25 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Description** | **Graph** |
+| **Nombre de ejemplo** | **Descripción** | **Graph** |
 |---------------|----------|--------|
 | Comunicación de gráficos | Gráfico de comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Referencia de la API de Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-> [!div class="nextstepaction"]
-> [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-> [!div class="nextstepaction"]
-> [Registro de un bot que admite llamadas y reuniones en línea](./registering-calling-bot.md)
-> [!div class="nextstepaction"]
-> [Permisos de Graph para bots de llamadas y reuniones en línea](./registering-calling-bot.md#add-graph-permissions)
-> [!div class="nextstepaction"]
-> [Cómo desarrollar bots de llamadas y reuniones en línea en el equipo](./debugging-local-testing-calling-meeting-bots.md)
-> [!div class="nextstepaction"]
-> [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md)
-> [!div class="nextstepaction"]
-> [Información técnica sobre cómo controlar las notificaciones de llamadas entrantes](./call-notifications.md)
+- [Referencia de la API de Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+
+- [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+
+- [Registro de un bot que admite llamadas y reuniones en línea](./registering-calling-bot.md)
+
+- [Permisos de Graph para bots de llamadas y reuniones en línea](./registering-calling-bot.md#add-graph-permissions)
+
+- [Cómo desarrollar bots de llamadas y reuniones en línea en el equipo](./debugging-local-testing-calling-meeting-bots.md)
+
+- [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md)
+
+- [Información técnica sobre cómo controlar las notificaciones de llamadas entrantes](./call-notifications.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

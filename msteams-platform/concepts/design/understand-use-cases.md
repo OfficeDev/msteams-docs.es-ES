@@ -5,12 +5,12 @@ description: Entender los casos de uso
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 748e40c712af7fb0095edd4f6ffe67ed253decec
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019870"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058666"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -77,16 +77,13 @@ Sobre todo, recuerde que a nadie le gusta el correo no deseado. La limpieza de m
 
 Identifique qué nuevas características prefiere tener el usuario en la solución actual. Si tienes una guía básica para nuevas características que agregar a la aplicación, el diseño y la arquitectura se verán afectados.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Elegir cómo distribuir la aplicación](../deploy-and-publish/overview.md)
+- [Elegir cómo distribuir la aplicación](../deploy-and-publish/overview.md)
 
-> [!div class="nextstepaction"]
-> [Diseñar pestañas eficaces](../../tabs/design/tabs.md)
+- [Diseñar pestañas eficaces](../../tabs/design/tabs.md)
 
-> [!div class="nextstepaction"]
-> [Diseñar bots increíbles](../../bots/design/bots.md)
+- [Diseñar bots increíbles](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

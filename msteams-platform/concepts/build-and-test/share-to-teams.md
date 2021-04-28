@@ -1,17 +1,17 @@
 ---
-title: Botón Crear share-to-teams
+title: Crear un botón Compartir en Teams
 description: Cómo agregar el botón Compartir a Teams incrustado en su sitio web
 ms.topic: reference
 localization_priority: Normal
 keywords: Share Teams Share-to-Teams
-ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020826"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058477"
 ---
-# <a name="create-share-to-teams-button"></a>Botón Crear share-to-teams
+# <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
 Los sitios web de terceros pueden usar el script del iniciador para insertar botones de Share-to-Teams en sus páginas web. Cuando selecciona, inicia la experiencia de Share-to-Teams en una ventana emergente. Esto le permite compartir un vínculo directamente con cualquier persona o canal de Microsoft Teams sin cambiar el contexto. Este documento le guía sobre cómo crear e insertar un botón Compartir a Teams para su sitio web, crear la vista previa del sitio web y ampliar Share-to-Teams for Education.
 
@@ -79,7 +79,7 @@ En la tabla siguiente se describen las etiquetas necesarias:
 |Valor|Etiqueta meta| Open Graph|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|Descripción|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Imagen en miniatura| ninguno. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 Puede usar las versiones predeterminadas html o la versión de Open Graph.
@@ -131,7 +131,6 @@ Puede seleccionar para establecer los valores predeterminados de los siguientes 
 ></span>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

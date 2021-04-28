@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorización de teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 7f67df35954cd29810c387d05215eeec476a4ed4
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654429"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058330"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos de recursos en Teams
 
@@ -83,8 +83,7 @@ Ejecute toda la colección de permisos para cada llamada a la API. Los permisos 
 2. Siga los pasos para probar los permisos [RSC agregados mediante Postman](#test-added-rsc-permissions-using-the-postman-app).
 3. Compruebe todos los códigos de estado de respuesta para confirmar que las llamadas API específicas, correctamente, han fallado con un código de estado **HTTP 403**.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [API de Microsoft Graph y Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+- [API de Microsoft Graph y Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

@@ -5,12 +5,12 @@ description: Describe dónde pueden los usuarios descubrir y usar su aplicación
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: f3f4af191400b6c04c41827ce689b4250c105ce0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f2bdb35c76bdb7487e66a0e6b9ad01c6da9e04f8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019842"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058323"
 ---
 # <a name="entry-points-for-teams-apps"></a>Puntos de entrada para aplicaciones de Teams
 
@@ -45,10 +45,9 @@ En la siguiente lista se muestra cómo se usan normalmente las capacidades de Te
 
 * [**Las pestañas**](~/tabs/what-are-tabs.md) proporcionan una experiencia web incrustada a pantalla completa que es significativa para el usuario que la está viendo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Directrices de diseño de aplicaciones de Teams](../concepts/design/design-teams-app-overview.md)
+- [Directrices de diseño de aplicaciones de Teams](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

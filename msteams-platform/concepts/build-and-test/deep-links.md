@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020838"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058337"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -222,7 +222,6 @@ Los parámetros de consulta son:
 
 Para usar este vínculo profundo con el bot, puedes especificarlo como el destino de la dirección URL en el botón de la tarjeta o pulsar en la acción a través del `openUrl` tipo de acción.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

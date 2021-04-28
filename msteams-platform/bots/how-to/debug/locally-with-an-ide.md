@@ -5,12 +5,12 @@ description: Probar y depurar el bot localmente con un IDE
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 495e4dd2a3f29dbe0be61e8b42827bfc8c8a6f94
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 52676d35599560704e5bb72d85e09860174fdaf1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020024"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058379"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -93,10 +93,8 @@ Para impedir que el bot reciba mensajes, vaya al **Panel de bots** y edite el ca
 
 Para quitar el bot completamente de Teams, vaya al **Panel de bots** y edite el canal de Microsoft Teams. Elija el **botón** Eliminar en la parte inferior. Esto evita que los usuarios detecten, agreguen e interactúen con el bot. Esto no quita el bot de las instancias de Teams de otros usuarios, pero también deja de funcionar para ellas.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class=nextstep]
-> [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)
+- [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)
 
-> [!div class=nextstep]
-> [Depurar el bot de llamadas y reuniones de forma local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+- [Depurar el bot de llamadas y reuniones de forma local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

@@ -6,12 +6,12 @@ keywords: Cámara media qr code qrcode bar code barcode scanner scan capabilitie
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ede791a6cd566a0fc725a04e0b615ae1b8eeb0eb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020740"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058344"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar la función de escáner de código QR o de códigos de barras 
 
@@ -108,10 +108,8 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 }, config);
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar capacidades multimedia en Teams](mobile-camera-image-permissions.md)
+- [Integrar capacidades multimedia en Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrar capacidades de ubicación en Teams](location-capability.md)
+- [Integrar capacidades de ubicación en Teams](location-capability.md)

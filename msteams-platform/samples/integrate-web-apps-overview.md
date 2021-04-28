@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Una introducción a la integración de aplicaciones web y funcionalidades de dispositivos con la aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6493f493b2bfc67a23aebfb5142aff60cf0afe93
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020245"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058659"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
@@ -45,7 +45,7 @@ Con Power Apps, puedes crear aplicaciones empresariales que se conecten a los da
 
 Power Virtual Agent es una solución de interfaz gráfica guiada sin código. Se basa en Microsoft Power Platform y bot Framework. Permite a todos los miembros del equipo crear y mantener bots de chat conversacionales enriquecidos que se integran fácilmente con la plataforma de Teams. Puede diseñar, desarrollar y publicar agentes virtuales inteligentes para Teams sin tener que configurar un entorno de desarrollo, crear un servicio web o registrarse directamente con Bot Framework.
 
-### <a name="create-virtual-assistant"></a>Crear asistente virtual
+### <a name="create-virtual-assistant"></a>Crear un asistente virtual
 
 Virtual Assistant es una plantilla de código abierto de Microsoft que le permite crear una solución conversacional sólida y mantener el control total de la experiencia del usuario, la personalidad de marca de la organización y los datos necesarios. 
 
@@ -77,43 +77,30 @@ Puede crear vínculos profundos a las entidades de Teams. Puede crear vínculos 
 
 La plataforma de Microsoft Teams mejora continuamente las capacidades de los desarrolladores y se alinea con experiencias integradas de primera persona. La plataforma mejorada de Teams permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente javaScript de Microsoft Teams. 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Asignar los casos de uso de la aplicación a las funcionalidades de la plataforma teams](~/concepts/design/map-use-cases.md)
+- [Asignar los casos de uso de la aplicación a las funcionalidades de la plataforma teams](~/concepts/design/map-use-cases.md)
 
-> [!div class="nextstepaction"]
-> [Determinar los puntos de entrada de la aplicación](~/concepts/extensibility-points.md)
+- [Determinar los puntos de entrada de la aplicación](~/concepts/extensibility-points.md)
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrating-web-apps.md)
+- [Integrar aplicaciones web](~/samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Crear aplicaciones personalizadas de código bajo para Microsoft Teams](~/samples/teams-low-code-solutions.md)
+- [Crear aplicaciones personalizadas de código bajo para Microsoft Teams](~/samples/teams-low-code-solutions.md)
 
-> [!div class="nextstepaction"]
-> [Añadir un bot de chat de Power Virtual Agents](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+- [Añadir un bot de chat de Power Virtual Agents](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Crear asistente virtual](~/samples/virtual-assistant.md)
+- [Crear asistente virtual](~/samples/virtual-assistant.md)
 
-> [!div class="nextstepaction"]
-> [Plantillas de aplicaciones para Microsoft Teams](~/samples/app-templates.md)
+- [Plantillas de aplicaciones para Microsoft Teams](~/samples/app-templates.md)
 
-> [!div class="nextstepaction"]
-> [Conectores de turnos listos para producción](~/samples/shifts-wfm-connectors.md)
+- [Conectores de turnos listos para producción](~/samples/shifts-wfm-connectors.md)
 
-> [!div class="nextstepaction"]
-> [Instalar Moodle LMS](~/resources/moodleinstructions.md)
+- [Instalar Moodle LMS](~/resources/moodleinstructions.md)
 
-> [!div class="nextstepaction"]
-> [Crear un botón de Compartir en Teams](~/concepts/build-and-test/share-to-teams.md)
+- [Crear un botón de Compartir en Teams](~/concepts/build-and-test/share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Añadir una pestaña de Teams a SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+- [Añadir una pestaña de Teams a SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [Crear vínculos profundos](~/concepts/build-and-test/deep-links.md)
+- [Crear vínculos profundos](~/concepts/build-and-test/deep-links.md)
 
-> [!div class="nextstepaction"]
-> [Funciones del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
+- [Funciones del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)

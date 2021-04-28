@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 741f39c2aca6e99fb7bdfaa1171de4e2bb1e7755
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018379"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058351"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
 
@@ -37,7 +37,7 @@ Antes de crear aplicaciones para reuniones de Teams, debes comprender lo siguien
 
 ## <a name="meeting-apps-api-reference"></a>Referencia de api de aplicaciones de reunión
 
-|API|Descripción|Solicitud|Origen|
+|API|Description|Solicitud|Origen|
 |---|---|----|---|
 |**GetUserContext**| Esta API le permite obtener información contextual para mostrar contenido relevante en una pestaña de Teams. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|SDK de cliente de Microsoft Teams|
 |**GetParticipant**| Esta API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -55,7 +55,7 @@ Para identificar y recuperar información contextual del contenido de la pestañ
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Obligatorio|Description|
 |---|---|----|---|
 |**meetingId**| string | Sí | El identificador de reunión está disponible a través de Bot Invoke y el SDK de cliente de Teams.|
 |**participantId**| string | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
@@ -135,7 +135,7 @@ El cuerpo de la respuesta JSON `GetParticipant` para la API es:
 
 #### <a name="response-codes"></a>Códigos de respuesta
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **403** | La aplicación no puede obtener información de los participantes. Esta es la respuesta de error más común y se desencadena si la aplicación no está instalada en la reunión. Por ejemplo, si la aplicación está deshabilitada por el administrador del espacio empresarial o bloqueada durante la migración del sitio en directo.|
 | **200** | La información del participante se recupera correctamente.|
@@ -153,7 +153,7 @@ Todos los usuarios de una reunión reciben las notificaciones enviadas a través
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Obligatorio|Description|
 |---|---|----|---|
 |**conversationId**| string | Sí | El identificador de conversación está disponible como parte de la invocación de bot |
 
@@ -219,7 +219,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>Códigos de respuesta
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **201** | La actividad con señal se envía correctamente |
 | **401** | La aplicación responde con un token no válido. |
@@ -264,7 +264,7 @@ Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de 
 
 La pestaña y las propiedades te permiten determinar dónde debe aparecer `context` `scopes` la aplicación. Las pestañas del `team` ámbito or pueden tener más de un `groupchat` contexto. Estos son los valores de la propiedad desde `context` la que puede usar todos o algunos de los valores:
 
-|Valor|Descripción|
+|Valor|Description|
 |---|---|
 | **channelTab** | Pestaña en el encabezado de un canal de grupo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios que no se encuentra en el contexto de un equipo o reunión. |
@@ -324,7 +324,7 @@ Para usar la `userContext` API para enrutar las solicitudes en consecuencia, vea
 La extensión de mensajería funciona según lo esperado cuando un usuario está en una vista en la reunión y el usuario puede publicar tarjetas de extensión de mensaje de redacción. AppName en la reunión es una información sobre herramientas que indica el nombre de la aplicación en la barra U de la reunión.
 
 > [!NOTE]
-> Use la versión 1.9.0 del SDK de [Teams](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) para cargar el panel lateral, ya que las versiones anteriores no son compatibles con el panel lateral.
+> Use la versión 1.7.0 o posterior del SDK de [Teams,](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)ya que las versiones anteriores no admiten el panel lateral.
 
 #### <a name="in-meeting-dialog"></a>Diálogo en la reunión
 
@@ -377,12 +377,12 @@ Las configuraciones posteriores a la reunión y previas a la reunión son equiva
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Nombre de ejemplo | Descripción | .NET | Node.js |
+|Nombre de ejemplo | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Extensibilidad de reuniones | Ejemplo de extensibilidad de reuniones de Microsoft Teams para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
 | Bot de burbuja de contenido de reunión | Ejemplo de extensibilidad de reuniones de Microsoft Teams para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 > [!div class="nextstepaction"]
 > [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)

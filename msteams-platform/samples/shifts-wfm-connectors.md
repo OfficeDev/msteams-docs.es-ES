@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Kronos de conectores de Microsoft Teams
 ms.author: lajanuar
-ms.openlocfilehash: 94e0b2b61998510ea9dd054d118e856eadc49b2d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d17e3e18cfd39fec8117ce46aa99cb99da6927bc
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019620"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058701"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de turnos listos para producción  
 
@@ -70,7 +70,6 @@ Con el código de código abierto, puedes integrar JDA, como BlueYonder versión
 
 Para obtener más información sobre la contribución y la sugerencia, vea [Get it on GitHub](https://aka.ms/JDAShiftsConnector).</br></br>
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

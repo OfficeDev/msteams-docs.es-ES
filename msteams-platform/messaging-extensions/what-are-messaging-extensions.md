@@ -5,12 +5,12 @@ description: Información general sobre las extensiones de mensajería en la pla
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: fcd5661a2e0b601579fc5af843935d64ab487cef
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a5d30912d5cc580b6e85e19178c49d91811bc11f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020698"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058540"
 ---
 # <a name="messaging-extensions"></a>Extensiones de mensajería
 
@@ -70,15 +70,14 @@ Las siguientes imágenes muestran la característica de desamuestración de vín
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|
 | Extensión de mensajería con comandos basados en acciones | En este ejemplo se muestra cómo crear una extensión de mensajería basada en acciones. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extensión de mensajería con comandos basados en búsqueda | En este ejemplo se muestra cómo crear una extensión de mensajería basada en búsquedas. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Crear una extensión de mensajería](../build-your-first-app/build-messaging-extension.md)
+- [Crear una extensión de mensajería](../build-your-first-app/build-messaging-extension.md)
 
 
 ## <a name="next-step"></a>Paso siguiente

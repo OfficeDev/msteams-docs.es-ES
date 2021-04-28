@@ -6,12 +6,12 @@ keywords: Medios de permisos de dispositivo nativos de las capacidades de micró
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 9e4ccf2dfd2c8743621ea44f340ca7a41e302adc
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 98b4cd80de20671d45f198e89e1c273e88b36a87
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020747"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058365"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
 
@@ -62,7 +62,7 @@ Las [API selectMedia,](/javascript/api/@microsoft/teams-js/media?view=msteams-cl
 
 Debes usar el siguiente conjunto de API para habilitar las capacidades multimedia del dispositivo:
 
-| API      | Descripción   |
+| API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) (**Camera)**| Esta API permite a los usuarios **capturar o seleccionar medios de la cámara del** dispositivo y devolverlo a la aplicación web. Los usuarios pueden editar, recortar, girar, anotar o dibujar sobre imágenes antes del envío. En respuesta a , la aplicación web recibe los IDs multimedia de las imágenes seleccionadas `selectMedia` y una miniatura de los medios seleccionados. Esta API se puede configurar aún más a través de [la configuración ImageProps.](/javascript/api/@microsoft/teams-js/imageprops?view=msteams-client-js-latest&preserve-view=true) |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) (**Microphone**)| Establece el [mediaType en](/javascript/api/@microsoft/teams-js/mediatype?view=msteams-client-js-latest&preserve-view=true) `4` en la API para obtener acceso a la funcionalidad de `selectMedia` micrófono. Esta API también permite a los usuarios grabar audio desde el micrófono del dispositivo y devolver clips grabados a la aplicación web. Los usuarios pueden pausar, volver a grabar y reproducir la vista previa de grabación antes del envío. En respuesta a **selectMedia,** la aplicación web recibe los IDs multimedia de la grabación de audio seleccionada. <br/> Use `maxDuration` , si necesita configurar una duración en minutos para grabar la conversación. La duración actual de la grabación es de 10 minutos, después de lo cual finaliza la grabación.  |
@@ -255,10 +255,8 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar la funcionalidad del escáner de códigos DE BARRAS o QR en Teams](qr-barcode-scanner-capability.md)
+- [Integrar la funcionalidad del escáner de códigos DE BARRAS o QR en Teams](qr-barcode-scanner-capability.md)
 
-> [!div class="nextstepaction"]
-> [Integrar capacidades de ubicación en Teams](location-capability.md)
+- [Integrar capacidades de ubicación en Teams](location-capability.md)

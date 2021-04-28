@@ -4,12 +4,12 @@ description: Describe el proceso para probar la aplicación personalizada de Tea
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurar microsoft 365 inquilino Teams cargar aplicación de prueba
-ms.openlocfilehash: 8815e73c054cb75782660ef4afb3ae583b4f40fa
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d95d65961b060ff1938d51c0f3fafc2b1e56fa7e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019940"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058610"
 ---
 # <a name="test-your-app"></a>Probar la aplicación
 
@@ -35,16 +35,13 @@ Para ver los registros de la consola, ver o modificar las solicitudes html, css 
 
 Agregue los datos de prueba al inquilino de prueba de Microsoft 365. Para obtener más información, vea Agregar datos de prueba al inquilino de prueba de [Office 365](~/concepts/build-and-test/test-data.md)y completar todos los requisitos previos antes de empezar a cargar los datos de prueba.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
+- [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

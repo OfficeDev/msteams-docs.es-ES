@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5b23e3b2548e3d0eab98fae73d37316063fe60c1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020929"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058603"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -390,7 +390,7 @@ Para obtener más información acerca de las tarjetas y las tarjetas de los bots
 
 A continuación se desenván los códigos de estado y sus valores de mensaje y código de error:
 
-| Código de estado | Código de error y valores de mensaje | Descripción |
+| Código de estado | Código de error y valores de mensaje | Description |
 |----------------|-----------------|-----------------|
 | 403 | **Código**: `ConversationBlockedByUser` <br/> **Mensaje:** El usuario bloqueó la conversación con el bot. | El usuario bloqueó el bot en un chat 1:1 o un canal mediante la configuración de moderación. |
 | 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensaje:** el bot no forma parte de la lista de conversaciones. | El bot no forma parte de la conversación. |
@@ -403,16 +403,15 @@ A continuación se desenván los códigos de estado y sus valores de mensaje y c
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Nombre de ejemplo | Descripción | . NETCore | Node.js | Python |
+|Nombre de ejemplo | Description | . NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
 | Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
-> [!div class="nextstepaction"]
-> [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+- [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
+
+- [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

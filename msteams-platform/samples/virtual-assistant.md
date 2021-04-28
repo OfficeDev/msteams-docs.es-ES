@@ -1,17 +1,17 @@
 ---
-title: Crear asistente virtual
+title: Crear un asistente virtual
 description: Cómo crear bots y habilidades del Asistente virtual para su uso en Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots de asistente virtual de teams
-ms.openlocfilehash: 65d9b90dacd6ca653ce22b7170651423a2ac9425
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 80a308050317e8a211b8f7a9e2dd459c1572af18
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019663"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058680"
 ---
-# <a name="create-virtual-assistant"></a>Crear asistente virtual 
+# <a name="create-virtual-assistant"></a>Crear un asistente virtual 
 
 Virtual Assistant es una plantilla de código abierto de Microsoft que le permite crear una solución conversacional sólida y mantener el control total de la experiencia del usuario, la personalidad de marca de la organización y los datos necesarios. La [plantilla](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) principal del Asistente virtual es el bloque de creación básico que reúne las tecnologías de Microsoft necesarias para crear un Asistente virtual, incluido [el SDK de Bot Framework,](https://github.com/microsoft/botframework-sdk) [Language Understanding (LUIS)](https://www.luis.ai/)y [QnA Maker.](https://www.qnamaker.ai/) También reúne las capacidades esenciales, como el registro de aptitudes, las cuentas vinculadas, la intención conversacional básica de ofrecer a los usuarios una amplia variedad de interacciones y experiencias sin problemas. Además, las capacidades de plantilla incluyen ejemplos enriquecidos de habilidades conversacionales [reutilizables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Las habilidades individuales se integran en una solución de Asistente virtual para habilitar varios escenarios. Con el SDK de Bot Framework, las habilidades se presentan en forma de código fuente, lo que permite personalizar y ampliar según sea necesario. Para obtener más información sobre las habilidades de Bot Framework, vea [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). Este documento le guía sobre las consideraciones de implementación del Asistente virtual para organizaciones, cómo crear un Asistente virtual centrado en Teams, ejemplo relacionado, ejemplo de código y limitaciones del Asistente virtual.
 En la siguiente imagen se muestra la introducción al asistente virtual:
@@ -569,19 +569,16 @@ También puede aprovechar las aptitudes existentes desde el repositorio [de Bot 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Description** | **C#** | **.NET** |
+| **Nombre de ejemplo** | **Descripción** | **C#** | **.NET** |
 |----------|-----------------|----------|------------------|
 | Plantilla de Visual Studio actualizada | Plantilla personalizada para admitir las capacidades de teams. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 | Código de habilidad de bot de libro a sala | Permite buscar y reservar rápidamente una sala de reuniones sobre la marcha. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Libro a sala](app-templates.md#book-a-room)
+- [Libro a sala](app-templates.md#book-a-room)
 
-> [!div class="nextstepaction"]
-> [Bot de Microsoft Teams](../bots/what-are-bots.md)
+- [Bot de Microsoft Teams](../bots/what-are-bots.md)

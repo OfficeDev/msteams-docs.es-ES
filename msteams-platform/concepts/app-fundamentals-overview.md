@@ -5,12 +5,12 @@ description: Describir los conceptos básicos del desarrollo de plataformas de T
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b52eebf2b8e0884cd225298ae557bb7ac65d4a68
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6d0c22049e828426cfe963da6631b4c289566bf0
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020866"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058463"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Conceptos básicos de desarrollo de aplicaciones de Microsoft Teams
 
@@ -33,13 +33,11 @@ Puede reconocer problemas de usuario e identificar las respuestas a algunos prob
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Se proporciona información para compartir la aplicación y colaborar en elementos de un sistema externo. También puede aprender a iniciar flujos de trabajo y enviar notificaciones a los usuarios. Obtén sugerencias adicionales sobre dónde empezar, cómo crear redes sociales con los usuarios, bots de conversación y combinar varias características.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)
+- [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Crear la primera aplicación de Microsoft Teams](../build-your-first-app/build-first-app-overview.md)
+- [Crear la primera aplicación de Microsoft Teams](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

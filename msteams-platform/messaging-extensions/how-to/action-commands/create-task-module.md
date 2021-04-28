@@ -5,12 +5,12 @@ description: Cómo controlar la acción de invocación inicial y responder con u
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019849"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058631"
 ---
 # <a name="create-and-send-the-task-module"></a>Crear y enviar el módulo de tareas
 
@@ -939,15 +939,14 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
+| Nombre de ejemplo           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"] 
-> [Definir comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+- [Definir comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## <a name="next-step"></a>Paso siguiente

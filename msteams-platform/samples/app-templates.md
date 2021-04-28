@@ -6,12 +6,12 @@ keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 58cda9f400081a47bb9bebf20ba509ee3623dc0b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ceec7e05ae08ff147fb87005403ec8264e0ec313
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020524"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058673"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -691,7 +691,6 @@ Workplace Awards es una plantilla de aplicación de Teams que proporciona un mar
 
 Para obtener más información sobre la plantilla de aplicación, consulta [Plantilla de aplicación](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

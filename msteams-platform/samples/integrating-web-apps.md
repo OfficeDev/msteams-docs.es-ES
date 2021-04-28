@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Aplicaciones web
-ms.openlocfilehash: 1f46c4a8b9457a00b5000e81c280759f584a50d2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0cc4c8bbecb51056e579478de64a5f4e73199674
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020425"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058694"
 ---
 # <a name="web-apps"></a>Aplicaciones web 
 
@@ -121,7 +121,6 @@ A continuación se muestra un ejemplo de un mensaje de notificación: **No me en
 
 Cuando se crea un equipo, también se aprovisiona una colección de sitios de [SharePoint](https://docs.microsoft.com/microsoftteams/sharepoint-onedrive-interact) para admitir el almacenamiento de archivos y datos para ese equipo. La aplicación debe aprovechar esta característica si interactúa con archivos. Use la colección de sitios para almacenar datos sin procesar en Listas de SharePoint y Excel.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

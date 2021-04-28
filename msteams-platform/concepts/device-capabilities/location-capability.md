@@ -6,12 +6,12 @@ keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d10f2df48ee5b75252508fbc51e5a31df9ea083f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019863"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058372"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -49,7 +49,7 @@ Actualice la aplicación de Teams [manifest.jsarchivo](../../resources/schema/ma
 
 Debes usar el siguiente conjunto de API para habilitar las capacidades de ubicación del dispositivo:
 
-| API      | Descripción   |
+| API      | Description   |
 | --- | --- |
 |[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Proporciona la ubicación del dispositivo actual del usuario o abre el selector de ubicación nativa y devuelve la ubicación elegida por el usuario. |
 |[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | Muestra la ubicación en el mapa |
@@ -103,10 +103,8 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Integrar capacidades multimedia en Teams](mobile-camera-image-permissions.md)
+- [Integrar capacidades multimedia en Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrar la funcionalidad del escáner de códigos DE BARRAS o QR en Teams](qr-barcode-scanner-capability.md)
+- [Integrar la funcionalidad del escáner de códigos DE BARRAS o QR en Teams](qr-barcode-scanner-capability.md)
