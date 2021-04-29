@@ -5,12 +5,12 @@ description: Cómo enviar, recibir y controlar mensajes de un bot en un chat de 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7055042dfff4b633fdd570ce5d7318a17ac15cf6
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058596"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075755"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversaciones de chat de canal y grupo con un bot
 
@@ -268,9 +268,9 @@ No envíe un mensaje en los siguientes casos:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Obtener el contexto de teams](~/bots/how-to/get-teams-context.md).
+[Obtener contexto de Teams](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

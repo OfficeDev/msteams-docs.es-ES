@@ -5,12 +5,12 @@ description: Detalle de las soluciones disponibles de Microsoft baja y sin códi
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d294bf335a7688584e52c22d2585f3db2ef1c788
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058687"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075727"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Crear aplicaciones personalizadas de código bajo para Microsoft Teams
 
@@ -81,6 +81,6 @@ Virtual Assistant es una plantilla de código abierto de Microsoft que le permit
 > [!div class="nextstepaction"]
 > [Administrar aplicaciones de Microsoft Power Platform en el Centro de administración de Microsoft Teams](/microsoftteams/manage-power-platform-apps)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+[Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

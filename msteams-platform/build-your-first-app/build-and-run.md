@@ -1,87 +1,197 @@
 ---
 title: 'Introducción: compilación y ejecución de la primera aplicación'
-author: heath-hamilton
+author: girliemac
 description: Crea rápidamente una aplicación de Microsoft Teams que muestre un "¡Hola, mundo!" con Microsoft Teams Toolkit.
-ms.author: lajanuar
-localization_priority: Normal
-ms.date: 11/03/2020
+ms.author: timura
+ms.date: 03/22/2021
 ms.topic: quickstart
-ms.openlocfilehash: 1b34c3f3121e834abc8a8a92a8a0ac9a049c9e07
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b34409919f073535c741a48edf30f3edd8c6bc8f
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020887"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068804"
 ---
-# <a name="build-and-run-your-first-microsoft-teams-app"></a>Crear y ejecutar la primera aplicación de Microsoft Teams
+# <a name="create-your-first-microsoft-teams-app"></a>Crear la primera aplicación de Microsoft Teams
 
-Inicie el desarrollo de Microsoft Teams creando una pestaña personal que muestre "Hello, World!".
-Cree y ejecute la primera aplicación de Teams con los pasos siguientes:
+Esta guía de inicio rápido te enseña a crear y ejecutar la aplicación de Microsoft Teams que muestra "Hello, World!"
+
+## <a name="prerequisites"></a>Requisitos previos
+
+Antes de comenzar, debe configurar el inquilino de desarrollo de [Teams](#set-up-your-teams-development-tenant) e [instalar las herramientas de desarrollo de Teams.](#install-your-development-tools)
+
+### <a name="set-up-your-teams-development-tenant"></a>Configurar el inquilino de desarrollo de Teams
+
+Un **inquilino** es como un contenedor para una organización. En términos de Teams, un inquilino es donde los usuarios de esa organización chat, comparten archivos y ejecutan reuniones. Como desarrollador, necesita un inquilino para realizar la instalación local y probar las aplicaciones de Teams que está creando.  
+
+# <a name="do-not-have-a-tenant"></a>[No tener un inquilino](#tab/do-not-have-a-tenant)
+
+Puedes obtener una cuenta de prueba gratuita de Teams, que incluye un inquilino que permite la instalación local de aplicaciones, uniéndose al programa para desarrolladores de Microsoft 365. El proceso de registro tarda aproximadamente dos minutos.
+
+**Para obtener un inquilino**
+
+1. Vaya al programa para desarrolladores de [Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Selecciona **Unirse ahora** y sigue las instrucciones en pantalla.
+1. En la pantalla de bienvenida, seleccione **Configurar suscripción E5**.
+1. Configura tu cuenta de desarrollador de Microsoft 365. 
+   Después de finalizar, aparecerá la siguiente pantalla:
+
+   :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Ejemplo de lo que ve después de registrarse en el programa para desarrolladores de Microsoft 365.":::
+
+1. Inicie sesión en Teams con su nueva cuenta.
+1. En el cliente de Teams, seleccione **Aplicaciones**.
+1. Comprueba que puedes ver la opción **Cargar una aplicación** personalizada. Si lo haces, esto significa que puedes realizar la instalación local de aplicaciones.
+
+   :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Ilustración que muestra dónde se puede cargar una aplicación personalizada en Teams.":::
+
+# <a name="have-a-tenant"></a>[Tener un inquilino](#tab/have-a-tenant)
+
+Si ya tienes un inquilino, comprueba si puedes realizar la instalación local de aplicaciones en Teams.
+
+**Comprobar que puedes realizar la instalación local de las aplicaciones** 
+
+1. En el cliente de Teams, seleccione **Aplicaciones**. 
+1.  Comprueba que puedes ver la opción **Cargar una aplicación** personalizada. Si lo haces, esto significa que puedes realizar la instalación local de aplicaciones. 
+
+   :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Ilustración que muestra dónde se puede cargar una aplicación personalizada en Teams.":::
+
+---
+
+### <a name="install-your-development-tools"></a>Instalar las herramientas de desarrollo
+
+Para crear esta aplicación, usarás teams Toolkit for Visual Studio Code para empezar rápidamente. También puedes crear aplicaciones de Teams con cualquiera de tus herramientas predefinidas. 
+
+> [!NOTE]
+> Teams muestra el contenido de la aplicación solo a través de conexiones HTTPS. Para depurar ciertos tipos de aplicaciones localmente, como un bot, aprenderás a usar ngrok para configurar un túnel seguro entre Teams y tu aplicación.
+> 
+> Las aplicaciones de Production Teams se hospedan en la nube.
+
+**Para instalar herramientas de Microsoft Teams**
+
+1. Instale [Node.js](https://nodejs.org/en/).
+1. Si planea crear un bot o una extensión de mensajería, instale [ngrok](https://ngrok.com/download) y exponga el localhost a [Internet con ngrok](../tutorials/get-started-dotnet-app-studio.md#tunnel-using-ngrok).
+1. Instale la versión más reciente [de Visual Studio Code](https://code.visualstudio.com/download). 
+   
+   > [!NOTE]
+   > El kit de herramientas no admite versiones anteriores de Visual Studio Code.
+
+1. En la barra de actividad izquierda, seleccione **Extensiones** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: .
+1. En **Microsoft Teams Toolkit,** seleccione **Instalar**.
+
+   :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Ilustración que muestra dónde en Visual Studio código puede instalar la extensión microsoft Teams Toolkit.":::
 
 ## <a name="1-create-your-app-project"></a>1. Crear el proyecto de aplicación
 
-Usa Microsoft Teams Toolkit en Visual Studio code para configurar el primer proyecto de aplicación. Cree el proyecto de la aplicación con los pasos siguientes:
+1. Abra Visual Studio código.
+1. Selecciona **Microsoft Teams Toolkit** Crear una nueva aplicación de :::image type="icon" source="../assets/icons/vsc-toolkit.png":::  >  **Teams**.
 
-1. En Visual Studio, selecciona **Microsoft Teams en** la barra de actividades izquierda y elige Crear una nueva aplicación de :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Teams**.
-1. Cuando se le pida, inicie sesión con su cuenta de desarrollo de Microsoft 365.
-1. En la **pantalla Agregar funcionalidades,** seleccione **Ficha** y, a **continuación, Siguiente**.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Captura de pantalla que muestra cómo configurar el proyecto de la aplicación con Visual Studio Code Teams Toolkit.":::
-1. Escribe un nombre para la aplicación de Teams. (Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de aplicación en el equipo local).
-1. Compruebe solo la **opción pestaña Personal** y seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Captura de pantalla que muestra cómo crear el proyecto de la aplicación con Visual Studio Kit de herramientas de Code Teams.":::
+   
+1. Inicie sesión con su cuenta de desarrollo de Microsoft 365. Ya sea la que acaba de crear o la cuenta que ya tenía que permite la instalación local de aplicaciones.
+1. En la **pantalla Seleccionar proyecto,** vaya a **Aplicación personal** y seleccione **JS** (JavaScript) > **Siguiente**.
 
-## <a name="2-understand-important-app-project-components"></a>2. Comprender los componentes importantes del proyecto de la aplicación
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-03.png" alt-text="Captura de pantalla que muestra cómo configurar el proyecto de la aplicación con Visual Studio Code Teams Toolkit.":::
 
-Una vez que el kit de herramientas configura el proyecto, tiene los componentes para crear una pestaña personal básica para Teams. Los directorios y archivos del proyecto se muestran en el área Explorador de Visual Studio código.
+1. Escribe un nombre para la aplicación de Teams.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Captura de pantalla que muestra los archivos de proyecto de la aplicación para una pestaña personal en Visual Studio código.":::
+    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-04.png" alt-text="Captura de pantalla que muestra cómo agregar un nombre al proyecto de la aplicación con Visual Studio Kit de herramientas de Code Teams.":::
 
-### <a name="app-scaffolding"></a>Scaffolding de aplicaciones
+1. Seleccione **Finalizar**. 
+   El proyecto ya está configurado. 
 
-El kit de herramientas crea automáticamente scaffolding en el directorio en función de las capacidades que `src` agregó durante la instalación.
+## <a name="2-understand-your-app-project-components"></a>2. Comprender los componentes del proyecto de la aplicación
 
-Si creas una pestaña durante la instalación, por ejemplo, el archivo del directorio es importante porque controla la inicialización y `App.js` el enrutamiento de la `src/components` aplicación. Llama al [SDK de cliente de JavaScript](../tabs/how-to/using-teams-client-sdk.md) de Microsoft Teams para establecer la comunicación entre la aplicación y Teams.
+Una vez que el kit de herramientas configura el proyecto de la aplicación, tienes los componentes para crear tu "Hello, World!" Aplicación de Teams. Los directorios y archivos del proyecto se encuentran en el Explorador Visual Studio código. 
 
-### <a name="app-id"></a>Identificador de la aplicación
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Captura de pantalla que muestra el scaffolding en el proyecto de la aplicación con Visual Studio Code Teams Toolkit.":::
 
-Configura la aplicación con App Studio con el id. de aplicación de Teams. Busque el identificador en el `teamsAppId` objeto, que se encuentra en el archivo del `package.json` proyecto.
+El kit de herramientas crea automáticamente scaffolding de aplicaciones en el directorio en función de `src` las capacidades que agregó durante la instalación. Desde que creaste una pestaña durante la instalación, el archivo del directorio controla la inicialización `App.js` y el enrutamiento de la `src/components` aplicación. El archivo también llama al SDK de cliente de JavaScript de Microsoft Teams para establecer la comunicación entre la aplicación y Teams. 
 
 ## <a name="3-build-and-run-your-app"></a>3. Crear y ejecutar la aplicación
 
-Compila y ejecuta la aplicación localmente para ahorrar tiempo. Esta información también está disponible en el kit de herramientas `README` . Cree y ejecute la aplicación con los pasos siguientes:
+Compila y ejecuta la aplicación localmente para ahorrar tiempo. 
 
-1. En un terminal, vaya al directorio raíz del proyecto de aplicación y ejecute `npm install` .
+**Para compilar y ejecutar la aplicación**
+
+1. En Visual Studio, seleccione **Ver**  >  **terminal**.
+1. Ejecute `npm install` .
 1. Ejecute `npm start` .
-
-Una vez completado, hay un **compilado correctamente.** en el terminal. La aplicación se está ejecutando en `https://localhost:3000` .
+  
+  Un **compilado correctamente.** mensaje aparece en el terminal. La aplicación se está ejecutando en el localhost en `https://localhost:3000` . 
 
 ## <a name="4-sideload-your-app-in-teams"></a>4. Instalación local de la aplicación en Teams
 
-La aplicación está lista para probarse en Teams. Para ello, debes tener una cuenta de desarrollo de Microsoft 365 que permita la instalación local de aplicaciones. Para obtener más información sobre la apertura de cuentas, vea [Cuenta de desarrollo de Teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). 
+La instalación local es el proceso de instalación de una aplicación en Teams que no ha sido aprobada por el administrador o Microsoft. La instalación local es común al probar y depurar aplicaciones de Teams.
 
-> [!TIP]
-> Comprueba si hay problemas antes de descargar localmente la aplicación, mediante la característica de validación de [App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), que se incluye en el kit de herramientas. Se corrigen los errores para que la aplicación se desacargue correctamente.
+De forma predeterminada, Teams no permite la instalación local de aplicaciones. Puedes cambiar esta configuración en el Centro de administración de Teams.
 
-La instalación local de la aplicación en Teams sigue estos pasos:
+**Para habilitar la instalación local de aplicaciones en Teams**
 
-> [!NOTE]
-> Para habilitar la instalación local antes de la instalación local de la aplicación en Teams, siga los pasos descritos en Activar la instalación [local de la aplicación](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+1. Inicie sesión en el [Centro de administración de Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) con sus credenciales de administrador.  
+1. Seleccione **Mostrar todos los**  >  **equipos**. 
 
-1. Seleccione la **clave F5** para iniciar un cliente web de Teams en Visual Studio código.
-1. Para mostrar el contenido de la aplicación en Teams, especifica que el lugar donde se ejecuta la aplicación ( `localhost` ) es de confianza:
-   1. Abra una nueva pestaña en la misma ventana del explorador (Google Chrome de forma predeterminada) que se abrió después de presionar **F5**.
-   1. Vaya a `https://localhost:3000/tab` y continúe con la página.
-1. Vuelva a Teams. En el cuadro de diálogo, **selecciona Agregar para mí** para instalar la aplicación.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Captura de pantalla que muestra un ejemplo de aplicación de pestaña personal &quot;Hello, World!&quot; que se ejecuta en Teams.":::
+   ![imagen del menú del Centro de administración](~/assets/images/prepare-test-tenant/admin-center.png)
 
-🎉 Enhorabuena! La aplicación se ejecuta en Teams.
+   > [!Note] 
+   > La opción **Teams** puede tardar hasta 24 horas en aparecer. 
+
+1. Ve a **Directivas de instalación de aplicaciones** de Teams  >    >  **Global** (configuración predeterminada para toda la organización).
+
+   ![Activar la vista de instalación local](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+1. Activa la **alternancia cargar aplicaciones personalizadas.**
+
+1. Seleccione **Guardar** para guardar los cambios.
+
+   El inquilino de prueba ahora permite la instalación local de aplicaciones personalizadas.
+
+   > [!Note]
+   > Comprueba si hay problemas antes de descargar localmente la aplicación con la característica de validación de App Studio, que se incluye en el kit de herramientas. Se corrigen los errores para que la aplicación se desacargue correctamente.
+
+
+### <a name="sideload-your-app"></a>Instalación local de la aplicación
+
+1. En Visual Studio, abra el Kit de herramientas de Teams.
+1. Vaya a **App Studio**.  
+1. Seleccione **Probar y distribuir**  >  **instalar**.
+
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-appstudio.png" alt-text="Captura de pantalla que muestra cómo descargar localmente la aplicación en el cliente de Teams con Visual Studio Code Teams Toolkit.":::
+
+**Como alternativa**
+
+1. Seleccione la **tecla F5** para abrir la ventana del explorador que desea instalar. Esto omitirá el proceso de instalación en **App Studio** y lajerá Teams en el explorador.
+1. En el cuadro de diálogo de instalación, selecciona **Agregar** para instalar la aplicación en Teams.
+
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Captura de pantalla que muestra cómo descargar localmente la aplicación en el cliente de Teams.":::
+
+   > [!Note]
+   > App Studio también está disponible como una aplicación independiente para el cliente de Teams.
+
+### <a name="troubleshoot-sideloading-issues"></a>Solucionar problemas de instalación local
+
+**Error en la instalación**
+
+Si aparece el mensaje de error al instalar la aplicación, comprueba que la información de `Manifest parsing has failed` la aplicación se ha escrito correctamente.
+
+**Para comprobar la información de la aplicación**
+
+* En Teams Toolkit, ve a Detalles de **App Studio** App y comprueba que toda la información  >   necesaria se haya escrito correctamente.
+*  Si editó manualmente el archivo, compruebe que el JSON está bien definido en la herramienta Manifiesto de la aplicación `manifest.json` en App Studio. 
+
+**Contenido de tabulación no mostrado**
+
+Comprueba que la aplicación se está ejecutando. Si no es así, vaya al terminal y ejecute `npm start` .
+
+## <a name="see-also"></a>Consulte también
+
+* [Preparar el espacio empresarial de Microsoft 365](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)
+* [Elegir una configuración para probar y depurar la aplicación de Microsoft Teams](../concepts/build-and-test/debug.md)
+* [Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md)
+* [Preparar el envío de AppSource](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Desarrolle aplicaciones rápidamente con App Studio para Microsoft Teams](../concepts/build-and-test/app-studio-overview.md)
+* [Crear una pestaña de canal](../build-your-first-app/build-channel-tab.md)
 
 ## <a name="next-step"></a>Paso siguiente
 
-Expande en la pestaña personal que acaba de crear o crea otro tipo de aplicación de Teams.
-
 > [!div class="nextstepaction"]
-> [Agregar a la pestaña personal](../build-your-first-app/build-personal-tab.md)
-> [!div class="nextstepaction"]
-> [Crear una pestaña de canal](../build-your-first-app/build-channel-tab.md)
-> [!div class="nextstepaction"]
-> [Crear un bot](../build-your-first-app/build-bot.md)
+> [Crear una pestaña personal para Microsoft Teams](../build-your-first-app/build-personal-tab.md)

@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922520"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068825"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a tarjetas en Teams
 
@@ -164,7 +164,7 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
 Use la propiedad information masking para enmascarar información específica, como contraseña o información confidencial de los usuarios dentro del elemento de entrada de [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) tarjeta adaptable. 
 
 > [!NOTE]
-> La característica solo admite el enmascaramiento de información del lado [cliente,](../../build-your-first-app/build-bot.md#4-configure-your-bot)el texto de entrada enmascarado se envía como texto sin formato a la dirección del extremo https que se especificó durante la configuración del bot . 
+> La característica solo admite el enmascaramiento de información del lado [cliente,](../../build-your-first-app/build-bot.md)el texto de entrada enmascarado se envía como texto sin formato a la dirección del extremo https que se especificó durante la configuración del bot . 
 
 > [!NOTE]
 > La propiedad de enmascaramiento de información está disponible actualmente solo en la versión preliminar del desarrollador.

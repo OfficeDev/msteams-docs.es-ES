@@ -5,12 +5,12 @@ description: Cómo realizar la implementación de vínculos con la extensión de
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ec4ac7329b2c0df64237692d450977148789eff8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058519"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075720"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -176,6 +176,6 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 
-- [Qué son las tarjetas](~/task-modules-and-cards/what-are-cards.md)
+[Tarjetas](~/task-modules-and-cards/what-are-cards.md)

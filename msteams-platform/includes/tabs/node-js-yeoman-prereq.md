@@ -1,22 +1,22 @@
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Para completar este tutorial, necesitará un inquilino de Office 365 y un equipo configurado con la *opción permitir la carga de aplicaciones personalizadas* habilitada. Para obtener más información, vea [preparar el inquilino de Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Para completar este inicio rápido, necesitará un inquilino de Office 365 y un equipo configurado con Permitir cargar *aplicaciones personalizadas* habilitadas. Para obtener más información, vea [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - Si actualmente no tiene una cuenta de Office 365, puede registrarse para obtener una suscripción gratuita a través del programa de desarrolladores de Office 365. La suscripción permanecerá activa siempre que la use para el desarrollo continuado. Vea [Bienvenido al programa de desarrolladores de Office 365](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
+  - Si actualmente no tiene una cuenta de Office 365, puede registrarse para obtener una suscripción gratuita a través del Programa para desarrolladores de Office 365. La suscripción permanecerá activa mientras la estés usando para el desarrollo continuo. Vea [Welcome to the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program).
 
-Además, este proyecto requiere que tenga instalado lo siguiente en el entorno de desarrollo:
+Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- Cualquier editor de texto o IDE. Puede instalar y usar [Visual Studio Code](https://code.visualstudio.com/download) de forma gratuita.
+- Cualquier editor de texto o IDE. Puede instalar y usar Visual Studio [code](https://code.visualstudio.com/download) de forma gratuita.
 
-- [Node. js/NPM](https://nodejs.org/en/). Debe usar la última versión de LTS. El administrador de paquetes de nodos (NPM) se instalará en el sistema con la instalación de node. js.
+- [Node.js/npm](https://nodejs.org/en/). Debe usar la versión lts más reciente. El nodo Administrador de paquetes (npm) se instalará en el sistema con la instalación de Node.js.
 
-- Después de instalar correctamente node. js, instale los paquetes [Yeoman](https://yeoman.io/) y [Gulp-CLI](https://www.npmjs.com/package/gulp-cli) escribiendo lo siguiente en el símbolo del sistema:
+- Después de instalar correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) escribiendo lo siguiente en el símbolo del sistema:
 
 ```bash
 npm install yo gulp-cli --global
 ```
 
-- Para instalar el generador de aplicaciones de Microsoft Teams, escriba lo siguiente en el símbolo del sistema:
+- Para instalar el generador de Aplicaciones de Microsoft Teams, escriba lo siguiente en el símbolo del sistema:
 
 ```bash
 npm install generator-teams --global
@@ -24,58 +24,62 @@ npm install generator-teams --global
 
 ## <a name="generate-your-project"></a>Generar el proyecto
 
-- Abra un símbolo del sistema y cree un nuevo directorio para el proyecto de pestañas.
+- Abra un símbolo del sistema y cree un nuevo directorio para el proyecto de pestaña.
 
-- Para iniciar el generador, navegue hasta el nuevo directorio y escriba el siguiente comando:
+- Para iniciar el generador, vaya al nuevo directorio y escriba el siguiente comando:
 
 ```bash
 yo teams
 ```
 
-- A continuación, deberá proporcionar una serie de valores que se usarán en el archivo **manifest. JSON** de la aplicación:
+- A continuación, proporcionará una serie de valores que se usarán en el archivo demanifest.js **aplicación:**
 
 ![captura de pantalla de apertura del generador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
 **¿Cuál es el nombre de la solución?**
 
-Este es el nombre del proyecto. Puede aceptar el nombre sugerido; para ello, presione Entrar.
+Este es el nombre del proyecto. Puede aceptar el nombre sugerido presionando entrar.
 
 **¿Dónde desea ubicar los archivos?**
 
-Actualmente está en el directorio del proyecto. Presione entrar.
+Actualmente está en el directorio del proyecto. Presione ENTRAR.
 
-**¿El título del proyecto de la aplicación de Microsoft Teams?**
+**¿Título del proyecto de aplicación de Microsoft Teams?**
 
-Este es el nombre del paquete de la aplicación y se usará en el manifiesto de la aplicación y la descripción.
+Este es el nombre del paquete de la aplicación y se usará en el manifiesto y la descripción de la aplicación.
 
-**El nombre de la (empresa)? (máximo 32 caracteres)**
+**¿Su nombre (empresa)? (máximo 32 caracteres)**
 
-El nombre de la compañía se usará en el manifiesto de la aplicación.
+El nombre de la empresa se usará en el manifiesto de la aplicación.
 
-<br>**¿Qué versión de manifiesto desearía usar?**
+<br>**¿Qué versión de manifiesto le gustaría usar?**
 
 Seleccione el esquema predeterminado.
 
-**Escriba su identificador de socio de Microsoft, si tiene uno? (Déjelo en blanco para omitir)**
+**¿Scaffolding rápido? (Y/n)**
 
-Este campo no es necesario y solo debe usarse si ya forma parte de la [red de asociados de Microsoft](https://partner.microsoft.com).
+El valor predeterminado es sí; escriba **n** para escribir su Id. de partner de Microsoft.
+
+**Escriba su id. de partner de Microsoft, si tiene uno. (Dejar en blanco para omitir)**
+
+Este campo no es obligatorio y solo debe usarse si ya forma parte de [la red de partners de Microsoft](https://partner.microsoft.com).
 
 **¿Qué desea agregar al proyecto?**
 
-Seleccione ( &ast; ) una tabulación.
+Seleccione ( &ast; ) Una pestaña.
 
-**La dirección URL en la que va a hospedar esta solución?**
+**¿La dirección URL donde hospedará esta solución?**
 
-De forma predeterminada, el generador sugiere una dirección URL de sitios web de Azure. Solo va a probar la aplicación de forma local, por lo tanto, no es necesaria una dirección URL válida para completar este inicio rápido.
+De forma predeterminada, el generador sugiere una dirección URL de Sitios web de Azure. Solo probarás tu aplicación localmente, por lo tanto, no es necesaria una dirección URL válida para completar esta guía de inicio rápido.
 
-**¿Le gustaría incluir el marco de pruebas y las pruebas iniciales? (s/N)**
+**¿Desea incluir el marco de pruebas y las pruebas iniciales? (y/N)**
 
-Elija **no** incluir un marco de pruebas para este proyecto. El valor predeterminado es sí; Escriba **n**.
+Elija **no incluir** un marco de prueba para este proyecto. El valor predeterminado es sí; escriba **n**.
 
-**¿Desea usar las aplicaciones de Azure Insights para telemetría? (s/N)**
+**¿Desea usar Azure Applications Insights para telemetría? (y/N)**
 
-Elija **no** incluir [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). El valor predeterminado es no; Escriba **n**.
+Elija **no incluir** Azure Application [Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). El valor predeterminado es no; escriba **n**.
 
-**Nombre de pestaña predeterminado (16 caracteres como máximo)?**
+**Nombre de tabulación predeterminado (máximo 16 caracteres)?**
 
-Asigne un nombre a la pestaña. Este nombre de la pestaña se usará en el proyecto como un componente de ruta de acceso de archivo o dirección URL.
+Asigne un nombre a la pestaña. Este nombre de pestaña se usará en todo el proyecto como un componente de ruta de acceso de archivo/dirección URL.

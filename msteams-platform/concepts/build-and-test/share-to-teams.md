@@ -4,12 +4,12 @@ description: Cómo agregar el botón Compartir a Teams incrustado en su sitio we
 ms.topic: reference
 localization_priority: Normal
 keywords: Share Teams Share-to-Teams
-ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058477"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075650"
 ---
 # <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
@@ -131,6 +131,6 @@ Puede seleccionar para establecer los valores predeterminados de los siguientes 
 ></span>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+[Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

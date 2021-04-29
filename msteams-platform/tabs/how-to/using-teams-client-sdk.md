@@ -6,12 +6,12 @@ description: Información general sobre el SDK de cliente javaScript de Microsof
 localization_priority: Normal
 keywords: Canal de grupo de pestañas de teams configurable sdk estático JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: 6d40f005e863e0ef5687b20beecfdaf03ee8becb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c3bbdf9b71618148faf9822aaf051b85aecf17fb
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019562"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068727"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
 
@@ -22,18 +22,20 @@ El SDK es útil para desarrollar aplicaciones con cualquiera de las siguientes f
 * [Pestañas](../../tabs/what-are-tabs.md)
 * [Módulos de tareas](../../task-modules-and-cards/what-are-task-modules.md)
 
-Por ejemplo, el SDK puede hacer que la [pestaña reaccione a los](../../build-your-first-app/build-personal-tab.md#3-update-the-tab-theme) cambios en el tema que los usuarios realicen en el cliente de Teams.
+Por ejemplo, el SDK puede hacer que la [pestaña reaccione a los](../../build-your-first-app/build-personal-tab.md) cambios en el tema que los usuarios realicen en el cliente de Teams.
 
 ## <a name="getting-started"></a>Introducción
 
 Realice una de las siguientes acciones según sus preferencias de desarrollo:
 
-* [Instalar el SDK con npm o Yarn](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
-* [Clonar el SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
+
+* [Instalar el SDK con npm o Yarn](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="common-sdk-functions"></a>Funciones comunes de SDK
 
-Consulta las tablas siguientes para comprender las funciones de SDK que se usan con frecuencia. La [documentación de referencia del SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) proporciona información más completa.
+
+Consulta las tablas siguientes para comprender las funciones de SDK que se usan con frecuencia. La [documentación de referencia del SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) proporciona información más completa.
+
 
 ### <a name="basic-functions"></a>Funciones básicas
 

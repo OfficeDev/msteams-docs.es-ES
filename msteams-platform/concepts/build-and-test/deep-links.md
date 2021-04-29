@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058337"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075601"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -150,7 +150,7 @@ Para usar este vínculo profundo con el bot, especifique esto como destino de di
 
 El siguiente formato de vínculo profundo se puede usar en un bot, conector o tarjeta de extensión de mensajería:
 
-`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
 
 Los parámetros de consulta son:
 
@@ -222,6 +222,12 @@ Los parámetros de consulta son:
 
 Para usar este vínculo profundo con el bot, puedes especificarlo como el destino de la dirección URL en el botón de la tarjeta o pulsar en la acción a través del `openUrl` tipo de acción.
 
-## <a name="see-also"></a>Vea también
+## <a name="code-sample"></a>Ejemplo de código
 
-- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+| Nombre de ejemplo | Description | .NET |
+|-------------|-------------|------|
+| Id. de subentidad de consumo de vínculos profundos | Aplicación de ejemplo de Microsoft Teams para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de fichas. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+
+## <a name="see-also"></a>Consulte también
+
+[Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

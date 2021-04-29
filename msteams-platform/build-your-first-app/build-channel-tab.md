@@ -1,97 +1,64 @@
 ---
 title: 'Introducción: crear una pestaña de canal y grupo'
-author: heath-hamilton
+author: girliemac
 description: Cree rápidamente una pestaña de grupo y canal de Microsoft Teams con Microsoft Teams Toolkit.
-ms.author: lajanuar
-localization_priority: Normal
-ms.date: 10/09/2020
+ms.author: timura
+ms.date: 03/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: aadab4b6826b026eadd5ed564b6e5de5c29b4b1d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 868a471499bf2015196b7b741e340d070d0ed458
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020880"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068755"
 ---
-# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Crear una pestaña de canal y grupo para Microsoft Teams
+# <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a>Crear la primera pestaña de canal y grupo para Microsoft Teams
 
-En este tutorial, crearás una pestaña de canal básica *(también* conocida como pestaña de *grupo),* que es una página a pantalla completa para un canal de grupo o chat. A diferencia de una pestaña personal, los usuarios pueden configurar algunos aspectos de este tipo de pestaña (por ejemplo, cambiar el nombre de la pestaña para que sea significativa para su canal).
-
-## <a name="your-assignment"></a>Su asignación
-
-No hace mucho tiempo, la organización creó una aplicación de Teams que usa una pestaña para mostrar información de contacto importante (servicio de soporte, recursos humanos, etc.). Sin embargo, como es una pestaña personal, cada usuario debe instalar la pestaña para verla y la adopción es menor de lo esperado. En otras palabras, demasiados trabajadores aún no saben cómo llegar al servicio de ayuda.
-
-Puedes hacer que esta información sea más fácil de encontrar mediante la creación de una pestaña de canal, que eliminará la carga de requerir que todos instalen una aplicación. En su lugar, un usuario puede agregar la pestaña en un canal o chat para beneficio de un grupo completo.
+Este tutorial le enseña a  crear una pestaña de canal básica también conocida como pestaña de grupo *,* que es una página a pantalla completa para un canal de grupo o chat. También puede configurar algunos aspectos de este tipo de pestaña, por ejemplo, cambiar el nombre de la pestaña para que sea significativa para su canal, lo que no puede hacer en una pestaña personal.
 
 ## <a name="what-youll-learn"></a>Lo que aprenderás
 
-> [!div class="checklist"]
->
-> * Crear un proyecto de aplicación con Microsoft Teams Toolkit for Visual Studio Code
-> * Identificar algunas de las configuraciones de la aplicación y los scaffolding relevantes para las pestañas de canal
-> * Crear contenido de pestaña
-> * Crear contenido para la página de configuración de una pestaña
-> * Proporcionar un nombre de pestaña sugerido
-> * Compilar y ejecutar la aplicación localmente
-> * Descargar localmente la aplicación en Teams para pruebas
+* Crea un proyecto de aplicación con Microsoft Teams Toolkit para Visual Studio código.
+* Comprenda las configuraciones de la aplicación y los scaffolding relevantes para las pestañas de canal.
+* Crear contenido de pestaña y configuración de pestañas.
+* Crea y ejecuta la aplicación en teams para pruebas.
 
-## <a name="before-you-begin"></a>Antes de empezar
+## <a name="prerequisites"></a>Requisitos previos
 
-Si aún no lo ha hecho, asegúrese de comprender e [instalar los requisitos previos](build-first-app-overview.md#get-prerequisites)de desarrollo de Teams .
+Asegúrate de comprender cómo configurar y crear una aplicación sencilla de Teams. Para obtener más información, consulta crear la primera aplicación de [Microsoft Teams "Hello, World!".](../build-your-first-app/build-and-run.md)
 
 ## <a name="1-create-your-app-project"></a>1. Crear el proyecto de aplicación
 
-Microsoft Teams Toolkit ayuda a configurar la aplicación y a configurar scaffolding relevantes para las pestañas de canal y grupo, incluida una página de configuración básica y una página de contenido que muestra un "Hello, World!" Mensaje.
+Microsoft Teams Toolkit te ayuda a configurar la aplicación y configurar el scaffolding relevante para las pestañas de canal y grupo. También contiene una página de configuración básica y una página de contenido que muestra un "Hello, World!" Mensaje.
 
-> [!TIP]
-> Si no has creado un proyecto de aplicación de Teams [](../build-your-first-app/build-and-run.md) antes, es posible que te sea útil seguir estas instrucciones que explican los proyectos con más detalle.
+**Para crear el proyecto de aplicación**
 
-1. En Visual Studio, selecciona **Microsoft Teams en** la barra de actividades izquierda y elige Crear una nueva aplicación de :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Teams**.
-1. Cuando se le pida, inicie sesión con su cuenta de desarrollo de Microsoft 365.
-1. En la **pantalla Agregar funcionalidades,** seleccione **Ficha** y, a **continuación, Siguiente**.
-1. Escribe un nombre para la aplicación de Teams. (Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de aplicación en el equipo local). Seleccione **Grupo o pestaña Canal de Teams**.
-1. Seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto.  
+1. Ve a Visual Studio y selecciona **Microsoft Teams** en la barra de actividades :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: izquierda.
+1. Inicie sesión con su cuenta de desarrollo de Microsoft 365 cuando se le pida que lo haga.
+1. En la **pantalla Seleccionar proyecto,** seleccione **JS** (JavaScript) en Canal y aplicación **de grupo.**
+1. Escribe un nombre para la aplicación de Teams. 
 
-## <a name="2-identify-relevant-app-project-components"></a>2. Identificar componentes relevantes del proyecto de aplicación
+    > [!NOTE]
+    > Este es el nombre predeterminado de la aplicación y también el nombre del directorio del proyecto de aplicación en el equipo local.
+
+1. Seleccione **Grupo o pestaña Canal de Teams**.
+1. Seleccione **Finalizar** en la parte inferior de la pantalla para configurar el proyecto y guardar el proyecto en el equipo local.  
+
+## <a name="2-understand-your-app-project-components"></a>2. Comprender los componentes del proyecto de la aplicación
 
 Gran parte de las configuraciones de la aplicación y los scaffolding se establecen automáticamente al crear el proyecto con el kit de herramientas. Veamos los componentes principales para crear una pestaña de canal.
 
-### <a name="app-configurations"></a>Configuraciones de aplicaciones
-
-En el kit de herramientas, ve **a App Studio** para ver y actualizar las configuraciones de la aplicación.
-
-### <a name="app-scaffolding"></a>Scaffolding de aplicaciones
-
-El scaffolding de la aplicación proporciona los componentes para representar la pestaña de canal en Teams. Hay mucho con lo que puede trabajar, pero por ahora solo necesita centrarse en lo siguiente:
-
-* Dos archivos ubicados en el `src/components` directorio del proyecto:
-  * `Tab.js` para representar la página de contenido de la pestaña.
-  * `TabConfig.js` para representar la página de configuración de la pestaña.
-* SDK de cliente de JavaScript de Microsoft Teams, que viene precargado en los componentes front-end del proyecto.
+* **Configuraciones de aplicaciones:** abre **App Studio** en el kit de herramientas para ver y actualizar las configuraciones de la aplicación.
+* **Scaffolding de aplicaciones:** el scaffolding de la aplicación proporciona los componentes necesarios para representar la pestaña de canal en Teams. Sin embargo, hay mucho con lo que puede trabajar, por ahora vamos a centrarnos en lo siguiente:
+  * Los archivos ubicados en el `src/components` directorio del proyecto:
+    * `Tab.js` para representar la página de contenido de la pestaña.
+    * `TabConfig.js` para representar la página de configuración de la pestaña.
+  * SDK de cliente de JavaScript de Microsoft Teams, que viene precargado en los componentes front-end del proyecto.
 
 ## <a name="3-customize-your-tab-content-page"></a>3. Personalizar la página de contenido de la pestaña
 
-Copie y actualice el siguiente fragmento de código con información relevante para su organización o, por el momento, use el código tal como está.
-
-```JSX
-<div>
-  <h1>Important Contacts</h1>
-    <ul>
-      <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-      <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-      <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-    </ul>
-</div>
-```
-
-Vaya al `src/components` directorio y abra `Tab.js` . Busque la `render()` función y pegue el contenido dentro `return()` (como se muestra).
-
-```JavaScript
-render() {
-
-    let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
-
-    return (
+1. Copie y modifique el siguiente ejemplo de código con información relevante para su organización. También puede usar el fragmento de código tal como es:
+    ```JSX
     <div>
       <h1>Important Contacts</h1>
         <ul>
@@ -100,95 +67,111 @@ render() {
           <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
         </ul>
     </div>
-    );
-}
-```
+    ```
+1. Vaya al `src/components` directorio y abra el `Tab.js` archivo. Busque la `render()` función y pegue el código dentro como se muestra en el siguiente `return()` ejemplo:
+    ```JavaScript
+    render() {
 
-Agregue la siguiente regla a (también ubicada en ) para que los vínculos de correo electrónico sean más fáciles de leer `App.css` `src/components` independientemente del tema que se utilice.
+        let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
 
-```CSS
-a {
-  color: inherit;
-}
-```
+        return (
+        <div>
+          <h1>Important Contacts</h1>
+            <ul>
+              <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+              <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+              <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+            </ul>
+        </div>
+        );
+    }
+    ```
+1. Vaya al directorio y actualice el archivo con el siguiente código para que los vínculos de correo electrónico sean más fáciles de `src/components` leer en cualquier tema que se `App.css` utilice:
+    ```CSS
+    a {
+      color: inherit;
+    }
+    ```
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. Personalizar la página de configuración de pestañas
 
-Cada pestaña de un canal o chat tiene una página de configuración, un modal con al menos una opción de configuración que se muestra cuando los usuarios agregan la aplicación. De forma predeterminada, la página de configuración pregunta a los usuarios si quieren notificar al canal o al chat cuando se instala la pestaña.
+Cada pestaña de un canal o chat tiene una página de configuración, un modal con al menos una opción de configuración que se muestra cuando los usuarios agregan la aplicación. De forma predeterminada, la página de configuración pregunta a los usuarios si quieren notificar al canal o al chat cuando se instala la pestaña. Puede personalizar la página de configuración agregando contenido personalizado.
 
-Agregue contenido personalizado a la página de configuración. Vaya al directorio del proyecto, abra y actualice el contenido del marcador de posición `src/components` `TabConfig.js` dentro `return()` (como se muestra en el ejemplo siguiente).
+Para agregar contenido personalizado, abra el archivo desde el directorio y actualice el contenido de marcador de posición dentro como `TabConfig.js` se muestra en el ejemplo `src/components` `return()` siguiente:
 
-```JavaScript
-return (
-    <div>
-      <h1>Add My Contoso Contacts</h1>
+  ```JavaScript
+  return (
       <div>
-        Select <b>Save</b> to add our organization's important contacts to this workspace.
+        <h1>Add My Contoso Contacts</h1>
+        <div>
+          Select <b>Save</b> to add our organization's important contacts to this workspace.
+        </div>
       </div>
-    </div>
-);
-```
+  );
+  ```
  
 > [!TIP]
-> Como mínimo, proporciona información breve acerca de la aplicación en esta página, ya que puede ser la primera vez que los usuarios estén aprendiendo sobre ella. También puede incluir opciones de configuración personalizadas o un flujo [de trabajo de autenticación,](../tabs/how-to/authentication/auth-aad-sso.md)que es común en las páginas de configuración de pestañas.
+> Proporciona una breve información sobre la aplicación en esta página, ya que esta sería la primera vez que los usuarios leen sobre ella. También puede incluir opciones de configuración personalizadas o un flujo [de trabajo de autenticación,](../tabs/how-to/authentication/auth-aad-sso.md)que es común en las páginas de configuración de pestañas.
 
-## <a name="5-provide-a-suggested-tab-name"></a>5. Proporcionar un nombre de pestaña sugerido
+## <a name="5-customize-your-tab-name"></a>5. Personalizar el nombre de la pestaña
 
-Cuando agregas una pestaña de canal, de forma predeterminada se muestra el nombre de la aplicación (por ejemplo, **primera aplicación).**
+Al agregar una pestaña de canal, el nombre de la aplicación se muestra de forma predeterminada, por ejemplo, **first-app**. También puede proporcionar un nombre que tenga más sentido en el contexto de la colaboración en grupo, por ejemplo, **Contactos de grupo:**
 
-Esto puede estar bien en función de lo que llames a tu aplicación, pero es posible que quieras proporcionar un nombre que tenga más sentido en el contexto de colaboración en grupo (por ejemplo, Contactos de **grupo**).
+1. Vaya al `src/components` directorio y abra el `TabConfig.js` archivo.
+1. Agregue la propiedad con el nombre de pestaña que desea mostrar de forma predeterminada `suggestedDisplayName` `microsoftTeams.settings.setSettings` en, como se muestra en el ejemplo siguiente:
 
-1. En `TabConfig.js` , vaya a `microsoftTeams.settings.setSettings` .
-2. Agregue la `suggestedDisplayName` propiedad con el nombre de pestaña que desea mostrar de forma predeterminada. 
-3. Use el nombre proporcionado en el ejemplo siguiente o escriba su nombre. (De forma predeterminada, los usuarios pueden cambiar el nombre).
-
-```JavaScript
-microsoftTeams.settings.setSettings({
-  "contentUrl": "https://localhost:3000/tab",
-  "suggestedDisplayName": "Team Contacts"
-});
-```
+  ```JavaScript
+    microsoftTeams.settings.setSettings({
+    "contentUrl": "https://localhost:3000/tab",
+    "suggestedDisplayName": "Team Contacts"
+  });
+  ```
 
 ## <a name="6-build-and-run-your-app"></a>6. Crear y ejecutar la aplicación
 
-En el interés del tiempo, compilarás y ejecutarás la aplicación localmente.
+Este tutorial te enseña a crear y ejecutar la aplicación localmente. 
 
-(Esta información también está disponible en el kit de herramientas `README` ).)
-
-1. En un terminal, vaya al directorio raíz del proyecto de aplicación y ejecute `npm install` .
+1. Vaya al directorio raíz del proyecto de la aplicación en Terminal.
+1. Ejecute `npm install` .
 1. Ejecute `npm start` .
 
-Una vez completado, hay un **compilado correctamente.** en el terminal. La aplicación se está ejecutando en `https://localhost:3000` .
+Esta información también está presente en la `README` sección del kit de herramientas.
+La aplicación se está ejecutando `https://localhost:3000` después de **la compilación correctamente.** mensaje aparece en el terminal. 
 
 ## <a name="7-sideload-your-app-in-teams"></a>7. Instalación local de la aplicación en Teams
 
-La aplicación está lista para probarse en Teams. Para ello, debes tener una cuenta que permita la instalación local de la aplicación. (Si no está seguro de que lo tiene, obtenga información sobre cómo obtener una cuenta de desarrollo [de Teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)).)
+La aplicación está lista para probarse en Teams. Para ello, debes tener una cuenta que permita la instalación local de la aplicación. 
 
-1. En Visual Studio, presione la tecla **F5** para iniciar un cliente web de Teams.
-1. Para mostrar el contenido de la aplicación en Teams, especifica que el lugar donde se ejecuta la aplicación ( `localhost` ) es de confianza:
-   1. Abra una nueva pestaña en la misma ventana del explorador (Google Chrome de forma predeterminada) que se abrió después de presionar **F5**.
-   1. Vaya a `https://localhost:3000/tab` y continúe con la página.
-1. Vuelva a Teams. En el modal, seleccione **Agregar a un** equipo o Agregar a un **chat** y busque un canal o chat que pueda usar para las pruebas.
-1. Seleccione **Configurar una pestaña**. La página de configuración se muestra en un modal.<br/>
+1. Abra un cliente web de Teams en Visual Studio code con la **clave F5.**
+1. Agrega ( ) como confiable siguiendo estos pasos para permitir que el contenido de la aplicación `localhost` se muestre en Teams:
+
+   1. Abra una nueva pestaña en la misma ventana del explorador (Google Chrome de forma predeterminada) que se abrió con la **tecla F5.**
+   1. Abra `https://localhost:3000/tab` y continúe con la página.
+
+1. Selecciona **Agregar a un equipo** o Agregar a un **chat** y busca un canal o chat que puedas usar para realizar pruebas desde el modal en Teams.
+1. Seleccione **Configurar una pestaña**. La página de configuración se muestra en un modal.
+
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Captura de pantalla de una página de configuración de pestaña de canal.":::
-1. Seleccione **Guardar** para configurar la pestaña. Se muestra la página de contenido.<br/>
+
+1. Seleccione **Guardar** para configurar la pestaña. Aparece la siguiente página de contenido:
+
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Captura de pantalla de una pestaña de canal con vista de contenido estático.":::
 
-## <a name="well-done"></a>Bien hecho
+## <a name="see-also"></a>Consulte también
 
-¡Enhorabuena! Tienes una aplicación de Teams con una pestaña para mostrar contenido útil en canales y chats.
+* [Crear y ejecutar la primera aplicación de Microsoft Teams](../build-your-first-app/build-and-run.md) 
+* [SDK para cliente de JavaScript en Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Diseño de la pestaña para escritorio y web de Microsoft Teams](../tabs/design/tabs.md) 
+* [Diseño de la aplicación de Microsoft Teams con plantillas de interfaz de usuario](../concepts/design/design-teams-app-ui-templates.md) 
+* [Pestañas en dispositivos móviles](../tabs/design/tabs-mobile.md)
+* [Compatibilidad con inicio de sesión único (SSO) para pestañas](../tabs/how-to/authentication/auth-aad-sso.md)
+* [Introducción a la API de Microsoft Teams](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Crear una pestaña personal personalizada con Node.js y el generador de Yeoman para Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
-## <a name="learn-more"></a>Más información
-
-* Siga nuestras [directrices de diseño](../tabs/design/tabs.md) y cree con [plantillas de](../concepts/design/design-teams-app-ui-templates.md) interfaz de usuario preparadas para producción para crear una experiencia perfecta.
-* Comprender [las consideraciones móviles](../tabs/design/tabs-mobile.md) para las pestañas.
-* [Agregar autenticación de SSO a la pestaña](../tabs/how-to/authentication/auth-aad-sso.md).
-* Utilizar datos de Teams con [Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
-* [Crear una pestaña sin el kit de herramientas](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
-
-## <a name="next-lesson"></a>Siguiente lección
-
-Ya sabes cómo crear una pestaña para la colaboración. ¿Quieres intentar crear un tipo diferente de aplicación de Teams?
+## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Crear un bot](../build-your-first-app/build-bot.md)
+
+> [!div class="nextstepaction"]
+> [Crear una extensión de mensajería](../build-your-first-app/build-messaging-extension.md)

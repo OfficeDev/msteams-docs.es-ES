@@ -4,33 +4,26 @@ description: Describe las directrices para diseñar pestañas que funcionan en d
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Las directrices de diseño de teams hacen referencia a las pestañas móviles de aplicaciones personales del marco de trabajo de teams
-ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: cdcaddf5ba0fb18537e87daa4b459c7377225f76
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020411"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075699"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
-> [!NOTE]
-> Si decide que la pestaña canal o grupo aparezca en los clientes móviles de Teams, la configuración debe tener un valor para la propiedad `setSettings()` `websiteUrl` (vea a continuación).
-
-Las pestañas personalizadas pueden formar parte de un canal, un chat de grupo o una aplicación personal (aplicaciones que contienen pestañas estáticas o un bot de uno a uno).
-
-Las aplicaciones personales están disponibles en clientes móviles en el cajón de aplicaciones. La aplicación solo se puede instalar desde un cliente de escritorio o web y puede tardar hasta 24 horas en aparecer en clientes móviles. Como alternativa, puede aplicar una recarga en el cliente móvil al iniciar sesión. Esto debería hacer que la aplicación móvil esté disponible de inmediato.
-
-Las pestañas de canal también están disponibles en dispositivos móviles. Actualmente, el comportamiento predeterminado es usar la pestaña `websiteUrl` para iniciarla en una ventana del explorador. Sin embargo, se pueden cargar en un cliente móvil haciendo clic en el menú desbordamiento situado junto a la pestaña y seleccionando Abrir , que usará la pestaña para cargarla dentro del cliente móvil `...` de  `contentUrl` Teams.
+Puedes incluir pestañas en canales móviles de Teams, chats y aplicaciones personales.
 
 ## <a name="accessing-personal-tabs"></a>Acceso a pestañas personales
 
-En la siguiente ilustración se muestra cómo acceder a una pestaña personal en el móvil.
+Puedes acceder a pestañas personales en el cajón de la aplicación.
 
 :::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Ilustración que muestra el cajón de la aplicación móvil de Teams." border="false":::
 
 ## <a name="accessing-channel-tabs"></a>Acceso a pestañas de canal
 
-En la siguiente ilustración se muestra cómo obtener acceso a una pestaña de canal en el móvil.
+Puedes acceder a las pestañas canal  y grupo seleccionando el botón Más en el canal o chat en el que se han agregado.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Ilustración que muestra una pestaña móvil de Teams." border="false":::
 
@@ -126,10 +119,6 @@ Los campos son áreas donde los usuarios pueden introducir texto. Los paneles de
 
 Cuando crees una aplicación que incluya una pestaña, debes considerar (y probar) cómo funcionará la pestaña en los clientes de Microsoft Teams de Android e iOS. En las secciones siguientes se describen algunos de los escenarios clave que debe tener en cuenta.
 
-### <a name="testing-on-mobile-clients"></a>Pruebas en clientes móviles
-
-Debes validar que la pestaña funciona correctamente en dispositivos móviles de distintos tamaños y calidades. Para dispositivos Android, puedes usar [DevTools](~/tabs/how-to/developer-tools.md) para depurar la pestaña mientras se ejecuta. Se recomienda probar tanto en dispositivos de alto y bajo rendimiento, como en una tableta.
-
 ### <a name="authentication"></a>Autenticación
 
 Para que la autenticación funcione en clientes móviles, debe actualizar el SDK de JavaScript de Teams a la versión 1.4.1 como mínimo.
@@ -139,4 +128,26 @@ Para que la autenticación funcione en clientes móviles, debe actualizar el SDK
 Los clientes móviles necesitan funcionar regularmente con un ancho de banda bajo y conexiones intermitentes. La aplicación debe controlar los tiempos de espera correctamente proporcionando un mensaje contextual al usuario. También debe usar indicadores de progreso del usuario para proporcionar comentarios a los usuarios sobre los procesos de larga ejecución.
 
 > [!NOTE]
-> Las pestañas solo se habilitan en dispositivos móviles después de agregar la aplicación a una lista de permitidos, en función de la entrada del equipo de aprobación. Para comprobar la capacidad de respuesta de los dispositivos móviles, llegue a teamsubm@microsoft.com. 
+> Las pestañas solo se habilitan en dispositivos móviles después de agregar la aplicación a una lista de permitidos, en función de la entrada del equipo de aprobación. Para comprobar la capacidad de respuesta de los dispositivos móviles, llegue a teamsubm@microsoft.com.
+
+### <a name="testing-on-mobile-clients"></a>Pruebas en clientes móviles
+
+Debes validar que la pestaña funciona correctamente en dispositivos móviles de distintos tamaños y calidades. Para dispositivos Android, puedes usar [DevTools](~/tabs/how-to/developer-tools.md) para depurar la pestaña mientras se ejecuta. Se recomienda probar tanto en dispositivos de alto y bajo rendimiento, como en una tableta.
+
+### <a name="distribution"></a>Distribución
+
+Las aplicaciones que aparecen en la tienda de Teams deben aprobarse para que el uso móvil funcione correctamente en el cliente móvil de Teams. El comportamiento de las pestañas depende de si la aplicación está aprobada.
+
+#### <a name="channel-and-group-tab-behavior"></a>Comportamiento de las pestañas canal y grupo
+
+* **Comportamiento cuando se aprueba:** se abre en el cliente móvil de Teams con la configuración de la `contentUrl` aplicación.
+* **Comportamiento cuando no se aprueba:** se abre en el explorador predeterminado del dispositivo mediante la configuración de la aplicación (que también debe incluirse en la función `websiteUrl` del código `setSettings()` fuente). Sin embargo, los usuarios aún pueden cargar la  pestaña en el cliente móvil de Teams seleccionando Más junto a la aplicación y **seleccionando Abrir**, que desencadena la configuración de la `contentUrl` aplicación.
+
+#### <a name="personal-app-behavior"></a>Comportamiento de la aplicación personal
+
+* **Comportamiento cuando se aprueba:** cada pestaña de la aplicación personal se muestra en el cliente móvil de Teams con su configuración `contentUrl` respectiva.
+* **Comportamiento cuando no se aprueba:** la aplicación personal no está disponible en el cliente móvil de Teams.
+
+#### <a name="non-teams-store-app-behavior"></a>Comportamiento de la aplicación de la tienda que no es de Teams
+
+Si vas a descargar localmente la aplicación o publicarla en el catálogo de aplicaciones de una organización, el comportamiento de las pestañas será el mismo que las aplicaciones de la tienda de Teams aprobadas por Microsoft para dispositivos móviles.
