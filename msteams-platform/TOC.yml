@@ -8,17 +8,17 @@
 - name: Introducción
   expanded: true
   items:
-    - name: Información general y prerrequisitos
+    - name: Información general
       href: build-your-first-app/build-first-app-overview.md
-    - name: 'Crear un "¡Hola, mundo!" aplicación'
+    - name: 'Crear un "Hola, mundo" aplicación'
       href: build-your-first-app/build-and-run.md
-    - name: Crear una pestaña personal
+    - name: Crear una pestaña personal básica
       href: build-your-first-app/build-personal-tab.md
-    - name: Crear una pestaña de canal y grupo
+    - name: Crear su primera pestaña de canal y grupo
       href: build-your-first-app/build-channel-tab.md
-    - name: Crear un bot
+    - name: Cree su primer bot
       href: build-your-first-app/build-bot.md
-    - name: Crear una extensión de mensajería
+    - name: Cree su primera extensión de mensajería
       href: build-your-first-app/build-messaging-extension.md
 - name: Tutoriales y ejemplos de código
   items:
