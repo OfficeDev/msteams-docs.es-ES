@@ -1,19 +1,19 @@
 ---
 title: Agregar acciones de tarjeta en un bot
-description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en los bots
+description: Describe acciones de tarjeta en Microsoft Teams y cómo usarlas en los bots
 localization_priority: Normal
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de teams
-ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 75dcd6e1de1968f021a1ebe66c6770c4f641c94d
+ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019541"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "52088797"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
-Las tarjetas usadas por bots y extensiones de mensajería en Teams admiten los siguientes tipos de actividad ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) . Tenga en cuenta que estas acciones difieren de las tarjetas de Conector de `potentialActions` Office 365 cuando se usan de Connectors.
+Las tarjetas usadas por bots y extensiones de mensajería en Teams admiten los siguientes tipos de actividad ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) . Tenga en cuenta que estas acciones difieren de `potentialActions` Office 365 tarjetas connector cuando se usan de Connectors.
 
 | Tipo | Acción |
 | --- | --- |
@@ -24,12 +24,12 @@ Las tarjetas usadas por bots y extensiones de mensajería en Teams admiten los s
 | `signin` | Inicia el flujo de OAuth, lo que permite a los bots conectarse con servicios seguros. |
 
 > [!NOTE]
->* Teams no admite tipos `CardAction` que no aparecen en la tabla anterior.
+>* Teams no admite tipos `CardAction` no enumerados en la tabla anterior.
 >* Teams no admite la `potentialActions` propiedad.
->* Las acciones de tarjeta son diferentes de [las acciones sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en Bot Framework/Azure Bot Service. Las acciones sugeridas no se admiten en Microsoft Teams: si quieres que los botones aparezcan en un mensaje de bot de Teams, usa una tarjeta.
+>* Las acciones de tarjeta son diferentes de [las acciones sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en Bot Framework/Azure Bot Service. Las acciones sugeridas no se admiten en Microsoft Teams: si desea que los botones aparezcan en un mensaje Teams bot, use una tarjeta.
 >* Si usa una acción de tarjeta como parte de una extensión de mensajería, las acciones no funcionarán hasta que la tarjeta se envía al canal (no funcionarán mientras la tarjeta esté en el cuadro de mensaje de redacción).
 
-Teams también admite [acciones de tarjetas adaptables,](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)que solo las usan las tarjetas adaptables. Estas acciones se enumeran en su propia sección al final de esta referencia.
+Teams también admite acciones [de tarjetas adaptables,](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)que solo las usan las tarjetas adaptables. Estas acciones se enumeran en su propia sección al final de esta referencia.
 
 ## <a name="openurl"></a>openUrl
 
@@ -223,11 +223,12 @@ Inicia un flujo de OAuth, lo que permite a los bots conectarse con servicios seg
 
 ## <a name="adaptive-cards-actions"></a>Acciones de tarjetas adaptables
 
-Las tarjetas adaptables admiten tres tipos de acción:
+Las tarjetas adaptables admiten cuatro tipos de acción:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.Exebonito](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 Además de las acciones mencionadas anteriormente, puede modificar la carga de la tarjeta adaptable para admitir acciones existentes de Bot Framework mediante una propiedad `Action.Submit` en el objeto de `msteams` `data` `Action.Submit` . En las secciones siguientes se detalla cómo usar acciones existentes de Bot Framework con tarjetas adaptables.
 
