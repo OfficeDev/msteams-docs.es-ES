@@ -1,60 +1,55 @@
 ---
 title: Empaquetar la aplicación
-description: Obtén información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y almacenar la publicación.
+description: Aprende a empaquetar tu aplicación Microsoft Teams para probar, cargar y publicar en la tienda.
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: c8341f3d83b5e6610e44276d6732affa1d1c1e91
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: e477539a9b8eaa0c869a2070fcd20b74aecfe490
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020143"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101705"
 ---
-# <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Crear un paquete de aplicación para la aplicación de Microsoft Teams
+# <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete Microsoft Teams aplicación
 
-Las aplicaciones de Teams se definen mediante un archivo JSON de manifiesto de aplicación y se agrupan en un paquete de aplicación con sus iconos. Necesitarás un paquete de aplicación para cargar e instalar la aplicación en Teams y publicarla en el catálogo de aplicaciones de línea de negocio o en AppSource.
+Necesitas un paquete de la aplicación sin embargo planeas distribuir tu Microsoft Teams aplicación. Un paquete válido es un archivo ZIP que contiene lo siguiente:
 
-Un paquete de aplicación de Teams es un archivo .zip que contiene lo siguiente:
+* **Manifiesto de** la aplicación: describe cómo se configura la aplicación, incluidas sus capacidades, los recursos necesarios y otros atributos importantes.
+* **Iconos de la** aplicación: cada paquete requiere un icono de color y esquema para la aplicación.
 
-* Un archivo de manifiesto denominado , que especifica los atributos de la aplicación y apunta a los recursos necesarios para la experiencia, como la ubicación de su página de configuración de pestañas o el identificador de aplicación de Microsoft para `manifest.json` su bot.
-* [Iconos de color y esquema de la aplicación](#app-icons).
+## <a name="app-manifest"></a>Manifiesto de la aplicación
 
-## <a name="creating-a-manifest"></a>Creación de un manifiesto
+El archivo de manifiesto de la aplicación debe estar en el nivel superior del paquete con el nombre `manifest.json` . 
 
-**Teams App Studio puede** ayudar a configurar el manifiesto. También contiene una biblioteca de control React y ejemplos configurables para tarjetas. Para obtener más información, consulta [Introducción a App Studio](~/concepts/build-and-test/app-studio-overview.md).
+Al publicar en el almacén Teams, asegúrese de que el manifiesto haga referencia al esquema [más reciente](~/resources/schema/manifest-schema.md).
 
-El archivo de manifiesto debe llamarse "manifest.js" y estar en el nivel superior del paquete de carga. Tenga en cuenta que los manifiestos y paquetes creados anteriormente pueden admitir una versión anterior del esquema. Para las aplicaciones de Teams y, especialmente, el envío de AppSource (anteriormente Tienda Office), debe usar el esquema de [manifiesto actual.](~/resources/schema/manifest-schema.md)
-
-> [!TIP]
-> Especifique el esquema al principio del manifiesto para habilitar la IntelliSense o similar desde el editor de código:
->
-> `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",`
- 
 ## <a name="app-icons"></a>Iconos de la aplicación
 
-El paquete de la aplicación debe incluir dos versiones PNG del icono de la aplicación: un icono de color y un icono de esquema. Para que la aplicación pase la revisión de AppSource, estos iconos deben cumplir los siguientes requisitos de tamaño.
+El paquete de la aplicación debe incluir dos versiones PNG del icono de la aplicación: una versión de color y esquema.
 
 > [!Note]
-> Si la aplicación tiene un bot o una extensión de mensajería, los iconos también se incluirán en el registro del Servicio de bots de Microsoft Azure.
+> Si la aplicación tiene un bot o una extensión de mensajería, los iconos también se incluirán en el registro Microsoft Azure bot service.
+
+Para que la aplicación pase Teams la tienda, estos iconos deben cumplir los siguientes requisitos de tamaño.
 
 ### <a name="color-icon"></a>Icono de color
 
-La versión de color del icono se muestra en la mayoría de los escenarios de Teams y debe tener 192 x 192 píxeles. El símbolo del icono (96 x 96 píxeles) puede ser cualquier color o color, pero debe estar sobre un fondo cuadrado sólido o totalmente transparente.
+La versión de color del icono se muestra en la mayoría Teams escenarios y debe ser de 192 x 192 píxeles. El símbolo del icono (96 x 96 píxeles) puede ser cualquier color, pero debe estar sobre un fondo cuadrado sólido o totalmente transparente.
 
-Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bot. Incluye 48 píxeles de relleno alrededor del símbolo para que estos recortes se puedan realizar sin perder ningún detalle.
+Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bot. Para recortar el símbolo sin perder ningún detalle, incluya 48 píxeles de relleno alrededor del símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Icono de color de Teams y instrucciones de diseño." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams icono de color y instrucciones de diseño." border="false":::
 
 ### <a name="outline-icon"></a>Icono esquema
 
 Un icono de esquema se muestra en dos escenarios:
 
-* Cuando la aplicación está en uso y "izada" en la barra de aplicaciones a la izquierda de Teams.
-* cuando un usuario ancla la extensión de mensajería de la aplicación.
+* Cuando la aplicación está en uso y "izada" en la barra de la aplicación en el lado izquierdo de Teams.
+* Cuando un usuario ancla la extensión de mensajería de la aplicación.
 
 El icono debe ser de 32 x 32 píxeles. Puede ser blanco con un fondo transparente o transparente con un fondo blanco (no se permiten otros colores). El icono de esquema no debe tener ningún relleno adicional alrededor del símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Instrucciones de diseño de iconos de esquema de Teams." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams de diseño de iconos de esquema." border="false":::
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
@@ -77,9 +72,13 @@ El icono de color enviado en el paquete de la aplicación debe ser cuadrado. No 
    :::column-end:::
 :::row-end:::
 
+#### <a name="dont-copy-other-brands"></a>No: Copiar otras marcas
+
+Los iconos no deben imitar ningún producto protegido por derechos de autor que no sea de su propiedad (por ejemplo, un diseño similar a un producto o marca de Microsoft).
+
 ### <a name="examples"></a>Ejemplos
 
-Este es el modo en que los iconos de la aplicación aparecen en diferentes contextos y capacidades de Teams.
+Este es el modo en que los iconos de la aplicación aparecen en diferentes Teams capacidades y contextos.
 
 #### <a name="personal-app"></a>Aplicación personal
 
@@ -92,3 +91,14 @@ Este es el modo en que los iconos de la aplicación aparecen en diferentes conte
 #### <a name="messaging-extension"></a>Extensión de mensajería
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texto alternativo>" border="false":::
+
+## <a name="next-step"></a>Paso siguiente
+
+Elige cómo planeas distribuir la aplicación:
+
+> [!div class="nextstepaction"]
+> [Descarga local de la aplicación en Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [Publicar la aplicación en su organización](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+> [!div class="nextstepaction"]
+> [Publicar la aplicación en la tienda](~/concepts/deploy-and-publish/appsource/publish.md)

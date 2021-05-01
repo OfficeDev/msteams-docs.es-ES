@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: 5193c77a33ea53007c5292af7c7c3c343a48be36
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 94e8e573ac806fdfce0933129708be9bcdc82c45
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088790"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101397"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,8 +22,9 @@ El registro de cambios enumera los cambios realizados en la Microsoft Teams y en
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|04/30/2021|Nueva guía sobre cómo publicar aplicaciones en la Teams tienda.|[Publicar la aplicación en la tienda Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [directrices de validación de la tienda](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 | 04/29/2021 | Nuevo: Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| La característica de personalización de aplicaciones ya está disponible en la vista previa del desarrollador.|[Introducción a la aplicación de Equipos de diseño,](concepts/design/design-teams-app-overview.md#app-customization) [Introducción a App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y Esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
+|04/08/2021| La característica de personalización de aplicaciones ya está disponible en la vista previa del desarrollador.|[Diseño Teams de la aplicación,](concepts/design/design-teams-app-overview.md#app-customization)información [general de App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: Actualice a la versión 4.10 o posterior del SDK de Bot Framework, tal como hemos empezado con el proceso de desuso para `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 |03/05/2021|El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -44,7 +45,7 @@ El registro de cambios enumera los cambios realizados en la Microsoft Teams y en
 |08/06/2020|Compatibilidad con la autenticación de SSO de pestañas|[Desarrollar una pestaña de Microsoft Teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph bots y mensajes proactivos (versión preliminar pública)|[Habilitar la instalación proactiva de bots y la mensajería proactiva en Teams con Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Actualizaciones de funcionalidad de dispositivo móvil.|[Solicitar permisos de dispositivo para la Microsoft Teams pestaña](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|Teams Herramienta de validación de aplicaciones para envíos de AppSource.|[Teams Herramienta de validación de aplicaciones](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
+|07/20/2020|Teams Herramienta de validación de aplicaciones para envíos de AppSource.|[Teams de validación de paquetes de aplicaciones](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-package)
 |07/15/2020|Crear un asistente virtual para Teams|[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Mostrar una documentación de indicador de carga nativa|[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Empieza a crear Teams aplicaciones con el Visual Studio Code Toolkit.|[Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](toolkit/visual-studio-code-overview.md) |

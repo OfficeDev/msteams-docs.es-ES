@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020136"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101698"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
@@ -197,9 +197,11 @@ Los usuarios deberían poder cambiar la configuración de un bot. Puede proporci
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-### <a name="content"></a>Contenido
+Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+### <a name="content"></a>Content
+
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot para establecer una persona clara." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>Práctica recomendada: cree un rol coherente para el bot
 
@@ -209,7 +211,7 @@ Encontrará más información sobre cómo escribir para los bots en el <a href="
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra los procedimientos recomendados de bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra para transmitir claramente lo que el bot puede hacer." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Práctica recomendada: transmita claramente qué puede hacer el bot
 
@@ -217,7 +219,7 @@ Los mensajes de bienvenida y los paseos ayudan a los usuarios a comprender qué 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ejemplo es mostrar un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Ejemplo que muestra que no oscurece las características del bot." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>Práctica a evitar: ocultar las características del bot
 
@@ -228,7 +230,7 @@ Las primeras impresiones son importantes. Es probable que los usuarios se confun
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Muestra de cómo mostrar un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="El ejemplo que muestra el bot debe reconocer que no hay preguntas." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Práctica recomendada: que el bot reconozca mensajes que no son preguntas
 
@@ -236,7 +238,7 @@ El bot debería poder responder a mensajes como "Hola", "Ayuda" y "Gracias", as�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Ejemplo que muestra que debe evitar respuestas torpes a mensajes de bot simples." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>Práctica a evitar: perder oportunidades para una charla agradable
 
@@ -249,7 +251,7 @@ Algunas personas esperan que las conversaciones fluyan de forma natural como lo 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo de procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo que muestra bots debe ayudar a los usuarios a comprender cómo usar bots." border="false":::
 
 #### <a name="do-provide-help"></a>Práctica recomendada: proporcione ayuda
 
@@ -257,7 +259,7 @@ Si el bot no puede satisfacer una solicitud, dé al usuario una manera de aprend
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Ejemplo que muestra que el bot no debe varár a los usuarios." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Práctica a evitar: dejar a los usuarios sin ayuda
 
@@ -270,7 +272,7 @@ Los usuarios abandonarán rápidamente el bot si no pueden solucionar problemas 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Ejemplo que muestra que puede usar módulos de tareas o pestañas con el bot para interacciones complejas." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Práctica recomendada: use pestañas o módulos de tareas
 
@@ -278,7 +280,7 @@ Si su bot proporciona una respuesta que requiere pasos adicionales, puede vincul
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Vea el ejemplo de un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Ejemplo que muestra cómo el bot debe evitar interacciones en varios turnos." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Práctica a evitar: hacer interacciones multiuso tediosas
 
@@ -291,7 +293,7 @@ Una conversación extensa para completar una tarea simple ralentiza y complica e
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Ejemplo que muestra cómo los bots solo deben mostrar información privada en un contexto personal." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Práctica recomendada: muestre información confidencial solo en un contexto personal
 
@@ -299,7 +301,7 @@ Si el bot está en un chat o canal de grupo, le recomendamos que dirija a los us
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Ilustración que muestra un procedimiento recomendado de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Ejemplo que muestra cómo los bots no deben revelar información confidencial a un grupo o personas." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Práctica a evitar: presentar a todo el mundo contenido confidencial
 
@@ -308,17 +310,10 @@ El bot no debería revelar información confidencial a un grupo de personas.
    :::column-end:::
 :::row-end:::
 
-## <a name="learn-more"></a>Más información
+## <a name="see-also"></a>Vea también
 
 A continuación, tiene guías adicionales que le pueden ayudar con el diseño del bot:
 
 * [Diseño de su aplicación personal](../../concepts/design/personal-apps.md)
 * [Diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [Diseño de módulos de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="validate-your-design"></a>Valide su diseño
-
-Si tiene previsto publicar la aplicación en AppSource, debe comprender los problemas de diseño que habitualmente provocan errores en las aplicaciones durante el envío.
-
-> [!div class="nextstepaction"]
-> [Comprobar las instrucciones de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

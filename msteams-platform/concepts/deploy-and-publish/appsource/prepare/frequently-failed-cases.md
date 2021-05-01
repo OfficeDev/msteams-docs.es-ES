@@ -1,23 +1,26 @@
 ---
 title: Sugerencias de envío de aplicaciones y casos con frecuencia con errores
-description: describe sugerencias para un envío de almacén de Teams correcto y motivos comunes por los que los envíos fallan
+description: describe sugerencias para un envío de Teams de almacenamiento y motivos comunes por los que los envíos fallan
 ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: Sugerencias de envío de aplicaciones con frecuencia con errores en las directrices de validación de casos
-ms.openlocfilehash: a5e03f6ac7afb949cb94824fde3514a14869b291
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b00beb084b8ca9d149e46f1cc661b8d52e308cc4
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019924"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101691"
 ---
-# <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío correcto de aplicaciones de Microsoft Teams
+# <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío Microsoft Teams aplicación correcta
+
+>[!NOTE]
+>Esta página estará en desuso en mayo de 2021. Para obtener más información sobre cómo publicar correctamente la aplicación, consulta las Teams [de validación de la tienda.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
 En este artículo se abordan los motivos comunes por los que las aplicaciones enviadas no pueden validarse. Aunque no está pensado para ser una lista exhaustiva de todos los posibles problemas con la aplicación, seguir esta guía aumentará la probabilidad de que el envío de la aplicación pase por primera vez. Consulte [Directivas de certificación del mercado](/legal/marketplace/certification-policies) comercial para obtener una amplia lista de directivas de validación.
 
 >[!NOTE]
->**[La sección 1140](/legal/marketplace/certification-policies#1140-teams)** es específica de Microsoft Teams y la **[subsección 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** aborda los requisitos de funcionalidad de las aplicaciones de Teams.
+>**[La sección 1140](/legal/marketplace/certification-policies#1140-teams)** es específica Microsoft Teams y **[la subsección 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** aborda los requisitos de funcionalidad para Teams aplicaciones.
 
 ## <a name="validation-guidelines--most-failed-test-cases"></a>Directrices de validación & casos de prueba con errores
 
@@ -25,7 +28,7 @@ En este artículo se abordan los motivos comunes por los que las aplicaciones en
 
 Vea también [sección 100 : General](/legal/marketplace/certification-policies#100-general)
 
-* Asegúrese de usar la versión 1.4.1 o posterior del [SDK de Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
+* Asegúrese de usar la versión 1.4.1 o posterior del [SDK Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
 * No realices cambios en la aplicación mientras el proceso de validación esté en curso. Si lo hace, necesitará una revalidación completa de la aplicación.
 * La aplicación no debe dejar de responder, finalizar de forma inesperada ni contener errores de programación. Si se produce un problema, la aplicación debe producir un error y proporcionar información válida para el avance al usuario.
 * La aplicación no debe descargar, instalar ni iniciar automáticamente ningún código ejecutable en el entorno del usuario. Todas las descargas deben buscar un permiso explícito del usuario.
@@ -38,14 +41,14 @@ Vea también [sección 100 : General](/legal/marketplace/certification-policies#
     * Metadatos de origen de la aplicación.
     * Pantalla de configuración del conector.
 
-* El recorrido visual puede ser un vídeo, una captura de pantalla, un vínculo a una pestaña estática con detalles de la aplicación. Todas estas referencias deben estar dentro del entorno de Teams.
+* El recorrido visual puede ser un vídeo, una captura de pantalla, un vínculo a una pestaña estática con detalles de la aplicación. Todas estas referencias deben estar dentro del Teams de datos.
 
     ![Aplicación de ejemplo 1 ](../../../../assets/images/faq/Sampleapp1.png) ![ Aplicación de ejemplo 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Incremente el número de versión de la aplicación en el manifiesto si realiza algún cambio de manifiesto en el envío.
-* La aplicación no debe sacar usuarios de Teams para escenarios de usuario principales. Los destinos de vínculo de las aplicaciones no deben vincularse a un explorador externo. Los destinos de vínculo deben vincularse a elementos div contenidos en Teams, por ejemplo, módulos de tareas y pestañas. 
+* La aplicación no debe sacar a los usuarios de Teams escenarios principales de usuario. Los destinos de vínculo de las aplicaciones no deben vincularse a un explorador externo. Los destinos de vínculo deben vincularse a elementos div incluidos Teams, por ejemplo, módulos de tareas y pestañas. 
 * Se sugiere usar módulos de tareas o pestañas para mostrar información a los usuarios de Teams.
-* Todos los escenarios principales y no principales deben completarse en el entorno de Teams excepto para:
+* Todos los escenarios principales y no principales deben completarse en el Teams excepto para:
   * Directiva de privacidad
   * Términos de uso (TOU)
   * Vínculo sitio web
@@ -59,13 +62,13 @@ Vea también [sección 1100.5: Control de clientes](/legal/marketplace/certifica
 
 * Si la aplicación o el complemento dependen de cuentas o servicios externos, la experiencia de inicio de sesión, de inicio de sesión y de registro debe ser aparente y accesible en todas las funcionalidades de la aplicación.
 * Si hay una opción explícita de inicio de sesión proporcionada al usuario, debe haber una opción de salida correspondiente (incluso si la aplicación usa la autenticación [silenciosa](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
-* La opción de cerrar sesión solo debe cerrar la sesión del usuario de la funcionalidad de la aplicación y no salir del cliente de Teams.
+* La opción de cerrar sesión solo debe cerrar la sesión del usuario de la funcionalidad de la aplicación y no salir del Teams cliente.
 * Como mínimo, la opción de cerrar sesión debe cerrar la sesión del usuario de las mismas capacidades a las que se tiene acceso con la opción de inicio de sesión. Por ejemplo, si la opción de inicio de sesión incluye tanto la extensión de mensajería como la pestaña, la opción de cerrar sesión debe incluir tanto la extensión de mensajería como la pestaña.
 
 * Asegúrese de que siempre hay una manera de revertir los siguientes comportamientos (o similares):
   * Inicio de sesión => cerrar sesión.
   * Vincular una cuenta/servicio => desvincular una cuenta o servicio.
-  * Conectar una cuenta/servicio => desconectar una cuenta o servicio.
+  * Conectar cuenta/servicio => desconectar una cuenta o servicio.
   * Autorizar una cuenta/servicio => desautorizar o denegar una cuenta o servicio.
   * Registrar una cuenta/servicio => cancelar el registro o cancelar la suscripción a una cuenta/servicio.
 * Si la aplicación requiere una cuenta o un servicio, debes proporcionar una forma de que el usuario se inscriba o cree una solicitud de registro. Se puede conceder una excepción si la aplicación requiere una licencia para usar. En estos escenarios, proporcione instrucciones claras para que un nuevo usuario se inscriba.
@@ -78,8 +81,8 @@ Vea también [sección 1100.5: Control de clientes](/legal/marketplace/certifica
 > * en el mensaje de ayuda de la aplicación.
 > * en la ventana donde se pide al usuario que inicie sesión en sus servicios.
 
-* Las aplicaciones sin un flujo de registro fácil también deben incluir una pestaña de ayuda o un vínculo a una página web, donde un nuevo usuario puede ver instrucciones detalladas sobre cómo configurar la aplicación de Teams. Proporcione información detallada para asegurarse de que un nuevo usuario no está bloqueado al probar la aplicación por primera vez.
-* Las funciones de inicio de sesión y de salida deben funcionar en clientes móviles. Asegúrese de usar [el SDK de Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js) versión 1.4.1 o posterior.
+* Las aplicaciones sin un flujo de registro fácil también deben incluir una pestaña de ayuda o un vínculo a una página web, donde un nuevo usuario puede ver instrucciones detalladas sobre cómo configurar la Teams aplicación. Proporcione información detallada para asegurarse de que un nuevo usuario no está bloqueado al probar la aplicación por primera vez.
+* Las funciones de inicio de sesión y de salida deben funcionar en clientes móviles. Asegúrese de usar el [SDK Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js) versión 1.4.1 o posterior.
 
 Para obtener información adicional sobre la autenticación, vea:
 
@@ -101,17 +104,17 @@ Para obtener información adicional sobre la autenticación, vea:
 
 * Las pestañas deben proporcionar contenido centrado y evitar los elementos de interfaz de usuario necesarios. Esto suele hacer referencia a una navegación anidada o por capas innecesaria, una interfaz de usuario innecesaria o irrelevante junto al contenido o cualquier vínculo que lleve al usuario a contenido no relacionado. Por ejemplo, la siguiente vista de pestaña omite los menús de navegación y solo muestra el contenido principal:
 
-![Vista web de SharePoint](../../../../assets/images/faq/web-sp.png)  
-![Vista de pestañas de SharePoint](../../../../assets/images/faq/tab-sp.png)
+![SharePoint web](../../../../assets/images/faq/web-sp.png)  
+![SharePoint de pestañas](../../../../assets/images/faq/tab-sp.png)
 
 * Las pestañas deben ser ligeras en la naturaleza y no incluir navegación compleja.
 * Las pestañas de canal que tienen funciones de edición complejas dentro de la aplicación deben abrir la vista de editor en una ventana múltiple en lugar de en una pestaña.
-* Las pestañas de canal no deben proporcionar una barra de aplicaciones con iconos en el carril izquierdo que entre en conflicto con la navegación principal de Teams.
-* Las pestañas no deben presentar una barra de aplicaciones con iconos en el carril izquierdo que entren en conflicto con la navegación principal de Teams.
+* Las pestañas de canal no deben proporcionar una barra de aplicaciones con iconos en el carril izquierdo que entren en conflicto con la navegación principal Teams aplicación.
+* Las pestañas no deben presentar una barra de aplicaciones con iconos en el carril izquierdo que entren en conflicto con la navegación Teams aplicación.
 * Las pestañas que tienen funciones de edición complejas dentro de la aplicación deben abrir la vista de editor en una ventana múltiple en lugar de en la pestaña.
 * Si hay varias opciones de vista, considere la posibilidad de tener un menú de configuración de pestañas para que el usuario elija. Por ejemplo, en lugar de insertar un menú dentro de la pestaña, coloque el menú en la página de configuración para que la vista de pestaña real esté limpia y centrada.
 * Incluya una pestaña *ayuda* como pestaña estática para aconsejar a los usuarios cómo configurar, registrarse y usar la aplicación.
-* Incluya una pestaña *Configuración* que esté disponible en el encabezado de la aplicación.
+* Incluya una pestaña *Configuración* que esté disponible desde el encabezado de la aplicación.
 
 ![Página de configuración de idea amplia](../../../../assets/images/faq/wideidea.png)
 
@@ -123,14 +126,14 @@ Para obtener información adicional sobre la autenticación, vea:
 * No muestres toda la página web dentro de la ventana emergente configuración de inicio de sesión.
 * Un usuario siempre debe poder finalizar la experiencia de configuración, incluso si no puede encontrar inmediatamente el contenido que está buscando.
 * La experiencia de configuración debe proporcionar opciones para que el usuario encuentre su contenido, anclar una dirección URL o crear contenido nuevo si no existe.
-* La experiencia de configuración debe permanecer en el contexto de Teams. El usuario no debe tener que dejar la experiencia de configuración para crear contenido y, a continuación, volver a Teams para anclarlo.
+* La experiencia de configuración debe permanecer dentro del Teams contexto. El usuario no debe tener que dejar la experiencia de configuración para crear contenido y, a continuación, volver a Teams para anclarlo.
 * Use el área de ventanilla disponible de forma eficaz. No lo desperdici en el uso de logotipos enormes dentro de la configuración emergente.
 
-![OneNote permite a los usuarios pegar un vínculo de OneNote en caso de que no se puedan encontrar notas](../../../../assets/images/faq/tab-onenote-config.png)
+![OneNote permite a los usuarios pegar un vínculo OneNote en caso de que no se puedan encontrar notas](../../../../assets/images/faq/tab-onenote-config.png)
 
 ![Los usuarios siempre pueden crear un nuevo plan en planner en caso de que no haya otros existentes](../../../../assets/images/faq/tab-planner-config.png)
 
-![SharePoint también permite al usuario pegar directamente un vínculo de SharePoint](../../../../assets/images/faq/tab-sp-config.png)
+![SharePoint permite al usuario pegar directamente un vínculo SharePoint de datos](../../../../assets/images/faq/tab-sp-config.png)
 
 ### <a name="9989-tabs-in-channel---member-access"></a>&#9989; pestañas en canal: acceso de miembros
 
@@ -143,11 +146,11 @@ El bot debe responder a cualquier comando y no al usuario. Estos son algunos con
 
 * **Usar listas de comandos**. El análisis de la entrada del usuario o la previsión de la intención del usuario es difícil. En lugar de permitir que los usuarios adivinen qué puede hacer el bot, proporcione una lista de los comandos que el bot entiende.
 
-![Lista de comandos Flow](../../../../assets/images/faq/flow-bot.png)
+![Flow de comandos](../../../../assets/images/faq/flow-bot.png)
 
 * **Incluir un comando de ayuda**. Es probable que los usuarios escriban "Ayuda" cuando se pierden o cuando el bot no responde como se esperaba. Incluye un comando de ayuda que describe cómo se experimentará el valor de la aplicación junto con todos los comandos válidos.
 
-![Comando de ayuda de flujo](../../../../assets/images/faq/flow-help.png)
+![Flow de ayuda](../../../../assets/images/faq/flow-help.png)
 
 * **Incluya contenido de ayuda o instrucciones cuando se pierda el bot**. Cuando el bot no puede comprender la entrada del usuario, debe sugerir una acción alternativa. Por ejemplo, *"Lo siento, no lo entiendo. Escriba "ayuda" para obtener más información".* No respondas con un mensaje de error o *simplemente, "No lo entiendo".*
 
@@ -161,7 +164,7 @@ El bot debe responder a cualquier comando y no al usuario. Estos son algunos con
 * **Usar tarjetas adaptables y módulos de tareas para que la respuesta del bot sea clara y fácil de usar** 
  [Las tarjetas adaptables con botones que invocan módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots) mejoran la experiencia del usuario del bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos. Además, las respuestas de bot no deben ser textuales con texto largo. Los bots deben usar tarjetas adaptables y módulos de tareas en lugar de una interfaz de usuario basada en chat conversacional y respuestas de texto largas.
 
-* **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o de equipos, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la referencia del esquema de manifiesto de Microsoft [Teams](../../../../resources/schema/manifest-schema.md#bots).)
+* **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o de equipos, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la referencia Microsoft Teams esquema de [manifiesto](../../../../resources/schema/manifest-schema.md#bots).)
 
 * **Incluir chat de grupo, de grupo o de conversación 1:1.** Las notificaciones de bot deben incluir un equipo, un chat de grupo o una conversación uno a uno con contenido relevante para la audiencia.
 
@@ -214,18 +217,18 @@ Las cosas son un poco diferentes cuando el bot se agrega por primera vez a un ca
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; capacidad de respuesta móvil, sin ventas directas ni pago
 
 * Las pestañas, las tarjetas adaptables, los mensajes de bot y el contenido de los módulos de tareas deben responder para una variedad de tamaños de pantalla de dispositivo móvil.
-* Las aplicaciones compatibles con iOS deben ser totalmente funcionales en el dispositivo iPad más reciente con la versión más reciente de iOS.
+* Las aplicaciones compatibles con iOS deben ser totalmente funcionales en el dispositivo iPad con la versión más reciente de iOS.
 * No debe incluir referencias directas a compras desde la aplicación, ofertas de prueba, ofertas para versiones de pago o vínculos a ninguna tienda en línea donde los usuarios puedan comprar o adquirir otro contenido, aplicaciones o complementos desde la aplicación de Teams en el sistema operativo móvil (Android, iOS).
 * La versión de iOS o Android del complemento no debe mostrar ninguna interfaz de usuario o idioma ni vínculo a ninguna otra aplicación, complemento o sitio web que pida al usuario que pague.
 * Las páginas de la Directiva de privacidad y los Términos de uso asociadas también deben estar libres de vínculos de la interfaz de usuario o de la Tienda de comercio.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; No publicar datos confidenciales en una audiencia que no está diseñada para ver los datos
 
-La aplicación de Teams no debe publicar datos confidenciales como tarjeta de crédito o instrumento de pago financiero, información de identificación personal (PIN), estado o seguimiento de contactos a una audiencia que no está destinada a ver esos datos.
+La aplicación Teams no debe publicar datos confidenciales como tarjeta de crédito o instrumento de pago financiero, información de identificación personal (PIN), estado o seguimiento de contactos a una audiencia que no está destinada a ver esos datos.
 
-### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; No transmitir detalles de pago financieros ni completar transacciones financieras a través de la aplicación de Teams
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; No transmitir detalles de pago financieros ni completar transacciones financieras a través de la Teams aplicación
 
-* La aplicación de Teams no debe pedir a los usuarios que realicen un pago directamente en la interfaz de Teams.
+* La Teams no debe pedir a los usuarios que realicen un pago directamente en Teams interfaz.
 * Es posible que las aplicaciones no transmitan detalles del instrumento financiero a través del usuario en la interfaz de la aplicación. Las aplicaciones solo pueden transmitir vínculos para proteger los servicios de pago a los usuarios si esto se revela en los Términos de uso, la directiva de privacidad y cualquier página de perfil o sitio web de la aplicación antes de que un usuario acepte usar la aplicación.
 
 ### <a name="9989-clear-warning-before-downloading-any-files-or-executable-exe-into-a-users-environment"></a>&#9989; Borrar advertencia antes de descargar archivos o archivos ejecutables ( `.exe` ) en el entorno de un usuario
@@ -239,14 +242,14 @@ Advierto a los usuarios antes de que la aplicación descargue los archivos o arc
 * Los `@mention` ejecutables de extensión de mensaje deben ser claros, fáciles de comprender y fáciles de leer.
 ![Extensión de mensaje](../../../../assets/images/faq/message-extension.png)
 
-## <a name="m365-publisher-attestation"></a>M365 Publisher Attestation
+## <a name="m365-publisher-attestation"></a>M365 Publisher atestación
 
-### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; completar la atestación de publisher en el Centro de partners
+### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; completar la Publisher en el Centro de partners
 
-* Consulte la documentación [del programa Complete Publisher Attestation](/microsoft-365-app-certification/docs/attestation) para obtener más información.
-* Siga los pasos de la sección [Flujo de trabajo de atestación](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) de editores para completar el proceso de atestación del editor. Escribe en appcert@microsoft.com para cualquier pregunta.
+* Consulte la [documentación del programa Publisher atestación completa](/microsoft-365-app-certification/docs/attestation) para obtener más información.
+* Siga los pasos de la sección Publisher flujo de trabajo de [atestación](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) de publicación para completar el proceso de atestación del editor. Escribe en appcert@microsoft.com para cualquier pregunta.
 * Consulte la guía [de solución de problemas](/azure/active-directory/develop/troubleshoot-publisher-verification) para obtener información adicional.
 * Complete la autoaestación a través del centro de partners. Rellene el cuestionario Self-Assessment en **Cumplimiento de aplicaciones**.
 
 > [!div class="nextstepaction"]
-> [Más información sobre las directivas de aprobación de aplicaciones de Teams](/legal/marketplace/certification-policies#1140-teams)
+> [Más información sobre las Teams de aprobación de aplicaciones](/legal/marketplace/certification-policies#1140-teams)

@@ -1,31 +1,31 @@
 ---
 title: Diseño de la pestaña para escritorio y web
-description: Aprende a diseñar una pestaña de Teams (escritorio y web) y a obtener el Kit de interfaz de usuario de Microsoft Teams.
+description: Obtén información sobre cómo diseñar una Teams (escritorio y web) y obtener el kit Microsoft Teams interfaz de usuario.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019688"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101852"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Diseño de la pestaña para escritorio y web de Microsoft Teams
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Diseño de la pestaña para Microsoft Teams escritorio y web
 
 Una pestaña es un lienzo grande para el contenido. Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar pestañas en Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Puedes encontrar instrucciones completas de diseño de pestañas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
+Puedes encontrar instrucciones completas de diseño de pestañas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Agregar una pestaña
 
-Puedes agregar una pestaña desde el almacén de Teams (AppSource) o en uno de los siguientes contextos:
+Puedes agregar una pestaña desde el almacén Teams (AppSource) o en uno de los siguientes contextos:
 
 * Chat
 * Canal
@@ -66,7 +66,7 @@ Puede agregar un paso en el que los usuarios primero deben iniciar sesión con s
 
 ### <a name="designing-a-tab-setup-with-ui-templates"></a>Diseño de una configuración de pestaña con plantillas de interfaz de usuario
 
-Usa una de las siguientes plantillas de interfaz de usuario de Teams para diseñar la experiencia de configuración de pestañas:
+Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la experiencia de configuración de pestañas:
 
 * [Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.
 * [Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.
@@ -91,7 +91,7 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 
 ### <a name="designing-a-tab-with-ui-templates"></a>Diseño de una pestaña con plantillas de interfaz de usuario
 
-Usa una de las siguientes plantillas de interfaz de usuario de Teams para ayudar a diseñar la experiencia de pestaña:
+Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la experiencia de pestaña:
 
 * [Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.
 * [Panel de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tareas: un panel de tareas, a veces denominado tablero de kanban o carriles de natación, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
@@ -144,6 +144,8 @@ Notificar a los usuarios sobre la actividad de tabulación de una de las siguien
 * **Mensaje:** aparece un mensaje en la fuente de actividad del usuario con un vínculo profundo a [la pestaña](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
 ## <a name="best-practices"></a>Procedimientos recomendados
+
+Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 ### <a name="collaboration"></a>Colaboración
 
@@ -214,9 +216,9 @@ Quite los pasos innecesarios para agregar una pestaña.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustración que muestra qué hacer con el tema de tabulación." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Hacer: Aprovechar los tokens de color de Teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Hacer: aprovechar las ventajas de Teams de color
 
-Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.
+Cada Teams tema tiene su propia combinación de colores. Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.
 
    :::column-end:::
    :::column span="":::
@@ -224,14 +226,7 @@ Cada tema de Teams tiene su propia combinación de colores. Para controlar los c
 
 #### <a name="dont-hard-code-color-values"></a>No: valores de color de código duro
 
-Si no usa tokens de color de Teams, sus diseños serán menos escalables y tendrán más tiempo para administrar.
+Si no usas tokens Teams de color, tus diseños serán menos escalables y tendrán más tiempo para administrar.
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Valide su diseño
-
-Si tiene previsto publicar la aplicación en AppSource, debe comprender los problemas de diseño que habitualmente provocan errores en las aplicaciones durante el envío.
-
-> [!div class="nextstepaction"]
-> [Comprobar las instrucciones de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

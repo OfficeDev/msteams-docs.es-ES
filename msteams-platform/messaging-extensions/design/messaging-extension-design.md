@@ -1,33 +1,33 @@
 ---
 title: Diseño de la extensión de mensajería
-description: Aprende a diseñar una extensión de mensajería de Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
+description: Obtén información sobre cómo diseñar una Teams de mensajería y obtener el kit Microsoft Teams interfaz de usuario.
 keywords: Recomendaciones sobre extensiones de mensajería de referencia de directrices de diseño de teams
 author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020726"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101579"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Diseño de la extensión de mensajería de Microsoft Teams
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>Diseño de la extensión Microsoft Teams de mensajería
 
 Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o actuar en un mensaje sin salir de la conversación.
 Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar extensiones de mensajería en Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Puedes encontrar instrucciones completas de diseño de extensión de mensajería, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams.
+Puedes encontrar instrucciones completas de diseño de extensión de mensajería, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams de usuario.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>Agregar una extensión de mensajería
 
-Puede agregar una extensión de mensajería en los siguientes contextos de Teams:
+Puede agregar una extensión de mensajería en los siguientes Teams contextos:
 
 * En la tienda de Teams (AppSource)
 * En un canal, chat o reunión (antes, durante y después) cerca del cuadro de redacción. Vale la pena tener en cuenta que si agregas una extensión de mensajería en uno de estos lugares, solo puedes usarla en ese contexto.
@@ -40,17 +40,17 @@ En el ejemplo siguiente se muestra cómo agregar una extensión de mensajería e
 
 La autenticación no es obligatoria, pero si la aplicación es algo parecido a una herramienta de seguimiento de vales, es posible que necesites que las personas inicien sesión para usar la extensión de mensajería.
 
-Para obtener coherencia en todas las aplicaciones de Teams, no puedes personalizar la pantalla de inicio de sesión. Si usa la autenticación de inicio de sesión único (SSO), los usuarios iniciarán sesión automáticamente.
+Para obtener coherencia Teams aplicaciones, no puedes personalizar la pantalla de inicio de sesión. Si usa la autenticación de inicio de sesión único (SSO), los usuarios iniciarán sesión automáticamente.
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="En el ejemplo se muestra la pantalla de configuración de extensión de mensajería con un botón de inicio de sesión." border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>Tipos de extensiones de mensajería
 
-Las extensiones de mensajería pueden tener comandos de búsqueda, comandos de acción o ambos. Los comandos dependen de las características de la aplicación y de cómo se ajustan a los casos de uso de Teams.
+Las extensiones de mensajería pueden tener comandos de búsqueda, comandos de acción o ambos. Los comandos dependen de las características de la aplicación y de cómo se ajustan a Teams casos de uso.
 
 ### <a name="search-commands"></a>Comandos de búsqueda
 
-Con los comandos de búsqueda, los usuarios pueden usar la extensión de mensajería para buscar rápidamente contenido externo e insertarlo en un mensaje. Los comandos de búsqueda normalmente están disponibles en el cuadro de redacción. Por ejemplo, puede iniciar o agregar a una discusión compartiendo un fragmento de contenido, sin salir nunca de Teams.
+Con los comandos de búsqueda, los usuarios pueden usar la extensión de mensajería para buscar rápidamente contenido externo e insertarlo en un mensaje. Los comandos de búsqueda normalmente están disponibles en el cuadro de redacción. Por ejemplo, puede iniciar o agregar a una discusión compartiendo un fragmento de contenido, sin salir de Teams.
 
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="En el ejemplo se muestra una extensión de mensajería basada en búsqueda iniciada desde el cuadro de redacción." border="false":::
 
@@ -62,7 +62,7 @@ Tiene algunas opciones para mostrar los resultados de búsqueda de extensión de
 
 ### <a name="action-commands"></a>Comandos de acción
 
-Los comandos de acción permiten a los usuarios desencadenar acciones y procesar solicitudes en servicios externos dentro de Teams. Por ejemplo, si la aplicación realiza un seguimiento de los pedidos, un usuario podría crear un nuevo pedido con el contenido del mensaje de un compañero desde el chat.
+Los comandos action permiten a los usuarios desencadenar acciones y procesar solicitudes en servicios externos dentro de Teams. Por ejemplo, si la aplicación realiza un seguimiento de los pedidos, un usuario podría crear un nuevo pedido con el contenido del mensaje de un compañero desde el chat.
 
 Con frecuencia, las extensiones de mensajería basadas en acciones requieren que los usuarios completen un formulario o algún otro tipo de configuración dentro de un modal. Puede crear estas experiencias con [módulos de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
@@ -81,7 +81,7 @@ Una vez agregado, los usuarios pueden abrir la extensión de mensajería selecci
 Una vez agregado, los usuarios pueden seleccionar el icono **Más** en el mensaje de chat o la publicación del canal para buscar los comandos de acción :::image type="icon" source="../../assets/icons/teams-client-more.png"::: de la extensión. La extensión puede aparecer en **Más acciones basadas** en el uso.
 
 > [!NOTE]
-> La compatibilidad con más acciones de un mensaje de chat o una publicación de canal no está disponible en la plataforma móvil de Microsoft Teams. 
+> La compatibilidad con más acciones de un mensaje de chat o una publicación de canal no está disponible en Microsoft Teams plataforma móvil. 
 
 #### <a name="chat-message"></a>Mensaje de chat
 
@@ -161,6 +161,8 @@ El siguiente ejemplo es una extensión de mensajería abierta desde el cuadro de
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
+Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+
 ### <a name="setup-and-general-usage"></a>Configuración y uso general
 
 :::row:::
@@ -192,7 +194,7 @@ Las extensiones de mensajería no siempre son fáciles de encontrar. Incluye cap
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Ejemplo de templating." border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Hacer: permitir que Teams controle parte del trabajo de diseño si es posible
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: Let Teams handle some of the design work if possible
 
 Si tiene sentido para los casos de uso, considere la posibilidad de crear una extensión de mensajería basada en búsquedas. Teams representa estos tipos de extensiones con tema y accesibilidad integrados.
 
@@ -213,9 +215,9 @@ Si la extensión de mensajería requiere comandos de acción, mantenga el módul
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Ejemplo en el uso de los mismos." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Hacer: Aprovechar los tokens de color de Teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Hacer: aprovechar las ventajas de Teams de color
 
-Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.
+Cada Teams tema tiene su propia combinación de colores. Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.
 
    :::column-end:::
    :::column span="":::
@@ -223,7 +225,7 @@ Cada tema de Teams tiene su propia combinación de colores. Para controlar los c
 
 #### <a name="dont-hard-code-color-values"></a>No: valores de color de código duro
 
-Si no usa tokens de color de Teams, sus diseños serán menos escalables y tendrán más tiempo para administrar.
+Si no usas tokens Teams de color, tus diseños serán menos escalables y tendrán más tiempo para administrar.
 
    :::column-end:::
 :::row-end:::
@@ -262,10 +264,3 @@ Puedes hacer que los usuarios presionen una tecla o seleccione un botón para en
 #### <a name="do-consider-zero-term-queries"></a>Do: Consider zero-term queries
 
 Por ejemplo, antes de que un usuario escriba algo en el cuadro de búsqueda, muestre lo que ha visto por última vez en la aplicación. Es posible que quieran insertar ese contenido en su conversación.
-
-## <a name="validate-your-design"></a>Valide su diseño
-
-Si tiene previsto publicar la aplicación en AppSource, debe comprender los problemas de diseño que habitualmente provocan errores en las aplicaciones durante el envío.
-
-> [!div class="nextstepaction"]
-> [Comprobar las instrucciones de validación de diseño](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

@@ -1,27 +1,27 @@
 ---
 title: Diseño de tarjetas adaptables para la aplicación
-description: Aprende a diseñar tarjetas adaptables para Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
+description: Obtén información sobre cómo diseñar tarjetas adaptables para Teams y obtener el kit Microsoft Teams interfaz de usuario.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 67a2882a0a687d5ccb48759419ecefcdf9396fc3
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 14ffff1264e716e04a1ffb5549b71a8b7ec5fc14
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020285"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101740"
 ---
-# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de tarjetas adaptables para la aplicación de Microsoft Teams
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de tarjetas adaptables para tu Microsoft Teams aplicación
 
 Una tarjeta adaptable contiene un cuerpo de forma libre de elementos de tarjeta y un conjunto opcional de acciones. Las tarjetas adaptables son fragmentos de contenido que se pueden usar y que se pueden agregar a una conversación a través de un bot o una extensión de mensajería. Con texto, gráficos y botones, estas tarjetas proporcionan una comunicación enriquecte a tu audiencia.
 
 El marco de la tarjeta adaptable se usa en muchos productos de Microsoft, incluidos Teams. Puedes enviar tarjetas dentro de mensajes a los usuarios a través de bots o extensiones de mensajería. Los usuarios pueden realizar acciones en las tarjetas cuando están presentes.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="En el ejemplo se muestra una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Ejemplo de introducción a una tarjeta adaptable." border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Puedes encontrar instrucciones de diseño más completas para las tarjetas adaptables en Teams, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams. El kit de interfaz de usuario también trata temas esenciales como temas, accesibilidad y tamaño dinámico.
+Puedes encontrar instrucciones de diseño más completas para las tarjetas adaptables en Teams, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también trata temas esenciales como temas, accesibilidad y tamaño dinámico.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -39,65 +39,65 @@ También puedes empezar a diseñar las tarjetas adaptables directamente en el ex
 
 Nuestra tarjeta más grande. Se usa para compartir artículos o escenarios en los que una imagen cuenta la mayor parte del artículo.
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="En el ejemplo se muestra la tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="En el ejemplo se muestra una tarjeta de héroe de tarjeta adaptable." border="false":::
 
 ### <a name="thumbnail"></a>Miniatura
 
 Se usa para enviar un mensaje sencillo que puede usarse.
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Ejemplo de una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="En el ejemplo se muestra una tarjeta en miniatura de tarjeta adaptable." border="false":::
 
 ### <a name="list"></a>Lista
 
 Se usa en escenarios en los que desea que el usuario elija un elemento de una lista, pero los elementos no necesitan mucha explicación.
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Ejemplo de tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="En el ejemplo se muestra una tarjeta de lista de tarjeta adaptable." border="false":::
 
 ### <a name="digest"></a>Digest
 
 Se usa para resúmenes de noticias y publicaciones de redondear. Nota: Se recomienda la tarjeta en miniatura para una sola actualización o elemento de noticias.
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="La ilustración muestra una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="En el ejemplo se muestra una tarjeta implícita de tarjeta adaptable." border="false":::
 
 ### <a name="media"></a>Elementos multimedia
 
 Úsalo cuando quieras combinar texto y medios, como audio o vídeo.
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="La ilustración muestra la tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="En el ejemplo se muestra una tarjeta multimedia de tarjeta adaptable." border="false":::
 
 ### <a name="people"></a>Personas
 
 Se usa mejor cuando se transmite de forma eficaz quién está implicado en una tarea.
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Ilustración de una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="En el ejemplo se muestra una tarjeta de personas de tarjeta adaptable." border="false":::
 
 ### <a name="request-ticket"></a>Ticket de solicitud
 
 Se usa para obtener entradas rápidas de un usuario para crear automáticamente una tarea o vale.
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Ilustración de la tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="En el ejemplo se muestra una tarjeta de vale de solicitud de tarjeta adaptable." border="false":::
 
 ### <a name="imageset"></a>ImageSet
 
 Se usa para enviar varias miniaturas de imagen.
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Ejemplo de una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de imágenes de tarjeta adaptable." border="false":::
 
 ### <a name="actionset"></a>ActionSet
 
 Úselo cuando desee que el usuario seleccione un botón y, a continuación, recopila la entrada de usuario adicional de la misma tarjeta.
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Muestra una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de acciones de tarjeta adaptable." border="false":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
 Se usa para recopilar varias entradas del usuario.
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="En el ejemplo se muestra una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de opciones de tarjeta adaptable." border="false":::
 
 ## <a name="anatomy"></a>Anatomía
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="En el ejemplo se muestra una tarjeta de anatomía de tarjeta adaptable." border="false":::
 
 Las tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta:
 
@@ -109,11 +109,13 @@ Las tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomi
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
+Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+
 ### <a name="primary-and-secondary-actions"></a>Acciones principales y secundarias
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Procedimiento recomendado sobre cómo debe incluir solo un pequeño conjunto de acciones en una tarjeta adaptable." border="false":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Hacer: usar hasta seis acciones principales
 
@@ -121,7 +123,7 @@ Aunque las tarjetas adaptables pueden admitir seis acciones principales, la mayo
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Procedimiento recomendado sobre cómo no saturar a los usuarios con demasiadas acciones en una tarjeta adaptable." border="false":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>No usar más de seis acciones principales
 
@@ -132,7 +134,7 @@ Las tarjetas adaptables deben presentar contenido rápido y fácil de usar. Dema
 
 ### <a name="frequency"></a>Frecuencia
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Ilustración que muestra un procedimiento recomendado de tarjetas adaptables." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Procedimiento recomendado sobre la frecuencia de la tarjeta adaptable." border="false":::
 
 #### <a name="do-be-concise"></a>Hacer: ser conciso
 

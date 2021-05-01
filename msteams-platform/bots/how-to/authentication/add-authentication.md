@@ -1,24 +1,24 @@
 ---
-title: Agregar autenticación al bot de Teams
+title: Agregar autenticación al bot Teams usuario
 author: clearab
 description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Teams.
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7f171a791a9ee557e4af2e7d1e1b053046bd9db5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020953"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101491"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
+# <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot Teams usuario
 
 Hay ocasiones en las que es posible que necesite crear bots en Microsoft Teams que puedan tener acceso a recursos en nombre del usuario, como un servicio de correo.
 
 En este artículo se muestra cómo usar la autenticación del SDK de Azure Bot Service v4, basada en OAuth 2.0. Esto facilita el desarrollo de un bot que puede usar tokens de autenticación en función de las credenciales del usuario. La clave en todo esto es el uso de proveedores **de identidades,** como veremos más adelante.
 
-OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Una comprensión básica de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams.
+OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams.
 
 Consulta [OAuth 2 Simplified para](https://aka.ms/oauth2-simplified) obtener una descripción básica y [OAuth 2.0](https://oauth.net/2/) para obtener la especificación completa.
 
@@ -27,7 +27,7 @@ Para obtener más información acerca de cómo el Servicio de bots de Azure cont
 En este artículo, aprenderá lo siguiente:
 
 - **Cómo crear un bot habilitado para autenticación**. Usará [cs-auth-sample][teams-auth-bot-cs] para controlar las credenciales de inicio de sesión del usuario y la generación del token de autenticación.
-- **Cómo implementar el bot en Azure y asociarlo a un proveedor de identidades.** El proveedor emite un token en función de las credenciales de inicio de sesión del usuario. El bot puede usar el token para obtener acceso a recursos, como un servicio de correo, que requieren autenticación. Para obtener más información,  [vea Flujo de autenticación de Microsoft Teams para bots](auth-flow-bot.md).
+- **Cómo implementar el bot en Azure y asociarlo a un proveedor de identidades.** El proveedor emite un token en función de las credenciales de inicio de sesión del usuario. El bot puede usar el token para obtener acceso a recursos, como un servicio de correo, que requieren autenticación. Para obtener más [información, vea Microsoft Teams de autenticación para bots](auth-flow-bot.md).
 - **Cómo integrar el bot en Microsoft Teams**. Una vez integrado el bot, puedes iniciar sesión e intercambiar mensajes con él en un chat.
 
 ## <a name="prerequisites"></a>Requisitos previos
@@ -71,7 +71,7 @@ Se usa un grupo de recursos para crear recursos individuales para Bot Framework.
     1. **Suscripción**. Puede usar una suscripción existente.
     1. **Grupo de recursos**. Seleccione el grupo que creó anteriormente.
     1. **Nombre**. Escriba el nombre del plan de servicio. Un ejemplo podría ser  *TeamsServicePlan*. Recuerde que el nombre debe ser único, dentro del grupo.
-    1. **Sistema operativo**. Selecciona *Windows* o el sistema operativo aplicable.
+    1. **Sistema operativo**. Seleccione *Windows* o el sistema operativo aplicable.
     1. **Región**. Seleccione *Oeste de EE. UU.* o una región cercana a las aplicaciones.
     1. **Plan de precios**. Asegúrese de que *standard S1* está seleccionado. Este debe ser el valor predeterminado.
     1. Seleccione el **botón Revisar y** crear. Debería ver un banner que lee *Validación pasada*.
@@ -96,7 +96,7 @@ Para obtener más información, vea [Create a bot for Teams](../create-a-bot-for
 Necesita un proveedor de identidades que se pueda usar para la autenticación.
 En este procedimiento, usará un proveedor de Azure AD; También se pueden usar otros proveedores de identidad compatibles con Azure AD.
 
-1. En [**Azure Portal**][azure-portal], en el panel de navegación izquierdo, seleccione **Azure Active Directory**.
+1. En [**azure portal**][azure-portal], en el panel de navegación izquierdo, seleccione **Azure Active Directory**.
     > [!TIP]
     > Deberá crear y registrar este recurso de Azure AD en un espacio empresarial en el que pueda dar su consentimiento para delegar los permisos solicitados por una aplicación.
     > Para obtener instrucciones sobre cómo crear un inquilino, vea [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
@@ -104,7 +104,7 @@ En este procedimiento, usará un proveedor de Azure AD; También se pueden usar 
 1. En el panel derecho, seleccione la **pestaña Nuevo registro,** en la parte superior izquierda.
 1. Se le pedirá que proporcione la siguiente información:
    1. **Nombre**. Escriba el nombre de la aplicación. Un ejemplo podría ser  *BotTeamsIdentity*. Recuerde que el nombre debe ser único.
-   1. Seleccione los **tipos de cuenta admitidos** para la aplicación. Seleccione Cuentas en cualquier directorio de la organización (cualquier directorio de Azure AD - Multitenant) y cuentas personales de *Microsoft (por ejemplo, Skype, Xbox).*
+   1. Seleccione los **tipos de cuenta admitidos** para la aplicación. Selecciona Cuentas en cualquier directorio de la organización (cualquier directorio de Azure AD - Multitenant) y cuentas personales de *Microsoft (por ejemplo, Skype, Xbox).*
    1. Para el **URI de redireccionamiento**:<br/>
        &#x2713;Seleccione **Web**. <br/>
        &#x2713; Establezca la dirección URL en `https://token.botframework.com/.auth/web/redirect` .
@@ -118,21 +118,23 @@ En este procedimiento, usará un proveedor de Azure AD; También se pueden usar 
 1. En el panel izquierdo, seleccione **Certificados & secretos para** crear un secreto de cliente para la aplicación.
 
    1. En **Secretos de** cliente, &#x2795; **Nuevo secreto de cliente**.
-   1. Agrega una descripción para identificar este secreto de otras personas que podrías tener que crear para esta aplicación, como *Bot identity app en Teams*.
+   1. Agrega una descripción para identificar este secreto de otros usuarios que podrías necesitar crear para esta aplicación, como la aplicación de identidad bot *en Teams*.
    1. Establece **Expira en** la selección.
    1. Seleccione **Agregar**.
    1. Antes de salir de esta página, **registre el secreto**. Este valor se usará más adelante como _secreto_ de cliente al registrar la aplicación de Azure AD con el bot.
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar la conexión del proveedor de identidades y registrarla con el bot
 
-Nota: hay dos opciones para los proveedores de servicios aquí:Azure AD V1 y Azure AD V2.  Las diferencias entre los dos proveedores se resumen [aquí,](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)pero, en general, V2 proporciona más flexibilidad con respecto a cambiar los permisos del bot.  Los permisos de la API de Graph se enumeran en el campo ámbitos y, a medida que se agregan nuevos, los bots permitirán a los usuarios dar su consentimiento a los nuevos permisos en el siguiente inicio de sesión.  Para V1, el usuario debe eliminar el consentimiento del bot para que se pidan nuevos permisos en el cuadro de diálogo OAuth. 
+Nota: hay dos opciones para los proveedores de servicios aquí:Azure AD V1 y Azure AD V2.  Las diferencias entre los dos proveedores se resumen [aquí,](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)pero, en general, V2 proporciona más flexibilidad con respecto a cambiar los permisos del bot.  Graph Los permisos de API se enumeran en el campo ámbitos y, a medida que se agregan los nuevos, los bots permitirán a los usuarios dar su consentimiento a los nuevos permisos en el siguiente inicio de sesión.  Para V1, el usuario debe eliminar el consentimiento del bot para que se pidan nuevos permisos en el cuadro de diálogo OAuth. 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
 1. En [**Azure Portal,**][azure-portal]seleccione el grupo de recursos en el panel.
 1. Seleccione el vínculo de registro del canal de bot.
-1. En la página de recursos, seleccione **Configuración**.
-1. En **Configuración de conexión de OAuth** cerca de la parte inferior de la página, seleccione Agregar **configuración**.
+1. Abra la página de recursos y seleccione **Configuración** **en Configuración**. 
+1. Seleccione **Agregar conexión de OAuth Configuración**.    
+La siguiente imagen muestra la selección correspondiente en la página de recursos:  
+![Configuración de SampleAppDemoBot](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. Complete el formulario de la siguiente manera:
 
     1. **Nombre**. Escriba un nombre para la conexión. Usarás este nombre en el bot en el `appsettings.json` archivo. Por ejemplo *BotTeamsAuthADv1*.
@@ -145,7 +147,7 @@ Nota: hay dos opciones para los proveedores de servicios aquí:Azure AD V1 y Azu
 
         - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o  Cuentas en cualquier directorio de la organización *(directorio de Microsoft AAD - Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación de AAD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.
 
-        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio de AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox y Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, la aplicación de AAD comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
+        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio de AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox, Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, la aplicación de AAD comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
 
     h. En **Dirección URL de** recurso , escriba `https://graph.microsoft.com/` . Esto no se usa en el ejemplo de código actual.  
     i. Deje **ámbitos en** blanco. La siguiente imagen es un ejemplo:
@@ -158,20 +160,23 @@ Nota: hay dos opciones para los proveedores de servicios aquí:Azure AD V1 y Azu
 
 1. En [**Azure Portal,**][azure-portal]seleccione el grupo de recursos en el panel.
 1. Seleccione el vínculo de registro del canal de bot.
-1. En la página de recursos, seleccione **Configuración**.
-1. En **Configuración de conexión de OAuth** cerca de la parte inferior de la página, seleccione Agregar **configuración**.
+1. Abra la página de recursos y seleccione **Configuración** **en Configuración**. 
+1. Seleccione **Agregar conexión de OAuth Configuración**.  
+La siguiente imagen muestra la selección correspondiente en la página de recursos:        
+![Configuración de SampleAppDemoBot](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
+
 1. Complete el formulario de la siguiente manera:
 
     1. **Nombre**. Escriba un nombre para la conexión. Usarás este nombre en el bot en el `appsettings.json` archivo. Por ejemplo *BotTeamsAuthADv2*.
     1. **Proveedor de servicios**. Seleccione **Azure Active Directory v2**. Una vez seleccionado, se mostrarán los campos específicos de Azure AD.
     1. **Id. de cliente**. Escriba el identificador de aplicación (cliente) que registró para la aplicación proveedora de identidades de Azure en los pasos anteriores.
     1. **Secreto de cliente**. Escriba el secreto que registró para la aplicación proveedora de identidades de Azure en los pasos anteriores.
-    1. **Dirección URL de Exchange de token**. Deje esto en blanco.
+    1. **Dirección URL Exchange token**. Deje esto en blanco.
     1. **Identificador de inquilino**, escriba el id. de directorio  **(espacio empresarial)** que registró anteriormente para la aplicación de identidad de Azure o común según el tipo de cuenta admitido seleccionado al crear la aplicación del proveedor de identidades. Para decidir qué valor asignar, siga estos criterios:
 
         - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o  Cuentas en cualquier directorio de la organización *(directorio de Microsoft AAD - Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación de AAD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.
 
-        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio de AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox y Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, la aplicación de AAD comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
+        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio de AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox, Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, la aplicación de AAD comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
 
     1. Para **Ámbitos,** escriba una lista delimitada por espacios de permisos de gráfico que esta aplicación requiere, por ejemplo: User.Read User.ReadBasic.All Mail.Read 
 
@@ -201,7 +206,7 @@ Una vez realizada la configuración preliminar, vamos a centrarnos en la creaci�
 
 1. Clone [cs-auth-sample][teams-auth-bot-cs].
 1. Inicie Visual Studio.
-1. En la barra de herramientas, **seleccione Archivo -> Abrir -> Project/Solution** y abra el proyecto de bot.
+1. En la barra de **herramientas, seleccione Archivo -> Abrir -> Project/Solución** y abra el proyecto de bot.
 1. En C# actualizar **appsettings.jsde la** siguiente manera:
 
     - Establezca `ConnectionName` el nombre de la conexión del proveedor de identidades que agregó al registro del canal de bot. El nombre que se usa en este ejemplo es *BotTeamsAuthADv1*.
@@ -275,7 +280,7 @@ Como alternativa, mientras esté Visual Studio, puede seguir estos pasos:
 
 ## <a name="test-the-bot-using-the-emulator"></a>Probar el bot con el emulador
 
-Si aún no lo ha hecho, instale el emulador [de Microsoft Bot Framework](https://aka.ms/bot-framework-emulator-readme). Vea también [Depurar con el emulador](https://aka.ms/bot-framework-emulator-debug-with-emulator).
+Si aún no lo ha hecho, instale el [archivo Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Vea también [Depurar con el emulador](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
 Para que el inicio de sesión de ejemplo del bot funcione, debe configurar el emulador como se muestra a continuación.
 
@@ -284,9 +289,9 @@ Para que el inicio de sesión de ejemplo del bot funcione, debe configurar el em
 Si un bot requiere autenticación, debe configurar el emulador como se muestra a continuación.
 
 1. Inicie el emulador.
-1. En el emulador, selecciona el icono de engranaje &#9881; en la parte inferior izquierda o la pestaña Configuración del **emulador** en la parte superior derecha.
+1. En el emulador, seleccione el icono de engranaje &#9881; en la parte inferior izquierda o la pestaña Configuración **emulador** en la parte superior derecha.
 1. Active la casilla **usar tokens de autenticación de la versión 1.0**.
-1. Escriba la ruta de acceso local a la **herramienta ngrok.** *Consulta* el Wiki de integración de túneles de Bot Framework [Emulator](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok))/ngrok . Para obtener más información sobre la herramienta, [vea ngrok](https://ngrok.com/).
+1. Escriba la ruta de acceso local a la **herramienta ngrok.** *Vea* el wiki Bot Framework Emulator / ngrok tunneling integration [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). Para obtener más información sobre la herramienta, [vea ngrok](https://ngrok.com/).
 1. Active la casilla **Ejecutar ngrok cuando se inicie el emulador**.
 1. Seleccione el **botón** Guardar.
 
@@ -297,7 +302,7 @@ Una vez que el usuario lo hace, el proveedor genera un token de usuario y lo env
 
 Después de configurar el mecanismo de autenticación, puede realizar las pruebas de bot reales.  
 
-1. Ejecute el ejemplo de bot localmente en el equipo, a través Visual Studio por ejemplo.
+1. Ejecute el ejemplo de bot localmente en el equipo, por Visual Studio por ejemplo.
 1. Inicie el emulador.
 1. Seleccione el **botón Abrir bot.**
 1. En la **dirección URL del bot,** escriba la dirección URL local del bot. Normalmente, `http://localhost:3978/api/messages` .
@@ -368,7 +373,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. Seleccione y **zip** los `manifest.json` archivos , `outline.png` `color.png` y.
 1. Abra **Microsoft Teams**.
 1. En el panel izquierdo, en la parte inferior, seleccione el **icono Aplicaciones**.
-1. En el panel derecho, en la parte inferior, selecciona **Cargar una aplicación personalizada.**
+1. En el panel derecho, en la parte inferior, **selecciona Upload una aplicación personalizada.**
 1. Vaya a la `TeamsAppManifest` carpeta y cargue el manifiesto comprimido.
 Se muestra el siguiente asistente:
 
@@ -383,8 +388,8 @@ Se muestra el siguiente asistente:
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Probar el bot localmente en Teams
 
-Microsoft Teams es un producto totalmente basado en la nube, que requiere que todos los servicios a los que tiene acceso estén disponibles desde la nube mediante puntos de conexión HTTPS. Por lo tanto, para permitir que el bot (nuestro ejemplo) funcione en Teams, debe publicar el código en la nube de su elección o hacer que una instancia en ejecución local sea accesible externamente **a** través de una herramienta de túnel. Se recomienda  [ngrok](https://ngrok.com/download), que crea una dirección URL direccionable externamente para un puerto que se abre localmente en el equipo.
-Para configurar ngrok en preparación para ejecutar la aplicación de Microsoft Teams localmente, siga estos pasos:
+Microsoft Teams es un producto totalmente basado en la nube, requiere que todos los servicios a los que tiene acceso estén disponibles desde la nube mediante puntos de conexión HTTPS. Por lo tanto, para permitir que el bot (nuestro ejemplo) funcione en Teams, debe publicar el código en la nube  de su elección o hacer que una instancia en ejecución local sea accesible externamente a través de una herramienta de túnel. Se recomienda  [ngrok](https://ngrok.com/download), que crea una dirección URL direccionable externamente para un puerto que se abre localmente en el equipo.
+Para configurar ngrok en preparación para ejecutar la aplicación Microsoft Teams localmente, siga estos pasos:
 
 1. En una ventana de terminal, vaya al directorio donde ha `ngrok.exe` instalado. Se recomienda establecer la *ruta de acceso de la variable* de entorno para que apunte a ella.
 1. Ejecute, por ejemplo, `ngrok http 3978 --host-header=localhost:3978` . Reemplace el número de puerto según sea necesario.
@@ -393,14 +398,14 @@ Esto inicia ngrok para escuchar en el puerto especificado. A cambio, le proporci
     ![cadena de conexión de la aplicación bot de teams adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Copie la dirección HTTPS de reenvío. Debe ser similar a lo siguiente: `https://dea822bf.ngrok.io/` .
-1. Anexar `/api/messages` para obtener `https://dea822bf.ngrok.io/api/messages` . Este es el punto **de conexión de** mensajes para el bot que se ejecuta localmente en el equipo y al que se puede acceder a través de la web en un chat de Microsoft Teams.
+1. Anexar `/api/messages` para obtener `https://dea822bf.ngrok.io/api/messages` . Este es el punto **de conexión** de mensajes para el bot que se ejecuta localmente en el equipo y al que se puede acceder a través de la web en un chat en Microsoft Teams.
 1. Un último paso para realizar es actualizar el extremo de mensajes del bot implementado. En el ejemplo, implementamos el bot en Azure. Así que **vamos a realizar estos pasos:
     1. En el explorador, vaya a [**Azure Portal**][azure-portal].
     1. Seleccione el **registro del canal bot**.
     1. En el panel izquierdo, seleccione **Configuración**.
     1. En el panel derecho, en el cuadro **Extremo** de mensajería, escriba la dirección URL de ngrok, en nuestro ejemplo, `https://dea822bf.ngrok.io/api/messages` .
 1. Inicie el bot localmente, por ejemplo, en Visual Studio modo de depuración.
-1. Pruebe el bot mientras se ejecuta localmente con el chat web de prueba del portal **de** Bot Framework . Al igual que el emulador, esta prueba no permite tener acceso a la funcionalidad específica de Teams.
+1. Pruebe el bot mientras se ejecuta localmente con el chat web de prueba del portal **de** Bot Framework . Al igual que el emulador, esta prueba no permite tener acceso a Teams funcionalidad específica.
 1. En la ventana de terminal donde se ejecuta puede ver el tráfico `ngrok` HTTP entre el bot y el cliente de chat web. Si desea una vista más detallada, en una ventana del explorador escriba que obtuvo `http://127.0.0.1:4040` de la ventana de terminal anterior. La siguiente imagen es un ejemplo:
 
     ![Pruebas de auth bot teams ngrok](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
@@ -413,7 +418,7 @@ Esto inicia ngrok para escuchar en el puerto especificado. A cambio, le proporci
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
-Este manifiesto contiene la información necesaria para que Microsoft Teams se conecte con el bot.  
+Este manifiesto contiene la información necesaria Microsoft Teams para conectarse con el bot.  
 
 ```json
 {

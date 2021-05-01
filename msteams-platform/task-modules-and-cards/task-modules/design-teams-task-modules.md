@@ -1,26 +1,26 @@
 ---
 title: Diseño de módulos de tareas
 author: heath-hamilton
-description: Aprende a diseñar módulos de tareas para aplicaciones de Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
+description: Aprende a diseñar módulos de tareas para Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario.
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019548"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101733"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la aplicación de Microsoft Teams
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la Microsoft Teams aplicación
 
-Puedes crear experiencias emergentes modales en tu aplicación de Teams con módulos de tareas. Use esta funcionalidad para mostrar medios enriquecidos e información o completar una tarea compleja.
+Puedes crear experiencias emergentes modales en tu Teams con módulos de tareas. Use esta funcionalidad para mostrar medios enriquecidos e información o completar una tarea compleja.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="En el ejemplo se muestra un módulo de tareas." border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Puedes encontrar instrucciones de diseño de módulos de tareas más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams.
+Puedes encontrar instrucciones de diseño de módulos de tareas más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit Microsoft Teams interfaz de usuario.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -68,7 +68,7 @@ Las listas funcionan bien en un módulo de tareas porque son fáciles de examina
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de ejemplos en un módulo de tareas." border="false":::
 
-### <a name="form"></a>Form
+### <a name="form"></a>Formulario
 
 Los módulos de tareas son un excelente lugar para superficier formularios con entradas de usuario secuenciales y validación en línea. Puedes aprovechar las tarjetas adaptables como una forma de insertar elementos de formulario.
 
@@ -106,11 +106,13 @@ En este ejemplo se muestran los resultados del sondeo iniciados desde una tarjet
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
+Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+
 ### <a name="usability"></a>Facilidad de uso
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (un módulo de tareas a la vez)." border="false":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>Hacer: Usar un módulo de tareas a la vez
 
@@ -118,7 +120,7 @@ El objetivo es centrar al usuario en completar una tarea después de todo.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado de módulo de tareas (pop a dialog on top of a task module)." border="false":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Don't: Pop a dialog on top of a task module
 
@@ -131,7 +133,7 @@ Esto crea una experiencia de usuario confusa y desenfoque.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="En el ejemplo se muestra el procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (asegúrese de que el contenido responde)." border="false":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>Do: Make sure the content is responsive
 
@@ -139,7 +141,7 @@ Aunque las tarjetas adaptables hospedadas en un módulo de tareas se representan
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="En el ejemplo se muestra un procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (no use barras de desplazamiento horizontales)." border="false":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>No usar: Usar barras de desplazamiento horizontales
 
@@ -152,7 +154,7 @@ Es un procedimiento recomendado mantener el contenido centrado y no demasiado la
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="En el ejemplo se muestra el procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (mantenerlo corto)." border="false":::
 
 #### <a name="do-keep-it-short"></a>Do: Keep it short
 
@@ -160,9 +162,9 @@ Puedes crear fácilmente un asistente para varios pasos, pero eso no significa n
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Ilustración que muestra un procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (no tiene interacciones largas)." border="false":::
 
-#### <a name="dont-do-long-interactions"></a>No hacer: realizar interacciones largas
+#### <a name="dont-have-long-interactions"></a>No: tener interacciones largas
 
 Intenta mantener tus interacciones cortas y hasta el punto.
 
@@ -173,7 +175,7 @@ Intenta mantener tus interacciones cortas y hasta el punto.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="La ilustración muestra un procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (usar mensajes de error en línea)." border="false":::
 
 #### <a name="do-use-inline-error-messages"></a>Hacer: usar mensajes de error en línea
 
@@ -181,7 +183,7 @@ Consulta la plantilla de interfaz de usuario de formularios para obtener instruc
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="La ilustración muestra un procedimiento recomendado del módulo de tareas." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Ejemplo que muestra un procedimiento recomendado del módulo de tareas (colocar mensajes de error en cuadros de diálogo)." border="false":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>No: poner mensajes de error en cuadros de diálogo
 

@@ -1,20 +1,20 @@
 ---
 title: Referencia de esquema de manifiesto
-description: Describe el esquema de manifiesto de Microsoft Teams
+description: Describe el esquema de manifiesto para Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: db7cb777dfc0f6d56f0e4876afb3ae49ba7d9926
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 984a5de5b2c8e24f79269e62c3a7fd422ecce63f
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075713"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101810"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
-El manifiesto de Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) . Las versiones anteriores 1.0-1.4 también son compatibles (con "v1.x" en la dirección URL).
+El Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) . Las versiones anteriores 1.0-1.4 también son compatibles (con "v1.x" en la dirección URL).
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad.
 
@@ -314,7 +314,7 @@ Esta cadena de versión debe seguir el [estándar de semver](http://semver.org/)
 
 **Obligatorio:** id. de aplicación de Microsoft
 
-El identificador es un identificador único generado por Microsoft para la aplicación. Tienes un identificador si el bot está registrado a través de Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft. Debe escribir el identificador aquí. De lo contrario, debe generar un nuevo identificador en el Portal de [registro de aplicaciones de Microsoft](https://aka.ms/appregistrations). Use el mismo identificador si agrega un bot.
+El identificador es un identificador único generado por Microsoft para la aplicación. Tienes un identificador si el bot está registrado a través del Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft. Debe escribir el identificador aquí. De lo contrario, debe generar un nuevo identificador en el Portal de [registro de aplicaciones de Microsoft](https://aka.ms/appregistrations). Use el mismo identificador si agrega un bot.
 
 > [!NOTE]
 > Si vas a enviar una actualización a la aplicación existente en AppSource, no se debe modificar el identificador del manifiesto.
@@ -323,9 +323,9 @@ El identificador es un identificador único generado por Microsoft para la aplic
 
 **Obligatorio** : objeto
 
-Proporciona información sobre su empresa. Para las aplicaciones enviadas a AppSource (anteriormente Tienda Office), estos valores deben coincidir con la información de la entrada de AppSource. Consulte las [directrices de publicación](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) para obtener información adicional.
+Especifica información sobre su empresa. Para las aplicaciones enviadas a la Teams, estos valores deben coincidir con la información de la descripción de la tienda. Para obtener más información, consulte [las Teams de publicación del almacén de almacenamiento.](~/concepts/deploy-and-publish/appsource/publish.md)
 
-|Nombre| Tamaño máximo | Necesario | Description|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`name`|32 caracteres|✔|Nombre para mostrar del desarrollador.|
 |`websiteUrl`|2048 caracteres|✔|La https:// url del sitio web del desarrollador. Este vínculo debe llevar a los usuarios a su empresa o página de aterrizaje específica del producto.|
@@ -337,9 +337,9 @@ Proporciona información sobre su empresa. Para las aplicaciones enviadas a AppS
 
 **Obligatorio** : objeto
 
-El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la experiencia de Teams. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y `full` deben ser diferentes.
+El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la Teams usuario. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y `full` deben ser diferentes.
 
-|Nombre| Tamaño máximo | Necesario | Description|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
@@ -352,7 +352,7 @@ Describe la aplicación a los usuarios. Para las aplicaciones enviadas a AppSour
 
 Asegúrese de que su descripción describe con precisión su experiencia y proporciona información para ayudar a los clientes potenciales a comprender lo que hace su experiencia. Debe tener en cuenta en la descripción completa, si se requiere una cuenta externa para su uso. Los valores de `short` y `full` deben ser diferentes. La descripción breve no debe repetirse dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
-|Nombre| Tamaño máximo | Necesario | Description|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|80 caracteres|✔|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔|Descripción completa de la aplicación.|
@@ -369,7 +369,7 @@ Un identificador único para la aplicación en la notación de dominio inverso; 
 
 Permite la especificación de un idioma predeterminado, así como punteros a archivos de idioma adicionales. Vea [localización](~/concepts/build-and-test/apps-localization.md).
 
-|Nombre| Tamaño máximo | Necesario | Description|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|La etiqueta de idioma de las cadenas de este archivo de manifiesto de nivel superior.|
 
@@ -377,7 +377,7 @@ Permite la especificación de un idioma predeterminado, así como punteros a arc
 
 Una matriz de objetos que especifica traducciones de idioma adicionales.
 
-|Nombre| Tamaño máximo | Necesario | Description|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`languageTag`||✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
 |`file`||✔|Una ruta de acceso de archivo relativa a un archivo .json que contiene las cadenas traducidas.|
@@ -386,9 +386,9 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 **Obligatorio** : objeto
 
-Iconos usados dentro de la aplicación de Teams. Los archivos de icono deben incluirse como parte del paquete de carga. Consulta [Iconos](../../concepts/build-and-test/apps-package.md#app-icons) para obtener más información.
+Iconos usados dentro de la Teams aplicación. Los archivos de icono deben incluirse como parte del paquete de carga. Consulta [Iconos](../../concepts/build-and-test/apps-package.md#app-icons) para obtener más información.
 
-|Nombre| Tamaño máximo | Necesario | Description|
+|Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`outline`|32 x 32 píxeles|✔|Una ruta de acceso de archivo relativa a un icono de esquema PNG transparente de 32 x 32.|
 |`color`|192 x 192 píxeles|✔|Una ruta de acceso de archivo relativa a un icono PNG de color completo de 192 x 192.|
@@ -428,7 +428,7 @@ Este elemento es una matriz (máximo de 16 elementos) con todos los elementos de
 |---|---|---|---|---|
 |`entityId`|string|64 caracteres|✔|Identificador único para la entidad que muestra la pestaña.|
 |`name`|string|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
-|`contentUrl`|string||✔|Dirección HTTPS:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Teams.|
+|`contentUrl`|string||✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
 |`websiteUrl`|string|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
 |`searchUrl`|string|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito, lo que significa que solo se puede aprovisionar como `personal` parte de la experiencia personal.|
@@ -460,7 +460,7 @@ El elemento es una matriz (máximo de solo 1 elemento actualmente solo se permit
 
 Una lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto es una matriz (máximo de 2 elementos) con todos los elementos de tipo; debe definir una lista de comandos independiente para cada ámbito compatible `object` con el bot. Consulta [Menús bot para](~/bots/how-to/create-a-bot-commands-menu.md) obtener más información.
 
-|Nombre| Tipo| Tamaño máximo | Necesario | Description|
+|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeraciones|3|✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
 |`items.commands`|matriz de objetos|10  |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
@@ -476,7 +476,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 
 **Opcional:** matriz
 
-El `connectors` bloque define un conector de Office 365 para la aplicación.
+El `connectors` bloque define un Office 365 connector para la aplicación.
 
 El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan un conector.
 
@@ -563,11 +563,11 @@ Proporciona las características nativas en el dispositivo de un usuario al que 
 
 **Opcional**, excepto **Requerido cuando** se indica
 
-Una lista de dominios válidos para sitios web que la aplicación espera cargar en el cliente de Teams. Las listas de dominios pueden incluir caracteres comodín, por ejemplo, `*.example.com` . Esto coincide exactamente con un segmento del dominio; si necesita hacer `a.b.example.com` coincidir, use `*.*.example.com` . Si la interfaz de usuario de contenido o configuración de pestañas necesita navegar a cualquier otro dominio además del uso para la configuración de pestañas, este dominio debe especificarse aquí.
+Una lista de dominios válidos para sitios web que la aplicación espera cargar en el Teams cliente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo, `*.example.com` . Esto coincide exactamente con un segmento del dominio; si necesita hacer `a.b.example.com` coincidir, use `*.*.example.com` . Si la interfaz de usuario de contenido o configuración de pestañas necesita navegar a cualquier otro dominio además del uso para la configuración de pestañas, este dominio debe especificarse aquí.
 
 No es **necesario** incluir los dominios de los proveedores de identidades que quieres admitir en la aplicación. Por ejemplo, para autenticar con un identificador de Google, es necesario redirigir a accounts.google.com, sin embargo, no debe incluir accounts.google.com en `validDomains[]` .
 
-Las aplicaciones de Teams que requieren que sus propias direcciones URL de sharepoint funcionen correctamente, incluyen "{teamsitedomain}" en su lista de dominios válida.
+Teams aplicaciones que requieren que sus propias direcciones URL de sharepoint funcionen correctamente, incluye "{teamsitedomain}" en su lista de dominios válida.
 
 > [!IMPORTANT]
 > No agregue dominios que estén fuera del control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, sin embargo, `*.onmicrosoft.com` no es válido.
@@ -578,7 +578,7 @@ El objeto es una matriz con todos los elementos del tipo `string` .
 
 **Opcional** : objeto
 
-Proporcione el identificador de aplicación de Azure Active Directory (AAD) y la información de Microsoft Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación. Si la aplicación está registrada en AAD, debes proporcionar el identificador de la aplicación para que los administradores puedan revisar fácilmente los permisos y conceder el consentimiento en el Centro de administración de Teams.
+Proporcione su Azure Active Directory de aplicación (AAD) y microsoft Graph información para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación. Si la aplicación está registrada en AAD, debes proporcionar el identificador de la aplicación, para que los administradores puedan revisar fácilmente los permisos y conceder el consentimiento en Teams centro de administración.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -607,7 +607,7 @@ Indica dónde se representa una aplicación personal con o sin una barra de enca
 
 Define las propiedades que usa la aplicación para publicar una fuente de actividad de usuario.
 
-|Nombre| Tipo| Tamaño máximo | Necesario | Description|
+|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`activityTypes`|matriz de objetos|128 elementos| | Proporciona los tipos de actividades que la aplicación puede publicar en una fuente de actividad de usuarios.|
 

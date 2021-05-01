@@ -1,20 +1,20 @@
 ---
-title: Asignar los casos de uso a las funcionalidades de la aplicación de Teams
+title: Asignar los casos de uso a Teams funcionalidades de la aplicación
 author: clearab
-description: Elegir el ámbito de aplicación correcto
+description: Identifica cómo pueden funcionar los casos de uso de la aplicación en la experiencia Teams aplicación.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a3d9ec8f1a5c18025cffc0f97285e1ec764becb8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 271bb38a9d8cc3d9921c757b6fc722754bb63017
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058456"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101775"
 ---
-# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a las funcionalidades de la aplicación de Teams
+# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
-Después de identificar *quién* es el usuario y *qué* problema  resolverá, es el momento de decidir cómo resolver el problema. Quién, *qué* y *cómo* completa el proceso de comprensión y asignación de los casos de uso a las capacidades de la aplicación de Teams.  Debes definir el ámbito de la aplicación en función de las respuestas que has recibido del usuario a las consultas y, a continuación, decidir qué funcionalidad es la más adecuada para crear la aplicación.
+Después de identificar *quién* es el usuario y *qué* problema  resolverá, es el momento de decidir cómo resolver el problema. *Quién,* *qué* y *cómo* completa el proceso de comprensión y asignación de los casos de uso a Teams funcionalidades de la aplicación. Debes definir el ámbito de la aplicación en función de las respuestas que has recibido del usuario a las consultas y, a continuación, decidir qué funcionalidad es la más adecuada para crear la aplicación.
 
 > [!NOTE]
 > Debes tener una buena comprensión de los puntos de entrada y los elementos de [interfaz de usuario](../../concepts/extensibility-points.md) disponibles para la aplicación. También debe asegurarse de que ha considerado cuidadosamente [los casos](../../concepts/design/understand-use-cases.md) de uso.
@@ -30,24 +30,23 @@ Al elegir el ámbito de la aplicación, tenga en cuenta lo siguiente:
 
 Puedes elegir entre el ámbito personal y el ámbito de equipo o canal de la aplicación en función de lo siguiente:
 
-* Para seleccionar el ámbito personal, responda a preguntas, como:
+* Para el ámbito personal, haga las siguientes preguntas:
   * ¿Hay interacciones uno a uno con la aplicación necesarias por motivos de privacidad u otros motivos? Por ejemplo, comprobar el saldo de salida u otra información privada.
-  * ¿Va a haber colaboración entre usuarios que podrían no tener teams comunes? Por ejemplo, encontrar próximos eventos de toda la organización en una empresa.
-  * ¿Hay notificaciones o mensajes personalizados que deban enviarse a un usuario a lo largo de la experiencia de la aplicación de Teams? Por ejemplo, avisos de aprobaciones o registros.
-
-* Para seleccionar el ámbito de equipo o canal, responda a preguntas, como: 
+  * ¿Va a haber colaboración entre usuarios que podrían no tener una Teams? Por ejemplo, encontrar próximos eventos de toda la organización en una empresa.
+  * ¿Hay notificaciones o mensajes personalizados que deban enviarse a un usuario a lo largo Teams experiencia de la aplicación? Por ejemplo, avisos de aprobaciones o registros.
+* Para un ámbito compartido (equipo, canal o chat), haga las siguientes preguntas:
   * ¿La información presentada por la aplicación, ya sea en la pestaña o a través de un bot, es relevante y útil para la mayoría de los miembros de un equipo? Por ejemplo, aplicación Scrum.
   * ¿Podría cambiar el contexto de la aplicación en función del equipo al que se agrega? Por ejemplo, las tareas de Planner son diferentes en diferentes equipos. 
   * ¿Es posible que todos los miembros de una persona que necesiten colaborar sean parte de un solo equipo? Por ejemplo, agentes que trabajan en un vale.
 
-Los siguientes escenarios te guiarán en la comprensión de la selección de puntos de entrada y elementos de interfaz de usuario que funcionan bien con las capacidades de la aplicación de Teams:
+Los siguientes escenarios te guiarán en la comprensión de la selección de puntos de entrada y elementos de interfaz de usuario que funcionan bien con las Teams de la aplicación:
 
 > [!NOTE]
 > No es una lista exhaustiva, pero le ayudará a pensar en algunas de las posibilidades disponibles.
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Crear, compartir y colaborar en elementos de un sistema externo
 
-La aplicación para Microsoft Teams es una excelente manera de interactuar con los datos y hay una variedad de puntos de integración entre los que elegir.
+La aplicación Microsoft Teams es una excelente manera de interactuar con los datos y hay una variedad de puntos de integración entre los que elegir.
 
 * **Extensiones de mensajería con comandos de búsqueda:** busque sistemas externos y comparta los resultados como una tarjeta interactiva.
 
@@ -55,7 +54,7 @@ La aplicación para Microsoft Teams es una excelente manera de interactuar con l
 
 * **Pestañas:** cree experiencias web incrustadas para ver, trabajar con y compartir datos.
 
-* **Conectores y webhooks:** una forma sencilla de insertar datos y enviar datos desde el cliente de Teams.
+* **Conectores y webhooks:** una forma sencilla de insertar datos y enviar datos fuera del Teams cliente.
 
 * **Módulos de** tareas: formularios modales interactivos desde donde los necesite para recopilar o mostrar información.
 
@@ -73,7 +72,7 @@ A veces, solo necesita una forma rápida de iniciar un proceso o flujo de trabaj
 
 ## <a name="send-notifications-and-alerts"></a>Enviar notificaciones y alertas
 
-Enviar notificaciones asincrónicas y alertas a los usuarios de Teams. Use tarjetas interactivas para proporcionar acceso rápido a acciones y vínculos a información adicional que se usan con frecuencia.
+Enviar notificaciones asincrónicas y alertas a los usuarios en Teams. Use tarjetas interactivas para proporcionar acceso rápido a acciones y vínculos a información adicional que se usan con frecuencia.
 
 * **Bots conversacionales:** enviar mensajes proactivos a grupos, canales o usuarios individuales.
 
@@ -85,7 +84,7 @@ La gente tiene preguntas y probablemente tiene muchas de las respuestas almacena
 
 * **Bots conversacionales:** procesamiento de lenguaje natural, inteligencia artificial, aprendizaje automático y todas las palabras de voz. Usa un bot con tecnología de la nube inteligente para conectar a los usuarios con las respuestas que necesitan.
 
-* **Pestañas:** inserte el portal web existente en Teams o cree una versión específica de Teams para la funcionalidad agregada.
+* **Pestañas:** inserte el portal web existente en Teams o cree una Teams específica para la funcionalidad agregada.
 
 ## <a name="get-social"></a>Obtener redes sociales
 
@@ -93,7 +92,7 @@ Una plataforma de colaboración es inherentemente una plataforma social. Deje qu
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Piense en términos de una aplicación de una sola página
 
-Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que pueda hacer en un SPA, puede hacerlo en una pestaña de Teams. Asegúrese de prestar atención al ámbito. Las pestañas de grupo y canal son para experiencias compartidas y las pestañas personales son para experiencias personales. La lista de cosas del equipo va en la pestaña canal y la lista de tus cosas va en la pestaña personal.
+Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que puedas hacer en un SPA, puedes hacer en una pestaña en Teams. Asegúrese de prestar atención al ámbito. Las pestañas de grupo y canal son para experiencias compartidas y las pestañas personales son para experiencias personales. La lista de cosas del equipo va en la pestaña canal y la lista de tus cosas va en la pestaña personal.
 
 ## <a name="start-small"></a>Iniciar pequeño
 
@@ -105,6 +104,4 @@ Dicho esto, las mejores aplicaciones suelen combinar varias características, cr
 
 ## <a name="see-also"></a>Vea también
 
-- [Desarrollar aplicaciones para Microsoft Teams](../../overview.md)
- 
-
+* [Desarrollar aplicaciones para Microsoft Teams](../../overview.md)

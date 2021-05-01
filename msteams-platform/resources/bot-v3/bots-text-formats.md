@@ -5,12 +5,12 @@ keywords: mensajes de conversaciones de bots
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019751"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101824"
 ---
 # <a name="formatting-bot-messages"></a>Dar formato a los mensajes de bots
 
@@ -34,7 +34,7 @@ Actualmente, se aplican las siguientes limitaciones:
 
 * Los mensajes de solo texto no admiten formato de tabla
 
-Para obtener información sobre el formato de las tarjetas, vea [la referencia de tarjeta de Teams](~/task-modules-and-cards/cards/cards-reference.md).
+Para obtener información sobre el formato de las tarjetas, [vea el Teams referencia de tarjeta .](~/task-modules-and-cards/cards/cards-reference.md)
 
 ### <a name="cross-platform-support"></a>Compatibilidad entre plataformas
 
@@ -80,11 +80,11 @@ La compatibilidad con el formato de texto varía según el tipo de mensaje y por
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text` | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | texto con formato previo | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| vínculo de imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| vínculo de imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

@@ -1,16 +1,16 @@
 ---
 title: Actualizar y eliminar mensajes enviados desde el bot
 author: WashingtonKayaker
-description: Cómo actualizar y eliminar mensajes enviados desde el bot de Microsoft Teams
+description: Cómo actualizar y eliminar mensajes enviados desde el Microsoft Teams bot
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 90dc50fd2ec153813457f199ac029e17a0157502
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019989"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101537"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Actualizar y eliminar mensajes enviados desde el bot
 
@@ -58,7 +58,7 @@ update_result = await context.update_activity(new_activity)
 
 > [!NOTE]
 
-> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio [Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes de API.
+> Puede desarrollar aplicaciones Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio [Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes de API.
 
 Para actualizar una actividad existente dentro de una conversación, incluya y `conversationId` en el extremo de `activityId` solicitud. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada posterior original.
 
@@ -66,9 +66,9 @@ Para actualizar una actividad existente dentro de una conversación, incluya y `
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Solicitud y responce** | **Description** |
+|Solicitud |Respuesta |
 |----|----|
-| Un [objeto activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | Un [objeto ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
+| Un [objeto Activity.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | Un [objeto ResourceResponse.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
 
 ---
 * * *
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[API de REST](#tab/rest)
 
 > [!NOTE]
-> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio de conector de [bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes DE API.
+> Puede desarrollar aplicaciones Teams en cualquier tecnología de programación web y llamar directamente a las API rest del servicio [de conector de bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Para ello, debe implementar procedimientos de seguridad [de](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) autenticación con las solicitudes DE API.
 
 Para actualizar una actividad existente dentro de una conversación, incluya y `conversationId` en el extremo de `activityId` solicitud. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada posterior original.
 
@@ -170,9 +170,9 @@ Para eliminar una actividad existente dentro de una conversación, incluya y `co
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Solicitud y responce** | **Description** |
+| **Solicitud y respuesta** | **Descripción** |
 |----|----|
-| N/A | Código de estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
+| N/A | Un código de estado HTTP que indica el resultado de la operación. No se especifica nada en el cuerpo de la respuesta. |
 
 ---
 
@@ -180,11 +180,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 En el ejemplo de código siguiente se muestran los conceptos básicos de las conversaciones:
 
-| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Conceptos básicos de la conversación de Teams  | Muestra los conceptos básicos de las conversaciones en Teams, incluida la actualización y eliminación de mensajes. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams Conceptos básicos de conversación  | Muestra los conceptos básicos de las conversaciones en Teams actualización y eliminación de mensajes. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Obtener contexto de Teams](~/bots/how-to/get-teams-context.md)
+> [Obtener Teams contexto](~/bots/how-to/get-teams-context.md)
