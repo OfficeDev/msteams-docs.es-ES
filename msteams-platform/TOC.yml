@@ -396,34 +396,32 @@
           href: graph-api/rsc/test-resource-specific-consent.md
         - name: Archivo de prueba JSON de consentimientos específicos de recursos
           href: graph-api/rsc/test-rsc-json-file.md
-- name: Publicar la aplicación
+- name: Distribuir la aplicación
   items:
-    - name: Configurar las opciones de instalación predeterminadas
-      href: concepts/deploy-and-publish/add-default-install-scope.md
-    - name: Elegir cómo distribuir la aplicación
-      href: concepts/deploy-and-publish/overview.md
+    - name: Información general
+      href: concepts/deploy-and-publish/apps-publish-overview.md
     - name: Crear el paquete de aplicación
       href: concepts/build-and-test/apps-package.md
-    - name: Cargar la aplicación para un equipo o usuario
+    - name: Cargar la aplicación
       href: concepts/deploy-and-publish/apps-upload.md
     - name: Publicar en la organización
-      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-    - name: Publicar en la tienda de Teams (AppSource)
+      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    - name: Publicar en la tienda de Teams
       items:
-        - name: Información sobre el envío en AppSource
+        - name: Información general
           href: concepts/deploy-and-publish/appsource/publish.md
-        - name: Lista de comprobación previa al envío
+        - name: Revisar las instrucciones de validación de la tienda
+          href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+        - name: Crear una cuenta del Centro de partners
+          href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
+        - name: Preparar el envío de la tienda
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-        - name: Lista de comprobación de página de detalles de la aplicación
-          href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-        - name: Lista de comprobación de manifiesto de la aplicación
-          href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-        - name: Casos con errores frecuentes
-          href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-        - name: Qué hacer después de publicar la aplicación
+        - name: Enviar la aplicación
+          href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+        - name: Resolver problemas si se produce un error en el envío de la tienda
+          href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
+        - name: Mantener la aplicación publicada
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-        - name: Programa de certificación de aplicaciones
-          href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: Recursos
   items:
     - name: Esquema del manifiesto de la aplicación
@@ -446,6 +444,8 @@
       href: resources/removing-tab-margins.md
     - name: Atributo de cookies SameSite (actualización de 2020)
       href: resources/samesite-cookie-update.md
+    - name: Casos con errores frecuentes para los envíos de la tienda
+      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Colaborar en documentos de Teams
       href: resources/teams-contributor-reference.md
 - name: Soporte técnico y comentarios
