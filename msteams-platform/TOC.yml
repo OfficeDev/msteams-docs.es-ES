@@ -10,7 +10,7 @@
   items:
     - name: Información general
       href: build-your-first-app/build-first-app-overview.md
-    - name: 'Crear un "Hola, mundo" aplicación'
+    - name: 'Crear un aplicación que simplemente diga "Hola, mundo"'
       href: build-your-first-app/build-and-run.md
     - name: Crear una pestaña personal básica
       href: build-your-first-app/build-personal-tab.md
@@ -302,6 +302,18 @@
           href: task-modules-and-cards/cards/cards-actions.md
         - name: Referencia de tarjetas
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Acciones universales para tarjetas adaptables
+          items:
+            - name: Información general
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+            - name: Trabajar con Acciones universales para tarjetas adaptables
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+            - name: Vistas específicas de usuario
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+            - name: Flujos de trabajo secuenciales
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+            - name: Tarjetas actualizadas
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: Crear módulos de tareas
       items:
         - name: Información general
