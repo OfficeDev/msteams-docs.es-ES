@@ -1,7 +1,7 @@
 ---
 title: Apertura de vínculos
 author: clearab
-description: Cómo realizar la implementación de vínculos con la extensión de mensajería en una aplicación de Microsoft Teams.
+description: Cómo realizar el despliegue de vínculos con la extensión de mensajería en una Microsoft Teams aplicación.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -21,7 +21,7 @@ Este documento te guía sobre cómo agregar la actualización de vínculos al ma
 > [!NOTE]
 > Actualmente, la desafución de vínculos no se admite en clientes móviles.
 
-La extensión de mensajería de Azure DevOps usa la implementación de vínculos para buscar direcciones URL pegadas en el área de mensajes de redacción que apunten a un elemento de trabajo. En la imagen siguiente, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps, que la extensión de mensajería ha resuelto en una tarjeta:
+La Azure DevOps de mensajería usa la desamuestra de vínculos para buscar direcciones URL pegadas en el área de mensaje de redacción que apunten a un elemento de trabajo. En la siguiente imagen, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps, que la extensión de mensajería ha resuelto en una tarjeta:
 
 ![Ejemplo de desafusado de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -34,7 +34,7 @@ Para agregar la implementación de vínculos al manifiesto de la aplicación, ag
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Agregar un despliegue de vínculos con App Studio
 
-1. Abre **App Studio** desde el cliente de Microsoft Teams y selecciona la pestaña Editor **de** manifiestos.
+1. Abre **App Studio** desde el Microsoft Teams y selecciona la pestaña Editor **de** manifiestos.
 1. Cargue el manifiesto de la aplicación.
 1. En la **página Extensión de** mensajería, agregue el dominio que desea buscar en la sección Controladores **de** mensajes. En la siguiente imagen se explica el proceso:
 
@@ -75,7 +75,7 @@ Se admiten los siguientes tipos de tarjeta:
 
 * [Tarjeta miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Tarjeta de conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Tarjeta de conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 ### <a name="example"></a>Ejemplo
@@ -176,6 +176,6 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Consulte también 
+## <a name="see-also"></a>Vea también 
 
 [Tarjetas](~/task-modules-and-cards/what-are-cards.md)

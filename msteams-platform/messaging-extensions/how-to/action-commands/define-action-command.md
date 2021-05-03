@@ -45,7 +45,7 @@ La siguiente imagen muestra las ubicaciones desde las que se invoca el comando a
 
 Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representa dentro del módulo de tareas:   
 
-* **Lista estática de parámetros:** este es el método más sencillo. Puedes definir una lista de parámetros en el manifiesto de la aplicación que representa el cliente de Teams, pero no puedes controlar el formato en este caso.
+* **Lista estática de parámetros:** este es el método más sencillo. Puedes definir una lista de parámetros en el manifiesto de la aplicación que Teams cliente, pero no puedes controlar el formato en este caso.
 * **Tarjeta adaptable:** puedes seleccionar usar una tarjeta adaptable, que proporciona un mayor control sobre la interfaz de usuario, pero aún te limita a los controles y opciones de formato disponibles.
 * **Vista web incrustada:** puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles. 
 
@@ -71,7 +71,7 @@ Para agregar el comando action al manifiesto de la aplicación, debes agregar un
 
 **Para crear un comando de acción**
 
-1. Abre **App Studio** desde el cliente de Microsoft Teams y selecciona la pestaña Editor de **manifiestos.**
+1. Abre **App Studio** desde el Microsoft Teams y selecciona la pestaña Editor de **manifiestos.**
 1. Si ya creaste el paquete de la aplicación en **App Studio,** selecciónelo en la lista. Si no has creado un paquete de aplicación, importa uno existente.
 1. Después de importar un paquete de aplicación, selecciona **Extensiones de mensajería en** **Funcionalidades**. Obtiene una ventana emergente para configurar la extensión de mensajería.
 1. Selecciona **Configurar en la** ventana para incluir la extensión de mensajería en la experiencia de la aplicación. En la siguiente imagen se muestra la ventana de configuración de la extensión de mensajería:
@@ -87,7 +87,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. Seleccione **Permitir que los usuarios desencadene acciones en servicios externos mientras están dentro de Teams**. En la siguiente imagen se muestra la selección de comandos de acción:
+1. Seleccione **Permitir que los usuarios desencadene acciones** en servicios externos mientras están dentro de Teams . En la siguiente imagen se muestra la selección de comandos de acción:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -205,8 +205,8 @@ La siguiente sección es un ejemplo de un `composeExtensions` objeto que define 
 
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -30,7 +30,7 @@ En el proceso de la solicitud de invocación inicial, el servicio recibe un obje
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
 |`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
-|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`from.aadObjectId`| Azure Active Directory de objeto del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.channel.id`| Identificador de canal (si la solicitud se realizó en un canal). |
 |`channelData.team.id`| Id. de equipo (si la solicitud se realizó en un canal). |
@@ -80,7 +80,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
 |`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
-|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`from.aadObjectId`| Azure Active Directory de objeto del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
 |`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje al que este mensaje es una respuesta. |
@@ -130,7 +130,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
 |`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
-|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`from.aadObjectId`| Azure Active Directory de objeto del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
 |`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje al que este mensaje es una respuesta. |
@@ -187,7 +187,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
 |`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
-|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`from.aadObjectId`| Azure Active Directory de objeto del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.channel.id`| Identificador de canal (si la solicitud se realizó en un canal). |
 |`channelData.team.id`| Id. de equipo (si la solicitud se realizó en un canal). |
@@ -253,7 +253,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
 |`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
-|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`from.aadObjectId`| Azure Active Directory de objeto del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.channel.id`| Identificador de canal (si la solicitud se realizó en un canal). |
 |`channelData.team.id`| Id. de equipo (si la solicitud se realizó en un canal). |
@@ -362,7 +362,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
 |`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
-|`from.aadObjectId`| Identificador de objeto de Azure Active Directory del usuario que envió la solicitud. |
+|`from.aadObjectId`| Azure Active Directory de objeto del usuario que envió la solicitud. |
 |`channelData.tenant.id`| Identificador del inquilino de Azure Active Directory |
 |`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
 |`value.commandId` | Contiene el identificador del comando que se invocó. |
@@ -628,7 +628,7 @@ La siguiente sección de código es un ejemplo para `fetchTask` responder con un
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-En este ejemplo se usa [el paquete AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) además del SDK de Bot Framework.
+En este ejemplo se [usa el NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) además del SDK de Bot Framework.
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -939,12 +939,12 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Description | .NET    | Node.js   |   
+| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Acción de extensión de mensajería de Teams| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Búsqueda de extensión de mensajería de Teams   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Definir comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
