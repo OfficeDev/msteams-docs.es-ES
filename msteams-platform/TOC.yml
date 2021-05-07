@@ -380,7 +380,7 @@
       href: concepts/build-and-test/test-data.md
     - name: Pestañas
       items:
-        - name: Depurar la pestaña con DevTools
+        - name: DevTools para pestañas de Microsoft Teams
           href: tabs/how-to/developer-tools.md
     - name: Bots
       items:
@@ -400,6 +400,8 @@
   items:
     - name: Información general
       href: concepts/deploy-and-publish/apps-publish-overview.md
+    - name: Configurar las opciones de instalación predeterminadas
+      href: concepts/deploy-and-publish/add-default-install-scope.md
     - name: Crear el paquete de aplicación
       href: concepts/build-and-test/apps-package.md
     - name: Cargar la aplicación
@@ -422,16 +424,10 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Mantener la aplicación publicada
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-- name: Recursos
+- name: Manifiesto
   items:
     - name: Esquema del manifiesto de la aplicación
       href: resources/schema/manifest-schema.md
-    - name: Localización
-      items:
-        - name: Localizar la aplicación
-          href: concepts/build-and-test/apps-localization.md
-        - name: Esquema de JSON de localización
-          href: resources/schema/localization-schema.md
     - name: Versión preliminar pública para desarrolladores
       items:
         - name: Información general
@@ -440,6 +436,14 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Características
           href: resources/dev-preview/developer-preview-features.md
+- name: Recursos
+  items:
+    - name: Localización
+      items:
+        - name: Localizar la aplicación
+          href: concepts/build-and-test/apps-localization.md
+        - name: Esquema de JSON de localización
+          href: resources/schema/localization-schema.md
     - name: Cambios del margen de pestaña
       href: resources/removing-tab-margins.md
     - name: Atributo de cookies SameSite (actualización de 2020)
