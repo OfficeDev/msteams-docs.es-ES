@@ -4,18 +4,18 @@ description: Limitación de tasas y procedimientos recomendados en Microsoft Tea
 ms.topic: conceptual
 localization_priority: Normal
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020901"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230963"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
 La limitación de velocidad es un método para limitar los mensajes a una frecuencia máxima determinada. Como principio general, la aplicación debe limitar el número de mensajes que publica a una conversación de canal o chat individual. Esto garantiza una experiencia óptima y los mensajes no aparecen como correo no deseado para los usuarios.
 
-Para proteger Microsoft Teams y sus usuarios, las API de bot proporcionan un límite de velocidad para las solicitudes entrantes. Las aplicaciones que superen este límite reciben un `HTTP 429 Too Many Requests` estado de error. Todas las solicitudes están sujetas a la misma directiva de limitación de tasas, incluido el envío de mensajes, enumeraciones de canales y recuperaciones de listas.
+Para proteger Microsoft Teams y sus usuarios, las API del bot proporcionan un límite de velocidad para las solicitudes entrantes. Las aplicaciones que superen este límite reciben un `HTTP 429 Too Many Requests` estado de error. Todas las solicitudes están sujetas a la misma directiva de limitación de tasas, incluido el envío de mensajes, enumeraciones de canales y recuperaciones de listas.
 
 Como los valores exactos de los límites de tasa están sujetos a cambios, la aplicación debe implementar el comportamiento de devolución adecuado cuando la API devuelva `HTTP 429 Too Many Requests` .
 
@@ -80,7 +80,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-Puede realizar backoff y reintentos mediante [el control de errores transitorios](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obtener instrucciones sobre cómo obtener e instalar el paquete NuGet, vea agregar el bloque de aplicación de control de [errores transitorios a la solución](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Vea también [control de errores transitorios](/azure/architecture/best-practices/transient-faults).
+Puede realizar backoff y reintentos mediante [el control de errores transitorios](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Para obtener instrucciones sobre cómo obtener e instalar el paquete NuGet, vea agregar el bloque de aplicación de control de errores [transitorios a la solución](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Vea también [control de errores transitorios](/azure/architecture/best-practices/transient-faults).
 
 Después de pasar por el ejemplo para detectar excepciones transitorias, vaya a través del ejemplo de retroceso exponencial. Puede usar retroceso exponencial en lugar de reintentar errores.
 
@@ -121,7 +121,7 @@ El límite por bot por subproceso controla el tráfico que un bot puede generar 
 
 >[!NOTE]
 > * El límite de subprocesos de 3600 segundos y 1800 operaciones solo se aplica si se envían varios mensajes de bot a un solo usuario. 
-> * El límite global por aplicación por inquilino es de 30 solicitudes por segundo (RPS). Por lo tanto, el número total de mensajes de bot por segundo no debe cruzar el límite de subprocesos.
+> * El límite global por aplicación por inquilino es de 50 solicitudes por segundo (RPS). Por lo tanto, el número total de mensajes de bot por segundo no debe cruzar el límite de subprocesos.
 > * La división de mensajes en el nivel de servicio da como resultado rps superior a lo esperado. Si le preocupa acercarse a los límites, debe implementar la [estrategia de despegar](#backoff-example). Los valores proporcionados en esta sección son solo para estimación.
 
 En la tabla siguiente se proporcionan los límites por bot por subproceso:

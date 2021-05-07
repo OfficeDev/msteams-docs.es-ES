@@ -4,18 +4,26 @@ description: Describe cómo especificar las opciones de instalación predetermin
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 561a4f2910e703db5ffce6176f6177dfd661d2ce
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058617"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230935"
 ---
-# <a name="add-a-default-install-scope-and-group-capability"></a>Agregar un ámbito de instalación predeterminado y una funcionalidad de grupo
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurar las opciones de instalación predeterminadas para Microsoft Teams aplicación
 
-Es común que una aplicación admita varios escenarios en Teams, pero es posible que la haya diseñado con un ámbito y una funcionalidad específicos en mente. Por ejemplo, si la aplicación es principalmente para uso de equipo o canal, puedes asegurarte de que la primera opción de instalación que los usuarios ven en la tienda es **Agregar a un equipo**.
+Es común que una aplicación admita varios escenarios en Teams, pero es posible que la haya diseñado con un ámbito y capacidad específicos en mente. Por ejemplo, si la aplicación es principalmente para uso de equipo o canal, puedes asegurarte de que la primera opción de instalación que los usuarios ven en la tienda es **Agregar a un equipo**.
 
-![Agregar una aplicación](../../assets/images/compose-extensions/addanapp.png)
+:::row:::
+   :::column span="2":::
+
+![Agregar un ejemplo desplegable de aplicaciones](../../assets/images/compose-extensions/addanapp.png)
+
+   :::column-end:::
+   :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 Si la funcionalidad principal de la aplicación es un bot, también puedes convertir el bot en la funcionalidad predeterminada cuando un usuario instala la aplicación en un equipo.
 
@@ -65,4 +73,4 @@ Configura la funcionalidad predeterminada cuando la aplicación esté instalada 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Elegir cómo distribuir la aplicación](overview.md)
+> [Crear el paquete de aplicación](~/concepts/build-and-test/apps-package.md)

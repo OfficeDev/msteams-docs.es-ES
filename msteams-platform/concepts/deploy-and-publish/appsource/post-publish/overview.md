@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8e4656ea7ca9f373123026a50ecb837d1a64e3fa
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101754"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230921"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación Microsoft Teams publicada
 
@@ -58,4 +58,4 @@ Crea el vínculo con la siguiente dirección URL anexada con el identificador de
 
 ## <a name="see-also"></a>Vea también
 
-* [Monetizar su aplicación a través del Marketplace comercial de Microsoft](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
+[Monetizar su aplicación a través del Marketplace comercial de Microsoft](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

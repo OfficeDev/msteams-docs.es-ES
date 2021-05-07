@@ -4,12 +4,12 @@ description: Describe las directrices que deben seguir todas las aplicaciones en
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: b4b9260be2a92c3a9029acf89b2eadae60a8fc7a
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101931"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230928"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validación del almacén
 
@@ -31,6 +31,7 @@ El nombre de una aplicación desempeña un papel fundamental en la forma en que 
 * Si la aplicación forma parte de una asociación oficial con Microsoft, el nombre de la aplicación debe ser el primero (por ejemplo, **Contoso Connector para Microsoft Teams**).
 * No debe copiar el nombre de una aplicación que aparece en la tienda u otra oferta en el mercado comercial.
 * No debe contener términos profanos o despectivos. El nombre tampoco debe incluir un lenguaje racial o culturalmente insensible.
+* Debe ser único. Por ejemplo, no puedes enumerar varias aplicaciones para distintas regiones con el mismo nombre y funcionalidad.
 
 Vea también: Descripción del paquete y la tienda de la [aplicación 4.0](#40-app-package-and-store-listing)
 
