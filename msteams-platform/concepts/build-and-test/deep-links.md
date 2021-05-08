@@ -4,18 +4,18 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
+ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230956"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "52278155"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
 Puede crear vínculos a información y características dentro de Teams. Los escenarios en los que la creación de vínculos profundos son útiles son los siguientes:
 
-* Navegar por el usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la pestaña para que el usuario pueda ver más detalles sobre la actividad.
+* Navegar al usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la pestaña para que el usuario pueda ver más detalles sobre la actividad.
 * La aplicación automatiza o simplifica determinadas tareas del usuario, como crear un chat o programar una reunión, mediante la rellenar previamente los vínculos profundos con los parámetros necesarios. Esto evita la necesidad de que los usuarios escriban manualmente información.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Como alternativa, también puede generar vínculos profundos mediante programaci
 >[!NOTE]
 > Actualmente, shareDeepLink no funciona en plataformas móviles.
 
-### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Mostrar un vínculo profundo a un elemento dentro de la pestaña
+### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>Mostrar un vínculo profundo a un elemento dentro de la pestaña
 
 Para mostrar un cuadro de diálogo que contiene un vínculo profundo a un elemento dentro de la pestaña, llame `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
@@ -56,7 +56,7 @@ Proporcione los campos siguientes:
 * `subEntityLabel`: etiqueta para el elemento que se usará para mostrar el vínculo profundo.
 * `subEntityWebUrl`: un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña.
 
-### <a name="generating-a-deep-link-to-your-tab"></a>Generación de un vínculo profundo a la pestaña
+### <a name="generate-a-deep-link-to-your-tab"></a>Generar un vínculo profundo a la pestaña
 
 > [!NOTE]
 > Las pestañas personales tienen un ámbito, mientras que las pestañas de canal `personal` y grupo usan o `team` `group` ámbitos. Los dos tipos de pestaña tienen una sintaxis ligeramente diferente, ya que solo la pestaña configurable tiene una `channel` propiedad asociada con su objeto de contexto. Vea la [referencia del manifiesto](~/resources/schema/manifest-schema.md) para obtener más información sobre los ámbitos de tabulación.
@@ -100,7 +100,7 @@ Ejemplos:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### <a name="consuming-a-deep-link-from-a-tab"></a>Consumir un vínculo profundo desde una pestaña
+### <a name="consume-a-deep-link-from-a-tab"></a>Consumir un vínculo profundo desde una pestaña
 
 Al navegar a un vínculo profundo, Microsoft Teams simplemente navega a la pestaña y proporciona un mecanismo a través de la biblioteca de JavaScript de Microsoft Teams para recuperar el identificador de sub entidad si existe.
 
@@ -196,14 +196,14 @@ Los parámetros de consulta son:
 
 Ejemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="linking-to-the-scheduling-dialog"></a>Vinculación al cuadro de diálogo de programación
+## <a name="deep-link-to-the-scheduling-dialog"></a>Vínculo profundo al cuadro de diálogo de programación
 
 > [!NOTE]
 > Esta característica se encuentra actualmente en versión preliminar del desarrollador.
 
 Puede crear vínculos profundos al Teams de programación integrado. Esto es especialmente útil si la aplicación ayuda al usuario a completar el calendario o programar tareas relacionadas.
 
-### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Generar un vínculo profundo al cuadro de diálogo de programación
+### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Generar un vínculo profundo al cuadro de diálogo de programación
 
 Use el siguiente formato para un vínculo profundo que puede usar en un bot, connector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
@@ -222,9 +222,32 @@ Los parámetros de consulta son:
 
 Para usar este vínculo profundo con el bot, puedes especificarlo como el destino de la dirección URL en el botón de la tarjeta o pulsar en la acción a través del `openUrl` tipo de acción.
 
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Vinculación profunda a una llamada de audio o audio y vídeo
+
+Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un solo usuario o a un grupo de usuarios, especificando el tipo de llamada, como *audio* o *av*, y los participantes. Después de invocar el vínculo profundo y antes de realizar la llamada, Teams cliente de escritorio solicita una confirmación para realizar la llamada. En caso de llamada de grupo, puede llamar a un conjunto de usuarios VoIP y a un conjunto de usuarios RTC en la misma invocación de vínculo profundo. 
+
+En caso de una llamada de vídeo, el cliente pedirá confirmación y activará el vídeo del autor de la llamada para la llamada. El receptor de la llamada tiene la opción de responder solo a través de audio o audio y vídeo, a través de la Teams de notificación de llamadas.
+
+> [!NOTE]
+> Este vínculo profundo no se puede usar para invocar una reunión.
+
+### <a name="generate-a-deep-link-to-a-chat"></a>Generar un vínculo profundo a un chat
+
+| Vínculo profundo | Formato | Ejemplo |
+|-----------|--------|---------|
+| Realizar una llamada de audio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
+| Realizar una llamada de audio y vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | https://teams.microsoft.com/l/call/0/0?users=&lt&gt;;user1,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+  
+Estos son los parámetros de consulta:
+* `users`: lista separada por comas de los id. de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite userPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en caso de una llamada RTC, admite una rtc mri 4: &lt; phonenumber &gt; .
+* `Withvideo`: este es un parámetro opcional, que puede usar para realizar una llamada de vídeo. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de una llamada de audio o audio y vídeo a través de la Teams de notificación de llamadas. 
+* `Source`: se trata de un parámetro opcional, que informa sobre el origen del vínculo profundo.
+
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo | Descripción | C # |Node.js|
+| Nombre de ejemplo | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
 |Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
