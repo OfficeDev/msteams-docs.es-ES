@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
-ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
+ms.openlocfilehash: ccad5c6cc8daa513b12185efa2ed57e02438fd89
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "52278155"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300559"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -178,7 +178,7 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>Vínculos profundos para SharePoint Framework pestañas
+## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculación profunda para SharePoint Framework pestañas
 
 El siguiente formato de vínculo profundo se puede usar en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
@@ -196,7 +196,7 @@ Los parámetros de consulta son:
 
 Ejemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="deep-link-to-the-scheduling-dialog"></a>Vínculo profundo al cuadro de diálogo de programación
+## <a name="deep-linking-to-the-scheduling-dialog"></a>Vinculación profunda al cuadro de diálogo de programación
 
 > [!NOTE]
 > Esta característica se encuentra actualmente en versión preliminar del desarrollador.

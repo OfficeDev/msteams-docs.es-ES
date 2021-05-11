@@ -5,20 +5,20 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 05a1becbd021a67e2a843a8ddb5f58ea76cf444e
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019702"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304022"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifiesto de vista previa de desarrollador para Microsoft Teams
 
 > [!NOTE]
 > Consulta [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) para obtener información sobre el programa y cómo puedes unirte.
-> Si no usa la vista previa del desarrollador, no debe usar esta versión del manifiesto. Consulte [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) para la versión pública del manifiesto.
+> Si no usa la vista previa del desarrollador, no debe usar esta versión del manifiesto. Vea [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) para la versión pública del manifiesto.
 
-El manifiesto de Microsoft Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe cumplir con el esquema hospedado en [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
+El Microsoft Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
 Para obtener más información sobre las características disponibles, vea: [Características en public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
 
@@ -234,7 +234,7 @@ Esta cadena de versión debe seguir el [estándar de semver](http://semver.org/)
 
 **Obligatorio** &ndash; Id. de aplicación de Microsoft
 
-Identificador único generado por Microsoft para esta aplicación. Si has registrado un bot a través de Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft, ya debes tener un identificador y debes escribirlo aquí. De lo contrario, debe generar un nuevo identificador en el Portal de registro de aplicaciones de Microsoft ([Mis](https://apps.dev.microsoft.com)aplicaciones ), escriba aquí y, a continuación, volver a usarlo cuando [agregue un bot](~/bots/how-to/create-a-bot-for-teams.md).
+Identificador único generado por Microsoft para esta aplicación. Si has registrado un bot a través del Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft, ya debes tener un identificador y debes escribirlo aquí. De lo contrario, debe generar un nuevo identificador en el Portal de registro de aplicaciones de Microsoft ([Mis](https://apps.dev.microsoft.com)aplicaciones ), escriba aquí y, a continuación, volver a usarlo cuando [agregue un bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -246,7 +246,7 @@ Un identificador único para esta aplicación en la notación de dominio inverso
 
 **Required**
 
-Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSource (anteriormente Tienda Office), estos valores deben coincidir con la información de la entrada de AppSource.
+Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSource (anteriormente Office Store), estos valores deben coincidir con la información de la entrada AppSource.
 
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
@@ -279,7 +279,7 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 **Required**
 
-El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la experiencia de Teams. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y no deben ser los `full` mismos.
+El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la Teams usuario. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y no deben ser los `full` mismos.
 
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
@@ -303,7 +303,7 @@ Asegúrese de que su descripción describe con precisión su experiencia y propo
 
 **Required**
 
-Iconos usados dentro de la aplicación de Teams. Los archivos de icono deben incluirse como parte del paquete de carga.
+Iconos usados dentro de la Teams aplicación. Los archivos de icono deben incluirse como parte del paquete de carga.
 
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
@@ -329,7 +329,7 @@ El objeto es una matriz con todos los elementos del tipo `object` . Este bloque 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|La https:// url que se va a usar al configurar la pestaña.|
-|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
+|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo la pestaña estará disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
@@ -346,7 +346,7 @@ El objeto es una matriz (máximo de 16 elementos) con todos los elementos del ti
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Identificador único para la entidad que muestra la pestaña.|
 |`name`|Cadena|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
-|`contentUrl`|Cadena|2048 caracteres|✔|Dirección HTTPS:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el lienzo de Teams.|
+|`contentUrl`|Cadena|2048 caracteres|✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
 |`websiteUrl`|Cadena|2048 caracteres||La https:// dirección URL para apuntar si un usuario opta por ver en un explorador.|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito, lo que significa que solo se puede aprovisionar como `personal` parte de la experiencia personal.|
 
@@ -379,7 +379,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 
 **Optional**
 
-El `connectors` bloque define un conector de Office 365 para la aplicación.
+El `connectors` bloque define un Office 365 connector para la aplicación.
 
 El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan un conector.
 
@@ -403,7 +403,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|Cadena|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. Esto bien puede ser el mismo que el identificador general [de la aplicación](#id).|
-|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
+|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
 |`commands`|Matriz de objeto|10  |✔|Matriz de comandos que admite la extensión de mensajería|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -418,9 +418,9 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`type`|String|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: `query`|
 |`title`|Cadena|32 caracteres|✔|El nombre de comando fácil de usar|
 |`description`|Cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando|
-|`initialRun`|Booleano|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
+|`initialRun`|Boolean|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
 |`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose", "commandBox"]`|
-|`fetchTask`|Booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente|
+|`fetchTask`|Boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente|
 |`taskInfo`|Objeto|||Especificar el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como 'large', 'medium' o 'small'|
@@ -478,7 +478,7 @@ El objeto es una matriz con todos los elementos del tipo `string` .
 
 **Optional**
 
-Especifica tu id. de aplicación de AAD y la información de Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de AAD.
+Especifica tu id. de aplicación de AAD y Graph información para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de AAD.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -489,7 +489,7 @@ Especifica tu id. de aplicación de AAD y la información de Graph para ayudar a
 
 **Opcional** : matriz
 
-El `configurableProperties` bloque define las propiedades de la aplicación que el administrador de Teams puede personalizar. Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
+El `configurableProperties` bloque define las propiedades de la aplicación que Teams puede personalizar el administrador. Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
 > Debe definirse un mínimo de una propiedad. Puede definir un máximo de nueve propiedades en este bloque.
@@ -499,10 +499,10 @@ Puede definir cualquiera de las siguientes propiedades:
 * `name`: permite al administrador cambiar el nombre para mostrar de la aplicación.
 * `shortDescription`: permite al administrador cambiar la descripción breve de la aplicación.
 * `longDescription`: permite al administrador cambiar la descripción detallada de la aplicación.
-* `smallImageUrl`: es `outline` una propiedad en el bloque del `icons` manifiesto.
+* `smallImageUrl`: es la `outline` propiedad del bloque del `icons` manifiesto.
 * `largeImageUrl`: es la `color` propiedad del bloque del `icons` manifiesto.
 * `accentColor`: es el color que se debe usar junto con y como fondo para los iconos de esquema.
-* `developerUrl`: es la dirección HTTPS:// url del sitio web del desarrollador.
+* `websiteUrl`: es la dirección HTTPS:// url del sitio web del desarrollador.
 * `privacyUrl`: es la dirección URL https:// a la directiva de privacidad del desarrollador.
 * `termsOfUseUrl`: es la dirección URL https:// los términos de uso del desarrollador.
 
@@ -528,6 +528,6 @@ Cuando se selecciona un ámbito de instalación de grupo, se definirá la funcio
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`team`|string|||Cuando el ámbito de instalación seleccionado es `team` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`groupchat`|string|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`meetings`|string|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`groupchat`|cadena|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`meetings`|cadena|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
 

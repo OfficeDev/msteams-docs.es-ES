@@ -4,12 +4,12 @@ description: Comience a crear aplicaciones increíbles en Microsoft Teams a trav
 keywords: introducción a app studio de teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: aa55abb6a4acd4220c2988d1a42c2a2bddc89042
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019968"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304036"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Desarrolle aplicaciones rápidamente con App Studio para Microsoft Teams
 
@@ -56,8 +56,6 @@ La sección de detalles del Editor de manifiesto define la descripción de alto 
 La sección de funciones del Editor de manifiesto es donde están definidas las funcionalidades de la aplicación y donde se muestran los detalles de cada una de esas funcionalidades.
 
 > [!NOTE]
-> La característica de personalización de la aplicación está disponible actualmente solo en la versión preliminar del desarrollador.
-> 
 > Como práctica recomendada, debes proporcionar directrices de personalización para que los usuarios de la aplicación y los clientes puedan seguir al personalizar la aplicación. Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 
@@ -86,7 +84,7 @@ Tenga en cuenta que, si ha definido que el bot solo sea compatible con un ámbit
 Esta sección le permite agregar un conector a la aplicación. Si ya registró un Conector de Office 365, elija *Configurar* y escriba el nombre y el id. del conector. Si desea un conector nuevo haga clic en *Registrarse* para ir al Panel del desarrollador de conectores en el explorador.
 
 > [!NOTE]
-> La personalización de aplicaciones permite a los administradores cambiar la apariencia de las aplicaciones cargadas a través de bots, extensiones de mensajería, pestañas y conectores. Por ejemplo, si el administrador de Teams personaliza el nombre de una aplicación de *Contoso* a *Contoso Agent,* la aplicación aparecerá con el nuevo nombre *Agente Contoso* para los usuarios. Sin embargo, al agregar un conector a un chat, en la lista los conectores seguirán mostrándole el nombre de la aplicación como *Contoso*.
+> La personalización de aplicaciones permite a los administradores cambiar la apariencia de las aplicaciones cargadas a través de bots, extensiones de mensajería, pestañas y conectores. Por ejemplo, si el administrador de Teams personaliza el nombre de una aplicación de *Contoso* a *Contoso Agent,* la aplicación aparecerá con el nuevo nombre *Agente contoso* para los usuarios. Sin embargo, al agregar un conector a un chat, en la lista los conectores seguirán mostrándole el nombre de la aplicación como *Contoso*.
 
 
 ##### <a name="messaging-extensions"></a>Extensiones de mensajería

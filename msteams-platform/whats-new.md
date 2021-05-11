@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: b1a78166b64d6f3c9c8e2b097822d874591a956c
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 449df27aaa28b0ba15c98efa78f93f74b8446920
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230886"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300573"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -27,9 +27,9 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|05/07/2021| Vínculos profundos para llamadas de audio y vídeo en el chat. |[Vínculos profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)
 |04/30/2021|Nueva guía sobre cómo publicar aplicaciones en la Teams tienda.|[Publicar la aplicación en la tienda Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [directrices de validación de la tienda](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Nuevo: Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| La característica de personalización de aplicaciones ya está disponible en la vista previa del desarrollador.|[Diseño Teams de la aplicación,](concepts/design/design-teams-app-overview.md#app-customization)información [general de App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: Actualice a la versión 4.10 o posterior del SDK de Bot Framework, tal como hemos empezado con el proceso de desuso para `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 |03/05/2021|El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -154,6 +154,7 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|04/08/2021| La característica de personalización de aplicaciones ya está disponible en la vista previa del desarrollador.|[Diseño Teams de la aplicación,](concepts/design/design-teams-app-overview.md#app-customization)información [general de App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| Las pestañas ya no tendrán márgenes alrededor de sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 
 Para obtener más información, [vea public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
