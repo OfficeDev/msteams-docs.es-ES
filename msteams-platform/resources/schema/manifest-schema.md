@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: c0b8b6f5baa163d2292227f7d361b6d12849edec
+ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304015"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52336520"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
-El Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . Las versiones anteriores 1.0-1.4 también son compatibles (con "v1.x" en la dirección URL).
+El Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . También se admiten las versiones anteriores 1.0, 1.1,..., 1.6, y así sucesivamente (con "v1.x" en la dirección URL).
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad.
 
@@ -336,7 +336,7 @@ El identificador es un identificador único generado por Microsoft para la aplic
 
 Especifica información sobre su empresa. Para las aplicaciones enviadas a la Teams, estos valores deben coincidir con la información de la descripción de la tienda. Para obtener más información, consulte [las Teams de publicación del almacén de almacenamiento.](~/concepts/deploy-and-publish/appsource/publish.md)
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`name`|32 caracteres|✔|Nombre para mostrar del desarrollador.|
 |`websiteUrl`|2048 caracteres|✔|La https:// url del sitio web del desarrollador. Este vínculo debe llevar a los usuarios a su empresa o página de aterrizaje específica del producto.|
@@ -350,7 +350,7 @@ Especifica información sobre su empresa. Para las aplicaciones enviadas a la Te
 
 El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la Teams usuario. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y `full` deben ser diferentes.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
@@ -363,7 +363,7 @@ Describe la aplicación a los usuarios. Para las aplicaciones enviadas a AppSour
 
 Asegúrese de que su descripción describe con precisión su experiencia y proporciona información para ayudar a los clientes potenciales a comprender lo que hace su experiencia. Debe tener en cuenta en la descripción completa, si se requiere una cuenta externa para su uso. Los valores de `short` y `full` deben ser diferentes. La descripción breve no debe repetirse dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`short`|80 caracteres|✔|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔|Descripción completa de la aplicación.|
@@ -380,7 +380,7 @@ Un identificador único para la aplicación en la notación de dominio inverso; 
 
 Permite la especificación de un idioma predeterminado, así como punteros a archivos de idioma adicionales. Vea [localización](~/concepts/build-and-test/apps-localization.md).
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|La etiqueta de idioma de las cadenas de este archivo de manifiesto de nivel superior.|
 
@@ -388,7 +388,7 @@ Permite la especificación de un idioma predeterminado, así como punteros a arc
 
 Una matriz de objetos que especifica traducciones de idioma adicionales.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`languageTag`||✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
 |`file`||✔|Una ruta de acceso de archivo relativa a un archivo .json que contiene las cadenas traducidas.|
@@ -399,7 +399,7 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 Iconos usados dentro de la Teams aplicación. Los archivos de icono deben incluirse como parte del paquete de carga. Consulta [Iconos](../../concepts/build-and-test/apps-package.md#app-icons) para obtener más información.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`outline`|32 x 32 píxeles|✔|Una ruta de acceso de archivo relativa a un icono de esquema PNG transparente de 32 x 32.|
 |`color`|192 x 192 píxeles|✔|Una ruta de acceso de archivo relativa a un icono PNG de color completo de 192 x 192.|
@@ -471,10 +471,10 @@ El elemento es una matriz (máximo de solo 1 elemento actualmente solo se permit
 
 Una lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto es una matriz (máximo de 2 elementos) con todos los elementos de tipo; debe definir una lista de comandos independiente para cada ámbito compatible `object` con el bot. Consulta [Menús bot para](~/bots/how-to/create-a-bot-commands-menu.md) obtener más información.
 
-|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tipo| Tamaño máximo | Necesario | Description|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeraciones|3|✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
-|`items.commands`|matriz de objetos|10  |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.commands`|matriz de objetos|10|✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillo de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -511,7 +511,7 @@ El elemento es una matriz (máximo de 1 elemento) con todos los elementos de tip
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. Esto bien puede ser el mismo que el identificador general de la aplicación.|
-|`commands`|matriz de objetos|10  |✔|Matriz de comandos que admite la extensión de mensajería|
+|`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería|
 |`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|cadena|||El tipo de controlador de mensajes. Debe ser `"link"`.|
@@ -618,7 +618,7 @@ Indica dónde se representa una aplicación personal con o sin una barra de enca
 
 Define las propiedades que usa la aplicación para publicar una fuente de actividad de usuario.
 
-|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tipo| Tamaño máximo | Necesario | Description|
 |---|---|---|---|---|
 |`activityTypes`|matriz de objetos|128 elementos| | Proporciona los tipos de actividades que la aplicación puede publicar en una fuente de actividad de usuarios.|
 
