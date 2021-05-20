@@ -1,23 +1,23 @@
 ---
-title: Publicar solicitudes externas en Microsoft Teams con webhooks entrantes
+title: Publicar solicitudes externas para Microsoft Teams con webhooks entrantes
 author: laujan
-description: cómo agregar webhook entrante a la aplicación de Teams
-keywords: webhook saliente de pestañas de teams
+description: cómo agregar webhook entrante a Teams aplicación
+keywords: equipos pestañas webhook saliente
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bc4d768751d34ccf305ef99e126159123a83ef3f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018421"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566820"
 ---
-# <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Publicar solicitudes externas en Teams con webhooks entrantes
+# <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Publicar solicitudes externas para Teams con webhooks entrantes
 
 ## <a name="what-are-incoming-webhooks-in-teams"></a>¿Qué son los webhooks entrantes en Teams?
 
-Los webhooks entrantes son un tipo especial de Conector en Teams que proporcionan una forma sencilla de que una aplicación externa comparta contenido en canales de equipo y que a menudo se usan como herramientas de seguimiento y notificación. Teams proporciona una dirección URL única a la que envía una carga JSON con el mensaje que desea publicar, normalmente en formato de tarjeta. Las tarjetas son contenedores de interfaz de usuario (UI) que contienen contenido y acciones relacionadas con un solo tema y son una forma de presentar datos de mensajes de forma coherente. Teams usa tarjetas dentro de tres funciones:
+Los webhooks entrantes son un tipo especial de conector en Teams que proporcionan una forma sencilla para que una aplicación externa comparta contenido en canales de equipo y que a menudo se usan como herramientas de seguimiento y notificación. Teams proporciona una dirección URL única a la que se envía una carga JSON con el mensaje que desea publicar, normalmente en formato de tarjeta. Las tarjetas son contenedores de interfaz de usuario (UI) que contienen contenido y acciones relacionadas con un único tema y son una forma de presentar los datos de mensajes de forma coherente. Teams utiliza tarjetas dentro de tres capacidades:
 
 * Bots
 * Extensiones de mensajería
@@ -27,44 +27,48 @@ Los webhooks entrantes son un tipo especial de Conector en Teams que proporciona
 
 | Característica | Descripción |
 | ------- | ----------- |
-|Configuración con ámbito|Los webhooks entrantes están en el ámbito y configurados en el nivel de canal (por ejemplo, los webhooks salientes están en el ámbito y configurados en el nivel de equipo).|
-|Definiciones de recursos seguros|Los mensajes tienen formato de carga JSON. Esta estructura de mensajería declarativa evita la inyección de código malintencionado, ya que no hay ninguna ejecución de código en el cliente.|
-|Compatibilidad con mensajes que se pueden tomar medidas|Si decide enviar mensajes a través de tarjetas, debe usar el formato de tarjeta de mensaje que **se puede usar.** Las tarjetas de mensaje que se pueden tomar en acción se admiten en todos los grupos de Office 365, incluido Teams. Estos son los vínculos [a la referencia de](/outlook/actionable-messages/message-card-reference) tarjeta de mensaje de acción heredada y al área de juegos de [tarjetas de mensaje.](https://messagecardplayground.azurewebsites.net)|
-|Compatibilidad con mensajería HTTPS independiente| Las tarjetas son una excelente manera de presentar información de una manera clara y coherente. Cualquier herramienta o marco que pueda enviar solicitudes HTTPS POST puede enviar mensajes a Teams a través de un webhook entrante.|
-|Compatibilidad con Markdown|Todos los campos de texto de las tarjetas de mensajería que pueden actuar admiten Markdown básico. **No use el marcado HTML en las tarjetas**. puesto que se omite y se trata como texto sin formato.|
+|Configuración con ámbito|Los webhooks entrantes están en el ámbito y configurados en el nivel de canal. Por ejemplo, los webhooks salientes se limitan y configuran en el nivel de equipo.|
+|Definiciones seguras de recursos|Los mensajes tienen el formato de cargas JSON. Esta estructura de mensajería declarativa impide la inyección de código malintencionado, ya que no hay ninguna ejecución de código en el cliente.|
+|Soporte de mensajería procesable|Si decide enviar mensajes a través de tarjetas, debe utilizar el formato **de tarjeta de mensaje procesable.** Las tarjetas de mensaje procesables se admiten en todos los grupos Office 365, incluidos los Teams. Aquí están los enlaces a la [referencia de la tarjeta de mensaje accionable heredada](/outlook/actionable-messages/message-card-reference) y al área de juegos de la tarjeta de [mensajes.](https://messagecardplayground.azurewebsites.net)|
+|Soporte de mensajería HTTPS independiente| Las tarjetas son una gran manera de presentar información de una manera clara y consistente. Cualquier herramienta o marco de trabajo que pueda enviar solicitudes HTTPS POST puede enviar mensajes a Teams a través de un webhook entrante.|
+|Soporte de reducción|Todos los campos de texto de las tarjetas de mensajería procesables admiten el markdown básico. **No uses marcado HTML en tus tarjetas.** puesto que se omite y se trata como texto sin formato.|
 
 > [!Note]
-> Los bots de Teams, las extensiones de mensajería, los webhooks entrantes y bot Framework admiten tarjetas adaptables, un marco de plataforma entre tarjetas abierto. [Actualmente, los conectores](../../webhooks-and-connectors/how-to/connectors-creating.md) de Teams no admiten tarjetas adaptables. Sin embargo, es posible crear un flujo [que](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) publica tarjetas adaptables en un canal de Teams.
+> Teams bots, extensiones de mensajería, webhooks entrantes y Bot Framework admiten tarjetas adaptables, un marco de plataforma entre tarjetas abierto. [Teams conectores](../../webhooks-and-connectors/how-to/connectors-creating.md) no admiten actualmente tarjetas adaptables. Sin embargo, es posible crear un [flujo](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) que publique tarjetas adaptables en un canal Teams.
 
-## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Agregar un webhook entrante a un canal de Teams
+## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Agregue un webhook entrante a un canal de Teams
 
 > [!Important]  
-> Si los permisos Miembros de configuración de su equipo Permitir a los miembros crear, actualizar y quitar conectores están  =>    =>  **seleccionados,** cualquier miembro del equipo puede agregar, modificar o eliminar un conector.
+> Si los permisos **de miembro Configuración** de su equipo Permiten a los miembros  =>    =>  **crear, actualizar y quitar conectores** está seleccionado, cualquier miembro del equipo puede agregar, modificar o eliminar un conector.
 
-1. Navegue hasta el canal donde desea agregar el webhook y seleccione (&#8226;&#8226;&#8226;) *Más opciones* en la barra de navegación superior.
+**Para agregar un webhook entrante**
+
+1. Vaya al canal donde desea agregar el webhook y seleccione (&#8226;&#8226;&#8226;) *Más opciones* en la barra de navegación superior.
 1. Elija **Conectores** en el menú desplegable y busque **Webhook entrante**.
-1. Selecciona el **botón Configurar,** proporciona un nombre y, opcionalmente, carga un avatar de imagen para el webhook.
-1. La ventana de diálogo mostrará una dirección URL única que se asignará al canal. Asegúrese de copiar **y guardar la dirección URL;** tendrá que proporcionarla al servicio externo.
-1. Seleccione el **botón Listo.** El webhook estará disponible en el canal de grupo.
+1. Seleccione el botón **Configurar,** proporcione un nombre y, opcionalmente, cargue un avatar de imagen para el webhook.
+1. La ventana de diálogo presentará una dirección URL única que se asignará al canal. Asegúrese de **copiar y guardar la dirección URL:** deberá proporcionarla al servicio externo.
+1. Seleccione el botón **Listo.** El webhook estará disponible en el canal del equipo.
 
-## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Quitar un webhook entrante de un canal de Teams
+## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Eliminar un webhook entrante de un canal de Teams
 
-1. Navegue hasta el canal donde se agregó el webhook y seleccione (&#8226;&#8226;&#8226;) *Más opciones* en la barra de navegación superior.
+**Para eliminar un webhook entrante**
+
+1. Vaya al canal donde se agregó el webhook y seleccione (&#8226;&#8226;&#8226;) *Más opciones* en la barra de navegación superior.
 1. Elija **Conectores** en el menú desplegable.
-1. A la izquierda, en **Administrar**, elija **Configurar**.
-1. Seleccione el *número Configurado para* ver una lista de los conectores actuales.
+1. A la izquierda, en **Administrar**, elija **Configurado**.
+1. Seleccione el *número Configurado* para ver una lista de los conectores actuales.
 1. Seleccione **Administrar** junto al conector que desea eliminar.
-1. Seleccione el **botón** Quitar y aparecerá un cuadro *de diálogo* Quitar configuración.
-1. Opcionalmente, complete los campos del cuadro de diálogo y las casillas antes de seleccionar el **botón** Quitar. El webhook se eliminará del canal de grupo.
+1. Seleccione el botón **Quitar** y se le presentará un cuadro de diálogo *Quitar configuración.*
+1. Opcionalmente, complete los campos y casillas de diálogo antes de seleccionar el botón **Quitar.** El webhook se eliminará del canal del equipo.
 
 ## <a name="distribution"></a>Distribución
 
-Tiene tres opciones para distribuir el webhook entrante:
+Tiene tres opciones para distribuir su webhook entrante:
 
 * Configure un webhook entrante directamente para su equipo.
-* Agregar una página de configuración y ajustar el webhook entrante en [un conector de O365](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* Empaquetar y publicar el conector como parte del [envío de AppSource.](~/concepts/deploy-and-publish/office-store-guidance.md)
+* Agregue una página de configuración y envuelva el webhook entrante en un [conector O365](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* Empaquete y publique el conector como parte del envío de [AppSource.](~/concepts/deploy-and-publish/office-store-guidance.md)
 
-## <a name="learn-more"></a>Más información
+## <a name="see-also"></a>Vea también
 
-* [Enviar mensajes a conectores y webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
+[Envío de mensajes a conectores y webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)

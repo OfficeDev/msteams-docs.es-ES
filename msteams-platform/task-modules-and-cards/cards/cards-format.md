@@ -1,44 +1,44 @@
 ---
 title: Formato de texto en tarjetas
-description: Describe el formato de texto de tarjeta en Microsoft Teams
-keywords: formato de tarjetas de bots de teams
+description: Describe el formato de texto de la tarjeta en Microsoft Teams
+keywords: equipos bots formato de tarjetas
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068825"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566588"
 ---
-# <a name="format-cards-in-teams"></a>Dar formato a tarjetas en Teams
+# <a name="format-cards-in-teams"></a>Formatee las tarjetas en Teams
 
-Puede agregar formato de texto enriquecido a las tarjetas mediante Markdown o HTML, según el tipo de tarjeta.
+Puede agregar formato de texto enriquecido a sus tarjetas mediante Markdown o HTML, dependiendo del tipo de tarjeta.
 
-Las tarjetas solo admiten el formato en la propiedad de texto, no en las propiedades de título o subtítulo. El formato se puede especificar mediante un subconjunto de formato XML (HTML) o Markdown según el tipo de tarjeta. Se recomienda usar el formato Markdown para el desarrollo actual y futuro de tarjetas adaptables.
+Las tarjetas admiten el formato solo en la propiedad text, no en las propiedades title o subtitle. El formato se puede especificar mediante un subconjunto de formato XML (HTML) o Markdown en función del tipo de tarjeta. Para el desarrollo actual y futuro se recomienda tarjetas adaptables mediante el formato De reducción.
 
-La compatibilidad con el formato difiere entre los distintos tipos de tarjeta y la representación de la tarjeta puede diferir ligeramente entre los clientes de teams móviles y de escritorio, así como teams en el explorador de escritorio.
+El soporte de formato difiere entre diferentes tipos de tarjetas, y la representación de la tarjeta puede diferir ligeramente entre el escritorio y los clientes de Teams móviles, así como Teams en el navegador de escritorio.
 
-Puedes incluir una imagen en línea con cualquier tarjeta de Teams. Las imágenes con formato como , o archivos y no deben superar  `.png` `.jpg` los `.gif` 1024 ×1024 px o 1 MB. Gif animado no es compatible oficialmente. *Consulta Referencia* [de tarjetas](./cards-reference.md#inline-card-images)
+Puede incluir una imagen en línea con cualquier tarjeta de Teams. Las imágenes se formatean como  `.png` , o archivos y no deben `.jpg` `.gif` exceder 1024 ×1024 px o 1 MB. Gif animado no es oficialmente compatible. Para obtener más información, consulte [Referencia de tarjetas](./cards-reference.md#inline-card-images).
 
 ## <a name="formatting-cards-with-markdown"></a>Formato de tarjetas con Markdown
 
-Hay dos tipos de tarjeta que admiten Markdown en Teams:
+Hay dos tipos de tarjetas que admiten Markdown en Teams:
 
 > [!div class="checklist"]
-> * **Tarjetas adaptables:** Markdown se admite en el campo Tarjeta `Textblock` adaptable, así como `Fact.Title` y `Fact.Value` . Html no se admite en tarjetas adaptables.
-> * **Tarjetas de conector de O365:** Markdown y HTML limitado se admiten en las tarjetas de Conector de Office 365 en los campos de texto.
+> * **Tarjetas adaptables:** Markdown es compatible con el campo de la tarjeta `Textblock` adaptativa, así como y `Fact.Title` `Fact.Value` . HTML no es compatible con tarjetas adaptables.
+> * **Tarjetas de conector O365:** Markdown y HTML limitado se admiten en Office 365 tarjetas connector en los campos de texto.
 
-# <a name="markdown-formatting-adaptive-cards"></a>[**Formato markdown: tarjetas adaptables**](#tab/adaptive-md)
+# <a name="markdown-formatting-adaptive-cards"></a>[**Formato de reducción: tarjetas adaptables**](#tab/adaptive-md)
 
- Los estilos admitidos `Textblock` para , `Fact.Title` y `Fact.Value` son:
+ Los estilos `Textblock` admitidos para , `Fact.Title` y `Fact.Value` son:
 
 | Estilo | Ejemplo | Markdown |
 | --- | --- | --- |
 | bold | **Bold** | ```**Bold**``` |
 | italic | _Italic_ | ```_Italic_``` |
-| lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| lista desordenada | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
@@ -47,33 +47,33 @@ No se admiten las siguientes etiquetas Markdown:
 * Encabezados
 * Tablas
 * Imágenes
-* Texto con formato previo
-* Blockquotes
+* Texto preformateado
+* Bloques
 
 > [!IMPORTANT]
-> Las tarjetas adaptables no admiten formato HTML.
+> Las tarjetas adaptables no admiten el formato HTML.
 
-### <a name="newlines-for-adaptive-cards"></a>Líneas nuevas para tarjetas adaptables
+### <a name="newlines-for-adaptive-cards"></a>Nuevas líneas para tarjetas adaptables
 
-En las listas puede usar las `\r` `\n` secuencias de escape o para las líneas nuevas. Si se usa en una lista, se aplica sangría al siguiente elemento `\n\n` de la lista. Si necesita líneas nuevas en otra parte del bloque de texto, use `\n\n` .
+En las listas puede utilizar las `\r` secuencias o `\n` secuencias de escape para las nuevas líneas. El uso `\n\n` en una lista hará que el siguiente elemento de la lista tenga sangría. Si necesita nuevas líneas en otra parte del bloque de texto, utilice `\n\n` .
 
-### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Diferencias de dispositivos móviles y de escritorio para tarjetas adaptables
+### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Diferencias móviles y de escritorio para tarjetas adaptables
 
 El formato es ligeramente diferente entre el escritorio y las versiones móviles de Teams.
 
-En el escritorio, el formato markdown de tarjeta adaptable aparece de esta forma en los exploradores web y en la aplicación cliente de Teams:
+En el escritorio, el formato de reducción de tarjeta adaptable aparece así tanto en los navegadores web como en la aplicación cliente Teams:
 
-![Formato markdown de tarjeta adaptable en el cliente de escritorio](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Formato de markdown de tarjeta adaptable en el cliente de escritorio](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-En iOS, el formato markdown de tarjeta adaptable aparece de la siguiente forma:
+En iOS, el formato de reducción de tarjeta adaptable aparece así:
 
-![Formato markdown de tarjeta adaptable en iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Formato de markdown de tarjeta adaptable en iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-En Android, el formato de markdown de tarjeta adaptable aparece de la siguiente forma:
+En Android, el formato de reducción de tarjeta adaptable aparece así:
 
-![Formato markdown de tarjeta adaptable en Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+![Formato de markdown de tarjeta adaptable en Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="more-information-on-adaptive-cards"></a>Más información sobre tarjetas adaptables
+### <a name="more-information-on-adaptive-cards"></a>Más información sobre las tarjetas adaptables
 
 [Características de texto en tarjetas adaptables](/adaptive-cards/create/textfeatures) Las características de fecha y localización mencionadas en este tema no se admiten en Teams.
 
@@ -111,25 +111,25 @@ En Android, el formato de markdown de tarjeta adaptable aparece de la siguiente 
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>Mencione la compatibilidad con tarjetas adaptables v1.2
+### <a name="mention-support-within-adaptive-cards-v12"></a>Mencionar soporte dentro de tarjetas adaptables v1.2
 
-Las menciones basadas en tarjetas se admiten en clientes web, de escritorio y móviles. Puede agregar menciones @ dentro de un cuerpo de tarjeta adaptable para bots y respuestas de extensión de mensajería. Para agregar menciones @ en tarjetas, siga la misma lógica de notificación y representación que las [menciones basadas](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)en mensajes en conversaciones de chat de canal y grupo.
+Las menciones basadas en tarjetas son compatibles con clientes web, de escritorio y móviles. Puede agregar menciones @ dentro de un cuerpo de tarjeta adaptable para bots y respuestas de extensión de mensajería. Para agregar @ menciones en las tarjetas, siga la misma lógica de notificación y representación que la de las menciones basadas en mensajes en conversaciones de [chat de canal y grupo.](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)
 
-Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
+Los bots y las extensiones de mensajería pueden incluir menciones dentro del contenido de la tarjeta en los elementos [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) y [FactSet.](https://adaptivecards.io/explorer/FactSet.html)
 
 > [!NOTE]
-> * [Actualmente,](https://adaptivecards.io/explorer/Media.html) los elementos multimedia no se admiten en las tarjetas adaptables v1.2 en la plataforma de Teams.
-> * Las menciones & equipo de canal no se admiten en los mensajes de bot.
+> * [Actualmente, los elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten en tarjetas adaptables v1.2 en la plataforma Teams.
+> * Las menciones de equipo de & de canal no se admiten en los mensajes de bot.
 
-#### <a name="constructing-mentions"></a>Menciones de construcción
+#### <a name="constructing-mentions"></a>Construcción de menciones
 
 Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir los siguientes elementos:
 
 * `<at>username</at>` en los elementos de tarjeta adaptable compatibles.
-* El objeto dentro de una propiedad en el contenido de la tarjeta, que incluye el identificador de usuario `mention` de Teams del usuario `msteams` mencionado.
-* El `userId` es único para el identificador del bot y un usuario en particular. Se puede usar para @mention un usuario determinado. Se `userId` puede recuperar mediante una de las opciones mencionadas en obtener el identificador de [usuario](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
+* Objeto `mention` dentro de una propiedad en el contenido de la `msteams` tarjeta, que incluye el identificador de usuario Teams del usuario mencionado.
+* Es `userId` único para su ID de bot y un usuario en particular. Se puede utilizar para @mention un usuario determinado. Se `userId` puede recuperar mediante una de las opciones mencionadas para obtener el ID de [usuario](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
-#### <a name="sample-adaptive-card-with-a-mention"></a>Tarjeta adaptable de ejemplo con una mención
+#### <a name="sample-adaptive-card-with-a-mention"></a>Tarjeta adaptativa de muestra con una mención
 
 ``` json
 {
@@ -161,17 +161,17 @@ Para incluir una mención en una tarjeta adaptable, la aplicación debe incluir 
 ```
 
 ### <a name="information-masking-in-adaptive-cards"></a>Enmascaramiento de información en tarjetas adaptables
-Use la propiedad information masking para enmascarar información específica, como contraseña o información confidencial de los usuarios dentro del elemento de entrada de [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) tarjeta adaptable. 
+Utilice la propiedad information masking para enmascarar información específica, como la contraseña o la información confidencial de los usuarios dentro del elemento de entrada de tarjeta [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) adaptable. 
 
 > [!NOTE]
-> La característica solo admite el enmascaramiento de información del lado [cliente,](../../build-your-first-app/build-bot.md)el texto de entrada enmascarado se envía como texto sin formato a la dirección del extremo https que se especificó durante la configuración del bot . 
+> La característica solo admite el enmascaramiento de información del lado cliente, el texto de entrada enmascarado se envía como texto sin cifrar a la dirección de punto de conexión https especificada durante la [configuración del bot.](../../build-your-first-app/build-bot.md) 
 
 > [!NOTE]
-> La propiedad de enmascaramiento de información está disponible actualmente solo en la versión preliminar del desarrollador.
+> La propiedad information masking solo está disponible actualmente en la vista previa del desarrollador.
 
-Para enmascarar la información en tarjetas adaptables, agregue la `isMasked` propiedad **al tipo** y establezca su valor `Input.Text` en *true*.
+Para enmascarar la información en tarjetas adaptables, agregue la `isMasked` propiedad a **type** y establezca su valor `Input.Text` en *true*.
 
-#### <a name="sample-adaptive-card-with-masking-property"></a>Tarjeta adaptable de ejemplo con la propiedad masking
+#### <a name="sample-adaptive-card-with-masking-property"></a>Tarjeta adaptativa de muestra con propiedad de enmascaramiento
 
 ```json
 {
@@ -186,14 +186,14 @@ La siguiente imagen es un ejemplo de enmascaramiento de información en tarjetas
 
 ![Imagen de información de enmascaramiento](../../assets/images/cards/masking-information-view.png)
 
-### <a name="full-width-adaptive-card"></a>Tarjeta adaptable de ancho completo
-Puede usar la propiedad para expandir el ancho de una tarjeta adaptable y `msteams` usar espacio de lienzo adicional. Para obtener información sobre cómo usar la propiedad, vea el siguiente ejemplo:
+### <a name="full-width-adaptive-card"></a>Tarjeta adaptativa de ancho completo
+Puede utilizar la `msteams` propiedad para expandir el ancho de una tarjeta adaptable y hacer uso de espacio de lienzo adicional. Para obtener información sobre cómo utilizar la propiedad, consulte el ejemplo siguiente:
 
 #### <a name="constructing-full-width-cards"></a>Construcción de tarjetas de ancho completo
-Para que una tarjeta adaptable de ancho completo, el objeto de la propiedad en el contenido de la `width` `msteams` tarjeta debe establecerse en `Full` .
+Para que una tarjeta adaptable de ancho completo sea el `width` objeto de la propiedad en el contenido de la tarjeta debe `msteams` establecerse en `Full` .
 Además, la aplicación debe incluir los siguientes elementos:
 
-#### <a name="sample-adaptive-card-with-full-width"></a>Tarjeta adaptable de ejemplo con ancho completo
+#### <a name="sample-adaptive-card-with-full-width"></a>Tarjeta adaptativa de muestra con ancho completo
 
 ``` json
 {
@@ -216,19 +216,19 @@ Además, la aplicación debe incluir los siguientes elementos:
 }
 ```
 
-Una tarjeta adaptable de ancho completo aparece de la siguiente manera: ![ Vista de tarjeta adaptable de ancho completo](../../assets/images/cards/full-width-adaptive-card.png)
+Una tarjeta adaptable de ancho completo aparece de la siguiente manera: ![ Vista de tarjeta adaptativa de ancho completo](../../assets/images/cards/full-width-adaptive-card.png)
 
-Si no ha establecido la propiedad en Full , la vista predeterminada de la tarjeta adaptable es la siguiente: Vista de tarjeta adaptable `width` de ancho  ![ pequeño](../../assets/images/cards/small-width-adaptive-card.png)
+Si no ha establecido la `width` propiedad en *Full*, la vista predeterminada de la tarjeta adaptable es la siguiente: Vista de tarjeta adaptable de ![ ancho pequeño](../../assets/images/cards/small-width-adaptive-card.png)
 
-### <a name="typeahead-support"></a>Compatibilidad con Typeahead
+### <a name="typeahead-support"></a>Soporte de Typeahead
 
-Dentro del elemento de esquema, pedir a los usuarios que filtren y seleccionen a través de un número considerable de opciones puede ralentizar significativamente la finalización [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) de tareas. La compatibilidad con la punta de tipo dentro de las tarjetas adaptables puede simplificar la selección de entrada limitando o filtrando el conjunto de opciones de entrada cuando un usuario escribe la entrada. 
+Dentro del [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) elemento de esquema, pedir a los usuarios que filtren y seleccionen a través de un número considerable de opciones puede ralentizar significativamente la finalización de tareas. La compatibilidad con typeahead dentro de las tarjetas adaptables puede simplificar la selección de entrada al restringir o filtrar el conjunto de opciones de entrada mientras un usuario escribe la entrada. 
 
-#### <a name="enable-typeahead-in-adaptive-cards"></a>Habilitar el cabezal de tipo en tarjetas adaptables
+#### <a name="enable-typeahead-in-adaptive-cards"></a>Habilitar cabezal tipoa en tarjetas adaptables
 
-Para habilitar typeahead dentro del `Input.Choiceset` conjunto en y asegurarse de que está establecido en `style` `filtered` `isMultiSelect` `false` . 
+Para habilitar typeahead dentro del `Input.Choiceset` conjunto y asegúrese de que está establecido en `style` `filtered` `isMultiSelect` `false` . 
 
-#### <a name="sample-adaptive-card-with-typeahead-support"></a>Tarjeta adaptable de ejemplo con compatibilidad con membrete
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>Tarjeta adaptativa de muestra con soporte de cabezal tipo
 
 ``` json
 {
@@ -243,12 +243,12 @@ Para habilitar typeahead dentro del `Input.Choiceset` conjunto en y asegurarse d
 }
 ``` 
 
-### <a name="stage-view-for-images-in-adaptive-cards"></a>Vista de fase para imágenes en tarjetas adaptables
+### <a name="stage-view-for-images-in-adaptive-cards"></a>Vista de escenario para imágenes en tarjetas adaptables
 
 > [!NOTE]
-> Esta característica está disponible actualmente solo en la versión preliminar del desarrollador.
+> Esta característica solo está disponible actualmente en la vista previa del desarrollador.
  
-En una tarjeta adaptable, puedes usar la propiedad para agregar la capacidad de mostrar imágenes en la vista de fase `msteams` de forma selectiva. Cuando los usuarios mantienen el mouse sobre las imágenes, verían un icono de expansión, para el que `allowExpand` el atributo está establecido en `true` . Para obtener información sobre cómo usar la propiedad, vea el siguiente ejemplo:
+En una tarjeta adaptable, puede utilizar la `msteams` propiedad para agregar la capacidad de mostrar imágenes en la vista de escenario de forma selectiva. Cuando los usuarios pasan el cursor sobre las imágenes, verían un icono de expansión, para el que el `allowExpand` atributo está establecido en `true` . Para obtener información sobre cómo utilizar la propiedad, consulte el ejemplo siguiente:
 
 ``` json
 {
@@ -267,57 +267,57 @@ En una tarjeta adaptable, puedes usar la propiedad para agregar la capacidad de 
 }
 ```
 
-Cuando los usuarios mantienen el mouse sobre la imagen, aparece un icono expandir en la esquina superior derecha de la imagen: ![ tarjeta adaptable con imagen expandible](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+Cuando los usuarios se desplazan sobre la imagen, aparece un icono de expansión en la esquina superior derecha de la imagen: ![ tarjeta adaptable con imagen ampliable](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
-La imagen aparece en la vista de fase cuando el usuario selecciona el botón expandir: ![ Imagen expandida a vista de fase](../../assets/images/cards/adaptivecard-expand-image.png)
+La imagen aparece en la vista de escenario cuando el usuario selecciona el botón expandir: ![ Imagen expandida a vista de escenario](../../assets/images/cards/adaptivecard-expand-image.png)
 
-En la vista de fase, los usuarios pueden acercar y alejar la imagen. Puedes seleccionar qué imágenes de la tarjeta adaptable deben tener esta funcionalidad.
-
-> [!NOTE]
-> La funcionalidad acercar y alejar solo se aplica a los elementos de imagen (tipo Image) de una tarjeta adaptable.
+En la vista de escenario, los usuarios pueden acercar y alejar la imagen. Puede seleccionar qué imágenes de su tarjeta adaptable deben tener esta capacidad.
 
 > [!NOTE]
-> En el caso de las aplicaciones móviles de Teams, la funcionalidad de vista de fase para imágenes en tarjetas adaptables está disponible de forma predeterminada y los usuarios podrán ver imágenes de tarjeta adaptables en la vista de fase simplemente pulsando en la imagen, independientemente de si el atributo está presente o `allowExpand` no.
+> La capacidad acercar y alejar solo se aplica a los elementos de imagen (tipo imagen) de una tarjeta adaptable.
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[**Formato markdown: tarjetas de conector de O365**](#tab/connector-md)
+> [!NOTE]
+> Para Teams aplicaciones móviles, la funcionalidad de vista de etapa para imágenes en tarjetas adaptables está disponible de forma predeterminada y los usuarios podrán ver imágenes de tarjetas adaptables en la vista de escenario simplemente tocando la imagen, independientemente de si el `allowExpand` atributo está presente o no.
 
-Las tarjetas de conector admiten markdown limitado y formato HTML. La compatibilidad con HTML se describe en la última sección.
+# <a name="markdown-formatting-o365-connector-cards"></a>[**Formato de reducción: tarjetas de conector O365**](#tab/connector-md)
+
+Las tarjetas de conector admiten el formato limitado de Markdown y HTML. La compatibilidad con HTML se describe en la última sección.
 
 | Estilo | Ejemplo | Markdown |
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
-| strikethrough | ~~text~~ | `~~text~~` |
-| lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
+| tachado | ~~text~~ | `~~text~~` |
+| lista desordenada | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| texto con formato previo | `text` | ``preformatted text`` |
-| blockquote | >texto de bloques | `>blockquote text` |
+| texto preformateado | `text` | ``preformatted text`` |
+| blockquote | >texto en bloque | `>blockquote text` |
 | hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| vínculo de imagen |![Agacharse en una roca](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| enlace de imagen |![Pato en una roca](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-En las tarjetas de conector, las líneas nuevas se representan `\n\n` para , pero no para o `\n` `\r` .
+En las tarjetas de conector, las nuevas líneas se representan para `\n\n` , pero no para o `\n` `\r` .
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Diferencias de dispositivos móviles y de escritorio para tarjetas de conector con Markdown
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Diferencias móviles y de escritorio para las tarjetas de conector con Markdown
 
-En el escritorio, el formato markdown para tarjetas de conector tiene este aspecto:
+En el escritorio, el formato de markdown para las tarjetas de conector tiene este aspecto:
 
-![Formato markdown para tarjetas de conector en el cliente de escritorio](../../assets/images/cards/connector-desktop-markdown-combined.png)
+![Formato de reducción para tarjetas de conector en el cliente de escritorio](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
-En iOS, el formato markdown para tarjetas de conector tiene este aspecto:
+En iOS, el formato de reducción para las tarjetas de conector tiene este aspecto:
 
-![Formato markdown para tarjetas de conector en el cliente de iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Formato de reducción para tarjetas de conector en el cliente iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Problemas:
 
-* El cliente de iOS para Teams no representa imágenes en línea markdown o HTML en tarjetas de conector.
-* Las comillas bloques se representan como sangría pero sin un fondo gris.
+* El cliente de iOS para Teams no representa imágenes en línea Markdown o HTML en tarjetas de conector.
+* Las comillas de bloque se representan como sangrías pero sin un fondo gris.
 
-En Android, el formato markdown para tarjetas de conector tiene este aspecto:
+En Android, el formato markdown para las tarjetas de conector tiene este aspecto:
 
-![Formato markdown para tarjetas de conector en el cliente Android](../../assets/images/cards/connector-android-markdown-combined.png)
+![Formato de reducción para tarjetas de conector en el cliente Android](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a>Ejemplo de formato para tarjetas de conector de Markdown
+### <a name="formatting-example-for-markdown-connector-cards"></a>Ejemplo de formato para tarjetas de conector markdown
 
 ``` json
 {
@@ -368,39 +368,39 @@ En Android, el formato markdown para tarjetas de conector tiene este aspecto:
 
 ## <a name="formatting-cards-with-html"></a>Formato de tarjetas con HTML
 
-# <a name="html-formatting-o365-connector-cards"></a>[**Formato HTML: tarjetas de conector de O365**](#tab/connector-html)
+# <a name="html-formatting-o365-connector-cards"></a>[**Formato HTML: Tarjetas de conector O365**](#tab/connector-html)
 
-Las tarjetas de conector admiten markdown limitado y formato HTML. Markdown se describe en la sección siguiente.
+Las tarjetas de conector admiten el formato limitado de Markdown y HTML. La reducción se describe en la siguiente sección.
 
 | Estilo | Ejemplo | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `<strike>text</strike>` |
-| lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| tachado | ~~text~~ | `<strike>text</strike>` |
+| lista desordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| texto con formato previo | `text` | `<pre>text</pre>` |
+| texto preformateado | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| vínculo de imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| enlace de imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 En las tarjetas de conector, las líneas nuevas se representan en HTML mediante la `<p>` etiqueta.
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Diferencias de dispositivos móviles y de escritorio para tarjetas de conector con HTML
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Diferencias móviles y de escritorio para tarjetas de conectores mediante HTML
 
-En el escritorio, el formato HTML de las tarjetas de conector tiene este aspecto:
+En el escritorio, el formato HTML para las tarjetas de conector tiene este aspecto:
 
 ![Formato HTML para tarjetas de conector en el cliente de escritorio](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 En iOS, el formato HTML tiene este aspecto:
 
-![Formato HTML para tarjetas de conector en el cliente de iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
+![Formato HTML para tarjetas de conector en el cliente iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Problemas:
 
-* Las imágenes en línea no se representan en iOS con Markdown o HTML en tarjetas de conector.
-* El texto con formato previo se representa pero no tiene un fondo gris.
+* Las imágenes en línea no se representan en iOS mediante Markdown o HTML en tarjetas de conector.
+* El texto preformateado se representa pero no tiene un fondo gris.
 
 En Android, el formato HTML tiene este aspecto:
 
@@ -456,48 +456,48 @@ En Android, el formato HTML tiene este aspecto:
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**Formato HTML: tarjetas de miniatura y de héroe**](#tab/simple-html)
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**Formato HTML: tarjetas de héroe y miniatura**](#tab/simple-html)
 
-Las etiquetas HTML son compatibles con tarjetas sencillas, como la tarjeta de miniatura y la de héroe. Markdown no es compatible.
+Las etiquetas HTML son compatibles con tarjetas simples como el héroe y la tarjeta en miniatura. No se admite la reducción.
 
 | Estilo | Ejemplo | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `<strike>text</strike>` |
-| lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| tachado | ~~text~~ | `<strike>text</strike>` |
+| lista desordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| texto con formato previo | `text` | `<pre>text</pre>` |
+| texto preformateado | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| vínculo de imagen |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| enlace de imagen |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferencias de escritorio y móvil para tarjetas sencillas
+### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferencias móviles y de escritorio para tarjetas simples
 
-Debido a las diferencias de resolución entre la plataforma de escritorio y la plataforma móvil, el formato es diferente entre el escritorio y la versión móvil de Teams.
+Debido a las diferencias de resolución entre el escritorio y la plataforma móvil, el formato es diferente entre el escritorio y la versión móvil de Teams.
 
-En el escritorio, el formato HTML aparece de la siguiente forma:
+En el escritorio, el formato HTML aparece así:
 
 ![Formato HTML en el cliente de escritorio](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-En iOS, el formato HTML aparece de la siguiente forma:
+En iOS, el formato HTML aparece así:
 
-![Formato HTML en el cliente de iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+![Formato HTML en el cliente iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Problemas:
 
-* El formato de caracteres como negrita y cursiva no se representa en iOS.
+* El formato de caracteres como negrita e cursa no se representa en iOS.
 
-En Android, el formato HTML aparece de esta forma:
+En Android, el formato HTML aparece así:
 
 ![Formato HTML en el cliente Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-El formato de caracteres como negrita y cursiva se muestra correctamente en Android.
+Formato de caracteres como negrita y pantalla cursalica correctamente en Android.
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Ejemplo de formato para formato HTML en tarjetas sencillas
+### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Ejemplo de formato para formato HTML en tarjetas simples
 
-Estas capturas de pantalla se crearon con Teams AppStudio, donde la propiedad de texto de una tarjeta de héroe se estableció en la siguiente cadena. Puedes probar el formato en tus propias tarjetas modificando este código.
+Estas capturas de pantalla se crearon con Teams AppStudio, donde la propiedad de texto de una tarjeta de héroe se estableció en la siguiente cadena. Puede probar el formato en sus propias tarjetas modificando este código.
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 

@@ -1,51 +1,52 @@
 ---
 title: Crear un asistente virtual
-description: Cómo crear bots y habilidades del Asistente virtual para su uso en Microsoft Teams
+description: Cómo crear bot virtual asistente y habilidades para su uso en Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
-keywords: bots de asistente virtual de teams
-ms.openlocfilehash: 80a308050317e8a211b8f7a9e2dd459c1572af18
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+keywords: equipos de robots asistentes virtuales
+ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058680"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566876"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual 
 
-Virtual Assistant es una plantilla de código abierto de Microsoft que le permite crear una solución conversacional sólida y mantener el control total de la experiencia del usuario, la personalidad de marca de la organización y los datos necesarios. La [plantilla](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) principal del Asistente virtual es el bloque de creación básico que reúne las tecnologías de Microsoft necesarias para crear un Asistente virtual, incluido [el SDK de Bot Framework,](https://github.com/microsoft/botframework-sdk) [Language Understanding (LUIS)](https://www.luis.ai/)y [QnA Maker.](https://www.qnamaker.ai/) También reúne las capacidades esenciales, como el registro de aptitudes, las cuentas vinculadas, la intención conversacional básica de ofrecer a los usuarios una amplia variedad de interacciones y experiencias sin problemas. Además, las capacidades de plantilla incluyen ejemplos enriquecidos de habilidades conversacionales [reutilizables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Las habilidades individuales se integran en una solución de Asistente virtual para habilitar varios escenarios. Con el SDK de Bot Framework, las habilidades se presentan en forma de código fuente, lo que permite personalizar y ampliar según sea necesario. Para obtener más información sobre las habilidades de Bot Framework, vea [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). Este documento le guía sobre las consideraciones de implementación del Asistente virtual para organizaciones, cómo crear un Asistente virtual centrado en Teams, ejemplo relacionado, ejemplo de código y limitaciones del Asistente virtual.
-En la siguiente imagen se muestra la introducción al asistente virtual:
+Virtual Assistant es una plantilla de código abierto de Microsoft que le permite crear una solución conversacional sólida mientras mantiene el control total de la experiencia del usuario, la personalización de marca de la organización y los datos necesarios. La [plantilla principal de Virtual Assistant](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) es el building block básico que reúne las tecnologías de Microsoft necesarias para crear un Asistente virtual, incluido el SDK de Bot [Framework,](https://github.com/microsoft/botframework-sdk) [Language Understanding (LUIS)](https://www.luis.ai/)y [QnA Maker.](https://www.qnamaker.ai/) También reúne las capacidades esenciales, incluyendo el registro de habilidades, cuentas vinculadas, intención conversacional básica para ofrecer una gama de interacciones y experiencias sin problemas a los usuarios. Además, las capacidades de la plantilla incluyen ejemplos enriquecidos de [habilidades](https://microsoft.github.io/botframework-solutions/overview/skills)conversacionales reutilizables.  Las habilidades individuales se integran en una solución de Virtual Assistant para habilitar múltiples escenarios. Con el SDK de Bot Framework, las habilidades se presentan en forma de código fuente, lo que le permite personalizar y ampliar según sea necesario. Para obtener más información sobre las habilidades de Bot Framework, consulte [Qué es una habilidad de Bot Framework](https://microsoft.github.io/botframework-solutions/overview/skills/). Este documento le guía sobre las consideraciones de implementación del Asistente virtual para las organizaciones, cómo crear un Asistente virtual centrado Teams, ejemplo relacionado, ejemplo de código y limitaciones del Asistente virtual.
+La siguiente imagen muestra la descripción general del asistente virtual:
 
-![Diagrama de información general del Asistente virtual](../assets/images/bots/virtual-assistant/overview.png)
+![Diagrama de visión general de Virtual Assistant](../assets/images/bots/virtual-assistant/overview.png)
 
-Las actividades de mensajes de texto se enrutan a las aptitudes asociadas mediante el núcleo del Asistente virtual mediante un [modelo de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) distribución. 
+Las actividades de mensajes de texto se enrutan a las habilidades asociadas por el núcleo del Asistente virtual mediante un modelo [de envío.](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) 
 
 ## <a name="implementation-considerations"></a>Consideraciones de implementación
 
-La decisión de agregar un Asistente virtual incluye muchos determinantes y difiere para cada organización. Los factores de soporte de una implementación del Asistente virtual para su organización son los siguientes:
+La decisión de agregar un Asistente Virtual incluye muchos determinantes y difiere para cada organización. Los factores auxiliares de una implementación de Virtual Assistant para su organización son los siguientes:
 
-* Un equipo central administra todas las experiencias de los empleados. Tiene la capacidad de crear una experiencia de Asistente virtual y administrar actualizaciones de la experiencia principal, incluida la adición de nuevas habilidades.
-* Existen varias aplicaciones en todas las funciones empresariales y se espera que el número aumente en el futuro.
-* Las aplicaciones existentes son personalizables, pertenecen a la organización y se convierten en habilidades para un Asistente virtual.
-* El equipo de experiencias de los empleados centrales puede influir en las personalizaciones de las aplicaciones existentes. También proporciona instrucciones necesarias para integrar aplicaciones existentes como habilidades en la experiencia del Asistente virtual.   
-En la siguiente imagen se muestran las funciones empresariales del Asistente virtual: 
+* Un equipo central administra todas las experiencias de los empleados. Tiene la capacidad de crear una experiencia de Asistente Virtual y administrar actualizaciones de la experiencia principal, incluida la adición de nuevas habilidades.
+* Existen varias aplicaciones entre las funciones empresariales y se espera que el número crezca en el futuro.
+* Las aplicaciones existentes son personalizables, propiedad de la organización, y se convierten en habilidades para un Asistente Virtual.
+* El equipo central de experiencias de empleados puede influir en las personalizaciones de las aplicaciones existentes. También proporciona la orientación necesaria para integrar las aplicaciones existentes como habilidades en la experiencia de Virtual Assistant.
 
-![El equipo central mantiene el asistente y los equipos de funciones empresariales contribuyen con habilidades](../assets/images/bots/virtual-assistant/business-functions.png)
+La siguiente imagen muestra las funciones empresariales de Virtual Assistant: 
 
-## <a name="create-a-teams-focused-virtual-assistant"></a>Crear un Asistente virtual centrado en Teams
+![El equipo central mantiene al asistente y los equipos de funciones empresariales aportan habilidades](../assets/images/bots/virtual-assistant/business-functions.png)
 
-Microsoft ha publicado una plantilla [Visual Studio para](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) crear asistentes virtuales y habilidades. Con la Visual Studio, puedes crear un Asistente virtual con una experiencia basada en texto que admita tarjetas enriquecciones limitadas con acciones. Hemos mejorado la plantilla Visual Studio base para incluir las capacidades de la plataforma de Microsoft Teams y mejorar las excelentes experiencias de la aplicación de Teams. Algunas de las funcionalidades incluyen compatibilidad con tarjetas adaptables enriquecciones, módulos de tareas, chats de grupo o equipos y extensiones de mensajería. Para obtener más información sobre la extensión del Asistente virtual a Microsoft Teams, vea [Tutorial: Extender el Asistente virtual a Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
-En la siguiente imagen se muestra el diagrama de alto nivel de una solución de Asistente virtual:
+## <a name="create-a-teams-focused-virtual-assistant"></a>Crear un asistente virtual centrado en la Teams
 
-![Diagrama de alto nivel de una solución de Asistente virtual](../assets/images/bots/virtual-assistant/high-level-diagram.png)
+Microsoft ha publicado una [plantilla de Visual Studio](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) para crear asistentes virtuales y habilidades. Con la plantilla Visual Studio, puede crear un Asistente Virtual, impulsado por una experiencia basada en texto con soporte para tarjetas enriquecidas limitadas con acciones. Hemos mejorado la plantilla base Visual Studio para incluir Microsoft Teams capacidades de plataforma y potenciar grandes experiencias de Teams aplicación. Algunas de las capacidades incluyen compatibilidad con tarjetas adaptables enriquecidas, módulos de tareas, chats de equipos o grupos y extensiones de mensajería. Para obtener más información sobre cómo ampliar Virtual Assistant a Microsoft Teams, consulte [Tutorial: Extender el asistente virtual a Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
+La siguiente imagen muestra el diagrama de alto nivel de una solución de Virtual Assistant:
 
-### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>Agregar tarjetas adaptables al Asistente virtual
+![Diagrama de alto nivel de una solución de Virtual Assistant](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
-Para enviar solicitudes correctamente, el Asistente virtual debe identificar el modelo de LUIS correcto y la habilidad correspondiente asociada a él. Sin embargo, el mecanismo de distribución no se puede usar para las actividades de acción de tarjeta, ya que el modelo de LUIS asociado con una habilidad está formado para los textos de acción de tarjeta. Los textos de acción de la tarjeta son palabras clave fijas, predefinidas y no comentadas por un usuario.
+### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>Añade tarjetas adaptables a tu Asistente Virtual
 
-Este inconveniente se resuelve insertando información de aptitudes en la carga de acción de la tarjeta. Cada habilidad debe `skillId` insertarse en el  `value` campo de acciones de tarjeta. Debes asegurarte de que cada actividad de acción de tarjeta lleva la información de habilidad relevante y el Asistente virtual puede usar esta información para el envío.
+Para enviar solicitudes correctamente, el Asistente virtual debe identificar el modelo de LUIS correcto y la habilidad correspondiente asociada a él. Sin embargo, el mecanismo de envío no se puede usar para actividades de acción de tarjeta, ya que el modelo de LUIS asociado a una habilidad está entrenado para textos de acción de cartas. Los textos de acción de la tarjeta son palabras clave fijas, predefinidas y no se comentan desde un usuario.
 
-Debe proporcionar en el constructor para asegurarse de que la información de `skillId` aptitudes siempre está presente en las acciones de la tarjeta.
+Este inconveniente se resuelve esto incorporando información de habilidad en la carga útil de la acción de la tarjeta. Cada habilidad debe integrarse `skillId` en el campo de las acciones de  `value` cartas. Debe asegurarse de que cada actividad de acción de la tarjeta lleva la información de habilidad relevante, y Virtual Assistant puede utilizar esta información para el envío.
+
+Debe proporcionar `skillId` en el constructor para asegurarse de que la información de habilidad siempre está presente en las acciones de la tarjeta.
 En la siguiente sección se muestra un código de ejemplo de datos de acción de tarjeta:
 ```csharp
     public class CardActionData
@@ -69,8 +70,8 @@ En la siguiente sección se muestra un código de ejemplo de datos de acción de
     };
 ```
 
-A continuación, se presenta la clase de la plantilla Asistente virtual `SkillCardActionData` para extraer de la carga de la acción de `skillId` tarjeta.
-En la siguiente sección se muestra un fragmento de código para extraer de la carga de acción de la  `skillId` tarjeta:
+A continuación, `SkillCardActionData` la clase de la plantilla Asistente virtual se introduce para extraer de la carga útil de la acción `skillId` de la tarjeta.
+En la siguiente sección se muestra un fragmento de código para extraer  `skillId` de la carga útil de la acción de la tarjeta:
 
 ```csharp
     // Skill Card action data should contain skillId parameter
@@ -86,7 +87,7 @@ En la siguiente sección se muestra un fragmento de código para extraer de la c
 ```
 
 La implementación se realiza mediante un método de extensión en la [clase Activity.](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md)
-En la siguiente sección se muestra un fragmento de código para extraer de datos de acción de  `skillId` tarjeta:
+En la siguiente sección se muestra un fragmento de código para extraer  `skillId` de los datos de acción de la tarjeta:
 
 ```csharp
     public static class ActivityExtensions
@@ -119,17 +120,17 @@ En la siguiente sección se muestra un fragmento de código para extraer de dato
     }
 ```
 
-### <a name="handle-interruptions"></a>Controlar interrupciones
+### <a name="handle-interruptions"></a>Interrupciones del mango
 
-El Asistente virtual puede controlar las interrupciones en casos en los que un usuario intenta invocar una habilidad mientras otra habilidad está activa actualmente. `TeamsSkillDialog`, y `TeamsSwitchSkillDialog` se presentan en función de [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) y [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs)de Bot Framework. Permiten a los usuarios cambiar una experiencia de habilidad de las acciones de tarjeta. Para controlar esta solicitud, el Asistente virtual solicita al usuario un mensaje de confirmación para que cambie de habilidades.
+Virtual Assistant puede controlar las interrupciones en los casos en que un usuario intenta invocar una habilidad mientras otra habilidad está activa actualmente. `TeamsSkillDialog`, y `TeamsSwitchSkillDialog` se introducen en función del [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) y [el SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs)de Bot Framework. Permiten a los usuarios cambiar una experiencia de habilidad de las acciones de la tarjeta. Para controlar esta solicitud, el Asistente virtual solicita al usuario un mensaje de confirmación para cambiar las habilidades:
 
-![Mensaje de confirmación al cambiar a una nueva habilidad](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
+![Solicitud de confirmación al cambiar a una nueva habilidad](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
 
-### <a name="handle-task-module-requests"></a>Controlar solicitudes de módulo de tareas
+### <a name="handle-task-module-requests"></a>Gestionar las solicitudes de módulos de tareas
 
-Para agregar capacidades de módulo de tareas a un Asistente virtual, se incluyen dos métodos adicionales en el controlador de actividades del Asistente virtual: `OnTeamsTaskModuleFetchAsync` y `OnTeamsTaskModuleSubmitAsync` . Estos métodos escuchan las actividades relacionadas con el módulo de tareas del Asistente virtual, identifican la habilidad asociada con la solicitud y reenvía la solicitud a la habilidad identificada. 
+Para agregar capacidades de módulo de tareas a un Asistente virtual, se incluyen dos métodos adicionales en el controlador de actividad Asistente virtual: `OnTeamsTaskModuleFetchAsync` y `OnTeamsTaskModuleSubmitAsync` . Estos métodos escuchan las actividades relacionadas con el módulo de tareas desde Virtual Assistant, identifican la habilidad asociada con la solicitud y reenvían la solicitud a la habilidad identificada. 
 
-El reenvío de solicitudes se realiza a través [del método SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` . Devuelve la respuesta según `InvokeResponse` la cual se analiza y se convierte en `TaskModuleResponse` .
+El reenvío de solicitudes se realiza a través del método [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true) `PostActivityAsync` . Devuelve la respuesta como `InvokeResponse` la que se analiza y se convierte en `TaskModuleResponse` .
 
 
 ```csharp
@@ -169,9 +170,9 @@ El reenvío de solicitudes se realiza a través [del método SkillHttpClient](/d
         }
 ```
 
-Se sigue un enfoque similar para el envío de acciones de tarjeta y las respuestas del módulo de tareas. Los datos de acción de captura y envío del módulo de tareas se actualizan para incluir `skillId` . El método De extensión `GetSkillId` de actividad extrae de la carga que proporciona detalles sobre la habilidad que debe `skillId` invocarse.
+Se sigue un enfoque similar para el envío de acciones de tarjeta y las respuestas del módulo de tareas. Los datos de acción de captura y envío del módulo de tareas se actualizan para incluir `skillId` . El método extensión de actividad `GetSkillId` extrae `skillId` de la carga útil que proporciona detalles sobre la habilidad que debe invocarse.
 
-El fragmento de código `OnTeamsTaskModuleFetchAsync` para y `OnTeamsTaskModuleSubmitAsync` los métodos se proporciona en la siguiente sección:
+El fragmento de código `OnTeamsTaskModuleFetchAsync` para y métodos se dan en la siguiente `OnTeamsTaskModuleSubmitAsync` sección:
 
 ```csharp
     // Invoked when a "task/fetch" event is received to invoke task module.
@@ -219,18 +220,18 @@ El fragmento de código `OnTeamsTaskModuleFetchAsync` para y `OnTeamsTaskModuleS
     }
 ```
 
-Además, debe incluir todos los dominios de aptitudes en la sección del archivo de manifiesto del Asistente virtual para que los módulos de tareas invocados a través de una habilidad se `validDomains` represente correctamente.
+Además, debe incluir todos los dominios de habilidad de la sección en el `validDomains` archivo de manifiesto de Virtual Assistant para que los módulos de tareas se invoquen a través de un renderizado de habilidades correctamente.
 
-### <a name="handle-collaborative-app-scopes"></a>Controlar ámbitos de aplicaciones de colaboración
+### <a name="handle-collaborative-app-scopes"></a>Controlar los ámbitos de aplicación colaborativa
 
-Las aplicaciones de Teams pueden existir en varios ámbitos, incluido el chat 1:1, el chat de grupo y los canales. La plantilla principal del Asistente virtual está diseñada para chats 1:1. Como parte de la experiencia de incorporación, el Asistente virtual solicita a los usuarios el nombre y mantiene el estado del usuario. Dado que esa experiencia de incorporación no es adecuada para el chat de grupo o los ámbitos de canal, se ha quitado.
+Teams aplicaciones pueden existir en varios ámbitos, incluyendo chat 1:1, chat de grupo y canales. La plantilla principal de Virtual Assistant está diseñada para chats 1:1. Como parte de la experiencia de incorporación, Virtual Assistant solicita nombre a los usuarios y mantiene el estado del usuario. Dado que esa experiencia de incorporación no es adecuada para el chat de grupo o los ámbitos de canal se ha eliminado.
 
-Las habilidades deben controlar actividades en varios ámbitos, como chat 1:1, chat de grupo y conversación de canal. Si alguno de estos ámbitos no es compatible, las aptitudes deben responder con un mensaje adecuado.
+Las habilidades deben manejar actividades en múltiples ámbitos, como chat 1:1, chat en grupo y conversación de canal. Si no se admite alguno de estos ámbitos, las habilidades deben responder con un mensaje adecuado.
 
-Se han agregado las siguientes funciones de procesamiento al núcleo del Asistente virtual:
+Las siguientes funciones de procesamiento se han agregado al núcleo de Virtual Assistant:
 
-* El Asistente virtual se puede invocar sin ningún mensaje de texto desde un canal o chat de grupo.
-* Las articulaciones se limpian antes de enviar el mensaje al módulo de envío. Por ejemplo, quite el @mention necesario del bot.
+* Virtual Assistant se puede invocar sin ningún mensaje de texto de un chat o canal de grupo.
+* Las articulaciones se limpian antes de enviar el mensaje al módulo de envío. Por ejemplo, quite la @mention necesaria del bot.
 
 ```csharp
     if (innerDc.Context.Activity.Conversation?.IsGroup == true)
@@ -247,9 +248,9 @@ Se han agregado las siguientes funciones de procesamiento al núcleo del Asisten
     }
 ```
 
-### <a name="handle-messaging-extensions"></a>Controlar extensiones de mensajería
+### <a name="handle-messaging-extensions"></a>Manejar extensiones de mensajería
 
-Los comandos de una extensión de mensajería se declaran en el archivo de manifiesto de la aplicación. La interfaz de usuario de extensión de mensajería está basada en esos comandos. Para que un Asistente virtual encienda un comando de extensión de mensajería como una habilidad adjunta, el propio manifiesto de un Asistente virtual debe contener esos comandos. Debes agregar los comandos del manifiesto de una habilidad individual al manifiesto del Asistente virtual. El identificador de comando proporciona información sobre una habilidad asociada anexando el identificador de aplicación de la habilidad a través de un separador `:` .
+Los comandos de una extensión de mensajería se declaran en el archivo de manifiesto de la aplicación. La interfaz de usuario de la extensión de mensajería está alimentada por esos comandos. Para que un Asistente virtual encienda un comando de extensión de mensajería como una habilidad adjunta, el propio manifiesto de un Asistente virtual debe contener esos comandos. Debe agregar los comandos del manifiesto de una habilidad individual al manifiesto del Asistente virtual. El identificador de comando proporciona información sobre una habilidad asociada añadiendo el ID de aplicación de la habilidad a través de un `:` separador.
 
 El fragmento de código del archivo de manifiesto de una habilidad se muestra en la siguiente sección:
 
@@ -279,7 +280,7 @@ El fragmento de código de archivo de manifiesto del Asistente virtual correspon
     ....
 ```
 
-Una vez que un usuario invoca los comandos, el Asistente virtual puede identificar una habilidad asociada mediante el análisis del identificador de comando, actualizar la actividad quitando el sufijo adicional del identificador de comando y reenviarlo a la habilidad `:<skill_id>` correspondiente. El código de una habilidad no necesita controlar el sufijo adicional. Por lo tanto, se evitan conflictos entre los IDs de comandos entre las habilidades. Con este enfoque, todos los comandos de búsqueda y acción de una habilidad en todos los contextos, como **redacción,** **commandBox** y **mensaje,** son alimentados por un Asistente virtual.
+Una vez invocados los comandos por un usuario, el Asistente virtual puede identificar una habilidad asociada analizando el ID de comando, actualizar la actividad quitando el sufijo adicional `:<skill_id>` del ID de comando y reenviarlo a la habilidad correspondiente. El código de una habilidad no necesita manejar el sufijo adicional. Por lo tanto, se evitan los conflictos entre los dedo de mando a través de habilidades. Con este enfoque, todos los comandos de búsqueda y acción de una habilidad dentro de todos los contextos, como **componer,** **commandBox** y **mensaje,** están alimentados por un Asistente Virtual.
 
 ```csharp
     const string MessagingExtensionCommandIdSeparator = ":";
@@ -315,7 +316,7 @@ Una vez que un usuario invoca los comandos, el Asistente virtual puede identific
     }
 ```
 
-Algunas actividades de extensión de mensajería no incluyen el identificador de comando. Por ejemplo, `composeExtension/selectItem` solo contiene el valor de la acción invocar pulsación. Para identificar la habilidad asociada, `skillId`  se adjunta a cada tarjeta de elemento mientras se forma una respuesta para `OnTeamsMessagingExtensionQueryAsync` . Esto es similar al método para agregar [tarjetas adaptables al Asistente virtual.](#add-adaptive-cards-to-your-virtual-assistant)
+Algunas actividades de extensión de mensajería no incluyen el identificador de comando. Por ejemplo, `composeExtension/selectItem` contiene solo el valor de la acción de toque invoke. Para identificar la habilidad asociada, `skillId`  se adjunta a cada carta de artículos mientras se forma una respuesta para `OnTeamsMessagingExtensionQueryAsync` . Esto es similar al enfoque para [agregar tarjetas adaptables a su Asistente Virtual.](#add-adaptive-cards-to-your-virtual-assistant)
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
@@ -333,15 +334,15 @@ Algunas actividades de extensión de mensajería no incluyen el identificador de
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo convertir la plantilla de aplicación Libro a sala en una habilidad de Asistente virtual: Book-a-room es un Microsoft Teams que permite a los usuarios encontrar y reservar rápidamente una sala de reuniones durante 30, 60 o 90 minutos a partir de la hora actual. El tiempo predeterminado es de 30 minutos. El bot Book-a-room tiene ámbitos para conversaciones personales de o**r 1:1. En la siguiente imagen se muestra un Asistente virtual con **un libro de habilidades de** sala:
+En el ejemplo siguiente se muestra cómo convertir la plantilla de aplicación Reservar una habitación en una habilidad asistente virtual: Reservar una habitación es un Microsoft Teams que permite a los usuarios encontrar y reservar rápidamente una sala de reuniones durante 30, 60 o 90 minutos a partir de la hora actual. El tiempo predeterminado es de 30 minutos. El bot Book-a-room se limita a conversaciones personales o 1:1. La siguiente imagen muestra un Asistente Virtual con un libro una habilidad **de habitación:**
 
-![Asistente virtual con una habilidad de "reservar una sala"](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
+![Asistente virtual con una habilidad de "reservar una habitación"](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
-Los siguientes son los cambios delta introducidos para convertirlo en una habilidad adjunta a un Asistente virtual. Se siguen directrices similares para convertir cualquier bot de v4 existente en una habilidad.
+Los siguientes son los cambios delta introducidos para convertirlo en una habilidad que se adjunta a un Asistente Virtual. Se siguen directrices similares para convertir cualquier bot v4 existente en una habilidad.
 
 ### <a name="skill-manifest"></a>Manifiesto de habilidad
 
-Un manifiesto de habilidad es un archivo JSON que expone el punto de conexión de mensajería, el identificador, el nombre y otros metadatos relevantes de una habilidad. Este manifiesto es diferente del manifiesto usado para la instalación local de una aplicación en Microsoft Teams. Un Asistente virtual requiere una ruta de acceso a este archivo como entrada para adjuntar una habilidad. Hemos agregado el siguiente manifiesto a la carpeta wwwroot del bot.
+Un manifiesto de habilidad es un archivo JSON que expone el punto de conexión de mensajería, el IDENTIFICADOR, el nombre y otros metadatos relevantes de una habilidad. Este manifiesto es diferente del manifiesto utilizado para descargar una aplicación en Microsoft Teams. Un Asistente virtual requiere una ruta de acceso a este archivo como entrada para asociar una habilidad. Hemos agregado el siguiente manifiesto a la carpeta wwwroot del bot.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..
@@ -392,9 +393,9 @@ botskills connect --remoteManifest "<url to skill's manifest>" ..
 
 ### <a name="luis-integration"></a>Integración de LUIS
 
-El modelo de distribución del Asistente virtual se basa en los modelos DE LUIS de las habilidades adjuntas. El modelo de distribución identifica la intención de cada actividad de texto y descubre las aptitudes asociadas a ella.
+El modelo de envío de Virtual Assistant se basa en los modelos de LUIS de habilidades adjuntas. El modelo de envío identifica la intención de cada actividad de texto y descubre la habilidad asociada a ella.
 
-El Asistente virtual requiere el modelo de LUIS de la habilidad en formato como entrada al `.lu` adjuntar una habilidad. LUIS json se convierte al `.lu` formato mediante la herramienta botframework-cli.
+Virtual Assistant requiere el modelo de LUIS de habilidad en `.lu` formato como entrada mientras se adjunta una habilidad. LUIS json se convierte en `.lu` formato mediante la herramienta botframework-cli.
 
 ```json
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to the folder containing your Skill's .lu files>" --languages "en-us" --cs
@@ -405,13 +406,13 @@ npm i -g @microsoft/botframework-cli
 bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 ```
 
-El bot book-a-room tiene dos comandos principales para los usuarios:
+Book-a-room bot tiene dos comandos principales para los usuarios:
 
 - `Book room`
 - `Manage Favorites`
 
-Hemos creado un modelo de LUIS al comprender estos dos comandos. Los secretos correspondientes deben rellenarse en `cognitivemodels.json` . El archivo JSON de LUIS correspondiente se [encuentra aquí](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json).
-El archivo `.lu` correspondiente se muestra en la siguiente sección:
+Hemos creado un modelo de LUIS mediante la comprensión de estos dos comandos. Los secretos correspondientes deben rellenarse en `cognitivemodels.json` . El archivo JSON de LUIS correspondiente se encuentra [aquí.](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json)
+El archivo correspondiente `.lu` se muestra en la siguiente sección:
 
 ```
 > ! Automatically generated by [LUDown CLI](https://github.com/Microsoft/botbuilder-tools/tree/master/Ludown), Tue Mar 31 2020 17:30:32 GMT+0530 (India Standard Time)
@@ -461,12 +462,12 @@ El archivo `.lu` correspondiente se muestra en la siguiente sección:
 > # RegEx entities
 ```
 
-Con este enfoque, cualquier comando emitido por un usuario al Asistente virtual relacionado con o se identifica como un comando asociado con el bot y se reenvía `book room` `manage favorites` a esta `Book-a-room` habilidad.
-Por otra parte, el bot necesita usar el modelo DESI para comprender estos comandos si `Book-a-room room` no están llenos. Por ejemplo: `I want to manage my favorite rooms`.
+Con este enfoque, cualquier comando emitido por un usuario al Asistente virtual relacionado con `book room` o se identifica como un comando asociado con bot y se `manage favorites` `Book-a-room` reenvía a esta habilidad.
+Por otro lado, el bot debe usar el `Book-a-room room` modelo de LUIS para comprender estos comandos si no están escritos completos. Por ejemplo: `I want to manage my favorite rooms`.
 
-### <a name="multi-language-support"></a>Compatibilidad con varios idiomas
+### <a name="multi-language-support"></a>Soporte multilingüe
 
-Por ejemplo, se crea un modelo de LUIS con solo cultura inglesa. Puede crear modelos de LUIS correspondientes a otros idiomas y agregar una entrada a `cognitivemodels.json` .
+Por ejemplo, se crea un modelo de LUIS con solo la referencia cultural en inglés. Puede crear modelos de LUIS correspondientes a otros idiomas y agregar entrada a `cognitivemodels.json` .
 
 ```json
 {
@@ -486,7 +487,7 @@ Por ejemplo, se crea un modelo de LUIS con solo cultura inglesa. Puede crear mod
 }
 ```
 
-En paralelo, agregue el archivo `.lu` correspondiente en la ruta de acceso de luisFolder. La estructura de carpetas debe ser la siguiente:
+En paralelo, agregue el archivo correspondiente `.lu` en la ruta luisFolder. La estructura de carpetas debe ser la siguiente:
 
 ```bash
 | - luisFolder
@@ -506,38 +507,38 @@ Para modificar `languages` el parámetro, actualice el comando botskills de la s
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-El Asistente virtual usa `SetLocaleMiddleware` para identificar la configuración regional actual e invocar el modelo de distribución correspondiente. La actividad del marco de bot tiene un campo de configuración regional que usa este software intermedio. También puedes usar lo mismo para tu habilidad. El bot book-a-room no usa este middleware y, en su lugar, obtiene la configuración regional de la entidad clientInfo de la actividad del marco [de bot.](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)
+Virtual Assistant utiliza `SetLocaleMiddleware` para identificar la configuración regional actual e invocar el modelo de envío correspondiente. La actividad del marco de bots tiene un campo de configuración regional que usa este middleware. También puedes usar lo mismo para tu habilidad. Book-a-room bot no usa este middleware y, en su lugar, obtiene la configuración regional de la [entidad clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)de la actividad de marco de trabajo de Bot.
 
-### <a name="claim-validation"></a>Validación de notificación
+### <a name="claim-validation"></a>Validación de reclamaciones
 
-Hemos agregado [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) para restringir a los autores de llamadas a la habilidad. Para permitir que un Asistente virtual llame a esta habilidad, rellena la matriz desde con el identificador de aplicación de ese `AllowedCallers` `appsettings` asistente virtual en particular.
+Hemos agregado [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) para restringir a los llamadores a la habilidad. Para permitir que un Asistente virtual llame a esta habilidad, rellene `AllowedCallers` la matriz con el identificador de aplicación de ese Asistente virtual en `appsettings` particular.
 
 ```
 "AllowedCallers": [ "<caller_VA1_appId>", "<caller_VA2_appId>" ],
 ```
 
-La matriz de autores de llamadas permitida puede restringir las aptitudes que los consumidores pueden tener acceso a la habilidad. Agregue una sola `*` entrada a esta matriz para aceptar llamadas de cualquier consumidor de habilidades.
+La matriz de llamadas permitidas puede restringir qué habilidades pueden acceder los consumidores a la habilidad. Agregue una sola entrada `*` a esta matriz, para aceptar llamadas de cualquier consumidor de habilidades.
 
 ```
 "AllowedCallers": [ "*" ],
 ```
 
-Para obtener más información sobre cómo agregar validación de notificaciones a una habilidad, vea [Agregar validación de notificaciones a la habilidad](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
+Para obtener más información sobre cómo agregar validación de notificaciones a una habilidad, consulte [Agregar validación de notificaciones a la habilidad](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
 
-### <a name="limitation-of-card-refresh"></a>Limitación de actualización de tarjetas 
+### <a name="limitation-of-card-refresh"></a>Limitación de la actualización de la tarjeta 
 
-La actualización de actividad, como la actualización de tarjetas, aún no se admite a través del Asistente virtual ([problema de github](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Por lo tanto, hemos reemplazado todas las llamadas de actualización de `UpdateActivityAsync` tarjetas con la publicación de nuevas llamadas de tarjeta `SendActivityAsync` .
+La actividad de actualización, como la actualización de tarjetas, aún no se admite a través de Virtual Assistant[(problema de github).](https://github.com/microsoft/botbuilder-dotnet/issues/3686) Por lo tanto, hemos reemplazado todas las llamadas de actualización de tarjetas `UpdateActivityAsync` con la publicación de nuevas llamadas de `SendActivityAsync` tarjeta.
 
-### <a name="card-actions-and-task-module-flows"></a>Acciones de tarjeta y flujos de módulos de tareas
+### <a name="card-actions-and-task-module-flows"></a>Acciones de tarjetas y flujos de módulos de tareas
 
-Para reenviar la acción de la tarjeta o las actividades del módulo de tareas a una habilidad asociada, la habilidad debe `skillId` insertarse en ella.
-`Book-a-room` La acción de la tarjeta bot, la captura del módulo de tareas y las cargas de acción de envío se modifican para que `skillId` contengan como parámetro. 
+Para reenviar las actividades de la acción de la carta o del módulo de tareas a una habilidad asociada, la habilidad debe `skillId` integrarse en ella.
+`Book-a-room` acción de la tarjeta bot, la obtención del módulo de tareas y el envío de cargas útiles de acción se modifican para que contengan `skillId` como parámetro. 
 
-Para obtener más información, [consulte esta](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) sección de esta documentación.
+Para obtener más información, consulte [esta](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) sección de esta documentación.
 
-### <a name="handle-activities-from-group-chat-or-channel-scope"></a>Controlar actividades desde el ámbito de canal o chat de grupo
+### <a name="handle-activities-from-group-chat-or-channel-scope"></a>Manejar actividades desde el chat grupal o el alcance del canal
 
-`Book-a-room bot` está diseñado para chats privados, como ámbito personal o 1:1 solo. Dado que hemos personalizado el Asistente virtual para admitir ámbitos de canal y chat de grupo, el Asistente virtual debe invocarse desde los ámbitos de canal y, por lo tanto, el bot debe obtener actividades para `Book-a-room` el mismo ámbito. Por `Book-a-room` lo tanto, el bot se personaliza para controlar esas actividades. Puede encontrar los métodos de protección `OnMessageActivityAsync` del controlador de actividad del `Book-a-room` bot.
+`Book-a-room bot` está diseñado para chats privados, como personal o solo 1:1 alcance. Puesto que tenemos virtual assistant personalizado para admitir el chat de grupo y los ámbitos de canal, el Asistente virtual debe invocarse desde los ámbitos de canal y, por lo tanto, `Book-a-room` bot debe obtener actividades para el mismo ámbito. Por lo `Book-a-room` tanto, el bot está personalizado para manejar esas actividades. Puede encontrar los métodos de protección del `OnMessageActivityAsync` controlador de actividad del `Book-a-room` bot.
 
 ```csharp
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -554,31 +555,31 @@ Para obtener más información, [consulte esta](https://msteams-captain.visualst
     }
 ```
 
-También puede aprovechar las aptitudes existentes desde el repositorio [de Bot Framework Solutions](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) o crear una nueva habilidad desde cero. Para crear una nueva habilidad, consulta [tutoriales para crear una nueva habilidad.](https://microsoft.github.io/botframework-solutions/overview/skills/) Para obtener documentación sobre el Asistente virtual y la arquitectura de habilidades,[vea Asistente virtual y arquitectura de habilidades.](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
+También puede aprovechar las habilidades existentes desde el repositorio de [Bot Framework Solutions](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) o crear una nueva habilidad desde cero. Para crear una nueva habilidad, consulte [tutoriales para crear una nueva habilidad.](https://microsoft.github.io/botframework-solutions/overview/skills/) Para obtener documentación de virtual asistente y arquitectura de habilidades, consulte[Asistente virtual y arquitectura de habilidades.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
 
-## <a name="limitations-of-virtual-assistant"></a>Limitaciones del Asistente virtual 
+## <a name="limitations-of-virtual-assistant"></a>Limitaciones del Asistente Virtual 
 
-* **EndOfConversation:** una habilidad debe enviar una `endOfConversation` actividad cuando finalice una conversación. En función de la actividad, un Asistente virtual termina el contexto con esa habilidad en particular y vuelve al contexto raíz del Asistente virtual. En el caso del bot Book-a-room, no hay un estado claro en el que se termine la conversación. Por lo tanto, no hemos enviado desde el bot y cuando el usuario quiere volver al contexto raíz, simplemente `endOfConversation` puede hacerlo por `Book-a-room` `start over` comando.  
-* **Actualización de tarjetas:** la actualización de tarjetas aún no se admite a través del Asistente virtual.  
+* **EndOfConversation**: Una habilidad debe enviar una `endOfConversation` actividad cuando finaliza una conversación. En función de la actividad, un Asistente virtual finaliza el contexto con esa habilidad en particular y vuelve al contexto raíz de Virtual Assistant. Para book-a-room bot, no hay un estado claro donde se termine la conversación. Por lo tanto, no hemos enviado `endOfConversation` desde el bot y cuando el usuario quiere volver al contexto raíz simplemente pueden hacerlo por `Book-a-room` `start over` comando.  
+* **Actualización de tarjeta:** la actualización de la tarjeta aún no se admite a través del Asistente virtual.  
 * **Extensiones de mensajería**:
-  * Actualmente, un Asistente virtual puede admitir un máximo de diez comandos para extensiones de mensajería.
-  * La configuración de extensiones de mensajería no está en el ámbito de comandos individuales, sino de toda la extensión en sí. Esto limita la configuración de cada habilidad individual a través del Asistente virtual.
-  * Los IDs de comandos de extensiones de mensajería tienen una longitud máxima de [64](../resources/schema/manifest-schema.md#composeextensions) caracteres y se usan 37 caracteres para insertar información de aptitudes. Por lo tanto, las restricciones actualizadas para el identificador de comando están limitadas a 27 caracteres.
+  * Actualmente, un Asistente virtual puede admitir un máximo de diez comandos para las extensiones de mensajería.
+  * La configuración de extensiones de mensajería no está en el ámbito de comandos individuales, sino para toda la propia extensión. Esto limita la configuración para cada habilidad individual a través de Virtual Assistant.
+  * Los archivos de comandos de extensiones de mensajería tienen una longitud máxima de [64 caracteres](../resources/schema/manifest-schema.md#composeextensions) y se utilizan 37 caracteres para incrustar información de habilidades. Por lo tanto, las restricciones actualizadas para el ID de comando están limitadas a 27 caracteres.
 
-También puede aprovechar las aptitudes existentes desde el repositorio [de Bot Framework Solutions](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) o crear una nueva habilidad desde cero. Los tutoriales para las versiones posteriores se pueden [encontrar aquí](https://microsoft.github.io/botframework-solutions/overview/skills/). Consulte la documentación [sobre](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) el Asistente virtual y la arquitectura de habilidades.
+También puede aprovechar las habilidades existentes desde el repositorio de [Bot Framework Solutions](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) o crear una nueva habilidad desde cero. Los tutoriales para el posterior se pueden encontrar [aquí.](https://microsoft.github.io/botframework-solutions/overview/skills/) Consulte la [documentación](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) de Virtual Assistant y arquitectura de habilidades.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **C#** | **.NET** |
+| **Nombre de la muestra** | **Descripción** | **C#** | **.NET** |
 |----------|-----------------|----------|------------------|
-| Plantilla de Visual Studio actualizada | Plantilla personalizada para admitir las capacidades de teams. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
-| Código de habilidad de bot de libro a sala | Permite buscar y reservar rápidamente una sala de reuniones sobre la marcha. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+| Plantilla de estudio visual actualizada | Plantilla personalizada para admitir las capacidades de los equipos. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
+| Código de habilidad de bots de reserva en una habitación | Le permite encontrar y reservar rápidamente una sala de reuniones sobre la marcha. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
 
 
 ## <a name="see-also"></a>Vea también
 
 - [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 
-- [Libro a sala](app-templates.md#book-a-room)
+- [Reservar una habitación](app-templates.md#book-a-room)
 
-- [Bot de Microsoft Teams](../bots/what-are-bots.md)
+- [bot Microsoft Teams](../bots/what-are-bots.md)

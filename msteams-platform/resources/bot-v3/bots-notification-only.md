@@ -1,35 +1,35 @@
 ---
 title: Bots de solo notificación
-description: Describe qué bots de solo notificación están en Microsoft Teams
-keywords: notificación de bots de teams
+description: Describe qué bots solo de notificación hay en Microsoft Teams
+keywords: notificación de bots de equipos
 ms.topic: conceptual
 localization_priority: Normal
 ms.date: 01/29/2020
-ms.openlocfilehash: 42a0b9acecbc1821ea492cb6c850c7a9b11bbbfe
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3de462f73733f5f7cf223444ffe6deeb53faaaaa
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019765"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566764"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>Bots de solo notificación en Microsoft Teams
+# <a name="notification-only-bots-in-microsoft-teams"></a>Bots solo de notificación en Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Si el único propósito del bot es entregar notificaciones a los usuarios y no es conversacional, puedes habilitar el campo `isNotificationOnly` en el manifiesto de la aplicación. Esto produce los siguientes cambios:
+Si el único propósito del bot es entregar una notificación a los usuarios y no es conversacional, puede habilitar el campo en el `isNotificationOnly` manifiesto de la aplicación. Esto produce los siguientes cambios:
 
-* Los usuarios no pueden enviar un mensaje al bot de solo notificación.
-* Los usuarios no @mention el bot.
+* Los usuarios no pueden enviar mensajes al bot de solo notificación.
+* Los usuarios no pueden @mention el bot.
 
 > [!NOTE]
-> Las aplicaciones solo bot aparecerán en la bandeja de aplicaciones personal en ambos `isNotificationOnly: true` casos: o `isNotificationOnly: false` .
+> Las aplicaciones solo para bots aparecerán en la bandeja de aplicaciones personales en ambos casos: `isNotificationOnly: true` o `isNotificationOnly: false` .
 
 ## <a name="app-manifest"></a>Manifiesto de la aplicación
 
 Para habilitar esto, establezca `isNotificationOnly` en `true` .
 
 > [!NOTE]
-> Tenga en cuenta que el valor `isNotificationOnly` de es booleano y no una cadena.
+> Tenga en cuenta que el valor de `isNotificationOnly` es booleano y no una cadena.
 
 ```json
 {
@@ -50,4 +50,4 @@ Para habilitar esto, establezca `isNotificationOnly` en `true` .
 
 ## <a name="best-practices-and-limitations"></a>Procedimientos recomendados y limitaciones
 
-* Los bots de solo notificación usan mensajería proactiva para comunicarse con el usuario. Consulta [Mensajería proactiva para bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) para obtener más información.
+* Los bots de solo notificación usan mensajería proactiva para comunicarse con el usuario. Para obtener más información, consulte [Mensajería proactiva para bots.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)

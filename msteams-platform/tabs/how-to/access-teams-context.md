@@ -4,27 +4,27 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 localization_priority: Normal
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020404"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566869"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtener contexto para la pestaña Microsoft Teams
 
-Puede que su pestaña necesite información contextual para mostrar contenido relevante.
+La pestaña debe requerir información contextual para mostrar el contenido relevante:
 
-* O bien, puede que necesite información básica sobre el usuario, el equipo o la empresa.
-* También es posible que la pestaña necesite información local y del tema.
-* La pestaña podría necesitar leer el `entityId` o `subEntityId` que identifica lo que hay en esta pestaña.
+* Información básica sobre el usuario, el equipo o la empresa.
+* Información regional y temática.
+* Lea el `entityId` o que identifica lo que hay en esta `subEntityId` pestaña.
 
 ## <a name="user-context"></a>Contexto del usuario
 
-El contexto sobre el usuario, el equipo o la compañía puede ser especialmente útil cuando
+El contexto sobre el usuario, el equipo o la empresa puede ser especialmente útil cuando:
 
-* Necesita crear o asociar recursos en la aplicación con el usuario o el equipo especificados.
-* Quiere iniciar un flujo de autenticación con Azure Active Directory u otro proveedor de identidades y no quiere que el usuario vuelva a introducir su nombre de usuario. (Para obtener más información sobre la autenticación en la pestaña de Microsoft Teams, consulte [Autenticar a un usuario en la pestaña de Microsoft Teams](~/concepts/authentication/authentication.md)).
+* Cree o asocie recursos de la aplicación con el usuario o equipo especificado.
+* Inicia un flujo de autenticación contra Azure Active Directory u otro proveedor de identidades y no desea requerir que el usuario vuelva a escribir su nombre de usuario. Para obtener más información sobre la autenticación dentro de la pestaña Microsoft Teams, consulte [Autenticar a un usuario en la pestaña Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Aunque esta información de usuario puede ayudar a proporcionarle una experiencia de usuario fluida, *no* debe usarla como prueba de identidad. Por ejemplo, un atacante podría cargar su página en un "explorador malo" y representar información o solicitudes dañinas.
@@ -33,8 +33,8 @@ El contexto sobre el usuario, el equipo o la compañía puede ser especialmente 
 
 Puede acceder a la información contextual de dos formas:
 
-* Insertando valores de marcador de posición de la dirección URL
-* Usando el [cliente de SDK JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client)
+* Inserte valores de marcador de posición url.
+* Utilice el [SDK de cliente de JavaScript Microsoft Teams](/javascript/api/overview/msteams-client).
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obtener contexto insertando valores de marcador de posición de la URL
 
@@ -48,23 +48,19 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 * {theme}: el tema actual de la interfaz de usuario como `default`, `dark` o `contrast`.
 * {groupId}: el id. del grupo de Office 365 en el que se encuentra la pestaña.
 * {tid}: el id. del espacio empresarial de Azure AD del usuario actual.
-* {locale}: la configuración regional actual del usuario con formato de languageId-countryId (por ejemplo, en-us).
+* {locale}: la configuración regional actual del usuario con formato languageId-countryId. Por ejemplo, en-nosotros.
 
 >[!NOTE]
 >El marcador de posición `{upn}` anterior está en desuso. Para la compatibilidad con versiones anteriores, actualmente es un sinónimo de `{loginHint}`.
 
-Por ejemplo, supongamos que en el manifiesto de la pestaña establece el atributo `configURL` para
+Por ejemplo, supongamos que en el manifiesto de tabulación al que establece el `configURL` atributo , el usuario que ha iniciado sesión tiene los siguientes `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` atributos:
 
-`"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
+* Su nombre de usuario es 'user@example.com'.
+* Su ID de inquilino de empresa es 'e2653c-etc'.
+* Son miembros del grupo de Office 365 con id '00209384-etc'.
+* El usuario ha establecido su tema Teams en 'oscuro'.
 
-Y el usuario que ha iniciado sesión tiene los siguientes atributos:
-
-* Su nombre de usuario es "user@example.com"
-* Su id. de espacio empresarial es "e2653c-etc"
-* Es miembro del grupo de Office 365 con el id. "00209384-etc"
-* El usuario estableció su tema de Teams en "oscuro"
-
-Cuando configure su pestaña, Teams llama a esta dirección URL:
+Cuando configuran la pestaña, Teams llama a la siguiente DIRECCIÓN URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -72,7 +68,7 @@ Cuando configure su pestaña, Teams llama a esta dirección URL:
 
 También puede recuperar la información mencionada previamente usando el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client)llamando a `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-La variable de contexto se verá como el ejemplo siguiente.
+La variable de contexto tiene el siguiente ejemplo:
 
 ```json
 {
@@ -102,7 +98,7 @@ La variable de contexto se verá como el ejemplo siguiente.
     "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
@@ -121,12 +117,12 @@ La variable de contexto se verá como el ejemplo siguiente.
 
 Cuando la página de contenido se carga en un canal privado, los datos que reciba de la llamada `getContext` estarán ocultos para proteger la privacidad del canal. Los siguientes campos se cambian cuando la página de contenido está en un canal privado. Si la página utiliza cualquiera de los valores siguientes, tendrá que comprobar el campo `channelType` para determinar si la página se carga en un canal privado y responder según adecuadamente.
 
-* `groupId` - No definido para canales privados
-* `teamId` - Establecer en el threadId del canal privado
-* `teamName` - Establecer como el nombre del canal privado
-* `teamSiteUrl` - Establecer la dirección URL de un sitio de SharePoint único y distinto para el canal privado
-* `teamSitePath` - Establecer la ruta de acceso de un sitio de SharePoint único y distinto para el canal privado
-* `teamSiteDomain` - Establecer el dominio de un dominio del sitio de SharePoint único y distinto para el canal privado
+* `groupId`: Indefinido para canales privados
+* `teamId`: Establecer en el threadId del canal privado
+* `teamName`: Establecer en el nombre del canal privado
+* `teamSiteUrl`: Establecer en la DIRECCIÓN URL de un sitio de SharePoint distinto y único para el canal privado
+* `teamSitePath`: Establecer en la ruta de acceso de un sitio de SharePoint distinto y único para el canal privado
+* `teamSiteDomain`: Establecer en el dominio de un dominio de sitio SharePoint distinto y único para el canal privado
 
 > [!Note]
 >  teamSiteUrl también funciona bien para los canales estándar.

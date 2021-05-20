@@ -3,79 +3,79 @@ title: Mensajes proactivos
 description: Describe que los bots pueden iniciar una conversación en Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
-keywords: escenarios de teams bot de conversación de mensajería proactiva
-ms.openlocfilehash: a13c565c8abe8c78fe6402d76796381b6a837393
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: equipos escenarios de mensajería proactiva conversación bot
+ms.openlocfilehash: baf148d0f4d0a669de582dfca70ed5d5bed0274c
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019793"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566792"
 ---
 # <a name="proactive-messaging-for-bots"></a>Mensajería proactiva para bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Un mensaje proactivo es un mensaje que envía un bot para iniciar una conversación. Puede que quiera que el bot inicie una conversación por varios motivos, entre los que se incluyen:
+Un mensaje proactivo es un mensaje enviado por un bot para iniciar una conversación. Puede que quiera que el bot inicie una conversación por varios motivos, entre los que se incluyen:
 
-* Mensajes de bienvenida para conversaciones de bot personales
-* Respuestas de sondeo
-* Notificaciones de eventos externos
+* Mensajes de bienvenida para conversaciones personales con bots.
+* Respuestas de las encuestas.
+* Notificaciones de eventos externos.
 
-Enviar un mensaje para iniciar un nuevo hilo de conversación es diferente al envío de un mensaje en respuesta a una conversación existente: cuando el bot inicia una nueva conversación, no hay ninguna conversación preexistida en la que publicar el mensaje. Para enviar un mensaje proactivo, debe:
+Enviar un mensaje para iniciar un nuevo subproceso de conversación es diferente de enviar un mensaje en respuesta a una conversación existente: cuando el bot inicia una nueva conversación, no hay ninguna conversación preexistente a la que publicar el mensaje. Para enviar un mensaje proactivo usted necesita:
 
-1. [Decidir lo que vas a decir](#best-practices-for-proactive-messaging)
-1. [Obtener el identificador único del usuario y el identificador de inquilino](#obtain-necessary-user-information)
+1. [Decide lo que vas a decir](#best-practices-for-proactive-messaging)
+1. [Obtenga el identificador único del usuario y el identificador de inquilino](#obtain-necessary-user-information)
 1. [Enviar el mensaje](#examples)
 
-Al crear mensajes proactivos, **debe** llamar y pasar la dirección URL del servicio antes de crear la `MicrosoftAppCredentials.TrustServiceUrl` que usará para enviar el `ConnectorClient` mensaje. Si no lo haces, la aplicación recibirá una `401: Unauthorized` respuesta. Vea [los ejemplos siguientes](#net-example-from-this-sample).
+Al crear mensajes **proactivos, debe** llamar y pasar la dirección URL del servicio antes de crear el `MicrosoftAppCredentials.TrustServiceUrl` que `ConnectorClient` usará para enviar el mensaje. Si no lo hace, la aplicación recibirá una `401: Unauthorized` respuesta. Para obtener más información, consulte [los ejemplos siguientes](#net-example-from-this-sample).
 
-## <a name="best-practices-for-proactive-messaging"></a>Procedimientos recomendados para mensajería proactiva
+## <a name="best-practices-for-proactive-messaging"></a>Mejores prácticas para la mensajería proactiva
 
-Enviar mensajes proactivos a los usuarios puede ser una forma muy eficaz de comunicarse con los usuarios. Sin embargo, desde su perspectiva, este mensaje puede parecer que no se les ha enviado y, en el caso de los mensajes de bienvenida, será la primera vez que interactúen con la aplicación. Por lo tanto, es muy importante usar esta funcionalidad con moderación (no enviar correo no deseado a los usuarios) y proporcionarles suficiente información para que comprendan por qué se envían mensajes.
+Enviar mensajes proactivos a los usuarios puede ser una forma muy eficaz de comunicarse con sus usuarios. Sin embargo, desde su perspectiva este mensaje puede parecer que viene a ellos completamente sin probar, y en el caso de los mensajes de bienvenida será la primera vez que hayan interactuado con la aplicación. Como tal, es muy importante utilizar esta funcionalidad con moderación (no enviar spam a los usuarios), y proporcionarles suficiente información para permitirles entender por qué se les está enviando mensajes.
 
 Generalmente, los mensajes proactivos se divide en dos categorías: mensajes de bienvenida o notificaciones.
 
 ### <a name="welcome-messages"></a>Mensajes de bienvenida
 
-Al usar la mensajería proactiva para enviar un mensaje de bienvenida a un usuario, debe tener en cuenta que para la mayoría de las personas que reciben el mensaje no tendrán contexto para saber por qué lo están recibiendo. También es la primera vez que interactúan con la aplicación; es la oportunidad de crear una buena primera impresión. Los mejores mensajes de bienvenida incluirán:
+Al usar mensajes proactivos para enviar un mensaje de bienvenida a un usuario, debe tener en cuenta que para la mayoría de las personas que reciben el mensaje no tendrán contexto por qué lo reciben. Esta es también la primera vez que habrán interactuado con la aplicación; es su oportunidad de crear una buena primera impresión. Los mejores mensajes de bienvenida incluirán:
 
-* **Por qué reciben este mensaje.** Debe ser muy claro para el usuario por qué están recibiendo el mensaje. Si el bot se instaló en un canal y envió un mensaje de bienvenida a todos los usuarios, hágles saber en qué canal se instaló y quién lo instaló.
-* **¿Qué ofrece?** ¿Qué pueden hacer con la aplicación? ¿Qué valor puede aportarles?
-* **Qué deben hacer a continuación.** Invítelos a probar un comando o interactuar con la aplicación de alguna manera.
+* **¿Por qué están recibiendo este mensaje?** Debe ser muy claro para el usuario por qué está recibiendo el mensaje. Si el bot se instaló en un canal y envió un mensaje de bienvenida a todos los usuarios, hágales saber en qué canal se instaló y potencialmente quién lo instaló.
+* **¿Qué ofreces?** ¿Qué pueden hacer con tu aplicación? ¿Qué valor puedes aportarles?
+* **¿Qué deberían hacer a continuación?** Invítelos a probar un comando o interactuar con la aplicación de alguna manera.
 
 ### <a name="notification-messages"></a>Mensajes de notificación
 
-Al usar la mensajería proactiva para enviar notificaciones, debe asegurarse de que los usuarios tienen una ruta de acceso clara para realizar acciones comunes en función de la notificación y una comprensión clara de por qué se produjo la notificación. Por lo general, los mensajes de notificación de buena calidad incluirán:
+Al usar mensajes proactivos para enviar notificaciones, debe asegurarse de que los usuarios tienen una ruta clara para realizar acciones comunes basadas en la notificación y una comprensión clara de por qué se produjo la notificación. Los buenos mensajes de notificación generalmente incluirán:
 
-* **Qué ha pasado.** Una indicación clara de lo que ocurrió para causar la notificación.
-* **Lo que ocurrió.** Debe estar claro qué elemento/cosa se actualizó para provocar la notificación.
-* **Quién lo hizo.** Quién realizó la acción que hizo que se enviara la notificación.
-* **Lo que pueden hacer al respecto.** Facilita a los usuarios realizar acciones en función de las notificaciones.
-* **Cómo pueden optar por no participar.** Debe proporcionar una ruta de acceso para que los usuarios no puedan participar en notificaciones adicionales.
+* **Qué ha pasado.** Una clara indicación de lo que sucedió para causar la notificación.
+* **A qué le pasó.** Debe estar claro qué elemento/cosa se actualizó para causar la notificación.
+* **Quién lo hizo.** Quién tomó la medida que provocó el envío de la notificación.
+* **Lo que pueden hacer al respecto.** Facilite a los usuarios la real realo de acciones basadas en sus notificaciones.
+* **Cómo pueden optar por no participar.** Debe proporcionar una ruta para que los usuarios opten por no recibir notificaciones adicionales.
 
-## <a name="obtain-necessary-user-information"></a>Obtener información de usuario necesaria
+## <a name="obtain-necessary-user-information"></a>Obtener la información necesaria del usuario
 
-Los bots pueden crear nuevas conversaciones con un usuario individual de Microsoft Teams obteniendo el identificador único del usuario y el *identificador* *de inquilino.* Puede obtener estos valores mediante uno de los siguientes métodos:
+Los bots pueden crear nuevas conversaciones con un usuario Microsoft Teams individual obteniendo el *identificador único* del usuario y el identificador de *inquilino.* Puede obtener estos valores utilizando uno de los métodos siguientes:
 
-* Al [capturar la lista de equipos](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) desde un canal en el que se instala la aplicación.
-* Al almacenarlos en caché cuando un usuario [interactúa con el bot en un canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md).
-* Cuando un usuario se [@mentioned en una conversación de canal,](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) el bot forma parte.
-* Al almacenarlos en caché cuando [recibes `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) el evento cuando la aplicación está instalada en un ámbito personal, o cuando se agregan nuevos miembros a un chat de canal o grupo que
+* Al [obtener la lista](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) de equipos de un canal en el que está instalada la aplicación.
+* Al almacenarlos en caché cuando un usuario [interactúa con el bot en un canal.](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)
+* Cuando un usuario está [@mentioned en una conversación de canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) del que forma parte el bot.
+* Al almacenarlos en caché cuando [recibes el `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) evento cuando la aplicación está instalada en un ámbito personal, o se agregan nuevos miembros a un canal o chat de grupo que.
 
-### <a name="proactively-install-your-app-using-graph"></a>Instalar proactivamente la aplicación con Graph
+### <a name="proactively-install-your-app-using-graph"></a>Instale de forma proactiva la aplicación con Graph
 
 > [!Note]
-> La instalación proactiva de aplicaciones con graph se encuentra actualmente en fase beta.
+> La instalación proactiva de aplicaciones mediante el gráfico está actualmente en fase beta.
 
-En ocasiones, es posible que sea necesario enviar mensajes de forma proactiva a los usuarios que no han instalado o interactuado con la aplicación anteriormente. Por ejemplo, desea usar el comunicador de la compañía [para](~/samples/app-templates.md#company-communicator) enviar mensajes a toda la organización. Para este escenario, puedes usar la API de Graph para instalar proactivamente la aplicación para los usuarios y, a continuación, almacenar en caché los valores necesarios del evento que recibirá `conversationUpdate` la aplicación al instalarla.
+En ocasiones, puede ser necesario enviar mensajes de forma proactiva a los usuarios que no han instalado o interactuado con la aplicación anteriormente. Por ejemplo, desea usar el [comunicador de empresa](~/samples/app-templates.md#company-communicator) para enviar mensajes a toda la organización. Para este escenario, puede usar la API de Graph para instalar de forma proactiva la aplicación para los usuarios y, a continuación, almacenar en caché los valores necesarios del evento que recibirá la `conversationUpdate` aplicación al instalarse.
 
-Solo puedes instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en la tienda de aplicaciones de Teams.
+Solo puedes instalar aplicaciones que estén en tu catálogo de aplicaciones organizativas o en la tienda de aplicaciones Teams.
 
-Consulta [Instalar aplicaciones para usuarios en](/graph/teams-proactive-messaging) la documentación de Graph para obtener información completa. También hay un [ejemplo en .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Consulte [Instalar aplicaciones para usuarios](/graph/teams-proactive-messaging) en la documentación de Graph para obtener detalles completos. También hay un [ejemplo en .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Ejemplos
 
-Asegúrese de autenticarse y tener un token de portador antes de crear una nueva conversación con la API de REST.
+Asegúrese de autenticar y tener un token de portador antes de crear una nueva conversación mediante la API de REST.
 
 ```json
 POST /v3/conversations
@@ -97,7 +97,7 @@ POST /v3/conversations
 }
 ```
 
-Debe proporcionar el identificador de usuario y el identificador de inquilino. Si la llamada se realiza correctamente, la API devuelve el siguiente objeto de respuesta.
+Debe proporcionar el IDENTIFICADOR de usuario y el identificador de inquilino. Si la llamada se realiza correctamente, la API devuelve con el siguiente objeto de respuesta.
 
 ```json
 {
@@ -105,11 +105,11 @@ Debe proporcionar el identificador de usuario y el identificador de inquilino. S
 }
 ```
 
-Este identificador es el identificador de conversación único del chat personal. Almacene este valor y reutilice para futuras interacciones con el usuario.
+Este ID es el ID de conversación único del chat personal. Por favor, almacene este valor y reutilízcalo para futuras interacciones con el usuario.
 
 ### <a name="using-net"></a>Uso de .NET
 
-En este ejemplo se [usa el paquete NuGet Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
+En este ejemplo se usa el paquete [NuGet Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -156,13 +156,11 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-*Vea también ejemplos* [de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
-
 ## <a name="creating-a-channel-conversation"></a>Crear una conversación de canal
 
-El bot agregado por el equipo puede publicar en un canal para crear una nueva cadena de respuesta. Si usa el SDK de Node.js Teams, use lo que le proporciona una dirección completa con el identificador de actividad y el identificador de `startReplyChain()` conversación correctos. Si está usando C#, vea el ejemplo siguiente.
+El bot agregado por el equipo puede publicar en un canal para crear una nueva cadena de respuesta. Si usa el SDK de Node.js Teams, use `startReplyChain()` el que le proporciona una dirección completamente rellenada con el identificador de actividad y el identificador de conversación correctos. Si está utilizando C#, consulte el ejemplo siguiente.
 
-Como alternativa, puede usar la API de REST y emitir una solicitud POST al [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) recurso.
+Como alternativa, puede usar la API de REST y emitir una solicitud POST para [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) obtener recursos.
 
 ### <a name="net-example-from-this-sample"></a>Ejemplo de .NET (de [este ejemplo)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
@@ -209,3 +207,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
     }
 }
 ```
+
+## <a name="see-also"></a>Vea también
+
+[Muestras de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
