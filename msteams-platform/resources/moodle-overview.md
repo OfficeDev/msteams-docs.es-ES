@@ -1,6 +1,6 @@
 ---
-title: Sistema de gestión del aprendizaje moodle
-description: Visión general de la integración de Moodle LMS con Teams
+title: Sistema de administración de aprendizaje de Moodle
+description: Información general sobre la integración de LMS de Moodle con Teams
 ms.topic: overview
 localization_priority: Normal
 ms.author: surbhigupta
@@ -12,37 +12,37 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52555487"
 ---
-# <a name="moodle-learning-management-system"></a>Sistema de gestión del aprendizaje moodle
+# <a name="moodle-learning-management-system"></a>Sistema de administración de aprendizaje de Moodle
 
-Moodle es el sistema de gestión de aprendizaje de código abierto más grande del mundo. Esta aplicación ayuda a los educadores a crear y organizar sus cursos a través de características valiosas que incluyen una herramienta de cuestionarios robusta, discusiones calificadas y una variedad de tipos de tareas para que los estudiantes interactúen con el contenido.  
+Moodle es el sistema de administración de aprendizaje de código abierto más grande del mundo. Esta aplicación ayuda a los profesores a crear y organizar sus cursos a través de características valiosas que incluyen una sólida herramienta de cuestionarios, discusiones y una variedad de tipos de tareas para que los alumnos participen con el contenido.  
  
-Moodle se integra con Microsoft Teams. Teams es el centro de colaboración en tiempo real, trabajo en equipo y productividad. Con una integración perfecta con Office 365, cientos de aplicaciones, chat y capacidades de reuniones en vivo de hasta 300 participantes, Teams ofrece a los profesores y estudiantes la capacidad de trabajar juntos de manera más eficiente sin importar dónde se encuentren. 
+Moodle se integra con Microsoft Teams. Teams es el centro de colaboración en tiempo real, trabajo en equipo y productividad. Con una integración perfecta con Office 365, cientos de aplicaciones, chat y capacidades de reunión en directo de hasta 300 participantes, Teams ofrece a los profesores y alumnos la capacidad de trabajar juntos de forma más eficaz independientemente de dónde estén. 
  
-Además, los plugins Microsoft 365 Moodle complementan a Moodle proporcionando una experiencia completa para profesores y estudiantes. Con los plugins Microsoft 365 Moodle, los administradores de sitios pueden sincronizar usuarios entre Office 365 y Moodle, automatizar la coincidencia de usuarios, sincronizar cursos con repositorios de Microsoft Teams y archivos, conectar asignaciones de OneNote e incrustar documentos Office.  
+Además, los complementos Microsoft 365 Moodle complementan a Moodle proporcionando una experiencia completa para profesores y estudiantes. Con los complementos de Microsoft 365 Moodle, los administradores del sitio pueden sincronizar usuarios entre Office 365 y Moodle, automatizar la coincidencia de usuarios, sincronizar cursos con Microsoft Teams y repositorios de archivos, conectar asignaciones OneNote e insertar documentos Office.  
  
-Además, Microsoft Teams aplicaciones como mConnect by Skooler y la Microsoft 365 Moodle Plugins, que integra Moodle en Teams, profesores y estudiantes pueden tener lo mejor de ambos mundos aprovechando las características únicas de Moodle mientras participan en la comunicación y colaboración en tiempo real.
+Además, Microsoft Teams aplicaciones como mConnect de Skooler y los complementos de Microsoft 365 Moodle, que integra Moodle en Teams, los profesores y los alumnos pueden disfrutar de lo mejor de ambos mundos aprovechando las características únicas de Moodle mientras participan en la comunicación y colaboración en tiempo real.
 
-## <a name="mconnect-app-by-skooler"></a>mConnect aplicación de Skooler
+## <a name="mconnect-app-by-skooler"></a>aplicación mConnect de Skooler
 
-La aplicación mConnect de Skooler le permite ofrecer aprendizajes virtuales a través de Teams con facilidad.
+La aplicación mConnect de Skooler te permite ofrecer aprendizajes virtuales a través Teams con facilidad.
 
-### <a name="why-mconnect-and-teams"></a>¿Por qué mConnect y Teams
+### <a name="why-mconnect-and-teams"></a>Por qué mConnect y Teams
 
-Vea el siguiente video para entender cómo mConnect y Teams funcionan mejor juntos:
+Vea el siguiente vídeo para comprender cómo mConnect y Teams funcionan mejor juntos:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
-Desde el interior de mConnect, los participantes del curso acceden a toda la experiencia del curso de Moodle dentro de la colaboración y comunicación en tiempo real proporcionada por Microsoft Teams.
+Desde dentro de mConnect, los participantes del curso acceden a la experiencia completa del curso de Moodle dentro de la colaboración y comunicación en tiempo real proporcionada por Microsoft Teams.
 
-### <a name="get-started-with-mconnect-and-teams"></a>Comience con mConnect y Teams
+### <a name="get-started-with-mconnect-and-teams"></a>Introducción a mConnect y Teams
 
 Vea el siguiente vídeo para comprender cómo empezar a usar mConnect y Teams:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
 
-Para obtener más información, consulte [mConnect by Skooler](https://skooler.com/mconnect/how-to/).
+Para obtener más información, [vea mConnect by Skooler](https://skooler.com/mconnect/how-to/).
 
-## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Moodle Plugins
+## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Complementos de Moodle
 
-Los plugins de Moodle para Teams facilitan la programación, entrega y colaboración en el contenido del curso. Instale los plugins que traen sin problemas el sistema de gestión de aprendizaje Moodle a Teams. Para obtener más información, consulte [Instalar Moodle LMS](moodleInstructions.md).
+Los complementos de Moodle para Teams facilita la programación, entrega y colaboración en el contenido del curso. Instale los complementos que integren perfectamente el sistema de administración de aprendizaje de Moodle en Teams. Para obtener más información, vea [Install Moodle LMS](moodleInstructions.md).
 

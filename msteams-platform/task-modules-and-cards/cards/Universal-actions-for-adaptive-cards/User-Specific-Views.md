@@ -13,15 +13,15 @@ ms.locfileid: "52555447"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
-Anteriormente, si las tarjetas adaptables se enviaba en una conversación Teams, todos los usuarios ven exactamente el mismo contenido de la tarjeta. Con la introducción del modelo de acciones universales y `refresh` para tarjetas adaptables, los desarrolladores de bots ahora pueden proporcionar vistas específicas del usuario de tarjetas adaptables a los usuarios. La misma tarjeta adaptable ahora puede actualizar a una tarjeta adaptable específica del usuario.
+Anteriormente si se enviaron tarjetas adaptables en una Teams conversación, todos los usuarios verán exactamente el mismo contenido de la tarjeta. Con la introducción del modelo de acciones universales y las tarjetas adaptables, los desarrolladores de bots ahora pueden proporcionar vistas específicas del usuario de tarjetas adaptables `refresh` a los usuarios. La misma tarjeta adaptable ahora puede actualizarse a una tarjeta adaptable específica del usuario.
 
-Por ejemplo, Megan, un inspector de seguridad de Contoso, desea crear un incidente y asignarlo a Alex. También quiere que todos en el equipo estén al tanto del incidente. Megan usa la extensión de mensaje de informes de incidentes de Contoso con tecnología de acciones universales para tarjetas adaptables.
+Por ejemplo, Megan, un inspector de seguridad de Contoso, quiere crear un incidente y asignarlo a Alex. También quiere que todos los miembros del equipo sean conscientes del incidente. Megan usa la extensión de mensaje de informes de incidentes de Contoso con tecnología de acciones universales para tarjetas adaptables.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Vistas específicas de usuario":::
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>Vistas específicas del usuario para tarjetas adaptables
 
-El código siguiente proporciona un ejemplo de tarjetas adaptables:
+El siguiente código proporciona un ejemplo de tarjetas adaptables:
 
 ```JSON
 {
@@ -52,16 +52,16 @@ El código siguiente proporciona un ejemplo de tarjetas adaptables:
 }
 ```
 
-**Para enviar tarjetas adaptables, actualice vistas específicas del usuario e invoque solicitudes al bot**
+**Para enviar tarjetas adaptables, actualizar vistas específicas del usuario e invocar solicitudes al bot**
 
-1. Cuando Megan crea un nuevo incidente, el bot envía la tarjeta adaptable o la tarjeta común con los detalles del incidente en la conversación Teams.
-2. Ahora esta tarjeta se actualiza automáticamente a la vista específica del usuario para Megan y Alex. Las resonancias magnéticas de usuario de Alex y Megan se agregan en `userIds` propiedad de la propiedad del JSON de la tarjeta `refresh` adaptable. La tarjeta sigue siendo la misma para otros usuarios en la conversación.
-3. Para Megan, la actualización automática desencadena una `adaptiveCard/action` solicitud de invocación al bot. El bot puede devolver una tarjeta creadora de incidentes con `Edit` el botón como respuesta a esta solicitud de invocación.
-4. De forma similar para Alex, la actualización automática desencadena otra `adaptiveCard/action` solicitud de invocación al bot. El bot puede devolver un botón de tarjeta de propietario de incidente `Resolve` como respuesta a esta solicitud de invocación.
+1. Cuando Megan crea un nuevo incidente, el bot envía la tarjeta adaptable o la tarjeta común con detalles de incidentes en la Teams conversación.
+2. Ahora, esta tarjeta se actualiza automáticamente a la vista específica del usuario para Megan y Alex. Los MRIs de usuario de Alex y Megan se agregan en propiedad `userIds` de la propiedad del JSON de tarjeta `refresh` adaptable. La tarjeta sigue siendo la misma para otros usuarios de la conversación.
+3. Para Megan, la actualización automática desencadena una `adaptiveCard/action` solicitud de invocación al bot. El bot puede devolver una tarjeta de creador de incidentes con `Edit` botón como respuesta a esta solicitud de invocación.
+4. De forma similar para Alex, la actualización automática desencadena otra `adaptiveCard/action` solicitud de invocación al bot. El bot puede devolver un botón de tarjeta de propietario `Resolve` de incidentes como respuesta a esta solicitud de invocación.
 
 ## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Invocar solicitud enviada desde Teams cliente al bot
 
-El código siguiente proporciona un ejemplo de una solicitud de invocación enviada desde el cliente Teams de Alex y Megan al bot:
+El código siguiente proporciona un ejemplo de una solicitud de invocación enviada desde el cliente de Teams de Alex y Megan al bot:
 
 ```JSON
 { 
@@ -84,9 +84,9 @@ El código siguiente proporciona un ejemplo de una solicitud de invocación envi
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card"></a>adaptiveCard/action invocan tarjeta de respuesta
+## <a name="adaptivecardaction-invoke-response-card"></a>adaptiveCard/action invoke response card
 
-El código siguiente proporciona un ejemplo de una tarjeta de respuesta de invocación adaptiveCard/action para Megan:
+El código siguiente proporciona un ejemplo de una tarjeta de respuesta adaptiveCard/action invoke para Megan:
 
 ```JSON
 {
@@ -126,9 +126,9 @@ El código siguiente proporciona un ejemplo de una tarjeta de respuesta de invoc
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>adaptiveCard/action invocan tarjeta de respuesta para Alex
+## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>adaptiveCard/action invoke response card for Alex
 
-El código siguiente proporciona un ejemplo de una tarjeta de respuesta de invocación adaptiveCard/action para Alex:
+El siguiente código proporciona un ejemplo de una tarjeta de respuesta adaptiveCard/action invoke para Alex:
 
 ```JSON
 {
@@ -186,11 +186,11 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 Directrices de diseño de tarjetas a tener en cuenta al diseñar vistas específicas del usuario:
 
-* Puede crear un máximo de **60 vistas específicas** de usuario para una tarjeta determinada que se envía a un chat o canal especificando las `userIds` suyas en la `refresh` sección.
+* Puede crear un máximo de **60** vistas específicas de usuario para una tarjeta determinada que se envía a un chat o canal especificando sus `userIds` en la `refresh` sección.
 * **Tarjeta base:** La versión base de la tarjeta que el desarrollador del bot envía al chat. Esta es la versión de la tarjeta adaptable para todos los usuarios que no se especifican en la `userIds` sección.
-* Se puede utilizar una actualización o edición de mensajes para actualizar la tarjeta base y actualizar simultáneamente la tarjeta específica del usuario.
+* Se puede usar una actualización o edición de mensajes para actualizar la tarjeta base y actualizar simultáneamente la tarjeta específica del usuario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
 * [Vistas actualizadas](Up-To-Date-Views.md)

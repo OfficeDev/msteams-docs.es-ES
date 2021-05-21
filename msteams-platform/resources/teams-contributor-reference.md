@@ -1,6 +1,6 @@
 ---
-title: Contribuir a Microsoft Teams documentación
-description: pasos para crear y publicar documentación Teams
+title: Contribuir a la Microsoft Teams documentación
+description: pasos para crear y publicar Teams documentación
 author: laujan
 ms.author: lajanuar
 localization_priority: Normal
@@ -12,67 +12,67 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566232"
 ---
-# <a name="contributing-to-microsoft-teams-documentation"></a>Contribuir a Microsoft Teams documentación
+# <a name="contributing-to-microsoft-teams-documentation"></a>Contribuir a la Microsoft Teams documentación
 
-[Teams documentación](/microsoftteams/platform/overview) forma parte de la biblioteca de documentación técnica de [Microsoft Docs.](https://docs.microsoft.com/) El contenido se organiza en grupos denominados docsets, cada uno representando un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso de URL después *de docs <span></span> .microsoft.com*.  Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta de acceso del archivo docset Teams. Teams artículos se escriben en la sintaxis [MarkDown](#markdown-reference) y se hospedan en [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+[Teams documentación forma](/microsoftteams/platform/overview) parte de la biblioteca de documentación técnica de [Microsoft Docs.](https://docs.microsoft.com/) El contenido se organiza en grupos denominados docsets, cada uno que representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso url después *de docs <span></span> .microsoft.com*.  Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta Teams de archivo docset. Teams artículos se escriben en [la sintaxis markdown](#markdown-reference) y se hospedan en [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
-## <a name="set-up-your-workspace"></a>Configure el espacio de trabajo
+## <a name="set-up-your-workspace"></a>Configurar el área de trabajo
 
 > [!div class="checklist"]
 >
 > * Instalar [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Instale [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
-> * Instale [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directamente desde el marketplace de VS Code.
+> * Instalar [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Instale [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directamente desde VS Code Marketplace.
 <br>&emsp;&emsp; o
 
 > [!div class="checklist"]
 >
 > * Instalar desde dentro de VS Code:
 
-   1. Seleccione el **icono Extensiones** en la barra de actividades lateral o utilice el comando Ver = **extensiones>** (Ctrl+Mayús+X) y busque el Paquete de creación *de documentos* (Microsoft).
-   1. Seleccione el botón **Instalar.**
-   1. Una vez completada la instalación, el botón **Instalar** cambiará al botón **Administrar** engranaje.
+   1. Seleccione el **icono Extensiones** en la barra de actividad lateral o use el comando Ver = **> Extensiones** (Ctrl+Mayús+X) y busque *docs Authoring Pack* (Microsoft).
+   1. Seleccione el **botón Instalar.**
+   1. Una vez completada la instalación, **el botón Instalar** cambiará al botón **Administrar** engranaje.
 
-## <a name="review-the-microsoft-docs-contributors-guide"></a>Revise la Guía de colaboradores de Microsoft Docs
+## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisar la Guía de colaboradores de Microsoft Docs
 
-La [guía de colaboradores](/contribute) ofrece instrucciones para crear, publicar y actualizar contenido técnico en la plataforma Microsoft Docs.
+La [guía de colaboradores](/contribute) ofrece instrucciones para crear, publicar y actualizar contenido técnico en la plataforma de Microsoft Docs.
 
-## <a name="microsoft-writing-style-and-content-guides"></a>Guías de escritura, estilo y contenido de Microsoft
+## <a name="microsoft-writing-style-and-content-guides"></a>Guías de contenido, estilo y escritura de Microsoft
 
-* **[Guía de estilo de escritura de Microsoft](/style-guide/welcome)**. Considere la posibilidad de agregar esta guía en línea al menú **Favoritos** de su navegador. Es un recurso integral para la escritura técnica actual y refleja el enfoque moderno de Microsoft hacia la voz y el estilo.
+* **[Guía de estilo de Microsoft Writing](/style-guide/welcome)**. Considera la posibilidad de agregar esta guía en línea al menú **Favoritos del** explorador. Es un recurso completo para la escritura técnica actual y refleja el enfoque moderno de Microsoft para la voz y el estilo.
 
-* **[Escribir contenido para desarrolladores.](/style-guide/developer-content/)** Teams contenido específico está dirigido a un público desarrollador con una comprensión fundamental de los conceptos y procesos de programación. Es importante que proporcione información clara y técnicamente precisa de una manera convincente mientras mantiene el tono y el estilo de Microsoft.
+* **[Escritura de contenido para desarrolladores](/style-guide/developer-content/)**. Teams contenido específico está dirigido a una audiencia de desarrolladores con una comprensión fundamental de los conceptos y procesos de programación. Es importante que proporcione información clara y técnicamente precisa de una manera atractiva mientras mantiene el tono y el estilo de Microsoft.
 
-* **[Escribir instrucciones paso a paso.](/style-guide/procedures-instructions/writing-step-by-step-instructions)** Las experiencias aplicadas e interactivas son una excelente manera para que los desarrolladores aprendan sobre los productos y tecnologías de Microsoft. Presentar procedimientos complejos o sencillos en un formato progresivo es natural y fácil de usar.
+* **[Escribir instrucciones paso a paso](/style-guide/procedures-instructions/writing-step-by-step-instructions)**. Las experiencias aplicadas e interactivas son una excelente manera para que los desarrolladores aprendan sobre los productos y tecnologías de Microsoft. Presentar procedimientos complejos o simples en un formato progresivo es natural y fácil de usar.
 
 ## <a name="markdown-reference"></a>Referencia de MarkDown
 
- Las páginas de Microsoft Docs se escriben en la sintaxis MarkDown y se analizan a través de un motor [Markdig.](https://github.com/lunet-io/markdig) Consulte *Referencia* [de Docs Markdown](/contribute/markdown-reference) para etiquetas específicas y convenciones de formato.
+ Las páginas de Microsoft Docs se escriben en la sintaxis de MarkDown y se analizan a través de un [motor Markdig.](https://github.com/lunet-io/markdig) Consulte *Docs* [Markdown reference for](/contribute/markdown-reference) specific tags and formatting conventions.
 
-## <a name="file-paths"></a>Rutas de archivo
+## <a name="file-paths"></a>Rutas de acceso a archivos
 
-Establecer una ruta de acceso de archivo válida para hipervínculos en la documentación puede ser un desafío, especialmente cuando se usan rutas relativas y se crean vínculos a otros conjuntos de documentos.  La compilación no se realizará correctamente en GitHub si la ruta de acceso del archivo es incorrecta o no válida.
+Establecer una ruta de acceso de archivo válida para hipervínculos en la documentación puede ser un desafío, especialmente cuando se usan rutas relativas y se crean vínculos a otros conjuntos de documentos.  La compilación no se completa correctamente GitHub si la ruta de acceso del archivo es incorrecta o no es válida.
 
-Para obtener más información sobre hipervínculos y rutas de archivo, consulte [Usar vínculos en la documentación](/contribute/how-to-write-links).
+Para obtener más información sobre hipervínculos y rutas de acceso a archivos, vea [Usar vínculos en la documentación](/contribute/how-to-write-links).
 
 >[!IMPORTANT]
-> Para hacer referencia a un artículo que forma *parte del* conjunto de documentos de la plataforma Teams:<br>
-> &emsp;&#x2714; Utilice una ruta relativa sin una barra diagonal inicial.<br>
-> &emsp;&#x2714; Incluir la extensión de archivo Markdown.<br>
->Por ejemplo:  **directorio principal/directorio/ruta de acceso a article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> Para hacer referencia a un artículo de biblioteca de Microsoft Docs que *no forma parte del* conjunto de documentos de plataforma Teams:<br>
-> &emsp;&#x2714; Utilice una ruta relativa que comience con una barra diagonal.<br>
+> Para hacer referencia a un artículo que *forma parte del* docset Teams plataforma:<br>
+> &emsp;&#x2714; use una ruta relativa sin una barra diagonal hacia delante.<br>
+> &emsp;&#x2714; incluir la extensión de archivo Markdown.<br>
+>Por ejemplo:  **directorio primario/directorio/ruta de acceso a article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+> Para hacer referencia a un artículo de biblioteca de Microsoft Docs que *no forma* parte del Teams docset de la plataforma:<br>
+> &emsp;&#x2714; use una ruta relativa que comience por una barra diagonal.<br>
 > &emsp;&#x2714; No incluya la extensión de archivo. <br> Por ejemplo:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
-> Para hacer referencia a una página fuera de la biblioteca de Microsoft Docs, como GitHub, use la ruta de acceso completa del `https` archivo.<br>
+> Para hacer referencia a una página fuera de la biblioteca de Microsoft Docs, como GitHub, use la ruta de `https` acceso de archivo completa.<br>
 
-## <a name="code-samples-and-snippets"></a>Muestras de código y fragmentos de código
+## <a name="code-samples-and-snippets"></a>Ejemplos de código y fragmentos de código
 
-Los ejemplos de código desempeñan un papel importante para ayudar a los desarrolladores a usar correctamente API y SDK. Las muestras de código bien presentadas pueden comunicar cómo funcionan las cosas con mayor claridad que el texto descriptivo y la información instructiva por sí solas. Sus muestras de código deben ser precisas, concisas, bien documentadas y, lo más importante, amigables con los lectores. El código que es fácil de leer también es fácil de entender, probar, depurar, mantener, modificar y ampliar. Para obtener más información, consulte [Cómo incluir código en documentos](/contribute/code-in-docs).
+Los ejemplos de código desempeñan un papel importante al ayudar a los desarrolladores a usar correctamente API y SDK. Los ejemplos de código bien presentados pueden comunicar cómo funcionan las cosas más claramente que el texto descriptivo y la información de instrucciones solo. Los ejemplos de código deben ser precisos, concisos, bien documentados y, lo más importante, fáciles de usar para el lector. El código fácil de leer también es fácil de comprender, probar, depurar, mantener, modificar y extender. Para obtener más información, [vea How to include code in docs](/contribute/code-in-docs).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Estilo docs y inicio rápido de voz](/contribute/style-quick-start)
-* [Vanguardia : Legibilidad del código fuente Sugerencias](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips).
+* [Inicio rápido de voz y estilo de documentos](/contribute/style-quick-start)
+* [Cutting Edge : Source Code Readability Sugerencias](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips).
 
 > [!div class="nextstepaction"]
-> [Obtenga actualizaciones de Microsoft Docs y los últimos anuncios](/teamblog)
+> [Obtener actualizaciones de Microsoft Docs y los anuncios más recientes](/teamblog)

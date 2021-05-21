@@ -1,7 +1,7 @@
 ---
-title: ¿Qué son los webhooks y los conectores?
+title: ¿Qué son los webhooks y conectores?
 author: clearab
-description: Comprenda cómo los webhooks y conectores pueden conectar sus servicios web al cliente Teams.
+description: Comprenda cómo los webhooks y conectores pueden conectar los servicios web al Teams cliente.
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
@@ -12,17 +12,17 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566806"
 ---
-# <a name="what-are-webhooks-and-connectors"></a>¿Qué son los webhooks y los conectores?
+# <a name="what-are-webhooks-and-connectors"></a>¿Qué son los webhooks y conectores?
 
 Los webhook y los conectores son una forma simple de conectar los servicios web a canales y equipos en Microsoft Teams. 
 
 ## <a name="outgoing-webhooks"></a>Webhooks salientes
 
-Los webhooks salientes permiten que los usuarios envíen mensajes de texto desde un canal a los servicios web. Una vez configurado, los usuarios podrán @mention el webhook saliente y enviar un mensaje a su servicio. Su servicio tendrá cinco segundos para enviar una respuesta al mensaje, que podría contener texto o una tarjeta.
+Los webhooks salientes permiten que los usuarios envíen mensajes de texto desde un canal a los servicios web. Una vez configurado, los usuarios podrán @mention webhook saliente y enviar un mensaje al servicio. El servicio tendrá cinco segundos para enviar una respuesta al mensaje, que puede contener texto o una tarjeta.
 
-Los webhooks salientes se configuran por equipo, no se pueden incluir como parte de una aplicación de Teams normal. Son los más adecuados para completar cargas de trabajo específicas del equipo que no requieren que se recopilen o intercambien grandes cantidades de información.
+Los webhooks salientes se configuran por equipo, no se pueden incluir como parte de una aplicación Teams normal. Son las más adecuadas para completar cargas de trabajo específicas del equipo que no requieren grandes cantidades de información para recopilarse o intercambiarse.
 
-Para obtener más información, consulte [Crear un webhook saliente.](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+Para obtener más información, [vea Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 
 ## <a name="connectors"></a>Conectores
 
@@ -30,12 +30,12 @@ Los conectores permiten a los usuarios suscribirse para recibir notificaciones y
 
 ### <a name="incoming-webhooks"></a>Webhooks entrantes
 
-Los webhooks entrantes son el tipo más simple de conector. Para cualquier canal del equipo (si están habilitados para ese equipo) puede optar por exponer un punto de conexión HTTPS que acepte JSON con el formato correcto e insertar mensajes en ese canal. Son una forma rápida y fácil de conectar un canal a su servicio, y se utilizan mejor para escenarios que son únicos para un equipo en particular. Por ejemplo, podría crear un webhook entrante en el canal de DevOps y configurar los servicios de compilación, implementación y supervisión para enviar alertas.
+Los webhooks entrantes son el tipo más sencillo de conector. Para cualquier canal del equipo (si están habilitados para ese equipo), puede elegir exponer un extremo HTTPS que acepte JSON con el formato correcto e inserte mensajes en ese canal. Son una forma rápida y fácil de conectar un canal al servicio y se usan mejor para escenarios que son exclusivos de un equipo en particular. Por ejemplo, puede crear un webhook entrante en el canal de DevOps y configurar los servicios de compilación, implementación y supervisión para enviar alertas.
 
-Para obtener más información, consulte [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md).
+Para obtener más información, [vea Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md).
 
 ### <a name="office-365-connectors"></a>Conectores de Office 365
 
-Office 365 Los conectores le permiten crear una página de configuración personalizada para el webhook entrante y empaquetarlos como parte de una aplicación Teams. A continuación, puede distribuir esa aplicación de forma más amplia, o incluso a nuestra tienda de aplicaciones. También envía mensajes principalmente con tarjetas de conector de Office 365 y tiene la capacidad de agregarles un conjunto limitado de acciones de tarjeta. Un buen ejemplo de esto es un conector meteorológico que permite a los usuarios elegir una ubicación y hora del día para recibir actualizaciones sobre el clima de mañana. Se configuran en un nivel de canal, pero se instalan a nivel de equipo.
+Office 365 Los conectores te permiten crear una página de configuración personalizada para el webhook entrante y empaquetarlos como parte de una Teams aplicación. A continuación, puedes distribuir esa aplicación de forma más amplia o incluso a nuestra tienda de aplicaciones. Los mensajes se envían principalmente Office 365 tarjetas connector y tienen la capacidad de agregarles también un conjunto limitado de acciones de tarjeta. Un buen ejemplo de esto es un conector meteorológico que permite a los usuarios elegir una ubicación y hora del día para recibir actualizaciones sobre el tiempo del mañana. Se configuran en un nivel de canal, pero se instalan en un nivel de equipo.
 
-Para obtener más información, consulte [Crear un conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md).
+Para obtener más información, vea [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).

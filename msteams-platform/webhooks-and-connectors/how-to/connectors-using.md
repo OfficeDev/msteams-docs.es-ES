@@ -4,12 +4,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams o365 conector
-ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566526"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583739"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
 
@@ -103,7 +103,7 @@ También puede usar este JSON para crear tarjetas que contengan entradas enrique
 }
 ```
 
-Este mensaje produce la siguiente tarjeta en el canal:
+Este mensaje genera la siguiente tarjeta en el canal:
 
 ![Captura de pantalla de una tarjeta de conector](~/assets/images/connectors/connector_message.png)
 
@@ -141,7 +141,7 @@ Para obtener más información sobre las acciones de tarjetas de conector, consu
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configurar un webhook de entrada personalizado
 
-Siga estos pasos para ver cómo enviar una tarjeta simple a un conector:
+Siga estos pasos para ver cómo enviar una tarjeta sencilla a un conector:
 
 1. En Microsoft Teams, elija **Más opciones** (**&#8943;**) junto al nombre del canal y elija **Conectores**.
 1. Desplácese por la lista de conectores hasta **Webhook entrante** y elija **Agregar**.
@@ -239,8 +239,8 @@ La siguiente manifest.jsen el archivo contiene los elementos básicos necesarios
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>El flujo para el envío de [tarjetas adaptables](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) mediante un webhook entrante es el siguiente:
 
-1. [Configure un webhook personalizado](#setting-up-a-custom-incoming-webhook) en Teams.</br></br>
-1. Cree el archivo JSON de la tarjeta adaptable:
+1. [Configure un webhook personalizado](#setting-up-a-custom-incoming-webhook) en Teams.
+1. Cree el archivo JSON de tarjeta adaptable:
 
     ```json
     {
@@ -272,7 +272,7 @@ La siguiente manifest.jsen el archivo contiene los elementos básicos necesarios
     > - El campo `"contentType"` debe establecerse en tipo de tarjeta adaptable.
     > - El objeto `"content"` es la tarjeta con formato JSON.
 
-1. Prueba tu tarjeta adaptable con Cartero.
+1. Pruebe la tarjeta adaptable con Postman.
 
 Para probar la tarjeta adaptativa, puede usar [Postman](https://www.postman.com) para enviar una solicitud POST a la dirección URL que creó cuando configuró el webhook entrante. Pegue el archivo JSON en el cuerpo de la solicitud y vea el mensaje de la tarjeta adaptable en Teams.
 
@@ -281,9 +281,9 @@ Para probar la tarjeta adaptativa, puede usar [Postman](https://www.postman.com)
 
 ## <a name="testing-your-connector"></a>Probar el conector
 
-Para probar el conector, cárguelo en un equipo igual que lo haría con cualquier otra aplicación. Puede crear un paquete de .zip mediante el archivo de manifiesto desde el Panel para desarrolladores de conectores que se modificó como se indicó en la sección anterior y los dos archivos de icono.
+Para probar el conector, cárguelo en un equipo igual que lo haría con cualquier otra aplicación. Puede crear un paquete .zip mediante el archivo de manifiesto del Panel de desarrolladores de Conectores que se modificó como se indica en la sección anterior y los dos archivos de icono.
 
-Después de cargar la aplicación, abra la lista Conectores desde cualquier canal. Desplázate hasta la parte inferior para ver tu aplicación en la sección **Cargado:**
+Después de cargar la aplicación, abra la lista Conectores desde cualquier canal. Desplácese a la parte inferior para ver la aplicación en la **sección Cargado:**
 
 ![Captura de pantalla de la sección cargada en el cuadro de diálogo Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -301,7 +301,7 @@ Los límites de velocidad de la aplicación controlan el tráfico que puede gene
 |---|---|
 | 1   | 4   |  
 | 30   | 60  |  
-| 3600   | 100  |
+| 3600   | 60W  |
 | 7200 | 150  |
 | 86400  | 1800  |
 
@@ -325,6 +325,6 @@ try
  
 Estos límites tienen el propósito de reducir el correo no deseado en un canal con un conector y garantizan una experiencia óptima para los usuarios finales.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Office 365 Conectores — Microsoft Teams](/connectors/teams/)
+[Office 365 Conectores: Microsoft Teams](/connectors/teams/)

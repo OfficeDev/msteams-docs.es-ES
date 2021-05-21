@@ -2,7 +2,7 @@
 title: Creación de una página de configuración
 author: laujan
 description: cómo crear una página de configuración
-keywords: equipos pestañas canal de grupo configurable
+keywords: Canal de grupo de pestañas de teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
@@ -15,19 +15,19 @@ ms.locfileid: "52566687"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
-Una página de configuración es un tipo especial de página de [contenido.](content-page.md) Los usuarios configuran algunos aspectos de la aplicación Microsoft Teams mediante la página de configuración y usan esa configuración como parte de lo siguiente:
+Una página de configuración es un tipo especial de [página de contenido](content-page.md). Los usuarios configuran algunos aspectos de la aplicación Microsoft Teams con la página de configuración y la usan como parte de lo siguiente:
 
-* Una pestaña de chat de canal o grupo: recopile información de los usuarios y establezca la `contentUrl` página de contenido que se va a mostrar.
+* Una pestaña de chat de canal o grupo: recopilar información de los usuarios y establecer la `contentUrl` página de contenido que se mostrará.
 * Una [extensión de mensajería](~/messaging-extensions/what-are-messaging-extensions.md).
-* Un [conector de Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+* Un [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuración de un canal o pestaña de chat de grupo
+## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuración de una pestaña de chat de grupo o canal
 
-La aplicación debe hacer referencia al [SDK de cliente de JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) y llamar a `microsoft.initialize()` . Además, las direcciones URL utilizadas deben estar protegidas y estar disponibles en la nube. 
+La aplicación debe hacer referencia al [sdk Microsoft Teams cliente de JavaScript y](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) llamar a `microsoft.initialize()` . Además, las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube. 
 
 ### <a name="example"></a>Ejemplo
 
-Un ejemplo de una página de configuración se muestra en la siguiente imagen: 
+En la siguiente imagen se muestra un ejemplo de una página de configuración: 
 
 <img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
 
@@ -88,7 +88,7 @@ El código correspondiente para la página de configuración se muestra en la si
 ...
 ```
 
-Elija **el** botón Seleccionar gris o **Seleccionar rojo** en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo. 
+Elija seleccionar **el botón Gris** o **Seleccionar** rojo en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo. 
 
 La siguiente imagen muestra el contenido de la pestaña con el icono gris:
 
@@ -98,32 +98,32 @@ La siguiente imagen muestra el contenido de la pestaña con el icono rojo:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-La elección del botón relativo desencadena `saveGray()` uno o varios e invoca lo `saveRed()` siguiente:
+Elegir el botón relativo desencadena `saveGray()` o , e invoca lo `saveRed()` siguiente:
 
-1. El `settings.setValidityState(true)` está establecido en true.
-1. `microsoftTeams.settings.registerOnSaveHandler()`Se desencadena el controlador de eventos.
-1. El botón **Guardar** de la página de configuración de la aplicación, cargado en Teams, está habilitado.
+1. Se `settings.setValidityState(true)` establece en true.
+1. Se `microsoftTeams.settings.registerOnSaveHandler()` desencadena el controlador de eventos.
+1. El **botón** Guardar de la página de configuración de la aplicación, cargado en Teams, está habilitado.
 
-El código de página de configuración informa a la Teams que se cumplen los requisitos de configuración y la instalación puede continuar. Cuando el usuario selecciona **Guardar,** se establecen los parámetros de `settings.setSettings()` la interfaz, tal como se `Settings` define. Para obtener más información, consulte [Configuración interfaz](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). En el último paso, `saveEvent.notifySuccess()` se llama para indicar que la dirección URL del contenido se ha resuelto correctamente.
+El código de página de configuración informa a Teams que los requisitos de configuración se cumplen y la instalación puede continuar. Cuando el usuario selecciona **Guardar**, los parámetros de `settings.setSettings()` se establecen, según lo define la `Settings` interfaz. Para obtener más información, [vea Configuración interfaz](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). En el último paso, se llama para indicar que la dirección URL de `saveEvent.notifySuccess()` contenido se ha resuelto correctamente.
 
 >[!NOTE]
 >
->* Si registra un controlador de guardado mediante `microsoftTeams.settings.registerOnSaveHandler()` , la devolución de llamada debe invocar o indicar el resultado de la `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` configuración.
->* Si no registra un controlador de guardado, la `saveEvent.notifySuccess()` llamada se realiza automáticamente cuando el usuario selecciona **Guardar**.
+>* Si registra un controlador de guardado mediante , la devolución de llamada debe invocar o indicar `microsoftTeams.settings.registerOnSaveHandler()` el resultado de la `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` configuración.
+>* Si no registra un controlador de guardado, la llamada se realiza `saveEvent.notifySuccess()` automáticamente cuando el usuario selecciona **Guardar**.
 
-### <a name="get-context-data-for-your-tab-settings"></a>Obtenga datos de contexto para la configuración de la pestaña
+### <a name="get-context-data-for-your-tab-settings"></a>Obtener datos de contexto para la configuración de la pestaña
 
-Puede que su pestaña necesite información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de su pestaña al proporcionar una experiencia de usuario más personalizada.
+Puede que su pestaña necesite información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de la pestaña al proporcionar una experiencia de usuario más personalizada.
 
-Para obtener más información sobre las propiedades utilizadas para la configuración de pestañas, consulte [Interfaz de contexto](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
+Para obtener más información sobre las propiedades usadas para la configuración de pestañas, vea [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
 
-1. Inserte marcadores de posición de cadena de consulta de DIRECCIÓN URL en el `configurationURL` manifiesto.
+1. Inserte marcadores de posición de cadena de consulta url en el `configurationURL` manifiesto .
 
-1. Utilice el método [SDK de Teams.](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})`
+1. Use el [Teams SDK.](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})`
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insertar marcadores de posición en el `configurationUrl`
 
-Agregue marcadores de posición de interfaz de contexto a la `configurationUrl` base. Por ejemplo:
+Agregue marcadores de posición de interfaz de contexto a la base `configurationUrl` . Por ejemplo:
 
 ##### <a name="base-url"></a>Base URL
 
@@ -133,7 +133,7 @@ Agregue marcadores de posición de interfaz de contexto a la `configurationUrl` 
 ...
 ```
 
-#### <a name="base-url-with-query-strings"></a>URL base con cadenas de consulta
+#### <a name="base-url-with-query-strings"></a>Dirección URL base con cadenas de consulta
 
 ```json
 ...
@@ -141,7 +141,7 @@ Agregue marcadores de posición de interfaz de contexto a la `configurationUrl` 
 ...
 ```
 
-Después de cargar la página, el Teams actualiza los marcadores de posición de cadena de consulta con valores relevantes. Incluya lógica en la página de configuración para recuperar y usar esos valores. Para obtener más información sobre cómo trabajar con cadenas de consulta de DIRECCIÓN URL, vea [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) en MDN Web Docs. En el ejemplo siguiente se describe la forma de extraer un valor de la `configurationUrl` propiedad:
+Después de cargar la página, el Teams actualiza los marcadores de posición de cadena de consulta con valores relevantes. Incluya lógica en la página de configuración para recuperar y usar esos valores. Para obtener más información sobre cómo trabajar con cadenas de consulta de dirección URL, vea [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN Web Docs. En el siguiente ejemplo se describe la forma de extraer un valor de la `configurationUrl` propiedad:
 
 ```html
 <script>
@@ -156,9 +156,9 @@ document.write(getId());
 </script>
 ```
 
-### <a name="use-the-getcontext-function-to-retrieve-context"></a>Utilice la `getContext()` función para recuperar el contexto
+### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar la `getContext()` función para recuperar contexto
 
-La `microsoftTeams.getContext((context) => {})` función recupera la interfaz [Context](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) cuando se invoca. Agregue esta función a la página de configuración para recuperar valores de contexto:
+La `microsoftTeams.getContext((context) => {})` función recupera la interfaz context [cuando](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) se invoca. Agregue esta función a la página de configuración para recuperar valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -176,14 +176,14 @@ La `microsoftTeams.getContext((context) => {})` función recupera la interfaz [C
 
 ## <a name="context-and-authentication"></a>Contexto y autenticación
 
- Autentique antes de permitir que un usuario configure la aplicación. De lo contrario, el contenido podría incluir orígenes que tienen sus protocolos de autenticación. Para obtener más información, consulte [Autenticar a un usuario en una pestaña Microsoft Teams](~/tabs/how-to/authentication/auth-flow-tab.md). Use información de contexto para construir las solicitudes de autenticación y las direcciones URL de página de autorización.
-Asegúrese de que todos los dominios utilizados en las páginas de pestañas se enumeran en la `manifest.json` matriz y `validDomains` la matriz.
+ Autentica antes de permitir que un usuario configure la aplicación. De lo contrario, el contenido podría incluir orígenes que tienen sus protocolos de autenticación. Para obtener más información, vea [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Use información de contexto para crear las direcciones URL de la página de autorización y las solicitudes de autenticación.
+Asegúrese de que todos los dominios usados en las páginas de pestañas se enumeran en la `manifest.json` matriz `validDomains` and.
 
-## <a name="modify-or-remove-a-tab"></a>Modificar o eliminar una pestaña
+## <a name="modify-or-remove-a-tab"></a>Modificar o quitar una pestaña
 
-Las opciones de eliminación compatibles refinan aún más la experiencia del usuario. Establezca la propiedad del manifiesto `canUpdateConfiguration` en , que permite a los usuarios `true` modificar, reconfigurar o cambiar el nombre de un grupo o canal pestaña. Además, indique lo que sucede con el contenido cuando se quita una pestaña, incluyendo una página de opciones de eliminación en la aplicación y estableciendo un valor para la `removeUrl` propiedad en la  `setSettings()` configuración. El usuario puede desinstalar las pestañas Personal, pero no puede modificarlas. Para obtener más información, consulte [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
+Las opciones de eliminación admitidas refinan aún más la experiencia del usuario. Establezca la propiedad del manifiesto en , que permite a los usuarios `canUpdateConfiguration` modificar, reconfigurar o cambiar el nombre de una pestaña de grupo `true` o canal. Además, indica lo que sucede con el contenido cuando se quita una pestaña, incluyendo una página de opciones de eliminación en la aplicación y estableciendo un valor para la propiedad `removeUrl` en la  `setSettings()` configuración. El usuario puede desinstalar las pestañas Personales, pero no puede modificarlas. Para obtener más información, vea [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Microsoft Teams configuración setSettings() para la página de eliminación:
+Microsoft Teams setSettings() para la página de eliminación:
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clientes móviles
 
-Si decide que la pestaña de canal o grupo aparezca en la Teams clientes móviles, la `setSettings()` configuración debe tener un valor para la `websiteUrl` propiedad. Para obtener más información, consulte [instrucciones para pestañas en dispositivos móviles.](~/tabs/design/tabs-mobile.md)
+Si decide que la pestaña canal o grupo aparezca en el Teams móviles, la configuración debe tener un `setSettings()` valor para la `websiteUrl` propiedad. Para obtener más información, consulte [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).

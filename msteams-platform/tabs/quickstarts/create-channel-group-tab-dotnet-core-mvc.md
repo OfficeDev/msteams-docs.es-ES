@@ -1,20 +1,20 @@
 ---
-title: Crear una pestaña Canal y Grupo con ASP.NET MVC principal
+title: Crear una pestaña Canal y Grupo con ASP.NET Core MVC
 author: laujan
 description: Guía de inicio rápido para crear un canal personalizado y una pestaña de grupo con ASP.NET Core MVC
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 9d89fd98bae9732a8f9e2d34b82d7fc0e6985e01
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020313"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52580465"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Crear una pestaña De canal personalizado y grupo con ASP.NET MVC principal
+# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Crear un canal personalizado y una pestaña de grupo con ASP.NET Core MVC
 
-En esta guía de inicio rápido, crearemos una pestaña de canal o grupo personalizada con C# y ASP.Net Core MVC. También usaremos [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
+En esta guía de inicio rápido, crearemos una pestaña de canal o grupo personalizada con C# y ASP.Net Core MVC. También usaremos [App Studio](~/concepts/build-and-test/app-studio-overview.md) para Microsoft Teams finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -38,7 +38,7 @@ Para compilar y ejecutar la aplicación, presione **F5** o **elija Iniciar depur
 
 ### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía ASP.NET aplicación web principal 2.2 con la casilla Avanzadas *- Configurar* para HTTPS activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
+Este proyecto se creó a partir de una plantilla vacía ASP.NET Core aplicación web 2.2 con la casilla Avanzadas *- Configurar* para HTTPS activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -64,11 +64,11 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
 - Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams.
+Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña a Teams.
 
 ### <a name="csproj"></a>.csproj
 
-En la ventana Visual Studio Explorador de soluciones haga clic con el botón secundario en el proyecto y **seleccione Editar archivo de proyecto.** En la parte inferior del archivo verá el código que crea y actualiza la carpeta zip cuando se compila la aplicación:
+En la ventana Visual Studio Explorador de soluciones haga clic con el botón secundario en el proyecto y seleccione **Editar Project archivo**. En la parte inferior del archivo verá el código que crea y actualiza la carpeta zip cuando se compila la aplicación:
 
 ```xml
 <PropertyGroup>
@@ -92,7 +92,7 @@ En la ventana Visual Studio Explorador de soluciones haga clic con el botón sec
 
 *ChannelGroup.cs* presenta un objeto Message y métodos a los que se llamará desde los controladores durante la configuración.
 
-### <a name="views"></a>Vistas
+### <a name="views"></a>Views
 
 #### <a name="home"></a>Inicio
 
@@ -100,7 +100,7 @@ ASP.NET Core trata los archivos denominados *Index* como la página predetermina
 
 #### <a name="shared"></a>Compartido
 
-El marcado de vista *parcial _Layout.cshtml* contiene la estructura de página general de la aplicación y los elementos visuales compartidos. También hará referencia a la biblioteca de Teams.
+El marcado de vista *parcial _Layout.cshtml* contiene la estructura de página general de la aplicación y los elementos visuales compartidos. También hará referencia a la Teams biblioteca.
 
 ### <a name="controllers"></a>Controladores
 
@@ -110,9 +110,9 @@ Los controladores usan la propiedad ViewBag para transferir valores dinámicamen
 
 - Abra un símbolo del sistema en la raíz del directorio del proyecto y ejecute el siguiente comando:
 
-```bash
-ngrok http https://localhost:443560 -host-header="localhost:44360"
-```
+    ```bash
+    ngrok http https://localhost:443560 -host-header="localhost:44360"
+    ```
 
 - Ngrok escuchará las solicitudes de Internet y las enrutará a la aplicación cuando se ejecute en el puerto 44355.  Debe ser similar `https://y8rCgT2b.ngrok.io/` a *donde y8rCgT2b* se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
 
@@ -120,8 +120,6 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 
 ## <a name="update-your-application"></a>Actualizar la aplicación
 
-En **Tab.cshtml,** la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir el **botón Seleccionar gris** o **Seleccionar** rojo, se activa o, respectivamente, se establece y habilita el botón Guardar en la página `saveGray()` de `saveRed()` `settings.setValidityState(true)` configuración.  Este código permite a Teams saber que ha cumplido los requisitos de configuración y que la instalación puede continuar. Al guardar, se establecen los `settings.setSettings` parámetros de. Por último, `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente.
+En **Tab.cshtml,** la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir el **botón Seleccionar gris** o **Seleccionar** rojo, se activa o, respectivamente, se establece y habilita el botón Guardar en la página `saveGray()` de `saveRed()` `settings.setValidityState(true)` configuración.  Este código permite Teams que ha cumplido los requisitos de configuración y la instalación puede continuar. Al guardar, se establecen los `settings.setSettings` parámetros de. Por último, `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
-
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

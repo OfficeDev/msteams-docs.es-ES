@@ -41,7 +41,7 @@ Es fundamental que el bot se presente y describa lo que puede hacer. Esta comuni
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>Mensaje de bienvenida en un chat uno a uno
 
-En contextos personales, los mensajes de bienvenida marcan el tono del bot. El mensaje incluye un saludo, lo que el bot puede hacer y algunas sugerencias sobre cómo interactuar. Por ejemplo, "Trate de preguntarme sobre ...". Cuando sea posible, estas sugerencias deben devolver respuestas almacenadas sin necesidad de iniciar sesión.
+En contextos personales, los mensajes de bienvenida marcan el tono del bot. El mensaje incluye un saludo, lo que el bot puede hacer y algunas sugerencias sobre cómo interactuar. Por ejemplo, "Intente preguntarme sobre ...". Cuando sea posible, estas sugerencias deben devolver respuestas almacenadas sin necesidad de iniciar sesión.
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="El ejemplo muestra una introducción a un bot en una aplicación personal." border="false":::
 
@@ -68,7 +68,7 @@ Puede incluir un paseo con mensajes de bienvenida y para cuando el bot responda 
 
 #### <a name="one-on-one-chats"></a>Chats uno a uno
 
-En una aplicación personal, un carrusel puede ofrecer información general eficaz sobre el bot y otras características de la aplicación. Se recomienda incluir botones para permitir a los usuarios probar comandos de bot. Por ejemplo, **crear una tarea**.
+En una aplicación personal, un carrusel puede ofrecer información general eficaz sobre el bot y otras características de la aplicación. Se recomienda incluir botones para permitir que los usuarios prueben comandos bot. Por ejemplo, **Crear una tarea**.
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="El ejemplo muestra un paseo de bots en un chat uno a uno." border="false":::
 
@@ -134,7 +134,7 @@ Use un diccionario de sinónimos y la ayuda de personas tan diversas como le sea
 
 Diseñe el bot para reconocer la intención del usuario. La idea es capturar lo que alguien quiere de un bot como respuesta a un mensaje o una consulta. La intención clasifica un mensaje o consulta como una acción única con uno o varios objetos de datos afectados por la acción. 
 
-En los ejemplos siguientes se describen la intención del usuario y los datos de los mensajes enviados a los bots:
+En los ejemplos siguientes se describen la intención del usuario y los datos de los mensajes enviados a bots:
 
 :::row:::
    :::column span="":::
@@ -167,7 +167,7 @@ Cuando reciben una consulta, los bots pueden proporcionar una coincidencia exact
 
 Su bot no solo debe poder admitir solicitudes y preguntas completas, sino también lidiar con interacciones de varios turnos. Anticipar los posibles pasos siguientes facilita mucho a los usuarios completar el flujo de tareas (les evita elaborar una solicitud exhaustiva).
 
-En el ejemplo siguiente, el bot responde a cada mensaje con opciones para lo que podría querer hacer a continuación:
+En el siguiente ejemplo, el bot responde a cada mensaje con opciones para lo que podría querer hacer a continuación:
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="El ejemplo muestra una interacción multiturno con un bot." border="false":::
 
@@ -175,7 +175,7 @@ En el ejemplo siguiente, el bot responde a cada mensaje con opciones para lo que
 
 Con la mensajería dinámica, el bot puede actuar como un boletín que envía notificaciones relevantes a un canal, chat de grupo o usuario con una frecuencia específica. Un bot puede enviar un mensaje cuando se ha hecho cambios en un documento o cuando se cierra un elemento de trabajo.
 
-En el ejemplo siguiente, un usuario recibe una notificación del sistema de que un bot les envió un mensaje en otro canal:
+En el siguiente ejemplo, un usuario recibe una notificación del sistema que un bot les envía un mensaje en otro canal:
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="En el ejemplo se muestra una notificación del sistema en la que un bot informa de forma dinámica a un usuario desde otro canal." border="false":::
 
@@ -185,7 +185,7 @@ Ahora, en ese canal, el usuario puede leer su mensaje del bot.
 
 ### <a name="use-tabs-with-bots"></a>Usar pestañas con bots
 
-Una pestaña puede facilitar el uso del bot. Por ejemplo, si el bot puede crear elementos de trabajo, sería bueno mostrar todos esos elementos en una ubicación central dentro de una pestaña. Para obtener más información, consulte [diseñar pestañas](../../tabs/design/tabs.md).
+Una pestaña puede facilitar el uso del bot. Por ejemplo, si el bot puede crear elementos de trabajo, sería bueno mostrar todos esos elementos en una ubicación central dentro de una pestaña. Para obtener más información, vea [designing tabs](../../tabs/design/tabs.md).
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="El ejemplo muestra cómo una pestaña puede ayudar a organizar el contenido del bot." border="false":::
 
@@ -197,11 +197,11 @@ Los usuarios deberían poder cambiar la configuración de un bot. Puede proporci
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Utilice estas recomendaciones para crear una experiencia de aplicación de calidad.
+Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 ### <a name="content"></a>Content
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Ejemplo que muestra una práctica recomendada de bot para establecer una persona clara." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot para establecer una persona clara." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>Práctica recomendada: cree un rol coherente para el bot
 
@@ -211,7 +211,7 @@ Encontrará más información sobre cómo escribir para los bots en el <a href="
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra para transmitir claramente lo que su bot puede hacer." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Ejemplo que muestra para transmitir claramente lo que el bot puede hacer." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>Práctica recomendada: transmita claramente qué puede hacer el bot
 
@@ -230,7 +230,7 @@ Las primeras impresiones son importantes. Es probable que los usuarios se confun
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Ejemplo que muestra que el bot debe reconocer no preguntas." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="El ejemplo que muestra el bot debe reconocer que no hay preguntas." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>Práctica recomendada: que el bot reconozca mensajes que no son preguntas
 
@@ -251,7 +251,7 @@ Algunas personas esperan que las conversaciones fluyan de forma natural como lo 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo que muestra los bots debe ayudar a los usuarios a comprender cómo usar bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Ejemplo que muestra bots debe ayudar a los usuarios a comprender cómo usar bots." border="false":::
 
 #### <a name="do-provide-help"></a>Práctica recomendada: proporcione ayuda
 
@@ -259,7 +259,7 @@ Si el bot no puede satisfacer una solicitud, dé al usuario una manera de aprend
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Ejemplo que muestra que el bot no debe dejar varados a los usuarios." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Ejemplo que muestra que el bot no debe varár a los usuarios." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>Práctica a evitar: dejar a los usuarios sin ayuda
 
@@ -280,7 +280,7 @@ Si su bot proporciona una respuesta que requiere pasos adicionales, puede vincul
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Ejemplo que muestra cómo el bot debe evitar interacciones de varios giros." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Ejemplo que muestra cómo el bot debe evitar interacciones en varios turnos." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>Práctica a evitar: hacer interacciones multiuso tediosas
 
@@ -310,7 +310,7 @@ El bot no debería revelar información confidencial a un grupo de personas.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 A continuación, tiene guías adicionales que le pueden ayudar con el diseño del bot:
 

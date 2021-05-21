@@ -1,7 +1,7 @@
 ---
-title: Crea una pestaña personal con ASP.NET Core
+title: Crear una pestaña personal con ASP.NET Core
 author: laujan
-description: Una guía de inicio rápido para crear una pestaña personal personalizada con ASP.NET Core.
+description: Guía de inicio rápido para crear una pestaña personal personalizada con ASP.NET Core.
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,34 +12,34 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566897"
 ---
-# <a name="create-a-personal-tab-using-aspnetcore"></a>Cree una pestaña personal con ASP.NETCore
+# <a name="create-a-personal-tab-using-aspnetcore"></a>Crear una pestaña personal con ASP.NETCore
 
-En esta guía de inicio rápido, crearemos una pestaña personal personalizada con las páginas C# y ASP.Net Core Razor. También usaremos [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
+En esta guía de inicio rápido, crearemos una pestaña personal personalizada con C# y ASP.Net páginas principales de La hoja de herramientas. También usaremos [App Studio](~/concepts/build-and-test/app-studio-overview.md) para Microsoft Teams finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
 ## <a name="get-the-source-code"></a>Obtener el código fuente
 
-Abra un símbolo del sistema y cree un nuevo directorio para el proyecto de pestaña. Hemos proporcionado un proyecto sencillo para que comiences. Para recuperar el código fuente, puede descargar la carpeta zip y extraer los archivos o clonar el repositorio de ejemplo en el nuevo directorio:
+Abra un símbolo del sistema y cree un nuevo directorio para el proyecto de pestaña. Hemos proporcionado un proyecto sencillo para empezar. Para recuperar el código fuente, puede descargar la carpeta zip y extraer los archivos o clonar el repositorio de ejemplo en el nuevo directorio:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Una vez que tenga el código fuente, abra Visual Studio y seleccione **Abrir un proyecto o solución.** Vaya al directorio de la aplicación de pestañas y abra **PersonalTab.sln**.
+Una vez que tenga el código fuente, abra Visual Studio y seleccione **Abrir un proyecto o solución**. Vaya al directorio de la aplicación de tabulación y abra **PersonalTab.sln**.
 
-Para compilar y ejecutar la aplicación, presione **F5** o elija **Iniciar depuración** en el menú **Depurar.** En un explorador, vaya a las direcciones URL a continuación para comprobar la aplicación cargada correctamente:
+Para compilar y ejecutar la aplicación, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar. En un explorador, vaya a las direcciones URL siguientes para comprobar que la aplicación se cargó correctamente:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
 - `http://localhost:44325/privacy`
 - `http://localhost:44325/tou`
 
-## <a name="review-the-source-code"></a>Revise el código fuente
+## <a name="review-the-source-code"></a>Revisar el código fuente
 
-### <a name="startupcs"></a>Inicio.cs
+### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía de aplicación web ASP.NET Core 2.2 con la casilla **Avanzadas - Configurar para HTTPS** activada en la configuración. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita la publicación de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
+Este proyecto se creó a partir de una plantilla vacía ASP.NET Core aplicación web 2.2 con la casilla Avanzadas **- Configurar** para HTTPS activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -59,21 +59,21 @@ En ASP.NET Core, la carpeta raíz web es donde la aplicación busca archivos est
 
 ### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET Core trata los archivos denominados *Índice* como la página predeterminada/página de inicio del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se mostrará como la página principal de la aplicación.
+ASP.NET Core trata los archivos denominados *Index* como la página predeterminada/principal del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se mostrará como la página principal de la aplicación.
 
 ### <a name="appmanifest-folder"></a>Carpeta AppManifest
 
 Esta carpeta contiene los siguientes archivos de paquete de aplicación necesarios:
 
-- Un **icono a todo color** que mide 192 x 192 píxeles.
-- Un **icono de contorno transparente** que mide 32 x 32 píxeles.
-- Un **manifest.jsen el** archivo que especifica los atributos de la aplicación.
+- Un **icono de color completo** que mide 192 x 192 píxeles.
+- Un **icono de esquema transparente** que mide 32 x 32 píxeles.
+- Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben estar comprimidos en un paquete de aplicación para su uso en la carga de la pestaña a Teams. Microsoft Teams cargará lo especificado en el `contentUrl` manifiesto, lo incrustará en un <iframe \> y lo representará en la pestaña.
+Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams cargará el especificado en el manifiesto, lo incrustará en un iframe <y lo representará `contentUrl` \> en la pestaña.
 
 ### <a name="csproj"></a>.csproj
 
-En la ventana Explorador de soluciones Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Editar Project archivo**. En la parte inferior del archivo verá el código que crea y actualiza la carpeta zip cuando se compila la aplicación:
+En la Visual Studio Explorador de soluciones, haga clic con el botón secundario en el proyecto y seleccione **Editar Project archivo**. En la parte inferior del archivo verá el código que crea y actualiza la carpeta zip cuando se compila la aplicación:
 
 ```xml
 <PropertyGroup>
@@ -103,22 +103,22 @@ En la ventana Explorador de soluciones Visual Studio, haga clic con el botón de
     ngrok http https://localhost:44325 -host-header="localhost:44325"
     ```
 
-- Ngrok escuchará las solicitudes de Internet y las enrutará a su aplicación cuando se ejecute en el puerto 44325.  Debe ser similar `https://y8rPrT2b.ngrok.io/` a donde *y8rPrT2b* es reemplazado por su URL HTTPS alfanumérica ngrok.
+- Ngrok escuchará las solicitudes de Internet y las enrutará a la aplicación cuando se ejecute en el puerto 44325.  Debe ser similar `https://y8rPrT2b.ngrok.io/` a *donde y8rPrT2b* se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
 
-- Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de tomar nota de la dirección URL: la necesitará más adelante.
+- Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de tomar nota de la dirección URL, la necesitará más adelante.
 
-- Compruebe que **ngrok** se está ejecutando y funcionando correctamente abriendo el explorador e yendo a la página de contenido a través de la dirección URL HTTPS de ngrok que se proporcionó en la ventana del símbolo del sistema.
+- Compruebe que **ngrok** se está ejecutando y funcionando correctamente abriendo el explorador y yendo a la página de contenido a través de la dirección URL HTTPS de ngrok que se proporcionó en la ventana del símbolo del sistema.
 
 >[!TIP]
->Debe tener la aplicación en Visual Studio y ngrok ejecutándose para completar esta guía de inicio rápido. Si necesita dejar de ejecutar la aplicación en Visual Studio para trabajar en ella, **mantenga ngrok en ejecución.** Seguirá escuchando y reanudará el enrutamiento de la solicitud de la aplicación cuando se reinicie en Visual Studio. Si tienes que reiniciar el servicio ngrok devolverá una nueva dirección URL y tendrás que actualizar cada lugar que use esa dirección URL.
+>Debe tener la aplicación en ejecución Visual Studio y ngrok para completar esta guía de inicio rápido. Si necesita dejar de ejecutar la aplicación en Visual Studio para trabajar en ella, **mantenga ngrok en ejecución**. Seguirá escuchando y reanudará el enrutamiento de la solicitud de la aplicación cuando se reinicie en Visual Studio. Si tiene que reiniciar el servicio ngrok, devolverá una nueva dirección URL y tendrá que actualizar cada lugar que use esa dirección URL.
 
-### <a name="run-your-application"></a>Ejecute la aplicación
+### <a name="run-your-application"></a>Ejecutar la aplicación
 
-- En Visual Studio presione **F5** o elija **Iniciar depuración** en el menú **Depurar de** la aplicación.
+- En Visual Studio presione **F5** o **elija Iniciar depuración** en el menú **Depurar de la** aplicación.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Cree una pestaña personal personalizada con ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)
+> [Crear una pestaña personal personalizada con ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)
