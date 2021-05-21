@@ -1,6 +1,6 @@
 ---
-title: Empaqueta tu aplicación
-description: Obtén información sobre cómo empaquetar la aplicación Microsoft Teams para probar, cargar y almacenar publicaciones.
+title: Empaquetar la aplicación
+description: Aprende a empaquetar tu aplicación Microsoft Teams para probar, cargar y publicar en la tienda.
 localization_priority: Normal
 ms.topic: conceptual
 ms.openlocfilehash: 219e2d5341707ed51b7e0a3a8077f93df9eac640
@@ -10,46 +10,46 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52565217"
 ---
-# <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete de aplicación Microsoft Teams
+# <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete Microsoft Teams aplicación
 
-Necesitas un paquete de aplicación, sin embargo, planeas distribuir tu aplicación Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
+Necesitas un paquete de la aplicación sin embargo planeas distribuir tu Microsoft Teams aplicación. Un paquete válido es un archivo ZIP que contiene lo siguiente:
 
-* **Manifiesto de aplicación:** describe cómo está configurada la aplicación, incluidas sus capacidades, recursos necesarios y otros atributos importantes.
-* **Iconos de la aplicación:** cada paquete requiere un icono de color y contorno para la aplicación.
+* **Manifiesto de** la aplicación: describe cómo se configura la aplicación, incluidas sus capacidades, los recursos necesarios y otros atributos importantes.
+* **Iconos de la** aplicación: cada paquete requiere un icono de color y esquema para la aplicación.
 
 ## <a name="app-manifest"></a>Manifiesto de la aplicación
 
 El archivo de manifiesto de la aplicación debe estar en el nivel superior del paquete con el nombre `manifest.json` . 
 
-Al publicar en el almacén de Teams, asegúrese de que el manifiesto hace referencia al [esquema](~/resources/schema/manifest-schema.md)más reciente.
+Al publicar en el almacén Teams, asegúrese de que el manifiesto haga referencia al esquema [más reciente](~/resources/schema/manifest-schema.md).
 
 ## <a name="app-icons"></a>Iconos de la aplicación
 
-El paquete de la aplicación debe incluir dos versiones PNG del icono de la aplicación: una versión de color y contorno.
+El paquete de la aplicación debe incluir dos versiones PNG del icono de la aplicación: una versión de color y esquema.
 
 > [!Note]
-> Si la aplicación tiene un bot o una extensión de mensajería, los iconos también se incluirán en el registro Microsoft Azure Bot Service.
+> Si la aplicación tiene un bot o una extensión de mensajería, los iconos también se incluirán en el registro Microsoft Azure bot service.
 
-Para que la aplicación pase Teams revisión de la tienda, estos iconos deben cumplir los siguientes requisitos de tamaño.
+Para que la aplicación pase Teams la tienda, estos iconos deben cumplir los siguientes requisitos de tamaño.
 
 ### <a name="color-icon"></a>Icono de color
 
-La versión en color del icono se muestra en la mayoría de los escenarios Teams y debe ser de 192x192 píxeles. Su símbolo de icono (96x96 píxeles) puede ser de cualquier color, pero debe sentarse sobre un fondo cuadrado sólido o totalmente transparente.
+La versión de color del icono se muestra en la mayoría Teams escenarios y debe ser de 192 x 192 píxeles. El símbolo del icono (96 x 96 píxeles) puede ser cualquier color, pero debe estar sobre un fondo cuadrado sólido o totalmente transparente.
 
-Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bots. Para recortar el símbolo sin perder ningún detalle, incluye 48 píxeles de relleno alrededor de tu símbolo.
+Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bot. Para recortar el símbolo sin perder ningún detalle, incluya 48 píxeles de relleno alrededor del símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams icono de color y orientación de diseño." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams icono de color y instrucciones de diseño." border="false":::
 
-### <a name="outline-icon"></a>Icono de contorno
+### <a name="outline-icon"></a>Icono esquema
 
-Un icono de contorno se muestra en dos escenarios:
+Un icono de esquema se muestra en dos escenarios:
 
-* Cuando la aplicación está en uso y "izado" en la barra de aplicaciones en el lado izquierdo de Teams.
-* Cuando un usuario ancle la extensión de mensajería de la aplicación.
+* Cuando la aplicación está en uso y "izada" en la barra de la aplicación en el lado izquierdo de Teams.
+* Cuando un usuario ancla la extensión de mensajería de la aplicación.
 
-El icono debe ser de 32x32 píxeles. Puede ser blanco con un fondo transparente o transparente con un fondo blanco (no se permiten otros colores). El icono de contorno no debe tener ningún relleno adicional alrededor del símbolo.
+El icono debe ser de 32 x 32 píxeles. Puede ser blanco con un fondo transparente o transparente con un fondo blanco (no se permiten otros colores). El icono de esquema no debe tener ningún relleno adicional alrededor del símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams guía de diseño de iconos de contorno." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams de diseño de iconos de esquema." border="false":::
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
@@ -57,28 +57,28 @@ El icono debe ser de 32x32 píxeles. Puede ser blanco con un fondo transparente 
    :::column span="":::
 :::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Ilustración que muestra cómo diseñar los iconos de la aplicación." border="false":::
 
-#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Hacer: Siga las directrices precisas del icono de contorno
+#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Do: Follow the precise outline icon guidelines
 
-Los valores RGB de blanco utilizados en el icono deben ser Rojo: 255, Verde: 255, Azul: 255. Todas las demás partes del icono de contorno deben ser totalmente transparentes, con el canal alfa establecido en 0.
+Los valores RGB de blanco usados en el icono deben ser Rojo: 255, Verde: 255, Azul: 255. Todas las demás partes del icono de esquema deben ser totalmente transparentes, con el canal alfa establecido en 0.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Ilustración que muestra cómo no diseñar los iconos de la aplicación." border="false":::
 
-#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>No: Recortar en forma cuadrada circular o redondeada
+#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>No: Recortar en una forma cuadrada circular o redondeada
 
-El icono de color enviado en el paquete de la aplicación debe ser cuadrado. No redondees las esquinas de tu icono. Teams ajusta automáticamente el radio de esquina.
+El icono de color enviado en el paquete de la aplicación debe ser cuadrado. No redondee las esquinas del icono. Teams ajusta automáticamente el radio de esquina.
 
    :::column-end:::
 :::row-end:::
 
 #### <a name="dont-copy-other-brands"></a>No: Copiar otras marcas
 
-Sus iconos no deben imitar ningún producto protegido por derechos de autor que no posea. Por ejemplo, un diseño similar a un producto o marca de Microsoft.
+Los iconos no deben imitar ningún producto protegido por derechos de autor que no sea de su propiedad. Por ejemplo, un diseño similar a un producto o marca de Microsoft.
 
 ### <a name="examples"></a>Ejemplos
 
-Así es como aparecen los iconos de la aplicación en diferentes capacidades y contextos de Teams.
+Este es el modo en que los iconos de la aplicación aparecen en diferentes Teams capacidades y contextos.
 
 #### <a name="personal-app"></a>Aplicación personal
 
@@ -90,15 +90,15 @@ Así es como aparecen los iconos de la aplicación en diferentes capacidades y c
 
 #### <a name="messaging-extension"></a>Extensión de mensajería
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<>de texto alternativo " border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texto alternativo>" border="false":::
 
 ## <a name="next-step"></a>Paso siguiente
 
-Elige cómo planeas distribuir tu aplicación:
+Elige cómo planeas distribuir la aplicación:
 
 > [!div class="nextstepaction"]
-> [Descarga tu aplicación en Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [Descarga local de la aplicación en Teams](~/concepts/deploy-and-publish/apps-upload.md)
 > [!div class="nextstepaction"]
-> [Publica tu aplicación en tu organización](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+> [Publicar la aplicación en su organización](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
-> [Publica tu aplicación en la tienda](~/concepts/deploy-and-publish/appsource/publish.md)
+> [Publicar la aplicación en la tienda](~/concepts/deploy-and-publish/appsource/publish.md)
