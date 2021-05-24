@@ -61,8 +61,12 @@
       href: samples/app-templates.md
     - name: Conectores de turnos listos para producción
       href: samples/shifts-wfm-connectors.md
-    - name: Instalar Moodle LMS
-      href: resources/moodleInstructions.md
+    - name: Moodle LMS
+      items:
+        - name: Información general
+          href: resources/moodle-overview.md
+        - name: Instalar Moodle LMS
+          href: resources/moodleInstructions.md
     - name: Crear un botón Compartir en Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Añadir una pestaña de Teams a SharePoint
@@ -331,7 +335,7 @@
       items:
         - name: Flujo de autenticación en pestañas
           href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: "Usar autenticación de Azure\_AD"
+        - name: Usar autenticación de Azure AD
           href: tabs/how-to/authentication/auth-tab-aad.md
         - name: Usar autenticación silenciosa
           href: tabs/how-to/authentication/auth-silent-aad.md
