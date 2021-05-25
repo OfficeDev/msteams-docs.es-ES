@@ -3,38 +3,44 @@ title: Diseño de la aplicación personalizada
 author: heath-hamilton
 description: Obtén información sobre cómo diseñar Microsoft Teams aplicaciones. Los recursos incluyen el kit Microsoft Teams interfaz de usuario, procedimientos recomendados, ejemplos y mucho más.
 localization_priority: Normal
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 2f21872bd8c37026528ff6fde282e8c433d5e052
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565119"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644878"
 ---
-# <a name="designing-your-microsoft-teams-app"></a><span data-ttu-id="63cc1-104">Diseño de la Microsoft Teams aplicación</span><span class="sxs-lookup"><span data-stu-id="63cc1-104">Designing your Microsoft Teams app</span></span>
+# <a name="designing-your-microsoft-teams-app"></a><span data-ttu-id="898d0-104">Diseño de la Microsoft Teams aplicación</span><span class="sxs-lookup"><span data-stu-id="898d0-104">Designing your Microsoft Teams app</span></span>
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Imagen conceptual que presenta las Microsoft Teams de diseño.":::
 
-<span data-ttu-id="63cc1-106">Independientemente de si eres diseñador, jefe de producto, desarrollador o creador con herramientas de código bajo, estas directrices pueden ayudarte a tomar rápidamente las decisiones de diseño adecuadas para tu Microsoft Teams aplicación.</span><span class="sxs-lookup"><span data-stu-id="63cc1-106">Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Microsoft Teams app.</span></span>
+<span data-ttu-id="898d0-106">Independientemente de si eres diseñador, jefe de producto, desarrollador o creador con herramientas de código bajo, estas directrices pueden ayudarte a tomar rápidamente las decisiones de diseño adecuadas para tu Microsoft Teams aplicación.</span><span class="sxs-lookup"><span data-stu-id="898d0-106">Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Microsoft Teams app.</span></span>
 
-## <a name="teams-app-design-principles"></a><span data-ttu-id="63cc1-107">Teams de diseño de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="63cc1-107">Teams app design principles</span></span>
+## <a name="creating-a-cohesive-experience"></a><span data-ttu-id="898d0-107">Creación de una experiencia cohesiva</span><span class="sxs-lookup"><span data-stu-id="898d0-107">Creating a cohesive experience</span></span>
 
-<span data-ttu-id="63cc1-108">Teams aplicaciones ayudan a los usuarios a lograr más juntos.</span><span class="sxs-lookup"><span data-stu-id="63cc1-108">Teams apps help people achieve more together.</span></span> <span data-ttu-id="63cc1-109">Use estos principios para guiar el diseño.</span><span class="sxs-lookup"><span data-stu-id="63cc1-109">Use these principles to guide your design.</span></span>
+<span data-ttu-id="898d0-108">Diseñar una aplicación Teams es como diseñar una aplicación web convencional, pero también un poco diferente.</span><span class="sxs-lookup"><span data-stu-id="898d0-108">Designing a Teams app is like designing a conventional web app—but also a little different.</span></span> <span data-ttu-id="898d0-109">Un diseño eficaz resalta los atributos únicos de la aplicación mientras se adapta de forma natural a Teams características y contextos.</span><span class="sxs-lookup"><span data-stu-id="898d0-109">An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.</span></span>
+
+<span data-ttu-id="898d0-110">Estas directrices y recursos pueden ayudarle a encontrar ese equilibrio.</span><span class="sxs-lookup"><span data-stu-id="898d0-110">These guidelines and resources can help you strike that balance.</span></span> <span data-ttu-id="898d0-111">Sabrás qué hacer y qué evitar al diseñar la aplicación Teams (como la navegación de varios niveles en una pestaña).</span><span class="sxs-lookup"><span data-stu-id="898d0-111">You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).</span></span>
+
+## <a name="teams-app-design-principles"></a><span data-ttu-id="898d0-112">Teams de diseño de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="898d0-112">Teams app design principles</span></span>
+
+<span data-ttu-id="898d0-113">Teams aplicaciones ayudan a los usuarios a lograr más juntos.</span><span class="sxs-lookup"><span data-stu-id="898d0-113">Teams apps help people achieve more together.</span></span> <span data-ttu-id="898d0-114">Use estos principios para guiar el diseño.</span><span class="sxs-lookup"><span data-stu-id="898d0-114">Use these principles to guide your design.</span></span>
 
 :::row:::
    :::column span="":::
 
-### <a name="collaborative"></a><span data-ttu-id="63cc1-110">Colaboración</span><span class="sxs-lookup"><span data-stu-id="63cc1-110">Collaborative</span></span>
+### <a name="collaborative"></a><span data-ttu-id="898d0-115">Colaboración</span><span class="sxs-lookup"><span data-stu-id="898d0-115">Collaborative</span></span>
 
-<span data-ttu-id="63cc1-111">Teams aplicaciones ayudan a los usuarios a lograr más juntos.</span><span class="sxs-lookup"><span data-stu-id="63cc1-111">Teams apps help people achieve more together.</span></span> <span data-ttu-id="63cc1-112">Use estos principios para guiar el diseño.</span><span class="sxs-lookup"><span data-stu-id="63cc1-112">Use these principles to guide your design.</span></span>
+<span data-ttu-id="898d0-116">Teams aplicaciones ayudan a los usuarios a lograr más juntos.</span><span class="sxs-lookup"><span data-stu-id="898d0-116">Teams apps help people achieve more together.</span></span> <span data-ttu-id="898d0-117">Use estos principios para guiar el diseño.</span><span class="sxs-lookup"><span data-stu-id="898d0-117">Use these principles to guide your design.</span></span>
 
    :::column-end:::
    :::column span="":::
 
-### <a name="trustworthy"></a><span data-ttu-id="63cc1-113">Confiable</span><span class="sxs-lookup"><span data-stu-id="63cc1-113">Trustworthy</span></span>
+### <a name="trustworthy"></a><span data-ttu-id="898d0-118">Confiable</span><span class="sxs-lookup"><span data-stu-id="898d0-118">Trustworthy</span></span>
 
-<span data-ttu-id="63cc1-114">La aplicación es segura y compatible.</span><span class="sxs-lookup"><span data-stu-id="63cc1-114">The app is secure and compliant.</span></span> <span data-ttu-id="63cc1-115">Los usuarios pueden encontrar fácilmente información sobre privacidad.</span><span class="sxs-lookup"><span data-stu-id="63cc1-115">Users can easily find information about privacy.</span></span>
+<span data-ttu-id="898d0-119">La aplicación es segura y compatible.</span><span class="sxs-lookup"><span data-stu-id="898d0-119">The app is secure and compliant.</span></span> <span data-ttu-id="898d0-120">Los usuarios pueden encontrar fácilmente información sobre privacidad.</span><span class="sxs-lookup"><span data-stu-id="898d0-120">Users can easily find information about privacy.</span></span>
 
    :::column-end:::
 :::row-end:::
@@ -42,16 +48,16 @@ ms.locfileid: "52565119"
 :::row:::
    :::column span="":::
 
-### <a name="globally-inclusive"></a><span data-ttu-id="63cc1-116">Globalmente inclusiva</span><span class="sxs-lookup"><span data-stu-id="63cc1-116">Globally inclusive</span></span>
+### <a name="globally-inclusive"></a><span data-ttu-id="898d0-121">Globalmente inclusiva</span><span class="sxs-lookup"><span data-stu-id="898d0-121">Globally inclusive</span></span>
 
-<span data-ttu-id="63cc1-117">Las personas de todos los orígenes, conjuntos de aptitudes y disciplinas pueden usar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="63cc1-117">People of all backgrounds, skillsets, and disciplines can use the app.</span></span> <span data-ttu-id="63cc1-118">Es cultural, racial y socialmente consciente.</span><span class="sxs-lookup"><span data-stu-id="63cc1-118">It’s culturally, racially, and socially aware.</span></span>
+<span data-ttu-id="898d0-122">Las personas de todos los orígenes, conjuntos de aptitudes y disciplinas pueden usar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="898d0-122">People of all backgrounds, skillsets, and disciplines can use the app.</span></span> <span data-ttu-id="898d0-123">Es cultural, racial y socialmente consciente.</span><span class="sxs-lookup"><span data-stu-id="898d0-123">It’s culturally, racially, and socially aware.</span></span>
 
    :::column-end:::
    :::column span="":::
 
-### <a name="light"></a><span data-ttu-id="63cc1-119">Leve</span><span class="sxs-lookup"><span data-stu-id="63cc1-119">Light</span></span>
+### <a name="light"></a><span data-ttu-id="898d0-124">Leve</span><span class="sxs-lookup"><span data-stu-id="898d0-124">Light</span></span>
 
-<span data-ttu-id="63cc1-120">La aplicación se centra en escenarios principales que se combinan con Teams flujos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="63cc1-120">The app focuses on core scenarios that blend with Teams workflows.</span></span>
+<span data-ttu-id="898d0-125">La aplicación se centra en escenarios principales que se combinan con Teams flujos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="898d0-125">The app focuses on core scenarios that blend with Teams workflows.</span></span>
 
    :::column-end:::
 :::row-end:::
@@ -59,16 +65,16 @@ ms.locfileid: "52565119"
 :::row:::
    :::column span="":::
 
-### <a name="native-or-distinct"></a><span data-ttu-id="63cc1-121">Nativo o distinto</span><span class="sxs-lookup"><span data-stu-id="63cc1-121">Native or distinct</span></span>
+### <a name="native-or-distinct"></a><span data-ttu-id="898d0-126">Nativo o distinto</span><span class="sxs-lookup"><span data-stu-id="898d0-126">Native or distinct</span></span>
 
-<span data-ttu-id="63cc1-122">La aplicación usa componentes Teams diseño nativos o propios.</span><span class="sxs-lookup"><span data-stu-id="63cc1-122">The app uses native Teams design components or your own.</span></span> <span data-ttu-id="63cc1-123">No hay una combinación de esquemas de color, controles, entre otras.</span><span class="sxs-lookup"><span data-stu-id="63cc1-123">There’s no blend of color schemes, controls, and so on.</span></span>
+<span data-ttu-id="898d0-127">La aplicación usa componentes Teams diseño nativos o propios.</span><span class="sxs-lookup"><span data-stu-id="898d0-127">The app uses native Teams design components or your own.</span></span> <span data-ttu-id="898d0-128">No hay una combinación de esquemas de color, controles, entre otras.</span><span class="sxs-lookup"><span data-stu-id="898d0-128">There’s no blend of color schemes, controls, and so on.</span></span>
 
    :::column-end:::
    :::column span="":::
 
-### <a name="useful"></a><span data-ttu-id="63cc1-124">Útil</span><span class="sxs-lookup"><span data-stu-id="63cc1-124">Useful</span></span>
+### <a name="useful"></a><span data-ttu-id="898d0-129">Útil</span><span class="sxs-lookup"><span data-stu-id="898d0-129">Useful</span></span>
 
-<span data-ttu-id="63cc1-125">La aplicación se basa en un escenario que los usuarios deben hacer en Teams.</span><span class="sxs-lookup"><span data-stu-id="63cc1-125">The app is based on a scenario people need to do in Teams.</span></span>
+<span data-ttu-id="898d0-130">La aplicación se basa en un escenario que los usuarios deben hacer en Teams.</span><span class="sxs-lookup"><span data-stu-id="898d0-130">The app is based on a scenario people need to do in Teams.</span></span>
 
    :::column-end:::
 :::row-end:::
@@ -76,16 +82,16 @@ ms.locfileid: "52565119"
 :::row:::
    :::column span="":::
 
-### <a name="easy-to-use"></a><span data-ttu-id="63cc1-126">Fácil de usar</span><span class="sxs-lookup"><span data-stu-id="63cc1-126">Easy to use</span></span>
+### <a name="easy-to-use"></a><span data-ttu-id="898d0-131">Fácil de usar</span><span class="sxs-lookup"><span data-stu-id="898d0-131">Easy to use</span></span>
 
-<span data-ttu-id="63cc1-127">La interfaz de usuario es fácil de entender, agradable en apariencia y tono, y hace que las personas sean más productivas.</span><span class="sxs-lookup"><span data-stu-id="63cc1-127">The UI is easy to understand, pleasant in look and tone, and makes people more productive.</span></span>
+<span data-ttu-id="898d0-132">La interfaz de usuario es fácil de entender, agradable en apariencia y tono, y hace que las personas sean más productivas.</span><span class="sxs-lookup"><span data-stu-id="898d0-132">The UI is easy to understand, pleasant in look and tone, and makes people more productive.</span></span>
 
    :::column-end:::
    :::column span="":::
 
-### <a name="responsive"></a><span data-ttu-id="63cc1-128">Respuesta correcta</span><span class="sxs-lookup"><span data-stu-id="63cc1-128">Responsive</span></span>
+### <a name="responsive"></a><span data-ttu-id="898d0-133">Respuesta correcta</span><span class="sxs-lookup"><span data-stu-id="898d0-133">Responsive</span></span>
 
-<span data-ttu-id="63cc1-129">La aplicación es independiente del dispositivo y la pantalla.</span><span class="sxs-lookup"><span data-stu-id="63cc1-129">The app is device and screen agnostic.</span></span>
+<span data-ttu-id="898d0-134">La aplicación es independiente del dispositivo y la pantalla.</span><span class="sxs-lookup"><span data-stu-id="898d0-134">The app is device and screen agnostic.</span></span>
 
    :::column-end:::
 :::row-end:::
@@ -93,107 +99,86 @@ ms.locfileid: "52565119"
 :::row:::
    :::column span="":::
 
-### <a name="accessible"></a><span data-ttu-id="63cc1-130">Accesible</span><span class="sxs-lookup"><span data-stu-id="63cc1-130">Accessible</span></span>
+### <a name="accessible"></a><span data-ttu-id="898d0-135">Accesible</span><span class="sxs-lookup"><span data-stu-id="898d0-135">Accessible</span></span>
 
-<span data-ttu-id="63cc1-131">La aplicación cumple Teams requisitos de accesibilidad en términos de contraste de color, alternativas de navegación y mucho más.</span><span class="sxs-lookup"><span data-stu-id="63cc1-131">The app meets Teams accessibility requirements in terms of color contrast, navigation alternatives, and more.</span></span>
+<span data-ttu-id="898d0-136">La aplicación cumple Teams requisitos de accesibilidad en términos de contraste de color, alternativas de navegación y mucho más.</span><span class="sxs-lookup"><span data-stu-id="898d0-136">The app meets Teams accessibility requirements in terms of color contrast, navigation alternatives, and more.</span></span>
 
    :::column-end:::
    :::column span="":::
 
-### <a name="well-described"></a><span data-ttu-id="63cc1-132">Bien descrito</span><span class="sxs-lookup"><span data-stu-id="63cc1-132">Well described</span></span>
+### <a name="well-described"></a><span data-ttu-id="898d0-137">Bien descrito</span><span class="sxs-lookup"><span data-stu-id="898d0-137">Well described</span></span>
 
-<span data-ttu-id="63cc1-133">El texto, los iconos y las imágenes hacen que se aclare para qué está la aplicación y cómo usarla.</span><span class="sxs-lookup"><span data-stu-id="63cc1-133">Text, icons, and images make it clear what the app is for and how to use it.</span></span>
+<span data-ttu-id="898d0-138">El texto, los iconos y las imágenes hacen que se aclare para qué está la aplicación y cómo usarla.</span><span class="sxs-lookup"><span data-stu-id="898d0-138">Text, icons, and images make it clear what the app is for and how to use it.</span></span>
 
    :::column-end:::
 :::row-end:::
 
-## <a name="creating-a-cohesive-experience"></a><span data-ttu-id="63cc1-134">Creación de una experiencia cohesiva</span><span class="sxs-lookup"><span data-stu-id="63cc1-134">Creating a cohesive experience</span></span>
+## <a name="teams-design-system"></a><span data-ttu-id="898d0-139">Teams de diseño</span><span class="sxs-lookup"><span data-stu-id="898d0-139">Teams design system</span></span>
 
-<span data-ttu-id="63cc1-135">Diseñar una aplicación Teams es como diseñar una aplicación web convencional, pero también un poco diferente.</span><span class="sxs-lookup"><span data-stu-id="63cc1-135">Designing a Teams app is like designing a conventional web app—but also a little different.</span></span> <span data-ttu-id="63cc1-136">Un diseño eficaz resalta los atributos únicos de la aplicación mientras se adapta de forma natural a Teams características y contextos.</span><span class="sxs-lookup"><span data-stu-id="63cc1-136">An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.</span></span>
+<span data-ttu-id="898d0-140">Obtén información [sobre los aspectos Teams diseño de la aplicación,](design-teams-app-fundamentals.md)incluido el diseño, las esquemas de color y mucho más.</span><span class="sxs-lookup"><span data-stu-id="898d0-140">Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.</span></span>
 
-<span data-ttu-id="63cc1-137">Estas directrices y recursos pueden ayudarle a encontrar ese equilibrio.</span><span class="sxs-lookup"><span data-stu-id="63cc1-137">These guidelines and resources can help you strike that balance.</span></span> <span data-ttu-id="63cc1-138">Sabrás qué hacer y qué evitar al diseñar la aplicación Teams (como la navegación de varios niveles en una pestaña).</span><span class="sxs-lookup"><span data-stu-id="63cc1-138">You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).</span></span>
+## <a name="app-capabilities"></a><span data-ttu-id="898d0-141">Capacidades de la aplicación</span><span class="sxs-lookup"><span data-stu-id="898d0-141">App capabilities</span></span>
 
-## <a name="planning-your-app"></a><span data-ttu-id="63cc1-139">Planeación de la aplicación</span><span class="sxs-lookup"><span data-stu-id="63cc1-139">Planning your app</span></span>
+<span data-ttu-id="898d0-142">Comprender cómo las personas agregan, usan y administran Teams aplicaciones para aprovechar al máximo cada funcionalidad del diseño.</span><span class="sxs-lookup"><span data-stu-id="898d0-142">Understand how people add, use, and manage Teams apps to make the most of each capability in your design.</span></span>
 
-<span data-ttu-id="63cc1-140">Para diseñar una aplicación de Teams de alta calidad, primero debes comprender lo que quieres que haga tu aplicación y cómo crees que la usarán las personas.</span><span class="sxs-lookup"><span data-stu-id="63cc1-140">To design a high-quality Teams app, you must first understand what you want your app to do and how you think people will use it.</span></span> <span data-ttu-id="63cc1-141">Si aún no lo has hecho, tómese un tiempo para [planear correctamente la aplicación](../../concepts/extensibility-points.md).</span><span class="sxs-lookup"><span data-stu-id="63cc1-141">If you haven't already, take some time to properly [plan your app](../../concepts/extensibility-points.md).</span></span>
+* [<span data-ttu-id="898d0-143">Aplicaciones personales</span><span class="sxs-lookup"><span data-stu-id="898d0-143">Personal apps</span></span>](../../concepts/design/personal-apps.md)
+* [<span data-ttu-id="898d0-144">Pestañas</span><span class="sxs-lookup"><span data-stu-id="898d0-144">Tabs</span></span>](../../tabs/design/tabs.md)
+* [<span data-ttu-id="898d0-145">Extensiones de mensajería</span><span class="sxs-lookup"><span data-stu-id="898d0-145">Messaging extensions</span></span>](../../messaging-extensions/design/messaging-extension-design.md)
+* [<span data-ttu-id="898d0-146">Bots</span><span class="sxs-lookup"><span data-stu-id="898d0-146">Bots</span></span>](../../bots/design/bots.md)
+* [<span data-ttu-id="898d0-147">Extensiones de reunión</span><span class="sxs-lookup"><span data-stu-id="898d0-147">Meeting extensions</span></span>](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="design-fundamentals"></a><span data-ttu-id="63cc1-142">Conceptos básicos de diseño</span><span class="sxs-lookup"><span data-stu-id="63cc1-142">Design fundamentals</span></span>
+## <a name="ui-templates"></a><span data-ttu-id="898d0-148">Plantillas de la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="898d0-148">UI templates</span></span>
 
-<span data-ttu-id="63cc1-143">Obtén información [sobre los aspectos Teams diseño de la aplicación,](design-teams-app-fundamentals.md)incluido el diseño, las esquemas de color y mucho más.</span><span class="sxs-lookup"><span data-stu-id="63cc1-143">Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.</span></span>
+<span data-ttu-id="898d0-149">Cree rápidamente diseños complejos y de alta fidelidad con plantillas para Teams [casos de uso y flujos de trabajo](design-teams-app-ui-templates.md)comunes.</span><span class="sxs-lookup"><span data-stu-id="898d0-149">Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).</span></span>
 
-## <a name="basic-fluent-ui-components-for-teams"></a><span data-ttu-id="63cc1-144">Componentes básicos de la interfaz de usuario fluent para Teams</span><span class="sxs-lookup"><span data-stu-id="63cc1-144">Basic Fluent UI components for Teams</span></span>
+## <a name="basic-ui-components"></a><span data-ttu-id="898d0-150">Componentes básicos de la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="898d0-150">Basic UI components</span></span>
 
-<span data-ttu-id="63cc1-145">Basados en la interfaz de usuario fluent, estos son los elementos principales para crear interfaces [Teams familiares.](design-teams-app-basic-ui-components.md)</span><span class="sxs-lookup"><span data-stu-id="63cc1-145">Based on Fluent UI, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).</span></span>
+<span data-ttu-id="898d0-151">Según la interfaz de usuario de Fluent, estos son [los](design-teams-app-basic-ui-components.md) elementos principales que puedes usar para crear experiencias Teams desde cero.</span><span class="sxs-lookup"><span data-stu-id="898d0-151">Based on Fluent UI, these are the [core elements](design-teams-app-basic-ui-components.md) you can use to create Teams experiences from scratch.</span></span>
 
-## <a name="ui-templates"></a><span data-ttu-id="63cc1-146">Plantillas de la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="63cc1-146">UI templates</span></span>
+## <a name="tools-and-samples"></a><span data-ttu-id="898d0-152">Herramientas y ejemplos</span><span class="sxs-lookup"><span data-stu-id="898d0-152">Tools and samples</span></span>
 
-<span data-ttu-id="63cc1-147">Cree rápidamente diseños complejos y de alta fidelidad con plantillas para Teams [casos de uso y flujos de trabajo](design-teams-app-ui-templates.md)comunes.</span><span class="sxs-lookup"><span data-stu-id="63cc1-147">Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).</span></span>
+<span data-ttu-id="898d0-153">Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:</span><span class="sxs-lookup"><span data-stu-id="898d0-153">The following tools can help designers and developers get started:</span></span>
 
-## <a name="app-capabilities"></a><span data-ttu-id="63cc1-148">Capacidades de la aplicación</span><span class="sxs-lookup"><span data-stu-id="63cc1-148">App capabilities</span></span>
+### <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="898d0-154">Kit de UI de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="898d0-154">Microsoft Teams UI Kit</span></span>
 
-<span data-ttu-id="63cc1-149">Comprender cómo las personas agregan, usan y administran Teams aplicaciones para aprovechar al máximo cada funcionalidad del diseño.</span><span class="sxs-lookup"><span data-stu-id="63cc1-149">Understand how people add, use, and manage Teams apps to make the most of each capability in your design.</span></span>
-
-* [<span data-ttu-id="63cc1-150">Aplicaciones personales</span><span class="sxs-lookup"><span data-stu-id="63cc1-150">Personal apps</span></span>](../../concepts/design/personal-apps.md)
-* [<span data-ttu-id="63cc1-151">Pestañas</span><span class="sxs-lookup"><span data-stu-id="63cc1-151">Tabs</span></span>](../../tabs/design/tabs.md)
-* [<span data-ttu-id="63cc1-152">Extensiones de mensajería</span><span class="sxs-lookup"><span data-stu-id="63cc1-152">Messaging extensions</span></span>](../../messaging-extensions/design/messaging-extension-design.md)
-* [<span data-ttu-id="63cc1-153">Bots</span><span class="sxs-lookup"><span data-stu-id="63cc1-153">Bots</span></span>](../../bots/design/bots.md)
-* [<span data-ttu-id="63cc1-154">Extensiones de reunión</span><span class="sxs-lookup"><span data-stu-id="63cc1-154">Meeting extensions</span></span>](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [<span data-ttu-id="63cc1-155">Módulos de tareas</span><span class="sxs-lookup"><span data-stu-id="63cc1-155">Task modules</span></span>](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [<span data-ttu-id="63cc1-156">Tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="63cc1-156">Adaptive Cards</span></span>](../../task-modules-and-cards/cards/design-effective-cards.md)
-
-## <a name="app-customization"></a><span data-ttu-id="63cc1-157">Personalización de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="63cc1-157">App customization</span></span>
-
-<span data-ttu-id="63cc1-158">Comprenda cómo el Teams puede personalizar o cambiar el nombre de la aplicación en función de las necesidades de la organización.</span><span class="sxs-lookup"><span data-stu-id="63cc1-158">Understand how the Teams admin can customize or rebrand the app based on the organization's need.</span></span> <span data-ttu-id="63cc1-159">Esta personalización se habilita si se define en `configurableProperties` el esquema de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="63cc1-159">This customization is enabled if you define the `configurableProperties` in the manifest schema.</span></span> <span data-ttu-id="63cc1-160">Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).</span><span class="sxs-lookup"><span data-stu-id="63cc1-160">For more information, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="63cc1-161">La personalización de aplicaciones permite a los administradores cambiar la apariencia de las aplicaciones cargadas a través de bots, extensiones de mensajería, pestañas y conectores.</span><span class="sxs-lookup"><span data-stu-id="63cc1-161">App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors.</span></span> <span data-ttu-id="63cc1-162">Por ejemplo, si el administrador de Teams personaliza el nombre de una aplicación de *Contoso* a *Contoso Agent,* la aplicación aparecerá con el nuevo nombre *Agente contoso* para los usuarios.</span><span class="sxs-lookup"><span data-stu-id="63cc1-162">For example, if the Teams admin customizes the name of an app from *Contoso* to *Contoso Agent*, then the app will appear with the new name *Contoso Agent* to users.</span></span> <span data-ttu-id="63cc1-163">Sin embargo, al agregar un conector a un chat, en la lista los conectores seguirán mostrándole el nombre de la aplicación como *Contoso*.</span><span class="sxs-lookup"><span data-stu-id="63cc1-163">However, while adding a connector to a chat, in the list the connectors will still show the name of the app as *Contoso*.</span></span>
-> 
-> <span data-ttu-id="63cc1-164">Como práctica recomendada, debes proporcionar directrices de personalización para que los usuarios de la aplicación y los clientes puedan seguir al personalizar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="63cc1-164">As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app.</span></span> <span data-ttu-id="63cc1-165">Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).</span><span class="sxs-lookup"><span data-stu-id="63cc1-165">For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).</span></span>
-
-## <a name="tools-and-samples"></a><span data-ttu-id="63cc1-166">Herramientas y ejemplos</span><span class="sxs-lookup"><span data-stu-id="63cc1-166">Tools and samples</span></span>
-
-<span data-ttu-id="63cc1-167">Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:</span><span class="sxs-lookup"><span data-stu-id="63cc1-167">The following tools can help designers and developers get started:</span></span>
-
-### <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="63cc1-168">Kit de UI de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="63cc1-168">Microsoft Teams UI Kit</span></span>
-
-<span data-ttu-id="63cc1-169">Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="63cc1-169">Design a Teams app with UI components, templates, and examples that you can drag, drop, and modify as needed.</span></span> <span data-ttu-id="63cc1-170">El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.</span><span class="sxs-lookup"><span data-stu-id="63cc1-170">The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.</span></span>
+<span data-ttu-id="898d0-155">Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="898d0-155">Design a Teams app with UI components, templates, and examples that you can drag, drop, and modify as needed.</span></span> <span data-ttu-id="898d0-156">El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.</span><span class="sxs-lookup"><span data-stu-id="898d0-156">The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="63cc1-171">Obtener el kit de interfaz de usuario (Figma)</span><span class="sxs-lookup"><span data-stu-id="63cc1-171">Get the UI kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
+> [<span data-ttu-id="898d0-157">Obtener el kit de interfaz de usuario (Figma)</span><span class="sxs-lookup"><span data-stu-id="898d0-157">Get the UI kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a><span data-ttu-id="63cc1-172">Microsoft Teams Biblioteca de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="63cc1-172">Microsoft Teams UI Library</span></span>
+### <a name="microsoft-teams-ui-library"></a><span data-ttu-id="898d0-158">Microsoft Teams Biblioteca de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="898d0-158">Microsoft Teams UI Library</span></span>
 
-<span data-ttu-id="63cc1-173">Ver y probar plantillas de Teams de interfaz de usuario individuales y componentes relacionados en el explorador.</span><span class="sxs-lookup"><span data-stu-id="63cc1-173">View and test individual Teams UI templates and related components in your browser.</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="63cc1-174">Pruebe la biblioteca de interfaz de usuario (área de juegos)</span><span class="sxs-lookup"><span data-stu-id="63cc1-174">Try the UI library (playground)</span></span>](https://dev-int.teams.microsoft.com/storybook/main/index.html)
-
-<span data-ttu-id="63cc1-175">Importe estas plantillas y componentes relacionados directamente en el proyecto Teams aplicación.</span><span class="sxs-lookup"><span data-stu-id="63cc1-175">Import these templates and related components directly into your Teams app project.</span></span>
+<span data-ttu-id="898d0-159">Ver y probar plantillas de Teams de interfaz de usuario individuales y componentes relacionados en el explorador.</span><span class="sxs-lookup"><span data-stu-id="898d0-159">View and test individual Teams UI templates and related components in your browser.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="63cc1-176">Obtener la biblioteca de interfaz de usuario (GitHub)</span><span class="sxs-lookup"><span data-stu-id="63cc1-176">Get the UI library (GitHub)</span></span>](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+> [<span data-ttu-id="898d0-160">Pruebe la biblioteca de interfaz de usuario (área de juegos)</span><span class="sxs-lookup"><span data-stu-id="898d0-160">Try the UI library (playground)</span></span>](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-### <a name="sample-app"></a><span data-ttu-id="63cc1-177">Aplicación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="63cc1-177">Sample app</span></span>
-
-<span data-ttu-id="63cc1-178">Instala una aplicación de ejemplo para ver cómo se ven y se comportan las plantillas de interfaz de usuario en Teams contextos.</span><span class="sxs-lookup"><span data-stu-id="63cc1-178">Install a sample app to see how UI templates look and behave within Teams contexts.</span></span>
+<span data-ttu-id="898d0-161">Importe estas plantillas y componentes relacionados directamente en el proyecto Teams aplicación.</span><span class="sxs-lookup"><span data-stu-id="898d0-161">Import these templates and related components directly into your Teams app project.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="63cc1-179">Obtener la aplicación de ejemplo (GitHub)</span><span class="sxs-lookup"><span data-stu-id="63cc1-179">Get the sample app (GitHub)</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
+> [<span data-ttu-id="898d0-162">Obtener la biblioteca de interfaz de usuario (GitHub)</span><span class="sxs-lookup"><span data-stu-id="898d0-162">Get the UI library (GitHub)</span></span>](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
-## <a name="other-resources"></a><span data-ttu-id="63cc1-180">Otros recursos</span><span class="sxs-lookup"><span data-stu-id="63cc1-180">Other resources</span></span>
+### <a name="sample-app"></a><span data-ttu-id="898d0-163">Aplicación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="898d0-163">Sample app</span></span>
 
-<span data-ttu-id="63cc1-181">Para obtener más información, pruebe uno de los siguientes recursos:</span><span class="sxs-lookup"><span data-stu-id="63cc1-181">To learn more, try one of the following resources:</span></span>
-
-### <a name="fluent-ui-documentation"></a><span data-ttu-id="63cc1-182">Documentación de la interfaz de usuario fluent</span><span class="sxs-lookup"><span data-stu-id="63cc1-182">Fluent UI documentation</span></span>
-
-<span data-ttu-id="63cc1-183">Obtenga ejemplos de código y detalles de implementación para los componentes basados en fluent ui que se usan para crear Teams experiencias.</span><span class="sxs-lookup"><span data-stu-id="63cc1-183">Get code samples and implementation details for the Fluent UI-based components used to build Teams experiences.</span></span>
+<span data-ttu-id="898d0-164">Puedes cargar una aplicación de ejemplo para ver cómo deben verse y comportarse las aplicaciones en el Teams cliente.</span><span class="sxs-lookup"><span data-stu-id="898d0-164">You can upload a sample app to see how apps should look and behave in the Teams client.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="63cc1-184">Probar Teams de interfaz de usuario (Fluent UI)</span><span class="sxs-lookup"><span data-stu-id="63cc1-184">Try Teams UI components (Fluent UI)</span></span>](https://fluentsite.z22.web.core.windows.net/)
+> [<span data-ttu-id="898d0-165">Obtener la aplicación de ejemplo (GitHub)</span><span class="sxs-lookup"><span data-stu-id="898d0-165">Get the sample app (GitHub)</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-### <a name="adaptive-cards-designer"></a><span data-ttu-id="63cc1-185">Diseñador de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="63cc1-185">Adaptive Cards designer</span></span>
+## <a name="other-resources"></a><span data-ttu-id="898d0-166">Otros recursos</span><span class="sxs-lookup"><span data-stu-id="898d0-166">Other resources</span></span>
 
-<span data-ttu-id="63cc1-186">Diseñar tarjetas adaptables en nuestra herramienta basada en web.</span><span class="sxs-lookup"><span data-stu-id="63cc1-186">Design Adaptive Cards in our web-based tool.</span></span>
+<span data-ttu-id="898d0-167">Para obtener más información, pruebe uno de los siguientes recursos:</span><span class="sxs-lookup"><span data-stu-id="898d0-167">To learn more, try one of the following resources:</span></span>
+
+### <a name="fluent-ui-documentation"></a><span data-ttu-id="898d0-168">Documentación de la interfaz de usuario fluent</span><span class="sxs-lookup"><span data-stu-id="898d0-168">Fluent UI documentation</span></span>
+
+<span data-ttu-id="898d0-169">Obtenga ejemplos de código y detalles de implementación para los componentes básicos de la interfaz de usuario fluent que se usan para crear Teams experiencias.</span><span class="sxs-lookup"><span data-stu-id="898d0-169">Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="63cc1-187">Probar el diseñador de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="63cc1-187">Try the Adaptive Cards designer</span></span>](https://adaptivecards.io/designer/)
+> [<span data-ttu-id="898d0-170">Probar Teams de interfaz de usuario (Fluent UI)</span><span class="sxs-lookup"><span data-stu-id="898d0-170">Try Teams UI components (Fluent UI)</span></span>](https://fluentsite.z22.web.core.windows.net/)
+
+### <a name="adaptive-cards-designer"></a><span data-ttu-id="898d0-171">Diseñador de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="898d0-171">Adaptive Cards designer</span></span>
+
+<span data-ttu-id="898d0-172">Diseñar tarjetas adaptables en nuestra herramienta basada en web.</span><span class="sxs-lookup"><span data-stu-id="898d0-172">Design Adaptive Cards in our web-based tool.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="898d0-173">Probar el diseñador de tarjetas adaptables</span><span class="sxs-lookup"><span data-stu-id="898d0-173">Try the Adaptive Cards designer</span></span>](https://adaptivecards.io/designer/)

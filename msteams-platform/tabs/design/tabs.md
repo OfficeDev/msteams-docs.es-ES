@@ -5,228 +5,292 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: baa17cd97ff4e2cad91615dced5c4e4cf5e533c8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566883"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644744"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a><span data-ttu-id="41b86-103">Diseño de la pestaña para Microsoft Teams escritorio y web</span><span class="sxs-lookup"><span data-stu-id="41b86-103">Designing your tab for Microsoft Teams desktop and web</span></span>
+# <a name="designing-your-tab-for-microsoft-teams"></a><span data-ttu-id="94738-103">Diseñar la pestaña para Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="94738-103">Designing your tab for Microsoft Teams</span></span>
 
-<span data-ttu-id="41b86-104">Una pestaña es un lienzo grande para el contenido.</span><span class="sxs-lookup"><span data-stu-id="41b86-104">A tab is a large canvas for your content.</span></span> <span data-ttu-id="41b86-105">Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar pestañas en Teams.</span><span class="sxs-lookup"><span data-stu-id="41b86-105">To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.</span></span>
+<span data-ttu-id="94738-104">Una pestaña es un lienzo grande para el contenido de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="94738-104">A tab is a large canvas for your app content.</span></span> <span data-ttu-id="94738-105">Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar pestañas en Teams.</span><span class="sxs-lookup"><span data-stu-id="94738-105">To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.</span></span>
 
-## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="41b86-106">Kit de UI de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="41b86-106">Microsoft Teams UI Kit</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="94738-106">Kit de UI de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="94738-106">Microsoft Teams UI Kit</span></span>
 
-<span data-ttu-id="41b86-107">Puedes encontrar instrucciones completas de diseño de pestañas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario.</span><span class="sxs-lookup"><span data-stu-id="41b86-107">You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="41b86-108">El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.</span><span class="sxs-lookup"><span data-stu-id="41b86-108">The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.</span></span>
+<span data-ttu-id="94738-107">Puedes encontrar instrucciones completas de diseño de pestañas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario.</span><span class="sxs-lookup"><span data-stu-id="94738-107">You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="94738-108">El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.</span><span class="sxs-lookup"><span data-stu-id="94738-108">The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="41b86-109">Obtener el Kit de UI de Microsoft Teams (Figma)</span><span class="sxs-lookup"><span data-stu-id="41b86-109">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
+> [<span data-ttu-id="94738-109">Obtener el Kit de UI de Microsoft Teams (Figma)</span><span class="sxs-lookup"><span data-stu-id="94738-109">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="add-a-tab"></a><span data-ttu-id="41b86-110">Agregar una pestaña</span><span class="sxs-lookup"><span data-stu-id="41b86-110">Add a tab</span></span>
+## <a name="add-a-tab"></a><span data-ttu-id="94738-110">Agregar una pestaña</span><span class="sxs-lookup"><span data-stu-id="94738-110">Add a tab</span></span>
 
-<span data-ttu-id="41b86-111">Puedes agregar una pestaña desde el almacén Teams (AppSource) o en uno de los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="41b86-111">You can add a tab from the Teams store (AppSource) or in one of the following contexts:</span></span>
+<span data-ttu-id="94738-111">Puedes agregar una pestaña desde el almacén Teams (AppSource) o en uno de los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="94738-111">You can add a tab from the Teams store (AppSource) or in one of the following contexts:</span></span>
 
-* <span data-ttu-id="41b86-112">Chat</span><span class="sxs-lookup"><span data-stu-id="41b86-112">Chat</span></span>
-* <span data-ttu-id="41b86-113">Canal</span><span class="sxs-lookup"><span data-stu-id="41b86-113">Channel</span></span>
-* <span data-ttu-id="41b86-114">Reunión (antes, durante o después de la reunión)</span><span class="sxs-lookup"><span data-stu-id="41b86-114">Meeting (before, during, or after the meeting)</span></span>
+* <span data-ttu-id="94738-112">Chat</span><span class="sxs-lookup"><span data-stu-id="94738-112">Chat</span></span>
+* <span data-ttu-id="94738-113">Canal</span><span class="sxs-lookup"><span data-stu-id="94738-113">Channel</span></span>
+* <span data-ttu-id="94738-114">Reunión (antes, durante o después de la reunión)</span><span class="sxs-lookup"><span data-stu-id="94738-114">Meeting (before, during, or after the meeting)</span></span>
 
-<span data-ttu-id="41b86-115">En el siguiente ejemplo se muestra cómo se agrega una pestaña en un canal:</span><span class="sxs-lookup"><span data-stu-id="41b86-115">The following example shows how a tab is added in a channel:</span></span>
+# <a name="desktop"></a>[<span data-ttu-id="94738-115">Escritorio</span><span class="sxs-lookup"><span data-stu-id="94738-115">Desktop</span></span>](#tab/desktop)
+
+<span data-ttu-id="94738-116">En el ejemplo siguiente se muestra cómo los usuarios pueden agregar una pestaña en un canal.</span><span class="sxs-lookup"><span data-stu-id="94738-116">The following example shows how users can add a tab in a channel.</span></span>
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="En el ejemplo se muestra una pestaña que se agrega en un canal." border="false":::
 
-## <a name="set-up-a-tab"></a><span data-ttu-id="41b86-117">Configurar una pestaña</span><span class="sxs-lookup"><span data-stu-id="41b86-117">Set up a tab</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="94738-118">Móvil</span><span class="sxs-lookup"><span data-stu-id="94738-118">Mobile</span></span>](#tab/mobile)
 
-<span data-ttu-id="41b86-118">Hay un breve proceso de configuración para agregar una aplicación como un canal, chat o pestaña de reunión. La experiencia está en gran medida a su medida.</span><span class="sxs-lookup"><span data-stu-id="41b86-118">There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you.</span></span> <span data-ttu-id="41b86-119">Por ejemplo, podrías tener una descripción de cómo usar la aplicación y algunas opciones de configuración opcionales.</span><span class="sxs-lookup"><span data-stu-id="41b86-119">For example, you could have a description of how to use the app and some optional settings.</span></span> <span data-ttu-id="41b86-120">Incluye un paso de inicio de sesión aquí si necesitas autenticar usuarios.</span><span class="sxs-lookup"><span data-stu-id="41b86-120">Include a sign-in step here if you need to authenticate users.</span></span>
+<span data-ttu-id="94738-119">Los usuarios pueden acceder a  las pestañas seleccionando el botón Más en el canal (ejemplo a continuación) o chat en el que se han agregado.</span><span class="sxs-lookup"><span data-stu-id="94738-119">Users can access tabs by selecting the **More** button in the channel (example below) or chat in which they've been added.</span></span>
 
-### <a name="tab-configuration-modal"></a><span data-ttu-id="41b86-121">Modal de configuración de tabulación</span><span class="sxs-lookup"><span data-stu-id="41b86-121">Tab configuration modal</span></span>
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="En el ejemplo se muestra una pestaña móvil que se agrega en un canal." border="false":::
+
+---
+
+## <a name="set-up-a-tab"></a><span data-ttu-id="94738-121">Configurar una pestaña</span><span class="sxs-lookup"><span data-stu-id="94738-121">Set up a tab</span></span>
+
+<span data-ttu-id="94738-122">Hay un breve proceso de configuración para agregar una aplicación como un canal, chat o pestaña de reunión. La experiencia está en gran medida a su medida.</span><span class="sxs-lookup"><span data-stu-id="94738-122">There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you.</span></span> <span data-ttu-id="94738-123">Por ejemplo, podrías tener una descripción de cómo usar la aplicación y algunas opciones de configuración opcionales.</span><span class="sxs-lookup"><span data-stu-id="94738-123">For example, you could have a description of how to use the app and some optional settings.</span></span> <span data-ttu-id="94738-124">Incluye un paso de inicio de sesión aquí si necesitas autenticar usuarios.</span><span class="sxs-lookup"><span data-stu-id="94738-124">Include a sign-in step here if you need to authenticate users.</span></span>
+
+### <a name="tab-configuration-dialog"></a><span data-ttu-id="94738-125">Cuadro de diálogo de configuración de tabulación</span><span class="sxs-lookup"><span data-stu-id="94738-125">Tab configuration dialog</span></span>
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="En el ejemplo se muestra un modal de configuración de tabulación." border="false":::
 
-### <a name="anatomy-tab-configuration-modal"></a><span data-ttu-id="41b86-123">Anatomía: modal de configuración de tabulación</span><span class="sxs-lookup"><span data-stu-id="41b86-123">Anatomy: Tab configuration modal</span></span>
+### <a name="anatomy-tab-configuration-dialog"></a><span data-ttu-id="94738-127">Anatomía: cuadro de diálogo de configuración de tabulación</span><span class="sxs-lookup"><span data-stu-id="94738-127">Anatomy: Tab configuration dialog</span></span>
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un modal de configuración de tabulación." border="false":::
 
-|<span data-ttu-id="41b86-125">Contador</span><span class="sxs-lookup"><span data-stu-id="41b86-125">Counter</span></span>|<span data-ttu-id="41b86-126">Descripción</span><span class="sxs-lookup"><span data-stu-id="41b86-126">Description</span></span>|
+|<span data-ttu-id="94738-129">Contador</span><span class="sxs-lookup"><span data-stu-id="94738-129">Counter</span></span>|<span data-ttu-id="94738-130">Descripción</span><span class="sxs-lookup"><span data-stu-id="94738-130">Description</span></span>|
 |----------|-----------|
-|<span data-ttu-id="41b86-127">1</span><span class="sxs-lookup"><span data-stu-id="41b86-127">1</span></span>|<span data-ttu-id="41b86-128">**Logotipo de la** aplicación: logotipo de aplicación a todo color de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="41b86-128">**App logo**: Full color app logo of your app.</span></span>|
-|<span data-ttu-id="41b86-129">2</span><span class="sxs-lookup"><span data-stu-id="41b86-129">2</span></span>|<span data-ttu-id="41b86-130">**Nombre de la** aplicación: nombre completo de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="41b86-130">**App name**: Full name of your app.</span></span>|
-|<span data-ttu-id="41b86-131">3</span><span class="sxs-lookup"><span data-stu-id="41b86-131">3</span></span>|<span data-ttu-id="41b86-132">**iframe:** espacio dinámico para el contenido de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="41b86-132">**iframe**: Responsive space for your app’s content.</span></span> <span data-ttu-id="41b86-133">Por ejemplo, configuración de tabulación o autenticación.</span><span class="sxs-lookup"><span data-stu-id="41b86-133">For example, tab settings or authentication.</span></span>|
-|<span data-ttu-id="41b86-134">4 </span><span class="sxs-lookup"><span data-stu-id="41b86-134">4</span></span>|<span data-ttu-id="41b86-135">**Acerca del vínculo:** abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.</span><span class="sxs-lookup"><span data-stu-id="41b86-135">**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.</span></span>
-|<span data-ttu-id="41b86-136">5 </span><span class="sxs-lookup"><span data-stu-id="41b86-136">5</span></span>|<span data-ttu-id="41b86-137">**Botón Cerrar:** cierra el modal.</span><span class="sxs-lookup"><span data-stu-id="41b86-137">**Close button**: Closes the modal.</span></span>|
-|<span data-ttu-id="41b86-138">6 </span><span class="sxs-lookup"><span data-stu-id="41b86-138">6</span></span>|<span data-ttu-id="41b86-139">**Notificar a los miembros del equipo** opción: el modal pregunta si desea crear una publicación para que otros sepan que agregó una pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-139">**Notify team members option**: The modal asks if you want to create a post letting others know you added a tab.</span></span>|
-|<span data-ttu-id="41b86-140">7 </span><span class="sxs-lookup"><span data-stu-id="41b86-140">7</span></span>|<span data-ttu-id="41b86-141">**Botón Atrás:** va al paso anterior en función de dónde se abrió el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="41b86-141">**Back button**: Goes to the previous step based on where the dialog opened.</span></span>|
-|<span data-ttu-id="41b86-142">8 </span><span class="sxs-lookup"><span data-stu-id="41b86-142">8</span></span>|<span data-ttu-id="41b86-143">**Botón Guardar:** completa la configuración de la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-143">**Save button**: Completes tab setup.</span></span>|
+|<span data-ttu-id="94738-131">1</span><span class="sxs-lookup"><span data-stu-id="94738-131">1</span></span>|<span data-ttu-id="94738-132">**Logotipo de la** aplicación: logotipo de aplicación a todo color de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="94738-132">**App logo**: Full color app logo of your app.</span></span>|
+|<span data-ttu-id="94738-133">2</span><span class="sxs-lookup"><span data-stu-id="94738-133">2</span></span>|<span data-ttu-id="94738-134">**Nombre de la** aplicación: nombre completo de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="94738-134">**App name**: Full name of your app.</span></span>|
+|<span data-ttu-id="94738-135">3</span><span class="sxs-lookup"><span data-stu-id="94738-135">3</span></span>|<span data-ttu-id="94738-136">**iframe:** espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).</span><span class="sxs-lookup"><span data-stu-id="94738-136">**iframe**: Responsive space for your app’s content (for example, tab settings or authentication).</span></span>|
+|<span data-ttu-id="94738-137">4 </span><span class="sxs-lookup"><span data-stu-id="94738-137">4</span></span>|<span data-ttu-id="94738-138">**Acerca del vínculo:** abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.</span><span class="sxs-lookup"><span data-stu-id="94738-138">**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.</span></span>|
+|<span data-ttu-id="94738-139">5 </span><span class="sxs-lookup"><span data-stu-id="94738-139">5</span></span>|<span data-ttu-id="94738-140">**Botón Cerrar:** cierra el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="94738-140">**Close button**: Closes the dialog.</span></span>|
+|<span data-ttu-id="94738-141">6 </span><span class="sxs-lookup"><span data-stu-id="94738-141">6</span></span>|<span data-ttu-id="94738-142">**Opción Notificar a los miembros del** equipo: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-142">**Notify team members option**: The dialog asks users if they want to create a post letting others know they added a tab.</span></span>|
+|<span data-ttu-id="94738-143">7 </span><span class="sxs-lookup"><span data-stu-id="94738-143">7</span></span>|<span data-ttu-id="94738-144">**Botón Atrás:** va al paso anterior en función de dónde se abrió el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="94738-144">**Back button**: Goes to the previous step based on where the dialog opened.</span></span>|
+|<span data-ttu-id="94738-145">8 </span><span class="sxs-lookup"><span data-stu-id="94738-145">8</span></span>|<span data-ttu-id="94738-146">**Botón Guardar:** completa la configuración de la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-146">**Save button**: Completes tab setup.</span></span>|
 
-### <a name="tab-authentication-with-single-sign-on"></a><span data-ttu-id="41b86-144">Autenticación de tabulación con inicio de sesión único</span><span class="sxs-lookup"><span data-stu-id="41b86-144">Tab authentication with single sign-on</span></span>
+### <a name="tab-authentication-with-single-sign-on"></a><span data-ttu-id="94738-147">Autenticación de tabulación con inicio de sesión único</span><span class="sxs-lookup"><span data-stu-id="94738-147">Tab authentication with single sign-on</span></span>
 
-<span data-ttu-id="41b86-145">Puede agregar un paso en el que los usuarios primero deben iniciar sesión con sus credenciales de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="41b86-145">You can add a step in which users must first sign in with their Microsoft credentials.</span></span> <span data-ttu-id="41b86-146">Este método de autenticación se denomina inicio de sesión único (SSO).</span><span class="sxs-lookup"><span data-stu-id="41b86-146">This authentication method is called single sign-on (SSO).</span></span>
+<span data-ttu-id="94738-148">Puede agregar un paso en el que los usuarios primero deben iniciar sesión con sus credenciales de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="94738-148">You can add a step in which users must first sign in with their Microsoft credentials.</span></span> <span data-ttu-id="94738-149">Este método de autenticación se denomina inicio de sesión único (SSO).</span><span class="sxs-lookup"><span data-stu-id="94738-149">This authentication method is called single sign-on (SSO).</span></span>
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="En el ejemplo se muestra una pantalla de autenticación de tabulación." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a><span data-ttu-id="41b86-148">Diseño de una configuración de pestaña con plantillas de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="41b86-148">Designing a tab setup with UI templates</span></span>
+### <a name="designing-a-tab-setup-with-ui-templates"></a><span data-ttu-id="94738-151">Diseño de una configuración de pestaña con plantillas de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="94738-151">Designing a tab setup with UI templates</span></span>
 
-<span data-ttu-id="41b86-149">Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la experiencia de configuración de pestañas:</span><span class="sxs-lookup"><span data-stu-id="41b86-149">Use one of the following Teams UI templates to help design your tab setup experience:</span></span>
+<span data-ttu-id="94738-152">Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la experiencia de configuración de pestañas:</span><span class="sxs-lookup"><span data-stu-id="94738-152">Use one of the following Teams UI templates to help design your tab setup experience:</span></span>
 
-* <span data-ttu-id="41b86-150">[Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.</span><span class="sxs-lookup"><span data-stu-id="41b86-150">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
-* <span data-ttu-id="41b86-151">[Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.</span><span class="sxs-lookup"><span data-stu-id="41b86-151">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
-* <span data-ttu-id="41b86-152">[Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.</span><span class="sxs-lookup"><span data-stu-id="41b86-152">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
+* <span data-ttu-id="94738-153">[Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.</span><span class="sxs-lookup"><span data-stu-id="94738-153">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="94738-154">[Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.</span><span class="sxs-lookup"><span data-stu-id="94738-154">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="94738-155">[Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.</span><span class="sxs-lookup"><span data-stu-id="94738-155">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
 
-## <a name="view-a-tab"></a><span data-ttu-id="41b86-153">Ver una pestaña</span><span class="sxs-lookup"><span data-stu-id="41b86-153">View a tab</span></span>
+## <a name="view-a-tab"></a><span data-ttu-id="94738-156">Ver una pestaña</span><span class="sxs-lookup"><span data-stu-id="94738-156">View a tab</span></span>
 
-<span data-ttu-id="41b86-154">Las pestañas proporcionan una experiencia web a pantalla completa en Teams donde puede mostrar contenido de colaboración (como paneles de tareas y paneles) e información importante.</span><span class="sxs-lookup"><span data-stu-id="41b86-154">Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.</span></span>
+<span data-ttu-id="94738-157">Las pestañas proporcionan una experiencia web a pantalla completa en Teams donde puede mostrar contenido de colaboración (como paneles de tareas y paneles) e información importante.</span><span class="sxs-lookup"><span data-stu-id="94738-157">Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.</span></span>
+
+# <a name="desktop"></a>[<span data-ttu-id="94738-158">Escritorio</span><span class="sxs-lookup"><span data-stu-id="94738-158">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="En el ejemplo se muestra una pestaña con un panel de tareas." border="false":::
 
-### <a name="anatomy-tab"></a><span data-ttu-id="41b86-156">Anatomía: Ficha</span><span class="sxs-lookup"><span data-stu-id="41b86-156">Anatomy: Tab</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="94738-160">Móvil</span><span class="sxs-lookup"><span data-stu-id="94738-160">Mobile</span></span>](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="En el ejemplo se muestra una pestaña móvil con un panel de tareas." border="false":::
+
+---
+
+### <a name="anatomy-tab"></a><span data-ttu-id="94738-162">Anatomía: Ficha</span><span class="sxs-lookup"><span data-stu-id="94738-162">Anatomy: Tab</span></span>
+
+# <a name="desktop"></a>[<span data-ttu-id="94738-163">Escritorio</span><span class="sxs-lookup"><span data-stu-id="94738-163">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
 
-|<span data-ttu-id="41b86-158">Contador</span><span class="sxs-lookup"><span data-stu-id="41b86-158">Counter</span></span>|<span data-ttu-id="41b86-159">Descripción</span><span class="sxs-lookup"><span data-stu-id="41b86-159">Description</span></span>|
+|<span data-ttu-id="94738-165">Contador</span><span class="sxs-lookup"><span data-stu-id="94738-165">Counter</span></span>|<span data-ttu-id="94738-166">Descripción</span><span class="sxs-lookup"><span data-stu-id="94738-166">Description</span></span>|
 |----------|-----------|
-|<span data-ttu-id="41b86-160">1</span><span class="sxs-lookup"><span data-stu-id="41b86-160">1</span></span>|<span data-ttu-id="41b86-161">**Nombre de la pestaña:** etiqueta de navegación para la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-161">**Tab name**: Navigation label for your tab.</span></span>|
-|<span data-ttu-id="41b86-162">2</span><span class="sxs-lookup"><span data-stu-id="41b86-162">2</span></span>|<span data-ttu-id="41b86-163">**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.</span><span class="sxs-lookup"><span data-stu-id="41b86-163">**Tab overflow**: Opens tab actions, such as rename and remove.</span></span>|
-|<span data-ttu-id="41b86-164">3</span><span class="sxs-lookup"><span data-stu-id="41b86-164">3</span></span>|<span data-ttu-id="41b86-165">**Chat de pestaña:** abre un subproceso de chat a la derecha, lo que permite a los usuarios tener una conversación junto al contenido.</span><span class="sxs-lookup"><span data-stu-id="41b86-165">**Tab chat**: Opens a chat thread on the right, allowing users to have a conversation next to the content.</span></span>|
-|<span data-ttu-id="41b86-166">4 </span><span class="sxs-lookup"><span data-stu-id="41b86-166">4</span></span>|<span data-ttu-id="41b86-167">**iframe:** muestra el contenido de la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-167">**iframe**: Displays your tab’s content.</span></span>
+|<span data-ttu-id="94738-167">1</span><span class="sxs-lookup"><span data-stu-id="94738-167">1</span></span>|<span data-ttu-id="94738-168">**Nombre de la pestaña:** etiqueta de navegación para la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-168">**Tab name**: Navigation label for your tab.</span></span>|
+|<span data-ttu-id="94738-169">2</span><span class="sxs-lookup"><span data-stu-id="94738-169">2</span></span>|<span data-ttu-id="94738-170">**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.</span><span class="sxs-lookup"><span data-stu-id="94738-170">**Tab overflow**: Opens tab actions, such as rename and remove.</span></span>|
+|<span data-ttu-id="94738-171">3</span><span class="sxs-lookup"><span data-stu-id="94738-171">3</span></span>|<span data-ttu-id="94738-172">**Chat de pestañas:** abre un chat a la derecha, lo que permite a los usuarios tener una conversación junto al contenido.</span><span class="sxs-lookup"><span data-stu-id="94738-172">**Tab chat**: Opens a chat to the right, allowing users to have a conversation next to the content.</span></span>|
+|<span data-ttu-id="94738-173">4 </span><span class="sxs-lookup"><span data-stu-id="94738-173">4</span></span>|<span data-ttu-id="94738-174">**iframe:** muestra el contenido de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="94738-174">**iframe**: Displays your app content.</span></span>|
 
-### <a name="designing-a-tab-with-ui-templates"></a><span data-ttu-id="41b86-168">Diseño de una pestaña con plantillas de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="41b86-168">Designing a tab with UI templates</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="94738-175">Móvil</span><span class="sxs-lookup"><span data-stu-id="94738-175">Mobile</span></span>](#tab/mobile)
 
-<span data-ttu-id="41b86-169">Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la experiencia de pestaña:</span><span class="sxs-lookup"><span data-stu-id="41b86-169">Use one of the following Teams UI templates to help design your tab experience:</span></span>
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
 
-* <span data-ttu-id="41b86-170">[Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.</span><span class="sxs-lookup"><span data-stu-id="41b86-170">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
-* <span data-ttu-id="41b86-171">[Panel de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tareas: un panel de tareas, a veces denominado tablero de kanban o carriles de natación, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.</span><span class="sxs-lookup"><span data-stu-id="41b86-171">[Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span>
-* <span data-ttu-id="41b86-172">[Panel:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.</span><span class="sxs-lookup"><span data-stu-id="41b86-172">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.</span></span>
-* <span data-ttu-id="41b86-173">[Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.</span><span class="sxs-lookup"><span data-stu-id="41b86-173">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
-* <span data-ttu-id="41b86-174">[Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.</span><span class="sxs-lookup"><span data-stu-id="41b86-174">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
-* <span data-ttu-id="41b86-175">[Navegación izquierda:](../../concepts/design/design-teams-app-ui-templates.md#left-nav)la plantilla de navegación izquierda puede ayudar si la pestaña requiere algo de navegación.</span><span class="sxs-lookup"><span data-stu-id="41b86-175">[Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation.</span></span> <span data-ttu-id="41b86-176">En general, debe mantener la navegación por pestañas al mínimo.</span><span class="sxs-lookup"><span data-stu-id="41b86-176">In general, you should keep tab navigation to a minimum.</span></span>
+|<span data-ttu-id="94738-177">Contador</span><span class="sxs-lookup"><span data-stu-id="94738-177">Counter</span></span>|<span data-ttu-id="94738-178">Descripción</span><span class="sxs-lookup"><span data-stu-id="94738-178">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="94738-179">1</span><span class="sxs-lookup"><span data-stu-id="94738-179">1</span></span>|<span data-ttu-id="94738-180">**Nombre de la pestaña:** etiqueta de navegación para la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-180">**Tab name**: Navigation label for your tab.</span></span>|
+|<span data-ttu-id="94738-181">2</span><span class="sxs-lookup"><span data-stu-id="94738-181">2</span></span>|<span data-ttu-id="94738-182">**Chat de pestaña:** abre un chat que permite a los usuarios tener una conversación junto al contenido.</span><span class="sxs-lookup"><span data-stu-id="94738-182">**Tab chat**: Opens a chat that allows users to have a conversation next to the content.</span></span>|
+|<span data-ttu-id="94738-183">3</span><span class="sxs-lookup"><span data-stu-id="94738-183">3</span></span>|<span data-ttu-id="94738-184">**webview:** muestra el contenido de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="94738-184">**webview**: Displays your app content.</span></span>|
 
-## <a name="use-a-tab-to-collaborate"></a><span data-ttu-id="41b86-177">Usar una pestaña para colaborar</span><span class="sxs-lookup"><span data-stu-id="41b86-177">Use a tab to collaborate</span></span>
+---
 
-<span data-ttu-id="41b86-178">Las pestañas ayudan a facilitar las conversaciones sobre el contenido en una ubicación central.</span><span class="sxs-lookup"><span data-stu-id="41b86-178">Tabs help facilitate conversations about content in a central location.</span></span>
+### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a><span data-ttu-id="94738-185">Diseño de una pestaña con plantillas de interfaz de usuario y componentes avanzados</span><span class="sxs-lookup"><span data-stu-id="94738-185">Designing a tab with UI templates and advanced components</span></span>
 
-### <a name="thread-discussion"></a><span data-ttu-id="41b86-179">Discusión de subprocesos</span><span class="sxs-lookup"><span data-stu-id="41b86-179">Thread discussion</span></span>
+<span data-ttu-id="94738-186">Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar la experiencia de pestaña:</span><span class="sxs-lookup"><span data-stu-id="94738-186">Use one of the following Teams templates and components to help design your tab experience:</span></span>
 
-<span data-ttu-id="41b86-180">Los usuarios pueden publicar automáticamente en un canal o chat una vez que han agregado una nueva pestaña. Esto no solo notifica a los miembros del equipo del nuevo contenido y proporciona un vínculo a la pestaña, sino que permite a los usuarios empezar a hablar sobre la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-180">Users can automatically post to a channel or chat once they’ve added a new tab. This not only notifies team members of the new content and provides a link to tab, it allows people to start talking about the tab.</span></span>
+* <span data-ttu-id="94738-187">[Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.</span><span class="sxs-lookup"><span data-stu-id="94738-187">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="94738-188">[Panel de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tareas: un panel de tareas, a veces denominado tablero de kanban o carriles de natación, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.</span><span class="sxs-lookup"><span data-stu-id="94738-188">[Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span>
+* <span data-ttu-id="94738-189">[Panel:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.</span><span class="sxs-lookup"><span data-stu-id="94738-189">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.</span></span>
+* <span data-ttu-id="94738-190">[Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.</span><span class="sxs-lookup"><span data-stu-id="94738-190">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="94738-191">[Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.</span><span class="sxs-lookup"><span data-stu-id="94738-191">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
+* <span data-ttu-id="94738-192">[Navegación izquierda:](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)el componente de navegación izquierdo puede ayudar si la pestaña requiere algo de navegación.</span><span class="sxs-lookup"><span data-stu-id="94738-192">[Left nav](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): The left nav component can help if your tab requires some navigation.</span></span> <span data-ttu-id="94738-193">En general, debe mantener la navegación por pestañas al mínimo.</span><span class="sxs-lookup"><span data-stu-id="94738-193">In general, you should keep tab navigation to a minimum.</span></span>
+
+## <a name="use-a-tab-to-collaborate"></a><span data-ttu-id="94738-194">Usar una pestaña para colaborar</span><span class="sxs-lookup"><span data-stu-id="94738-194">Use a tab to collaborate</span></span>
+
+<span data-ttu-id="94738-195">Las pestañas ayudan a facilitar las conversaciones sobre el contenido en una ubicación central.</span><span class="sxs-lookup"><span data-stu-id="94738-195">Tabs help facilitate conversations about content in a central location.</span></span>
+
+### <a name="thread-discussion"></a><span data-ttu-id="94738-196">Discusión de subprocesos</span><span class="sxs-lookup"><span data-stu-id="94738-196">Thread discussion</span></span>
+
+<span data-ttu-id="94738-197">Los usuarios pueden publicar automáticamente en un canal o chat una vez que han agregado una nueva pestaña. Esto no solo notifica a los miembros del equipo del nuevo contenido y proporciona un vínculo a la pestaña, sino que permite a los usuarios empezar a hablar sobre la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-197">Users can automatically post to a channel or chat once they’ve added a new tab. This not only notifies team members of the new content and provides a link to tab, it allows people to start talking about the tab.</span></span>
+
+# <a name="desktop"></a>[<span data-ttu-id="94738-198">Escritorio</span><span class="sxs-lookup"><span data-stu-id="94738-198">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="En el ejemplo se muestra una pestaña que se está analizando en un subproceso de canal." border="false":::
 
-### <a name="side-by-side-discussion"></a><span data-ttu-id="41b86-182">Discusión en paralelo</span><span class="sxs-lookup"><span data-stu-id="41b86-182">Side-by-side discussion</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="94738-200">Móvil</span><span class="sxs-lookup"><span data-stu-id="94738-200">Mobile</span></span>](#tab/mobile)
 
-<span data-ttu-id="41b86-183">Los usuarios pueden tener una conversación a continuación mientras ven el contenido de la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-183">Users can have a conversation next while viewing the tab’s content.</span></span>
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="En el ejemplo se muestra una pestaña móvil que se está analizando en un subproceso de canal." border="false":::
+
+---
+
+### <a name="tab-chat"></a><span data-ttu-id="94738-202">Chat de pestañas</span><span class="sxs-lookup"><span data-stu-id="94738-202">Tab chat</span></span>
+
+<span data-ttu-id="94738-203">Los usuarios pueden tener una conversación junto al contenido de la pestaña que están viendo.</span><span class="sxs-lookup"><span data-stu-id="94738-203">Users can have a conversation next to the tab content they're viewing.</span></span> <span data-ttu-id="94738-204">En el escritorio, el chat se abre al lado del contenido de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="94738-204">On desktop, the chat opens to the side of the app content.</span></span>
+
+# <a name="desktop"></a>[<span data-ttu-id="94738-205">Escritorio</span><span class="sxs-lookup"><span data-stu-id="94738-205">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="En el ejemplo se muestra una pestaña con un chat abierto en el lado derecho." border="false":::
 
-### <a name="permissions-and-role-based-views"></a><span data-ttu-id="41b86-185">Permisos y vistas basadas en roles</span><span class="sxs-lookup"><span data-stu-id="41b86-185">Permissions and role-based views</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="94738-207">Móvil</span><span class="sxs-lookup"><span data-stu-id="94738-207">Mobile</span></span>](#tab/mobile)
 
-<span data-ttu-id="41b86-186">La experiencia de pestaña puede ser diferente para los usuarios en función de sus permisos.</span><span class="sxs-lookup"><span data-stu-id="41b86-186">The tab experience may be different for users depending on their permissions.</span></span> <span data-ttu-id="41b86-187">Por ejemplo, un usuario puede tener acceso a la pestaña sin tener que iniciar sesión.</span><span class="sxs-lookup"><span data-stu-id="41b86-187">For example, one user can access the tab without having to sign in.</span></span> <span data-ttu-id="41b86-188">Sin embargo, otro usuario debe firmar y verá contenido ligeramente diferente.</span><span class="sxs-lookup"><span data-stu-id="41b86-188">Another user, however, must sign and will see slightly different content.</span></span>
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="En el ejemplo se muestra una pestaña móvil con un área de chat en contexto." border="false":::
 
-## <a name="manage-a-tab"></a><span data-ttu-id="41b86-189">Administrar una pestaña</span><span class="sxs-lookup"><span data-stu-id="41b86-189">Manage a tab</span></span>
+---
 
-<span data-ttu-id="41b86-190">Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-190">You can include options to rename, remove, or modify a tab.</span></span>
+### <a name="permissions-and-role-based-views"></a><span data-ttu-id="94738-209">Permisos y vistas basadas en roles</span><span class="sxs-lookup"><span data-stu-id="94738-209">Permissions and role-based views</span></span>
 
-### <a name="anatomy-tab-menu"></a><span data-ttu-id="41b86-191">Anatomía: menú De pestaña</span><span class="sxs-lookup"><span data-stu-id="41b86-191">Anatomy: Tab menu</span></span>
+<span data-ttu-id="94738-210">La experiencia de pestaña puede ser diferente para los usuarios en función de sus permisos.</span><span class="sxs-lookup"><span data-stu-id="94738-210">The tab experience may be different for users depending on their permissions.</span></span> <span data-ttu-id="94738-211">Por ejemplo, un usuario puede tener acceso a la pestaña sin tener que iniciar sesión.</span><span class="sxs-lookup"><span data-stu-id="94738-211">For example, one user can access the tab without having to sign in.</span></span> <span data-ttu-id="94738-212">Sin embargo, otro usuario debe firmar y verá contenido ligeramente diferente.</span><span class="sxs-lookup"><span data-stu-id="94738-212">Another user, however, must sign and will see slightly different content.</span></span>
+
+## <a name="manage-a-tab"></a><span data-ttu-id="94738-213">Administrar una pestaña</span><span class="sxs-lookup"><span data-stu-id="94738-213">Manage a tab</span></span>
+
+<span data-ttu-id="94738-214">Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-214">You can include options to rename, remove, or modify a tab.</span></span>
+
+### <a name="anatomy-tab-menu"></a><span data-ttu-id="94738-215">Anatomía: menú De pestaña</span><span class="sxs-lookup"><span data-stu-id="94738-215">Anatomy: Tab menu</span></span>
+
+# <a name="desktop"></a>[<span data-ttu-id="94738-216">Escritorio</span><span class="sxs-lookup"><span data-stu-id="94738-216">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña." border="false":::
 
-|<span data-ttu-id="41b86-193">Contador</span><span class="sxs-lookup"><span data-stu-id="41b86-193">Counter</span></span>|<span data-ttu-id="41b86-194">Descripción</span><span class="sxs-lookup"><span data-stu-id="41b86-194">Description</span></span>|
+|<span data-ttu-id="94738-218">Contador</span><span class="sxs-lookup"><span data-stu-id="94738-218">Counter</span></span>|<span data-ttu-id="94738-219">Descripción</span><span class="sxs-lookup"><span data-stu-id="94738-219">Description</span></span>|
 |----------|-----------|
-|<span data-ttu-id="41b86-195">1</span><span class="sxs-lookup"><span data-stu-id="41b86-195">1</span></span>|<span data-ttu-id="41b86-196">**Configuración**: (opcional) Permite a los usuarios modificar la configuración de una pestaña después de agregarla.</span><span class="sxs-lookup"><span data-stu-id="41b86-196">**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.</span></span>|
-|<span data-ttu-id="41b86-197">2</span><span class="sxs-lookup"><span data-stu-id="41b86-197">2</span></span>|<span data-ttu-id="41b86-198">**Cambiar** nombre: permite a los usuarios dar a la pestaña un nombre que sea más significativo para el equipo.</span><span class="sxs-lookup"><span data-stu-id="41b86-198">**Rename**: Allows users to give the tab a name that’s more meaningful to the team.</span></span>|
-|<span data-ttu-id="41b86-199">3</span><span class="sxs-lookup"><span data-stu-id="41b86-199">3</span></span>|<span data-ttu-id="41b86-200">**Quitar:** quita la pestaña del canal, chat o reunión.</span><span class="sxs-lookup"><span data-stu-id="41b86-200">**Remove**: Removes the tab from the channel, chat, or meeting.</span></span>|
+|<span data-ttu-id="94738-220">1</span><span class="sxs-lookup"><span data-stu-id="94738-220">1</span></span>|<span data-ttu-id="94738-221">**Configuración**: (opcional) Permite a los usuarios modificar la configuración de una pestaña después de agregarla.</span><span class="sxs-lookup"><span data-stu-id="94738-221">**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.</span></span>|
+|<span data-ttu-id="94738-222">2</span><span class="sxs-lookup"><span data-stu-id="94738-222">2</span></span>|<span data-ttu-id="94738-223">**Cambiar** nombre: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.</span><span class="sxs-lookup"><span data-stu-id="94738-223">**Rename**: Users can give the tab a name that’s meaningful to the channel, chat, or meeting.</span></span>|
+|<span data-ttu-id="94738-224">3</span><span class="sxs-lookup"><span data-stu-id="94738-224">3</span></span>|<span data-ttu-id="94738-225">**Quitar:** quita la pestaña del canal, chat o reunión.</span><span class="sxs-lookup"><span data-stu-id="94738-225">**Remove**: Removes the tab from the channel, chat, or meeting.</span></span>|
 
-## <a name="tab-notifications-and-deep-linking"></a><span data-ttu-id="41b86-201">Notificaciones de tabulación y vinculación profunda</span><span class="sxs-lookup"><span data-stu-id="41b86-201">Tab notifications and deep linking</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="94738-226">Móvil</span><span class="sxs-lookup"><span data-stu-id="94738-226">Mobile</span></span>](#tab/mobile)
 
-<span data-ttu-id="41b86-202">Puede enviar un mensaje con un vínculo profundo a la pestaña. Por ejemplo, una tarjeta muestra un resumen de los datos de errores que un usuario puede seleccionar para ver el error completo en una pestaña. El envío de mensajes sobre la actividad de tabulación aumenta el conocimiento sin notificar explícitamente a todos (es decir, actividad sin ruido).</span><span class="sxs-lookup"><span data-stu-id="41b86-202">You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (i.e., activity without noise).</span></span> <span data-ttu-id="41b86-203">También puede usar @mention usuarios específicos si es necesario.</span><span class="sxs-lookup"><span data-stu-id="41b86-203">You also can @mention specific users if needed.</span></span>
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña móvil." border="false":::
 
-<span data-ttu-id="41b86-204">Notificar a los usuarios sobre la actividad de tabulación de una de las siguientes maneras:</span><span class="sxs-lookup"><span data-stu-id="41b86-204">Notify users of tab activity one of the following ways:</span></span>
+|<span data-ttu-id="94738-228">Contador</span><span class="sxs-lookup"><span data-stu-id="94738-228">Counter</span></span>|<span data-ttu-id="94738-229">Descripción</span><span class="sxs-lookup"><span data-stu-id="94738-229">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="94738-230">1</span><span class="sxs-lookup"><span data-stu-id="94738-230">1</span></span>|<span data-ttu-id="94738-231">**Abrir en el explorador:** abre la aplicación en el explorador predeterminado del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="94738-231">**Open in browser**: Opens the app in the device’s default browser.</span></span>|
+|<span data-ttu-id="94738-232">2</span><span class="sxs-lookup"><span data-stu-id="94738-232">2</span></span>|<span data-ttu-id="94738-233">**Vínculo Copiar:** los usuarios pueden copiar y compartir un vínculo a la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-233">**Copy link**: Users can copy and share a link to the tab.</span></span>|
+|<span data-ttu-id="94738-234">3</span><span class="sxs-lookup"><span data-stu-id="94738-234">3</span></span>|<span data-ttu-id="94738-235">**Configuración**: (opcional) Modificar la configuración de una pestaña después de agregarla.</span><span class="sxs-lookup"><span data-stu-id="94738-235">**Settings**: (Optional) Modify a tab’s settings after it's been added.</span></span>|
+|<span data-ttu-id="94738-236">4 </span><span class="sxs-lookup"><span data-stu-id="94738-236">4</span></span>|<span data-ttu-id="94738-237">**Cambiar** nombre: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.</span><span class="sxs-lookup"><span data-stu-id="94738-237">**Rename**: Users can give the tab a name that's meaningful to the channel, chat, or meeting.</span></span>|
+|<span data-ttu-id="94738-238">5 </span><span class="sxs-lookup"><span data-stu-id="94738-238">5</span></span>|<span data-ttu-id="94738-239">**Eliminar:** quita la pestaña del canal, chat o reunión.</span><span class="sxs-lookup"><span data-stu-id="94738-239">**Delete**: Removes the tab from the channel, chat, or meeting.</span></span>|
 
-* <span data-ttu-id="41b86-205">**Bot:** este método se prefiere especialmente si el subproceso de tabulación está dirigido.</span><span class="sxs-lookup"><span data-stu-id="41b86-205">**Bot**: This method is preferred especially if the tab thread is targeted.</span></span> <span data-ttu-id="41b86-206">La conversación enhebrada de la pestaña se mueve a la vista como activa recientemente.</span><span class="sxs-lookup"><span data-stu-id="41b86-206">The tab’s threaded conversation is moved into view as recently active.</span></span> <span data-ttu-id="41b86-207">Este método también permite cierta sofisticación en la forma en que se envía la notificación.</span><span class="sxs-lookup"><span data-stu-id="41b86-207">This method also allows for some sophistication in how the notification is sent.</span></span>
-* <span data-ttu-id="41b86-208">**Mensaje:** aparece un mensaje en la fuente de actividad del usuario con un vínculo profundo a [la pestaña](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="41b86-208">**Message**: A message shows up in the user’s activity feed with a [deep link to the tab](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).</span></span>
+---
 
-## <a name="best-practices"></a><span data-ttu-id="41b86-209">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="41b86-209">Best practices</span></span>
+## <a name="tab-notifications-and-deep-linking"></a><span data-ttu-id="94738-240">Notificaciones de tabulación y vinculación profunda</span><span class="sxs-lookup"><span data-stu-id="94738-240">Tab notifications and deep linking</span></span>
 
-<span data-ttu-id="41b86-210">Usa estas recomendaciones para crear una experiencia de aplicación de calidad:</span><span class="sxs-lookup"><span data-stu-id="41b86-210">Use these recommendations to create a quality app experience:</span></span>
+<span data-ttu-id="94738-241">Puede enviar un mensaje con un vínculo profundo a la pestaña. Por ejemplo, una tarjeta muestra un resumen de los datos de errores que un usuario puede seleccionar para ver el error completo en una pestaña. El envío de mensajes sobre la actividad de tabulación aumenta el conocimiento sin notificar explícitamente a todos (es decir, actividad sin ruido).</span><span class="sxs-lookup"><span data-stu-id="94738-241">You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (i.e., activity without noise).</span></span> <span data-ttu-id="94738-242">También puede usar @mention usuarios específicos si es necesario.</span><span class="sxs-lookup"><span data-stu-id="94738-242">You also can @mention specific users if needed.</span></span>
 
-### <a name="collaboration"></a><span data-ttu-id="41b86-211">Colaboración</span><span class="sxs-lookup"><span data-stu-id="41b86-211">Collaboration</span></span>
+<span data-ttu-id="94738-243">Notificar a los usuarios sobre la actividad de tabulación de una de las siguientes maneras:</span><span class="sxs-lookup"><span data-stu-id="94738-243">Notify users of tab activity one of the following ways:</span></span>
+
+* <span data-ttu-id="94738-244">**Bot:** este método se prefiere especialmente si el subproceso de tabulación está dirigido.</span><span class="sxs-lookup"><span data-stu-id="94738-244">**Bot**: This method is preferred especially if the tab thread is targeted.</span></span> <span data-ttu-id="94738-245">La conversación enhebrada de la pestaña se mueve a la vista como activa recientemente.</span><span class="sxs-lookup"><span data-stu-id="94738-245">The tab’s threaded conversation is moved into view as recently active.</span></span> <span data-ttu-id="94738-246">Este método también permite cierta sofisticación en la forma en que se envía la notificación.</span><span class="sxs-lookup"><span data-stu-id="94738-246">This method also allows for some sophistication in how the notification is sent.</span></span>
+* <span data-ttu-id="94738-247">**Mensaje:** aparece un mensaje en la fuente de actividad del usuario con un vínculo profundo a [la pestaña](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="94738-247">**Message**: A message shows up in the user’s activity feed with a [deep link to the tab](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).</span></span>
+
+## <a name="best-practices"></a><span data-ttu-id="94738-248">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="94738-248">Best practices</span></span>
+
+<span data-ttu-id="94738-249">Usa estas recomendaciones para crear una experiencia de aplicación de calidad:</span><span class="sxs-lookup"><span data-stu-id="94738-249">Use these recommendations to create a quality app experience:</span></span>
+
+### <a name="collaboration"></a><span data-ttu-id="94738-250">Colaboración</span><span class="sxs-lookup"><span data-stu-id="94738-250">Collaboration</span></span>
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="La ilustración muestra qué hacer con el diseño de navegación de pestañas." border="false":::
 
-#### <a name="do-facilitate-conversation"></a><span data-ttu-id="41b86-213">Hacer: facilitar la conversación</span><span class="sxs-lookup"><span data-stu-id="41b86-213">Do: Facilitate conversation</span></span>
+#### <a name="do-facilitate-conversation"></a><span data-ttu-id="94738-252">Hacer: facilitar la conversación</span><span class="sxs-lookup"><span data-stu-id="94738-252">Do: Facilitate conversation</span></span>
 
-<span data-ttu-id="41b86-214">Incluir contenido y componentes de los que los usuarios puedan hablar.</span><span class="sxs-lookup"><span data-stu-id="41b86-214">Include content and components people can talk about.</span></span> <span data-ttu-id="41b86-215">Si no cabe en el contexto de un chat, canal o reunión, no pertenece a la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-215">If it doesn’t fit within the context of a chat, channel, or meeting, it doesn’t belong in your tab.</span></span>
+<span data-ttu-id="94738-253">Incluir contenido y componentes de los que los usuarios puedan hablar.</span><span class="sxs-lookup"><span data-stu-id="94738-253">Include content and components people can talk about.</span></span> <span data-ttu-id="94738-254">Si no cabe en el contexto de un chat, canal o reunión, no pertenece a la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-254">If it doesn’t fit within the context of a chat, channel, or meeting, it doesn’t belong in your tab.</span></span>
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="En el ejemplo se muestra lo que no se debe hacer con el diseño de navegación de pestañas." border="false":::
 
-#### <a name="dont-treat-your-tab-like-any-other-webpage"></a><span data-ttu-id="41b86-217">No: trate la pestaña como cualquier otra página web</span><span class="sxs-lookup"><span data-stu-id="41b86-217">Don't: Treat your tab like any other webpage</span></span>
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a><span data-ttu-id="94738-256">No: trate la pestaña como cualquier otra página web</span><span class="sxs-lookup"><span data-stu-id="94738-256">Don't: Treat your tab like any other webpage</span></span>
 
-<span data-ttu-id="41b86-218">Una pestaña no es una página web que alguien pueda ver una vez.</span><span class="sxs-lookup"><span data-stu-id="41b86-218">A tab isn’t a webpage someone might view once.</span></span> <span data-ttu-id="41b86-219">Una pestaña debe mostrar el contenido más importante y relevante que los usuarios necesitan para lograr algo juntos.</span><span class="sxs-lookup"><span data-stu-id="41b86-219">A tab should display your most important, relevant content that people need to accomplish something together.</span></span>
+<span data-ttu-id="94738-257">Una pestaña no es una página web que alguien pueda ver una vez.</span><span class="sxs-lookup"><span data-stu-id="94738-257">A tab isn’t a webpage someone might view once.</span></span> <span data-ttu-id="94738-258">Una pestaña debe mostrar el contenido más importante y relevante que los usuarios necesitan para lograr algo juntos.</span><span class="sxs-lookup"><span data-stu-id="94738-258">A tab should display your most important, relevant content that people need to accomplish something together.</span></span>
 
    :::column-end:::
 :::row-end:::
 
-### <a name="navigation"></a><span data-ttu-id="41b86-220">Navegación</span><span class="sxs-lookup"><span data-stu-id="41b86-220">Navigation</span></span>
+### <a name="navigation"></a><span data-ttu-id="94738-259">Navegación</span><span class="sxs-lookup"><span data-stu-id="94738-259">Navigation</span></span>
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Ejemplo que muestra qué hacer con el diseño de navegación de pestañas." border="false":::
 
-#### <a name="do-limit-tasks-and-data"></a><span data-ttu-id="41b86-222">Hacer: limitar tareas y datos</span><span class="sxs-lookup"><span data-stu-id="41b86-222">Do: Limit tasks and data</span></span>
+#### <a name="do-limit-tasks-and-data"></a><span data-ttu-id="94738-261">Hacer: limitar tareas y datos</span><span class="sxs-lookup"><span data-stu-id="94738-261">Do: Limit tasks and data</span></span>
 
-<span data-ttu-id="41b86-223">Las pestañas funcionan mejor cuando se abordan necesidades específicas.</span><span class="sxs-lookup"><span data-stu-id="41b86-223">Tabs work best when they address specific needs.</span></span> <span data-ttu-id="41b86-224">Incluya un conjunto limitado de tareas y datos relevantes para el equipo o grupo.</span><span class="sxs-lookup"><span data-stu-id="41b86-224">Include a limited set of tasks and data relevant to the team or group.</span></span>
+<span data-ttu-id="94738-262">Las pestañas funcionan mejor cuando se abordan necesidades específicas.</span><span class="sxs-lookup"><span data-stu-id="94738-262">Tabs work best when they address specific needs.</span></span> <span data-ttu-id="94738-263">Incluya un conjunto limitado de tareas y datos relevantes para el equipo o grupo.</span><span class="sxs-lookup"><span data-stu-id="94738-263">Include a limited set of tasks and data relevant to the team or group.</span></span>
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Ilustración que muestra qué no hacer con el diseño de navegación de pestañas." border="false":::
 
-#### <a name="dont-embed-your-entire-app"></a><span data-ttu-id="41b86-226">No: insertar toda la aplicación</span><span class="sxs-lookup"><span data-stu-id="41b86-226">Don't: Embed your entire app</span></span>
+#### <a name="dont-embed-your-entire-app"></a><span data-ttu-id="94738-265">No: insertar toda la aplicación</span><span class="sxs-lookup"><span data-stu-id="94738-265">Don't: Embed your entire app</span></span>
 
-<span data-ttu-id="41b86-227">El uso de una pestaña para mostrar una aplicación completa con navegación de varios niveles e interacciones complejas conduce a una sobrecarga de información.</span><span class="sxs-lookup"><span data-stu-id="41b86-227">Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.</span></span>
+<span data-ttu-id="94738-266">El uso de una pestaña para mostrar una aplicación completa con navegación de varios niveles e interacciones complejas conduce a una sobrecarga de información.</span><span class="sxs-lookup"><span data-stu-id="94738-266">Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.</span></span>
 
    :::column-end:::
 :::row-end:::
 
-### <a name="setup"></a><span data-ttu-id="41b86-228">Instalación</span><span class="sxs-lookup"><span data-stu-id="41b86-228">Setup</span></span>
+### <a name="setup"></a><span data-ttu-id="94738-267">Instalación</span><span class="sxs-lookup"><span data-stu-id="94738-267">Setup</span></span>
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Ilustración que muestra qué hacer con el diseño de configuración de pestañas." border="false":::
 
-#### <a name="do-keep-it-simple"></a><span data-ttu-id="41b86-230">Do: Keep it simple</span><span class="sxs-lookup"><span data-stu-id="41b86-230">Do: Keep it simple</span></span>
+#### <a name="do-keep-it-simple"></a><span data-ttu-id="94738-269">Do: Keep it simple</span><span class="sxs-lookup"><span data-stu-id="94738-269">Do: Keep it simple</span></span>
 
-<span data-ttu-id="41b86-231">Si la aplicación requiere autenticación, intenta integrar el inicio de sesión único (SSO) de Microsoft para una experiencia de inicio de sesión más fluida.</span><span class="sxs-lookup"><span data-stu-id="41b86-231">If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience.</span></span> <span data-ttu-id="41b86-232">Además, solo incluya información esencial y pasos para agregar la pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-232">Also, only include essential information and steps to add the tab.</span></span>
+<span data-ttu-id="94738-270">Si la aplicación requiere autenticación, intenta integrar el inicio de sesión único (SSO) de Microsoft para una experiencia de inicio de sesión más fluida.</span><span class="sxs-lookup"><span data-stu-id="94738-270">If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience.</span></span> <span data-ttu-id="94738-271">Además, solo incluya información esencial y pasos para agregar la pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-271">Also, only include essential information and steps to add the tab.</span></span>
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Ilustración que muestra qué no hacer con el diseño de configuración de pestañas." border="false":::
 
-#### <a name="dont-have-too-many-steps"></a><span data-ttu-id="41b86-234">No: tener demasiados pasos</span><span class="sxs-lookup"><span data-stu-id="41b86-234">Don't: Have too many steps</span></span>
+#### <a name="dont-have-too-many-steps"></a><span data-ttu-id="94738-273">No: tener demasiados pasos</span><span class="sxs-lookup"><span data-stu-id="94738-273">Don't: Have too many steps</span></span>
 
-<span data-ttu-id="41b86-235">Quite los pasos innecesarios para agregar una pestaña.</span><span class="sxs-lookup"><span data-stu-id="41b86-235">Remove any unnecessary steps for adding a tab.</span></span>
+<span data-ttu-id="94738-274">Quite los pasos innecesarios para agregar una pestaña.</span><span class="sxs-lookup"><span data-stu-id="94738-274">Remove any unnecessary steps for adding a tab.</span></span>
 
    :::column-end:::
 :::row-end:::
 
-### <a name="theming"></a><span data-ttu-id="41b86-236">Creación de temas</span><span class="sxs-lookup"><span data-stu-id="41b86-236">Theming</span></span>
+### <a name="theming"></a><span data-ttu-id="94738-275">Creación de temas</span><span class="sxs-lookup"><span data-stu-id="94738-275">Theming</span></span>
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustración que muestra qué hacer con el tema de tabulación." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a><span data-ttu-id="41b86-238">Hacer: aprovechar las ventajas de Teams de color</span><span class="sxs-lookup"><span data-stu-id="41b86-238">Do: Take advantage of Teams color tokens</span></span>
+#### <a name="do-take-advantage-of-teams-color-tokens"></a><span data-ttu-id="94738-277">Hacer: aprovechar las ventajas de Teams de color</span><span class="sxs-lookup"><span data-stu-id="94738-277">Do: Take advantage of Teams color tokens</span></span>
 
-<span data-ttu-id="41b86-239">Cada Teams tema tiene su propia combinación de colores.</span><span class="sxs-lookup"><span data-stu-id="41b86-239">Each Teams theme has its own color scheme.</span></span> <span data-ttu-id="41b86-240">Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.</span><span class="sxs-lookup"><span data-stu-id="41b86-240">To handle theme changes automatically, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a> in your design.</span></span>
+<span data-ttu-id="94738-278">Cada Teams tema tiene su propia combinación de colores.</span><span class="sxs-lookup"><span data-stu-id="94738-278">Each Teams theme has its own color scheme.</span></span> <span data-ttu-id="94738-279">Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.</span><span class="sxs-lookup"><span data-stu-id="94738-279">To handle theme changes automatically, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a> in your design.</span></span>
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustración que muestra lo que no se debe hacer con el tema de tabulación." border="false":::
 
-#### <a name="dont-hard-code-color-values"></a><span data-ttu-id="41b86-242">No: valores de color de código duro</span><span class="sxs-lookup"><span data-stu-id="41b86-242">Don't: Hard code color values</span></span>
+#### <a name="dont-hard-code-color-values"></a><span data-ttu-id="94738-281">No: valores de color de código duro</span><span class="sxs-lookup"><span data-stu-id="94738-281">Don't: Hard code color values</span></span>
 
-<span data-ttu-id="41b86-243">Si no usas tokens Teams de color, tus diseños serán menos escalables y tendrán más tiempo para administrar.</span><span class="sxs-lookup"><span data-stu-id="41b86-243">If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.</span></span>
+<span data-ttu-id="94738-282">Si no usas tokens Teams de color, tus diseños serán menos escalables y tendrán más tiempo para administrar.</span><span class="sxs-lookup"><span data-stu-id="94738-282">If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.</span></span>
 
    :::column-end:::
 :::row-end:::
