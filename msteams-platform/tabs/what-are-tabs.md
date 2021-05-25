@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 19c51d5c30f938dc5368b28b69ffeb29330887b4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 21499a4e18acee369b4b1bda6184e4b14b6262ec
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566596"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629973"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -65,7 +65,7 @@ Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configura
 > El comportamiento predeterminado de las aplicaciones solo es aplicable si se distribuye a través Teams tienda. De forma predeterminada, todas las pestañas se abren en el Teams cliente.
 > Para iniciar una evaluación de la aplicación para la facilidad de uso móvil, teamsubm@microsoft.com con los detalles de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

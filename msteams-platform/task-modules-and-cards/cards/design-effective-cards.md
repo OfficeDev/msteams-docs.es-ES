@@ -4,18 +4,18 @@ description: Obtén información sobre cómo diseñar tarjetas adaptables para T
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 14ffff1264e716e04a1ffb5549b71a8b7ec5fc14
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b4d5f43268c7bd5afecb56d26eb0d49ed6c9002b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101740"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630312"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de tarjetas adaptables para tu Microsoft Teams aplicación
 
 Una tarjeta adaptable contiene un cuerpo de forma libre de elementos de tarjeta y un conjunto opcional de acciones. Las tarjetas adaptables son fragmentos de contenido que se pueden usar y que se pueden agregar a una conversación a través de un bot o una extensión de mensajería. Con texto, gráficos y botones, estas tarjetas proporcionan una comunicación enriquecte a tu audiencia.
 
-El marco de la tarjeta adaptable se usa en muchos productos de Microsoft, incluidos Teams. Puedes enviar tarjetas dentro de mensajes a los usuarios a través de bots o extensiones de mensajería. Los usuarios pueden realizar acciones en las tarjetas cuando están presentes.
+El marco de la tarjeta adaptable se usa en muchos productos de Microsoft, incluidos Teams. Puedes enviar tarjetas dentro de mensajes a los usuarios a través de bots o extensiones de mensajería. Los usuarios también pueden realizar acciones en las tarjetas cuando están presentes.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Ejemplo de introducción a una tarjeta adaptable." border="false":::
 
@@ -39,73 +39,151 @@ También puedes empezar a diseñar las tarjetas adaptables directamente en el ex
 
 Nuestra tarjeta más grande. Se usa para compartir artículos o escenarios en los que una imagen cuenta la mayor parte del artículo.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="En el ejemplo se muestra una tarjeta de héroe de tarjeta adaptable." border="false":::
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="En el ejemplo se muestra una tarjeta de héroe de tarjeta adaptable en el móvil." border="false":::
+
+---
 
 ### <a name="thumbnail"></a>Miniatura
 
 Se usa para enviar un mensaje sencillo que puede usarse.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="En el ejemplo se muestra una tarjeta en miniatura de tarjeta adaptable." border="false":::
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="En el ejemplo se muestra una tarjeta en miniatura de tarjeta adaptable en el móvil." border="false":::
+
+---
 
 ### <a name="list"></a>Lista
 
 Se usa en escenarios en los que desea que el usuario elija un elemento de una lista, pero los elementos no necesitan mucha explicación.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="En el ejemplo se muestra una tarjeta de lista de tarjeta adaptable." border="false":::
 
-### <a name="digest"></a>Digest
+# <a name="mobile"></a>[Móvil](#tab/mobile)
 
-Se usa para resúmenes de noticias y publicaciones de redondear. Nota: Se recomienda la tarjeta en miniatura para una sola actualización o elemento de noticias.
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="En el ejemplo se muestra una tarjeta de lista de tarjeta adaptable en el móvil." border="false":::
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="En el ejemplo se muestra una tarjeta implícita de tarjeta adaptable." border="false":::
+---
+Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
+---
 
 ### <a name="media"></a>Elementos multimedia
 
 Úsalo cuando quieras combinar texto y medios, como audio o vídeo.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="En el ejemplo se muestra una tarjeta multimedia de tarjeta adaptable." border="false":::
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="En el ejemplo se muestra una tarjeta multimedia de tarjeta adaptable en el móvil." border="false":::
+
+---
 
 ### <a name="people"></a>Personas
 
 Se usa mejor cuando se transmite de forma eficaz quién está implicado en una tarea.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="En el ejemplo se muestra una tarjeta de personas de tarjeta adaptable." border="false":::
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="En el ejemplo se muestra una tarjeta de personas de tarjeta adaptable en el móvil." border="false":::
+
+---
 
 ### <a name="request-ticket"></a>Ticket de solicitud
 
 Se usa para obtener entradas rápidas de un usuario para crear automáticamente una tarea o vale.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="En el ejemplo se muestra una tarjeta de vale de solicitud de tarjeta adaptable." border="false":::
 
-### <a name="imageset"></a>ImageSet
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="En el ejemplo se muestra una tarjeta de vale de solicitud de tarjeta adaptable en el móvil." border="false":::
+
+---
+
+### <a name="image-set"></a>Conjunto de imágenes
 
 Se usa para enviar varias miniaturas de imagen.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de imágenes de tarjeta adaptable." border="false":::
 
-### <a name="actionset"></a>ActionSet
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de imágenes de tarjeta adaptable en el móvil." border="false":::
+
+---
+
+### <a name="action-set"></a>Conjunto de acciones
 
 Úselo cuando desee que el usuario seleccione un botón y, a continuación, recopila la entrada de usuario adicional de la misma tarjeta.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de acciones de tarjeta adaptable." border="false":::
 
-### <a name="choiceset"></a>ChoiceSet
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de acciones de tarjeta adaptable en el móvil." border="false":::
+
+---
+
+### <a name="choice-set"></a>Conjunto de opciones
 
 Se usa para recopilar varias entradas del usuario.
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de opciones de tarjeta adaptable." border="false":::
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="En el ejemplo se muestra una tarjeta de conjunto de opciones de tarjeta adaptable en el móvil." border="false":::
+
+---
 
 ## <a name="anatomy"></a>Anatomía
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="En el ejemplo se muestra una tarjeta de anatomía de tarjeta adaptable." border="false":::
+Las tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta.
 
-Las tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta:
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample muestra la anatomía de la tarjeta adaptable." border="false":::
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="En el ejemplo se muestra la anatomía de la tarjeta adaptable en el móvil." border="false":::
+
+---
 
 |Contador|Descripción|
 |----------|-----------|
-|A|**Encabezado:** haga que los encabezados sea claros y concisos, pero descriptivos.|
-|B|**Copia del cuerpo:** se usa para transmitir detalles que son demasiado largos o que no son lo suficientemente importantes como para incluirlos en el encabezado.|
-|C|**Acciones principales:** Como práctica recomendada, incluya de 1 a 3 acciones principales. Se permite un máximo de seis.|
+|A|**Encabezado:** haga que los encabezados sea claros y concisos.|
+|B|**Copia del cuerpo:** transmita detalles que sean demasiado largos o que no sean lo suficientemente importantes como para incluirlos en el encabezado.|
+|C|**Acciones principales:** Como práctica recomendada, incluya de 1 a 3 acciones principales. Puede tener hasta seis.|
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 

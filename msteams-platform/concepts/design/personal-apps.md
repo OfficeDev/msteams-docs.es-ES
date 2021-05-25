@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b3f08c39a7900b80fb46d167fae8d9e8bdbcc574
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101558"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644896"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñar tu aplicación personal para Microsoft Teams
 
@@ -39,14 +39,16 @@ Con un área de trabajo privada, puedes ver contenido de la aplicación que sea 
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomía: aplicación personal (área de trabajo privada)
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Atribución de la aplicación:** el logotipo y el nombre de la aplicación.|
-|B|**Pestañas:** proporciona navegación para tu aplicación personal. Por ejemplo, incluya una **pestaña Acerca o** **Ayuda.**|
+|B|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |C|**Vista emergente:** inserta el contenido de la aplicación desde una ventana primaria a una ventana secundaria independiente.|
-|D|**Más menú:** incluye información y opciones adicionales de la aplicación. (También puede crear una **Configuración** una pestaña).|
+|D|**Más menú:** incluye información y opciones de aplicación adicionales. (También puede crear una **Configuración** una pestaña).|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
 
@@ -55,22 +57,44 @@ Con un área de trabajo privada, puedes ver contenido de la aplicación que sea 
 |A|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |1|**iframe:** muestra el contenido de la aplicación.|
 
-### <a name="designing-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
+# <a name="mobile"></a>[Móvil](#tab/mobile)
 
-Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar tu pestaña personal:
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Atribución de la aplicación:** el nombre de la aplicación.|
+|B|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|C|**Más menú:** incluye información y opciones de aplicación adicionales.|
+|D|**Navegación principal:** proporciona navegación a la aplicación otras características Teams principales.|
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|1|**webview:** muestra el contenido de la aplicación.|
+
+---
+
+### <a name="designing-with-ui-templates-and-advanced-components"></a>Diseño con plantillas de interfaz de usuario y componentes avanzados
+
+Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar la pestaña personal:
 
 * [Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.
 * [Panel de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tareas: un panel de tareas, a veces denominado tablero de kanban o carriles de natación, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
 * [Panel:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.
 * [Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.
 * [Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.
-* [Navegación izquierda:](../../concepts/design/design-teams-app-ui-templates.md#left-nav)la plantilla de navegación izquierda puede ayudar si la pestaña requiere algo de navegación. En general, debe mantener la navegación por pestañas al mínimo.
+* [Navegación izquierda:](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav)el componente de navegación izquierdo puede ayudar si la aplicación personal requiere algo de navegación. En general, debe mantener la navegación al mínimo.
 
 ## <a name="use-a-personal-app-bot"></a>Usar una aplicación personal (bot)
 
 Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). El bot está disponible en una pestaña especificada.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomía: aplicación personal (bot)
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
 
@@ -79,6 +103,19 @@ Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno 
 |A|**Ficha Bot:** Por ejemplo, incluya una **pestaña Chat** para obtener acceso a las conversaciones y notificaciones del bot.|
 |B|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
 |C|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Punto de entrada del bot:** punto de entrada para que los usuarios accedan a la característica bot en la aplicación personal.|
+|B|**Botón Atrás:** lleva a los usuarios de vuelta al área de trabajo privada.|
+|C|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
+|D|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
+
+---
 
 ## <a name="manage-a-personal-tab"></a>Administrar una pestaña personal
 

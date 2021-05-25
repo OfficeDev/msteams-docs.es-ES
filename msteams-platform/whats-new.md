@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: aa78d187b3fa771c7e7f0fadfe1aa8f571203cb7
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 073776e7058ef2224b891158319fd816953d2c05
+ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566519"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52634698"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -27,12 +27,14 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|5/24/2021|Se Teams directrices de diseño de aplicaciones con patrones móviles y mucho más.|[Diseño de la Teams aplicación](~/concepts/design/design-teams-app-overview.md)
+|03/18/2021|Aviso: **Actualice a la versión 4.10** o posterior del SDK de Bot Framework tal como hemos empezado con el proceso de desuso para y `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |05/13/2021|Se agregó información sobre mConnect y Skooler.|[Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)
 |05/10/2021| Se libera el manifiesto v1.10.|[Esquema del manifiesto](resources/schema/manifest-schema.md) |
-|05/10/2021| Característica de personalización de aplicaciones.| [Diseño de la Microsoft Teams aplicación](~/concepts/design/design-teams-app-overview.md#app-customization) |
+|05/10/2021| Nueva característica de personalización de aplicaciones.| [Habilitar organizaciones para personalizar la aplicación](concepts/design/enable-app-customization.md) |
 |05/07/2021| Vínculos profundos para llamadas de audio y vídeo en el chat. |[Vínculos profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Nueva guía sobre cómo publicar aplicaciones en la Teams tienda.|[Publicar la aplicación en la tienda Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [directrices de validación de la tienda](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Nuevo: Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+| 04/29/2021 | Nuevo: Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |03/18/2021|Aviso: Actualice a la versión 4.10 o posterior del SDK de Bot Framework, tal como hemos empezado con el proceso de desuso para `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 |03/05/2021|El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -157,6 +159,9 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores para Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/24/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/21/2021|Vínculo de tabulaciones y vista de fase|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
 |03/05/2021| Las pestañas ya no tendrán márgenes alrededor de sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 
 Para obtener más información, [vea public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).

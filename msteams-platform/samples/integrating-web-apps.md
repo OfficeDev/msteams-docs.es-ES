@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Aplicaciones web
-ms.openlocfilehash: 6783a05079f876cf3c2475a0ad5ca0e1f6687fc4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566225"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630435"
 ---
 # <a name="web-apps"></a>Aplicaciones web 
 
@@ -110,7 +110,7 @@ Usa un [bot](../bots/what-are-bots.md) en tu aplicación Teams para conversacion
 
 Los bots también permiten enviar mensajes **proactivos** a usuarios o canales individuales. Los mensajes proactivos son mensajes no proactivos desencadenados por un evento externo y no un mensaje enviado a un bot. Por ejemplo, el bot envía un mensaje de bienvenida cuando está instalado o un nuevo usuario se une a un canal. 
 
-El envío de mensajes proactivos requiere Teams identificadores específicos. Puede capturar la información mediante [la captura de](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)datos de lista o perfil de usuario, la suscripción a eventos de conversación o el uso de Microsoft [Graph](/graph/teams-proactive-messaging). [](../bots/how-to/conversations/subscribe-to-conversation-events.md)
+El envío de mensajes proactivos requiere Teams identificadores específicos. Puede capturar la información mediante [la captura de](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)datos de lista o perfil de usuario, la suscripción a eventos de conversación o el uso de Microsoft [Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams). [](../bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 No enviar correo no deseado a los usuarios con mensajes excesivos. Si la Teams la admite, los usuarios pueden configurar las opciones de notificación para la aplicación.   
 A continuación se muestra un ejemplo de un mensaje de notificación: **No me envíe mensajes no probados.**
@@ -121,6 +121,6 @@ A continuación se muestra un ejemplo de un mensaje de notificación: **No me en
 
 Cuando se crea un equipo, también [se aprovisiona SharePoint](/microsoftteams/sharepoint-onedrive-interact) colección de sitios para admitir el almacenamiento de archivos y datos para ese equipo. La aplicación debe aprovechar esta característica si interactúa con archivos. Use la colección de sitios para almacenar datos sin procesar en SharePoint listas y Excel.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

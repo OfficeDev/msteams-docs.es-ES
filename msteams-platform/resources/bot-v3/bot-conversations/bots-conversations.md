@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: mensajes de bots de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566498"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630463"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación con un Microsoft Teams bot
 
@@ -88,7 +88,7 @@ Según los ámbitos declarados, el bot puede recibir mensajes en los siguientes 
 * **chat personal** Los usuarios pueden interactuar en una conversación privada con un bot simplemente seleccionando el bot agregado en el historial de chat o escribiendo su nombre o identificador de aplicación en el cuadro Para: en un nuevo chat.
 * **Canales** Se puede mencionar un bot (&quot;@_botname")_ en un canal si se ha agregado al equipo. Tenga en cuenta que las respuestas adicionales a un bot en un canal requieren mencionar el bot. No responderá a las respuestas en las que no se menciona.
 
-Para los mensajes entrantes, el bot recibe un [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) objeto de tipo `messageType: message` . Aunque el objeto puede contener otros tipos de información, como las actualizaciones de canal enviadas al bot, el tipo representa la comunicación `Activity` entre bot y [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` usuario.
+Para los mensajes entrantes, el bot recibe un [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) de tipo `messageType: message` . Aunque el objeto puede contener otros tipos de información, como las actualizaciones de canal enviadas al bot, el tipo representa la comunicación `Activity` entre bot y [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` usuario.
 
 El bot recibe una carga que contiene el mensaje de usuario, así como otra información sobre el usuario, el origen del mensaje y `Text` Teams información. Nota:
 

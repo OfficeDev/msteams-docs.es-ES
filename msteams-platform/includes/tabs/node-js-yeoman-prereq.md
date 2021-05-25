@@ -78,7 +78,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Desea usar Azure Applications Insights para telemetría? (y/N)**
 
-    Elija **no incluir** Azure Application [Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). El valor predeterminado es no; escriba **n**.
+    Elija **no incluir** Azure Application [Insights](/azure/azure-monitor/app/app-insights-overview). El valor predeterminado es no; escriba **n**.
 
     **Nombre de tabulación predeterminado (máximo 16 caracteres)?**
 

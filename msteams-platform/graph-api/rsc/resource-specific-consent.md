@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorización de teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: dabe0c33013fbb398eee7bf00ac2881cd86e6bc5
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d751e5dba22b19edfe6ffda3eb6a73a37375f92b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566136"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630680"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimiento específico de recursos (RSC)
 
@@ -56,7 +56,7 @@ Puede habilitar o deshabilitar el consentimiento del [propietario del grupo](/az
 
 > [!div class="checklist"]
 >
->- Inicie sesión en [Azure Portal](https://portal.azure.com) como administrador [global/administrador de la compañía](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).  
+>- Inicie sesión en [Azure Portal](https://portal.azure.com) como administrador [global/administrador de la compañía](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).  
  > - [Seleccione](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory** Enterprise  =>  **aplicaciones Consent** y  =>  **permisos** Configuración de  =>  **consentimiento de usuario**.
 > - Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado Consentimiento del propietario del grupo para las aplicaciones que tienen acceso a datos **(El** valor predeterminado es Permitir el consentimiento del propietario del grupo para todos **los propietarios del grupo).** Para que el propietario de un equipo instale una aplicación con RSC, el consentimiento del propietario del grupo debe estar habilitado para ese usuario.
 
@@ -157,7 +157,7 @@ Una vez instalada la aplicación en un equipo, puedes usar [Graph Explorer](http
 
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
  
 * [Probar permisos de consentimiento específicos de recursos en Teams](test-resource-specific-consent.md)
 * [Consentimiento específico de recursos en Microsoft Teams para administradores](/MicrosoftTeams/resource-specific-consent)

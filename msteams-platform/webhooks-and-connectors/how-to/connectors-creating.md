@@ -5,16 +5,16 @@ keywords: teams o365 conector
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 9eaaedf88d907dd7a7422068ab5d20450345f0e7
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566813"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629826"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Crear Office 365 conectores de Microsoft Teams
 
->Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 existente o crear una nueva para incluirla en Microsoft Teams. Consulte [Crear su propio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) para obtener más información.
+Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 existente o crear una nueva para incluirla en Microsoft Teams. Consulte [Crear su propio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) para obtener más información.
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>Agregar un conector a la Teams aplicación
 
@@ -104,7 +104,7 @@ Este es un HTML de ejemplo para crear una página de configuración de Connector
 #### <a name="getsettings-response-properties"></a>`GetSettings()` propiedades de respuesta
 
 >[!Note]
->Los parámetros devueltos por la llamada aquí son diferentes de si se invocara este método desde una pestaña y difieren de los `getSettings` documentados [aquí](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>Los parámetros devueltos por la llamada aquí son diferentes de si se invocara este método desde una pestaña y difieren de los `getSettings` documentados [aquí](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parámetro   | Detalles |
 |-------------|---------|
@@ -185,6 +185,25 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
   "accentColor": "#FFFFFF"
 }
 ```
+
+## <a name="disable-or-enable-connectors-in-teams"></a>Deshabilitar o habilitar conectores en Teams
+
+El módulo Exchange Online PowerShell V2 usa la autenticación moderna y funciona con la autenticación multifactor (MFA) para conectarse a todos los entornos de PowerShell relacionados Exchange en Microsoft 365. Los administradores pueden usar Exchange Online PowerShell para deshabilitar conectores para un inquilino completo o un buzón de grupo específico, lo que afecta a todos los usuarios de ese espacio empresarial o buzón. No es posible deshabilitar para algunos y no para otros. Además, los conectores están deshabilitados de forma predeterminada para GCC inquilinos.
+
+La configuración de nivel de inquilino invalida la configuración de nivel de grupo. Por ejemplo, si un administrador habilita conectores para el grupo y los deshabilita en el inquilino, se deshabilitarán los conectores para el grupo. Para habilitar un conector en Teams, conéctese a [Exchange Online PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mediante la autenticación moderna con o sin MFA.
+
+### <a name="commands-to-disable-or-enable-connectors"></a>Comandos para deshabilitar o habilitar conectores
+
+**Ejecute el comando en Exchange Online PowerShell**
+
+* Para deshabilitar conectores para el inquilino: `Set-OrganizationConfig -ConnectorsEnabled:$false` .
+* Para deshabilitar los mensajes que se pueden usar para el inquilino: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false` .
+* Para habilitar conectores para Teams, ejecute los siguientes comandos:
+    * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+    * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
+    * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
+
+Para obtener más información sobre el intercambio de módulos de PowerShell, [vea Set-OrganizationConfig](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true). Para habilitar o deshabilitar los Outlook, [conecta aplicaciones a tus grupos en Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us).
 
 ## <a name="testing-your-connector"></a>Probar el conector
 

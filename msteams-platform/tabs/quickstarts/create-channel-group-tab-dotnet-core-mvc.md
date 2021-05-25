@@ -5,12 +5,12 @@ description: Guía de inicio rápido para crear un canal personalizado y una pes
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: bac406f22e9273b6cca5d1d5f576b03d295b875f
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580465"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630358"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Crear un canal personalizado y una pestaña de grupo con ASP.NET Core MVC
 
@@ -20,7 +20,7 @@ En esta guía de inicio rápido, crearemos una pestaña de canal o grupo persona
 
 ## <a name="get-the-source-code"></a>Obtener el código fuente
 
-Abra un símbolo del sistema y cree un nuevo directorio para el proyecto de pestaña. Hemos proporcionado un proyecto de pestaña de [grupo de canales](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) sencillo para empezar. Para recuperar el código fuente, puede descargar la carpeta zip y extraer los archivos o clonar el repositorio de ejemplo en el nuevo directorio:
+Abra un símbolo del sistema y cree un nuevo directorio para el proyecto de pestaña. Hemos proporcionado un proyecto de pestaña de [grupo de canales](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) sencillo para empezar. Para recuperar el código fuente, puede descargar la carpeta zip y extraer los archivos o clonar el repositorio de ejemplo en el nuevo directorio:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git

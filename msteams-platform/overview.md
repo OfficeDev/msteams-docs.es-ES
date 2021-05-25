@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 8724b669476b11aa8cb1aca6d9586fc7ea42587d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566512"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630511"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -24,69 +24,124 @@ Las aplicaciones son la forma en que Teams para adaptarse a sus necesidades. Cre
 
 ## <a name="what-are-teams-apps"></a>¿Qué Teams aplicaciones?
 
-Teams aplicaciones son una combinación de [funcionalidades](concepts/capabilities-overview.md) y [puntos de entrada.](concepts/extensibility-points.md) Por ejemplo, los usuarios pueden chatear con el *bot* (funcionalidad) de la aplicación en un *canal* (punto de entrada).
+Teams aplicaciones son una combinación de [funcionalidades.](concepts/capabilities-overview.md) Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras son complejas (administrar registros de pacientes). Al planear la aplicación, recuerda que Teams es un centro de colaboración. Las mejores Teams ayudan a las personas a expresarse y a trabajar mejor juntos.
 
-Algunas aplicaciones son sencillas (enviar notificaciones), mientras que otras son complejas (administrar registros de pacientes). Al planear la aplicación, recuerda que Teams es un centro de colaboración. Las mejores Teams ayudan a las personas a expresarse y a trabajar mejor juntos.
+### <a name="personal-apps"></a>Aplicaciones personales
 
 :::row:::
-   :::column span="":::
+   :::column span="1":::
 
-### <a name="tabs"></a>Pestañas
-
-**Obtenga información más cómodamente:** a veces solo necesita facilitar la búsqueda. Muestra una página web importante en una [pestaña,](tabs/what-are-tabs.md)que proporciona una experiencia web a pantalla completa para contenido estático y dinámico en Teams.
-
-:::image type="content" source="assets/images/overview-tabs.png" alt-text="Representación conceptual de cómo son las pestañas en el Teams cliente." border="false":::
+**Ayudar a los usuarios** a centrarse: una [aplicación personal](concepts/design/personal-apps.md) es un espacio o bot dedicado para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
 
    :::column-end:::
 
-   :::column span="":::
+   :::column span="3":::
 
-### <a name="bots"></a>Bots
-
-**Convertir palabras en acciones:** las conversaciones a menudo resultan en la necesidad de hacer algo (generar un pedido, revisar mi código, comprobar el estado del vale, y así sucesivamente). Un [bot](bots/what-are-bots.md) puede iniciar estos tipos de flujos de trabajo directamente dentro de Teams.
-
-:::image type="content" source="assets/images/overview-bots.png" alt-text="Representación conceptual de cómo son los bots en el Teams cliente." border="false":::
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="Representación conceptual de cómo son las aplicaciones personales en el Teams cliente." border="false":::
 
    :::column-end:::
 
 :::row-end:::
 
+### <a name="tabs"></a>Pestañas
+
+:::row:::
+   :::column span="1":::
+
+**Colaborar más cómodamente:** muestre el contenido basado en web en una [pestaña](tabs/what-are-tabs.md) donde los usuarios puedan analizarlo y trabajar en él juntos.
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="Representación conceptual de cómo son las pestañas en el Teams cliente." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+### <a name="bots"></a>Bots
+
+:::row:::
+   :::column span="1":::
+
+**Convertir palabras en acciones:** las conversaciones a menudo resultan en la necesidad de hacer algo (generar un pedido, revisar mi código, comprobar el estado del vale, y así sucesivamente). Un [bot](bots/what-are-bots.md) puede iniciar estos tipos de flujos de trabajo directamente dentro de Teams.
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="Representación conceptual de cómo son los bots en el Teams cliente." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+### <a name="messaging-extensions"></a>Extensiones de mensajería
+
+:::row:::
+
+   :::column span="1":::
+
+**Facilita la multitarea:** con extensiones [de mensajería,](messaging-extensions/what-are-messaging-extensions.md)puedes compartir rápidamente información externa en una conversación. También puede actuar en un mensaje, como crear un vale de ayuda basado en el contenido de una publicación de canal.
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de mensajería en el Teams cliente." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="meeting-extensions"></a>Extensiones de reunión
+
+:::row:::
+
+   :::column span="1":::
+
+**Crear aplicaciones para reuniones:** hay algunas opciones para incorporar la aplicación a la [experiencia de Teams de llamadas.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de reunión en el Teams cliente." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="webhooks-and-connectors"></a>Webhooks y conectores
+
 :::row:::
 
    :::column span="":::
 
-### <a name="messaging-extensions"></a>Extensiones de mensajería
-
-**Facilita la multitarea:** con extensiones [de mensajería,](messaging-extensions/what-are-messaging-extensions.md)puedes compartir rápidamente información externa en una conversación. También puede actuar en un mensaje, como crear un vale de ayuda basado en el contenido de una publicación de canal.
-
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="Representación conceptual de cómo son las extensiones de mensajería en el Teams cliente." border="false":::
+**Comunicarse con aplicaciones externas:** [los webhooks entrantes](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) son una forma sencilla de enviar automáticamente notificaciones desde otra aplicación a un canal Teams usuario. Con [webhooks salientes,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envía un mensaje al servicio web con un @mention.
 
    :::column-end:::
 
    :::column span="":::
-
-### <a name="webhooks"></a>Webhooks
-
-**Comunicarse con aplicaciones externas:** [los webhooks entrantes](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) son una forma sencilla de enviar automáticamente notificaciones desde otra aplicación a un canal Teams usuario. Con [webhooks salientes,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envía un mensaje al servicio web con un @mention.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Representación conceptual de cómo son los conectores en el Teams cliente." border="false":::
 
    :::column-end:::
 :::row-end:::
 
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para Teams
+
 :::row:::
 
    :::column span="":::
 
-### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para Teams
-
-**Usar Teams:** la API de [Microsoft Graph](/graph/teams-concept-overview) para Teams proporciona acceso a información sobre equipos, canales, usuarios y mensajes que pueden ayudarle a crear o mejorar las características de la aplicación.
-
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams." border="false":::
+**Usar Teams:** la API de [Microsoft Graph](/graph/teams-concept-overview) para Teams proporciona acceso a información sobre equipos, canales, usuarios y mensajes que pueden ayudarle a crear o mejorar las características de la aplicación (como notificaciones enriquecciones).
 
    :::column-end:::
 
    :::column span="":::
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams." border="false":::
+
    :::column-end:::
 :::row-end:::
 
@@ -127,7 +182,7 @@ Combina las características que a los usuarios les gusta acerca de una aplicaci
 
 ## <a name="a-little-code-goes-a-long-way"></a>Un poco de código va mucho más allá
 
-No es necesario ser un programador experto para crear una aplicación Teams web. Pruebe una de las varias soluciones de código bajo.
+No es necesario ser un programador experto para crear una aplicación Teams web. Pruebe una de varias soluciones de código bajo.
 
 > [!div class="nextstepaction"]
 > [Crear una aplicación de código bajo](samples/teams-low-code-solutions.md)
@@ -154,7 +209,7 @@ No es necesario ser un programador experto para crear una aplicación Teams web.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
 * [Diseñar la aplicación Teams aplicación](concepts/design/design-teams-app-overview.md)

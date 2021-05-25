@@ -5,12 +5,12 @@ description: Al planear la Microsoft Teams, primero debes comprender qué proble
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b1d51dd126f237584b5c53ca053cdd13bc470d0b
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 7e91ddcab88243baf83f11fad59539845724fc78
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101789"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630764"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -79,7 +79,7 @@ Identifique qué nuevas características prefiere tener el usuario en la soluci�
 
 ## <a name="see-also"></a>Vea también
 
-* [Elegir cómo distribuir la aplicación](../deploy-and-publish/overview.md)
+* [Elegir cómo distribuir la aplicación](../deploy-and-publish/apps-publish-overview.md)
 * [Pestañas de diseño](../../tabs/design/tabs.md)
 * [Bots de diseño](../../bots/design/bots.md)
 

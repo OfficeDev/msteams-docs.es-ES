@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566588"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630216"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a las tarjetas Teams
 
@@ -169,8 +169,6 @@ Use la propiedad information masking para enmascarar información específica, c
 > [!NOTE]
 > La propiedad de enmascaramiento de información está disponible actualmente solo en la versión preliminar del desarrollador.
 
-Para enmascarar la información en tarjetas adaptables, agregue la `isMasked` propiedad **al tipo** y establezca su valor `Input.Text` en *true*.
-
 #### <a name="sample-adaptive-card-with-masking-property"></a>Tarjeta adaptable de ejemplo con la propiedad masking
 
 ```json
@@ -178,8 +176,7 @@ Para enmascarar la información en tarjetas adaptables, agregue la `isMasked` pr
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 La siguiente imagen es un ejemplo de enmascaramiento de información en tarjetas adaptables:
@@ -218,7 +215,7 @@ Además, la aplicación debe incluir los siguientes elementos:
 
 Una tarjeta adaptable de ancho completo aparece de la siguiente manera: ![ Vista de tarjeta adaptable de ancho completo](../../assets/images/cards/full-width-adaptive-card.png)
 
-Si no ha establecido la propiedad en Full , la vista predeterminada de la tarjeta adaptable es la siguiente: Vista de tarjeta adaptable `width` de ancho  ![ pequeño](../../assets/images/cards/small-width-adaptive-card.png)
+Si no ha establecido la propiedad en Full , la vista predeterminada de la tarjeta adaptable aparece de la siguiente manera: Vista de tarjeta adaptable `width` de ancho  ![ pequeño](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Compatibilidad con Typeahead
 
@@ -287,7 +284,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. La compatibil
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -376,7 +373,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. Markdown se d
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -464,7 +461,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como la tarjeta de mi
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

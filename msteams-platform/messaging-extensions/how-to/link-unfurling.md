@@ -5,12 +5,12 @@ description: Cómo realizar el despliegue de vínculos con la extensión de mens
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 405b320b887300837d51332a9548ff60aff450d0
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075720"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630687"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -178,4 +178,5 @@ A continuación se muestra un ejemplo de la respuesta:
 
 ## <a name="see-also"></a>Vea también 
 
-[Tarjetas](~/task-modules-and-cards/what-are-cards.md)
+* [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
+* [Desafusado de vínculos de pestañas y vista fase](~/tabs/tabs-link-unfurling.md)

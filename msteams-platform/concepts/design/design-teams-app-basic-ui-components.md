@@ -1,26 +1,26 @@
 ---
 title: Diseñar la aplicación con componentes básicos de la interfaz de usuario fluent
 author: heath-hamilton
-description: Obtén información sobre los componentes primitivos de la interfaz de usuario que se usan habitualmente para crear aplicaciones de Microsoft Teams y obtener el Kit de interfaz de usuario de Microsoft Teams.
+description: Obtén información sobre los componentes de interfaz de usuario primitivos que se usan habitualmente para crear Microsoft Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: fd6053b28bd56231d49c5830a00d40868a36509a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019891"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644913"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes básicos de la interfaz de usuario fluent
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación Microsoft Teams con componentes básicos de la interfaz de usuario fluent
 
-Las aplicaciones de Teams normalmente se construyen con los siguientes componentes básicos de Fluent UI. Diseñados de la forma más plana posible, estos componentes pueden funcionar en diferentes casos de uso, temas y tamaños de pantalla.
+Puedes crear tu aplicación Teams desde cero con los siguientes componentes básicos de Fluent UI. Diseñados de la forma más plana posible, estos componentes pueden funcionar en diferentes casos de uso, temas y tamaños de pantalla.
 
-Las ilustraciones de esta página muestran cómo se ven los componentes en los temas predeterminados (claros) y oscuros de Teams.
+Las ilustraciones de esta página muestran cómo se ven los componentes Teams los temas predeterminados (claros) y oscuros.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-En función de la interfaz de usuario <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent,</a>el Kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para crear aplicaciones de Teams. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+Basado en la interfaz de usuario <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluent,</a>Microsoft Teams kit de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -69,7 +69,7 @@ En función de la interfaz de usuario <a href="https://fluentsite.z22.web.core.w
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de lista de grupos." border="false":::
 
-## <a name="hyperlink"></a>Hipervínculo
+## <a name="hyperlink"></a>Hyperlink
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de hipervínculo." border="false":::
 
@@ -133,7 +133,7 @@ Nota: En Fluent UI, alternar es un tipo de casilla.
 
 ## <a name="other-resources"></a>Otros recursos
 
-Obtenga ejemplos de código y detalles de implementación para algunos de los componentes enumerados aquí y en el Kit de interfaz de usuario de Microsoft Teams.
+Obtenga ejemplos de código y detalles de implementación para algunos de los componentes enumerados aquí y en el kit Microsoft Teams interfaz de usuario.
 
 > [!div class="nextstepaction"]
 > [Pruebe los componentes (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)

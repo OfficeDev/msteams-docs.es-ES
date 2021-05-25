@@ -1,18 +1,18 @@
 ---
-title: Obtener contexto específico de Teams para el bot
+title: Obtener Teams contexto específico para el bot
 author: laujan
 description: Cómo obtener el contexto específico de Microsoft Team para el bot, incluida la lista de conversaciones, los detalles y la lista de canales.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2e0178c5fd1ebca85d6e6c2cb6f3591f36a648fb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6a8f903fb2f3ed8120e31b7536b65f22fdf6d620
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020013"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630169"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>Obtener contexto específico de Teams para el bot
+# <a name="get-teams-specific-context-for-your-bot"></a>Obtener Teams contexto específico para el bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -20,7 +20,7 @@ Un bot puede tener acceso a datos de contexto adicionales sobre un equipo o chat
 
 ## <a name="fetch-the-roster-or-user-profile"></a>Capturar la lista o el perfil de usuario
 
-El bot puede consultar la lista de miembros y sus perfiles de usuario básicos, incluidos los id. de usuario de Teams y la información de Azure Active Directory (AAD), como name y objectId. Puede usar esta información para correlacionar identidades de usuario. Por ejemplo, para comprobar si un usuario ha iniciado sesión en una pestaña a través de credenciales de AAD, es miembro del equipo. Para obtener miembros de conversación, el tamaño mínimo o máximo de la página depende de la implementación. El tamaño de página inferior a 50, se trata como 50 y mayor que 500, se recorta en 500. Incluso si usa la versión no paginada, no es confiable en equipos grandes y no debe usarse. Para obtener más información, vea cambios en las API de [bot de Teams para obtener miembros de equipo o chat.](~/resources/team-chat-member-api-changes.md)
+El bot puede consultar la lista de miembros y sus perfiles de usuario básicos, incluidos Teams id. de usuario e información de Azure Active Directory (AAD), como name y objectId. Puede usar esta información para correlacionar identidades de usuario. Por ejemplo, para comprobar si un usuario ha iniciado sesión en una pestaña a través de credenciales de AAD, es miembro del equipo. Para obtener miembros de conversación, el tamaño mínimo o máximo de la página depende de la implementación. El tamaño de página inferior a 50, se trata como 50 y mayor que 500, se recorta en 500. Incluso si usa la versión no paginada, no es confiable en equipos grandes y no debe usarse. Para obtener más información, vea cambios en las API Teams [Bot para capturar miembros de equipo o chat.](~/resources/team-chat-member-api-changes.md)
 
 El siguiente código de ejemplo usa el extremo paginado para capturar la lista:
 
@@ -123,11 +123,11 @@ Response body
 
 * * *
 
-Después de capturar la lista o el perfil de usuario, puede obtener los detalles de un solo miembro. Actualmente, para recuperar información de uno o más miembros de un chat o equipo, use las API de bots de Microsoft Teams para C# o para las `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` API de TypeScript.
+Después de capturar la lista o el perfil de usuario, puede obtener los detalles de un solo miembro. Actualmente, para recuperar información para uno o varios miembros de un chat o equipo, use las API de bots de Microsoft Teams para C# o para las `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` API de TypeScript.
 
 ## <a name="get-single-member-details"></a>Obtener detalles de un solo miembro
 
-También puede recuperar los detalles de un usuario determinado con su id. de usuario de Teams, UPN o id. de objeto de AAD.
+También puede recuperar los detalles de un usuario determinado mediante su Teams de usuario, UPN o id. de objeto de AAD.
 
 El siguiente código de ejemplo se usa para obtener detalles de un solo miembro:
 
@@ -166,7 +166,7 @@ export class MyBot extends TeamsActivityHandler {
 async def _show_members(
     self, turn_context: TurnContext
 ):
-    member = TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
+    member = await TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
 # <a name="json"></a>[JSON](#tab/json)
@@ -207,7 +207,7 @@ Response body
 
 * * *
 
-Después de obtener los detalles de un solo miembro, puede obtener detalles del equipo. Actualmente, para recuperar información para un equipo, use las API de bots de Microsoft Teams `TeamsInfo.GetMemberDetailsAsync` para C# o para `TeamsInfo.getTeamDetails` TypeScript.
+Después de obtener los detalles de un solo miembro, puede obtener detalles del equipo. Actualmente, para recuperar información para un equipo, use las API de bots Microsoft Teams para `TeamsInfo.GetMemberDetailsAsync` C# o `TeamsInfo.getTeamDetails` para TypeScript.
 
 ## <a name="get-teams-details"></a>Obtener los detalles del equipo
 
@@ -282,7 +282,7 @@ Response body
 
 * * *
 
-Después de obtener los detalles del equipo, puede obtener la lista de canales de un equipo. Actualmente, para recuperar información de una lista de canales de un equipo, use las API de bots de Microsoft Teams para C# o para `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` las API de TypeScript.
+Después de obtener los detalles del equipo, puede obtener la lista de canales de un equipo. Actualmente, para recuperar información de una lista de canales de un equipo, use las API de bots de Microsoft Teams para C# o para las `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` API de TypeScript.
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>Obtener la lista de canales de un equipo
 

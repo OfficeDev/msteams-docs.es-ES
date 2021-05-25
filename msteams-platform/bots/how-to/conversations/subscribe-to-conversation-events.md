@@ -1,16 +1,16 @@
 ---
 title: Eventos de conversación
 author: WashingtonKayaker
-description: Cómo trabajar con eventos de conversación desde el bot de Microsoft Teams.
+description: Cómo trabajar con eventos de conversación desde el Microsoft Teams bot.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020031"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630708"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -40,7 +40,7 @@ Un bot recibe un `conversationUpdate` evento en cualquiera de los siguientes cas
 
 El evento `conversationUpdate` se envía al bot cuando recibe información sobre las actualizaciones de suscripción de los equipos donde se ha agregado. También recibe una actualización cuando se ha agregado por primera vez para conversaciones personales.
 
-En la tabla siguiente se muestra una lista de eventos de actualización de conversaciones de Teams con más detalles:
+En la tabla siguiente se muestra una lista de Teams eventos de actualización de conversación con más detalles:
 
 | Acción realizada        | EventType         | Método llamado              | Descripción                | Ámbito |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
@@ -143,7 +143,7 @@ async def on_teams_channel_created(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-renamed"></a>Cambio de nombre del canal
 
@@ -225,7 +225,7 @@ async def on_teams_channel_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-deleted"></a>Canal eliminado
 
@@ -309,7 +309,7 @@ async def on_teams_channel_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-restored"></a>Canal restaurado
 
@@ -398,7 +398,7 @@ async def on_teams_channel_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-members-added"></a>Miembros del equipo agregados
 
@@ -542,7 +542,7 @@ async def on_teams_members_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-members-removed"></a>Miembros del equipo eliminados
 
@@ -654,7 +654,7 @@ async def on_teams_members_removed(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-renamed"></a>Cambio de nombre de equipo
 
@@ -734,7 +734,7 @@ async def on_teams_team_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-deleted"></a>Equipo eliminado
 
@@ -810,7 +810,7 @@ async def on_teams_team_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-restored"></a>Equipo restaurado
 
@@ -890,7 +890,7 @@ async def on_teams_team_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-archived"></a>Equipo archivado
 
@@ -970,7 +970,7 @@ async def on_teams_team_archived(
     )
 ```
 
-* * *
+---
 
 
 ### <a name="team-unarchived"></a>Equipo sin jerarquía
@@ -1051,7 +1051,7 @@ async def on_teams_team_unarchived(
     )
 ```
 
-* * *
+---
 
 Ahora que ha trabajado con los eventos de actualización de conversación, puede comprender los eventos de reacción de mensajes que se producen para diferentes reacciones a un mensaje.
 
@@ -1173,7 +1173,7 @@ async def on_reactions_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="reactions-removed-from-bot-message"></a>Reacciones eliminadas del mensaje de bot
 
@@ -1282,7 +1282,7 @@ async def on_reactions_removed(
     return
 ```
 
-* * *
+---
 
 ## <a name="installation-update-event"></a>Evento de actualización de instalación
 
@@ -1320,6 +1320,10 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
+
+No disponible
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1375,11 +1379,16 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
+
+# <a name="python"></a>[Python](#tab/python)
+
+No disponible
+
+---
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | Bot de conversación | Código de ejemplo para eventos de conversación de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

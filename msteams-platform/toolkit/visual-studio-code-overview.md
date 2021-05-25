@@ -5,12 +5,12 @@ keywords: Kit de herramientas de código visual studio de teams
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: efd0962e9c4c0d64dbac47caf29b2e56907937b3
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566561"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629840"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Crear aplicaciones con el Teams Toolkit y Visual Studio Code
 
@@ -45,7 +45,7 @@ El Microsoft Teams Toolkit para Visual Studio Code está disponible para su desc
 
 1. En Visual Studio Code, seleccione el icono Teams icono ![Icono de Teams](../assets/icons/favicon-16x16.png) de la barra de actividades en el lado izquierdo de la ventana.
 1. Selecciona **Importar paquete de aplicación** en el menú de comandos.
-1. Elige el archivo [zip Teams paquete de](../concepts/build-and-test/apps-package.md) la aplicación existente.
+1. Elige el archivo zip Teams [paquete de](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true) la aplicación existente.
 1. Elija el **botón Seleccionar paquete de** publicación. La pestaña de configuración del kit de herramientas ahora debe rellenarse con los detalles de la aplicación.
 1. En Visual Studio Code, seleccione **Agregar** carpeta de archivo al área de trabajo para agregar el directorio de código fuente  ->   al área Visual Studio Code de trabajo.
 
@@ -55,7 +55,7 @@ En su núcleo, la aplicación Teams abarca tres componentes:
 
   1. El Microsoft Teams (web, de escritorio o móvil) donde los usuarios interactúan con la aplicación.
   1. Un servidor que responde a las solicitudes de contenido que se mostrarán en Teams. Por ejemplo, contenido de pestaña HTML o una tarjeta adaptable de bot.
-  1. Un Teams [de la aplicación que](/concepts/build-and-test/apps-package.md) consta de tres archivos:
+  1. Un Teams de la aplicación consta de tres archivos:
 
       > [!div class="checklist"]
       >
@@ -83,7 +83,7 @@ Consulta la **página principal crear y** ejecutar contenido en la página princ
 
 ### <a name="enable-development-from-localhost"></a>Habilitar el desarrollo desde localhost
 
-Si quieres depurar la aplicación basada en pestañas en localhost con HTTPS, deberás decir a tu explorador que confíe en la aplicación desde <https://localhost> . Vaya a <https://localhost:3000/tab>. Si ve una advertencia que indica que el sitio no es de confianza, elija la opción para continuar de todos modos. La aplicación ahora debe ser accesible desde el Teams cliente.
+Si quieres depurar la aplicación basada en pestañas en localhost con HTTPS, deberás decir a tu explorador que confíe en la aplicación desde `<https://localhost>` . Vaya a `<https://localhost:3000/tab>`. Si ve una advertencia que indica que el sitio no es de confianza, elija la opción para continuar de todos modos. La aplicación ahora debe ser accesible desde el Teams cliente.
 
 ### <a name="run-your-app-in-teams"></a>Ejecute la aplicación en Teams
 

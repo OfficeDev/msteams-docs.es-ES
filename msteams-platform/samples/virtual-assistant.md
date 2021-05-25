@@ -4,12 +4,12 @@ description: Cómo crear bots y habilidades del Asistente virtual para su uso en
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots de asistente virtual de teams
-ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566876"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630736"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual 
 
@@ -411,7 +411,7 @@ El bot book-a-room tiene dos comandos principales para los usuarios:
 - `Book room`
 - `Manage Favorites`
 
-Hemos creado un modelo de LUIS al comprender estos dos comandos. Los secretos correspondientes deben rellenarse en `cognitivemodels.json` . El archivo JSON de LUIS correspondiente se [encuentra aquí](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json).
+Hemos creado un modelo de LUIS al comprender estos dos comandos. Los secretos correspondientes deben rellenarse en `cognitivemodels.json` . El archivo JSON de LUIS correspondiente se [encuentra aquí](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json).
 El archivo `.lu` correspondiente se muestra en la siguiente sección:
 
 ```
@@ -534,7 +534,7 @@ La actualización de actividad, como la actualización de tarjetas, aún no se a
 Para reenviar la acción de la tarjeta o las actividades del módulo de tareas a una habilidad asociada, la habilidad debe `skillId` insertarse en ella.
 `Book-a-room` La acción de la tarjeta bot, la captura del módulo de tareas y las cargas de acción de envío se modifican para que `skillId` contengan como parámetro. 
 
-Para obtener más información, [consulte esta](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) sección de esta documentación.
+Para obtener más información, [consulte esta](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) sección de esta documentación.
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>Controlar actividades desde el ámbito de canal o chat de grupo
 
@@ -555,7 +555,7 @@ Para obtener más información, [consulte esta](https://msteams-captain.visualst
     }
 ```
 
-También puede aprovechar las aptitudes existentes desde el repositorio [de Bot Framework Solutions](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) o crear una nueva habilidad desde cero. Para crear una nueva habilidad, consulta [tutoriales para crear una nueva habilidad.](https://microsoft.github.io/botframework-solutions/overview/skills/) Para obtener documentación sobre el Asistente virtual y la arquitectura de habilidades,[vea Asistente virtual y arquitectura de habilidades.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
+También puede aprovechar las aptitudes existentes desde el repositorio [de Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) o crear una nueva habilidad desde cero. Para crear una nueva habilidad, consulta [tutoriales para crear una nueva habilidad.](https://microsoft.github.io/botframework-solutions/overview/skills/) Para obtener documentación sobre el Asistente virtual y la arquitectura de habilidades,[vea Asistente virtual y arquitectura de habilidades.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitaciones del Asistente virtual 
 
@@ -566,7 +566,7 @@ También puede aprovechar las aptitudes existentes desde el repositorio [de Bot 
   * La configuración de extensiones de mensajería no está en el ámbito de comandos individuales, sino de toda la extensión en sí. Esto limita la configuración de cada habilidad individual a través del Asistente virtual.
   * Los IDs de comandos de extensiones de mensajería tienen una longitud máxima de [64](../resources/schema/manifest-schema.md#composeextensions) caracteres y se usan 37 caracteres para insertar información de aptitudes. Por lo tanto, las restricciones actualizadas para el identificador de comando están limitadas a 27 caracteres.
 
-También puede aprovechar las aptitudes existentes desde el repositorio [de Bot Framework Solutions](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) o crear una nueva habilidad desde cero. Los tutoriales para las versiones posteriores se pueden [encontrar aquí](https://microsoft.github.io/botframework-solutions/overview/skills/). Consulte la documentación [sobre](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) el Asistente virtual y la arquitectura de habilidades.
+También puede aprovechar las aptitudes existentes desde el repositorio [de Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) o crear una nueva habilidad desde cero. Los tutoriales para las versiones posteriores se pueden [encontrar aquí](https://microsoft.github.io/botframework-solutions/overview/skills/). Consulte la documentación [sobre](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) el Asistente virtual y la arquitectura de habilidades.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
@@ -576,10 +576,8 @@ También puede aprovechar las aptitudes existentes desde el repositorio [de Bot 
 | Código de habilidad de bot de libro a sala | Permite buscar y reservar rápidamente una sala de reuniones sobre la marcha. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
-
-- [Libro a sala](app-templates.md#book-a-room)
-
-- [Microsoft Teams bot](../bots/what-are-bots.md)
+* [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+* [Libro a sala](app-templates.md#book-a-room)
+* [Microsoft Teams bot](../bots/what-are-bots.md)

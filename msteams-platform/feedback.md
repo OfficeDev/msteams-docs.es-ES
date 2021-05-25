@@ -4,12 +4,12 @@ description: El Microsoft Teams de producto responde a la comunidad de desarroll
 localization_priority: Normal
 ms.topic: reference
 keywords: preguntas de los desarrolladores de comentarios de teams problemas de solicitudes de soporte técnico de contactos contribuciones de la comunidad
-ms.openlocfilehash: 0ced6a6e593f38e42833a81df9a22f4919b8c5bb
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b052b50bdafd542904bf3a9dfc6ee9d1ad5cf769
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566169"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630484"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams de la comunidad de desarrolladores
 
@@ -24,7 +24,7 @@ Microsoft Teams comunidad de desarrolladores usan Stack Overflow para conectarse
 |  **Actualizaciones de documentación**           |     Seleccione **Editar** en el artículo que desea actualizar y envíe una solicitud de extracción a la Microsoft Teams [documentación GitHub](https://github.com/MicrosoftDocs/msteams-docs) repositorio.                                                                                                                                                           |
 |       **Sugerencias de características**       |                                                                                                                                                                      Publique sugerencias de características [en Microsoft Teams de comentarios en UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).                                                                                                                                                                      |
 |       **Preguntas generales**         |Enviar preguntas generales sobre la plataforma Microsoft Teams desarrolladores a [Microsoft Teams Community ayuda](mailto:microsoftteamsdev@microsoft.com). Recomendamos publicar preguntas en los canales mencionados aquí y usar el correo electrónico solo si no se aplica ningún otro modo de comunicación.                                                                                                                                                                      |
-|        **Ejemplos**         | Enviar problemas con ejemplos a los repositorios [Microsoft Teams samples](/microsoftteams/platform/tutorials/code-samples) respectivos.|
+|        **Ejemplos**         | Enviar problemas con ejemplos a los repositorios [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) respectivos.|
 |           **Problemas o sugerencias del SDK de pestañas**          |         Enviar problemas y solicitudes de características al repositorio de SDK [para Microsoft Teams biblioteca de JavaScript](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Use la `microsoft-teams` etiqueta para publicar preguntas sobre cómo hacerlo sobre el SDK en Stack [Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams).                                                                                                                                                                            |
 
 ## <a name="product-support-channels"></a>Canales de soporte técnico de productos
@@ -35,6 +35,6 @@ En la tabla siguiente se enumeran los canales de soporte técnico para enviar Te
 |         **Microsoft Teams problemas y errores del producto**          | El administrador de inquilinos puede comunicarse [con Microsoft 365 soporte técnico.](/microsoft-365/admin/contact-support-for-business-products)                                                            |
 |        **Preguntas generales sobre Microsoft Teams**        |  Envíe sus preguntas en [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).               |                                                           
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Referencia del SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

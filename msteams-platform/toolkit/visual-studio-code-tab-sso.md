@@ -5,12 +5,12 @@ keywords: Teams visual studio code toolkit tabs sso graph authentication Azure i
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 11e642ce335dae4344f1c730b73763e9172fd76c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566834"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630995"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Autenticación de inicio de sesión único con Teams Toolkit y Visual Studio Code para pestañas
 
@@ -48,6 +48,6 @@ Si desea obtener más información sobre cómo se aprovisionará  el registro de
 > [!TIP]
 > Es posible que no veas el diálogo de instalación de la aplicación en el explorador si las ventanas emergentes están deshabilitadas para el explorador. Si esto sucede, habilita las ventanas emergentes y actualiza la página.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](visual-studio-code-overview.md)
+[Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](visual-studio-code-overview.md)

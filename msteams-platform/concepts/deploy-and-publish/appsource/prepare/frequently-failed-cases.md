@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: Sugerencias de envío de aplicaciones con frecuencia con errores en las directrices de validación de casos
-ms.openlocfilehash: 50bbd2af3b4c834e2ac4776e1fc7db1d8bf45173
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565276"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630001"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío Microsoft Teams aplicación correcta
 
@@ -157,8 +157,7 @@ El bot debe responder a cualquier comando y no al usuario. Estos son algunos con
 
   ![Ejemplo de comando de ayuda](../../../../assets/images/faq/helpcommand.png)
 
-* **Usar tarjetas adaptables y módulos de tareas para que la respuesta del bot sea clara y fácil de usar** 
- [Las tarjetas adaptables con botones que invocan módulos de tareas](/task-modules-and-cards/task-modules/task-modules-bots.md) mejoran la experiencia del usuario del bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos. Además, las respuestas de bot no deben ser textuales con texto largo. Los bots deben usar tarjetas adaptables y módulos de tareas en lugar de una interfaz de usuario basada en chat conversacional y respuestas de texto largas.
+* **Usar tarjetas adaptables y módulos de tareas para que la respuesta del bot sea clara y fácil de usar** Las tarjetas adaptables con botones que invocan módulos de tareas mejoran la experiencia del usuario del bot. Estas tarjetas y botones son más fáciles de usar en un dispositivo móvil en lugar de que el usuario escriba los comandos. Además, las respuestas de bot no deben ser textuales con texto largo. Los bots deben usar tarjetas adaptables y módulos de tareas en lugar de una interfaz de usuario basada en chat conversacional y respuestas de texto largas.
 
 * **Piense en todos los ámbitos**. Asegúrese de que el bot proporciona respuestas adecuadas cuando se menciona ( `@*botname*` ) en un canal y en conversaciones personales. Si el bot no proporciona un contexto significativo dentro del ámbito personal o de equipos, deshabilite dicho ámbito a través del manifiesto. (Vea el `bots` bloque en la referencia Microsoft Teams esquema de [manifiesto](../../../../resources/schema/manifest-schema.md#bots).)
 
@@ -247,7 +246,7 @@ Advierto a los usuarios antes de que la aplicación descargue los archivos o arc
 * Consulte la guía [de solución de problemas](/azure/active-directory/develop/troubleshoot-publisher-verification) para obtener información adicional.
 * Complete la autoaestación a través del centro de partners. Rellene el cuestionario Self-Assessment en **Cumplimiento de aplicaciones**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Más información sobre las Teams de aprobación de aplicaciones](/legal/marketplace/certification-policies#1140-teams)
 * [Sección 100: General](/legal/marketplace/certification-policies#100-general)

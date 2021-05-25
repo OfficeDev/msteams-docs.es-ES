@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566687"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629966"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -104,7 +104,7 @@ Elegir el botón relativo desencadena `saveGray()` o , e invoca lo `saveRed()` s
 1. Se `microsoftTeams.settings.registerOnSaveHandler()` desencadena el controlador de eventos.
 1. El **botón** Guardar de la página de configuración de la aplicación, cargado en Teams, está habilitado.
 
-El código de página de configuración informa a Teams que los requisitos de configuración se cumplen y la instalación puede continuar. Cuando el usuario selecciona **Guardar**, los parámetros de `settings.setSettings()` se establecen, según lo define la `Settings` interfaz. Para obtener más información, [vea Configuración interfaz](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). En el último paso, se llama para indicar que la dirección URL de `saveEvent.notifySuccess()` contenido se ha resuelto correctamente.
+El código de página de configuración informa a Teams que los requisitos de configuración se cumplen y la instalación puede continuar. Cuando el usuario selecciona **Guardar**, los parámetros de `settings.setSettings()` se establecen, según lo define la `Settings` interfaz. Para obtener más información, [vea Configuración interfaz](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). En el último paso, se llama para indicar que la dirección URL de `saveEvent.notifySuccess()` contenido se ha resuelto correctamente.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ El código de página de configuración informa a Teams que los requisitos de co
 
 Puede que su pestaña necesite información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de la pestaña al proporcionar una experiencia de usuario más personalizada.
 
-Para obtener más información sobre las propiedades usadas para la configuración de pestañas, vea [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
+Para obtener más información sobre las propiedades usadas para la configuración de pestañas, vea [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
 
 1. Inserte marcadores de posición de cadena de consulta url en el `configurationURL` manifiesto .
 
@@ -158,7 +158,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar la `getContext()` función para recuperar contexto
 
-La `microsoftTeams.getContext((context) => {})` función recupera la interfaz context [cuando](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) se invoca. Agregue esta función a la página de configuración para recuperar valores de contexto:
+La `microsoftTeams.getContext((context) => {})` función recupera la interfaz context [cuando](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) se invoca. Agregue esta función a la página de configuración para recuperar valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clientes móviles
 
-Si decide que la pestaña canal o grupo aparezca en el Teams móviles, la configuración debe tener un `setSettings()` valor para la `websiteUrl` propiedad. Para obtener más información, consulte [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+Si decide que la pestaña canal o grupo aparezca en el Teams móviles, la configuración `setSettings()` debe tener un valor para `websiteUrl` . Para obtener más información, consulte [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).

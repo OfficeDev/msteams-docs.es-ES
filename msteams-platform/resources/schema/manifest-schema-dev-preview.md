@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: b52d52f96312dc2978844b07a0f7ebb1d817166d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566708"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629868"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifiesto de vista previa de desarrollador para Microsoft Teams
 
@@ -186,6 +186,27 @@ Para obtener más información sobre las características disponibles, vea: [Car
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -286,7 +307,7 @@ El nombre de la experiencia de la aplicación, que se muestra a los usuarios en 
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
 
-## <a name="description"></a>description
+## <a name="description"></a>descripción
 
 **Required**
 
@@ -329,7 +350,7 @@ El objeto es una matriz con todos los elementos del tipo `object` . Este bloque 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|La https:// url que se va a usar al configurar la pestaña.|
-|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo la pestaña estará disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
@@ -403,7 +424,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|Cadena|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. Esto bien puede ser el mismo que el identificador general [de la aplicación](#id).|
-|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
 |`commands`|Matriz de objeto|10|✔|Matriz de comandos que admite la extensión de mensajería|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -418,9 +439,9 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`type`|String|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: `query`|
 |`title`|Cadena|32 caracteres|✔|Nombre de comando fácil de usar.|
 |`description`|Cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|Boolean|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
+|`initialRun`|Booleano|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
 |`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
+|`fetchTask`|Booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
@@ -484,6 +505,7 @@ Especifica tu id. de aplicación de AAD y Graph información para ayudar a los u
 |---|---|---|---|---|
 |`id`|Cadena|36 caracteres|✔|Id. de aplicación de AAD de la aplicación. Este identificador debe ser un GUID.|
 |`resource`|Cadena|2048 caracteres|✔|Url de recurso de la aplicación para adquirir token de autenticación para SSO.|
+|`applicationPermissions`|Matriz|Máximo de 100 elementos|✔|Permisos de recursos para la aplicación.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

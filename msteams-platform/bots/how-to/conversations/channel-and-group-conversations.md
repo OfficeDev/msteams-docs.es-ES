@@ -5,27 +5,29 @@ description: Cómo enviar, recibir y controlar mensajes de un bot en un chat de 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: ef5cf8464fa0e93d5ea3840003a2b0c04a4a5ef5
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075755"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631002"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversaciones de chat de canal y grupo con un bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Para instalar el bot de Microsoft Teams en un chat de grupo o equipo, agregue el `teams` ámbito o `groupchat` al bot. Esto permite que todos los miembros de la conversación interactúen con el bot. Una vez instalado el bot, tiene acceso a metadatos sobre la conversación, como la lista de miembros de la conversación. Además, cuando se instala en un equipo, el bot tiene acceso a detalles sobre ese equipo y a la lista completa de canales.
+Para instalar el Microsoft Teams bot en un chat de grupo o equipo, agregue el `teams` ámbito o `groupchat` al bot. Esto permite que todos los miembros de la conversación interactúen con el bot. Una vez instalado el bot, tiene acceso a metadatos sobre la conversación, como la lista de miembros de la conversación. Además, cuando se instala en un equipo, el bot tiene acceso a detalles sobre ese equipo y a la lista completa de canales.
 
-Los bots de un grupo o canal solo reciben mensajes cuando se mencionan `@botname` . No reciben ningún otro mensaje enviado a la conversación.
+Los bots de un grupo o canal solo reciben mensajes cuando se mencionan @botname. No reciben ningún otro mensaje enviado a la conversación. El bot debe ser @mencionado directamente. El bot no recibe un mensaje cuando se menciona el equipo o el canal, o cuando alguien responde a un mensaje del bot sin @mentioning.
 
 > [!NOTE]
-> El bot debe ser `@mentioned` directamente. El bot no recibe un mensaje cuando se menciona el equipo o el canal, o cuando alguien responde a un mensaje del bot sin @mentioning.
+> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../../../resources/dev-preview/developer-preview-intro.md) público.
+>
+> Con el consentimiento específico de recursos (RSC), los bots pueden recibir todos los mensajes de canal en los equipos en los que está instalado sin que se @mentioned. Para obtener más información, vea [recibir todos los mensajes de canal con RSC](channel-messages-with-rsc.md).
 
 ## <a name="design-guidelines"></a>Directrices de diseño
 
-A diferencia de los chats personales, en los chats de grupo y canales, el bot debe proporcionar una introducción rápida. Debe seguir estas y más directrices de diseño de bots. Para obtener más información sobre cómo diseñar bots en Teams, vea cómo diseñar conversaciones de [bots en canales y chats.](~/bots/design/bots.md)
+A diferencia de los chats personales, en los chats de grupo y canales, el bot debe proporcionar una introducción rápida. Debe seguir estas y más directrices de diseño de bots. Para obtener más información sobre cómo diseñar bots en Teams, vea cómo diseñar conversaciones de [bot en canales y chats.](~/bots/design/bots.md)
 
 Ahora, puedes crear nuevos subprocesos de conversación y administrar fácilmente diferentes conversaciones en canales.
 
@@ -37,7 +39,7 @@ A continuación, puede recuperar menciones con el `entities` objeto y agregar me
 
 ## <a name="work-with-mentions"></a>Trabajar con menciones
 
-Cada mensaje al bot de un grupo o canal contiene @mention con su nombre en el texto del mensaje. Asegúrese de que el análisis de mensajes controla @mention. El bot también puede recuperar otros usuarios mencionados en un mensaje y agregar menciones a los mensajes que envía.
+Cada mensaje al bot de un grupo o canal contiene @mention con su nombre en el texto del mensaje. El bot también puede recuperar otros usuarios mencionados en un mensaje y agregar menciones a los mensajes que envía.
 
 También debe quitar el @mentions del contenido del mensaje que recibe el bot.
 
@@ -268,9 +270,9 @@ No envíe un mensaje en los siguientes casos:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Obtener contexto de Teams](~/bots/how-to/get-teams-context.md)
+[Obtener Teams contexto](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

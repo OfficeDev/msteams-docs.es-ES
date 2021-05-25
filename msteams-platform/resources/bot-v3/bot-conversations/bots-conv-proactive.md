@@ -4,12 +4,12 @@ description: Describe que los bots pueden iniciar una conversación en Microsoft
 ms.topic: conceptual
 localization_priority: Normal
 keywords: escenarios de teams bot de conversación de mensajería proactiva
-ms.openlocfilehash: baf148d0f4d0a669de582dfca70ed5d5bed0274c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 82282c4e2a2d48acad8f4bb384976906296be8f9
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566792"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630470"
 ---
 # <a name="proactive-messaging-for-bots"></a>Mensajería proactiva para bots
 
@@ -71,7 +71,7 @@ En ocasiones, es posible que sea necesario enviar mensajes de forma proactiva a 
 
 Solo puedes instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en la Teams de aplicaciones.
 
-Consulta [Instalar aplicaciones para usuarios en](/graph/teams-proactive-messaging) la Graph documentación para obtener información completa. También hay un [ejemplo en .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Consulta [Instalar aplicaciones para usuarios en](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) la Graph documentación para obtener información completa. También hay un [ejemplo en .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -208,6 +208,6 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

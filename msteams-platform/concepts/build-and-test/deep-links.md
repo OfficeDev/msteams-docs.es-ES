@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566057"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630148"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -78,7 +78,7 @@ Los parámetros de consulta son:
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | El identificador del manifiesto. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | El identificador del elemento de la pestaña, que proporcionaste al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
-| `entityWebUrl` o `subEntityWebUrl`&emsp; | Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | https://tasklist.example.com/123 o https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` o `subEntityWebUrl`&emsp; | Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` |
 | `entityLabel` o `subEntityLabel`&emsp; | Una etiqueta para el elemento de la pestaña, que se usará al mostrar el vínculo profundo. | Lista de tareas 123 o "Tarea 456 |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Un objeto JSON que contiene los campos siguientes:</br></br> * Un identificador para el elemento dentro de la pestaña. </br></br> * El Microsoft Teams de canal que está disponible en el contexto de la [pestaña](~/tabs/how-to/access-teams-context.md). | 
 | `subEntityId`&emsp; | Un identificador para el elemento dentro de la pestaña. |Task456 |
@@ -156,8 +156,8 @@ Los parámetros de consulta son:
 
 * `tenantId`: Ejemplo de identificador de inquilino, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Tipo de archivo compatible, como docx, pptx, xlsx y pdf
-* `objectUrl`: Dirección URL del objeto del archivo, https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: Dirección URL base del archivo, https://microsoft.sharepoint.com/teams
+* `objectUrl`: Dirección URL del objeto del archivo, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Dirección URL base del archivo, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Nombre del servicio, id. de la aplicación
 * `threadId`: el threadId es el identificador de equipo del equipo donde se almacena el archivo. Es opcional y no se puede establecer para los archivos almacenados en la carpeta de OneDrive usuario. threadId : 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: Id. de grupo del archivo, ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -191,7 +191,7 @@ Los parámetros de consulta son:
 * `appID`: Su identificador de **manifiesto fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: El identificador de elemento que proporcionaste [al configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md). Por ejemplo, **tasklist123**.
-* `entityWebUrl`: un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña - https://tasklist.example.com/123 o https://tasklist.example.com/list123/task456 .
+* `entityWebUrl`: un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña - `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` .
 * `entityName`: una etiqueta para el elemento de la pestaña, que se usará al mostrar el vínculo profundo, la lista de tareas 123 o la tarea 456.
 
 Ejemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
@@ -251,7 +251,7 @@ Estos son los parámetros de consulta:
 |-------------|-------------|------|----|
 |Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 

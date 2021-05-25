@@ -5,12 +5,12 @@ description: Detalle de las soluciones disponibles de Microsoft baja y sin códi
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: a5615c5b70e21ea1bcade3dc46c6a2b5b3bc4f92
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 770657e34672a4314f6cbbc1e73951816f2efa1c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566211"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630666"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Crear aplicaciones personalizadas de código bajo para Microsoft Teams
 
@@ -29,7 +29,7 @@ Microsoft Power Platform combina cuatro tecnologías sólidas de Microsoft, como
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams y Power BI
 
-La [pestaña Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) para Microsoft Teams agrega compatibilidad con informes en el área de [](/power-bi/collaborate-share/service-embed-report-microsoft-teams) trabajo de Teams y [](/power-bi/collaborate-share/service-collaborate-microsoft-teams) permite a los usuarios compartir contenido Power BI interactivo y colaborar con otros usuarios en Teams canales y chats. Puedes crear contenido Power BI [aplicación](/power-bi/collaborate-share/service-create-distribute-apps) empaquetado desde cero y distribuirlo como una aplicación o crear una aplicación de plantilla [en Power BI](/connect-data/service-template-apps-create). Además, usa la nueva [aplicación Power BI en Teams](https://go.microsoft.com/fwlink/?linkid=2143643) para llevar toda la experiencia Power BI servicio básico a Teams.
+La [pestaña Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) para Microsoft Teams agrega compatibilidad con informes en el área de [](/power-bi/collaborate-share/service-embed-report-microsoft-teams) trabajo de Teams y [](/power-bi/collaborate-share/service-collaborate-microsoft-teams) permite a los usuarios compartir contenido Power BI interactivo y colaborar con otros usuarios en Teams canales y chats. Puedes crear contenido Power BI [aplicación](/power-bi/collaborate-share/service-create-distribute-apps) empaquetado desde cero y distribuirlo como una aplicación o crear una aplicación de plantilla [en Power BI](/power-bi/connect-data/service-template-apps-create). Además, usa la nueva [aplicación Power BI en Teams](https://go.microsoft.com/fwlink/?linkid=2143643) para llevar toda la experiencia Power BI servicio básico a Teams.
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams y Power Apps
 
@@ -81,6 +81,6 @@ Virtual Assistant es una plantilla de código abierto de Microsoft que le permit
 > [!div class="nextstepaction"]
 > [Administrar aplicaciones de Microsoft Power Platform en el Centro Microsoft Teams administración](/microsoftteams/manage-power-platform-apps)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
