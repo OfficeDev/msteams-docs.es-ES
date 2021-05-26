@@ -3,12 +3,12 @@ title: Información general sobre las acciones universales para tarjetas adaptab
 description: Una introducción rápida a las acciones universales para tarjetas adaptables.
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f0adf3d1a01262ff9cbdf14128c9ffe088ae8072
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088940"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649720"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
@@ -26,7 +26,7 @@ Este documento le ayuda a comprender cómo puede usar el modelo de acciones univ
 Las acciones universales para tarjetas adaptables mejoran la experiencia del usuario al habilitar los siguientes escenarios:
 
 * [Acciones universales](#universal-actions)
-* [Vistas específicas del usuario](#user-specific-views)
+* [Vistas específicas de usuario](#user-specific-views)
 * [Compatibilidad con flujos de trabajo secuenciales](#sequential-workflow-support)
 * [Vistas actualizadas](#up-to-date-views)
 
@@ -51,9 +51,17 @@ Ahora puede enviar la misma tarjeta a ambos, Teams y Outlook, y mantenerlos sinc
 
 En la siguiente imagen se muestran las acciones universales de las tarjetas adaptables para Teams y Outlook:
 
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="La misma tarjeta móvil para Teams y Outlook":::
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="La misma tarjeta que Teams y Outlook":::
 
-### <a name="user-specific-views"></a>Vistas específicas del usuario
+* * *
+
+### <a name="user-specific-views"></a>Vistas específicas de usuario
 
 Hoy en día, todos los usuarios Teams chat o canal ven exactamente las mismas acciones de vista y botón en la tarjeta adaptable. Sin embargo, en determinados escenarios existe un requisito para que determinados usuarios actúen de forma diferente y tengan acceso a información diferente dentro del mismo chat o canal.
 
@@ -61,7 +69,15 @@ Por ejemplo, si envía una tarjeta de informes de incidentes en un chat o canal,
 
 En la siguiente imagen se muestra un ejemplo de una extensión de mensajería de vales (ME) donde se muestran diferentes usuarios en el chat diferentes acciones según el requisito:
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Vistas específicas del usuario":::
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Vistas específicas del usuario móvil":::
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Vistas específicas de usuario":::
+
+* * *
 
 Para obtener más información, vea [el ejemplo de vistas específicas del usuario](User-Specific-Views.md).
 
@@ -91,7 +107,7 @@ Ahora, puede comprender cómo se pueden transformar las tarjetas adaptables con 
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>Tarjetas adaptables y el nuevo modelo de acciones universales
 
-Las tarjetas adaptables son una combinación de contenido, como texto y gráficos, y acciones que puede realizar un usuario. Para obtener más información, vea [Adaptive Cards](http://adaptivecards.io/). Las nuevas acciones universales para tarjetas adaptables permiten un control común de las acciones de tarjeta adaptable en plataformas y aplicaciones. Para obtener más información, [vea Universal Action Model](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
+Las tarjetas adaptables son una combinación de contenido, como texto y gráficos, y acciones que puede realizar un usuario. Para obtener más información, vea [Adaptive Cards](http://adaptivecards.io/). Las nuevas acciones universales para tarjetas adaptables permiten un control común de las acciones de tarjeta adaptable en plataformas y aplicaciones. Para obtener más información, [vea Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
 
 [El documento Trabajar con acciones universales](Work-with-universal-actions-for-adaptive-cards.md) para tarjetas adaptables le lleva a través de los pasos para usar las capacidades de acciones universales para tarjetas adaptables para la solución.
 
@@ -105,4 +121,4 @@ Las tarjetas adaptables son una combinación de contenido, como texto y gráfico
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Trabajar con acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
+> [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)

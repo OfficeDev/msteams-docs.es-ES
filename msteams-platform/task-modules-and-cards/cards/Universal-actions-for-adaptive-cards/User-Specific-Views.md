@@ -4,12 +4,12 @@ description: Ejemplo de vistas específicas del usuario mediante acciones univer
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555447"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649634"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
@@ -17,7 +17,15 @@ Anteriormente si se enviaron tarjetas adaptables en una Teams conversación, tod
 
 Por ejemplo, Megan, un inspector de seguridad de Contoso, quiere crear un incidente y asignarlo a Alex. También quiere que todos los miembros del equipo sean conscientes del incidente. Megan usa la extensión de mensaje de informes de incidentes de Contoso con tecnología de acciones universales para tarjetas adaptables.
 
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Vistas específicas del usuario móvil":::
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Vistas específicas de usuario":::
+
+* * *
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>Vistas específicas del usuario para tarjetas adaptables
 
@@ -190,7 +198,7 @@ Directrices de diseño de tarjetas a tener en cuenta al diseñar vistas específ
 * **Tarjeta base:** La versión base de la tarjeta que el desarrollador del bot envía al chat. Esta es la versión de la tarjeta adaptable para todos los usuarios que no se especifican en la `userIds` sección.
 * Se puede usar una actualización o edición de mensajes para actualizar la tarjeta base y actualizar simultáneamente la tarjeta específica del usuario.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
 * [Vistas actualizadas](Up-To-Date-Views.md)

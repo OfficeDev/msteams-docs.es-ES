@@ -1,16 +1,16 @@
 ---
-title: Trabajar con acciones universales para tarjetas adaptables
+title: Trabajar con Acciones universales para tarjetas adaptables
 description: Trabajar con las acciones universales para tarjetas adaptables.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8c260a4893d38ad365cbb3bdd5a7613a1b42654f
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088871"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649702"
 ---
-# <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con acciones universales para tarjetas adaptables
+# <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con Acciones universales para tarjetas adaptables
 
 Las acciones universales para tarjetas adaptables proporcionan una forma de implementar escenarios basados en tarjetas adaptables para ambos, Teams y Outlook. Este documento trata lo siguiente:
 
@@ -42,7 +42,7 @@ Las acciones universales para tarjetas adaptables se presentan en el esquema de 
 
 Si estableces la versión de la tarjeta en menor que 1.4 y usas una o ambas, la propiedad `refresh` y , sucede lo `Action.Execute` siguiente:
 
-| Client | Comportamiento |
+| Cliente | Comportamiento |
 | :-- | :-- |
 | Teams | La tarjeta deja de funcionar. La tarjeta no se actualiza y no se representa en función de `Action.Execute` la versión del Teams cliente. Para garantizar la máxima compatibilidad en Teams, defina `Action.Execute` con una en la propiedad de `Action.Submit` reserva. |
 
@@ -52,7 +52,7 @@ Para obtener más información sobre cómo admitir clientes más antiguos, vea [
 
 Al crear tarjetas adaptables, reemplace `Action.Submit` y `Action.Http` por `Action.Execute` . El esquema para `Action.Execute` es similar al de `Action.Submit` .
 
-Para obtener más información, [ veaAction.Execute schema and properties](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+Para obtener más información, [ veaAction.Execute schema and properties](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Ahora, puedes usar el modelo de actualización para permitir que las tarjetas adaptables se actualicen automáticamente.
 
@@ -60,7 +60,7 @@ Ahora, puedes usar el modelo de actualización para permitir que las tarjetas ad
 
 Para actualizar automáticamente la tarjeta adaptable, defina su propiedad, que `refresh` inserta una acción de tipo y una `Action.Execute` `userIds` matriz.
 
-Para obtener más información, vea [refresh schema and properties](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
+Para obtener más información, vea [refresh schema and properties](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 
 ## <a name="user-ids-in-refresh"></a>Id. de usuario en la actualización
 
@@ -72,7 +72,7 @@ Las siguientes son las características de UserIds en refresh:
 
 * La propiedad UserIds se agrega porque los canales Teams pueden incluir un gran número de miembros. Si todos los miembros están viendo el canal al mismo tiempo, una actualización automática incondicional da como resultado muchas llamadas simultáneas al bot. Para evitar esto, la propiedad siempre debe incluirse para identificar qué usuarios deben obtener una actualización automática con un máximo de `userIds` *60 (60) MRIs* de usuario .
 
-* Para Teams obtener más información sobre cómo capturar los MRIs de usuario de un miembro de la conversación para agregarlos en la lista userIds en la sección actualizar de la tarjeta adaptable, vea [fetch roster or user profile](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* Para Teams obtener más información sobre cómo capturar los MRIs de usuario de un miembro de la conversación para agregarlos en la lista userIds en la sección actualizar de la tarjeta adaptable, vea [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
 * Ejemplo Teams MRI del usuario es`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -85,9 +85,9 @@ El siguiente paso es usar la actividad `adaptiveCard/action` de invocación para
 
 Cuando se ejecuta en el cliente, se realiza un nuevo tipo de `Action.Execute` actividad Invoke en el `adaptiveCard/action` bot.
 
-Para obtener más información, vea [request format and properties for a typical invoke `adaptiveCard/action` activity](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#request-format).
+Para obtener más información, vea [request format and properties for a typical invoke `adaptiveCard/action` activity](/adaptive-cards/authoring-cards/universal-action-model#request-format).
 
-Para obtener más información, vea [response format and properties for a typical invoke activity with supported response `adaptiveCard/action` types](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#response-format).
+Para obtener más información, vea [response format and properties for a typical invoke activity with supported response `adaptiveCard/action` types](/adaptive-cards/authoring-cards/universal-action-model#response-format).
 
 A continuación, puedes aplicar compatibilidad con versiones anteriores a clientes antiguos en diferentes plataformas y hacer que tu tarjeta adaptable sea compatible.
 
@@ -99,7 +99,13 @@ Las acciones universales para tarjetas adaptables permiten establecer propiedade
 
 Para garantizar la compatibilidad con versiones anteriores de las tarjetas adaptables con versiones anteriores de Teams, debe incluir la propiedad `fallback` y establecer su valor en `Action.Submit` . Además, el código del bot debe procesar tanto `Action.Execute` como `Action.Submit` .
 
-Para obtener más información, vea [compatibilidad con versiones anteriores en Teams](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams).
+Para obtener más información, vea [compatibilidad con versiones anteriores en Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
+
+## <a name="code-sample"></a>Ejemplo de código
+
+|Nombre de ejemplo | Descripción | . NETCore |
+|----------------|-----------------|--------------|
+| Teams bot de restauración | Crea un bot simple que acepte el pedido de alimentos con tarjetas adaptables. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>Vea también
 

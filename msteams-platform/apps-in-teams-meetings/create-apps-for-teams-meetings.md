@@ -1,67 +1,86 @@
 ---
-title: Crear aplicaciones para reuniones de equipos
+title: Requisitos previos y referencias de API para aplicaciones en Teams reuniones
 author: laujan
-description: crear aplicaciones para reuniones de teams
+description: Trabajar con aplicaciones para Teams reuniones
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 3bfbcd0eed1bd287303315ae57cd2f0db039890c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6ee26142ad80021f00ffebf3502f68c124ab4b67
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630183"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651729"
 ---
-# <a name="create-apps-for-teams-meetings"></a>Crear aplicaciones para reuniones de Teams
+# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para aplicaciones en Teams reuniones
 
-## <a name="prerequisites-and-considerations"></a>Requisitos previos y consideraciones
+Para expandir las capacidades de tus aplicaciones en todo el ciclo de vida de la reunión, Teams te permite trabajar con aplicaciones para Teams reuniones. Debes pasar por los requisitos previos y puedes usar las referencias a la API de aplicaciones de reunión para mejorar la experiencia de la reunión.
 
-Antes de crear aplicaciones para Teams reuniones, debes comprender lo siguiente:
+## <a name="prerequisites"></a>Requisitos previos
+
+Antes de trabajar con aplicaciones para Teams reuniones, debes comprender lo siguiente:
 
 * Debes tener conocimientos sobre cómo desarrollar Teams aplicaciones. Para obtener más información, [consulta Teams desarrollo de aplicaciones](../overview.md).
 
-* Debes actualizar el manifiesto Teams aplicación para indicar que la aplicación está disponible para reuniones. Para obtener más información, consulta [manifiesto de la aplicación](#update-your-app-manifest).
+* Debes actualizar el manifiesto Teams aplicación para indicar que la aplicación está disponible para reuniones. Para obtener más información, consulta [manifiesto de la aplicación](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
 
-* Para que la aplicación funcione en el ciclo de vida de la reunión como una pestaña, debe admitir pestañas configurables en el ámbito de groupchat. Para obtener más información, [vea groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) y [build a group tab](../build-your-first-app/build-channel-tab.md).
+* La aplicación debe admitir pestañas configurables en el ámbito groupchat, para que la aplicación funcione en el ciclo de vida de la reunión como pestaña. Para obtener más información, [vea groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) y [build a group tab](../build-your-first-app/build-channel-tab.md).
 
-* Debe cumplir las directrices generales Teams diseño de pestañas para escenarios previos y posteriores a la reunión. Para obtener experiencias durante las reuniones, consulte las directrices de diseño de la pestaña en la reunión y del cuadro de diálogo en la reunión. Para obtener más información, [vea Teams de](../tabs/design/tabs.md)diseño de pestañas, directrices de diseño de [pestañas](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) en la reunión y directrices de diseño de [cuadros de diálogo en la reunión.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* Debe cumplir las directrices generales Teams de diseño de pestañas para escenarios previos y posteriores a la reunión. Para obtener experiencias durante las reuniones, consulte las directrices de diseño de la pestaña en la reunión y del cuadro de diálogo en la reunión. Para obtener más información, [vea Teams de](../tabs/design/tabs.md)diseño de pestañas, directrices de diseño de pestañas en la reunión y directrices de diseño de cuadros de diálogo en la [reunión.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) [](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)
 
 * Debes admitir el ámbito para habilitar la aplicación en `groupchat` chats previos y posteriores a la reunión. Con la experiencia de la aplicación previa a la reunión, puedes encontrar y agregar aplicaciones de reunión y realizar tareas previas a la reunión. Con la experiencia de la aplicación posterior a la reunión, puedes ver los resultados de la reunión, como los resultados de encuestas o los comentarios.
 
-* Los parámetros de dirección URL de la API de reunión deben `meetingId` `userId` tener , y `tenantId` . Están disponibles como parte de la actividad del SDK Teams cliente y bot. Además, se puede recuperar información confiable para el identificador de usuario y el identificador de inquilino mediante la autenticación [de SSO de tabulación.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Los parámetros de dirección URL de la API de reunión deben `meetingId` `userId` tener , y `tenantId` . Están disponibles como parte de la actividad del SDK Teams cliente y el bot. Además, puede recuperar información confiable para el identificador de usuario y el identificador de inquilino mediante la [autenticación de SSO de tabulación.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 * La `GetParticipant` API debe tener un registro de bot y un identificador para generar tokens de autenticación. Para obtener más información, vea [bot registration and ID](../build-your-first-app/build-bot.md).
 
-* Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras etapas a lo largo del ciclo de vida de la reunión. Para el cuadro de diálogo en la reunión, vea el `bot Id` parámetro de finalización en `Notification Signal API` .
+* Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras etapas a lo largo del ciclo de vida de la reunión. Para el cuadro de diálogo en la reunión, vea el parámetro de `bot Id` finalización en `NotificationSignal` la API.
 
-## <a name="meeting-apps-api-reference"></a>Referencia de api de aplicaciones de reunión
+* La API de detalles de la reunión debe tener un registro del bot y un identificador de bot. Requiere bot SDK para obtener `TurnContext` .
+
+* Para eventos de reunión en tiempo real, debe estar familiarizado con el objeto disponible a través `TurnContext` del SDK de bot. El `Activity` objeto en contiene la carga con la hora de inicio y finalización `TurnContext` real. Los eventos de reunión en tiempo real requieren un identificador de bot registrado de Teams plataforma.
+
+Una vez que haya pasado por los requisitos previos, puede usar las referencias de api de aplicaciones de reunión , , y la API de detalles de reunión que le permiten tener acceso a la información mediante atributos y mostrar contenido `GetUserContext` `GetParticipant` `NotificationSignal` relevante.
+
+## <a name="meeting-apps-api-references"></a>Referencias de API de aplicaciones de reunión
+
+Las nuevas extensibilidades de reuniones le proporcionan API que transforman la experiencia de la reunión. Con esta nueva funcionalidad, puedes crear aplicaciones o integrar aplicaciones existentes en el ciclo de vida de la reunión. Puedes usar las API para que la aplicación conozca la reunión. Puede elegir qué API desea usar para mejorar la experiencia de la reunión.
+
+En la tabla siguiente se proporciona una lista de estas API:
 
 |API|Descripción|Solicitud|Origen|
 |---|---|----|---|
 |**GetUserContext**| Esta API le permite obtener información contextual para mostrar contenido relevante en una Teams pestaña. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK de cliente|
 |**GetParticipant**| Esta API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Esta API le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Le permite señalar en función de la acción del usuario que muestra un cuadro de diálogo en la reunión. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**Detalles de la reunión** | Esta API le permite obtener metadatos estáticos de reunión. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
-### <a name="getusercontext"></a>GetUserContext
+### <a name="getusercontext-api"></a>GetUserContext API
 
 Para identificar y recuperar información contextual para el contenido de la pestaña, vea [Obtener contexto para su Teams pestaña](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). se usa en una pestaña al ejecutarse en el contexto de la reunión y `meetingId` se agrega para la carga de respuesta.
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
-> * No almacenar en caché los roles de los participantes, ya que el organizador de la reunión puede cambiar un rol en cualquier momento.
+> * No almacenar en caché los roles de los participantes, ya que el organizador de la reunión puede cambiar los roles en cualquier momento.
 > * Teams actualmente no admite listas de distribución grandes ni tamaños de lista de más de 350 participantes para la `GetParticipant` API.
+
+La `GetParticipant` API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. La API incluye parámetros de consulta, ejemplos y códigos de respuesta.
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
+La `GetParticipant` API incluye los siguientes parámetros de consulta:
+
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**meetingId**| string | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
-|**participantId**| string | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| string | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
+|**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
+|**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
+|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
 
 #### <a name="example"></a>Ejemplo
+
+La `GetParticipant` API incluye los siguientes ejemplos:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -135,13 +154,15 @@ El cuerpo de la respuesta JSON `GetParticipant` para la API es:
 
 #### <a name="response-codes"></a>Códigos de respuesta
 
+La `GetParticipant` API incluye los siguientes códigos de respuesta:
+
 |Código de respuesta|Descripción|
 |---|---|
 | **403** | La aplicación no puede obtener información de los participantes. Esta es la respuesta de error más común y se desencadena si la aplicación no está instalada en la reunión. Por ejemplo, si la aplicación está deshabilitada por el administrador del espacio empresarial o bloqueada durante la migración del sitio en directo.|
 | **200** | La información del participante se recupera correctamente.|
 | **401** | La aplicación responde con un token no válido.|
 | **404** | La reunión ha expirado o no se encuentra el participante.|
-| **500** | La reunión ha expirado más de 60 días desde que finalizó la reunión o el participante no tiene permisos en función de su rol.|
+| **500** | La reunión ha expirado (más de 60 días) desde que finalizó la reunión o los participantes no tienen permisos en función de su rol.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
@@ -151,13 +172,17 @@ Todos los usuarios de una reunión reciben las notificaciones enviadas a través
 > * Cuando se invoca un cuadro de diálogo en la reunión, el contenido se presenta como un mensaje de chat.
 > * Actualmente, no se admite el envío de notificaciones dirigidas.
 
-#### <a name="query-parameters"></a>Parámetros de consulta
+`NotificationSignal` La API le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Esta API le permite señalar en función de la acción del usuario que muestra un cuadro de diálogo en la reunión. La API incluye parámetros de consulta, ejemplos y códigos de respuesta.
+
+#### <a name="query-parameter"></a>Parámetro de consulta
+
+La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**conversationId**| string | Sí | El identificador de conversación está disponible como parte de la invocación de bot. |
+|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
-#### <a name="example"></a>Ejemplo
+#### <a name="examples"></a>Ejemplos
 
 Se `Bot ID` declara en el manifiesto y el bot recibe un objeto result.
 
@@ -165,6 +190,8 @@ Se `Bot ID` declara en el manifiesto y el bot recibe un objeto result.
 > * El `completionBotId` parámetro de la es opcional en el ejemplo de carga `externalResourceUrl` solicitada. `Bot ID` se declara en el manifiesto y el bot recibe un objeto result.
 > * Los `externalResourceUrl` parámetros de ancho y alto deben estar en píxeles. Para asegurarse de que las dimensiones están dentro de los límites permitidos, vea [directrices de diseño](design/designing-apps-in-meetings.md).
 > * La dirección URL es la página cargada como una en el cuadro de diálogo `<iframe>` en la reunión. El dominio debe estar en la matriz de la aplicación `validDomains` en el manifiesto de la aplicación.
+
+La `NotificationSignal` API incluye los siguientes ejemplos:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -215,9 +242,11 @@ POST /v3/conversations/{conversationId}/activities
 }
 ```
 
-* * *
+---
 
 #### <a name="response-codes"></a>Códigos de respuesta
+
+La `NotificationSignal` API incluye los siguientes códigos de respuesta:
 
 |Código de respuesta|Descripción|
 |---|---|
@@ -226,153 +255,233 @@ POST /v3/conversations/{conversationId}/activities
 | **403** | La aplicación no puede enviar la señal. Esto puede ocurrir debido a diversos motivos, como que el administrador de inquilinos deshabilita la aplicación, la aplicación se bloquea durante la migración del sitio en directo, y así sucesivamente. En este caso, la carga contiene un mensaje de error detallado. |
 | **404** | El chat de reunión no existe. |
 
-## <a name="enable-your-app-for-teams-meetings"></a>Habilitar la aplicación para Teams reuniones
-
-### <a name="update-your-app-manifest"></a>Actualizar el manifiesto de la aplicación
-
-Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de la aplicación mediante `configurableTabs` las `scopes` matrices , `context` y. El ámbito define a quién y el contexto define dónde está disponible la aplicación.
+### <a name="meeting-details-api"></a>API de detalles de reunión
 
 > [!NOTE]
-> Intente actualizar el manifiesto de la aplicación con el [esquema de manifiesto](../resources/schema/manifest-schema-dev-preview.md).
-> Las aplicaciones de las reuniones necesitan *ámbito groupchat.* El *ámbito de* equipo solo funciona para pestañas en canales.
+> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
 
-```json
+La API de detalles de la reunión permite a la aplicación obtener metadatos estáticos de la reunión. Estos son puntos de datos que no cambian dinámicamente.
+La API está disponible a través de Bot Services.
 
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
-```
-> [!NOTE]
-> `meetingStage` actualmente solo está disponible en versión preliminar del desarrollador.
+#### <a name="query-parameter"></a>Parámetro de consulta
 
-### <a name="context-property"></a>Context (propiedad)
+La API de detalles de reunión incluye el siguiente parámetro de consulta:
 
-La pestaña y las propiedades te permiten determinar dónde debe aparecer `context` `scopes` la aplicación. Las pestañas del `team` ámbito or pueden tener más de un `groupchat` contexto. Estos son los valores de la propiedad desde `context` la que puede usar todos o algunos de los valores:
+|Valor|Tipo|Obligatorio|Descripción|
+|---|---|----|---|
+|**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 
-|Valor|Descripción|
-|---|---|
-| **channelTab** | Pestaña en el encabezado de un canal de grupo. |
-| **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios que no se encuentra en el contexto de un equipo o reunión. |
-| **meetingChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios en el contexto de una reunión programada. |
-| **meetingDetailsTab** | Pestaña en el encabezado de la vista de detalles de la reunión del calendario. |
-| **meetingSidePanel** | Un panel en la reunión abierto a través de la barra unificada (barra U). |
-| **meetingStage** | Una aplicación del panel lateral se puede compartir en la fase de reunión. |
+#### <a name="example"></a>Ejemplo
 
-> [!NOTE]
-> `Context` actualmente no se admite en clientes móviles.
+La API de detalles de la reunión incluye los siguientes ejemplos:
 
-## <a name="configure-your-app-for-meeting-scenarios"></a>Configurar la aplicación para escenarios de reunión
+# <a name="c"></a>[C#](#tab/dotnet)
 
-> [!NOTE]
-> * Para que la aplicación esté visible en la galería de pestañas, debe admitir pestañas configurables y el ámbito de chat de grupo.
-> * Los clientes móviles solo admiten pestañas en fases de reunión previas y posteriores.
-> * Las experiencias en la reunión que es el cuadro de diálogo y la pestaña en la reunión actualmente no se admiten en clientes móviles. Para obtener más información, consulta [las instrucciones para las pestañas en el móvil](../tabs/design/tabs-mobile.md) al crear las pestañas para móviles.
-
-### <a name="before-a-meeting"></a>Antes de una reunión
-
-Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones de mensajería a una reunión. Los usuarios con roles de organizador y moderador pueden agregar pestañas a una reunión.
-
-**Para agregar una pestaña a una reunión**
-
-1. En el calendario, seleccione una reunión a la que desee agregar una pestaña.
-1. Seleccione la **pestaña Detalles** y seleccione más <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Aparece la galería de pestañas.
-
-    ![Experiencia previa a la reunión](../assets/images/apps-in-meetings/PreMeeting.png)
-
-1. En la galería de pestañas, selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
-    > [!NOTE] 
-    > Actualmente, en la pestaña reuniones, no se admite la obtención de detalles de la reunión y la información de los participantes.
-
-**Para agregar una extensión de mensajería a una reunión**
-
-1. Seleccione los puntos suspensivos o el menú de desbordamiento &#x25CF;&#x25CF;&#x25CF; ubicado en el área del mensaje de redacción en el chat.
-1. Selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una extensión de mensajería.
-
-**Para agregar un bot a una reunión**
-
-En un chat de reunión, escriba la **@** clave y seleccione Obtener **bots**.
-
-> [!NOTE]
-> * La identidad del usuario debe confirmarse con [tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la `GetParticipant` API.
-> * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y presentadores crear un nuevo sondeo.
-> * Las asignaciones de roles se pueden cambiar mientras se está en curso una reunión. Para obtener más información, vea [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
-
-### <a name="during-a-meeting"></a>Durante una reunión
-
-#### <a name="sidepanel"></a>sidePanel
-
-Con sidePanel, puede personalizar experiencias en una reunión que permita a los organizadores y presentadores tener un conjunto diferente de vistas y acciones. En el manifiesto de la aplicación, debes agregar sidePanel a la matriz de contexto. En la reunión y en todos los escenarios, la aplicación se representa en una pestaña en la reunión que tiene 320 píxeles de ancho. Para obtener más información, vea [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
-
-Para usar la `userContext` API para enrutar las solicitudes en consecuencia, [vea Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Vea [Teams de autenticación para las pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación para pestañas es muy similar al flujo de autenticación para sitios web. Por lo tanto, las pestañas pueden usar OAuth 2.0 directamente. Vea, Plataforma de identidad de Microsoft y flujo de código de autorización [de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
-
-La extensión de mensajería funciona según lo esperado cuando un usuario está en una vista en la reunión y el usuario puede publicar tarjetas de extensión de mensaje de redacción. AppName en la reunión es una información sobre herramientas que indica el nombre de la aplicación en la barra U de la reunión.
-
-> [!NOTE]
-> Use la versión 1.7.0 o posterior de [Teams SDK,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)ya que las versiones anteriores no admiten el panel lateral.
-
-#### <a name="in-meeting-dialog"></a>Diálogo en la reunión
-
-El cuadro de diálogo en la reunión se puede usar para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use la API para indicar que se debe desencadenar [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) una notificación de burbuja. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
-
-El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar una burbuja de contenido en una reunión. Puede usar el método `submitTask` para enviar datos en un chat de reunión.
-
-> [!NOTE]
-> * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams módulo de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest&preserve-view=true).
-> * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de solicitud del objeto, no en `from.id` `from` los `from.aadObjectId` metadatos de la solicitud. `from.id`es el identificador de usuario `from.aadObjectId` y es el Azure Active Directory (AAD) del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
-
-#### <a name="share-to-stage"></a>Compartir en fase 
-
-> [!NOTE]
-> * Esta funcionalidad está disponible actualmente solo en la versión preliminar del desarrollador.
-> * Para usar esta característica, la aplicación debe admitir un panel lateral en la reunión.
-
-
-Esta funcionalidad ofrece a los desarrolladores la capacidad de compartir una aplicación en la fase de reunión. Al habilitar el recurso compartido en la fase de reunión, los participantes de la reunión pueden colaborar en tiempo real. 
-
-El contexto necesario está `meetingStage` en el manifiesto de la aplicación. Un requisito previo para ello es tener el `meetingSidePanel` contexto. Esto habilita el **botón** Compartir en el panel lateral como depecited en la siguiente imagen:
-
-  ![share_to_stage_during_meeting experiencia](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
-
-El cambio de manifiesto necesario para habilitar esta funcionalidad es el siguiente: 
-
-```json
-
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "groupchat"
-      ],
-      "context":[
-        
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
+```csharp
+var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var creds = connectorClient.Credentials as AppCredentials;
+var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
+var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
+request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
+string content;
+if (response.Content != null)
+{
+    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+}
 ```
 
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
+No disponible
 
-### <a name="after-a-meeting"></a>Después de una reunión
+# <a name="json"></a>[JSON](#tab/json)
 
-Las configuraciones posteriores a la reunión y previas a la reunión son equivalentes.
+```http
+GET /v1/meetings/{meetingId}
+```
+
+---
+
+El cuerpo de la respuesta JSON para la API de detalles de reunión es el siguiente:
+
+```json
+{ 
+   "details": { 
+        "id": "meeting ID", 
+        "msGraphResourceId": "", 
+        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+        "joinUrl": "https://teams.microsoft.com/l/xx", 
+        "title": "All Hands", 
+        "type": "Scheduled" 
+    }, 
+    "conversation": { 
+            "isGroup": true, 
+            “conversationType”: “groupchat”, 
+            "id": "meeting chat ID" 
+    }, 
+    "organizer": { 
+        "id": "<organizer user ID>", 
+        "aadObjectId": "<AAD ID>", 
+        "tenantId": "<Tenant ID>" 
+    }
+} 
+```
+
+## <a name="real-time-teams-meeting-events"></a>Eventos de reuniones Teams en tiempo real
+
+> [!NOTE]
+> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
+
+El usuario puede recibir eventos de reunión en tiempo real. Tan pronto como cualquier aplicación está asociada a una reunión, el inicio real de la reunión y la hora de finalización de la reunión se comparten con el bot.
+
+La hora real de inicio y finalización de una reunión es diferente de la hora de inicio y finalización programada. La API de detalles de la reunión proporciona la hora de inicio y finalización programadas, mientras que el evento proporciona la hora real de inicio y finalización.
+
+### <a name="example-of-meeting-start-event-payload"></a>Ejemplo de carga del evento de inicio de reunión
+
+El código siguiente proporciona un ejemplo de carga del evento de inicio de reunión:
+
+```json
+{ 
+    "name": "Microsoft/MeetingStart", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:10:41.1252256Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "userID", 
+        "name": "", 
+        "aadObjectId": "aadOnjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user Id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event", 
+        "Id":"meeting id", 
+        "JoinUrl": "url" 
+        "StartTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### <a name="example-of-meeting-end-event-payload"></a>Ejemplo de carga del evento de fin de reunión
+
+El código siguiente proporciona un ejemplo de carga del evento de fin de reunión:
+
+```json
+{ 
+    "name": "Microsoft/MeetingEnd", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:17:17.4388966Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "user id", 
+        "name": "", 
+        "aadObjectId": "aadObjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting Id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event in Canary", 
+        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
+        "JoinUrl": "url", 
+        "EndTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### <a name="example-of-getting-metadata-of-a-meeting"></a>Ejemplo de obtener metadatos de una reunión
+
+El bot recibe el evento a través del `OnEventActivityAsync` controlador.
+
+Para deserializar la carga json, se introduce un objeto de modelo para obtener los metadatos de una reunión. Los metadatos de una reunión residen en la `value` propiedad de la carga del evento. Se `MeetingStartEndEventvalue` crea el objeto model, cuyas variables de miembro corresponden a las claves de la propiedad en la carga del `value` evento.
+
+El código siguiente muestra cómo capturar los metadatos de una reunión que es , , , , y desde un evento de inicio y finalización de `MeetingType` `Title` la `Id` `JoinUrl` `StartTime` `EndTime` reunión:
+
+```csharp
+protected override async Task OnEventActivityAsync(
+ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Event Name is either `Microsoft/MeetingStart` or `Microsoft/MeetingEnd`
+    var meetingEventName = turnContext.Activity.Name;
+    // Value contains meeting information (ex: meeting type, start time, etc).
+    var meetingEventInfo = turnContext.Activity.Value as JObject; 
+    var meetingEventInfoObject =
+meetingEventInfo.ToObject<MeetingStartEndEventValue>();
+    // Create a very simple adaptive card with meeting information
+var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
+meetingEventInfoObject);
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+}
+```
+
+MeetingStartEndEventvalue.cs incluye el código siguiente:
+
+```csharp
+public class MeetingStartEndEventValue
+{
+    public string Id { get; set; }
+    public string Title { get; set; }
+    public string MeetingType { get; set; }
+    public string JoinUrl { get; set; }
+    public string StartTime { get; set; }
+    public string EndTime { get; set; }
+}
+```
 
 ## <a name="code-sample"></a>Ejemplo de código
 
@@ -380,9 +489,15 @@ Las configuraciones posteriores a la reunión y previas a la reunión son equiva
 |----------------|-----------------|--------------|--------------|
 | Extensibilidad de reuniones | Microsoft Teams extensibilidad de reunión para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de burbuja de contenido de reunión | Microsoft Teams de extensibilidad de reuniones para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting SidePanel | Microsoft Teams extensibilidad de reuniones para iterar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
+| MeetingSidePanel | Microsoft Teams extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | |
 
 ## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)

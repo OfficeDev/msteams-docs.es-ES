@@ -4,12 +4,12 @@ description: Ejemplo de flujos de trabajo secuenciales mediante acciones univers
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 7f285bf76aac4f0ca276321aee2ce4b4e5c3e7e4
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555405"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649652"
 ---
 # <a name="sequential-workflows"></a>Flujos de trabajo secuenciales
 
@@ -123,7 +123,13 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="code-sample"></a>Ejemplo de código
+
+|Nombre de ejemplo | Descripción | . NETCore |
+|----------------|-----------------|--------------|
+| Teams bot de restauración | Crea un bot simple que acepte el pedido de alimentos con tarjetas adaptables. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+
+## <a name="see-also"></a>Vea también
 
 * [Acciones de tarjeta adaptable en Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Cómo funcionan los bots](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
