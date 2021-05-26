@@ -5,12 +5,12 @@ keywords: introducción a los equipos del portal de desarrolladores
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 857d2069c4f67bf15e1d3435af55a684a918df87
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635126"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646336"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administrar tus aplicaciones con el Portal de desarrolladores para Microsoft Teams
 
@@ -79,8 +79,8 @@ En la **página Información** general, puedes ver el número total de usuarios 
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *R30 mensual* | Métrica de uso predeterminada. Muestra el recuento de usuarios activos únicos que usaron la aplicación dentro de esa ventana móvil de 30 días en UTC. |
 | *Diario* | Muestra el recuento de usuarios activos únicos que usaron la aplicación en un día determinado en UTC. |
-| *Historial* | El uso mensual y diario se muestra durante los últimos siete, 30 días y 60 días. |
-| *Latencia* | Debería ver el uso reflejado durante un día determinado en un plazo de 24-48 horas. El uso de nuevas aplicaciones puede tardar entre 3 y 5 días en mostrarse.|
+
+El uso mensual y diario se muestra durante los últimos siete, 30 días y 60 días. Debería ver el uso reflejado durante un día determinado en un plazo de 24-48 horas. El uso de nuevas aplicaciones puede tardar entre 3 y 5 días en mostrarse.
 
 ## <a name="use-tools-to-create-app-features"></a>Usar herramientas para crear características de la aplicación
 

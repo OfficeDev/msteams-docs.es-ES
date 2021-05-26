@@ -5,13 +5,13 @@ description: Obtenga información general sobre cómo los desarrolladores pueden
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.date: 05/24/2021
+ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630511"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646540"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams aplicaciones aportan información clave, herramientas comunes y 
 Las aplicaciones son la forma en que Teams para adaptarse a sus necesidades. Crea algo nuevo para Teams o integra una aplicación existente.
 
 > [!div class="nextstepaction"]
-> [Comenzar aquí](build-your-first-app/build-first-app-overview.md)
+> [Comenzar aquí](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>¿Qué Teams aplicaciones?
 
@@ -153,7 +153,7 @@ Teams aplicaciones son una combinación de [funcionalidades.](concepts/capabilit
 Familiarícese rápidamente con la creación de Teams mediante la configuración del entorno y la creación de una aplicación sencilla.
 
 > [!div class="nextstepaction"]
-> [Compilar una aplicación por primera vez](build-your-first-app/build-first-app-overview.md)
+> [Compilar una aplicación por primera vez](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::

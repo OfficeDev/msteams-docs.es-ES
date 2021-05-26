@@ -6,12 +6,12 @@ keywords: Cámara media qr code qrcode bar code barcode scanner scan capabilitie
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2bd5c5c1cfaab4e2f03423f078c04b133331de1a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630533"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646568"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar la función de escáner de código QR o de códigos de barras 
 
@@ -19,7 +19,7 @@ Este documento le guía sobre cómo integrar la funcionalidad del escáner de c�
 
 El código de barras es un método para representar datos en un formulario visual y legible por máquina. El código de barras contiene información sobre un producto, como un tipo, tamaño, fabricante y país de origen en forma de barras y espacios. El código se lee con el escáner óptico de la cámara del dispositivo nativo. Para una experiencia de colaboración más completa, puedes integrar la funcionalidad de escáner de códigos QR o códigos de barras que se proporciona en la plataforma Teams con la Teams aplicación.   
 
-Puedes usar Microsoft Teams [SDK de cliente de JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona las herramientas necesarias para que la aplicación pueda tener acceso a las capacidades del dispositivo nativo del [usuario.](native-device-permissions.md) Usa la `scanBarCode` API para integrar la funcionalidad del escáner dentro de la aplicación. 
+Puedes usar Microsoft Teams [SDK de cliente de JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona las herramientas necesarias para que la aplicación pueda tener acceso a las capacidades del dispositivo nativo del [usuario.](native-device-permissions.md) Usa la API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) para integrar la funcionalidad del escáner en la aplicación. 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Ventaja de integrar la funcionalidad de escáner de códigos DE BARRAS o QR
 
@@ -28,7 +28,7 @@ Estas son las ventajas de la integración de las capacidades de escáner de cód
 * La integración permite a los desarrolladores de aplicaciones web en Teams para aprovechar la funcionalidad de análisis de CÓDIGOS QR o códigos de barras con Teams SDK de cliente de JavaScript.
 * Con esta característica, el usuario solo necesita alinear un QR o un código de barras dentro de un marco en el centro de la interfaz de usuario del escáner y el código se examina automáticamente. Los datos almacenados se comparten de nuevo con la aplicación web de llamada. Esto evita los inconvenientes y errores humanos de introducir códigos de producto largos u otra información relevante manualmente.
 
-Para integrar la funcionalidad de escáner qr o de código de barras, debes actualizar el archivo de manifiesto de la aplicación y llamar a la `scanBarCode` API. Para una integración eficaz, debe [](#code-snippet) tener una buena comprensión del fragmento de código para llamar a la API, lo que le permite usar la funcionalidad nativa de escáner de códigos de barras o `scanBarCode` QR. La API proporciona un error para un estándar de código de barras no compatible.
+Para integrar la funcionalidad de escáner qr o de código de barras, debes actualizar el archivo de manifiesto de la aplicación y llamar a la API [scanBarCode.](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) Para una integración eficaz, debe [](#code-snippet) tener una buena comprensión del fragmento de código para llamar a la API [scanBarCode,](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) lo que le permite usar la funcionalidad de escáner de código de barras o QR nativo. La API proporciona un error para un estándar de código de barras no compatible.
 Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la Teams aplicación.
 
 > [!NOTE] 
@@ -49,9 +49,9 @@ Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/man
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
-La API invoca el control de escáner que permite al usuario examinar diferentes tipos de código de barras `ScanBarCode` y devuelve el resultado como una cadena.
+La API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) invoca el control de escáner que permite al usuario examinar diferentes tipos de código de barras y devuelve el resultado como una cadena.
 
-Para personalizar la experiencia de análisis de código de barras, la configuración de código de barras opcional se pasa como entrada a la `ScanBarCode` API. Puede especificar el intervalo de tiempo de espera del examen en segundos mediante `timeOutIntervalInSec` . Su valor predeterminado es 30 segundos y el valor máximo es 60 segundos.
+Para personalizar la experiencia de análisis de código de barras, [la](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) configuración de código de barras opcional se pasa como entrada a la API [scanBarCode.](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) Puede especificar el intervalo de tiempo de espera del examen en segundos mediante `timeOutIntervalInSec` . Su valor predeterminado es 30 segundos y el valor máximo es 60 segundos.
 
 La **API scanBarCode()** admite los siguientes tipos de código de barras:
 

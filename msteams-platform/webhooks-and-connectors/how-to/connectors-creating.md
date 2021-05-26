@@ -5,12 +5,12 @@ keywords: teams o365 conector
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1598b84fc1c36547aa4c814cdf03404a3833779e
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629826"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646329"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Crear Office 365 conectores de Microsoft Teams
 
@@ -190,7 +190,7 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
 
 El módulo Exchange Online PowerShell V2 usa la autenticación moderna y funciona con la autenticación multifactor (MFA) para conectarse a todos los entornos de PowerShell relacionados Exchange en Microsoft 365. Los administradores pueden usar Exchange Online PowerShell para deshabilitar conectores para un inquilino completo o un buzón de grupo específico, lo que afecta a todos los usuarios de ese espacio empresarial o buzón. No es posible deshabilitar para algunos y no para otros. Además, los conectores están deshabilitados de forma predeterminada para GCC inquilinos.
 
-La configuración de nivel de inquilino invalida la configuración de nivel de grupo. Por ejemplo, si un administrador habilita conectores para el grupo y los deshabilita en el inquilino, se deshabilitarán los conectores para el grupo. Para habilitar un conector en Teams, conéctese a [Exchange Online PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mediante la autenticación moderna con o sin MFA.
+La configuración de nivel de inquilino invalida la configuración de nivel de grupo. Por ejemplo, si un administrador habilita conectores para el grupo y los deshabilita en el inquilino, se deshabilitarán los conectores para el grupo. Para habilitar un conector en Teams, conéctese a [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mediante la autenticación moderna con o sin MFA.
 
 ### <a name="commands-to-disable-or-enable-connectors"></a>Comandos para deshabilitar o habilitar conectores
 
@@ -203,7 +203,7 @@ La configuración de nivel de inquilino invalida la configuración de nivel de g
     * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
     * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-Para obtener más información sobre el intercambio de módulos de PowerShell, [vea Set-OrganizationConfig](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true). Para habilitar o deshabilitar los Outlook, [conecta aplicaciones a tus grupos en Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us).
+Para obtener más información sobre el intercambio de módulos de PowerShell, [vea Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar o deshabilitar los Outlook, [conecta aplicaciones a tus grupos en Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us).
 
 ## <a name="testing-your-connector"></a>Probar el conector
 
