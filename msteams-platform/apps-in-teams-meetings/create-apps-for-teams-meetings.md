@@ -1,19 +1,19 @@
 ---
-title: Requisitos previos y referencias de API para aplicaciones en Teams reuniones
+title: Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
 author: laujan
 description: Trabajar con aplicaciones para Teams reuniones
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 6ee26142ad80021f00ffebf3502f68c124ab4b67
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: aeedd6ff4ee1e075d24020d872b5ebd216be4fb0
+ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651729"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "52684645"
 ---
-# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para aplicaciones en Teams reuniones
+# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
 
 Para expandir las capacidades de tus aplicaciones en todo el ciclo de vida de la reunión, Teams te permite trabajar con aplicaciones para Teams reuniones. Debes pasar por los requisitos previos y puedes usar las referencias a la API de aplicaciones de reunión para mejorar la experiencia de la reunión.
 
@@ -76,7 +76,7 @@ La `GetParticipant` API incluye los siguientes parámetros de consulta:
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
+|**tenantId**| Cadena | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
 
 #### <a name="example"></a>Ejemplo
 
@@ -180,7 +180,7 @@ La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
+|**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
 #### <a name="examples"></a>Ejemplos
 
@@ -489,9 +489,9 @@ public class MeetingStartEndEventValue
 |----------------|-----------------|--------------|--------------|
 | Extensibilidad de reuniones | Microsoft Teams extensibilidad de reunión para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de burbuja de contenido de reunión | Microsoft Teams de extensibilidad de reuniones para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| MeetingSidePanel | Microsoft Teams extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | |
+| MeetingSidePanel | Microsoft Teams extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

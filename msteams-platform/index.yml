@@ -56,24 +56,21 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
           text: Funciones de la aplicación de Teams
-        - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: overview
-          text: Asignar casos de uso a Microsoft Teams funcionalidades
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: how-to-guide
-          text: Crear una Teams con Node.js
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: how-to-guide
-          text: 'Crear una aplicación Teams con C #'
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: 'Crear aplicaciones de código Teams, bots y flujos con Microsoft Power Platform'
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Portal para desarrolladores de Teams
         - url: /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Esquema de manifiesto para Teams aplicaciones
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Crear escenarios para Microsoft Teams aplicaciones
+          text: Escenarios de compilación para Teams aplicaciones
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: Procedimientos recomendados para Teams escenarios de aplicaciones
     - title: Aprender
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
