@@ -5,17 +5,17 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629868"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667422"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifiesto de vista previa de desarrollador para Microsoft Teams
 
 > [!NOTE]
-> Consulta [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) para obtener información sobre el programa y cómo puedes unirte.
+> Para obtener más información sobre el programa y cómo puede unirse, vea [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 > Si no usa la vista previa del desarrollador, no debe usar esta versión del manifiesto. Vea [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) para la versión pública del manifiesto.
 
 El Microsoft Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
@@ -73,6 +73,7 @@ Para obtener más información sobre las características disponibles, vea: [Car
       "entityId": "idForPage",
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content?host=msteams",
+      "contentBotId": "Specifies to the app that tab is an Adaptive Card Tab. You can either provide the contentBotId or contentUrl.",
       "websiteUrl": "https://contoso.com/content",
       "scopes": [ "personal" ]
     }
@@ -350,7 +351,7 @@ El objeto es una matriz con todos los elementos del tipo `object` . Este bloque 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|La https:// url que se va a usar al configurar la pestaña.|
-|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
+|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo la pestaña estará disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
@@ -361,13 +362,17 @@ El objeto es una matriz con todos los elementos del tipo `object` . Este bloque 
 
 Define un conjunto de pestañas que se pueden "anclar" de forma predeterminada, sin que el usuario las agregue manualmente. Las pestañas estáticas declaradas en el ámbito siempre se anclan a la experiencia `personal` personal de la aplicación. Actualmente no se admiten las pestañas estáticas declaradas `team` en el ámbito.
 
+Represente las pestañas con tarjetas adaptables especificando en `contentBotId` lugar de en el bloque `contentUrl` **staticTabs.**
+
 El objeto es una matriz (máximo de 16 elementos) con todos los elementos del tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan una solución de tabulación estática.
+
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Identificador único para la entidad que muestra la pestaña.|
 |`name`|Cadena|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
 |`contentUrl`|Cadena|2048 caracteres|✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
+|`contentBotId`|   | | | El Microsoft Teams de aplicación especificado para el bot en el portal de Bot Framework. |
 |`websiteUrl`|Cadena|2048 caracteres||La https:// dirección URL para apuntar si un usuario opta por ver en un explorador.|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito, lo que significa que solo se puede aprovisionar como `personal` parte de la experiencia personal.|
 
@@ -424,7 +429,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|Cadena|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. Esto bien puede ser el mismo que el identificador general [de la aplicación](#id).|
-|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
+|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
 |`commands`|Matriz de objeto|10|✔|Matriz de comandos que admite la extensión de mensajería|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -439,9 +444,9 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`type`|String|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: `query`|
 |`title`|Cadena|32 caracteres|✔|Nombre de comando fácil de usar.|
 |`description`|Cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|Booleano|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
+|`initialRun`|Boolean|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
 |`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose", "commandBox"]`|
-|`fetchTask`|Booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
+|`fetchTask`|Boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|

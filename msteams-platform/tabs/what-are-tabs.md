@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 21499a4e18acee369b4b1bda6184e4b14b6262ec
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 06454530ab2d0b7e993120f6696f3507a7352bf3
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629973"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667420"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -43,6 +43,12 @@ Hay dos tipos de pestañas disponibles en Teams: canal/grupo y personal. Las pes
 
 ## <a name="understand-how-tabs-work"></a>Comprender cómo funcionan las pestañas
 
+Puede usar uno de los siguientes métodos para crear pestañas:
+* [Declarar pestaña personalizada en el manifiesto de la aplicación](#declare-custom-tab-in-app-manifest)
+* [Usar la tarjeta adaptable para crear pestañas](#use-adaptive-card-to-build-tabs)
+
+### <a name="declare-custom-tab-in-app-manifest"></a>Declarar pestaña personalizada en el manifiesto de la aplicación
+
 Se declara una pestaña personalizada en el manifiesto de la aplicación del paquete de la aplicación. Para cada página web que quieras incluir como pestaña en la aplicación, defines una dirección URL y un ámbito. Además, debe agregar el SDK de cliente Teams [JavaScript a](/javascript/api/overview/msteams-client) la página y llamar después `microsoftTeams.initialize()` de que se cargue la página. Si lo hace, le dirá Teams que muestre su página, le dará acceso a información específica de Teams (por ejemplo, si el cliente de Teams ejecuta el tema *oscuro)* y le permitirá realizar acciones en función de los resultados.
 
 Independientemente de si elige exponer la pestaña dentro del ámbito de canal o grupo o personal, deberá presentar una página de contenido HTML de iframe <en \> la pestaña. [](~/tabs/how-to/create-tab-pages/content-page.md) Para las pestañas personales, la dirección URL de contenido se establece directamente en el manifiesto Teams aplicación mediante la `contentUrl` propiedad de la `staticTabs` matriz. El contenido de la pestaña será el mismo para todos los usuarios.
@@ -51,7 +57,12 @@ Para las pestañas de canal o grupo, también debe crear una página de configur
 
 Puedes tener varios canales o pestañas de grupo y hasta dieciséis pestañas personales por aplicación.
 
-## <a name="mobile-considerations"></a>Consideraciones móviles
+
+### <a name="use-adaptive-card-to-build-tabs"></a>Usar la tarjeta adaptable para crear pestañas
+
+Al desarrollar una pestaña con el método tradicional, debe tener en cuenta aspectos como HTML, consideraciones css para sentirse nativo, tiempos de carga lentos, restricciones de iFrame, mantenimiento y costos del servidor, entre otros. Las pestañas de tarjeta adaptables son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un iframe, puedes representar la tarjeta adaptable en una pestaña. Mientras que el front-end se representa como tarjeta adaptable, el back-end está alimentado por un bot. El bot es responsable de aceptar solicitudes y responder correctamente con la tarjeta adaptable que se va a representar.
+
+## <a name="mobile-clients"></a>Clientes móviles
 
 Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configuración debe tener un `setSettings()` valor para la `websiteUrl` propiedad. Para garantizar una experiencia de usuario óptima, debe seguir las instrucciones para las [pestañas](~/tabs/design/tabs-mobile.md) en el móvil al crear las pestañas. Las [aplicaciones distribuidas a Teams tienda tienen](~/concepts/deploy-and-publish/appsource/publish.md) un proceso de aprobación independiente para clientes móviles. El comportamiento predeterminado de estas aplicaciones es el siguiente:
 
@@ -61,7 +72,9 @@ Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configura
 | **Pestañas canal y grupo** | La pestaña se abre en el Teams mediante `contentUrl` . | La pestaña se abre en un explorador fuera del Teams con `websiteUrl` . |
 
 > [!NOTE]
->
+> [Las aplicaciones enviadas a AppSource](../concepts/deploy-and-publish/overview.md#publish-to-appsource) para su publicación en Teams se evalúan automáticamente para la capacidad de respuesta móvil. Para cualquier consulta, llegue a teamsubm@microsoft.com.
+> Para todas las aplicaciones que no se distribuyen a través de [AppSource](../concepts/deploy-and-publish/overview.md), las pestañas se abren en una vista web desde la aplicación dentro de los clientes de Teams de forma predeterminada y no se requiere ningún proceso de aprobación independiente.
+> 
 > El comportamiento predeterminado de las aplicaciones solo es aplicable si se distribuye a través Teams tienda. De forma predeterminada, todas las pestañas se abren en el Teams cliente.
 > Para iniciar una evaluación de la aplicación para la facilidad de uso móvil, teamsubm@microsoft.com con los detalles de la aplicación.
 
@@ -75,4 +88,4 @@ Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configura
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Requisitos de pestaña](~/tabs/how-to/tab-requirements.md)
+> [Requisitos de la pestaña](~/tabs/how-to/tab-requirements.md)

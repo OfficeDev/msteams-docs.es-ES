@@ -4,16 +4,44 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651722"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668858"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
-Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) y en la versión preliminar del desarrollador.
+Descubra Microsoft Teams de plataforma que se presentan en Microsoft Build 2021, disponible generalmente (GA) y en la versión preliminar del desarrollador.
+
+## <a name="microsoft-build-2021"></a>Microsoft Build 2021
+
+# <a name="features-in-developer-preview"></a>[Características de la vista previa del desarrollador](#tab/devpreview)
+
+| **Fecha** | **Funciones** | **Temas cambiados** |
+| -------- | --------- | ------------------ |
+|05/26/2021| Crear pestañas con tarjetas adaptables. |[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
+|05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
+|05/25/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
+|05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| La característica modo juntos combina a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Modo juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/24/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/21/2021| Las pestañas vinculan el despliegue y la vista de fase. |[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
+
+> [!NOTE]
+> Para obtener más información sobre las características disponibles en la vista previa del desarrollador, vea [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+# <a name="features-in-ga"></a>[Características de GA](#tab/GA)
+
+| **Fecha** | **Funciones** | **Temas cambiados** |
+| -------- | --------- | ------------------ |
+|04/29/2021 | Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| Personalización de la aplicación.|[Introducción a la aplicación de Equipos de diseño,](concepts/design/enable-app-customization.md) [Introducción a App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y Esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
+|03/29/2021 | Dar formato a las tarjetas Teams. | [Dar formato a las tarjetas Teams](task-modules-and-cards/cards/cards-format.md) |
+|02/19/2021|Se agregaron funcionalidades de ubicación. <br/> La información sobre las capacidades de ubicación se agrega en la introducción a las capacidades del dispositivo, los permisos de dispositivo nativo, las capacidades multimedia de integración y los archivos de funcionalidad de escáner de códigos de barras o QR.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
+
+---
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -33,11 +61,11 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 |05/10/2021| Nueva característica de personalización de aplicaciones.| [Habilitar organizaciones para personalizar la aplicación](concepts/design/enable-app-customization.md) |
 |05/07/2021| Vínculos profundos para llamadas de audio y vídeo en el chat. |[Vínculos profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Nueva guía sobre cómo publicar aplicaciones en la Teams tienda.|[Publicar la aplicación en la tienda Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [directrices de validación de la tienda](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Nuevo: Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| La característica de personalización de aplicaciones ya está disponible en la vista previa del desarrollador.|[Introducción a la aplicación de Equipos de diseño,](concepts/design/enable-app-customization.md) [Introducción a App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y Esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
+|04/29/2021 | Acciones universales para tarjetas adaptables. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| Característica de personalización de aplicaciones.|[Introducción a la aplicación de Equipos de diseño,](concepts/design/enable-app-customization.md) [Introducción a App Studio](concepts/build-and-test/app-studio-overview.md#connectors)y Esquema de [manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Aviso: Actualice a la versión 4.10 o posterior del SDK de Bot Framework, tal como hemos empezado con el proceso de desuso para `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
-|03/05/2021|El ámbito de instalación predeterminado y la funcionalidad de grupo se encuentra en la vista previa del desarrollador.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
+|03/05/2021|Ámbito de instalación predeterminado y funcionalidad de grupo.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Reordenar pestañas de aplicaciones personales.|[Reordenar la pestaña de chat en aplicaciones personales](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|Enmascaramiento de información en tarjetas adaptables.| [Enmascaramiento de información en tarjetas adaptables](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Se agregaron funcionalidades de ubicación. <br/> La información sobre las capacidades de ubicación se agrega en la introducción a las capacidades del dispositivo, los permisos de dispositivo nativo, las capacidades multimedia de integración y los archivos de funcionalidad de escáner de códigos de barras o QR.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
@@ -105,7 +133,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 | 05/06/2019 | Programa de certificación de aplicaciones para aplicaciones de tienda. | [Certificación de aplicaciones](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | Las plantillas de aplicación ya están disponibles. | [Plantillas de aplicación](~/samples/app-templates.md) |
 | 04/23/2019 | Las extensiones de mensajería basadas en acciones ya están disponibles. | [Extensiones de mensaje basadas en acciones](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | La creación de vínculos profundos al chat privado está fuera de la vista previa del desarrollador y está disponible. | [Vinculación profunda a un chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 02/18/2019 | Crear vínculos profundos al chat privado. | [Vinculación profunda a un chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Información sobre SKU y licenceType en el contexto de la pestaña. | [Contexto de tabulación](~/concepts/tabs/tabs-context.md) |
 
 <br>
@@ -120,7 +148,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
-| 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams y se han movido fuera de la vista previa del desarrollador. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
+| 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Ahora puede crear vínculos profundos a chats privados entre usuarios. | [Vinculación profunda a un chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 08/11/2018 | SharePoint Framework 1.7 se ha enviado y con ella una nueva característica para usar Microsoft Teams pestaña como un SharePoint Framework web. | [Pestañas en SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
@@ -130,7 +158,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 | 09/11/2018 | Las páginas de configuración de pestañas ahora son significativamente más altas. | [Diseño de pestañas](tabs/design/tabs.md) |
 | 08/15/2018 | Las tarjetas adaptables ahora son compatibles Teams.|[Acciones de tarjeta adaptables en Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Compatibilidad con clientes para DevTools.| [DevTools para el Microsoft Teams escritorio](~/resources/dev-preview/developer-preview-tools.md)|
-| 08/08/2018 | Ahora, las extensiones de mensajería admiten varios comandos. Esta característica ha estado en Developer Preview y ahora se ha lanzado a todos los usuarios.| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
+| 08/08/2018 | Ahora, las extensiones de mensajería admiten varios comandos. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | La configuración en línea ahora se admite en Conectores. La documentación de Connectors también se ha revisado y ampliado para mayor claridad.| [Conectores](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | El bot ahora puede enviar y recibir archivos.| [Enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Se ha agregado información sobre la re-certificación de aplicaciones a la sección Publicación. |[Permisos de manifiesto](resources/schema/manifest-schema.md#permissions)|
@@ -159,6 +187,7 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|05/26/2021|Compilar pestañas con tarjetas adaptables|[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
 |05/25/2021| API de detalles de reunión y eventos de Teams en tiempo real | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |

@@ -4,16 +4,16 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 localization_priority: Normal
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566862"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668865"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
-Las tarjetas enumeradas en este documento se admiten en bots para Microsoft Teams. Se basan en tarjetas definidas por Bot Framework, pero Teams no admite todas las tarjetas de Bot Framework y, en su lugar, se han agregado Teams tarjetas. Las diferencias se llaman en las referencias de este documento.
+Las tarjetas enumeradas en este documento se admiten en bots para Microsoft Teams. Se basan en tarjetas definidas por Bot Framework (BF), pero Teams no admite todas las tarjetas de Bot Framework y, en su lugar, se han agregado algunas Teams tarjetas. Las diferencias se llaman en las referencias de este documento.
 
 ## <a name="card-examples"></a>Ejemplos de tarjetas
 
