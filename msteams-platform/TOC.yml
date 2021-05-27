@@ -6,19 +6,20 @@
     - name: Novedades
       href: whats-new.md
 - name: Introducción
+  expanded: true
   items:
-    - name: Información general
-      href: build-your-first-app/build-first-app-overview.md
-    - name: 'Crear un aplicación que simplemente diga "Hola, mundo"'
-      href: build-your-first-app/build-and-run.md
-    - name: Crear una pestaña personal básica
-      href: build-your-first-app/build-personal-tab.md
-    - name: Crear su primera pestaña de canal y grupo
-      href: build-your-first-app/build-channel-tab.md
-    - name: Cree su primer bot
-      href: build-your-first-app/build-bot.md
-    - name: Cree su primera extensión de mensajería
-      href: build-your-first-app/build-messaging-extension.md
+    - name: Requisitos previos
+      href: get-started/prerequisites.md
+    - name: Crear una aplicación personal (React)
+      href: get-started/first-app-react.md
+    - name: Crear una aplicación personal (Blazor)
+      href: get-started/first-app-blazor.md
+    - name: Crear una aplicación personal (SPFx)
+      href: get-started/first-app-spfx.md
+    - name: Crear un bot de conversación
+      href: get-started/first-app-bot.md
+    - name: Crear una extensión de mensajería
+      href: get-started/first-message-extension.md
 - name: Tutoriales y ejemplos de código
   items:
     - name: Tutoriales
@@ -191,10 +192,22 @@
   items:
     - name: Información general
       href: tabs/what-are-tabs.md
-    - name: Expansión de vínculo de pestaña y vista de fases
-      href: tabs/tabs-link-unfurling.md
-    - name: Requisitos de pestaña
-      href: tabs/how-to/tab-requirements.md
+    - name: Crear una pestaña
+      items:
+        - name: Requisitos de la pestaña
+          href: tabs/how-to/tab-requirements.md
+        - name: Creación de una página de contenido
+          href: tabs/how-to/create-tab-pages/content-page.md
+        - name: Creación de una página de configuración
+          href: tabs/how-to/create-tab-pages/configuration-page.md
+        - name: Crear una página de eliminación
+          href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Obtención del contexto de Teams para la pestaña
+          href: tabs/how-to/access-teams-context.md
+        - name: Compilar pestañas con tarjetas adaptables
+          href: tabs/how-to/build-adaptive-card-tabs.md
+        - name: Expansión del vínculo de la pestaña y vista de fases
+          href: tabs/tabs-link-unfurling.md
     - name: Guías de inicio rápido
       items:
         - name: Pestaña personal con Node.js
@@ -209,16 +222,6 @@
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
         - name: Pestaña de canal con C#/ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-    - name: Creación de una página de contenido
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Creación de una página de configuración
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Crear una página de eliminación
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Pestañas en dispositivos móviles
-      href: tabs/design/tabs-mobile.md
-    - name: Obtención del contexto de Teams para la pestaña
-      href: tabs/how-to/access-teams-context.md
 - name: Crear bots
   items:
     - name: Información general
@@ -298,8 +301,14 @@
   items:
     - name: Información general
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Compilar una aplicación para reuniones
+    - name: Extensibilidad de la aplicación para reuniones
+      href: apps-in-teams-meetings/meeting-app-extensibility.md
+    - name: Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Habilitar y configurar las aplicaciones para reuniones
+      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Modo conferencia en Teams
+      href: apps-in-teams-meetings/teams-together-mode.md
 - name: Crear webhooks y conectores
   items:
     - name: Información general
