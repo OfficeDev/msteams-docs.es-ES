@@ -5,12 +5,12 @@ description: Describe cómo responder a la acción de envío del módulo de tare
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019835"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710644"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -26,7 +26,7 @@ Tiene las siguientes opciones para responder:
 * [Respuesta de](#respond-with-a-card-inserted-into-the-compose-message-area)tarjeta: puede responder con una tarjeta con la que el usuario puede interactuar o insertar en un mensaje.
 * [Tarjeta adaptable desde el bot:](#bot-response-with-adaptive-card)inserte una tarjeta adaptable directamente en la conversación.
 * [Solicitar al usuario que autentique](~/messaging-extensions/how-to/add-authentication.md).
-* [Solicite al usuario que proporcione una configuración adicional](~/messaging-extensions/how-to/add-configuration-page.md).
+* [Solicitar al usuario que proporcione una configuración adicional]~/get-started/first-message-extension.md).
 
 Para la autenticación o configuración, después de que el usuario complete el proceso, la invocación original se resiente al servicio web. En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación de invocación `commandContext` de la extensión de mensajería: 
 
@@ -587,9 +587,9 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 |Field|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|Cadena|Describe la mención de una "persona".|
-|`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
-|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
+|`mentionType`|String|Describe la mención de una "persona".|
+|`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
+|`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
 ## <a name="code-sample"></a>Ejemplo de código
 

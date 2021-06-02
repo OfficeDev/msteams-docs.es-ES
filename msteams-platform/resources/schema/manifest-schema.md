@@ -5,16 +5,17 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 6c7cd02480f78d19aed269b5d78d0c6f470621d2
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d8427d23ba2caa73cecd173f6d1ef0d041252b3b
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566449"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710630"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
 El Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . También se admiten las versiones anteriores 1.0, 1.1,..., 1.6, y así sucesivamente (con "v1.x" en la dirección URL).
+Para obtener más información sobre los cambios realizados en cada versión, vea [registro de cambios de manifiesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad:
 

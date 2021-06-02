@@ -4,12 +4,12 @@ author: clearab
 description: Cómo responder al comando de búsqueda desde una extensión de mensajería en una Microsoft Teams aplicación.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 15b48b135f656feeb3cfb28ffbe12852ddb66359
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075636"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710637"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -345,10 +345,10 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
-[Agregar configuración a una extensión de mensajería](~/messaging-extensions/how-to/add-configuration-page.md)
- 
+[Agregar configuración a una extensión de mensajería](~/get-started/first-message-extension.md)
+
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]

@@ -5,12 +5,12 @@ description: Cree una extensión de mensajería para Microsoft Teams con el Kit 
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: ad341c386cc9e1bf03cf6e25c0d8be8add0880c6
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698124"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710651"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crear y ejecutar la primera extensión de mensajería para Microsoft Teams
 
@@ -30,16 +30,16 @@ Instale los [requisitos previos](prerequisites.md) para garantizar que su entorn
 
 ## <a name="create-your-project"></a>Crear un proyecto
 
-Usar el Kit de herramientas de Teams para crear su primer proyecto:
+Use el Kit de herramientas de Teams para crear su primer proyecto:
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Abrir Visual Studio Code.
 1. Abra el Kit de herramientas de Microsoft Teams. Para ello, seleccione el icono de Teams en la barra lateral:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="El icono de Teams en la barra lateral de Visual Studio Code.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icono de Teams en la barra lateral de Visual Studio Code.":::
 
-1. Seleccione **Crear un nuevo proyecto**.
+1. Seleccione **Crear nuevo proyecto**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Ubicación del vínculo Crear nuevo proyecto en la barra lateral del Kit de herramientas de Teams.":::
 
@@ -62,7 +62,7 @@ Usar el Kit de herramientas de Teams para crear su primer proyecto:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Captura de pantalla que muestra cómo seleccionar el lenguaje de programación.":::
 
-1. Seleccione una carpeta (opcional).  Se creará una carpeta en la carpeta del área de trabajo para el proyecto que esté creando.
+1. Seleccione una carpeta de área de trabajo.  Se creará una carpeta dentro de la carpeta del área de trabajo para el proyecto que esté creando.
 
 1. Escriba un nombre adecuado para la aplicación, como `helloworld`.  El nombre de la aplicación solo puede contener caracteres alfanuméricos.  Presione **Entrar** para continuar.
 
@@ -70,7 +70,7 @@ La aplicación Teams se creará en unos segundos.
 
 # <a name="command-line"></a>[Línea de comandos](#tab/cli)
 
-Use la CLI `teamsfx` para crear su primer proyecto:  Comience en la carpeta en la que quiera crear la carpeta del proyecto.
+Use la CLI de `teamsfx` para crear su primer proyecto:  Comience en la carpeta en la que quiera crear la carpeta del proyecto.
 
 ``` bash
 teamsfx new
@@ -102,7 +102,7 @@ El código bot se almacena en el directorio `bot`.  `bots/messageExtensionBot.js
 > [!Tip]
 > Familiarícese con los bots fuera de Teams antes de integrar su primer bot en Teams.  Para encontrar más información sobre los bots, vea los tutoriales de [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="run-your-app-locally"></a>Ejecute la aplicación localmente
+## <a name="run-your-app-locally"></a>Ejecutar la aplicación localmente
 
 El Kit de herramientas de Teams le permite hospedar la aplicación localmente.  Para ello:
 
@@ -166,6 +166,23 @@ Antes de la implementación, la aplicación se ejecuta de forma local:
 La implementación implica recursos de aprovisionamiento en una suscripción activa de Azure y la implementación (carga) del back-end y del código de front-end de la aplicación en Azure. El back-end usa varios servicios de Azure, como Azure App Service y Azure Bot Service.
 
 </details>
+
+## <a name="add-a-configuration-page-to-your-messaging-extension"></a>Agregar una página de configuración a la extensión de mensajería
+
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+## <a name="code-sample"></a>Ejemplo de código
+
+El Teams configuración de autenticación de búsqueda para proyectos de ejemplo en GitHub, muestra cómo crear extensiones de mensajería que incluyen una página de configuración y autenticación de [servicio de bot.](https://github.com/microsoft/BotBuilder-Samples#teams-samples) Los ejemplos también muestran cómo crear extensiones de mensaje que acepten solicitudes de búsqueda y devuelvan los resultados después de que el usuario haya iniciado sesión.
+
+| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+|-----------------|-----------------|-------------|--------------|--------|
+| Generador de bots | Para crear extensiones de mensajería. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+
+## <a name="additional-code-sample"></a>Ejemplo de código adicional
+
+> [!div class="nextstepaction"]
+> [Ver más ejemplos de Bot Framework en GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
 ## <a name="next-steps"></a>Siguientes pasos
 
