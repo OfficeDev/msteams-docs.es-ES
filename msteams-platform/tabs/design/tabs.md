@@ -1,18 +1,18 @@
 ---
-title: Diseño de la pestaña para escritorio y web
-description: Obtén información sobre cómo diseñar una Teams (escritorio y web) y obtener el kit Microsoft Teams interfaz de usuario.
+title: Pestañas de diseño para escritorio, web y móvil
+description: Aprende a diseñar una pestaña Teams para escritorio, web y móvil, y obtén el kit Microsoft Teams interfaz de usuario.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644744"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721846"
 ---
-# <a name="designing-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>Diseñe la pestaña para Microsoft Teams
 
 Una pestaña es un lienzo grande para el contenido de la aplicación. Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar pestañas en Teams.
 
@@ -74,7 +74,7 @@ Puede agregar un paso en el que los usuarios primero deben iniciar sesión con s
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="En el ejemplo se muestra una pantalla de autenticación de tabulación." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>Diseño de una configuración de pestaña con plantillas de interfaz de usuario
+### <a name="design-a-tab-setup-with-ui-templates"></a>Diseñar una configuración de pestaña con plantillas de interfaz de usuario
 
 Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la experiencia de configuración de pestañas:
 
@@ -166,7 +166,7 @@ Los usuarios pueden tener una conversación junto al contenido de la pestaña qu
 
 ### <a name="permissions-and-role-based-views"></a>Permisos y vistas basadas en roles
 
-La experiencia de pestaña puede ser diferente para los usuarios en función de sus permisos. Por ejemplo, un usuario puede tener acceso a la pestaña sin tener que iniciar sesión. Sin embargo, otro usuario debe firmar y verá contenido ligeramente diferente.
+La experiencia de pestaña puede ser diferente para los usuarios en función de sus permisos. Por ejemplo, un usuario puede tener acceso a la pestaña sin tener que iniciar sesión. Sin embargo, otro usuario debe iniciar sesión y ver contenido ligeramente diferente.
 
 ## <a name="manage-a-tab"></a>Administrar una pestaña
 
