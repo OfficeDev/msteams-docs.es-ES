@@ -1,16 +1,16 @@
 ---
-title: Extensibilidad de aplicaciones de reunión
+title: Extensibilidad de la aplicación para reuniones
 author: laujan
 description: Comprender la extensibilidad de la aplicación de reunión
 ms.topic: conceptual
-ms.openlocfilehash: 96770a6a06d7a4478d8a00a7928c74b38d7b4b2c
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 575952555bda288d791862140f7b40ce1792c868
+ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649844"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52736757"
 ---
-# <a name="meeting-app-extensibility"></a>Extensibilidad de aplicaciones de reunión
+# <a name="meeting-app-extensibility"></a>Extensibilidad de la aplicación para reuniones
 
 Teams extensibilidad de la aplicación de reunión se basa en los siguientes conceptos:
 
@@ -141,9 +141,9 @@ En la tabla siguiente se proporcionan los tipos de usuario y las característica
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
 | Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar ni eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
-| Federado | No disponible | No disponible | No disponible | No disponible | No disponible | No disponible |
+| Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar ni eliminar. | Se permite la interacción. No se permite la adquisición, actualización y eliminación. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
@@ -153,4 +153,4 @@ En la tabla siguiente se proporcionan los tipos de usuario y las característica
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Requisitos previos y referencias de API para aplicaciones en Teams reuniones](create-apps-for-teams-meetings.md)
+> [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
