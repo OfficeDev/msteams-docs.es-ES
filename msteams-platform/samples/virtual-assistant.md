@@ -576,7 +576,7 @@ También puede aprovechar las aptitudes existentes desde el repositorio [de Bot 
 | Código de habilidad de bot de libro a sala | Permite buscar y reservar rápidamente una sala de reuniones sobre la marcha. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 * [Libro a sala](app-templates.md#book-a-room)

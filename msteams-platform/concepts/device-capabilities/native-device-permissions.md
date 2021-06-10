@@ -81,7 +81,7 @@ Cada propiedad le permite pedir al usuario que pida su consentimiento:
 
 | Propiedad      | Descripción   |
 | --- | --- |
-| Elementos multimedia         | Permiso para usar la cámara, el micrófono, los altavoces y la galería multimedia de acceso. |
+| medios         | Permiso para usar la cámara, el micrófono, los altavoces y la galería multimedia de acceso. |
 | geolocalización   | Permiso para devolver la ubicación del usuario.      |
 | notificaciones | Permiso para enviar las notificaciones de usuario.      |
 | midi          | Permiso para enviar y recibir información de interfaz digital de instrumentos musicales (MIDI) desde un instrumento musical digital.   |
@@ -187,7 +187,7 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 > [!NOTE]
 > Cuando da su consentimiento a los permisos de dispositivo nativo, solo es válido para la _sesión de_ inicio de sesión actual.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
 > [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)

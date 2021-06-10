@@ -35,6 +35,6 @@ En la tabla siguiente se enumeran los canales de soporte técnico para enviar Te
 |         **Microsoft Teams problemas y errores del producto**          | El administrador de inquilinos puede comunicarse [con Microsoft 365 soporte técnico.](/microsoft-365/admin/contact-support-for-business-products)                                                            |
 |        **Preguntas generales sobre Microsoft Teams**        |  Envíe sus preguntas en [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).               |                                                           
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

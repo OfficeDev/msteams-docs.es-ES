@@ -251,7 +251,7 @@ Estos son los parámetros de consulta:
 |-------------|-------------|------|----|
 |Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 

@@ -33,7 +33,7 @@ Puede reconocer problemas de usuario e identificar las respuestas a algunos prob
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Se proporciona información para compartir la aplicación y colaborar en elementos de un sistema externo. También puede aprender a iniciar flujos de trabajo y enviar notificaciones a los usuarios. Obtén sugerencias adicionales sobre dónde empezar, cómo crear redes sociales con los usuarios, bots de conversación y combinar varias características.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)
 * [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)

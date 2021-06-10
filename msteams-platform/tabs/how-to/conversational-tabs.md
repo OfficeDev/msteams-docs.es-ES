@@ -1,5 +1,5 @@
 ---
-title: Crear pestañas conversacionales
+title: Crear pestañas de conversación
 author: laujan
 description: Crear chat de sub entity conversacional para las pestañas del canal
 keywords: Canal de pestañas de teams configurable
@@ -12,7 +12,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/31/2021
 ms.locfileid: "52709655"
 ---
-# <a name="create-conversational-tabs"></a>Crear pestañas conversacionales
+# <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
 Las sub entidades conversacionales proporcionan una forma de permitir que los usuarios tengan conversaciones sobre las sub entidades en la pestaña, como tareas específicas, pacientes y oportunidades de ventas, en lugar de analizar toda la pestaña, también conocida como entidad. Un canal tradicional o una pestaña configurable permite al usuario tener una conversación sobre una pestaña, pero es posible que el usuario quiera una conversación más centrada. Puede surgir el requisito de una conversación más centrada, si hay demasiado contenido para tener una discusión centralizada o si el contenido ha cambiado con el tiempo, lo que hace que la conversación sea irrelevante para el contenido que se muestra. Las sub entidades de conversación proporcionan una experiencia de conversación mucho más centrada para las pestañas dinámicas.
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: aeedd6ff4ee1e075d24020d872b5ebd216be4fb0
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
+ms.openlocfilehash: f42e827801e21bbd039f52dbb685d4559ae5cf81
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "52684645"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853511"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
 
@@ -37,11 +37,7 @@ Antes de trabajar con aplicaciones para Teams reuniones, debes comprender lo sig
 
 * Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras etapas a lo largo del ciclo de vida de la reunión. Para el cuadro de diálogo en la reunión, vea el parámetro de `bot Id` finalización en `NotificationSignal` la API.
 
-* La API de detalles de la reunión debe tener un registro del bot y un identificador de bot. Requiere bot SDK para obtener `TurnContext` .
-
-* Para eventos de reunión en tiempo real, debe estar familiarizado con el objeto disponible a través `TurnContext` del SDK de bot. El `Activity` objeto en contiene la carga con la hora de inicio y finalización `TurnContext` real. Los eventos de reunión en tiempo real requieren un identificador de bot registrado de Teams plataforma.
-
-Una vez que haya pasado por los requisitos previos, puede usar las referencias de api de aplicaciones de reunión , , y la API de detalles de reunión que le permiten tener acceso a la información mediante atributos y mostrar contenido `GetUserContext` `GetParticipant` `NotificationSignal` relevante.
+Una vez que haya pasado por los requisitos previos, puede usar las referencias de api de aplicaciones de reunión , y eso le permite tener acceso a la información mediante atributos y mostrar `GetUserContext` `GetParticipant` contenido `NotificationSignal` relevante.
 
 ## <a name="meeting-apps-api-references"></a>Referencias de API de aplicaciones de reunión
 
@@ -54,7 +50,6 @@ En la tabla siguiente se proporciona una lista de estas API:
 |**GetUserContext**| Esta API le permite obtener información contextual para mostrar contenido relevante en una Teams pestaña. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK de cliente|
 |**GetParticipant**| Esta API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Esta API le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Le permite señalar en función de la acción del usuario que muestra un cuadro de diálogo en la reunión. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Detalles de la reunión** | Esta API le permite obtener metadatos estáticos de reunión. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
 ### <a name="getusercontext-api"></a>GetUserContext API
 
@@ -254,234 +249,6 @@ La `NotificationSignal` API incluye los siguientes códigos de respuesta:
 | **401** | La aplicación responde con un token no válido. |
 | **403** | La aplicación no puede enviar la señal. Esto puede ocurrir debido a diversos motivos, como que el administrador de inquilinos deshabilita la aplicación, la aplicación se bloquea durante la migración del sitio en directo, y así sucesivamente. En este caso, la carga contiene un mensaje de error detallado. |
 | **404** | El chat de reunión no existe. |
-
-### <a name="meeting-details-api"></a>API de detalles de reunión
-
-> [!NOTE]
-> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
-
-La API de detalles de la reunión permite a la aplicación obtener metadatos estáticos de la reunión. Estos son puntos de datos que no cambian dinámicamente.
-La API está disponible a través de Bot Services.
-
-#### <a name="query-parameter"></a>Parámetro de consulta
-
-La API de detalles de reunión incluye el siguiente parámetro de consulta:
-
-|Valor|Tipo|Obligatorio|Descripción|
-|---|---|----|---|
-|**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
-
-#### <a name="example"></a>Ejemplo
-
-La API de detalles de la reunión incluye los siguientes ejemplos:
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
-string content;
-if (response.Content != null)
-{
-    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-}
-```
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-No disponible
-
-# <a name="json"></a>[JSON](#tab/json)
-
-```http
-GET /v1/meetings/{meetingId}
-```
-
----
-
-El cuerpo de la respuesta JSON para la API de detalles de reunión es el siguiente:
-
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            “conversationType”: “groupchat”, 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
-    }
-} 
-```
-
-## <a name="real-time-teams-meeting-events"></a>Eventos de reuniones Teams en tiempo real
-
-> [!NOTE]
-> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
-
-El usuario puede recibir eventos de reunión en tiempo real. Tan pronto como cualquier aplicación está asociada a una reunión, el inicio real de la reunión y la hora de finalización de la reunión se comparten con el bot.
-
-La hora real de inicio y finalización de una reunión es diferente de la hora de inicio y finalización programada. La API de detalles de la reunión proporciona la hora de inicio y finalización programadas, mientras que el evento proporciona la hora real de inicio y finalización.
-
-### <a name="example-of-meeting-start-event-payload"></a>Ejemplo de carga del evento de inicio de reunión
-
-El código siguiente proporciona un ejemplo de carga del evento de inicio de reunión:
-
-```json
-{ 
-    "name": "Microsoft/MeetingStart", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:10:41.1252256Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "userID", 
-        "name": "", 
-        "aadObjectId": "aadOnjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user Id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event", 
-        "Id":"meeting id", 
-        "JoinUrl": "url" 
-        "StartTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
-}
-```
-
-### <a name="example-of-meeting-end-event-payload"></a>Ejemplo de carga del evento de fin de reunión
-
-El código siguiente proporciona un ejemplo de carga del evento de fin de reunión:
-
-```json
-{ 
-    "name": "Microsoft/MeetingEnd", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:17:17.4388966Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "user id", 
-        "name": "", 
-        "aadObjectId": "aadObjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting Id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event in Canary", 
-        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
-        "JoinUrl": "url", 
-        "EndTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
-}
-```
-
-### <a name="example-of-getting-metadata-of-a-meeting"></a>Ejemplo de obtener metadatos de una reunión
-
-El bot recibe el evento a través del `OnEventActivityAsync` controlador.
-
-Para deserializar la carga json, se introduce un objeto de modelo para obtener los metadatos de una reunión. Los metadatos de una reunión residen en la `value` propiedad de la carga del evento. Se `MeetingStartEndEventvalue` crea el objeto model, cuyas variables de miembro corresponden a las claves de la propiedad en la carga del `value` evento.
-
-El código siguiente muestra cómo capturar los metadatos de una reunión que es , , , , y desde un evento de inicio y finalización de `MeetingType` `Title` la `Id` `JoinUrl` `StartTime` `EndTime` reunión:
-
-```csharp
-protected override async Task OnEventActivityAsync(
-ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
-{
-    // Event Name is either `Microsoft/MeetingStart` or `Microsoft/MeetingEnd`
-    var meetingEventName = turnContext.Activity.Name;
-    // Value contains meeting information (ex: meeting type, start time, etc).
-    var meetingEventInfo = turnContext.Activity.Value as JObject; 
-    var meetingEventInfoObject =
-meetingEventInfo.ToObject<MeetingStartEndEventValue>();
-    // Create a very simple adaptive card with meeting information
-var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
-meetingEventInfoObject);
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
-}
-```
-
-MeetingStartEndEventvalue.cs incluye el código siguiente:
-
-```csharp
-public class MeetingStartEndEventValue
-{
-    public string Id { get; set; }
-    public string Title { get; set; }
-    public string MeetingType { get; set; }
-    public string JoinUrl { get; set; }
-    public string StartTime { get; set; }
-    public string EndTime { get; set; }
-}
-```
 
 ## <a name="code-sample"></a>Ejemplo de código
 

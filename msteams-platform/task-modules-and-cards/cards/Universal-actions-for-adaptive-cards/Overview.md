@@ -111,7 +111,7 @@ Las tarjetas adaptables son una combinación de contenido, como texto y gráfico
 
 Puede empezar actualizando escenarios mediante la guía [de inicio rápido](Work-with-universal-actions-for-adaptive-cards.md) y aprovechar las acciones universales.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Qué son los bots](~/bots/what-are-bots.md)
 * [Introducción a las tarjetas adaptables](~/task-modules-and-cards/what-are-cards.md)

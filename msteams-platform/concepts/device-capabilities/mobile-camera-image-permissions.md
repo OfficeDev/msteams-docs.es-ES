@@ -255,7 +255,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Integrar la funcionalidad de escáner de códigos QR o códigos de barras en Teams](qr-barcode-scanner-capability.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)

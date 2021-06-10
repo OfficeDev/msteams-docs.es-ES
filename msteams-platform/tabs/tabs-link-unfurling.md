@@ -1,5 +1,5 @@
 ---
-title: Desafusado de vínculos de pestañas y vista fase
+title: Expansión del vínculo de la pestaña y vista de fases
 author: Rajeshwari-v
 description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pestaña con Microsoft Teams aplicación.
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2021
 ms.locfileid: "52631344"
 ---
-# <a name="tabs-link-unfurling-and-stage-view"></a>Desafusado de vínculos de pestañas y vista fase
+# <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
 > [!NOTE]
 > Esta característica solo está disponible en [la versión preliminar del](../resources/dev-preview/developer-preview-intro.md) desarrollador público.
@@ -128,7 +128,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
 | `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
@@ -136,7 +136,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | `websiteUrl?` | Cadena | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
 | `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Desafutización de vínculos de extensiones de mensajería](~/messaging-extensions/how-to/link-unfurling.md)
 

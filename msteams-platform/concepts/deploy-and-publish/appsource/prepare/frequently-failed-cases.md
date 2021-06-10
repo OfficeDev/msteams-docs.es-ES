@@ -246,7 +246,7 @@ Advierto a los usuarios antes de que la aplicación descargue los archivos o arc
 * Consulte la guía [de solución de problemas](/azure/active-directory/develop/troubleshoot-publisher-verification) para obtener información adicional.
 * Complete la autoaestación a través del centro de partners. Rellene el cuestionario Self-Assessment en **Cumplimiento de aplicaciones**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Más información sobre las Teams de aprobación de aplicaciones](/legal/marketplace/certification-policies#1140-teams)
 * [Sección 100: General](/legal/marketplace/certification-policies#100-general)

@@ -270,7 +270,7 @@ No envíe un mensaje en los siguientes casos:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Obtener Teams contexto](~/bots/how-to/get-teams-context.md)
 

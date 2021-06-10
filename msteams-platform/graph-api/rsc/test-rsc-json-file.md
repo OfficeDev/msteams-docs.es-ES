@@ -1,11 +1,11 @@
 ---
-title: Probar el consentimiento específico del recurso en Teams
+title: Probar el consentimiento específico de recursos en Teams
 description: Cómo probar el consentimiento específico de recursos en Teams con Postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: how-to
-keywords: OAuth SSO AAD rsc Postman Graph de autorización de teams
+keywords: autorización de teams OAuth SSO AAD rsc Postman Graph
 ms.openlocfilehash: 7360a81108ac900fdf6d03217b667e257ff227fe
 ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/27/2021
 ms.locfileid: "50014519"
 ---
-# <a name="test-rsc-postman-collection-json"></a>JSON de la colección Postman de RSC de prueba
+# <a name="test-rsc-postman-collection-json"></a>JSON de la colección postman de RSC de prueba
 
 ```json
 {

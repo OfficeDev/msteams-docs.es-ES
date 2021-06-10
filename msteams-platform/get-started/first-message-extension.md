@@ -184,7 +184,7 @@ El Teams configuración de autenticación de búsqueda para proyectos de ejemplo
 > [!div class="nextstepaction"]
 > [Ver más ejemplos de Bot Framework en GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 Vea otros métodos para crear aplicaciones de Teams:
 

@@ -121,6 +121,6 @@ A continuación se muestra un ejemplo de un mensaje de notificación: **No me en
 
 Cuando se crea un equipo, también [se aprovisiona SharePoint](/microsoftteams/sharepoint-onedrive-interact) colección de sitios para admitir el almacenamiento de archivos y datos para ese equipo. La aplicación debe aprovechar esta característica si interactúa con archivos. Use la colección de sitios para almacenar datos sin procesar en SharePoint listas y Excel.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

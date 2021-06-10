@@ -98,7 +98,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`para Teams web.
 1. Vaya a **Permisos de API**. Seleccione **Agregar un permiso** Microsoft  >  **Graph**  >  **permisos delegados** y, a continuación, agregue los siguientes permisos desde Graph API:
     * User.Read habilitado de forma predeterminada
-    * correo electrónico
+    * email
     * offline_access
     * OpenId
     * perfil

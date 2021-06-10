@@ -77,7 +77,7 @@ Puede crear vínculos profundos a las entidades de Teams. Puede crear vínculos 
 
 Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams mejorada permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente de JavaScript de Microsoft Teams. 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Asignar los casos de uso de la aplicación a Teams funcionalidades de plataforma](~/concepts/design/map-use-cases.md)
 * [Determinar los puntos de entrada de la aplicación](~/concepts/extensibility-points.md)

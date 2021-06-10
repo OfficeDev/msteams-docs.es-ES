@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736771"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853525"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -23,7 +23,6 @@ Descubra Microsoft Teams de plataforma que se presentan en Microsoft Build 2021,
 | -------- | --------- | ------------------ |
 |05/26/2021| Crear pestañas con tarjetas adaptables. |[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
-|05/25/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| La característica modo juntos combina a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Modo juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
@@ -196,7 +195,6 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 | -------- | --------- | ------------------ |
 |05/26/2021|Compilar pestañas con tarjetas adaptables|[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
-|05/25/2021| API de detalles de reunión y eventos de Teams en tiempo real | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| La característica modo juntos combina a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Modo juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |

@@ -55,7 +55,7 @@ Dado que los datos existentes se migran, el mantenimiento de las marcas de tiemp
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permisos
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento de administrador?|Entidades/API cubiertas|
 |-|-|-|-|-|-|
@@ -99,7 +99,7 @@ La creación de un canal para los mensajes importados es similar al escenario de
 
 > [Cree un nuevo canal con](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) una marca de tiempo back-in-time con la propiedad de recurso `createdDateTime` channel. Coloque el nuevo canal en , un estado especial que reja a los usuarios de la mayoría de las actividades de chat dentro del canal hasta que se complete `migration mode` el proceso de migración.  Incluya el atributo de instancia con el valor en la solicitud POST para identificar explícitamente al nuevo equipo como creado `channelCreationMode` `migration` para la migración.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permisos
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento de administrador?|Entidades/API cubiertas|
 |-|-|-|-|-|-|

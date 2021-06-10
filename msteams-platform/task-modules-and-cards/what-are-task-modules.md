@@ -61,10 +61,10 @@ El `TaskInfo` objeto contiene los metadatos de un módulo de tareas. La definici
 | `title` | string | Aparece debajo del nombre de la aplicación y a la derecha del icono de la aplicación. |
 | `height` | número o cadena | Puede ser un número que representa el alto del módulo de tareas en píxeles, `small` o , `medium` o `large` . [Vea a continuación cómo se controlan el alto y el ancho](#task-module-sizing). |
 | `width` | número o cadena | Puede ser un número que representa el ancho del módulo de tareas en píxeles, `small` o , `medium` o `large` . [Vea a continuación cómo se controlan el alto y el ancho](#task-module-sizing). |
-| `url` | string | Dirección URL de la página cargada como dentro `<iframe>` del módulo de tareas. El dominio de la dirección URL debe estar en la matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) de la aplicación en el manifiesto de la aplicación. |
+| `url` | cadena | Dirección URL de la página cargada como dentro `<iframe>` del módulo de tareas. El dominio de la dirección URL debe estar en la matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) de la aplicación en el manifiesto de la aplicación. |
 | `card` | Tarjeta adaptable o datos adjuntos de una tarjeta de bot de tarjeta adaptable | Json para que la tarjeta adaptable aparezca en el módulo de tareas. Si invocas desde un bot, tendrás que usar el JSON de tarjeta adaptable en un objeto Bot `attachment` Framework. Desde una pestaña, usarás solo una tarjeta adaptable. [Este es un ejemplo.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | Si un cliente no admite la característica del módulo de tareas, esta dirección URL se abre en una pestaña del explorador. |
-| `completionBotId` | string | Especifica un identificador de aplicación de bot al que enviar el resultado de la interacción del usuario con el módulo de tareas. Si se especifica, el bot recibirá un `task/submit invoke` evento con un objeto JSON en la carga del evento. |
+| `fallbackUrl` | cadena | Si un cliente no admite la característica del módulo de tareas, esta dirección URL se abre en una pestaña del explorador. |
+| `completionBotId` | cadena | Especifica un identificador de aplicación de bot al que enviar el resultado de la interacción del usuario con el módulo de tareas. Si se especifica, el bot recibirá un `task/submit invoke` evento con un objeto JSON en la carga del evento. |
 
 > [!NOTE]
 > La característica del módulo de tareas requiere que los dominios de las direcciones URL que quiera cargar se incluyan en la matriz en el `validDomains` manifiesto de la aplicación.

@@ -208,6 +208,6 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

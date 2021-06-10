@@ -70,7 +70,7 @@ Puede usar cualquier servicio direccionable externamente para hospedar el códig
 
 ## <a name="load-and-run-your-experience"></a>Cargar y ejecutar la experiencia
 
-Para cargar y ejecutar la experiencia en Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para más información vea:
+Para cargar y ejecutar la experiencia en Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para obtener más información, vea:
 
 * [Crea el paquete para tu Microsoft Teams aplicación](~/concepts/build-and-test/apps-package.md).
 * [Upload la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).

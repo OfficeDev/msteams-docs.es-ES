@@ -284,7 +284,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. La compatibil
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
 | strikethrough | ~~text~~ | `~~text~~` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -373,7 +373,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML. Markdown se d
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -461,7 +461,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como la tarjeta de mi
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
 | lista sin ordenar | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

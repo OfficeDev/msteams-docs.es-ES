@@ -4,7 +4,7 @@ La implementación consta de dos pasos.  En primer lugar, se crean los recursos 
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Abra Visual Studio Code.
+1. Abrir Visual Studio Code.
 1. Seleccione el Teams Toolkit de la barra lateral seleccionando el Teams.
 1. Seleccione **Aprovisionar en la nube**.
 

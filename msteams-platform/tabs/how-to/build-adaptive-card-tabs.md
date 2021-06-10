@@ -408,7 +408,7 @@ A continuación se muestra un ejemplo de solicitud ree emitida:
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 > [!div class="nextstepaction"]
 > [Tarjeta adaptable](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)

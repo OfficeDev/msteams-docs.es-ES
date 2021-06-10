@@ -53,6 +53,6 @@ Si desea obtener más información sobre cómo se aprovisionará  el registro de
 > [!TIP]
 > Es posible que no veas el diálogo de instalación de la aplicación en el explorador si las ventanas emergentes están deshabilitadas para el explorador. Si esto sucede, habilita las ventanas emergentes y actualiza la página.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](visual-studio-code-overview.md)

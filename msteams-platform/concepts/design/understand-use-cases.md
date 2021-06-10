@@ -77,7 +77,7 @@ Sobre todo, recuerde que a nadie le gusta el correo no deseado. La limpieza de m
 
 Identifique qué nuevas características prefiere tener el usuario en la solución actual. Si tienes una guía básica para nuevas características que agregar a la aplicación, el diseño y la arquitectura se verán afectados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Elegir cómo distribuir la aplicación](../deploy-and-publish/apps-publish-overview.md)
 * [Pestañas de diseño](../../tabs/design/tabs.md)

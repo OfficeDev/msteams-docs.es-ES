@@ -157,7 +157,7 @@ Una vez instalada la aplicación en un equipo, puedes usar [Graph Explorer](http
 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  
 * [Probar permisos de consentimiento específicos de recursos en Teams](test-resource-specific-consent.md)
 * [Consentimiento específico de recursos en Microsoft Teams para administradores](/MicrosoftTeams/resource-specific-consent)

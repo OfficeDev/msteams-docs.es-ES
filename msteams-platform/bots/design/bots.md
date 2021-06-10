@@ -307,7 +307,7 @@ Los usuarios deberían poder cambiar la configuración de un bot. Puede proporci
 
 Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
 
-### <a name="content"></a>Content
+### <a name="content"></a>Contenido
 
 :::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Ejemplo que muestra un procedimiento recomendado de bot para establecer una persona clara." border="false":::
 
@@ -418,7 +418,7 @@ El bot no debería revelar información confidencial a un grupo de personas.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 A continuación, tiene guías adicionales que le pueden ayudar con el diseño del bot:
 

@@ -93,7 +93,7 @@ Para impedir que el bot reciba mensajes, vaya al **Panel de bots** y edite el Mi
 
 Para quitar el bot completamente de Teams, vaya al **Panel de bots** y edite el Microsoft Teams. Elija el **botón** Eliminar en la parte inferior. Esto evita que los usuarios detecten, agreguen e interactúen con el bot. Esto no quita el bot de las instancias de Teams de otro usuario, pero también deja de funcionar para ellas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Depurar el bot de llamadas y reuniones de forma local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

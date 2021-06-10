@@ -30,7 +30,7 @@ Tiene las siguientes opciones para responder:
 
 Para la autenticación o configuración, después de que el usuario complete el proceso, la invocación original se resiente al servicio web. En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación de invocación `commandContext` de la extensión de mensajería: 
 
-|Tipo de respuesta | Redacción | Barra de comandos | Message |
+|Tipo de respuesta | Redacción | Barra de comandos | Mensaje |
 |--------------|:-------------:|:-------------:|:---------:|
 |Respuesta de tarjeta | ✔ | ✔ | ✔ |
 |Otro módulo de tareas | ✔ | ✔ | ✔ |
@@ -587,9 +587,9 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 |Field|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|String|Describe la mención de una "persona".|
-|`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
-|`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
+|`mentionType`|Cadena|Describe la mención de una "persona".|
+|`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
+|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
 ## <a name="code-sample"></a>Ejemplo de código
 

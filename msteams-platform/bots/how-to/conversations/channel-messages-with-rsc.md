@@ -80,7 +80,7 @@ Para realizar la instalación local en un equipo para probar, si todos los mensa
 
     ![Bot recibe mensaje](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Conversaciones de bot](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Consentimiento específico del recurso](/microsoftteams/resource-specific-consent)

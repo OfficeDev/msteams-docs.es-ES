@@ -52,6 +52,6 @@ En la tabla siguiente se describe la disponibilidad y el comportamiento de las p
 
 Si estás descargando localmente la aplicación o publicando en el catálogo de aplicaciones de una organización, el comportamiento de las pestañas será el mismo que las aplicaciones de la tienda Teams aprobadas por Microsoft para dispositivos móviles.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de pestañas](~/tabs/design/tabs.md)

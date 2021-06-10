@@ -81,6 +81,6 @@ Virtual Assistant es una plantilla de código abierto de Microsoft que le permit
 > [!div class="nextstepaction"]
 > [Administrar aplicaciones de Microsoft Power Platform en el Centro Microsoft Teams administración](/microsoftteams/manage-power-platform-apps)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

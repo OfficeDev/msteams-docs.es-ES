@@ -77,7 +77,7 @@ Android WebView es un componente del sistema Chrome que permite a las aplicacion
 * Para las cookies que solo son necesarias en un contexto de primera persona, debe declararlas como `SameSite=Lax` o `SameSite=Strict` , según corresponda.
 * Para las cookies necesarias en un contexto de terceros, debe asegurarse de que se declaran como `SameSite=None; Secure` .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Ejemplos de SameSite](https://github.com/GoogleChromeLabs/samesite-examples)
 * [Recetas de cookies de SameSite](https://web.dev/samesite-cookie-recipes/)

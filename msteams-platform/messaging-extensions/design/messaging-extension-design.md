@@ -126,17 +126,8 @@ Una vez agregado, los usuarios pueden seleccionar el icono **Más** en el mensaj
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="En el ejemplo se muestra cómo abrir una extensión de mensajería desde una publicación de chat en el móvil." border="false":::
 
 ---
-
-#### Channel post
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
 ---
 
 ## <a name="use-a-messaging-extension"></a>Usar una extensión de mensajería

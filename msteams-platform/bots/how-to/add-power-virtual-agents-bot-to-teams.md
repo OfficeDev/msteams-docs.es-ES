@@ -99,7 +99,7 @@ Abra **la pestaña Probar y distribuir** y seleccione **Instalar** para agregar 
 1. **Iniciar un chat**   
 El proceso de configuración para agregar el bot Power Virtual Agents chat a Teams completa. Ahora puedes iniciar una conversación con el bot en un chat personal.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 * [Crear un chatbot para Teams con Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  

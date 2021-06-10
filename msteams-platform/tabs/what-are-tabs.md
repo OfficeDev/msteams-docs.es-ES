@@ -78,7 +78,7 @@ Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configura
 > El comportamiento predeterminado de las aplicaciones solo es aplicable si se distribuye a través Teams tienda. De forma predeterminada, todas las pestañas se abren en el Teams cliente.
 > Para iniciar una evaluación de la aplicación para la facilidad de uso móvil, teamsubm@microsoft.com con los detalles de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

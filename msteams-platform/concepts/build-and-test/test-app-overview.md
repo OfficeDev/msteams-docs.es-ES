@@ -35,7 +35,7 @@ Para ver los registros de la consola, ver o modificar las solicitudes html, css 
 
 Agregue los datos de prueba a Microsoft 365 inquilino de prueba. Para obtener más información, vea [Agregar](~/concepts/build-and-test/test-data.md)datos de prueba al inquilino de prueba Office 365 y completar todos los requisitos previos antes de empezar a cargar los datos de prueba.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)

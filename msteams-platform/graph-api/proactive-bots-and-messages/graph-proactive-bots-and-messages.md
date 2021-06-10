@@ -31,7 +31,7 @@ Los bots inician mensajes proactivos para iniciar conversaciones con un usuario.
 
 Para que el bot pueda enviar un mensaje de forma proactiva a un usuario, debe instalarse como una aplicación personal o en un equipo en el que el usuario sea miembro. En ocasiones, debes enviar mensajes de forma proactiva a los usuarios que no han instalado ni interactuado previamente con la aplicación. Por ejemplo, la necesidad de enviar información vital a todos los usuarios de la organización. Para estos escenarios, puede usar la API de Microsoft Graph para instalar proactivamente el bot para los usuarios.
 
-## <a name="permissions"></a>Permisos
+## <a name="permissions"></a>Permissions
 
 Los permisos de tipo de recurso [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) de Microsoft Graph le ayudan a administrar el ciclo de vida de instalación de la aplicación para todos los ámbitos de usuario (personal) o de equipo (canal) de la plataforma Microsoft Teams usuario:
 
