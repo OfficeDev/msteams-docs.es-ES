@@ -5,12 +5,12 @@ description: Cómo realizar el despliegue de vínculos con la extensión de mens
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 405b320b887300837d51332a9548ff60aff450d0
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 726ba47d1290b4dc38bb2b90e5ce9fc8a3c5fb6b
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630687"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853553"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -19,7 +19,8 @@ ms.locfileid: "52630687"
 Este documento te guía sobre cómo agregar la actualización de vínculos al manifiesto de la aplicación con App studio y manualmente. Con la apertura de vínculos su aplicación puede registrarse para recibir una actividad `invoke` cuando se pegan las direcciones URL con un dominio en particular en el área de redacción de mensajes. Contiene la dirección URL completa pegada en el área del mensaje de redacción y puede responder con una tarjeta que el usuario pueda deshacer, proporcionando información o `invoke` acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
 
 > [!NOTE]
-> Actualmente, la desafución de vínculos no se admite en clientes móviles.
+> * Actualmente, la desafución de vínculos no se admite en clientes móviles.
+> * El resultado de la descarga de vínculos se almacena en caché durante 30 minutos.
 
 La Azure DevOps de mensajería usa la desamuestra de vínculos para buscar direcciones URL pegadas en el área de mensaje de redacción que apunten a un elemento de trabajo. En la siguiente imagen, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps, que la extensión de mensajería ha resuelto en una tarjeta:
 
@@ -176,7 +177,7 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 
 * [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
-* [Desafusado de vínculos de pestañas y vista fase](~/tabs/tabs-link-unfurling.md)
+* [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)

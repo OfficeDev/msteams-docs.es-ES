@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667422"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853539"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifiesto de vista previa de desarrollador para Microsoft Teams
 
@@ -215,7 +215,7 @@ Para obtener más información sobre las características disponibles, vea: [Car
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ],
@@ -308,7 +308,7 @@ El nombre de la experiencia de la aplicación, que se muestra a los usuarios en 
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
 
-## <a name="description"></a>descripción
+## <a name="description"></a>description
 
 **Required**
 
@@ -516,22 +516,22 @@ Especifica tu id. de aplicación de AAD y Graph información para ayudar a los u
 
 **Opcional** : matriz
 
-El `configurableProperties` bloque define las propiedades de la aplicación que Teams puede personalizar el administrador. Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
+El `configurableProperties` bloque define las propiedades de la aplicación que Teams los administradores pueden personalizar. Para obtener más información, consulta [Habilitar la personalización de la aplicación](~/concepts/design/enable-app-customization.md).
 
 > [!NOTE]
 > Debe definirse un mínimo de una propiedad. Puede definir un máximo de nueve propiedades en este bloque.
-> Como práctica recomendada, debes proporcionar directrices de personalización para que los usuarios de la aplicación y los clientes puedan seguir al personalizar la aplicación. 
 
 Puede definir cualquiera de las siguientes propiedades:
-* `name`: permite al administrador cambiar el nombre para mostrar de la aplicación.
-* `shortDescription`: permite al administrador cambiar la descripción breve de la aplicación.
-* `longDescription`: permite al administrador cambiar la descripción detallada de la aplicación.
-* `smallImageUrl`: es la `outline` propiedad del bloque del `icons` manifiesto.
-* `largeImageUrl`: es la `color` propiedad del bloque del `icons` manifiesto.
-* `accentColor`: es el color que se debe usar junto con y como fondo para los iconos de esquema.
-* `websiteUrl`: es la dirección HTTPS:// url del sitio web del desarrollador.
-* `privacyUrl`: es la dirección URL https:// a la directiva de privacidad del desarrollador.
-* `termsOfUseUrl`: es la dirección URL https:// los términos de uso del desarrollador.
+
+* `name`: nombre para mostrar de la aplicación.
+* `shortDescription`: descripción breve de la aplicación.
+* `longDescription`: descripción detallada de la aplicación.
+* `smallImageUrl`: icono de esquema de la aplicación.
+* `largeImageUrl`: icono de color de la aplicación.
+* `accentColor`: color que se usará junto con y como fondo para los iconos de esquema.
+* `developerUrl`: la dirección URL HTTPS del sitio web del desarrollador.
+* `privacyUrl`: la dirección URL HTTPS de la directiva de privacidad del desarrollador.
+* `termsOfUseUrl`: la dirección URL HTTPS de los términos de uso del desarrollador.
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -555,6 +555,5 @@ Cuando se selecciona un ámbito de instalación de grupo, se definirá la funcio
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`team`|string|||Cuando el ámbito de instalación seleccionado es `team` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`groupchat`|string|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`meetings`|string|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-
+|`groupchat`|cadena|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`meetings`|cadena|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|

@@ -33,16 +33,16 @@ Para personalizar Teams con aplicaciones para reuniones, puedes habilitar las ap
 
 La nueva característica modo junto permite a los usuarios colaborar en una reunión con su equipo en un solo lugar sin estar separados por cuadros.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md)
 * [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Requisitos previos y referencias de API para aplicaciones en Teams reuniones](create-apps-for-teams-meetings.md)
+* [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
 * [Modo juntos](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Extensibilidad de aplicaciones de reunión](meeting-app-extensibility.md)
+> [Extensibilidad de la aplicación para reuniones](meeting-app-extensibility.md)

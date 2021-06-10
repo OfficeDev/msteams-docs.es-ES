@@ -1,5 +1,5 @@
 ---
-title: Modo juntos en Teams
+title: Modo conferencia en Teams
 description: Trabajar con el modo de colaboración
 ms.topic: conceptual
 ms.openlocfilehash: 1620e01ef1825ec43e94614ff8ea355e764e10e0
@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2021
 ms.locfileid: "52651743"
 ---
-# <a name="together-mode-in-teams"></a>Modo juntos en Teams
+# <a name="together-mode-in-teams"></a>Modo conferencia en Teams
 
 > [!NOTE]
 > Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
@@ -278,6 +278,6 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)

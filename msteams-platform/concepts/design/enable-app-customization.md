@@ -1,18 +1,18 @@
 ---
-title: Permitir a los administradores personalizar la aplicación
+title: Habilitar la aplicación para personalizarla
 author: heath-hamilton
 description: Comprender cómo Teams los administradores pueden personalizar la aplicación para su organización.
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1fba8bba86f1bf1b4bab754d0c01d03adb46dd4b
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1b5e2670cdabc139ea945f3d0c5705d9262b5832
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631380"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853546"
 ---
-# <a name="enable-orgs-to-customize-your-microsoft-teams-app"></a>Habilitar organizaciones para personalizar la Microsoft Teams aplicación
+# <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Habilitar la aplicación Microsoft Teams personalizada
 
 Puedes permitir que las organizaciones (específicamente Teams administradores) personalice algunos aspectos de tu Microsoft Teams aplicación. Algunos ejemplos posibles son:
 

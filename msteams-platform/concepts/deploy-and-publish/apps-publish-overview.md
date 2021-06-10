@@ -40,7 +40,7 @@ Haz que la aplicación esté disponible para todos los usuarios. Este tipo de di
 
 Para obtener más información, [vea publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cumplimiento de Aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)
 

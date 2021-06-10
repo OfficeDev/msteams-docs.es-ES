@@ -301,7 +301,7 @@ Los límites de velocidad de la aplicación controlan el tráfico que puede gene
 |---|---|
 | 1   | 4   |  
 | 30   | 60  |  
-| 3600   | 60W  |
+| 3600   | 100  |
 | 7200 | 150  |
 | 86400  | 1800  |
 
