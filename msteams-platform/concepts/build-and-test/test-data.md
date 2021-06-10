@@ -246,7 +246,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
 
 5. Una vez finalizado el script, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar la pestaña](~/tabs/how-to/developer-tools.md) 
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)

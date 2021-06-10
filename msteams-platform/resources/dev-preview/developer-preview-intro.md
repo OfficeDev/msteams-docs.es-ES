@@ -1,6 +1,6 @@
 ---
 title: Vista previa del desarrollador
-description: Describe las características de la versión preliminar de desarrolladores públicos de Microsoft Teams
+description: Describe las características de public developer preview de Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Características para desarrolladores de teams preview
@@ -16,7 +16,7 @@ ms.locfileid: "52019723"
 >[!NOTE]
 >Es posible que las características incluidas en la versión preliminar no estén completas y que se someten a cambios antes de estar disponibles en la versión pública. Solo se proporcionan con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
 
-Developer Preview es un programa público para desarrolladores que proporciona acceso anticipado a características inéditas en Microsoft Teams. Esto te permite explorar y probar las próximas características para la posible inclusión en la aplicación de Microsoft Teams. También agradecemos los [comentarios](~/feedback.md) sobre cualquier característica en la vista previa del desarrollador. La vista previa del desarrollador está habilitada por cliente de Microsoft Teams, por lo que no es necesario preocuparse por afectar a toda la organización.
+Developer Preview es un programa público para desarrolladores que proporciona acceso anticipado a características inéditas en Microsoft Teams. Esto te permite explorar y probar las próximas características para la posible inclusión en tu Microsoft Teams aplicación. También agradecemos los [comentarios](~/feedback.md) sobre cualquier característica en la vista previa del desarrollador. La vista previa del desarrollador está habilitada Microsoft Teams cliente, por lo que no es necesario preocuparse por afectar a toda la organización.
 
 ## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de vista previa del desarrollador
 
@@ -35,7 +35,7 @@ El uso de una aplicación que contiene características de vista previa para des
 Para habilitar la vista previa del desarrollador público en un cliente de escritorio o web, debe hacer lo siguiente:
 
 1. Habilitar la carga de aplicaciones en la consola de administración de su inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Haga clic en su perfil (en la parte superior derecha o inferior izquierda de la interfaz de Teams) para mostrar el menú Teams.
+1. Haga clic en el perfil (en la parte superior derecha o inferior izquierda de la Teams interfaz) para mostrar el Teams menú.
 1. Selecciona Acerca de → versión preliminar del desarrollador.
 1. Seleccione **Cambiar a vista previa del programador**.
 
@@ -44,7 +44,7 @@ Para habilitar la vista previa del desarrollador público en un cliente de escri
 Para habilitar la vista previa del desarrollador público en un cliente móvil, debe hacer lo siguiente:
 
 1. Habilitar la carga de aplicaciones en la consola de administración de su inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Abra el menú hamburguesa en la parte superior izquierda y, a continuación, seleccione **Configuración**.
+1. Abra el menú hamburguesa en la parte superior izquierda y, a continuación, **seleccione Configuración**.
 1. Seleccione **Acerca de**.
 1. Haga clic en el botón de alternancia Vista previa del programador.
 

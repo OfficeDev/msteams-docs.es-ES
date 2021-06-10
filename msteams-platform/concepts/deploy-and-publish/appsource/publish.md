@@ -43,7 +43,7 @@ Cuando sientas que la aplicación está lista para la producción, puedes comenz
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Publicación en Microsoft 365 app stores](https://docs.microsoft.com/office/dev/store/)
 * [Upload aplicación Teams aplicación](~/concepts/deploy-and-publish/apps-upload.md)
@@ -52,4 +52,4 @@ Cuando sientas que la aplicación está lista para la producción, puedes comenz
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Revisar las directrices de validación del almacén](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> [Revisar las instrucciones de validación de la tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

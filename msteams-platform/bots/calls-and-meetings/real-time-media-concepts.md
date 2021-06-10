@@ -11,9 +11,9 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020158"
 ---
-# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Llamadas y reuniones multimedia en tiempo real con Microsoft Teams
+# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Llamadas multimedia en tiempo real y reuniones con Microsoft Teams
 
-La Plataforma multimedia en tiempo real permite a los bots interactuar con las llamadas y reuniones de Microsoft Teams mediante el uso compartido de pantalla, vídeo y voz en tiempo real. Se trata de una funcionalidad avanzada que permite al bot enviar y recibir contenido de voz y vídeo fotograma por fotograma. El bot tiene acceso sin procesar a las secuencias multimedia de voz, vídeo y pantalla compartida. Hay bots multimedia hospedados en servicios más sencillos que dependen de la Plataforma multimedia en tiempo real para todo el procesamiento de medios. Los bots que procesan los medios por sí mismos se denominan bots multimedia hospedados en aplicaciones.
+La Plataforma multimedia en tiempo real permite a los bots interactuar con Microsoft Teams llamadas y reuniones mediante el uso compartido de voz, vídeo y pantalla en tiempo real. Se trata de una funcionalidad avanzada que permite al bot enviar y recibir contenido de voz y vídeo fotograma por fotograma. El bot tiene acceso sin procesar a las secuencias multimedia de voz, vídeo y pantalla compartida. Hay bots multimedia hospedados en servicios más sencillos que dependen de la Plataforma multimedia en tiempo real para todo el procesamiento de medios. Los bots que procesan los medios por sí mismos se denominan bots multimedia hospedados en aplicaciones.
 
 Por ejemplo, en una llamada 1:1 con un bot, mientras el usuario habla, el bot recibe 50 fotogramas de audio por segundo, con cada fotograma que contiene 20 milisegundos (ms) de audio. Un bot multimedia hospedado por la aplicación puede realizar el reconocimiento de voz en tiempo real a medida que se reciben los fotogramas de audio, en lugar de tener que esperar una grabación después de que el usuario haya dejado de hablar. El bot también puede enviar y recibir vídeo de resolución de alta definición, incluido el contenido de uso compartido de pantalla basado en vídeo.
 
@@ -21,11 +21,11 @@ La plataforma proporciona una API sencilla como socket para que el bot envíe y 
 
 ## <a name="media-session"></a>Sesión multimedia
 
-Cuando un bot multimedia en tiempo real responde a una llamada entrante o se une a una reunión de Teams, debe declarar qué modalidades debe admitir. Para cada modalidad admitida, el bot declara si puede enviar y recibir medios, recibir solo o enviar solo. Por ejemplo, un bot diseñado para controlar las llamadas de Teams 1:1 requiere enviar y recibir audio, pero solo enviar vídeo, ya que no requiere recibir el vídeo del autor de la llamada. El conjunto de modalidades de audio y vídeo establecidas entre el bot y la llamada o reunión de Teams se denomina sesión multimedia.
+Cuando un bot multimedia en tiempo real responde a una llamada entrante o se une a una reunión Teams, debe declarar qué modalidades debe admitir. Para cada modalidad admitida, el bot declara si puede enviar y recibir medios, recibir solo o enviar solo. Por ejemplo, un bot diseñado para controlar las llamadas Teams 1:1, requiere enviar y recibir audio, pero solo enviar vídeo, ya que no requiere recibir el vídeo del autor de la llamada. El conjunto de modalidades de audio y vídeo establecidas entre el bot y el Teams o reunión se denomina sesión multimedia.
 
 Se admiten dos tipos de modalidades de vídeo, el vídeo principal y el uso compartido de pantalla basado en vídeo. El vídeo principal se usa para transportar el vídeo desde la cámara web de un usuario. El uso compartido de pantalla basado en vídeo permite que un usuario comparta su pantalla como una secuencia de vídeo. La plataforma permite que un bot envíe y reciba ambos tipos de vídeo.
 
-Cuando se une a una reunión de Teams, un bot puede recibir varias secuencias de vídeo principales simultáneamente hasta diez por sesión multimedia. Esto permite que el bot vea a más de un participante en la reunión.
+Cuando se une a una reunión Teams, un bot puede recibir varias secuencias de vídeo principales simultáneamente hasta diez por sesión multimedia. Esto permite que el bot vea a más de un participante en la reunión.
 
 La siguiente sección proporciona detalles sobre el bot que envía y recibe medios como una secuencia de fotogramas.
 
@@ -49,19 +49,19 @@ En la siguiente sección se proporcionan detalles acerca de qué participantes d
 
 ## <a name="active-and-dominant-speakers"></a>Altavoces activos y dominantes
 
-Cuando se une a una reunión de Teams formada por varios participantes, un bot puede identificar qué participantes de la reunión hablan actualmente. Los altavoces activos identifican qué participantes se escuchan en cada fotograma de audio recibido. Los altavoces dominantes identifican qué participantes son actualmente más activos o dominantes en la conversación de grupo, aunque su voz no se escucha en todos los fotogramas de audio. El conjunto de altavoces dominantes puede cambiar a medida que los diferentes participantes toman turnos de palabra.
+Cuando se une a una Teams que consta de varios participantes, un bot puede identificar qué participantes de la reunión están hablando actualmente. Los altavoces activos identifican qué participantes se escuchan en cada fotograma de audio recibido. Los altavoces dominantes identifican qué participantes son actualmente más activos o dominantes en la conversación de grupo, aunque su voz no se escucha en todos los fotogramas de audio. El conjunto de altavoces dominantes puede cambiar a medida que los diferentes participantes toman turnos de palabra.
 
 En la siguiente sección se proporcionan detalles sobre las solicitudes de suscripción de vídeo realizadas por un bot.
 
 ## <a name="video-subscription"></a>Suscripción de vídeo
 
-En una llamada 1:1, el bot recibe automáticamente el vídeo del autor de la llamada si el bot está habilitado para recibir el vídeo. En una reunión de Teams, el bot debe indicar a la plataforma qué participantes quiere ver. Una suscripción de vídeo es una solicitud del bot para recibir el vídeo principal o el contenido para compartir pantalla de un participante. A medida que los participantes en la reunión llevan a cabo su conversación, el bot modifica sus suscripciones de vídeo deseadas en función de las actualizaciones del conjunto de altavoces dominante o las notificaciones que indican qué participante está compartiendo pantalla actualmente.
+En una llamada 1:1, el bot recibe automáticamente el vídeo del autor de la llamada si el bot está habilitado para recibir el vídeo. En una Teams, el bot debe indicar a la plataforma qué participantes quiere ver. Una suscripción de vídeo es una solicitud del bot para recibir el vídeo principal o el contenido para compartir pantalla de un participante. A medida que los participantes en la reunión llevan a cabo su conversación, el bot modifica sus suscripciones de vídeo deseadas en función de las actualizaciones del conjunto de altavoces dominante o las notificaciones que indican qué participante está compartiendo pantalla actualmente.
 
 En la siguiente sección se proporcionan detalles sobre lo que debe instalar y los requisitos para desarrollar un bot multimedia hospedado en la aplicación.
 
 ## <a name="developer-resources"></a>Recursos para desarrolladores
 
-Para desarrollar un bot multimedia hospedado por la aplicación, debe instalar el paquete NuGet de la biblioteca .NET de [Microsoft.Graph.Calls.Media](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) en el Visual Studio proyecto.
+Para desarrollar un bot multimedia hospedado por la aplicación, debe instalar [microsoft.Graph. La biblioteca .NET Calls.Media](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet paquete dentro del Visual Studio proyecto.
 
 Los bots multimedia hospedados en aplicaciones requieren .NET o C# y Windows Server. Para obtener más información, vea [requisitos y consideraciones para bots multimedia hospedados en aplicaciones.](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)
 

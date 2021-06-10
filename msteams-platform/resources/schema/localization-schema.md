@@ -14,7 +14,7 @@ ms.locfileid: "52019709"
 ---
 # <a name="reference-localization-file-json-schema"></a>Referencia: esquema JSON del archivo de localización
 
-El archivo de localización de Microsoft Teams describe las traducciones de idioma que se van a servir en función de la configuración del idioma del cliente. El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obtener información adicional, consulta [Localización de aplicaciones](~/concepts/build-and-test/apps-localization.md).
+El Microsoft Teams de localización describe las traducciones de idioma que se van a servir en función de la configuración del idioma del cliente. El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obtener información adicional, consulta [Localización de aplicaciones](~/concepts/build-and-test/apps-localization.md).
 
 ## <a name="sample"></a>Muestra
 
@@ -42,7 +42,7 @@ El esquema define las siguientes propiedades:
 La https:// url que hace referencia al esquema JSON para el manifiesto.
 
 > [!TIP]
-> Especifique el esquema al principio del manifiesto para habilitar la IntelliSense o similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Especifique el esquema al principio del manifiesto para habilitar la IntelliSense o similar desde el editor de código:`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>name.short
 

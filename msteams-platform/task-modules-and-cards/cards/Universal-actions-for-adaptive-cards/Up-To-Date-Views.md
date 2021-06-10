@@ -121,7 +121,7 @@ A continuación se muestran los dos roles que se muestran a los usuarios en func
 2. Bot envía la tarjeta base de aprobación en la conversación.
 3. Todos los demás usuarios de la conversación ven la tarjeta enviada por el bot. La actualización automática se desencadena para Megan y Nestor,  que ahora ven la tarjeta específica del usuario con los botones **Aprobar** o Rechazar cuando sus MRIs de usuario se agregan a la lista en la propiedad de la `userIds` tarjeta `refresh` adaptable.
 
-    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Vistas específicas del usuario":::
+    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Vistas específicas de usuario":::
 
 4. Nestor selecciona el botón **Aprobar** que está alimentado con `Action.Execute` . El bot obtiene una `adaptiveCard/action` solicitud de invocación a la que puede devolver una tarjeta adaptable en respuesta.
 5. El bot desencadena una edición de mensajes con una tarjeta actualizada que indica que Nestor ha aprobado la solicitud mientras la aprobación de Megan está pendiente.
@@ -259,7 +259,7 @@ El código siguiente proporciona un ejemplo de tarjetas adaptables enviadas como
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Trabajar con acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
-* [Vistas específicas del usuario](User-Specific-Views.md)
+* [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
+* [Vistas específicas de usuario](User-Specific-Views.md)

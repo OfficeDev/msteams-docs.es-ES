@@ -1,5 +1,5 @@
 ---
-title: Diseño de webhooks y conectores de Microsoft Teams
+title: Diseño Microsoft Teams webhooks y conectores
 author: heath-hamilton
 description: Instrucciones y procedimientos recomendados para diseñar webhooks y conectores para Microsoft Teams.
 localization_priority: Normal

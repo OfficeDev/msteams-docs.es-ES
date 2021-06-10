@@ -36,7 +36,7 @@ ms.locfileid: "52020952"
     1. En *Secretos de cliente,* haga clic **en Nuevo secreto de cliente**.
     1. Agrega una descripción para identificar este secreto de otros usuarios que podrías necesitar crear para esta aplicación.
     1. Establece *Expira en* la selección.
-    1. Haga clic en **Agregar**.
+    1. Seleccione **Agregar**.
     1. Copie el secreto de cliente y guárdelo en un archivo.
 1. Vuelva a la ventana **Registro** del canal bot  y copie el *identificador* de aplicación y el secreto de cliente en los cuadros **Id.** de aplicación de Microsoft y **Contraseña,** respectivamente.
 1. Haga clic en **Aceptar**.

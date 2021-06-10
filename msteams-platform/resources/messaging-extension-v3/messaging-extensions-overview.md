@@ -31,7 +31,7 @@ Las extensiones de mensajería aparecen en la parte inferior del cuadro de redac
 
 ## <a name="types-of-messaging-extensions"></a>Tipos de extensiones de mensajería
 
-Hay principalmente dos tipos de extensiones de mensajería que puede crear para Teams hoy en día. Los siguientes temas le guiarán a través del proceso de creación:
+Hay principalmente dos tipos de extensiones de mensajería que puede crear para Teams hoy. Los siguientes temas le guiarán a través del proceso de creación:
 
 * [Extensiones de mensajería basadas en búsquedas:](~/resources/messaging-extension-v3/search-extensions.md)consulte su servicio para obtener información e insertarla en un mensaje. Ejemplo: buscar un elemento de trabajo
 * [Extensiones de mensajería basadas en acciones:](~/resources/messaging-extension-v3/create-extensions.md)recopilar información del usuario y publicarla en un servicio de terceros. Ejemplo: Crear un elemento de trabajo

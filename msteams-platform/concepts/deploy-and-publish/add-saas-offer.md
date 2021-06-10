@@ -1,6 +1,6 @@
 ---
 title: Crear una oferta de SaaS para la aplicación de su Teams
-description: Describe los pasos necesarios para hacer que una oferta SaaS forma parte de una experiencia de aplicación de Teams de terceros
+description: Describe los pasos necesarios para hacer que una oferta SaaS forma parte de una experiencia de aplicación Teams de terceros
 keywords: SaaS de la aplicación de teams ofrece servicio de software de marketplace del centro de partners
 author: laujan
 localization_priority: Normal
@@ -15,7 +15,7 @@ ms.locfileid: "52019926"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>Crear una oferta de SaaS para la aplicación de su Teams
 
-Agregar una oferta de software como servicio (SaaS) a la solución de la aplicación le permite entregar fácilmente la aplicación basada en la nube y mejorar la experiencia del usuario proporcionando actualizaciones automatizadas y un mayor acceso en todas las plataformas. Las aplicaciones de Microsoft Teams son gratuitas para instalarse en el entorno de Teams, pero algunas pueden requerir que los usuarios compren una suscripción a SaaS para experimentar la funcionalidad y el ámbito completos de la aplicación. Las suscripciones SaaS se pueden comprar a un proveedor de servicios en la nube o puedes crear una suscripción a SaaS monetizada para tu aplicación de Teams directamente a través del Centro de partners o el Marketplace comercial.
+Agregar una oferta de software como servicio (SaaS) a la solución de la aplicación le permite entregar fácilmente la aplicación basada en la nube y mejorar la experiencia del usuario proporcionando actualizaciones automatizadas y un mayor acceso en todas las plataformas. Microsoft Teams aplicaciones pueden instalarse de forma gratuita en el entorno de Teams, pero algunas pueden requerir que los usuarios compren una suscripción saas para experimentar la funcionalidad y el ámbito completos de la aplicación. Las suscripciones SaaS se pueden comprar a un proveedor de servicios en la nube o puedes crear una suscripción SaaS monetizada para tu aplicación Teams directamente a través del Centro de partners o el Mercado comercial.
 
 ## <a name="getting-started-with-saas-offers"></a>Introducción a las ofertas de SaaS
 
@@ -31,4 +31,4 @@ Agregar una oferta de software como servicio (SaaS) a la solución de la aplicac
 | **Preguntas frecuentes: Consultas de experiencia de usuario de la API saas** | Encuentre respuestas a los temas comunes de la experiencia del usuario final.| [Documentación](/azure/marketplace/partner-center-portal/saas-fulfillment-apis-faq) |
 
 > [!div class="nextstepaction"]
-> [Obtenga información sobre cómo los administradores de Teams pueden comprar la aplicación para su organización](/MicrosoftTeams/purchase-third-party-apps)
+> [Obtén información sobre Teams administradores pueden comprar la aplicación para su organización](/MicrosoftTeams/purchase-third-party-apps)

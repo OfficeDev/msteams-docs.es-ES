@@ -203,7 +203,7 @@ A menos que creaste la aplicación específicamente para Teams, probablemente ti
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="En el ejemplo se muestra cómo no controlar las características complejas de la aplicación con una aplicación personal." border="false":::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 Estas otras directrices de diseño pueden ayudar en función del ámbito de la aplicación personal:
 

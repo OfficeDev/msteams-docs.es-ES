@@ -18,7 +18,7 @@ En este tutorial, crearás una nueva aplicación Microsoft Teams en SharePoint F
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Asegúrese de que el entorno de desarrollo está configurado mediante la instalación de los [requisitos previos](prerequisites.md)
+Instale los [requisitos previos](prerequisites.md) para garantizar que su entorno de desarrollo está configurado
 
 > [!div class="nextstepaction"]
 > [Requisitos previos para la instalación](prerequisites.md)
@@ -27,32 +27,32 @@ Asegúrese de que el entorno de desarrollo está configurado mediante la instala
 
 Además de los requisitos previos, también debe ser administrador de una colección SharePoint de sitios.  Aquí es donde implementará la aplicación para el hospedaje.  Si usa un inquilino del programa para desarrolladores M365, use la cuenta de administrador que haya configurado al registrarse en el programa.  
 
-## <a name="create-your-project"></a>Crear el proyecto
+## <a name="create-your-project"></a>Crear un proyecto
 
-Use el Teams Toolkit para crear el primer proyecto:
+Use el Kit de herramientas de Teams para crear su primer proyecto:
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Abra Visual Studio código.
-1. Abra el Teams Toolkit seleccionando el icono Teams en la barra lateral:
+1. Abra Visual Studio Code.
+1. Abra el Kit de herramientas de Teams. Para ello, seleccione el icono de Teams en la barra lateral:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icono Teams en la barra lateral Visual Studio Code barra lateral.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icono de Teams en la barra lateral de Visual Studio Code.":::
 
-1. Seleccione **Crear nuevo Project**.
+1. Seleccione **Crear nuevo proyecto**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Ubicación del vínculo Create New Project en la barra lateral Teams Toolkit barra lateral.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Ubicación del vínculo Crear nuevo proyecto en la barra lateral del Kit de herramientas de Teams.":::
 
-1. Selecciona **Crear una nueva Teams aplicación**.
+1. Seleccione **Crear una nueva aplicación de Teams**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Inicio del asistente para Crear Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Inicio del Asistente para crear un nuevo proyecto":::
 
-1. En el **paso Seleccionar capacidades,** la **funcionalidad Tab** ya estará seleccionada.  Pulse **Aceptar**.
+1. En el paso **Seleccionar funcionalidades**, ya estará seleccionada la funcionalidad de **Pestaña**.  Pulse **Aceptar**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Captura de pantalla que muestra cómo agregar funcionalidades a la nueva aplicación.":::
 
 1. En el **paso Tipo de hospedaje front-end,** seleccione SharePoint Framework **(SPFx).**
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Captura de pantalla que muestra cómo seleccionar el hospedaje de la nueva aplicación.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Captura de pantalla que muestra cómo seleccionar el hospedaje para la nueva aplicación.":::
 
 1. En el **paso Marco,** seleccione **React**.
 
@@ -64,51 +64,51 @@ Use el Teams Toolkit para crear el primer proyecto:
 
 1. Cuando se le pida el **lenguaje de programación,** presione **ENTRAR** para aceptar el valor predeterminado.
 
-1. Seleccione una carpeta de área de trabajo.  Se creará una carpeta dentro de la carpeta del área de trabajo para el proyecto que está creando.
+1. Seleccione una carpeta de área de trabajo.  Se creará una carpeta dentro de la carpeta del área de trabajo para el proyecto que esté creando.
 
-1. Escribe un nombre adecuado para la aplicación, como `helloworld` .  El nombre de la aplicación debe estar formado solo por caracteres alfanuméricos.  Presione **ENTRAR** para continuar.
+1. Escriba un nombre adecuado para la aplicación, como `helloworld`.  El nombre de la aplicación solo puede contener caracteres alfanuméricos.  Presione **Entrar** para continuar.
 
-La Teams se creará en unos segundos.
+La aplicación Teams se creará en unos segundos.
 
 # <a name="command-line"></a>[Línea de comandos](#tab/cli)
 
-Use la `teamsfx` CLI para crear el primer proyecto.  Comience desde la carpeta donde desea crear la carpeta del proyecto.
+Use la CLI de `teamsfx` para crear su primer proyecto:  Comience en la carpeta en la que quiera crear la carpeta del proyecto.
 
 ``` bash
 teamsfx new
 ```
 
-La CLI le guiará por algunas preguntas para crear el proyecto.  Cada pregunta le dirá cómo responderla (por ejemplo, usar teclas de flecha para seleccionar una opción).  Cuando haya respondido a la pregunta, confirme su elección presionando **Entrar**.
+La CLI le guiará por varias preguntas para crear el proyecto.  En cada pregunta se le indicará cómo responder (por ejemplo, usando las teclas de dirección para seleccionar una opción).  Cuando haya respondido a la pregunta, presione **Entrar** para confirmar la elección.
 
-1. Selecciona **Crear una nueva Teams aplicación**.
-1. Elija la **funcionalidad Tab.**
+1. Seleccione **Crear una nueva aplicación de Teams**.
+1. Seleccione la funcionalidad de **Pestaña**.
 1. Seleccione **SharePoint Framework (SPFx) de** front-end.
 1. Seleccione **React** framework.
 1. Presione **Entrar** para el **nombre del elemento web**.
 1. Presione **ENTRAR** para la **descripción del elemento web**.
 1. Presione **ENTRAR** para el **lenguaje de programación**.
 1. Presione **Entrar** para seleccionar la carpeta de área de trabajo predeterminada.
-1. Escribe un nombre adecuado para la aplicación, como `helloworld` .  El nombre de la aplicación debe estar formado solo por caracteres alfanuméricos.
+1. Escriba un nombre adecuado para la aplicación, como `helloworld`.  El nombre de la aplicación solo puede contener caracteres alfanuméricos.
 
-Una vez que se hayan contestado todas las preguntas, se creará el proyecto.
+Una vez que haya respondido a todas las preguntas, se creará el proyecto.
 
 ---
 
 - [Obtenga más información sobre el desarrollo para SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
 
-## <a name="take-a-tour-of-the-source-code"></a>Realizar un recorrido por el código fuente
+## <a name="take-a-tour-of-the-source-code"></a>Dar un paseo por el código fuente
 
-Si quieres omitir esta sección por ahora, puedes [ejecutar la aplicación localmente.](#run-your-app-locally)
+Si quiere omitir esta sección por ahora, puede [ejecutar la aplicación de forma local](#run-your-app-locally).
 
-Una vez Teams Toolkit configurar el proyecto, tienes los componentes para crear una aplicación personal básica para Teams que se hospeda en el SharePoint Framework.  Los directorios y archivos del proyecto se muestran en el área Explorador de Visual Studio Code.
+Una vez Teams Toolkit configurar el proyecto, tienes los componentes para crear una aplicación personal básica para Teams que se hospeda en el SharePoint Framework.  Los archivos y directorios del proyecto se muestran en el área del Explorador de Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Captura de pantalla que muestra los archivos de proyecto de la aplicación para una aplicación personal en Visual Studio Code.":::
 
-El Toolkit crea automáticamente scaffolding en el directorio del proyecto en función de las capacidades que agregó durante la instalación. El Teams Toolkit mantiene su estado para la aplicación en el `.fx` directorio.  Entre otros elementos de este directorio:
+El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`.  Entre otros elementos de este directorio:
 
-- Los iconos de la aplicación se almacenan como archivos PNG `color.png` en y `outline.png` .
+- Los iconos de aplicación se almacenan como archivos PNG en `color.png` y `outline.png`.
 - El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `manifest.source.json` .
-- La configuración que eligió al crear el proyecto se almacena en `settings.json` .
+- La configuración que eligió al crear el proyecto se almacena en `settings.json`.
 
 Dado que ha seleccionado un SPFx webpart, los siguientes archivos son relevantes para la interfaz de usuario:
 
@@ -121,23 +121,23 @@ Para obtener más información sobre SharePoint webparts para Teams, [consulte l
 
 Teams Toolkit permite hospedar la aplicación localmente y ejecutarla a través de [SharePoint Framework Workbench](/sharepoint/dev/spfx/debug-in-vscode).
 
-### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Cree y ejecute la aplicación localmente en Visual Studio Code
+### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Compilar y ejecutar la aplicación de forma local en Visual Studio Code
 
-Para compilar y ejecutar la aplicación localmente:
+Para crear y ejecutar la aplicación localmente:
 
 1. Desde Visual Studio Code, presione **F5**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Captura de pantalla que muestra cómo iniciar una SPFx en un área de trabajo local.":::
 
    > [!NOTE]
-   > Cuando ejecutas la aplicación por primera vez, se descargan todas las dependencias y se compila la aplicación.  Una ventana del explorador se abre automáticamente y carga SharePoint Workbench cuando se completa la compilación.  Esto puede tardar entre 3 y 5 minutos en completarse.
+   > Al ejecutar la aplicación por primera vez, se descargan todas las dependencias y se compila la aplicación.  Una ventana del explorador se abre automáticamente y carga SharePoint Workbench cuando se completa la compilación.  Este proceso puede tardar entre 3 o 5 minutos.
 
    Una vez que se SharePoint Workbench.
 
    >[!NOTE]
-   > El Toolkit le pedirá que instale un certificado local si es necesario. Este certificado permite Teams cargar la aplicación desde `https://localhost` . Seleccione Sí cuando aparezca el siguiente cuadro de diálogo:
+   > El Kit de herramientas le pedirá que instale un certificado local si es necesario. Este certificado permite a Teams cargar la aplicación desde `https://localhost`. Seleccione Sí cuando aparezca el siguiente cuadro de diálogo:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de pantalla que muestra cómo se indica cómo instalar un certificado SSL para Teams cargar la aplicación desde localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de pantalla en la que se muestra la solicitud para instalar un certificado SSL para permitir que Teams cargue la aplicación desde localhost.":::
 
 1. Presione uno de los **iconos Agregar elemento web** (+) para agregar el elemento web.
 
@@ -158,7 +158,7 @@ Asegúrate de que SharePoint catálogo de aplicaciones existe en la implementaci
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Abra Visual Studio Code.
+1. Abrir Visual Studio Code.
 1. Seleccione el Teams Toolkit de la barra lateral seleccionando el Teams.
 1. Seleccione **Aprovisionar en la nube**.
 
@@ -238,9 +238,9 @@ Abra la Teams (o inicie sesión en `https://teams.microsoft.com` ).  Presione el
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Obtenga información sobre otros métodos para crear Teams aplicaciones:
+Vea otros métodos para crear aplicaciones de Teams:
 
-- [Crear una aplicación Teams con React](first-app-react.md)
-- [Crear una Teams con Blazor](first-app-blazor.md)
-- [Crear una aplicación de bot conversacional](first-app-bot.md)
+- [Crear una aplicación de Teams con React](first-app-react.md)
+- [Crear una aplicación de Teams con Blazor](first-app-blazor.md)
+- [Crear una aplicación de bots de conversación](first-app-bot.md)
 - [Crear una extensión de mensajería](first-message-extension.md)

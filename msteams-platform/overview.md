@@ -209,7 +209,7 @@ No es necesario ser un programador experto para crear una aplicación Teams web.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
 * [Diseñar la aplicación Teams aplicación](concepts/design/design-teams-app-overview.md)

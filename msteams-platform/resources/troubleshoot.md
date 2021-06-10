@@ -12,7 +12,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020432"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas de la aplicación de Microsoft Teams
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas de Microsoft Teams aplicación
 
 ## <a name="troubleshooting-tabs"></a>Pestañas de solución de problemas
 
@@ -49,7 +49,7 @@ Al agregar una pestaña, si hace clic en los botones de guardar pero se muestra 
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>No se puede autenticar al usuario ni mostrar el proveedor de autenticación en la pestaña
 
-A menos que realice la autenticación silenciosa, debe seguir el proceso de autenticación proporcionado por el SDK de [cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client.md).
+A menos que realice la autenticación silenciosa, debe seguir el proceso de autenticación proporcionado por el SDK de cliente [Microsoft Teams JavaScript](/javascript/api/overview/msteams-client.md).
 
 > [!NOTE]
 >Se requiere todo el flujo de autenticación para iniciar y finalizar en el dominio, que debe aparecer en el `validDomains` objeto del manifiesto.
@@ -64,7 +64,7 @@ Existe un problema conocido por el que la actualización de una aplicación de b
 
 ### <a name="cant-add-my-bot"></a>No se puede agregar el bot
 
-El administrador de inquilinos de Office 365 debe habilitar las aplicaciones para que las carguen los usuarios finales. Tenga en cuenta que, en algunos casos, el inquilino de Office 365 puede tener varias SKU asociadas y, para que los bots funcionen en cualquiera, deben estar habilitados en todas las SKU. Consulte [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obtener más información.
+El administrador de inquilinos Office 365 habilitar las aplicaciones para que las carguen los usuarios finales. Tenga en cuenta que, en algunos casos, el inquilino Office 365 puede tener varias SKU asociadas y, para que los bots funcionen en cualquiera, deben estar habilitados en todas las SKU. Consulte [Prepare your Office 365 tenant para](~/concepts/build-and-test/prepare-your-o365-tenant.md) obtener más información.
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>No se puede agregar bot como miembro de un equipo
 
@@ -86,12 +86,12 @@ La mayoría de los errores de manifiesto proporcionarán una sugerencia sobre qu
 
 Motivos comunes de errores de lectura de manifiesto:
 
-* JSON no válido. Use un IDE como [Visual Studio code](https://code.visualstudio.com) [o Visual Studio](https://www.visualstudio.com/vs/) que valide automáticamente la sintaxis JSON.
+* JSON no válido. Use un IDE como [Visual Studio Code](https://code.visualstudio.com) o [Visual Studio](https://www.visualstudio.com/vs/) que valide automáticamente la sintaxis JSON.
 * Problemas de codificación. Use UTF-8 para el *manifest.jsen* el archivo. Es posible que otras codificaciones, específicamente con la lista de materiales, no sean legibles.
-* Paquete .zip malformado. El *manifest.jsen* debe estar en el nivel superior del archivo .zip. Tenga en cuenta que la compresión de archivos mac predeterminada puede colocar el *manifest.jsen* un subdirectorio, que no se cargará correctamente en Microsoft Teams.
+* Paquete de .zip malformado. El *manifest.jsen el* archivo debe estar en el nivel superior del .zip archivo. Tenga en cuenta que la compresión de archivos Mac predeterminada puede colocar el *manifest.jsen* un subdirectorio, que no se cargará correctamente en Microsoft Teams.
 
 ### <a name="another-extension-with-same-id-exists"></a>Existe otra extensión con el mismo identificador
 
-Si intenta volver a cargar un paquete actualizado con el  mismo identificador, elija el icono Reemplazar al final de la fila de tabla de la pestaña en lugar del **botón** Cargar.
+Si intenta volver a cargar un paquete actualizado con el  mismo identificador, elija el icono Reemplazar al final de la fila de tabla de la pestaña en lugar del botón **Upload** tabla.
 
 Si no va a volver a cargar un paquete actualizado, asegúrese de que el identificador es único.

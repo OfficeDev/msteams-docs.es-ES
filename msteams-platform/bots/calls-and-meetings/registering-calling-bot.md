@@ -1,5 +1,5 @@
 ---
-title: Registrar el bot de llamadas y reuniones para Microsoft Teams
+title: Registrar llamadas y reuniones bot para Microsoft Teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
@@ -11,19 +11,19 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020151"
 ---
-# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar el bot de llamadas y reuniones para Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar llamadas y reuniones bot para Microsoft Teams
 
 Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un bot de Microsoft Teams normal con las siguientes características adicionales usadas para registrar el bot:
 
-* Hay una nueva versión del manifiesto de la aplicación de Teams con dos configuraciones `supportsCalling` adicionales y `supportsVideo` . Esta configuración se incluye en la versión [preliminar](../../resources/dev-preview/developer-preview-intro.md) del desarrollador del manifiesto de la aplicación de Teams.
-* [Los permisos de Microsoft Graph](./registering-calling-bot.md#add-graph-permissions) deben configurarse para el identificador de aplicación de Microsoft del bot.
-* Los permisos de las API de llamadas y reuniones en línea de Graph requieren el consentimiento del administrador de inquilinos.
+* Hay una nueva versión del manifiesto Teams aplicación con dos configuraciones `supportsCalling` adicionales y `supportsVideo` . Esta configuración se incluye en la versión [preliminar](../../resources/dev-preview/developer-preview-intro.md) del desarrollador del manifiesto Teams aplicación.
+* [Los Graph microsoft deben](./registering-calling-bot.md#add-graph-permissions) configurarse para el identificador de aplicación de Microsoft del bot.
+* Los Graph de llamadas y reuniones en línea requieren el consentimiento del administrador del espacio empresarial.
 
 ## <a name="new-manifest-settings"></a>Nueva configuración del manifiesto
 
 Los bots de llamadas y reuniones en línea tienen las siguientes dos opciones de configuración adicionales en el manifest.jsque habilitan audio o vídeo para el bot en Teams.
 
-* `bots[0].supportsCalling`. Si está presente y se establece en `true` , Teams permite que el bot participe en llamadas y reuniones en línea.
+* `bots[0].supportsCalling`. Si está presente y se establece en , Teams permite que el `true` bot participe en llamadas y reuniones en línea.
 * `bots[0].supportsVideo`. Si está presente y se establece en `true` , Teams sabe que el bot admite vídeo.
 
 Si desea que el IDE valide correctamente el manifest.jsen el esquema para el bot de llamadas y reuniones para estos valores, puede cambiar el atributo de la `$schema` siguiente manera:
@@ -36,21 +36,21 @@ La siguiente sección le permite crear un nuevo bot o agregar funcionalidades de
 
 ## <a name="create-new-bot-or-add-calling-capabilities"></a>Crear nuevo bot o agregar funcionalidades de llamada
 
-Para obtener información sobre la creación de bots, [vea create a bot for Teams](../how-to/create-a-bot-for-teams.md).
+Para obtener información sobre la creación de bots, vea [create a bot for Teams](../how-to/create-a-bot-for-teams.md).
 
 **Para crear un nuevo bot para Teams**
 
 1. Use este vínculo para crear un nuevo bot, `https://dev.botframework.com/bots/new` . Como alternativa, si selecciona el botón Crear un **bot** en el portal de Bot Framework, cree el bot en Microsoft Azure, para el que debe tener una cuenta de Azure.
-1. Agregue el canal de Teams.
-1. Seleccione la **pestaña Llamar** en la página canal de Teams. Seleccione **Habilitar llamada** y, a continuación, actualice **Webhook (para llamar)** con la dirección URL HTTPS donde recibe notificaciones entrantes, por ejemplo `https://contoso.com/teamsapp/api/calling` . Para obtener más información, vea [configuring channels](/bot-framework/portal-configure-channels).
+1. Agregue el Teams canal.
+1. Seleccione la **pestaña Llamada** en la página Teams canal. Seleccione **Habilitar llamada** y, a continuación, actualice **Webhook (para llamar)** con la dirección URL HTTPS donde recibe notificaciones entrantes, por ejemplo `https://contoso.com/teamsapp/api/calling` . Para obtener más información, vea [configuring channels](/bot-framework/portal-configure-channels).
 
-    ![Configurar la información del canal de Teams](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
+    ![Configurar Teams de canal](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 En la siguiente sección se proporciona una lista de los permisos de aplicación admitidos para llamadas y reuniones en línea.
 
-## <a name="add-graph-permissions"></a>Agregar permisos de Graph
+## <a name="add-graph-permissions"></a>Agregar Graph permisos
 
-Graph proporciona permisos granulares para controlar el acceso que las aplicaciones tienen a los recursos. Decides qué permisos para Graph solicitas tu aplicación. Las API de llamadas de Graph admiten permisos de aplicación, que usan las aplicaciones que se ejecutan sin que haya un usuario que haya iniciado sesión. Un administrador de inquilinos debe conceder el consentimiento a los permisos de la aplicación.
+El Graph proporciona permisos granulares para controlar el acceso que las aplicaciones tienen a los recursos. Decides qué permisos para Graph solicitudes de la aplicación. Las Graph las API de llamadas admiten permisos de aplicación, que usan las aplicaciones que se ejecutan sin que haya un usuario que haya iniciado sesión. Un administrador de inquilinos debe conceder el consentimiento a los permisos de la aplicación.
 
 ### <a name="application-permissions-for-calls"></a>Permisos de aplicación para llamadas
 
@@ -78,7 +78,7 @@ En la tabla siguiente se proporciona una lista de permisos de aplicación para r
 
 ### <a name="assign-permissions"></a>Asignar permisos
 
-Debe configurar los permisos de aplicación para el bot por adelantado mediante [Azure Portal](https://aka.ms/aadapplist) si prefiere usar el extremo V1 de Azure Active [Directory (AAD).](/azure/active-directory/develop/azure-ad-endpoint-comparison)
+Debe configurar los permisos de aplicación para el bot con antelación mediante [Azure Portal](https://aka.ms/aadapplist) si prefiere usar el punto de conexión [Azure Active Directory (AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obtener el consentimiento del administrador de inquilinos
 

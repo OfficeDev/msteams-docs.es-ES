@@ -15,33 +15,33 @@ ms.locfileid: "52020186"
 # <a name="bots-and-sdks"></a>Bots y SDK
 
 Para crear un bot que funcione en Microsoft Teams, puede usar una de las siguientes opciones:
-* Un bot existente basado en el SDK de Microsoft Bot Framework.
-* Servicio de chatbot de Power Virtual Agents.
+* Un bot existente basado en Microsoft Bot Framework SDK.
+* Power Virtual Agents chatbot.
 * Webhooks y conectores.
 
-## <a name="bots-and-the-microsoft-bot-framework"></a>Bots y Microsoft Bot Framework
+## <a name="bots-and-the-microsoft-bot-framework"></a>Bots y el Microsoft Bot Framework
 
-El bot de Teams consta de los tres elementos siguientes:
+El Teams bot consta de los tres elementos siguientes:
 
 * Un servicio web accesible públicamente que la organizaciòn hospeda.
 * El registro del bot con Bot Framework.
-* El paquete de la aplicación de Teams con el manifiesto de la aplicación. Esto es lo que los usuarios instalan y conectan el cliente de Teams al servicio web, enrutado a través del servicio bot.
+* El Teams de la aplicación con el manifiesto de la aplicación. Esto es lo que los usuarios instalan y conectan el Teams al servicio web, enrutado a través del servicio bot.
 
 [Bot Framework es](https://dev.botframework.com/) un SDK enriquecido que se usa para crear bots con C#, Java, Python y JavaScript. Si ya tienes un bot basado en Bot Framework, puedes modificarlo fácilmente para que funcione en Microsoft Teams. Use C# o Node.js para aprovechar nuestros [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Estos paquetes amplían las clases y métodos básicos del SDK de Bot Builder de la siguiente manera:
 
-* Use tipos de tarjetas especializadas como la tarjeta de conector de Office 365.
-* Establecer datos de canal específicos de Teams en las actividades.
+* Use tipos de tarjeta especializados como la Office 365 de conector.
+* Establecer Teams de canal específicos de las actividades.
 * Procesar solicitudes de extensión de mensajería.
 
 > [!IMPORTANT]
-> Puede desarrollar aplicaciones de Teams en cualquier tecnología de programación web y llamar directamente a las API de [REST de Bot Framework.](/bot-framework/rest-api/bot-framework-rest-overview) Pero debe realizar el control de tokens en todos los casos.
+> Puede desarrollar aplicaciones Teams en cualquier tecnología de programación web y llamar directamente a las API de [REST de Bot Framework.](/bot-framework/rest-api/bot-framework-rest-overview) Pero debe realizar el control de tokens en todos los casos.
 
 > [!TIP]
-> Teams App Studio te ayuda a crear y configurar el manifiesto de la aplicación y registrar el servicio web como un bot en Bot Framework. También contiene una biblioteca de controles de React y un generador de tarjetas interactivas. Para obtener más información, consulta [Introducción a Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> Teams App Studio te ayuda a crear y configurar el manifiesto de la aplicación y registrar el servicio web como bot en Bot Framework. También contiene una biblioteca React control y un generador de tarjetas interactivas. Para obtener más información, consulta [Introducción a Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
-## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots y agentes virtuales de Microsoft Power
+## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots y microsoft Power Virtual Agents
 
-[Power Virtual Agents es](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) un servicio de chatbot basado en la plataforma Microsoft Power y Bot Framework. El proceso de desarrollo de Power Virtual Agent usa un enfoque de interfaz gráfica y sin código guiado que permite a los miembros del equipo crear y mantener fácilmente un agente virtual inteligente. Después de crear el chatbot en el [portal de Power Virtual Agents,](https://powervirtualagents.microsoft.com)puede [integrarlo fácilmente con Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Para obtener más información sobre cómo empezar, vea [la documentación de Power Virtual Agents](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) es un servicio de chatbot basado en la plataforma Microsoft Power y Bot Framework. El proceso de desarrollo de Power Virtual Agent usa un enfoque de interfaz gráfica y sin código guiado que permite a los miembros del equipo crear y mantener fácilmente un agente virtual inteligente. Después de crear el chatbot en [el portal de Power Virtual Agents,](https://powervirtualagents.microsoft.com)puede [integrarlo](how-to/add-power-virtual-agents-bot-to-teams.md)fácilmente con Teams . Para obtener más información sobre cómo empezar, [vea Power Virtual Agents documentación](https://docs.microsoft.com/power-virtual-agents/).
 
 ## <a name="bots-and-webhooks-and-connectors"></a>Bots, webhooks y conectores
 
@@ -59,7 +59,7 @@ Los bots en Microsoft Teams pueden formar parte de una conversación uno a uno, 
 
 ### <a name="in-a-channel"></a>En un canal
 
-Los canales contienen conversaciones en subprocesos entre varias personas incluso hasta dos mil. Esto potencialmente le da al bot un alcance masivo, pero las interacciones individuales deben ser concisos. Las interacciones tradicionales de varios turnos no funcionan. En su lugar, debe buscar usar tarjetas interactivas o módulos de tareas, o mover la conversación a una conversación uno a uno para recopilar mucha información. El bot solo tiene acceso a los mensajes donde está `@mentioned` . Puede recuperar mensajes adicionales de la conversación mediante Microsoft Graph y permisos de nivel de organización.
+Los canales contienen conversaciones en subprocesos entre varias personas incluso hasta dos mil. Esto potencialmente le da al bot un alcance masivo, pero las interacciones individuales deben ser concisos. Las interacciones tradicionales de varios turnos no funcionan. En su lugar, debe buscar usar tarjetas interactivas o módulos de tareas, o mover la conversación a una conversación uno a uno para recopilar mucha información. El bot solo tiene acceso a los mensajes donde está `@mentioned` . Puede recuperar mensajes adicionales de la conversación con permisos de microsoft Graph de nivel de organización.
 
 Los bots funcionan mejor en un canal en los siguientes casos:
 

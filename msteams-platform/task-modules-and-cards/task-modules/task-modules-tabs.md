@@ -1,6 +1,6 @@
 ---
-title: Uso de módulos de tareas en pestañas de Microsoft Teams
-description: Explica cómo invocar módulos de tareas desde pestañas de Teams con el SDK de cliente de Microsoft Teams
+title: Uso de módulos de tareas Microsoft Teams pestañas
+description: Explica cómo invocar módulos de tareas desde Teams pestañas mediante el SDK Microsoft Teams cliente
 localization_priority: Normal
 ms.topic: how-to
 keywords: sdk de cliente de pestañas de teams de módulos de tareas
@@ -13,9 +13,9 @@ ms.locfileid: "52019527"
 ---
 # <a name="using-task-modules-in-tabs"></a>Uso de módulos de tareas en pestañas
 
-Agregar un módulo de tareas a la pestaña puede simplificar enormemente la experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos. Los módulos de tareas le permiten recopilar sus entradas en un elemento emergente de Teams. Un buen ejemplo de esto es la edición de tarjetas planner; puede usar módulos de tareas para crear una experiencia similar.
+Agregar un módulo de tareas a la pestaña puede simplificar enormemente la experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos. Los módulos de tareas permiten recopilar sus entradas en un Teams emergente que tenga en cuenta las tareas. Un buen ejemplo de esto es la edición de tarjetas planner; puede usar módulos de tareas para crear una experiencia similar.
 
-Para admitir la característica del módulo de tareas, se agregaron dos nuevas funciones al [SDK de cliente de Microsoft Teams:](/javascript/api/overview/msteams-client)
+Para admitir la característica del módulo de tareas, se agregaron dos nuevas funciones al SDK Microsoft Teams [cliente:](/javascript/api/overview/msteams-client)
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -76,9 +76,9 @@ Si no hay ningún error de invocación y el usuario no presiona X para descartar
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
 
-Una vez validado lo que el usuario ha escrito, se llama a la función SDK (a la que se hace referencia a continuación con fines `microsoftTeams.tasks.submitTask()` `submitTask()` de legibilidad). Puedes llamar sin ningún parámetro si solo quieres que Teams cierre el módulo de tareas, pero la mayoría de las veces querrás pasar un objeto o una cadena `submitTask()` a tu `submitHandler` .
+Una vez validado lo que el usuario ha escrito, se llama a la función SDK (a la que se hace referencia a continuación con fines `microsoftTeams.tasks.submitTask()` `submitTask()` de legibilidad). Puede llamar sin ningún parámetro si solo desea que Teams cierre el módulo de tareas, pero la mayoría de las veces querrá pasar un objeto o una cadena `submitTask()` a `submitHandler` su .
 
-Pase el resultado como primer parámetro. Teams invocará `submitHandler` dónde estará y será el objeto o cadena que pasó a `err` `null` `result` `submitTask()` . Si llama con un parámetro, debe pasar una o una matriz de cadenas: esto permite a Teams validar que la aplicación que envía el resultado es la misma que invocó el módulo `submitTask()` `result` de  `appId` `appId` tareas.
+Pase el resultado como primer parámetro. Teams `submitHandler` invocará dónde `err` estará y será el objeto o cadena que pasó a `null` `result` `submitTask()` . Si llamas con un parámetro, debes pasar una o una matriz de `submitTask()` `result` cadenas:  esto permite a Teams validar que la aplicación que envía el resultado es la misma que invocó el módulo de `appId` `appId` tareas.
 
 ### <a name="adaptive-card-taskinfocard"></a>Tarjeta adaptable ( `TaskInfo.card` )
 

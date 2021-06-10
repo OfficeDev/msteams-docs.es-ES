@@ -1,9 +1,9 @@
 ---
 title: Crear un botón Compartir en Teams
-description: Cómo agregar el botón Compartir a Teams incrustado en su sitio web
+description: Cómo agregar el botón Compartir a Teams insertado en su sitio web
 ms.topic: reference
 localization_priority: Normal
-keywords: Share Teams Share-to-Teams
+keywords: Compartir Teams compartir a Teams
 ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
 ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
@@ -13,17 +13,17 @@ ms.locfileid: "52075650"
 ---
 # <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
-Los sitios web de terceros pueden usar el script del iniciador para insertar botones de Share-to-Teams en sus páginas web. Cuando selecciona, inicia la experiencia de Share-to-Teams en una ventana emergente. Esto le permite compartir un vínculo directamente con cualquier persona o canal de Microsoft Teams sin cambiar el contexto. Este documento le guía sobre cómo crear e insertar un botón Compartir a Teams para su sitio web, crear la vista previa del sitio web y ampliar Share-to-Teams for Education.
+Los sitios web de terceros pueden usar el script del iniciador para insertar botones de share-to-Teams en sus páginas web. Cuando selecciona, inicia la experiencia compartir a Teams en una ventana emergente. Esto le permite compartir un vínculo directamente con cualquier persona o canal Microsoft Teams sin cambiar el contexto. Este documento le guía sobre cómo crear e insertar un botón Compartir a Teams para su sitio web, crear la vista previa del sitio web y ampliar Share-to-Teams for Education.
 
 > [!NOTE]
 > * Solo se admiten las versiones de escritorio de Edge y Chrome.
 > * No se admite el uso de freemium o cuentas de invitado.  
 
-En la siguiente imagen se muestra la experiencia emergente de Share-to-Teams:
+En la siguiente imagen se muestra la experiencia Teams emergente de Share-to-
 
-![Elemento emergente de Share-to-Teams](~/assets/images/share-to-teams-popup.png)
+![Elemento emergente de Teams compartir a Teams](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>Insertar un botón Compartir en Teams
+## <a name="embed-a-share-to-teams-button"></a>Insertar un recurso compartido en Teams botón
 
 1. Agregue el `launcher.js` script en la página web.
 
@@ -40,11 +40,11 @@ En la siguiente imagen se muestra la experiencia emergente de Share-to-Teams:
     </div>
     ```
 
-    Después de completar esto, el icono de Microsoft Teams se agrega a su sitio web. En la siguiente imagen se muestra el icono de Share-to-Teams:
+    Después de completar esto, el Microsoft Teams se agrega al sitio web. En la siguiente imagen se muestra el icono Compartir a Teams:
 
-    ![Icono Compartir en Teams](~/assets/icons/share-to-teams-icon.png)
+    ![Compartir a Teams icono](~/assets/icons/share-to-teams-icon.png)
 
-1. Como alternativa, si desea un tamaño de icono diferente para el botón Compartir con Teams, use el `data-icon-px-size` atributo.
+1. Como alternativa, si desea un tamaño de icono diferente para el botón Compartir a Teams, use el `data-icon-px-size` atributo.
 
     ```html
     <div
@@ -53,7 +53,7 @@ En la siguiente imagen se muestra la experiencia emergente de Share-to-Teams:
       data-icon-px-size="64">
     </div>
     ```
-1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de la dirección URL del vínculo que se va a compartir no se representa correctamente en Teams, puede deshabilitar la vista previa de la dirección URL agregando el atributo establecido `data-preview` en `false` .
+1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de la dirección URL del vínculo que se va a compartir no se representa correctamente en Teams, puede deshabilitar la vista previa de la dirección URL agregando el atributo establecido en `data-preview` `false` .
 
     ```html
     <div
@@ -67,7 +67,7 @@ En la siguiente imagen se muestra la experiencia emergente de Share-to-Teams:
 
 ## <a name="craft-your-website-preview"></a>Crear una vista previa del sitio web
 
-Cuando el sitio web se comparte con Teams, la tarjeta que se inserta en el canal seleccionado contiene una vista previa del sitio web. Puedes controlar el comportamiento de esta vista previa asegurando que los metadatos adecuados se agregan al sitio web que se comparte, como la `data-href` dirección URL.  
+Cuando el sitio web se comparte Teams, la tarjeta que se inserta en el canal seleccionado contiene una vista previa del sitio web. Puedes controlar el comportamiento de esta vista previa asegurando que los metadatos adecuados se agregan al sitio web que se comparte, como la `data-href` dirección URL.  
 
 **Para mostrar la vista previa**
 
@@ -76,30 +76,30 @@ Cuando el sitio web se comparte con Teams, la tarjeta que se inserta en el canal
 
 En la tabla siguiente se describen las etiquetas necesarias:
 
-|Valor|Etiqueta meta| Open Graph|
+|Valor|Etiqueta meta| Abra Graph|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|Descripción|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Imagen en miniatura| ninguno. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Puede usar las versiones predeterminadas html o la versión de Open Graph.
+Puede usar las versiones predeterminadas html o la versión Graph html.
 
-## <a name="share-to-teams-for-education"></a>Compartir con Teams para Educación
+## <a name="share-to-teams-for-education"></a>Compartir a Teams para Educación
 
-Para los profesores que usan el botón Compartir en Teams, hay una opción adicional para `Create an Assignment` . Esto le permite crear rápidamente una asignación en el equipo elegido, en función del vínculo compartido. En la siguiente imagen se muestra Share-to-Teams para educación: 
+Para los profesores que usan el botón Compartir Teams, hay una opción adicional para `Create an Assignment` . Esto le permite crear rápidamente una asignación en el equipo elegido, en función del vínculo compartido. En la siguiente imagen se muestra Share-to-Teams para educación: 
 
-![Compartir con educación emergente de Teams](~/assets/images/share-to-teams-popup-edu.png)
+![Compartir con Teams educación emergente](~/assets/images/share-to-teams-popup-edu.png)
 
 ## <a name="full-launcherjs-definition"></a>Definición launcher.js completa
 
 | Propiedad | Atributo HTML | Tipo | Predeterminado | Descripción |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | No aplicable | Href del contenido que se debe compartir. |
+| href | `data-href` | cadena | No aplicable | Href del contenido que se debe compartir. |
 | preview | `data-preview` | boolean (como una cadena) | `true` | Mostrar o no una vista previa del contenido que se va a compartir. |
 | iconPxSize | `data-icon-px-size` | número (como una cadena) | `32` | Tamaño en píxeles del botón Compartir a Teams que se representará. |
-| msgText | `data-msg-text` | string | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
-| assignInstr | `data-assign-instr` | string | No aplicable | Texto predeterminado que se insertará en el campo asignaciones "Instrucciones". El número máximo de caracteres es 200. |
-| assignTitle | `data-assign-title` | string | No aplicable | Texto predeterminado que se insertará en el campo asignaciones "Título". El número máximo de caracteres es 50. |
+| msgText | `data-msg-text` | cadena | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
+| assignInstr | `data-assign-instr` | cadena | No aplicable | Texto predeterminado que se insertará en el campo asignaciones "Instrucciones". El número máximo de caracteres es 200. |
+| assignTitle | `data-assign-title` | cadena | No aplicable | Texto predeterminado que se insertará en el campo asignaciones "Título". El número máximo de caracteres es 50. |
 
 ### <a name="methods"></a>Métodos
 
@@ -111,7 +111,7 @@ Actualmente, todos los botones de recurso compartido se representan en la págin
 
 ### <a name="set-default-form-values"></a>Establecer valores de formulario predeterminados
 
-Puede seleccionar para establecer los valores predeterminados de los siguientes campos en el formulario Compartir en Teams:
+Puede seleccionar para establecer los valores predeterminados de los siguientes campos en el formulario Compartir Teams formulario:
 
 * Diga algo al respecto: `msgText`
 * Instrucciones de asignación: `assignInstr`

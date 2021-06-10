@@ -1,5 +1,5 @@
 ---
-title: Autenticación para bots con Azure Active Directory
+title: Autenticación para bots que usan Azure Active Directory
 description: Describe la autenticación de Azure AD en Teams y cómo usarla en los bots
 keywords: Bots de autenticación de teams AAD
 localization_priority: Normal
@@ -12,11 +12,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020691"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar un usuario en un bot de Microsoft Teams
+# <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar un usuario en un bot de Microsoft Teams de autenticación
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Es posible que desee usar muchos servicios dentro de la aplicación de Teams y la mayoría de estos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y, por supuesto, Teams. Los usuarios de Teams tienen información de perfil de usuario almacenada en Azure Active Directory (Azure AD) mediante Microsoft Graph. Este artículo se centrará en la autenticación con Azure AD para obtener acceso a esta información.
+Es posible que desee usar muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y, por supuesto, Teams. Los usuarios de Teams tienen información de perfil de usuario almacenada en Azure Active Directory (Azure AD) mediante Microsoft Graph. Este artículo se centrará en la autenticación con Azure AD para obtener acceso a esta información.
 
 OAuth 2.0 es un estándar abierto para la autenticación usada por Azure AD y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. Los ejemplos siguientes usan el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información de perfil del usuario de Azure AD y Microsoft Graph.
 
@@ -69,7 +69,7 @@ Asegúrese de agregar el dominio de la dirección URL de redireccionamiento de a
 
 ## <a name="showing-user-profile-information"></a>Mostrar información de perfil de usuario
 
-Aunque obtener un token de acceso es difícil debido a todas las transiciones de ida y vuelta en diferentes sitios web y a los problemas de seguridad que deben solucionarse, una vez que tenga un token, obtener información de Azure Active Directory es sencillo. El bot realiza una llamada al punto de `me` conexión de Graph con el token de acceso. Graph responde con la información del usuario de la persona que inició sesión. La información de la respuesta se usa para construir una tarjeta bot y se envía.
+Aunque obtener un token de acceso es difícil debido a todas las transiciones de ida y vuelta en diferentes sitios web y a los problemas de seguridad que deben solucionarse, una vez que tenga un token, obtener información de Azure Active Directory es sencillo. El bot realiza una llamada al punto Graph `me` con el token de acceso. Graph responde con la información del usuario de la persona que inició sesión. La información de la respuesta se usa para construir una tarjeta bot y se envía.
 
 ```typescript
 // Show user profile
@@ -126,4 +126,4 @@ private async handleLogout(session: builder.Session): Promise<void> {
 
 Para ver el código de ejemplo que muestra el proceso de autenticación del bot, vea:
 
-* [Ejemplo de autenticación de bots de Microsoft Teams](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams ejemplo de autenticación de bots](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)

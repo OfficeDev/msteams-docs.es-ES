@@ -108,7 +108,7 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 }, config);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)

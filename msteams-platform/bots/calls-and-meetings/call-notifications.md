@@ -14,17 +14,17 @@ ms.locfileid: "52020179"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
-Al registrar un bot de llamadas y reuniones para [Microsoft Teams,](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)se menciona el webhook para la dirección URL de llamada. Esta dirección URL es el extremo de webhook para todas las llamadas entrantes al bot.
+Al [registrar un bot de llamadas](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)y reuniones para Microsoft Teams , se menciona el webhook para la dirección URL de llamada. Esta dirección URL es el extremo de webhook para todas las llamadas entrantes al bot.
 
 ## <a name="protocol-determination"></a>Determinación del protocolo
 
-La notificación entrante se proporciona en un formato heredado para la compatibilidad con el protocolo [de Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para convertir la llamada al protocolo de Microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporcionar la siguiente respuesta:
+La notificación entrante se proporciona en un formato heredado para la compatibilidad con el protocolo [Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para convertir la llamada al protocolo microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporcionar la siguiente respuesta:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-El bot recibe la notificación de nuevo, pero esta vez en el protocolo de Microsoft Graph.
+El bot recibe la notificación de nuevo, pero esta vez en el protocolo Graph Microsoft.
 
 En una versión futura de la Plataforma multimedia en tiempo real, puede configurar el protocolo que admite la aplicación para evitar recibir la devolución de llamada inicial en el formato heredado.
 

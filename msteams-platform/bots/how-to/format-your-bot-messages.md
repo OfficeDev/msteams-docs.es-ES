@@ -53,7 +53,7 @@ Actualmente, algunos estilos no se admiten en todas las plataformas. En la tabla
 | Lista ordenada              | ✖ | ✔ |
 | Texto con formato previo         | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ |
-| Hipervínculo                 | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ |
 | Vínculo imagen                | ✔ | ✖ |
 
 Después de comprobar la compatibilidad entre plataformas, asegúrese de que la compatibilidad con plataformas individuales también esté disponible.
@@ -77,7 +77,7 @@ En la tabla siguiente se proporciona una lista de estilos y cuáles de estos est
 | Lista ordenada              | ✔ | ✖ | ✖ |
 | Texto con formato previo         | ✔ | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ | ✔ |
-| Hipervínculo                 | ✔ | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ | ✔ |
 | Vínculo imagen                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Tarjetas
