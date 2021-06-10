@@ -12,113 +12,113 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2021
 ms.locfileid: "52644945"
 ---
-# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a><span data-ttu-id="f97a4-103">Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados</span><span class="sxs-lookup"><span data-stu-id="f97a4-103">Designing your Microsoft Teams app with advanced UI components</span></span>
+# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a><span data-ttu-id="0c81e-103">Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados</span><span class="sxs-lookup"><span data-stu-id="0c81e-103">Designing your Microsoft Teams app with advanced UI components</span></span>
 
-<span data-ttu-id="f97a4-104">Los siguientes componentes son una combinación de componentes básicos de [la](~/concepts/design/design-teams-app-basic-ui-components.md) interfaz de usuario que puedes usar para situaciones comunes Teams de diseño, como la navegación.</span><span class="sxs-lookup"><span data-stu-id="f97a4-104">The following components are a combination of [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md) that you can use for common Teams design situations, such as navigation.</span></span>
+<span data-ttu-id="0c81e-104">Los siguientes componentes son una combinación de componentes básicos de [la](~/concepts/design/design-teams-app-basic-ui-components.md) interfaz de usuario que puedes usar para situaciones comunes Teams de diseño, como la navegación.</span><span class="sxs-lookup"><span data-stu-id="0c81e-104">The following components are a combination of [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md) that you can use for common Teams design situations, such as navigation.</span></span>
 
-## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="f97a4-105">Kit de UI de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="f97a4-105">Microsoft Teams UI Kit</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="0c81e-105">Kit de UI de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="0c81e-105">Microsoft Teams UI Kit</span></span>
 
-<span data-ttu-id="f97a4-106">Basado en la interfaz de usuario <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluent,</a>Microsoft Teams kit de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="f97a4-106">Based on <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>, the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps.</span></span> <span data-ttu-id="f97a4-107">En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.</span><span class="sxs-lookup"><span data-stu-id="f97a4-107">In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.</span></span>
+<span data-ttu-id="0c81e-106">Basado en la interfaz de usuario <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluent,</a>Microsoft Teams kit de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="0c81e-106">Based on <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>, the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps.</span></span> <span data-ttu-id="0c81e-107">En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.</span><span class="sxs-lookup"><span data-stu-id="0c81e-107">In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f97a4-108">Obtener el Kit de UI de Microsoft Teams (Figma)</span><span class="sxs-lookup"><span data-stu-id="f97a4-108">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
+> [<span data-ttu-id="0c81e-108">Obtener el Kit de UI de Microsoft Teams (Figma)</span><span class="sxs-lookup"><span data-stu-id="0c81e-108">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="breadcrumb"></a><span data-ttu-id="f97a4-109">Ruta de navegación</span><span class="sxs-lookup"><span data-stu-id="f97a4-109">Breadcrumb</span></span>
+## <a name="breadcrumb"></a><span data-ttu-id="0c81e-109">Ruta de navegación</span><span class="sxs-lookup"><span data-stu-id="0c81e-109">Breadcrumb</span></span>
 
-<span data-ttu-id="f97a4-110">Las rutas de navegación son una ayuda de navegación que transmite la jerarquía de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f97a4-110">Breadcrumbs are a navigational aid that convey your app’s hierarchy.</span></span> <span data-ttu-id="f97a4-111">Ayudan a los usuarios a comprender cómo la página que están viendo se ajusta a la experiencia general y ofrecen acceso con un solo clic a niveles más altos de esa jerarquía.</span><span class="sxs-lookup"><span data-stu-id="f97a4-111">They help users understand how the page they’re viewing fits into the overall experience and afford one-click access to higher levels in that hierarchy.</span></span>
+<span data-ttu-id="0c81e-110">Las rutas de navegación son una ayuda de navegación que transmite la jerarquía de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0c81e-110">Breadcrumbs are a navigational aid that convey your app’s hierarchy.</span></span> <span data-ttu-id="0c81e-111">Ayudan a los usuarios a comprender cómo la página que están viendo se ajusta a la experiencia general y ofrecen acceso con un solo clic a niveles más altos de esa jerarquía.</span><span class="sxs-lookup"><span data-stu-id="0c81e-111">They help users understand how the page they’re viewing fits into the overall experience and afford one-click access to higher levels in that hierarchy.</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f97a4-112">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="f97a4-112">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="0c81e-112">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="0c81e-112">Top use cases</span></span>
 
-* <span data-ttu-id="f97a4-113">Jerarquía de comunicación</span><span class="sxs-lookup"><span data-stu-id="f97a4-113">Communicate hierarchy</span></span>
-* <span data-ttu-id="f97a4-114">Navegación</span><span class="sxs-lookup"><span data-stu-id="f97a4-114">Navigation</span></span>
+* <span data-ttu-id="0c81e-113">Jerarquía de comunicación</span><span class="sxs-lookup"><span data-stu-id="0c81e-113">Communicate hierarchy</span></span>
+* <span data-ttu-id="0c81e-114">Navegación</span><span class="sxs-lookup"><span data-stu-id="0c81e-114">Navigation</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="f97a4-115">Escritorio</span><span class="sxs-lookup"><span data-stu-id="f97a4-115">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="0c81e-115">Escritorio</span><span class="sxs-lookup"><span data-stu-id="0c81e-115">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el escritorio." border="false":::
 
-# <a name="mobile"></a>[<span data-ttu-id="f97a4-117">Móvil</span><span class="sxs-lookup"><span data-stu-id="f97a4-117">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="0c81e-117">Móvil</span><span class="sxs-lookup"><span data-stu-id="0c81e-117">Mobile</span></span>](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el móvil." border="false":::
 
 ---
 
-## <a name="left-nav"></a><span data-ttu-id="f97a4-119">Navegación izquierda</span><span class="sxs-lookup"><span data-stu-id="f97a4-119">Left nav</span></span>
+## <a name="left-nav"></a><span data-ttu-id="0c81e-119">Navegación izquierda</span><span class="sxs-lookup"><span data-stu-id="0c81e-119">Left nav</span></span>
 
-<span data-ttu-id="f97a4-120">Use la navegación izquierda para examinar varias páginas dentro de la Teams pestaña. En el siguiente ejemplo, la navegación izquierda se encuentra entre la lista de canales y el contenido de la pestaña.</span><span class="sxs-lookup"><span data-stu-id="f97a4-120">Use the left nav to browse multiple pages within your Teams tab. In the following example, the left nav is between the channel list and tab content.</span></span>
+<span data-ttu-id="0c81e-120">Use la navegación izquierda para examinar varias páginas dentro de la Teams pestaña. En el siguiente ejemplo, la navegación izquierda se encuentra entre la lista de canales y el contenido de la pestaña.</span><span class="sxs-lookup"><span data-stu-id="0c81e-120">Use the left nav to browse multiple pages within your Teams tab. In the following example, the left nav is between the channel list and tab content.</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f97a4-121">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="f97a4-121">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="0c81e-121">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="0c81e-121">Top use cases</span></span>
 
-* <span data-ttu-id="f97a4-122">Examinar varias páginas dentro de una Teams pestaña.</span><span class="sxs-lookup"><span data-stu-id="f97a4-122">Browse multiple pages within a Teams tab.</span></span>
-* <span data-ttu-id="f97a4-123">Dividir aplicaciones complejas en varias páginas.</span><span class="sxs-lookup"><span data-stu-id="f97a4-123">Break down complex apps into multiple pages.</span></span>
+* <span data-ttu-id="0c81e-122">Examinar varias páginas dentro de una Teams pestaña.</span><span class="sxs-lookup"><span data-stu-id="0c81e-122">Browse multiple pages within a Teams tab.</span></span>
+* <span data-ttu-id="0c81e-123">Dividir aplicaciones complejas en varias páginas.</span><span class="sxs-lookup"><span data-stu-id="0c81e-123">Break down complex apps into multiple pages.</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="f97a4-124">Escritorio</span><span class="sxs-lookup"><span data-stu-id="f97a4-124">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="0c81e-124">Escritorio</span><span class="sxs-lookup"><span data-stu-id="0c81e-124">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el escritorio." border="false":::
 
-# <a name="mobile"></a>[<span data-ttu-id="f97a4-126">Móvil</span><span class="sxs-lookup"><span data-stu-id="f97a4-126">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="0c81e-126">Móvil</span><span class="sxs-lookup"><span data-stu-id="0c81e-126">Mobile</span></span>](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el móvil." border="false":::
 
 ---
 
-## <a name="notification-bar"></a><span data-ttu-id="f97a4-128">Barra de notificaciones</span><span class="sxs-lookup"><span data-stu-id="f97a4-128">Notification bar</span></span>
+## <a name="notification-bar"></a><span data-ttu-id="0c81e-128">Barra de notificaciones</span><span class="sxs-lookup"><span data-stu-id="0c81e-128">Notification bar</span></span>
 
-<span data-ttu-id="f97a4-129">Una barra de notificaciones es un área dedicada para mostrar mensajes breves e importantes que no requieren que el usuario tome medidas inmediatas.</span><span class="sxs-lookup"><span data-stu-id="f97a4-129">A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action.</span></span> <span data-ttu-id="f97a4-130">Los iconos y los colores de fondo específicos están asociados con tipos específicos de mensajes (vea a continuación).</span><span class="sxs-lookup"><span data-stu-id="f97a4-130">Specific background colors and icons are associated with specific types of messages (see below).</span></span>
+<span data-ttu-id="0c81e-129">Una barra de notificaciones es un área dedicada para mostrar mensajes breves e importantes que no requieren que el usuario tome medidas inmediatas.</span><span class="sxs-lookup"><span data-stu-id="0c81e-129">A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action.</span></span> <span data-ttu-id="0c81e-130">Los iconos y los colores de fondo específicos están asociados con tipos específicos de mensajes (vea a continuación).</span><span class="sxs-lookup"><span data-stu-id="0c81e-130">Specific background colors and icons are associated with specific types of messages (see below).</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f97a4-131">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="f97a4-131">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="0c81e-131">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="0c81e-131">Top use cases</span></span>
 
-* <span data-ttu-id="f97a4-132">Mensajes críticos, errores y advertencias</span><span class="sxs-lookup"><span data-stu-id="f97a4-132">Critical messages, errors, and warnings</span></span>
-* <span data-ttu-id="f97a4-133">Mensajes de éxito</span><span class="sxs-lookup"><span data-stu-id="f97a4-133">Success messages</span></span>
-* <span data-ttu-id="f97a4-134">Mensajes informativos o promocionales</span><span class="sxs-lookup"><span data-stu-id="f97a4-134">Informational or promotional messages</span></span>
+* <span data-ttu-id="0c81e-132">Mensajes críticos, errores y advertencias</span><span class="sxs-lookup"><span data-stu-id="0c81e-132">Critical messages, errors, and warnings</span></span>
+* <span data-ttu-id="0c81e-133">Mensajes de éxito</span><span class="sxs-lookup"><span data-stu-id="0c81e-133">Success messages</span></span>
+* <span data-ttu-id="0c81e-134">Mensajes informativos o promocionales</span><span class="sxs-lookup"><span data-stu-id="0c81e-134">Informational or promotional messages</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="f97a4-135">Escritorio</span><span class="sxs-lookup"><span data-stu-id="f97a4-135">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="0c81e-135">Escritorio</span><span class="sxs-lookup"><span data-stu-id="0c81e-135">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio." border="false":::
 
-# <a name="mobile"></a>[<span data-ttu-id="f97a4-137">Móvil</span><span class="sxs-lookup"><span data-stu-id="f97a4-137">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="0c81e-137">Móvil</span><span class="sxs-lookup"><span data-stu-id="0c81e-137">Mobile</span></span>](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="En el ejemplo se muestra la plantilla de interfaz de usuario de la barra de notificaciones en el móvil." border="false":::
 
 ---
 
-## <a name="stage"></a><span data-ttu-id="f97a4-139">Etapa</span><span class="sxs-lookup"><span data-stu-id="f97a4-139">Stage</span></span>
+## <a name="stage"></a><span data-ttu-id="0c81e-139">Etapa</span><span class="sxs-lookup"><span data-stu-id="0c81e-139">Stage</span></span>
 
-<span data-ttu-id="f97a4-140">Stage ofrece una forma de que los usuarios abran una entidad (como una imagen, un archivo o un sitio web) en Teams en lugar de abrirlo en otra aplicación o explorador.</span><span class="sxs-lookup"><span data-stu-id="f97a4-140">Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser.</span></span> <span data-ttu-id="f97a4-141">El caso de uso principal de la fase es la visualización; la superficie no debe usarse para interacciones complejas.</span><span class="sxs-lookup"><span data-stu-id="f97a4-141">The primary use case of stage is viewing; the surface should not be used for complex interactions.</span></span>
+<span data-ttu-id="0c81e-140">Stage ofrece una forma de que los usuarios abran una entidad (como una imagen, un archivo o un sitio web) en Teams en lugar de abrirlo en otra aplicación o explorador.</span><span class="sxs-lookup"><span data-stu-id="0c81e-140">Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser.</span></span> <span data-ttu-id="0c81e-141">El caso de uso principal de la fase es la visualización; la superficie no debe usarse para interacciones complejas.</span><span class="sxs-lookup"><span data-stu-id="0c81e-141">The primary use case of stage is viewing; the surface should not be used for complex interactions.</span></span>
 
-<span data-ttu-id="f97a4-142">(Nota de implementación: cree la fase con un módulo [de tareas grande](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span><span class="sxs-lookup"><span data-stu-id="f97a4-142">(Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span></span>
+<span data-ttu-id="0c81e-142">(Nota de implementación: cree la fase con un módulo [de tareas grande](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span><span class="sxs-lookup"><span data-stu-id="0c81e-142">(Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f97a4-143">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="f97a4-143">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="0c81e-143">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="0c81e-143">Top use cases</span></span>
 
-* <span data-ttu-id="f97a4-144">Abra una entidad en Teams en lugar de otra aplicación o explorador</span><span class="sxs-lookup"><span data-stu-id="f97a4-144">Open an entity in Teams instead of another app or browser</span></span>
-* <span data-ttu-id="f97a4-145">Contenido multimedia destacado u otro contenido</span><span class="sxs-lookup"><span data-stu-id="f97a4-145">Spotlight media or other content</span></span>
+* <span data-ttu-id="0c81e-144">Abra una entidad en Teams en lugar de otra aplicación o explorador</span><span class="sxs-lookup"><span data-stu-id="0c81e-144">Open an entity in Teams instead of another app or browser</span></span>
+* <span data-ttu-id="0c81e-145">Contenido multimedia destacado u otro contenido</span><span class="sxs-lookup"><span data-stu-id="0c81e-145">Spotlight media or other content</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="f97a4-146">Escritorio</span><span class="sxs-lookup"><span data-stu-id="f97a4-146">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="0c81e-146">Escritorio</span><span class="sxs-lookup"><span data-stu-id="0c81e-146">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el escritorio." border="false":::
 
-# <a name="mobile"></a>[<span data-ttu-id="f97a4-148">Móvil</span><span class="sxs-lookup"><span data-stu-id="f97a4-148">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="0c81e-148">Móvil</span><span class="sxs-lookup"><span data-stu-id="0c81e-148">Mobile</span></span>](#tab/mobile)
 
-<span data-ttu-id="f97a4-149">La aplicación puede iniciar una fase desde una tarjeta adaptable, un vínculo compartido o componentes visuales (como un gráfico).</span><span class="sxs-lookup"><span data-stu-id="f97a4-149">Your app can launch a stage from an Adaptive Card, shared link, or visual components (such as a chart).</span></span>
+<span data-ttu-id="0c81e-149">La aplicación puede iniciar una fase desde una tarjeta adaptable, un vínculo compartido o componentes visuales (como un gráfico).</span><span class="sxs-lookup"><span data-stu-id="0c81e-149">Your app can launch a stage from an Adaptive Card, shared link, or visual components (such as a chart).</span></span>
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el móvil." border="false":::
 
 ---
 
-## <a name="toolbar"></a><span data-ttu-id="f97a4-151">Barra de herramientas</span><span class="sxs-lookup"><span data-stu-id="f97a4-151">Toolbar</span></span>
+## <a name="toolbar"></a><span data-ttu-id="0c81e-151">Barra de herramientas</span><span class="sxs-lookup"><span data-stu-id="0c81e-151">Toolbar</span></span>
 
-<span data-ttu-id="f97a4-152">Una barra de herramientas es un contenedor para agrupar un conjunto de controles.</span><span class="sxs-lookup"><span data-stu-id="f97a4-152">A toolbar is a container for grouping a set of controls.</span></span>
+<span data-ttu-id="0c81e-152">Una barra de herramientas es un contenedor para agrupar un conjunto de controles.</span><span class="sxs-lookup"><span data-stu-id="0c81e-152">A toolbar is a container for grouping a set of controls.</span></span>
 
-### <a name="top-use-cases"></a><span data-ttu-id="f97a4-153">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="f97a4-153">Top use cases</span></span>
+### <a name="top-use-cases"></a><span data-ttu-id="0c81e-153">Casos de uso principales</span><span class="sxs-lookup"><span data-stu-id="0c81e-153">Top use cases</span></span>
 
-* <span data-ttu-id="f97a4-154">Acciones contextuales en el contenido de la aplicación</span><span class="sxs-lookup"><span data-stu-id="f97a4-154">Contextual actions on app content</span></span>
-* <span data-ttu-id="f97a4-155">Filtro contextual y búsqueda</span><span class="sxs-lookup"><span data-stu-id="f97a4-155">Contextual filter and find</span></span>
-* <span data-ttu-id="f97a4-156">Navegación y rutas de navegación</span><span class="sxs-lookup"><span data-stu-id="f97a4-156">Navigation and breadcrumbs</span></span>
+* <span data-ttu-id="0c81e-154">Acciones contextuales en el contenido de la aplicación</span><span class="sxs-lookup"><span data-stu-id="0c81e-154">Contextual actions on app content</span></span>
+* <span data-ttu-id="0c81e-155">Filtro contextual y búsqueda</span><span class="sxs-lookup"><span data-stu-id="0c81e-155">Contextual filter and find</span></span>
+* <span data-ttu-id="0c81e-156">Navegación y rutas de navegación</span><span class="sxs-lookup"><span data-stu-id="0c81e-156">Navigation and breadcrumbs</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="f97a4-157">Escritorio</span><span class="sxs-lookup"><span data-stu-id="f97a4-157">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="0c81e-157">Escritorio</span><span class="sxs-lookup"><span data-stu-id="0c81e-157">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el escritorio." border="false":::
 
-# <a name="mobile"></a>[<span data-ttu-id="f97a4-159">Móvil</span><span class="sxs-lookup"><span data-stu-id="f97a4-159">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="0c81e-159">Móvil</span><span class="sxs-lookup"><span data-stu-id="0c81e-159">Mobile</span></span>](#tab/mobile)
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el móvil." border="false":::
 

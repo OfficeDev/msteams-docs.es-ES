@@ -1,7 +1,7 @@
 ---
-title: Opciones de compilación para el desarrollo de aplicaciones de Microsoft Teams
+title: Opciones de compilación para Microsoft Teams desarrollo de aplicaciones
 author: heath-hamilton
-description: Describe los SDK, las herramientas y las API que puedes usar para crear todos los tipos de aplicaciones de Teams.
+description: Describe los SDK, las herramientas y las API que puedes usar para crear todos los tipos de Teams aplicaciones.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,6 +12,6 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020845"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="53a84-103">Opciones de compilación para el desarrollo de aplicaciones de Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="53a84-103">Build options for Microsoft Teams app development</span></span>
+# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="e2f6b-103">Opciones de compilación para Microsoft Teams desarrollo de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="e2f6b-103">Build options for Microsoft Teams app development</span></span>
 
-<span data-ttu-id="53a84-104">Próximamente...</span><span class="sxs-lookup"><span data-stu-id="53a84-104">Coming soon ...</span></span>
+<span data-ttu-id="e2f6b-104">Próximamente...</span><span class="sxs-lookup"><span data-stu-id="e2f6b-104">Coming soon ...</span></span>

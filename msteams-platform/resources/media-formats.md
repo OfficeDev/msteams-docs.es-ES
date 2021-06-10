@@ -1,6 +1,6 @@
 ---
 title: Formatos multimedia admitidos para bots
-description: Los bots de Microsoft Teams solo admiten los siguientes formatos multimedia para el contenido de audio y vídeo.
+description: Los bots Microsoft Teams solo admiten los siguientes formatos multimedia para el contenido de audio y vídeo.
 ms.topic: reference
 localization_priority: Normal
 keywords: formatos multimedia de bots de teams
@@ -11,24 +11,24 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020614"
 ---
-# <a name="supported-media-formats-for-bots"></a><span data-ttu-id="ffa6b-104">Formatos multimedia admitidos para bots</span><span class="sxs-lookup"><span data-stu-id="ffa6b-104">Supported media formats for bots</span></span>
+# <a name="supported-media-formats-for-bots"></a><span data-ttu-id="4e4c1-104">Formatos multimedia admitidos para bots</span><span class="sxs-lookup"><span data-stu-id="4e4c1-104">Supported media formats for bots</span></span>
 
-<span data-ttu-id="ffa6b-105">Los bots de Microsoft Teams solo admiten los siguientes formatos multimedia para el contenido de audio y vídeo:</span><span class="sxs-lookup"><span data-stu-id="ffa6b-105">Bots on Microsoft Teams supports only the following media formats for audio and video content:</span></span>
+<span data-ttu-id="4e4c1-105">Los bots de Microsoft Teams admiten solo los siguientes formatos multimedia para el contenido de audio y vídeo:</span><span class="sxs-lookup"><span data-stu-id="4e4c1-105">Bots on Microsoft Teams supports only the following media formats for audio and video content:</span></span>
 
-| <span data-ttu-id="ffa6b-106">Formato</span><span class="sxs-lookup"><span data-stu-id="ffa6b-106">Format</span></span> | <span data-ttu-id="ffa6b-107">Más información</span><span class="sxs-lookup"><span data-stu-id="ffa6b-107">More information</span></span> |
+| <span data-ttu-id="4e4c1-106">Formato</span><span class="sxs-lookup"><span data-stu-id="4e4c1-106">Format</span></span> | <span data-ttu-id="4e4c1-107">Más información</span><span class="sxs-lookup"><span data-stu-id="4e4c1-107">More information</span></span> |
 | --- | --- |
-| <span data-ttu-id="ffa6b-108">Vorbis</span><span class="sxs-lookup"><span data-stu-id="ffa6b-108">Vorbis</span></span> | http://www.vorbis.com/ |
-| <span data-ttu-id="ffa6b-109">PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW</span><span class="sxs-lookup"><span data-stu-id="ffa6b-109">PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW</span></span> | https://wiki.multimedia.cx/?title=PCM |
-| <span data-ttu-id="ffa6b-110">Ogg</span><span class="sxs-lookup"><span data-stu-id="ffa6b-110">Ogg</span></span> | http://www.vorbis.com/ |
-| <span data-ttu-id="ffa6b-111">Matroska</span><span class="sxs-lookup"><span data-stu-id="ffa6b-111">Matroska</span></span> | https://matroska.org/ |
-| <span data-ttu-id="ffa6b-112">WAV</span><span class="sxs-lookup"><span data-stu-id="ffa6b-112">WAV</span></span> | https://en.wikipedia.org/wiki/WAV |
-| <span data-ttu-id="ffa6b-113">AAC</span><span class="sxs-lookup"><span data-stu-id="ffa6b-113">AAC</span></span> | https://en.wikipedia.org/wiki/Advanced_Audio_Coding |
-| <span data-ttu-id="ffa6b-114">H264</span><span class="sxs-lookup"><span data-stu-id="ffa6b-114">H264</span></span> | https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC |
-| <span data-ttu-id="ffa6b-115">MP3</span><span class="sxs-lookup"><span data-stu-id="ffa6b-115">MP3</span></span> | https://en.wikipedia.org/wiki/MP3 |
-| <span data-ttu-id="ffa6b-116">Opus</span><span class="sxs-lookup"><span data-stu-id="ffa6b-116">Opus</span></span> | http://opus-codec.org/ |
-| <span data-ttu-id="ffa6b-117">MP4</span><span class="sxs-lookup"><span data-stu-id="ffa6b-117">MP4</span></span> | https://en.wikipedia.org/wiki/MPEG-4 |
+| <span data-ttu-id="4e4c1-108">Vorbis</span><span class="sxs-lookup"><span data-stu-id="4e4c1-108">Vorbis</span></span> | http://www.vorbis.com/ |
+| <span data-ttu-id="4e4c1-109">PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW</span><span class="sxs-lookup"><span data-stu-id="4e4c1-109">PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW</span></span> | https://wiki.multimedia.cx/?title=PCM |
+| <span data-ttu-id="4e4c1-110">Ogg</span><span class="sxs-lookup"><span data-stu-id="4e4c1-110">Ogg</span></span> | http://www.vorbis.com/ |
+| <span data-ttu-id="4e4c1-111">Matroska</span><span class="sxs-lookup"><span data-stu-id="4e4c1-111">Matroska</span></span> | https://matroska.org/ |
+| <span data-ttu-id="4e4c1-112">WAV</span><span class="sxs-lookup"><span data-stu-id="4e4c1-112">WAV</span></span> | https://en.wikipedia.org/wiki/WAV |
+| <span data-ttu-id="4e4c1-113">AAC</span><span class="sxs-lookup"><span data-stu-id="4e4c1-113">AAC</span></span> | https://en.wikipedia.org/wiki/Advanced_Audio_Coding |
+| <span data-ttu-id="4e4c1-114">H264</span><span class="sxs-lookup"><span data-stu-id="4e4c1-114">H264</span></span> | https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC |
+| <span data-ttu-id="4e4c1-115">MP3</span><span class="sxs-lookup"><span data-stu-id="4e4c1-115">MP3</span></span> | https://en.wikipedia.org/wiki/MP3 |
+| <span data-ttu-id="4e4c1-116">Opus</span><span class="sxs-lookup"><span data-stu-id="4e4c1-116">Opus</span></span> | http://opus-codec.org/ |
+| <span data-ttu-id="4e4c1-117">MP4</span><span class="sxs-lookup"><span data-stu-id="4e4c1-117">MP4</span></span> | https://en.wikipedia.org/wiki/MPEG-4 |
 
-## <a name="next-step"></a><span data-ttu-id="ffa6b-118">Paso siguiente</span><span class="sxs-lookup"><span data-stu-id="ffa6b-118">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="4e4c1-118">Paso siguiente</span><span class="sxs-lookup"><span data-stu-id="4e4c1-118">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ffa6b-119">Cambios en las API de bots de Teams para capturar miembros de equipo o chat</span><span class="sxs-lookup"><span data-stu-id="ffa6b-119">Changes to Teams bot APIs for fetching Team or chat members</span></span>](~/resources/team-chat-member-api-changes.md)
+> [<span data-ttu-id="4e4c1-119">Cambios en Teams API de bot para capturar miembros de equipo o chat</span><span class="sxs-lookup"><span data-stu-id="4e4c1-119">Changes to Teams bot APIs for fetching Team or chat members</span></span>](~/resources/team-chat-member-api-changes.md)

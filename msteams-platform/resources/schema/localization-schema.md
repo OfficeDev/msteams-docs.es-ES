@@ -12,11 +12,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019709"
 ---
-# <a name="reference-localization-file-json-schema"></a><span data-ttu-id="3d91c-104">Referencia: esquema JSON del archivo de localización</span><span class="sxs-lookup"><span data-stu-id="3d91c-104">Reference: Localization file JSON schema</span></span>
+# <a name="reference-localization-file-json-schema"></a><span data-ttu-id="5fdd5-104">Referencia: esquema JSON del archivo de localización</span><span class="sxs-lookup"><span data-stu-id="5fdd5-104">Reference: Localization file JSON schema</span></span>
 
-<span data-ttu-id="3d91c-105">El archivo de localización de Microsoft Teams describe las traducciones de idioma que se van a servir en función de la configuración del idioma del cliente.</span><span class="sxs-lookup"><span data-stu-id="3d91c-105">The Microsoft Teams localization file describes language translations that will be served based on the client language settings.</span></span> <span data-ttu-id="3d91c-106">El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) .</span><span class="sxs-lookup"><span data-stu-id="3d91c-106">Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json).</span></span> <span data-ttu-id="3d91c-107">Para obtener información adicional, consulta [Localización de aplicaciones](~/concepts/build-and-test/apps-localization.md).</span><span class="sxs-lookup"><span data-stu-id="3d91c-107">For additional information see [app localization](~/concepts/build-and-test/apps-localization.md).</span></span>
+<span data-ttu-id="5fdd5-105">El Microsoft Teams de localización describe las traducciones de idioma que se van a servir en función de la configuración del idioma del cliente.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-105">The Microsoft Teams localization file describes language translations that will be served based on the client language settings.</span></span> <span data-ttu-id="5fdd5-106">El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) .</span><span class="sxs-lookup"><span data-stu-id="5fdd5-106">Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json).</span></span> <span data-ttu-id="5fdd5-107">Para obtener información adicional, consulta [Localización de aplicaciones](~/concepts/build-and-test/apps-localization.md).</span><span class="sxs-lookup"><span data-stu-id="5fdd5-107">For additional information see [app localization](~/concepts/build-and-test/apps-localization.md).</span></span>
 
-## <a name="sample"></a><span data-ttu-id="3d91c-108">Muestra</span><span class="sxs-lookup"><span data-stu-id="3d91c-108">Sample</span></span>
+## <a name="sample"></a><span data-ttu-id="5fdd5-108">Muestra</span><span class="sxs-lookup"><span data-stu-id="5fdd5-108">Sample</span></span>
 
 ```json
 {
@@ -33,97 +33,97 @@ ms.locfileid: "52019709"
 }
 ```
 
-<span data-ttu-id="3d91c-109">El esquema define las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="3d91c-109">The schema defines the following properties:</span></span>
+<span data-ttu-id="5fdd5-109">El esquema define las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="5fdd5-109">The schema defines the following properties:</span></span>
 
-## <a name="schema"></a><span data-ttu-id="3d91c-110">$schema</span><span class="sxs-lookup"><span data-stu-id="3d91c-110">$schema</span></span>
+## <a name="schema"></a><span data-ttu-id="5fdd5-110">$schema</span><span class="sxs-lookup"><span data-stu-id="5fdd5-110">$schema</span></span>
 
-<span data-ttu-id="3d91c-111">**URI**</span><span class="sxs-lookup"><span data-stu-id="3d91c-111">**URI**</span></span>
+<span data-ttu-id="5fdd5-111">**URI**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-111">**URI**</span></span>
 
-<span data-ttu-id="3d91c-112">La https:// url que hace referencia al esquema JSON para el manifiesto.</span><span class="sxs-lookup"><span data-stu-id="3d91c-112">The https:// URL referencing the JSON Schema for the manifest.</span></span>
+<span data-ttu-id="5fdd5-112">La https:// url que hace referencia al esquema JSON para el manifiesto.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-112">The https:// URL referencing the JSON Schema for the manifest.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="3d91c-113">Especifique el esquema al principio del manifiesto para habilitar la IntelliSense o similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`</span><span class="sxs-lookup"><span data-stu-id="3d91c-113">Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`</span></span>
+> <span data-ttu-id="5fdd5-113">Especifique el esquema al principio del manifiesto para habilitar la IntelliSense o similar desde el editor de código:`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`</span><span class="sxs-lookup"><span data-stu-id="5fdd5-113">Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`</span></span>
 
-## <a name="nameshort"></a><span data-ttu-id="3d91c-114">name.short</span><span class="sxs-lookup"><span data-stu-id="3d91c-114">name.short</span></span>
+## <a name="nameshort"></a><span data-ttu-id="5fdd5-114">name.short</span><span class="sxs-lookup"><span data-stu-id="5fdd5-114">name.short</span></span>
 
-<span data-ttu-id="3d91c-115">**String, Max Length 30**</span><span class="sxs-lookup"><span data-stu-id="3d91c-115">**String, Max Length 30**</span></span>
+<span data-ttu-id="5fdd5-115">**String, Max Length 30**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-115">**String, Max Length 30**</span></span>
 
-<span data-ttu-id="3d91c-116">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-116">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-116">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-116">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
 
-## <a name="namefull"></a><span data-ttu-id="3d91c-117">name.full</span><span class="sxs-lookup"><span data-stu-id="3d91c-117">name.full</span></span>
+## <a name="namefull"></a><span data-ttu-id="5fdd5-117">name.full</span><span class="sxs-lookup"><span data-stu-id="5fdd5-117">name.full</span></span>
 
-<span data-ttu-id="3d91c-118">**String, Max Length 100**</span><span class="sxs-lookup"><span data-stu-id="3d91c-118">**String, Max Length 100**</span></span>
+<span data-ttu-id="5fdd5-118">**String, Max Length 100**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-118">**String, Max Length 100**</span></span>
 
-<span data-ttu-id="3d91c-119">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-119">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-119">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-119">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
 
-## <a name="descriptionshort"></a><span data-ttu-id="3d91c-120">description.short</span><span class="sxs-lookup"><span data-stu-id="3d91c-120">description.short</span></span>
+## <a name="descriptionshort"></a><span data-ttu-id="5fdd5-120">description.short</span><span class="sxs-lookup"><span data-stu-id="5fdd5-120">description.short</span></span>
 
-<span data-ttu-id="3d91c-121">**String, Max Length 80**</span><span class="sxs-lookup"><span data-stu-id="3d91c-121">**String, Max Length 80**</span></span>
+<span data-ttu-id="5fdd5-121">**String, Max Length 80**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-121">**String, Max Length 80**</span></span>
 
-<span data-ttu-id="3d91c-122">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-122">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-122">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-122">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
 
-## <a name="descriptionfull"></a><span data-ttu-id="3d91c-123">description.full</span><span class="sxs-lookup"><span data-stu-id="3d91c-123">description.full</span></span>
+## <a name="descriptionfull"></a><span data-ttu-id="5fdd5-123">description.full</span><span class="sxs-lookup"><span data-stu-id="5fdd5-123">description.full</span></span>
 
-<span data-ttu-id="3d91c-124">**String, Longitud máxima 4000**</span><span class="sxs-lookup"><span data-stu-id="3d91c-124">**String, Max Length 4000**</span></span>
+<span data-ttu-id="5fdd5-124">**String, Longitud máxima 4000**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-124">**String, Max Length 4000**</span></span>
 
-<span data-ttu-id="3d91c-125">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-125">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-125">Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-125">Replaces the corresponding string from the app manifest with the value provided here.</span></span>
 
-## <a name="statictabs0-910-5name"></a><span data-ttu-id="3d91c-126">staticTabs \\ [([0-9]|1[0-5]) \\ ] \\ .name</span><span class="sxs-lookup"><span data-stu-id="3d91c-126">staticTabs\\[([0-9]|1[0-5])\\]\\.name</span></span>
+## <a name="statictabs0-910-5name"></a><span data-ttu-id="5fdd5-126">staticTabs \\ [([0-9]|1[0-5]) \\ ] \\ .name</span><span class="sxs-lookup"><span data-stu-id="5fdd5-126">staticTabs\\[([0-9]|1[0-5])\\]\\.name</span></span>
 
-<span data-ttu-id="3d91c-127">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="3d91c-127">**String, Max Length 128**</span></span>
+<span data-ttu-id="5fdd5-127">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-127">**String, Max Length 128**</span></span>
 
-<span data-ttu-id="3d91c-128">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-128">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-128">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-128">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="bots0commandlists0-2commands0-9title"></a><span data-ttu-id="3d91c-129">bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="3d91c-129">bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title</span></span>
+## <a name="bots0commandlists0-2commands0-9title"></a><span data-ttu-id="5fdd5-129">bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="5fdd5-129">bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title</span></span>
 
-<span data-ttu-id="3d91c-130">**String, Max Length 32**</span><span class="sxs-lookup"><span data-stu-id="3d91c-130">**String, Max Length 32**</span></span>
+<span data-ttu-id="5fdd5-130">**String, Max Length 32**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-130">**String, Max Length 32**</span></span>
 
-<span data-ttu-id="3d91c-131">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-131">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-131">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-131">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="bots0commandlists0-2commands0-9description"></a><span data-ttu-id="3d91c-132">bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description</span><span class="sxs-lookup"><span data-stu-id="3d91c-132">bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description</span></span>
+## <a name="bots0commandlists0-2commands0-9description"></a><span data-ttu-id="5fdd5-132">bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description</span><span class="sxs-lookup"><span data-stu-id="5fdd5-132">bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description</span></span>
 
-<span data-ttu-id="3d91c-133">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="3d91c-133">**String, Max Length 128**</span></span>
+<span data-ttu-id="5fdd5-133">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-133">**String, Max Length 128**</span></span>
 
-<span data-ttu-id="3d91c-134">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-134">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-134">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-134">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9title"></a><span data-ttu-id="3d91c-135">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="3d91c-135">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title</span></span>
+## <a name="composeextensions0commands0-9title"></a><span data-ttu-id="5fdd5-135">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="5fdd5-135">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title</span></span>
 
-<span data-ttu-id="3d91c-136">**String, Max Length 32**</span><span class="sxs-lookup"><span data-stu-id="3d91c-136">**String, Max Length 32**</span></span>
+<span data-ttu-id="5fdd5-136">**String, Max Length 32**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-136">**String, Max Length 32**</span></span>
 
-<span data-ttu-id="3d91c-137">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-137">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-137">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-137">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9description"></a><span data-ttu-id="3d91c-138">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description</span><span class="sxs-lookup"><span data-stu-id="3d91c-138">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description</span></span>
+## <a name="composeextensions0commands0-9description"></a><span data-ttu-id="5fdd5-138">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description</span><span class="sxs-lookup"><span data-stu-id="5fdd5-138">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description</span></span>
 
-<span data-ttu-id="3d91c-139">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="3d91c-139">**String, Max Length 128**</span></span>
+<span data-ttu-id="5fdd5-139">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-139">**String, Max Length 128**</span></span>
 
-<span data-ttu-id="3d91c-140">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-140">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-140">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-140">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9parameters0-4title"></a><span data-ttu-id="3d91c-141">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="3d91c-141">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title</span></span>
+## <a name="composeextensions0commands0-9parameters0-4title"></a><span data-ttu-id="5fdd5-141">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="5fdd5-141">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title</span></span>
 
-<span data-ttu-id="3d91c-142">**String, Max Length 32**</span><span class="sxs-lookup"><span data-stu-id="3d91c-142">**String, Max Length 32**</span></span>
+<span data-ttu-id="5fdd5-142">**String, Max Length 32**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-142">**String, Max Length 32**</span></span>
 
-<span data-ttu-id="3d91c-143">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-143">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-143">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-143">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9parameters0-4description"></a><span data-ttu-id="3d91c-144">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .description</span><span class="sxs-lookup"><span data-stu-id="3d91c-144">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description</span></span>
+## <a name="composeextensions0commands0-9parameters0-4description"></a><span data-ttu-id="5fdd5-144">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .description</span><span class="sxs-lookup"><span data-stu-id="5fdd5-144">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description</span></span>
 
-<span data-ttu-id="3d91c-145">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="3d91c-145">**String, Max Length 128**</span></span>
+<span data-ttu-id="5fdd5-145">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-145">**String, Max Length 128**</span></span>
 
-<span data-ttu-id="3d91c-146">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-146">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-146">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-146">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9parameters0-4value"></a><span data-ttu-id="3d91c-147">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .value</span><span class="sxs-lookup"><span data-stu-id="3d91c-147">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value</span></span>
+## <a name="composeextensions0commands0-9parameters0-4value"></a><span data-ttu-id="5fdd5-147">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .value</span><span class="sxs-lookup"><span data-stu-id="5fdd5-147">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value</span></span>
 
-<span data-ttu-id="3d91c-148">**String, Longitud máxima 512**</span><span class="sxs-lookup"><span data-stu-id="3d91c-148">**String, Max Length 512**</span></span>
+<span data-ttu-id="5fdd5-148">**String, Longitud máxima 512**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-148">**String, Max Length 512**</span></span>
 
-<span data-ttu-id="3d91c-149">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-149">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-149">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-149">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a><span data-ttu-id="3d91c-150">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .choices \\ [[0-9] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="3d91c-150">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title</span></span>
+## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a><span data-ttu-id="5fdd5-150">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .choices \\ [[0-9] \\ ] \\ .title</span><span class="sxs-lookup"><span data-stu-id="5fdd5-150">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title</span></span>
 
-<span data-ttu-id="3d91c-151">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="3d91c-151">**String, Max Length 128**</span></span>
+<span data-ttu-id="5fdd5-151">**String, Longitud máxima 128**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-151">**String, Max Length 128**</span></span>
 
-<span data-ttu-id="3d91c-152">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-152">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-152">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-152">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
 
-## <a name="composeextensions0commands0-9taskinfotitle"></a><span data-ttu-id="3d91c-153">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .taskInfo \\ .title</span><span class="sxs-lookup"><span data-stu-id="3d91c-153">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title</span></span>
+## <a name="composeextensions0commands0-9taskinfotitle"></a><span data-ttu-id="5fdd5-153">composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .taskInfo \\ .title</span><span class="sxs-lookup"><span data-stu-id="5fdd5-153">composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title</span></span>
 
-<span data-ttu-id="3d91c-154">**String, Max Length 64**</span><span class="sxs-lookup"><span data-stu-id="3d91c-154">**String, Max Length 64**</span></span>
+<span data-ttu-id="5fdd5-154">**String, Max Length 64**</span><span class="sxs-lookup"><span data-stu-id="5fdd5-154">**String, Max Length 64**</span></span>
 
-<span data-ttu-id="3d91c-155">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="3d91c-155">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
+<span data-ttu-id="5fdd5-155">Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.</span><span class="sxs-lookup"><span data-stu-id="5fdd5-155">Replaces the corresponding string(s) from the app manifest with the value provided here.</span></span>
