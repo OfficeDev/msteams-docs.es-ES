@@ -75,7 +75,7 @@ conceptualContent:
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
           itemType: learn
-          text: Compilar aplicaciones para Microsoft Teams
+          text: Desarrollar aplicaciones para Microsoft Teams
         - url: /learn/modules/embedded-web-experiences
           itemType: learn
           text: Crear experiencias web incrustadas con pestañas
