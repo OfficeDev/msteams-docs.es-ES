@@ -3,12 +3,12 @@ title: Habilitar y configurar las aplicaciones para Teams reuniones
 author: laujan
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
-ms.openlocfilehash: 3484e82f3f51a9a92da6588234744c42a86b5730
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651736"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871842"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -130,7 +130,7 @@ La extensión de mensajería funciona según lo esperado cuando un usuario está
 
 #### <a name="in-meeting-dialog-box"></a>Cuadro de diálogo En la reunión
 
-El cuadro de diálogo en la reunión se puede usar para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use la API para indicar que se debe desencadenar [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) una notificación de burbuja. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
+El cuadro de diálogo en la reunión se puede usar para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use la API para indicar que se debe desencadenar [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) una notificación de burbuja. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
 
 El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar una burbuja de contenido en una reunión. Puede usar el método `submitTask` para enviar datos en un chat de reunión.
 
@@ -178,7 +178,7 @@ Las configuraciones posteriores a la reunión [y previas](#pre-meeting) a la reu
 |----------------|-----------------|--------------|----------------|-----------|
 | Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token, que se genera secuencialmente para que cada participante tenga una oportunidad equitativa de interactuar. Esto puede ser útil en situaciones como reuniones de scrum, preguntas&sesiones A, y así sucesivamente. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

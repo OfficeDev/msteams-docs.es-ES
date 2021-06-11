@@ -4,12 +4,12 @@ description: Cómo crear bots y habilidades del Asistente virtual para su uso en
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots de asistente virtual de teams
-ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a736dfc7a9a2f23389b2232b36beb800bc059ad5
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630736"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871849"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual 
 
@@ -570,13 +570,13 @@ También puede aprovechar las aptitudes existentes desde el repositorio [de Bot 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **C#** | **.NET** |
-|----------|-----------------|----------|------------------|
-| Plantilla de Visual Studio actualizada | Plantilla personalizada para admitir las capacidades de teams. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
-| Código de habilidad de bot de libro a sala | Permite buscar y reservar rápidamente una sala de reuniones sobre la marcha. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+| **Nombre de ejemplo** | **Descripción** | **C#**  **.NET** |
+|----------|-----------------|---------------------------|
+| Plantilla de Visual Studio actualizada | Plantilla personalizada para admitir las capacidades de teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Código de habilidad de bot de libro a sala | Permite buscar y reservar rápidamente una sala de reuniones sobre la marcha. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 * [Libro a sala](app-templates.md#book-a-room)
