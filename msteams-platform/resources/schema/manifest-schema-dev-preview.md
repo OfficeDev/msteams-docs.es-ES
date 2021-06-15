@@ -5,18 +5,19 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: c2009038341a22664b0f055fa9756a9d1eba87b9
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853539"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915093"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Esquema de manifiesto de vista previa de desarrollador para Microsoft Teams
 
+Para obtener información sobre cómo habilitar la vista previa del desarrollador, vea [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+
 > [!NOTE]
-> Para obtener más información sobre el programa y cómo puede unirse, vea [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-> Si no usa la vista previa del desarrollador, no debe usar esta versión del manifiesto. Vea [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) para la versión pública del manifiesto.
+> * Si no estás usando las características de vista previa del desarrollador, usa el manifiesto de la aplicación [para las características de GA](~/resources/schema/manifest-schema.md) en su lugar.
 
 El Microsoft Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
@@ -270,7 +271,7 @@ Un identificador único para esta aplicación en la notación de dominio inverso
 
 Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSource (anteriormente Office Store), estos valores deben coincidir con la información de la entrada AppSource.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`name`|32 caracteres|✔|Nombre para mostrar del desarrollador.|
 |`websiteUrl`|2048 caracteres|✔|La https:// url del sitio web del desarrollador. Este vínculo debe llevar a los usuarios a su empresa o página de aterrizaje específica del producto.|
@@ -284,7 +285,7 @@ Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSo
 
 Permite la especificación de un idioma predeterminado, así como punteros a archivos de idioma adicionales. Vea [localización](~/concepts/build-and-test/apps-localization.md).
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`defaultLanguageTag`|4 caracteres|✔|La etiqueta de idioma de las cadenas de este archivo de manifiesto de nivel superior.|
 
@@ -292,7 +293,7 @@ Permite la especificación de un idioma predeterminado, así como punteros a arc
 
 Una matriz de objetos que especifica traducciones de idioma adicionales.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`languageTag`|4 caracteres|✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
 |`file`|4 caracteres|✔|Una ruta de acceso de archivo relativa a un archivo .json que contiene las cadenas traducidas.|
@@ -303,7 +304,7 @@ Una matriz de objetos que especifica traducciones de idioma adicionales.
 
 El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la Teams usuario. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y no deben ser los `full` mismos.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
@@ -316,7 +317,7 @@ Describe la aplicación a los usuarios. Para las aplicaciones enviadas a AppSour
 
 Asegúrese de que su descripción describe con precisión su experiencia y proporciona información para ayudar a los clientes potenciales a comprender lo que hace su experiencia. También debe tener en cuenta, en la descripción completa, si se requiere una cuenta externa para su uso. Los valores de `short` y no deben ser los `full` mismos.  La descripción breve no debe repetirse dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`short`|80 caracteres|✔|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔|Descripción completa de la aplicación.|
@@ -327,7 +328,7 @@ Asegúrese de que su descripción describe con precisión su experiencia y propo
 
 Iconos usados dentro de la Teams aplicación. Los archivos de icono deben incluirse como parte del paquete de carga.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Nombre| Tamaño máximo | Necesario | Description|
 |---|---|---|---|
 |`outline`|2048 caracteres|✔|Una ruta de acceso de archivo relativa a un icono de esquema PNG transparente de 32 x 32.|
 |`color`|2048 caracteres|✔|Una ruta de acceso de archivo relativa a un icono PNG de color completo de 192 x 192.|
@@ -351,7 +352,7 @@ El objeto es una matriz con todos los elementos del tipo `object` . Este bloque 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|La https:// url que se va a usar al configurar la pestaña.|
-|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: `true`|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo la pestaña estará disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
@@ -429,7 +430,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|Cadena|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. Esto bien puede ser el mismo que el identificador general [de la aplicación](#id).|
-|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
 |`commands`|Matriz de objeto|10|✔|Matriz de comandos que admite la extensión de mensajería|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,9 +445,9 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`type`|String|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: `query`|
 |`title`|Cadena|32 caracteres|✔|Nombre de comando fácil de usar.|
 |`description`|Cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|Boolean|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
+|`initialRun`|Booleano|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
 |`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
+|`fetchTask`|Booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|

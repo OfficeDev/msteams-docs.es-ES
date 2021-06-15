@@ -5,22 +5,34 @@ description: Comprender cómo Teams los administradores pueden personalizar la a
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1b5e2670cdabc139ea945f3d0c5705d9262b5832
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: bf1b43629c87dd4123520c634772e5dea14e0bb5
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853546"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915086"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Habilitar la aplicación Microsoft Teams personalizada
 
-Puedes permitir que las organizaciones (específicamente Teams administradores) personalice algunos aspectos de tu Microsoft Teams aplicación. Algunos ejemplos posibles son:
+Puedes permitir a los clientes personalizar algunos aspectos de la aplicación Microsoft Teams en el centro Teams administración. Esta característica solo es compatible con las aplicaciones publicadas en la Teams tienda. Las aplicaciones y aplicaciones de instalación local publicadas para una organización no se pueden personalizar.
 
-* Cambiar el color de énfal de la aplicación para que coincida con la marca de la organización.
-* Actualizar el nombre de la aplicación de *Contoso* al *agente contoso*, que es el nombre que verán los usuarios de la organización. (Nota: Los usuarios que agreguen un conector a un chat seguirán ven el nombre de la aplicación original, *Contoso*).
+Algunos ejemplos posibles de esta característica incluyen:
 
-Puede habilitar esta característica en el Portal de [desarrolladores para Teams](https://dev.teams.microsoft.com/home). (Esto se configura `configurableProperties` en el manifiesto de la aplicación). Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
+* Cambiar el color de acento de la aplicación para que coincida con la marca de una organización.
+* Actualizar el nombre de la aplicación de *Contoso* al *agente contoso*, que es el nombre que verán los usuarios de la organización. (Nota: Los usuarios que agreguen un conector a un chat o un canal seguirán ven el nombre de la aplicación original, *Contoso*.)
 
-## <a name="best-practices"></a>Procedimientos recomendados
+Puede habilitar esta característica en el Portal de [desarrolladores para Teams](https://dev.teams.microsoft.com/home). Esto configura , que no están disponibles en versiones anteriores a `configurableProperties` la 1.10 del manifiesto Teams aplicación.
 
-Proporcionar directrices para los clientes que desean personalizar la aplicación. Para obtener más información, consulta [Personalizar aplicaciones en Microsoft Teams](/MicrosoftTeams/customize-apps).
+## <a name="test-your-app"></a>Probar la aplicación
+
+No puede probar esta característica durante el desarrollo. La personalización de aplicaciones no se admite para la instalación local o la publicación en el catálogo de aplicaciones de una organización.
+
+## <a name="user-considerations"></a>Consideraciones del usuario
+
+Como editor de aplicaciones, proporcione la siguiente información a los clientes de Teams administradores:
+* Incluya una nota que recomiende probar los cambios de personalización en Teams inquilino de prueba antes de realizar cambios en su entorno de producción. 
+* Proporciona procedimientos recomendados para personalizar la aplicación.
+
+## <a name="see-also"></a>Ver también
+
+* [Personalizar aplicaciones en el Centro Teams administración](/MicrosoftTeams/customize-apps)
