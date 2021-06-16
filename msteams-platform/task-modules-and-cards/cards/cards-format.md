@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630216"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949766"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a las tarjetas Teams
 
@@ -242,9 +242,6 @@ Para habilitar typeahead dentro del `Input.Choiceset` conjunto en y asegurarse d
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>Vista de fase para imágenes en tarjetas adaptables
 
-> [!NOTE]
-> Esta característica está disponible actualmente solo en la versión preliminar del desarrollador.
- 
 En una tarjeta adaptable, puedes usar la propiedad para agregar la capacidad de mostrar imágenes en la vista de fase `msteams` de forma selectiva. Cuando los usuarios mantienen el mouse sobre las imágenes, verían un icono de expansión, para el que `allowExpand` el atributo está establecido en `true` . Para obtener información sobre cómo usar la propiedad, vea el siguiente ejemplo:
 
 ``` json

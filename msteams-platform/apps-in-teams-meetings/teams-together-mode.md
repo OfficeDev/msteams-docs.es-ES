@@ -1,24 +1,24 @@
 ---
-title: Modo conferencia en Teams
-description: Trabajar con el modo de colaboración
+title: Escenas personalizadas del modo conjunto
+description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: 1620e01ef1825ec43e94614ff8ea355e764e10e0
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651743"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949752"
 ---
-# <a name="together-mode-in-teams"></a>Modo conferencia en Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas del modo junto en Teams
 
 > [!NOTE]
 > Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
 
-Microsoft Teams El modo juntos proporciona un entorno de reunión envolvente y atractivo que reúne a las personas y les anima a activar su vídeo. Combina digitalmente a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos diseñados y fijos por el creador de la escena.
+Las escenas personalizadas del modo junto en Microsoft Teams proporcionan un entorno de reunión envolvente y atractivo que reúne a las personas y les anima a activar su vídeo. Combina digitalmente a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos diseñados y fijos por el creador de la escena.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Una escena en el modo juntos es un artefacto creado por el desarrollador de la escena mediante el estudio de escena de Microsoft. En una configuración de escena pensada, los participantes han designado puestos con secuencias de vídeo representados en esos puestos.
+Una escena en escenas personalizadas del Modo conjunto es un artefacto creado por el desarrollador de la escena mediante el estudio de escena de Microsoft. En una configuración de escena pensada, los participantes han designado puestos con secuencias de vídeo representados en esos puestos.
 
 > [!NOTE]
 > Solo se recomiendan las aplicaciones de escena, ya que la experiencia de adquisición de estas aplicaciones es más sencilla.
@@ -33,7 +33,7 @@ El siguiente proceso proporciona información general para crear una aplicación
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debe tener una comprensión básica de lo siguiente para usar el modo juntos:
+Debe tener una comprensión básica de lo siguiente para usar escenas personalizadas del Modo conjunto:
 
 * Definición de escena y puestos en una escena.
 * Tenga una cuenta de Microsoft Developer y familiarícese con Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) y App Studio.
@@ -145,14 +145,14 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
 1. En el **cuadro de diálogo Ver en Teams,** seleccione Vista previa en **Teams**.
 1. En el cuadro de diálogo que aparece, seleccione **Agregar**.
 
-    Se puede probar o acceder a la escena creando una reunión de prueba y iniciando el modo juntos. Para obtener más información, [vea activate the Together Mode](#activate-the-together-mode).
+    Se puede probar o acceder a la escena mediante la creación de una reunión de prueba y el inicio de escenas personalizadas del Modo conjunto. Para obtener más información, vea [Activar escenas personalizadas del modo conjunto](#activate-custom-together-mode-scenes).
 
-    ![Iniciar el modo juntos](../assets/images/apps-in-meetings/launchtogethermode.png)
+    ![Iniciar escenas personalizadas del modo conjunto](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
     > * Al seleccionar **Vista** previa, se crea automáticamente Microsoft Teams aplicación  que se puede ver en la página Aplicaciones del portal Teams desarrolladores.
     > * Al seleccionar **Vista** previa, se crea automáticamente un paquete de aplicación appmanifest.jsdetrás de la escena. Como se mencionó anteriormente, esto se abstrae, pero puedes acceder al paquete de la aplicación creado automáticamente navegando a **Aplicaciones** desde el menú.
-    > * A continuación, la escena se puede ver en la galería de escenas del Modo conjunto.
+    > * A continuación, la escena se puede ver en la galería de escenas del modo conjunto personalizada.
 
 1. Opcionalmente, puedes seleccionar **Compartir** en el menú desplegable Guardar para crear un vínculo que se pueda compartir para distribuir fácilmente las escenas para que otras personas las usen.  Al abrir este vínculo, se instala la escena para el usuario y pueden empezar a usarlo.
 
@@ -172,7 +172,7 @@ Una escena más compleja que aprovecha el eje Z se muestra en la muestra de intr
 
 ## <a name="sample-scenejson"></a>Ejemplo scene.jsen
 
-Scene.jsjunto con las imágenes indican la posición exacta de los puestos. Una escena consta de imágenes de mapa de bits, sprites y rectángulos para colocar los vídeos de los participantes. Estos sprites y cuadros de participantes se definen en un sistema de coordenadas mundiales con el eje X apuntando a la derecha y el eje Y apuntando hacia abajo. El modo juntos admite el acercamiento de los participantes actuales. Esto es útil para reuniones pequeñas en una escena grande. Un sprite es una imagen de mapa de bits estática posicionada en el mundo. El valor Z del sprite determina la posición del sprite. La representación comienza con el sprite con el valor Z más bajo, por lo que un valor Z más alto significa que está más cerca de la cámara. Cada participante tiene su propia fuente de vídeo, que se segmenta para que solo se represente el primer plano.
+Scene.jsjunto con las imágenes indican la posición exacta de los puestos. Una escena consta de imágenes de mapa de bits, sprites y rectángulos para colocar los vídeos de los participantes. Estos sprites y cuadros de participantes se definen en un sistema de coordenadas mundiales con el eje X apuntando a la derecha y el eje Y apuntando hacia abajo. Las escenas del Modo conjunto personalizado admiten acercamiento a los participantes actuales. Esto es útil para reuniones pequeñas en una escena grande. Un sprite es una imagen de mapa de bits estática posicionada en el mundo. El valor Z del sprite determina la posición del sprite. La representación comienza con el sprite con el valor Z más bajo, por lo que un valor Z más alto significa que está más cerca de la cámara. Cada participante tiene su propia fuente de vídeo, que se segmenta para que solo se represente el primer plano.
 
 A continuación se muestra scene.jsejemplo:
 
@@ -246,13 +246,13 @@ Cada escena tiene un identificador y un nombre únicos. El JSON de la escena tam
 
 ZOrder representa el orden de colocar imágenes y puestos a lo largo del eje Z. En muchos casos, proporciona una sensación de profundidad o partición si es necesario. Para obtener más información, consulte el ejemplo de introducción paso a paso. El ejemplo aprovecha el zOrder.
 
-Ahora que has pasado por el ejemplo scene.jsactivado, puedes activar el modo juntos para participar en escenas.
+Ahora que has pasado por el ejemplo scene.js, puedes activar las escenas personalizadas del Modo conjunto para participar en escenas.
 
-## <a name="activate-the-together-mode"></a>Activar el modo juntos
+## <a name="activate-custom-together-mode-scenes"></a>Activar escenas personalizadas del modo conjunto
 
-Obtenga información de un extremo a otro de cómo un usuario final interactúa con las escenas en el modo juntos.
+Obtenga información de un extremo a otro de cómo un usuario final interactúa con las escenas en escenas personalizadas del modo conjunto.
 
-**Para elegir escenas y activar el modo juntos**
+**Para elegir escenas y activar escenas personalizadas del Modo conjunto**
 
 1. Crear una nueva reunión de prueba.
 
@@ -265,19 +265,19 @@ Obtenga información de un extremo a otro de cómo un usuario final interactúa 
 
 1. En la **Galería de escenarios,** seleccione la escena que desea usar para la reunión.
 
-1. Opcionalmente, el organizador de la reunión y el moderador pueden elegir Cambiar todos los **participantes** al modo de reunión conjunta en la reunión.
+1. Opcionalmente, el organizador de la reunión y el moderador pueden cambiar la escena de todos los **participantes** de la reunión.
 
     >[!NOTE]
-    > En cualquier momento, solo se puede usar una escena de forma homogénea para la reunión. Si un moderador u organizador cambia una escena, cambia para todos. El cambio de entrada o de salida del modo juntos es una función de los participantes individuales, pero mientras están en el modo juntos, todos los participantes tienen la misma escena.
+    > En cualquier momento, solo se puede usar una escena de forma homogénea para la reunión. Si un moderador u organizador cambia una escena, cambia para todos. El cambio de las escenas personalizadas del Modo conjunto es una función de los participantes individuales, pero mientras que en las escenas personalizadas del Modo conjunto, todos los participantes tienen la misma escena.
 
 1. Seleccione **Aplicar**. Teams instala la aplicación para el usuario y aplica la escena.
 
-## <a name="open-a-together-mode-scene-package"></a>Abrir un paquete de escena de modo conjunto
+## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Abrir un paquete de escenas de escenas de modo conjunto personalizado
 
 Puedes compartir el paquete de escena que es un archivo .zip recuperado del estudio de escena a otros creadores para mejorar aún más la escena. Se **puede aprovechar la funcionalidad** Importar una escena. Esta herramienta ayuda a desenvolver un paquete de escena para permitir al creador continuar con la creación de la escena.
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)

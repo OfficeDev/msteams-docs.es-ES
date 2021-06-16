@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 86a39bc771873afb25d401534569498241b2daf1
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853525"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949661"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -24,7 +24,7 @@ Descubra Microsoft Teams de plataforma que se presentan en Microsoft Build 2021,
 |05/26/2021| Crear pestañas con tarjetas adaptables. |[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
 |05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| La característica modo juntos combina a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Modo juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| La característica de escenas del modo combinado personalizado combina a los participantes en una única escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021| Las pestañas vinculan el despliegue y la vista de fase. |[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
 
@@ -57,6 +57,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|06/09/2021| Vista de fase de imágenes en tarjetas adaptables con `allowExpand` atributo. | [Vista de fase para imágenes en tarjetas adaptables](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Pestañas conversacionales. | [Iniciar y continuar conversaciones sobre el contenido en las pestañas](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Se Teams directrices de diseño de aplicaciones con patrones móviles y mucho más.|[Diseño de la Teams aplicación](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| Se agregó información sobre mConnect y Skooler.|[Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)
@@ -103,7 +104,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 |07/27/2020 | Graph bots y mensajes proactivos (versión preliminar pública).|[Habilitar la instalación proactiva de bots y la mensajería proactiva en Teams con Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |07/22/2020 |Actualizaciones de funcionalidad de dispositivo móvil.|[Solicitar permisos de dispositivo para la Microsoft Teams pestaña](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Teams Herramienta de validación de aplicaciones para envíos de AppSource.|[Teams Herramienta de validación de aplicaciones](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
-|07/15/2020|Cree un asistente virtual para Teams.|[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
+|07/15/2020|Cree un asistente virtual para Teams.|[Virtual Assistant para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Mostrar una documentación de indicador de carga nativa.|[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Empieza a crear Teams aplicaciones con el Visual Studio Code Toolkit.|[Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Inicio de sesión único para las pestañas GA para Teams web y de escritorio.|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
@@ -196,7 +197,7 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 |05/26/2021|Compilar pestañas con tarjetas adaptables|[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
 |05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| La característica modo juntos combina a los participantes en una sola escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Modo juntos](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| La característica de escenas del modo combinado personalizado combina a los participantes en una única escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Vínculo de tabulaciones y vista de fase|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
 |03/05/2021| Las pestañas ya no tendrán márgenes alrededor de sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |

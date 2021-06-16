@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630148"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949682"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -178,6 +178,11 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
+
+## <a name="deep-linking-to-an-app"></a>Vinculación profunda a una aplicación
+
+Crea vínculos profundos para la aplicación después de que la aplicación aparezca en la Teams aplicación. Para crear un vínculo para iniciar Teams, anexe la siguiente dirección URL al identificador de la aplicación: `https://teams.microsoft.com/l/app/<your-app-id>` . Aparece un cuadro de diálogo para instalar la aplicación. 
+  
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculación profunda para SharePoint Framework pestañas
 
 El siguiente formato de vínculo profundo se puede usar en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -251,7 +256,7 @@ Estos son los parámetros de consulta:
 |-------------|-------------|------|----|
 |Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 
