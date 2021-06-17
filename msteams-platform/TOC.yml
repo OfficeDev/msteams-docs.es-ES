@@ -212,6 +212,8 @@
           href: tabs/tabs-link-unfurling.md
         - name: Crear pestañas de conversación
           href: tabs/how-to/conversational-tabs.md
+        - name: Cambios del margen de pestaña
+          href: resources/removing-tab-margins.md
     - name: Guías de inicio rápido
       items:
         - name: Pestaña personal con Node.js
@@ -309,7 +311,7 @@
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Habilitar y configurar las aplicaciones para reuniones
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    - name: Modo conferencia en Teams
+    - name: Escenas personalizadas en modo conjunto en Teams
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Crear webhooks y conectores
   items:
@@ -371,8 +373,6 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: Usar autenticación SSO
           href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Añadir SSO con el kit de herramientas de Teams para Visual Studio Code
-          href: toolkit/visual-studio-code-tab-sso.md
     - name: Bots
       items:
         - name: Flujo de autenticación en bots
@@ -477,8 +477,6 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Esquema de JSON de localización
           href: resources/schema/localization-schema.md
-    - name: Cambios del margen de pestaña
-      href: resources/removing-tab-margins.md
     - name: Atributo de cookies SameSite (actualización de 2020)
       href: resources/samesite-cookie-update.md
     - name: Casos con errores frecuentes para los envíos de la tienda
