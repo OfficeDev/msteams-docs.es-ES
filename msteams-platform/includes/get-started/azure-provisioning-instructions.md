@@ -19,7 +19,7 @@ La implementación consta de dos pasos.  En primer lugar, se crean los recursos 
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Captura de pantalla del cuadro de diálogo de aprovisionamiento.":::
 
-   El proceso de aprovisionamiento creará recursos en la nube de Azure.  Esto llevará algún tiempo.  Puede supervisar el progreso viendo los cuadros de diálogo en la esquina inferior derecha.  Después de unos minutos, verá el siguiente aviso:
+   El proceso de aprovisionamiento crea recursos en la nube de Azure. Esto lleva algo de tiempo. Puede supervisar el progreso viendo los cuadros de diálogo en la esquina inferior derecha. Después de unos minutos, verá el siguiente aviso:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo completado de aprovisionamiento.":::
 
@@ -35,7 +35,7 @@ En la ventana de terminal:
    teamsfx provision
    ```
 
-   Es posible que se le pida que inicie sesión en su suscripción de Azure.  Si es necesario, se le pedirá que seleccione una suscripción de Azure que se usará para los recursos de Azure.
+   Es posible que se le pida que inicie sesión en su suscripción de Azure. Si es necesario, se le pedirá que seleccione una suscripción de Azure que se usará para los recursos de Azure.
 
    > [!NOTE]
    > Siempre hay algunos recursos de Azure usados para hospedar la aplicación.
@@ -51,7 +51,7 @@ En la ventana de terminal:
 > [!NOTE]
 > **¿Cuál es la diferencia entre Aprovisionar e Implementar?**
 >
-> El **paso Aprovisionar** creará recursos en Azure y M365 para la aplicación, pero no se copia ningún código (HTML, CSS, JavaScript, etc.) en los recursos.  El **paso** Implementar copiará el código de la aplicación en los recursos que creaste durante el paso de aprovisionamiento.  Es común implementar varias veces sin aprovisionar nuevos recursos. Dado que el paso de aprovisionamiento puede tardar algún tiempo en completarse, es independiente del paso de implementación.
+> El **paso Aprovisionar** crea recursos en Azure y M365 para la aplicación, pero no se copia ningún código (HTML, CSS, JavaScript, etc.) en los recursos. El **paso Implementar** copia el código de la aplicación en los recursos que creaste durante el paso de aprovisionamiento. Es común implementar varias veces sin aprovisionar nuevos recursos. Dado que el paso de aprovisionamiento puede tardar algún tiempo en completarse, es independiente del paso de implementación.
 
 Una vez finalizados los pasos de aprovisionamiento e implementación:
 

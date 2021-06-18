@@ -6,12 +6,12 @@ keywords: Medios de permisos de dispositivo nativos de las capacidades de micró
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 48566c6301141d8c7755482a1f5f5daec33449f3
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630568"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994381"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
 
@@ -29,7 +29,8 @@ Para una integración eficaz, debe tener una buena comprensión de los fragmento
 Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la Teams aplicación.
 
 > [!NOTE] 
-> Actualmente, Microsoft Teams compatibilidad con funcionalidades multimedia solo está disponible para clientes móviles.
+> * Actualmente, Microsoft Teams compatibilidad con funcionalidades multimedia solo está disponible para clientes móviles.    
+> * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel lateral de la reunión. 
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
@@ -255,7 +256,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 * [Integrar la funcionalidad de escáner de códigos QR o códigos de barras en Teams](qr-barcode-scanner-capability.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)

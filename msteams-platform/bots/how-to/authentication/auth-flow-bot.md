@@ -4,12 +4,12 @@ description: Describe Microsoft Teams de autenticación en bots
 keywords: bots de flujo de autenticación de teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: f3bf73c105dc38e1cea515bfa7bb7d5324b02ce4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565909"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994227"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flujo de autenticación para bots en Microsoft Teams
 
@@ -28,7 +28,7 @@ Consulte el ejemplo Microsoft Teams [](https://github.com/OfficeDev/Microsoft-Te
     > El flujo de concesión de código de autorización de OAuth 2.0 llama a un parámetro de la solicitud de autenticación que contiene un token de sesión único para evitar un ataque de falsificación de solicitudes `state` [entre sitios.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) En el ejemplo se usa un GUID generado aleatoriamente.
 4. Cuando el usuario selecciona el botón *de* inicio de sesión, Teams abre una ventana emergente y navega a la página de inicio.
    > [!NOTE]
-   > El tamaño de la ventana emergente se puede controlar mediante parámetros de cadena de consulta de ancho y alto en la dirección URL. Por ejemplo, si agrega width=500 y height=500, el tamaño de la ventana emergente es de 500 x 500 píxeles. Teams muestra la ventana emergente con el tamaño de píxel especificado, hasta un máximo que es un porcentaje del tamaño de la ventana principal.
+   > El tamaño de la ventana emergente se puede controlar mediante parámetros de cadena de consulta de ancho y alto en la dirección URL. Por ejemplo, si agrega width=600 y height=600, el tamaño de la ventana emergente es de 600 x 600 píxeles. El tamaño real de la ventana emergente se recueste como un porcentaje del Teams de la ventana principal. Si la Teams es pequeña, la ventana emergente es menor que las dimensiones especificadas.
 
 5. La página de inicio redirige al usuario al extremo del proveedor de `authorize` identidades. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. En el sitio del proveedor, el usuario inicia sesión y concede acceso al bot.
@@ -57,6 +57,6 @@ Código de ejemplo que muestra el proceso de autenticación del bot:
 | Teams autenticación | En este ejemplo se muestra la autenticación en Microsoft Teams aplicaciones. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
 | Autenticación de bot | En este ejemplo se muestra cómo usar la autenticación para un bot que se ejecuta en Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 [Agregar autenticación al bot Teams usuario](add-authentication.md)

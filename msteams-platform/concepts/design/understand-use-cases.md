@@ -5,12 +5,12 @@ description: Al planear la Microsoft Teams, primero debes comprender qué proble
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7e91ddcab88243baf83f11fad59539845724fc78
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630764"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994101"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -77,7 +77,7 @@ Sobre todo, recuerde que a nadie le gusta el correo no deseado. La limpieza de m
 
 Identifique qué nuevas características prefiere tener el usuario en la solución actual. Si tienes una guía básica para nuevas características que agregar a la aplicación, el diseño y la arquitectura se verán afectados.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 * [Elegir cómo distribuir la aplicación](../deploy-and-publish/apps-publish-overview.md)
 * [Pestañas de diseño](../../tabs/design/tabs.md)

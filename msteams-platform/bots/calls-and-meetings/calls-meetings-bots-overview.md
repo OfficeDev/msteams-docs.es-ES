@@ -4,17 +4,14 @@ description: Obtén información sobre cómo las Microsoft Teams pueden interact
 ms.topic: conceptual
 localization_priority: Normal
 keywords: llamadas de audio vídeo IVR reuniones en línea de voz
-ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 02354bb37c564d2ad30a502c9a4a28d1f899c2b1
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058316"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994234"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de llamadas y reuniones en línea
-
-> [!NOTE]
-> Actualmente, la compatibilidad con llamadas y bots de reunión en línea no se admite en la plataforma Microsoft Teams móvil.
 
 Los bots pueden interactuar con Teams llamadas y reuniones mediante el uso compartido de pantalla, vídeo y voz en tiempo real. Con [las API de Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)para llamadas y reuniones en línea, Teams aplicaciones ahora pueden interactuar con los usuarios mediante voz y vídeo para mejorar la experiencia. Estas API le permiten agregar las siguientes características nuevas:
 
@@ -53,6 +50,10 @@ Las llamadas son punto a punto entre una persona y el bot, o varias partes entre
 A continuación se enumeran los distintos tipos de llamadas y permisos necesarios para la llamada:
 
 * Un usuario puede iniciar una llamada punto a punto con el bot o invitar al bot a una llamada multiparte existente. La llamada multiparte aún no está habilitada en la interfaz Teams usuario.
+
+    > [!NOTE]
+    > Actualmente, las llamadas iniciadas por el usuario a un bot no se admiten Microsoft Teams plataforma móvil.
+
 * Graph permisos no son necesarios para que un usuario inicie una llamada punto a punto con el bot. Se necesitan permisos adicionales para que el bot participe en una llamada multiparte o para que el bot inicie una llamada punto a punto con un usuario.
 * Una llamada puede iniciarse como punto a punto y, finalmente, convertirse en una llamada multipartid. El bot puede iniciar llamadas multipartes invitando a otras personas, siempre que el bot tenga los permisos adecuados. Si el bot no tiene permisos para participar en llamadas de grupo y si un participante agrega otro participante a la llamada, el bot se descarta de la llamada.
 
@@ -93,7 +94,7 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 |---------------|----------|--------|
 | Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 - [Graph Referencia de API](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
 

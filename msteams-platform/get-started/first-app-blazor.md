@@ -5,12 +5,12 @@ description: Cree rápidamente una aplicación de Microsoft Teams en la que se m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667457"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994395"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Crear y ejecutar la primera aplicación Microsoft Teams con Blazor
 
@@ -269,11 +269,14 @@ El manifiesto de la aplicación está cargando la pestaña desde una `localhost`
 
 Ahora puedes usar el botón Vista previa **en Teams** en la parte superior de la página para iniciar la aplicación en Teams.
 
-## <a name="next-steps"></a>Pasos siguientes
-
-Vea otros métodos para crear aplicaciones de Teams:
+## <a name="see-also"></a>Ver también
 
 - [Crear una aplicación de Teams con React](first-app-react.md)
-- [Crear una aplicación de Teams como elemento web de SharePoint](first-app-spfx.md) (no se necesita Azure)
+- [Crear una aplicación Teams como elemento SharePoint web](first-app-spfx.md)
 - [Crear una aplicación de bots de conversación](first-app-bot.md)
 - [Crear una extensión de mensajería](first-message-extension.md)
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Crear una aplicación Teams como elemento SharePoint web](first-app-spfx.md)

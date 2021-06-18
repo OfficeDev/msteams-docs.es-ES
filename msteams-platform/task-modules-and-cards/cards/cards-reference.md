@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 localization_priority: Normal
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 741980ea79dd23659dd2b8a240d767b8292ca251
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668865"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994388"
 ---
 # <a name="cards-reference"></a>Referencia de tarjetas
 
@@ -55,7 +55,7 @@ Las imágenes deben tener como máximo 1024×1024, en formato PNG, JPEG o GIF, y
 | Propiedad | Tipo  | Descripción |
 | --- | --- | --- |
 | url | URL | DIRECCIÓN URL HTTPS a la imagen. |
-| alt | Cadena | Descripción accesible de la imagen. |
+| alt | String | Descripción accesible de la imagen. |
 
 > [!NOTE]
 > Si una tarjeta incluye una dirección URL de imagen que pasa por un redireccionamiento antes de la imagen final, no se admite el redireccionamiento en la dirección URL de la imagen. Esto ocurre para las imágenes compartidas en la nube pública.
@@ -82,7 +82,8 @@ Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier
 
 > [!NOTE]
 > * Teams plataforma admite v1.2 o versiones anteriores de características de tarjeta adaptable.
-> * Actualmente, los elementos multimedia no se admiten en la tarjeta adaptable v1.2 en la Teams web.
+> * El estilo de acción positiva o destructiva no se admite en tarjetas adaptables en la Teams web.
+> * Actualmente, los elementos multimedia no se admiten en tarjetas adaptables en la Teams web.
 
 ### <a name="example-of-an-adaptive-card"></a>Ejemplo de una tarjeta adaptable
 

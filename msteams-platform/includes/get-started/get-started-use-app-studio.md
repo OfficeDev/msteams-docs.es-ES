@@ -16,7 +16,11 @@ Siga estos pasos para actualizar el paquete de la aplicación:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    El ejemplo viene con su propio manifiesto y está diseñado para crear un paquete de aplicación cuando se crea el proyecto. En .NET esto se hace en Visual Studio y en Node.js esto se realiza escribiendo en la línea de comandos en `gulp` el directorio raíz del proyecto.
+    El ejemplo viene con su propio manifiesto y está diseñado para crear un paquete de aplicación cuando se crea el proyecto. Puedes crear el paquete de la aplicación en .NET con Visual Studio. En Visual Studio, el manifest.jsel archivo on se encuentra en **en Manifiesto** en `Microsoft.Teams.Samples.HelloWorld.Web` . Este paso se describe en la siguiente imagen:  
+    
+    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+    
+    Puedes crear el paquete de la aplicación en Node.js escribiendo en la línea `gulp` de comandos en el directorio raíz del proyecto.
 
     ```bash
     $ gulp

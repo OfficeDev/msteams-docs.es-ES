@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear una pestaña personalizada c
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 54886b47bbe70fed5dd1f010517e6c91d8d5a50d
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 23df721a28225a8c453274e6e77efa8f756e84f3
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646862"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994374"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Compila y ejecuta la primera aplicación Microsoft Teams con SharePoint Framework (SPFx)
 
@@ -236,11 +236,13 @@ Abra la Teams (o inicie sesión en `https://teams.microsoft.com` ).  Presione el
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Captura de pantalla que muestra la aplicación en Teams":::
 
-## <a name="next-steps"></a>Pasos siguientes
-
-Vea otros métodos para crear aplicaciones de Teams:
+## <a name="see-also"></a>Ver también
 
 - [Crear una aplicación de Teams con React](first-app-react.md)
 - [Crear una aplicación de Teams con Blazor](first-app-blazor.md)
-- [Crear una aplicación de bots de conversación](first-app-bot.md)
 - [Crear una extensión de mensajería](first-message-extension.md)
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Crear una aplicación de bots de conversación](first-app-bot.md)

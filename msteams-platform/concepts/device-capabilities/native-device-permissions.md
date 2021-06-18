@@ -4,12 +4,12 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: dd317da0b2c8e214f7a44d13ef69bf9fea2aad93
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630540"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994353"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para la Microsoft Teams aplicación
 
@@ -29,6 +29,9 @@ Al obtener acceso a las capacidades del dispositivo, puedes crear experiencias m
 * Grabar y compartir vídeos cortos.
 * Grabe notas de audio y guárdelas para su uso posterior.
 * Use la información de ubicación del usuario para mostrar información relevante.
+
+> [!NOTE]
+> Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel lateral de la reunión. 
 
 ## <a name="access-device-permissions"></a>Permisos de dispositivo de acceso
 
@@ -187,7 +190,7 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 > [!NOTE]
 > Cuando da su consentimiento a los permisos de dispositivo nativo, solo es válido para la _sesión de_ inicio de sesión actual.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)

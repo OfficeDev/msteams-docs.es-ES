@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: d2e9900e6c7d1f5ea5edfabe6dacb2f18b429b3f
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949780"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994220"
 ---
 # <a name="send-proactive-messages"></a>Enviar mensajes proactivos
 
@@ -67,9 +67,7 @@ Después de obtener la información de dirección adecuada, puede enviar el mens
 
 ## <a name="send-the-message"></a>Enviar el mensaje
 
-Ahora que tiene la información de dirección correcta, puede enviar el mensaje. Si usas el SDK, lo harás con el método y con y para realizar `continueConversation` una llamada directa a la `conversationId` `tenantId` API. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje. Vea la [sección de](#samples) ejemplos o use uno de los ejemplos enumerados en la sección de [ejemplo de](#code-sample) código.
-
-Si usa el SDK, debe usar el método y la llamada a la API directa `continueConversation` `conversationId` para enviar el `tenantId` mensaje. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje.
+Ahora que tiene la información de dirección correcta, puede enviar el mensaje. Si usa el SDK, debe usar el método `continueConversation` y y realizar una llamada directa a la `conversationId` `tenantId` API. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje. Vea la [sección de](#samples) ejemplos o use uno de los ejemplos enumerados en la sección de [ejemplo de](#code-sample) código.
 
 Ahora que ha enviado el mensaje proactivo, debe seguir estos procedimientos recomendados mientras envía mensajes proactivos para un mejor intercambio de información entre los usuarios y el bot.
 
@@ -115,7 +113,7 @@ Envía un mensaje de forma proactiva a los usuarios que no han instalado o inter
 
 Solo puedes instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en la Tienda de aplicaciones de Teams.
 
-Consulta [instalar aplicaciones para usuarios en](/graph/api/userteamwork-post-installedapps) la documentación Graph y la instalación proactiva de [bots](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)y la mensajería en Teams con Graph . También hay un ejemplo [de Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
+Consulta [Instalar aplicaciones para usuarios en](/graph/api/userteamwork-post-installedapps) la documentación de Graph y la instalación proactiva de [bots y mensajería en Teams con Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). También hay un ejemplo [de Microsoft .NET framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
 
 ## <a name="samples"></a>Ejemplos
 
@@ -280,8 +278,11 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 > [!div class="nextstepaction"]
 > [Teams de código de mensajería proactiva](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
+## <a name="see-also"></a>Ver también
+
+[**Teams de código de mensajería proactiva**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [**Teams de código de mensajería proactiva**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
->  [Dar formato a los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)
+> [Formatear los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)

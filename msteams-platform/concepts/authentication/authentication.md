@@ -4,12 +4,12 @@ description: Describe la autenticación en Teams y cómo usarla en las aplicacio
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Autenticación de teams OAuth SSO AAD
-ms.openlocfilehash: a7488533590fe941ceed0ca6476253c4a3f3ce41
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: c48f58c9d6f22b406a94e8370bab4b6a908fb2c8
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101719"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994080"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 

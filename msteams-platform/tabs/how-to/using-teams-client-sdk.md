@@ -6,12 +6,12 @@ description: Información general sobre Microsoft Teams SDK de cliente de JavaSc
 localization_priority: Normal
 keywords: Canal de grupo de pestañas de teams configurable sdk estático JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: 04c6bb9d7687a068375bce548588e6713fd57747
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630344"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994367"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Crear pestañas y otras experiencias hospedadas con el SDK Microsoft Teams cliente de JavaScript
 
@@ -58,6 +58,7 @@ Consulta las tablas siguientes para comprender las funciones de SDK que se usan 
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|Inicia una solicitud de autenticación que abre una nueva ventana con los parámetros proporcionados por el autor de la llamada. El objeto **AuthenticateParameters** define los valores de entrada opcionales.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|Notifica al marco que inició la solicitud de autenticación que la solicitud se ha realizado correctamente y cierra la ventana de autenticación|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|Notifica al marco que inició la solicitud de autenticación que la solicitud ha producido un error y cierra la ventana de autenticación.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|Enviar solicitud para emitir un token de Azure AD en nombre de la aplicación. El token se puede adquirir de la memoria caché, si no ha expirado. De lo contrario, se envía una solicitud a Azure AD para obtener un nuevo token.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>Configuración espacio de nombres
 

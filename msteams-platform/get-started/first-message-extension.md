@@ -5,12 +5,12 @@ description: Cree una extensión de mensajería para Microsoft Teams con el Kit 
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710651"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994206"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crear y ejecutar la primera extensión de mensajería para Microsoft Teams
 
@@ -184,9 +184,7 @@ El Teams configuración de autenticación de búsqueda para proyectos de ejemplo
 > [!div class="nextstepaction"]
 > [Ver más ejemplos de Bot Framework en GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="next-steps"></a>Pasos siguientes
-
-Vea otros métodos para crear aplicaciones de Teams:
+## <a name="see-also"></a>Ver también
 
 - [Crear una aplicación de Teams con React](first-app-react.md)
 - [Crear una aplicación de Teams con Blazor](first-app-blazor.md)

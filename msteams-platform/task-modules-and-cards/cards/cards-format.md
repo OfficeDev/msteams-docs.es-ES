@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: eead38b7f28ca740473a1df029e35b9ac624391d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949766"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994171"
 ---
 # <a name="format-cards-in-teams"></a>Dar formato a las tarjetas Teams
 
@@ -165,9 +165,6 @@ Use la propiedad information masking para enmascarar información específica, c
 
 > [!NOTE]
 > La característica solo admite el enmascaramiento de información del lado [cliente,](../../build-your-first-app/build-bot.md)el texto de entrada enmascarado se envía como texto sin formato a la dirección del extremo https que se especificó durante la configuración del bot . 
-
-> [!NOTE]
-> La propiedad de enmascaramiento de información está disponible actualmente solo en la versión preliminar del desarrollador.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Tarjeta adaptable de ejemplo con la propiedad masking
 
