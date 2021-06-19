@@ -427,8 +427,10 @@
       items:
         - name: Probar permisos de consentimientos específicos de recursos
           href: graph-api/rsc/test-resource-specific-consent.md
-        - name: Archivo de prueba JSON de consentimientos específicos de recursos
-          href: graph-api/rsc/test-rsc-json-file.md
+        - name: Consentimiento específico del recurso para el archivo de prueba JSON del equipo
+          href: graph-api/rsc/test-team-rsc-json-file.md
+        - name: Consentimiento específico del recurso para el archivo de prueba JSON del chat
+          href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: Distribuir la aplicación
   items:
     - name: Información general
