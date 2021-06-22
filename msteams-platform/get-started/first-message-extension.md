@@ -5,12 +5,12 @@ description: Cree una extensión de mensajería para Microsoft Teams con el Kit 
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994206"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037638"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crear y ejecutar la primera extensión de mensajería para Microsoft Teams
 
@@ -97,7 +97,7 @@ Una extensión de mensajería usa [Bot Framework](https://docs.botframework.com)
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="Distribución de archivos de un proyecto de bot.":::
 
-El código bot se almacena en el directorio `bot`.  `bots/messageExtensionBot.js` es el punto de entrada principal de la extensión de mensajería.
+El código bot se almacena en el directorio `bot`.  `bot/messageExtensionBot.js` es el punto de entrada principal de la extensión de mensajería.
 
 > [!Tip]
 > Familiarícese con los bots fuera de Teams antes de integrar su primer bot en Teams.  Para encontrar más información sobre los bots, vea los tutoriales de [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).
@@ -175,7 +175,7 @@ La implementación implica recursos de aprovisionamiento en una suscripción act
 
 El Teams configuración de autenticación de búsqueda para proyectos de ejemplo en GitHub, muestra cómo crear extensiones de mensajería que incluyen una página de configuración y autenticación de [servicio de bot.](https://github.com/microsoft/BotBuilder-Samples#teams-samples) Los ejemplos también muestran cómo crear extensiones de mensaje que acepten solicitudes de búsqueda y devuelvan los resultados después de que el usuario haya iniciado sesión.
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
 | Generador de bots | Para crear extensiones de mensajería. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 

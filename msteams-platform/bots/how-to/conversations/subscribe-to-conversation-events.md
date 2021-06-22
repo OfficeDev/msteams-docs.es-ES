@@ -5,12 +5,12 @@ description: Cómo trabajar con eventos de conversación desde el Microsoft Team
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630708"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049052"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -1386,9 +1386,27 @@ No disponible
 
 ---
 
+## <a name="uninstall-behavior-for-personal-app-with-bot"></a>Comportamiento de desinstalación de la aplicación personal con bot
+
+> [!NOTE]
+> El comportamiento de desinstalación de la aplicación personal con bot solo está disponible actualmente en [la versión preliminar del desarrollador público.](../../../resources/dev-preview/developer-preview-intro.md)
+
+Al desinstalar una aplicación, el bot también se desinstala. Cuando un usuario envía un mensaje a la aplicación, recibe un código de respuesta 403. El bot recibe un código de respuesta 403 para los nuevos mensajes publicados por el bot. El comportamiento posterior a la desinstalación de bots en el ámbito personal con los ámbitos Teams y groupChat ahora están alineados. No puedes enviar ni recibir mensajes después de desinstalar una aplicación.
+
+<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
+
+## <a name="event-handling-for-install-and-uninstall-events"></a>Control de eventos para eventos de instalación y desinstalación
+
+Al usar estos eventos de instalación y desinstalación, hay algunas instancias en las que los bots dan excepciones al recibir eventos inesperados de Teams. Esto ocurre en los siguientes casos:
+
+* Creas el bot sin el SDK Microsoft Bot Framework y, como resultado, el bot da una excepción al recibir un evento inesperado.
+* Creas el bot con el SDK de Microsoft Bot Framework y seleccionas modificar el comportamiento de evento predeterminado invalidando el identificador de evento base.
+
+Es importante saber que los nuevos eventos se pueden agregar en cualquier momento en el futuro y el bot comienza a recibirlos. Por lo tanto, debe diseñar la posibilidad de recibir eventos inesperados. Si usa el SDK de Bot Framework, el bot responde automáticamente con un 200: aceptar cualquier evento que no elija controlar.
+
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | Bot de conversación | Código de ejemplo para eventos de conversación de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

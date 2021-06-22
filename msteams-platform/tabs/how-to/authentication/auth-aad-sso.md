@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
-ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
+ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52760884"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049039"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -120,7 +120,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
 >
 > * ¹ Si la aplicación de AAD está registrada en el mismo espacio empresarial donde realiza una solicitud de autenticación en Teams, no se le puede pedir al usuario su consentimiento y se le concede un token de acceso de inmediato. Los usuarios solo consienten estos permisos si la aplicación AAD está registrada en un inquilino diferente.
 > * ² Si el dominio personalizado no se agrega a AAD, se produce un error que indica que el nombre de host no debe basarse en un dominio ya propiedad. Para agregar un dominio personalizado a AAD y registrarlo, siga el procedimiento agregar un nombre de dominio [personalizado al procedimiento de AAD](/azure/active-directory/fundamentals/add-custom-domain) y, a continuación, repita el paso 5. También puede obtener este error si no ha iniciado sesión con credenciales de administrador en el Office 365 arrendamiento.
-> * Si no recibe el nombre principal de usuario (UPN)) en el token de acceso devuelto, puede agregarlo como una notificación opcional [en](/azure/active-directory/develop/active-directory-optional-claims) AAD.
+> * Si no recibe el nombre principal de usuario (UPN) en el token de acceso devuelto, puede agregarlo como una notificación opcional [en](/azure/active-directory/develop/active-directory-optional-claims) AAD.
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. Actualizar el manifiesto Teams aplicación
 
@@ -166,7 +166,7 @@ Después de recibir el token de acceso en la devolución de llamada correcta, pu
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|**Nombre de ejemplo**|**Descripción**|**C#**|**Node.js**|
+|**Nombre de ejemplo**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams de ejemplo para pestañas SSO de Azure AD| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 

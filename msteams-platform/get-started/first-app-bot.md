@@ -5,12 +5,12 @@ description: Crear un bot de conversación para Microsoft Teams con el Kit de he
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 68b266b1cf9d8f7e9b4b98611d3ba982a2e18a47
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994262"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037652"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Cree su primer bot de conversación para Microsoft Teams
 
@@ -89,7 +89,7 @@ Una extensión de mensajería usa [Bot Framework](https://docs.botframework.com)
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="Distribución de archivos de un proyecto de bot.":::
 
-El código bot se almacena en el directorio `bot`.  El `bots/teamsBot.js` es el punto de entrada principal para el bot, y los cuadros de diálogo se almacenan en el directorio `dialogs`.
+El código bot se almacena en el directorio `bot`.  El `bot/teamsBot.js` es el punto de entrada principal para el bot, y los cuadros de diálogo se almacenan en el directorio `dialogs`.
 
 > [!Tip]
 > Familiarícese con los bots fuera de Teams antes de integrar su primer bot en Teams.  Para encontrar más información sobre los bots, vea los tutoriales de [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).
