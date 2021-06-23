@@ -1,17 +1,17 @@
 ---
 title: Microsoft Teams y el atributo cookie SameSite (actualización de 2020)
-author: laujan
+author: surbhigupta
 description: describe los atributos de la cookie SameSite
 keywords: atributos cookie samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9e899cd7f4e8adcf55a39fc5cef434a7faa4b0ba
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629854"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068627"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams y el atributo cookie SameSite (actualización de 2020)
 
@@ -57,7 +57,7 @@ Chrome 80, programado para su lanzamiento en febrero de 2020, introduce nuevos v
 ### <a name="tabs-task-modules-and-message-extensions"></a>Pestañas, módulos de tareas y extensiones de mensaje
 
 * Teams pestañas para insertar contenido que se ve en un contexto de nivel superior o `<iframes>` de primera persona.
-* Los módulos de tareas le permiten crear experiencias emergentes modales en su aplicación de Teams. De forma similar a una pestaña, se abre una ventana modal dentro de la página actual.
+* Los módulos de tareas te permiten crear experiencias emergentes modales en tu  aplicación de Teams. De forma similar a una pestaña, se abre una ventana modal dentro de la página actual.
 * Las extensiones de mensajes permiten insertar contenido enriquecido en un mensaje de chat desde recursos externos.
 
 Las cookies usadas por el contenido incrustado se considerarán de terceros cuando el sitio se muestre en un `<iframe>` archivo . Además, si los recursos remotos de una página dependen de las cookies que se envían con una solicitud y etiquetas, fuentes externas y contenido personalizado, debe asegurarse de que están marcadas para el uso entre sitios, como o asegurarse de que hay una `<img>` `<script>` `SameSite=None; Secure` reserva.

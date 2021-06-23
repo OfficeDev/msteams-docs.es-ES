@@ -6,13 +6,13 @@ ms.date: 05/20/2019
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: da624ea0e92e193f4ad7f334d958349d542dd6e0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 6a9eaab388927fcff51d7883e1a61ca1cec81fac
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566470"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069077"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Controlar eventos de bot en Microsoft Teams
 

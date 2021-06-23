@@ -1,16 +1,16 @@
 ---
 title: Bots y SDK
-author: clearab
+author: surbhigupta
 description: Bots y SDK en Microsoft Teams.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020186"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069025"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -41,7 +41,7 @@ El Teams bot consta de los tres elementos siguientes:
 
 ## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots y microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) es un servicio de chatbot basado en la plataforma Microsoft Power y Bot Framework. El proceso de desarrollo de Power Virtual Agent usa un enfoque de interfaz gráfica y sin código guiado que permite a los miembros del equipo crear y mantener fácilmente un agente virtual inteligente. Después de crear el chatbot en [el portal de Power Virtual Agents,](https://powervirtualagents.microsoft.com)puede [integrarlo](how-to/add-power-virtual-agents-bot-to-teams.md)fácilmente con Teams . Para obtener más información sobre cómo empezar, [vea Power Virtual Agents documentación](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) es un servicio de chatbot basado en la plataforma Microsoft Power y Bot Framework. El proceso de desarrollo de Power Virtual Agent usa un enfoque de interfaz gráfica y sin código guiado que permite a los miembros del equipo crear y mantener fácilmente un agente virtual inteligente. Después de crear el chatbot en [el portal de Power Virtual Agents,](https://powervirtualagents.microsoft.com)puede [integrarlo](how-to/add-power-virtual-agents-bot-to-teams.md)fácilmente con Teams . Para obtener más información sobre cómo empezar, [vea Power Virtual Agents documentación](/power-virtual-agents).
 
 ## <a name="bots-and-webhooks-and-connectors"></a>Bots, webhooks y conectores
 

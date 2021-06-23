@@ -1,16 +1,16 @@
 ---
 title: Formatear los mensajes del bot
-author: clearab
+author: surbhigupta
 description: Agregar formato enriquecido a los mensajes del bot
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020908"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068987"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
@@ -53,7 +53,7 @@ Actualmente, algunos estilos no se admiten en todas las plataformas. En la tabla
 | Lista ordenada              | ✖ | ✔ |
 | Texto con formato previo         | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
+| Hipervínculo                 | ✔ | ✔ |
 | Vínculo imagen                | ✔ | ✖ |
 
 Después de comprobar la compatibilidad entre plataformas, asegúrese de que la compatibilidad con plataformas individuales también esté disponible.
@@ -66,7 +66,7 @@ La compatibilidad con el formato de texto varía según el tipo de mensaje y la 
 
 En la tabla siguiente se proporciona una lista de estilos y cuáles de estos estilos se admiten en escritorio, iOS y Android:
 
-| Estilo                     | Desktop | iOS | Android |
+| Estilo                     | Escritorio | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | Negrita                      | ✔ | ✔ | ✔ |
 | Italic                    | ✔ | ✔ | ✔ |
@@ -77,7 +77,7 @@ En la tabla siguiente se proporciona una lista de estilos y cuáles de estos est
 | Lista ordenada              | ✔ | ✖ | ✖ |
 | Texto con formato previo         | ✔ | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
+| Hipervínculo                 | ✔ | ✔ | ✔ |
 | Vínculo imagen                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Tarjetas

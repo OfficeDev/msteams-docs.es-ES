@@ -1,16 +1,16 @@
 ---
 title: Extensiones de mensajería
-author: clearab
+author: surbhigupta
 description: Información general sobre las extensiones de mensajería en la Microsoft Teams de mensajería
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 6bf4b9a3147e9916f2eac05a890fc8fc134799be
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075671"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069096"
 ---
 # <a name="messaging-extensions"></a>Extensiones de mensajería
 
@@ -33,7 +33,7 @@ La siguiente imagen muestra las ubicaciones desde las que se invocan las extensi
 Una extensión de mensajería consta de un servicio web que hospeda y un manifiesto de aplicación, que define desde dónde se invoca el servicio web en el Microsoft Teams cliente. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación seguro, por lo que debe registrar el servicio web como bot en Bot Framework. 
 
 > [!NOTE]
-> Aunque puede crear el servicio web manualmente, use [bot Framework SDK](https://github.com/microsoft/botframework) para trabajar con el protocolo.
+> Aunque puede crear el servicio web manualmente, use [bot Framework SDK](https://github.com/microsoft/botframework-sdk) para trabajar con el protocolo.
 
 En el manifiesto de la aplicación Microsoft Teams aplicación, se define una sola extensión de mensajería con hasta diez comandos diferentes. Cada comando define un tipo, como acción o búsqueda, y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son área de mensaje de redacción, barra de comandos y mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información relevante. Responda con una carga JSON, lo que permite al Teams cliente conocer la siguiente interacción que se habilitará. 
 

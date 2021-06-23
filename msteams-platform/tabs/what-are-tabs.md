@@ -1,16 +1,16 @@
 ---
 title: ¿Qué son las pestañas personalizadas Teams?
-author: laujan
+author: surbhigupta
 description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 06454530ab2d0b7e993120f6696f3507a7352bf3
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: 792604c7763628ce0d45b332064e23c14e94aeb2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667420"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069192"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 

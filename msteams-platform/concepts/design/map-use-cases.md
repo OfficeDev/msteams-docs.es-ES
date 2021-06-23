@@ -1,16 +1,16 @@
 ---
 title: Asignar los casos de uso a Teams funcionalidades de la aplicación
-author: clearab
+author: surbhigupta
 description: Identifica cómo pueden funcionar los casos de uso de la aplicación en la experiencia Teams aplicación.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 179d0a37d72577c36f2cc44a11a8217cb9f016b2
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b374f0ca81402effb548c1cfcb90ed3d316360f1
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566113"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068560"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 

@@ -1,16 +1,16 @@
 ---
 title: Probar y depurar el bot localmente
-author: clearab
+author: surbhigupta
 description: Probar y depurar el bot localmente con un IDE
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: af4b8d38b763d2266ec64fef0fe8c487b9120773
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631016"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068988"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -44,7 +44,7 @@ Usa el punto de conexión https proporcionado por ngrok en el manifiesto de la a
 
 En ocasiones, es posible que sea necesario probar el bot sin instalarlo como una aplicación en Teams. Proporcionamos dos métodos para probar el bot. Probar el bot sin instalarlo como una aplicación puede ser útil para garantizar que el bot esté disponible y responda, pero no te permitirá probar toda la amplitud de la funcionalidad de Microsoft Teams que puedas haber agregado al bot. Si necesita probar completamente el bot, consulte [testing by uploading](#test-by-uploading-to-teams).
 
-### <a name="use-the-bot-emulator"></a>Usar el emulador de bots
+### <a name="use-the-bot-emulator"></a>Use el bot Emulator
 
 El Bot Framework Emulator es una aplicación de escritorio que permite a los desarrolladores de bots probar y depurar sus bots de forma local o remota. El emulador te ayuda a chatear con el bot e inspeccionar los mensajes que el bot envía y recibe. Esto puede ser útil para comprobar que el bot está disponible y responde. Sin embargo, el emulador no permite probar ninguna funcionalidad específica de Teams que haya agregado al bot, ni las respuestas del bot son una representación visual precisa de cómo se representan en Teams. Si necesita probar cualquiera de esos aspectos, es mejor [cargar el bot](#test-by-uploading-to-teams).
 

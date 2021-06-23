@@ -1,14 +1,14 @@
 ---
 title: Habilitar y configurar las aplicaciones para Teams reuniones
-author: laujan
+author: surbhigupta
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
-ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
-ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
+ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "52871842"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068638"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -178,7 +178,7 @@ Las configuraciones posteriores a la reunión [y previas](#pre-meeting) a la reu
 |----------------|-----------------|--------------|----------------|-----------|
 | Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token, que se genera secuencialmente para que cada participante tenga una oportunidad equitativa de interactuar. Esto puede ser útil en situaciones como reuniones de scrum, preguntas&sesiones A, y así sucesivamente. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

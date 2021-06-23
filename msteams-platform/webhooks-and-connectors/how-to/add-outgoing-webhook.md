@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams tabs outgoing webhook actionable message verify webhook
-ms.openlocfilehash: a5a0cdfc9080ac4567f438b6fb6fd0671df8c19f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 2fac6f42e27a4c8cb3d079ea281d458a4dfe41ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566533"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069179"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>Agregar bots personalizados a Teams webhooks salientes
 
@@ -104,6 +104,110 @@ Las respuestas de los webhooks salientes aparecen en la misma cadena de respuest
     "text": "This is a reply!"
 }
 ```
+
+> [!NOTE]
+> * Puede enviar mensajes de texto, tarjeta de héroe y tarjeta adaptable como datos adjuntos con el webhook saliente.
+> * Las tarjetas admiten el formato. Para obtener más información, vea [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
+
+Los siguientes códigos son ejemplos de una respuesta de tarjeta adaptable:
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+string content = await this.Request.Content.ReadAsStringAsync();
+Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
+{
+    Body = new List<AdaptiveElement>()
+    {
+        new AdaptiveTextBlock(){Text= $"Request sent by: {incomingActivity.From.Name}"},
+        new AdaptiveImage(){Url=new Uri("https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6")},
+        new AdaptiveTextBlock(){Text="Sample image for Adaptive Card.."}
+    }
+};
+
+var attachment = new Attachment()
+{
+    ContentType = AdaptiveCard.ContentType,
+    Content = Card
+};
+
+var sampleResponseActivity = new Activity
+{
+    Attachments = new [] { attachment }
+};
+
+return sampleResponseActivity;
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+```javascript
+var receivedMsg = JSON.parse(payload);
+var responseMsg = JSON.stringify({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": null,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: " + receivedMsg.from.name
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": null,
+            "thumbnailUrl": null
+        }
+    ]
+});
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: Megan"
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card.."
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
+* * *
 
 ## <a name="create-an-outgoing-webhook"></a>Creación de un webhook saliente
 

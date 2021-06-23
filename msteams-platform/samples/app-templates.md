@@ -5,13 +5,13 @@ ms.topic: reference
 keywords: Microsoft Teams de ejemplos de plantillas
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: 8cfb066ee3c202fb8611a61bbde3058207a62a35
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566345"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069188"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -42,7 +42,7 @@ La plantilla de aplicación Champion Management Platform (CMP) te ayuda a admini
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Herramienta de adopción: Microsoft 365 caminos de aprendizaje (Introducción) &#9734;
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Herramienta de adopción: Microsoft 365 Learning rutas de acceso (Introducción) &#9734;
 
 La Introducción de aplicación te permite aportar la potencia de las Microsoft 365 de aprendizaje dentro de Microsoft Teams. Esta plantilla de aplicación te permite conceder un acceso fácil a páginas de aprendizaje específicas u otros activos de intranet y cargar el contenido directamente dentro de Teams. También puedes cambiar el nombre o el logotipo de la aplicación para que coincida con la personalción de marca de tu empresa.
 
@@ -73,7 +73,7 @@ Ask Away es un [bot Microsoft Teams](../bots/what-are-bots.md) que permite a los
 
 ## <a name="associate-insights"></a>Información de asociados
 
-Associate Insights es una plantilla [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) que permite a los trabajadores de primera línea capturar y enviar directamente la opinión, el sentimiento y la percepción del cliente. Los trabajadores de primera línea suelen ser el primer representante de la compañía en interactuar con los clientes en un punto a uno de contacto. Los equipos empresariales comparten y usan los datos recopilados de forma colaborativa, como a través de una pestaña Power BI Teams, para mejorar el producto y mejorar la experiencia del cliente.
+Associate Ideas es una [plantilla Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) que permite a los trabajadores de primera línea capturar y enviar directamente la opinión, el sentimiento y la percepción del cliente. Los trabajadores de primera línea suelen ser el primer representante de la compañía en interactuar con los clientes en un punto a uno de contacto. Los equipos empresariales comparten y usan los datos recopilados de forma colaborativa, como a través de una pestaña Power BI Teams, para mejorar el producto y mejorar la experiencia del cliente.
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -380,13 +380,13 @@ Bot de soporte técnico de RECURSOS es una pregunta&Un bot que lleva a un profes
 
 ## <a name="icebreaker"></a>Rompehielo
 
-Icebreaker es un [bot Microsoft Teams que](../bots/what-are-bots.md) ayuda a tu equipo a acercarse emparejando dos miembros del equipo aleatorios cada semana para reunirse. El bot facilita la programación al sugerir automáticamente horas libres que funcionen para ambos miembros. Fortalezca las conexiones personales y cree una comunidad estrechamente unida con esta aplicación.
+Icebreaker es un [bot Microsoft Teams](../bots/what-are-bots.md) que ayuda al equipo a acercarse emparejando dos miembros del equipo aleatorios cada semana para reunirse. El bot facilita la programación al sugerir automáticamente horas libres que funcionen para ambos miembros. Fortalezca las conexiones personales y cree una comunidad estrechamente unida con esta aplicación.
 
 Además de fomentar las conexiones personales en todo el equipo, la aplicación Icebreaker puede ayudar a cultivar comunidades basadas en intereses dentro de la organización. Por ejemplo, puedes usar esta aplicación para un grupo de DevOps de interés para ayudar a que las ideas y los procedimientos recomendados se extienda orgánicamente en toda la organización.
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Aplicación Icebreaker](../assets/images/icebreaker.png)
+![Icebreaker app](../assets/images/icebreaker.png)
 
 ## <a name="incentives"></a>Incentivos
 

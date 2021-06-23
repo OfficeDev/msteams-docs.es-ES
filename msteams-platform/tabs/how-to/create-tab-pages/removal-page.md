@@ -1,17 +1,17 @@
 ---
 title: Creación de una etiqueta de eliminación
-author: laujan
+author: surbhigupta
 description: Cómo crear una página de eliminación de pestañas
 keywords: Teams tabs group channel configurable remove delete
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1a1f38a2bcb3b5bc4bc54f469c8727e44d8695e
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 9f4e10bd8fd5b5c4caf8f5349e0952732821dd85
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566673"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069053"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modificar o quitar una pestaña de grupo de canales
 

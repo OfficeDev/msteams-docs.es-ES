@@ -1,20 +1,20 @@
 ---
 title: Contribuir a la Microsoft Teams documentación
 description: pasos para crear y publicar Teams documentación
-author: laujan
+author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: 52253bb096857e2cb883295c8ae6b58518506d9a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33296219b9d42b2ca26eb3c44df5c6429f5259ce
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566232"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069157"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Contribuir a la Microsoft Teams documentación
 
-[Teams documentación forma](/microsoftteams/platform/overview) parte de la biblioteca de documentación técnica de [Microsoft Docs.](https://docs.microsoft.com/) El contenido se organiza en grupos denominados docsets, cada uno que representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso url después *de docs <span></span> .microsoft.com*.  Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta Teams de archivo docset. Teams artículos se escriben en [la sintaxis markdown](#markdown-reference) y se hospedan en [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+[Teams documentación forma](/microsoftteams/platform/overview) parte de la biblioteca de documentación técnica de [Microsoft Docs.](https://docs.microsoft.com) El contenido se organiza en grupos denominados docsets, cada uno que representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso url después *de docs <span></span> .microsoft.com*.  Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta Teams de archivo docset. Teams artículos se escriben en [la sintaxis markdown](#markdown-reference) y se hospedan en [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
 ## <a name="set-up-your-workspace"></a>Configurar el área de trabajo
 

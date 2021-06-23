@@ -2,16 +2,16 @@
 title: Consentimiento específico de recursos en Teams
 description: Describe el consentimiento específico de los recursos en Teams y cómo aprovecharlo.
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorización de teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
-ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
+ms.openlocfilehash: f364371f7763235e64da71b91db9b16b41ddf389
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "53022981"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068552"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentimiento específico de recursos (RSC)
 
@@ -23,7 +23,7 @@ El consentimiento específico de recursos (RSC) es una integración de api de Mi
 ## <a name="resource-specific-permissions"></a>Permisos específicos de recursos
 
 ### <a name="resource-specific-permissions-for-a-team"></a>Permisos específicos de recursos para un equipo
-|Permisos de aplicación| Acción |
+|Permisos de aplicación| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtén la configuración de este equipo.|
 |TeamSettings.ReadWrite.Group|Actualice la configuración de este equipo.|
@@ -42,7 +42,7 @@ El consentimiento específico de recursos (RSC) es una integración de api de Mi
 Para obtener más información, vea [Permisos de consentimiento específicos de recursos del equipo](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Permisos específicos de recursos para un chat
-|Permisos de aplicación| Acción |
+|Permisos de aplicación| Action |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | Obtén la configuración de este chat.                                    |
 | ChatSettings.ReadWrite.Chat    | Actualice la configuración de este chat.                          |
@@ -245,7 +245,7 @@ Para obtener información sobre cómo obtener detalles sobre las aplicaciones in
 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  
 * [Probar permisos de consentimiento específicos de recursos en Teams](test-resource-specific-consent.md)
 * [Consentimiento específico de recursos en Microsoft Teams para administradores](/MicrosoftTeams/resource-specific-consent)

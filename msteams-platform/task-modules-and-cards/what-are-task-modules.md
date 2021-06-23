@@ -1,16 +1,16 @@
 ---
 title: ¿Qué son los módulos de tareas?
-author: clearab
+author: surbhigupta
 description: Agregar experiencias emergentes modales para recopilar o mostrar información a los usuarios desde Microsoft Teams aplicaciones
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 23157e30ce25c2dfa1c21e7f5c4ddd4f735b660f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e4937fc4909535506c61b4ac353283322d5f3631
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566847"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068606"
 ---
 # <a name="task-modules"></a>Módulos de tareas
 

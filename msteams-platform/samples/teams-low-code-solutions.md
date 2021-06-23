@@ -1,16 +1,16 @@
 ---
 title: Crear aplicaciones personalizadas de código bajo para Microsoft Teams
-author: laujan
+author: surbhigupta
 description: Detalle de las soluciones disponibles de Microsoft baja y sin código para Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 3c7f2dc76f01a47226598e5480e9b39ce9dd173a
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994087"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069134"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Crear aplicaciones personalizadas de código bajo para Microsoft Teams
 
@@ -56,7 +56,7 @@ Virtual Assistant es una plantilla de código abierto de Microsoft que le permit
 |  Tema  |  Vínculos  |
 |:---------|:----------------------|
 |Power BI|[Power BI para creadores de aplicaciones](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI para desarrolladores](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|PowerApps|[Power Apps para creadores de aplicaciones](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps para desarrolladores](/learn/browse/?products=power-apps)|
+|Power Apps|[Power Apps para creadores de aplicaciones](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps para desarrolladores](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automate para creadores de aplicaciones](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate para desarrolladores](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
 |Power Virtual Agents|[Power Virtual Agents para desarrolladores y creadores de aplicaciones](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
@@ -81,6 +81,6 @@ Virtual Assistant es una plantilla de código abierto de Microsoft que le permit
 > [!div class="nextstepaction"]
 > [Administrar aplicaciones de Microsoft Power Platform en el Centro Microsoft Teams administración](/microsoftteams/manage-power-platform-apps)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

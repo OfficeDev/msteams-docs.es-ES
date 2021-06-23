@@ -5,13 +5,13 @@ keywords: Teams Complementos de integración de aplicaciones de Moodle
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: d7fddad80ca08fd4ca8dee352cdcbc46e8e97dcd
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 54f4fec4e240f866c686ed715bd5093a319a2a48
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566722"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069172"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -228,7 +228,7 @@ Después de generar el identificador de aplicación y la contraseña, implemente
 
 Una vez que los recursos hayan completado la implementación en Azure, debe configurar los complementos Microsoft 365 Moodle con un punto de conexión de mensajería. Debe obtener el punto de conexión del bot en Azure:
 
-1. Inicie sesión en el [Azure Portal](https://portal.azure.com).
+1. Inicie sesión en el [portal de Azure](https://portal.azure.com).
 
 1. En el panel izquierdo, seleccione **Grupos de recursos** y seleccione el grupo de recursos que usó o creó, mientras implementa el bot.
 

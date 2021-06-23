@@ -1,16 +1,16 @@
 ---
 title: Agregar autenticación a la extensión de mensajería
-author: clearab
+author: surbhigupta
 description: Cómo agregar autenticación a una extensión de mensajería
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1670bcd68def5470f2a590b11f7c25a00ccd06b7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d1ebde822e1a0216edaa1b85ac6142234ae34b78
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020712"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068922"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Agregar autenticación a la extensión de mensajería
 

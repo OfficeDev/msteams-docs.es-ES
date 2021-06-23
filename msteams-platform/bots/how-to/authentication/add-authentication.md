@@ -1,16 +1,16 @@
 ---
 title: Agregar autenticación al bot Teams usuario
-author: clearab
+author: surbhigupta
 description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Teams.
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 36cb6f3de6f97af1d01512175923b79f69f630ad
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566005"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069010"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot Teams usuario
 
@@ -278,24 +278,24 @@ Como alternativa, mientras esté Visual Studio, puede seguir estos pasos:
 1. En el **cuadro Punto de conexión** de mensajería, escriba la dirección URL obtenida anteriormente seguida de `api/messages` . Este es un ejemplo: `https://botteamsauth.azurewebsites.net/api/messages` .
 1. Seleccione el **botón** Guardar en la parte superior izquierda.
 
-## <a name="test-the-bot-using-the-emulator"></a>Probar el bot con el emulador
+## <a name="test-the-bot-using-the-emulator"></a>Pruebe el bot con el Emulator
 
-Si aún no lo ha hecho, instale el [archivo Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Vea también [Depurar con el emulador](https://aka.ms/bot-framework-emulator-debug-with-emulator).
+Si aún no lo ha hecho, instale el [archivo Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Vea también [Depurar con el Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-Para que el inicio de sesión de ejemplo del bot funcione, debe configurar el emulador.
+Para que el inicio de sesión de ejemplo del bot funcione, debe configurar el Emulator.
 
-### <a name="configure-the-emulator-for-authentication"></a>Configurar el emulador para la autenticación
+### <a name="configure-the-emulator-for-authentication"></a>Configurar el Emulator para la autenticación
 
-Si un bot requiere autenticación, debe configurar el emulador. Para configurar:
+Si un bot requiere autenticación, debe configurar el Emulator. Para configurar:
 
-1. Inicie el emulador.
-1. En el emulador, seleccione el icono de engranaje &#9881; en la parte inferior izquierda o la pestaña Configuración **emulador** en la parte superior derecha.
+1. Inicie el Emulator.
+1. En la Emulator, seleccione el icono de engranaje &#9881; la parte inferior izquierda o la pestaña **Emulator Configuración** en la parte superior derecha.
 1. Active la casilla **usar tokens de autenticación de la versión 1.0**.
 1. Escriba la ruta de acceso local a la **herramienta ngrok.** *Vea* el wiki Bot Framework Emulator / ngrok tunneling integration [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). Para obtener más información sobre la herramienta, [vea ngrok](https://ngrok.com/).
-1. Active la casilla **Ejecutar ngrok cuando se inicie el emulador**.
+1. Active la casilla **Ejecutar ngrok cuando el Emulator se inicie**.
 1. Seleccione el **botón** Guardar.
 
-Cuando el bot muestra una tarjeta de inicio de sesión y el usuario selecciona el botón de inicio de sesión, el emulador abre una página que el usuario puede usar para iniciar sesión con el proveedor de autenticación.
+Cuando el bot muestra una tarjeta de inicio de sesión y el usuario selecciona el botón de inicio de sesión, el Emulator abre una página que el usuario puede usar para iniciar sesión con el proveedor de autenticación.
 Una vez que el usuario lo hace, el proveedor genera un token de usuario y lo envía al bot. Después, el bot puede actuar en nombre del usuario.
 
 ### <a name="test-the-bot-locally"></a>Probar el bot localmente
@@ -303,7 +303,7 @@ Una vez que el usuario lo hace, el proveedor genera un token de usuario y lo env
 Después de configurar el mecanismo de autenticación, puede realizar las pruebas de bot reales.  
 
 1. Ejecute el ejemplo de bot localmente en el equipo, por Visual Studio por ejemplo.
-1. Inicie el emulador.
+1. Inicie el Emulator.
 1. Seleccione el **botón Abrir bot.**
 1. En la **dirección URL del bot,** escriba la dirección URL local del bot. Normalmente, `http://localhost:3978/api/messages` .
 1. En el **Id. de aplicación de Microsoft,** escriba el identificador de aplicación del bot desde `appsettings.json` .
@@ -314,7 +314,7 @@ Después de configurar el mecanismo de autenticación, puede realizar las prueba
 1. Se muestra un cuadro de diálogo emergente para **Confirmar dirección URL abierta.** Esto permite que el usuario del bot (usted) se autentique.  
 1. Seleccione **Confirmar**.
 1. Si se le pide, seleccione la cuenta del usuario aplicable.
-1. Según la configuración que usó para el emulador, se obtiene una de las siguientes opciones:
+1. Según la configuración que usó para la Emulator, se obtiene una de las siguientes opciones:
     1. **Uso del código de verificación de inicio de sesión**  
       &#x2713; Se abre una ventana que muestra el código de validación.  
       &#x2713; copiar y escribir el código de validación en el cuadro de chat para completar el inicio de sesión.
@@ -405,7 +405,7 @@ Esto inicia ngrok para escuchar en el puerto especificado. A cambio, le proporci
     1. En el panel izquierdo, seleccione **Configuración**.
     1. En el panel derecho, en el cuadro **Extremo** de mensajería, escriba la dirección URL de ngrok, en nuestro ejemplo, `https://dea822bf.ngrok.io/api/messages` .
 1. Inicie el bot localmente, por ejemplo, en Visual Studio modo de depuración.
-1. Pruebe el bot mientras se ejecuta localmente con el chat web de prueba del portal **de** Bot Framework . Al igual que el emulador, esta prueba no permite tener acceso a Teams funcionalidad específica.
+1. Pruebe el bot mientras se ejecuta localmente con el chat web de prueba del portal **de** Bot Framework . Al igual que Emulator, esta prueba no permite tener acceso a Teams funcionalidad específica.
 1. En la ventana de terminal donde se ejecuta puede ver el tráfico `ngrok` HTTP entre el bot y el cliente de chat web. Si desea una vista más detallada, en una ventana del explorador escriba que obtuvo `http://127.0.0.1:4040` de la ventana de terminal anterior. La siguiente imagen es un ejemplo:
 
     ![Pruebas de auth bot teams ngrok](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).

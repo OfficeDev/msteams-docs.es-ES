@@ -2,16 +2,16 @@
 title: Crear una oferta de SaaS para la aplicación de su Teams
 description: Describe los pasos necesarios para hacer que una oferta SaaS forma parte de una experiencia de aplicación Teams de terceros
 keywords: SaaS de la aplicación de teams ofrece servicio de software de marketplace del centro de partners
-author: laujan
+author: surbhigupta
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: b588dc9df46fb47830c8e88fed4b0646206201f4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c2cff522c0089657c6a33a4e4c3b4dd176abda11
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019926"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068966"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>Crear una oferta de SaaS para la aplicación de su Teams
 
@@ -24,7 +24,7 @@ Agregar una oferta de software como servicio (SaaS) a la solución de la aplicac
 |**Crear una nueva oferta SaaS**|Cómo crear y configurar una nueva oferta SaaS en el mercado comercial.| [Documentación](/azure/marketplace/partner-center-portal/create-new-saas-offer)|
 |**Registrar una aplicación SaaS** | Cómo registrar una aplicación SaaS con Microsoft.| [Documentación](/azure/marketplace/partner-center-portal/pc-saas-registration)|
 |**Creación de ofertas SaaS: lista de comprobación para desarrolladores**| Detalles y instrucciones para crear una oferta SaaS en el Centro de partners.| [Documentación](/azure/marketplace/partner-center-portal/offer-creation-checklist)|
-|**Oferta de mercado comercial: procedimientos recomendados** |Información para crear ofertas SaaS eficaces.|[Documentación](/azure/marketplace/gtm-offer-listing-best-practices)|
+|**Oferta de mercado comercial: procedimientos recomendados** |Ideas para crear ofertas SaaS eficaces.|[Documentación](/azure/marketplace/gtm-offer-listing-best-practices)|
 |**API de cumplimiento SaaS de Microsoft (V2)** | Explore las API que permiten a los desarrolladores crear ofertas saas con Microsoft.| [Documentación](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) |
 |**Implementar el SDK de cumplimiento saas**| Cómo implementar los componentes necesarios necesarios para habilitar el SDK, incluida la API de cumplimiento saas (v2) y la API de servicio de medición de Marketplace.| [Obtenerlo en GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/docs/Installation-Instructions.md) |
 |**Código de ejemplo de oferta SaaS**| Vea nuestro SDK y ejemplos de código de oferta SaaS.| [Obtenerlo en GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK)|

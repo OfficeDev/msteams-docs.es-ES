@@ -2,16 +2,16 @@
 title: Use Microsoft Graph para importar mensajes de plataforma externa a Teams
 description: Describe cómo usar Microsoft Graph importar mensajes desde una plataforma externa a Teams
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 5ea06e8b490bae0595abb31086848d0b050bded0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ad4e494264a72a3fdb1d926323bc2878d10cf44d
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566162"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069141"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
@@ -55,7 +55,7 @@ Dado que los datos existentes se migran, el mantenimiento de las marcas de tiemp
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Permisos
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento de administrador?|Entidades/API cubiertas|
 |-|-|-|-|-|-|
@@ -99,7 +99,7 @@ La creación de un canal para los mensajes importados es similar al escenario de
 
 > [Cree un nuevo canal con](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) una marca de tiempo back-in-time con la propiedad de recurso `createdDateTime` channel. Coloque el nuevo canal en , un estado especial que reja a los usuarios de la mayoría de las actividades de chat dentro del canal hasta que se complete `migration mode` el proceso de migración.  Incluya el atributo de instancia con el valor en la solicitud POST para identificar explícitamente al nuevo equipo como creado `channelCreationMode` `migration` para la migración.  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Permisos
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento de administrador?|Entidades/API cubiertas|
 |-|-|-|-|-|-|
