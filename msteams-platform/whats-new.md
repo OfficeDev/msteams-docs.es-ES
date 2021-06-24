@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: b5253c1769ebaac5548c779b3f66a87abb195ed8
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
+ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049060"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53095524"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -195,6 +195,7 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|06/23/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentimiento específico de recursos para chats. |[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md)Probar permisos de consentimiento específicos de [resouce en Teams](graph-api/rsc/test-resource-specific-consent.md)|  
 |05/26/2021|Compilar pestañas con tarjetas adaptables|[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
