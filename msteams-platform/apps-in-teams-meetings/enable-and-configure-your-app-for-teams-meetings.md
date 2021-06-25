@@ -3,12 +3,12 @@ title: Habilitar y configurar las aplicaciones para Teams reuniones
 author: surbhigupta
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
-ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068638"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114185"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -79,11 +79,12 @@ Después de habilitar la aplicación para Teams reuniones, debes configurar la a
 > * Las experiencias en la reunión que es el cuadro de diálogo y la pestaña en la reunión actualmente no se admiten en clientes móviles. Para obtener más información, consulta [instrucciones para pestañas en el móvil](../tabs/design/tabs-mobile.md) al crear las pestañas para móviles.
 
 Teams reuniones proporciona una experiencia de colaboración única para su organización. Proporciona la oportunidad de configurar la aplicación para diferentes escenarios de reunión. Puedes configurar las aplicaciones para mejorar la experiencia de la reunión en función del rol de participante o el tipo de usuario. Ahora puede identificar qué acciones se pueden realizar en los siguientes escenarios de reunión:
-* [Reunión previa](#pre-meeting)
-* [En reunión](#in-meeting)
-* [Posterior a la reunión](#post-meeting)
 
-### <a name="pre-meeting"></a>Reunión previa
+* [Antes de una reunión](#before-a-meeting)
+* [Durante una reunión](#during-a-meeting)
+* [Después de una reunión](#after-a-meeting)
+
+### <a name="before-a-meeting"></a>Antes de una reunión
 
 Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones de mensajería. Los usuarios con roles de organizador y moderador pueden agregar pestañas a una reunión.
 
@@ -113,7 +114,7 @@ En un chat de reunión, escriba la **@** clave y seleccione Obtener **bots**.
 > * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y presentadores crear un nuevo sondeo.
 > * Las asignaciones de roles se pueden cambiar mientras se está en curso una reunión. Para obtener más información, vea [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-### <a name="in-meeting"></a>En reunión
+### <a name="during-a-meeting"></a>Durante una reunión
 
 Durante una reunión, puedes usar el meetingSidePanel o el cuadro de diálogo en la reunión para crear experiencias únicas para tus aplicaciones.
 
@@ -138,19 +139,18 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 > * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams módulo de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de solicitud del objeto, no en `from.id` `from` los `from.aadObjectId` metadatos de la solicitud. `from.id`es el identificador de usuario `from.aadObjectId` y es el Azure Active Directory (AAD) del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### <a name="share-to-stage"></a>Compartir en fase
+#### <a name="shared-meeting-stage"></a>Fase de reunión compartida
 
 > [!NOTE]
 > * Esta funcionalidad está disponible actualmente solo en [la versión preliminar del](../resources/dev-preview/developer-preview-intro.md) desarrollador.
-> * Para usar esta característica, la aplicación debe admitir una reunión en la reuniónSidePanel.
 
-Esta funcionalidad ofrece a los desarrolladores la capacidad de compartir una aplicación en la fase de reunión. Al habilitar el recurso compartido en la fase de reunión, los participantes de la reunión pueden colaborar en tiempo real.
+La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real.
 
 El contexto necesario está `meetingStage` en el manifiesto de la aplicación. Un requisito previo para ello es tener el `meetingSidePanel` contexto. Esto habilita **Compartir** en el meetingSidePanel.
 
 ![Compartir en fase durante la experiencia de reunión](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-El cambio de manifiesto necesario para habilitar esta funcionalidad es el siguiente:
+Para habilitar la fase de reunión compartida, configure el manifiesto de la aplicación de este modo:
 
 ```json
 "configurableTabs": [
@@ -168,17 +168,19 @@ El cambio de manifiesto necesario para habilitar esta funcionalidad es el siguie
   ]
 ```
 
-### <a name="post-meeting"></a>Posterior a la reunión
+Vea cómo diseñar [una experiencia de fase de reunión compartida.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-Las configuraciones posteriores a la reunión [y previas](#pre-meeting) a la reunión son las mismas.
+### <a name="after-a-meeting"></a>Después de una reunión
+
+Las configuraciones después y [antes de las reuniones](#before-a-meeting) son las mismas.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
 |Nombre de ejemplo | Descripción | Muestra |
 |----------------|-----------------|--------------|----------------|-----------|
-| Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token, que se genera secuencialmente para que cada participante tenga una oportunidad equitativa de interactuar. Esto puede ser útil en situaciones como reuniones de scrum, preguntas&sesiones A, y así sucesivamente. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token, que se genera secuencialmente para que cada participante tenga una oportunidad equitativa de colaborar en una reunión. Esto puede ser útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

@@ -6,12 +6,12 @@ keywords: Microsoft Teams de ejemplos de plantillas
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069188"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111192"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -680,6 +680,40 @@ La aplicación Administración de visitantes permite a su organización y a los 
 :::column-end:::
 :::row-end:::
 
+## <a name="water-cooler-9734"></a>Enfriador de agua &#9734;
+
+Water Cool es una aplicación Teams personalizada que permite a los equipos corporativos crear, invitar y unirse a conversaciones informales entre compañeros de equipo, como las que tienen lugar en el enfriador de agua o la sala de descanso. Use esta plantilla para varios escenarios, como nuevos anuncios no relacionados con proyectos, temas de interés, eventos actuales o conversaciones sobre aficiones. La aplicación proporciona una interfaz fácil para que cualquier persona encuentre una conversación existente o inicie una nueva. Es una base para crear capacidades de comunicación personalizadas dirigidas, lo que fomenta la interacción entre compañeros de trabajo que, de lo contrario, no pueden socializar durante los descansos.    
+
+[Obtenerlo en GitHub](https://github.com/microsoft/csapps-msteams-watercooler)     
+
+![Appscreens de Water Cool](../assets/images/appScreens.gif)    
+
+### <a name="key-features"></a>Características principales
+
+**Página principal del enfriador** de agua: puede examinar las salas existentes en las que los miembros del equipo interactúan en conversaciones existentes con determinadas personas o temas de interés. Las conversaciones activas en la **página principal** muestran un nombre de sala, una descripción breve, una duración de llamada y una imagen de sala. 
+
+![Página principal del enfriador de agua](../assets/images/home-page.png)
+
+**Sala de unirse:** use **la característica Unirse** a la sala para unirse a una conversación en curso inmediatamente. Seleccione **Unirse** a las conversaciones activas para unirse a la sala.
+
+![Sala de unirse](../assets/images/joinRoom.gif)
+
+**Creación de salas:** usa la **característica de creación de** sala para crear una Teams o chat para que todos los asistentes interactúen. Cree salas fácilmente especificando el nombre de la sala, la breve descripción, hasta cinco compañeros como grupo inicial y seleccionando del conjunto proporcionado de imágenes de la sala. 
+
+![Creación de sala](../assets/images/createRoom.gif)
+
+**Buscar sala:** use la característica **Buscar sala** para buscar palabras clave que coincidan con el tema o breves descripciones de conversaciones en curso.
+
+![Buscar conversación](../assets/images/findConversation.gif)
+
+**Invitación del asistente:** use la **característica de** invitación del asistente para invitar a usuarios adicionales después de la creación de la sala. Esto es similar a Teams llamada.
+
+![Invitación de asistente](../assets/images/attendeeInvitation.gif)
+
+**Distintivo de la** aplicación: el icono **del** enfriador de agua del menú izquierdo muestra un distintivo con el número de conversaciones activas visibles desde Teams mientras se usa cualquier aplicación. 
+
+![Distintivo de aplicación](../assets/images/badge.gif)
+
 ## <a name="workplace-awards"></a>Workplace Awards
 
 Workplace Awards es una plantilla Teams aplicación que proporciona un marco positivo para fomentar el reconocimiento y fomentar la cultura de la apreciación de los empleados en el lugar de trabajo moderno. La aplicación te permite configurar y administrar un reconocimiento y recompensas de empleados, denominado programa R&R donde los empleados pueden designar y respaldar fácilmente a compañeros y el líder de R&R puede ver las nominaciones enviadas, conceder premios y anunciar destinatarios.
@@ -699,6 +733,6 @@ Workplace Awards es una plantilla Teams aplicación que proporciona un marco pos
 
 Para obtener más información sobre la plantilla de aplicación, consulta [Plantilla de aplicación](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

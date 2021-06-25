@@ -6,25 +6,26 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: eaa37f1ccb7944ee18bb62ae47882dc4a715b165
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 58e11312e61124bf09fcb55d2bcd0fc475e75a49
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566890"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114618"
 ---
-# <a name="create-your-first-teams-app-using-c"></a>Crear la primera aplicación Teams con C #
+# <a name="build-your-first-teams-app-using-c"></a>Crear la primera aplicación Teams con C #
 
-Este tutorial te ayuda a crear una aplicación Microsoft Teams con C#. Para ello, debe:
+En este tutorial, aprenderás a crear tu primera aplicación Microsoft Teams con .NET o C#. También le guiará a través de los pasos para:
 
-* Prepare el entorno
-* Obtener requisitos previos
-* Descargar el ejemplo
-* Compilar y ejecutar el ejemplo
-* Hospedar la aplicación de ejemplo
-* Actualizar las credenciales de la aplicación hospedada
-* Configurar la pestaña aplicación
+1. [Preparar el entorno](#prepare-your-environment)
+1. [Obtener requisitos previos](#GetPrerequisites)
+1. [Descargar el ejemplo](#DownloadSample)
+1. [Compilar y ejecutar el ejemplo](#BuildRun)
+1. [Hospedar la aplicación de ejemplo](#hostsample)
+1. [Actualizar las credenciales de la aplicación hospedada](#updatecredentials)
+1. [Configurar la pestaña aplicación](#configureapptab)
 
+<a name="prepare-your-environment"></a>
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
 <a name="GetPrerequisites"></a>
@@ -68,7 +69,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>Compilar y ejecutar el ejemplo
 
-Después de clonar el repositorio, use Visual Studio para abrir el archivo de solución **Microsoft.Teams. Samples.HelloWorld.sln** del **directorio Microsoft-Teams-Samples/samples/app-hello-world/csharp** del ejemplo. A continuación, **seleccione Generar solución** en el **menú** Generar. Para ejecutar el ejemplo, presione **F5** o **seleccione Iniciar depuración** en el **menú** Depurar.
+Puede crear y ejecutar la asignación después de clonarse. 
+
+**Para compilar y ejecutar el ejemplo clonado**
+
+1. Abra el archivo de solución **Microsoft.Teams. Samples.HelloWorld.sln** del **directorio Microsoft-Teams-Samples/samples/app-hello-world/csharp** del ejemplo.
+1. Seleccione **Generar solución** en el **menú** Generar.
+1. Seleccione la **tecla F5** o seleccione **Iniciar depuración** en el **menú Depurar** para ejecutar el ejemplo.
 
 Cuando se inicia la aplicación, se abre una ventana del explorador con la raíz de la aplicación iniciada. Puedes ir a las siguientes direcciones URL para comprobar que se están cargando todas las direcciones URL de la aplicación:
 
@@ -77,12 +84,11 @@ Cuando se inicia la aplicación, se abre una ventana del explorador con la raíz
 - `https://localhost:44327/first`
 - `https://localhost:44327/second`
 
-<a name="HostSample"></a>
-
 > [!Note]
 > Si recibe un `Could not find a part of the path … bin\roslyn\csc.exe` error, actualice el paquete con el comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` . Para obtener más información, vea [esta pregunta en Stack Overflow](https://stackoverflow.com/questions/32780315).
 
-## <a name="host-the-sample-app"></a>Hospedar la aplicación de ejemplo
+<a name="hostsample"></a>
+## <a name="deploy-your-sample-app"></a>Implementar la aplicación de ejemplo
 
 Las aplicaciones de Microsoft Teams son aplicaciones web que proporcionan una o más funcionalidades. Para que Teams plataforma para cargar la aplicación, la aplicación debe estar disponible en Internet. Para ello, debes hospedar la aplicación. Puede hospedarlo en Microsoft Azure de forma gratuita o crear un túnel para el proceso local en el equipo mediante `ngrok` . Después de hospedar la aplicación, anote su dirección URL raíz, como `https://yourteamsapp.ngrok.io` o `https://yourteamsapp.azurewebsites.net` .
 
@@ -96,15 +102,18 @@ Después de instalar `ngrok` , abra una nueva ventana de terminal y ejecute el s
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-`Ngrok` escucha las solicitudes de Internet y las enruta a la aplicación que se ejecuta en el puerto 44327. Para comprobarlo, abre el explorador y ve a `https://d0ac14a5.ngrok.io/hello` cargar la página de saludo de la aplicación. En lugar de esta dirección URL, use la dirección de reenvío mostrada en `ngrok` la sesión de la consola.
+`Ngrok` responde a las solicitudes de Internet y las enruta a la aplicación que se ejecuta en el puerto 44327. 
 
-> [!NOTE]
-> Si ha usado un puerto diferente en el paso [de](#build-and-run-the-sample) compilación y ejecución, asegúrese de usar el mismo número de puerto para configurar el `ngrok` túnel.
+**Para comprobar la respuesta**
 
-> [!TIP]
-> Es una buena idea ejecutarse `ngrok` en una ventana de terminal diferente. Esto se hace para evitar `ngrok` que se ejecute sin interferir con la aplicación. Debes detener, recompilar y volver a ejecutar la aplicación. La `ngrok` sesión proporciona información de depuración útil en esta ventana.
+1. Abra el explorador y vaya a `https://d0ac14a5.ngrok.io/hello` . Esto cargará la página Hello de la aplicación.
+1. En lugar de la dirección URL mencionada en el paso 1, usa la dirección de reenvío que se muestra en `ngrok` la sesión de la consola.
+    > [!NOTE]
+    > Si ha usado un puerto diferente en el paso [de](#build-and-run-the-sample) compilación y ejecución, asegúrese de usar el mismo número de puerto para configurar el `ngrok` túnel.
+    > [!TIP]
+    > Es una buena idea ejecutarse `ngrok` en una ventana de terminal diferente. Esto se hace para evitar `ngrok` que se ejecute sin interferir con la aplicación. Debes detener, recompilar y volver a ejecutar la aplicación. La `ngrok` sesión proporciona información de depuración útil en esta ventana.
 
-La aplicación solo está disponible durante la sesión actual en el equipo. Si la máquina está apagada o está en modo de suspensión, el servicio ya no estará disponible. Recuerda esto cuando compartas la aplicación para realizar pruebas a otros usuarios. Si tienes que reiniciar el servicio, la aplicación devuelve una nueva dirección y debes actualizar cada ubicación que use esa dirección. La versión de pago `ngrok` de no tiene esta limitación.
+    La aplicación solo está disponible durante la sesión actual en el equipo. Si la máquina está apagada o está en modo de suspensión, el servicio ya no estará disponible. Recuerda esto cuando compartas la aplicación para realizar pruebas a otros usuarios. Si tienes que reiniciar el servicio, la aplicación devuelve una nueva dirección y debes actualizar cada ubicación que use esa dirección. La versión de pago `ngrok` de no tiene esta limitación.
 
 ### <a name="host-in-azure"></a>Host en Azure
 
@@ -114,38 +123,87 @@ Visual Studio compatibilidad integrada para la implementación de aplicaciones e
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
+**Actualizar el paquete de la aplicación**
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
+# <a name="developer-portal"></a>[Portal para desarrolladores](#tab/DP)
+
+**Para instalar Developer Portal (versión preliminar) en Teams**
+
+
+1. Selecciona el **icono Aplicaciones** en la parte inferior de la barra izquierda y busca Portal **para desarrolladores.**
+
+    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+
+1. Seleccione **Portal para desarrolladores** y **seleccione Abrir**.
+
+    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+
+1. Selecciona la pestaña Aplicaciones y selecciona **Importar una aplicación existente.**
+
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+
+1. Seleccione **Hello World** y seleccione **Importar**. La **aplicación Hello World** se importa en el Portal de desarrolladores. 
+
+    Puedes configurar la aplicación mediante el portal Teams Developer Portal. El manifiesto se encuentra en Distribuir. Puedes usar el manifiesto para configurar las capacidades, los recursos necesarios y otros atributos importantes para la aplicación. Para obtener más información sobre cómo configurar la aplicación mediante el Portal de desarrolladores, [consulta Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+
+    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+---
+
+<a name="updatecredentials"></a>
 ## <a name="update-the-credentials-for-your-hosted-app"></a>Actualizar las credenciales de la aplicación hospedada
 
 La aplicación de ejemplo requiere que las variables de entorno se establezcan en los valores guardados en el archivo de texto.
 
-Abra el archivo `appsettings.json`. Actualice el **valor de MicrosoftAppId** con el identificador de bot que guardó en el archivo de texto. Actualice **MicrosoftAppPassword** con la contraseña del bot que guardó.
+**Para actualizar las credenciales de la aplicación hospedada**
 
-<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
+1. Abra el archivo `appsettings.json`. 
+1. Actualice el **valor de MicrosoftAppId** con el identificador de bot que guardó en el archivo de texto. 
+1. Actualice **MicrosoftAppPassword** con la contraseña del bot que guardó.
 
-Después de realizar estos cambios, recompile la aplicación. Si usa ngrok, ejecute la aplicación localmente y, si está hospedando en Azure, vuelva a implementar la aplicación.
+    <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
+    Después de realizar estos cambios, recompile la aplicación. Si usa ngrok, ejecute la aplicación localmente y, si está hospedando en Azure, vuelva a implementar la aplicación.
+
+<a name="configureapptab"></a>
 ## <a name="configure-the-app-tab"></a>Configurar la pestaña aplicación
 
-Una vez que instales la aplicación en un equipo, debes configurarla para que muestre contenido. Ve a un canal del equipo en el que instalaste la aplicación de ejemplo y selecciona el botón **"+"** para agregar una nueva pestaña. Elija **Hello World** en la lista Agregar **una** pestaña. Se muestra un cuadro de diálogo de configuración que permite elegir la pestaña que se va a mostrar en este canal. Después de seleccionar la pestaña y seleccionar **Guardar** la `Hello World` pestaña se carga con la pestaña.
+Después de instalar la aplicación en teams, debes configurarla para mostrar el contenido. 
 
-<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
+**Para configurar la pestaña de la aplicación**
+
+1. Ve a un canal del equipo en el que instalaste la aplicación de ejemplo y selecciona el botón **"+"** para agregar una nueva pestaña.
+1. Seleccione **Hello World** en la lista Agregar **una** pestaña. Se muestra un cuadro de diálogo de configuración que permite seleccionar la pestaña que se va a mostrar en este canal. 
+1. Seleccione **Guardar**. La `Hello World` pestaña se carga con la pestaña.
+
+    <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### <a name="test-your-bot-in-teams"></a>Pruebe el bot en Teams
 
-Ahora puedes probar el bot en Teams. Selecciona un canal en el equipo donde registraste la aplicación y escribe `@your-bot-name` . Esto se denomina una **\@ mención**. El bot responde a cualquier mensaje que envíe.
+Ahora puede probar el bot en Teams. 
 
-<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+**Para probar el bot**
+
+* Selecciona un canal en el equipo donde registraste la aplicación y escribe `@your-bot-name` . Esto se denomina una **\@ mención**. El bot responde a cualquier mensaje que envíe.
+
+    <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Probar la extensión de mensajería
 
-Para probar la extensión de mensajería, puede seleccionar **...** debajo del cuadro de entrada de la vista de conversación. Se muestra un menú con la aplicación **"Hello World".** Al seleccionarlo, se muestra un conjunto de textos aleatorios. Puede seleccionar uno de los textos aleatorios que se insertan en la conversación.
+Para probar la extensión de mensajería, seleccione **...** debajo del cuadro de entrada de la vista de conversación. Se muestra un menú con la aplicación **"Hello World".** Al seleccionarlo, se muestra un conjunto de textos aleatorios. Puede seleccionar uno de los textos aleatorios que se insertan en la conversación.
 
-<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
 
-<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
 Seleccione uno de los textos aleatorios. Se muestra una tarjeta con formato y lista para enviar con su propio mensaje.
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+
+## <a name="see-also"></a>Vea también
+
+* [Introducción a tutoriales](code-samples.md)
+* [Muestras de código](https://github.com/OfficeDev/Microsoft-Teams-Samples)
