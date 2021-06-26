@@ -6,62 +6,62 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: ad4e494264a72a3fdb1d926323bc2878d10cf44d
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 95cbf6bf2deac4ea71e60fe0fece06c1dd3ad24c
+ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069141"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53130097"
 ---
-# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a><span data-ttu-id="a5486-104">Importar mensajes de plataformas de terceros a Teams con Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="a5486-104">Import third-party platform messages to Teams using Microsoft Graph</span></span>
+# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a><span data-ttu-id="1930a-104">Importar mensajes de plataformas de terceros a Teams con Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="1930a-104">Import third-party platform messages to Teams using Microsoft Graph</span></span>
 
-<span data-ttu-id="a5486-105">Con Microsoft Graph, puede migrar el historial de mensajes y los datos existentes de los usuarios desde un sistema externo a un canal Teams usuario.</span><span class="sxs-lookup"><span data-stu-id="a5486-105">With Microsoft Graph, you can migrate users' existing message history and data from an external system into a Teams channel.</span></span> <span data-ttu-id="a5486-106">Al habilitar la recreación de una jerarquía de mensajería de plataforma de terceros dentro de Teams, los usuarios pueden continuar sus comunicaciones sin problemas y continuar sin interrupciones.</span><span class="sxs-lookup"><span data-stu-id="a5486-106">By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.</span></span>
+<span data-ttu-id="1930a-105">Con Microsoft Graph, puede migrar el historial de mensajes y los datos existentes de los usuarios desde un sistema externo a un canal Teams usuario.</span><span class="sxs-lookup"><span data-stu-id="1930a-105">With Microsoft Graph, you can migrate users' existing message history and data from an external system into a Teams channel.</span></span> <span data-ttu-id="1930a-106">Al habilitar la recreación de una jerarquía de mensajería de plataforma de terceros dentro de Teams, los usuarios pueden continuar sus comunicaciones sin problemas y continuar sin interrupciones.</span><span class="sxs-lookup"><span data-stu-id="1930a-106">By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.</span></span>
 
-> [!NOTE] 
-> <span data-ttu-id="a5486-107">En el futuro, Microsoft puede solicitarle a usted o a sus clientes que paguen tarifas adicionales en función de la cantidad de datos que se importen.</span><span class="sxs-lookup"><span data-stu-id="a5486-107">In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported.</span></span>
+> [!NOTE]
+> <span data-ttu-id="1930a-107">En el futuro, Microsoft puede solicitarle a usted o a sus clientes que paguen tarifas adicionales en función de la cantidad de datos que se importen.</span><span class="sxs-lookup"><span data-stu-id="1930a-107">In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported.</span></span>
 
-## <a name="import-overview"></a><span data-ttu-id="a5486-108">Introducción a la importación</span><span class="sxs-lookup"><span data-stu-id="a5486-108">Import overview</span></span>
+## <a name="import-overview"></a><span data-ttu-id="1930a-108">Introducción a la importación</span><span class="sxs-lookup"><span data-stu-id="1930a-108">Import overview</span></span>
 
-<span data-ttu-id="a5486-109">En un nivel alto, el proceso de importación consta de lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="a5486-109">At a high level, the import process consists of the following:</span></span>
+<span data-ttu-id="1930a-109">En un nivel alto, el proceso de importación consta de lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="1930a-109">At a high level, the import process consists of the following:</span></span>
 
-1. [<span data-ttu-id="a5486-110">Crear un equipo con una marca de tiempo back-in-time</span><span class="sxs-lookup"><span data-stu-id="a5486-110">Create a team with a back-in-time timestamp</span></span>](#step-one-create-a-team)
-1. [<span data-ttu-id="a5486-111">Crear un canal con una marca de tiempo back-in-time</span><span class="sxs-lookup"><span data-stu-id="a5486-111">Create a channel with a back-in-time timestamp</span></span>](#step-two-create-a-channel) 
-1. [<span data-ttu-id="a5486-112">Importar mensajes con fecha de back-in-time externos</span><span class="sxs-lookup"><span data-stu-id="a5486-112">Import external back-in-time dated messages</span></span>](#step-three-import-messages)
-1. [<span data-ttu-id="a5486-113">Completar el proceso de migración de equipos y canales</span><span class="sxs-lookup"><span data-stu-id="a5486-113">Complete the team and channel migration process</span></span>](#step-four-complete-migration-mode)
-1. [<span data-ttu-id="a5486-114">Agregar miembros del equipo</span><span class="sxs-lookup"><span data-stu-id="a5486-114">Add team members</span></span>](#step-five-add-team-members)
+1. <span data-ttu-id="1930a-110">[Crear un equipo con una marca de tiempo back-in-time](#step-1-create-a-team).</span><span class="sxs-lookup"><span data-stu-id="1930a-110">[Create a team with a back-in-time timestamp](#step-1-create-a-team).</span></span>
+1. <span data-ttu-id="1930a-111">[Crear un canal con una marca de tiempo back-in-time](#step-2-create-a-channel).</span><span class="sxs-lookup"><span data-stu-id="1930a-111">[Create a channel with a back-in-time timestamp](#step-2-create-a-channel).</span></span>
+1. <span data-ttu-id="1930a-112">[Importar mensajes externos con fecha de back-in-time](#step-3-import-messages).</span><span class="sxs-lookup"><span data-stu-id="1930a-112">[Import external back-in-time dated messages](#step-3-import-messages).</span></span>
+1. <span data-ttu-id="1930a-113">[Complete el proceso de migración de equipo y canal](#step-4-complete-migration-mode).</span><span class="sxs-lookup"><span data-stu-id="1930a-113">[Complete the team and channel migration process](#step-4-complete-migration-mode).</span></span>
+1. <span data-ttu-id="1930a-114">[Agregar miembros del equipo](#step-five-add-team-members).</span><span class="sxs-lookup"><span data-stu-id="1930a-114">[Add team members](#step-five-add-team-members).</span></span>
 
-## <a name="necessary-requirements"></a><span data-ttu-id="a5486-115">Requisitos necesarios</span><span class="sxs-lookup"><span data-stu-id="a5486-115">Necessary requirements</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="1930a-115">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="1930a-115">Prerequisites</span></span>
 
-### <a name="analyze-and-prepare-message-data"></a><span data-ttu-id="a5486-116">Analizar y preparar datos de mensajes</span><span class="sxs-lookup"><span data-stu-id="a5486-116">Analyze and prepare message data</span></span>
+### <a name="analyze-and-prepare-message-data"></a><span data-ttu-id="1930a-116">Analizar y preparar datos de mensajes</span><span class="sxs-lookup"><span data-stu-id="1930a-116">Analyze and prepare message data</span></span>
 
-<span data-ttu-id="a5486-117">✔ revisar los datos de terceros para decidir qué se migrará.</span><span class="sxs-lookup"><span data-stu-id="a5486-117">✔ Review the third-party data to decide what will be migrated.</span></span>  
-<span data-ttu-id="a5486-118">✔ extraer los datos seleccionados del sistema de chat de terceros.</span><span class="sxs-lookup"><span data-stu-id="a5486-118">✔ Extract the selected data from the third-party chat system.</span></span>  
-<span data-ttu-id="a5486-119">✔ asignar la estructura de chat de terceros a la Teams de chat.</span><span class="sxs-lookup"><span data-stu-id="a5486-119">✔ Map the third-party chat structure to the Teams structure.</span></span>  
-<span data-ttu-id="a5486-120">✔ Convertir datos de importación en formato necesario para la migración.</span><span class="sxs-lookup"><span data-stu-id="a5486-120">✔ Convert import data into format needed for migration.</span></span>  
+* <span data-ttu-id="1930a-117">Revise los datos de terceros para decidir qué se migrará.</span><span class="sxs-lookup"><span data-stu-id="1930a-117">Review the third-party data to decide what will be migrated.</span></span>  
+* <span data-ttu-id="1930a-118">Extrae los datos seleccionados del sistema de chat de terceros.</span><span class="sxs-lookup"><span data-stu-id="1930a-118">Extract the selected data from the third-party chat system.</span></span>  
+* <span data-ttu-id="1930a-119">Asigne la estructura de chat de terceros a la Teams de chat.</span><span class="sxs-lookup"><span data-stu-id="1930a-119">Map the third-party chat structure to the Teams structure.</span></span>  
+* <span data-ttu-id="1930a-120">Convertir datos de importación en formato necesario para la migración.</span><span class="sxs-lookup"><span data-stu-id="1930a-120">Convert import data into format needed for migration.</span></span>  
 
-### <a name="set-up-your-office-365-tenant"></a><span data-ttu-id="a5486-121">Configurar el espacio empresarial de Office 365</span><span class="sxs-lookup"><span data-stu-id="a5486-121">Set up your Office 365 tenant</span></span>
+### <a name="set-up-your-office-365-tenant"></a><span data-ttu-id="1930a-121">Configurar el espacio empresarial de Office 365</span><span class="sxs-lookup"><span data-stu-id="1930a-121">Set up your Office 365 tenant</span></span>
 
-<span data-ttu-id="a5486-122">✔ asegúrese de que existe Office 365 inquilino para los datos de importación.</span><span class="sxs-lookup"><span data-stu-id="a5486-122">✔ Ensure that an Office 365 tenant exists for the import data.</span></span> <span data-ttu-id="a5486-123">Para obtener más información sobre cómo configurar un arrendamiento Office 365 para Teams, vea [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).</span><span class="sxs-lookup"><span data-stu-id="a5486-123">For more information on setting up an Office 365 tenancy for Teams, see [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).</span></span>  
-<span data-ttu-id="a5486-124">✔ Asegúrese de que los miembros del equipo están en Azure Active Directory (AAD).</span><span class="sxs-lookup"><span data-stu-id="a5486-124">✔ Make sure that team members are in Azure Active Directory (AAD).</span></span>  <span data-ttu-id="a5486-125">Para obtener más información, [vea Agregar un nuevo usuario a](/azure/active-directory/fundamentals/add-users-azure-active-directory) Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a5486-125">For more information, see [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure Active Directory.</span></span>
+* <span data-ttu-id="1930a-122">Asegúrese de que existe Office 365 inquilino para los datos de importación.</span><span class="sxs-lookup"><span data-stu-id="1930a-122">Ensure that an Office 365 tenant exists for the import data.</span></span> <span data-ttu-id="1930a-123">Para obtener más información sobre cómo configurar un arrendamiento Office 365 para Teams, vea [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).</span><span class="sxs-lookup"><span data-stu-id="1930a-123">For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).</span></span>
+* <span data-ttu-id="1930a-124">Asegúrese de que los miembros del equipo están en Azure Active Directory (AAD).</span><span class="sxs-lookup"><span data-stu-id="1930a-124">Make sure that team members are in Azure Active Directory (AAD).</span></span> <span data-ttu-id="1930a-125">Para obtener más información, [vea Agregar un nuevo usuario a](/azure/active-directory/fundamentals/add-users-azure-active-directory) AAD.</span><span class="sxs-lookup"><span data-stu-id="1930a-125">For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.</span></span>
 
-## <a name="step-one-create-a-team"></a><span data-ttu-id="a5486-126">Paso uno: Crear un equipo</span><span class="sxs-lookup"><span data-stu-id="a5486-126">Step One: Create a team</span></span>
+## <a name="step-1-create-a-team"></a><span data-ttu-id="1930a-126">Paso 1: Crear un equipo</span><span class="sxs-lookup"><span data-stu-id="1930a-126">Step 1: Create a team</span></span>
 
-<span data-ttu-id="a5486-127">Dado que los datos existentes se migran, el mantenimiento de las marcas de tiempo de mensajes originales y la prevención de la actividad de mensajería durante el proceso de migración son fundamentales para volver a crear el flujo de mensajes existente del usuario en Teams.</span><span class="sxs-lookup"><span data-stu-id="a5486-127">Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams.</span></span> <span data-ttu-id="a5486-128">Esto se consigue de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="a5486-128">This is achieved as follows:</span></span>
+<span data-ttu-id="1930a-127">Dado que está migrando datos existentes, el mantenimiento de las marcas de tiempo de mensajes originales y la prevención de la actividad de mensajería durante el proceso de migración son fundamentales para volver a crear el flujo de mensajes existente del usuario en Teams.</span><span class="sxs-lookup"><span data-stu-id="1930a-127">Since you are migrating existing data, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams.</span></span> <span data-ttu-id="1930a-128">Esto se consigue de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="1930a-128">This is achieved as follows:</span></span>
 
-> <span data-ttu-id="a5486-129">[Cree un nuevo equipo con](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) una marca de tiempo back-in-time con la propiedad de recurso de  `createdDateTime`  grupo.</span><span class="sxs-lookup"><span data-stu-id="a5486-129">[Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource  `createdDateTime`  property.</span></span> <span data-ttu-id="a5486-130">Coloque el nuevo equipo en , un estado especial que reja a los usuarios de la mayoría de las actividades dentro del equipo hasta que se complete `migration mode` el proceso de migración.</span><span class="sxs-lookup"><span data-stu-id="a5486-130">Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete.</span></span> <span data-ttu-id="a5486-131">Incluya el atributo de instancia con el valor en la solicitud POST para identificar explícitamente al nuevo equipo como creado `teamCreationMode` `migration` para la migración.</span><span class="sxs-lookup"><span data-stu-id="a5486-131">Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.</span></span>  
+> <span data-ttu-id="1930a-129">[Cree un nuevo equipo con](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) una marca de tiempo back-in-time con la propiedad de recurso de `createdDateTime` grupo.</span><span class="sxs-lookup"><span data-stu-id="1930a-129">[Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property.</span></span> <span data-ttu-id="1930a-130">Coloque el nuevo equipo en , un estado especial que restringe a los usuarios de la mayoría de las actividades dentro del equipo hasta que se complete `migration mode` el proceso de migración.</span><span class="sxs-lookup"><span data-stu-id="1930a-130">Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete.</span></span> <span data-ttu-id="1930a-131">Incluya el atributo de instancia con el valor en la solicitud POST para identificar explícitamente al nuevo equipo como creado `teamCreationMode` `migration` para la migración.</span><span class="sxs-lookup"><span data-stu-id="1930a-131">Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.</span></span>  
 
-> [!Note]
-> <span data-ttu-id="a5486-132">El `createdDateTime` campo solo se rellenará para las instancias de un equipo o canal que se hayan migrado.</span><span class="sxs-lookup"><span data-stu-id="a5486-132">The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.</span></span>
+> [!NOTE]
+> <span data-ttu-id="1930a-132">El `createdDateTime` campo solo se rellenará para las instancias de un equipo o canal que se hayan migrado.</span><span class="sxs-lookup"><span data-stu-id="1930a-132">The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.</span></span>
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a><span data-ttu-id="a5486-133">Permisos</span><span class="sxs-lookup"><span data-stu-id="a5486-133">Permissions</span></span>
+#### <a name="permission"></a><span data-ttu-id="1930a-133">Permiso</span><span class="sxs-lookup"><span data-stu-id="1930a-133">Permission</span></span>
 
-|<span data-ttu-id="a5486-134">ScopeName</span><span class="sxs-lookup"><span data-stu-id="a5486-134">ScopeName</span></span>|<span data-ttu-id="a5486-135">DisplayName</span><span class="sxs-lookup"><span data-stu-id="a5486-135">DisplayName</span></span>|<span data-ttu-id="a5486-136">Descripción</span><span class="sxs-lookup"><span data-stu-id="a5486-136">Description</span></span>|<span data-ttu-id="a5486-137">Tipo</span><span class="sxs-lookup"><span data-stu-id="a5486-137">Type</span></span>|<span data-ttu-id="a5486-138">¿Consentimiento de administrador?</span><span class="sxs-lookup"><span data-stu-id="a5486-138">Admin Consent?</span></span>|<span data-ttu-id="a5486-139">Entidades/API cubiertas</span><span class="sxs-lookup"><span data-stu-id="a5486-139">Entities/APIs covered</span></span>|
+|<span data-ttu-id="1930a-134">ScopeName</span><span class="sxs-lookup"><span data-stu-id="1930a-134">ScopeName</span></span>|<span data-ttu-id="1930a-135">DisplayName</span><span class="sxs-lookup"><span data-stu-id="1930a-135">DisplayName</span></span>|<span data-ttu-id="1930a-136">Descripción</span><span class="sxs-lookup"><span data-stu-id="1930a-136">Description</span></span>|<span data-ttu-id="1930a-137">Tipo</span><span class="sxs-lookup"><span data-stu-id="1930a-137">Type</span></span>|<span data-ttu-id="1930a-138">¿Consentimiento de administrador?</span><span class="sxs-lookup"><span data-stu-id="1930a-138">Admin Consent?</span></span>|<span data-ttu-id="1930a-139">Entidades/API cubiertas</span><span class="sxs-lookup"><span data-stu-id="1930a-139">Entities/APIs covered</span></span>|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|<span data-ttu-id="a5486-140">Administrar la migración a Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="a5486-140">Manage migration to Microsoft Teams</span></span>|<span data-ttu-id="a5486-141">Crear y administrar recursos para la migración a Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="a5486-141">Creating, managing resources for migration to Microsoft Teams.</span></span>|<span data-ttu-id="a5486-142">**Solo aplicación**</span><span class="sxs-lookup"><span data-stu-id="a5486-142">**Application-only**</span></span>|<span data-ttu-id="a5486-143">**Sí**</span><span class="sxs-lookup"><span data-stu-id="a5486-143">**Yes**</span></span>|`POST /teams`|
+|`Teamwork.Migrate.All`|<span data-ttu-id="1930a-140">Administrar la migración a Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="1930a-140">Manage migration to Microsoft Teams</span></span>|<span data-ttu-id="1930a-141">Crear y administrar recursos para la migración a Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="1930a-141">Creating and managing resources for migration to Microsoft Teams.</span></span>|<span data-ttu-id="1930a-142">**Solo aplicación**</span><span class="sxs-lookup"><span data-stu-id="1930a-142">**Application-only**</span></span>|<span data-ttu-id="1930a-143">**Sí**</span><span class="sxs-lookup"><span data-stu-id="1930a-143">**Yes**</span></span>|`POST /teams`|
 
-#### <a name="request-create-a-team-in-migration-state"></a><span data-ttu-id="a5486-144">Solicitud (crear un equipo en estado de migración)</span><span class="sxs-lookup"><span data-stu-id="a5486-144">Request (create a team in migration state)</span></span>
+#### <a name="request-create-a-team-in-migration-state"></a><span data-ttu-id="1930a-144">Solicitud (crear un equipo en estado de migración)</span><span class="sxs-lookup"><span data-stu-id="1930a-144">Request (create a team in migration state)</span></span>
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams
@@ -76,7 +76,7 @@ Content-Type: application/json
 }
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-145">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-145">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-145">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-145">Response</span></span>
 
 ```http
 HTTP/1.1 202 Accepted
@@ -84,28 +84,30 @@ Location: /teams/{team-id}/operations/{operation-id}
 Content-Location: /teams/{team-id}
 ```
 
-#### <a name="error-messages"></a><span data-ttu-id="a5486-146">Mensajes de error</span><span class="sxs-lookup"><span data-stu-id="a5486-146">Error messages</span></span>
+#### <a name="error-message"></a><span data-ttu-id="1930a-146">Mensaje de error</span><span class="sxs-lookup"><span data-stu-id="1930a-146">Error message</span></span>
 
 ```http
 400 Bad Request
 ```
 
-* <span data-ttu-id="a5486-147">`createdDateTime`  para el futuro.</span><span class="sxs-lookup"><span data-stu-id="a5486-147">`createdDateTime`  set for future.</span></span>
-* <span data-ttu-id="a5486-148">`createdDateTime`  especificado correctamente, pero falta `teamCreationMode`  el atributo de instancia o se establece en valor no válido.</span><span class="sxs-lookup"><span data-stu-id="a5486-148">`createdDateTime`  correctly specified, but `teamCreationMode`  instance attribute  is missing or set to invalid value.</span></span>
+<span data-ttu-id="1930a-147">Puede recibir el mensaje de error en los siguientes escenarios:</span><span class="sxs-lookup"><span data-stu-id="1930a-147">You can receive the error message in the following scenarios:</span></span>
 
-## <a name="step-two-create-a-channel"></a><span data-ttu-id="a5486-149">Paso dos: Crear un canal</span><span class="sxs-lookup"><span data-stu-id="a5486-149">Step Two: Create a channel</span></span>
+* <span data-ttu-id="1930a-148">Si `createdDateTime` está establecido para el futuro.</span><span class="sxs-lookup"><span data-stu-id="1930a-148">If `createdDateTime` is set for future.</span></span>
+* <span data-ttu-id="1930a-149">Si se especifica correctamente, pero falta el atributo `createdDateTime` de instancia o se establece en valor no `teamCreationMode` válido.</span><span class="sxs-lookup"><span data-stu-id="1930a-149">If `createdDateTime` is correctly specified, but `teamCreationMode` instance attribute is missing or set to invalid value.</span></span>
 
-<span data-ttu-id="a5486-150">La creación de un canal para los mensajes importados es similar al escenario de creación de equipo:</span><span class="sxs-lookup"><span data-stu-id="a5486-150">Creating a channel for the imported messages is similar to the create team scenario:</span></span>
+## <a name="step-2-create-a-channel"></a><span data-ttu-id="1930a-150">Paso 2: Crear un canal</span><span class="sxs-lookup"><span data-stu-id="1930a-150">Step 2: Create a channel</span></span>
 
-> <span data-ttu-id="a5486-151">[Cree un nuevo canal con](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) una marca de tiempo back-in-time con la propiedad de recurso `createdDateTime` channel.</span><span class="sxs-lookup"><span data-stu-id="a5486-151">[Create a new channel](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property.</span></span> <span data-ttu-id="a5486-152">Coloque el nuevo canal en , un estado especial que reja a los usuarios de la mayoría de las actividades de chat dentro del canal hasta que se complete `migration mode` el proceso de migración.</span><span class="sxs-lookup"><span data-stu-id="a5486-152">Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel until the migration process is complete.</span></span>  <span data-ttu-id="a5486-153">Incluya el atributo de instancia con el valor en la solicitud POST para identificar explícitamente al nuevo equipo como creado `channelCreationMode` `migration` para la migración.</span><span class="sxs-lookup"><span data-stu-id="a5486-153">Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.</span></span>  
+<span data-ttu-id="1930a-151">La creación de un canal para los mensajes importados es similar al escenario de creación de equipo:</span><span class="sxs-lookup"><span data-stu-id="1930a-151">Creating a channel for the imported messages is similar to the create team scenario:</span></span>
+
+> <span data-ttu-id="1930a-152">[Cree un nuevo canal con](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) una marca de tiempo back-in-time con la propiedad de recurso `createdDateTime` channel.</span><span class="sxs-lookup"><span data-stu-id="1930a-152">[Create a new channel](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property.</span></span> <span data-ttu-id="1930a-153">Coloque el nuevo canal en , un estado especial que restringe a los usuarios de la mayoría de las actividades de chat dentro del canal hasta que se complete `migration mode` el proceso de migración.</span><span class="sxs-lookup"><span data-stu-id="1930a-153">Place the new channel in `migration mode`, a special state that restricts users from most chat activities within the channel until the migration process is complete.</span></span> <span data-ttu-id="1930a-154">Incluya el atributo de instancia con el valor en la solicitud POST para identificar explícitamente al nuevo equipo como creado `channelCreationMode` `migration` para la migración.</span><span class="sxs-lookup"><span data-stu-id="1930a-154">Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.</span></span>  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a><span data-ttu-id="a5486-154">Permisos</span><span class="sxs-lookup"><span data-stu-id="a5486-154">Permissions</span></span>
+#### <a name="permission"></a><span data-ttu-id="1930a-155">Permiso</span><span class="sxs-lookup"><span data-stu-id="1930a-155">Permission</span></span>
 
-|<span data-ttu-id="a5486-155">ScopeName</span><span class="sxs-lookup"><span data-stu-id="a5486-155">ScopeName</span></span>|<span data-ttu-id="a5486-156">DisplayName</span><span class="sxs-lookup"><span data-stu-id="a5486-156">DisplayName</span></span>|<span data-ttu-id="a5486-157">Descripción</span><span class="sxs-lookup"><span data-stu-id="a5486-157">Description</span></span>|<span data-ttu-id="a5486-158">Tipo</span><span class="sxs-lookup"><span data-stu-id="a5486-158">Type</span></span>|<span data-ttu-id="a5486-159">¿Consentimiento de administrador?</span><span class="sxs-lookup"><span data-stu-id="a5486-159">Admin Consent?</span></span>|<span data-ttu-id="a5486-160">Entidades/API cubiertas</span><span class="sxs-lookup"><span data-stu-id="a5486-160">Entities/APIs covered</span></span>|
+|<span data-ttu-id="1930a-156">ScopeName</span><span class="sxs-lookup"><span data-stu-id="1930a-156">ScopeName</span></span>|<span data-ttu-id="1930a-157">DisplayName</span><span class="sxs-lookup"><span data-stu-id="1930a-157">DisplayName</span></span>|<span data-ttu-id="1930a-158">Descripción</span><span class="sxs-lookup"><span data-stu-id="1930a-158">Description</span></span>|<span data-ttu-id="1930a-159">Tipo</span><span class="sxs-lookup"><span data-stu-id="1930a-159">Type</span></span>|<span data-ttu-id="1930a-160">¿Consentimiento de administrador?</span><span class="sxs-lookup"><span data-stu-id="1930a-160">Admin Consent?</span></span>|<span data-ttu-id="1930a-161">Entidades/API cubiertas</span><span class="sxs-lookup"><span data-stu-id="1930a-161">Entities/APIs covered</span></span>|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|<span data-ttu-id="a5486-161">Administrar la migración a Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="a5486-161">Manage migration to Microsoft Teams</span></span>|<span data-ttu-id="a5486-162">Crear y administrar recursos para la migración a Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="a5486-162">Creating, managing resources for migration to Microsoft Teams.</span></span>|<span data-ttu-id="a5486-163">**Solo aplicación**</span><span class="sxs-lookup"><span data-stu-id="a5486-163">**Application-only**</span></span>|<span data-ttu-id="a5486-164">**Sí**</span><span class="sxs-lookup"><span data-stu-id="a5486-164">**Yes**</span></span>|`POST /teams`|
+|`Teamwork.Migrate.All`|<span data-ttu-id="1930a-162">Administrar la migración a Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="1930a-162">Manage migration to Microsoft Teams</span></span>|<span data-ttu-id="1930a-163">Crear y administrar recursos para la migración a Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="1930a-163">Creating and managing resources for migration to Microsoft Teams.</span></span>|<span data-ttu-id="1930a-164">**Solo aplicación**</span><span class="sxs-lookup"><span data-stu-id="1930a-164">**Application-only**</span></span>|<span data-ttu-id="1930a-165">**Sí**</span><span class="sxs-lookup"><span data-stu-id="1930a-165">**Yes**</span></span>|`POST /teams`|
 
-#### <a name="request-create-a-channel-in-migration-state"></a><span data-ttu-id="a5486-165">Solicitud (crear un canal en estado de migración)</span><span class="sxs-lookup"><span data-stu-id="a5486-165">Request (create a channel in migration state)</span></span>
+#### <a name="request-create-a-channel-in-migration-state"></a><span data-ttu-id="1930a-166">Solicitud (crear un canal en estado de migración)</span><span class="sxs-lookup"><span data-stu-id="1930a-166">Request (create a channel in migration state)</span></span>
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -120,7 +122,7 @@ Content-Type: application/json
 }
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-166">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-166">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-167">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-167">Response</span></span>
 
 ```http
 HTTP/1.1 202 Accepted
@@ -139,24 +141,26 @@ HTTP/1.1 202 Accepted
 }
 ```
 
-#### <a name="error-message"></a><span data-ttu-id="a5486-167">Mensaje de error</span><span class="sxs-lookup"><span data-stu-id="a5486-167">Error message</span></span>
+#### <a name="error-message"></a><span data-ttu-id="1930a-168">Mensaje de error</span><span class="sxs-lookup"><span data-stu-id="1930a-168">Error message</span></span>
 
 ```http
 400 Bad Request
 ```
+<span data-ttu-id="1930a-169">Puede recibir el mensaje de error en los siguientes escenarios:</span><span class="sxs-lookup"><span data-stu-id="1930a-169">You can receive the error message in the following scenarios:</span></span>
 
-* <span data-ttu-id="a5486-168">`createdDateTime`  para el futuro.</span><span class="sxs-lookup"><span data-stu-id="a5486-168">`createdDateTime`  set for future.</span></span>
-* <span data-ttu-id="a5486-169">`createdDateTime`  especificado correctamente, pero `channelCreationMode`  falta el atributo de instancia o se establece en valor no válido.</span><span class="sxs-lookup"><span data-stu-id="a5486-169">`createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.</span></span>
+* <span data-ttu-id="1930a-170">Si `createdDateTime` está establecido para el futuro.</span><span class="sxs-lookup"><span data-stu-id="1930a-170">If `createdDateTime` is set for future.</span></span>
+* <span data-ttu-id="1930a-171">Si `createdDateTime` se especifica correctamente, pero falta el atributo de instancia o se establece en valor no `channelCreationMode` válido.</span><span class="sxs-lookup"><span data-stu-id="1930a-171">If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.</span></span>
 
-## <a name="step-three-import-messages"></a><span data-ttu-id="a5486-170">Paso tres: Importar mensajes</span><span class="sxs-lookup"><span data-stu-id="a5486-170">Step Three: Import messages</span></span>
+## <a name="step-3-import-messages"></a><span data-ttu-id="1930a-172">Paso 3: Importar mensajes</span><span class="sxs-lookup"><span data-stu-id="1930a-172">Step 3: Import messages</span></span>
 
-<span data-ttu-id="a5486-171">Después de crear el equipo y el canal, puede empezar a enviar mensajes back-in-time con las claves `createdDateTime`  y del cuerpo de la `from`  solicitud.</span><span class="sxs-lookup"><span data-stu-id="a5486-171">After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from`  keys in the request body.</span></span> <span data-ttu-id="a5486-172">**NOTA:** no se admiten los mensajes importados con versiones anteriores al `createdDateTime` `createdDateTime` subproceso de mensaje.</span><span class="sxs-lookup"><span data-stu-id="a5486-172">**NOTE**: messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.</span></span>
+<span data-ttu-id="1930a-173">Después de crear el equipo y el canal, puede empezar a enviar mensajes back-in-time con las claves `createdDateTime`  y del cuerpo de la `from` solicitud.</span><span class="sxs-lookup"><span data-stu-id="1930a-173">After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from` keys in the request body.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="a5486-173">`createdDateTime` debe ser único entre los mensajes del mismo subproceso.</span><span class="sxs-lookup"><span data-stu-id="a5486-173">`createdDateTime` must be unique across messages in the same thread.</span></span>
-> * <span data-ttu-id="a5486-174">`createdDateTime` admite marcas de tiempo con precisión de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="a5486-174">`createdDateTime` supports timestamps with milliseconds precision.</span></span> <span data-ttu-id="a5486-175">Por ejemplo, si el mensaje de solicitud entrante tiene el valor de establecido como `createdDateTime` *2020-09-16T05:50:31.0025302Z*, se convertiría a *2020-09-16T05:50:31.002Z* cuando se ingiere el mensaje.</span><span class="sxs-lookup"><span data-stu-id="a5486-175">For example, if the incoming request message has the value of `createdDateTime` set as *2020-09-16T05:50:31.0025302Z*, then it would be converted to *2020-09-16T05:50:31.002Z* when the message is ingested.</span></span>
+> * <span data-ttu-id="1930a-174">No se admiten los mensajes importados con versiones `createdDateTime` anteriores al subproceso de `createdDateTime` mensaje.</span><span class="sxs-lookup"><span data-stu-id="1930a-174">Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.</span></span>
+> * <span data-ttu-id="1930a-175">`createdDateTime` debe ser único entre los mensajes del mismo subproceso.</span><span class="sxs-lookup"><span data-stu-id="1930a-175">`createdDateTime` must be unique across messages in the same thread.</span></span>
+> * <span data-ttu-id="1930a-176">`createdDateTime` admite marcas de tiempo con precisión de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="1930a-176">`createdDateTime` supports timestamps with milliseconds precision.</span></span> <span data-ttu-id="1930a-177">Por ejemplo, si el mensaje de solicitud entrante tiene el valor de establecido como `createdDateTime` *2020-09-16T05:50:31.0025302Z*, se convertiría a *2020-09-16T05:50:31.002Z* cuando se ingiere el mensaje.</span><span class="sxs-lookup"><span data-stu-id="1930a-177">For example, if the incoming request message has the value of `createdDateTime` set as *2020-09-16T05:50:31.0025302Z*, then it would be converted to *2020-09-16T05:50:31.002Z* when the message is ingested.</span></span>
 
-#### <a name="request-post-message-that-is-text-only"></a><span data-ttu-id="a5486-176">Solicitud (mensaje POST que es de solo texto)</span><span class="sxs-lookup"><span data-stu-id="a5486-176">Request (POST message that is text-only)</span></span>
+#### <a name="request-post-message-that-is-text-only"></a><span data-ttu-id="1930a-178">Solicitud (mensaje POST que es de solo texto)</span><span class="sxs-lookup"><span data-stu-id="1930a-178">Request (POST message that is text-only)</span></span>
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -177,7 +181,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 }
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-177">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-177">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-179">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-179">Response</span></span>
 
 ```http
 HTTP/1.1 200 OK
@@ -219,16 +223,17 @@ HTTP/1.1 200 OK
 }
 ```
 
-#### <a name="error-messages"></a><span data-ttu-id="a5486-178">Mensajes de error</span><span class="sxs-lookup"><span data-stu-id="a5486-178">Error messages</span></span>
+#### <a name="error-message"></a><span data-ttu-id="1930a-180">Mensaje de error</span><span class="sxs-lookup"><span data-stu-id="1930a-180">Error message</span></span>
 
 ```http
 400 Bad Request
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a><span data-ttu-id="a5486-179">Solicitud (POST un mensaje con imagen en línea)</span><span class="sxs-lookup"><span data-stu-id="a5486-179">Request (POST a message with inline image)</span></span>
+#### <a name="request-post-a-message-with-inline-image"></a><span data-ttu-id="1930a-181">Solicitud (POST un mensaje con imagen en línea)</span><span class="sxs-lookup"><span data-stu-id="1930a-181">Request (POST a message with inline image)</span></span>
 
-> [!Note]
-> <span data-ttu-id="a5486-180">No hay ámbitos de permisos especiales en este escenario, ya que la solicitud forma parte de chatMessage; los ámbitos de chatMessage también se aplican aquí.</span><span class="sxs-lookup"><span data-stu-id="a5486-180">There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.</span></span>
+> [!NOTE]
+> * <span data-ttu-id="1930a-182">No hay ámbitos de permisos especiales en este escenario, ya que la solicitud forma parte de `chatMessage` .</span><span class="sxs-lookup"><span data-stu-id="1930a-182">There are no special permission scopes in this scenario since the request is part of `chatMessage`.</span></span>
+> * <span data-ttu-id="1930a-183">Los ámbitos para `chatMessage` aplicar aquí.</span><span class="sxs-lookup"><span data-stu-id="1930a-183">The scopes for `chatMessage` apply here.</span></span>
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -248,7 +253,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 }
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-181">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-181">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-184">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-184">Response</span></span>
 
 ```http
 HTTP/1.1 200 OK
@@ -287,42 +292,42 @@ HTTP/1.1 200 OK
 }
 ```
 
-## <a name="step-four-complete-migration-mode"></a><span data-ttu-id="a5486-182">Paso cuatro: Completar el modo de migración</span><span class="sxs-lookup"><span data-stu-id="a5486-182">Step Four: Complete migration mode</span></span>
+## <a name="step-4-complete-migration-mode"></a><span data-ttu-id="1930a-185">Paso 4: Completar el modo de migración</span><span class="sxs-lookup"><span data-stu-id="1930a-185">Step 4: Complete migration mode</span></span>
 
-<span data-ttu-id="a5486-183">Una vez completado el proceso de migración de mensajes, tanto el equipo como el canal se sacarán del modo de migración mediante el  `completeMigration`  método.</span><span class="sxs-lookup"><span data-stu-id="a5486-183">Once the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration`  method.</span></span> <span data-ttu-id="a5486-184">En este paso se abren los recursos de equipo y canal para su uso general por parte de los miembros del equipo.</span><span class="sxs-lookup"><span data-stu-id="a5486-184">This step opens the team and channel resources for general use by team members.</span></span> <span data-ttu-id="a5486-185">La acción está enlazada a la `team` instancia.</span><span class="sxs-lookup"><span data-stu-id="a5486-185">The action is bound to the `team` instance.</span></span> <span data-ttu-id="a5486-186">Todos los canales deben completarse fuera del modo de migración para poder completar el equipo.</span><span class="sxs-lookup"><span data-stu-id="a5486-186">All channels must be completed out of migration mode before the team can be completed.</span></span>
+<span data-ttu-id="1930a-186">Una vez completado el proceso de migración de mensajes, tanto el equipo como el canal se sacarán del modo de migración mediante el  `completeMigration` método.</span><span class="sxs-lookup"><span data-stu-id="1930a-186">After the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration` method.</span></span> <span data-ttu-id="1930a-187">En este paso se abren los recursos de equipo y canal para su uso general por parte de los miembros del equipo.</span><span class="sxs-lookup"><span data-stu-id="1930a-187">This step opens the team and channel resources for general use by team members.</span></span> <span data-ttu-id="1930a-188">La acción está enlazada a la `team` instancia.</span><span class="sxs-lookup"><span data-stu-id="1930a-188">The action is bound to the `team` instance.</span></span> <span data-ttu-id="1930a-189">Antes de que el equipo se complete, todos los canales deben completarse fuera del modo de migración.</span><span class="sxs-lookup"><span data-stu-id="1930a-189">Before the team completes, all channels must be completed out of migration mode.</span></span>
 
-#### <a name="request-end-channel-migration-mode"></a><span data-ttu-id="a5486-187">Solicitud (modo de migración de canal final)</span><span class="sxs-lookup"><span data-stu-id="a5486-187">Request (end channel migration mode)</span></span>
+#### <a name="request-end-channel-migration-mode"></a><span data-ttu-id="1930a-190">Solicitud (modo de migración de canal final)</span><span class="sxs-lookup"><span data-stu-id="1930a-190">Request (end channel migration mode)</span></span>
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-188">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-188">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-191">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-191">Response</span></span>
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="request-end-team-migration-mode"></a><span data-ttu-id="a5486-189">Solicitud (modo de migración de equipo final)</span><span class="sxs-lookup"><span data-stu-id="a5486-189">Request (end team migration mode)</span></span>
+#### <a name="request-end-team-migration-mode"></a><span data-ttu-id="1930a-192">Solicitud (modo de migración de equipo final)</span><span class="sxs-lookup"><span data-stu-id="1930a-192">Request (end team migration mode)</span></span>
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-190">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-190">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-193">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-193">Response</span></span>
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-* <span data-ttu-id="a5486-191">Acción llamada en un `team` o que no está en `channel` `migrationMode` .</span><span class="sxs-lookup"><span data-stu-id="a5486-191">Action called on a `team` or `channel` that is not in `migrationMode`.</span></span>
+<span data-ttu-id="1930a-194">Acción llamada en un `team` o que no está en `channel` `migrationMode` .</span><span class="sxs-lookup"><span data-stu-id="1930a-194">Action called on a `team` or `channel` that is not in `migrationMode`.</span></span>
 
-## <a name="step-five-add-team-members"></a><span data-ttu-id="a5486-192">Paso cinco: Agregar miembros del equipo</span><span class="sxs-lookup"><span data-stu-id="a5486-192">Step Five: Add team members</span></span>
+## <a name="step-five-add-team-members"></a><span data-ttu-id="1930a-195">Paso cinco: Agregar miembros del equipo</span><span class="sxs-lookup"><span data-stu-id="1930a-195">Step five: Add team members</span></span>
 
-<span data-ttu-id="a5486-193">Puedes agregar un miembro a un equipo mediante la interfaz de usuario Teams [o](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) la API Graph [agregar miembro](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) de Microsoft:</span><span class="sxs-lookup"><span data-stu-id="a5486-193">You can add a member to a team [using the Teams UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [Add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API:</span></span>
+<span data-ttu-id="1930a-196">Puedes agregar un miembro a un equipo mediante la interfaz de usuario Teams [o](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) la API Graph [miembro de](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) Microsoft:</span><span class="sxs-lookup"><span data-stu-id="1930a-196">You can add a member to a team [using the Teams UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API:</span></span>
 
-#### <a name="request-add-member"></a><span data-ttu-id="a5486-194">Solicitud (agregar miembro)</span><span class="sxs-lookup"><span data-stu-id="a5486-194">Request (add member)</span></span>
+#### <a name="request-add-member"></a><span data-ttu-id="1930a-197">Solicitud (agregar miembro)</span><span class="sxs-lookup"><span data-stu-id="1930a-197">Request (add member)</span></span>
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
@@ -335,45 +340,47 @@ Content-length: 30
 }
 ```
 
-#### <a name="response"></a><span data-ttu-id="a5486-195">Respuesta</span><span class="sxs-lookup"><span data-stu-id="a5486-195">Response</span></span>
+#### <a name="response"></a><span data-ttu-id="1930a-198">Respuesta</span><span class="sxs-lookup"><span data-stu-id="1930a-198">Response</span></span>
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-## <a name="tips-and-additional-information"></a><span data-ttu-id="a5486-196">Sugerencias información adicional</span><span class="sxs-lookup"><span data-stu-id="a5486-196">Tips and additional information</span></span>
+## <a name="tips-and-additional-information"></a><span data-ttu-id="1930a-199">Sugerencias información adicional</span><span class="sxs-lookup"><span data-stu-id="1930a-199">Tips and additional information</span></span>
 
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* <span data-ttu-id="a5486-197">Una vez `completeMigration` realizada la solicitud, no puede importar más mensajes en el equipo.</span><span class="sxs-lookup"><span data-stu-id="a5486-197">Once the `completeMigration` request is made, you cannot import further messages into the team.</span></span>
+* <span data-ttu-id="1930a-200">Después de `completeMigration` realizar la solicitud, no puede importar más mensajes en el equipo.</span><span class="sxs-lookup"><span data-stu-id="1930a-200">After the `completeMigration` request is made, you cannot import further messages into the team.</span></span>
 
-* <span data-ttu-id="a5486-198">Los miembros del equipo solo se pueden agregar al nuevo equipo después de `completeMigration` que la solicitud haya devuelto una respuesta correcta.</span><span class="sxs-lookup"><span data-stu-id="a5486-198">Team members can only be added to the new team after the `completeMigration` request has returned a successful response.</span></span>
+* <span data-ttu-id="1930a-201">Solo puede agregar miembros del equipo al nuevo equipo después de que `completeMigration` la solicitud haya devuelto una respuesta correcta.</span><span class="sxs-lookup"><span data-stu-id="1930a-201">You can only add team members to the new team after the `completeMigration` request has returned a successful response.</span></span>
 
-* <span data-ttu-id="a5486-199">Limitación: los mensajes se importan a 5 RPS por canal.</span><span class="sxs-lookup"><span data-stu-id="a5486-199">Throttling: Messages import at 5 RPS per channel.</span></span>
+* <span data-ttu-id="1930a-202">Limitación: los mensajes se importan a cinco RPS por canal.</span><span class="sxs-lookup"><span data-stu-id="1930a-202">Throttling: Messages import at five RPS per channel.</span></span>
 
-* <span data-ttu-id="a5486-200">Si necesita realizar una corrección en los resultados de la migración, debe eliminar el equipo y repetir los pasos para crear el equipo y canalizar y volver a migrar los mensajes.</span><span class="sxs-lookup"><span data-stu-id="a5486-200">If you need to make a correction to the migration results, you need to delete the team and repeat the steps to create the team and channel and re-migrate the messages.</span></span>
+* <span data-ttu-id="1930a-203">Si necesita realizar una corrección en los resultados de la migración, debe eliminar el equipo y repetir los pasos para crear el equipo y canalizar y volver a migrar los mensajes.</span><span class="sxs-lookup"><span data-stu-id="1930a-203">If you need to make a correction to the migration results, you must delete the team and repeat the steps to create the team and channel and re-migrate the messages.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a5486-201">Actualmente, las imágenes en línea son el único tipo de medios admitidos por el esquema de api de mensajes de importación.</span><span class="sxs-lookup"><span data-stu-id="a5486-201">Currently, inline images are the only type of media supported by the import message API schema.</span></span>
+> <span data-ttu-id="1930a-204">Actualmente, las imágenes en línea son el único tipo de medios admitidos por el esquema de api de mensajes de importación.</span><span class="sxs-lookup"><span data-stu-id="1930a-204">Currently, inline images are the only type of media supported by the import message API schema.</span></span>
 
-##### <a name="import-content-scope"></a><span data-ttu-id="a5486-202">Importar ámbito de contenido</span><span class="sxs-lookup"><span data-stu-id="a5486-202">Import content scope</span></span>
+##### <a name="import-content-scope"></a><span data-ttu-id="1930a-205">Importar ámbito de contenido</span><span class="sxs-lookup"><span data-stu-id="1930a-205">Import content scope</span></span>
 
-|<span data-ttu-id="a5486-203">En el ámbito</span><span class="sxs-lookup"><span data-stu-id="a5486-203">In-scope</span></span> | <span data-ttu-id="a5486-204">Actualmente fuera del ámbito</span><span class="sxs-lookup"><span data-stu-id="a5486-204">Currently out-of-scope</span></span>|
+<span data-ttu-id="1930a-206">En la tabla siguiente se proporciona el ámbito de contenido:</span><span class="sxs-lookup"><span data-stu-id="1930a-206">The following table provides the content scope:</span></span>
+
+|<span data-ttu-id="1930a-207">En el ámbito</span><span class="sxs-lookup"><span data-stu-id="1930a-207">In-scope</span></span> | <span data-ttu-id="1930a-208">Actualmente fuera del ámbito</span><span class="sxs-lookup"><span data-stu-id="1930a-208">Currently out-of-scope</span></span>|
 |----------|--------------------------|
-|<span data-ttu-id="a5486-205">Mensajes de equipo y canal</span><span class="sxs-lookup"><span data-stu-id="a5486-205">Team and channel messages</span></span>|<span data-ttu-id="a5486-206">1:1 y mensajes de chat en grupo</span><span class="sxs-lookup"><span data-stu-id="a5486-206">1:1 and group chat messages</span></span>|
-|<span data-ttu-id="a5486-207">Hora de creación del mensaje original</span><span class="sxs-lookup"><span data-stu-id="a5486-207">Created time of the original message</span></span>|<span data-ttu-id="a5486-208">Canales privados</span><span class="sxs-lookup"><span data-stu-id="a5486-208">Private channels</span></span>|
-|<span data-ttu-id="a5486-209">Imágenes en línea como parte del mensaje</span><span class="sxs-lookup"><span data-stu-id="a5486-209">Inline images as part of the message</span></span>|<span data-ttu-id="a5486-210">En menciones</span><span class="sxs-lookup"><span data-stu-id="a5486-210">At mentions</span></span>|
-|<span data-ttu-id="a5486-211">Vínculos a archivos existentes en SPO/OneDrive</span><span class="sxs-lookup"><span data-stu-id="a5486-211">Links to existing files in SPO/OneDrive</span></span>|<span data-ttu-id="a5486-212">Reacciones</span><span class="sxs-lookup"><span data-stu-id="a5486-212">Reactions</span></span>|
-|<span data-ttu-id="a5486-213">Mensajes con texto enriquecido</span><span class="sxs-lookup"><span data-stu-id="a5486-213">Messages with rich text</span></span>|<span data-ttu-id="a5486-214">Vídeos</span><span class="sxs-lookup"><span data-stu-id="a5486-214">Videos</span></span>|
-|<span data-ttu-id="a5486-215">Cadena de respuesta de mensajes</span><span class="sxs-lookup"><span data-stu-id="a5486-215">Message reply chain</span></span>|<span data-ttu-id="a5486-216">Anuncios</span><span class="sxs-lookup"><span data-stu-id="a5486-216">Announcements</span></span>|
-|<span data-ttu-id="a5486-217">Procesamiento de alto rendimiento</span><span class="sxs-lookup"><span data-stu-id="a5486-217">High throughput processing</span></span>|<span data-ttu-id="a5486-218">Fragmentos de código</span><span class="sxs-lookup"><span data-stu-id="a5486-218">Code snippets</span></span>|
-||<span data-ttu-id="a5486-219">Adhesivos</span><span class="sxs-lookup"><span data-stu-id="a5486-219">Stickers</span></span>|
-||<span data-ttu-id="a5486-220">Emojis</span><span class="sxs-lookup"><span data-stu-id="a5486-220">Emojis</span></span>|
-||<span data-ttu-id="a5486-221">Ofertas</span><span class="sxs-lookup"><span data-stu-id="a5486-221">Quotes</span></span>|
-||<span data-ttu-id="a5486-222">Publicaciones cruzadas entre canales</span><span class="sxs-lookup"><span data-stu-id="a5486-222">Cross posts between channels</span></span>|
+|<span data-ttu-id="1930a-209">Mensajes de equipo y canal</span><span class="sxs-lookup"><span data-stu-id="1930a-209">Team and channel messages</span></span>|<span data-ttu-id="1930a-210">1:1 y mensajes de chat en grupo</span><span class="sxs-lookup"><span data-stu-id="1930a-210">1:1 and group chat messages</span></span>|
+|<span data-ttu-id="1930a-211">Hora de creación del mensaje original</span><span class="sxs-lookup"><span data-stu-id="1930a-211">Created time of the original message</span></span>|<span data-ttu-id="1930a-212">Canales privados</span><span class="sxs-lookup"><span data-stu-id="1930a-212">Private channels</span></span>|
+|<span data-ttu-id="1930a-213">Imágenes en línea como parte del mensaje</span><span class="sxs-lookup"><span data-stu-id="1930a-213">Inline images as part of the message</span></span>|<span data-ttu-id="1930a-214">En menciones</span><span class="sxs-lookup"><span data-stu-id="1930a-214">At mentions</span></span>|
+|<span data-ttu-id="1930a-215">Vínculos a archivos existentes en SPO o OneDrive</span><span class="sxs-lookup"><span data-stu-id="1930a-215">Links to existing files in SPO or OneDrive</span></span>|<span data-ttu-id="1930a-216">Reacciones</span><span class="sxs-lookup"><span data-stu-id="1930a-216">Reactions</span></span>|
+|<span data-ttu-id="1930a-217">Mensajes con texto enriquecido</span><span class="sxs-lookup"><span data-stu-id="1930a-217">Messages with rich text</span></span>|<span data-ttu-id="1930a-218">Vídeos</span><span class="sxs-lookup"><span data-stu-id="1930a-218">Videos</span></span>|
+|<span data-ttu-id="1930a-219">Cadena de respuesta de mensajes</span><span class="sxs-lookup"><span data-stu-id="1930a-219">Message reply chain</span></span>|<span data-ttu-id="1930a-220">Anuncios</span><span class="sxs-lookup"><span data-stu-id="1930a-220">Announcements</span></span>|
+|<span data-ttu-id="1930a-221">Procesamiento de alto rendimiento</span><span class="sxs-lookup"><span data-stu-id="1930a-221">High throughput processing</span></span>|<span data-ttu-id="1930a-222">Fragmentos de código</span><span class="sxs-lookup"><span data-stu-id="1930a-222">Code snippets</span></span>|
+||<span data-ttu-id="1930a-223">Adhesivos</span><span class="sxs-lookup"><span data-stu-id="1930a-223">Stickers</span></span>|
+||<span data-ttu-id="1930a-224">Emojis</span><span class="sxs-lookup"><span data-stu-id="1930a-224">Emojis</span></span>|
+||<span data-ttu-id="1930a-225">Ofertas</span><span class="sxs-lookup"><span data-stu-id="1930a-225">Quotes</span></span>|
+||<span data-ttu-id="1930a-226">Publicaciones cruzadas entre canales</span><span class="sxs-lookup"><span data-stu-id="1930a-226">Cross posts between channels</span></span>|
 
 
-## <a name="see-also"></a><span data-ttu-id="a5486-223">Consulte también</span><span class="sxs-lookup"><span data-stu-id="a5486-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1930a-227">Vea también</span><span class="sxs-lookup"><span data-stu-id="1930a-227">See also</span></span>
 
-[<span data-ttu-id="a5486-224">Obtenga más información sobre microsoft Graph y Teams integración</span><span class="sxs-lookup"><span data-stu-id="a5486-224">Learn more about Microsoft Graph and Teams integration</span></span>](/graph/teams-concept-overview)
+[<span data-ttu-id="1930a-228">Integración Graph y Teams Microsoft</span><span class="sxs-lookup"><span data-stu-id="1930a-228">Microsoft Graph and Teams integration</span></span>](/graph/teams-concept-overview)

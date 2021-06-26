@@ -1,23 +1,61 @@
 ---
-title: Envío de mensajes a conectores y webhooks
+title: Crear y enviar mensajes
+author: laujan
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams o365 conector
-ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
-ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
+ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "52583739"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140531"
 ---
-# <a name="sending-messages-to-connectors-and-webhooks"></a><span data-ttu-id="241ce-104">Envío de mensajes a conectores y webhooks</span><span class="sxs-lookup"><span data-stu-id="241ce-104">Sending messages to connectors and webhooks</span></span>
+# <a name="create-and-send-messages"></a><span data-ttu-id="8a94d-104">Crear y enviar mensajes</span><span class="sxs-lookup"><span data-stu-id="8a94d-104">Create and send messages</span></span>
 
-<span data-ttu-id="241ce-105">Para enviar un mensaje a través del conector de Office 365 o el webhook de entrada, debe publicar una carga JSON en la dirección URL del webhook.</span><span class="sxs-lookup"><span data-stu-id="241ce-105">To send a message through your Office 365 Connector or incoming webhook, you post a JSON payload to the webhook URL.</span></span> <span data-ttu-id="241ce-106">Por lo general, esta carga será una [tarjeta de conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span><span class="sxs-lookup"><span data-stu-id="241ce-106">Typically this payload will be in the form of an [Office 365 Connector Card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
+<span data-ttu-id="8a94d-105">Puede crear mensajes que puedan realizar acciones y enviarlos a través de Webhook entrante o Office 365 Connector.</span><span class="sxs-lookup"><span data-stu-id="8a94d-105">You can create actionable messages and send it through Incoming Webhook or Office 365 Connector.</span></span>
 
-<span data-ttu-id="241ce-107">También puede usar este JSON para crear tarjetas que contengan entradas enriquecidas, como entrada de texto, selección múltiple o selección de una fecha y hora.</span><span class="sxs-lookup"><span data-stu-id="241ce-107">You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time.</span></span> <span data-ttu-id="241ce-108">El código que genera la tarjeta y publica en la dirección URL de webhook se puede ejecutar en cualquier servicio hospedado.</span><span class="sxs-lookup"><span data-stu-id="241ce-108">The code that generates the card and posts to the webhook URL can be running on any hosted service.</span></span> <span data-ttu-id="241ce-109">Estas tarjetas se definen como parte de mensajes accionables, y también se admiten en las [tarjetas](~/task-modules-and-cards/what-are-cards.md) que se usan en los bots de Teams y las extensiones de mensajería.</span><span class="sxs-lookup"><span data-stu-id="241ce-109">These cards are defined as part of actionable messages, and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and Messaging extensions.</span></span>
+## <a name="create-actionable-messages"></a><span data-ttu-id="8a94d-106">Crear mensajes que pueden actuar</span><span class="sxs-lookup"><span data-stu-id="8a94d-106">Create actionable messages</span></span>
 
-### <a name="example-connector-message"></a><span data-ttu-id="241ce-110">Ejemplo de mensaje de conector</span><span class="sxs-lookup"><span data-stu-id="241ce-110">Example connector message</span></span>
+<span data-ttu-id="8a94d-107">Los mensajes que pueden actuar incluyen tres botones visibles en la tarjeta.</span><span class="sxs-lookup"><span data-stu-id="8a94d-107">The actionable messages include three visible buttons on the card.</span></span> <span data-ttu-id="8a94d-108">Cada botón se define en la propiedad del mensaje mediante acciones, cada una con un tipo de entrada, un campo de texto, un selector de fechas o una lista de `potentialAction` `ActionCard` opciones múltiples.</span><span class="sxs-lookup"><span data-stu-id="8a94d-108">Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list.</span></span> <span data-ttu-id="8a94d-109">Cada `ActionCard` uno tiene una acción asociada, por ejemplo `HttpPOST` .</span><span class="sxs-lookup"><span data-stu-id="8a94d-109">Each `ActionCard` has an associated action, for example `HttpPOST`.</span></span>
+
+<span data-ttu-id="8a94d-110">Las tarjetas de conector admiten las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="8a94d-110">The connector cards support the following actions:</span></span>
+
+- <span data-ttu-id="8a94d-111">`ActionCard`: presenta uno o varios tipos de entrada y acciones asociadas.</span><span class="sxs-lookup"><span data-stu-id="8a94d-111">`ActionCard`: Presents one or more input types and associated actions.</span></span>
+- <span data-ttu-id="8a94d-112">`HttpPOST`: envía la solicitud POST a una dirección URL.</span><span class="sxs-lookup"><span data-stu-id="8a94d-112">`HttpPOST`: Sends POST request to a URL.</span></span>
+- <span data-ttu-id="8a94d-113">`OpenUri`: abre uri en un explorador o aplicación independiente, opcionalmente tiene como destino diferentes URI basados en sistemas operativos.</span><span class="sxs-lookup"><span data-stu-id="8a94d-113">`OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.</span></span>
+
+<span data-ttu-id="8a94d-114">La acción `ActionCard` admite tres tipos de entrada:</span><span class="sxs-lookup"><span data-stu-id="8a94d-114">The `ActionCard` action supports three input types:</span></span>
+
+- <span data-ttu-id="8a94d-115">`TextInput`: un campo de texto de línea única o de varias líneas con un límite de longitud opcional.</span><span class="sxs-lookup"><span data-stu-id="8a94d-115">`TextInput`: A single line or multiline text field with an optional length limit.</span></span>
+- <span data-ttu-id="8a94d-116">`DateInput`: selector de fecha con un selector de hora opcional.</span><span class="sxs-lookup"><span data-stu-id="8a94d-116">`DateInput`: A date selector with an optional time selector.</span></span>
+- <span data-ttu-id="8a94d-117">`MultichoiceInput`: Una lista enumerada de opciones que ofrecen una sola selección o varias selecciones.</span><span class="sxs-lookup"><span data-stu-id="8a94d-117">`MultichoiceInput`: An enumerated list of choices offering either a single selection or multiple selections.</span></span>
+
+<span data-ttu-id="8a94d-118">`MultichoiceInput` admite una propiedad `style` que controla si inicialmente la lista se muestra totalmente expandida.</span><span class="sxs-lookup"><span data-stu-id="8a94d-118">`MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded.</span></span> <span data-ttu-id="8a94d-119">El valor predeterminado de `style` depende del valor de la siguiente `isMultiSelect` manera:</span><span class="sxs-lookup"><span data-stu-id="8a94d-119">The default value of `style` depends on the value of `isMultiSelect` as follows:</span></span>
+
+| `isMultiSelect` | <span data-ttu-id="8a94d-120">`style` predeterminado</span><span class="sxs-lookup"><span data-stu-id="8a94d-120">`style` default</span></span> |
+| --- | --- |
+| <span data-ttu-id="8a94d-121">`false` o no especificado</span><span class="sxs-lookup"><span data-stu-id="8a94d-121">`false` or not specified</span></span> | `compact` |
+| `true` | `expanded` |
+
+<span data-ttu-id="8a94d-122">Para mostrar la lista de selección múltiple en el estilo compacto, debe especificar ambos `"isMultiSelect": true` y `"style": true` .</span><span class="sxs-lookup"><span data-stu-id="8a94d-122">To display the multiselect list in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.</span></span>
+
+<span data-ttu-id="8a94d-123">Para obtener más información sobre las acciones de tarjeta de conector, vea [Actions](/outlook/actionable-messages/card-reference#actions).</span><span class="sxs-lookup"><span data-stu-id="8a94d-123">For more information on connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).</span></span>
+
+> [!NOTE]
+> * <span data-ttu-id="8a94d-124">Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.</span><span class="sxs-lookup"><span data-stu-id="8a94d-124">Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.</span></span>
+> * <span data-ttu-id="8a94d-125">Para la acción HttpPOST, el token de usuario se incluye con las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="8a94d-125">For the HttpPOST action, the bearer token is included with the requests.</span></span> <span data-ttu-id="8a94d-126">Este token incluye la identidad de Azure AD del usuario de Office 365 que realizó la acción.</span><span class="sxs-lookup"><span data-stu-id="8a94d-126">This token includes the Azure AD identity of the Office 365 user who took the action.</span></span>
+
+## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a><span data-ttu-id="8a94d-127">Enviar un mensaje a través de Webhook entrante o Office 365 Connector</span><span class="sxs-lookup"><span data-stu-id="8a94d-127">Send a message through Incoming Webhook or Office 365 Connector</span></span>
+
+<span data-ttu-id="8a94d-128">Para enviar un mensaje a través del Webhook entrante o Office 365 Connector, publique una carga JSON en la dirección URL del webhook.</span><span class="sxs-lookup"><span data-stu-id="8a94d-128">To send a message through your Incoming Webhook or Office 365 Connector, post a JSON payload to the webhook URL.</span></span> <span data-ttu-id="8a94d-129">Esta carga debe tener la forma de una [Office 365 de conector .](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)</span><span class="sxs-lookup"><span data-stu-id="8a94d-129">This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
+
+<span data-ttu-id="8a94d-130">También puede usar este JSON para crear tarjetas que contengan entradas enriqueciendo, como entrada de texto, selección múltiple o selección de fecha y hora.</span><span class="sxs-lookup"><span data-stu-id="8a94d-130">You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time.</span></span> <span data-ttu-id="8a94d-131">El código que genera la tarjeta y la publica en la dirección URL de webhook puede ejecutarse en cualquier servicio hospedado.</span><span class="sxs-lookup"><span data-stu-id="8a94d-131">The code that generates the card and posts it to the webhook URL can run on any hosted service.</span></span> <span data-ttu-id="8a94d-132">Estas tarjetas se definen como parte de los [](~/task-modules-and-cards/what-are-cards.md)mensajes que se pueden usar y también se admiten en tarjetas, que se usan Teams bots y extensiones de mensajería.</span><span class="sxs-lookup"><span data-stu-id="8a94d-132">These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.</span></span>
+
+### <a name="example-of-connector-message"></a><span data-ttu-id="8a94d-133">Ejemplo de mensaje de conector</span><span class="sxs-lookup"><span data-stu-id="8a94d-133">Example of connector message</span></span>
+
+<span data-ttu-id="8a94d-134">Un ejemplo de mensaje de conector es el siguiente:</span><span class="sxs-lookup"><span data-stu-id="8a94d-134">An example of connector message is as follows:</span></span>
 
 ```json
 {
@@ -103,57 +141,19 @@ ms.locfileid: "52583739"
 }
 ```
 
-<span data-ttu-id="241ce-111">Este mensaje genera la siguiente tarjeta en el canal:</span><span class="sxs-lookup"><span data-stu-id="241ce-111">This message produces the following card in the channel:</span></span>
+<span data-ttu-id="8a94d-135">Este mensaje proporciona la siguiente tarjeta en el canal:</span><span class="sxs-lookup"><span data-stu-id="8a94d-135">This message provides the following card in the channel:</span></span>
 
-![Captura de pantalla de una tarjeta de conector](~/assets/images/connectors/connector_message.png)
+![Captura de pantalla de una tarjeta de conector](~/assets/images/connectorcard.png)
 
-## <a name="creating-actionable-messages"></a><span data-ttu-id="241ce-113">Creación de mensajes que requieren acción</span><span class="sxs-lookup"><span data-stu-id="241ce-113">Creating actionable messages</span></span>
+## <a name="send-messages-using-curl-and-powershell"></a><span data-ttu-id="8a94d-137">Enviar mensajes con cURL y PowerShell</span><span class="sxs-lookup"><span data-stu-id="8a94d-137">Send messages using cURL and PowerShell</span></span>
 
-<span data-ttu-id="241ce-114">En el ejemplo de la sección anterior se incluyen tres botones visibles en la tarjeta.</span><span class="sxs-lookup"><span data-stu-id="241ce-114">The example in the preceding section includes three visible buttons on the card.</span></span> <span data-ttu-id="241ce-115">Cada botón se define en la propiedad `potentialAction` del mensaje mediante acciones `ActionCard`, cada una de las cuales contiene un tipo de entrada: un campo de texto, un selector de fecha o una lista de opciones múltiples.</span><span class="sxs-lookup"><span data-stu-id="241ce-115">Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multi-choice list.</span></span> <span data-ttu-id="241ce-116">Cada acción `ActionCard` tiene asociada una acción, por ejemplo `HttpPOST`.</span><span class="sxs-lookup"><span data-stu-id="241ce-116">Each `ActionCard` action has an associated action, for example `HttpPOST`.</span></span>
+# <a name="curl"></a>[<span data-ttu-id="8a94d-138">cURL</span><span class="sxs-lookup"><span data-stu-id="8a94d-138">cURL</span></span>](#tab/cURL)
 
-<span data-ttu-id="241ce-117">Las tarjetas de conector admiten tres tipos de acciones:</span><span class="sxs-lookup"><span data-stu-id="241ce-117">Connector cards support three types of actions:</span></span>
+<span data-ttu-id="8a94d-139">**Para publicar un mensaje en el webhook con cURL**</span><span class="sxs-lookup"><span data-stu-id="8a94d-139">**To post a message in the webhook with cURL**</span></span>
 
-- <span data-ttu-id="241ce-118">`ActionCard` Presenta uno o varios tipos de entrada y acciones asociadas.</span><span class="sxs-lookup"><span data-stu-id="241ce-118">`ActionCard` Presents one or more input types and associated actions</span></span>
-- <span data-ttu-id="241ce-119">`HttpPOST` Envía una solicitud POST a una dirección URL.</span><span class="sxs-lookup"><span data-stu-id="241ce-119">`HttpPOST` Sends a POST request to a URL</span></span>
-- <span data-ttu-id="241ce-120">`OpenUri` Abre un identificador URI en un explorador o aplicación independiente. De manera opcional, marca como destino diferentes URI en función de los sistemas operativos.</span><span class="sxs-lookup"><span data-stu-id="241ce-120">`OpenUri` Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems</span></span>
+1. <span data-ttu-id="8a94d-140">Instale cURL con: https://curl.haxx.se/ .</span><span class="sxs-lookup"><span data-stu-id="8a94d-140">Install cURL using: https://curl.haxx.se/.</span></span>
 
-<span data-ttu-id="241ce-121">La acción `ActionCard` admite tres tipos de entrada:</span><span class="sxs-lookup"><span data-stu-id="241ce-121">The `ActionCard` action supports three input types:</span></span>
-
-- <span data-ttu-id="241ce-122">`TextInput` Un campo de texto de una sola línea o multilínea con un límite de longitud opcional.</span><span class="sxs-lookup"><span data-stu-id="241ce-122">`TextInput` A single-line or multiline text field with an optional length limit</span></span>
-- <span data-ttu-id="241ce-123">`DateInput` Un selector de fecha con un selector de hora opcional.</span><span class="sxs-lookup"><span data-stu-id="241ce-123">`DateInput` A date selector with an optional time selector</span></span>
-- <span data-ttu-id="241ce-124">`MultichoiceInput` Una lista de opciones enumeradas que ofrece una sola selección o selecciones múltiples.</span><span class="sxs-lookup"><span data-stu-id="241ce-124">`MultichoiceInput` A enumerated list of choices offering either a single selection or multiple selections</span></span>
-
-<span data-ttu-id="241ce-125">`MultichoiceInput` admite una propiedad `style` que controla si inicialmente la lista se muestra totalmente expandida.</span><span class="sxs-lookup"><span data-stu-id="241ce-125">`MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded.</span></span> <span data-ttu-id="241ce-126">El valor predeterminado de `style` depende del valor de `isMultiSelect`.</span><span class="sxs-lookup"><span data-stu-id="241ce-126">The default value of `style` depends on the value of `isMultiSelect`.</span></span>
-
-| `isMultiSelect` | <span data-ttu-id="241ce-127">`style` predeterminado</span><span class="sxs-lookup"><span data-stu-id="241ce-127">`style` default</span></span> |
-| --- | --- |
-| <span data-ttu-id="241ce-128">`false` o no especificado</span><span class="sxs-lookup"><span data-stu-id="241ce-128">`false` or not specified</span></span> | `compact` |
-| `true` | `expanded` |
-
-<span data-ttu-id="241ce-129">Si quiere que se muestre inicialmente una lista de selección múltiple en el estilo compacto, debe especificar `"isMultiSelect": true` y `"style": true`.</span><span class="sxs-lookup"><span data-stu-id="241ce-129">If you want a multiselect list initially displayed in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.</span></span>
-
-<span data-ttu-id="241ce-130">Para obtener más información sobre las acciones de tarjetas de conector, consulte **[Acciones]**(/outlook/actionable-messages/card-reference#actions) en la referencia de tarjeta de mensajes accionables.</span><span class="sxs-lookup"><span data-stu-id="241ce-130">For more information on Connector card actions, see **[Actions]**(/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="241ce-131">Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.</span><span class="sxs-lookup"><span data-stu-id="241ce-131">Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.</span></span>
-> 
-> <span data-ttu-id="241ce-132">Para la acción HttpPOST, el token de usuario se incluye con las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="241ce-132">For the HttpPOST action, the bearer token is included with the requests.</span></span> <span data-ttu-id="241ce-133">Este token incluye la identidad de Azure AD del usuario de Office 365 que realizó la acción.</span><span class="sxs-lookup"><span data-stu-id="241ce-133">This token includes the Azure AD identity of the Office 365 user who took the action.</span></span>
-
-## <a name="setting-up-a-custom-incoming-webhook"></a><span data-ttu-id="241ce-134">Configurar un webhook de entrada personalizado</span><span class="sxs-lookup"><span data-stu-id="241ce-134">Setting up a custom incoming webhook</span></span>
-
-<span data-ttu-id="241ce-135">Siga estos pasos para ver cómo enviar una tarjeta sencilla a un conector:</span><span class="sxs-lookup"><span data-stu-id="241ce-135">Follow these steps to see how to send a simple card to a Connector:</span></span>
-
-1. <span data-ttu-id="241ce-136">En Microsoft Teams, elija **Más opciones** (**&#8943;**) junto al nombre del canal y elija **Conectores**.</span><span class="sxs-lookup"><span data-stu-id="241ce-136">In Microsoft Teams, choose **More options** (**&#8943;**) next to the channel name and then choose **Connectors**.</span></span>
-1. <span data-ttu-id="241ce-137">Desplácese por la lista de conectores hasta **Webhook entrante** y elija **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="241ce-137">Scroll through the list of Connectors to **Incoming Webhook**, and choose **Add**.</span></span>
-1. <span data-ttu-id="241ce-138">Escriba un nombre para el webhook, cargue una imagen para asociarla a los datos del webhook y elija **Crear**.</span><span class="sxs-lookup"><span data-stu-id="241ce-138">Enter a name for the webhook, upload an image to associate with data from the webhook, and choose **Create**.</span></span>
-1. <span data-ttu-id="241ce-139">Copie el webhook en el portapapeles y guárdelo.</span><span class="sxs-lookup"><span data-stu-id="241ce-139">Copy the webhook to the clipboard and save it.</span></span> <span data-ttu-id="241ce-140">Necesitará la dirección URL del webhook para enviar información a Microsoft Teams.</span><span class="sxs-lookup"><span data-stu-id="241ce-140">You'll need the webhook URL for sending information to Microsoft Teams.</span></span>
-1. <span data-ttu-id="241ce-141">Seleccione **Listo**.</span><span class="sxs-lookup"><span data-stu-id="241ce-141">Choose **Done**.</span></span>
-
-### <a name="post-a-message-to-the-webhook-using-curl"></a><span data-ttu-id="241ce-142">Publicar un mensaje en webhook con cURL</span><span class="sxs-lookup"><span data-stu-id="241ce-142">Post a message to the webhook using cURL</span></span>
-
-<span data-ttu-id="241ce-143">Los siguientes pasos usan [cURL](https://curl.haxx.se/).</span><span class="sxs-lookup"><span data-stu-id="241ce-143">The following steps use [cURL](https://curl.haxx.se/).</span></span> <span data-ttu-id="241ce-144">Damos por sentado que lo tiene instalado y está familiarizado con su uso básico.</span><span class="sxs-lookup"><span data-stu-id="241ce-144">We assume that you have this installed and are familiar with its basic usage.</span></span>
-
-1. <span data-ttu-id="241ce-145">Desde la línea de comandos, escriba el siguiente comando cURL:</span><span class="sxs-lookup"><span data-stu-id="241ce-145">From the command line, enter the following cURL command:</span></span>
+1. <span data-ttu-id="8a94d-141">Desde la línea de comandos, escriba el siguiente comando cURL:</span><span class="sxs-lookup"><span data-stu-id="8a94d-141">From the command line, enter the following cURL command:</span></span>
 
    ```bash
    // on macOS or Linux
@@ -165,82 +165,43 @@ ms.locfileid: "52583739"
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-1. <span data-ttu-id="241ce-146">Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `curl`.</span><span class="sxs-lookup"><span data-stu-id="241ce-146">If the POST succeeds, you should see a simple **1** output by `curl`.</span></span>
-1. <span data-ttu-id="241ce-147">Compruebe el cliente de Microsoft Team.</span><span class="sxs-lookup"><span data-stu-id="241ce-147">Check the Microsoft Team client.</span></span> <span data-ttu-id="241ce-148">Debería ver la nueva tarjeta publicada en el equipo.</span><span class="sxs-lookup"><span data-stu-id="241ce-148">You should see the new card posted to the team.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="8a94d-142">Si post se realiza correctamente, debe ver una salida simple **1** por `curl` .</span><span class="sxs-lookup"><span data-stu-id="8a94d-142">If the POST succeeds, you must see a simple **1** output by `curl`.</span></span>
 
-### <a name="post-a-message-to-the-webhook-using-powershell"></a><span data-ttu-id="241ce-149">Publicar un mensaje en webhook con PowerShell</span><span class="sxs-lookup"><span data-stu-id="241ce-149">Post a message to the webhook using PowerShell</span></span>
+1. <span data-ttu-id="8a94d-143">Compruebe en Microsoft Teams cliente la nueva tarjeta publicada.</span><span class="sxs-lookup"><span data-stu-id="8a94d-143">Check the Microsoft Teams client for the new card posted.</span></span>
 
-<span data-ttu-id="241ce-150">Los siguientes pasos usan PowerShell.</span><span class="sxs-lookup"><span data-stu-id="241ce-150">The following steps use PowerShell.</span></span> <span data-ttu-id="241ce-151">Damos por sentado que lo tiene instalado y está familiarizado con su uso básico.</span><span class="sxs-lookup"><span data-stu-id="241ce-151">We assume that you have this installed and are familiar with its basic usage.</span></span>
+# <a name="powershell"></a>[<span data-ttu-id="8a94d-144">PowerShell</span><span class="sxs-lookup"><span data-stu-id="8a94d-144">PowerShell</span></span>](#tab/PowerShell)
 
-1. <span data-ttu-id="241ce-152">Desde el símbolo del sistema de PowerShell, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="241ce-152">From the PowerShell prompt, enter the following command:</span></span>
+ <span data-ttu-id="8a94d-145">Requisito previo: instalación de PowerShell y familiarización con su uso básico.</span><span class="sxs-lookup"><span data-stu-id="8a94d-145">Prerequisite: Installation of PowerShell and familiarization with its basic usage.</span></span>
+
+<span data-ttu-id="8a94d-146">**Para publicar un mensaje en el webhook con PowerShell**</span><span class="sxs-lookup"><span data-stu-id="8a94d-146">**To post a message to the webhook with PowerShell**</span></span>
+
+1. <span data-ttu-id="8a94d-147">Desde el símbolo del sistema de PowerShell, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="8a94d-147">From the PowerShell prompt, enter the following command:</span></span>
 
    ```powershell
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-1. <span data-ttu-id="241ce-153">Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `Invoke-RestMethod`.</span><span class="sxs-lookup"><span data-stu-id="241ce-153">If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.</span></span>
-1. <span data-ttu-id="241ce-154">Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook.</span><span class="sxs-lookup"><span data-stu-id="241ce-154">Check the Microsoft Teams channel associated with the webhook URL.</span></span> <span data-ttu-id="241ce-155">Debería ver la nueva tarjeta publicada en el canal.</span><span class="sxs-lookup"><span data-stu-id="241ce-155">You should see the new card posted to the channel.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="8a94d-148">Si post se realiza correctamente, debe ver una salida simple **1** por `Invoke-RestMethod` .</span><span class="sxs-lookup"><span data-stu-id="8a94d-148">If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.</span></span>
 
-- <span data-ttu-id="241ce-156">[Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).</span><span class="sxs-lookup"><span data-stu-id="241ce-156">[Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).</span></span>
-- <span data-ttu-id="241ce-157">Modifique la parte `icons` del manifiesto para hacer referencia a los nombres de archivo de los iconos en lugar de a las direcciones URL.</span><span class="sxs-lookup"><span data-stu-id="241ce-157">Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.</span></span>
+1. <span data-ttu-id="8a94d-149">Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook.</span><span class="sxs-lookup"><span data-stu-id="8a94d-149">Check the Microsoft Teams channel associated with the webhook URL.</span></span> <span data-ttu-id="8a94d-150">Puede ver la nueva tarjeta publicada en el canal.</span><span class="sxs-lookup"><span data-stu-id="8a94d-150">You can see the new card posted to the channel.</span></span> <span data-ttu-id="8a94d-151">Antes de usar el conector para probar o publicar la aplicación, debe hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="8a94d-151">Before you use the connector to test or publish your app, you must do the following:</span></span>
 
-<span data-ttu-id="241ce-158">La siguiente manifest.jsen el archivo contiene los elementos básicos necesarios para probar y enviar la aplicación:</span><span class="sxs-lookup"><span data-stu-id="241ce-158">The following manifest.json file contains the basic elements needed to test and submit your app:</span></span>
+    - <span data-ttu-id="8a94d-152">[Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).</span><span class="sxs-lookup"><span data-stu-id="8a94d-152">[Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).</span></span>
+    - <span data-ttu-id="8a94d-153">Modifique la `icons` parte del manifiesto a los nombres de archivo de los iconos en lugar de las direcciones URL.</span><span class="sxs-lookup"><span data-stu-id="8a94d-153">Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="241ce-159">Reemplace `id` y `connectorId` en el ejemplo siguiente con el GUID del conector.</span><span class="sxs-lookup"><span data-stu-id="241ce-159">Replace `id` and `connectorId` in the following example with the GUID of your Connector.</span></span>
+---
 
-#### <a name="example-manifestjson-with-connector"></a><span data-ttu-id="241ce-160">Ejemplo de manifest.json con conector</span><span class="sxs-lookup"><span data-stu-id="241ce-160">Example manifest.json with connector</span></span>
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
-  "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-  "version": "1.0",
-  "packageName": "com.sampleapp",
-  "developer": {
-    "name": "Publisher",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.microsoft.com",
-    "termsOfUseUrl": "https://www.microsoft.com"
-  },
-  "description": {
-    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
-    "short": "This is a small sample app we made for you!"
-  },
-  "icons": {
-    "outline": "sampleapp-outline.png",
-    "color": "sampleapp-color.png"
-  },
-  "connectors": [
-    {
-      "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-      "scopes": [
-        "team"
-      ]
-    }
-  ],
-  "name": {
-    "short": "Sample App",
-    "full": "Sample App"
-  },
-  "accentColor": "#FFFFFF",
-  "needsIdentity": "true"
-}
-```
-
-## <a name="send-adaptive-cards-using-an-incoming-webhook"></a><span data-ttu-id="241ce-161">Enviar tarjetas adaptables con un webhook entrante</span><span class="sxs-lookup"><span data-stu-id="241ce-161">Send adaptive cards using an incoming webhook</span></span>
+## <a name="send-adaptive-cards-using-an-incoming-webhook"></a><span data-ttu-id="8a94d-154">Enviar tarjetas adaptables mediante un webhook entrante</span><span class="sxs-lookup"><span data-stu-id="8a94d-154">Send Adaptive Cards using an Incoming Webhook</span></span>
 
 > [!NOTE]
->
-> <span data-ttu-id="241ce-162">✔ Todos los elementos de esquema de tarjetas adaptables nativas, excepto `Action.Submit`, son completamente compatibles.</span><span class="sxs-lookup"><span data-stu-id="241ce-162">✔ All native adaptive card schema elements, except `Action.Submit`, are fully supported.</span></span>
->
-> <span data-ttu-id="241ce-163">✔ Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), y [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).</span><span class="sxs-lookup"><span data-stu-id="241ce-163">✔ The supported Actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).</span></span>
+> * <span data-ttu-id="8a94d-155">Todos los elementos nativos del esquema de tarjeta adaptable, excepto `Action.Submit` , son totalmente compatibles.</span><span class="sxs-lookup"><span data-stu-id="8a94d-155">All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.</span></span>
+> * <span data-ttu-id="8a94d-156">Las acciones admitidas [**son Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)y [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).</span><span class="sxs-lookup"><span data-stu-id="8a94d-156">The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).</span></span>
 
-### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a><span data-ttu-id="241ce-164">El flujo para el envío de [tarjetas adaptables](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) mediante un webhook entrante es el siguiente:</span><span class="sxs-lookup"><span data-stu-id="241ce-164">The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:</span></span>
+<span data-ttu-id="8a94d-157">**Para enviar tarjetas adaptables a través de un webhook entrante**</span><span class="sxs-lookup"><span data-stu-id="8a94d-157">**To send Adaptive Cards through an Incoming Webhook**</span></span>
 
-1. <span data-ttu-id="241ce-165">[Configure un webhook personalizado](#setting-up-a-custom-incoming-webhook) en Teams.</span><span class="sxs-lookup"><span data-stu-id="241ce-165">[Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</span></span>
-1. <span data-ttu-id="241ce-166">Cree el archivo JSON de tarjeta adaptable:</span><span class="sxs-lookup"><span data-stu-id="241ce-166">Create your adaptive card JSON file:</span></span>
+1. <span data-ttu-id="8a94d-158">[Configure un webhook personalizado](/add-incoming-webhook.md) en Teams.</span><span class="sxs-lookup"><span data-stu-id="8a94d-158">[Setup a custom webhook](/add-incoming-webhook.md) in Teams.</span></span>
+1. <span data-ttu-id="8a94d-159">Cree un archivo JSON de tarjeta adaptable con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="8a94d-159">Create Adaptive Card JSON file using the following code:</span></span>
 
     ```json
     {
@@ -265,47 +226,41 @@ ms.locfileid: "52583739"
     }
     ```
 
-    > [!div class="checklist"]
-    >
-    > - <span data-ttu-id="241ce-167">El campo `"type"` debe ser `"message"`.</span><span class="sxs-lookup"><span data-stu-id="241ce-167">The `"type"` field must be `"message"`.</span></span>
-    > - <span data-ttu-id="241ce-168">La matriz `"attachments"` contiene un conjunto de objetos de tarjeta.</span><span class="sxs-lookup"><span data-stu-id="241ce-168">The `"attachments"` array contains a set of card objects.</span></span>
-    > - <span data-ttu-id="241ce-169">El campo `"contentType"` debe establecerse en tipo de tarjeta adaptable.</span><span class="sxs-lookup"><span data-stu-id="241ce-169">The `"contentType"` field must be set to adaptive card type.</span></span>
-    > - <span data-ttu-id="241ce-170">El objeto `"content"` es la tarjeta con formato JSON.</span><span class="sxs-lookup"><span data-stu-id="241ce-170">The `"content"` object is the card formatted in JSON.</span></span>
+    <span data-ttu-id="8a94d-160">Las propiedades del archivo JSON de tarjeta adaptable son las siguientes:</span><span class="sxs-lookup"><span data-stu-id="8a94d-160">The properties for Adaptive Card JSON file are as follows:</span></span>
 
-1. <span data-ttu-id="241ce-171">Pruebe la tarjeta adaptable con Postman.</span><span class="sxs-lookup"><span data-stu-id="241ce-171">Test your adaptive card with Postman.</span></span>
+    * <span data-ttu-id="8a94d-161">El campo `"type"` debe ser `"message"`.</span><span class="sxs-lookup"><span data-stu-id="8a94d-161">The `"type"` field must be `"message"`.</span></span>
+    * <span data-ttu-id="8a94d-162">La matriz `"attachments"` contiene un conjunto de objetos de tarjeta.</span><span class="sxs-lookup"><span data-stu-id="8a94d-162">The `"attachments"` array contains a set of card objects.</span></span>
+    * <span data-ttu-id="8a94d-163">El `"contentType"` campo debe establecerse en Tipo de tarjeta adaptable.</span><span class="sxs-lookup"><span data-stu-id="8a94d-163">The `"contentType"` field must be set to Adaptive Card type.</span></span>
+    * <span data-ttu-id="8a94d-164">El objeto `"content"` es la tarjeta con formato JSON.</span><span class="sxs-lookup"><span data-stu-id="8a94d-164">The `"content"` object is the card formatted in JSON.</span></span>
 
-<span data-ttu-id="241ce-172">Para probar la tarjeta adaptativa, puede usar [Postman](https://www.postman.com) para enviar una solicitud POST a la dirección URL que creó cuando configuró el webhook entrante.</span><span class="sxs-lookup"><span data-stu-id="241ce-172">You can test your adaptive card using [Postman](https://www.postman.com) to send a POST request to the URL that you created when you setup your incoming webhook.</span></span> <span data-ttu-id="241ce-173">Pegue el archivo JSON en el cuerpo de la solicitud y vea el mensaje de la tarjeta adaptable en Teams.</span><span class="sxs-lookup"><span data-stu-id="241ce-173">Paste your JSON file in the body of the request and view your adaptive card message in Teams.</span></span>
+1. <span data-ttu-id="8a94d-165">Pruebe la tarjeta adaptable con Postman:</span><span class="sxs-lookup"><span data-stu-id="8a94d-165">Test your Adaptive Card with Postman:</span></span>
 
->[!TIP]
-> <span data-ttu-id="241ce-174">Puede usar el código de tarjeta adaptable [Ejemplos y plantillas](https://adaptivecards.io/samples) para el cuerpo de la solicitud Post de prueba.</span><span class="sxs-lookup"><span data-stu-id="241ce-174">You can use adaptive card code [Samples and Templates](https://adaptivecards.io/samples) for the body of your test Post request.</span></span>
+    * <span data-ttu-id="8a94d-166">Pruebe la tarjeta adaptable con [Postman](https://www.postman.com) para enviar una solicitud POST a la dirección URL, creada para configurar el webhook entrante.</span><span class="sxs-lookup"><span data-stu-id="8a94d-166">Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.</span></span>
+    * <span data-ttu-id="8a94d-167">Pegue el archivo JSON en el cuerpo de la solicitud y vea el mensaje de tarjeta adaptable en Teams.</span><span class="sxs-lookup"><span data-stu-id="8a94d-167">Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.</span></span>
 
-## <a name="testing-your-connector"></a><span data-ttu-id="241ce-175">Probar el conector</span><span class="sxs-lookup"><span data-stu-id="241ce-175">Testing your connector</span></span>
+> [!TIP]
+> <span data-ttu-id="8a94d-168">Use plantillas y [ejemplos de código de tarjeta](https://adaptivecards.io/samples) adaptable para probar el cuerpo de la solicitud POST.</span><span class="sxs-lookup"><span data-stu-id="8a94d-168">Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.</span></span>
 
-<span data-ttu-id="241ce-176">Para probar el conector, cárguelo en un equipo igual que lo haría con cualquier otra aplicación.</span><span class="sxs-lookup"><span data-stu-id="241ce-176">To test your Connector, upload it to a team as you would with any other app.</span></span> <span data-ttu-id="241ce-177">Puede crear un paquete .zip mediante el archivo de manifiesto del Panel de desarrolladores de Conectores que se modificó como se indica en la sección anterior y los dos archivos de icono.</span><span class="sxs-lookup"><span data-stu-id="241ce-177">You can create a .zip package using the manifest file from the Connectors Developer Dashboard which was modified as directed in the preceding section and the two icon files.</span></span>
+## <a name="rate-limiting-for-connectors"></a><span data-ttu-id="8a94d-169">Limitación de velocidad para conectores</span><span class="sxs-lookup"><span data-stu-id="8a94d-169">Rate limiting for connectors</span></span>
 
-<span data-ttu-id="241ce-178">Después de cargar la aplicación, abra la lista Conectores desde cualquier canal.</span><span class="sxs-lookup"><span data-stu-id="241ce-178">After you upload the app, open the Connectors list from any channel.</span></span> <span data-ttu-id="241ce-179">Desplácese a la parte inferior para ver la aplicación en la **sección Cargado:**</span><span class="sxs-lookup"><span data-stu-id="241ce-179">Scroll to the bottom to see your app in the **Uploaded** section:</span></span>
+<span data-ttu-id="8a94d-170">Los límites de velocidad de aplicación controlan el tráfico que puede generar un conector o un webhook entrante en un canal.</span><span class="sxs-lookup"><span data-stu-id="8a94d-170">Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel.</span></span> <span data-ttu-id="8a94d-171">Teams realizar un seguimiento de las solicitudes mediante una ventana de tasa fija y un contador incremental medidos en segundos.</span><span class="sxs-lookup"><span data-stu-id="8a94d-171">Teams track requests using a fixed rate window and incremental counter measured in seconds.</span></span> <span data-ttu-id="8a94d-172">Si se realizan más de cuatro solicitudes en un segundo, la conexión de cliente se limita hasta que la ventana se actualiza durante la duración de la tasa fija.</span><span class="sxs-lookup"><span data-stu-id="8a94d-172">If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.</span></span>
 
-![Captura de pantalla de la sección cargada en el cuadro de diálogo Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
+### <a name="transactions-per-second-thresholds"></a><span data-ttu-id="8a94d-173">Umbrales de transacciones por segundo</span><span class="sxs-lookup"><span data-stu-id="8a94d-173">Transactions per second thresholds</span></span>
 
-<span data-ttu-id="241ce-181">Ahora, puede iniciar la experiencia de configuración.</span><span class="sxs-lookup"><span data-stu-id="241ce-181">You can now launch the configuration experience.</span></span> <span data-ttu-id="241ce-182">Tenga en cuenta que este flujo se produce completamente en Microsoft Teams a través de una ventana emergente.</span><span class="sxs-lookup"><span data-stu-id="241ce-182">Be aware that this flow occurs entirely within Microsoft Teams through a pop-up window.</span></span> <span data-ttu-id="241ce-183">Actualmente, este comportamiento es distinto de la experiencia de configuración en Conectores que hemos creado; estamos trabajando para unificar las experiencias.</span><span class="sxs-lookup"><span data-stu-id="241ce-183">Currently, this behavior differs from the configuration experience in Connectors that we created; we are working on unifying the experiences.</span></span>
+<span data-ttu-id="8a94d-174">En la tabla siguiente se proporcionan los detalles de transacciones basadas en tiempo:</span><span class="sxs-lookup"><span data-stu-id="8a94d-174">The following table provides the time based transaction details:</span></span>
 
-<span data-ttu-id="241ce-184">Para comprobar que una acción `HttpPOST` está funcionando correctamente, utilice el [webhook entrante personalizado](#setting-up-a-custom-incoming-webhook).</span><span class="sxs-lookup"><span data-stu-id="241ce-184">To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](#setting-up-a-custom-incoming-webhook).</span></span>
-
-## <a name="rate-limiting-for-connectors"></a><span data-ttu-id="241ce-185">Limitación de velocidad para conectores</span><span class="sxs-lookup"><span data-stu-id="241ce-185">Rate limiting for connectors</span></span>
-
-<span data-ttu-id="241ce-186">Los límites de velocidad de la aplicación controlan el tráfico que puede generar un conector o un webhook entrante en un canal.</span><span class="sxs-lookup"><span data-stu-id="241ce-186">Application rate limits control the traffic that a connector or an incoming webhook is allowed to generate on a channel.</span></span> <span data-ttu-id="241ce-187">Teams realiza un seguimiento de las solicitudes a través de una ventana de velocidad fija y un contador incremental medido en segundos.</span><span class="sxs-lookup"><span data-stu-id="241ce-187">Teams tracks requests via a fixed-rate window and incremental counter measured in seconds.</span></span>  <span data-ttu-id="241ce-188">Si se hacen demasiadas solicitudes, se limita la conexión de cliente hasta que se actualice la ventana, es decir, mientras dure la velocidad fija.</span><span class="sxs-lookup"><span data-stu-id="241ce-188">If too many requests are made, the client connection will be throttled until the window refreshes, i.e., for the duration of the fixed rate.</span></span>
-
-### <a name="transactions-per-second-thresholds"></a><span data-ttu-id="241ce-189">**Umbrales de transacciones por segundo**</span><span class="sxs-lookup"><span data-stu-id="241ce-189">**Transactions per second thresholds**</span></span>
-
-| <span data-ttu-id="241ce-190">Tiempo (segundos)</span><span class="sxs-lookup"><span data-stu-id="241ce-190">Time (seconds)</span></span>  | <span data-ttu-id="241ce-191">Número máximo de solicitudes permitidas</span><span class="sxs-lookup"><span data-stu-id="241ce-191">Maximum allowed requests</span></span>  |
+| <span data-ttu-id="8a94d-175">Tiempo en segundos</span><span class="sxs-lookup"><span data-stu-id="8a94d-175">Time in seconds</span></span>  | <span data-ttu-id="8a94d-176">Número máximo de solicitudes permitidas</span><span class="sxs-lookup"><span data-stu-id="8a94d-176">Maximum allowed requests</span></span>  |
 |---|---|
-| <span data-ttu-id="241ce-192">1</span><span class="sxs-lookup"><span data-stu-id="241ce-192">1</span></span>   | <span data-ttu-id="241ce-193">4 </span><span class="sxs-lookup"><span data-stu-id="241ce-193">4</span></span>  |  
-| <span data-ttu-id="241ce-194">30</span><span class="sxs-lookup"><span data-stu-id="241ce-194">30</span></span>   | <span data-ttu-id="241ce-195">60</span><span class="sxs-lookup"><span data-stu-id="241ce-195">60</span></span>  |  
-| <span data-ttu-id="241ce-196">3600</span><span class="sxs-lookup"><span data-stu-id="241ce-196">3600</span></span>   | <span data-ttu-id="241ce-197">100</span><span class="sxs-lookup"><span data-stu-id="241ce-197">100</span></span>  |
-| <span data-ttu-id="241ce-198">7200</span><span class="sxs-lookup"><span data-stu-id="241ce-198">7200</span></span> | <span data-ttu-id="241ce-199">150</span><span class="sxs-lookup"><span data-stu-id="241ce-199">150</span></span>  |
-| <span data-ttu-id="241ce-200">86400</span><span class="sxs-lookup"><span data-stu-id="241ce-200">86400</span></span>  | <span data-ttu-id="241ce-201">1800</span><span class="sxs-lookup"><span data-stu-id="241ce-201">1800</span></span>  |
+| <span data-ttu-id="8a94d-177">1 </span><span class="sxs-lookup"><span data-stu-id="8a94d-177">1</span></span>   | <span data-ttu-id="8a94d-178">4 </span><span class="sxs-lookup"><span data-stu-id="8a94d-178">4</span></span>  |  
+| <span data-ttu-id="8a94d-179">30</span><span class="sxs-lookup"><span data-stu-id="8a94d-179">30</span></span>   | <span data-ttu-id="8a94d-180">60</span><span class="sxs-lookup"><span data-stu-id="8a94d-180">60</span></span>  |  
+| <span data-ttu-id="8a94d-181">3600</span><span class="sxs-lookup"><span data-stu-id="8a94d-181">3600</span></span>   | <span data-ttu-id="8a94d-182">100</span><span class="sxs-lookup"><span data-stu-id="8a94d-182">100</span></span>  |
+| <span data-ttu-id="8a94d-183">7200</span><span class="sxs-lookup"><span data-stu-id="8a94d-183">7200</span></span> | <span data-ttu-id="8a94d-184">150</span><span class="sxs-lookup"><span data-stu-id="8a94d-184">150</span></span>  |
+| <span data-ttu-id="8a94d-185">86400</span><span class="sxs-lookup"><span data-stu-id="8a94d-185">86400</span></span>  | <span data-ttu-id="8a94d-186">1800</span><span class="sxs-lookup"><span data-stu-id="8a94d-186">1800</span></span>  |
 
-<span data-ttu-id="241ce-202">Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) como la que se muestra a continuación mitigaría la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo.</span><span class="sxs-lookup"><span data-stu-id="241ce-202">A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second.</span></span> <span data-ttu-id="241ce-203">Consulte las [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar superar los límites de velocidad.</span><span class="sxs-lookup"><span data-stu-id="241ce-203">Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.</span></span>
+<span data-ttu-id="8a94d-187">Una [lógica de reintentos con retroceso](/azure/architecture/patterns/retry) exponencial puede mitigar la limitación de velocidad en casos en los que las solicitudes superan los límites en un segundo.</span><span class="sxs-lookup"><span data-stu-id="8a94d-187">A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second.</span></span> <span data-ttu-id="8a94d-188">Siga [los procedimientos recomendados](../../bots/how-to/rate-limit.md) para evitar alcanzar los límites de velocidad.</span><span class="sxs-lookup"><span data-stu-id="8a94d-188">Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="8a94d-189">Una [lógica de reintentos con retroceso](/azure/architecture/patterns/retry) exponencial puede mitigar la limitación de velocidad en casos en los que las solicitudes superan los límites en un segundo.</span><span class="sxs-lookup"><span data-stu-id="8a94d-189">A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second.</span></span> <span data-ttu-id="8a94d-190">Consulte las [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar superar los límites de velocidad.</span><span class="sxs-lookup"><span data-stu-id="8a94d-190">Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.</span></span>
 
 ```csharp
 // Please note that response body needs to be extracted and read 
@@ -322,9 +277,11 @@ try
     }
 }
 ```
- 
-<span data-ttu-id="241ce-204">Estos límites tienen el propósito de reducir el correo no deseado en un canal con un conector y garantizan una experiencia óptima para los usuarios finales.</span><span class="sxs-lookup"><span data-stu-id="241ce-204">These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to your end users.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="241ce-205">Consulte también</span><span class="sxs-lookup"><span data-stu-id="241ce-205">See also</span></span>
+<span data-ttu-id="8a94d-191">Estos límites se aplican para reducir el correo no deseado de un canal por un conector y garantiza una experiencia óptima para los usuarios.</span><span class="sxs-lookup"><span data-stu-id="8a94d-191">These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to users.</span></span>
 
-[<span data-ttu-id="241ce-206">Office 365 Conectores: Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="241ce-206">Office 365 Connectors — Microsoft Teams</span></span>](/connectors/teams/)
+## <a name="see-also"></a><span data-ttu-id="8a94d-192">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a94d-192">See also</span></span>
+
+* [<span data-ttu-id="8a94d-193">Office 365 Conectores para Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="8a94d-193">Office 365 Connectors for Microsoft Teams</span></span>](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [<span data-ttu-id="8a94d-194">Crear un webhook entrante</span><span class="sxs-lookup"><span data-stu-id="8a94d-194">Create an Incoming Webhook</span></span>](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [<span data-ttu-id="8a94d-195">Crear un webhook saliente</span><span class="sxs-lookup"><span data-stu-id="8a94d-195">Create an Outgoing Webhook</span></span>](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
