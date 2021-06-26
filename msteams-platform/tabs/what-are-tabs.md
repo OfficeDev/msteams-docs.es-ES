@@ -1,34 +1,49 @@
 ---
-title: ¿Qué son las pestañas personalizadas Teams?
+title: Pestañas de Microsoft Teams
 author: surbhigupta
 description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 792604c7763628ce0d45b332064e23c14e94aeb2
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1564d7410cd0ce18d27afbbb3729cc30cfcfc4f6
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069192"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140166"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
 Las pestañas Teams páginas web que se integran en Microsoft Teams. Son etiquetas sencillas html <iframe que apuntan a dominios declarados en el manifiesto de la aplicación y se pueden agregar como parte de un canal dentro de un equipo, chat de grupo o aplicación personal para un usuario \> individual. Puedes incluir pestañas personalizadas con la aplicación para insertar tu propio contenido web en Teams o agregar una funcionalidad específica Teams al contenido web. Para obtener más información, [vea Teams SDK de cliente de JavaScript](/javascript/api/overview/msteams-client).
 
-Hay dos tipos de pestañas disponibles en Teams: canal/grupo y personal. Las pestañas canal o grupo entregan contenido a canales y chats de grupo, y son una excelente forma de crear espacios de colaboración en torno al contenido basado en web dedicado. Las pestañas personales, junto con los bots de ámbito personal, forman parte de aplicaciones personales y están en el ámbito de un solo usuario. Se pueden anclar a la barra de navegación izquierda para facilitar el acceso.
+En la siguiente imagen se muestran las pestañas del canal contoso:
+
+![Pestañas de canal o grupo y personales](../assets/images/tabs/tabs.png)
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
+
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/T2a8yJC3VcQ]
+
+Hay pocos requisitos previos que debe superar antes de trabajar en pestañas.
+
+Hay dos tipos de pestañas disponibles en Teams, personal y canal o grupo. [Las pestañas personales,](~/tabs/how-to/create-personal-tab.md)junto con los bots de ámbito personal, forman parte de aplicaciones personales y están en el ámbito de un solo usuario. Se pueden anclar a la barra de navegación izquierda para facilitar el acceso. [Las pestañas](~/tabs/how-to/create-channel-group-tab.md) de canal o grupo entregan contenido a canales y chats de grupo, y son una excelente forma de crear espacios de colaboración en torno al contenido basado en web dedicado.
+
+Puede crear [una página de contenido como](~/tabs/how-to/create-tab-pages/content-page.md) parte de una pestaña personal, una pestaña de canal o grupo o un módulo de tareas. Puedes crear [una página](~/tabs/how-to/create-tab-pages/configuration-page.md) de configuración que permita Microsoft Teams los usuarios configurar una aplicación y usarla para configurar una pestaña de chat de canal o grupo, una extensión de mensajería o un conector de Office 365. Puede permitir a los usuarios volver a configurar la pestaña después de la instalación y [crear una página de](~/tabs/how-to/create-tab-pages/removal-page.md) eliminación de pestañas para la aplicación. Al crear una aplicación Teams que incluya una pestaña, debes probar cómo funciona la pestaña en los clientes de android [y Teams iOS.](~/tabs/design/tabs-mobile.md) La pestaña debe [obtener contexto a](~/tabs/how-to/access-teams-context.md) través de la información básica, la configuración regional y la información del tema, y eso identifica lo que hay en la `entityId` `subEntityId` pestaña.
+
+Puedes crear pestañas con tarjetas adaptables y centralizar todas las funcionalidades de la aplicación Teams eliminando la necesidad de un back-end diferente para los bots y pestañas. [Stage View](~/tabs/tabs-link-unfurling.md) es un nuevo componente de interfaz de usuario que te permite representar el contenido abierto en pantalla completa Teams anclado como una pestaña. El servicio [de desamuestración](~/tabs/tabs-link-unfurling.md) de vínculos existente se actualiza para que se use para convertir direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Puede crear [pestañas](~/tabs/how-to/conversational-tabs.md) conversacionales con sub-entidades conversacionales que permitan a los usuarios tener conversaciones sobre sub entidades en la pestaña, como tareas específicas, pacientes y oportunidades de ventas, en lugar de analizar toda la pestaña. Puedes realizar cambios en los [márgenes de tabulación](~/resources/removing-tab-margins.md) para mejorar la experiencia del desarrollador al crear aplicaciones.
 
 ## <a name="tab-features"></a>Características de tabulación
 
-> [!div class="checklist"]
->
-> * Si se agrega una pestaña a una aplicación que también tiene un bot, el bot también se agrega al equipo.
-> * Reconocimiento del Azure Active Directory (Azure AD) del usuario actual.
-> * Reconocimiento de configuración regional para que el usuario indique el idioma, es decir, `en-us` . 
-> * Funcionalidad de inicio de sesión único (SSO), si es compatible.
-> * Capacidad de usar bots o notificaciones de aplicaciones para vincular profundamente a la pestaña o a una sub entidad dentro del servicio, por ejemplo, un elemento de trabajo individual.
-> * La capacidad de abrir un módulo de tareas desde vínculos dentro de una pestaña.
-> * Reutilización de SharePoint web dentro de la pestaña.
+Las características de la pestaña son las siguientes:
+
+* Si se agrega una pestaña a una aplicación que también tiene un bot, el bot también se agrega al equipo.
+* Reconocimiento del Azure Active Directory (AAD) del usuario actual.
+* Reconocimiento de configuración regional para que el usuario indique el idioma que es `en-us` .
+* Funcionalidad de inicio de sesión único (SSO), si es compatible.
+* Capacidad de usar bots o notificaciones de aplicaciones para vincular profundamente a la pestaña o a una sub entity dentro del servicio, por ejemplo, un elemento de trabajo individual.
+* La capacidad de abrir un módulo de tareas desde vínculos dentro de una pestaña.
+* Reutilización de SharePoint web dentro de la pestaña.
 
 ## <a name="tabs-user-scenarios"></a>Escenarios de usuario de pestañas
 
@@ -36,7 +51,7 @@ Hay dos tipos de pestañas disponibles en Teams: canal/grupo y personal. Las pes
 **Ejemplo:** Creas una pestaña personal en tu aplicación Teams que presenta un sitio web corporativo informativo a los usuarios.
 
 **Escenario:** Agregue páginas de soporte técnico a Teams bot o extensión de mensajería. \
-**Ejemplo:** Se crean pestañas personales que proporcionan *información sobre* *el* contenido de la página web y ayudan a los usuarios.
+**Ejemplo:** Se crean pestañas personales que proporcionan **información sobre** **el** contenido de la página web y ayudan a los usuarios.
 
 **Escenario:** Proporcionar acceso a elementos con los que los usuarios interactúan regularmente para el diálogo y la colaboración cooperativos. \
 **Ejemplo:** Se crea una pestaña de canal o grupo con vínculos profundos a elementos individuales.
@@ -44,41 +59,21 @@ Hay dos tipos de pestañas disponibles en Teams: canal/grupo y personal. Las pes
 ## <a name="understand-how-tabs-work"></a>Comprender cómo funcionan las pestañas
 
 Puede usar uno de los siguientes métodos para crear pestañas:
+
 * [Declarar pestaña personalizada en el manifiesto de la aplicación](#declare-custom-tab-in-app-manifest)
-* [Usar la tarjeta adaptable para crear pestañas](#use-adaptive-card-to-build-tabs)
+* [Usar la tarjeta adaptable para crear pestañas](~/tabs/how-to/build-adaptive-card-tabs.md)
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>Declarar pestaña personalizada en el manifiesto de la aplicación
 
-Se declara una pestaña personalizada en el manifiesto de la aplicación del paquete de la aplicación. Para cada página web que quieras incluir como pestaña en la aplicación, defines una dirección URL y un ámbito. Además, debe agregar el SDK de cliente Teams [JavaScript a](/javascript/api/overview/msteams-client) la página y llamar después `microsoftTeams.initialize()` de que se cargue la página. Si lo hace, le dirá Teams que muestre su página, le dará acceso a información específica de Teams (por ejemplo, si el cliente de Teams ejecuta el tema *oscuro)* y le permitirá realizar acciones en función de los resultados.
+Se declara una pestaña personalizada en el manifiesto de la aplicación del paquete de la aplicación. Para cada página web que quieras incluir como pestaña en la aplicación, defines una dirección URL y un ámbito. Además, puede agregar el SDK de cliente Teams [JavaScript a](/javascript/api/overview/msteams-client) la página y llamar después `microsoftTeams.initialize()` de que se cargue la página. Teams muestra la página y proporciona acceso Teams información específica, por ejemplo, Teams cliente está ejecutando el tema oscuro.
 
-Independientemente de si elige exponer la pestaña dentro del ámbito de canal o grupo o personal, deberá presentar una página de contenido HTML de iframe <en \> la pestaña. [](~/tabs/how-to/create-tab-pages/content-page.md) Para las pestañas personales, la dirección URL de contenido se establece directamente en el manifiesto Teams aplicación mediante la `contentUrl` propiedad de la `staticTabs` matriz. El contenido de la pestaña será el mismo para todos los usuarios.
+Independientemente de si elige exponer la pestaña dentro del canal o grupo, o el ámbito personal, debe presentar una página de contenido HTML de iframe <en \> la pestaña. [](~/tabs/how-to/create-tab-pages/content-page.md) Para las pestañas personales, la dirección URL de contenido se establece directamente en el manifiesto Teams aplicación mediante la `contentUrl` propiedad de la `staticTabs` matriz. El contenido de la pestaña es el mismo para todos los usuarios.
 
-Para las pestañas de canal o grupo, también debe crear una página de configuración adicional que permita a los usuarios configurar la dirección URL de la página de contenido, normalmente mediante parámetros de cadena de consulta url para cargar el contenido adecuado para ese contexto. Esto se debe a que la pestaña canal o grupo se puede agregar a varios equipos o chats de grupo diferentes. En cada instalación posterior, los usuarios podrán configurar la pestaña, lo que le permitirá adaptar la experiencia según sea necesario. Cuando los usuarios agregan o configuran una pestaña, se asocia una dirección URL a la pestaña que se presenta en la interfaz Teams usuario. Configurar una pestaña es simplemente agregar parámetros adicionales a esa dirección URL. Por ejemplo, al agregar la pestaña Azure Boards, la página de configuración le permite elegir qué placa se cargará la pestaña. La dirección URL de la página de configuración la especifica la  `configurationUrl` propiedad en la `configurableTabs` matriz del manifiesto de la aplicación.
+Para pestañas de canal o grupo, también puede crear una página de configuración adicional. Esta página le permite configurar la dirección URL de la página de contenido, normalmente mediante parámetros de cadena de consulta url para cargar el contenido adecuado para ese contexto. Esto se debe a que la pestaña canal o grupo se puede agregar a varios equipos o chats de grupo. En cada instalación posterior, los usuarios pueden configurar la pestaña, lo que le permite adaptar la experiencia según sea necesario. Cuando los usuarios agregan o configuran una pestaña, se asocia una dirección URL a la pestaña que se presenta en la interfaz Teams usuario (UI). La configuración de una pestaña simplemente agrega parámetros adicionales a esa dirección URL. Por ejemplo, al agregar la pestaña Azure Boards, la página de configuración le permite elegir, qué placa se carga en la ficha. La dirección URL de la página de configuración la especifica la  `configurationUrl` propiedad en la `configurableTabs` matriz del manifiesto de la aplicación.
 
-Puedes tener varios canales o pestañas de grupo y hasta dieciséis pestañas personales por aplicación.
+Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales por aplicación.
 
-
-### <a name="use-adaptive-card-to-build-tabs"></a>Usar la tarjeta adaptable para crear pestañas
-
-Al desarrollar una pestaña con el método tradicional, debe tener en cuenta aspectos como HTML, consideraciones css para sentirse nativo, tiempos de carga lentos, restricciones de iFrame, mantenimiento y costos del servidor, entre otros. Las pestañas de tarjeta adaptables son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un iframe, puedes representar la tarjeta adaptable en una pestaña. Mientras que el front-end se representa como tarjeta adaptable, el back-end está alimentado por un bot. El bot es responsable de aceptar solicitudes y responder correctamente con la tarjeta adaptable que se va a representar.
-
-## <a name="mobile-clients"></a>Clientes móviles
-
-Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configuración debe tener un `setSettings()` valor para la `websiteUrl` propiedad. Para garantizar una experiencia de usuario óptima, debe seguir las instrucciones para las [pestañas](~/tabs/design/tabs-mobile.md) en el móvil al crear las pestañas. Las [aplicaciones distribuidas a Teams tienda tienen](~/concepts/deploy-and-publish/appsource/publish.md) un proceso de aprobación independiente para clientes móviles. El comportamiento predeterminado de estas aplicaciones es el siguiente:
-
-| **Funcionalidad de la aplicación** | **Comportamiento si la aplicación está aprobada** | **Comportamiento si la aplicación no está aprobada** |
-| --- | --- | --- |
-| **Pestañas personales** | La aplicación aparece en la barra inferior de los clientes móviles. Las pestañas se abren en Teams cliente. | La aplicación no aparece en la barra inferior de los clientes móviles. |
-| **Pestañas canal y grupo** | La pestaña se abre en el Teams mediante `contentUrl` . | La pestaña se abre en un explorador fuera del Teams con `websiteUrl` . |
-
-> [!NOTE]
-> [Las aplicaciones enviadas a AppSource](../concepts/deploy-and-publish/overview.md#publish-to-appsource) para su publicación en Teams se evalúan automáticamente para la capacidad de respuesta móvil. Para cualquier consulta, llegue a teamsubm@microsoft.com.
-> Para todas las aplicaciones que no se distribuyen a través de [AppSource](../concepts/deploy-and-publish/overview.md), las pestañas se abren en una vista web desde la aplicación dentro de los clientes de Teams de forma predeterminada y no se requiere ningún proceso de aprobación independiente.
-> 
-> El comportamiento predeterminado de las aplicaciones solo es aplicable si se distribuye a través Teams tienda. De forma predeterminada, todas las pestañas se abren en el Teams cliente.
-> Para iniciar una evaluación de la aplicación para la facilidad de uso móvil, teamsubm@microsoft.com con los detalles de la aplicación.
-
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)
@@ -88,4 +83,4 @@ Si decide que la pestaña canal o grupo aparezca en Teams móviles, la configura
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Requisitos de la pestaña](~/tabs/how-to/tab-requirements.md)
+> [Requisitos previos](~/tabs/how-to/tab-requirements.md)

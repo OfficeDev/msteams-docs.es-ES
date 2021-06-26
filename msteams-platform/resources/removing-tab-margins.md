@@ -6,12 +6,12 @@ keywords: tab removing margins padding
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 086ce3a375416291a64e3222e698d7e363a651e6
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069163"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140575"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -54,3 +54,18 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 > * Todas las pestañas tienen sus márgenes quitados: pestañas personales, pestañas de chat (grupo), pestañas de reunión y pestañas de canal.
 > * No hay forma de participar o no participar en este cambio. Se aplicará a todas las pestañas.
 > * Este cambio puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes que rodean su interfaz de usuario.
+
+## <a name="see-also"></a>Vea también
+
+* [Teams pestañas](~/tabs/what-are-tabs.md)
+* [Requisitos previos](~/tabs/how-to/tab-requirements.md)
+* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
+* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
+* [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
+* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
+* [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)

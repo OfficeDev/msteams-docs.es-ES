@@ -1,18 +1,18 @@
 ---
 title: Enviar mensajes proactivos
-description: Describe cómo enviar mensajes proactivos con el bot de Microsoft Teams.
+description: Describe cómo enviar mensajes proactivos con el Microsoft Teams bot.
 ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
+ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994220"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53130198"
 ---
-# <a name="send-proactive-messages"></a>Enviar mensajes proactivos
+# <a name="proactive-messages"></a>Mensajes proactivos
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -22,7 +22,7 @@ Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a u
 * Notificaciones
 * Mensajes programados
 
-Para que el bot envíe un mensaje proactivo a un usuario, chat de grupo o equipo, debe tener acceso para enviar el mensaje. Para un chat de grupo o un equipo, la aplicación que contiene el bot debe instalarse primero en esa ubicación. Puedes instalar [proactivamente la](#proactively-install-your-app-using-graph) aplicación con Microsoft Graph en un [](/microsoftteams/teams-custom-app-policies-and-settings) equipo, si es necesario, o usar una directiva de aplicación para enviar aplicaciones a equipos y usuarios de tu inquilino. Para los usuarios, la aplicación debe estar instalada para el usuario o el usuario debe formar parte de un equipo donde esté instalada la aplicación.
+Para que el bot envíe un mensaje proactivo a un usuario, chat de grupo o equipo, debe tener acceso para enviar el mensaje. Para un chat de grupo o un equipo, la aplicación que contiene el bot debe instalarse primero en esa ubicación. Puedes instalar [proactivamente](#proactively-install-your-app-using-graph) la aplicación con Microsoft Graph en un equipo, [](/microsoftteams/teams-custom-app-policies-and-settings) si es necesario, o usar una directiva de aplicación para enviar aplicaciones a equipos y usuarios de tu inquilino. Para los usuarios, la aplicación debe estar instalada para el usuario o el usuario debe formar parte de un equipo donde esté instalada la aplicación.
 
 Enviar un mensaje proactivo es diferente del envío de un mensaje normal. No hay ningún activo `turnContext` que usar para una respuesta. Debe crear la conversación antes de enviar el mensaje. Por ejemplo, un nuevo chat uno a uno o un nuevo hilo de conversación en un canal. No puede crear un nuevo chat de grupo o un nuevo canal en un equipo con mensajería proactiva.
 
@@ -35,7 +35,7 @@ Enviar un mensaje proactivo es diferente del envío de un mensaje normal. No hay
 
 Los fragmentos de código de la [sección samples](#samples) son para crear una conversación uno a uno. Para ver los vínculos a ejemplos de trabajo completos para conversaciones uno a uno y grupos o canales, vea [el ejemplo de código](#code-sample).
 
-Para usar mensajes proactivos de forma eficaz, vea [procedimientos recomendados para la mensajería proactiva.](#best-practices-for-proactive-messaging) Para determinados escenarios, debes instalar [proactivamente la aplicación con Graph](#proactively-install-your-app-using-graph). Los fragmentos de código de la [sección samples](#samples) son para crear una conversación uno a uno. Para obtener ejemplos de trabajo completos para conversaciones uno a uno y grupos o canales, vea [el ejemplo de código](#code-sample).
+Para usar mensajes proactivos de forma eficaz, vea [procedimientos recomendados para la mensajería proactiva.](#best-practices-for-proactive-messaging) Para determinados escenarios, debes [instalar proactivamente la aplicación con Graph](#proactively-install-your-app-using-graph). Los fragmentos de código de la [sección samples](#samples) son para crear una conversación uno a uno. Para obtener ejemplos de trabajo completos para conversaciones uno a uno y grupos o canales, vea [el ejemplo de código](#code-sample).
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Obtener el id. de usuario, id. de equipo o id. de canal
 
@@ -91,11 +91,11 @@ Para enviar notificaciones mediante mensajería proactiva, asegúrese de que los
 
 * Qué ocurrió: una indicación clara de lo que ocurrió para provocar la notificación.
 * Cuál fue el resultado: debe estar claro qué elemento se actualizó para provocar la notificación.
-* Quién o qué lo desencadenó: quién o qué acción hizo que se enviara la notificación.
+* Quién o lo que lo desencadenó: Quién o qué acción llevó a que se enviara la notificación.
 * Qué pueden hacer los usuarios en respuesta: facilita que los usuarios realicen acciones en función de las notificaciones.
 * Cómo pueden optar por no participar los usuarios: debe proporcionar una ruta de acceso para que los usuarios no puedan participar en notificaciones adicionales.
 
-Para enviar mensajes a un gran grupo de usuarios, por ejemplo, a su organización, instale proactivamente la aplicación con Graph.
+Para enviar mensajes a un gran grupo de usuarios, por ejemplo, a su organización, instale proactivamente la aplicación mediante Graph.
 
 ### <a name="scheduled-messages"></a>Mensajes programados
 
@@ -104,16 +104,16 @@ Al usar la mensajería proactiva para enviar mensajes programados a los usuarios
 * ¿Por qué recibe el usuario el mensaje?: Haga que sea fácil para los usuarios comprender el motivo por el que están recibiendo el mensaje.
 * Qué puede hacer el usuario a continuación: los usuarios pueden realizar la acción necesaria en función del contenido del mensaje.
 
-## <a name="proactively-install-your-app-using-graph"></a>Instalar proactivamente la aplicación con Graph
+## <a name="proactively-install-your-app-using-graph"></a>Instale proactivamente la aplicación con Graph
 
 > [!Note]
-> Actualmente, la instalación proactiva de aplicaciones con Graph se encuentra en fase beta.
+> La instalación proactiva de aplicaciones Graph está actualmente en versión beta.
 
-Envía un mensaje de forma proactiva a los usuarios que no han instalado o interactuado anteriormente con la aplicación. Por ejemplo, desea usar el comunicador de la compañía [para](~/samples/app-templates.md#company-communicator) enviar mensajes a toda la organización. En este caso, puedes usar la API de Graph para instalar proactivamente la aplicación para los usuarios. Almacena en caché los valores necesarios del `conversationUpdate` evento que la aplicación recibe al instalarlo.
+Envía un mensaje de forma proactiva a los usuarios que no han instalado o interactuado anteriormente con la aplicación. Por ejemplo, desea usar el comunicador de la compañía [para](~/samples/app-templates.md#company-communicator) enviar mensajes a toda la organización. En este caso, puedes usar la API Graph para instalar proactivamente la aplicación para los usuarios. Almacena en caché los valores necesarios del `conversationUpdate` evento que la aplicación recibe al instalarlo.
 
-Solo puedes instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en la Tienda de aplicaciones de Teams.
+Solo puedes instalar aplicaciones que estén en el catálogo de aplicaciones de la organización o en Teams App Store.
 
-Consulta [Instalar aplicaciones para usuarios en](/graph/api/userteamwork-post-installedapps) la documentación de Graph y la instalación proactiva de [bots y mensajería en Teams con Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). También hay un ejemplo [de Microsoft .NET framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
+Consulta [instalar aplicaciones para usuarios en](/graph/api/userteamwork-post-installedapps) la documentación Graph y la instalación proactiva de [bots](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)y la mensajería en Teams con Graph . También hay un ejemplo [de Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
 
 ## <a name="samples"></a>Ejemplos
 
@@ -278,7 +278,7 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 > [!div class="nextstepaction"]
 > [Teams de código de mensajería proactiva](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 [**Teams de código de mensajería proactiva**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 

@@ -6,32 +6,32 @@ keywords: Canal de grupo de pestañas de teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 041ef78fcc6e3f5203842e808949e86e8dd3aae4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 00aac64465dcc0c59a0146ea37f863f16c976a52
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069213"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140225"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
 Una página de configuración es un tipo especial de [página de contenido](content-page.md). Los usuarios configuran algunos aspectos de la aplicación Microsoft Teams con la página de configuración y la usan como parte de lo siguiente:
 
-* Una pestaña de chat de canal o grupo: recopilar información de los usuarios y establecer la `contentUrl` página de contenido que se mostrará.
+* Una pestaña de chat de canal o grupo: recopilar información de los usuarios y establecer la `contentUrl` página de contenido que se va a mostrar.
 * Una [extensión de mensajería](~/messaging-extensions/what-are-messaging-extensions.md).
 * Un [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuración de una pestaña de chat de grupo o canal
+## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar una pestaña de chat de canal o grupo
 
-La aplicación debe hacer referencia al [sdk Microsoft Teams cliente de JavaScript y](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) llamar a `microsoft.initialize()` . Además, las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube. 
+La aplicación debe hacer referencia al [sdk Microsoft Teams cliente de JavaScript y](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) llamar a `microsoft.initialize()` . Las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube.
 
 ### <a name="example"></a>Ejemplo
 
-En la siguiente imagen se muestra un ejemplo de una página de configuración: 
+En la siguiente imagen se muestra un ejemplo de una página de configuración:
 
 <img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
 
-El código correspondiente para la página de configuración se muestra en la siguiente sección:
+El siguiente código es un ejemplo de código correspondiente para la página de configuración:
 
 ```html
 <head>
@@ -88,23 +88,23 @@ El código correspondiente para la página de configuración se muestra en la si
 ...
 ```
 
-Elija seleccionar **el botón Gris** o **Seleccionar** rojo en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo. 
+Elija seleccionar **el botón Gris** o **Seleccionar** rojo en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo.
 
-La siguiente imagen muestra el contenido de la pestaña con el icono gris:
+La siguiente imagen muestra el contenido de la pestaña con un icono gris:
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-La siguiente imagen muestra el contenido de la pestaña con el icono rojo:
+La siguiente imagen muestra el contenido de la pestaña con un icono rojo:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-Elegir el botón relativo desencadena `saveGray()` o , e invoca lo `saveRed()` siguiente:
+Elegir el botón adecuado desencadena `saveGray()` o , e invoca lo `saveRed()` siguiente:
 
-1. Se `settings.setValidityState(true)` establece en true.
-1. Se `microsoftTeams.settings.registerOnSaveHandler()` desencadena el controlador de eventos.
-1. El **botón** Guardar de la página de configuración de la aplicación, cargado en Teams, está habilitado.
+* Se `settings.setValidityState(true)` establece en true. 
+* Se `microsoftTeams.settings.registerOnSaveHandler()` desencadena el controlador de eventos.
+* **Guardar** en la página de configuración de la aplicación está habilitado.
 
-El código de página de configuración informa a Teams que los requisitos de configuración se cumplen y la instalación puede continuar. Cuando el usuario selecciona **Guardar**, los parámetros de `settings.setSettings()` se establecen, según lo define la `Settings` interfaz. Para obtener más información, [vea Configuración interfaz](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). En el último paso, se llama para indicar que la dirección URL de `saveEvent.notifySuccess()` contenido se ha resuelto correctamente.
+El código de página de configuración informa Teams que los requisitos de configuración se cumplen y la instalación puede continuar. Cuando el usuario selecciona **Guardar**, los parámetros de `settings.setSettings()` se establecen, según lo define la `Settings` interfaz. Para obtener más información, vea [la interfaz de configuración](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 >[!NOTE]
 >
@@ -113,13 +113,13 @@ El código de página de configuración informa a Teams que los requisitos de co
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obtener datos de contexto para la configuración de la pestaña
 
-Puede que su pestaña necesite información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de la pestaña al proporcionar una experiencia de usuario más personalizada.
+La pestaña requiere información contextual para mostrar contenido relevante. La información contextual mejora aún más el atractivo de la pestaña al proporcionar una experiencia de usuario más personalizada.
 
-Para obtener más información sobre las propiedades usadas para la configuración de pestañas, vea [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
+Para obtener más información sobre las propiedades usadas para la configuración de pestañas, vea [context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Recopile los valores de las variables de datos de contexto de las dos maneras siguientes:
 
-1. Inserte marcadores de posición de cadena de consulta url en el `configurationURL` manifiesto .
+* Inserte marcadores de posición de cadena de consulta url en el `configurationURL` manifiesto .
 
-1. Use el [Teams SDK.](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})`
+* Use el [Teams SDK.](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})`
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insertar marcadores de posición en el `configurationUrl`
 
@@ -141,7 +141,7 @@ Agregue marcadores de posición de interfaz de contexto a la base `configuration
 ...
 ```
 
-Después de cargar la página, el Teams actualiza los marcadores de posición de cadena de consulta con valores relevantes. Incluya lógica en la página de configuración para recuperar y usar esos valores. Para obtener más información sobre cómo trabajar con cadenas de consulta de dirección URL, vea [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN Web Docs. En el siguiente ejemplo se describe la forma de extraer un valor de la `configurationUrl` propiedad:
+Después de cargar la página, Teams los marcadores de posición de cadena de consulta con valores relevantes. Incluya lógica en la página de configuración para recuperar y usar esos valores. Para obtener más información sobre cómo trabajar con cadenas de consulta de dirección URL, vea [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN Web Docs. En el siguiente ejemplo de código se proporciona la forma de extraer un valor de la `configurationUrl` propiedad:
 
 ```html
 <script>
@@ -158,7 +158,9 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar la `getContext()` función para recuperar contexto
 
-La `microsoftTeams.getContext((context) => {})` función recupera la interfaz context [cuando](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) se invoca. Agregue esta función a la página de configuración para recuperar valores de contexto:
+La `microsoftTeams.getContext((context) => {})` función recupera la interfaz de [contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) cuando se invoca.
+
+El código siguiente proporciona un ejemplo de cómo agregar esta función a la página de configuración para recuperar valores de contexto:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -176,14 +178,13 @@ La `microsoftTeams.getContext((context) => {})` función recupera la interfaz co
 
 ## <a name="context-and-authentication"></a>Contexto y autenticación
 
- Autentica antes de permitir que un usuario configure la aplicación. De lo contrario, el contenido podría incluir orígenes que tienen sus protocolos de autenticación. Para obtener más información, vea [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Use información de contexto para crear las direcciones URL de la página de autorización y las solicitudes de autenticación.
-Asegúrese de que todos los dominios usados en las páginas de pestañas se enumeran en la `manifest.json` matriz `validDomains` and.
+Autentica antes de permitir que un usuario configure la aplicación. De lo contrario, el contenido podría incluir orígenes que tienen sus protocolos de autenticación. Para obtener más información, vea [autenticar un usuario en una Microsoft Teams pestaña](~/tabs/how-to/authentication/auth-flow-tab.md). Use información de contexto para crear las direcciones URL de la página de autorización y las solicitudes de autenticación. Asegúrese de que todos los dominios usados en las páginas de pestañas se enumeran en la `manifest.json` matriz `validDomains` and.
 
 ## <a name="modify-or-remove-a-tab"></a>Modificar o quitar una pestaña
 
-Las opciones de eliminación admitidas refinan aún más la experiencia del usuario. Establezca la propiedad del manifiesto en , que permite a los usuarios `canUpdateConfiguration` modificar, reconfigurar o cambiar el nombre de una pestaña de grupo `true` o canal. Además, indica lo que sucede con el contenido cuando se quita una pestaña, incluyendo una página de opciones de eliminación en la aplicación y estableciendo un valor para la propiedad `removeUrl` en la  `setSettings()` configuración. El usuario puede desinstalar las pestañas Personales, pero no puede modificarlas. Para obtener más información, vea [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Establezca la propiedad del manifiesto en , que permite a los usuarios `canUpdateConfiguration` modificar, reconfigurar o cambiar el nombre `true` de una pestaña de canal o grupo. Además, indica lo que sucede con el contenido cuando se quita una pestaña, incluyendo una página de opciones de eliminación en la aplicación y estableciendo un valor para la propiedad `removeUrl` en la  `setSettings()` configuración. El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, [vea crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Microsoft Teams setSettings() para la página de eliminación:
+`setSettings()`Microsoft Teams configuración para la página de eliminación:
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -198,3 +199,22 @@ microsoftTeams.settings.setSettings({
 ## <a name="mobile-clients"></a>Clientes móviles
 
 Si decide que la pestaña canal o grupo aparezca en el Teams móviles, la configuración `setSettings()` debe tener un valor para `websiteUrl` . Para obtener más información, consulte [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+
+## <a name="see-also"></a>Vea también
+
+* [Teams pestañas](~/tabs/what-are-tabs.md)
+* [Requisitos previos](~/tabs/how-to/tab-requirements.md)
+* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
+* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
+* [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
+* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
+* [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
+* [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)

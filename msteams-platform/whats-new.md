@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095524"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140302"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|06/25/2021| Guía paso a paso introducida para enviar mensajes proactivos. | [Guía paso a paso para enviar mensajes proactivos](sbs-send-proactive.yml) |
 |06/09/2021| Vista de fase de imágenes en tarjetas adaptables con `allowExpand` atributo. | [Vista de fase para imágenes en tarjetas adaptables](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Pestañas conversacionales. | [Iniciar y continuar conversaciones sobre el contenido en las pestañas](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Se Teams directrices de diseño de aplicaciones con patrones móviles y mucho más.|[Diseño de la Teams aplicación](~/concepts/design/design-teams-app-overview.md)
@@ -74,7 +75,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 |03/18/2021|Aviso: Actualice a la versión 4.10 o posterior del SDK de Bot Framework, tal como hemos empezado con el proceso de desuso para `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync` . | [Cambios en la API de bot para los miembros del equipo o chat](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Nota: Las pestañas ya no tendrán márgenes que rodean sus experiencias. Los desarrolladores de pestañas deben revisar y actualizar sus aplicaciones. | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 |03/05/2021|Ámbito de instalación predeterminado y funcionalidad de grupo.| [Ámbito de instalación predeterminado y funcionalidad de grupo](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|Reordenar pestañas de aplicaciones personales.|[Reordenar la pestaña de chat en aplicaciones personales](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
+|03/05/2021|Reordenar pestañas de aplicaciones personales.|[Reordenar la pestaña de chat en aplicaciones personales](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
 |03/04/2021|Enmascaramiento de información en tarjetas adaptables.| [Enmascaramiento de información en tarjetas adaptables](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Se agregaron funcionalidades de ubicación. <br/> La información sobre las capacidades de ubicación se agrega en la introducción a las capacidades del dispositivo, los permisos de dispositivo nativo, las capacidades multimedia de integración y los archivos de funcionalidad de escáner de códigos de barras o QR.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Se agregó la funcionalidad de escáner qr o de código de barras. <br/> La información de funcionalidad del escáner de códigos QR o de código de barras se agrega en la información general sobre las capacidades del dispositivo, los permisos de dispositivo nativos y los archivos de capacidades multimedia.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), Integrate QR or barcode scanner [capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
@@ -131,7 +132,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 | 10/31/2019 | Bots conversacionales y documentación de extensión de mensajería actualizada para reflejar el SDK de Bot Framework 4.6. La documentación del SDK de v3 está disponible en la sección Recursos. | Toda la documentación sobre bots y extensiones de mensajería. |
 | 10/31/2019 | Nueva estructura de documentación y refactorización de artículos principales. Por favor, informe de los vínculos muertos o de 404 creando un GitHub problema. | Todos ellos! |
 | 09/13/2019 | El bot de solicitud se instala desde la extensión de mensajería basada en acciones. | [Iniciar acciones con extensiones de mensajería](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 08/28/2019 | Compatibilidad con canales privados en pestañas y conectores. | [Obtención del contexto de Teams para la pestaña](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 08/28/2019 | Compatibilidad con canales privados en pestañas y conectores. | [Obtención del contexto de Teams para la pestaña](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 06/20/2019 | Compartir un sitio web externo, desde un sitio web externo, en un canal Teams web. | [Compartir a Teams](~/share-to-teams.md) |
 | 05/25/2019 | Responder con el mensaje del bot desde el módulo de tareas. | [Responder con el mensaje del bot desde el módulo de tareas](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots en chats de grupo. | [Interactuar con un bot en un canal o chat en grupo](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
