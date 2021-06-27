@@ -192,42 +192,30 @@
   items:
     - name: Información general
       href: tabs/what-are-tabs.md
-    - name: Crear una pestaña
-      items:
-        - name: Requisitos de la pestaña
-          href: tabs/how-to/tab-requirements.md
-        - name: Creación de una página de contenido
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: Creación de una página de configuración
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: Crear una página de eliminación
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Pestañas en dispositivos móviles
-          href: tabs/design/tabs-mobile.md
-        - name: Obtención del contexto de Teams para la pestaña
-          href: tabs/how-to/access-teams-context.md
-        - name: Compilar pestañas con tarjetas adaptables
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: Expansión del vínculo de la pestaña y vista de fases
-          href: tabs/tabs-link-unfurling.md
-        - name: Crear pestañas de conversación
-          href: tabs/how-to/conversational-tabs.md
-        - name: Cambios del margen de pestaña
-          href: resources/removing-tab-margins.md
-    - name: Guías de inicio rápido
-      items:
-        - name: Pestaña personal con Node.js
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: Pestaña personal con C#/ASP.NET Core
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Pestaña personal con C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Pestaña de canal con Node.js
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: Pestaña de canal con C#/ASP.NET Core
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Pestaña de canal con C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: Requisitos previos
+      href: tabs/how-to/tab-requirements.md
+    - name: Crear una pestaña personal
+      href: tabs/how-to/create-personal-tab.md
+    - name: Crear una pestaña de canal
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: Creación de una página de contenido
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Creación de una página de configuración
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Crear una página de eliminación
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Pestañas en dispositivos móviles
+      href: tabs/design/tabs-mobile.md
+    - name: Obtención del contexto de Teams para la pestaña
+      href: tabs/how-to/access-teams-context.md
+    - name: Compilar pestañas con tarjetas adaptables
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: Expansión del vínculo de la pestaña y vista de fases
+      href: tabs/tabs-link-unfurling.md
+    - name: Crear pestañas de conversación
+      href: tabs/how-to/conversational-tabs.md
+    - name: Cambios del margen de pestaña
+      href: resources/removing-tab-margins.md
 - name: Crear bots
   items:
     - name: Información general
@@ -251,8 +239,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Eventos de conversación en el bot de Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Enviar mensajes proactivos
+        - name: Mensajes proactivos
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: Guía paso a paso
+              href: sbs-send-proactive.yml
         - name: Formatear los mensajes del bot
           href: bots/how-to/format-your-bot-messages.md
         - name: Actualizar y eliminar mensajes de bot
@@ -317,26 +308,28 @@
   items:
     - name: Información general
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Creación de un webhook entrante
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    - name: Creación de un webhook saliente
+    - name: Crear webhooks salientes
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Crear un Conector de Office 365
+    - name: Crear webhooks entrantes
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    - name: Crear Conectores de Office 365
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: Enviar mensajes a conectores y webhooks
+    - name: Crear y enviar mensajes
       href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Crear módulos de tareas y tarjetas
   items:
+    - name: Información general
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: Crear tarjetas
       items:
         - name: Información general
           href: task-modules-and-cards/what-are-cards.md
-        - name: Formatear el texto de la tarjeta
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: Agregar y responder a acciones de la tarjeta
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: Referencia de tarjetas
+        - name: Tipos de tarjetas
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Dar formato a tarjetas en Microsoft Teams
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Acciones de tarjeta
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: Acciones universales para tarjetas adaptables
           items:
             - name: Información general
@@ -353,9 +346,11 @@
       items:
         - name: Información general
           href: task-modules-and-cards/what-are-task-modules.md
+        - name: Invocar y descartar módulos de tareas
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
         - name: Uso de módulos de tareas en pestañas
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-        - name: Uso de módulos de tareas en bots
+        - name: Uso de módulos de tareas desde los bots
           href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Añadir autenticación
   items:
@@ -477,13 +472,13 @@
       items:
         - name: Localizar la aplicación
           href: concepts/build-and-test/apps-localization.md
-        - name: Esquema de JSON de localización
+        - name: Localizar la referencia de esquema JSON
           href: resources/schema/localization-schema.md
-    - name: Atributo de cookies SameSite (actualización de 2020)
+    - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
     - name: Casos con errores frecuentes para los envíos de la tienda
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Colaborar en documentos de Teams
+    - name: Contribuir a este contenido
       href: resources/teams-contributor-reference.md
 - name: Soporte técnico y comentarios
   href: feedback.md
