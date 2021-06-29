@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b54fc7235132a9253f6eecc62417f786bf4aa45c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140190"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179940"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -43,15 +43,7 @@ Teams pestañas deben cumplir los siguientes requisitos previos:
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
-* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
-* [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
-* [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

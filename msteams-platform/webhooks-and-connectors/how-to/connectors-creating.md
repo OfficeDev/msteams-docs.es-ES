@@ -1,19 +1,19 @@
 ---
-title: Crear Office 365 conectores
+title: Crear Conectores de Office 365
 author: laujan
 description: Describe cómo empezar a usar Office 365 Connectors en Microsoft Teams
 keywords: teams o365 conector
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 95e3c9f2f7e188c158ae8c9161b2306c5e7f27e5
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140425"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179758"
 ---
-# <a name="create-office-365-connectors"></a>Crear Office 365 conectores
+# <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
 Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 existente o crear uno nuevo dentro de Teams. Para obtener más información, [vea build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
@@ -24,7 +24,7 @@ Puede [empaquetar y](~/concepts/build-and-test/apps-package.md) [publicar el](~/
 Para distribuir el conector, debe registrarse a través [del Panel de desarrolladores de Conectores.](https://outlook.office.com/connectors/home/login/#/publish) Cuando se registra un conector, se supone que funciona en todos los Office 365 compatibles con aplicaciones, incluidos Outlook y Teams. Si ese no es el caso y debe crear un conector que solo funcione en Microsoft Teams, póngase en contacto con: Microsoft Teams correo electrónico [de envíos de aplicaciones](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
-> El conector se registra después de seleccionar **Guardar** en el Panel de desarrolladores de conectores. Si quieres publicar el conector en AppSource, sigue las instrucciones de publicar la aplicación Microsoft Teams [en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no quieres publicar la aplicación en AppSource, distribuyela directamente a la organización. Después [de publicar conectores para la organización,](/connectors-creating.md)no se requiere ninguna acción adicional en el Panel del conector.
+> El conector se registra después de seleccionar **Guardar** en el Panel de desarrolladores de conectores. Si quieres publicar el conector en AppSource, sigue las instrucciones de publicar la aplicación Microsoft Teams [en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no quieres publicar la aplicación en AppSource, distribuyela directamente a la organización. Después [de publicar conectores para la organización,](#publish-connectors-for-the-organization)no se requiere ninguna acción adicional en el Panel del conector.
 
 ### <a name="integrate-the-configuration-experience"></a>Integrar la experiencia de configuración
 

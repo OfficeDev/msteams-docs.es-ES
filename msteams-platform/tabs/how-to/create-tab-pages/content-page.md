@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable estático
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: d1ec2c0381ba371393a03cda69ffc44a5f49924e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 1276fdac2d3a30836b574b8e51b99fcbd7a415d2
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140204"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179737"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -105,17 +105,9 @@ Si indicas en el manifiesto de la aplicación, todas las páginas de configuraci
 ## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
-* [Requisitos previos](~/tabs/how-to/tab-requirements.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
-* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
-* [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
-* [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

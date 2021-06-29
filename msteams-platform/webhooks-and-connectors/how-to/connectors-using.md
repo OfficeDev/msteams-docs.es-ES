@@ -5,12 +5,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams o365 conector
-ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140531"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179898"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -200,7 +200,7 @@ Este mensaje proporciona la siguiente tarjeta en el canal:
 
 **Para enviar tarjetas adaptables a través de un webhook entrante**
 
-1. [Configure un webhook personalizado](/add-incoming-webhook.md) en Teams.
+1. [Configure un webhook personalizado](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) en Teams.
 1. Cree un archivo JSON de tarjeta adaptable con el código siguiente:
 
     ```json

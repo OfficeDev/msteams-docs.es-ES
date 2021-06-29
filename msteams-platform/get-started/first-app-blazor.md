@@ -5,12 +5,12 @@ description: Cree rápidamente una aplicación de Microsoft Teams en la que se m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994395"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179954"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Crear y ejecutar la primera aplicación Microsoft Teams con Blazor
 
@@ -111,7 +111,7 @@ Una vez hecho, la aplicación se puede cargar en el cliente de Teams.  Usamos el
 
 Para crear y ejecutar la aplicación localmente:
 
-1. Desde Visual Studio Code, presione **F5** para ejecutar la aplicación en modo de depuración.
+1. Desde Visual Studio, presione **F5** para ejecutar la aplicación en modo de depuración.
 
 1. Si se solicita, instale el certificado SSL autofirmado para la depuración local.
 
@@ -228,7 +228,7 @@ El manifiesto de la aplicación está cargando la pestaña desde una `localhost`
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Seleccionar información básica":::
 
-1. Hay varios lugares dentro del manifiesto que enumera una `locahost:XXXXX` como parte de una dirección URL.  Reemplace todas las repeticiones `{{azure_app_url}}` con (incluidas las llaves).
+1. Hay varios lugares dentro del manifiesto que enumera una `localhost:XXXXX` como parte de una dirección URL.  Reemplace todas las repeticiones `{{azure_app_url}}` con (incluidas las llaves).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajustar la información básica del entorno":::
 
@@ -269,7 +269,7 @@ El manifiesto de la aplicación está cargando la pestaña desde una `localhost`
 
 Ahora puedes usar el botón Vista previa **en Teams** en la parte superior de la página para iniciar la aplicación en Teams.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 - [Crear una aplicación de Teams con React](first-app-react.md)
 - [Crear una aplicación Teams como elemento SharePoint web](first-app-spfx.md)

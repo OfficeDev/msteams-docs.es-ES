@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pestaña con Microsoft Teams aplicación.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1495bba765d149d23156b136be85f39d07c2d94b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140176"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179947"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -141,16 +141,8 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 * [Desafutización de vínculos de extensiones de mensajería](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams pestañas](~/tabs/what-are-tabs.md)
-* [Requisitos previos](~/tabs/how-to/tab-requirements.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
-* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -5,20 +5,24 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1564d7410cd0ce18d27afbbb3729cc30cfcfc4f6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140166"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179925"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
 Las pestañas Teams páginas web que se integran en Microsoft Teams. Son etiquetas sencillas html <iframe que apuntan a dominios declarados en el manifiesto de la aplicación y se pueden agregar como parte de un canal dentro de un equipo, chat de grupo o aplicación personal para un usuario \> individual. Puedes incluir pestañas personalizadas con la aplicación para insertar tu propio contenido web en Teams o agregar una funcionalidad específica Teams al contenido web. Para obtener más información, [vea Teams SDK de cliente de JavaScript](/javascript/api/overview/msteams-client).
 
+La siguiente imagen muestra pestañas personales:
+
+![Pestañas personales](../assets/images/tabs/personaltab.png)
+
 En la siguiente imagen se muestran las pestañas del canal contoso:
 
-![Pestañas de canal o grupo y personales](../assets/images/tabs/tabs.png)
+![Pestañas de canal o grupo](../assets/images/tabs/tabs.png)
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
 
