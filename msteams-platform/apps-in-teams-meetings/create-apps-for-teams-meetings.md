@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179702"
+ms.locfileid: "53196239"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
 
@@ -262,18 +262,19 @@ La `NotificationSignal` API incluye los siguientes códigos de respuesta:
 
 La API de detalles de la reunión permite a la aplicación obtener metadatos estáticos de la reunión. Estos son puntos de datos que no cambian dinámicamente.
 La API está disponible a través de Bot Services.
-#### <a name="pre-requisite"></a>Requisito previo
-Antes de usar la API de detalles de reunión, se deben obtener los permisos RSC necesarios. El manifiesto de la aplicación debe tener el siguiente webApplicationInfo:
 
-# <a name="json"></a>[JSON](#tab/json)
+#### <a name="prerequisite"></a>Requisito previo
 
-```"webApplicationInfo": {
+Para usar la API de detalles de reunión, debe obtener permisos de RSC. Use el siguiente ejemplo para configurar la propiedad del manifiesto de la `webApplicationInfo` aplicación:
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### <a name="query-parameter"></a>Parámetro de consulta
@@ -351,18 +352,18 @@ El usuario puede recibir eventos de reunión en tiempo real. Tan pronto como cua
 
 La hora real de inicio y finalización de una reunión es diferente de la hora de inicio y finalización programada. La API de detalles de la reunión proporciona la hora de inicio y finalización programadas, mientras que el evento proporciona la hora real de inicio y finalización.
 
-#### <a name="pre-requisite"></a>Requisito previo
-El manifiesto de la aplicación debe tener el siguiente webApplicationInfo para recibir correctamente los eventos de inicio y finalización de la reunión.
+### <a name="prerequisite"></a>Requisito previo
 
-# <a name="json"></a>[JSON](#tab/json)
+El manifiesto de la aplicación debe tener la `webApplicationInfo` propiedad para recibir los eventos de inicio y finalización de la reunión. Use el siguiente ejemplo para configurar el manifiesto:
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>Ejemplo de carga del evento de inicio de reunión
@@ -517,7 +518,7 @@ public class MeetingStartEndEventValue
 | MeetingSidePanel | Microsoft Teams extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Ficha Detalles en reunión | Microsoft Teams de extensibilidad de reuniones para iterar con la pestaña Detalles en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

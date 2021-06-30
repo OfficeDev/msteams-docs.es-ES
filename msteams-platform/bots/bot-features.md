@@ -1,33 +1,38 @@
 ---
 title: Bots y SDK
 author: surbhigupta
-description: Bots y SDK en Microsoft Teams.
+description: Información general sobre las herramientas y SDK para crear Microsoft Teams bots.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069025"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196246"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
-Para crear un bot que funcione en Microsoft Teams, puede usar una de las siguientes opciones:
-* Un bot existente basado en Microsoft Bot Framework SDK.
-* Power Virtual Agents chatbot.
-* Webhooks y conectores.
+Puede crear un bot que funcione en Microsoft Teams con una de las siguientes herramientas o funcionalidades:
 
-## <a name="bots-and-the-microsoft-bot-framework"></a>Bots y el Microsoft Bot Framework
+* [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
+* [Power Virtual Agents](#bots-with-power-virtual-agents)
+* [Virtual Assistant](~/samples/virtual-assistant.md)
+* [Webhooks y conectores](#bots-with-webhooks-and-connectors)
 
-El Teams bot consta de los tres elementos siguientes:
+## <a name="bots-with-the-microsoft-bot-framework"></a>Bots con el Microsoft Bot Framework
 
-* Un servicio web accesible públicamente que la organizaciòn hospeda.
-* El registro del bot con Bot Framework.
-* El Teams de la aplicación con el manifiesto de la aplicación. Esto es lo que los usuarios instalan y conectan el Teams al servicio web, enrutado a través del servicio bot.
+El Teams bot consta de lo siguiente:
 
-[Bot Framework es](https://dev.botframework.com/) un SDK enriquecido que se usa para crear bots con C#, Java, Python y JavaScript. Si ya tienes un bot basado en Bot Framework, puedes modificarlo fácilmente para que funcione en Microsoft Teams. Use C# o Node.js para aprovechar nuestros [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Estos paquetes amplían las clases y métodos básicos del SDK de Bot Builder de la siguiente manera:
+* Un servicio web accesible públicamente hospedado por usted.
+* Registro de Bot Framework para el servicio web.
+* El Teams de la aplicación, que conecta el Teams cliente al servicio web.
+
+> [!TIP]
+> Use el Portal de desarrolladores para registrar el servicio web con Bot Framework y especificar las configuraciones de la aplicación. Para obtener más información, consulta Administrar tus aplicaciones con el Portal de [desarrolladores para Teams](~/concepts/build-and-test/teams-developer-portal.md).
+
+[Bot Framework es](https://dev.botframework.com/) un SDK enriquecido que se usa para crear bots con C#, Java, Python y JavaScript. Si ya tienes un bot basado en Bot Framework, puedes modificarlo fácilmente para que funcione en Teams. Use C# o Node.js para aprovechar nuestros [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Estos paquetes amplían las clases y métodos básicos del SDK de Bot Builder de la siguiente manera:
 
 * Use tipos de tarjeta especializados como la Office 365 de conector.
 * Establecer Teams de canal específicos de las actividades.
@@ -36,14 +41,11 @@ El Teams bot consta de los tres elementos siguientes:
 > [!IMPORTANT]
 > Puede desarrollar aplicaciones Teams en cualquier tecnología de programación web y llamar directamente a las API de [REST de Bot Framework.](/bot-framework/rest-api/bot-framework-rest-overview) Pero debe realizar el control de tokens en todos los casos.
 
-> [!TIP]
-> Teams App Studio te ayuda a crear y configurar el manifiesto de la aplicación y registrar el servicio web como bot en Bot Framework. También contiene una biblioteca React control y un generador de tarjetas interactivas. Para obtener más información, consulta [Introducción a Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
-
-## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots y microsoft Power Virtual Agents
+## <a name="bots-with-power-virtual-agents"></a>Bots con Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) es un servicio de chatbot basado en la plataforma Microsoft Power y Bot Framework. El proceso de desarrollo de Power Virtual Agent usa un enfoque de interfaz gráfica y sin código guiado que permite a los miembros del equipo crear y mantener fácilmente un agente virtual inteligente. Después de crear el chatbot en [el portal de Power Virtual Agents,](https://powervirtualagents.microsoft.com)puede [integrarlo](how-to/add-power-virtual-agents-bot-to-teams.md)fácilmente con Teams . Para obtener más información sobre cómo empezar, [vea Power Virtual Agents documentación](/power-virtual-agents).
 
-## <a name="bots-and-webhooks-and-connectors"></a>Bots, webhooks y conectores
+## <a name="bots-with-webhooks-and-connectors"></a>Bots con webhooks y conectores
 
 Los webhooks y conectores conectan el bot a los servicios web. Con webhooks y conectores, puede crear un bot simple para la interacción básica, como crear un flujo de trabajo u otros comandos simples. Solo están disponibles en el equipo donde los cree y están diseñados para procesos sencillos específicos del flujo de trabajo de su empresa. Para obtener más información, [vea what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
