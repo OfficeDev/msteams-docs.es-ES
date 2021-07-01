@@ -4,12 +4,12 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994353"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211621"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para la Microsoft Teams aplicación
 
@@ -19,6 +19,7 @@ Puedes enriquecer tu aplicación Teams con funcionalidades de dispositivo nativa
 > * Para integrar las funcionalidades multimedia dentro de Microsoft Teams móvil, consulta [Integrar funcionalidades multimedia.](mobile-camera-image-permissions.md)
 > * Para integrar la funcionalidad de escáner de códigos QR o código de barras dentro de la aplicación móvil Microsoft Teams, consulta Integrar la funcionalidad del escáner de códigos DE BARRAS o [QR en Teams](qr-barcode-scanner-capability.md).
 > * Para integrar las funcionalidades de ubicación dentro Microsoft Teams aplicación móvil, consulta [Integrar capacidades de ubicación.](location-capability.md)
+> * Para integrar la funcionalidad selector de personas dentro de la Microsoft Teams móvil, consulta Integrar la funcionalidad selector de personas [en Teams](people-picker-capability.md).
 
 ## <a name="native-device-permissions"></a>Permisos de dispositivo nativo
 
@@ -68,7 +69,7 @@ Un usuario puede administrar los permisos de dispositivo en  Teams configuració
 
 ## <a name="specify-permissions"></a>Especificar permisos
 
-Actualiza las aplicaciones agregando y especificando cuáles de las cinco propiedades `manifest.json` `devicePermissions` que usas en la aplicación:
+Actualiza las aplicaciones agregando y especificando cuál de las cinco propiedades siguientes `manifest.json` `devicePermissions` que usas en la aplicación:
 
 ``` json
 "devicePermissions": [
@@ -190,7 +191,7 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 > [!NOTE]
 > Cuando da su consentimiento a los permisos de dispositivo nativo, solo es válido para la _sesión de_ inicio de sesión actual.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
 > [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
@@ -200,3 +201,6 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 
 > [!div class="nextstepaction"]
 > [Integrar las capacidades de ubicación en Teams](location-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrar la funcionalidad selector de personas en Teams](people-picker-capability.md)

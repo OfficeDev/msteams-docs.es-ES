@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: Cámara image media microphone mic qr code qrcode bar code barcode scan scanner location capabilities native device permissions
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 8df8341e8996e4bf380575ac59e05325da16bd0d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566197"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211586"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 
@@ -41,3 +41,5 @@ Después de obtener acceso a las funcionalidades del dispositivo, usa Teams API 
 * Digitalizar QR o código de barras mediante [el control de escáner](qr-barcode-scanner-capability.md).
 * Grabar audio a través del micrófono.
 * Compartir ubicación mediante [el selector de ubicación](location-capability.md).
+
+Además, puedes integrar el control Teams selector [de](people-picker-capability.md) personas nativas que permite a los usuarios buscar y seleccionar personas en la experiencia de la aplicación web.
