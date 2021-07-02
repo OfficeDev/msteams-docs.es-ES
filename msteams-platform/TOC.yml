@@ -86,6 +86,8 @@
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
         - name: Integrar capacidades de ubicación
           href: concepts/device-capabilities/location-capability.md
+        - name: Integrar de la funcionalidad de Selector de usuarios
+          href: concepts/device-capabilities/people-picker-capability.md
 - name: Diseño de la aplicación
   items:
     - name: Información general
