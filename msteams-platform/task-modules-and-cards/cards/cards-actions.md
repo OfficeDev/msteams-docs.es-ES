@@ -4,12 +4,12 @@ description: Describe acciones de tarjeta en Microsoft Teams y cómo usarlas en 
 localization_priority: Normal
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de teams
-ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140092"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254205"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -533,7 +533,7 @@ El siguiente código muestra un ejemplo de tarjetas adaptables con `invoke` acci
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
         "type": "task/fetch"
