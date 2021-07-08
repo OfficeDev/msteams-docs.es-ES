@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 localization_priority: Normal
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: be38454daac519530d0fdf10b5170e128219f6fc
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d3b84344eccee7c2595b0e978c72d7e331b198cb
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140500"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328075"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -56,6 +56,21 @@ Puede identificar y usar diferentes tipos de tarjetas según los requisitos de l
 | [Tarjeta de inicio de sesión](#signin-card) | Esta tarjeta permite que un bot solicite que un usuario inicia sesión. |
 | [Tarjeta miniatura](#thumbnail-card) | Esta tarjeta normalmente contiene una sola imagen en miniatura, texto corto y uno o más botones. |
 | [Colecciones de tarjetas](#card-collections) | Esta colección de tarjetas se usa para devolver varios elementos en una sola respuesta. |
+
+## <a name="features-that-support-different-card-types"></a>Características que admiten distintos tipos de tarjeta
+
+| Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhooks entrantes | Conectores de O365 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Tarjeta adaptable | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
+| Tarjeta O365 Connector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Tarjeta de héroe | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Tarjeta miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Tarjeta de lista | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
+| Tarjeta de recibo | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
+| Tarjeta de inicio de sesión | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+
+> [!NOTE]
+> Para las tarjetas adaptables en webhooks entrantes, todos los elementos de esquema nativos de tarjeta adaptable, excepto `Action.Submit` , son totalmente compatibles. Las acciones admitidas [**son Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)y [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 ## <a name="common-properties-for-all-cards"></a>Propiedades comunes para todas las tarjetas
 
@@ -432,7 +447,7 @@ Office 365 Las tarjetas de conector funcionan correctamente Microsoft Teams, inc
 
 La diferencia importante entre usar tarjetas de conector desde un conector y usar tarjetas de conector en el bot es el control de las acciones de tarjeta. En la tabla siguiente se muestra la diferencia:
 
-| Conector | Bot |
+| Connector | Bot |
 | --- | --- |
 | El extremo recibe la carga de la tarjeta a través de HTTP POST. | La acción desencadena una actividad que envía solo el identificador de acción `HttpPOST` y el cuerpo al `invoke` bot.|
 

@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Crear pestañas con tarjetas adaptables
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179905"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328061"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -98,6 +98,9 @@ A continuación se muestra un manifiesto de ficha Tarjeta adaptable de ejemplo:
 ## <a name="invoke-activities"></a>Invocar actividades
 
 La comunicación entre la pestaña Tarjeta adaptable y el bot se realiza a través de `invoke` actividades. Cada `invoke` actividad tiene un nombre **correspondiente**. Use el nombre de cada actividad para diferenciar cada solicitud. `tab/fetch` y `tab/submit` son las actividades que se tratan en esta sección.
+
+> [!NOTE]
+> Los bots deben enviar todas las respuestas a [la dirección URL del servicio](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). La dirección URL del servicio se recibe como parte de la carga `activity` entrante.
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Capturar tarjeta adaptable para representar en una pestaña
 

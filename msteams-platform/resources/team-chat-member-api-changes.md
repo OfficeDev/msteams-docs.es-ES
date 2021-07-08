@@ -6,22 +6,22 @@ keywords: Lista de miembros del equipo de apis de bot framework
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 9c6444967d330d27a415ac596a3858c05c49236e
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114248"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328068"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams api de bots para capturar miembros de equipo o chat
 
 >[!NOTE]
 > Se ha iniciado el proceso de desuso `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` y las API. Inicialmente, están muy limitadas a cinco solicitudes por minuto y devuelven un máximo de 10.000 miembros por equipo. Esto hace que no se devuelva la lista completa a medida que aumenta el tamaño del equipo.
-> Debe actualizar a la versión 4.10 o posterior del SDK de Bot Framework y cambiar a los extremos de api paginados o a la `TeamsInfo.GetMemberAsync` API de usuario único. Esto también se aplica al bot incluso si no estás usando directamente estas API, ya que los SDK antiguos llaman a estas API durante [los eventos membersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Para ver la lista de próximos cambios, vea [Cambios de la API](team-chat-member-api-changes.md#api-changes). 
+> Debe actualizar a la versión 4.10 o posterior del SDK de Bot Framework y cambiar a los extremos de api paginados o a la `TeamsInfo.GetMemberAsync` API de usuario único. Esto también se aplica al bot incluso si no estás usando directamente estas API, ya que los SDK antiguos llaman a estas API durante [los eventos membersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Para ver la lista de próximos cambios, vea [Cambios de la API](team-chat-member-api-changes.md#api-changes).
 
-Actualmente, los desarrolladores de bots que desean recuperar información para uno o más miembros de un chat o equipo usan las API de bots de Microsoft Teams para C# o para Las API de `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` TypeScript o Node.js. Para obtener más información, vea [fetch roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Estas API tienen varios defectos.
+Actualmente, si desea recuperar información para uno o varios miembros de un chat o equipo, puede usar las API de [bots](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) de Microsoft Teams para C# o para Las API de `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` TypeScript o Node.js. Para obtener más información, vea [fetch roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
-Actualmente, si desea recuperar información para uno o varios miembros de un chat o equipo, puede usar las API de [bots](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) de Microsoft Teams para C# o para Las API de `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` TypeScript o Node.js. Estas API tienen los siguientes defectos:
+Estas API tienen los siguientes defectos:
 
 * Para equipos grandes, el rendimiento es bajo y los tiempos de espera son más probables: el tamaño máximo del equipo ha aumentado considerablemente desde Teams se publicó a principios de 2017. Como o devuelve toda la lista de miembros, la llamada a la API tarda mucho tiempo en volver para equipos grandes, y es común que la llamada se desalome y tenga que intentarlo de `GetMembersAsync` `getMembers` nuevo.
 * Obtener detalles de perfil para un solo usuario es difícil: para obtener la información de perfil de un solo usuario, debe recuperar toda la lista de miembros y, a continuación, buscar la que desee. Hay una función auxiliar en el SDK de Bot Framework para que sea más sencilla, pero no es eficaz.

@@ -5,23 +5,23 @@ description: Obtenga información sobre los componentes de la interfaz de usuari
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: ae1c2793586dc638d56051e105482aac92e01091
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 6f2bd9cd237751adb15db45bbd6e3cdfea35ce09
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644945"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328082"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados
 
 Los siguientes componentes son una combinación de componentes básicos de [la](~/concepts/design/design-teams-app-basic-ui-components.md) interfaz de usuario que puedes usar para situaciones comunes Teams de diseño, como la navegación.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
-Basado en la interfaz de usuario <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluent,</a>Microsoft Teams kit de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de</a>usuario, el kit Microsoft Teams de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Ruta de navegación
 
@@ -83,14 +83,14 @@ Una barra de notificaciones es un área dedicada para mostrar mensajes breves e 
 
 ## <a name="stage"></a>Etapa
 
-Stage ofrece una forma de que los usuarios abran una entidad (como una imagen, un archivo o un sitio web) en Teams en lugar de abrirlo en otra aplicación o explorador. El caso de uso principal de la fase es la visualización; la superficie no debe usarse para interacciones complejas.
+Stage permite a los usuarios ver contenido (como una imagen, un archivo o un sitio web) en una superficie grande Teams sin cambiar de contexto. La fase es principalmente para ver contenido. No use fases para interacciones complejas.
 
-(Nota de implementación: cree la fase con un módulo [de tareas grande](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
+Obtenga información sobre cómo implementar [la fase](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Abra una entidad en Teams en lugar de otra aplicación o explorador
-* Contenido multimedia destacado u otro contenido
+* Mostrar contenido en una superficie grande dentro de Teams en lugar de otra aplicación o explorador
+* Contenido multimedia destacado u otro contenido enriquecido
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211593"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333690"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
 
@@ -87,7 +87,7 @@ La `GetParticipant` API incluye los siguientes ejemplos:
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -154,7 +154,7 @@ El cuerpo de la respuesta JSON `GetParticipant` para la API es:
 
 #### <a name="response-codes"></a>Códigos de respuesta
 
-La `GetParticipant` API incluye los siguientes códigos de respuesta:
+La `GetParticipant` API devuelve los siguientes códigos de respuesta:
 
 |Código de respuesta|Descripción|
 |---|---|
@@ -162,7 +162,6 @@ La `GetParticipant` API incluye los siguientes códigos de respuesta:
 | **200** | La información del participante se recupera correctamente.|
 | **401** | La aplicación responde con un token no válido.|
 | **404** | La reunión ha expirado o no se encuentra el participante.|
-| **500** | La reunión ha expirado (más de 60 días) desde que finalizó la reunión o los participantes no tienen permisos en función de su rol.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
@@ -197,15 +196,7 @@ La `NotificationSignal` API incluye los siguientes ejemplos:
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -292,7 +283,7 @@ La API de detalles de la reunión incluye los siguientes ejemplos:
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
@@ -518,7 +509,7 @@ public class MeetingStartEndEventValue
 | MeetingSidePanel | Microsoft Teams extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Ficha Detalles en reunión | Microsoft Teams de extensibilidad de reuniones para iterar con la pestaña Detalles en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
