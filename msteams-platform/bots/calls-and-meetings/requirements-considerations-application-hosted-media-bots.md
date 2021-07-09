@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Máquina virtual de Azure de Windows Server multimedia hospedada por la aplicación
 ms.date: 11/16/2018
-ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020059"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335364"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos y consideraciones para bots multimedia hospedados en aplicaciones
 
@@ -60,6 +60,9 @@ En la siguiente sección se proporcionan detalles sobre las consideraciones de e
 ## <a name="scalability-and-performance-considerations"></a>Consideraciones de rendimiento y escalabilidad
 
 Los bots multimedia hospedados en aplicaciones requieren las siguientes consideraciones de escalabilidad y rendimiento:
+- Los bots multimedia hospedados en aplicaciones requieren más capacidad de cómputo y red (ancho de banda) que los bots de mensajería y pueden incurrir en costos operativos significativamente más altos. Un desarrollador de bots multimedia en tiempo real debe medir cuidadosamente la escalabilidad del bot y asegurarse de que el bot no acepta más llamadas simultáneas de las que puede administrar. Un bot habilitado para vídeo puede soportar solo una o dos sesiones multimedia simultáneas por núcleo de CPU (si usa los formatos de vídeo RGB24 o NV12 "sin procesar").
+- Actualmente, la Plataforma multimedia en tiempo real no aprovecha las unidades de procesamiento de gráficos (GPU) disponibles en la máquina virtual para desactivar la codificación y decodificación de vídeo H.264. En su lugar, la codificación y descodificación de vídeo se realizan en el software de la CPU. Si hay una GPU disponible, el bot puede aprovecharlo para su propia representación de gráficos, por ejemplo, si el bot usa un motor de gráficos 3D.
+- La instancia de vm que hospeda el bot multimedia en tiempo real debe tener al menos 2 núcleos de CPU. Para Azure, se recomienda una máquina virtual de la serie Dv2. Para otros tipos de vm de Azure, un sistema con cuatro CPU virtuales (vCPU) es el tamaño mínimo necesario. La información detallada sobre los tipos de vm de Azure está disponible en la [documentación de Azure](/azure/virtual-machines/windows/sizes-general). 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
@@ -70,7 +73,7 @@ Los ejemplos de bots multimedia hospedados en la aplicación son los siguientes:
 | Ejemplo de medios locales | Ejemplos que ilustran diferentes escenarios de medios locales. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Ejemplo de medios remotos | Ejemplos que ilustran diferentes escenarios multimedia remotos. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Recursos adicionales
 
 - [Graph Documentación del SDK de llamada](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Los bots requieren más capacidad de procesamiento y ancho de banda de red que los bots de mensajería e incurren en costos operativos significativamente más altos. Un desarrollador de bots multimedia en tiempo real debe medir cuidadosamente la escalabilidad del bot y asegurarse de que el bot no acepta más llamadas simultáneas de las que puede administrar. Un bot habilitado para vídeo solo puede soportar una o dos sesiones multimedia simultáneas por núcleo de CPU si usa los formatos de vídeo RGB24 o NV12 sin procesar.

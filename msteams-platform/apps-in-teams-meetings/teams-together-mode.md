@@ -2,14 +2,14 @@
 title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949752"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335378"
 ---
-# <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas del modo junto en Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
 > [!NOTE]
 > Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
@@ -128,7 +128,7 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
     > * Después de enviar la escena, las ubicaciones de avatar se reemplazan por secuencias de vídeo del participante real.
     > * Puede arrastrar las imágenes de los participantes alrededor de la escena y colocarlas en la posición necesaria y cambiar su tamaño mediante la flecha de cambio de tamaño.
 
-1. Seleccione cualquier imagen de participante y seleccione la casilla **Asignar mancha** para asignar la mancha al participante.
+1. Seleccione cualquier imagen de participante y active la casilla **Asignar mancha** para asignar la mancha al participante.
 
 1. Seleccione **Organizador de reuniones** o Rol de **moderador** para el participante.
 
@@ -252,7 +252,7 @@ Ahora que has pasado por el ejemplo scene.js, puedes activar las escenas persona
 
 Obtenga información de un extremo a otro de cómo un usuario final interactúa con las escenas en escenas personalizadas del modo conjunto.
 
-**Para elegir escenas y activar escenas personalizadas del Modo conjunto**
+**Para seleccionar escenas y activar escenas personalizadas del Modo conjunto**
 
 1. Crear una nueva reunión de prueba.
 
@@ -278,6 +278,6 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)

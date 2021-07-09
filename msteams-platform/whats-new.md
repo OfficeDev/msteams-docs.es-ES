@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: b9ef7cbe1a7fa1a673a60375bab893a86c2dbf6b
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254198"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335357"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|07/08/2021|La extensibilidad de la aplicación de reunión está disponible en dispositivos móviles. Los clientes móviles admiten aplicaciones durante la reunión. |[Extensibilidad de la aplicación para reuniones](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar la funcionalidad selector de personas.|[Integrar de la funcionalidad de Selector de usuarios](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Guía paso a paso introducida para enviar mensajes proactivos. | [Guía paso a paso para enviar mensajes proactivos](sbs-send-proactive.yml) |
 |06/09/2021| Vista de fase de imágenes en tarjetas adaptables con `allowExpand` atributo. | [Vista de fase para imágenes en tarjetas adaptables](~/task-modules-and-cards/cards/cards-format.md) |

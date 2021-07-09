@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333690"
+ms.locfileid: "53335350"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
 
@@ -45,7 +45,7 @@ Una vez que haya pasado por los requisitos previos, puede usar las referencias d
 
 ## <a name="meeting-apps-api-references"></a>Referencias de API de aplicaciones de reunión
 
-Las nuevas extensibilidades de reuniones le proporcionan API que transforman la experiencia de la reunión. Con esta nueva funcionalidad, puedes crear aplicaciones o integrar aplicaciones existentes en el ciclo de vida de la reunión. Puedes usar las API para que la aplicación conozca la reunión. Puede elegir qué API desea usar para mejorar la experiencia de la reunión.
+Las nuevas extensibilidades de reuniones proporcionan API para transformar la experiencia de la reunión. Puedes crear aplicaciones o integrar aplicaciones existentes en el ciclo de vida de la reunión. Puedes usar las API para que la aplicación conozca la reunión. Puede seleccionar las API que desea usar para mejorar la experiencia de reunión.
 
 En la tabla siguiente se proporciona una lista de estas API:
 
@@ -509,7 +509,7 @@ public class MeetingStartEndEventValue
 | MeetingSidePanel | Microsoft Teams extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Ficha Detalles en reunión | Microsoft Teams de extensibilidad de reuniones para iterar con la pestaña Detalles en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

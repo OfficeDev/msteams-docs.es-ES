@@ -3,12 +3,12 @@ title: Habilitar y configurar las aplicaciones para Teams reuniones
 author: surbhigupta
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
-ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139973"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335371"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -61,22 +61,17 @@ La propiedad determina lo que debe mostrarse cuando un usuario invoca una aplica
 |---|---|
 | **channelTab** | Pestaña en el encabezado de un canal de grupo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios, no en el contexto de un equipo o reunión. |
-| **meetingChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios en el contexto de una reunión programada. |
-| **meetingDetailsTab** | Pestaña en el encabezado de la vista de detalles de la reunión del calendario. |
+| **meetingChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios en el contexto de una reunión programada. Puede especificar **meetingChatTab** o **meetingDetailsTab** para asegurarse de que las aplicaciones funcionan en dispositivos móviles. |
+| **meetingDetailsTab** | Pestaña en el encabezado de la vista de detalles de la reunión del calendario. Puede especificar **meetingChatTab** o **meetingDetailsTab** para asegurarse de que las aplicaciones funcionan en dispositivos móviles. |
 | **meetingSidePanel** | Un panel en la reunión abierto a través de la barra unificada (barra U). |
-| **meetingStage** | Una aplicación de meetingSidePanel se puede compartir en la fase de reunión. |
-
-> [!NOTE]
-> `Context` actualmente no se admite en clientes móviles.
+| **meetingStage** | Una aplicación de meetingSidePanel se puede compartir en la fase de reunión. Esta pestaña no es compatible con el móvil. |
 
 Después de habilitar la aplicación para Teams reuniones, debes configurar la aplicación antes de una reunión, durante una reunión y después de una reunión.
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurar la aplicación para escenarios de reunión
 
 > [!NOTE]
-> * Para que la aplicación esté visible en la galería de pestañas, debe admitir pestañas configurables y el ámbito de chat de grupo.
-> * Los clientes móviles solo admiten pestañas en fases de reunión previas y posteriores.
-> * Las experiencias en la reunión que es el cuadro de diálogo y la pestaña en la reunión actualmente no se admiten en clientes móviles. Para obtener más información, consulta [instrucciones para pestañas en el móvil](../tabs/design/tabs-mobile.md) al crear las pestañas para móviles.
+> Para que la aplicación esté visible en la galería de pestañas, debe admitir pestañas configurables y el ámbito de chat de grupo.
 
 Teams reuniones proporciona una experiencia de colaboración única para su organización. Proporciona la oportunidad de configurar la aplicación para diferentes escenarios de reunión. Puedes configurar las aplicaciones para mejorar la experiencia de la reunión en función del rol de participante o el tipo de usuario. Ahora puede identificar qué acciones se pueden realizar en los siguientes escenarios de reunión:
 
@@ -180,7 +175,7 @@ Las configuraciones después y [antes de las reuniones](#before-a-meeting) son l
 |----------------|-----------------|--------------|----------------|-----------|
 | Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token, que se genera secuencialmente para que cada participante tenga una oportunidad equitativa de colaborar en una reunión. Esto puede ser útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

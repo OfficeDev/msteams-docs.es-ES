@@ -3,12 +3,12 @@ title: Extensibilidad de la aplicación para reuniones
 author: surbhigupta
 description: Comprender la extensibilidad de la aplicación de reunión
 ms.topic: conceptual
-ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068636"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335399"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidad de la aplicación para reuniones
 
@@ -32,8 +32,7 @@ Las pestañas permiten a los miembros del equipo tener acceso a servicios y cont
 > Si has integrado una pestaña con la reunión Teams, la aplicación debe seguir el flujo de autenticación de inicio de sesión único (SSO) para las [pestañas.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 > [!NOTE]
-> * Los clientes móviles solo admiten pestañas en fases de reunión previas y posteriores. Las experiencias en la reunión que son el cuadro de diálogo y el panel en la reunión actualmente no están disponibles en dispositivos móviles.
-> * Las aplicaciones solo se admiten en reuniones privadas programadas.
+> Las aplicaciones solo se admiten en reuniones privadas programadas.
 
 #### <a name="pre-meeting-app-experience"></a>Experiencia de la aplicación previa a la reunión
 
@@ -48,42 +47,86 @@ Con la experiencia de la aplicación previa a la reunión, puedes buscar y agreg
 
 1. En la galería de pestañas, selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
 
-    ![Vista de tabulación previa a la reunión](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * También puede agregar una pestaña mediante la **pestaña Chat de** reunión en una reunión existente.
     > * El diseño de tabulación debe estar en un estado organizado, si hay más de diez sondeos o encuestas.
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
+![Vista de tabulación previa a la reunión](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+Después de agregar las pestañas a una reunión existente en escritorio o web, puede ver las mismas aplicaciones en la experiencia previa a la reunión en **Más** sección de los detalles de la reunión.
+
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+
+---
 
 #### <a name="in-meeting-app-experience"></a>Experiencia de la aplicación en la reunión
 
 Con la experiencia de la aplicación en la reunión, puedes interactuar con los participantes durante la reunión mediante aplicaciones y el cuadro de diálogo en la reunión. Las aplicaciones de reunión se hospedan en la barra superior superior de la ventana de reunión como pestaña en la reunión. Use el cuadro de diálogo en la reunión para mostrar el contenido que se puede usar para los participantes de la reunión. Para obtener más información, consulta [Crear aplicaciones para Teams reuniones.](create-apps-for-teams-meetings.md)
 
+Para dispositivos móviles, las aplicaciones de reunión están disponibles en **Aplicaciones** > puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Selecciona **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
+
 **Para usar pestañas durante una reunión**
 
-1. Después de entrar en la reunión, en la barra superior de la ventana de chat, selecciona la aplicación que quieras usar. Una aplicación está visible en una reunión Teams en el panel lateral o en el cuadro de diálogo en la reunión.
+1. Vaya a Teams.
+1. En el calendario, seleccione una reunión en la que desee usar una pestaña.
+1. Después de entrar en la reunión, en la barra superior superior de la ventana de chat, selecciona la aplicación necesaria.
+    Una aplicación está visible en una reunión Teams en el panel lateral o en el cuadro de diálogo en la reunión.
 1. En el cuadro de diálogo en la reunión, escriba la respuesta como comentarios.
 
-    ![Vista cuadro de diálogo](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-    > [!NOTE]
-    > * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso a , y representar `meetingId` `userMri` la experiencia `frameContext` correctamente.
-    > * Si el cuadro de diálogo en la reunión se representa correctamente, se le notificará que los resultados se descargaron correctamente.
-    > * El manifiesto de la aplicación especifica los lugares donde quieres que aparezcan. El campo de contexto se usa para este propósito. También puede formar parte de una experiencia de bandeja de uso compartido, sujeto a las directrices de diseño especificadas.
+![Vista cuadro de diálogo](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-    En la siguiente imagen se muestra el panel lateral de la reunión:
+# <a name="mobile"></a>[Móvil](#tab/mobile)
 
-    ![Panel lateral en la reunión](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+Después de entrar en la reunión y agregar la aplicación desde el escritorio o la web, la aplicación está visible en la reunión de aplicaciones Teams móvil en la **sección** Aplicaciones. Selecciona **Aplicaciones** para mostrar la lista de aplicaciones. El usuario puede iniciar cualquiera de las aplicaciones como un panel del lado de la reunión de la aplicación.
+
+Se muestra el cuadro de diálogo en la reunión donde puede escribir la respuesta como comentarios.
+
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+
+> [!NOTE]
+> No es necesario cambiar el manifiesto de la aplicación para que las aplicaciones funcionen en dispositivos móviles.
+
+---
+
+> [!NOTE]
+> * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso a , y representar `meetingId` `userMri` la experiencia `frameContext` correctamente.
+> * Si el cuadro de diálogo en la reunión se representa correctamente, recibirá una notificación de que los resultados se descargaron correctamente.
+> * El manifiesto de la aplicación especifica los lugares en los que quieres que aparezcan. El campo de contexto se usa para este propósito. También es la parte de una experiencia de bandeja de uso compartido, sujeto a las directrices de diseño especificadas.
+
+En la siguiente imagen se muestra el panel lateral de la reunión:
+
+![Panel lateral en la reunión](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+En la tabla siguiente se describe el comportamiento de la aplicación cuando se aprueba y no se aprueba:
+
+|Funcionalidad de la aplicación | La aplicación está aprobada | La aplicación no está aprobada |
+|---|---|---|
+| Extensibilidad de reuniones | La aplicación aparecerá en reuniones. | La aplicación no aparecerá en reuniones para los clientes móviles. |
 
 #### <a name="post-meeting-app-experience"></a>Experiencia de aplicación posterior a la reunión
 
-Con la experiencia de la aplicación posterior a la reunión, puedes ver los resultados de la reunión, como los resultados de la encuesta o los comentarios. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para agregar una pestaña y obtener notas y resultados de la reunión en los que los organizadores y asistentes deben tomar medidas.
+Con la experiencia de la aplicación posterior a la reunión, puedes ver los resultados de la reunión, como los resultados de encuestas o los comentarios. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para agregar una pestaña, obtener notas de la reunión y resultados en los que los organizadores y asistentes deben realizar acciones.
 
 En la siguiente imagen se muestra la **pestaña Contoso** con los resultados del sondeo y los comentarios recibidos de los asistentes a la reunión:
 
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
 ![Vista posterior a la reunión](../assets/images/apps-in-meetings/PostMeeting.png)
 
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+
+---
+
 > [!NOTE]
-> El diseño de tabulación debe organizarse cuando haya más de diez sondeos o encuestas.
+> El diseño de tabulación debe organizarse cuando haya más de 10 sondeos o encuestas.
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Integrar bots en el ciclo de vida de la reunión
 
@@ -143,7 +186,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y las característica
 | Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar ni eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
 | Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar ni eliminar. | Se permite la interacción. No se permite la adquisición, actualización y eliminación. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Recursos adicionales
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

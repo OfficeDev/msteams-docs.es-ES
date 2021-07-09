@@ -5,12 +5,12 @@ description: Obtén información sobre cómo diseñar aplicaciones en Teams reun
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114352"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335413"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
@@ -37,13 +37,13 @@ En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una** 
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-En una reunión, los usuarios pueden seleccionar **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **agregar una aplicación** y elegir la aplicación que desean.
+En una reunión, los usuarios pueden **seleccionar Más** agregar :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **una aplicación** y seleccionar la aplicación que desean.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión." border="false":::
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
-En una reunión, los usuarios pueden seleccionar **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: y elegir la aplicación que desean.
+Después de agregar la aplicación en el escritorio, puedes seleccionar la aplicación y usarla en una reunión seleccionando **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión en el móvil." border="false":::
 
@@ -62,8 +62,8 @@ Antes de una reunión, los usuarios pueden agregar contenido en la pestaña. En 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña:** etiqueta de navegación para la pestaña.|
-|2 |**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.|
-|3 |**iframe:** muestra el contenido de la aplicación.|
+|2|**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.|
+|3|**iframe:** muestra el contenido de la aplicación.|
 
 ### <a name="designing-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
 
@@ -105,8 +105,8 @@ Las personas pueden usar la pestaña en la reunión para:
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de aplicación (seleccionado):** logotipo de aplicación transparente de 16 píxeles.|
-|2 |**Nombre de la aplicación**|
-|3 |**Encabezado:** incluye el nombre de la aplicación.|
+|2|**Nombre de la aplicación**|
+|3|**Encabezado:** incluye el nombre de la aplicación.|
 |4 |**Botón Cerrar:** descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
 |5 |**Barra de notificaciones:** las alertas de error se muestran directamente debajo del encabezado y presionan el contenido del iframe hacia abajo en 20 píxeles.|
 |6 |**iframe:** muestra el contenido de la aplicación.|
@@ -163,7 +163,7 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 |Contador|Descripción|
 |----------|-----------|
 |1|**Encabezado:** incluye el icono de la aplicación, el nombre, la cadena de acción y el icono cerrar.|
-|2 |**iframe:** muestra el contenido de la aplicación.|
+|2|**iframe:** muestra el contenido de la aplicación.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomía: encabezado del cuadro de diálogo En la reunión
 
@@ -174,8 +174,8 @@ Hay dos variantes de encabezado. Cuando sea posible, usa la variante con el avat
 |Contador|Descripción|
 |----------|-----------|
 |1|**Avatar:** persona que inicia el cuadro de diálogo en la reunión.|
-|2 |**Icono de aplicación**|
-|3 |**Nombre de la aplicación**|
+|2|**Icono de aplicación**|
+|3|**Nombre de la aplicación**|
 |4 |**Botón Cerrar:** descarta el cuadro de diálogo.|
 |5 |**Cadena de acción:** normalmente describe quién inició el cuadro de diálogo.|
 
@@ -246,8 +246,8 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de la** aplicación: el icono resaltado indica que la pestaña en la reunión de la aplicación está abierta.|
-|2 |**Botón Compartir a fase de reunión:** punto de entrada para compartir la aplicación a la fase de reunión. Muestra si configuras la aplicación para que use la fase de reunión compartida.|
-|3 |**iframe:** muestra el contenido de la aplicación.|
+|2|**Botón Compartir a fase de reunión:** punto de entrada para compartir la aplicación a la fase de reunión. Muestra si configuras la aplicación para que use la fase de reunión compartida.|
+|3|**iframe:** muestra el contenido de la aplicación.|
 |4 |**Botón Detener uso compartido:** deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 |5 |**Atribución del moderador:** muestra el nombre del participante que compartió la aplicación.|
 
