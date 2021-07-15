@@ -8,17 +8,17 @@ metadata:
   ms.date: 06/23/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
-  nextTutorialTitle: Enviar mensajes proactivos
+  nextTutorialTitle: Leer más sobre mensajes proactivos
   ms.custom: mvc
-  ms.openlocfilehash: 844e4c0ed85159f8ae7b080dff073e0d70f38748
-  ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+  ms.openlocfilehash: 4a6a30bd038c5117024c67a7786995391351e0fe
+  ms.sourcegitcommit: 7f9b3c1654536a88015f1b11b6c8a0f612b111c4
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "53133454"
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "53434469"
 items:
 - durationInMinutes: 1
-  content: "Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a una solicitud de un usuario. Esto puede incluir mensajes, como:\n - Mensajes de bienvenida\n - Notificaciones\n - Mensajes programados\n \nEsta guía paso a paso le ayuda a enviar un mensaje proactivo desde un bot. Verá los siguientes resultados:\n\n* Mensaje de saludo proactivo en el chat        \n![Saludo proactivo en el chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Mensaje de saludo proactivo en la tarjeta adaptable    \n![hello proactivo en la tarjeta adaptable](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
+  content: "Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a una solicitud de un usuario. Esto puede incluir mensajes, como:\n - Mensajes de bienvenida\n - Notificaciones\n - Mensajes programados\n \nEsta guía paso a paso le ayuda a enviar un mensaje proactivo desde un bot. Verá los siguientes resultados:\n\n* Mensaje de saludo proactivo en el chat        \n![Saludo proactivo en el chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Mensaje de saludo proactivo como tarjeta adaptable    \n![hello proactivo en la tarjeta adaptable](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
 - title: Requisitos previos
   durationInMinutes: 2
   content: "Asegúrese de instalar lo siguiente:    \n\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).\n* [ASP.NET y desarrollo web,](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer)o carga de trabajo de desarrollo multiplataforma [de .NET Core.](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer)\n* [ngrok:](https://ngrok.com/download)una aplicación multiplataforma que permite exponer un servidor de desarrollo local a Internet con el mínimo esfuerzo.\n* [Obtenga un espacio empresarial Teams desarrollador gratuito.](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n"

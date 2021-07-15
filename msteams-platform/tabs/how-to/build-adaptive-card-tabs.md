@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Crear pestañas con tarjetas adaptables
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328061"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428719"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -19,7 +19,7 @@ ms.locfileid: "53328061"
 
 Al desarrollar una pestaña con el método tradicional, es posible que se deba a estos problemas, como consideraciones de HTML y CSS, tiempos de carga lentos, restricciones de iFrame y costos y mantenimiento del servidor. Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un IFrame, puedes representar tarjetas adaptables en una pestaña. Mientras que el front-end se representa con tarjetas adaptables, el back-end está alimentado por un bot. El bot es responsable de aceptar solicitudes y responder correctamente con la tarjeta adaptable que se representa.
 
-Puedes crear tus pestañas con bloques de Lego de interfaz de usuario (UI) listos para usar que se ven y se sienten nativos en escritorio, web y móvil. Este artículo te ayuda a comprender los cambios necesarios para realizar el manifiesto de la aplicación, cómo la actividad de invocación solicita y envía información en pestaña con tarjetas adaptables y el impacto en el flujo de trabajo del módulo de tareas.
+Puedes crear las pestañas con bloques de creación de interfaz de usuario (UI) listos para usar que se ven y se sienten nativos en escritorio, web y móvil. Este artículo te ayuda a comprender los cambios necesarios para realizar el manifiesto de la aplicación, cómo la actividad de invocación solicita y envía información en pestaña con tarjetas adaptables y el impacto en el flujo de trabajo del módulo de tareas.
 
 En la siguiente imagen se muestran las pestañas de compilación con tarjetas adaptables en escritorio y móvil:
 

@@ -5,12 +5,12 @@ description: Cree rápidamente una aplicación de Microsoft Teams en la que se m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c14f55d014af120cab88044d31ee8600017e3c57
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: a749d70875948d606f42688fea74c1e0bf79817e
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254310"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428740"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Crear y ejecutar la primera aplicación Microsoft Teams con Blazor
 
@@ -236,7 +236,7 @@ El manifiesto de la aplicación carga la pestaña desde una `localhost` direcci�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Seleccionar información básica":::
 
-1. Hay varios lugares dentro del manifiesto que enumera una `locahost:XXXXX` como parte de una dirección URL.  Reemplace todas las repeticiones por `{{azure_app_url}}` , incluidas las llaves.
+1. Hay varios lugares dentro del manifiesto que enumera una `localhost:XXXXX` como parte de una dirección URL.  Reemplace todas las repeticiones por `{{azure_app_url}}` , incluidas las llaves.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajustar la información básica del entorno":::
 

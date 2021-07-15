@@ -4,12 +4,12 @@ description: Limitación de tasas y procedimientos recomendados en Microsoft Tea
 ms.topic: conceptual
 localization_priority: Normal
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230963"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428698"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
@@ -51,7 +51,7 @@ El uso de un retroceso exponencial con un vibración aleatoria es la forma recom
 Después de controlar `HTTP 429` las respuestas, puede seguir el ejemplo para detectar excepciones transitorias.
 
 > [!NOTE]
-> Además de volver a seleccionar el código de error **429**, también se deben volver a seleccionar los códigos de error **412**, **502** y **504.**
+> Además de reintentar el código de error **429**, también se deben volver a intentar los códigos de error **412**, **502** y **504.**
 
 ## <a name="detect-transient-exceptions-example"></a>Ejemplo de detección de excepciones transitorias
 
