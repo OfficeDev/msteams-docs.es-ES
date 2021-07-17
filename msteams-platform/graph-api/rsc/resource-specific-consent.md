@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorización de teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 4573140e33bffb0daafbdc9f929b5afd49231af8
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114423"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455223"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 
@@ -26,7 +26,7 @@ Los permisos de RSC pormenorizados, Teams específicos de la aplicación definen
 
 ### <a name="resource-specific-permissions-for-a-team"></a>Permisos específicos de recursos para un equipo
 
-|Permisos de aplicación| Acción |
+|Permiso de aplicación| Acción |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtén la configuración de este equipo.|
 |TeamSettings.ReadWrite.Group|Actualice la configuración de este equipo.|
@@ -48,7 +48,7 @@ Para obtener más información, vea [permisos de consentimiento específicos de 
 
 En la tabla siguiente se proporcionan permisos específicos de recursos para un chat:
 
-|Permisos de aplicación| Acción |
+|Permiso de aplicación| Acción |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | Obtén la configuración de este chat.                                    |
 | ChatSettings.ReadWrite.Chat    | Actualice la configuración de este chat.                          |
@@ -158,7 +158,7 @@ Los permisos RSC se declaran en el archivo JSON del manifiesto de la aplicación
     "applicationPermissions": [
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
-      "TeamSettings.Edit.Group",
+      "TeamSettings.ReadWrite.Group",
       "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",
@@ -242,11 +242,11 @@ Para obtener más información sobre cómo obtener detalles de las aplicaciones 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** |**Node.js** |
+| **Ejemplo de nombre** | **Descripción** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific consentimiento (RSC) | Use RSC para llamar a Graph API. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific consentimiento (RSC) | Use RSC para llamar a Graph API. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  
 * [Probar permisos de consentimiento específicos de recursos en Teams](test-resource-specific-consent.md)
 * [Consentimiento específico de recursos en Microsoft Teams para administradores](/MicrosoftTeams/resource-specific-consent)

@@ -2,12 +2,12 @@
 title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
+ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335378"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53463327"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -38,7 +38,7 @@ Debe tener una comprensión básica de lo siguiente para usar escenas personaliz
 * Definición de escena y puestos en una escena.
 * Tenga una cuenta de Microsoft Developer y familiarícese con Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) y App Studio.
 * [Concepto de instalación local de la aplicación](../concepts/deploy-and-publish/apps-upload.md).
-* Asegúrese de que el administrador ha concedido permiso para **Upload una** aplicación personalizada y para seleccionar todos los filtros como parte de las directivas de configuración y reunión de la aplicación respectivamente.
+* Asegúrese de que el administrador ha concedido permiso para [**Upload una**](../concepts/deploy-and-publish/apps-upload.md) aplicación personalizada y para seleccionar todos los filtros como parte de las directivas de configuración y reunión de la aplicación respectivamente.
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -140,9 +140,10 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
 1. Seleccione **Guardar** y **seleccione Ver en Teams** para probar rápidamente la escena en Microsoft Teams.
 
     >[!NOTE]
-    > Para eliminar una escena que creaste, **selecciona Eliminar escena** en la barra superior.
+    > * Al seleccionar **Ver en Teams** crea automáticamente una aplicación de Microsoft Teams que  se puede ver en la página Aplicaciones del portal Teams desarrolladores.
+    > * Al seleccionar **Ver en Teams** crea automáticamente un paquete de aplicación que appmanifest.jsdetrás de la escena. Como se mencionó anteriormente, esto se abstrae, pero puedes acceder al paquete de la aplicación creado automáticamente navegando a **Aplicaciones** desde el menú.
+    > * Para eliminar una escena que creaste, **selecciona Eliminar escena** en la barra superior.
 
-1. En el **cuadro de diálogo Ver en Teams,** seleccione Vista previa en **Teams**.
 1. En el cuadro de diálogo que aparece, seleccione **Agregar**.
 
     Se puede probar o acceder a la escena mediante la creación de una reunión de prueba y el inicio de escenas personalizadas del Modo conjunto. Para obtener más información, vea [Activar escenas personalizadas del modo conjunto](#activate-custom-together-mode-scenes).
@@ -150,9 +151,7 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
     ![Iniciar escenas personalizadas del modo conjunto](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > * Al seleccionar **Vista** previa, se crea automáticamente Microsoft Teams aplicación  que se puede ver en la página Aplicaciones del portal Teams desarrolladores.
-    > * Al seleccionar **Vista** previa, se crea automáticamente un paquete de aplicación appmanifest.jsdetrás de la escena. Como se mencionó anteriormente, esto se abstrae, pero puedes acceder al paquete de la aplicación creado automáticamente navegando a **Aplicaciones** desde el menú.
-    > * A continuación, la escena se puede ver en la galería de escenas del modo conjunto personalizada.
+    > * La escena se puede ver en la galería de escenas del modo conjunto personalizada.
 
 1. Opcionalmente, puedes seleccionar **Compartir** en el menú desplegable Guardar para crear un vínculo que se pueda compartir para distribuir fácilmente las escenas para que otras personas las usen.  Al abrir este vínculo, se instala la escena para el usuario y pueden empezar a usarlo.
 
