@@ -366,6 +366,8 @@
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importar mensajes de terceros
       href: graph-api/import-messages/import-external-messages-to-teams.md
+    - name: Ejemplos de código
+      href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: Probar la aplicación
   items:
     - name: Información general
