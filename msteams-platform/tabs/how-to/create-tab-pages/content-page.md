@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable estático
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1276fdac2d3a30836b574b8e51b99fcbd7a415d2
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 6d1a0f6dd3593209f94966140ea94b33ac0c8d10
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179737"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726876"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -40,7 +40,7 @@ El siguiente código proporciona un ejemplo de cómo se comunican la página y T
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
 
@@ -102,7 +102,7 @@ Si indicas en el manifiesto de la aplicación, todas las páginas de configuraci
     }
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

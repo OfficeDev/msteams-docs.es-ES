@@ -5,12 +5,12 @@ description: Cómo realizar el despliegue de vínculos con la extensión de mens
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068951"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726932"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -78,6 +78,8 @@ Se admiten los siguientes tipos de tarjeta:
 * [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 Tarjeta de conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+Puede mostrar una vista previa de una tarjeta adaptable o una tarjeta Office 365 Connector en la lista de resultados mediante su propiedad de vista previa. La propiedad preview no es necesaria si los resultados ya son tarjetas Hero o Thumbnail. Si usas los datos adjuntos de vista previa, debe ser una tarjeta hero o thumbnail. Si no se especifica ninguna propiedad de vista previa, se produce un error en la vista previa de la tarjeta y no se muestra nada.
 
 ### <a name="example"></a>Ejemplo
 

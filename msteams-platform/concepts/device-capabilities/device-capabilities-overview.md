@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: Cámara image media microphone mic qr code qrcode bar code barcode scan scanner location capabilities native device permissions
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: e1ee7f81c5280baafb1325a5c6537f9fa00f53ad
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211586"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726939"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 
@@ -43,3 +43,4 @@ Después de obtener acceso a las funcionalidades del dispositivo, usa Teams API 
 * Compartir ubicación mediante [el selector de ubicación](location-capability.md).
 
 Además, puedes integrar el control Teams selector [de](people-picker-capability.md) personas nativas que permite a los usuarios buscar y seleccionar personas en la experiencia de la aplicación web.
+

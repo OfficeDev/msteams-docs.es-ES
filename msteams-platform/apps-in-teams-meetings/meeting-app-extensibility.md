@@ -3,30 +3,30 @@ title: Extensibilidad de la aplicación para reuniones
 author: surbhigupta
 description: Comprender la extensibilidad de la aplicación de reunión
 ms.topic: conceptual
-ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335399"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726883"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidad de la aplicación para reuniones
 
 Teams extensibilidad de la aplicación de reunión se basa en los siguientes conceptos:
 
-* El ciclo de vida de la reunión tiene diferentes fases, como antes de la reunión, en la reunión y después de la reunión.  
+* El ciclo de vida de una reunión tiene varias fases, como antes de la reunión, en la reunión y después de la reunión.  
 * Hay tres roles de participante distintos en una reunión: organizador, moderador y asistente. Para obtener más información, vea [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Hay varios tipos [de usuario](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) en una reunión: usuarios anónimos, [](/microsoftteams/guest-access)invitados, invitados y federados. [](/microsoftteams/manage-external-access)
 
-En este artículo se describe información sobre el ciclo de vida de la reunión y cómo integrar pestañas, bots y extensiones de mensajería en la reunión. Proporciona información para identificar diferentes roles de participante y diferentes tipos de usuario para realizar tareas.
+En este artículo se describe información sobre el ciclo de vida de la reunión y cómo integrar pestañas, bots y extensiones de mensajería en una reunión. Proporciona información para identificar varios roles de participante y tipos de usuario para realizar tareas.
 
 ## <a name="meeting-lifecycle"></a>Ciclo de vida de la reunión
 
-El ciclo de vida de la reunión consiste en la experiencia de la aplicación previa a la reunión, en la reunión y posterior a la reunión. Puede integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión.
+El ciclo de vida de una reunión consiste en la experiencia de la aplicación previa, en la reunión y posterior a la reunión. Puede integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar pestañas en el ciclo de vida de la reunión
 
-Las pestañas permiten a los miembros del equipo tener acceso a servicios y contenido en un espacio específico dentro de una reunión. El equipo trabaja directamente con pestañas y tiene conversaciones sobre las herramientas y los datos disponibles en las pestañas. En Teams reunión, los usuarios pueden agregar una pestaña seleccionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, y elegir la aplicación que quieren instalar.
+Las pestañas permiten a los miembros del equipo tener acceso a servicios y contenido en un espacio específico dentro de una reunión. El equipo trabaja directamente con pestañas y tiene conversaciones sobre las herramientas y los datos disponibles en las pestañas. En una reunión Teams, los usuarios pueden agregar una pestaña seleccionando <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, y elegir la aplicación que quieren instalar.
 
 > [!IMPORTANT]
 > Si has integrado una pestaña con la reunión Teams, la aplicación debe seguir el flujo de autenticación de inicio de sesión único (SSO) para las [pestañas.](../tabs/how-to/authentication/auth-aad-sso.md)
@@ -48,8 +48,8 @@ Con la experiencia de la aplicación previa a la reunión, puedes buscar y agreg
 1. En la galería de pestañas, selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
 
     > [!NOTE]
-    > * También puede agregar una pestaña mediante la **pestaña Chat de** reunión en una reunión existente.
-    > * El diseño de tabulación debe estar en un estado organizado, si hay más de diez sondeos o encuestas.
+    > * También puede agregar una pestaña a una reunión existente mediante la **pestaña Chat de** la reunión.
+    > * El diseño de tabulación debe estar en un estado organizado, si hay más de 10 sondeos o encuestas.
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
@@ -65,7 +65,7 @@ Después de agregar las pestañas a una reunión existente en escritorio o web, 
 
 #### <a name="in-meeting-app-experience"></a>Experiencia de la aplicación en la reunión
 
-Con la experiencia de la aplicación en la reunión, puedes interactuar con los participantes durante la reunión mediante aplicaciones y el cuadro de diálogo en la reunión. Las aplicaciones de reunión se hospedan en la barra superior superior de la ventana de reunión como pestaña en la reunión. Use el cuadro de diálogo en la reunión para mostrar el contenido que se puede usar para los participantes de la reunión. Para obtener más información, consulta [Crear aplicaciones para Teams reuniones.](create-apps-for-teams-meetings.md)
+Con la experiencia de la aplicación en la reunión, puedes interactuar con los participantes durante la reunión mediante aplicaciones y el cuadro de diálogo en la reunión. Las aplicaciones de reunión se hospedan en la barra de herramientas de la ventana de reunión como una pestaña en la reunión. Use el cuadro de diálogo en la reunión para mostrar el contenido que se puede usar para los participantes de la reunión. Para obtener más información, consulta [Crear aplicaciones para Teams reuniones.](create-apps-for-teams-meetings.md)
 
 Para dispositivos móviles, las aplicaciones de reunión están disponibles en **Aplicaciones** > puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Selecciona **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
 
@@ -73,7 +73,7 @@ Para dispositivos móviles, las aplicaciones de reunión están disponibles en *
 
 1. Vaya a Teams.
 1. En el calendario, seleccione una reunión en la que desee usar una pestaña.
-1. Después de entrar en la reunión, en la barra superior superior de la ventana de chat, selecciona la aplicación necesaria.
+1. Después de entrar en la reunión, en la barra de herramientas de la ventana de chat, selecciona la aplicación necesaria.
     Una aplicación está visible en una reunión Teams en el panel lateral o en el cuadro de diálogo en la reunión.
 1. En el cuadro de diálogo en la reunión, escriba la respuesta como comentarios.
 
@@ -97,7 +97,7 @@ Se muestra el cuadro de diálogo en la reunión donde puede escribir la respuest
 > [!NOTE]
 > * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso a , y representar `meetingId` `userMri` la experiencia `frameContext` correctamente.
 > * Si el cuadro de diálogo en la reunión se representa correctamente, recibirá una notificación de que los resultados se descargaron correctamente.
-> * El manifiesto de la aplicación especifica los lugares en los que quieres que aparezcan. El campo de contexto se usa para este propósito. También es la parte de una experiencia de bandeja de uso compartido, sujeto a las directrices de diseño especificadas.
+> * El manifiesto de la aplicación especifica los lugares en los que quieres que aparezcan las aplicaciones. El campo de contexto se usa para este propósito. También es la parte de una experiencia de bandeja de uso compartido, sujeto a las directrices de diseño especificadas.
 
 En la siguiente imagen se muestra el panel lateral de la reunión:
 
@@ -111,7 +111,7 @@ En la tabla siguiente se describe el comportamiento de la aplicación cuando se 
 
 #### <a name="post-meeting-app-experience"></a>Experiencia de aplicación posterior a la reunión
 
-Con la experiencia de la aplicación posterior a la reunión, puedes ver los resultados de la reunión, como los resultados de encuestas o los comentarios. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para agregar una pestaña, obtener notas de la reunión y resultados en los que los organizadores y asistentes deben realizar acciones.
+Con la experiencia de la aplicación posterior a la reunión, puedes ver los resultados de la reunión, como los resultados de encuestas o los comentarios. Seleccionar <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> para agregar una pestaña, obtener notas de la reunión y ver los resultados en los que los organizadores y asistentes deben tomar medidas.
 
 En la siguiente imagen se muestra la **pestaña Contoso** con los resultados del sondeo y los comentarios recibidos de los asistentes a la reunión:
 
@@ -186,7 +186,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y las característica
 | Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar ni eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
 | Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar ni eliminar. | Se permite la interacción. No se permite la adquisición, actualización y eliminación. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

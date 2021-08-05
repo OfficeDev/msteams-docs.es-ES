@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179940"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726834"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -39,10 +39,18 @@ Teams pestañas deben cumplir los siguientes requisitos previos:
 
 * La pestaña Teams MS no admite la capacidad de cargar sitios web de intranet que usan certificados autofirmados.
 
-## <a name="see-also"></a>Vea también
+## <a name="tools-you-can-use-to-build-tabs"></a>Herramientas que puede usar para crear pestañas
+* [Kit de herramientas de Teams para Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+* [Kit de herramientas de Teams para Visual Studio](../../toolkit/visual-studio-overview.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
-* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Cree la primera aplicación con React](../../get-started/first-app-react.md)
+* [Cree la primera aplicación con Blazor](../../get-started/first-app-blazor.md)
+* [Cree la primera aplicación con SPFx](../../get-started/first-app-spfx.md)
+* [Cree su primer bot de conversación](../../get-started/first-app-bot.md)
+* [Crear la primera extensión de mensaje](../../get-started/first-message-extension.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 
 ## <a name="next-step"></a>Paso siguiente

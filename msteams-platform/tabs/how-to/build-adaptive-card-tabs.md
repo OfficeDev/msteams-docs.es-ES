@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Crear pestañas con tarjetas adaptables
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428719"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726855"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -17,9 +17,16 @@ ms.locfileid: "53428719"
 > * Esta característica se encuentra en [Public Developer Preview y](~/resources/dev-preview/developer-preview-intro.md) se admite en dispositivos de escritorio y móviles. La compatibilidad con el explorador web está disponible próximamente.
 > * Las pestañas con tarjetas adaptables actualmente solo se admiten como aplicaciones personales.
 
-Al desarrollar una pestaña con el método tradicional, es posible que se deba a estos problemas, como consideraciones de HTML y CSS, tiempos de carga lentos, restricciones de iFrame y costos y mantenimiento del servidor. Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un IFrame, puedes representar tarjetas adaptables en una pestaña. Mientras que el front-end se representa con tarjetas adaptables, el back-end está alimentado por un bot. El bot es responsable de aceptar solicitudes y responder correctamente con la tarjeta adaptable que se representa.
+Al desarrollar una pestaña con el método tradicional, puede encontrarse con estos problemas:
 
-Puedes crear las pestañas con bloques de creación de interfaz de usuario (UI) listos para usar que se ven y se sienten nativos en escritorio, web y móvil. Este artículo te ayuda a comprender los cambios necesarios para realizar el manifiesto de la aplicación, cómo la actividad de invocación solicita y envía información en pestaña con tarjetas adaptables y el impacto en el flujo de trabajo del módulo de tareas.
+* Consideraciones de HTML y CSS
+* Tiempos de carga lentos
+* Restricciones de iFrame
+* Mantenimiento y costos del servidor
+
+Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un IFrame, puedes representar tarjetas adaptables en una pestaña. Mientras que el front-end se representa con tarjetas adaptables, el back-end está alimentado por un bot. El bot es responsable de aceptar solicitudes y responder correctamente con la tarjeta adaptable que se representa.
+
+Puedes crear las pestañas con bloques de creación de interfaz de usuario (UI) listos para usar nativos en escritorio, web y móvil. Este artículo te ayuda a comprender los cambios necesarios para realizar el manifiesto de la aplicación. El artículo también identifica cómo la actividad de invocación solicita y envía información en pestaña con tarjetas adaptables y su efecto en el flujo de trabajo del módulo de tareas.
 
 En la siguiente imagen se muestran las pestañas de compilación con tarjetas adaptables en escritorio y móvil:
 
@@ -160,7 +167,7 @@ El código siguiente proporciona ejemplos de `tab/fetch` solicitud y respuesta:
 
 ### <a name="handle-submits-from-adaptive-card"></a>Controlar envíos desde tarjeta adaptable
 
-Después de representar una tarjeta adaptable en la pestaña, debe poder responder a las interacciones del usuario. Esta respuesta se controla mediante la `tab/submit` solicitud de invocación.
+Después de representar una tarjeta adaptable en la pestaña, puede responder a las interacciones del usuario. Esta respuesta se controla mediante la `tab/submit` solicitud de invocación.
 
 Cuando un usuario selecciona un botón en la pestaña Tarjeta adaptable, la solicitud se desencadena en el bot con los datos correspondientes a través de la función `tab/submit` `Action.Submit` de tarjeta adaptable. Los datos de la tarjeta adaptable están disponibles a través de la propiedad data de la `tab/submit` solicitud. Recibirá una de las siguientes respuestas a su solicitud:
 
@@ -325,7 +332,7 @@ El código siguiente proporciona ejemplos de `task/submit` solicitud y respuesta
 
 ## <a name="authentication"></a>Autenticación
 
-En las secciones anteriores de este artículo, ha visto que la mayoría de los paradigmas de desarrollo se pueden extender desde las solicitudes y respuestas del módulo de tareas a las solicitudes y respuestas de tabulación. Cuando se trata de controlar la autenticación, el flujo de trabajo de la pestaña Tarjeta adaptable sigue el patrón de autenticación para las extensiones de mensajería. Para obtener más información, vea [Agregar autenticación](../../messaging-extensions/how-to/add-authentication.md).
+En las secciones anteriores, ha visto que la mayoría de los paradigmas de desarrollo se pueden extender desde las solicitudes y respuestas del módulo de tareas a las solicitudes y respuestas de tabulación. Cuando se trata de controlar la autenticación, el flujo de trabajo de la pestaña Tarjeta adaptable sigue el patrón de autenticación para las extensiones de mensajería. Para obtener más información, vea [Agregar autenticación](../../messaging-extensions/how-to/add-authentication.md).
 
 `tab/fetch`las solicitudes pueden tener una **respuesta continue** o **auth.** Cuando se desencadena una solicitud y recibe una respuesta de `tab/fetch` **autenticación de** pestaña, la página de inicio de sesión se muestra al usuario.
 
@@ -415,7 +422,13 @@ El código siguiente muestra un ejemplo de solicitud ree emitida:
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="code-sample"></a>Ejemplo de código
+
+|**Ejemplo de nombre** | **Descripción** |**.NET** | **Node.js** |
+|----------------|-----------------|--------------|--------------|
+| Mostrar tarjetas adaptables en Teams pestaña | Microsoft Teams ejemplo de pestaña, que muestra cómo mostrar tarjetas adaptables en Teams. |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+
+## <a name="see-also"></a>Consulte también
 
 * [Tarjeta adaptable](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams pestañas](~/tabs/what-are-tabs.md)

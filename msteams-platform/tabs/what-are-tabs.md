@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179925"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726862"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -77,7 +77,11 @@ Para pestañas de canal o grupo, también puede crear una página de configuraci
 
 Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales por aplicación.
 
-## <a name="see-also"></a>Vea también
+### <a name="tools-you-can-use-to-build-tabs"></a>Herramientas que puede usar para crear pestañas
+* [Teams Toolkit para Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit para Visual Stuido](../toolkit/visual-studio-overview.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)
