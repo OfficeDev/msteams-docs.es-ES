@@ -1,19 +1,19 @@
 ---
-title: Atributo cookie SameSite
+title: Atributo de cookies SameSite
 author: laujan
 description: describe los atributos de la cookie SameSite
 keywords: atributos cookie samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140568"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708339"
 ---
-# <a name="samesite-cookie-attribute"></a>Atributo cookie SameSite 
+# <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite 
 
 Las cookies son cadenas de texto, enviadas desde sitios web y almacenadas en un equipo por el explorador web. Se usan para la autenticación y personalización. Por ejemplo, las cookies se usan para recuperar información con estado, conservar la configuración del usuario, registrar la actividad de exploración y mostrar anuncios relevantes. Las cookies siempre están vinculadas a un dominio determinado y las instalan varias partes. 
 
@@ -89,6 +89,6 @@ Android WebView es un componente del sistema Chrome que permite a las aplicacion
 * [Ejemplos de SameSite](https://github.com/GoogleChromeLabs/samesite-examples)
 * [Recetas de cookies de SameSite](https://web.dev/samesite-cookie-recipes/)
 * [Clientes incompatibles conocidos]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [Desarrolladores: Prepárese para new SameSite=None; Secure Cookie Configuración](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-* [Próximos cambios en las cookies de SameSite ASP.NET y ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Desarrolladores: Prepárese para el nuevo SameSite=None; Configuración de cookies seguras](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Próximos cambios de cookies de SameSite en ASP.NET y ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [Cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

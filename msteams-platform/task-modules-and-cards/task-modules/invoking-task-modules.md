@@ -4,12 +4,12 @@ description: Invocar y descartar módulos de tareas.
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: a23d5cee3f13967772a4b58ed973bf08906e36a6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 88544199007b92b2f29d99153cde7bca760a44f3c92c7ce710cdd8db4ebff986
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140781"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706660"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar y descartar módulos de tareas
 
@@ -35,10 +35,10 @@ El `TaskInfo` objeto contiene los metadatos de un módulo de tareas. Defina el `
 | `title` | string | Este atributo aparece debajo del nombre de la aplicación y a la derecha del icono de la aplicación. |
 | `height` | número o cadena | Este atributo puede ser un número que representa el alto del módulo de tareas en píxeles, `small` o , `medium` o `large` . Para obtener más información, vea [task module sizing](#task-module-sizing). |
 | `width` | número o cadena | Este atributo puede ser un número que representa el ancho del módulo de tareas en píxeles, `small` o , `medium` o `large` . Para obtener más información, vea [task module sizing](#task-module-sizing). |
-| `url` | string | Este atributo es la dirección URL de la página cargada como `<iframe>` dentro del módulo de tareas. El dominio de la dirección URL debe estar en la matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) de la aplicación en el manifiesto de la aplicación. |
+| `url` | cadenas | Este atributo es la dirección URL de la página cargada como `<iframe>` dentro del módulo de tareas. El dominio de la dirección URL debe estar en la matriz [validDomains](~/resources/schema/manifest-schema.md#validdomains) de la aplicación en el manifiesto de la aplicación. |
 | `card` | Datos adjuntos de tarjeta adaptable o de bot de tarjeta adaptable | Este atributo es el JSON para que la tarjeta adaptable aparezca en el módulo de tareas. Si el usuario invoca desde un bot, use el JSON de tarjeta adaptable en un objeto Bot `attachment` Framework. Desde una pestaña, el usuario debe usar una tarjeta adaptable. Para obtener más información, consulte [Adaptive Card or Adaptive Card bot card attachment](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | Este atributo abre la dirección URL en una pestaña del explorador, si un cliente no admite la característica del módulo de tareas. |
-| `completionBotId` | string | Este atributo especifica un identificador de aplicación bot para enviar el resultado de la interacción del usuario con el módulo de tareas. Si se especifica, el bot recibe un `task/submit invoke` evento con un objeto JSON en la carga del evento. |
+| `fallbackUrl` | cadenas | Este atributo abre la dirección URL en una pestaña del explorador, si un cliente no admite la característica del módulo de tareas. |
+| `completionBotId` | cadenas | Este atributo especifica un identificador de aplicación bot para enviar el resultado de la interacción del usuario con el módulo de tareas. Si se especifica, el bot recibe un `task/submit invoke` evento con un objeto JSON en la carga del evento. |
 
 > [!NOTE]
 > La característica del módulo de tareas requiere que los dominios de las direcciones URL que quiera cargar se incluyan en la matriz en el `validDomains` manifiesto de la aplicación.
@@ -197,7 +197,7 @@ Para los tipos de datos y los valores permitidos para `<TaskInfo.url>` , , , y ,
 
 En la tabla siguiente se proporciona información `APP_ID` sobre `BOT_APP_ID` y :
 
-| Valor | Tipo | Necesario | Descripción |
+| Valor | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Sí | El [identificador](~/resources/schema/manifest-schema.md#id) de la aplicación que invoca el módulo de tareas. La [matriz validDomains](~/resources/schema/manifest-schema.md#validdomains) del manifiesto `APP_ID` para debe contener el dominio para if está en la dirección `url` `url` URL. El identificador de la aplicación ya se conoce cuando se invoca un módulo de tareas desde una pestaña o un bot, por lo que no se incluye en `TaskInfo` . |
 | `BOT_APP_ID` | string | No | Si se especifica `completionBotId` un valor para, el `result` objeto se envía mediante un mensaje al bot `task/submit invoke` especificado. `BOT_APP_ID` debe especificarse como bot en el manifiesto de la aplicación, es decir, no se puede enviar a ningún bot. |
@@ -227,12 +227,12 @@ Microsoft Teams garantiza que la navegación por teclado funciona correctamente 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Nombre de ejemplo | Descripción | .NET | Node.js|
+|Ejemplo de nombre | Descripción | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Bots de ejemplo de módulo de tareas-V4 | Ejemplos para crear módulos de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Bots de ejemplo de módulo de tareas-V4 | Ejemplos para crear módulos de tareas. |[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Solicitar permisos de dispositivo](~/concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
@@ -242,4 +242,4 @@ Microsoft Teams garantiza que la navegación por teclado funciona correctamente 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Usar módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+> [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

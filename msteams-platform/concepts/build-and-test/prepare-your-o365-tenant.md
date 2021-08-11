@@ -4,21 +4,21 @@ description: Cómo empezar a trabajar con Teams en Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurar Microsoft 365 inquilino Teams carga
-ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019947"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704434"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar el espacio empresarial de Microsoft 365
 
 Microsoft 365 suscriptores pueden desarrollar aplicaciones para Microsoft Teams con uno de los siguientes planes:
 
-* Basic
+* Básico
 * Estándar
 * Enterprise E1, E3 y E5
-* Programador
+* Developer
 * Education, Education Plus y Education E5
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Habilite Teams para su organización y para obtener más información, [vea enab
 
 **Para activar la carga o la instalación local de la aplicación personalizada para el inquilino del desarrollador**
 
-1. Inicie sesión en [el Microsoft 365 de administración](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) con sus credenciales de administrador.
+1. Inicie sesión en [Centro de administración de Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) con sus credenciales de administrador.
 
 2. Seleccione **Mostrar todo**  >  **Teams**.
 

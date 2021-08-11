@@ -6,12 +6,12 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 54f4fec4e240f866c686ed715bd5093a319a2a48
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: e5f33fa9146d0abb735e9f76aeaecea2dbdd230efe81251f9b7dcaf5700a907a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069172"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706009"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -288,7 +288,7 @@ Cuando se sincroniza un curso de Moodle, Microsoft Teams instala automáticament
 > [!NOTE]
 > Para compartir cualquier solicitud de característica o comentarios con nosotros, visite nuestra página [De voz de usuario](https://microsoftteams.uservoice.com/forums/916759-moodle).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 - [Moodle](https://moodle.org/)

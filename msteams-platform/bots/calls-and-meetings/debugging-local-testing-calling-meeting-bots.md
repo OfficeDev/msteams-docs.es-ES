@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: túnel ngrok de desarrollo local
 ms.date: 11/18/2018
-ms.openlocfilehash: 0f29f77e5030a7dbef9e8f7cefae4e055b7cc5b5
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c38fe4aa04b359dca19c48add1b1a0a52e83ec46c4cb942788671820d29bb9a7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020165"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706403"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desarrollar bots de llamadas y reuniones en línea en el equipo local
 

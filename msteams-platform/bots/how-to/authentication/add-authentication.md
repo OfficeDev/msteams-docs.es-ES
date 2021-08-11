@@ -5,12 +5,12 @@ description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Team
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 76ea98feb27640ffb7b310ca097e5e7a810ac1aed31b8bf0d8aa2e09d73d341a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069010"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703799"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot Teams usuario
 
@@ -87,7 +87,7 @@ El registro de canales de bot registra el servicio web como un bot con Bot Frame
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
 > [!NOTE]
-> El recurso Registro de canales bot mostrará la región **Global** incluso si seleccionó Oeste de EE. UU. Esto se espera.
+> El recurso Registro de canales bot mostrará la región **Global** incluso si seleccionó Oeste de EE. UU. Esto es normal.
 
 Para obtener más información, vea [Create a bot for Teams](../create-a-bot-for-teams.md).
 
@@ -310,7 +310,7 @@ Después de configurar el mecanismo de autenticación, puede realizar las prueba
 1. En la **contraseña de Microsoft App,** escriba la contraseña de la aplicación del bot desde `appsettings.json` .
 1. Seleccione **Conectar**.
 1. Después de que el bot esté en funcionamiento, escriba cualquier texto para mostrar la tarjeta de inicio de sesión.
-1. Seleccione el **botón Iniciar sesión.**
+1. Seleccione el botón **Iniciar sesión**.
 1. Se muestra un cuadro de diálogo emergente para **Confirmar dirección URL abierta.** Esto permite que el usuario del bot (usted) se autentique.  
 1. Seleccione **Confirmar**.
 1. Si se le pide, seleccione la cuenta del usuario aplicable.
@@ -566,7 +566,7 @@ En el siguiente paso de diálogo, compruebe la presencia de un token en el resul
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Agregar autenticación a través del servicio bot de Azure](https://aka.ms/azure-bot-add-authentication)
 

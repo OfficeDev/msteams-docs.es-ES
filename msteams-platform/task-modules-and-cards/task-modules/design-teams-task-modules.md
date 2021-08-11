@@ -5,12 +5,12 @@ description: Aprende a diseñar módulos de tareas para Teams aplicaciones y obt
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 48e47a6c0bde0f0a3fefb8fcbfb362687ce58947
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629924"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708264"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la Microsoft Teams aplicación
 
@@ -18,12 +18,12 @@ Puedes crear experiencias emergentes modales en tu Teams con módulos de tareas.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="En el ejemplo se muestra un módulo de tareas." border="false":::
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Puedes encontrar instrucciones de diseño de módulos de tareas más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit Microsoft Teams interfaz de usuario.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="open-a-task-module"></a>Abrir un módulo de tareas
 
@@ -48,7 +48,7 @@ También se pueden crear con el marco [de](../../task-modules-and-cards/cards/de
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de aplicación**|
-|2|**Nombre de la** aplicación: nombre completo de la aplicación.|
+|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**Encabezado:** haga que los encabezados sea claros y concisos. Describa la tarea que desea que los usuarios completen.
 |4 |**Botón Cerrar:** cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
 |5 |**iframe:** espacio dinámico que hospeda el contenido de la aplicación.|
@@ -61,7 +61,7 @@ También se pueden crear con el marco [de](../../task-modules-and-cards/cards/de
 |Contador|Descripción|
 |----------|-----------|
 |1|**Encabezado:** haga que los encabezados sea claros y concisos. Describa la tarea que desea que los usuarios completen.
-|2|**Nombre de la** aplicación: nombre completo de la aplicación.|
+|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**Botón Cerrar:** cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
 |4 |**webview:** espacio dinámico que hospeda el contenido de la aplicación.|
 |5 |**Acciones (opcional):** botones relacionados con el contenido de la aplicación.|
@@ -78,7 +78,7 @@ Considere la posibilidad de usar plantillas para diseños comunes dentro de los 
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="list"></a>Lista
+### <a name="list"></a>List
 
 Las listas funcionan bien en un módulo de tareas porque son fáciles de examinar.
 
@@ -120,7 +120,7 @@ Cree un flujo de inicio de sesión o registro centrado con una serie de módulos
 
 ---
 
-### <a name="media"></a>Elementos multimedia
+### <a name="media"></a>Multimedia
 
 Insertar contenido multimedia en un módulo de tareas para una experiencia de visualización centrada.
 
@@ -178,7 +178,7 @@ En este ejemplo se muestran los resultados del sondeo iniciados desde una tarjet
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 ### <a name="usability"></a>Facilidad de uso
 

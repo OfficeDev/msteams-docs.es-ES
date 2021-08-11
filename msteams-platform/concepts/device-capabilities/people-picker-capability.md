@@ -1,19 +1,19 @@
 ---
-title: Integración de la funcionalidad selector de personas
+title: Integrar de la funcionalidad de Selector de usuarios
 author: Rajeshwari-v
 description: Cómo usar Teams SDK de cliente de JavaScript para integrar la funcionalidad selector de personas
 keywords: control de selector de personas
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 8399eeb1a088e4b60c466d51c223b9405ebf1711
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211644"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702788"
 ---
-# <a name="integrate-people-picker-capability"></a>Integración de la funcionalidad selector de personas 
+# <a name="integrate-people-picker-capability"></a>Integrar de la funcionalidad de Selector de usuarios 
 
 Selector de personas es un control para buscar y seleccionar personas. Esta es una funcionalidad nativa disponible en Teams plataforma. Puedes integrar Teams de entrada del selector de personas nativo con tus aplicaciones web. Puede seleccionar entre una o varias selecciones y configuraciones, como limitar la búsqueda en un chat, canales o en toda la organización.
 
@@ -82,7 +82,7 @@ En la siguiente imagen se muestra la experiencia de la funcionalidad selector de
 
 Debes asegurarte de controlar los errores correctamente en la aplicación web. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al iniciar el Selector de personas.|
@@ -90,7 +90,7 @@ Debes asegurarte de controlar los errores correctamente en la aplicación web. E
 | **8000** | USER_ABORT |El usuario canceló la operación.|
 | **9000** | OLD_PLATFORM | El usuario se encuentra en una compilación de plataforma antigua donde la implementación de la API no está presente.  La actualización de la compilación resuelve el problema.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)

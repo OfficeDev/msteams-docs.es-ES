@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: 9dcbd8f31c6ff68f0401e9fbb77297e8eebcf520
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101747"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707116"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino Microsoft 365 prueba
 
@@ -246,7 +246,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
 
 5. Una vez finalizado el script, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Depurar la pestaña](~/tabs/how-to/developer-tools.md) 
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)

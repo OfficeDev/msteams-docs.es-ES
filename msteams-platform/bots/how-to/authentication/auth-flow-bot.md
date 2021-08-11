@@ -4,12 +4,12 @@ description: Describe Microsoft Teams de autenticación en bots
 keywords: bots de flujo de autenticación de teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: fdce053ce837bb9a244712a63515194d05adb3a8
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 0eb4808cc162b293404530f7da7ac9d63b9f98cb86a0d864866fd31e388ecb89
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428705"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708323"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flujo de autenticación para bots en Microsoft Teams
 

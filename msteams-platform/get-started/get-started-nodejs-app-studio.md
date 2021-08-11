@@ -5,12 +5,12 @@ keywords: introducción a node.js nodejs App Studio
 ms.topic: tutorial
 localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 84c3452c739f67c2908d698b627b5651ff9d5d7a
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 5abde3b1866556ff20e9ee145e761915f88f7288c581556460f5e0e3f3386ecb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254375"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704689"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>Crea tu primera Microsoft Teams con Node.js
 

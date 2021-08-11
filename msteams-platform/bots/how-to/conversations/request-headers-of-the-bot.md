@@ -3,12 +3,12 @@ title: Enviar identificador de inquilino e identificador de conversación a los 
 description: describe cómo enviar el identificador de inquilino y el identificador de conversación a los encabezados de solicitud del bot.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 76f667453114ab202d43217b9a4c01a6d14cc1a8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a775c09589f59a6d487bf403544afccd5b59f797ac12cf60a9deb1fc2de16644
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565896"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706674"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Enviar identificador de inquilino e identificador de conversación a los encabezados de solicitud del bot
 

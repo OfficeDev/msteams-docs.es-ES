@@ -5,12 +5,12 @@ description: integración de un Power Virtual Agents chatbot en la plataforma Te
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: ed788fe2acdd2425a435ea7ad608e461c1b4d306a89d7fe3b57eee054b94e69e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196253"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705324"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Añadir un bot de chat de Power Virtual Agents 
 
@@ -99,7 +99,7 @@ Abra **la pestaña Probar y distribuir** y seleccione **Instalar** para agregar 
 1. **Iniciar un chat**   
 El proceso de configuración para agregar el bot Power Virtual Agents chat a Teams completa. Ahora puedes iniciar una conversación con el bot en un chat personal.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 * [Crear un chatbot para Teams con Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents).  

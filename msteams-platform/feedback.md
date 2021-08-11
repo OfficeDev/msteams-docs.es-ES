@@ -4,12 +4,12 @@ description: El Microsoft Teams de producto responde a la comunidad de desarroll
 localization_priority: Normal
 ms.topic: reference
 keywords: preguntas de los desarrolladores de comentarios de teams problemas de solicitudes de soporte técnico de contactos contribuciones de la comunidad
-ms.openlocfilehash: a1a167dabbbf6d4bfe88e6407bb9cf359c1335fe
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: f0e00df1919a6949433c124dbea15ffa973f7439c46130202c7ba7b6bf750aea
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726904"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705555"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams de la comunidad de desarrolladores
 
@@ -36,6 +36,6 @@ En la tabla siguiente se enumeran los canales de soporte técnico para enviar Te
 |         **Microsoft Teams problemas y errores del producto**          | El administrador de inquilinos puede comunicarse [con Microsoft 365 soporte técnico.](/microsoft-365/admin/contact-support-for-business-products)                                                            |
 |        **Preguntas generales sobre Microsoft Teams**        |  Envíe sus preguntas en [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).               |                                                           
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Referencia del SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

@@ -5,22 +5,22 @@ description: Diseña tu aplicación más rápido con componentes de interfaz de 
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644856"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702893"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
-Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de componentes basados en fluent ui que funcionan en casos de uso Teams comunes, lo que te da más tiempo para averiguar la mejor experiencia para los usuarios.
+Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de Fluent componentes basados en la interfaz de usuario que funcionan en casos de uso Teams comunes, lo que te da más tiempo para averiguar la mejor experiencia para los usuarios.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Introducción a herramientas y ejemplos
 
 Los siguientes recursos pueden ayudarte a diseñar y desarrollar tu aplicación con plantillas de interfaz de usuario.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Toma plantillas de interfaz de usuario para el diseño de la aplicación desde el kit de interfaz de usuario de Microsoft Teams, que también incluye información extensa sobre el uso, la anatomía, la accesibilidad y los procedimientos recomendados.
 
@@ -142,7 +142,7 @@ Los formularios se usan para recopilar, validar y enviar la entrada del usuario 
 
 ---
 
-## <a name="list"></a>Lista
+## <a name="list"></a>List
 
 Puede usar una lista para mostrar elementos relacionados en un formato analizable y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.
 
@@ -215,7 +215,7 @@ Un asistente guía a un usuario a través de varias pantallas para completar una
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Instalación
+* Configuración
 * Incorporación
 * Experiencias de primera ejecución
 

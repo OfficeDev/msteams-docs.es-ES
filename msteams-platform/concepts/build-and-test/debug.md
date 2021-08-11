@@ -4,18 +4,18 @@ description: Describe las opciones para probar y depurar Microsoft Teams aplicac
 keywords: teams ejecutar aplicaciones de depuración
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 1f11834ad83e8bea7e4114d25d022df2f62c1700
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5d358e7f37972f1b0954f2c4c5f6a892aeff8d8f4f08b4be22d4ae0215acbebe
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565161"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707319"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elige una configuración para probar y depurar tu Microsoft Teams aplicación
 
 Microsoft Teams aplicaciones contienen una o más capacidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, use una de las siguientes maneras:
 
-* **Puramente local:** en el caso de los bots, puede probar su experiencia en el emulador de bots. Para otro contenido, puede ejecutar localmente en el explorador y dirigir el contenido a través `http://localhost` de .
+* **Puramente local:** para bots, puede probar su experiencia en el bot Emulator. Para otro contenido, puede ejecutar localmente en el explorador y dirigir el contenido a través `http://localhost` de .
 * **Locally hosted in Teams:** This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. Esto te permite ejecutar y depurar fácilmente la aplicación en el Teams cliente.
 * **Hospedado en la nube en Teams:** esto realmente simula la compatibilidad de nivel de producción para una Teams aplicación. Implica cargar la solución en el servidor accesible externamente [](~/concepts/build-and-test/apps-package.md) o el proveedor de nube de elección y crear un paquete para cargarlo [en](~/concepts/deploy-and-publish/apps-upload.md) Teams.
 
@@ -29,12 +29,12 @@ Use varios manifiestos y paquetes para mantener la separación entre los servici
 ## <a name="purely-local"></a>Puramente local
 
 > [!NOTE]
-> Ejecutar el bot localmente no le da acceso Teams la funcionalidad de la aplicación o Teams funciones de bot específicas, como llamadas de lista y otras funciones específicas del canal. Además, algunas funcionalidades están permitidas por Bot Framework en el emulador de bots que podrían no funcionar al ejecutarse en Microsoft Teams.
+> Ejecutar el bot localmente no le da acceso Teams la funcionalidad de la aplicación o Teams funciones de bot específicas, como llamadas de lista y otras funciones específicas del canal. Además, algunas funcionalidades están permitidas por Bot Framework en el bot Emulator que podrían no funcionar al ejecutarse en Microsoft Teams.
 
-El bot puede ejecutarse en el emulador de bots. Esto le permite probar parte de la lógica principal del bot, ver un diseño aproximado de los mensajes y realizar pruebas sencillas. A continuación se indican los pasos:
+El bot puede ejecutarse en el bot Emulator. Esto le permite probar parte de la lógica principal del bot, ver un diseño aproximado de los mensajes y realizar pruebas sencillas. A continuación se indican los pasos:
 
 1. Ejecute el código localmente.
-2. Inicie el emulador de bot y establezca la dirección URL:
+2. Inicie el bot Emulator y establezca la dirección URL:
    * Node.js: `http://localhost:3978/api/messages`
    * .NET/C#: `http://localhost:3979/api/messages`
 3. Deje el id. de la aplicación de Microsoft y la contraseña de la aplicación microsoft en blanco, para que coincidan con las variables de entorno predeterminadas.

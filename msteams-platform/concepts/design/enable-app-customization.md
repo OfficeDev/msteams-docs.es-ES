@@ -5,16 +5,19 @@ description: Comprender cómo Teams los administradores pueden personalizar la a
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: bf1b43629c87dd4123520c634772e5dea14e0bb5
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: 8d7cad42bcb8e6892c25c3c24b50f938624e665a50274395bad00c07f0f1576c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915086"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703603"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Habilitar la aplicación Microsoft Teams personalizada
 
 Puedes permitir a los clientes personalizar algunos aspectos de la aplicación Microsoft Teams en el centro Teams administración. Esta característica solo es compatible con las aplicaciones publicadas en la Teams tienda. Las aplicaciones y aplicaciones de instalación local publicadas para una organización no se pueden personalizar.
+
+> [!IMPORTANT]
+> Actualmente, las aplicaciones de instalación local están disponibles en Government Community Cloud (GCC), pero no están disponibles para GCC-High y departamento de defensa (DOD).
 
 Algunos ejemplos posibles de esta característica incluyen:
 
@@ -33,6 +36,6 @@ Como editor de aplicaciones, proporcione la siguiente información a los cliente
 * Incluya una nota que recomiende probar los cambios de personalización en Teams inquilino de prueba antes de realizar cambios en su entorno de producción. 
 * Proporciona procedimientos recomendados para personalizar la aplicación.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [Personalizar aplicaciones en el Centro Teams administración](/MicrosoftTeams/customize-apps)

@@ -5,16 +5,19 @@ description: Crear un bot de conversación para Microsoft Teams con el Kit de he
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 96bbddd99b6901a4b92e1e2f2dc98482c755dc66
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 3c70db137bc61e2beef09b130269ca34838d40dd344858215fc8d71f583b315a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254254"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707056"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Cree su primer bot de conversación para Microsoft Teams
 
-En este tutorial, aprenderá a crear, ejecutar e implementar una aplicación de bot de Teams. Un bot actúa como intermediario entre un usuario de Microsoft Teams y un servicio web.  Los usuarios pueden chatear con un bot para obtener información rápidamente, iniciar flujos de trabajo o cualquier otra cosa que el servicio web pueda hacer. 
+En este tutorial, aprenderá a crear, ejecutar e implementar una aplicación de bot de Teams. Un bot actúa como intermediario entre un usuario de Microsoft Teams y un servicio web. Los usuarios pueden chatear con un bot para obtener información rápidamente, iniciar flujos de trabajo o cualquier otra cosa que el servicio web pueda hacer. 
+
+> [!IMPORTANT]
+> Actualmente, los bots están disponibles en Government Community Cloud (GCC) pero no están disponibles en GCC-High departamento de defensa (DOD).
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
@@ -139,6 +142,9 @@ Al presionar la tecla **F5,** el Teams Toolkit:
 <summary>Vea cómo solucionar problemas comunes al ejecutar localmente la aplicación.</summary>
 
 Para ejecutar correctamente la aplicación en Teams, debe tener una cuenta de desarrollo de Microsoft 365 que permita la instalación de prueba de aplicaciones. Para obtener más información sobre cómo abrir la cuenta, consulte [Requisitos previos](prerequisites.md#enable-sideloading).
+
+> [!IMPORTANT]
+> Actualmente, las aplicaciones de instalación local están disponibles en Government Community Cloud (GCC), GCC-High y DOD.
 
 > [!TIP]
 > Antes de hacer la instalación de prueba de la aplicación, compruebe si hay algún problema con la [herramienta de validación de aplicaciones](https://dev.teams.microsoft.com/appvalidation.html), que se incluye en el kit de herramientas. Corrija los errores para hacer correctamente la instalación de prueba.

@@ -4,12 +4,12 @@ description: Describe cómo llegar a DevTools al usar el Microsoft Teams de escr
 localization_priority: Normal
 ms.topic: how-to
 keywords: herramientas de desarrollo de depuración de herramientas para desarrolladores de cliente de escritorio chrome móvil
-ms.openlocfilehash: 70c9a2bab94ceb97e8dcd5cf5cdb98261d037f74
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8cc881af102810744dfaf0ee3de077da5d40671068ab319575518f8978e5f791
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101831"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701844"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 

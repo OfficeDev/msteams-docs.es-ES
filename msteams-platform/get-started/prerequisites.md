@@ -5,12 +5,12 @@ description: Obtén información sobre cómo empezar con el Microsoft Teams de a
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254269"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703165"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Requisitos previos: Introducción al Microsoft Teams de aplicaciones
 
@@ -30,7 +30,7 @@ Algunas de las herramientas que necesitas dependen de cómo prefieras crear tu T
 
 ## <a name="install-the-teams-toolkit"></a>Instale el Teams Toolkit
 
-El Teams Toolkit ayuda a simplificar el proceso de desarrollo con herramientas para aprovisionar e implementar recursos en la nube para tu aplicación, publicar en la Teams y mucho más. Puede usar el kit de herramientas con Visual Studio Code, Visual Studio o como una CLI (denominada `teamsfx` ).
+El Teams Toolkit ayuda a simplificar el proceso de desarrollo con herramientas para aprovisionar e implementar recursos en la nube para tu aplicación, publicar en la Teams y mucho más. Puede usar el kit de herramientas con Visual Studio Code, Visual Studio o como una CLI (denominada `teamsfx` ). Para obtener más información, [vea Teams Toolkit para Visual Studio Code](../toolkit/visual-studio-code-overview.md), Teams Toolkit para [Visual Studio](../toolkit/visual-studio-overview.md) y herramienta cli [de Teamsfx](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 

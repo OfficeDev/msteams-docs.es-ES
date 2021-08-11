@@ -3,12 +3,12 @@ title: Pestañas en dispositivos móviles
 description: Describe las consideraciones de los desarrolladores para implementar pestañas en Microsoft Teams móvil.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 5053160f2456a5d1c5f68cb74ea3ccc5c5eabca5
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e63bfc6b88e77b4dc0f05916dbf13fd5e8c2e199764b78961426ff9601de37e6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179723"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704945"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 

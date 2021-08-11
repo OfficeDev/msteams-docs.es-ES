@@ -4,12 +4,12 @@ description: Describe las directrices que deben seguir todas las aplicaciones en
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 79cdc032ee1e7479f7737e5dc71f8f01bb024da8
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763118"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703610"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validación del almacén
 
@@ -274,12 +274,12 @@ Si la aplicación incluye una pestaña, asegúrate de que se adhiera a estas dir
 > [!TIP]
 > Para obtener información sobre cómo crear una experiencia de aplicación de alta calidad, consulta las Teams [de diseño de pestañas.](~/tabs/design/tabs.md)
 
-### <a name="setup"></a>Instalación
+### <a name="setup"></a>Configuración
 
 * La configuración de tabulación no debe ser un usuario nuevo. Proporcione un mensaje sobre cómo completar la acción o el flujo de trabajo.
 * La autenticación debe realizarse durante la configuración de pestañas y no después.
 
-### <a name="views"></a>Views
+### <a name="views"></a>Vistas
 
 * El área de pantalla de inicio de sesión no debe usar logotipos grandes ni mostrar una página web completa.
 * El contenido se puede simplificar desglosando en varias pestañas.
@@ -355,7 +355,7 @@ Las notificaciones de bot deben incluir contenido relevante para el ámbito defi
 
 Las tarjetas adaptables son una forma muy recomendada de mostrar mensajes de bot. Las tarjetas deben ser ligeras e incluir solo de 1 a 3 acciones. Si necesita mostrar más contenido, considere la posibilidad de usar un módulo de tareas o una pestaña.
 
-Consulte los siguientes recursos para obtener más información:
+Para obtener más información, consulte los recursos siguientes:
 
 * [Diseño de tarjetas adaptables](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Referencia de tarjetas](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)

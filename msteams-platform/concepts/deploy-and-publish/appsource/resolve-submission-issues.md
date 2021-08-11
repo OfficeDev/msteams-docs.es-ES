@@ -4,12 +4,12 @@ description: Comprenda cómo solucionar y corregir problemas con el envío Micro
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 23c751d7a9fec96de128521f660213a559534283
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a18aff23b8523bc91485835c991cc6608deb8eae93ce175ff3403e699dc6c5e5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565112"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705562"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Resolver problemas si se produce Microsoft Teams envío del almacén
 

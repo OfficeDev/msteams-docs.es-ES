@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: conversations basics messages
-ms.openlocfilehash: a0c00d093827221968714aad88c35efa00660d82
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 886c2764c2d8dceecb0f6a0e960b3487d9360c3682e46c9a8098f6fb8a2876bf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630988"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705864"
 ---
 # <a name="conversation-basics"></a>Conceptos básicos de la conversación
 

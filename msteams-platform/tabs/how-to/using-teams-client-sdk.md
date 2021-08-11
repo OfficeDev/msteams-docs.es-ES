@@ -6,12 +6,12 @@ description: Información general sobre Microsoft Teams SDK de cliente de JavaSc
 localization_priority: Normal
 keywords: Canal de grupo de pestañas de teams configurable sdk estático JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: d1bcf9fd853d1b0e93c99ae62ad32f462fc98ed4eee1796e7ae5510ad02a8909
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994367"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704938"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Crear pestañas y otras experiencias hospedadas con el SDK Microsoft Teams cliente de JavaScript
 

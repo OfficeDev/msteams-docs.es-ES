@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recibir todos los mensajes de canal con permisos de RSC
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 833bdbc015cf852fcd899ce4e75f742448b89978
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631415"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705891"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recibir todos los mensajes de canal con RSC
 
@@ -80,7 +80,7 @@ Para realizar la instalación local en un equipo para probar, si todos los mensa
 
     ![Bot recibe mensaje](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Conversaciones de bot](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Consentimiento específico del recurso](/microsoftteams/resource-specific-consent)

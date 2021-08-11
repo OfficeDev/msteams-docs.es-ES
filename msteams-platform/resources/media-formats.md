@@ -4,12 +4,12 @@ description: Los bots Microsoft Teams solo admiten los siguientes formatos multi
 ms.topic: reference
 localization_priority: Normal
 keywords: formatos multimedia de bots de teams
-ms.openlocfilehash: 1a6fe745af6048be972bd6cea26ca5d0f876727f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a7279af1154a7d6aa66200146adcff5216b63b03a62229e2af908e8b9b8c9d07
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020614"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703113"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formatos multimedia admitidos para bots
 

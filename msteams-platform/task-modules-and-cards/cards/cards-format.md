@@ -4,15 +4,15 @@ description: Describe el formato de texto de tarjeta en Microsoft Teams
 keywords: formato de tarjetas de bots de teams
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
-ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.date: 06/25/2021
+ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140671"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706177"
 ---
-# <a name="format-cards-in-microsoft-teams"></a>Dar formato a las tarjetas Microsoft Teams
+# <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
 Estas son las dos formas de agregar formato de texto enriquecido a las tarjetas:
 * [Markdown](#format-cards-with-markdown)
@@ -297,13 +297,13 @@ Las tarjetas de conector admiten markdown limitado y formato HTML.
 | --- | --- | --- |
 | Negrita | **text** | `**text**` |
 | Italic | *text* | `*text*` |
-| Encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
+| Encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
 | Tachado | ~~text~~ | `~~text~~` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Texto con formato previo | `text` | ``preformatted text`` |
 | Blockquote | >texto de bloques | `>blockquote text` |
-| Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| Hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | Vínculo imagen |![Agacharse en una roca](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 En las tarjetas de conector, las líneas nuevas se representan `\n\n` para , pero no para o `\n` `\r` .
@@ -395,13 +395,13 @@ Las tarjetas de conector admiten markdown limitado y formato HTML.
 | --- | --- | --- |
 | Negrita | **text** | `<strong>text</strong>` |
 | Italic | *text* | `<em>text</em>` |
-| Encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| Encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Texto con formato previo | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Vínculo imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 En las tarjetas de conector, las líneas nuevas se representan en HTML mediante la `<p>` etiqueta.
@@ -485,13 +485,13 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como las tarjetas de 
 | --- | --- | --- |
 | Negrita | **text** | `<strong>text</strong>` |
 | Italic | *text* | `<em>text</em>` |
-| Encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| Encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Texto con formato previo | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Vínculo imagen |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferencias de escritorio y móvil para tarjetas sencillas

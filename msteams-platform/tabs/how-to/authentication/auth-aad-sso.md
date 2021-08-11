@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049039"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701900"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -36,7 +36,7 @@ La siguiente imagen muestra cómo funciona el proceso de SSO:
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. En la pestaña, se realiza una llamada de JavaScript a `getAuthToken()` . Esto indica Teams obtener un token de autenticación para la aplicación de tabulación.
+1. En la pestaña, se realiza una llamada de JavaScript a `getAuthToken()`. Esto indica Teams obtener un token de autenticación para la aplicación de tabulación.
 2. Si es la primera vez que el usuario actual usa la aplicación de pestaña, hay un mensaje de solicitud para dar su consentimiento si se requiere consentimiento o para administrar la autenticación de paso a paso, como la autenticación en dos fases.
 3. Teams solicita el token de aplicación de tabulación desde el punto de conexión Azure Active Directory (AAD) para el usuario actual.
 4. AAD envía el token de aplicación de tabulación a Teams aplicación.
@@ -44,7 +44,8 @@ La siguiente imagen muestra cómo funciona el proceso de SSO:
 6. El token se analiza en la aplicación de pestaña mediante JavaScript, para extraer la información necesaria, como la dirección de correo electrónico del usuario.
 
 > [!NOTE]
-> El solo es válido para dar su consentimiento a un conjunto limitado de API de nivel de usuario que son correo `getAuthToken()` electrónico, perfil, offline_access y OpenId. No se usa para otros ámbitos Graph como `User.Read` o `Mail.Read` . Para obtener soluciones alternativas sugeridas, [consulte Graph adicionales](#apps-that-require-additional-graph-scopes).
+> El solo es válido para dar su consentimiento a un conjunto limitado de API de nivel de usuario que son correo `getAuthToken()` electrónico, perfil, offline_access y OpenId. No se usa para otros ámbitos Graph como `User.Read` o `Mail.Read` . Para obtener soluciones alternativas sugeridas, consulte [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
+
 
 La API de SSO también funciona en [módulos de tareas](../../../task-modules-and-cards/what-are-task-modules.md) que insertan contenido web.
 
@@ -64,7 +65,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
 > [!NOTE]
 > Hay algunas restricciones importantes que debe saber:
 >
-> * Solo se admiten permisos Graph API de nivel de usuario, es decir, correo electrónico, perfil, offline_access, OpenId. Si debe tener acceso a otros ámbitos Graph como `User.Read` o , vea la solución alternativa `Mail.Read` [recomendada](#apps-that-require-additional-graph-scopes).
+> * Solo se admiten permisos Graph API de nivel de usuario, es decir, correo electrónico, perfil, offline_access, OpenId. Si debe tener acceso a otros ámbitos Graph, como o , vea Obtener un token de acceso `User.Read` `Mail.Read` con Graph [permisos](#get-an-access-token-with-graph-permissions).
 > * Es importante que el nombre de dominio de la aplicación sea el mismo que el nombre de dominio registrado para la aplicación de AAD.
 > * Actualmente, no se admiten varios dominios por aplicación.
 
@@ -87,7 +88,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
 1. Seleccione **Agregar un ámbito**. En el panel que se abre, **escriba access_as_user** como el nombre **de ámbito**.
 1. En el **cuadro Quién puede dar su consentimiento,** escriba **Administradores y usuarios**.
 1. Escriba los detalles en los cuadros para configurar los mensajes de consentimiento de usuario y administrador con los valores adecuados para el `access_as_user` ámbito:
-    * **Título del consentimiento de administrador:** Teams puede acceder al perfil del usuario.
+    * **Título de consentimiento del administrador:** Teams puede acceder al perfil del usuario.
     * **Descripción del consentimiento** de administrador: Teams puede llamar a las API web de la aplicación como el usuario actual.
     * **Título de consentimiento de** usuario: Teams puede acceder a su perfil y realizar solicitudes en su nombre.
     * Descripción del consentimiento del **usuario:** Teams llamar a las API de esta aplicación con los mismos derechos que tiene.
@@ -98,7 +99,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`para Teams web.
 1. Vaya a **Permisos de API**. Seleccione **Agregar un permiso** Microsoft  >  **Graph**  >  **permisos delegados** y, a continuación, agregue los siguientes permisos desde Graph API:
     * User.Read habilitado de forma predeterminada
-    * email
+    * correo electrónico
     * offline_access
     * OpenId
     * perfil
@@ -166,19 +167,17 @@ Después de recibir el token de acceso en la devolución de llamada correcta, pu
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|**Nombre de ejemplo**|**Description**|**C#**|**Node.js**|
+|**Ejemplo de nombre**|**Descripción**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| Tab SSO |Microsoft Teams de ejemplo para pestañas SSO de Azure AD| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Tab SSO |Microsoft Teams de ejemplo para pestañas SSO de Azure AD| [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
-### <a name="apps-that-require-additional-graph-scopes"></a>Aplicaciones que requieren ámbitos Graph adicionales
+### <a name="get-an-access-token-with-graph-permissions"></a>Obtener un token de acceso con Graph permisos
 
-Nuestra implementación actual para SSO solo concede consentimiento para permisos de nivel de usuario que son correo electrónico, perfil, offline_access, OpenId y no para otras API como User.Read o Mail.Read. Si la aplicación necesita más Graph ámbitos, en la siguiente sección se proporcionan algunas soluciones alternativas de habilitación.
+Nuestra implementación actual para SSO solo concede consentimiento para permisos de nivel de usuario que no se pueden usar para realizar Graph llamadas. Para obtener los permisos (ámbitos) necesarios para realizar una llamada Graph, las soluciones de SSO deben implementar un servicio web personalizado para intercambiar el token del SDK de JavaScript de Teams para un token que incluya los ámbitos necesarios. Esto se logra mediante el flujo en nombre [de](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)AAD .
 
 #### <a name="tenant-admin-consent"></a>Consentimiento de administrador de inquilinos
-
-El enfoque más sencillo es conseguir que un administrador de inquilinos preconsiente en nombre de la organización. Esto significa que los usuarios no tienen que dar su consentimiento a estos ámbitos y, a continuación, puede intercambiar el lado del servidor de tokens con el flujo en nombre [de](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)AAD. Esta solución alternativa es aceptable para aplicaciones internas de línea de negocio, pero no es suficiente para desarrolladores de terceros que no pueden confiar en la aprobación del administrador de inquilinos.
 
 Una forma sencilla de dar su consentimiento en nombre de una organización como administrador de inquilinos es hacer referencia a `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>` .
 

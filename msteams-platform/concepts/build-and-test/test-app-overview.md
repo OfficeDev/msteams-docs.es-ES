@@ -4,12 +4,12 @@ description: Describe el proceso para probar la aplicación Teams personalizada 
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurar Microsoft 365 inquilino Teams cargar la aplicación de prueba
-ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e33a1adb9ebc11f8bd1ece8f5fe43fc78e60b11883551fbd0ee3dfae237737cf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631009"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707692"
 ---
 # <a name="test-your-app"></a>Probar la aplicación
 
@@ -35,7 +35,7 @@ Para ver los registros de la consola, ver o modificar las solicitudes html, css 
 
 Agregue los datos de prueba a Microsoft 365 inquilino de prueba. Para obtener más información, vea [Agregar](~/concepts/build-and-test/test-data.md)datos de prueba al inquilino de prueba Office 365 y completar todos los requisitos previos antes de empezar a cargar los datos de prueba.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)

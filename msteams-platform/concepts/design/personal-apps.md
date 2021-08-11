@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644896"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705784"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñar tu aplicación personal para Microsoft Teams
 
@@ -18,12 +18,12 @@ Una aplicación personal puede ser un bot, un área de trabajo privada o ambos. 
 
 Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo las personas pueden agregar, usar y administrar aplicaciones personales en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Puedes encontrar instrucciones completas de diseño de aplicaciones personales, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Agregar una aplicación personal
 
@@ -46,7 +46,7 @@ Con un área de trabajo privada, puedes ver contenido de la aplicación que sea 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Atribución de la aplicación:** el logotipo y el nombre de la aplicación.|
-|B|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|N|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |C|**Vista emergente:** inserta el contenido de la aplicación desde una ventana primaria a una ventana secundaria independiente.|
 |D|**Más menú:** incluye información y opciones de aplicación adicionales. (También puede crear una **Configuración** una pestaña).|
 
@@ -64,7 +64,7 @@ Con un área de trabajo privada, puedes ver contenido de la aplicación que sea 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Atribución de la aplicación:** el nombre de la aplicación.|
-|B|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|N|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |C|**Más menú:** incluye información y opciones de aplicación adicionales.|
 |D|**Navegación principal:** proporciona navegación a la aplicación otras características Teams principales.|
 
@@ -101,7 +101,7 @@ Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Ficha Bot:** Por ejemplo, incluya una **pestaña Chat** para obtener acceso a las conversaciones y notificaciones del bot.|
-|B|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
+|N|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
 |C|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
@@ -111,7 +111,7 @@ Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Punto de entrada del bot:** punto de entrada para que los usuarios accedan a la característica bot en la aplicación personal.|
-|B|**Botón Atrás:** lleva a los usuarios de vuelta al área de trabajo privada.|
+|N|**Botón Atrás:** lleva a los usuarios de vuelta al área de trabajo privada.|
 |C|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
 |D|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
 
@@ -125,7 +125,7 @@ En el lado izquierdo de Teams, los usuarios pueden hacer clic con el botón secu
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 ### <a name="tab-priority"></a>Prioridad de tabulación
 
@@ -203,7 +203,7 @@ A menos que creaste la aplicación específicamente para Teams, probablemente ti
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="En el ejemplo se muestra cómo no controlar las características complejas de la aplicación con una aplicación personal." border="false":::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 Estas otras directrices de diseño pueden ayudar en función del ámbito de la aplicación personal:
 

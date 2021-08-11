@@ -10,12 +10,12 @@ metadata:
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
   nextTutorialTitle: Leer más sobre mensajes proactivos
   ms.custom: mvc
-  ms.openlocfilehash: 4a6a30bd038c5117024c67a7786995391351e0fe
-  ms.sourcegitcommit: 7f9b3c1654536a88015f1b11b6c8a0f612b111c4
+  ms.openlocfilehash: f242afca853e2ae5c01f2fa999775a5100ad04d0e0e8c9695b47a1f7f932ad9f
+  ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/14/2021
-  ms.locfileid: "53434469"
+  ms.lasthandoff: 08/07/2021
+  ms.locfileid: "57704884"
 items:
 - durationInMinutes: 1
   content: "Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a una solicitud de un usuario. Esto puede incluir mensajes, como:\n - Mensajes de bienvenida\n - Notificaciones\n - Mensajes programados\n \nEsta guía paso a paso le ayuda a enviar un mensaje proactivo desde un bot. Verá los siguientes resultados:\n\n* Mensaje de saludo proactivo en el chat        \n![Saludo proactivo en el chat](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Mensaje de saludo proactivo como tarjeta adaptable    \n![hello proactivo en la tarjeta adaptable](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"

@@ -6,12 +6,12 @@ keywords: Teams tabs group channel configurable remove delete
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 97f5dfdd8cd9e5e19ec26c345ac960a04a108ab3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179716"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706789"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 

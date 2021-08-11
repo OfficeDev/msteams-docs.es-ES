@@ -4,14 +4,14 @@ description: Explica cómo invocar módulos de tareas desde Teams pestañas medi
 localization_priority: Normal
 ms.topic: how-to
 keywords: sdk de cliente de pestañas de teams de módulos de tareas
-ms.openlocfilehash: 8afd2c93261f28aa7ced4c98d29be27dca35f8b1
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140558"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703586"
 ---
-# <a name="use-task-modules-in-tabs"></a>Usar módulos de tareas en pestañas
+# <a name="use-task-modules-in-tabs"></a>Uso de módulos de tareas en pestañas
 
 Agregue un módulo de tareas a la pestaña para simplificar la experiencia del usuario para los flujos de trabajo que requieran entrada de datos. Los módulos de tareas permiten recopilar sus entradas en una ventana emergente Teams-Aware Microsoft. Un buen ejemplo de esto es la edición de tarjetas planner. Puede usar módulos de tareas para crear una experiencia similar.
 
@@ -129,11 +129,11 @@ En la tabla siguiente se proporcionan los valores posibles `err` que puede recib
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Nombre de ejemplo | Descripción | .NET | Node.js|
+|Ejemplo de nombre | Descripción | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Invocar y descartar módulos de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 

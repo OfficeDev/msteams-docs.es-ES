@@ -3,12 +3,12 @@ title: Habilitar y configurar las aplicaciones para Teams reuniones
 author: surbhigupta
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
-ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 1d5983599e658440f3e1ec22c90ea88d63e22550e70be579290b51e57316df36
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726869"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702229"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 

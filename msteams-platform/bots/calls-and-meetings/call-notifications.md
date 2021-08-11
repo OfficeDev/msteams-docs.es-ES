@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: afinidad de región de devolución de llamada de llamadas de llamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: 06068c13d27598b9a7b5e70181c69f9efb2c0afb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5c24aa83b26999070f65978fce9b19139f2445955acb8f5aa7b5c0a46255c927
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020179"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705048"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
