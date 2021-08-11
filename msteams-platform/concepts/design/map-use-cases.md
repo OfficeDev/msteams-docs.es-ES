@@ -5,12 +5,12 @@ description: Identifica cómo pueden funcionar los casos de uso de la aplicació
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b374f0ca81402effb548c1cfcb90ed3d316360f1
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 82b7c4cf29eb6b5d31c55dbc420a3c2c6c3038dfa710ba6257fc5486a97713bf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068560"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709555"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
@@ -26,7 +26,7 @@ Al elegir el ámbito de la aplicación, tenga en cuenta lo siguiente:
 * Una aplicación puede existir en todos los ámbitos.
 * Las funcionalidades de la aplicación, como las extensiones de mensajería, siguen a los usuarios en todos los ámbitos.
 * Los usuarios suelen dudar de agregar aplicaciones a Teams o canales.
-* Los usuarios invitados pueden acceder al contenido expuesto en Teams o canales.
+* Los invitados pueden acceder al contenido expuesto en Teams o canales.
 
 Puedes elegir entre el ámbito personal y el ámbito de equipo o canal de la aplicación en función de lo siguiente:
 
@@ -102,6 +102,6 @@ Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que pu
 
 Dicho esto, las mejores aplicaciones suelen combinar varias características, creando una aplicación que involucre a los usuarios en el contexto correcto con la funcionalidad adecuada en el momento adecuado. No debe forzar ninguna funcionalidad en un lugar al que no pertenezca. El hecho de que tenga un buen bot de conversación uno a uno no significa que lo agregue a ningún equipo. Los distintos puntos de extensibilidad son buenos para diferentes cosas y juegan a sus puntos fuertes para crear una aplicación correcta.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Desarrollar aplicaciones para Microsoft Teams](../../overview.md)
+[Crear la primera Microsoft Teams aplicación](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

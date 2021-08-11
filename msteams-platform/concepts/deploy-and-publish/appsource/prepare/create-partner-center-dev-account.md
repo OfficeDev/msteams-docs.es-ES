@@ -4,12 +4,12 @@ description: Para publicar la aplicación en la Microsoft Teams, necesitas una c
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ac31ff3d46a87814edfe2b7ec789d183e9c02e2f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566043"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708657"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Crear una cuenta de desarrollador del Centro de partners
 

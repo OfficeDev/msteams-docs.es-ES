@@ -5,16 +5,19 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 890b1fb71a7b139aedec6869a734611578a78ceaaaf1510661529430ee7b9f26
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726862"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823224"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
 Las pestañas Teams páginas web que se integran en Microsoft Teams. Son etiquetas sencillas html <iframe que apuntan a dominios declarados en el manifiesto de la aplicación y se pueden agregar como parte de un canal dentro de un equipo, chat de grupo o aplicación personal para un usuario \> individual. Puedes incluir pestañas personalizadas con la aplicación para insertar tu propio contenido web en Teams o agregar una funcionalidad específica Teams al contenido web. Para obtener más información, [vea Teams SDK de cliente de JavaScript](/javascript/api/overview/msteams-client).
+
+> [!IMPORTANT]
+> Actualmente, las pestañas personalizadas están disponibles en Government Community Cloud (GCC), GCC-High y Department of Defense (DOD).
 
 La siguiente imagen muestra pestañas personales:
 
@@ -78,10 +81,10 @@ Para pestañas de canal o grupo, también puede crear una página de configuraci
 Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales por aplicación.
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>Herramientas que puede usar para crear pestañas
-* [Teams Toolkit para Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
+* [Kit de herramientas de Teams para Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit para Visual Stuido](../toolkit/visual-studio-overview.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Recursos adicionales
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

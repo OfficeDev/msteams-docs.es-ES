@@ -5,23 +5,23 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721846"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709449"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñe la pestaña para Microsoft Teams
 
 Una pestaña es un lienzo grande para el contenido de la aplicación. Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar pestañas en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Puedes encontrar instrucciones completas de diseño de pestañas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Agregar una pestaña
 
@@ -60,7 +60,7 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 |Contador|Descripción|
 |----------|-----------|
 |1|**Logotipo de la** aplicación: logotipo de aplicación a todo color de la aplicación.|
-|2|**Nombre de la** aplicación: nombre completo de la aplicación.|
+|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**iframe:** espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
 |4 |**Acerca del vínculo:** abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
 |5 |**Botón Cerrar:** cierra el cuadro de diálogo.|
@@ -253,7 +253,7 @@ El uso de una pestaña para mostrar una aplicación completa con navegación de 
    :::column-end:::
 :::row-end:::
 
-### <a name="setup"></a>Instalación
+### <a name="setup"></a>Configuración
 
 :::row:::
    :::column span="":::
@@ -280,15 +280,15 @@ Quite los pasos innecesarios para agregar una pestaña.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustración que muestra qué hacer con el tema de tabulación." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Hacer: aprovechar las ventajas de Teams de color
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Qué hacer: Aprovechar los tokens de color de Teams
 
-Cada Teams tema tiene su propia combinación de colores. Para controlar los cambios de tema automáticamente, usa <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en el diseño.
+Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema de forma automática, use los <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en su diseño.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustración que muestra lo que no se debe hacer con el tema de tabulación." border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>No: valores de color de código duro
+#### <a name="dont-hard-code-color-values"></a>Qué no hacer: Valores complicados de código de color
 
 Si no usas tokens Teams de color, tus diseños serán menos escalables y tendrán más tiempo para administrar.
 

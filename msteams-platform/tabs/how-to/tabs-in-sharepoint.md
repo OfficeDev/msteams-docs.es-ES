@@ -6,12 +6,12 @@ keywords: desarrollo de sharepoint framework de pestañas de teams
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6a9eead19685afb41c71e57cb44c7608973db1ad
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 8410b0734845e6bc6a79fa58a3ee5c89228ef927ee111cdfa10285daff4c062f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726918"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704555"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Añadir una pestaña de Teams a SharePoint 
 

@@ -6,12 +6,12 @@ keywords: Microsoft Teams de ejemplos de plantillas
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 72bb5506e552dfa3d35426e99a7ee74088ef41f6
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 1820de7a7a2a46766fac646c7a7267e754b855bfb1ea549ba208663ef9cadcd0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333697"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709020"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -23,7 +23,7 @@ Todas las plantillas de aplicación se proporcionan en los términos [de licenci
 
 **&#9734; indica las plantillas de aplicación recién publicadas.**
 
-### <a name="key-benefits"></a>Ventajas clave
+### <a name="key-benefits"></a>Ventajas principales
 
 * **Implemente directamente en la nube:** Todas las plantillas de aplicación incluyen scripts de implementación que te permiten hospedar todos los servicios necesarios en Microsoft Azure o en power platform. 
 * **Código de ejemplo recomendado:** Las plantillas de la aplicación se ajustan a los procedimientos recomendados en materia de seguridad e infraestructura. Se revisan todos los cambios enviados por la comunidad a las plantillas de la aplicación para garantizar la conformidad.

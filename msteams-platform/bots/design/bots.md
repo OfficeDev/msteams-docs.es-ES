@@ -5,16 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98e36bf55e61ef59261959021409d9e60d8542f5
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630121"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709881"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
 Los bots son aplicaciones de conversación que realizan un conjunto específico de tareas. Basándose en <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, los bots se comunican con los usuarios, responden a sus preguntas y les notifican de forma proactiva sobre cambios y otros eventos. Son una herramienta excelente de comunicación.
+
+> [!IMPORTANT]
+> Actualmente, los bots están disponibles en Government Community Cloud (GCC) pero no están disponibles en GCC-High departamento de defensa (DOD).
 
 A modo de guía en el diseño de su aplicación, a continuación se describe e ilustra cómo pueden los usuarios agregar, usar y administrar bots en Teams.
 
@@ -33,7 +36,7 @@ Los bots están disponibles para chats, canales y aplicaciones personales.
 
 Los usuarios pueden agregar un bot de una de las siguientes maneras:
 
-* Desde el Teams almacén.
+* Desde la tienda de Teams.
 * En el menú desplegable de la aplicación, seleccione el icono **Más** en el lado izquierdo de Teams.
 * Con una @mención en el nuevo cuadro de chat o redacción (en el siguiente ejemplo se muestra cómo puede hacerlo en un chat de grupo).
 
@@ -305,7 +308,7 @@ Los usuarios deberían poder cambiar la configuración de un bot. Puede proporci
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 ### <a name="content"></a>Contenido
 
@@ -418,7 +421,7 @@ El bot no debería revelar información confidencial a un grupo de personas.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 A continuación, tiene guías adicionales que le pueden ayudar con el diseño del bot:
 

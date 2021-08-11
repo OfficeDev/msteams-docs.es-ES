@@ -2,12 +2,12 @@
 title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
-ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
+ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53463327"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823238"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -155,12 +155,12 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
 
 1. Opcionalmente, puedes seleccionar **Compartir** en el menú desplegable Guardar para crear un vínculo que se pueda compartir para distribuir fácilmente las escenas para que otras personas las usen.  Al abrir este vínculo, se instala la escena para el usuario y pueden empezar a usarlo.
 
-1. Después de la vista previa, la escena se puede enviar como una aplicación a Teams siguiendo los pasos para el envío de la aplicación.
+1. Después de la vista previa, la escena se puede enviar como una aplicación a Teams en la sección Aplicaciones del Centro Teams desarrolladores. Desde allí puedes descargar el paquete de la aplicación o publicar directamente en tu organización.
 
     >[!NOTE]
     > Este paso requiere el paquete de la aplicación que es diferente del paquete de escena, para la escena que se diseñó. El paquete de la aplicación creado automáticamente se puede encontrar en la **sección Aplicaciones** del Centro Teams desarrolladores.
 
-1. Opcionalmente, el paquete de escena se puede recuperar **seleccionando Exportar** en el **menú** desplegable Guardar. Se .zip un archivo de .zip, es decir, el paquete de escena.
+1. Opcionalmente, el paquete de escena se puede guardar **seleccionando Exportar** en **el** menú desplegable Guardar. Se .zip un archivo de .zip, es decir, el paquete de escena.
 
     ![Exportar una escena](../assets/images/apps-in-meetings/build-a-scene.png)
 

@@ -4,12 +4,12 @@ description: Aprende a descargar localmente la aplicación en Microsoft Teams. L
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
+ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "52684652"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708713"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload la aplicación en Microsoft Teams
 
@@ -18,6 +18,9 @@ Puedes descargar localmente Microsoft Teams aplicaciones sin tener que publicar 
 * Quieres probar y depurar una aplicación localmente tú mismo o con otros desarrolladores.
 * Has creado una aplicación solo para ti. Por ejemplo, para automatizar un flujo de trabajo.
 * Has creado una aplicación para un pequeño conjunto de usuarios, como el grupo de trabajo.
+
+> [!IMPORTANT]
+> Actualmente, las aplicaciones de instalación local están disponibles en Government Community Cloud (GCC), pero no están disponibles para GCC-High y departamento de defensa (DOD).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

@@ -4,12 +4,12 @@ description: Vínculos y descripciones de aplicaciones de ejemplo para la Micros
 localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teams de desarrolladores
-ms.openlocfilehash: 09369123f23fc76b5e8c9fe3d5e89df56763d21f
-ms.sourcegitcommit: 10380fc80d7f281d2892b3514f87d1bd05180496
+ms.openlocfilehash: 05884025f91377764d65242d501314c3798d3a73a430e103de885692c1e2ee63
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "53373917"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709594"
 ---
 # <a name="overview"></a>Información general
 
@@ -57,7 +57,7 @@ Solo instalará un paquete de aplicación que contenga un archivo de configuraci
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="La ilustración que muestra la aplicación en Teams está apuntando a la lógica de la aplicación en el servidor en la nube.":::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Crear una aplicación con React](first-app-react.md)
 * [Crear una aplicación con Blazor](first-app-blazor.md)

@@ -4,17 +4,16 @@ author: KirtiPereira
 description: Crear pestañas con tarjetas adaptables
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 8f1b8bbc27a2b10d8e4fbca8e87c75eeb29c8c36efacd6eb3cf921295e27b88b
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726855"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823231"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
 > [!IMPORTANT]
-> * Esta característica se encuentra en [Public Developer Preview y](~/resources/dev-preview/developer-preview-intro.md) se admite en dispositivos de escritorio y móviles. La compatibilidad con el explorador web está disponible próximamente.
 > * Las pestañas con tarjetas adaptables actualmente solo se admiten como aplicaciones personales.
 
 Al desarrollar una pestaña con el método tradicional, puede encontrarse con estos problemas:
@@ -38,7 +37,6 @@ Antes de empezar a usar tarjetas adaptables para crear pestañas, debe:
 
 * Familiarícese con el [desarrollo de bots,](../../bots/what-are-bots.md) [las tarjetas adaptables](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)y los módulos [de](../../task-modules-and-cards/task-modules/task-modules-bots.md) tareas en Teams.
 * Hacer que un bot se ejecute Teams para su desarrollo.
-* Estar en [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>Cambios en el manifiesto de la aplicación
 

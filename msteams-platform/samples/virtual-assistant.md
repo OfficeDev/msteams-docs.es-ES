@@ -4,12 +4,12 @@ description: Cómo crear un Virtual Assistant bot y habilidades para su uso en M
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots de asistente virtual de teams
-ms.openlocfilehash: 976dacbd8b0bef7a3158d5ff35c5c38d97707c63
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: aec0b731b73607cd8f881509ab77da7b8fd35f21c121b97220fdd5019fc53df2
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428726"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708394"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual 
 
