@@ -5,12 +5,12 @@ description: Al planear la Microsoft Teams, primero debes comprender qué proble
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 59bfdf6a407a29adfd27c135066fd44fa58288ed
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703176"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585959"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 

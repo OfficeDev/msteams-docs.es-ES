@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: instalación proactiva de chat de mensajería de teams Graph
-ms.openlocfilehash: bb25987b7b7547a6db459d587e7960bc9f2df231a5be1fe7899a26eee4cf2557
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e6a14dbc94ceb86fc6c457a7c589260b36c8fdf4
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708052"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585966"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalación proactiva de aplicaciones con Graph API para enviar mensajes
 
@@ -74,7 +74,7 @@ Puede recuperar las `teamsAppId` siguientes formas:
     **Solicitud HTTP GET:**
 
     ```http
-    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     La solicitud debe devolver un objeto , que es el identificador de aplicación generado por `teamsApp` el catálogo de la `id` aplicación. Esto es diferente del identificador que proporcionaste en el manifiesto Teams aplicación:

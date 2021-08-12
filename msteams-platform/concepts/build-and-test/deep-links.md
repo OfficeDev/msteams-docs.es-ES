@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 localization_priority: Normal
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: 2f382e3612b0df026a12b8b37fdbbc278df6ecf8fe8e0c67582c3486eb91c5be
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: 97db37f4fd2831647f891a970479a03ddcc160c921098efc82aa82aec9e297c9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823217"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707312"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -241,18 +241,18 @@ En caso de una llamada de vídeo, el cliente pedirá confirmación y activará e
 | Vínculo profundo | Formato | Ejemplo |
 |-----------|--------|---------|
 | Realizar una llamada de audio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Realizar una llamada de audio y vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
-|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
+| Realizar una llamada de audio y vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
 | Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | https://teams.microsoft.com/l/call/0/0?users=&lt&gt;;user1,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Estos son los parámetros de consulta:
 * `users`: lista separada por comas de los id. de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite userPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en caso de una llamada RTC, admite una rtc mri 4: &lt; phonenumber &gt; .
-* `withVideo`: este es un parámetro opcional, que puede usar para realizar una llamada de vídeo. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de una llamada de audio o audio y vídeo a través de la Teams de notificación de llamadas. 
+* `Withvideo`: este es un parámetro opcional, que puede usar para realizar una llamada de vídeo. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de una llamada de audio o audio y vídeo a través de la Teams de notificación de llamadas. 
 * `Source`: se trata de un parámetro opcional, que informa sobre el origen del vínculo profundo.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Ejemplo de nombre | Descripción | C # |Node.js|
+| Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
 |Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 

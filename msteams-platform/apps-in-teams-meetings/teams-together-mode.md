@@ -2,12 +2,12 @@
 title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823238"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702169"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -155,7 +155,7 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
 
 1. Opcionalmente, puedes seleccionar **Compartir** en el menú desplegable Guardar para crear un vínculo que se pueda compartir para distribuir fácilmente las escenas para que otras personas las usen.  Al abrir este vínculo, se instala la escena para el usuario y pueden empezar a usarlo.
 
-1. Después de la vista previa, la escena se puede enviar como una aplicación a Teams en la sección Aplicaciones del Centro Teams desarrolladores. Desde allí puedes descargar el paquete de la aplicación o publicar directamente en tu organización.
+1. Después de la vista previa, la escena se puede enviar como una aplicación a Teams en la sección Aplicaciones del Centro Teams desarrolladores. Desde allí puedes descargar el paquete de la aplicación o publicar directamente en la organiación.
 
     >[!NOTE]
     > Este paso requiere el paquete de la aplicación que es diferente del paquete de escena, para la escena que se diseñó. El paquete de la aplicación creado automáticamente se puede encontrar en la **sección Aplicaciones** del Centro Teams desarrolladores.
@@ -277,6 +277,6 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Vea también
 
 [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)

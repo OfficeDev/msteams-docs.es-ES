@@ -5,12 +5,12 @@ description: Obtén información sobre cómo empezar con el Microsoft Teams de a
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2945490d70023a620bad43b618789164aa915d8a
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703165"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586001"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Requisitos previos: Introducción al Microsoft Teams de aplicaciones
 

@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 890b1fb71a7b139aedec6869a734611578a78ceaaaf1510661529430ee7b9f26
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: f7fa2ab75aa81740d1e5a3b9680c9290a57d296e346262044094965750f2d5ae
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823224"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707458"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -81,10 +81,10 @@ Para pestañas de canal o grupo, también puede crear una página de configuraci
 Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales por aplicación.
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>Herramientas que puede usar para crear pestañas
-* [Kit de herramientas de Teams para Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit para Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit para Visual Stuido](../toolkit/visual-studio-overview.md)
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Vea también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

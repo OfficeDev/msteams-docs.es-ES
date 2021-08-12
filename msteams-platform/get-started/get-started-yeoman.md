@@ -5,12 +5,12 @@ keywords: introducción a node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 2a75c5bfd24facb8be1897997fc94896e1f62990547da12d35c783d38be2e077
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823245"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703233"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Crear la primera aplicación Microsoft Teams con el generador de Yeoman
 
@@ -78,11 +78,11 @@ Esta sección le guiará por los pasos para generar el proyecto.
    1. Escriba el título del proyecto. Este título se usará en el manifiesto y la descripción de la aplicación. 
    1. Escriba un nombre de empresa que también se usará en el manifiesto.
    1. Escriba la versión del manifiesto que desea usar. Para este tutorial, `v1.5` seleccione , que es el esquema disponible general actual.
-   1. Seleccione los elementos que desea agregar al proyecto. Puede seleccionar una sola o cualquier combinación de elementos. Para este tutorial, solo tienes *que seleccionar una pestaña*:
+   1. Seleccione los elementos que desea agregar al proyecto. Puede seleccionar una sola o cualquier combinación de elementos. Para estos tutoriales, solo tienes *que seleccionar una pestaña*:
 
     ![selección de elementos](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Responda al siguiente conjunto de preguntas de seguimiento que aparecen en función de los elementos seleccionados en el paso 3.
+1. Responda al siguiente conjunto de preguntas de seguimiento que aparecen en función de los elementos seleccionados en el paso 2.
 1. Escriba una dirección URL para la ubicación donde hospedará la solución. 
 
    > [!NOTE]
@@ -191,7 +191,7 @@ También puede actualizar la versión Microsoft Teams actual a la versión más 
    ```
    ¡Felicidades! Has creado e implementado la primera Microsoft Teams aplicación. También ha actualizado Microsoft Teams.
 
- ## <a name="see-also"></a>Recursos adicionales
+ ## <a name="see-also"></a>Vea también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

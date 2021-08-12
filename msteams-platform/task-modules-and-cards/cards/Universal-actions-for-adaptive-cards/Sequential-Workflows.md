@@ -4,12 +4,12 @@ description: Ejemplo de flujos de trabajo secuenciales mediante acciones univers
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c6e247fd2b3cb8d908cc3cb7282bd3f7666d2ed0
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705525"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585994"
 ---
 # <a name="sequential-workflows"></a>Flujos de trabajo secuenciales
 
@@ -123,7 +123,7 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="code-samples"></a>Muestras de código
+## <a name="code-samples"></a>Ejemplos de código
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
@@ -135,4 +135,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 * [Acciones de tarjeta adaptable en Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Cómo funcionan los bots](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
-* [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
+* [Trabajar con acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
