@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706177"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345721"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -297,7 +297,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML.
 | --- | --- | --- |
 | Negrita | **text** | `**text**` |
 | Italic | *text* | `*text*` |
-| Encabezado (niveles 1 &ndash; 3) | **Texto** | `### Text`|
+| Encabezado (niveles 1 &ndash; 3) | **Text** | `### Text`|
 | Tachado | ~~text~~ | `~~text~~` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -395,7 +395,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML.
 | --- | --- | --- |
 | Negrita | **text** | `<strong>text</strong>` |
 | Italic | *text* | `<em>text</em>` |
-| Encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| Encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -485,7 +485,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como las tarjetas de 
 | --- | --- | --- |
 | Negrita | **text** | `<strong>text</strong>` |
 | Italic | *text* | `<em>text</em>` |
-| Encabezado (niveles 1 &ndash; 3) | **Texto** | `<h3>Text</h3>` |
+| Encabezado (niveles 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

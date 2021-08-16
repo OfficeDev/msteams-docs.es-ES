@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f7fa2ab75aa81740d1e5a3b9680c9290a57d296e346262044094965750f2d5ae
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bafaa54bd4c7b01fcdebae48ccf9a88adfe03a3b
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707458"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345714"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -81,7 +81,7 @@ Para pestañas de canal o grupo, también puede crear una página de configuraci
 Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales por aplicación.
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>Herramientas que puede usar para crear pestañas
-* [Teams Toolkit para Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
+* [Kit de herramientas de Teams para Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit para Visual Stuido](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>Vea también

@@ -6,12 +6,12 @@ keywords: Medios de permisos de dispositivo nativos de las capacidades de micró
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 74ebeee5392272021f2a9977709fc0b1df2a50b1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704969"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345735"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
 
@@ -254,5 +254,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrar la funcionalidad de escáner de códigos QR o códigos de barras en Teams](qr-barcode-scanner-capability.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)
-* [Integrar la funcionalidad selector de personas en Teams](people-picker-capability.md)
+* [Integrar el selector de personas en Teams](people-picker-capability.md)
 

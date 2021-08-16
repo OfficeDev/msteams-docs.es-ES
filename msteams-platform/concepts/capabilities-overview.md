@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 7cb2d042c1b666b6047aa910f3e797e2a59a396d2fd87a37f06fadc04e989d85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e0f7a57fb125450593fd63c412278e1030c51d42
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707127"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345693"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprender Microsoft Teams funcionalidades de la aplicación
 

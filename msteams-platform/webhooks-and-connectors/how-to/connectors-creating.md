@@ -6,12 +6,12 @@ keywords: teams o365 conector
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: e52402e841b675de7d0c19302b8c8090bcb90cef27ac61e8ac3d6dd69a0bb076
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ee9a00473a7d871e0c69f27a44ca6c7c23eadcbf
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709324"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345742"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -267,7 +267,7 @@ En la tabla siguiente se proporciona el nombre de ejemplo y su descripción:
 
 |**Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Conectores    | Sample Office 365 Connector que genera notificaciones en Teams canal.|   [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Conectores    | Sample Office 365 Connector que genera notificaciones en Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Ejemplo de conectores genéricos |Código de ejemplo para un conector genérico que es fácil de personalizar para cualquier sistema que admita webhooks.|  | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Consulte también
