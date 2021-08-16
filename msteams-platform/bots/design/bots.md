@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea0392868b06653657beff60b157070eaef7f4ba
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709881"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345651"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
@@ -155,8 +155,8 @@ Puede usar bots en los siguientes contextos:
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono y nombre de la aplicación**|
-|2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
-|3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
+|2 |**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
+|3 |**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
 |4 |**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
 |5 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
 |6 |**Tarjeta adaptable:** si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
@@ -169,8 +169,8 @@ Puede usar bots en los siguientes contextos:
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono y nombre de la aplicación**|
-|2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
-|3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
+|2 |**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
+|3 |**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
 |4 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
 |5 |**Tarjeta adaptable:** si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
 

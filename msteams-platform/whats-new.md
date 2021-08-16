@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: e2ab4728b765cf93f069f9a26679e5ea641a8ecafe0819666a0abacc1714572d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 53ffa86fae41cc35c080a92067cfcb6c59f9657e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706892"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345749"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|08/12/2021|Compilar pestañas con tarjetas adaptables|[Compilar pestañas con tarjetas adaptables](tabs/how-to/build-adaptive-card-tabs.md)|
 |08/04/2021| Las pestañas ya no tendrán márgenes alrededor de sus experiencias.  | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
 |07/08/2021|La extensibilidad de la aplicación de reunión está disponible en dispositivos móviles. Los clientes móviles admiten aplicaciones durante la reunión. |[Extensibilidad de la aplicación para reuniones](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar la funcionalidad selector de personas.|[Integrar de la funcionalidad de Selector de usuarios](concepts/device-capabilities/people-picker-capability.md)|  
@@ -126,7 +127,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2018</b></summary>
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -165,12 +166,11 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |06/23/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Consentimiento específico de recursos para chats. |[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md) [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|  
-|05/26/2021|Compilar pestañas con tarjetas adaptables|[Crear pestañas](tabs/how-to/build-adaptive-card-tabs.md)|
+|06/16/2021| Consentimiento específico de recursos para chats. |[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md) [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
 |05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| La característica de escenas del modo combinado personalizado combina a los participantes en una única escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md) |

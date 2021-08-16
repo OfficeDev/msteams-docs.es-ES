@@ -6,12 +6,12 @@ keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 94eb8735092f97f35a03b7b19eee9e20c75eaaac7463d1869c4c2718d55ef3bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705994"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345658"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -106,4 +106,4 @@ Debes asegurarte de controlar estos errores correctamente en tu Teams aplicació
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)
-* [Integrar la funcionalidad selector de personas en Teams](people-picker-capability.md)
+* [Integrar el selector de personas en Teams](people-picker-capability.md)

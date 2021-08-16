@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Aplicaciones web
-ms.openlocfilehash: 4a25649a8a791efc3f33572da203e36c7f39cb11f64676218f3a3f240da956c1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ba34241186484bb838ba3f61e5ca55914115a1f1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708332"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345763"
 ---
 # <a name="web-apps"></a>Aplicaciones web 
 

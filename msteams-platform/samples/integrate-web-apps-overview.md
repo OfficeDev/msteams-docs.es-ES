@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Una introducción a la integración de aplicaciones web y capacidades de dispositivo con Microsoft Teams aplicación.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707305"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345770"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
@@ -37,7 +37,7 @@ Las plataformas de código bajos proporcionan un enfoque intuitivo para el desar
 
 La plataforma Microsoft Power combina cuatro tecnologías sólidas de Microsoft, como Power BI, Power Apps, Power Automate y Power Virtual Agents una plataforma de aplicaciones eficaz. Estas tecnologías le permiten crear soluciones, automatizar procesos, analizar datos y crear agentes virtuales en un entorno unificado e integrado.
 
-### <a name="power-apps"></a>Power Apps
+### <a name="power-apps"></a>PowerApps
 
 Con Power Apps, puede crear aplicaciones empresariales que se conecten a sus datos empresariales y se adapten a las necesidades de su organización. Power Apps una amplia variedad de escenarios de aplicaciones para resolver los desafíos empresariales a través de aplicaciones de lienzo. Después de crear la aplicación, puedes exportarla desde el portal Power Apps creador e insertarla en Microsoft Teams.
 
@@ -77,6 +77,10 @@ Puede crear vínculos profundos a las entidades de Teams. Puede crear vínculos 
 
 Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams mejorada permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente de JavaScript de Microsoft Teams. 
 
+## <a name="integrate-people-picker"></a>Integrar selector de personas
+
+Puedes integrar el control Teams selector de personas nativas que permite a los usuarios buscar y seleccionar personas en la experiencia de la aplicación web.
+
 ## <a name="see-also"></a>Vea también
 
 * [Asignar los casos de uso de la aplicación a Teams funcionalidades de plataforma](~/concepts/design/map-use-cases.md)
@@ -92,3 +96,4 @@ Microsoft Teams plataforma está mejorando continuamente las capacidades de los 
 * [Añadir una pestaña de Teams a SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Crear vínculos profundos](~/concepts/build-and-test/deep-links.md)
 * [Funciones del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [control de selector de personas](~/concepts/device-capabilities/people-picker-capability.md)

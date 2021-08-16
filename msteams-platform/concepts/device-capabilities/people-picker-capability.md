@@ -1,35 +1,35 @@
 ---
-title: Integrar de la funcionalidad de Selector de usuarios
+title: Integrar selector de personas
 author: Rajeshwari-v
-description: Cómo usar Teams SDK de cliente de JavaScript para integrar la funcionalidad selector de personas
+description: Cómo usar Teams SDK de cliente de JavaScript para integrar el control selector de personas
 keywords: control de selector de personas
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702788"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345293"
 ---
-# <a name="integrate-people-picker-capability"></a>Integrar de la funcionalidad de Selector de usuarios 
+# <a name="integrate-people-picker"></a>Integrar selector de personas  
 
 Selector de personas es un control para buscar y seleccionar personas. Esta es una funcionalidad nativa disponible en Teams plataforma. Puedes integrar Teams de entrada del selector de personas nativo con tus aplicaciones web. Puede seleccionar entre una o varias selecciones y configuraciones, como limitar la búsqueda en un chat, canales o en toda la organización.
 
-Puedes usar Microsoft Teams [SDK de cliente de JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona API para integrar la funcionalidad selector de personas dentro de la aplicación `selectPeople` web. 
+Puedes usar Microsoft Teams [SDK de cliente de JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona API para integrar el Selector de personas dentro de la aplicación `selectPeople` web. 
 
-## <a name="advantages-of-integrating-people-picker-capability"></a>Ventajas de integrar la funcionalidad selector de personas
+## <a name="advantages-of-integrating-the-native-people-picker"></a>Ventajas de integrar el selector de personas nativo 
 
-* El control Selector de personas funciona en todas Teams superficies, como un módulo de tareas, un chat, un canal, una pestaña de reunión y una aplicación personal.
+* El control selector de personas funciona en todas Teams superficies, como un módulo de tareas, un chat, un canal, una pestaña de reunión y una aplicación personal.
 * Este control le permite buscar y seleccionar usuarios dentro de un chat, canal o toda la organización.
-*  La funcionalidad Selector de personas ayuda con escenarios que implican la asignación de tareas, el etiquetado y la notificación a un usuario. 
+* El Selector de personas ayuda con escenarios que implican la asignación de tareas, el etiquetado y la notificación a un usuario. 
 * Puedes usar este control fácilmente disponible en la aplicación web. Ahorra el esfuerzo y el tiempo de forma significativa para crear un control de este tipo por su cuenta.
 
 Debes llamar a la API para integrar el control selector de personas `selectPeople` en tu Teams aplicación. Para una integración eficaz, debe comprender el fragmento de [código](#code-snippet) para llamar a la API. Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la aplicación web.
 
 > [!NOTE] 
-> Actualmente, Microsoft Teams compatibilidad con la funcionalidad selector de personas solo está disponible para clientes móviles.
+> Actualmente, Microsoft Teams compatibilidad con el selector de personas solo está disponible para clientes móviles.
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
@@ -44,14 +44,14 @@ La `selectPeople` API incluye las siguientes configuraciones de entrada:
 
 |Parámetro Configuration|Tipo|Descripción| Valor predeterminado|
 |-----|------|--------------|------|
-|`title`| Cadena| Es un parámetro opcional. Establece el título del control Selector de personas. | Seleccionar personas|
-|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar los ID de AAD de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
+|`title`| String| Es un parámetro opcional. Establece el título del control Selector de personas. | Seleccionar personas|
+|`setSelected`|String| Es un parámetro opcional. Debe pasar los ID de AAD de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
 |`openOrgWideSearchInChatOrChannel`|Booleano | Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas en el ámbito de toda la organización incluso si la aplicación se agrega a un chat o canal. |Falso|
 |`singleSelect`|Booleano|Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas que restringe la selección a un solo usuario. |Falso|
 
-En la siguiente imagen se muestra la experiencia de la funcionalidad selector de personas en una aplicación web de ejemplo:
+En la siguiente imagen se muestra la experiencia del selector de personas en una aplicación web de ejemplo:
 
-![Experiencia de la aplicación web de la funcionalidad selector de personas](../../assets/images/tabs/people-picker-control-capability.png)
+![Experiencia de aplicación web del selector de personas](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### <a name="code-snippet"></a>Fragmento de código
 

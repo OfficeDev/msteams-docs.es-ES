@@ -4,12 +4,12 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: a8c7e2f198a13823aaa44034e11f4bb9b1d3bb0957d9a838a675a05fbfc83705
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 5ebd762abf04b977e04e960e102ada9bf586fea3
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702825"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345610"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para la Microsoft Teams aplicación
 
@@ -19,7 +19,6 @@ Puedes enriquecer tu aplicación Teams con funcionalidades de dispositivo nativa
 > * Para integrar las funcionalidades multimedia dentro de Microsoft Teams móvil, consulta [Integrar funcionalidades multimedia.](mobile-camera-image-permissions.md)
 > * Para integrar la funcionalidad de escáner de códigos QR o código de barras dentro de la aplicación móvil Microsoft Teams, consulta Integrar la funcionalidad del escáner de códigos DE BARRAS o [QR en Teams](qr-barcode-scanner-capability.md).
 > * Para integrar las funcionalidades de ubicación dentro Microsoft Teams aplicación móvil, consulta [Integrar capacidades de ubicación.](location-capability.md)
-> * Para integrar la funcionalidad selector de personas dentro de la Microsoft Teams móvil, consulta Integrar la funcionalidad selector de personas [en Teams](people-picker-capability.md).
 
 ## <a name="native-device-permissions"></a>Permisos de dispositivo nativo
 
@@ -195,9 +194,9 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 
 | **Nombre de ejemplo** | **Descripción** | **Node.js** |
 |---------------|--------------|--------|
-|Permisos de dispositivo | Usar Microsoft Teams de ejemplo de pestaña para demostrar los permisos del dispositivo |  [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+|Permisos de dispositivo | Usar Microsoft Teams de ejemplo de pestaña para demostrar los permisos del dispositivo |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
@@ -208,5 +207,3 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 > [!div class="nextstepaction"]
 > [Integrar las capacidades de ubicación en Teams](location-capability.md)
 
-> [!div class="nextstepaction"]
-> [Integrar la funcionalidad selector de personas en Teams](people-picker-capability.md)

@@ -5,12 +5,12 @@ description: Describir los conceptos fundamentales del Teams de plataformas.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 7ffdfbb735f2c7c6cf5cbcf0f1e7f2134f92f613989cd3f8eac84f22cd73543e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706081"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345582"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de desarrollo de aplicaciones
 
@@ -32,6 +32,10 @@ Puede reconocer problemas de usuario e identificar las respuestas a algunos prob
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Se proporciona información para compartir la aplicación y colaborar en elementos de un sistema externo. También puede aprender a iniciar flujos de trabajo y enviar notificaciones a los usuarios. Obtén sugerencias adicionales sobre dónde empezar, cómo crear redes sociales con los usuarios, bots de conversación y combinar varias características.
+
+## <a name="integrate-device-capabilities"></a>Integrar funcionalidades de dispositivos
+
+Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams mejorada permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente de JavaScript de Microsoft Teams. 
 
 ## <a name="see-also"></a>Vea también
 

@@ -3,12 +3,12 @@ title: Extensibilidad de la aplicación para reuniones
 author: surbhigupta
 description: Comprender la extensibilidad de la aplicación de reunión
 ms.topic: conceptual
-ms.openlocfilehash: 44c7397d94d98af5cbc9df4f291bd7cc037b5df832715dcaa943edee543f3b09
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 0da7a68fec5ea3cf01adfbb4edabded23a9f3311
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702260"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345286"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidad de la aplicación para reuniones
 

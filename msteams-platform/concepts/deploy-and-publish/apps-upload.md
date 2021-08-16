@@ -4,12 +4,12 @@ description: Aprende a descargar localmente la aplicación en Microsoft Teams. L
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708713"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345265"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload la aplicación en Microsoft Teams
 

@@ -4,17 +4,16 @@ author: KirtiPereira
 description: Crear pestañas con tarjetas adaptables
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6b969461669f9edb7d7f3e216b3b91dd700881b34de17389f8a43348b09830f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705088"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345575"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
 > [!IMPORTANT]
-> * Esta característica se encuentra en [Public Developer Preview y](~/resources/dev-preview/developer-preview-intro.md) se admite en dispositivos de escritorio y móviles. La compatibilidad con el explorador web está disponible próximamente.
 > * Las pestañas con tarjetas adaptables actualmente solo se admiten como aplicaciones personales.
 
 Al desarrollar una pestaña con el método tradicional, puede encontrarse con estos problemas:
@@ -36,9 +35,8 @@ En la siguiente imagen se muestran las pestañas de compilación con tarjetas ad
 
 Antes de empezar a usar tarjetas adaptables para crear pestañas, debe:
 
-* Familiarícese con el [desarrollo de bots,](../../bots/what-are-bots.md) [las tarjetas adaptables](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)y los módulos [de](../../task-modules-and-cards/task-modules/task-modules-bots.md) tareas en Teams.
+* Familiarícese con el [desarrollo de bots,](../../bots/what-are-bots.md) [las tarjetas adaptables](https://adaptivecards.io/)y los módulos [de](../../task-modules-and-cards/task-modules/task-modules-bots.md) tareas en Teams.
 * Hacer que un bot se ejecute Teams para su desarrollo.
-* Estar en [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>Cambios en el manifiesto de la aplicación
 
@@ -426,7 +424,7 @@ El código siguiente muestra un ejemplo de solicitud ree emitida:
 
 |**Ejemplo de nombre** | **Descripción** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar tarjetas adaptables en Teams pestaña | Microsoft Teams ejemplo de pestaña, que muestra cómo mostrar tarjetas adaptables en Teams. |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar tarjetas adaptables en Teams pestaña | Microsoft Teams ejemplo de pestaña, que muestra cómo mostrar tarjetas adaptables en Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 

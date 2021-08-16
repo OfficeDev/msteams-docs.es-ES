@@ -5,12 +5,12 @@ description: Guía de inicio rápido para crear una pestaña personal con el Gen
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 47ed3027f936366964871733e78c7a43851ffb99
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e45474d41404e057f2d73f7d1fad24a19e56b4f5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179868"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345679"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -42,13 +42,13 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
 - [Node.js/npm](https://nodejs.org/en/). Use la versión LTS más reciente. El nodo Administrador de paquetes (npm) se instala en el sistema con la instalación de Node.js.
 
-- Después de instalar correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando lo siguiente en el símbolo del sistema:
+- Una vez que haya instalado correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando el siguiente comando en el símbolo del sistema:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Instale el generador Microsoft Teams aplicaciones mediante la introducción de lo siguiente en el símbolo del sistema:
+- Instale el generador Microsoft Teams aplicaciones mediante la introducción del siguiente comando en el símbolo del sistema:
 
     ```bash
     npm install generator-teams --global
@@ -72,15 +72,15 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Cuál es el nombre de la solución?**
 
-    Este es el nombre del proyecto. Puede aceptar el nombre sugerido seleccionando la **tecla** Entrar.
+    El nombre de la solución es el nombre del proyecto. Puede aceptar el nombre sugerido seleccionando **Entrar**.
 
     **¿Dónde desea ubicar los archivos?**
 
-    Actualmente se encuentra en el directorio del proyecto. Seleccione **Entrar**.
+    Actualmente está en el directorio del proyecto. Seleccione **Entrar**.
 
     **¿Título de tu Microsoft Teams de aplicación?**
 
-    Este es el nombre del paquete de la aplicación y se usará en el manifiesto y la descripción de la aplicación. Escriba un título o **seleccione Entrar** para aceptar el nombre predeterminado.
+    El título es el nombre del paquete de la aplicación y se usa en el manifiesto y la descripción de la aplicación. Escriba un título o **seleccione Entrar** para aceptar el nombre predeterminado.
 
     **¿Su nombre (empresa)? (máximo 32 caracteres)**
 
@@ -92,11 +92,11 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Scaffolding rápido? (Y/n)**
 
-    El valor predeterminado es sí; escriba **n** para escribir su Id. de partner de Microsoft.
+    El valor predeterminado es sí; escriba **n** para escribir su id. de partner de Microsoft.
 
     **Escriba su id. de partner de Microsoft, si tiene uno. (Dejar en blanco para omitir)**
 
-    Este campo no es necesario y solo debe usarse si ya forma parte de [la red de partners de Microsoft](https://partner.microsoft.com).
+    Este campo no es necesario y debe usarse solo si ya forma parte de la red [de partners de Microsoft](https://partner.microsoft.com).
 
     **¿Qué desea agregar al proyecto?**
 
@@ -104,7 +104,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿La dirección URL donde hospedará esta solución?**
 
-    De forma predeterminada, el generador sugiere una dirección URL de Sitios web de Azure. Solo estás probando la aplicación localmente, por lo tanto, no es necesaria una dirección URL válida.
+    De forma predeterminada, el generador sugiere una dirección URL de sitios web de Azure. Solo estás probando la aplicación localmente, por lo que no es necesaria una dirección URL válida.
 
     **¿Desea mostrar un indicador de carga cuando se carga la aplicación o pestaña?**
 
@@ -116,7 +116,11 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Desea incluir el marco de pruebas y las pruebas iniciales? (y/N)**
 
-    Elija **no incluir** un marco de prueba para este proyecto. El valor predeterminado es sí, escriba **n**.
+    Elija **no incluir** un marco de prueba para este proyecto. El valor predeterminado es no, escriba **n**.
+
+    **¿Desea incluir la compatibilidad con ESLint? (y/N)**
+
+    Elija no incluir la compatibilidad con ESLint. El valor predeterminado es no, escriba **n**.
 
     **¿Desea usar azure applications Ideas para telemetría? (y/N)**
 
@@ -143,7 +147,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
 **Para agregar una pestaña personal a esta aplicación, cree una página de contenido y actualice los archivos existentes**
 
-1. En el editor de código, cree un nuevo archivo HTML, **personal.html** y agregue el siguiente marcado:
+1. En el editor de código, cree un nuevo archivo HTML **personal.html** y agregue el siguiente marcado:
 
     ```html
     <!DOCTYPE html>
@@ -235,13 +239,13 @@ gulp build
 
 #### <a name="run-your-application-in-localhost"></a>Ejecutar la aplicación en localhost
 
-1. Para iniciar un servidor web local, escriba lo siguiente en el símbolo del sistema:
+1. Para iniciar un servidor web local, escriba el siguiente comando en el símbolo del sistema:
 
     ```bash
     gulp serve
     ```
 
-1. Escriba en el explorador, reemplace por el nombre de la pestaña y vea la página principal de la aplicación como se `http://localhost:3007/<yourDefaultAppNameTab>/` muestra en la siguiente **<yourDefaultAppNameTab>** imagen:
+1. Escriba en el explorador, reemplace por el nombre de la pestaña y vea la página principal de la aplicación como se `http://localhost:3007/<yourDefaultAppNameTab>/` muestra en la siguiente `**<yourDefaultAppNameTab>**` imagen:
 
     ![captura de pantalla de la página principal](~/assets/images/tab-images/homePage.png)
 
@@ -251,11 +255,11 @@ gulp build
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro en la pestaña
 
-Microsoft Teams es un producto basado en la nube y requiere que el contenido de la pestaña esté disponible desde la nube mediante puntos de conexión HTTPS. Teams no permite el hospedaje local. Debe publicar la pestaña en una dirección URL pública o usar un proxy que exponga el puerto local a una dirección URL orientada a Internet.
+Microsoft Teams es un producto basado en la nube y requiere que el contenido de la pestaña esté disponible desde la nube mediante puntos de conexión HTTPS. Teams no permite el hospedaje local. Publique la pestaña en una dirección URL pública o use un proxy que exponga el puerto local a una dirección URL orientada a Internet.
 
-Para probar la extensión de pestaña, puede usar [ngrok](https://ngrok.com/docs), que está integrado en esta aplicación. Ngrok es una herramienta de software de proxy inverso que crea un túnel a los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Los puntos de conexión web del servidor están disponibles durante la sesión actual en el equipo. Cuando el equipo se apaga o se queda en reposo, el servicio ya no está disponible.
+Para probar la extensión de pestaña, [use ngrok](https://ngrok.com/docs), que está integrado en esta aplicación. Ngrok es una herramienta de software de proxy inverso. Ngrok crea un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Los puntos de conexión web del servidor están disponibles durante la sesión actual en el equipo. Cuando el equipo se apaga o se queda en reposo, el servicio ya no está disponible.
 
-En el símbolo del sistema, salga de localhost y escriba lo siguiente:
+En el símbolo del sistema, salga de localhost y escriba el siguiente comando:
 
 ```bash
 gulp ngrok-serve
@@ -268,7 +272,7 @@ gulp ngrok-serve
 
 **Para cargar la aplicación en Teams**
 
-1. Vaya a Microsoft Teams. Si usa la versión [basada en web,](https://teams.microsoft.com) puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador.](~/tabs/how-to/developer-tools.md)
+1. Vaya a Microsoft Teams. Si usa la versión [basada en web,](https://teams.microsoft.com)puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador.](~/tabs/how-to/developer-tools.md)
 1. En la esquina inferior izquierda, selecciona **Aplicaciones**.
 1. En la esquina inferior izquierda, elige **Upload una aplicación personalizada.**
 1. Vaya al directorio del proyecto, vaya a **la carpeta ./package,** seleccione la carpeta zip y elija **Abrir**.
@@ -281,13 +285,13 @@ gulp ngrok-serve
 
 ### <a name="view-your-personal-tab"></a>Ver la pestaña personal
 
-En la barra de navegación situada en el extremo izquierdo de Teams, selecciona los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; y elige tu aplicación en la lista.
+En la barra de navegación de la parte Teams, selecciona puntos suspensivos &#x25CF;&#x25CF;&#x25CF; y elige tu aplicación.
 
 # <a name="aspnet-core"></a>[ASP.NET Core](#tab/aspnetcore)
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>Crear una pestaña personal personalizada con ASP.NET Core
 
-Puedes crear una pestaña personal personalizada con C# páginas ASP.NET Core Desa herramientas. [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) también se usa para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
+Puedes crear una pestaña personal personalizada con C# páginas ASP.NET Core Desa herramientas. [App Studio](~/concepts/build-and-test/app-studio-overview.md) también se usa para completar el manifiesto de la aplicación e implementar la pestaña en Teams.
 
 ### <a name="prerequisites-for-personal-tab"></a>Requisitos previos para la pestaña personal
 
@@ -302,7 +306,7 @@ Debe comprender los siguientes requisitos previos:
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tiene Visual Studio, puede descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) versión gratuita.
+- La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tienes Visual Studio, puedes descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) versión gratuita.
 
 - La herramienta de proxy [inverso ngrok.](https://ngrok.com) Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
 
@@ -362,7 +366,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
 - Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un iframe <y lo representa `contentUrl` \> en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un iframe <y lo representa `contentUrl` \> en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
@@ -390,7 +394,7 @@ En la Visual Studio Explorador de soluciones, haga clic con el botón secundario
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Para que la pestaña se muestre en Teams, debe incluir el SDK de cliente Microsoft Teams **JavaScript** e incluir una llamada después de `microsoftTeams.initialize()` que se cargue la página. Así se comunican la pestaña y Teams aplicación:
+Para que la pestaña se muestre en Teams, debe incluir el SDK de cliente Microsoft Teams **JavaScript** e incluir una llamada después de `microsoftTeams.initialize()` que se cargue la página. La pestaña y la Teams se comunican de esta manera:
 
 Vaya a la **carpeta Shared,** abra **_Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
 
@@ -407,7 +411,7 @@ Asegúrese de guardar el **objeto PersonalTab.cshtml actualizado.**
 
 ### <a name="establish-a-secure-tunnel-to-your-tab-for-teams"></a>Establecer un túnel seguro en la pestaña para Teams
 
-Microsoft Teams es un producto basado en la nube y requiere que el contenido de la pestaña esté disponible desde la nube mediante puntos de conexión HTTPS. Teams no permite el hospedaje local. Debe publicar la pestaña en una dirección URL pública o usar un proxy que exponga el puerto local a una dirección URL orientada a Internet.
+Microsoft Teams es un producto basado en la nube y requiere que el contenido de la pestaña esté disponible desde la nube mediante puntos de conexión HTTPS. Teams no permite el hospedaje local. Publique la pestaña en una dirección URL pública o use un proxy que exponga el puerto local a una dirección URL orientada a Internet.
 
 Para probar la pestaña, use [ngrok](https://ngrok.com/docs). Los puntos de conexión web del servidor están disponibles mientras ngrok se ejecuta en el equipo. En la versión gratuita de ngrok, si cierra ngrok, las direcciones URL son diferentes la próxima vez que la inicie.
 
@@ -443,7 +447,7 @@ En Visual Studio, presione **F5** o elija **Iniciar depuración** en el menú **
 
 1. Ve a **App Studio** y selecciona la pestaña Editor **de manifiestos.**
 
-1. Selecciona **Importar una aplicación existente en** el editor de **manifiestos** para empezar a actualizar el paquete de la aplicación para la pestaña. El código fuente viene con su propio manifiesto parcialmente completo. El nombre del paquete de la **aplicación estab.zip**. Está disponible en la siguiente ruta de acceso:
+1. Selecciona **Importar una aplicación existente en** el editor de **manifiestos** para empezar a actualizar el paquete de la aplicación para la pestaña. El código fuente viene con su propio manifiesto parcialmente completo. El nombre del paquete de la **aplicación estab.zip**. Está disponible desde la siguiente ruta de acceso:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
@@ -455,9 +459,9 @@ En Visual Studio, presione **F5** o elija **Iniciar depuración** en el menú **
 
 Después de cargar el paquete de la aplicación en App Studio, debes configurarlo.
 
-Seleccione el icono de la pestaña recién importada en el panel derecho de la página de bienvenida del editor de manifiesto.
+Seleccione el icono de la pestaña recién importada de la página de bienvenida del editor de manifiesto.
 
-Hay una lista de pasos en el lado izquierdo del editor de manifiesto y, a la derecha, una lista de propiedades que deben tener valores para cada uno de esos pasos. El usuario ha proporcionado gran parte de la **informaciónmanifest.js,** pero hay campos que debe actualizar.
+Hay una lista de pasos en el lado izquierdo del editor de manifiestos. En el lado derecho del editor de manifiesto hay una lista de propiedades que deben tener valores para cada uno de esos pasos. El usuario ha proporcionado gran parte de la **informaciónmanifest.js,** pero hay campos que debe actualizar.
 
 ##### <a name="details-app-details"></a>Detalles: Detalles de la aplicación
 
@@ -518,7 +522,7 @@ En la **sección Dominios y permisos,** los dominios de las **pestañas** deben 
 
 ### <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>Crear una pestaña personal personalizada con ASP.NET Core MVC
 
-Puede crear una pestaña personal personalizada con C# y ASP.NET Core MVC. [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) también se usa para finalizar el manifiesto de la aplicación e implementar la pestaña en Teams.
+Puede crear una pestaña personal personalizada con C# y ASP.NET Core MVC. [App Studio para Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) también se usa para completar el manifiesto de la aplicación e implementar la pestaña en Teams.
 
 ### <a name="prerequisites-for-personal-tab-with-aspnet-core-mvc"></a>Requisitos previos para ficha personal con ASP.NET Core MVC
 
@@ -531,7 +535,7 @@ Puede crear una pestaña personal personalizada con C# y ASP.NET Core MVC. [App 
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tiene Visual Studio, puede descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) versión gratuita.
+- La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tienes Visual Studio, puedes descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) versión gratuita.
 
 - La herramienta de proxy [inverso ngrok.](https://ngrok.com) Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
 
@@ -586,7 +590,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 * Un **icono de esquema transparente** que mide 32 x 32 píxeles.
 * Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un IFrame y lo representa `contentUrl` en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un IFrame y lo representa `contentUrl` en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
@@ -616,7 +620,7 @@ En la Visual Studio Explorador de soluciones, haga clic con el botón secundario
 
 #### <a name="views"></a>Vistas
 
-Estas son las diferentes vistas de ASP.NET Core MVC:
+Estas vistas son las diferentes vistas de ASP.NET Core MVC:
 
 * Inicio: ASP.NET Core trata los archivos denominados **Index** como la página predeterminada o principal del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se muestra como la página principal de la aplicación.
 

@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 34d98707313dea011a072fa77cc0dfc1b03b2a83
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701900"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345672"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -115,7 +115,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
 
     Habilite la concesión implícita activando los siguientes cuadros: ✔ token de identificador ✔ token de acceso
 
-¡Enhorabuena! Has completado los requisitos previos de registro de la aplicación para continuar con la pestaña APLICACIÓN SSO.
+¡Felicidades! Has completado los requisitos previos de registro de la aplicación para continuar con la pestaña APLICACIÓN SSO.
 
 > [!NOTE]
 >
@@ -159,7 +159,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 Al llamar: y se requiere un consentimiento de usuario adicional para los permisos de nivel de usuario, se muestra un cuadro de diálogo al usuario `getAuthToken` para conceder un consentimiento adicional.
 
-Después de recibir el token de acceso en la devolución de llamada correcta, puede descodificar el token de acceso para ver las notificaciones asociadas con ese token. Opcionalmente, puedes copiar y pegar manualmente el token de acceso en una herramienta, como jwt.ms [inspeccionar](https://jwt.ms/) su contenido. Si no recibe el UPN en el token de acceso devuelto, puede agregarlo como una notificación [opcional](/azure/active-directory/develop/active-directory-optional-claims) en AAD.
+Después de recibir el token de acceso en la devolución de llamada correcta, puede descodificar el token de acceso para ver las notificaciones asociadas con ese token. Opcionalmente, puedes copiar y pegar manualmente el token de acceso en una herramienta, como jwt.ms [inspeccionar](https://jwt.ms/) su contenido. Si no recibe el UPN en el token de acceso devuelto, puede agregarlo como una notificación [opcional](/azure/active-directory/develop/active-directory-optional-claims) en AAD. Para obtener más información, vea [access tokens](/azure/active-directory/develop/access-tokens).
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -169,7 +169,7 @@ Después de recibir el token de acceso en la devolución de llamada correcta, pu
 
 |**Ejemplo de nombre**|**Descripción**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| Tab SSO |Microsoft Teams de ejemplo para pestañas SSO de Azure AD| [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Tab SSO |Microsoft Teams de ejemplo para pestañas SSO de Azure AD| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 

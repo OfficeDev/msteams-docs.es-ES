@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: c114eba3e022f153ccaa9e9031086989eca5d019bd472fb0b9f5da583465deb9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: df871894a1353301edaeb12af3cb940f0bb47472
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707518"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345617"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 

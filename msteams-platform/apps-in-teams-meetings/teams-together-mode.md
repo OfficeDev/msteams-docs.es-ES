@@ -2,12 +2,12 @@
 title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d19f99ab55654eab03d56de8a001484bb518a7f2
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702169"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345272"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -155,7 +155,7 @@ Las dimensiones del asiento se convierten en el lienzo para representar la secue
 
 1. Opcionalmente, puedes seleccionar **Compartir** en el menú desplegable Guardar para crear un vínculo que se pueda compartir para distribuir fácilmente las escenas para que otras personas las usen.  Al abrir este vínculo, se instala la escena para el usuario y pueden empezar a usarlo.
 
-1. Después de la vista previa, la escena se puede enviar como una aplicación a Teams en la sección Aplicaciones del Centro Teams desarrolladores. Desde allí puedes descargar el paquete de la aplicación o publicar directamente en la organiación.
+1. Después de la vista previa, la escena se puede enviar como una aplicación a Teams en la sección Aplicaciones del Centro Teams desarrolladores. Desde allí puedes descargar el paquete de la aplicación o publicar directamente en tu organización.
 
     >[!NOTE]
     > Este paso requiere el paquete de la aplicación que es diferente del paquete de escena, para la escena que se diseñó. El paquete de la aplicación creado automáticamente se puede encontrar en la **sección Aplicaciones** del Centro Teams desarrolladores.

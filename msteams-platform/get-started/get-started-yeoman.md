@@ -5,12 +5,12 @@ keywords: introducción a node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703233"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345181"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Crear la primera aplicación Microsoft Teams con el generador de Yeoman
 
@@ -78,11 +78,11 @@ Esta sección le guiará por los pasos para generar el proyecto.
    1. Escriba el título del proyecto. Este título se usará en el manifiesto y la descripción de la aplicación. 
    1. Escriba un nombre de empresa que también se usará en el manifiesto.
    1. Escriba la versión del manifiesto que desea usar. Para este tutorial, `v1.5` seleccione , que es el esquema disponible general actual.
-   1. Seleccione los elementos que desea agregar al proyecto. Puede seleccionar una sola o cualquier combinación de elementos. Para estos tutoriales, solo tienes *que seleccionar una pestaña*:
+   1. Seleccione los elementos que desea agregar al proyecto. Puede seleccionar una sola o cualquier combinación de elementos. Para este tutorial, solo tienes *que seleccionar una pestaña*:
 
     ![selección de elementos](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Responda al siguiente conjunto de preguntas de seguimiento que aparecen en función de los elementos seleccionados en el paso 2.
+1. Responda al siguiente conjunto de preguntas de seguimiento que aparecen en función de los elementos seleccionados en el paso 3.
 1. Escriba una dirección URL para la ubicación donde hospedará la solución. 
 
    > [!NOTE]
