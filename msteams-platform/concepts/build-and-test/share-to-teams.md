@@ -4,12 +4,12 @@ description: Cómo agregar el botón Compartir a Teams insertado en su sitio web
 ms.topic: reference
 localization_priority: Normal
 keywords: Compartir Teams compartir a Teams
-ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
+ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707731"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "58358625"
 ---
 # <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
@@ -40,7 +40,7 @@ En la siguiente imagen se muestra la experiencia Teams emergente de Share-to-
     </div>
     ```
 
-    Después de completar esto, el Microsoft Teams se agrega al sitio web. En la siguiente imagen se muestra el icono Compartir a Teams:
+    Después de completar esto, el Microsoft Teams se agrega al sitio web. La siguiente imagen muestra el icono Compartir a Teams:
 
     ![Compartir a Teams icono](~/assets/icons/share-to-teams-icon.png)
 
@@ -53,7 +53,7 @@ En la siguiente imagen se muestra la experiencia Teams emergente de Share-to-
       data-icon-px-size="64">
     </div>
     ```
-1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de la dirección URL del vínculo que se va a compartir no se representa correctamente en Teams, puede deshabilitar la vista previa de la dirección URL agregando el atributo establecido en `data-preview` `false` .
+1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de dirección URL del vínculo que se va a compartir no se representa correctamente en Teams, puede deshabilitar la vista previa de la dirección URL agregando el atributo establecido en `data-preview` `false` .
 
     ```html
     <div
@@ -63,7 +63,7 @@ En la siguiente imagen se muestra la experiencia Teams emergente de Share-to-
     </div>
     ```
 
-1. Si la página representa contenido dinámicamente, puede usar el método para forzar que el botón Compartir se represente en el `shareToMicrosoftTeams.renderButtons()` lugar adecuado de la canalización. 
+1. Si la página representa contenido dinámicamente, puede usar el método para forzar a Share a representarse en el `shareToMicrosoftTeams.renderButtons()` lugar adecuado de la canalización. 
 
 ## <a name="craft-your-website-preview"></a>Crear una vista previa del sitio web
 
@@ -78,7 +78,7 @@ En la tabla siguiente se describen las etiquetas necesarias:
 
 |Valor|Etiqueta meta| Abra Graph|
 |----|----|----|
-|Cargo|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |Descripción|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Imagen en miniatura| ninguno. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
@@ -94,12 +94,12 @@ Para los profesores que usan el botón Compartir Teams, hay una opción adiciona
 
 | Propiedad | Atributo HTML | Tipo | Predeterminado | Descripción |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | cadenas | No aplicable | Href del contenido que se debe compartir. |
+| href | `data-href` | string | N/D | Href del contenido que se debe compartir. |
 | preview | `data-preview` | boolean (como una cadena) | `true` | Mostrar o no una vista previa del contenido que se va a compartir. |
 | iconPxSize | `data-icon-px-size` | número (como una cadena) | `32` | Tamaño en píxeles del botón Compartir a Teams que se representará. |
-| msgText | `data-msg-text` | cadenas | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
-| assignInstr | `data-assign-instr` | cadenas | No aplicable | Texto predeterminado que se insertará en el campo asignaciones "Instrucciones". El número máximo de caracteres es 200. |
-| assignTitle | `data-assign-title` | cadenas | No aplicable | Texto predeterminado que se insertará en el campo asignaciones "Título". El número máximo de caracteres es 50. |
+| msgText | `data-msg-text` | string | N/D | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
+| assignInstr | `data-assign-instr` | string | N/D | Texto predeterminado que se va a insertar en el campo de asignaciones "Instrucciones". El número máximo de caracteres es 200. |
+| assignTitle | `data-assign-title` | string | N/D | Texto predeterminado que se va a insertar en el campo asignaciones "Título". El número máximo de caracteres es 50. |
 
 ### <a name="methods"></a>Métodos
 
