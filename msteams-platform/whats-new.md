@@ -4,16 +4,19 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
-ms.openlocfilehash: 53ffa86fae41cc35c080a92067cfcb6c59f9657e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d8b92b2e534d868dd475356f1b765626d80eb146
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345749"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398662"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
 Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) y en la versión preliminar del desarrollador.
+
+> [!IMPORTANT]
+> Ahora puede obtener las últimas actualizaciones Teams plataforma mediante la suscripción a la fuente de descarga de fuentes [ ![ RSS.](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates) Para obtener más información, vea [configure RSS feed](#get-latest-updates).
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -127,7 +130,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -166,7 +169,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |06/23/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
@@ -186,3 +189,20 @@ Junto con las nuevas [](samples/app-templates.md) características, también pro
 ## <a name="submit-your-feedback"></a>Enviar sus comentarios
 
 Recomendamos a Teams desarrolladores que hagan preguntas, presenten errores, envíen solicitudes de características y realicen contribuciones. Puede enviar comentarios a través de cualquiera de los [canales disponibles.](feedback.md)
+
+## <a name="get-latest-updates"></a>Obtener las actualizaciones más recientes
+
+Puede obtener las últimas actualizaciones Teams plataforma mediante la configuración en la [fuente RSS](/microsoftteams/platform/feed.atom).
+
+**Para configurar la fuente RSS**
+
+1. Abra Microsoft Teams.
+1. Seleccione **Teams** en el panel izquierdo.
+1. Seleccione un canal en el equipo.
+1. Seleccione puntos suspensivos &#x25CF;&#x25CF;&#x25CF; y, en la lista desplegable, seleccione **Conectores**.
+1. Busque **RSS en** el **cuadro de diálogo Conectores** que aparece.
+1. Seleccione **Configurar**.
+1. Escriba un nombre en **Escriba un nombre para la conexión RSS.**.
+1. Escriba **https://aka.ms/TeamsPlatformUpdates** dirección para la fuente **RSS**.
+1. Seleccione la frecuencia de la fuente en la **lista desplegable Frecuencia implícita.**
+1. Haga clic en **Guardar**.

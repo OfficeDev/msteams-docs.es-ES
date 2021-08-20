@@ -3,12 +3,12 @@ title: Extensibilidad de la aplicación para reuniones
 author: surbhigupta
 description: Comprender la extensibilidad de la aplicación de reunión
 ms.topic: conceptual
-ms.openlocfilehash: 0da7a68fec5ea3cf01adfbb4edabded23a9f3311
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345286"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398686"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilidad de la aplicación para reuniones
 
@@ -32,7 +32,8 @@ Las pestañas permiten a los miembros del equipo tener acceso a servicios y cont
 > Si has integrado una pestaña con la reunión Teams, la aplicación debe seguir el flujo de autenticación de inicio de sesión único (SSO) para las [pestañas.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 > [!NOTE]
-> Las aplicaciones solo se admiten en reuniones privadas programadas.
+> * Las reuniones programadas privadas solo admiten aplicaciones.
+> * La opción Agregar aplicación para Teams de la pestaña de extensión de reunión no se admite en Teams cliente web.
 
 #### <a name="pre-meeting-app-experience"></a>Experiencia de la aplicación previa a la reunión
 
