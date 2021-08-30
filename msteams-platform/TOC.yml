@@ -266,12 +266,14 @@
   items:
     - name: Información general
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Extensibilidad de la aplicación para reuniones
+    - name: Aplicaciones de reuniones unificadas
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
+    - name: Requisitos previos para las aplicaciones en las reuniones de Teams
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Habilitar y configurar las aplicaciones para reuniones
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Referencias API de aplicaciones de reuniones
+      href: apps-in-teams-meetings/API-references.md
     - name: Escenas personalizadas en modo conjunto en Teams
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Crear webhooks y conectores
@@ -346,6 +348,8 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Usar autenticación SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+        - name: Guía paso a paso para bots con SSO
+          href: sbs-bots-with-sso.yml
     - name: Extensiones de mensajería
       items:
         - name: Agregar autenticación a la extensión de mensajería
