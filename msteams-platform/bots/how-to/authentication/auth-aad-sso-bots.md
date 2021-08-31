@@ -4,12 +4,12 @@ description: Describe cómo obtener un token de usuario. Actualmente, un desarro
 keywords: token, token de usuario, compatibilidad con SSO para bots
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: f1d9a905ffb8239ecd3398e7db8ee593c6cbfba7
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ffa13e8a9f4014f0ed3e89f32b1eafed74fea76b
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345665"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528799"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -145,7 +145,7 @@ Si la aplicación contiene un bot y una pestaña, use el siguiente código para 
 
 **webApplicationInfo** es el elemento primario de los siguientes elementos:
 
-* **id:** el identificador de cliente de la aplicación. Este es el identificador de aplicación que obtuvo como parte del registro de la aplicación con AAD.
+* **id:** el identificador de cliente de la aplicación. Este es el identificador de aplicación que obtuvo como parte del registro de la aplicación con AAD. No comparta este identificador de aplicación con varias Teams aplicaciones. Crea una nueva aplicación de AAD para cada manifiesto de aplicación que usa `webApplicationInfo` .
 * **resource:** el dominio y el subdominio de la aplicación. Este es el mismo URI, incluido el protocolo que registró al crear la aplicación `api://` en Register your app through the `scope` [AAD portal](#register-your-app-through-the-aad-portal). No debe incluir la ruta `access_as_user` de acceso en el recurso. La parte de dominio de este URI debe coincidir con el dominio y los subdominios usados en las direcciones URL del manifiesto Teams aplicación.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Agregar el código para solicitar y recibir un token de bot

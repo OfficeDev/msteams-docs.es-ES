@@ -5,24 +5,24 @@ description: Obtén información sobre cómo diseñar notificaciones de fuentes 
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 4a2b5510c2e5d0b26897593bbf0fdc0dc493b46ead3be669ff8b72d7cc3970eb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705152"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408555"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Diseño de notificaciones de fuente de actividad para la Microsoft Teams aplicación
 
 La fuente de actividad es una superficie para que los usuarios puedan acceder a sus notificaciones en Microsoft Teams. La fuente conserva las notificaciones de las últimas cuatro semanas.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="En el ejemplo se muestra una notificación de aplicación en la Teams de actividad." border="false":::
-
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
 :::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Ejemplo muestra una notificación de aplicación que se muestra en la fuente Teams actividad en el móvil." border="false":::
+
+# <a name="desktop"></a>[Escritorio](#tab/desktop)
+
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="En el ejemplo se muestra una notificación de aplicación en la Teams de actividad." border="false":::
 
 ---
 
@@ -53,6 +53,15 @@ Los usuarios pueden administrar las notificaciones enviadas desde la aplicación
 
 Cada actividad genera una notificación del sistema. Lo que se muestra depende de lo que el usuario configure en sus opciones de notificación. Los usuarios también pueden elegir un estilo de notificación basado en su sistema operativo.
 
+# <a name="mobile"></a>[Móvil](#tab/mobile)
+
+:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variantes de Teams de fuente de actividad en Android e iOS." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|1|Android|
+|2|iOS|
+
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
 :::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de Teams de actividad en diferentes sistemas operativos." border="false":::
@@ -62,15 +71,6 @@ Cada actividad genera una notificación del sistema. Lo que se muestra depende d
 |1|Teams personalizado|
 |2|Windows|
 |3|Mac|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variantes de Teams de fuente de actividad en Android e iOS." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|1|Android|
-|2|iOS|
 
 ---
 

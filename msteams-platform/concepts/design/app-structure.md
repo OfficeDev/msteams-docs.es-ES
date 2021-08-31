@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 2e053186355b583e456e73c6443f5d8c043157a9ae0a09941a86a3aabd7978c5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706734"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408583"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprender la estructura Microsoft Teams aplicación
 
@@ -30,19 +30,17 @@ Las aplicaciones personales proporcionan un lienzo grande para hospedar el conte
 
 ***Ámbitos admitidos**: Personal*
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-El lienzo es un iframe para que puedas personalizar completamente la experiencia.
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para aplicaciones personales en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 El lienzo es una vista web para que puedas personalizar completamente la experiencia.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para aplicaciones personales en dispositivos móviles." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+El lienzo es un iframe para que puedas personalizar completamente la experiencia.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para aplicaciones personales en el escritorio." border="false":::
 
 ## <a name="tabs"></a>Pestañas
 
@@ -50,19 +48,17 @@ Las pestañas proporcionan un lienzo grande para hospedar el contenido de la apl
 
 ***Ámbitos admitidos:** canales, chats, reuniones*
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-El lienzo es un iframe para que puedas personalizar completamente la experiencia.
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las pestañas en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 El lienzo es una vista web para que puedas personalizar completamente la experiencia.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las pestañas en dispositivos móviles." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+El lienzo es un iframe para que puedas personalizar completamente la experiencia.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las pestañas en el escritorio." border="false":::
 
 ## <a name="bots"></a>Bots
 
@@ -70,15 +66,13 @@ Los bots son aplicaciones de conversación que se integran con Teams de mensajer
 
 ***Ámbitos admitidos:** Personal, Canales, Chats, Reuniones*
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para bots en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para bots en dispositivos móviles." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para bots en el escritorio." border="false":::
 
 ## <a name="messaging-extensions"></a>Extensiones de mensajería
 
@@ -86,15 +80,13 @@ Las extensiones de mensajería son métodos abreviados para insertar contenido d
 
 ***Ámbitos admitidos:** Personal, Canales, Chats, Reuniones*
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las extensiones de mensajería en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para extensiones de mensajería en dispositivos móviles." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las extensiones de mensajería en el escritorio." border="false":::
 
 ## <a name="meeting-extensions"></a>Extensiones de reunión
 
@@ -102,16 +94,14 @@ Las extensiones de reunión son aplicaciones para mejorar las reuniones en direc
 
 ***Ámbitos admitidos:** reuniones, chats*
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-La superficie es un iframe, lo que te permite personalizar la experiencia, pero ten en cuenta que durante las reuniones estas aplicaciones usan un tema oscuro y son estrechas.
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las extensiones de reunión en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 La superficie es una vista web, lo que te permite personalizar la experiencia, pero ten en cuenta que durante las reuniones estas aplicaciones usan un tema oscuro.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las extensiones de reunión en dispositivos móviles." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+La superficie es un iframe, lo que te permite personalizar la experiencia, pero ten en cuenta que durante las reuniones estas aplicaciones usan un tema oscuro y son estrechas.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Imagen conceptual que muestra las áreas front-end de Teams que los desarrolladores pueden personalizar para las extensiones de reunión en el escritorio." border="false":::

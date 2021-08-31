@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709449"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408632"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñe la pestaña para Microsoft Teams
 
@@ -31,19 +31,17 @@ Puedes agregar una pestaña desde el almacén Teams (AppSource) o en uno de los 
 * Canal
 * Reunión (antes, durante o después de la reunión)
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-En el ejemplo siguiente se muestra cómo los usuarios pueden agregar una pestaña en un canal.
-
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="En el ejemplo se muestra una pestaña que se agrega en un canal." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 Los usuarios pueden acceder a  las pestañas seleccionando el botón Más en el canal (ejemplo a continuación) o chat en el que se han agregado.
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="En el ejemplo se muestra una pestaña móvil que se agrega en un canal." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+En el ejemplo siguiente se muestra cómo los usuarios pueden agregar una pestaña en un canal.
+
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="En el ejemplo se muestra una pestaña que se agrega en un canal." border="false":::
 
 ## <a name="set-up-a-tab"></a>Configurar una pestaña
 
@@ -53,7 +51,7 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="En el ejemplo se muestra un modal de configuración de tabulación." border="false":::
 
-### <a name="anatomy-tab-configuration-dialog"></a>Anatomía: cuadro de diálogo de configuración de tabulación
+#### <a name="anatomy-tab-configuration-dialog"></a>Anatomía: cuadro de diálogo de configuración de tabulación
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un modal de configuración de tabulación." border="false":::
 
@@ -86,19 +84,27 @@ Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a dis
 
 Las pestañas proporcionan una experiencia web a pantalla completa en Teams donde puede mostrar contenido de colaboración (como paneles de tareas y paneles) e información importante.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="En el ejemplo se muestra una pestaña con un panel de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="En el ejemplo se muestra una pestaña móvil con un panel de tareas." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="En el ejemplo se muestra una pestaña con un panel de tareas." border="false":::
 
 ### <a name="anatomy-tab"></a>Anatomía: Ficha
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|1|**Nombre de la pestaña:** etiqueta de navegación para la pestaña.|
+|2|**Chat de pestaña:** abre un chat que permite a los usuarios tener una conversación junto al contenido.|
+|3|**webview:** muestra el contenido de la aplicación.|
+
+#### <a name="desktop"></a>Escritorio
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
 
@@ -109,19 +115,7 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 |3|**Chat de pestañas:** abre un chat a la derecha, lo que permite a los usuarios tener una conversación junto al contenido.|
 |4 |**iframe:** muestra el contenido de la aplicación.|
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|1|**Nombre de la pestaña:** etiqueta de navegación para la pestaña.|
-|2|**Chat de pestaña:** abre un chat que permite a los usuarios tener una conversación junto al contenido.|
-|3|**webview:** muestra el contenido de la aplicación.|
-
----
-
-### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a>Diseño de una pestaña con plantillas de interfaz de usuario y componentes avanzados
+### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Diseñar una pestaña con plantillas de interfaz de usuario y componentes avanzados
 
 Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar la experiencia de pestaña:
 
@@ -140,29 +134,25 @@ Las pestañas ayudan a facilitar las conversaciones sobre el contenido en una ub
 
 Los usuarios pueden publicar automáticamente en un canal o chat una vez que han agregado una nueva pestaña. Esto no solo notifica a los miembros del equipo del nuevo contenido y proporciona un vínculo a la pestaña, sino que permite a los usuarios empezar a hablar sobre la pestaña.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="En el ejemplo se muestra una pestaña que se está analizando en un subproceso de canal." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="En el ejemplo se muestra una pestaña móvil que se está analizando en un subproceso de canal." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="En el ejemplo se muestra una pestaña que se está analizando en un subproceso de canal." border="false":::
 
 ### <a name="tab-chat"></a>Chat de pestañas
 
 Los usuarios pueden tener una conversación junto al contenido de la pestaña que están viendo. En el escritorio, el chat se abre al lado del contenido de la aplicación.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="En el ejemplo se muestra una pestaña con un chat abierto en el lado derecho." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="En el ejemplo se muestra una pestaña móvil con un área de chat en contexto." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="En el ejemplo se muestra una pestaña con un chat abierto en el lado derecho." border="false":::
 
 ### <a name="permissions-and-role-based-views"></a>Permisos y vistas basadas en roles
 
@@ -174,17 +164,7 @@ Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.
 
 ### <a name="anatomy-tab-menu"></a>Anatomía: menú De pestaña
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|1|**Configuración**: (opcional) Permite a los usuarios modificar la configuración de una pestaña después de agregarla.|
-|2|**Cambiar** nombre: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
-|3|**Quitar:** quita la pestaña del canal, chat o reunión.|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña móvil." border="false":::
 
@@ -196,7 +176,15 @@ Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.
 |4 |**Cambiar** nombre: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
 |5 |**Eliminar:** quita la pestaña del canal, chat o reunión.|
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|1|**Configuración**: (opcional) Permite a los usuarios modificar la configuración de una pestaña después de agregarla.|
+|2|**Cambiar** nombre: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
+|3|**Quitar:** quita la pestaña del canal, chat o reunión.|
 
 ## <a name="tab-notifications-and-deep-linking"></a>Notificaciones de tabulación y vinculación profunda
 
@@ -253,7 +241,7 @@ El uso de una pestaña para mostrar una aplicación completa con navegación de 
    :::column-end:::
 :::row-end:::
 
-### <a name="setup"></a>Configuración
+### <a name="setup"></a>Instalación
 
 :::row:::
    :::column span="":::

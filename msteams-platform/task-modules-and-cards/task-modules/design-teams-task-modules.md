@@ -5,12 +5,12 @@ description: Aprende a diseñar módulos de tareas para Teams aplicaciones y obt
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708264"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408618"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la Microsoft Teams aplicación
 
@@ -41,7 +41,19 @@ Los módulos de tareas proporcionan una superficie flexible para las experiencia
 
 También se pueden crear con el marco [de](../../task-modules-and-cards/cards/design-effective-cards.md) tarjetas adaptables, que puede ser una forma más sencilla y rápida de facilitar escenarios comunes (como formularios).
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+### <a name="mobile"></a>Móvil
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un módulo de tareas en el móvil." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|1|**Encabezado:** haga que los encabezados sea claros y concisos. Describa la tarea que desea que los usuarios completen.
+|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
+|3|**Botón Cerrar:** cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
+|4 |**webview:** espacio dinámico que hospeda el contenido de la aplicación.|
+|5 |**Acciones (opcional):** botones relacionados con el contenido de la aplicación.|
+
+### <a name="desktop"></a>Escritorio
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un módulo de tareas." border="false":::
 
@@ -54,20 +66,6 @@ También se pueden crear con el marco [de](../../task-modules-and-cards/cards/de
 |5 |**iframe:** espacio dinámico que hospeda el contenido de la aplicación.|
 |6 |**Acciones (opcional):** botones relacionados con el contenido de la aplicación.|
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un módulo de tareas en el móvil." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|1|**Encabezado:** haga que los encabezados sea claros y concisos. Describa la tarea que desea que los usuarios completen.
-|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
-|3|**Botón Cerrar:** cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
-|4 |**webview:** espacio dinámico que hospeda el contenido de la aplicación.|
-|5 |**Acciones (opcional):** botones relacionados con el contenido de la aplicación.|
-
----
-
 ## <a name="designing-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
 
 Considere la posibilidad de usar plantillas para diseños comunes dentro de los módulos de tareas. Cada uno de ellos está hecho de componentes más pequeños para crear un diseño elegante y con capacidad de respuesta que se puede usar de forma personalizada para el escenario o con la apariencia de la marca.
@@ -78,103 +76,89 @@ Considere la posibilidad de usar plantillas para diseños comunes dentro de los 
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="list"></a>List
+### <a name="list"></a>Lista
 
 Las listas funcionan bien en un módulo de tareas porque son fáciles de examinar.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de ejemplos en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Lista de ejemplos en un módulo de tareas en móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
 
-### <a name="form"></a>Form
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Lista de ejemplos en un módulo de tareas." border="false":::
+
+### <a name="form"></a>Formulario
 
 Los módulos de tareas son un excelente lugar para superficier formularios con entradas de usuario secuenciales y validación en línea. Puedes aprovechar las tarjetas adaptables como una forma de insertar elementos de formulario.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Formulario de ejemplo en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Formulario de ejemplo en un módulo de tareas en móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Formulario de ejemplo en un módulo de tareas." border="false":::
 
 ### <a name="sign-in"></a>Iniciar sesión
 
 Cree un flujo de inicio de sesión o registro centrado con una serie de módulos de tareas, lo que permite a los usuarios moverse fácilmente a través de pasos secuenciales.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Ejemplo de experiencia de inicio de sesión en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Ejemplo de experiencia de inicio de sesión en un módulo de tareas en móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
 
-### <a name="media"></a>Multimedia
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Ejemplo de experiencia de inicio de sesión en un módulo de tareas." border="false":::
+
+### <a name="media"></a>Elementos multimedia
 
 Insertar contenido multimedia en un módulo de tareas para una experiencia de visualización centrada.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Ejemplo de contenido multimedia en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Ejemplo de contenido multimedia en un módulo de tareas en móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Ejemplo de contenido multimedia en un módulo de tareas." border="false":::
 
 ### <a name="empty-state"></a>Estado vacío
 
 Se usa para los mensajes de bienvenida, error y éxito.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Estado vacío de ejemplo en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Estado vacío de ejemplo en un módulo de tareas en el móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Estado vacío de ejemplo en un módulo de tareas." border="false":::
 
 ### <a name="image-gallery"></a>Galería de imágenes
 
 Insertar un carrusel de galería en un iframe (escritorio) o vista web (móvil).
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Galería de imágenes de ejemplo en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+##### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Galería de imágenes de ejemplo en un módulo de tareas en móvil." border="false":::
 
----
+##### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Galería de imágenes de ejemplo en un módulo de tareas." border="false":::
 
 ### <a name="poll"></a>Sondeo
 
 En este ejemplo se muestran los resultados del sondeo iniciados desde una tarjeta adaptable. El sondeo también se puede colocar dentro de un módulo de tareas.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Sondeo de ejemplo en un módulo de tareas." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Sondeo de ejemplo en un módulo de tareas en móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Sondeo de ejemplo en un módulo de tareas." border="false":::
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 

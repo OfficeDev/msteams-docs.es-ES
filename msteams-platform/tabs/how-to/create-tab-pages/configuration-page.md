@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f3781cdf8be3bf39480511258616c1e5dc5dedc107910480a3b02758fa28610c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 67b4a0ae121acfe53b99dbc56d47dda27f2bf1a5
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708367"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528792"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -189,7 +189,7 @@ Establezca la propiedad del manifiesto en , que permite a los usuarios `canUpdat
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
-    entityId: "add unique name here",
+    entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",
     websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
     removeUrl: "add removal page URL here"

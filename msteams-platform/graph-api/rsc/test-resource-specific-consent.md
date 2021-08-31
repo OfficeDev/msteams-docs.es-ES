@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorización de teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 8dd206abd4724bd5e23217504ff45edcc580d492e7af9f10ca46d70d64488cc9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708087"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528946"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos de recursos en Teams
 
@@ -30,45 +30,46 @@ El consentimiento específico de recursos (RSC) es una integración de api de Mi
 ## <a name="example-for-a-team"></a>Ejemplo para un equipo
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-         "Channel.Create.Group",
-         "Channel.Delete.Group",
-         "ChannelMessage.Read.Group",
-         "ChannelSettings.Read.Group",
-         "ChannelSettings.Edit.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group",
-         "TeamsApp.Read.Group",
-         "TeamsTab.Read.Group",
-         "TeamsTab.Create.Group",
-         "TeamsTab.Edit.Group",
-         "TeamsTab.Delete.Group",
-         "TeamSettings.Read.Group",
-         "TeamSettings.Edit.Group"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group"
+    ]
    }
 ```
 
 ## <a name="example-for-a-chat"></a>Ejemplo para un chat
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-          "ChatSettings.Read.Chat",
-          "ChatSettings.ReadWrite.Chat",
-          "ChatMessage.Read.Chat",
-          "ChatMember.Read.Chat",
-          "Chat.Manage.Chat",
-          "TeamsTab.Read.Chat",
-          "TeamsTab.Create.Chat",
-          "TeamsTab.Delete.Chat",
-          "TeamsTab.ReadWrite.Chat",
-          "TeamsAppInstallation.Read.Chat",
-          "OnlineMeeting.ReadBasic.Chat"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat"
+    ]
    }
 ```
 
@@ -77,6 +78,8 @@ El consentimiento específico de recursos (RSC) es una integración de api de Mi
 
 >[!NOTE]
 >Si la aplicación está pensada para admitir la instalación en ámbitos de equipo y chat, los permisos de equipo y chat se pueden especificar en el mismo manifiesto en `applicationPermissions` .
+
+>Si la aplicación está destinada a tener acceso a las API de llamadas/medios, el debe ser el identificador de aplicación `webApplicationInfo.Id` de AAD de un [servicio de bot de Azure](/graph/cloud-communications-get-started#register-a-bot).
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Probar los permisos RSC agregados a un equipo mediante la aplicación Postman
 

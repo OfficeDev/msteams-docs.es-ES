@@ -5,16 +5,16 @@ description: Obtén información sobre cómo diseñar aplicaciones en Teams reun
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 621fbb1e3da7ef9083229acf93b05c72cc528bf2ec813529d93025e1a54d79c6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702609"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528918"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
-Puedes crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una llamada o envíen un aviso rápido que no interrumpa el flujo de la reunión.
+Puedes crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una reunión o que envíen un aviso rápido que no interrumpa el flujo de la reunión.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
@@ -35,23 +35,21 @@ En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una** 
 
 ### <a name="add-during-a-meeting"></a>Agregar durante una reunión
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
+
+Una vez agregada la aplicación (por ejemplo, en el escritorio), los usuarios pueden acceder a la aplicación en una reunión seleccionando **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión en el móvil." border="false":::
+
+#### <a name="desktop"></a>Escritorio
 
 En una reunión, los usuarios pueden **seleccionar Más** agregar :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **una aplicación** y seleccionar la aplicación que desean.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-Después de agregar la aplicación en el escritorio, puedes seleccionar la aplicación y usarla en una reunión seleccionando **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
-
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión en el móvil." border="false":::
-
----
-
 ## <a name="before-a-meeting"></a>Antes de una reunión
 
-Antes de una reunión, los usuarios pueden agregar contenido en la pestaña. En el siguiente ejemplo se muestra un borrador de pregunta de encuesta que los usuarios responderán durante la llamada.
+Antes de una reunión, la aplicación está disponible para los usuarios en una pestaña. En el siguiente ejemplo se muestra un borrador de pregunta de encuesta que los usuarios responderán durante la reunión.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="En el ejemplo se muestra cómo usar el contenido de la aplicación en los detalles de la reunión antes de una llamada." border="false":::
 
@@ -65,7 +63,7 @@ Antes de una reunión, los usuarios pueden agregar contenido en la pestaña. En 
 |2|**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.|
 |3|**iframe:** muestra el contenido de la aplicación.|
 
-### <a name="designing-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
+### <a name="design-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
 
 Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la pestaña de reunión:
 
@@ -88,15 +86,13 @@ Las personas pueden usar la pestaña en la reunión para:
 * Cree un sondeo, una encuesta o un elemento de tarea para los participantes de la reunión.
 * Mostrar notas relevantes para la reunión. Por ejemplo, información sobre un cliente potencial de ventas.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="En el ejemplo se muestra cómo se puede presentar contenido de sondeo en una pestaña en la reunión." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="En el ejemplo se muestra cómo se puede presentar contenido de sondeo en una pestaña de reunión en el móvil." border="false":::
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="En el ejemplo se muestra cómo se puede presentar contenido de sondeo en una pestaña en la reunión." border="false":::
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomía: pestaña En la reunión
 
@@ -146,15 +142,13 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 * Enviar aprobaciones
 * Recibir recordatorios
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo se puede usar un cuadro de diálogo en la reunión." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo se puede usar un cuadro de diálogo en la reunión en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo se puede usar un cuadro de diálogo en la reunión." border="false":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomía: cuadro de diálogo en la reunión
 
@@ -186,13 +180,13 @@ Los cuadros de diálogo en reunión pueden variar en tamaño para tener en cuent
 * **Width:** puede especificar el ancho del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido.
 * **Alto:** puede especificar el alto del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido. También puedes permitir que los usuarios se desplacen verticalmente si el contenido de la aplicación supera el alto máximo.
 
-Para implementar, especifique el ancho y el alto con la [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) clave.
+Para implementar, especifique el ancho y el alto con la [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) clave.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="En el ejemplo se muestra el cuadro de diálogo en la reunión. Ancho: Min-280 píxeles (248 píxeles iframe). Máximo: 460 píxeles (428 píxeles de iframe). Alto: 300 píxeles (iframe)." border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Usar la fase de reunión compartida
 
-La fase de reunión compartida ayuda a los participantes a interactuar y colaborar en el contenido de la aplicación en tiempo real. Por ejemplo, los usuarios pueden centrar su llamada en editar un documento, hacer una lluvia de ideas con una pizarra o revisar un panel.
+La fase de reunión compartida ayuda a los participantes a interactuar y colaborar en el contenido de la aplicación en tiempo real. Por ejemplo, los usuarios pueden centrar su reunión en editar un documento, hacer una lluvia de ideas con una pizarra o revisar un panel.
 
 Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase se vuelve a reorientar para todos los participantes de la reunión.
 
@@ -203,7 +197,7 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
 :::row:::
    :::column span="1":::
 
-**Editar y revisar:** profundizar en los paneles y planear con todos los usuarios de la llamada.
+**Editar y revisar:** profundizar en los paneles y la planeación con todos los usuarios de la reunión.
 
    :::column-end:::
    :::column span="3":::
@@ -296,7 +290,7 @@ Para los cuadros de diálogo en la reunión, quite el contenido innecesario que 
 
 #### <a name="dont-introduce-unnecessary-elements"></a>No: introducir elementos innecesarios
 
-Un único cuadro de diálogo en la reunión con varias interacciones puede distraerse de la llamada.
+Un único cuadro de diálogo en la reunión con varias interacciones puede distraer de la reunión.
 
    :::column-end:::
 :::row-end:::

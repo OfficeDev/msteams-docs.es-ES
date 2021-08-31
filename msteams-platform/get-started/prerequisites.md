@@ -5,12 +5,12 @@ description: Obtén información sobre cómo empezar con el Microsoft Teams de a
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703165"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822230"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Requisitos previos: Introducción al Microsoft Teams de aplicaciones
 
@@ -97,6 +97,7 @@ Puede usar la CLI con el `teamsfx` comando. Compruebe que el comando funciona ej
 Instalar herramientas de explorador para el desarrollo de aplicaciones. Por ejemplo, si la aplicación está escrita con React, puedes usar React Developer Tools:
 
 - [React Herramientas para desarrolladores para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Herramientas para desarrolladores para Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 Si desea obtener acceso a los datos almacenados en Azure o implementar un back-end basado en la nube para su aplicación Teams en Azure, instale estas herramientas:
 

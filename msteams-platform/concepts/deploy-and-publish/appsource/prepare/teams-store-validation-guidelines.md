@@ -4,12 +4,12 @@ description: Describe las directrices que deben seguir todas las aplicaciones en
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703610"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408547"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validación del almacén
 
@@ -199,6 +199,11 @@ La descripción larga puede proporcionar una narrativa atractiva que resalta la 
   * "... trabajar con Microsoft Teams."
   * "... dentro de Microsoft Teams."
   * "... para Microsoft Teams."
+  * "... integrado con Microsoft Teams."
+  * "... creado para... "
+  * "... desarrollado para... "
+  * "... diseñado para..."
+
 
 **No:**
 
@@ -209,15 +214,8 @@ La descripción larga puede proporcionar una narrativa atractiva que resalta la 
 * Incluya errores tipográficos, gramaticales y mayúsculas innecesarias (por ejemplo, **Usuarios** en lugar de **usuarios).**
 * Incluir vínculos a AppSource.
 * Use el siguiente idioma a menos que sea un partner de Microsoft certificado:
-  * "... integrado con Microsoft Teams"
-  * "... se integra con ..."
-  * "... creado para ..."
-  * "... basado en ..."
-  * "... se ejecuta en ..."
-  * "... habilitado por ..."
   * "... certificado para ..."
-  * "... desarrollado para ..."
-  * "... diseñado para ..."
+  * "... powered by ..."
 
 ### <a name="screenshots"></a>Capturas de pantalla
 
@@ -274,7 +272,7 @@ Si la aplicación incluye una pestaña, asegúrate de que se adhiera a estas dir
 > [!TIP]
 > Para obtener información sobre cómo crear una experiencia de aplicación de alta calidad, consulta las Teams [de diseño de pestañas.](~/tabs/design/tabs.md)
 
-### <a name="setup"></a>Configuración
+### <a name="setup"></a>Instalación
 
 * La configuración de tabulación no debe ser un usuario nuevo. Proporcione un mensaje sobre cómo completar la acción o el flujo de trabajo.
 * La autenticación debe realizarse durante la configuración de pestañas y no después.

@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702141"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528879"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para Teams reuniones
 
-Las reuniones permiten la colaboración, la asociación, la comunicación informada y los comentarios compartidos en un foro inclusivo y activo. La aplicación de reunión puede ofrecer una experiencia de usuario para cada fase del ciclo de vida de la reunión, incluida la experiencia de la aplicación previa, en la reunión y posterior a la reunión, según el estado del asistente.
+Las reuniones permiten la colaboración, la asociación, la comunicación informada y los comentarios compartidos. La aplicación de reunión puede ofrecer una experiencia de usuario para cada fase del ciclo de vida de la reunión. El ciclo de vida de la reunión incluye experiencia de aplicaciones previas a la reunión, en la reunión y posteriores a la reunión, según el estado del asistente.
 
-Los usuarios pueden acceder a las aplicaciones durante las reuniones mediante la galería de pestañas, por ejemplo:
+Los usuarios pueden acceder a las aplicaciones durante las reuniones mediante la galería de pestañas desde su calendario, como:
 
 * Pre-stage a Kanban board.
 * Inicie un cuadro de diálogo que se puede ejecutar en la reunión.
@@ -25,13 +25,17 @@ Los usuarios pueden acceder a las aplicaciones durante las reuniones mediante la
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
+La siguiente ilustración le ofrece una idea de las características de extensibilidad de la aplicación de reunión:
+
+![Extensibilidad de la aplicación para reuniones](../assets/images/apps-in-meetings/meetingappextensibility.png)
+
 En este artículo se proporciona información general sobre la extensibilidad de la aplicación de reunión, las referencias a la API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del Modo conjunto en Teams.
 
-Puedes mejorar tu experiencia de reunión mediante la característica de extensibilidad de reuniones, que te permite integrar tus aplicaciones dentro de las reuniones. También incluye diferentes etapas de un ciclo de vida de reunión, donde puede integrar pestañas, bots y extensiones de mensajería. Con las API de extensibilidad de reuniones, puede identificar diferentes roles de participante y tipos de usuario, obtener eventos de reunión, generar cuadros de diálogo en la reunión, y así sucesivamente.
+Mejore su experiencia de reunión mediante la característica de extensibilidad de la reunión. Esta característica te permite integrar tus aplicaciones en reuniones. También incluye diferentes etapas de un ciclo de vida de reunión, donde puede integrar pestañas, bots y extensiones de mensajería. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar cuadros de diálogo en la reunión.
 
-Para personalizar Teams con aplicaciones para reuniones, puedes habilitar las aplicaciones para reuniones Teams actualizando el manifiesto de la aplicación y también puedes configurar tus aplicaciones para escenarios de reunión.
+Para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para las reuniones Teams mediante la actualización del manifiesto de la aplicación y también configure las aplicaciones para escenarios de reunión.
 
-La nueva característica personalizada de escenas del modo combinado permite a los usuarios colaborar en una reunión con su equipo en un solo lugar sin estar separados por cuadros.
+La nueva característica de escenas personalizadas del modo junto permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
 
 ## <a name="see-also"></a>Vea también
 

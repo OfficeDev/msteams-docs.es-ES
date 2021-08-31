@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recibir todos los mensajes de canal con permisos de RSC
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1499bf4c78edd67af531e3fe8fa47ddfe196a923
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705891"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528904"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recibir todos los mensajes de canal con RSC
 
@@ -80,7 +80,13 @@ Para realizar la instalación local en un equipo para probar, si todos los mensa
 
     ![Bot recibe mensaje](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="code-sample"></a>Ejemplo de código
+
+| Ejemplo de nombre | Descripción | C# |Node.js|
+|-------------|-------------|------|----|
+|Mensajes de canal con permisos RSC| Microsoft Teams aplicación de ejemplo que muestra cómo un bot puede recibir todos los mensajes de canal con RSC sin que se @mentioned.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+
+## <a name="see-also"></a>Consulte también
 
 * [Conversaciones de bot](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Consentimiento específico del recurso](/microsoftteams/resource-specific-consent)

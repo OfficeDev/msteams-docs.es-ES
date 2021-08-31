@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705784"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408625"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñar tu aplicación personal para Microsoft Teams
 
@@ -27,37 +27,19 @@ Puedes encontrar instrucciones completas de diseño de aplicaciones personales, 
 
 ## <a name="add-a-personal-app"></a>Agregar una aplicación personal
 
-Puedes agregar una aplicación personal desde la tienda Teams (AppSource) o el  menú desplegable de la aplicación seleccionando el icono Más en el lado izquierdo de Teams (que se muestra en el ejemplo siguiente).
+Los usuarios pueden agregar una aplicación personal desde la tienda  Teams o el menú desplegable de la aplicación seleccionando el icono Más en el lado izquierdo de Teams (que se muestra en el ejemplo siguiente).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="En el ejemplo se muestra cómo agregar una aplicación personal desde el menú desplegable de la aplicación." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Usar una aplicación personal (área de trabajo privada)
 
-Con un área de trabajo privada, puedes ver contenido de la aplicación que sea significativo para ti en una ubicación central sin salir de Teams.
+Con un área de trabajo privada, los usuarios pueden ver contenido de la aplicación que sea significativo para ellos en una ubicación central sin dejar Teams.
 
 (Nota de implementación: el área de trabajo privada se basa en la funcionalidad [*de tabulación*](../../build-your-first-app/build-personal-tab.md) personal).
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomía: aplicación personal (área de trabajo privada)
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|A|**Atribución de la aplicación:** el logotipo y el nombre de la aplicación.|
-|N|**Pestañas:** proporciona navegación para tu aplicación personal.|
-|C|**Vista emergente:** inserta el contenido de la aplicación desde una ventana primaria a una ventana secundaria independiente.|
-|D|**Más menú:** incluye información y opciones de aplicación adicionales. (También puede crear una **Configuración** una pestaña).|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|A|**Pestañas:** proporciona navegación para tu aplicación personal.|
-|1|**iframe:** muestra el contenido de la aplicación.|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
 
@@ -75,9 +57,25 @@ Con un área de trabajo privada, puedes ver contenido de la aplicación que sea 
 |A|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |1|**webview:** muestra el contenido de la aplicación.|
 
----
+#### <a name="desktop"></a>Escritorio
 
-### <a name="designing-with-ui-templates-and-advanced-components"></a>Diseño con plantillas de interfaz de usuario y componentes avanzados
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Atribución de la aplicación:** el logotipo y el nombre de la aplicación.|
+|N|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|C|**Vista emergente:** inserta el contenido de la aplicación desde una ventana primaria a una ventana secundaria independiente.|
+|D|**Más menú:** incluye información y opciones de aplicación adicionales. (También puede crear una **Configuración** una pestaña).|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|1|**iframe:** muestra el contenido de la aplicación.|
+
+### <a name="design-with-ui-templates-and-advanced-components"></a>Diseño con plantillas de interfaz de usuario y componentes avanzados
 
 Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar la pestaña personal:
 
@@ -90,21 +88,11 @@ Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar 
 
 ## <a name="use-a-personal-app-bot"></a>Usar una aplicación personal (bot)
 
-Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). El bot está disponible en una pestaña especificada.
+Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). Los usuarios interactúan con el bot en una pestaña especificada.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomía: aplicación personal (bot)
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|A|**Ficha Bot:** Por ejemplo, incluya una **pestaña Chat** para obtener acceso a las conversaciones y notificaciones del bot.|
-|N|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
-|C|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
 
@@ -115,7 +103,15 @@ Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno 
 |C|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
 |D|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
 
----
+#### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Ficha Bot:** Por ejemplo, incluya una **pestaña Chat** para obtener acceso a las conversaciones y notificaciones del bot.|
+|N|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
+|C|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
 
 ## <a name="manage-a-personal-tab"></a>Administrar una pestaña personal
 
