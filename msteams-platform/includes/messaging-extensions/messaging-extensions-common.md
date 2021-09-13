@@ -23,7 +23,7 @@ Para agregar una extensión de mensajería, incluya una nueva estructura JSON de
 
 La definición de extensión es un objeto que tiene la siguiente estructura:
 
-| Nombre de propiedad | Objetivo | ¿Necesario? |
+| Nombre de la propiedad | Finalidad | ¿Necesario? |
 |---|---|---|
 | `botId` | El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Normalmente, debería ser el mismo que el identificador de la aplicación Teams general. | Sí |
 | `scopes` | Matriz que declara si esta extensión se puede agregar a `personal` o `team` ámbitos (o ambos). | Sí |
@@ -38,7 +38,7 @@ La extensión de mensajería debe declarar un comando, que aparece cuando el usu
 
 En el manifiesto de la aplicación, el elemento de comando es un objeto con la siguiente estructura:
 
-| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Identificador único que se asigna a este comando. La solicitud de usuario incluirá este identificador. | Sí | 1.0 |
 | `title` | Nombre del comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
