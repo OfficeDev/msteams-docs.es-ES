@@ -1,15 +1,15 @@
 ---
 title: Iniciar acciones con extensiones de mensajería
 description: Crear extensiones de mensajería basadas en acciones para permitir a los usuarios desencadenar servicios externos
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Búsqueda de extensiones de mensajería de extensiones de mensajería de teams
-ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140372"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157290"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar acciones con extensiones de mensajería
 
@@ -712,6 +712,6 @@ public class MessagesController : ApiController
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

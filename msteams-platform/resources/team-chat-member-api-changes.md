@@ -3,15 +3,15 @@ title: Cambios en la API de bot para los miembros del equipo o chat
 author: ojasvichoudhary
 description: Describe los próximos cambios en curso de las API de bot usadas para recuperar miembros de equipos y chats
 keywords: Lista de miembros del equipo de apis de bot framework
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 25d3bdc5c25caec323ab1b45566b485e2c9df9fe78cb0b91f3546fcde7183e02
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 464283c145bf8b6cff6ac65db74c9e7b97c2d04b
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705125"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157262"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams api de bots para capturar miembros de equipo o chat
 

@@ -3,13 +3,13 @@ title: Tarjetas y módulos de tareas
 description: Tarjetas y módulos de tareas.
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 5980759e1a6650dd801b92fae804994a776dd6fd8edbfb257a915f9092d7a1f9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: 245d2d27f62dba27c9468be84cf9aa514b319923
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709562"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157261"
 ---
 # <a name="cards-and-task-modules"></a>Tarjetas y módulos de tareas
 
@@ -32,7 +32,7 @@ Puede dar formato al texto de la tarjeta con un subconjunto de formato XML o HTM
 
 Puede invocar los módulos de tareas en pestañas de canal o personales, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos puede mejorarse agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde Teams bots usando botones en tarjetas adaptables y tarjetas de Bot Framework.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
 * [Módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md)
