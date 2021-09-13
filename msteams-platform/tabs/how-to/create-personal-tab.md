@@ -2,15 +2,15 @@
 title: Crear una pestaña personal
 author: laujan
 description: Guía de inicio rápido para crear una pestaña personal con el Generador de Yeoman para Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: e45474d41404e057f2d73f7d1fad24a19e56b4f5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345679"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157117"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -681,7 +681,7 @@ Si creas un bot con un **ámbito personal,** aparece en la primera posición de 
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

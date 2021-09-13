@@ -2,14 +2,14 @@
 title: Introducción a App Studio para Microsoft Teams
 description: Comience a crear aplicaciones increíbles en Microsoft Teams a través de App Studio
 keywords: introducción a app studio de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 507a044098e479c7b737d6d7711a4e912ec81cbfe56fda2345a088618c47b36b
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704064"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157421"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administrar tus aplicaciones con App Studio para Microsoft Teams
 

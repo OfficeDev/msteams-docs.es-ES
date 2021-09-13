@@ -3,14 +3,14 @@ title: Formato de mensaje bot
 description: Describe los detalles del formato de los mensajes de bot
 keywords: Escenarios de teams canaliza el mensaje del bot de conversación
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e737cd42d2aa00e3e4f302b4917fef67adaa5645
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566477"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157378"
 ---
 # <a name="message-formatting-for-bots"></a>Formato de mensaje para bots
 
@@ -60,7 +60,7 @@ La compatibilidad con el formato de texto varía según el tipo de mensaje y por
 
 ### <a name="text-only-messages"></a>Mensajes de solo texto
 
-| Estilo                     | Desktop | iOS | Android |
+| Estilo                     | Escritorio | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |

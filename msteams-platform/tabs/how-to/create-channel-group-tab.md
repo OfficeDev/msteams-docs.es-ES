@@ -2,15 +2,15 @@
 title: Crear una pestaña de canal o grupo
 author: laujan
 description: Guía de inicio rápido para crear una pestaña de canal y grupo con el Generador de Yeoman para Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: fedaf3ec639917110e16c666734fa3eedbcda18e
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179993"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157118"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Crear una pestaña de canal o grupo
 
@@ -199,7 +199,7 @@ gulp build
     gulp serve
     ```
 
-1. Escriba en el explorador, reemplace por el nombre de la pestaña y vea la página principal de la aplicación como se `http://localhost:3007/<yourDefaultAppNameTab>/` muestra en la siguiente **<yourDefaultAppNameTab>** imagen:
+1. Escriba `http://localhost:3007/<yourDefaultAppNameTab>/` en el explorador, **reemplacedefaultAppNameTab** por el nombre de la pestaña y vea la página principal de la aplicación como se muestra en la siguiente imagen:
 
     ![captura de pantalla de la página principal](~/assets/images/tab-images/homePage.png)
 
@@ -636,7 +636,7 @@ En **Tab.cshtml,** la aplicación presenta al usuario dos botones de opción par
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

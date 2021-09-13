@@ -3,14 +3,14 @@ title: Bots y SDK
 author: surbhigupta
 description: Información general sobre las herramientas y SDK para crear Microsoft Teams bots.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707102"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157097"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -112,7 +112,7 @@ Una de las desventajas de los bots es que es difícil mantener una gran base de 
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -2,14 +2,14 @@
 title: Vista previa del desarrollador
 description: Describe las características de public developer preview de Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Características para desarrolladores de teams preview
-ms.openlocfilehash: 1dc719ae9ead4ef7c7519925b79ca62859ada903
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 975dc5b29fce984b9c8321ee9b8fc9fa3d53b822
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345561"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157461"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar de desarrolladores públicos para Microsoft Teams
 

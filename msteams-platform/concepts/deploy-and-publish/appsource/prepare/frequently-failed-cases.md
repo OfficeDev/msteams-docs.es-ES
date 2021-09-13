@@ -2,15 +2,15 @@
 title: Sugerencias de envío de aplicaciones y casos con frecuencia con errores
 description: describe sugerencias para un envío de Teams de almacenamiento y motivos comunes por los que los envíos fallan
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Sugerencias de envío de aplicaciones con frecuencia con errores en las directrices de validación de casos
-ms.openlocfilehash: 91ae68562d93e4ad8770d5251671c3fa756aa0b15482b4495fe016a01e068707
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706574"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157534"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío Microsoft Teams aplicación correcta
 
@@ -246,7 +246,7 @@ Advierto a los usuarios antes de que la aplicación descargue los archivos o arc
 * Consulte la guía [de solución de problemas](/azure/active-directory/develop/troubleshoot-publisher-verification) para obtener información adicional.
 * Complete la autoaestación a través del centro de partners. Rellene el cuestionario Self-Assessment en **Cumplimiento de aplicaciones**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Más información sobre las Teams de aprobación de aplicaciones](/legal/marketplace/certification-policies#1140-teams)
 * [Sección 100: General](/legal/marketplace/certification-policies#100-general)

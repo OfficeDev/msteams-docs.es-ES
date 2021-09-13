@@ -3,14 +3,14 @@ title: Agregar un menú bot
 description: Describe cómo crear menús para bots en Microsoft Teams
 keywords: creación de menús de bots de teams
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: da6f36e1b7071b92f6411ab7d2afdccb795946b7
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 14100c9032f0adf964975abbe436c84194475a99
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566771"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157686"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>Agregar un menú bot en Microsoft Teams
 

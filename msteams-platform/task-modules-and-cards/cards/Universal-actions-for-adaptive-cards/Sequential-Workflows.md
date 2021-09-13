@@ -3,13 +3,13 @@ title: Flujos de trabajo secuenciales
 description: Ejemplo de flujos de trabajo secuenciales mediante acciones universales
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705525"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157257"
 ---
 # <a name="sequential-workflows"></a>Flujos de trabajo secuenciales
 
@@ -123,12 +123,12 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="code-samples"></a>Muestras de código
+## <a name="code-samples"></a>Ejemplos de código
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Bot de servicio de alimentos de Teams | Crea un bot que acepte el pedido de alimentos con tarjetas adaptables. |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Aún no disponible |
-| Tarjetas adaptables de flujos de trabajo secuenciales | Muestra cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y tarjetas adaptables actualizadas en bots. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Bot de servicio de alimentos de Teams | Crea un bot que acepte el pedido de alimentos con tarjetas adaptables. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Aún no disponible |
+| Tarjetas adaptables de flujos de trabajo secuenciales | Muestra cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y tarjetas adaptables actualizadas en bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 
 ## <a name="see-also"></a>Consulte también

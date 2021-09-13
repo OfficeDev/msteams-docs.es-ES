@@ -3,15 +3,15 @@ title: Requisitos previos
 author: surbhigupta
 description: Todas las pestañas Microsoft Teams deben cumplir estos requisitos.
 keywords: Canal de grupo de pestañas de teams configurable
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701803"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157185"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 

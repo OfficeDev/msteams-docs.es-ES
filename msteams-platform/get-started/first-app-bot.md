@@ -5,12 +5,13 @@ description: Crear un bot de conversación para Microsoft Teams con el Kit de he
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 2b39dc51c1c175e738b88376a298df82f25a582a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345644"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157334"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Cree su primer bot de conversación para Microsoft Teams
 

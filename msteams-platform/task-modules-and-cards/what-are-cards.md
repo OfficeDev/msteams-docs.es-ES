@@ -1,15 +1,15 @@
 ---
 title: Tarjetas
 description: Describe las tarjetas y cómo se usan en bots, conectores y extensiones de mensajería
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: mensajes de tarjetas de bots de conectores
 ms.topic: overview
-ms.openlocfilehash: 5fce5983e5197bfde37d2c92d427e8135b294d422eb019ef207eeb7f0e5be9f3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 345e37a9af00c2f3300cc76f4b44b83cc47d0392
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706635"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157578"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -62,7 +62,7 @@ Además de las tarjetas adaptables, Teams admite otros dos tipos de tarjetas:
 
 Las tarjetas adaptables con webhooks entrantes permiten usar las capacidades enriquecibles y flexibles de las tarjetas adaptables. Envía datos mediante webhooks entrantes en Teams desde su servicio web.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Dar formato a las tarjetas Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Diseñar tarjetas adaptables](~/task-modules-and-cards/cards/design-effective-cards.md)

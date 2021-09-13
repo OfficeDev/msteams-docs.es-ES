@@ -2,15 +2,15 @@
 title: Diseño de notificaciones de fuentes de actividad
 author: heath-hamilton
 description: Obtén información sobre cómo diseñar notificaciones de fuentes de actividad para tu Teams aplicación y obtener el kit Microsoft Teams interfaz de usuario.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408555"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157529"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Diseño de notificaciones de fuente de actividad para la Microsoft Teams aplicación
 

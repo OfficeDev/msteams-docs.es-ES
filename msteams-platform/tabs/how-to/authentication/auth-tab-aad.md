@@ -2,14 +2,14 @@
 title: Autenticación para pestañas mediante Azure Active Directory
 description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: fichas de autenticación de teams AAD
-ms.openlocfilehash: 69b05edd2cb0106ccf951490c36e2268f947af418a50dd9cc53fe7ec1b3e1311
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6bd963a0ff6eee8b239693904fdf30798fd192d0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707790"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157074"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una Microsoft Teams pestaña
 
@@ -161,4 +161,4 @@ Código de ejemplo que muestra el proceso de autenticación de tabulación con A
 
 | **Ejemplo de nombre** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
-| Microsoft Teams de pestañas | Proceso de autenticación de tabulación con Azure AD. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+| Microsoft Teams de pestañas | Proceso de autenticación de tabulación con Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |

@@ -2,15 +2,15 @@
 title: Diseño de módulos de tareas
 author: heath-hamilton
 description: Aprende a diseñar módulos de tareas para Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 8edcc24d5fca7ba7e8260d2cc20ee8c6d7282af2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408618"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157249"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la Microsoft Teams aplicación
 
@@ -18,12 +18,12 @@ Puedes crear experiencias emergentes modales en tu Teams con módulos de tareas.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="En el ejemplo se muestra un módulo de tareas." border="false":::
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Puedes encontrar instrucciones de diseño de módulos de tareas más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit Microsoft Teams interfaz de usuario.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="open-a-task-module"></a>Abrir un módulo de tareas
 
@@ -112,7 +112,7 @@ Cree un flujo de inicio de sesión o registro centrado con una serie de módulos
 
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Ejemplo de experiencia de inicio de sesión en un módulo de tareas." border="false":::
 
-### <a name="media"></a>Elementos multimedia
+### <a name="media"></a>Multimedia
 
 Insertar contenido multimedia en un módulo de tareas para una experiencia de visualización centrada.
 

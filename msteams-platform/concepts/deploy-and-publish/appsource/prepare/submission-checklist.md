@@ -2,15 +2,15 @@
 title: Preparar el envío de la tienda
 description: Describe los pasos finales antes de enviar Microsoft Teams aplicación para que aparezca en la tienda.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d18cd98bf9b5b0921a45c4f4a4affb4b51153c90668da7cb990b2fd9b9f669f7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f02eb250925ce262ad78e5be1edbe42f4b9469e5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706489"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157114"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío Microsoft Teams almacén
 

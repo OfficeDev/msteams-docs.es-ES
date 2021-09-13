@@ -3,14 +3,14 @@ title: Combinar bots con pestañas
 description: Describe cómo usar pestañas y bots juntos
 keywords: desarrollo de pestañas de bots de teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 3273369ad1122355b792dc3d429c3a4eff7e1d47
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3053dbca3b1e91683564eb902d8b142fd4a30ddb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566456"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157462"
 ---
 # <a name="combine-bots-with-tabs"></a>Combinar bots con pestañas
 

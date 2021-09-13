@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identificar requisitos previos con aplicaciones para Teams reuniones
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: c237a3131eac0286a60fe5bbd398439b51245ee9
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822209"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157181"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Requisitos previos para las aplicaciones en las reuniones de Teams
 
@@ -79,7 +79,7 @@ La `GetParticipant` API permite que un bot obtenga información de los participa
 
 La `GetParticipant` API incluye los siguientes parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
@@ -184,7 +184,7 @@ La API permite proporcionar señales de reunión que se entregan mediante la API
 
 La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
@@ -279,7 +279,7 @@ Para usar la `Meeting Details` API, debe obtener permisos de RSC. Use el siguien
 
 La `Meeting Details` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 

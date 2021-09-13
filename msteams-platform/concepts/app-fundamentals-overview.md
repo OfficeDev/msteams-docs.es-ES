@@ -3,14 +3,14 @@ title: Introducción a los conceptos básicos de desarrollo de aplicaciones
 author: heath-hamilton
 description: Describir los conceptos fundamentales del Teams de plataformas.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345582"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157545"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de desarrollo de aplicaciones
 

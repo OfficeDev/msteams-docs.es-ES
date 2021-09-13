@@ -3,15 +3,15 @@ author: heath-hamilton
 description: Procedimientos recomendados para integrar aplicaciones web existentes con Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Aplicaciones web
-ms.openlocfilehash: ba34241186484bb838ba3f61e5ca55914115a1f1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345763"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157135"
 ---
 # <a name="web-apps"></a>Aplicaciones web 
 

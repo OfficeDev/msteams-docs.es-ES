@@ -3,25 +3,25 @@ title: Diseñar la aplicación con componentes de interfaz de usuario avanzados
 author: heath-hamilton
 description: Obtenga información sobre los componentes de la interfaz de usuario usados Teams .
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408695"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157625"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados
 
 Los siguientes componentes son una combinación de componentes básicos de [la](~/concepts/design/design-teams-app-basic-ui-components.md) interfaz de usuario que puedes usar para situaciones comunes Teams de diseño, como la navegación.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de</a>usuario, el kit Microsoft Teams de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Ruta de navegación
 

@@ -3,14 +3,14 @@ title: Enviar mensajes proactivos
 description: Describe cómo enviar mensajes proactivos con el Microsoft Teams bot.
 ms.topic: conceptual
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 5a999769879c8661d16b79f885b463166be557903a6448c709eb06ed16e49345
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705703"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157566"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -270,9 +270,9 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 
 | **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams Conceptos básicos de conversación  | Muestra los conceptos básicos de las conversaciones Teams, incluido el envío de mensajes proactivos de uno a uno.| [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
-| Iniciar nuevo subproceso en un canal | Muestra la creación de un nuevo subproceso en un canal. | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo usar la instalación proactiva de la aplicación para los usuarios y enviar notificaciones proactivas llamando a las API Graph Microsoft. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Teams Conceptos básicos de conversación  | Muestra los conceptos básicos de las conversaciones Teams, incluido el envío de mensajes proactivos de uno a uno.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Iniciar nuevo subproceso en un canal | Muestra la creación de un nuevo subproceso en un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo usar la instalación proactiva de la aplicación para los usuarios y enviar notificaciones proactivas llamando a las API Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>Ejemplo de código adicional
 

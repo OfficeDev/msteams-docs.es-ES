@@ -5,12 +5,13 @@ description: Obtén información sobre cómo empezar con el Microsoft Teams de a
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.localizationpriority: none
+ms.openlocfilehash: de9b351761f45999ce8cb0438c5d83041727f7f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822230"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157298"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Requisitos previos: Introducción al Microsoft Teams de aplicaciones
 
@@ -200,7 +201,7 @@ Visual Studio 2019 le pedirá que inicie sesión en cada servicio según sea nec
 
     Ahora que el entorno de desarrollo está configurado, puedes crear, crear e implementar la primera aplicación Teams desarrollo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md) 
 * [Crear una aplicación con React](first-app-react.md)

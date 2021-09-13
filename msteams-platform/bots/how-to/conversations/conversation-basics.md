@@ -3,14 +3,14 @@ title: Conceptos básicos de la conversación
 description: Introducción a las conversaciones
 ms.topic: overview
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 keyword: conversations basics messages
-ms.openlocfilehash: 886c2764c2d8dceecb0f6a0e960b3487d9360c3682e46c9a8098f6fb8a2876bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 767efd3b6351e3f771f6ffe5cb6ff36181009f4b
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705864"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157653"
 ---
 # <a name="conversation-basics"></a>Conceptos básicos de la conversación
 

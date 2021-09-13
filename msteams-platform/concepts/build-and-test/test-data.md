@@ -2,15 +2,15 @@
 title: Agregar datos de prueba al inquilino Microsoft 365 prueba
 description: Configurar la suscripción de Office 365 programa para desarrolladores para realizar pruebas correctas de Microsoft Teams aplicaciones
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707116"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157542"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino Microsoft 365 prueba
 
@@ -29,7 +29,7 @@ Puedes probar la aplicación Microsoft Teams con datos de ejemplo con una Micros
 
 ## <a name="allow-users-to-upload-apps"></a>Permitir a los usuarios cargar aplicaciones
 
-De forma predeterminada, solo los administradores globales o Teams administradores de servicios pueden cargar (instalación local) aplicaciones en un inquilino. También puedes permitir que los usuarios carguen aplicaciones personalizadas para su propio uso o en equipos para realizar pruebas. Para obtener más información, consulta Administrar las directivas y la configuración de aplicaciones [personalizadas en Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).
+De forma predeterminada, solo los administradores globales o Teams administradores de servicios pueden cargar (instalación local) aplicaciones en un inquilino. También puedes permitir que los usuarios carguen aplicaciones personalizadas para su propio uso o en equipos para realizar pruebas. Para obtener más información, consulta Administrar las directivas y la configuración de aplicaciones [personalizadas en Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## <a name="create-teams-and-channels-for-testing"></a>Crear equipos y canales para pruebas
 
@@ -246,7 +246,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
 
 5. Una vez finalizado el script, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar la pestaña](~/tabs/how-to/developer-tools.md) 
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)

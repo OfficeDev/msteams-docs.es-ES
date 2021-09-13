@@ -3,15 +3,15 @@ title: Comprender las funcionalidades de la aplicación
 author: heath-hamilton
 description: Teams de aplicaciones explicadas
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e0f7a57fb125450593fd63c412278e1030c51d42
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: a10c991c374392afca0ce793c0c34ea3fc0ca611
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345693"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157152"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprender Microsoft Teams funcionalidades de la aplicación
 
@@ -64,7 +64,7 @@ La siguiente lista ayuda a identificar la disponibilidad de GCC, GCC-High y DOD 
 * Para las aplicaciones de instalación local, consulta habilitar la aplicación [Teams](../concepts/design/enable-app-customization.md) [personalizada,](../concepts/deploy-and-publish/apps-publish-overview.md)distribuir la aplicación Microsoft Teams y Upload la aplicación en [Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Para los conectores personalizados, vea [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear aplicaciones para Teams](../overview.md) 
  [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)

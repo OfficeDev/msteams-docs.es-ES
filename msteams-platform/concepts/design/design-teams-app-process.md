@@ -2,15 +2,15 @@
 title: Proceso de diseño de aplicaciones
 author: heath-hamilton
 description: Obtén una idea general de cómo y cuándo puedes usar herramientas y recursos de Microsoft para diseñar una aplicación Microsoft Teams eficaz.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f4d406426cdadd946e3579cec85e8c5c8133c2b5206a00fc1e32a29a2442b7cd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 34401bf53196601b8836012fa4c96296510472a8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704495"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157618"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Proceso de diseño para Microsoft Teams aplicaciones
 

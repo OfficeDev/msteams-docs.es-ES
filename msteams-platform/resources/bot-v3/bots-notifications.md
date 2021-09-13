@@ -4,15 +4,15 @@ description: Describe cómo controlar eventos en bots para Microsoft Teams
 keywords: eventos de bots de teams
 ms.date: 05/20/2019
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 6a9eaab388927fcff51d7883e1a61ca1cec81fac
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 6189460e16459e737656f68945f1b0a2a3549834
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069077"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157501"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Controlar eventos de bot en Microsoft Teams
 

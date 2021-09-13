@@ -3,13 +3,13 @@ title: Invocar y descartar módulos de tareas
 description: Invocar y descartar módulos de tareas.
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: b58c4445953cc668156745871698679462ce888f
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.localizationpriority: medium
+ms.openlocfilehash: ab6425ae90c04e142e5d69f4a41ff49358731a23
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398672"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157246"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar y descartar módulos de tareas
 
@@ -194,7 +194,7 @@ Para los tipos de datos y los valores permitidos para `<TaskInfo.url>` , , , y ,
 
 En la tabla siguiente se proporciona información `APP_ID` sobre `BOT_APP_ID` y :
 
-| Valor | Tipo | Necesario | Descripción |
+| Valor | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Sí | El [identificador](~/resources/schema/manifest-schema.md#id) de la aplicación que invoca el módulo de tareas. La [matriz validDomains](~/resources/schema/manifest-schema.md#validdomains) del manifiesto `APP_ID` para debe contener el dominio para if está en la dirección `url` `url` URL. El identificador de la aplicación ya se conoce cuando se invoca un módulo de tareas desde una pestaña o un bot, por lo que no se incluye en `TaskInfo` . |
 | `BOT_APP_ID` | string | No | Si se especifica `completionBotId` un valor para, el `result` objeto se envía mediante un mensaje al bot `task/submit invoke` especificado. `BOT_APP_ID` debe especificarse como bot en el manifiesto de la aplicación, es decir, no se puede enviar a ningún bot. |

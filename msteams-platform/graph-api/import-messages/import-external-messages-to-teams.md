@@ -1,17 +1,17 @@
 ---
 title: Use Microsoft Graph para importar mensajes de plataforma externa a Teams
 description: Describe cómo usar Microsoft Graph importar mensajes desde una plataforma externa a Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704406"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157606"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
@@ -373,7 +373,7 @@ En la tabla siguiente se proporciona el ámbito de contenido:
 |Imágenes en línea como parte del mensaje|En menciones|
 |Vínculos a archivos existentes en SPO o OneDrive|Reacciones|
 |Mensajes con texto enriquecido|Vídeos|
-|Cadena de respuesta de mensajes|Anuncios|
+|Cadena de respuesta de mensajes|Announcements|
 |Procesamiento de alto rendimiento|Fragmentos de código|
 ||Adhesivos|
 ||Emojis|

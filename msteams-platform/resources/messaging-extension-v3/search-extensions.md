@@ -3,14 +3,14 @@ title: Búsqueda con extensiones de mensajería
 description: Describe cómo desarrollar extensiones de mensajería basadas en búsquedas
 keywords: Búsqueda de extensiones de mensajería de extensiones de mensajería de teams
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 515472838ff2ad35ef5dd295043ec27c53edb4f1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a8e4a80835dade53c129e9efe1b21cd6715104ce
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566736"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157665"
 ---
 # <a name="search-with-messaging-extensions"></a>Búsqueda con extensiones de mensajería
 
@@ -127,7 +127,7 @@ Cuando un usuario realiza una consulta, Microsoft Teams envía al servicio un ob
 
 Además de las propiedades de actividad del bot estándar, la carga contiene los siguientes metadatos de solicitud:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud; debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Actualmente se admiten los siguientes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -141,7 +141,7 @@ Además de las propiedades de actividad del bot estándar, la carga contiene los
 
 Los parámetros de solicitud en sí se encuentran en el objeto value, que incluye las siguientes propiedades:
 
-| Nombre de propiedad | Objetivo |
+| Nombre de la propiedad | Objetivo |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
 | `parameters` | Matriz de parámetros: cada objeto de parámetro contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
@@ -239,7 +239,7 @@ Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP
 
 El servicio debe responder con los resultados que coincidan con la consulta de usuario. La respuesta debe indicar un código de estado HTTP y `200 OK` un objeto application/json válido con el siguiente cuerpo:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
 |`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería <br>`message`: muestra un mensaje de texto sin formato |
@@ -658,6 +658,6 @@ const app = new App();
 app.run();
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

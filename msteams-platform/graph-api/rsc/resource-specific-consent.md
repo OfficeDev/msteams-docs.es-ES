@@ -1,17 +1,17 @@
 ---
 title: Habilitar el consentimiento específico de recursos en Teams
 description: Describe el consentimiento específico de los recursos en Teams y cómo aprovecharlo.
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorización de teams OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 256bdf29079f9a8f3085c63f7e072414c4bd3ce3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822216"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157422"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 

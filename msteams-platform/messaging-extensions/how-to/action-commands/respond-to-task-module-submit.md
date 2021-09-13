@@ -2,15 +2,15 @@
 title: Responder a la acción de envío del módulo de tareas
 author: surbhigupta
 description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensajería
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9d0690a620efc3e658372cfaecf31504787b3d71
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068958"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157689"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -584,7 +584,7 @@ Para usar la atribución de usuario en teams, debe agregar la entidad de menció
 
 La siguiente sección es una descripción de las entidades de la `OnBehalfOf` matriz:
 
-|Campo|Tipo|Descripción|
+|Field|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
 |`mentionType`|Cadena|Describe la mención de una "persona".|

@@ -3,14 +3,14 @@ title: Probar y depurar el bot localmente
 author: surbhigupta
 description: Probar y depurar el bot localmente con un IDE
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5774833806940fcd4a2cc771687ecfcd9126c835582f71c21f26b92314a1df40
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706319"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157221"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -93,7 +93,7 @@ Para impedir que el bot reciba mensajes, vaya al **Panel de bots** y edite el Mi
 
 Para quitar el bot completamente de Teams, vaya al **Panel de bots** y edite el Microsoft Teams. Elija el **botón** Eliminar en la parte inferior. Esto evita que los usuarios detecten, agreguen e interactúen con el bot. Esto no quita el bot de las instancias de Teams de otro usuario, pero también deja de funcionar para ellas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Depurar el bot de llamadas y reuniones de forma local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

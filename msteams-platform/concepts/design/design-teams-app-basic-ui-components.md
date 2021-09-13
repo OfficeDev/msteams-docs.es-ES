@@ -3,14 +3,14 @@ title: Diseñar la aplicación con componentes básicos Fluent interfaz de usuar
 author: heath-hamilton
 description: Obtén información sobre los componentes de interfaz de usuario primitivos que se usan habitualmente para crear Microsoft Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704231"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157369"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación Microsoft Teams con componentes Fluent interfaz de usuario básica
 
@@ -18,12 +18,12 @@ Puedes crear la aplicación Teams desde cero con los siguientes componentes bás
 
 Las ilustraciones de esta página muestran cómo se ven los componentes Teams los temas predeterminados (claros) y oscuros.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de</a>usuario, el kit Microsoft Teams de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerta
 

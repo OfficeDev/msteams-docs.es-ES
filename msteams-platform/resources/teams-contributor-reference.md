@@ -3,14 +3,14 @@ title: Contribuir a este contenido
 description: pasos para crear y publicar Teams documentación
 author: surbhigupta
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d09f946926f7377b65910c7bccce7cef8e30ef739afa31b94c83354cffbd7c27
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28fe69d59757bf53ddd105fde403d625d5faf419
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708059"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157454"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 
@@ -30,7 +30,7 @@ Teams documentación forma parte de la biblioteca de documentación técnica de 
 > * Instalar en VS Code:
 
    1. Seleccione el **icono Extensiones** en la barra de actividad lateral o use el comando Ver = **> Extensiones** o Ctrl+Mayús+X y busque **Microsoft Docs Authoring Pack**.
-   1. Seleccione **Instalar**.
+   1. Haga clic en **Instalar**.
    1. Después de la instalación, **el botón Instalar** cambia al botón **Administrar** engranaje.
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisar la Guía de colaboradores de Microsoft Docs
@@ -69,7 +69,7 @@ Para obtener más información sobre hipervínculos y rutas de acceso a archivos
 
 Los ejemplos de código desempeñan un papel importante para usar api y SDK de forma eficaz. Los ejemplos de código bien presentados pueden comunicar cómo funcionan las cosas más claramente que el texto descriptivo y la información de instrucciones solo. Los ejemplos de código deben ser precisos, concisos, bien documentados y fáciles de usar para el lector. El código fácil de leer debe ser fácil de comprender, probar, depurar, mantener, modificar y extender. Para obtener más información, [vea cómo incluir código en los documentos](/contribute/code-in-docs).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Microsoft Docs](/)
 * [guía de colaboradores](/contribute)

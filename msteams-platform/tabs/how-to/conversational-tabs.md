@@ -5,12 +5,13 @@ description: Crear chat de sub entity conversacional para las pestañas del cana
 keywords: Canal de pestañas de teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529010"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157654"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -91,7 +92,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Ejemplo de nombre | Descripción | C# |Node.js|
+| Ejemplo de nombre | Descripción | C # |Node.js|
 |-------------|-------------|------|----|
 |Crear pestaña Conversación| Microsoft Teams aplicación de muestra de pestaña para mostrar la pestaña crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 

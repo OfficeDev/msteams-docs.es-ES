@@ -3,14 +3,14 @@ title: Probar y depurar el bot
 description: Describe cómo probar bots en Microsoft Teams
 keywords: pruebas de bots de teams
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 269b0680e45d764cf4cb0269c40d3d202145edb8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 7d888d84434927cc22b4331ec51a01fb8905f555
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566463"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157214"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Probar y depurar el Microsoft Teams bot
 
@@ -38,7 +38,7 @@ Usa el punto de conexión https proporcionado por ngrok en el manifiesto de la a
 
 En ocasiones, es posible que sea necesario probar el bot sin instalarlo como una aplicación en Teams. Proporcionamos dos métodos para hacerlo a continuación. Probar el bot sin instalarlo como una aplicación puede ser útil para garantizar que el bot está disponible y responde, pero no te permitirá probar toda la amplitud de la funcionalidad Microsoft Teams que puedas haber agregado al bot. Si necesita probar completamente el bot, siga las instrucciones para [realizar pruebas cargando](#test-by-uploading-to-teams).
 
-### <a name="use-the-bot-emulator"></a>Usar el emulador de bots
+### <a name="use-the-bot-emulator"></a>Use el bot Emulator
 
 El Bot Framework Emulator es una aplicación de escritorio que permite a los desarrolladores de bots probar y depurar sus bots, ya sea de forma local o remota. Con el emulador, puedes chatear con el bot e inspeccionar los mensajes que el bot envía y recibe. Esto puede ser útil para comprobar que el bot está disponible y responde, pero el emulador no le permitirá probar ninguna funcionalidad específica de Teams que haya agregado al bot, ni las respuestas del bot serán una representación visual precisa de cómo se representarán en Teams. Si necesita probar cualquiera de esos aspectos, es mejor [cargar el bot](#test-by-uploading-to-teams).
 

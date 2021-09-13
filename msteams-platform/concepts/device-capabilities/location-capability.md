@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Cómo usar el SDK Teams cliente de JavaScript para aprovechar las funcionalidades de ubicación
 keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345658"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157609"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -93,7 +93,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condición|
+|Código de error |  Nombre del error     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|

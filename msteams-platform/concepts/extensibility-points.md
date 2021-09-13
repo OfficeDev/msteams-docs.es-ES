@@ -3,14 +3,14 @@ title: Puntos de entrada para aplicaciones de Teams
 author: heath-hamilton
 description: Describe dónde pueden los usuarios descubrir y usar su aplicación en Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702763"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157342"
 ---
 # <a name="entry-points-for-teams-apps"></a>Puntos de entrada para aplicaciones de Teams
 

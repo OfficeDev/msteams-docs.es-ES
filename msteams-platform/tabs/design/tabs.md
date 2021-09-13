@@ -2,26 +2,26 @@
 title: Pestañas de diseño para escritorio, web y móvil
 description: Aprende a diseñar una pestaña Teams para escritorio, web y móvil, y obtén el kit Microsoft Teams interfaz de usuario.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a33bc00f26d9a296d4b76e3885cd12d772e8f8e8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408632"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157077"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñe la pestaña para Microsoft Teams
 
 Una pestaña es un lienzo grande para el contenido de la aplicación. Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo los usuarios pueden agregar, usar y administrar pestañas en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Puedes encontrar instrucciones completas de diseño de pestañas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Agregar una pestaña
 
@@ -106,7 +106,7 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="En esta ilustración se muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|

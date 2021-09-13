@@ -4,12 +4,13 @@ description: Describe las opciones para publicar la Microsoft Teams aplicación.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: eeaa0dc7804938a663156ad019123b32630eb14f
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345707"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157538"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir la aplicación Microsoft Teams aplicación
 
@@ -43,7 +44,7 @@ Haz que la aplicación esté disponible para todos los usuarios. Este tipo de di
 
 Para obtener más información, [vea publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cumplimiento de Aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)
 

@@ -3,14 +3,14 @@ title: Creación de un bot
 description: Describe cómo crear bots en Microsoft Teams
 ms.topic: how-to
 keywords: creación de bots de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 67aa3e2cfd1950dced84785a9f6f35cfd4d5ff85
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d258f9e6713e6bb3d68aa19ef8a3b36d44dd3a07
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566778"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157406"
 ---
 # <a name="create-a-bot"></a>Creación de un bot
 
@@ -49,6 +49,6 @@ Para obtener más información, consulte [Bot Framework Documentation](/azure/bo
 > * Si registra un bot con Microsoft Azure Portal, debe tener una cuenta de Microsoft Azure. Puede [crear una de forma gratuita](https://azure.microsoft.com/free/). Para comprobar su identidad al crear una, debe proporcionar una tarjeta de crédito, pero no se le cobrará; siempre es gratuito crear y usar bots con Microsoft Teams.
 > * Ahora puedes usar App Studio para registrar/actualizar la información de la aplicación y el bot directamente en Microsoft Teams. Solo tendrás que usar el portal de Microsoft Azure para agregar o configurar otros canales de Bot Framework como Direct Line, Web Chat, Skype y Facebook Messenger.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

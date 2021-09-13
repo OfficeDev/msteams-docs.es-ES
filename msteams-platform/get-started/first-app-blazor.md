@@ -5,12 +5,13 @@ description: Cree rápidamente una aplicación de Microsoft Teams en la que se m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: eb3f5c66a8e7c6f19c96d192fb8b84124b6203d47d54f161633dd12969adbb17
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707251"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157337"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Crear y ejecutar la primera aplicación Microsoft Teams con Blazor
 
@@ -158,7 +159,7 @@ La implementación consta de dos pasos:
 1. Se crean los recursos en la nube necesarios. Esto también se conoce como aprovisionamiento.
 1. Inicia la codificación y copia la aplicación en los recursos de nube creados.
 
-> **Vista previa**
+> **VISTA PREVIA**
 >
 > La compatibilidad con aplicaciones de Blazor es nueva en Teams Toolkit.  El aprovisionamiento y la implementación se realizan con una combinación de Visual Studio 2019 y el Portal de desarrolladores para Teams.
 

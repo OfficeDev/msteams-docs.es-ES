@@ -1,19 +1,19 @@
 ---
-title: Integrar selector de personas
+title: Integrar Selector de personas
 author: Rajeshwari-v
 description: Cómo usar Teams SDK de cliente de JavaScript para integrar el control selector de personas
 keywords: control de selector de personas
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345293"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157366"
 ---
-# <a name="integrate-people-picker"></a>Integrar selector de personas  
+# <a name="integrate-people-picker"></a>Integrar Selector de personas  
 
 Selector de personas es un control para buscar y seleccionar personas. Esta es una funcionalidad nativa disponible en Teams plataforma. Puedes integrar Teams de entrada del selector de personas nativo con tus aplicaciones web. Puede seleccionar entre una o varias selecciones y configuraciones, como limitar la búsqueda en un chat, canales o en toda la organización.
 
@@ -44,8 +44,8 @@ La `selectPeople` API incluye las siguientes configuraciones de entrada:
 
 |Parámetro Configuration|Tipo|Descripción| Valor predeterminado|
 |-----|------|--------------|------|
-|`title`| String| Es un parámetro opcional. Establece el título del control Selector de personas. | Seleccionar personas|
-|`setSelected`|String| Es un parámetro opcional. Debe pasar los ID de AAD de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
+|`title`| Cadena| Es un parámetro opcional. Establece el título del control Selector de personas. | Seleccionar personas|
+|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar los ID de AAD de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
 |`openOrgWideSearchInChatOrChannel`|Booleano | Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas en el ámbito de toda la organización incluso si la aplicación se agrega a un chat o canal. |Falso|
 |`singleSelect`|Booleano|Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas que restringe la selección a un solo usuario. |Falso|
 
@@ -82,7 +82,7 @@ En la siguiente imagen se muestra la experiencia del selector de personas en una
 
 Debes asegurarte de controlar los errores correctamente en la aplicación web. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condición|
+|Código de error |  Nombre del error     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al iniciar el Selector de personas.|
@@ -90,7 +90,7 @@ Debes asegurarte de controlar los errores correctamente en la aplicación web. E
 | **8000** | USER_ABORT |El usuario canceló la operación.|
 | **9000** | OLD_PLATFORM | El usuario se encuentra en una compilación de plataforma antigua donde la implementación de la API no está presente.  La actualización de la compilación resuelve el problema.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)

@@ -3,15 +3,15 @@ title: 'Tutorial: crear la primera aplicación con C #'
 description: Obtén información sobre cómo empezar a crear Microsoft Teams aplicaciones con C# o .NET.
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707339"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157326"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Crear la primera aplicación Teams con C #
 
@@ -205,7 +205,7 @@ Ahora puede probar el bot en Teams.
 
     <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

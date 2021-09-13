@@ -3,13 +3,13 @@ title: Vistas específicas de usuario
 description: Ejemplo de vistas específicas del usuario mediante acciones universales
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 00d6c8e5109fdd9cdf83662f9585a9a2d9e7fd86
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.localizationpriority: medium
+ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585987"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157138"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
@@ -204,9 +204,9 @@ Directrices de diseño de tarjetas a tener en cuenta al diseñar vistas específ
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Tarjetas adaptables de flujos de trabajo secuenciales | Muestra cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y tarjetas adaptables actualizadas en bots. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Tarjetas adaptables de flujos de trabajo secuenciales | Muestra cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y tarjetas adaptables actualizadas en bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 
-* [Trabajar con acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
+* [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
 * [Vistas actualizadas](Up-To-Date-Views.md)

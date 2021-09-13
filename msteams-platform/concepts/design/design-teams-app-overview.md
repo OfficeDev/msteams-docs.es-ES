@@ -2,15 +2,15 @@
 title: Diseño de la aplicación personalizada
 author: heath-hamilton
 description: Obtén información sobre cómo diseñar Microsoft Teams aplicaciones. Los recursos incluyen el kit Microsoft Teams interfaz de usuario, procedimientos recomendados, ejemplos y mucho más.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705038"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157621"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la Microsoft Teams aplicación
 
@@ -139,7 +139,7 @@ En función Fluent interfaz de usuario, estos son los elementos principales que 
 
 Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario. El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.
 

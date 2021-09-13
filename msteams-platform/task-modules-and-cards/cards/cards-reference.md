@@ -1,15 +1,15 @@
 ---
 title: Tipos de tarjetas
 description: Describe todas las tarjetas y acciones de tarjeta disponibles para bots en Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705510"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157585"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -945,7 +945,7 @@ Bot Framework implementa las siguientes tarjetas, pero no son compatibles con Te
 * Tarjetas de audio
 * Tarjetas de vídeo
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md)
 * [Dar formato a tarjetas](~/task-modules-and-cards/cards/cards-format.md)

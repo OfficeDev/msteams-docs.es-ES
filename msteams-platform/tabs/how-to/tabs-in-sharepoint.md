@@ -3,15 +3,15 @@ title: Añadir una pestaña de Teams a SharePoint
 author: surbhigupta
 description: Cómo implementar la pestaña de Teams existente para SharePoint como un SharePoint Framework web.
 keywords: desarrollo de sharepoint framework de pestañas de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8410b0734845e6bc6a79fa58a3ee5c89228ef927ee111cdfa10285daff4c062f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6561164f177277e76b80e3c33ee57b9383bbd527
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704555"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157182"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Añadir una pestaña de Teams a SharePoint 
 

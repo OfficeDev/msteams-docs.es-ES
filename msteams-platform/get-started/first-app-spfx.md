@@ -5,12 +5,13 @@ description: Obtenga información sobre cómo crear una pestaña personalizada c
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706963"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157330"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Compila y ejecuta la primera aplicación Microsoft Teams con SharePoint Framework (SPFx)
 
@@ -236,7 +237,7 @@ El SharePoint se encuentra dentro `SPFx/sharepoint/solution` del proyecto.  Uplo
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Captura de pantalla que muestra la aplicación en Teams":::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

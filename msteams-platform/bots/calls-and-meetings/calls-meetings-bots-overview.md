@@ -2,14 +2,14 @@
 title: Bots de llamadas y reuniones en línea
 description: Obtén información sobre cómo las Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo con las API de Microsoft Graph para llamadas y reuniones en línea.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: llamadas de audio vídeo IVR reuniones en línea de voz
-ms.openlocfilehash: 578c10ab2566e8bbf51a2224b8d474fb74c92092ea815386865a4e28efe059c6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e94cb425f7931582067bc3439e890b74b64e0f51
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706801"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157577"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de llamadas y reuniones en línea
 
@@ -92,7 +92,7 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 
 | **Ejemplo de nombre** | **Descripción** | **Graph** |
 |---------------|----------|--------|
-| Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [Ver](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | Bot de llamadas y reuniones | La aplicación de ejemplo muestra cómo Bot puede crear llamadas, unirse a reuniones y transferir llamadas. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="see-also"></a>Consulte también

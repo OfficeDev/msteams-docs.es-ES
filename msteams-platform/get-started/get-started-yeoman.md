@@ -2,15 +2,15 @@
 title: 'Tutorial: crear la primera aplicación con el generador de Yeoman'
 description: Obtén información sobre cómo empezar a crear Microsoft Teams aplicaciones con el generador de Yeoman.
 keywords: introducción a node.js nodejs yeoman
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 90bd997de1e5bbfc92e366d466c156f052cbe3bf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345181"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157302"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Crear la primera aplicación Microsoft Teams con el generador de Yeoman
 
@@ -191,7 +191,7 @@ También puede actualizar la versión Microsoft Teams actual a la versión más 
    ```
    ¡Felicidades! Has creado e implementado la primera Microsoft Teams aplicación. También ha actualizado Microsoft Teams.
 
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

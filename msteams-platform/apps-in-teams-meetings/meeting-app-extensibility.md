@@ -3,12 +3,13 @@ title: Aplicaciones de reuniones unificadas
 author: surbhigupta
 description: Comprender las aplicaciones de reuniones unificadas
 ms.topic: conceptual
-ms.openlocfilehash: 330156d28bf78723c3c6a670cc34cd97b48ad7a4
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: 4a367af1b2941547143ff7e0ec4b897b1174e26e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528897"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157174"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -200,7 +201,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 | Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
 | Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

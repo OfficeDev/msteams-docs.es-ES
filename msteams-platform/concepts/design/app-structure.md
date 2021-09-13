@@ -3,14 +3,14 @@ title: 'Diseñar la aplicación: comprender la estructura de la aplicación'
 description: Comprende lo que puedes y no puedes personalizar en Microsoft Teams al diseñar la aplicación.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408583"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157526"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprender la estructura Microsoft Teams aplicación
 

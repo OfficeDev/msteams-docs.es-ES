@@ -1,15 +1,15 @@
 ---
 title: Diseño de Tarjetas adaptables para la aplicación
 description: Obtenga información sobre cómo diseñar Tarjetas adaptables para Teams y obtener el Kit de interfaz de usuario de Microsoft Teams.
-localization_priority: Priority
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 28a6b794b9ebae88f8895013f945cbf3b4a91e87
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 0a8964de024b01237632db1214ce24fdd5b6bd29
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408660"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157582"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de Tarjetas adaptables para la aplicación de Microsoft Teams
 

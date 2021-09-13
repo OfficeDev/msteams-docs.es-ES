@@ -5,12 +5,13 @@ description: Cree una extensión de mensajería para Microsoft Teams con el Kit 
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.localizationpriority: none
+ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254295"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157329"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crear y ejecutar la primera extensión de mensajería para Microsoft Teams
 
@@ -175,7 +176,7 @@ La implementación implica recursos de aprovisionamiento en una suscripción act
 
 El Teams configuración de autenticación de búsqueda para proyectos de ejemplo en GitHub, muestra cómo crear extensiones de mensajería que incluyen una página de configuración y autenticación de [servicio de bot.](https://github.com/microsoft/BotBuilder-Samples#teams-samples) Los ejemplos también muestran cómo crear extensiones de mensaje que acepten solicitudes de búsqueda y devuelvan los resultados después de que el usuario haya iniciado sesión.
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
 | Generador de bots | Para crear extensiones de mensajería. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
@@ -184,7 +185,7 @@ El Teams configuración de autenticación de búsqueda para proyectos de ejemplo
 > [!div class="nextstepaction"]
 > [Ver más ejemplos de Bot Framework en GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md) 
 * [Crear una aplicación con React](first-app-react.md)

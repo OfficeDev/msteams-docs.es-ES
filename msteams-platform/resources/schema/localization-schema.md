@@ -2,15 +2,15 @@
 title: Localizar la referencia de esquema JSON
 description: Describe el esquema de localización admitido por el archivo de localización para Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: localización del esquema de manifiesto de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 7a7c5e61e8e9db2526a725d676a237d9c37f7d71ea74d42117e0b59b51cae969
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 8c5f32fb8244f70fadc610ed7c193d97f11171f2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705548"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157209"
 ---
 # <a name="localize-json-schema-reference"></a>Localizar la referencia de esquema JSON
 
@@ -58,6 +58,6 @@ El esquema define las siguientes propiedades:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|Cadena|64|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 > [Localizar la aplicación](~/concepts/build-and-test/apps-localization.md)

@@ -2,12 +2,13 @@
 title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
-ms.openlocfilehash: 32b7cb32eb3f422641dbf28e635e39d978bad002
-ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
+ms.localizationpriority: none
+ms.openlocfilehash: 5fb049668247a12231f91aec0e75537608f25b10
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "58849443"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157173"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -236,6 +237,6 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)

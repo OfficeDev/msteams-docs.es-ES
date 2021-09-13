@@ -2,15 +2,15 @@
 title: Crear aplicaciones con el Teams Toolkit y Visual Studio
 description: Introducción a la creación de excelentes aplicaciones personalizadas directamente Visual Studio con el Microsoft Teams Toolkit
 keywords: Kit de herramientas de visual studio de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701814"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157060"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Crear aplicaciones con el Teams Toolkit y Visual Studio
 

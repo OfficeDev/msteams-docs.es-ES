@@ -4,12 +4,13 @@ author: KirtiPereira
 description: Crear pestañas con tarjetas adaptables
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345575"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157658"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 

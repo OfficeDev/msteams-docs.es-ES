@@ -3,14 +3,14 @@ title: Referencia de esquema de manifiesto
 description: Describe el esquema de manifiesto para Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: f1f40a3cc28410fe41f114ac749f06124fbbc1f850a02771bfe67ba40c77aae3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 07575bec4d0fc9b6defbf3cbefc9ae5330a45d73
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708031"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157458"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -337,7 +337,7 @@ El identificador es un identificador único generado por Microsoft para la aplic
 
 Especifica información sobre su empresa. Para las aplicaciones enviadas a la Teams, estos valores deben coincidir con la información de la descripción de la tienda. Para obtener más información, consulte [las Teams de publicación del almacén de almacenamiento.](~/concepts/deploy-and-publish/appsource/publish.md)
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Name| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`name`|32 caracteres|✔|Nombre para mostrar del desarrollador.|
 |`websiteUrl`|2048 caracteres|✔|La https:// url del sitio web del desarrollador. Este vínculo debe llevar a los usuarios a su empresa o página de aterrizaje específica del producto.|
@@ -351,7 +351,7 @@ Especifica información sobre su empresa. Para las aplicaciones enviadas a la Te
 
 El nombre de la experiencia de la aplicación, que se muestra a los usuarios en la Teams usuario. Para las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada AppSource. Los valores de `short` y `full` deben ser diferentes.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Name| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
@@ -364,7 +364,7 @@ Describe la aplicación a los usuarios. Para las aplicaciones enviadas a AppSour
 
 Asegúrese de que su descripción describe su experiencia y ayuda a los clientes potenciales a comprender lo que hace su experiencia. Debe tener en cuenta en la descripción completa, si se requiere una cuenta externa para su uso. Los valores de `short` y `full` deben ser diferentes. La descripción corta no se puede repetir dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Name| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`short`|80 caracteres|✔|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔|Descripción completa de la aplicación.|
@@ -381,7 +381,7 @@ Un identificador único para la aplicación en la notación de dominio inverso; 
 
 Permite la especificación de un idioma predeterminado y proporciona punteros a más archivos de idioma. Para obtener más información, vea [localización](~/concepts/build-and-test/apps-localization.md).
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Name| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|La etiqueta de idioma de las cadenas de este archivo de manifiesto de nivel superior.|
 
@@ -389,7 +389,7 @@ Permite la especificación de un idioma predeterminado y proporciona punteros a 
 
 Una matriz de objetos que especifica más traducciones de idioma.
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Name| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`languageTag`||✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
 |`file`||✔|Una ruta de acceso de archivo relativa al archivo .json que contiene las cadenas traducidas.|
@@ -400,7 +400,7 @@ Una matriz de objetos que especifica más traducciones de idioma.
 
 Iconos usados dentro de la Teams aplicación. Los archivos de icono deben incluirse como parte del paquete de carga. Para obtener más información, vea [Iconos](../../concepts/build-and-test/apps-package.md#app-icons).
 
-|Nombre| Tamaño máximo | Necesario | Descripción|
+|Name| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`outline`|32 x 32 píxeles|✔|Una ruta de acceso de archivo relativa a un icono de esquema PNG transparente de 32 x 32.|
 |`color`|192 x 192 píxeles|✔|Una ruta de acceso de archivo relativa a un icono PNG de color completo de 192 x 192.|
@@ -423,9 +423,9 @@ Se usa cuando la experiencia de la aplicación tiene una experiencia de pestaña
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|La https:// url que se va a usar al configurar la pestaña.|
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
-|`canUpdateConfiguration`|booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: **true**.|
+|`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: **true**.|
 |`context` |matriz de enumeraciones|6 ||Conjunto de `contextItem` ámbitos donde se admite [una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|cadenas|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
+|`sharePointPreviewImage`|cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|matriz de enumeraciones|1||Define cómo la pestaña está disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -439,10 +439,10 @@ Este elemento es una matriz (máximo de 16 elementos) con todos los elementos de
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`entityId`|string|64 caracteres|✔|Identificador único para la entidad que muestra la pestaña.|
-|`name`|cadenas|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
-|`contentUrl`|cadenas||✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
-|`websiteUrl`|cadenas|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
-|`searchUrl`|cadenas|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
+|`name`|string|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
+|`contentUrl`|cadena||✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
+|`websiteUrl`|cadena|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
+|`searchUrl`|string|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito, lo que significa que solo se puede aprovisionar como `personal` parte de la experiencia personal.|
 |`context` | matriz de enumeraciones| 2|| Conjunto de `contextItem` ámbitos donde se admite una pestaña.|
 
@@ -462,11 +462,11 @@ El elemento es una matriz (máximo de un solo elemento actualmente solo se permi
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. El identificador puede ser el mismo que el identificador general [de la aplicación](#id).|
 |`scopes`|matriz de enumeraciones|3|✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia específica para un solo usuario (`personal`). Estas opciones no son exclusivas.|
-|`needsChannelSelector`|booleano|||Describe si el bot usa o no una sugerencia de usuario para agregar el bot a un canal específico. Valor predeterminado: **`false`**|
-|`isNotificationOnly`|booleano|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Valor predeterminado: **`false`**|
-|`supportsFiles`|booleano|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Valor predeterminado: **`false`**|
-|`supportsCalling`|booleano|||Valor que indica dónde un bot admite llamadas de audio. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
-|`supportsVideo`|booleano|||Valor que indica dónde un bot admite videollamadas. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
+|`needsChannelSelector`|boolean|||Describe si el bot usa o no una sugerencia de usuario para agregar el bot a un canal específico. Valor predeterminado: **`false`**|
+|`isNotificationOnly`|boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Valor predeterminado: **`false`**|
+|`supportsFiles`|boolean|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Valor predeterminado: **`false`**|
+|`supportsCalling`|boolean|||Valor que indica dónde un bot admite llamadas de audio. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
+|`supportsVideo`|boolean|||Valor que indica dónde un bot admite videollamadas. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -475,7 +475,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeraciones|3|✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal` y `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción sencilla o un ejemplo de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.commands`|matriz de objetos|10|✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción sencilla o un ejemplo de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -496,7 +496,7 @@ El objeto es una matriz (máximo de un elemento) con todos los elementos de tipo
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|La https:// url que se va a usar al configurar el conector.|
 |`scopes`|matriz de enumeraciones|1|✔|Especifica si connector ofrece una experiencia en el contexto de un canal en un , o una experiencia ámbito a un `team` usuario individual solo ( `personal` ). Actualmente, solo se `team` admite el ámbito.|
-|`connectorId`|cadenas|64 caracteres|✔|Identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores.](https://aka.ms/connectorsdashboard)|
+|`connectorId`|string|64 caracteres|✔|Identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores.](https://aka.ms/connectorsdashboard)|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -512,10 +512,10 @@ El elemento es una matriz (máximo de un elemento) con todos los elementos de ti
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. El identificador puede ser el mismo que el identificador general de la aplicación.|
-|`commands`|matriz de objetos|10 |✔|Matriz de comandos que admite la extensión de mensajería.|
-|`canUpdateConfiguration`|booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
+|`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería.|
+|`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
 |`messageHandlers`|matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
-|`messageHandlers.type`|cadenas|||El tipo de controlador de mensajes. Debe ser `"link"`.|
+|`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -527,28 +527,28 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|64 caracteres|✔|El identificador del comando.|
-|`title`|cadenas|32 caracteres|✔|Nombre de comando fácil de usar.|
-|`type`|cadenas|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
-|`description`|cadenas|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|booleano|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
+|`title`|string|32 caracteres|✔|Nombre de comando fácil de usar.|
+|`type`|string|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
+|`description`|cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
+|`initialRun`|boolean|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
 |`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
-|`fetchTask`|booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
+|`fetchTask`|boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se debe cargar previamente al usar un comando de extensión de mensajería.|
-|`taskInfo.title`|cadenas|64 caracteres||Título del cuadro de diálogo inicial.|
-|`taskInfo.width`|cadenas|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.height`|cadenas|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.url`|cadenas|||Dirección URL de vista web inicial.|
+|`taskInfo.title`|cadena|64 caracteres||Título del cuadro de diálogo inicial.|
+|`taskInfo.width`|string|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.height`|cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.url`|cadena|||Dirección URL de vista web inicial.|
 |`parameters`|matriz de objeto|5 elementos|✔|La lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
-|`parameters.name`|cadenas|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
-|`parameters.title`|cadenas|32 caracteres|✔|Título fácil de usar para el parámetro.|
-|`parameters.description`|cadenas|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
-|`parameters.value`|cadenas|512 caracteres||Valor inicial del parámetro.|
-|`parameters.inputType`|cadenas|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.name`|cadena|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
+|`parameters.title`|cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
+|`parameters.description`|cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
+|`parameters.value`|string|512 caracteres||Valor inicial del parámetro.|
+|`parameters.inputType`|string|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 elementos||Las opciones de elección para `choiceset` el archivo . Use solo cuando `parameter.inputType` es `choiceset` .|
-|`parameters.choices.title`|cadenas|128 caracteres|✔|Título de la elección.|
-|`parameters.choices.value`|cadenas|512 caracteres|✔|Valor de la elección.|
+|`parameters.choices.title`|string|128 caracteres|✔|Título de la elección.|
+|`parameters.choices.value`|string|512 caracteres|✔|Valor de la elección.|
 
-## <a name="permissions"></a>permisos
+## <a name="permissions"></a>permissions
 
 **Opcional**:matriz de cadenas
 
@@ -595,7 +595,7 @@ Proporcione su Azure Active Directory de aplicación (AAD) y microsoft Graph inf
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔|Id. de aplicación de AAD de la aplicación. Este identificador debe ser un GUID.|
-|`resource`|cadenas|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir token de autenticación para SSO. </br> **NOTA:** Si no usa SSO, asegúrese de escribir un valor de cadena ficticia en este campo en el manifiesto de la aplicación, por ejemplo, para evitar https://notapplicable una respuesta de error. |
+|`resource`|cadena|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir token de autenticación para SSO. </br> **NOTA:** Si no usa SSO, asegúrese de escribir un valor de cadena ficticia en este campo en el manifiesto de la aplicación, por ejemplo, para evitar https://notapplicable una respuesta de error. |
 |`applicationPermissions`|matriz de cadenas|128 caracteres||Especifique el consentimiento [específico del recurso pormenorizados](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions).|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -628,8 +628,8 @@ Define las propiedades que usa la aplicación para publicar una fuente de activi
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|Tipo de notificación. *Vea a continuación*.|
-|`description`|cadenas|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
-|`templateText`|cadenas|128 caracteres|✔|Ex: "{actor} created task {taskId} for you"|
+|`description`|cadena|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
+|`templateText`|string|128 caracteres|✔|Ex: "{actor} created task {taskId} for you"|
 
 ```json
 {
@@ -699,8 +699,8 @@ Cuando se selecciona un ámbito de instalación de grupo, se definirá la funcio
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`team`|string|||Cuando el ámbito de instalación seleccionado es `team` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`groupchat`|cadenas|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`meetings`|cadenas|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`groupchat`|cadena|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`meetings`|string|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

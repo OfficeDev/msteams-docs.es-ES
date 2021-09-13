@@ -4,14 +4,14 @@ author: laujan
 description: describe los atributos de la cookie SameSite
 keywords: atributos cookie samesite
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708339"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157497"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite 
 
@@ -43,7 +43,7 @@ Chrome 80, publicado en febrero de 2020, introduce nuevos valores de cookies e i
  
 Los atributos de cookie SameSite son los siguientes:
 
-|Configuración | Aplicación | Valor |Especificación de atributos |
+|Setting | Aplicación | Valor |Especificación de atributos |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Las cookies se envían automáticamente solo en un **contexto de primera** parte y con solicitudes HTTP GET. Las cookies de SameSite se retienen en solicitudes de subsitio entre sitios, como llamadas para cargar imágenes o iframes. Se envían cuando un usuario navega a la dirección URL desde un sitio externo, por ejemplo, siguiendo un vínculo.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estricto** |El explorador solo envía cookies para solicitudes de contexto de primera parte. Se trata de solicitudes procedentes del sitio que establecen la cookie. Si la solicitud se originó desde una dirección URL diferente a la de la ubicación actual, no se enviará ninguna de las cookies `Strict` etiquetadas con el atributo.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
@@ -61,7 +61,7 @@ Los atributos de cookie SameSite son los siguientes:
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Pestañas, módulos de tareas y extensiones de mensajería
 
 * Teams pestañas para insertar contenido que se `<iframes>` ve en un contexto de nivel superior o de primera parte.
-* Los módulos de tareas te permiten crear experiencias emergentes modales en tu  aplicación de Teams. De forma similar a una pestaña, se abre una ventana modal dentro de la página actual.
+* Los módulos de tareas le permiten crear experiencias emergentes modales en su aplicación de Teams. De forma similar a una pestaña, se abre una ventana modal dentro de la página actual.
 * Las extensiones de mensajería permiten insertar contenido enriquecido en un mensaje de chat desde recursos externos.
 
 Las cookies usadas por el contenido incrustado se consideran de terceros cuando el sitio se muestra en un `<iframe>` archivo . Además, si los recursos remotos de una página dependen de las cookies que se envían con una solicitud y etiquetas, fuentes externas y contenido personalizado, debe asegurarse de que están marcadas para el uso entre sitios, como o asegurarse de que hay una `<img>` `<script>` `SameSite=None; Secure` reserva.

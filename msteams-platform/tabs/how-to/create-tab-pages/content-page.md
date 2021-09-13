@@ -3,15 +3,15 @@ title: Creación de una página de contenido
 author: surbhigupta
 description: cómo crear una página de contenido
 keywords: Canal de grupo de pestañas de teams configurable estático
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6f673420de73d786ddee95b4da7870750f3e6851a80f6ad71b1e606d650ba60
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708311"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157052"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 

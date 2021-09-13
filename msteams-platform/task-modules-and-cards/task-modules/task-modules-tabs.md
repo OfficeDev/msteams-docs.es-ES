@@ -1,15 +1,15 @@
 ---
 title: Usar módulos de tareas en Microsoft Teams pestañas
 description: Explica cómo invocar módulos de tareas desde Teams pestañas mediante el SDK Microsoft Teams cliente.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: sdk de cliente de pestañas de teams de módulos de tareas
-ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703586"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157450"
 ---
 # <a name="use-task-modules-in-tabs"></a>Uso de módulos de tareas en pestañas
 
@@ -131,7 +131,7 @@ En la tabla siguiente se proporcionan los valores posibles `err` que puede recib
 
 |Ejemplo de nombre | Descripción | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
 ## <a name="see-also"></a>Consulte también
 

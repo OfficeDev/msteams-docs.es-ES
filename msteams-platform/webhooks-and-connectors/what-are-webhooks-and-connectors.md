@@ -2,15 +2,15 @@
 title: Webhooks y conectores
 author: clearab
 description: Comprenda cómo los webhooks y conectores pueden conectar los servicios web al Teams cliente.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 199f1e8a82f067cbd8124553481ed54693d241f1c3a50c085b32203b89f4f63d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708639"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157650"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks y conectores
 
@@ -42,7 +42,7 @@ Office 365 Los conectores te permiten crear una página de configuración person
 
 Los mensajes que se pueden usar permiten a los usuarios tomar medidas sin salir de su cliente de correo electrónico, lo que aumenta la participación de los usuarios. Con Office 365 webhooks entrantes y de entrada, puede enviar mensajes publicando una carga JSON en la dirección URL del webhook.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

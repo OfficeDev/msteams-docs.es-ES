@@ -2,15 +2,15 @@
 title: Administrar las aplicaciones con el Portal de desarrolladores
 description: Aprende a administrar tus aplicaciones mediante el Portal de desarrolladores para Microsoft Teams.
 keywords: introducción a los equipos del portal de desarrolladores
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 6934978c1b30cfa53b2307d772f7093047c1eb454cd4ff2010767b8d5e270bb9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 028086c3ad39f26cdf7874ed574a8488232700c3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707703"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157115"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administrar tus aplicaciones con el Portal de desarrolladores para Microsoft Teams
 

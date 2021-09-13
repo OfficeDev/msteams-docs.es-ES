@@ -1,15 +1,15 @@
 ---
 title: Ejemplos de código de aplicación
 description: Vínculos y descripciones de aplicaciones de ejemplo para la Microsoft Teams de desarrolladores
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams de desarrolladores
-ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
-ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
+ms.openlocfilehash: 34c914898f7ae83022f1278bc11cc33ac5084ba5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "58849429"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157338"
 ---
 # <a name="overview"></a>Información general
 
@@ -61,7 +61,7 @@ Solo instalará un paquete de aplicación que contenga un archivo de configuraci
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="La ilustración que muestra la aplicación en Teams está apuntando a la lógica de la aplicación en el servidor en la nube.":::
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [Crear una aplicación con React](first-app-react.md)
 * [Crear una aplicación con Blazor](first-app-blazor.md)

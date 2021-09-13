@@ -4,12 +4,13 @@ author: Rajeshwari-v
 description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pestaña con Microsoft Teams aplicación.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.localizationpriority: none
+ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398679"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157490"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -129,7 +130,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
 | `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
@@ -139,7 +140,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Ejemplo de nombre | Descripción | C# |Node.js|
+| Ejemplo de nombre | Descripción | C # |Node.js|
 |-------------|-------------|------|----|
 |Ficha en la vista fase |Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña en la vista fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     

@@ -3,15 +3,15 @@ title: Creación de una etiqueta de eliminación
 author: surbhigupta
 description: Cómo crear una página de eliminación de pestañas
 keywords: Teams tabs group channel configurable remove delete
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706789"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157139"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -91,7 +91,7 @@ Después de ejecutar el controlador de eliminación o notificar Teams el resulta
 > * Teams activa el **botón Quitar** después de cinco segundos, incluso si la pestaña no ha llamado `setValidityState()` a .
 > * Cuando el usuario selecciona **Quitar**, Teams quita la pestaña después de 30 segundos, independientemente de si las acciones se han completado o no.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

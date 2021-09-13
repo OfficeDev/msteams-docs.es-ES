@@ -2,14 +2,14 @@
 title: Novedades
 description: Describe todas las nuevas características de desarrollador en Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: c1c5bb12f4d3599a47cac7727eeeaef1a64a090b
-ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
+ms.openlocfilehash: 8ef06dc5c2d6461b4867150ec8fec773f225b058
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862323"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157140"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -103,7 +103,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2019</b></summary>
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | El parámetro de las cargas enviadas a un bot ya no está cifrado, lo que permite usar este valor para crear `replyToId` vínculos profundos a estos mensajes. Las cargas del mensaje incluyen los valores cifrados en el parámetro `legacy.replyToId` .  |
 | 11/05/2019 | Inicio de sesión único con el Teams SDK de JavaScript. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |

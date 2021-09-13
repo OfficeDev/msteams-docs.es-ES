@@ -1,15 +1,15 @@
 ---
 title: Usar módulos de tareas en Microsoft Teams bots
 description: Cómo usar módulos de tareas con Microsoft Teams bots, incluidas las tarjetas de Bot Framework, las tarjetas adaptables y los vínculos profundos.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots de equipos de módulos de tareas
-ms.openlocfilehash: 7a4c5b0a3986f5a6a59064a05bcbc68587955effca0ea7fab80a7097a9732b6f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701877"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157581"
 ---
 # <a name="use-task-modules-from-bots"></a>Uso de módulos de tareas desde los bots
 
@@ -209,7 +209,7 @@ El esquema de las acciones de tarjeta de Bot Framework es diferente de las accio
 
 |Ejemplo de nombre | Descripción | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Bots de ejemplo de módulo de tareas-V4 | Ejemplos para crear módulos de tareas. |[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Bots de ejemplo de módulo de tareas-V4 | Ejemplos para crear módulos de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
 ## <a name="see-also"></a>Consulte también
 

@@ -3,14 +3,14 @@ title: Asignar los casos de uso a Teams funcionalidades de la aplicación
 author: surbhigupta
 description: Identifica cómo pueden funcionar los casos de uso de la aplicación en la experiencia Teams aplicación.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 77e8db5e0d0e4738cf479ccfddb9766507f7170c
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345554"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157141"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
@@ -102,6 +102,6 @@ Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que pu
 
 Dicho esto, las mejores aplicaciones suelen combinar varias características, creando una aplicación que involucre a los usuarios en el contexto correcto con la funcionalidad adecuada en el momento adecuado. No debe forzar ninguna funcionalidad en un lugar al que no pertenezca. El hecho de que tenga un buen bot de conversación uno a uno no significa que lo agregue a ningún equipo. Los distintos puntos de extensibilidad son buenos para diferentes cosas y juegan a sus puntos fuertes para crear una aplicación correcta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear la primera Microsoft Teams aplicación](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

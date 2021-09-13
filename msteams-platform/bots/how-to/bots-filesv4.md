@@ -3,14 +3,14 @@ title: Enviar y recibir archivos a través del bot
 description: Describe cómo enviar y recibir archivos a través del bot
 keywords: bots teams bots files send receive
 ms.date: 05/20/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: f6d738bfe3456ad9434512fd84d7e65d6062e57076656a57592cdf6a3f23790e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708121"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157159"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar y recibir archivos a través del bot
 
@@ -78,7 +78,7 @@ El siguiente código muestra un ejemplo de actividad de mensaje con datos adjunt
 
 En la tabla siguiente se describen las propiedades de contenido de los datos adjuntos:
 
-| Propiedad | Finalidad |
+| Propiedad | Objetivo |
 | --- | --- |
 | `downloadUrl` | OneDrive Dirección URL para capturar el contenido del archivo. El usuario puede emitir una `HTTP GET` directamente desde esta dirección URL. |
 | `uniqueId` | Identificador de archivo único. Este es el identificador OneDrive elemento de unidad de disco, en caso de que el usuario envíe un archivo al bot. |
@@ -124,7 +124,7 @@ El siguiente mensaje móvil contiene un objeto attachment que solicita permiso a
 
 En la tabla siguiente se describen las propiedades de contenido de los datos adjuntos:
 
-| Propiedad | Finalidad |
+| Propiedad | Objetivo |
 | --- | --- |
 | `description` | Describe el propósito del archivo o resume su contenido. |
 | `sizeInBytes` | Proporciona al usuario una estimación del tamaño del archivo y la cantidad de espacio que ocupa OneDrive. |
@@ -191,7 +191,7 @@ Después de cargar un archivo en el OneDrive usuario, envíe un mensaje de confi
 
 En la tabla siguiente se describen las propiedades de contenido de los datos adjuntos:
 
-| Propiedad | Finalidad |
+| Propiedad | Objetivo |
 | --- | --- |
 | `uniqueId` | OneDrive o SharePoint de elemento de unidad. |
 | `fileType` | Tipo de archivo, como .pdf o .docx. |
@@ -323,7 +323,7 @@ En el ejemplo de código siguiente se muestra cómo obtener el consentimiento de
 
 |**Ejemplo de nombre** | **Descripción** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| File upload | Muestra cómo obtener el consentimiento de archivos y cargar archivos a Teams desde un bot. Además, cómo recibir un archivo enviado a un bot. | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [Ver](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+| File upload | Muestra cómo obtener el consentimiento de archivos y cargar archivos a Teams desde un bot. Además, cómo recibir un archivo enviado a un bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
 ## <a name="next-step"></a>Paso siguiente
 

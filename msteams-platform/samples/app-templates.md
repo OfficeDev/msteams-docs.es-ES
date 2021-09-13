@@ -3,15 +3,15 @@ title: Microsoft Teams de aplicación
 description: Vínculos y descripciones de plantillas de aplicación para la Microsoft Teams plataforma
 ms.topic: reference
 keywords: Microsoft Teams de ejemplos de plantillas
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 1820de7a7a2a46766fac646c7a7267e754b855bfb1ea549ba208663ef9cadcd0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4a186997365499f30fe777a911d27a0b37fb7440
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709020"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157382"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 

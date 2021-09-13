@@ -2,14 +2,14 @@
 title: Crear vínculos profundos
 description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: 03b827585bacb292cf44274d7cdbcf337ca83935
-ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
+ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862330"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157465"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 

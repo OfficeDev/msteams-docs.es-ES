@@ -4,14 +4,14 @@ author: surbhigupta
 description: información general sobre las aplicaciones en Teams reuniones basadas en el rol de participante y usuario
 ms.topic: overview
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: b84975296b443ad71fb78042729f225a31ba9afe
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528879"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157175"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para Teams reuniones
 
@@ -37,7 +37,7 @@ Para personalizar Teams con aplicaciones para reuniones, habilite las aplicacion
 
 La nueva característica de escenas personalizadas del modo junto permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

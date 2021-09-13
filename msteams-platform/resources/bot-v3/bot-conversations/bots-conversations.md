@@ -2,15 +2,15 @@
 title: Enviar y recibir mensajes con un bot
 description: Describe cómo enviar y recibir mensajes con bots en Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: mensajes de bots de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630463"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157413"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación con un Microsoft Teams bot
 

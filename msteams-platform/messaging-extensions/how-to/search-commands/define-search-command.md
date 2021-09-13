@@ -4,12 +4,13 @@ author: surbhigupta
 description: Definir comandos de búsqueda de extensión de mensajería para Microsoft Teams aplicaciones.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068917"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157414"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
@@ -73,7 +74,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, debes agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
@@ -84,7 +85,7 @@ Para agregar manualmente el comando de búsqueda de extensión de mensajería al
 
 Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el Teams cliente.
 
-| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |

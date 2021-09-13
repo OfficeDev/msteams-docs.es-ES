@@ -3,14 +3,14 @@ title: 'Tutorial: crea la primera aplicación con Node.js'
 description: Obtén información sobre cómo empezar a crear Microsoft Teams aplicaciones con Node.js.
 keywords: introducción a node.js nodejs App Studio
 ms.topic: tutorial
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 5abde3b1866556ff20e9ee145e761915f88f7288c581556460f5e0e3f3386ecb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 67cbc37e156b19f9e059f434a7dbfab4b9932256
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704689"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157305"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>Crea tu primera Microsoft Teams con Node.js
 
@@ -265,7 +265,7 @@ Ahora puede interactuar con el bot en Teams. Elige un canal en el equipo donde r
 
     <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

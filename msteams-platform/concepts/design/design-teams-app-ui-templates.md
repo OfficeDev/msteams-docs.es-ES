@@ -3,14 +3,14 @@ title: Diseño de la aplicación con plantillas de interfaz de usuario
 author: heath-hamilton
 description: Diseña tu aplicación más rápido con componentes de interfaz de usuario estandarizados, diseños y patrones que se ven comúnmente en Microsoft Teams.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408686"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157617"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
@@ -20,7 +20,7 @@ Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz d
 
 Los siguientes recursos pueden ayudarte a diseñar y desarrollar tu aplicación con plantillas de interfaz de usuario.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Toma plantillas de interfaz de usuario para el diseño de la aplicación desde el kit de interfaz de usuario de Microsoft Teams, que también incluye información extensa sobre el uso, la anatomía, la accesibilidad y los procedimientos recomendados.
 

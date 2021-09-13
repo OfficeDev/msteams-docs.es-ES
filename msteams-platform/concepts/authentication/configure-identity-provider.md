@@ -2,14 +2,14 @@
 title: Configurar proveedores de identidades de OAuth 2.0
 description: Describe cómo configurar proveedores de identidades con un enfoque en Azure AD
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Proveedor de identidades de AAD oauth de autenticación de teams
-ms.openlocfilehash: f41e03717c24095b527adc471a89f8aee5de3a3ddba8773376fca49ee12bbbcc
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a7630dce11e052eadf39e5bd695bae1b8411f33d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705569"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157425"
 ---
 # <a name="configure-identity-providers"></a>Configurar proveedores de identidades
 

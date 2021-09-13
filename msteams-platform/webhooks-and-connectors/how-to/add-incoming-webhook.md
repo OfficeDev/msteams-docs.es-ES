@@ -3,15 +3,15 @@ title: Crear un webhook entrante
 author: laujan
 description: describe cómo agregar webhook entrante Teams aplicación y publicar solicitudes externas para Teams webhooks entrantes
 keywords: webhook saliente de pestañas de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c5f90da64fe846e6579bc47de2edcd900d6ee6ba3a640788fba440734f55b7ec
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705359"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157055"
 ---
 # <a name="create-incoming-webhook"></a>Crear webhook entrante
 

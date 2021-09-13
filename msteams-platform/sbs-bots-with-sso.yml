@@ -10,12 +10,13 @@ metadata:
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Más información sobre la autenticación de bots
   ms.custom: mvc
-  ms.openlocfilehash: 1b95b4010ce1c3b1340c1ddb4357645383c93497
-  ms.sourcegitcommit: b83e1ade63869be10e4fcdc963d6bab7c5311a5b
+  ms.localizationpriority: none
+  ms.openlocfilehash: 631caa72700165172619fc7a80a6cff2ad6e072f
+  ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/26/2021
-  ms.locfileid: "58538163"
+  ms.lasthandoff: 09/12/2021
+  ms.locfileid: "59157121"
 items:
 - durationInMinutes: 1
   content: "Teams bots son bots conversacionales que ejecutan tareas automatizadas repetitivas realizadas por los usuarios, como el servicio de atención al cliente. El usuario debe iniciar sesión con sus credenciales varias veces para realizar tareas repetitivas. El método de autenticación de inicio de sesión único (SSO) en Azure Active Directory (AAD) actualiza silenciosamente el token de autenticación. Esto se traduce en una reducción del número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión. \n\nUn bot se comporta de forma diferente en función de la conversación en la que está implicado:\n\n* Bots in channel and group chat conversations require the user to @mention the bot.\n* Los bots en una conversación uno a uno no requieren una @mención. Todos los mensajes enviados por el usuario se enruta al bot.\n\nEsta guía paso a paso le ayuda a crear un bot con autenticación de SSO habilitada. Verá el resultado siguiente:\n\n![Mobile ha iniciado sesión en el bot](~/assets/images/bots/sbs-desktop-mobile.png)\n"
@@ -101,7 +102,7 @@ items:
 
         | Field | Valor o descripción |
         | ----- | ----- |
-        | Nombre | Escriba el nombre de la nueva configuración de conexión. Puede usar el nombre en la configuración del código de servicio del bot. |
+        | Name | Escriba el nombre de la nueva configuración de conexión. Puede usar el nombre en la configuración del código de servicio del bot. |
         | Proveedor de servicios | Seleccione **Azure Active Directory V2**. |
         | Id. de cliente | Guardado anteriormente como id. **de aplicación de Microsoft**. |
         | Secreto de cliente | Se guardó anteriormente **como valor** del identificador de secreto de cliente. |

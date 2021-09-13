@@ -3,14 +3,14 @@ title: Agregar bots a Microsoft Teams aplicaciones
 description: Describe cómo empezar a desarrollar bots en Microsoft Teams
 ms.topic: conceptual
 keywords: desarrollo de bots de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: dd32439c74daf55c89d0e34614a073a36a5ffa1e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 939a4b2830d14b0b1a82f09d361e56d5651a1592
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345686"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157080"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Agregar bots a Microsoft Teams aplicaciones
 

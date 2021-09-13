@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Cómo usar el SDK Teams cliente de JavaScript para habilitar funcionalidades multimedia
 keywords: Medios de permisos de dispositivo nativos de las capacidades de micrófono de imagen de cámara
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 74ebeee5392272021f2a9977709fc0b1df2a50b1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 907409b9fec308b118e8e323b91fe6d740abf85e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345735"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157101"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
 
@@ -80,7 +80,7 @@ En la siguiente imagen se muestra la experiencia de la aplicación web `selectMe
 
 Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condición|
+|Código de error |  Nombre del error     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **404** | FILE_NOT_FOUND | El archivo especificado no se encuentra en la ubicación determinada.|
