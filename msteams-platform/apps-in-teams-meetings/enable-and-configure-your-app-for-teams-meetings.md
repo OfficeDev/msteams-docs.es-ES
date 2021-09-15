@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157176"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360485"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -50,9 +50,6 @@ El manifiesto de la aplicación debe incluir el siguiente fragmento de código:
     }
   ]
 ```
-
-> [!NOTE]
-> `meetingStage` actualmente solo está disponible en [versión preliminar del](../resources/dev-preview/developer-preview-intro.md) desarrollador.
 
 ### <a name="context-property"></a>Context (propiedad)
 
@@ -108,7 +105,7 @@ En un chat de reunión, escriba la **@** clave y seleccione Obtener **bots**.
 
 Durante una reunión, puedes usar el cuadro de diálogo o en la reunión `meetingSidePanel` para crear experiencias únicas para tus aplicaciones.
 
-#### <a name="meeting-sidepanel"></a>Meeting Sidepanel
+#### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
 Permite personalizar experiencias en una reunión que permiten a los organizadores y presentadores tener un conjunto diferente `meetingSidePanel` de vistas y acciones. En el manifiesto de la aplicación, debes agregar `meetingSidePanel` a la matriz de contexto. En la reunión y en todos los escenarios, la aplicación se representa en una pestaña en la reunión que tiene 320 píxeles de ancho. Para obtener más información, vea [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
@@ -130,9 +127,6 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 > * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no `from.id` `from` en los `from.aadObjectId` metadatos de la solicitud. `from.id`es el identificador de usuario `from.aadObjectId` y es el Azure Active Directory (AAD) del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="shared-meeting-stage"></a>Fase de reunión compartida
-
-> [!NOTE]
-> Esta funcionalidad está disponible actualmente solo en [la versión preliminar del](../resources/dev-preview/developer-preview-intro.md) desarrollador.
 
 La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real.
 
@@ -166,9 +160,10 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Ejemplo de nombre | Descripción | Muestra |
-|----------------|-----------------|--------------|----------------|-----------|
-| Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad equitativa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [Ver](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+|Ejemplo de nombre | Descripción | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad equitativa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 

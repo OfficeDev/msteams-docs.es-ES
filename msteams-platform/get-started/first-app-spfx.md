@@ -6,12 +6,12 @@ ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 36aa779db0c45ab3724673cb0030a97cceef6a78
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157330"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360817"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Compila y ejecuta la primera aplicación Microsoft Teams con SharePoint Framework (SPFx)
 
@@ -105,11 +105,16 @@ Después de Teams Toolkit configurar el proyecto, tienes los componentes para cr
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Captura de pantalla que muestra los archivos de proyecto de la aplicación para una aplicación personal en Visual Studio Code.":::
 
-El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`.  Entre otros elementos de este directorio:
+El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`. 
 
-- Los iconos de aplicación se almacenan como archivos PNG en `color.png` y `outline.png`.
-- El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `manifest.source.json` .
-- La configuración que eligió al crear el proyecto se almacena en `settings.json`.
+- La configuración que eligió al crear el proyecto se almacena en `.fx/settings.json`.
+- El estado del proyecto se almacena en `.fx/env.*.json` .
+
+Y la Teams de la aplicación se almacena en el `appPackage` directorio.
+
+- Los iconos de aplicación se almacenan como archivos PNG en `appPackage/color.png` y `appPackage/outline.png`.
+- El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `appPackage/manifest.source.json` .
+
 
 Dado que ha seleccionado un SPFx webpart, los siguientes archivos son relevantes para la interfaz de usuario:
 

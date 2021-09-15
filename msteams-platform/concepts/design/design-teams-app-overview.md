@@ -5,12 +5,12 @@ description: Obtén información sobre cómo diseñar Microsoft Teams aplicacion
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157621"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360471"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la Microsoft Teams aplicación
 
@@ -33,7 +33,7 @@ Teams aplicaciones ayudan a los usuarios a lograr más juntos. Use estos princip
 
 ### <a name="collaborative"></a>Colaboración
 
-Teams aplicaciones ayudan a los usuarios a lograr más juntos. Use estos principios para guiar el diseño.
+Teams la aplicación promueve la colaboración a través de actividades coordinadas y compartidas entre los usuarios.
 
    :::column-end:::
    :::column span="":::
@@ -91,7 +91,7 @@ La interfaz de usuario es fácil de entender, agradable en apariencia y tono, y 
 
 ### <a name="responsive"></a>Respuesta correcta
 
-La aplicación es independiente del dispositivo y la pantalla.
+La aplicación es independiente del dispositivo y de la pantalla.
 
    :::column-end:::
 :::row-end:::
@@ -139,7 +139,7 @@ En función Fluent interfaz de usuario, estos son los elementos principales que 
 
 Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario. El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.
 

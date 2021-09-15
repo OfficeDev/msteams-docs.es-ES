@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 39659b6c58b61f8b8880bd277effba1c8f9d115e
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157329"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360706"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Crear y ejecutar la primera extensión de mensajería para Microsoft Teams
 
@@ -122,11 +122,15 @@ Para crear y ejecutar la aplicación localmente:
 
 1. Selecciona **Agregar** para agregar la aplicación a tu cuenta.
 
-   Después de cargar la aplicación, se te llevará directamente a un cuadro de diálogo de búsqueda:
+   Después de cargar la aplicación, puedes intentar usar la funcionalidad de ejemplo: puedes iniciar la extensión de mensaje desde tres puntos en el área de redacción e intentar buscar paquetes npm desde la barra de búsqueda.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Su extensión de mensajería basada en búsquedas en acción":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Su extensión de mensajería basada en búsquedas en acción":::
+   
+   También puede intentar @your message extension instance from search bar in the top row of Teams and search for npm package.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Su extensión de mensajería basada en búsquedas en acción":::
 
-   Escriba texto en el cuadro de búsqueda y, después, seleccione una de las opciones.  Se agregará una tarjeta adaptable al cuadro de entrada.
+   Escriba texto en el cuadro de búsqueda y, a continuación, seleccione una de las opciones, puede crear y enviar tarjetas adaptables de los resultados de búsqueda.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Su extensión de mensajería basada en búsquedas en acción":::
 
 <!-- markdownlint-disable MD033 -->
 <details>

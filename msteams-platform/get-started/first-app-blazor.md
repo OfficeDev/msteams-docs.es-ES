@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d014ba82f8e499b8b38f1dbc13a9ee68ef29f1c9
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157337"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360657"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Crear y ejecutar la primera aplicación Microsoft Teams con Blazor
 
@@ -30,8 +30,6 @@ Asegúrese de que el entorno de desarrollo está configurado instalando los requ
 
 Use el Kit de herramientas de Teams para crear su primer proyecto:
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
-
 1. Abra Visual Studio 2019.
 
 1. Seleccione **Crear un nuevo proyecto**.
@@ -46,38 +44,6 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 
    1. Seleccione **Project**  >  **Configuración de TeamsFx** para  >  **SSO...**.
    1. Cuando se le pida, inicie sesión en su cuenta de administrador de M365.
-
-# <a name="command-line"></a>[Línea de comandos](#tab/cli)
-
-1. Abra un terminal y seleccione el directorio donde desea crear el proyecto.
-
-1. Ejecute `dotnet new -i` para instalar la plantilla desde NuGet:
-
-   ``` bash
-   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
-   ```
-
-   Solo tiene que hacerlo la primera vez o al actualizar la plantilla. Compruebe [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) la versión más reciente de este paquete.
-
-1. Crear un directorio:
-
-   ``` bash
-   mkdir helloworld
-   ```
-
-1. Ejecute `dotnet new` para crear un nuevo proyecto:
-
-   ``` bash
-   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
-   ```
-
-1. Después de scaffolding, configure el proyecto para Teams implementación:
-
-   ``` bash
-   teamsfx init
-   ```
-
-   Ahora puede abrir la solución en Visual Studio para la depuración.
 
 ---
 
@@ -169,7 +135,7 @@ La implementación consta de dos pasos:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Seleccione la operación Publicar en el proyecto":::
 
-1. En la **ventana Publicar,** **seleccione Azure** y selct **Next**.
+1. En la **ventana Publicar,** **seleccione Azure** y seleccione **Siguiente**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Seleccionar Azure como destino de publicación":::
 
@@ -278,7 +244,7 @@ El manifiesto de la aplicación carga la pestaña desde una `localhost` direcci�
 
    Ahora puedes usar la opción Vista previa **en Teams** en la parte superior de la página para iniciar la aplicación en Teams.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

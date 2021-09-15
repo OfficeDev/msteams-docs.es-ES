@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: cfe3dc5f303de9035b363f1e3b8224456ff6588e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 468f1bdaa5f27cf6a57ebab8e447d0003c3e3d81
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157333"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360541"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Compilar y ejecutar su primera aplicación de Microsoft Teams con React
 
@@ -45,7 +45,7 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Inicio del Asistente para crear un nuevo proyecto":::
 
-1. En la **sección Seleccionar capacidades,** varifique que **tab** está seleccionado y seleccione **Aceptar**.
+1. En la **sección Seleccionar capacidades,** compruebe que **Tab** está seleccionada y seleccione **Aceptar**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Captura de pantalla que muestra cómo agregar funcionalidades a la nueva aplicación.":::
 
@@ -96,11 +96,15 @@ Después de Teams Toolkit configurar el proyecto, tienes los componentes para cr
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Captura de pantalla que muestra los archivos de proyecto de la aplicación para una aplicación personal en Visual Studio Code.":::
 
-El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`.  Entre otros elementos de este directorio:
+El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`. 
 
-- Los iconos de aplicación se almacenan como archivos PNG en `color.png` y `outline.png`.
-- El manifiesto de la aplicación para la publicación en el Portal de desarrolladores para Teams se almacena en `manifest.source.json`.
-- La configuración que eligió al crear el proyecto se almacena en `settings.json`.
+- La configuración que eligió al crear el proyecto se almacena en `.fx/settings.json`.
+- El estado del proyecto se almacena en `.fx/env.*.json` .
+
+Y la Teams de la aplicación se almacena en el `appPackage` directorio.
+
+- Los iconos de aplicación se almacenan como archivos PNG en `appPackage/color.png` y `appPackage/outline.png`.
+- El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `appPackage/manifest.source.json` .
 
 Después de seleccionar la funcionalidad de pestaña durante la configuración, el kit de herramientas de Microsoft Teams seleccionará todo el código necesario para crear una pestaña básica en el directorio `tabs`. En este directorio hay varios archivos importantes:
 
@@ -118,7 +122,7 @@ Al agregar funcionalidad de nube, se agregan directorios adicionales al proyecto
 El Kit de herramientas de Teams le permite ejecutar la aplicación localmente.  Se compone de varias partes que son necesarias para proporcionar la infraestructura correcta que espera Teams:
 
 - Una aplicación se registra con Azure Active Directory.  Esta aplicación tiene permisos asociados a la ubicación desde la que se carga la aplicación y a cualquier recurso del back-end al que accede.
-- Una API web se hospeda para ayudar con las tareas de autenticación, actúa como un proxy entre la aplicación y Azure Active Directory.  Esto lo ejecuta Azure Functions Core Tools.  Se puede acceder en la dirección URL `https://localhost:5000`.
+- Una API web se hospeda para ayudar con las tareas de autenticación, actúa como un proxy entre la aplicación y Azure Active Directory. Se puede acceder en la dirección URL `https://localhost:5000`.
 - Los recursos HTML, CSS y JavaScript que configuran el front-end de la aplicación se hospedan en un servicio local. Se puede acceder en `https://localhost:3000`.
 - Se genera un manifiesto de aplicación y existe en el Portal de desarrolladores para Teams.  Teams usa el manifiesto de la aplicación para decir a los clientes conectados desde dónde cargar la aplicación.
 
@@ -131,6 +135,9 @@ Para crear y ejecutar la aplicación localmente:
 1. Desde Visual Studio Code, presione **F5** para ejecutar la aplicación en modo de depuración.
 
    > Al ejecutar la aplicación por primera vez, se descargan todas las dependencias y se compila la aplicación.  Cuando se complete la compilación, se abrirá automáticamente una ventana del explorador.  Este proceso puede tardar entre 3 o 5 minutos.
+
+   Por primera vez para ejecutarse localmente, se le pedirá que instale un certificado para la depuración local. haga clic en Continuar.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/certificate-prompt.png" alt-text="Captura de pantalla en la que se muestra la solicitud para instalar un certificado SSL para permitir que Teams cargue la aplicación desde localhost.":::
 
    El Toolkit solicita que instale un certificado local si es necesario. Este certificado permite a Teams cargar la aplicación desde `https://localhost`. Seleccione Sí cuando aparezca el siguiente cuadro de diálogo:
 
@@ -189,7 +196,7 @@ La implementación implica el aprovisionamiento de recursos en una suscripción 
 
 </details>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

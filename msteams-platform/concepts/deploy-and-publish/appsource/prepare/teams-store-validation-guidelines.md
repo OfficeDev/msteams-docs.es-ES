@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: none
-ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ed3dd7abd877a91fce1c321f0f6c68d91fd1b1e3
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157061"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360478"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validación del almacén
 
@@ -303,7 +303,6 @@ Si la aplicación incluye una pestaña, asegúrate de que se adhiera a estas dir
 * Las pestañas de un contexto personal pueden agregar contenido de instancias compartidas de la aplicación.
 * Las pestañas deben responder a Teams temas. Cuando un usuario cambia el tema, el tema de la aplicación debe reflejar la selección.
 * Las pestañas deben usar Teams de estilo, como fuentes Teams, rampas de tipo, paletas de colores, sistema de cuadrícula, movimiento, tono de voz, y así sucesivamente siempre que sea posible.
-* Debe incluir una **pestaña Configuración** usuario.
 * Las pestañas deben seguir Teams de interacción, como navegación en la página, posición y uso de cuadros de diálogo, jerarquías de información, y así sucesivamente siempre que sea posible.
 * El contenido de tabulación en el iframe no debe incluir características que imitan Teams funcionalidades principales. Por ejemplo, bots, extensiones de mensajería, llamadas, reuniones, entre otros.
 

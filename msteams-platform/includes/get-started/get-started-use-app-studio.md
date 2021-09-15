@@ -1,7 +1,7 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>Usar App Studio para actualizar el paquete de la aplicación
 
 > [!TIP]
-> **Pruebe el Portal para desarrolladores:** App Studio pronto se depricará. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
+> **Pruebe el Portal para desarrolladores:** App Studio ha evolucionado. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
 
 App Studio es una Teams que puedes instalar desde la Teams tienda. Simplifica la creación y el registro de una aplicación.
 
@@ -22,7 +22,7 @@ Siga estos pasos para actualizar el paquete de la aplicación:
 
     El ejemplo viene con su propio manifiesto y está diseñado para crear un paquete de aplicación cuando se crea el proyecto. En .NET, el archivo manifest.json se puede encontrar en Visual Studio en Manifiesto en ```Microsoft.Teams.Samples.HelloWorld.Web``` . En Node.js, esto se realiza escribiendo en la línea `gulp` de comandos del directorio raíz del proyecto.
 
-     En Visual Studio, el manifest.jsel archivo on se encuentra en **en Manifiesto** en `Microsoft.Teams.Samples.HelloWorld.Web` . Este paso se describe en la siguiente imagen:  
+     En Visual Studio, el archivo manifest.json se encuentra en **manifiesto** en `Microsoft.Teams.Samples.HelloWorld.Web` . Este paso se describe en la siguiente imagen:  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     

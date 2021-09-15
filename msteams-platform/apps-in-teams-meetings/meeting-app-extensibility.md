@@ -4,12 +4,12 @@ author: surbhigupta
 description: Comprender las aplicaciones de reuniones unificadas
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a367af1b2941547143ff7e0ec4b897b1174e26e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d77187543dd5e4ab774341f30a8a05a41c6a49f2
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157174"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360499"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -195,11 +195,11 @@ Un usuario invitado o anónimo no puede agregar, quitar o desinstalar aplicacion
 
 En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las características a las que puede tener acceso cada usuario:
 
-| Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
-| Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible |
-| Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible |
+| Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible | No se puede ver pero puede interactuar con la aplicación en la fase de reunión |
+| Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible | Puede ver e interactuar con la aplicación en la fase de reunión |
+| Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible | Puede ver e interactuar con la aplicación en la fase de reunión |
 
 ## <a name="see-also"></a>Consulte también
 
