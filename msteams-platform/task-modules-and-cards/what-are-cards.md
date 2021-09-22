@@ -4,12 +4,12 @@ description: Describe las tarjetas y cómo se usan en bots, conectores y extensi
 ms.localizationpriority: medium
 keywords: mensajes de tarjetas de bots de conectores
 ms.topic: overview
-ms.openlocfilehash: 345e37a9af00c2f3300cc76f4b44b83cc47d0392
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 50e8aa690d4de4dc5464a7e42dbc017e87afe35a
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157578"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475800"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -62,7 +62,11 @@ Además de las tarjetas adaptables, Teams admite otros dos tipos de tarjetas:
 
 Las tarjetas adaptables con webhooks entrantes permiten usar las capacidades enriquecibles y flexibles de las tarjetas adaptables. Envía datos mediante webhooks entrantes en Teams desde su servicio web.
 
-## <a name="see-also"></a>Consulte también
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Compatibilidad con el identificador de objeto de AAD y UPN en la mención del usuario 
+
+Los bots con tarjetas adaptables admiten identificadores de mención de usuario, como id. de objeto de AAD y nombre de principio de usuario (UPN), además de los identificadores existentes. Los webhooks entrantes comienzan a admitir la mención de usuario en la tarjeta adaptable con el identificador de objeto de AAD y UPN.
+
+## <a name="see-also"></a>Vea también
 
 * [Dar formato a las tarjetas Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Diseñar tarjetas adaptables](~/task-modules-and-cards/cards/design-effective-cards.md)

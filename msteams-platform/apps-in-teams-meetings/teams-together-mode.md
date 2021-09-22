@@ -3,12 +3,12 @@ title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 5fb049668247a12231f91aec0e75537608f25b10
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0558b3914ba3cabf2af3937a4a4cadb9342c3844
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157173"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475604"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -27,6 +27,9 @@ El siguiente proceso proporciona información general para crear una aplicación
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Crear solo una aplicación de escena" border="false":::
 
 Una única aplicación de escena sigue siendo una aplicación en Microsoft Teams. Scene studio controla la creación de paquetes de aplicaciones en segundo plano. Varias escenas de un único paquete de aplicación aparecen como una lista plana para los usuarios.
+
+> [!NOTE]
+> Los usuarios no pueden iniciar el modo junto desde el móvil. Sin embargo, después de que un usuario se una a una reunión a través del móvil y el modo Juntos esté activado desde el escritorio, los usuarios móviles que han activado el vídeo aparecerán en modo conjunto en el escritorio. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -108,7 +111,7 @@ La siguiente imagen muestra cada puesto representado como un avatar para crear l
 1. Seleccione **Guardar** y **seleccione Ver en Teams** para probar rápidamente la escena en Microsoft Teams.
 
     * Al seleccionar **Ver en Teams** crea automáticamente una aplicación de Microsoft Teams que  se puede ver en la página Aplicaciones del portal Teams desarrolladores.
-    * Al seleccionar **Ver en Teams** crea automáticamente un paquete de aplicación que appmanifest.jsdetrás de la escena. Puedes ir a  **Aplicaciones desde** el menú y acceder al paquete de aplicaciones creado automáticamente.
+    * Al seleccionar **Ver en Teams** crea automáticamente un paquete de aplicación que es appmanifest.json detrás de la escena. Puedes ir a  **Aplicaciones desde** el menú y acceder al paquete de aplicaciones creado automáticamente.
     * Para eliminar una escena que creaste, **selecciona Eliminar escena** en la barra superior.
 
 1. En **Vista en Teams**, seleccione Vista previa en **Teams**.
@@ -124,19 +127,19 @@ Opcionalmente, puede seleccionar **Compartir en** el **menú** desplegable Guard
 
 Después de la vista previa, la escena se envía como una aplicación para Teams siguiendo los pasos para el envío de la aplicación. Este paso requiere el paquete de la aplicación. El paquete de la aplicación es diferente del paquete de escena, para la escena que se diseñó. El paquete de la aplicación creado automáticamente se encuentra en la **sección Aplicaciones** del Centro Teams desarrolladores.
 
-Opcionalmente, el paquete de escena se recupera **seleccionando Exportar** en el **menú** desplegable Guardar. Se **.zip** un archivo de.zip, que es el paquete de escena. El paquete de escena incluye scene.jsy los activos PNG usados para crear una escena. Se revisa el paquete de escena para incorporar otros cambios:
+Opcionalmente, el paquete de escena se recupera **seleccionando Exportar** en el **menú** desplegable Guardar. Se **.zip** un archivo de.zip, que es el paquete de escena. El paquete de escena incluye un scene.json y los activos PNG usados para crear una escena. Se revisa el paquete de escena para incorporar otros cambios:
 
 ![Exportar una escena](../assets/images/apps-in-meetings/build-a-scene.png)
 
 Una escena compleja que usa el eje Z se muestra en el ejemplo de introducción paso a paso.
 
-## <a name="sample-scenejson"></a>Ejemplo scene.jsen
+## <a name="sample-scenejson"></a>Ejemplo scene.json
 
-Scene.jsjunto con las imágenes indican la posición exacta de los puestos. Una escena consta de imágenes de mapa de bits, sprites y rectángulos para colocar los vídeos de los participantes. Estos sprites y cuadros de participantes se definen en un sistema de coordenadas mundiales. El eje X apunta a la derecha y el eje Y apunta hacia abajo.
+Scene.json junto con las imágenes indican la posición exacta de los puestos. Una escena consta de imágenes de mapa de bits, sprites y rectángulos para colocar los vídeos de los participantes. Estos sprites y cuadros de participantes se definen en un sistema de coordenadas mundiales. El eje X apunta a la derecha y el eje Y apunta hacia abajo.
 
 Las escenas del Modo conjunto personalizado admiten acercamiento a los participantes actuales. Esta característica es útil para reuniones pequeñas en una escena grande. Un sprite es una imagen de mapa de bits estática posicionada en el mundo. El valor Z del sprite determina la posición del sprite. La representación comienza con el sprite con el valor Z más bajo, por lo que un valor Z más alto significa que está más cerca de la cámara. Cada participante tiene su propia fuente de vídeo, que se segmenta para que solo se represente el primer plano.
 
-El siguiente código es el scene.jsen el ejemplo:
+El siguiente código es el ejemplo scene.json:
 
 ```json
 {
@@ -205,7 +208,7 @@ Cada escena tiene un identificador y un nombre únicos. El JSON de la escena tam
 
 Representa `zOrder` el orden de colocación de imágenes y puestos a lo largo del eje Z. Proporciona una sensación de profundidad o partición si es necesario. Consulta el ejemplo de introducción paso a paso. El ejemplo usa `zOrder` el archivo .
 
-Ahora que has pasado por el ejemplo scene.js, puedes activar las escenas personalizadas del Modo conjunto para participar en escenas.
+Ahora que has pasado por el ejemplo scene.json, puedes activar las escenas personalizadas del Modo conjunto para participar en escenas.
 
 ## <a name="activate-custom-together-mode-scenes"></a>Activar escenas personalizadas del modo conjunto
 

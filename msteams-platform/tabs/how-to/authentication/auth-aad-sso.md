@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: API de inicio de sesión único de SSO AAD de autenticación de teams
-ms.openlocfilehash: eddbc681155d1fea03ca2c362f5519c4d2542887
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157381"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475688"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -67,6 +67,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
 > * Solo se admiten permisos Graph API de nivel de usuario, es decir, correo electrónico, perfil, offline_access, OpenId. Si debe tener acceso a otros ámbitos Graph, como o , vea Obtener un token de acceso `User.Read` `Mail.Read` con Graph [permisos](#get-an-access-token-with-graph-permissions).
 > * Es importante que el nombre de dominio de la aplicación sea el mismo que el nombre de dominio registrado para la aplicación de AAD.
 > * Actualmente, no se admiten varios dominios por aplicación.
+> * El usuario debe `accessTokenAcceptedVersion` establecerse `v2` en para una nueva aplicación.
 
 **Para registrar la aplicación a través del portal de AAD**
 

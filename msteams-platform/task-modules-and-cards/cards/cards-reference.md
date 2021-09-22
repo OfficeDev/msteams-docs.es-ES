@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: medium
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157585"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475597"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -59,10 +59,10 @@ Puede identificar y usar diferentes tipos de tarjetas según los requisitos de l
 
 ## <a name="features-that-support-different-card-types"></a>Características que admiten distintos tipos de tarjeta
 
-| Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhooks entrantes | Conectores de O365 |
+| Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhooks entrantes | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Tarjeta adaptable | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Tarjeta O365 Connector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365 Tarjeta de conector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Tarjeta de héroe | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Tarjeta miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Tarjeta de lista | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -75,6 +75,9 @@ Puede identificar y usar diferentes tipos de tarjetas según los requisitos de l
 ## <a name="common-properties-for-all-cards"></a>Propiedades comunes para todas las tarjetas
 
 Puedes ir a través de algunas propiedades comunes que son aplicables a todas las tarjetas.
+
+> [!NOTE]
+> Las tarjetas de miniatura y de héroe con varias acciones se dividen automáticamente en varias tarjetas en un diseño de carrusel.
 
 ### <a name="inline-card-images"></a>Imágenes de tarjetas en línea
 
@@ -110,7 +113,7 @@ Después de identificar las propiedades comunes de todas las tarjetas, ahora pue
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. Para obtener más información, vea [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. Para obtener más información, vea [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### <a name="support-for-adaptive-cards"></a>Compatibilidad con tarjetas adaptables
 
@@ -121,7 +124,8 @@ En la tabla siguiente se proporcionan las características que admiten tarjetas 
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams plataforma admite v1.2 o versiones anteriores de características de tarjeta adaptable.
+> * Teams plataforma admite v1.4 o versiones anteriores de características de tarjeta adaptable para tarjetas enviadas por bots y extensiones de mensajería basadas en acciones.
+> * Teams plataforma admite la versión 1.3 o versiones anteriores de características de tarjeta adaptable para otras funcionalidades, como tarjetas enviadas por el usuario (extensiones de mensajería basadas en búsquedas y desamueblar vínculos), pestañas y módulos de tareas.
 > * El estilo de acción positiva o destructiva no se admite en tarjetas adaptables en la Teams web.
 > * Actualmente, los elementos multimedia no se admiten en la tarjeta adaptable en Teams plataforma.
 
@@ -945,7 +949,7 @@ Bot Framework implementa las siguientes tarjetas, pero no son compatibles con Te
 * Tarjetas de audio
 * Tarjetas de vídeo
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md)
 * [Dar formato a tarjetas](~/task-modules-and-cards/cards/cards-format.md)

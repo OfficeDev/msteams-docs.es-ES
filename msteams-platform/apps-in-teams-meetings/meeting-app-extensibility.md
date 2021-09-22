@@ -4,12 +4,12 @@ author: surbhigupta
 description: Comprender las aplicaciones de reuniones unificadas
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: d77187543dd5e4ab774341f30a8a05a41c6a49f2
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 45633546825a54ed4d2adffbb60f459f26efe1c6
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360499"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475625"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -101,7 +101,7 @@ Se muestra el cuadro de diálogo en la reunión donde puede escribir la respuest
 > [!NOTE]
 > * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso a , y representar `meetingId` `userMri` la experiencia `frameContext` correctamente.
 > * Si el cuadro de diálogo en la reunión se representa correctamente, envía una notificación de que los resultados se descargan correctamente.
-> * El manifiesto de la aplicación especifica los lugares en los que quieres que aparezcan las aplicaciones. El campo de contexto se usa para este propósito. También es la parte de una experiencia de bandeja de uso compartido, sujeto a las directrices de diseño especificadas.
+> * El manifiesto de la aplicación usa el campo de contexto y especifica los lugares en los que el usuario desea que aparezcan las aplicaciones. Además, actúa como parte de una experiencia de bandeja de uso compartido como se menciona en las directrices de diseño especificadas.
 
 En la siguiente imagen se muestra el panel lateral de la reunión:
 
@@ -201,7 +201,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 | Invitado que forma parte del inquilino AAD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | Disponible | Puede ver e interactuar con la aplicación en la fase de reunión |
 | Usuario federado. Para obtener más información, vea [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde una tarjeta adaptable. | No disponible | Puede ver e interactuar con la aplicación en la fase de reunión |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

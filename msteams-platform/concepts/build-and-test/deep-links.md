@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157465"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475779"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -219,6 +219,9 @@ Use el siguiente formato para un vínculo profundo que puede usar en un bot, con
 
 Ejemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
+> [!NOTE]
+> Los parámetros de búsqueda no admiten `+` la señal en lugar de espacios en blanco ( ` ` ). Asegúrese de que el código de codificación uri devuelve `%20` espacios por ejemplo, `?subject=test%20subject` es bueno, pero es `?subject=test+subject` malo.
+
 Los parámetros de consulta son:
 
 * `attendees`: la lista opcional separada por comas de los id. de usuario que representan a los asistentes a la reunión. El usuario que realiza la acción es el organizador de la reunión. Actualmente, el campo Id. de usuario solo es compatible con UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico.
@@ -257,7 +260,7 @@ Estos son los parámetros de consulta:
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Ejemplo de nombre | Descripción | C # |Node.js|
+| Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
 |Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 

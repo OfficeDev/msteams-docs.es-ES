@@ -5,12 +5,12 @@ description: Comprenda cómo los webhooks y conectores pueden conectar los servi
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157650"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475764"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks y conectores
 
@@ -33,7 +33,7 @@ Los webhooks entrantes ayudan a publicar mensajes desde aplicaciones a Teams. Si
 
 ### <a name="office-365-connectors"></a>Conectores de Office 365
 
-Office 365 Los conectores te permiten crear una página de configuración personalizada para el webhook entrante y empaquetarlos como parte de una Teams aplicación. Los mensajes se envían principalmente mediante Office 365 connector y tienen la capacidad de agregarles un conjunto limitado de acciones de tarjeta. Por ejemplo, un conector meteorológico que permite a los usuarios seleccionar una ubicación y hora del día, para recibir actualizaciones sobre el tiempo del mañana. Se configuran en un nivel de canal, pero se instalan en un nivel de equipo.
+Office 365 Los conectores te permiten crear una página de configuración personalizada para el webhook entrante y empaquetarlos como parte de una Teams aplicación. Los mensajes se envían principalmente mediante Office 365 connector y tienen la capacidad de agregarles un conjunto limitado de acciones de tarjeta. Por ejemplo, un conector meteorológico que permite a los usuarios seleccionar una ubicación y una hora del día, para recibir actualizaciones sobre el tiempo del mañana. Se configuran en un nivel de canal, pero se instalan en un nivel de equipo.
 
 > [!NOTE]
 > Puedes distribuir la aplicación Office 365 Connector Teams a nuestra AppStore.
@@ -42,7 +42,7 @@ Office 365 Los conectores te permiten crear una página de configuración person
 
 Los mensajes que se pueden usar permiten a los usuarios tomar medidas sin salir de su cliente de correo electrónico, lo que aumenta la participación de los usuarios. Con Office 365 webhooks entrantes y de entrada, puede enviar mensajes publicando una carga JSON en la dirección URL del webhook.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

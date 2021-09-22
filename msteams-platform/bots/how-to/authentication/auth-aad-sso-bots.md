@@ -4,12 +4,12 @@ description: Describe cómo obtener un token de usuario. Actualmente, un desarro
 keywords: token, token de usuario, compatibilidad con SSO para bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: a3b150ee27eeb387c71191e74b6765dd5a93b148
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3f4c7a1c803baba2687e3803a820dc351f9ca33
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157161"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475736"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -31,7 +31,7 @@ Siga estos pasos para obtener tokens de aplicación de bot y autenticación:
     >* El token del bot se recibe de cada punto de conexión de usuario activo.
     >* La aplicación debe instalarse en el ámbito personal para la compatibilidad con SSO.
 
-1. Si el usuario actual usa la aplicación bot por primera vez, aparece un mensaje de solicitud solicitando al usuario que realice una de las siguientes acciones:
+1. Si el usuario actual usa la aplicación bot por primera vez, aparece un mensaje de solicitud para solicitar al usuario que realice una de las siguientes acciones:
     * Proporcionar consentimiento, si es necesario.
     * Controle la autenticación paso a paso, como la autenticación en dos fases.
 
@@ -101,13 +101,13 @@ Siga estos pasos para actualizar Azure Portal con la conexión de OAuth:
     * OpenId
     * perfil
 
-3. En Azure Portal, vaya a **Bot Channels Registration**.
+3. En Azure Portal, vaya a [ **AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+4. Seleccione **Configuración** en el panel izquierdo.
+5. Seleccione **Agregar conexión de OAuth Configuración**.
 
-4. Seleccione **Configuración** en el panel izquierdo y elija **Agregar configuración** en la sección Configuración Configuración **OAuth.**
+    ![Vista SSOBotHandle2](~/assets\Contosoairlines123.png)
 
-    ![Vista SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
-
-5. Realice los pasos siguientes para completar el **formulario Nueva configuración de** conexión:
+6. Realice los pasos siguientes para completar el **formulario Nueva configuración de** conexión:
 
     >[!NOTE]
     > **La concesión** implícita puede ser necesaria en la aplicación de AAD.

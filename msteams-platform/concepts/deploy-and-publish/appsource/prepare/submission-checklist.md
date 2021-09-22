@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f02eb250925ce262ad78e5be1edbe42f4b9469e5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2453a8541a168db2c8417b8a3d80985c95efa12a
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157114"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475786"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío Microsoft Teams almacén
 
@@ -22,16 +22,21 @@ Antes de enviar la aplicación al [Centro de partners,](/office/dev/store/use-pa
 
 Aunque la aplicación puede estar funcionando en un entorno de prueba, debes comprobar el paquete de la aplicación para evitar que se presenten problemas durante el proceso de envío.
 
-La Microsoft Teams de validación de aplicaciones te ayuda a identificar y solucionar problemas antes de enviarte al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
+La Microsoft Teams de validación de aplicaciones te ayuda a solucionar problemas antes de enviarte al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación con respecto a los casos de prueba usados durante la validación de la tienda.
 
 1. Vaya a la [herramienta Microsoft Teams validación de aplicaciones.](https://dev.teams.microsoft.com/appvalidation.html) (Nota: La herramienta también está disponible en [App Studio](../../../build-and-test/app-studio-overview.md).)
 1. Upload el paquete de la aplicación para ejecutar las pruebas automatizadas.
 1. Vaya a la **lista de comprobación preliminar** y revise los casos de prueba que son difíciles de automatizar.
-1. [Se solucionan problemas con las configuraciones](~/resources/schema/manifest-schema.md) o la aplicación en general si las pruebas automatizadas te dan errores o no has cumplido todos los criterios de la lista de comprobación.
+1. [Se solucionan problemas con las configuraciones](~/resources/schema/manifest-schema.md) o la aplicación en general. Estos problemas se producen si las pruebas automatizadas le dan errores o no ha cumplido todos los criterios de la lista de comprobación.
 
 ## <a name="compile-testing-instructions"></a>Compilar instrucciones de prueba
 
-Proporcione instrucciones y recursos para ayudar a los revisores a probar la aplicación, incluidas las cuentas de prueba, las credenciales y las claves de licencia. Puede agregar instrucciones en el Centro de partners o cargarlas en una ubicación disponible públicamente en SharePoint.
+Proporcione instrucciones y recursos para ayudar a los revisores a probar la aplicación, como:
+* Cuentas de prueba
+* Credenciales
+* Claves de licencia
+
+Puede agregar instrucciones en el Centro de partners o cargarlas en una ubicación disponible públicamente en SharePoint.
 
 ### <a name="feature-list"></a>Lista de características
 
@@ -39,9 +44,9 @@ Proporciona detalles sobre las capacidades de la aplicación en Teams y los paso
 
 ### <a name="accounts"></a>Cuentas
 
-Debes proporcionar cuentas de prueba si la aplicación requiere una licencia o una lista segura de back-end. Todas las cuentas que proporciones deben incluir datos rellenados previamente para facilitar las pruebas.
+Proporcione cuentas de prueba si la aplicación requiere una licencia o una lista segura de back-end. Todas las cuentas que proporciones deben incluir datos rellenados previamente para ayudar en las pruebas.
 
-Según las características de la aplicación, es posible que deba proporcionar lo siguiente:
+Según las características de la aplicación, es posible que deba proporcionar todas las siguientes cuentas:
 
 * Cuenta de administrador (obligatorio)
 * Cuenta que no es de administrador (obligatorio)
@@ -81,11 +86,11 @@ Asegúrese de que su nombre corto se adhiera a las [directrices de validación d
 
 ### <a name="write-descriptions"></a>Escribir descripciones
 
-Debes tener una descripción corta y larga de la aplicación.
+Debe tener una descripción corta y larga de su aplicación.
 
-#### <a name="short-description"></a>La descripción breve
+#### <a name="short-description"></a>Descripción breve
 
-Un resumen conciso de la aplicación que debe ser original, atractivo y dirigido a la audiencia de destino. Mantenga la descripción corta en una oración.
+Un resumen conciso de la aplicación que debe ser original, atractivo y dirigido a la audiencia de destino. Limite la descripción a una sola frase.
 
 :::row:::
 
@@ -99,9 +104,15 @@ Un resumen conciso de la aplicación que debe ser original, atractivo y dirigido
 
 Asegúrese de que su breve descripción se adhiera a las [directrices de validación de la tienda.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)
 
-#### <a name="long-description"></a>La descripción larga
+#### <a name="long-description"></a>Descripción larga
 
-La descripción larga puede proporcionar una narrativa que resalte las características principales de la aplicación, los problemas que resuelve y su audiencia de destino. Aunque esta descripción puede tener hasta 4.000 caracteres, la mayoría de los usuarios solo leerán entre 300 y 500 palabras.
+La descripción larga puede proporcionar una descripción que resalte las aplicaciones:
+
+* Características principales
+* Los problemas que resuelve
+* Público objetivo
+
+Aunque esta descripción puede tener hasta 4 000 caracteres, la mayoría de los usuarios sólo leerán entre 300 y 500 palabras.
 
 :::row:::
 
@@ -123,7 +134,7 @@ Para obtener más información, consulta las instrucciones para [crear Teams ico
 
 ### <a name="capture-screenshots"></a>Capturar capturas de pantalla
 
-Las capturas de pantalla proporcionan una vista previa visual destacada de la aplicación para complementar el nombre, el icono y las descripciones de la aplicación.
+Las capturas de pantalla proporcionan una destacada vista previa de su aplicación para complementar el nombre, el icono y las descripciones de la misma.
 
 :::row:::
 
@@ -135,35 +146,39 @@ Las capturas de pantalla proporcionan una vista previa visual destacada de la ap
 
 :::row-end:::
 
-Recuerde lo siguiente acerca de las capturas de pantalla:
+Recuerde los siguientes procedimientos recomendados sobre capturas de pantalla:
 
-* Puedes tener hasta cinco capturas de pantalla por descripción.
-* Los tipos de archivo admitidos incluyen PNG, JPEG y GIF.
-* Las dimensiones deben ser de 1366 x 768 píxeles.
-* Tamaño máximo de 1.024 KB.
+* Puede tener hasta cinco capturas de pantalla por anuncio.
+* Los tipos de archivo admitidos son PNG, JPEG y GIF.
+* Las dimensiones deben ser de 1366x768 píxeles.
+* Tamaño máximo de 1 024 KB.
 
 Para obtener los procedimientos recomendados, consulte los siguientes recursos:
 
-* [Teams de validación del almacén](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Crear imágenes eficaces para almacenes de aplicaciones de Microsoft](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>Crear un vídeo
 
-Un vídeo de la descripción puede ser la forma más eficaz de comunicar por qué las personas deben usar la aplicación. Debe abordar las siguientes preguntas en un vídeo:
+Un vídeo de la descripción puede ser la forma más eficaz de comunicar por qué las personas deben usar la aplicación. En un vídeo, se abordan las siguientes preguntas:
 
 * Quién Cuál es tu aplicación?
 * ¿Qué problemas puede resolver la aplicación?
 * ¿Cómo funciona la aplicación?
 * ¿Qué otras ventajas obtienes al usar la aplicación?
 
+Puedes agregar una dirección URL para el vídeo de YouTube o Vimeo.
+
 #### <a name="best-practices-for-videos"></a>Procedimientos recomendados para vídeos
 
-* Mantén el vídeo entre 30 y 90 segundos.
+* Mantenga el vídeo entre 60 y 90 segundos.
 * Apunta a la calidad. En una descripción, los usuarios verán el vídeo antes de las capturas de pantalla.
+* Comunicar el valor del producto en forma narrativa.
+* Muestra cómo funciona el producto.
 
 ### <a name="select-a-category-for-your-app"></a>Seleccionar una categoría para la aplicación
 
-Durante el envío, se te pide que clasifices tu aplicación. En la tabla siguiente se Teams categorías de almacén a las categorías enumeradas en [el Centro de partners](https://aka.ms/PartnerCenterHomePage).
+Durante el envío, se te pide que clasifices tu aplicación. En la tabla siguiente se Teams categorías de la Tienda a las categorías enumeradas en [el Centro de partners](https://aka.ms/PartnerCenterHomePage).
 
 | Teams categorías       | Categorías del Centro de partners  |
 |:---------------------|:---------------|
@@ -173,7 +188,7 @@ Durante el envío, se te pide que clasifices tu aplicación. En la tabla siguien
 | Recursos humanos | Recursos humanos y contratación |
 | Productividad | Administración de contenido, archivos y documentos, productividad, aprendizaje y tutoriales y utilidades |
 | Administración de proyectos | Administración de Project, flujo de trabajo y administración empresarial |
-| Ventas y soporte técnico | Administración de clientes y contactos, soporte al cliente, administración financiera, ventas y marketing |
+| Ventas y soporte técnico | Administración de clientes y contactos, soporte al cliente, administración financiera y ventas y marketing |
 | Social y divertido | Galerías de imágenes y vídeo, Estilo de vida, Noticias y Tiempo, Social, Viajes y Navegación |
 
 ### <a name="localize-your-store-listing"></a>Localización de la descripción de la tienda
@@ -182,11 +197,11 @@ El Centro de partners admite [listados de almacenes localizados.](/office/dev/st
 
 ## <a name="complete-publisher-verification"></a>Verificación Publisher completa
 
-[Publisher se requiere](/azure/active-directory/develop/publisher-verification-overview) la verificación de Teams aplicaciones enumeradas en la tienda. Para obtener más información, consulta [preguntas más frecuentes,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)cómo marcar tu aplicación como editor [comprobado](/azure/active-directory/develop/mark-app-as-publisher-verified)y solucionar problemas de verificación [del editor.](/azure/active-directory/develop/troubleshoot-publisher-verification)
+[Publisher se requiere](/azure/active-directory/develop/publisher-verification-overview) la verificación de Teams aplicaciones enumeradas en la tienda. Para obtener más información, consulte [las preguntas más frecuentes](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [cómo marcar su aplicación como verificada por el editor](/azure/active-directory/develop/mark-app-as-publisher-verified), y [cómo solucionar el problema de la verificación del editor](/azure/active-directory/develop/troubleshoot-publisher-verification).
 
 ## <a name="complete-publisher-attestation"></a>Certificación Publisher completa
 
-[Publisher atestación también](/microsoft-365-app-certification/docs/attestation) es necesaria para las Teams que aparecen en la tienda. El proceso incluye completar una autoevaluación de las prácticas de seguridad, control de datos y cumplimiento de la aplicación que pueden ayudar a los clientes potenciales a tomar decisiones fundamentadas sobre el uso de la aplicación.
+[Publisher atestación también](/microsoft-365-app-certification/docs/attestation) es necesaria para Teams aplicaciones enumeradas en la Tienda. El proceso incluye completar una autoevaluación de las prácticas de seguridad, control de datos y cumplimiento de la aplicación. El proceso puede ayudar a los clientes potenciales a tomar decisiones fundamentadas sobre el uso de la aplicación.
 
 > [!NOTE]
 > Si vas a enviar una nueva aplicación, no puedes completar oficialmente Publisher atestación hasta que la aplicación aparezca en la Teams tienda. Si estás actualizando una aplicación enumerada, completa Publisher atestación antes de enviar la versión más reciente de la aplicación para su validación.

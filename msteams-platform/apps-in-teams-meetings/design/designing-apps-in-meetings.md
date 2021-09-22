@@ -5,23 +5,23 @@ description: Obtén información sobre cómo diseñar aplicaciones en Teams reun
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157177"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475702"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
 Puedes crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una reunión o que envíen un aviso rápido que no interrumpa el flujo de la reunión.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Puedes encontrar instrucciones de diseño más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Agregar una extensión de reunión
 
@@ -104,7 +104,7 @@ Las personas pueden usar la pestaña en la reunión para:
 |2|**Nombre de la aplicación**|
 |3|**Encabezado:** incluye el nombre de la aplicación.|
 |4 |**Botón Cerrar:** descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
-|5 |**Barra de notificaciones:** las alertas de error se muestran directamente debajo del encabezado y presionan el contenido del iframe hacia abajo en 20 píxeles.|
+|5|**Barra de notificaciones:** las alertas de error se muestran directamente debajo del encabezado y presionan el contenido del iframe hacia abajo en 20 píxeles.|
 |6 |**iframe:** muestra el contenido de la aplicación.|
 
 ### <a name="spacing"></a>Spacing
@@ -171,7 +171,7 @@ Hay dos variantes de encabezado. Cuando sea posible, usa la variante con el avat
 |2|**Icono de aplicación**|
 |3|**Nombre de la aplicación**|
 |4 |**Botón Cerrar:** descarta el cuadro de diálogo.|
-|5 |**Cadena de acción:** normalmente describe quién inició el cuadro de diálogo.|
+|5|**Cadena de acción:** normalmente describe quién inició el cuadro de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamiento dinámico: cuadros de diálogo en la reunión
 
@@ -186,10 +186,13 @@ Para implementar, especifique el ancho y el alto con la [`externalResourceUrl`](
 
 ## <a name="use-the-shared-meeting-stage"></a>Usar la fase de reunión compartida
 
-La fase de reunión compartida ayuda a los participantes a interactuar y colaborar en el contenido de la aplicación en tiempo real. Por ejemplo, los usuarios pueden centrar su reunión en editar un documento, hacer una lluvia de ideas con una pizarra o revisar un panel.
+La fase de reunión compartida ayuda a los participantes a interactuar y colaborar con el contenido de la aplicación en tiempo real. Por ejemplo, los usuarios pueden centrar su reunión en editar un documento, hacer una lluvia de ideas con una pizarra o revisar un panel.
 
 Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase se vuelve a reorientar para todos los participantes de la reunión.
 
+> [!NOTE]
+> Actualmente, si una aplicación se comparte en fase en el escritorio, se mostrará solo para los usuarios en reuniones móviles.
+ 
 ### <a name="use-cases"></a>Casos de uso
 
 La fase de reunión compartida tiene que ver con la colaboración y la participación. Estos son algunos escenarios de ejemplo que le ayudarán a empezar.
@@ -243,7 +246,7 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
 |2|**Botón Compartir a fase de reunión:** punto de entrada para compartir la aplicación a la fase de reunión. Muestra si configuras la aplicación para que use la fase de reunión compartida.|
 |3|**iframe:** muestra el contenido de la aplicación.|
 |4 |**Botón Detener uso compartido:** deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
-|5 |**Atribución del moderador:** muestra el nombre del participante que compartió la aplicación.|
+|5|**Atribución del moderador:** muestra el nombre del participante que compartió la aplicación.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamiento dinámico: fase de reunión compartida
 
@@ -266,7 +269,7 @@ Cuando el panel lateral está abierto, la fase de reunión es de 918 x 540 píxe
 
 ## <a name="after-a-meeting"></a>Después de una reunión
 
-Puedes volver a una reunión después de que finalice y ver el contenido de la aplicación. En este ejemplo, el organizador de la reunión puede ver los resultados del sondeo en la pestaña **Contoso.** (Nota: Desde el punto de vista del diseño, no hay diferencia entre una experiencia de pestaña anterior y posterior a la reunión).
+Puedes volver a una reunión después de que finalice y ver el contenido de la aplicación. En este ejemplo, el organizador de la reunión puede ver los resultados del sondeo en la pestaña **Contoso.** (Nota: Desde el punto de vista del diseño, no hay ninguna diferencia entre la experiencia de tabulación anterior y posterior a la reunión).
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="La ilustración de ejemplo muestra una pestaña posterior a la reunión." border="false":::
 

@@ -3,12 +3,12 @@ title: Información general sobre las acciones universales para tarjetas adaptab
 description: Una introducción rápida a las acciones universales para tarjetas adaptables.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157258"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475716"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
@@ -19,7 +19,7 @@ Las acciones universales para tarjetas adaptables traen el bot como el back-end 
 Este documento le ayuda a comprender cómo puede usar el modelo de acciones universales para mejorar la experiencia del usuario de interactuar con tarjetas adaptables en plataformas y aplicaciones.
 
 > [!NOTE]
-> La compatibilidad con acciones universales para tarjetas adaptables solo está disponible para las tarjetas enviadas por el bot. La compatibilidad con las tarjetas enviadas a través del cuadro de redacción y las tarjetas de desamuestración de vínculos estará disponible próximamente.
+> La compatibilidad con acciones universales para tarjetas adaptables v1.4 solo está disponible para las tarjetas enviadas por el bot. La compatibilidad con las tarjetas enviadas a través del cuadro de redacción y las tarjetas de desamuestración de vínculos estará disponible próximamente.
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Mejorar las experiencias de usuario con acciones universales para tarjetas adaptables
 
