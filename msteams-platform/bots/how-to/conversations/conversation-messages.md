@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: f2cb661ac20d8313101144be275a54a90f4f2db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b46ce611ca09c4d5883cc66e0078291422e2b65a
+ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157158"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59491677"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -90,7 +90,13 @@ async def on_message_activity(self, turn_context: TurnContext):
         "name": "Teams TestBot"
     },
     "textFormat": "plain",
-    "text": "Hello Teams TestBot",
+    "text": "Hello Teams TestBot.Sending bold-italic rich text",
+    "attachments": [
+      {
+            "contentType": "text/html",
+            "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
+      } 
+    ],
     "entities": [
       { 
         "locale": "en-US",

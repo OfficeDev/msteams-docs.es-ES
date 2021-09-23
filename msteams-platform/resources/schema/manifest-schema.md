@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 07b2c969877dc61c8678bb89099d6275f2cf367c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: d1fa68cc4ae69e8a35c0d812192bb5c15a7cf130
+ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475765"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59491684"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -193,7 +193,7 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
           "context": [
             "message"
           ],
-          "description": "Command Description; e.g., Search for a customer",
+          "description": "Command Description; e.g., Add a customer",
           "initialRun": true,
           "fetchTask": true,
           "parameters": [
@@ -204,14 +204,26 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
               "inputType": "text"
             }
           ]
+        },
+         {
+          "id": "exampleCmd3",
+          "title": "Example Command 3",
+          "type": "action",
+          "context": [
+            "compose",
+            "commandBox",
+            "message"
+          ],
+          "description": "Command Description; e.g., Add a customer",
+          "fetchTask": false,
+          "taskInfo": {
+            "title": "Initial dialog title",
+            "width": "Dialog width",
+            "height": "Dialog height",
+            "url": "Initial webview URL"
+          }
         }
       ],
-      "taskInfo": {
-        "title": "Initial dialog title",
-        "width": "Dialog width",
-        "height": "Dialog height",
-        "url": "Initial webview URL"
-      },
       "messageHandlers": [
         {
           "type": "link",
@@ -225,7 +237,7 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
       ]
     }
   ],
-  "permissions": [
+"permissions": [
     "identity",
     "messageTeamMembers"
   ],
@@ -527,19 +539,19 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|64 caracteres|✔|El identificador del comando.|
-|`title`|cadena|32 caracteres|✔|Nombre de comando fácil de usar.|
-|`type`|cadena|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
+|`title`|string|32 caracteres|✔|Nombre de comando fácil de usar.|
+|`type`|string|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
 |`description`|cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|boolean|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
 |`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
 |`fetchTask`|boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se debe cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
-|`taskInfo.width`|cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.width`|string|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.height`|cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.url`|cadena|||Dirección URL de vista web inicial.|
 |`parameters`|matriz de objeto|5 elementos|✔|La lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
-|`parameters.name`|string|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
+|`parameters.name`|cadena|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
 |`parameters.title`|cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
 |`parameters.description`|cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
 |`parameters.value`|cadena|512 caracteres||Valor inicial del parámetro.|
@@ -631,7 +643,7 @@ Define las propiedades que usa la aplicación para publicar una fuente de activi
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|Tipo de notificación. *Vea a continuación*.|
-|`description`|string|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
+|`description`|cadena|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
 |`templateText`|string|128 caracteres|✔|Ex: "{actor} created task {taskId} for you"|
 
 ```json
