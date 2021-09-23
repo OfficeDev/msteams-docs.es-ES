@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
+ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157181"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59487483"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Requisitos previos para las aplicaciones en las reuniones de Teams
 
@@ -73,13 +73,13 @@ Para identificar y recuperar información contextual para el contenido de la pes
 > * No almacenar en caché los roles de los participantes, ya que el organizador de la reunión puede cambiar los roles en cualquier momento.
 > * Teams actualmente no admite listas de distribución grandes ni tamaños de lista de más de 350 participantes para la `GetParticipant` API.
 
-La `GetParticipant` API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. La API incluye parámetros de consulta, ejemplos y códigos de respuesta.
+La `GetParticipant` API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. La API incluye parámetros de consulta, ejemplos y códigos de respuesta. La API se admite en reuniones privadas programadas o periódicas y en reuniones programadas o periódicas de canal. 
 
 #### <a name="query-parameters"></a>Parámetros de consulta
 
 La `GetParticipant` API incluye los siguientes parámetros de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
@@ -184,7 +184,7 @@ La API permite proporcionar señales de reunión que se entregan mediante la API
 
 La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
@@ -279,7 +279,7 @@ Para usar la `Meeting Details` API, debe obtener permisos de RSC. Use el siguien
 
 La `Meeting Details` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 

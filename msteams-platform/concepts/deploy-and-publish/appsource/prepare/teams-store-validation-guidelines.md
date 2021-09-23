@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5e2f26fcdbd2e11fcb28331cd9d226d63c9a2aad
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439693"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475709"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -23,7 +23,7 @@ Al seguir estas directrices, se incrementa la probabilidad de que la aplicación
 
 ### <a name="app-name"></a>Nombre de la aplicación
 
-El nombre de una aplicación desempeña un papel fundamental a la hora de que los usuarios la descubran en la tienda. Recuerde lo siguiente sobre los nombres de las aplicaciones:
+El nombre de una aplicación desempeña un papel fundamental a la hora de que los usuarios puedan encontrarla en la tienda. Recuerde lo siguiente:
 
 * El nombre debe incluir términos relevantes para los usuarios.
 * Los nombres de las funciones principales de Teams&#8212;como **Chat**, **Contactos**, **Calendario**, **Llamadas**, **Archivos**, **Actividad**, **Teams**, **Aplicaciones** y **Ayuda**&#8212;no deben incluirse en el nombre de su aplicación.
@@ -32,7 +32,7 @@ El nombre de una aplicación desempeña un papel fundamental a la hora de que lo
 * Si su aplicación forma parte de una asociación oficial con Microsoft, el nombre de su aplicación debe ir en primer lugar (por ejemplo, **Contoso Connector para Microsoft Teams**).
 * No debe copiar el nombre de una aplicación que aparece en la tienda u otra oferta en el mercado comercial.
 * No debe contener términos profanos o despectivos. El nombre tampoco debe incluir un lenguaje racial o culturalmente insensible.
-* Debe ser único. Por ejemplo, no puede mostrar varias aplicaciones para diferentes regiones con el mismo nombre y funcionalidad.
+* Debe ser único. Por ejemplo, no puede enumerar varias aplicaciones para diferentes regiones con el mismo nombre y funcionalidad.
 
 ### <a name="suitable-for-workplace-consumption"></a>Apto para el consumo en el área de trabajo
 
@@ -68,7 +68,7 @@ Los bots siempre deben pedir permiso para subir un archivo y mostrar un mensaje 
 
 ### <a name="external-domains"></a>Dominios externos
 
-En la mayoría de los casos, no debe incluir dominios fuera del control de su organización (incluyendo comodines) y servicios de túnel en las configuraciones de dominio de su aplicación. Las excepciones son las siguientes:
+En la mayoría de los casos, no debe incluir dominios fuera del control de su organización (incluyendo comodines) ni servicios de túnel en las configuraciones de dominio de su aplicación. Se incluyen las siguientes excepciones:
 
 * Si su aplicación utiliza la tarjeta OAuthCard de Azure Bot Service, debe incluirla `token.botframework.com` como dominio válido o el botón de **inicio de sesión** no funcionará.
 * Si su aplicación depende de SharePoint, puede incluir el sitio raíz de SharePoint asociado como un dominio válido utilizando la `{teamSiteDomain}` propiedad de contexto.
@@ -192,6 +192,7 @@ La descripción larga puede proporcionar una narración atractiva que destaque l
 * Use la voz activa y hable directamente a los usuarios. Por ejemplo, *Puede ...*.
 * Enumere las características con viñetas para que sea más fácil escanear la descripción.
 * Describa las limitaciones de forma clara, condiciones o excepciones a la funcionalidad, las características y los resultados descritos en el listado y los materiales relacionados antes de que el usuario instale su aplicación.. Las funciones de Teams que admita su aplicación deben estar relacionadas con las funciones principales que describe su listado.
+* Asegúrese de que la descripción de la aplicación coincide con la funcionalidad disponible dentro de la aplicación Teams. Cualquier referencia a flujos de trabajo fuera de la aplicación Teams debe estar limitada y debe llamarse de forma clara desde la funcionalidad de la aplicación Teams.
 * Incluya un vínculo de ayuda o soporte.
 * Consulte **Microsoft 365** en lugar de **Office 365**.
 * Si necesita hacer referencia a **Teams**, escriba la primera referencia como **Microsoft Teams**. Las referencias posteriores pueden acortarse a **Teams**.
@@ -208,19 +209,23 @@ La descripción larga puede proporcionar una narración atractiva que destaque l
 
 **No:**
 
-* Supera las 500 palabras.
+* Superar las 500 palabras.
 * Abreviar **Microsoft** como **MS** o **MSFT**.
 * Indicar que la aplicación es una oferta de Microsoft, incluyendo el uso de eslóganes o etiquetas de Microsoft.
 * Usar nombres de marcas con derechos de autor que no son de su propiedad.
-* Incluya errores tipográficos, gramaticales y mayúsculas innecesarias (por ejemplo, **Usuarios** en lugar de **Usuarios**).
-* Incluir vínculos a AppSource.
-* Use el siguiente lenguaje a menos que sea un socio certificado de Microsoft:
+ * Usar el siguiente lenguaje a menos que sea un partner certificado de Microsoft:
   * "... certificado para ..."
   * "... proporcionado por ..."
+* Incluir errores tipográficos, gramaticales y mayúsculas innecesarias, como **Usuarios** en lugar de **usuarios.**
+* Incluir vínculos a AppSource.
+* Incluir afirmaciones no comprobadas (por ejemplo: mejor, superior, clasificada), a menos que vaya acompañada por la fuente de dicha afirmación.
+* Comparar la oferta con otras ofertas del marketplace.
+
+
 
 ### <a name="screenshots"></a>Capturas de pantalla
 
-Las capturas de pantalla proporcionan una destacada vista previa de su aplicación para complementar el nombre, el icono y las descripciones de la misma. Recuerde lo siguiente sobre las capturas de pantalla:
+Las capturas de pantalla proporcionan una destacada vista previa de su aplicación que complementa al nombre, el icono y las descripciones de la misma:
 
 * Puede tener hasta cinco capturas de pantalla por anuncio.
 * Los tipos de archivo admitidos son PNG, JPEG y GIF.
@@ -282,18 +287,18 @@ Si su aplicación incluye una pestaña, asegúrese de que se adhiere a estas dir
 
 * El área de pantalla de inicio de sesión no debe utilizar logotipos grandes ni mostrar una página web completa.
 * El contenido puede simplificarse dividiéndolo en varias pestañas.
-* Las pestañas no deben tener un encabezado duplicado. Elimine el logotipo del iframe, ya que el marco de la pestaña ya muestra el icono y el nombre de la aplicación.
+* Las pestañas no deben tener un encabezado duplicado. Quite el logotipo del iframe, ya que el marco de pestañas ya muestra el icono y el nombre de la aplicación.
 
 ### <a name="navigation"></a>Navegación
 
 * Las pestañas no deben tener más de tres niveles de navegación.
 * Las pestañas no deben proporcionar una navegación que entre en conflicto con la navegación principal de Teams.
-* Las páginas secundarias y terciarias de una pestaña deben abrirse en una vista de nivel dos y tres en el área de la pestaña principal, por la que se navega a través de las rutas de navegación o de la navegación izquierda. También puede incluir los siguientes componentes para ayudar a la navegación por las pestañas:
+* Las páginas secundarias y terciarias de una pestaña deben abrirse en una vista de nivel dos y tres en el área de la pestaña principal, por la que se navega a través de rutas de navegación o de la navegación izquierda. También podría incluir los siguientes componentes para facilitar la navegación por pestañas:
     * Botones Atrás
     * Encabezados de página
     * Menús de hamburguesa
 * La pestaña no debe tener desplazamiento horizontal.
-* Los vínculos profundos en las pestañas no deben enlazar con una página web externa, sino con algún lugar dentro de Teams. Por ejemplo, módulos de tareas u otras pestañas.
+* Los vínculos profundos en las pestañas no deben enlazar con una página web externa sino con algún sitio dentro de Teams. Por ejemplo, módulos de tareas u otras pestañas.
 * Las pestañas no deben permitir a los usuarios navegar fuera de Teams para la experiencia de la aplicación principal.
 
 ### <a name="usability"></a>Facilidad de uso
@@ -303,6 +308,7 @@ Si su aplicación incluye una pestaña, asegúrese de que se adhiere a estas dir
 * Las pestañas en un contexto personal pueden agregar contenido de instancias compartidas de la aplicación.
 * Las pestañas deben responder a los temas de Teams. Cuando un usuario cambia el tema, el tema de la aplicación debe reflejar la selección.
 * Las pestañas deben utilizar, siempre que sea posible, componentes de estilo Teams, como fuentes, rampas tipográficas, paletas de colores, sistema de cuadrícula, movimiento, tono de voz, etc.
+* Si la funcionalidad de la aplicación requiere cambios en la configuración, incluya una pestaña de **Configuración**.
 * Las pestañas deben seguir el diseño de interacción de Teams, como la navegación dentro de la página, la posición y el uso de los diálogos, las jerarquías de información, etc., siempre que sea posible.
 * El contenido de las pestañas en el iframe no debe incluir características que imiten las funciones principales de Teams. Por ejemplo, bots, extensiones de mensajería, llamadas, reuniones, etc.
 
@@ -320,7 +326,7 @@ Si su aplicación incluye un bot, asegúrese de que se adhiere a estas directric
 
 ### <a name="bot-commands"></a>Comandos bot
 
-Analizar las entradas de los usuarios y predecir su intención es difícil. Los comandos del bot proporcionan a los usuarios un conjunto de palabras o frases que su bot entiende para que ellos (y su bot) no tengan que adivinar.
+Analizar las entradas del usuario y predecir sus intenciones es complicado. Los comandos de bot proporcionan a los usuarios un conjunto de palabras o frases que el bot entiende para que ni ellos ni el bot tengan que estar adivinando.
 
 * Se recomienda encarecidamente incluir los comandos de bots compatibles en las configuraciones de la aplicación. Estos comandos aparecen en el cuadro de redacción cuando un usuario intenta enviar un mensaje a su bot.
 * Todos los comandos que admite su bot deben funcionar correctamente, incluyendo el comando **Hola**, **Saludos**, y **Ayuda**.
@@ -405,14 +411,14 @@ Si su aplicación incluye una extensión de la reunión, asegúrese de que se cu
 ### <a name="in-meeting-experience"></a>Experiencia en la reunión
 
 * Las aplicaciones sólo deben utilizar un tema oscuro durante las reuniones. Para más información, consulte las [Directrices de diseño de Teams](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
-* Un tooltip debería mostrar el nombre de la aplicación cuando se pasa por encima del icono de la misma durante las reuniones.
+* La información sobre herramientas debería mostrar el nombre de la aplicación cuando se pasa por encima del icono de la misma durante las reuniones.
 * Las extensiones de mensajería deben funcionar igual durante las reuniones que fuera de ellas.
 
 ### <a name="in-meeting-tabs"></a>Pestañas en la reunión
 
-* Debe ser receptivo. Asegúrese de mantener el relleno y los tamaños de los componentes.
+* Deben tener capacidad de respuesta. Asegúrese de mantener el espaciado y los tamaños del componente.
 * Debe tener un botón para volver atrás si hay más de una capa de navegación.
-* No debe incluir más de un botón de descartar o cierre. Esto puede confundir a los usuarios, puesto que ya existe un botón de encabezado para descartar la pestaña.
+* No debe incluir más de un botón de descartar o cerrar. Esto puede confundir a los usuarios, puesto que ya existe un botón de encabezado para descartar la pestaña.
 * No debe tener desplazamiento horizontal.
 
 ### <a name="in-meeting-dialogs"></a>Diálogos en las reuniones
@@ -441,7 +447,7 @@ Si su aplicación utiliza las [API de alimentación de actividad proporcionadas 
 ### <a name="spamming"></a>Correo no deseado
 
 * Las aplicaciones no deben enviar más de 10 notificaciones por minuto a un usuario.
-* Los bots y el feed de actividad no deberían provocar notificaciones duplicadas.
+* Los bots y la fuente de actividades no deberían provocar notificaciones duplicadas.
 * Las notificaciones deben aportar algún valor a los usuarios y no ser utilizadas para eventos triviales o irrelevantes.
 
 ### <a name="navigation-and-layout"></a>Navegación y diseño
