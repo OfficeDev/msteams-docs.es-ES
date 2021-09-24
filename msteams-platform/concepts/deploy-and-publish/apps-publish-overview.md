@@ -4,12 +4,13 @@ description: Describe las opciones para publicar la Microsoft Teams aplicación.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: b321fee132b23556dcc8299cdbbf6fb5d6ccd3cf
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.localizationpriority: none
+ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230920"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157538"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir la aplicación Microsoft Teams aplicación
 
@@ -19,13 +20,16 @@ Puedes proporcionar la aplicación Microsoft Teams a una persona, equipo, organi
 
 Descarga local de una aplicación para uso personal, colaboración con el equipo o pruebas y depuración. Este tipo de distribución no requiere un proceso de revisión formal.
 
+> [!IMPORTANT]
+> Actualmente, las aplicaciones de instalación local están disponibles en Government Community Cloud (GCC), pero no están disponibles para GCC-High y departamento de defensa (DOD).
+
 Para obtener más información, [consulta cargar la aplicación en Teams](apps-upload.md).
 
 ## <a name="publish-your-app-to-your-org"></a>Publicar la aplicación en su organización
 
 Haz que la aplicación esté disponible para los usuarios de tu organización. Este tipo de distribución requiere la Teams del administrador.
 
-Para obtener más información, consulta [Administrar tus aplicaciones en el centro Teams administración.](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
+Para obtener más información, consulta [Administrar tus aplicaciones en el centro Teams administración.](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
 
 ### <a name="government-community-cloud-gcc-organizations"></a>Government Community Cloud (GCC)
 

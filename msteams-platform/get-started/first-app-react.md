@@ -5,22 +5,23 @@ description: Cree rápidamente una aplicación de Microsoft Teams en la que se m
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: edd7cf8048dd89156b4b91afecb329d91baf3f53
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.localizationpriority: none
+ms.openlocfilehash: 468f1bdaa5f27cf6a57ebab8e447d0003c3e3d81
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994121"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360541"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Compilar y ejecutar su primera aplicación de Microsoft Teams con React
 
-En este tutorial, creará una nueva aplicación de Microsoft Teams en React que implementa una aplicación personal simple para obtener información de Microsoft Graph. Por ejemplo, una *aplicación personal incluye* un conjunto de pestañas con ámbito para uso individual. Durante el tutorial, aprenderás sobre la estructura de una aplicación Teams, cómo ejecutar una aplicación localmente y cómo implementar la aplicación en Azure.
+En este tutorial, aprenderás a crear una nueva aplicación Microsoft Teams en React que implemente una aplicación personal sencilla para extraer información de microsoft Graph. Por ejemplo, una *aplicación personal incluye* un conjunto de pestañas para uso individual. Durante el tutorial, aprenderás sobre la estructura de una aplicación Teams, cómo ejecutar una aplicación localmente y cómo implementar la aplicación en Azure.
 
 La aplicación que se crea muestra información básica del usuario para el usuario actual. Cuando se conceda permiso, la aplicación se conectará a Microsoft Graph como el usuario actual para obtener el perfil completo.
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Asegúrese de que el entorno de desarrollo está configurado mediante la instalación de los [requisitos previos](prerequisites.md).
+Asegúrese de que el entorno de desarrollo está configurado instalando los requisitos previos.
 
 > [!div class="nextstepaction"]
 > [Requisitos previos para la instalación](prerequisites.md)
@@ -32,7 +33,7 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Abra Visual Studio Code.
-1. Abra el Kit de herramientas de Teams. Para ello, seleccione el icono de Teams en la barra lateral:
+1. Abra el Teams Toolkit y seleccione el icono Teams en la barra lateral:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icono de Teams en la barra lateral de Visual Studio Code.":::
 
@@ -44,19 +45,19 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Inicio del Asistente para crear un nuevo proyecto":::
 
-1. En el **paso Seleccionar capacidades,** la **funcionalidad Tab** ya está seleccionada. Pulse **Aceptar**.
+1. En la **sección Seleccionar capacidades,** compruebe que **Tab** está seleccionada y seleccione **Aceptar**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Captura de pantalla que muestra cómo agregar funcionalidades a la nueva aplicación.":::
 
-1. En el paso **Tipo de hospedaje del front-end**, seleccione **Azure**.
+1. En la **sección Tipo de hospedaje front-end,** seleccione **Azure**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Captura de pantalla que muestra cómo seleccionar el hospedaje para la nueva aplicación.":::
 
-1. En el paso **Recursos de nube**, pulse **Aceptar**.  No necesitamos recursos de nube adicionales para este tutorial.
+1. En la **sección Recursos de** nube, seleccione **Aceptar**.  No necesitamos recursos de nube adicionales para este tutorial.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Captura de pantalla que muestra cómo agregar recursos de nube para la nueva aplicación.":::
 
-1. En el paso **Lenguaje de programación**, seleccione **JavaScript**.
+1. En la **sección Lenguaje de programación,** seleccione **JavaScript**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Captura de pantalla que muestra cómo seleccionar el lenguaje de programación.":::
 
@@ -64,7 +65,7 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 
 1. Escriba un nombre adecuado para la aplicación, como `helloworld`. El nombre de la aplicación solo puede contener caracteres alfanuméricos.  Presione **Entrar** para continuar.
 
-La Teams se crea en unos segundos.
+   La Teams se crea en unos segundos.
 
 # <a name="command-line"></a>[Línea de comandos](#tab/cli)
 
@@ -77,14 +78,13 @@ teamsfx new
 La CLI le guiará por varias preguntas para crear el proyecto. Cada pregunta le dirá cómo responderla, por ejemplo, use teclas de flecha para seleccionar una opción. Cuando haya respondido a la pregunta, presione **Entrar** para confirmar la elección.
 
 1. Seleccione **Crear una nueva aplicación de Teams**.
-1. Seleccione la funcionalidad de **Pestaña**.
-1. Seleccione el hospedaje de front-end de **Azure**.
-1. No seleccione ningún recurso de nube.
+1. Seleccione la **funcionalidad Tab.**
+1. Seleccione el hospedaje de front-end de **Azure**. No seleccione ningún recurso de nube.
 1. Seleccione **JavaScript** como lenguaje de programación.
 1. Presione **Entrar** para seleccionar la carpeta de área de trabajo predeterminada.
 1. Escriba un nombre adecuado para la aplicación, como `helloworld`.  El nombre de la aplicación solo puede contener caracteres alfanuméricos.
 
-Una vez que se han contestado todas las preguntas, se crea el proyecto.
+   Una vez contestadas todas las preguntas, se crea el proyecto.
 
 ---
 
@@ -92,15 +92,19 @@ Una vez que se han contestado todas las preguntas, se crea el proyecto.
 
 Si quiere omitir esta sección por ahora, puede [ejecutar la aplicación de forma local](#run-your-app-locally).
 
-Una vez que el Kit de herramientas de Teams configure el proyecto, tendrá los componentes para crear una aplicación personal básica para Teams. Los archivos y directorios del proyecto se muestran en el área del Explorador de Visual Studio Code.
+Después de Teams Toolkit configurar el proyecto, tienes los componentes para crear una aplicación personal básica para Teams. Los archivos y directorios del proyecto se muestran en el área del Explorador de Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Captura de pantalla que muestra los archivos de proyecto de la aplicación para una aplicación personal en Visual Studio Code.":::
 
-El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`.  Entre otros elementos de este directorio:
+El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`. 
 
-- Los iconos de aplicación se almacenan como archivos PNG en `color.png` y `outline.png`.
-- El manifiesto de la aplicación para la publicación en el Portal de desarrolladores para Teams se almacena en `manifest.source.json`.
-- La configuración que eligió al crear el proyecto se almacena en `settings.json`.
+- La configuración que eligió al crear el proyecto se almacena en `.fx/settings.json`.
+- El estado del proyecto se almacena en `.fx/env.*.json` .
+
+Y la Teams de la aplicación se almacena en el `appPackage` directorio.
+
+- Los iconos de aplicación se almacenan como archivos PNG en `appPackage/color.png` y `appPackage/outline.png`.
+- El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `appPackage/manifest.source.json` .
 
 Después de seleccionar la funcionalidad de pestaña durante la configuración, el kit de herramientas de Microsoft Teams seleccionará todo el código necesario para crear una pestaña básica en el directorio `tabs`. En este directorio hay varios archivos importantes:
 
@@ -118,11 +122,11 @@ Al agregar funcionalidad de nube, se agregan directorios adicionales al proyecto
 El Kit de herramientas de Teams le permite ejecutar la aplicación localmente.  Se compone de varias partes que son necesarias para proporcionar la infraestructura correcta que espera Teams:
 
 - Una aplicación se registra con Azure Active Directory.  Esta aplicación tiene permisos asociados a la ubicación desde la que se carga la aplicación y a cualquier recurso del back-end al que accede.
-- Una API web se hospeda para ayudar con las tareas de autenticación, actúa como un proxy entre la aplicación y Azure Active Directory.  Esto lo ejecuta Azure Functions Core Tools.  Se puede acceder en la dirección URL `https://localhost:5000`.
+- Una API web se hospeda para ayudar con las tareas de autenticación, actúa como un proxy entre la aplicación y Azure Active Directory. Se puede acceder en la dirección URL `https://localhost:5000`.
 - Los recursos HTML, CSS y JavaScript que configuran el front-end de la aplicación se hospedan en un servicio local. Se puede acceder en `https://localhost:3000`.
 - Se genera un manifiesto de aplicación y existe en el Portal de desarrolladores para Teams.  Teams usa el manifiesto de la aplicación para decir a los clientes conectados desde dónde cargar la aplicación.
 
-Una vez hecho, la aplicación se puede cargar en el cliente de Teams.  Usamos el cliente web de Teams para poder ver el código HTML, CSS y JavaScript en un entorno de desarrollo web estándar.
+Una vez hecho esto, la aplicación se puede cargar en el Teams cliente.  Usamos el cliente web de Teams para poder ver el código HTML, CSS y JavaScript en un entorno de desarrollo web estándar.
 
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Compilar y ejecutar la aplicación de forma local en Visual Studio Code
 
@@ -132,6 +136,9 @@ Para crear y ejecutar la aplicación localmente:
 
    > Al ejecutar la aplicación por primera vez, se descargan todas las dependencias y se compila la aplicación.  Cuando se complete la compilación, se abrirá automáticamente una ventana del explorador.  Este proceso puede tardar entre 3 o 5 minutos.
 
+   Por primera vez para ejecutarse localmente, se le pedirá que instale un certificado para la depuración local. haga clic en Continuar.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/certificate-prompt.png" alt-text="Captura de pantalla en la que se muestra la solicitud para instalar un certificado SSL para permitir que Teams cargue la aplicación desde localhost.":::
+
    El Toolkit solicita que instale un certificado local si es necesario. Este certificado permite a Teams cargar la aplicación desde `https://localhost`. Seleccione Sí cuando aparezca el siguiente cuadro de diálogo:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de pantalla en la que se muestra la solicitud para instalar un certificado SSL para permitir que Teams cargue la aplicación desde localhost.":::
@@ -140,7 +147,7 @@ Para crear y ejecutar la aplicación localmente:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Captura de pantalla que muestra cómo elegir la versión web de Teams al iniciarlo":::
 
-1. Es posible que se le pida que inicie sesión.  Si es así, inicie sesión con su cuenta de M365.
+1. Inicie sesión con su cuenta M365 cuando se le pida.
 1. Cuando se le pida que instale la aplicación en Teams, presione **Agregar**.
 
 Ahora se muestra la aplicación:
@@ -153,13 +160,13 @@ Puede realizar actividades de depuración normales como si se tratase de cualqui
 <details>
 <summary>Vea lo que ocurre al ejecutar la aplicación localmente en el depurador.</summary>
 
-Cuando presionó F5, el Kit de herramientas de Teams:
+Al presionar la tecla **F5,** el Teams Toolkit:
 
-1. Registró la aplicación con Azure Active Directory.
-1. *Realizó la transferencia local* de la aplicación en Teams.
-1. Inició el back-end de la aplicación ejecutándose de forma local con [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?#start).
-1. Inició el front-end de la aplicación hospedada localmente.
-1. Se Microsoft Teams en un explorador web con un comando para indicar a Teams que cargue de forma lateral la aplicación desde `https://localhost:3000/tab` . Esta es la dirección URL registrada en el manifiesto de la aplicación.
+* Registra la aplicación con Azure Active Directory.
+* *Carga localmente* la aplicación en Teams.
+* Inicia el back-end de la aplicación que se ejecuta localmente [con Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+* Inicia la aplicación front-end hospedada localmente.
+* Inicia Microsoft Teams en un explorador web con un comando para indicar a Teams que cargue de forma lateral la aplicación desde `https://localhost:3000/tab` . Esta es la dirección URL registrada en el manifiesto de la aplicación.
 
 </details>
 
@@ -179,24 +186,19 @@ Para ejecutar correctamente la aplicación en Teams, debe tener una cuenta de Te
 
 Antes de la implementación, la aplicación se ejecuta de forma local:
 
-1. El back-end se ejecuta con **Azure Functions Core Tools**.
-1. El punto de conexión HTTP de la aplicación, donde Microsoft Teams carga la aplicación, se ejecuta de forma local.
+* El back-end se ejecuta con **Azure Functions Core Tools**.
+* El punto de conexión HTTP de la aplicación, donde Microsoft Teams carga la aplicación, se ejecuta de forma local.
 
 La implementación implica el aprovisionamiento de recursos en una suscripción activa de Azure y la implementación o carga del código back-end y front-end de la aplicación en Azure.
 
-1. El back-end si está configurado usa una variedad de servicios de Azure, incluidos Azure App Service y Almacenamiento de Azure.
-1. La aplicación front-end se implementará en una cuenta de Azure Storage configurada para hospedaje web estático.
+* El back-end si está configurado usa una variedad de servicios de Azure, incluidos Azure App Service y Azure Storage.
+* La aplicación front-end se implementará en una cuenta de Azure Storage configurada para hospedaje web estático.
 
 </details>
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
-- [Crear una aplicación de Teams con Blazor](first-app-blazor.md)
-- [Crear una aplicación de Teams como elemento web de SharePoint](first-app-spfx.md) (no se necesita Azure)
-- [Crear una aplicación de bots de conversación](first-app-bot.md)
-- [Crear una extensión de mensajería](first-message-extension.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Crear una aplicación de Teams con Blazor](first-app-blazor.md)
+* [Introducción a tutoriales](code-samples.md)
+* [Crear una aplicación de bots de conversación](first-app-bot.md)
+* [Crear una extensión de mensajería](first-message-extension.md)
+* [Muestras de código](https://github.com/OfficeDev/Microsoft-Teams-Samples)

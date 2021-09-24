@@ -3,14 +3,14 @@ title: Eventos de conversación
 author: WashingtonKayaker
 description: Cómo trabajar con eventos de conversación desde el Microsoft Teams bot.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049052"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157649"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -45,15 +45,15 @@ En la tabla siguiente se muestra una lista de Teams eventos de actualización de
 | Acción realizada        | EventType         | Método llamado              | Descripción                | Ámbito |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Canal creado     | channelCreated    | OnTeamsChannelCreatedAsync | [Se crea un canal](#channel-created). | Equipo |
-| Cambio de nombre del canal     | channelRenamed    | OnTeamsChannelRenamedAsync | [Se cambia el nombre de un canal](#channel-renamed). | Equipo |
+| Se cambió el nombre del canal     | channelRenamed    | OnTeamsChannelRenamedAsync | [Se cambia el nombre de un canal](#channel-renamed). | Equipo |
 | Canal eliminado     | channelDeleted    | OnTeamsChannelDeletedAsync | [Se elimina un canal](#channel-deleted). | Equipo |
 | Canal restaurado    | channelRestored    | OnTeamsChannelRestoredAsync | [Se restaura un canal](#channel-deleted). | Equipo |
 | Miembros agregados   | membersAdded   | OnTeamsMembersAddedAsync   | [Se agrega un miembro](#team-members-added). | Todo |
 | Miembros eliminados | membersRemoved | OnTeamsMembersRemovedAsync | [Se quita un miembro](#team-members-removed). | groupChat y equipo |
-| Cambio de nombre de equipo        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Se cambia el nombre de un equipo](#team-renamed).       | Equipo |
+| Se cambió el nombre del equipo        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Se cambia el nombre de un equipo](#team-renamed).       | Equipo |
 | Equipo eliminado        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Se elimina un equipo](#team-deleted).       | Equipo |
 | Equipo archivado        | teamArchived       | OnTeamsTeamArchivedAsync    | [Se archiva un equipo](#team-archived).       | Equipo |
-| Equipo sin jerarquía        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Un equipo no está anárquico.](#team-unarchived)       | Equipo |
+| Equipo desarchivado        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Un equipo no está anárquico.](#team-unarchived)       | Equipo |
 | Equipo restaurado        | teamRestored      | OnTeamsTeamRestoredAsync    | [Se restaura un equipo](#team-restored)       | Equipo |
 
 ### <a name="channel-created"></a>Canal creado
@@ -145,7 +145,7 @@ async def on_teams_channel_created(
 
 ---
 
-### <a name="channel-renamed"></a>Cambio de nombre del canal
+### <a name="channel-renamed"></a>Se cambió el nombre del canal
 
 El evento de cambio de nombre de canal se envía al bot siempre que se cambie el nombre de un canal en un equipo donde esté instalado el bot.
 
@@ -656,7 +656,7 @@ async def on_teams_members_removed(
 
 ---
 
-### <a name="team-renamed"></a>Cambio de nombre de equipo
+### <a name="team-renamed"></a>Se cambió el nombre del equipo
 
 El bot recibe una notificación cuando se ha cambiado el nombre del equipo en el que está. Recibe un `conversationUpdate` evento con en el `eventType.teamRenamed` `channelData` objeto.
 
@@ -973,7 +973,7 @@ async def on_teams_team_archived(
 ---
 
 
-### <a name="team-unarchived"></a>Equipo sin jerarquía
+### <a name="team-unarchived"></a>Equipo desarchivado
 
 El bot recibe una notificación cuando el equipo en el que está instalado no estárchivo. Recibe un `conversationUpdate` evento con en el `eventType.teamUnarchived` `channelData` objeto.
 
@@ -1289,12 +1289,10 @@ async def on_reactions_removed(
 El bot recibe un `installationUpdate` evento al instalar un bot en un subproceso de conversación. La desinstalación del bot del subproceso también desencadena el evento. Al instalar un bot, el campo **de** acción del evento se establece  en *agregar* y, cuando se desinstala el bot, el campo de acción se establece en *quitar*.
  
 > [!NOTE]
-> Al actualizar una aplicación y, a continuación, agregar o quitar un bot, la acción también desencadena el `installationUpdate` evento. El **campo** de acción se establece en *add-upgrade* si agrega un bot o *remove-upgrade* si quita un bot. 
-
-> [!IMPORTANT]
-> Los eventos de actualización de instalación están en versión preliminar del desarrollador hoy y estarán disponibles generalmente (GA) en marzo de 2021. Para ver los eventos de actualización de instalación, puedes mover el cliente de Teams a la vista previa del desarrollador público y agregar la aplicación personalmente o a un equipo o un chat.
+> Al actualizar una aplicación y, a continuación, agregar o quitar un bot, la acción también desencadena el `installationUpdate` evento. El **campo** de acción se establece en *add-upgrade* si agrega un bot o *remove-upgrade* si quita un bot.
 
 ### <a name="install-update-event"></a>Evento Install update
+
 Use el `installationUpdate` evento para enviar un mensaje introductorio desde el bot durante la instalación. Este evento le ayuda a cumplir los requisitos de privacidad y retención de datos. También puede limpiar y eliminar datos de usuario o subproceso cuando se desinstala el bot.
 
 # <a name="c"></a>[C#](#tab/dotnet)
@@ -1406,7 +1404,7 @@ Es importante saber que los nuevos eventos se pueden agregar en cualquier moment
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | Bot de conversación | Código de ejemplo para eventos de conversación de bots. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

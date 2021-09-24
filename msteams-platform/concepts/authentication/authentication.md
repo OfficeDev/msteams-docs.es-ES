@@ -2,14 +2,14 @@
 title: Autenticación de usuarios de aplicaciones
 description: Describe la autenticación en Teams y cómo usarla en las aplicaciones
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Autenticación de teams OAuth SSO AAD
-ms.openlocfilehash: c48f58c9d6f22b406a94e8370bab4b6a908fb2c8
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994080"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475772"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "52994080"
 
 Para obtener acceso a la información de usuario protegida por Azure Active Directory (AAD) y acceder a datos de servicios como Facebook y Twitter, la aplicación establece una conexión de confianza con esos proveedores. Si la aplicación usa las API Graph Microsoft en el ámbito de usuario, autentique al usuario para recuperar los tokens de autenticación adecuados.
 
-En Teams, hay dos flujos de autenticación diferentes para la aplicación. Realice un flujo de autenticación basado en web tradicional en [una](~/tabs/how-to/create-tab-pages/content-page.md) página de contenido incrustada en una pestaña, una página de configuración o un módulo de tareas. Si la aplicación contiene un bot de conversación, use el flujo OAuthPrompt y, opcionalmente, el servicio de tokens de Azure Bot Framework para autenticar a un usuario como parte de una conversación.
+En Teams, hay dos flujos de autenticación diferentes para la aplicación. Realice un flujo de autenticación basado en web tradicional en [una](~/tabs/how-to/create-tab-pages/content-page.md) página de contenido incrustada en una pestaña, una página de configuración o un módulo de tareas. Si la aplicación contiene un bot de conversación, use el flujo de OAuthPrompt y, opcionalmente, el servicio de tokens de Azure Bot Framework para autenticar a un usuario como parte de una conversación.
 
 ## <a name="web-based-authentication-flow"></a>Flujo de autenticación basado en web
 
@@ -43,12 +43,15 @@ Para obtener más información sobre el uso de OAuthPrompt, vea:
 
 proporciona un ejemplo de SDK de autenticación de bot v3.
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Autenticación de bot | En este ejemplo se muestra cómo empezar con la autenticación en un bot para Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Sso de pestaña, bot y mensajería (ME) | En este ejemplo se muestra SSO para Tab, Bot y ME: búsqueda, acción, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | No disponible |
+
 
 ## <a name="configure-the-identity-provider"></a>Configurar el proveedor de identidades
 
 Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de los ejemplos y tutoriales tratan principalmente con el uso de AAD como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades.
 
 Para obtener más información, vea [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
+

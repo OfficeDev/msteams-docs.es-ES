@@ -3,19 +3,17 @@ title: Integrar la función de escáner de código QR o de códigos de barras
 author: Rajeshwari-v
 description: Cómo usar Teams SDK de cliente de JavaScript para aprovechar la funcionalidad del escáner de códigos de barras o QR
 keywords: Cámara media qr code qrcode bar code barcode scanner scan capabilities native device permissions
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 470360fcc489248806d746587344c7a19c91145c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646568"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157345"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar la función de escáner de código QR o de códigos de barras 
-
-Este documento le guía sobre cómo integrar la funcionalidad del escáner de códigos QR o de código de barras. 
 
 El código de barras es un método para representar datos en un formulario visual y legible por máquina. El código de barras contiene información sobre un producto, como un tipo, tamaño, fabricante y país de origen en forma de barras y espacios. El código se lee con el escáner óptico de la cámara del dispositivo nativo. Para una experiencia de colaboración más completa, puedes integrar la funcionalidad de escáner de códigos QR o códigos de barras que se proporciona en la plataforma Teams con la Teams aplicación.   
 
@@ -36,7 +34,7 @@ Es importante familiarizarse con los errores de respuesta [de la API](#error-han
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
-Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/manifest-schema.md#devicepermissions) agregando la propiedad `devicePermissions` y especificando `media` . Permite que la aplicación solicite los permisos necesarios a los usuarios antes de empezar a usar la funcionalidad del escáner de códigos de barras o QR.
+Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/manifest-schema.md#devicepermissions) agregando la propiedad `devicePermissions` y especificando `media` . Permite que la aplicación solicite los permisos necesarios a los usuarios antes de empezar a usar la funcionalidad del escáner de códigos de barras o QR. La actualización del manifiesto de la aplicación es la siguiente:
 
 ``` json
 "devicePermissions": [
@@ -70,14 +68,15 @@ La **API scanBarCode()** admite los siguientes tipos de código de barras:
 | UPC-A | Sí | Sí |
 | UPC-E | Sí | Sí |
 
-**Experiencia de aplicación web para `ScanBarCode` Api para la experiencia de aplicación** web de funcionalidad de escáner de códigos de barras o QR para la funcionalidad de escáner de códigos de barras o 
- ![ qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
+En la siguiente imagen se muestra la experiencia de la aplicación web de la funcionalidad del escáner de códigos de barras o QR:
+
+![experiencia de aplicación web para la funcionalidad de escáner de códigos de barras o qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## <a name="error-handling"></a>Control de errores
 
 Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condición|
+|Código de error |  Nombre del error     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
@@ -112,3 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)
+* [Integrar el selector de personas en Teams](people-picker-capability.md)
+

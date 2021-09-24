@@ -5,12 +5,12 @@ keywords: Solución de problemas de desarrollo de aplicaciones de teams
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ce45a75869e8b6694cd84c10f8fac1f9bd55bad4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9688f2023707ca4eb3e7de6b52d3395a4cba47fd36dd29599dc4ead590368b95
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020432"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708044"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas de Microsoft Teams aplicación
 

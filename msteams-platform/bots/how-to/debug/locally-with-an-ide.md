@@ -3,14 +3,14 @@ title: Probar y depurar el bot localmente
 author: surbhigupta
 description: Probar y depurar el bot localmente con un IDE
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068988"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157221"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 

@@ -3,20 +3,23 @@ title: Agregar bots a Microsoft Teams aplicaciones
 description: Describe cómo empezar a desarrollar bots en Microsoft Teams
 ms.topic: conceptual
 keywords: desarrollo de bots de teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 674576efccb2916b8a82ae27310d8fe49909a782
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 939a4b2830d14b0b1a82f09d361e56d5651a1592
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566757"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157080"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Agregar bots a Microsoft Teams aplicaciones
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 Crea y conecta bots inteligentes para interactuar con Microsoft Teams usuarios de forma natural a través del chat. O bien, proporcione un bot simple basado en comandos, que se usará como la interfaz de la "línea de comandos" para la experiencia de la aplicación Teams más amplia. Puede crear un bot de solo notificación, que puede enviar información relevante para los usuarios directamente a ellos en un canal o mensaje directo. Incluso puedes traer el bot basado en Bot Framework existente y agregar Teams compatibilidad específica para hacer que tu experiencia brille.
+
+> [!IMPORTANT]
+> Actualmente, los bots están disponibles en Government Community Cloud (GCC) pero no están disponibles en GCC-High departamento de defensa (DOD).
 
 ![Ejemplo de un bot que ayuda a un usuario](~/assets/images/bot_example.png)
 
@@ -70,6 +73,6 @@ Los siguientes temas le guiarán a través del proceso de creación de un gran b
 * [Usar pestañas con bots:](~/resources/bot-v3/bots-with-tabs.md)hacer que las pestañas y los bots funcionen juntos.
 * [Prueba el bot:](~/resources/bot-v3/bots-test.md)agrega el bot para conversaciones personales o de equipo para verlo en acción.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

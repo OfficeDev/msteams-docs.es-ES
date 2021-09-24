@@ -2,15 +2,15 @@
 title: Compatibilidad con SSO para las extensiones de mensajería
 author: KirtiPereira
 description: Cómo habilitar la compatibilidad con SSO para las extensiones de mensajería
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 02d08506a07e955693531908f4f3cf16573a02c0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efda0e946204a756d75874a55ac728f81f8ebaef
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566204"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157294"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Compatibilidad con inicio de sesión único (SSO) para extensiones de mensajería
  
@@ -21,7 +21,7 @@ Este documento le guía sobre cómo habilitar el SSO y almacenar el token de aut
 ## <a name="prerequisites"></a>Requisitos previos
 
 Los requisitos previos para habilitar SSO para extensiones de mensajería y desafutización de vínculos son los siguientes:
-* Debe tener una [cuenta de Azure.](https://azure.microsoft.com/en-us/free/)
+* Debe tener una [cuenta de Azure.](https://azure.microsoft.com/free/)
 * Debes configurar la aplicación a través del portal de AAD y actualizar el manifiesto de aplicación de Teams para el bot tal como se define en registrar la aplicación a través del [portal de AAD](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
 
 > [!NOTE]

@@ -3,15 +3,15 @@ title: Crear aplicaciones para la Microsoft Teams plataforma
 author: heath-hamilton
 description: Obtenga información general sobre cómo los desarrolladores pueden ampliar Microsoft Teams características con aplicaciones personalizadas.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: e35393a2696ace22068e34566c3dad4a3109bd73
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646540"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157505"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -209,7 +209,14 @@ No es necesario ser un programador experto para crear una aplicación Teams web.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Consulte también
+## <a name="integrate-teams-in-your-external-app"></a>Integrar Teams en la aplicación externa
+Esta página se centra en insertar sus propias experiencias en Microsoft Teams creando Teams aplicaciones. Si desea invertir  este modelo e integrar Teams u otras capacidades de comunicación en su propia experiencia de aplicación [externa,](/azure/communication-services/overview)consulte Azure Communication Services . Azure Communication Services son servicios basados en la nube con API de REST y SDK de biblioteca de cliente para ayudarle a integrar la comunicación en sus propias aplicaciones personalizadas. Puedes insertar componentes web genéricos Teams estilo React para llamar y chatear con la ayuda de la biblioteca [de interfaz de usuario.](https://azure.github.io/communication-ui-library/)
+
+Las aplicaciones de Azure Communication Services pueden usar la funcionalidad de vista previa pública para [interoperar](/azure/communication-services/concepts/teams-interop) con Teams y permitir que la aplicación personalizada se una Teams reuniones de forma anónima. Por ejemplo, puede integrar videollamadas en una aplicación bancaria móvil y permitir que los usuarios finales se reúnan virtualmente con los empleados del banco mediante Microsoft Teams. 
+
+También puede integrar una identidad Microsoft 365 para crear aplicaciones externas que inserten vídeo y llamadas RTC en nombre de un Teams usuario. Si ha usado [sdk](/skype-sdk/appsdk/skypeappsdk) Skype Empresarial en el pasado, estas funcionalidades como parte de Azure Communication Services se recomiendan como reemplazo.
+
+## <a name="see-also"></a>Vea también
 
 * [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
 * [Diseñar la aplicación Teams aplicación](concepts/design/design-teams-app-overview.md)

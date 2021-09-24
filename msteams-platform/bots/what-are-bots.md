@@ -3,18 +3,21 @@ title: Bots en Microsoft Teams
 author: surbhigupta
 description: Una introducción a los bots en Microsoft Teams.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 655684ef4f2a93d3f9c3858e3bf5a84eab4bd43c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: a5702afcc4e87486d23f363e2e7ec0476f597a71
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068973"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157154"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots en Microsoft Teams
 
 Un bot también conocido como bot de chat o bot de conversación es una aplicación que ejecuta tareas automatizadas simples y repetitivas realizadas por los usuarios, como el servicio de atención al cliente o el personal de soporte técnico. Algunos ejemplos de bots de uso diario incluyen bots que proporcionan información sobre el tiempo, reservan la cena o proporcionan información de viaje. Una interacción de bot puede ser una pregunta y una respuesta rápidas, o puede ser una conversación compleja que proporciona acceso a los servicios.
+
+> [!IMPORTANT]
+> Actualmente, los bots están disponibles en Government Community Cloud (GCC) pero no están disponibles en GCC-High departamento de defensa (DOD).
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
@@ -46,7 +49,7 @@ Con las API Graph Microsoft para llamadas y reuniones en línea, Microsoft Teams
 
 Puede usar las API Teams bot para obtener información para uno o más miembros de un chat o equipo. Para obtener más información, vea [cambios en las API Teams bot para capturar miembros de equipo o chat.](~/resources/team-chat-member-api-changes.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Creación de un bot para Teams](~/bots/how-to/create-a-bot-for-teams.md)
 

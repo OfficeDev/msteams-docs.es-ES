@@ -4,12 +4,13 @@ author: surbhigupta
 description: Cómo responder al comando de búsqueda desde una extensión de mensajería en una Microsoft Teams aplicación.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068940"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157053"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -24,7 +25,7 @@ Este documento le guía sobre cómo responder a solicitudes de usuario en forma 
 
 Los parámetros de solicitud se encuentran en el `value` objeto de la solicitud, que incluye las siguientes propiedades:
 
-| Nombre de propiedad | Objetivo |
+| Nombre de la propiedad | Objetivo |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
 | `parameters` | Matriz de parámetros. Cada objeto de parámetro contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
@@ -82,7 +83,7 @@ Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP
 
 El servicio debe responder con los resultados que coincidan con la consulta del usuario. La respuesta debe indicar un código de estado HTTP y una aplicación válida `200 OK` o un objeto JSON con las siguientes propiedades:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
 |`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería <br>`message`: muestra un mensaje de texto sin formato |
@@ -343,7 +344,7 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Consulte también
 

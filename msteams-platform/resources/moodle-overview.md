@@ -2,15 +2,15 @@
 title: Sistema de administración de aprendizaje de Moodle
 description: Información general sobre la integración de LMS de Moodle con Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: a3b048948382de844a3b335c2425b5fa5fe6bb1e
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: eb45c741bc60bea3466edeb6abe3f21b4453bec8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555487"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157136"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de administración de aprendizaje de Moodle
 

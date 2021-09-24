@@ -3,14 +3,14 @@ title: Formato de texto admitido en conversaciones
 description: Describe la compatibilidad con formato de texto en conversaciones de bots
 keywords: mensajes de conversaciones de bots
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: dfb91e18a2ad895ae5b48c905046a22449304fc6
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 466b2383230ce0cf8086ba4a3dd45a5488ed24b2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566750"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157078"
 ---
 # <a name="formatting-bot-messages"></a>Dar formato a los mensajes de bots
 
@@ -60,7 +60,7 @@ La compatibilidad con el formato de texto varía según el tipo de mensaje y por
 
 #### <a name="text-only-messages"></a>Mensajes de solo texto
 
-| Estilo                     | Desktop | iOS | Android |
+| Estilo                     | Escritorio | iOS | Android |
 |---------------------------|---------|-----|---------|
 | bold                      | ✔       | ✔   | ✔       |
 | italic                    | ✔       | ✔   | ✔       |

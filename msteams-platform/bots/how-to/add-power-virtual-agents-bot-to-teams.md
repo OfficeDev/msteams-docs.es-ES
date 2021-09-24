@@ -3,14 +3,14 @@ title: Agregar Power Virtual Agents chatbot a Teams
 author: surbhigupta
 description: integración de un Power Virtual Agents chatbot en la plataforma Teams web
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 85f2d91d2c5cfdb0ae746a00c7a9f3d6a0c15972
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 5a4aa24ceb5a73be56cfd069b02ca7b980d17055
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069017"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157573"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Añadir un bot de chat de Power Virtual Agents 
 
@@ -99,10 +99,10 @@ Abra **la pestaña Probar y distribuir** y seleccione **Instalar** para agregar 
 1. **Iniciar un chat**   
 El proceso de configuración para agregar el bot Power Virtual Agents chat a Teams completa. Ahora puedes iniciar una conversación con el bot en un chat personal.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Crear un chatbot para Teams con Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Crear un chatbot para Teams con Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents).  
 * [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
 * [Publicar el Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Seguridad y cumplimiento en Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
@@ -110,5 +110,4 @@ El proceso de configuración para agregar el bot Power Virtual Agents chat a Tea
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Crear asistente virtual](~/samples/virtual-assistant.md)
-
+> [Crear un asistente virtual](~/samples/virtual-assistant.md)

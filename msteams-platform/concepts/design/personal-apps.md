@@ -3,14 +3,14 @@ title: Diseño de su aplicación personal
 description: Aprende a diseñar una aplicación Teams personal y obtener el kit Microsoft Teams interfaz de usuario.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644896"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360721"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñar tu aplicación personal para Microsoft Teams
 
@@ -18,53 +18,35 @@ Una aplicación personal puede ser un bot, un área de trabajo privada o ambos. 
 
 Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo las personas pueden agregar, usar y administrar aplicaciones personales en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Puedes encontrar instrucciones completas de diseño de aplicaciones personales, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Agregar una aplicación personal
 
-Puedes agregar una aplicación personal desde la tienda Teams (AppSource) o el  menú desplegable de la aplicación seleccionando el icono Más en el lado izquierdo de Teams (que se muestra en el ejemplo siguiente).
+Los usuarios pueden agregar una aplicación personal desde la tienda  Teams o el menú desplegable de la aplicación seleccionando el icono Más en el lado izquierdo de Teams (que se muestra en el ejemplo siguiente).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="En el ejemplo se muestra cómo agregar una aplicación personal desde el menú desplegable de la aplicación." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Usar una aplicación personal (área de trabajo privada)
 
-Con un área de trabajo privada, puedes ver contenido de la aplicación que sea significativo para ti en una ubicación central sin salir de Teams.
+Con un área de trabajo privada, los usuarios pueden ver contenido de la aplicación que sea significativo para ellos en una ubicación central sin dejar Teams.
 
 (Nota de implementación: el área de trabajo privada se basa en la funcionalidad [*de tabulación*](../../build-your-first-app/build-personal-tab.md) personal).
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomía: aplicación personal (área de trabajo privada)
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|A|**Atribución de la aplicación:** el logotipo y el nombre de la aplicación.|
-|B|**Pestañas:** proporciona navegación para tu aplicación personal.|
-|C|**Vista emergente:** inserta el contenido de la aplicación desde una ventana primaria a una ventana secundaria independiente.|
-|D|**Más menú:** incluye información y opciones de aplicación adicionales. (También puede crear una **Configuración** una pestaña).|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|A|**Pestañas:** proporciona navegación para tu aplicación personal.|
-|1|**iframe:** muestra el contenido de la aplicación.|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Atribución de la aplicación:** el nombre de la aplicación.|
-|B|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|N|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |C|**Más menú:** incluye información y opciones de aplicación adicionales.|
 |D|**Navegación principal:** proporciona navegación a la aplicación otras características Teams principales.|
 
@@ -75,9 +57,25 @@ Con un área de trabajo privada, puedes ver contenido de la aplicación que sea 
 |A|**Pestañas:** proporciona navegación para tu aplicación personal.|
 |1|**webview:** muestra el contenido de la aplicación.|
 
----
+#### <a name="desktop"></a>Escritorio
 
-### <a name="designing-with-ui-templates-and-advanced-components"></a>Diseño con plantillas de interfaz de usuario y componentes avanzados
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En este ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Atribución de la aplicación:** el logotipo y el nombre de la aplicación.|
+|N|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|C|**Vista emergente:** inserta el contenido de la aplicación desde una ventana primaria a una ventana secundaria independiente.|
+|D|**Más menú:** incluye información y opciones de aplicación adicionales. (También puede crear una **Configuración** una pestaña).|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En este ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Pestañas:** proporciona navegación para tu aplicación personal.|
+|1|**iframe:** muestra el contenido de la aplicación.|
+
+### <a name="design-with-ui-templates-and-advanced-components"></a>Diseño con plantillas de interfaz de usuario y componentes avanzados
 
 Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar la pestaña personal:
 
@@ -90,32 +88,30 @@ Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar 
 
 ## <a name="use-a-personal-app-bot"></a>Usar una aplicación personal (bot)
 
-Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). El bot está disponible en una pestaña especificada.
+Las aplicaciones personales pueden incluir un bot para conversaciones uno a uno y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). Los usuarios interactúan con el bot en una pestaña especificada.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomía: aplicación personal (bot)
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente del bot personal." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|A|**Punto de entrada del bot:** punto de entrada para que los usuarios accedan a la característica bot en la aplicación personal.|
+|N|**Botón Atrás:** lleva a los usuarios de vuelta al área de trabajo privada.|
+|C|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
+|D|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
+
+#### <a name="desktop"></a>Escritorio
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Ficha Bot:** Por ejemplo, incluya una **pestaña Chat** para obtener acceso a las conversaciones y notificaciones del bot.|
-|B|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
+|N|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
 |C|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|A|**Punto de entrada del bot:** punto de entrada para que los usuarios accedan a la característica bot en la aplicación personal.|
-|B|**Botón Atrás:** lleva a los usuarios de vuelta al área de trabajo privada.|
-|C|**Mensaje de bot:** los bots suelen enviar mensajes y notificaciones en forma de tarjeta (como una tarjeta adaptable).|
-|D|**Cuadro Redacción:** campo de entrada para enviar mensajes al bot.|
-
----
 
 ## <a name="manage-a-personal-tab"></a>Administrar una pestaña personal
 
@@ -125,7 +121,7 @@ En el lado izquierdo de Teams, los usuarios pueden hacer clic con el botón secu
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Usa estas recomendaciones para crear una experiencia de aplicación de calidad.
+Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 ### <a name="tab-priority"></a>Prioridad de tabulación
 

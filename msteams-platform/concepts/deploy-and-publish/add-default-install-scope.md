@@ -2,14 +2,14 @@
 title: Configurar opciones de instalación predeterminadas para la aplicación
 description: Describe cómo especificar las opciones de instalación predeterminadas de la aplicación.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 561a4f2910e703db5ffce6176f6177dfd661d2ce
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 48f12faca9d8f67ec78e08736f16f8ad5a43dcd2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230935"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157541"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurar las opciones de instalación predeterminadas para Microsoft Teams aplicación
 

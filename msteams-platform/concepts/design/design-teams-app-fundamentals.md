@@ -2,15 +2,15 @@
 title: 'Diseñar la aplicación: comprender el sistema de diseño'
 description: Obtén información sobre los conceptos básicos del diseño de Microsoft Teams aplicación, incluido el diseño, la combinación de colores y mucho más.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 0af2a22200e62be9289f167b0306c9769366e46a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630845"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157622"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de diseño de aplicaciones
 
@@ -25,7 +25,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
       Teams se basa en un diseño de cuadrícula para garantizar relaciones coherentes y elegantes entre componentes de diseño. La unidad base de 4 píxeles de la cuadrícula permite a los componentes escalar de forma coherente en todos los tamaños de pantalla de Teams.
 
       * [Ver instrucciones de diseño completo (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implementar diseño (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/layout)
+      * [Implementar diseño (Fluent interfaz de usuario)](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
@@ -60,10 +60,10 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       El icono principal de la aplicación puede dar un gran paso al transmitir la marca a Teams usuarios. Hacer que el diseño de icono sea correcto también es importante para [publicar la aplicación](../../concepts/build-and-test/apps-package.md) en la Teams web.
 
-      También puedes usar iconos de la interfaz de usuario fluent en toda la aplicación:
+      También puedes usar iconos Fluent interfaz de usuario en toda la aplicación:
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obtener el último conjunto de iconos fluent (Figma)</a>
-      * [Implementar los iconos (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obtener el último Fluent de iconos (Figma)</a>
+      * [Implementar los iconos (Fluent interfaz de usuario)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::
@@ -82,7 +82,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
       Teams usa la interfaz de usuario de Segoe para su rampa de tipo y diferentes tamaños y grosores de fuente para ayudar a crear jerarquía y garantizar la legibilidad.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones de tipo completo (Figma)</a>
-      * [Implementar tipografía (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/typography)
+      * [Implementar tipografía (Fluent interfaz de usuario)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
    :::column span="1":::
@@ -101,7 +101,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
       Teams web y escritorio admiten temas predeterminados (claros), oscuros y de contraste alto, mientras que Teams móvil admite temas claros y oscuros. Cada tema tiene su propia combinación de colores.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Consulta instrucciones de color completo y tokens de color disponibles (Figma)</a>
-      * [Implementar colores (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+      * [Implementar colores (Fluent interfaz de usuario)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
    :::column span="1":::
@@ -119,7 +119,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
       Puedes usar la forma y la elevación para crear jerarquías adicionales en la aplicación. 
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones de forma y elevación completa (Figma)</a>
-      * [Implementar forma y elevación (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
+      * [Implementar forma y elevación (Fluent interfaz de usuario)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::

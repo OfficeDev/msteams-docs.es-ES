@@ -3,15 +3,15 @@ author: heath-hamilton
 description: Procedimientos recomendados para integrar aplicaciones web existentes con Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Aplicaciones web
-ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630435"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157135"
 ---
 # <a name="web-apps"></a>Aplicaciones web 
 
@@ -86,6 +86,9 @@ Azure Active Directory (AD) es el proveedor de identidades para Teams. Si la apl
 
 Teams tiene mecanismos de inicio de sesión único (SSO) con Azure AD para aplicaciones de terceros. También proporciona instrucciones para flujos de autenticación a otros proveedores de identidades mediante estándares como OAuth y Open ID Conectar, conocidos como OIDC.
 
+> [!IMPORTANT]
+> Actualmente, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC) pero no están disponibles para GCC-High y departamento de defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros para GCC, consulta Administrar directivas de permisos [de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones.](/microsoftteams/manage-apps)
+
 Para SharePoint, solo puedes usar SSO y no puedes agregar otro identificador de Azure AD si quieres que SSO funcione para otra aplicación, ya que el identificador es la SharePoint aplicación.
 
 Obtenga más información [sobre la autenticación en Teams](../concepts/authentication/authentication.md).
@@ -94,7 +97,7 @@ Obtenga más información [sobre la autenticación en Teams](../concepts/authent
 
 ***Escenarios de integración:** aplicaciones independientes, aplicaciones de colaboración*
 
-Asegúrate de seguir [las Teams de diseño para](../concepts/design/understand-use-cases.md) que tu aplicación sea nativa de Teams. No puedes migrar un contenido de la aplicación existente a una Teams pestaña. Para obtener más información sobre el diseño de aplicaciones, consulta [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+Asegúrate de seguir [las Teams de diseño para](../concepts/design/understand-use-cases.md) que tu aplicación sea nativa de Teams. No puedes migrar un contenido de la aplicación existente a una Teams pestaña. Para obtener más información sobre el diseño de aplicaciones, [consulta Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximizar la vinculación profunda
 
@@ -121,6 +124,6 @@ A continuación se muestra un ejemplo de un mensaje de notificación: **No me en
 
 Cuando se crea un equipo, también [se aprovisiona SharePoint](/microsoftteams/sharepoint-onedrive-interact) colección de sitios para admitir el almacenamiento de archivos y datos para ese equipo. La aplicación debe aprovechar esta característica si interactúa con archivos. Use la colección de sitios para almacenar datos sin procesar en SharePoint listas y Excel.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

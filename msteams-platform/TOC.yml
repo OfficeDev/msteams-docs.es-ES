@@ -1,3 +1,5 @@
+- name: Documentación para desarrolladores de Microsoft Teams
+  href: /microsoftteams/platform
 - name: Información general
   expanded: true
   items:
@@ -8,28 +10,26 @@
 - name: Introducción
   expanded: true
   items:
+    - name: Información general
+      href: get-started/code-samples.md
     - name: Requisitos previos
       href: get-started/prerequisites.md
-    - name: Crear una aplicación personal (React)
+    - name: Cree la primera aplicación con React
       href: get-started/first-app-react.md
-    - name: Crear una aplicación personal (Blazor)
+    - name: Cree la primera aplicación con Blazor
       href: get-started/first-app-blazor.md
-    - name: Crear una aplicación personal (SPFx)
+    - name: Cree la primera aplicación con SPFx
       href: get-started/first-app-spfx.md
-    - name: Crear un bot de conversación
+    - name: Compilación de la primera aplicación con C# o .NET
+      href: get-started/get-started-dotnet-app-studio.md
+    - name: Compilación de la primera aplicación con Node.js
+      href: get-started/get-started-nodejs-app-studio.md
+    - name: Compilación de la primera aplicación con el generador de Yeoman
+      href: get-started/get-started-yeoman.md
+    - name: Cree su primer bot de conversación
       href: get-started/first-app-bot.md
-    - name: Crear una extensión de mensajería
+    - name: Crear su primera extensión de mensajería
       href: get-started/first-message-extension.md
-- name: Tutoriales y ejemplos de código
-  items:
-    - name: Tutoriales
-      href: tutorials/code-samples.md
-    - name: Crear una aplicación con C# o .NET
-      href: tutorials/get-started-dotnet-app-studio.md
-    - name: Crear una aplicación con Node.js
-      href: tutorials/get-started-nodejs-app-studio.md
-    - name: Crear una aplicación con el generador de Yeoman
-      href: tutorials/get-started-yeoman.md
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Conceptos básicos de aplicación
@@ -44,36 +44,6 @@
       href: concepts/design/understand-use-cases.md
     - name: Asignación de casos de uso a las funciones de la aplicación de Teams
       href: concepts/design/map-use-cases.md
-- name: Integración con Teams
-  items:
-    - name: Información general
-      href: samples/integrate-web-apps-overview.md
-    - name: Aplicaciones web
-      href: samples/integrating-web-apps.md
-    - name: Aplicaciones de Power Platform
-      items:
-        - name: Información general
-          href: samples/teams-low-code-solutions.md
-        - name: Añadir un bot de chat de Power Virtual Agents
-          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Crear un asistente virtual
-          href: samples/virtual-assistant.md
-    - name: Plantillas de aplicaciones para Microsoft Teams
-      href: samples/app-templates.md
-    - name: Conectores de turnos listos para producción
-      href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS
-      items:
-        - name: Información general
-          href: resources/moodle-overview.md
-        - name: Instalar Moodle LMS
-          href: resources/moodleInstructions.md
-    - name: Crear un botón Compartir en Teams
-      href: concepts/build-and-test/share-to-teams.md
-    - name: Añadir una pestaña de Teams a SharePoint
-      href: tabs/how-to/tabs-in-sharepoint.md
-    - name: Crear vínculos profundos
-      href: concepts/build-and-test/deep-links.md
     - name: Funciones del dispositivo
       items:
         - name: Información general
@@ -192,42 +162,30 @@
   items:
     - name: Información general
       href: tabs/what-are-tabs.md
-    - name: Crear una pestaña
-      items:
-        - name: Requisitos de la pestaña
-          href: tabs/how-to/tab-requirements.md
-        - name: Creación de una página de contenido
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: Creación de una página de configuración
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: Crear una página de eliminación
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Pestañas en dispositivos móviles
-          href: tabs/design/tabs-mobile.md
-        - name: Obtención del contexto de Teams para la pestaña
-          href: tabs/how-to/access-teams-context.md
-        - name: Compilar pestañas con tarjetas adaptables
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: Expansión del vínculo de la pestaña y vista de fases
-          href: tabs/tabs-link-unfurling.md
-        - name: Crear pestañas de conversación
-          href: tabs/how-to/conversational-tabs.md
-        - name: Cambios del margen de pestaña
-          href: resources/removing-tab-margins.md
-    - name: Guías de inicio rápido
-      items:
-        - name: Pestaña personal con Node.js
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: Pestaña personal con C#/ASP.NET Core
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Pestaña personal con C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Pestaña de canal con Node.js
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: Pestaña de canal con C#/ASP.NET Core
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Pestaña de canal con C#/ASP.NET Core MVC
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: Requisitos previos
+      href: tabs/how-to/tab-requirements.md
+    - name: Crear una pestaña personal
+      href: tabs/how-to/create-personal-tab.md
+    - name: Crear una pestaña de canal
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: Creación de una página de contenido
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Creación de una página de configuración
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Crear una página de eliminación
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Pestañas en dispositivos móviles
+      href: tabs/design/tabs-mobile.md
+    - name: Obtención del contexto de Teams para la pestaña
+      href: tabs/how-to/access-teams-context.md
+    - name: Compilar pestañas con tarjetas adaptables
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: Expansión del vínculo de la pestaña y vista de fases
+      href: tabs/tabs-link-unfurling.md
+    - name: Crear pestañas de conversación
+      href: tabs/how-to/conversational-tabs.md
+    - name: Cambios del margen de pestaña
+      href: resources/removing-tab-margins.md
 - name: Crear bots
   items:
     - name: Información general
@@ -251,8 +209,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Eventos de conversación en el bot de Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Enviar mensajes proactivos
+        - name: Mensajes proactivos
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: Guía paso a paso
+              href: sbs-send-proactive.yml
         - name: Formatear los mensajes del bot
           href: bots/how-to/format-your-bot-messages.md
         - name: Actualizar y eliminar mensajes de bot
@@ -305,38 +266,42 @@
   items:
     - name: Información general
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Extensibilidad de la aplicación para reuniones
+    - name: Aplicaciones de reuniones unificadas
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams
+    - name: Requisitos previos para las aplicaciones en las reuniones de Teams
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Habilitar y configurar las aplicaciones para reuniones
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Referencias API de aplicaciones de reuniones
+      href: apps-in-teams-meetings/API-references.md
     - name: Escenas personalizadas en modo conjunto en Teams
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Crear webhooks y conectores
   items:
     - name: Información general
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Creación de un webhook entrante
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    - name: Creación de un webhook saliente
+    - name: Crear webhooks salientes
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Crear un Conector de Office 365
+    - name: Crear webhooks entrantes
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    - name: Crear Conectores de Office 365
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: Enviar mensajes a conectores y webhooks
+    - name: Crear y enviar mensajes
       href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Crear módulos de tareas y tarjetas
   items:
+    - name: Información general
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: Crear tarjetas
       items:
         - name: Información general
           href: task-modules-and-cards/what-are-cards.md
-        - name: Formatear el texto de la tarjeta
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: Agregar y responder a acciones de la tarjeta
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: Referencia de tarjetas
+        - name: Tipos de tarjetas
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Dar formato a tarjetas en Microsoft Teams
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Acciones de tarjeta
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: Acciones universales para tarjetas adaptables
           items:
             - name: Información general
@@ -353,9 +318,11 @@
       items:
         - name: Información general
           href: task-modules-and-cards/what-are-task-modules.md
+        - name: Invocar y descartar módulos de tareas
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
         - name: Uso de módulos de tareas en pestañas
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-        - name: Uso de módulos de tareas en bots
+        - name: Uso de módulos de tareas desde los bots
           href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Añadir autenticación
   items:
@@ -381,6 +348,8 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Usar autenticación SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+        - name: Guía paso a paso para bots con SSO
+          href: sbs-bots-with-sso.yml
     - name: Extensiones de mensajería
       items:
         - name: Agregar autenticación a la extensión de mensajería
@@ -395,12 +364,14 @@
       href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: Introducción
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
-    - name: Habilitar el consentimiento específico del recurso
+    - name: Consentimiento específico del recurso
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Instalación proactiva de aplicaciones usando la API de Graph y el envío de mensajes
+    - name: Instalación proactiva de aplicaciones con Graph API para enviar mensajes
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importar mensajes de terceros
       href: graph-api/import-messages/import-external-messages-to-teams.md
+    - name: Ejemplos de código
+      href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: Probar la aplicación
   items:
     - name: Información general
@@ -469,21 +440,51 @@
           href: resources/dev-preview/developer-preview-intro.md
         - name: Esquema del manifiesto
           href: resources/schema/manifest-schema-dev-preview.md
-        - name: Características
-          href: resources/dev-preview/developer-preview-features.md
+- name: Integración con Teams
+  items:
+    - name: Información general
+      href: samples/integrate-web-apps-overview.md
+    - name: Aplicaciones web
+      href: samples/integrating-web-apps.md
+    - name: Aplicaciones de Power Platform
+      items:
+        - name: Información general
+          href: samples/teams-low-code-solutions.md
+        - name: Añadir un bot de chat de Power Virtual Agents
+          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+        - name: Crear un asistente virtual
+          href: samples/virtual-assistant.md
+    - name: Plantillas de aplicaciones para Microsoft Teams
+      href: samples/app-templates.md
+    - name: Conectores de turnos listos para producción
+      href: samples/shifts-wfm-connectors.md
+    - name: Moodle LMS
+      items:
+        - name: Información general
+          href: resources/moodle-overview.md
+        - name: Instalar Moodle LMS
+          href: resources/moodleInstructions.md
+    - name: Crear un botón Compartir en Teams
+      href: concepts/build-and-test/share-to-teams.md
+    - name: Añadir una pestaña de Teams a SharePoint
+      href: tabs/how-to/tabs-in-sharepoint.md
+    - name: Crear vínculos profundos
+      href: concepts/build-and-test/deep-links.md
+    - name: Integrar Selector de personas
+      href: concepts/device-capabilities/people-picker-capability.md
 - name: Recursos
   items:
     - name: Localización
       items:
         - name: Localizar la aplicación
           href: concepts/build-and-test/apps-localization.md
-        - name: Esquema de JSON de localización
+        - name: Localizar la referencia de esquema JSON
           href: resources/schema/localization-schema.md
-    - name: Atributo de cookies SameSite (actualización de 2020)
+    - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
     - name: Casos con errores frecuentes para los envíos de la tienda
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Colaborar en documentos de Teams
+    - name: Contribuir a este contenido
       href: resources/teams-contributor-reference.md
 - name: Soporte técnico y comentarios
   href: feedback.md

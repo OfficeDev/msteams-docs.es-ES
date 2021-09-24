@@ -3,14 +3,14 @@ title: Formatear los mensajes del bot
 author: surbhigupta
 description: Agregar formato enriquecido a los mensajes del bot
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068987"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157218"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 

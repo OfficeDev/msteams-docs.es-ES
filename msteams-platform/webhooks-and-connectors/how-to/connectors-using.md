@@ -1,23 +1,61 @@
 ---
-title: Envío de mensajes a conectores y webhooks
+title: Crear y enviar mensajes
+author: laujan
 description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams o365 conector
-ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
-ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
+ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "52583739"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157657"
 ---
-# <a name="sending-messages-to-connectors-and-webhooks"></a>Envío de mensajes a conectores y webhooks
+# <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
-Para enviar un mensaje a través del conector de Office 365 o el webhook de entrada, debe publicar una carga JSON en la dirección URL del webhook. Por lo general, esta carga será una [tarjeta de conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Puede crear mensajes que puedan realizar acciones y enviarlos a través de Webhook entrante o Office 365 Connector.
 
-También puede usar este JSON para crear tarjetas que contengan entradas enriquecidas, como entrada de texto, selección múltiple o selección de una fecha y hora. El código que genera la tarjeta y publica en la dirección URL de webhook se puede ejecutar en cualquier servicio hospedado. Estas tarjetas se definen como parte de mensajes accionables, y también se admiten en las [tarjetas](~/task-modules-and-cards/what-are-cards.md) que se usan en los bots de Teams y las extensiones de mensajería.
+## <a name="create-actionable-messages"></a>Crear mensajes que pueden actuar
 
-### <a name="example-connector-message"></a>Ejemplo de mensaje de conector
+Los mensajes que pueden actuar incluyen tres botones visibles en la tarjeta. Cada botón se define en la propiedad del mensaje mediante acciones, cada una con un tipo de entrada, un campo de texto, un selector de fechas o una lista de `potentialAction` `ActionCard` opciones múltiples. Cada `ActionCard` uno tiene una acción asociada, por ejemplo `HttpPOST` .
+
+Las tarjetas de conector admiten las siguientes acciones:
+
+- `ActionCard`: presenta uno o varios tipos de entrada y acciones asociadas.
+- `HttpPOST`: envía la solicitud POST a una dirección URL.
+- `OpenUri`: abre uri en un explorador o aplicación independiente, opcionalmente tiene como destino diferentes URI basados en sistemas operativos.
+
+La acción `ActionCard` admite tres tipos de entrada:
+
+- `TextInput`: un campo de texto de línea única o de varias líneas con un límite de longitud opcional.
+- `DateInput`: selector de fecha con un selector de hora opcional.
+- `MultichoiceInput`: Una lista enumerada de opciones que ofrecen una sola selección o varias selecciones.
+
+`MultichoiceInput` admite una propiedad `style` que controla si inicialmente la lista se muestra totalmente expandida. El valor predeterminado de `style` depende del valor de la siguiente `isMultiSelect` manera:
+
+| `isMultiSelect` | `style` predeterminado |
+| --- | --- |
+| `false` o no especificado | `compact` |
+| `true` | `expanded` |
+
+Para mostrar la lista de selección múltiple en el estilo compacto, debe especificar ambos `"isMultiSelect": true` y `"style": true` .
+
+Para obtener más información sobre las acciones de tarjeta de conector, vea [Actions](/outlook/actionable-messages/card-reference#actions).
+
+> [!NOTE]
+> * Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.
+> * Para la acción HttpPOST, el token de usuario se incluye con las solicitudes. Este token incluye la identidad de Azure AD del usuario de Office 365 que realizó la acción.
+
+## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>Enviar un mensaje a través de Webhook entrante o Office 365 Connector
+
+Para enviar un mensaje a través del Webhook entrante o Office 365 Connector, publique una carga JSON en la dirección URL del webhook. Esta carga debe tener la forma de una [Office 365 de conector .](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+
+También puede usar este JSON para crear tarjetas que contengan entradas enriqueciendo, como entrada de texto, selección múltiple o selección de fecha y hora. El código que genera la tarjeta y la publica en la dirección URL de webhook puede ejecutarse en cualquier servicio hospedado. Estas tarjetas se definen como parte de los [](~/task-modules-and-cards/what-are-cards.md)mensajes que se pueden usar y también se admiten en tarjetas, que se usan Teams bots y extensiones de mensajería.
+
+### <a name="example-of-connector-message"></a>Ejemplo de mensaje de conector
+
+Un ejemplo de mensaje de conector es el siguiente:
 
 ```json
 {
@@ -103,55 +141,17 @@ También puede usar este JSON para crear tarjetas que contengan entradas enrique
 }
 ```
 
-Este mensaje genera la siguiente tarjeta en el canal:
+Este mensaje proporciona la siguiente tarjeta en el canal:
 
-![Captura de pantalla de una tarjeta de conector](~/assets/images/connectors/connector_message.png)
+![Captura de pantalla de una tarjeta de conector](~/assets/images/connectorcard.png)
 
-## <a name="creating-actionable-messages"></a>Creación de mensajes que requieren acción
+## <a name="send-messages-using-curl-and-powershell"></a>Enviar mensajes con cURL y PowerShell
 
-En el ejemplo de la sección anterior se incluyen tres botones visibles en la tarjeta. Cada botón se define en la propiedad `potentialAction` del mensaje mediante acciones `ActionCard`, cada una de las cuales contiene un tipo de entrada: un campo de texto, un selector de fecha o una lista de opciones múltiples. Cada acción `ActionCard` tiene asociada una acción, por ejemplo `HttpPOST`.
+# <a name="curl"></a>[cURL](#tab/cURL)
 
-Las tarjetas de conector admiten tres tipos de acciones:
+**Para publicar un mensaje en el webhook con cURL**
 
-- `ActionCard` Presenta uno o varios tipos de entrada y acciones asociadas.
-- `HttpPOST` Envía una solicitud POST a una dirección URL.
-- `OpenUri` Abre un identificador URI en un explorador o aplicación independiente. De manera opcional, marca como destino diferentes URI en función de los sistemas operativos.
-
-La acción `ActionCard` admite tres tipos de entrada:
-
-- `TextInput` Un campo de texto de una sola línea o multilínea con un límite de longitud opcional.
-- `DateInput` Un selector de fecha con un selector de hora opcional.
-- `MultichoiceInput` Una lista de opciones enumeradas que ofrece una sola selección o selecciones múltiples.
-
-`MultichoiceInput` admite una propiedad `style` que controla si inicialmente la lista se muestra totalmente expandida. El valor predeterminado de `style` depende del valor de `isMultiSelect`.
-
-| `isMultiSelect` | `style` predeterminado |
-| --- | --- |
-| `false` o no especificado | `compact` |
-| `true` | `expanded` |
-
-Si quiere que se muestre inicialmente una lista de selección múltiple en el estilo compacto, debe especificar `"isMultiSelect": true` y `"style": true`.
-
-Para obtener más información sobre las acciones de tarjetas de conector, consulte **[Acciones]**(/outlook/actionable-messages/card-reference#actions) en la referencia de tarjeta de mensajes accionables.
-
-> [!NOTE]
-> Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.
-> 
-> Para la acción HttpPOST, el token de usuario se incluye con las solicitudes. Este token incluye la identidad de Azure AD del usuario de Office 365 que realizó la acción.
-
-## <a name="setting-up-a-custom-incoming-webhook"></a>Configurar un webhook de entrada personalizado
-
-Siga estos pasos para ver cómo enviar una tarjeta sencilla a un conector:
-
-1. En Microsoft Teams, elija **Más opciones** (**&#8943;**) junto al nombre del canal y elija **Conectores**.
-1. Desplácese por la lista de conectores hasta **Webhook entrante** y elija **Agregar**.
-1. Escriba un nombre para el webhook, cargue una imagen para asociarla a los datos del webhook y elija **Crear**.
-1. Copie el webhook en el portapapeles y guárdelo. Necesitará la dirección URL del webhook para enviar información a Microsoft Teams.
-1. Seleccione **Listo**.
-
-### <a name="post-a-message-to-the-webhook-using-curl"></a>Publicar un mensaje en webhook con cURL
-
-Los siguientes pasos usan [cURL](https://curl.haxx.se/). Damos por sentado que lo tiene instalado y está familiarizado con su uso básico.
+1. Instale cURL con: https://curl.haxx.se/ .
 
 1. Desde la línea de comandos, escriba el siguiente comando cURL:
 
@@ -165,12 +165,16 @@ Los siguientes pasos usan [cURL](https://curl.haxx.se/). Damos por sentado que l
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-1. Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `curl`.
-1. Compruebe el cliente de Microsoft Team. Debería ver la nueva tarjeta publicada en el equipo.
+    > [!NOTE]
+    > Si post se realiza correctamente, debe ver una salida simple **1** por `curl` .
 
-### <a name="post-a-message-to-the-webhook-using-powershell"></a>Publicar un mensaje en webhook con PowerShell
+1. Compruebe en Microsoft Teams cliente la nueva tarjeta publicada.
 
-Los siguientes pasos usan PowerShell. Damos por sentado que lo tiene instalado y está familiarizado con su uso básico.
+# <a name="powershell"></a>[PowerShell](#tab/PowerShell)
+
+ Requisito previo: instalación de PowerShell y familiarización con su uso básico.
+
+**Para publicar un mensaje en el webhook con PowerShell**
 
 1. Desde el símbolo del sistema de PowerShell, escriba el comando siguiente:
 
@@ -178,69 +182,26 @@ Los siguientes pasos usan PowerShell. Damos por sentado que lo tiene instalado y
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-1. Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `Invoke-RestMethod`.
-1. Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook. Debería ver la nueva tarjeta publicada en el canal.
+    > [!NOTE]
+    > Si post se realiza correctamente, debe ver una salida simple **1** por `Invoke-RestMethod` .
 
-- [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
-- Modifique la parte `icons` del manifiesto para hacer referencia a los nombres de archivo de los iconos en lugar de a las direcciones URL.
+1. Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook. Puede ver la nueva tarjeta publicada en el canal. Antes de usar el conector para probar o publicar la aplicación, debe hacer lo siguiente:
 
-La siguiente manifest.jsen el archivo contiene los elementos básicos necesarios para probar y enviar la aplicación:
+    - [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
+    - Modifique la `icons` parte del manifiesto a los nombres de archivo de los iconos en lugar de las direcciones URL.
 
-> [!NOTE]
-> Reemplace `id` y `connectorId` en el ejemplo siguiente con el GUID del conector.
+---
 
-#### <a name="example-manifestjson-with-connector"></a>Ejemplo de manifest.json con conector
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
-  "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-  "version": "1.0",
-  "packageName": "com.sampleapp",
-  "developer": {
-    "name": "Publisher",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.microsoft.com",
-    "termsOfUseUrl": "https://www.microsoft.com"
-  },
-  "description": {
-    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
-    "short": "This is a small sample app we made for you!"
-  },
-  "icons": {
-    "outline": "sampleapp-outline.png",
-    "color": "sampleapp-color.png"
-  },
-  "connectors": [
-    {
-      "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-      "scopes": [
-        "team"
-      ]
-    }
-  ],
-  "name": {
-    "short": "Sample App",
-    "full": "Sample App"
-  },
-  "accentColor": "#FFFFFF",
-  "needsIdentity": "true"
-}
-```
-
-## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Enviar tarjetas adaptables con un webhook entrante
+## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Enviar tarjetas adaptables mediante un webhook entrante
 
 > [!NOTE]
->
-> ✔ Todos los elementos de esquema de tarjetas adaptables nativas, excepto `Action.Submit`, son completamente compatibles.
->
-> ✔ Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), y [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+> * Todos los elementos nativos del esquema de tarjeta adaptable, excepto `Action.Submit` , son totalmente compatibles.
+> * Las acciones admitidas [**son Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)y [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>El flujo para el envío de [tarjetas adaptables](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) mediante un webhook entrante es el siguiente:
+**Para enviar tarjetas adaptables a través de un webhook entrante**
 
-1. [Configure un webhook personalizado](#setting-up-a-custom-incoming-webhook) en Teams.
-1. Cree el archivo JSON de tarjeta adaptable:
+1. [Configure un webhook personalizado](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) en Teams.
+1. Cree un archivo JSON de tarjeta adaptable con el código siguiente:
 
     ```json
     {
@@ -265,39 +226,30 @@ La siguiente manifest.jsen el archivo contiene los elementos básicos necesarios
     }
     ```
 
-    > [!div class="checklist"]
-    >
-    > - El campo `"type"` debe ser `"message"`.
-    > - La matriz `"attachments"` contiene un conjunto de objetos de tarjeta.
-    > - El campo `"contentType"` debe establecerse en tipo de tarjeta adaptable.
-    > - El objeto `"content"` es la tarjeta con formato JSON.
+    Las propiedades del archivo JSON de tarjeta adaptable son las siguientes:
 
-1. Pruebe la tarjeta adaptable con Postman.
+    * El campo `"type"` debe ser `"message"`.
+    * La matriz `"attachments"` contiene un conjunto de objetos de tarjeta.
+    * El `"contentType"` campo debe establecerse en Tipo de tarjeta adaptable.
+    * El objeto `"content"` es la tarjeta con formato JSON.
 
-Para probar la tarjeta adaptativa, puede usar [Postman](https://www.postman.com) para enviar una solicitud POST a la dirección URL que creó cuando configuró el webhook entrante. Pegue el archivo JSON en el cuerpo de la solicitud y vea el mensaje de la tarjeta adaptable en Teams.
+1. Pruebe la tarjeta adaptable con Postman:
 
->[!TIP]
-> Puede usar el código de tarjeta adaptable [Ejemplos y plantillas](https://adaptivecards.io/samples) para el cuerpo de la solicitud Post de prueba.
+    * Pruebe la tarjeta adaptable con [Postman](https://www.postman.com) para enviar una solicitud POST a la dirección URL, creada para configurar el webhook entrante.
+    * Pegue el archivo JSON en el cuerpo de la solicitud y vea el mensaje de tarjeta adaptable en Teams.
 
-## <a name="testing-your-connector"></a>Probar el conector
-
-Para probar el conector, cárguelo en un equipo igual que lo haría con cualquier otra aplicación. Puede crear un paquete .zip mediante el archivo de manifiesto del Panel de desarrolladores de Conectores que se modificó como se indica en la sección anterior y los dos archivos de icono.
-
-Después de cargar la aplicación, abra la lista Conectores desde cualquier canal. Desplácese a la parte inferior para ver la aplicación en la **sección Cargado:**
-
-![Captura de pantalla de la sección cargada en el cuadro de diálogo Conector](~/assets/images/connectors/connector_dialog_uploaded.png)
-
-Ahora, puede iniciar la experiencia de configuración. Tenga en cuenta que este flujo se produce completamente en Microsoft Teams a través de una ventana emergente. Actualmente, este comportamiento es distinto de la experiencia de configuración en Conectores que hemos creado; estamos trabajando para unificar las experiencias.
-
-Para comprobar que una acción `HttpPOST` está funcionando correctamente, utilice el [webhook entrante personalizado](#setting-up-a-custom-incoming-webhook).
+> [!TIP]
+> Use plantillas y [ejemplos de código de tarjeta](https://adaptivecards.io/samples) adaptable para probar el cuerpo de la solicitud POST.
 
 ## <a name="rate-limiting-for-connectors"></a>Limitación de velocidad para conectores
 
-Los límites de velocidad de la aplicación controlan el tráfico que puede generar un conector o un webhook entrante en un canal. Teams realiza un seguimiento de las solicitudes a través de una ventana de velocidad fija y un contador incremental medido en segundos.  Si se hacen demasiadas solicitudes, se limita la conexión de cliente hasta que se actualice la ventana, es decir, mientras dure la velocidad fija.
+Los límites de velocidad de aplicación controlan el tráfico que puede generar un conector o un webhook entrante en un canal. Teams realizar un seguimiento de las solicitudes mediante una ventana de tasa fija y un contador incremental medidos en segundos. Si se realizan más de cuatro solicitudes en un segundo, la conexión de cliente se limita hasta que la ventana se actualiza durante la duración de la tasa fija.
 
-### <a name="transactions-per-second-thresholds"></a>**Umbrales de transacciones por segundo**
+### <a name="transactions-per-second-thresholds"></a>Umbrales de transacciones por segundo
 
-| Tiempo (segundos)  | Número máximo de solicitudes permitidas  |
+En la tabla siguiente se proporcionan los detalles de transacciones basadas en tiempo:
+
+| Tiempo en segundos  | Número máximo de solicitudes permitidas  |
 |---|---|
 | 1   | 4   |  
 | 30   | 60  |  
@@ -305,7 +257,10 @@ Los límites de velocidad de la aplicación controlan el tráfico que puede gene
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) como la que se muestra a continuación mitigaría la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Consulte las [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar superar los límites de velocidad.
+Una [lógica de reintentos con retroceso](/azure/architecture/patterns/retry) exponencial puede mitigar la limitación de velocidad en casos en los que las solicitudes superan los límites en un segundo. Siga [los procedimientos recomendados](../../bots/how-to/rate-limit.md) para evitar alcanzar los límites de velocidad.
+
+> [!NOTE]
+> Una [lógica de reintentos con retroceso](/azure/architecture/patterns/retry) exponencial puede mitigar la limitación de velocidad en casos en los que las solicitudes superan los límites en un segundo. Consulte las [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar superar los límites de velocidad.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
@@ -322,9 +277,11 @@ try
     }
 }
 ```
- 
-Estos límites tienen el propósito de reducir el correo no deseado en un canal con un conector y garantizan una experiencia óptima para los usuarios finales.
+
+Estos límites se aplican para reducir el correo no deseado de un canal por un conector y garantiza una experiencia óptima para los usuarios.
 
 ## <a name="see-also"></a>Consulte también
 
-[Office 365 Conectores: Microsoft Teams](/connectors/teams/)
+* [Office 365 Conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Crear un webhook saliente](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

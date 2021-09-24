@@ -1,79 +1,79 @@
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Upload la pestaña a Teams con App Studio
+## <a name="upload-your-tab-with-app-studio"></a>Upload pestaña con App Studio
 
 >[!NOTE]
-> Usamos App Studio para editar el **archivomanifest.jsy** cargar el paquete completado en Teams. También puedes editar manualmentemanifest.js **si** lo prefieres. Si lo hace, asegúrese de compilar la solución de nuevo para crear el **archivoTab.zip** que se va a cargar.
+> Usamos **App Studio** para editar el archivomanifest.js **y** cargar el paquete completado en Teams. También puede editar manualmentemanifest.js **en**. Si lo hace, asegúrese de volver a crear la solución para crear el **archivoTab.zip** cargar.
 
-- Abra el Microsoft Teams cliente. Si usa la versión [basada en web,](https://teams.microsoft.com) puede inspeccionar el código front-end con las herramientas de desarrollo [del explorador.](~/tabs/how-to/developer-tools.md)
+**Para cargar la pestaña con App Studio**
 
-- Abre App studio y selecciona la **pestaña Editor de manifiestos.**
+1. Vaya a Microsoft Teams. Si usa la versión [basada en web,](https://teams.microsoft.com) puede inspeccionar el código front-end con las herramientas de desarrollo [del explorador.](~/tabs/how-to/developer-tools.md)
 
-- Selecciona el **icono Importar una aplicación existente** en el editor de manifiestos para empezar a actualizar el paquete de la aplicación para la pestaña. El código fuente viene con su propio manifiesto parcialmente completo. El nombre del paquete de la **aplicación estab.zip**. Debe encontrarse aquí:
+1. Ve a **App Studio** y selecciona la pestaña Editor **de manifiestos.**
+
+1. Selecciona **Importar una aplicación existente en** el editor de **manifiestos** para empezar a actualizar el paquete de la aplicación para la pestaña. El código fuente viene con su propio manifiesto parcialmente completo. El nombre del paquete de la **aplicación estab.zip**. Está disponible en la siguiente ruta de acceso:
 
     ```bash
-    /bin/Debug/netcoreapp2.2/Tab.zip
+    /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-- Upload **Tab.zip** a App Studio.
+1. Upload **tab.zip** a App **Studio**.
 
 ### <a name="update-your-app-package-with-manifest-editor"></a>Actualizar el paquete de la aplicación con el editor de manifiestos
 
-Una vez que hayas cargado el paquete de la aplicación en App Studio, tendrás que terminar de configurarlo.
+Después de cargar el paquete de la aplicación en App Studio, debes configurarlo.
 
-- Seleccione el icono de la pestaña recién importada en el panel derecho de la página de bienvenida del editor de manifiesto.
+Seleccione el icono de la pestaña recién importada en el panel derecho de la página de bienvenida del editor de manifiesto.
 
-Hay una lista de pasos en el lado izquierdo del editor de manifiesto y, a la derecha, una lista de propiedades que necesitan tener valores para cada uno de esos pasos. Gran parte de la información ha sido proporcionada por su *manifest.js,* pero hay algunos campos que necesitará actualizar:
+Hay una lista de pasos en el lado izquierdo del editor de manifiesto y, a la derecha, una lista de propiedades que deben tener valores para cada uno de esos pasos. El usuario ha proporcionado gran parte de la **informaciónmanifest.js,** pero hay campos que debe actualizar.
 
 #### <a name="details-app-details"></a>Detalles: Detalles de la aplicación
 
 En la **sección Detalles de la** aplicación:
 
-- En **Identificación,** **selecciona Generar** para generar un nuevo identificador de aplicación para la aplicación.
+1. En **Identificación,** selecciona **Generar** para generar un nuevo identificador de aplicación para tu aplicación.
 
-- En **Información del desarrollador,** actualice **la dirección URL del sitio** web con la dirección URL HTTPS de **ngrok.**
+1. En **Información del desarrollador,** actualice el **sitio web** con la dirección URL HTTPS de **ngrok.**
 
-- En **Direcciones URL de la aplicación** se actualiza la declaración de **privacidad** y los `https://<yourngrokurl>/privacy` **Términos** de uso `https://<yourngrokurl>/tou` para>.
+1. En **Direcciones URL de la** aplicación, actualice la declaración **privacidad** y `https://<yourngrokurl>/privacy` los **Términos** de uso `https://<yourngrokurl>/tou` para>.
 
 #### <a name="capabilities-tabs"></a>Capacidades: pestañas
 
-En la *sección Pestañas:*
+En la **sección Pestañas:**
 
-- En **Agregar una pestaña personal,** seleccione **Agregar**. Se le mostrará una ventana de diálogo emergente.
+1. En **Agregar una pestaña personal,** seleccione **Agregar**. Aparece un cuadro de diálogo emergente.
 
-- Complete el **campo** Nombre.
+1. Escriba un nombre para la ficha personal en **Nombre**.
 
-- Complete el **campo Id. de** entidad.
+1. Escriba el **id. de entidad**.
 
-- Actualice el **campo Dirección URL** de contenido con `https://<yourngrokurl>/personalTab` .
+1. Actualizar **dirección URL de contenido** con `https://<yourngrokurl>/personalTab` .
 
-- Deje el **campo Dirección URL** del sitio web en blanco.
+    Deje el **campo Dirección URL** del sitio web en blanco.
 
-- Seleccione **Guardar**.
+1. Seleccione **Guardar**.
 
 #### <a name="finish-domains-and-permissions"></a>Finalizar: dominios y permisos
 
-En la **sección Dominios y permisos,** el campo Dominios de las **pestañas** debe contener la dirección URL de ngrok sin el prefijo HTTPS - `<yourngrokurl>.ngrok.io/` .
+En la **sección Dominios y permisos,** el campo Dominios de las **pestañas** debe contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io/` .
 
 ##### <a name="finish-test-and-distribute"></a>Finalizar: probar y distribuir
 
 >[!IMPORTANT]
->En el **campo** Descripción de la derecha verá la siguiente advertencia:
+> A la derecha, en **Descripción,** verá la siguiente advertencia:
 >
->&#9888; "**La matriz 'validDomains' no puede contener un sitio de túnel...**"
+> &#9888; La **matriz 'validDomains' no puede contener un sitio de túnel...**
 >
 >Esta advertencia puede omitirse mientras se prueba la pestaña.
 
-En la **sección Probar y** distribuir:
+1. En la **sección Probar y distribuir,** seleccione **Instalar**.
 
-- Seleccione **Instalar**.
+1. En el cuadro de diálogo emergente, seleccione **Agregar** y la pestaña se muestra con dos opciones.
 
-- En la ventana emergente asegúrese de que **Add for you** está establecido en **Sí** y **Agregar a** un equipo o chat está establecido en **No**.
-
-- Seleccione **Instalar**.
-
-- En la siguiente ventana emergente, seleccione **Abrir** y se mostrará la pestaña.
+1. En las opciones de la pestaña, elija **Seleccionar gris** o **Seleccionar rojo**. La pestaña se muestra según el color seleccionado.
+ 
+    ![Pestaña personal ASPNETMVC cargada](../../assets/images/tab-images/personaltabaspnetmvcuploaded.png)
 
 ## <a name="view-your-personal-tab"></a>Ver la pestaña personal
 
-- En la barra de navegación situada en el extremo izquierdo de la aplicación Teams, seleccione el `...` menú. Se te mostrará una lista de aplicaciones personales.
+1. En la barra de navegación situada en el extremo izquierdo de la Teams, selecciona los puntos suspensivos &#x25CF;&#x25CF;&#x25CF;. Se muestra una lista de aplicaciones personales.
 
-- Seleccione la pestaña de la lista que desea ver.
+1. Seleccione la pestaña de la lista para verlo.

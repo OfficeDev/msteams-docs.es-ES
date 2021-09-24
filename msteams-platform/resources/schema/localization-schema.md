@@ -1,26 +1,31 @@
 ---
-title: Referencia del esquema JSON del archivo de localización
+title: Localizar la referencia de esquema JSON
 description: Describe el esquema de localización admitido por el archivo de localización para Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: localización del esquema de manifiesto de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 3e4207fb3e862eac18c80ffc49e7c5648ae05c28
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8c5f32fb8244f70fadc610ed7c193d97f11171f2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019709"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157209"
 ---
-# <a name="reference-localization-file-json-schema"></a>Referencia: esquema JSON del archivo de localización
+# <a name="localize-json-schema-reference"></a>Localizar la referencia de esquema JSON
 
-El Microsoft Teams de localización describe las traducciones de idioma que se van a servir en función de la configuración del idioma del cliente. El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Para obtener información adicional, consulta [Localización de aplicaciones](~/concepts/build-and-test/apps-localization.md).
+El Microsoft Teams de localización describe las traducciones de idioma que se sirven en función de la configuración del idioma del cliente. El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json) . 
 
-## <a name="sample"></a>Muestra
+> [!TIP]
+> Especifique el esquema al principio del manifiesto para habilitar o `IntelliSense` compatibilidad similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",`
+
+## <a name="example"></a>Ejemplo 
+
+Ejemplo de esquema JSON de localización es el siguiente:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "name.short": "Le App Studio",
   "name.full": "App Studio pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio.",
@@ -35,95 +40,24 @@ El Microsoft Teams de localización describe las traducciones de idioma que se v
 
 El esquema define las siguientes propiedades:
 
-## <a name="schema"></a>$schema
+|Propiedad|Tipo|Longitud máxima|Descripción|
+|---------------|--------|---------|------------------|
+|`$schema`|URI|N/D|La https:// url que hace referencia al esquema JSON para el manifiesto.|
+|`name.short`|Cadena|30|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`name.full`|Cadena|100|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`description.short`|Cadena|80|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`description.full`|Cadena|4000|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|Cadena|32|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`## bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title`|Cadena|32|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title`|Cadena|32|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|Cadena|512|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|Cadena|64|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
 
-**URI**
+## <a name="see-also"></a>Consulte también
 
-La https:// url que hace referencia al esquema JSON para el manifiesto.
-
-> [!TIP]
-> Especifique el esquema al principio del manifiesto para habilitar la IntelliSense o similar desde el editor de código:`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
-
-## <a name="nameshort"></a>name.short
-
-**String, Max Length 30**
-
-Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="namefull"></a>name.full
-
-**String, Max Length 100**
-
-Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="descriptionshort"></a>description.short
-
-**String, Max Length 80**
-
-Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="descriptionfull"></a>description.full
-
-**String, Longitud máxima 4000**
-
-Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9]|1[0-5]) \\ ] \\ .name
-
-**String, Longitud máxima 128**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="bots0commandlists0-2commands0-9title"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
-
-**String, Max Length 32**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="bots0commandlists0-2commands0-9description"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
-
-**String, Longitud máxima 128**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .title
-
-**String, Max Length 32**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
-
-**String, Longitud máxima 128**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9parameters0-4title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .title
-
-**String, Max Length 32**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9parameters0-4description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .description
-
-**String, Longitud máxima 128**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9parameters0-4value"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .value
-
-**String, Longitud máxima 512**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .choices \\ [[0-9] \\ ] \\ .title
-
-**String, Longitud máxima 128**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
-
-## <a name="composeextensions0commands0-9taskinfotitle"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .taskInfo \\ .title
-
-**String, Max Length 64**
-
-Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.
+> [Localizar la aplicación](~/concepts/build-and-test/apps-localization.md)

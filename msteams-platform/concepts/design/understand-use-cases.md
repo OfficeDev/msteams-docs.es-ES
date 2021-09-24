@@ -3,14 +3,14 @@ title: Descripción de los casos de uso de la aplicación
 author: heath-hamilton
 description: Al planear la Microsoft Teams, primero debes comprender qué problemas intenta resolver la aplicación.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 151e9d24015f45f9085bd07604bc1cc7882266de
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994101"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157614"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -76,12 +76,6 @@ Sobre todo, recuerde que a nadie le gusta el correo no deseado. La limpieza de m
 ## <a name="plan-for-the-future"></a>Planear el futuro
 
 Identifique qué nuevas características prefiere tener el usuario en la solución actual. Si tienes una guía básica para nuevas características que agregar a la aplicación, el diseño y la arquitectura se verán afectados.
-
-## <a name="see-also"></a>Ver también
-
-* [Elegir cómo distribuir la aplicación](../deploy-and-publish/apps-publish-overview.md)
-* [Pestañas de diseño](../../tabs/design/tabs.md)
-* [Bots de diseño](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

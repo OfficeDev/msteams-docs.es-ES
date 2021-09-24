@@ -33,8 +33,8 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: Tutoriales y ejemplos de código
       itemType: sample
-      url: /microsoftteams/platform/tutorials/code-samples
-    - title: 'Microsoft Build 2021: ¿Qué hay de nuevo?'
+      url: /microsoftteams/platform/get-started/code-samples
+    - title: Novedades
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 conceptualContent:
@@ -125,7 +125,7 @@ conceptualContent:
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: Anuncios
-    - title: Community ayuda
+    - title: Ayuda
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview

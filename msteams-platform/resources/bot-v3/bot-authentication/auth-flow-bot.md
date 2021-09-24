@@ -6,11 +6,11 @@ localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
 ms.openlocfilehash: fe7e528be98a0b58334535952327b6026b30a87d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019807"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157498"
 ---
 # <a name="microsoft-teams-authentication-flow-for-bots"></a>Microsoft Teams de autenticación para bots
 

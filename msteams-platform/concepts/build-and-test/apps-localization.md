@@ -1,94 +1,110 @@
 ---
-title: Localización de la aplicación
+title: Localizar la aplicación
 description: Describe consideraciones para la localización de la Microsoft Teams aplicación.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 6dbdeb6d16c99aada23f8d74a92d958f9c29b69d
-ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
+ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2021
-ms.locfileid: "52709631"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157374"
 ---
-# <a name="localization-for-microsoft-teams-apps"></a>Localización para Microsoft Teams aplicaciones
+# <a name="localize-your-app"></a>Localizar la aplicación
 
-Al encontrar la aplicación Microsoft Teams, debes tener en cuenta lo siguiente:
+Debes tener en cuenta los siguientes factores para encontrar tu Microsoft Teams aplicación:
 
-1. La Teams de la tienda (si procede).
-1. Las cadenas de acceso del usuario final en el manifiesto de la aplicación. Por ejemplo, comandos bot.
-1. Responder al texto localizado enviado por los usuarios.
+1. [Localiza la descripción de AppSource](#localize-your-appsource-listing).
+1. [Localiza las cadenas en el manifiesto de la aplicación](#localize-strings-in-your-app-manifest). 
+1. [Controlar envíos de texto localizados de los usuarios](#handle-localized-text-submissions-from-your-users).
 
-## <a name="localizing-your-appsource-listing"></a>Localización de la descripción de AppSource
+## <a name="localize-your-appsource-listing"></a>Localización de la descripción de AppSource
 
-Si vas a publicar en la tienda, debes tener en cuenta que aún no se admite la localización de la descripción de AppSource. Sin embargo, como preparación para la compatibilidad con las listas localizadas en la tienda de aplicaciones, puedes agregar idiomas adicionales a tu descripción. Actualmente, solo la información de idioma predeterminada (inglés) que proporciones en el [Centro](/office/dev/store/submit-to-appsource-via-partner-center) de partners para tu descripción aparecerá en la descripción del sitio web de [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) para tu aplicación.
+Si vas a publicar la aplicación en la tienda, debes tener en cuenta que aún no se admite la localización de la descripción de AppSource. Para admitir las listas localizadas en la tienda de aplicaciones, puedes agregar idiomas adicionales a la descripción. La información de idioma predeterminada que proporcionas en [el Centro de partners](/office/dev/store/submit-to-appsource-via-partner-center) para tu descripción aparece en la descripción del sitio web de [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource es un lugar para todas las necesidades de su equipo. reunir todo, incluidos chats, reuniones, llamadas, archivos y herramientas para permitir un trabajo en equipo más productivo.") para tu aplicación. Actualmente, el idioma predeterminado es inglés.
 
-### <a name="example-of-configuring-localization"></a>Ejemplo de configuración de localización
+### <a name="configure-localization"></a>Configurar la localización
 
-Para configurar un idioma adicional para la aplicación, en el [Centro de partners,](/office/dev/store/submit-to-appsource-via-partner-center)selecciona inglés y el idioma adicional de la aplicación. El francés se usa en este ejemplo:
+Para configurar un idioma adicional para la aplicación, en el [Centro de partners,](/office/dev/store/submit-to-appsource-via-partner-center)selecciona inglés y el idioma adicional de la aplicación. El francés se usa como un idioma adicional en el siguiente ejemplo:
 
 1. Agregar idioma inglés
-    * Rellene el nombre de la aplicación.
-    * Rellene una breve descripción de la aplicación en inglés.
-    * Rellene la descripción larga de la aplicación en inglés.
-    * En la descripción larga, agrega también la línea "Esta aplicación está disponible en francés".
+    * Escribe el nombre de la aplicación.
+    * Escribe una breve descripción de la aplicación en inglés.
+    * Escribe la descripción larga de la aplicación en inglés.
+    * En la descripción larga, escribe: **Esta aplicación está disponible en francés**.
     * Upload las imágenes de la interfaz de usuario de la aplicación (en inglés).
 2. Agregar francés
-    * Rellene el nombre de la aplicación.
-    * Rellene una breve descripción de la aplicación en francés.
-    * Rellene la descripción larga de la aplicación en francés.
+    * Escribe el nombre de la aplicación.
+    * Escribe una breve descripción de la aplicación en francés.
+    * Escribe la descripción larga de la aplicación en francés.
     * Upload las imágenes de la interfaz de usuario de la aplicación (en francés).
 
-Las imágenes que cargues con el idioma inglés serán las que se usan en AppSource.
+Las imágenes que carga con el idioma inglés se usan en AppSource.
 
-## <a name="localizing-the-strings-in-your-app-manifest"></a>Localización de las cadenas en el manifiesto de la aplicación
+## <a name="localize-strings-in-your-app-manifest"></a>Localización de cadenas en el manifiesto de la aplicación
 
-Debes usar el esquema Microsoft Teams aplicación v1.5+ para encontrar la aplicación correctamente. Para ello, establece el atributo en el archivo manifest.jsen ' y actualiza la propiedad `$schema` https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json 'manifestVersion' en '1,7'.
+Debes usar el esquema Microsoft Teams aplicación y `v1.5` más adelante para encontrar la aplicación. Para ello, establece el atributo en el archivo manifest.jso posterior y actualiza la propiedad a `$schema` la versión ( en este **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` `1.5` caso). 
+
+Debe agregar la propiedad `localizationInfo` con el idioma predeterminado que admite la aplicación. El idioma predeterminado se usa como el idioma de reserva final si la configuración del cliente del usuario no coincide con ninguno de los idiomas adicionales.
 
 ### <a name="example-manifestjson-change"></a>Ejemplo manifest.jsal cambiar
 
+La siguiente manifest.jsayuda a agregar la propiedad con el idioma predeterminado que la `localizationInfo` aplicación admite junto con `additionalLanguages` :
+
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
+  "localizationInfo": {
+        "defaultLanguageTag": "en",
+        "additionalLanguages": [
+            {
+                "languageTag": "es-mx",
+                "file": "es-mx.json"
+            }
+        ]
+    }
   ...
 }
 ```
 
-A continuación, querrá agregar la propiedad 'localizationInfo' con el idioma predeterminado que admite la aplicación. El idioma predeterminado se usa como el último idioma de reserva si la configuración del cliente del usuario no coincide con ninguno de los idiomas adicionales.
+### <a name="example-localization-json-change"></a>Ejemplo de cambio .json de localización
 
-### <a name="example-manifestjson-change"></a>Ejemplo manifest.jsal cambiar
+A continuación se muestra un ejemplo para la localización .json:
 
 ```json
 {
-  ...
-  "localizationInfo": {
-    "defaultLanguageTag": "en"
-  }
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "manifestVersion": "1.5",
+  "name.short": "Localización",
+  "name.full": "Aplicación de localización",
   ...
 }
 ```
 
-Puede proporcionar archivos .json adicionales con traducciones de todas las cadenas de acceso del usuario en el manifiesto. Estos archivos deben cumplir el esquema [JSON](../../resources/schema/localization-schema.md) del archivo de localización y deben agregarse a la propiedad 'localizationInfo' del manifiesto. Cada archivo se correlaciona con una etiqueta de idioma que Teams cliente usa para elegir las cadenas adecuadas. La etiqueta de idioma tiene la forma de, pero se recomienda omitir la parte para dirigirse a todas las <language> - <region> <region> regiones que admiten el idioma deseado.
 
-El cliente Teams aplicará las cadenas en este orden: cadenas de idioma predeterminadas -> solo cadenas de idioma del usuario -> idioma del usuario + cadenas de región del usuario.
+Puede proporcionar archivos .json adicionales con traducciones de todas las cadenas de acceso del usuario en el manifiesto. Estos archivos deben cumplir el esquema JSON del archivo [de](../../resources/schema/localization-schema.md) localización y deben agregarse a la `localizationInfo` propiedad del manifiesto. Cada archivo se correlaciona con una etiqueta de idioma, que Teams cliente usa para seleccionar las cadenas adecuadas. La etiqueta de idioma tiene la forma de, pero puede omitir la parte para dirigirse a todas las `<language>-<region>` `<region>` regiones que admiten el idioma deseado.
 
-Por ejemplo, proporciona un idioma predeterminado de 'fr' (francés, todas las regiones) y archivos de idioma adicionales para 'en' (inglés, todas las regiones) y 'en-gb' (inglés, Gran Bretaña). Si el idioma del usuario está establecido en 'en-gb':
+El cliente Teams aplica las cadenas en el siguiente orden: cadenas de idioma predeterminadas -> idioma del usuario sólo cadenas -> idioma del usuario + cadenas de región del usuario.
 
-1. El Teams tomará las cadenas 'fr' sobrescrituras con las cadenas 'en'.
-2. Sobrescriba las cadenas 'en-gb'.
+Por ejemplo, proporciona un idioma predeterminado de "fr" (francés, todas las regiones) y archivos de idioma adicionales para "en" (inglés, todas las regiones) y "en-gb" (inglés, Gran Bretaña), el idioma del usuario se establece en "en-gb". Los siguientes cambios se llevan a cabo en función de la selección de idioma:
 
-Si el idioma del usuario está establecido en 'en-ca': 
+1. El Teams toma las cadenas 'fr' y las sobrescribe con las cadenas 'en'.
+1. Sobrescriba las cadenas 'en' con las cadenas 'en-gb'.
 
-1. El Teams tomará las cadenas 'fr' sobrescrituras con las cadenas 'en'.
-2. Dado que no se proporciona ninguna localización 'en-ca', se usarán las localizaciones 'en'.
+Si el idioma del usuario se establece en "en-ca", se realizarán los siguientes cambios en función de la selección de idioma: 
 
-Si el idioma del usuario se establece en 'es-es', el cliente de Teams tomará las cadenas 'fr' y no las invalidará con ninguno de los archivos de idioma.
+1. El Teams toma las cadenas 'fr' y las sobrescribe con las cadenas 'en'.
+1. Dado que no se proporciona ninguna localización 'en-ca', se usan las localizaciones 'en'.
 
-Por lo tanto, se recomienda encarecidamente proporcionar traducciones de solo idioma de nivel superior en el manifiesto ('en' en lugar de 'en-us') y solo proporcionar invalidaciones de nivel de región para las pocas cadenas que las necesitan.
+Si el idioma del usuario se establece en 'es-es', el cliente Teams toma las cadenas 'fr'. El Teams no invalida las cadenas con ninguno de los archivos de idioma, ya que no se proporciona ninguna traducción de 'es' o 'es-es'.
+
+Por lo tanto, debe proporcionar traducciones de nivel superior y solo de idioma en el manifiesto. Por ejemplo, 'en' en lugar de 'en-us'. Debe proporcionar invalidaciones de nivel de región solo para las pocas cadenas que las necesiten. 
 
 ### <a name="example-manifestjson-change"></a>Ejemplo manifest.jsal cambiar
+
+El manifest.jsal cambiar se muestra en el siguiente ejemplo:
 
 ```json
 {
@@ -116,6 +132,8 @@ Por lo tanto, se recomienda encarecidamente proporcionar traducciones de solo id
 
 ### <a name="example-localization-json-file"></a>Archivo .json de localización de ejemplo
 
+ El localization.jsal cambiar se muestra en el siguiente ejemplo:
+
 ```json
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
@@ -131,14 +149,13 @@ Por lo tanto, se recomienda encarecidamente proporcionar traducciones de solo id
 }
 ```
 
-## <a name="handling-localized-text-submissions-from-your-users"></a>Controlar envíos de texto localizados de los usuarios
+## <a name="handle-localized-text-submissions-from-your-users"></a>Controlar envíos de texto localizados de los usuarios
 
-Si proporciona versiones localizadas de la aplicación, es muy probable que los usuarios respondan con el mismo idioma. Teams convierte los envíos de usuario al idioma predeterminado, por lo que la aplicación tendrá que controlarlo. Por ejemplo, si proporciona una localización , las respuestas al bot serán el texto localizado del comando, no `commandList` el idioma predeterminado. La aplicación tendrá que responder correctamente.
+Si proporciona versiones localizadas de la aplicación, los usuarios responderán con el mismo idioma. Como Teams convierte los envíos de usuario al idioma predeterminado, la aplicación debe controlar las respuestas de idioma localizado. Por ejemplo, si proporciona una localización , las respuestas al bot son el texto localizado del comando, no `commandList` el idioma predeterminado. La aplicación debe responder correctamente.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo | Descripción | .NET | Node.js |
+| Ejemplo de nombre | Descripción | .NET | Node.js |
 |-------------|-------------|------|------|
 | Localización de aplicaciones | Microsoft Teams localización de aplicaciones mediante bot y pestaña. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
-
 

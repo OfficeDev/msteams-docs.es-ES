@@ -2,14 +2,14 @@
 title: Formatos multimedia admitidos para bots
 description: Los bots Microsoft Teams solo admiten los siguientes formatos multimedia para el contenido de audio y vídeo.
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: formatos multimedia de bots de teams
-ms.openlocfilehash: 1a6fe745af6048be972bd6cea26ca5d0f876727f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: da134568cb714580ad4f67b993d5ee467db39710
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020614"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157457"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formatos multimedia admitidos para bots
 

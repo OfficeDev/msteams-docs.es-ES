@@ -2,15 +2,15 @@
 title: Diseño de la aplicación personalizada
 author: heath-hamilton
 description: Obtén información sobre cómo diseñar Microsoft Teams aplicaciones. Los recursos incluyen el kit Microsoft Teams interfaz de usuario, procedimientos recomendados, ejemplos y mucho más.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644878"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360471"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la Microsoft Teams aplicación
 
@@ -33,7 +33,7 @@ Teams aplicaciones ayudan a los usuarios a lograr más juntos. Use estos princip
 
 ### <a name="collaborative"></a>Colaboración
 
-Teams aplicaciones ayudan a los usuarios a lograr más juntos. Use estos principios para guiar el diseño.
+Teams la aplicación promueve la colaboración a través de actividades coordinadas y compartidas entre los usuarios.
 
    :::column-end:::
    :::column span="":::
@@ -91,7 +91,7 @@ La interfaz de usuario es fácil de entender, agradable en apariencia y tono, y 
 
 ### <a name="responsive"></a>Respuesta correcta
 
-La aplicación es independiente del dispositivo y la pantalla.
+La aplicación es independiente del dispositivo y de la pantalla.
 
    :::column-end:::
 :::row-end:::
@@ -133,13 +133,13 @@ Cree rápidamente diseños complejos y de alta fidelidad con plantillas para Tea
 
 ## <a name="basic-ui-components"></a>Componentes básicos de la interfaz de usuario
 
-Según la interfaz de usuario de Fluent, estos son [los](design-teams-app-basic-ui-components.md) elementos principales que puedes usar para crear experiencias Teams desde cero.
+En función Fluent interfaz de usuario, estos son los elementos principales que puedes usar para crear experiencias Teams desde cero. [](design-teams-app-basic-ui-components.md)
 
 ## <a name="tools-and-samples"></a>Herramientas y ejemplos
 
 Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario. El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.
 
@@ -169,16 +169,16 @@ Puedes cargar una aplicación de ejemplo para ver cómo deben verse y comportars
 
 Para obtener más información, pruebe uno de los siguientes recursos:
 
-### <a name="fluent-ui-documentation"></a>Documentación de la interfaz de usuario fluent
+### <a name="fluent-ui-documentation"></a>Fluent Documentación de la interfaz de usuario
 
-Obtenga ejemplos de código y detalles de implementación para los componentes básicos de la interfaz de usuario fluent que se usan para crear Teams experiencias.
+Obtenga ejemplos de código y detalles de implementación para los componentes Fluent interfaz de usuario básicas que se usan para crear Teams experiencias.
 
 > [!div class="nextstepaction"]
-> [Probar Teams de interfaz de usuario (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Probar Teams de interfaz de usuario (Fluent interfaz de usuario)](https://fluentsite.z22.web.core.windows.net/)
 
-### <a name="adaptive-cards-designer"></a>Diseñador de tarjetas adaptables
+### <a name="adaptive-cards-designer"></a>Diseñador de tarjetas adaptables.
 
 Diseñar tarjetas adaptables en nuestra herramienta basada en web.
 
 > [!div class="nextstepaction"]
-> [Probar el diseñador de tarjetas adaptables](https://adaptivecards.io/designer/)
+> [Pruebe el diseñador de Tarjetas adaptables](https://adaptivecards.io/designer/)

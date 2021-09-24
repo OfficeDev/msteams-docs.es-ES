@@ -3,14 +3,14 @@ title: Asignar los casos de uso a Teams funcionalidades de la aplicación
 author: surbhigupta
 description: Identifica cómo pueden funcionar los casos de uso de la aplicación en la experiencia Teams aplicación.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b374f0ca81402effb548c1cfcb90ed3d316360f1
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068560"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157141"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
@@ -26,7 +26,7 @@ Al elegir el ámbito de la aplicación, tenga en cuenta lo siguiente:
 * Una aplicación puede existir en todos los ámbitos.
 * Las funcionalidades de la aplicación, como las extensiones de mensajería, siguen a los usuarios en todos los ámbitos.
 * Los usuarios suelen dudar de agregar aplicaciones a Teams o canales.
-* Los usuarios invitados pueden acceder al contenido expuesto en Teams o canales.
+* Los invitados pueden acceder al contenido expuesto en Teams o canales.
 
 Puedes elegir entre el ámbito personal y el ámbito de equipo o canal de la aplicación en función de lo siguiente:
 
@@ -104,4 +104,4 @@ Dicho esto, las mejores aplicaciones suelen combinar varias características, cr
 
 ## <a name="see-also"></a>Consulte también
 
-[Desarrollar aplicaciones para Microsoft Teams](../../overview.md)
+[Crear la primera Microsoft Teams aplicación](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

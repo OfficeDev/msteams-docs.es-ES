@@ -5,20 +5,21 @@ description: Obtenga información sobre cómo crear una pestaña personalizada c
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7bbbf7ae1d74a9094af5bc6ca4b3ac797ba05d5d
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.localizationpriority: none
+ms.openlocfilehash: 36aa779db0c45ab3724673cb0030a97cceef6a78
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037666"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360817"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Compila y ejecuta la primera aplicación Microsoft Teams con SharePoint Framework (SPFx)
 
-En este tutorial, crearás una nueva aplicación Microsoft Teams en SharePoint Framework (SPFx) que implemente una aplicación personal sencilla. (Una *aplicación personal* incluye un conjunto de pestañas con ámbito para uso individual). Durante el tutorial, aprenderás sobre la estructura de una aplicación Teams, cómo ejecutar la aplicación localmente y cómo implementar la aplicación en SharePoint.
+En este tutorial, aprenderás a crear una nueva aplicación Microsoft Teams en SharePoint Framework SPFx que implemente una aplicación personal sencilla. Por ejemplo, una *aplicación personal incluye* un conjunto de pestañas para uso individual. Durante el tutorial, aprenderás sobre la estructura de una aplicación de Teams, cómo ejecutar una aplicación localmente y cómo implementar la aplicación en SharePoint.
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-Instale los [requisitos previos](prerequisites.md) para garantizar que su entorno de desarrollo está configurado
+Asegúrese de que el entorno de desarrollo está configurado instalando los requisitos previos.
 
 > [!div class="nextstepaction"]
 > [Requisitos previos para la instalación](prerequisites.md)
@@ -34,7 +35,7 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Abra Visual Studio Code.
-1. Abra el Kit de herramientas de Teams. Para ello, seleccione el icono de Teams en la barra lateral:
+1. Seleccione el Teams en la barra lateral para abrir el Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icono de Teams en la barra lateral de Visual Studio Code.":::
 
@@ -46,15 +47,15 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Inicio del Asistente para crear un nuevo proyecto":::
 
-1. En el paso **Seleccionar funcionalidades**, ya estará seleccionada la funcionalidad de **Pestaña**.  Pulse **Aceptar**.
+1. En la **sección Seleccionar capacidades,** seleccione **Ficha** y seleccione **Aceptar**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Captura de pantalla que muestra cómo agregar funcionalidades a la nueva aplicación.":::
 
-1. En el **paso Tipo de hospedaje front-end,** seleccione SharePoint Framework **(SPFx).**
+1. En la **sección Tipo de hospedaje front-end,** seleccione SharePoint Framework **(SPFx).**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Captura de pantalla que muestra cómo seleccionar el hospedaje para la nueva aplicación.":::
 
-1. En el **paso Marco,** seleccione **React**.
+1. En la **sección Marco,** **seleccione React**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Seleccionar marco":::
 
@@ -68,7 +69,7 @@ Use el Kit de herramientas de Teams para crear su primer proyecto:
 
 1. Escriba un nombre adecuado para la aplicación, como `helloworld`.  El nombre de la aplicación solo puede contener caracteres alfanuméricos.  Presione **Entrar** para continuar.
 
-La aplicación Teams se creará en unos segundos.
+   La aplicación Teams se creará en unos segundos.
 
 # <a name="command-line"></a>[Línea de comandos](#tab/cli)
 
@@ -81,7 +82,7 @@ teamsfx new
 La CLI le guiará por varias preguntas para crear el proyecto.  En cada pregunta se le indicará cómo responder (por ejemplo, usando las teclas de dirección para seleccionar una opción).  Cuando haya respondido a la pregunta, presione **Entrar** para confirmar la elección.
 
 1. Seleccione **Crear una nueva aplicación de Teams**.
-1. Seleccione la funcionalidad de **Pestaña**.
+1. Seleccione **Tab**.
 1. Seleccione **SharePoint Framework (SPFx) de** front-end.
 1. Seleccione **React** framework.
 1. Presione **Entrar** para el **nombre del elemento web**.
@@ -90,7 +91,7 @@ La CLI le guiará por varias preguntas para crear el proyecto.  En cada pregunta
 1. Presione **Entrar** para seleccionar la carpeta de área de trabajo predeterminada.
 1. Escriba un nombre adecuado para la aplicación, como `helloworld`.  El nombre de la aplicación solo puede contener caracteres alfanuméricos.
 
-Una vez que haya respondido a todas las preguntas, se creará el proyecto.
+   Una vez contestadas todas las preguntas, se creará el proyecto.
 
 ---
 
@@ -100,15 +101,20 @@ Una vez que haya respondido a todas las preguntas, se creará el proyecto.
 
 Si quiere omitir esta sección por ahora, puede [ejecutar la aplicación de forma local](#run-your-app-locally).
 
-Una vez Teams Toolkit configurar el proyecto, tienes los componentes para crear una aplicación personal básica para Teams que se hospeda en el SharePoint Framework.  Los archivos y directorios del proyecto se muestran en el área del Explorador de Visual Studio Code.
+Después de Teams Toolkit configurar el proyecto, tienes los componentes para crear una aplicación personal básica para Teams que se hospeda en el SharePoint Framework.  Los archivos y directorios del proyecto se muestran en el área del Explorador de Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Captura de pantalla que muestra los archivos de proyecto de la aplicación para una aplicación personal en Visual Studio Code.":::
 
-El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`.  Entre otros elementos de este directorio:
+El kit de herramientas crea automáticamente el scaffolding en el directorio del proyecto en función de las funcionalidades que ha agregado durante la configuración. El Kit de herramientas de Teams mantiene el estado para la aplicación en el directorio `.fx`. 
 
-- Los iconos de aplicación se almacenan como archivos PNG en `color.png` y `outline.png`.
-- El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `manifest.source.json` .
-- La configuración que eligió al crear el proyecto se almacena en `settings.json`.
+- La configuración que eligió al crear el proyecto se almacena en `.fx/settings.json`.
+- El estado del proyecto se almacena en `.fx/env.*.json` .
+
+Y la Teams de la aplicación se almacena en el `appPackage` directorio.
+
+- Los iconos de aplicación se almacenan como archivos PNG en `appPackage/color.png` y `appPackage/outline.png`.
+- El manifiesto de la aplicación para publicar en el Portal de desarrolladores para Teams se almacena en `appPackage/manifest.source.json` .
+
 
 Dado que ha seleccionado un SPFx webpart, los siguientes archivos son relevantes para la interfaz de usuario:
 
@@ -125,32 +131,32 @@ Teams Toolkit permite hospedar la aplicación localmente y ejecutarla a través 
 
 Para crear y ejecutar la aplicación localmente:
 
-1. Desde Visual Studio Code, presione **F5**.
+1. Desde Visual Studio Code, presione la **tecla F5.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Captura de pantalla que muestra cómo iniciar una SPFx en un área de trabajo local.":::
 
    > [!NOTE]
    > Al ejecutar la aplicación por primera vez, se descargan todas las dependencias y se compila la aplicación.  Una ventana del explorador se abre automáticamente y carga SharePoint Workbench cuando se completa la compilación.  Este proceso puede tardar entre 3 o 5 minutos.
 
-   Una vez que se SharePoint Workbench.
+   Después de cargar SharePoint Workbench.
 
    >[!NOTE]
    > El Kit de herramientas le pedirá que instale un certificado local si es necesario. Este certificado permite a Teams cargar la aplicación desde `https://localhost`. Seleccione Sí cuando aparezca el siguiente cuadro de diálogo:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Captura de pantalla en la que se muestra la solicitud para instalar un certificado SSL para permitir que Teams cargue la aplicación desde localhost.":::
 
-1. Presione uno de los **iconos Agregar elemento web** (+) para agregar el elemento web.
+1. Seleccione **Agregar elemento web + iconos** para agregar el elemento web.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Captura de pantalla que muestra SPFx workbench que se ejecuta con el elemento emergente para agregar un elemento web que se muestra.":::
 
-1. Elija el elemento web en el menú.
+1. Seleccione el elemento web en el menú.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Captura de pantalla que muestra SPFx workbench que se ejecuta con el elemento emergente para agregar una selección de elemento web.":::
 
-La aplicación debería estar ejecutándose.  Puede realizar actividades de depuración normales como si se tratase de otras SPFx webpart (como establecer puntos de interrupción).
+   La aplicación debería estar ejecutándose.  Puede realizar actividades de depuración normales como si se tratase de otras SPFx webpart (como establecer puntos de interrupción).
 
-> [!TIP]
-> Intente colocar puntos de interrupción en el método de representación `SPFx/src/webparts/{webpart}/{webpart}.ts` y volver a cargar la ventana del explorador. VS Code se detendrá en puntos de interrupción en el código.
+   > [!TIP]
+   > Intente colocar puntos de interrupción en el método de representación `SPFx/src/webparts/{webpart}/{webpart}.ts` y volver a cargar la ventana del explorador. VS Code se detendrá en puntos de interrupción en el código.
 
 ## <a name="deploy-your-app-to-sharepoint"></a>Implementar la aplicación en SharePoint
 
@@ -164,13 +170,13 @@ Asegúrate de que SharePoint catálogo de aplicaciones existe en la implementaci
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de pantalla que muestra los comandos de aprovisionamiento":::
 
-1. Puede supervisar el progreso viendo los cuadros de diálogo en la esquina inferior derecha.  Después de unos segundos, verá el siguiente aviso:
+   Puede supervisar el progreso viendo los cuadros de diálogo en la esquina inferior derecha.  Después de unos segundos, verá el siguiente aviso:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo completado de aprovisionamiento.":::
 
 1. Una vez completado el aprovisionamiento, seleccione **Implementar en la nube.**
 
-1. Actualmente, la implementación automatizada no está disponible.  Aparecerá un cuadro de diálogo que le pedirá que cree e implemente manualmente. Presione **Compilar SharePoint paquete**.
+1. Actualmente, la implementación automatizada no está disponible.  Aparecerá un cuadro de diálogo que le pedirá que cree e implemente manualmente. Seleccione **Compilar SharePoint paquete**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Captura de pantalla del cuadro de diálogo Compilar paquete de Sharepoint":::
 
@@ -203,11 +209,11 @@ El SharePoint se encuentra dentro `SPFx/sharepoint/solution` del proyecto.  Uplo
 
 1. Inicie sesión en la Consola de administración de M365 y, a continuación, vaya al catálogo SharePoint de aplicaciones.
 
-   - Abra `https://admin.microsoft.com/AdminPortal/Home` .
-   - En **Centros de administración,** seleccione el **SharePoint** de administración.
-   - Selecciona **Más características en** el menú de la barra lateral.
-   - Presione **Abrir en** **Aplicaciones**.
-   - Seleccione **Catálogo de aplicaciones**.
+   1. Abra `https://admin.microsoft.com/AdminPortal/Home` .
+   1. En **Centros de administración,** seleccione el **SharePoint** de administración.
+   1. Selecciona **Más características en** el menú de la barra lateral.
+   1. Presione **Abrir en** **Aplicaciones**.
+   1. Seleccione **Catálogo de aplicaciones**.
 
 1. Selecciona **Distribuir aplicaciones para SharePoint**.
 
@@ -215,34 +221,30 @@ El SharePoint se encuentra dentro `SPFx/sharepoint/solution` del proyecto.  Uplo
 
 1. Seleccione **Upload**.
 
-1. Presione **Elegir archivo**.
+1. Seleccione **Elegir archivo**.
 
-1. Busque el `{project}.sppkg` archivo, ubicado en la `SPFx/sharepoint/solution` carpeta dentro del proyecto.  Presione **Abrir**.
+1. Busque el `{project}.sppkg` archivo en la carpeta dentro del `SPFx/sharepoint/solution` proyecto. Seleccione **Abrir**.
 
-1. Pulse **Aceptar**.
+1. Seleccione **Aceptar**.
 
-1. El SharePoint de implementación se iniciará automáticamente.  Asegúrese **de que esta solución esté disponible para todos** los sitios de la organización y, a continuación, presione **Implementar**.
+1. El SharePoint de implementación se iniciará automáticamente. Compruebe que **esta solución esté disponible para todos los sitios de la** organización. A continuación, **seleccione Implementar**.
 
 1. Seleccione la **pestaña** ARCHIVOS.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Seleccione la pestaña archivos en el catálogo SharePoint de aplicaciones.":::
 
-1. seleccione el paquete que implementó y, a continuación, presione **Sincronizar para Teams** en la cinta de opciones.
+1. seleccione el paquete que implementó y, a **continuación, seleccione Sincronizar para Teams** desde la esquina superior derecha.
 
     > [!Note]
     > El proceso de sincronización Teams puede tardar un par de minutos.  Verás un mensaje en el lado derecho del explorador que indica que la aplicación se ha sincronizado correctamente con Teams.
 
-Abra la Teams (o inicie sesión en `https://teams.microsoft.com` ).  Presione el triple punto en la barra lateral y, a continuación, **seleccione Todas las aplicaciones**.  La aplicación se colocará en las **aplicaciones creadas para tu categoría de** organización.  Puedes agregar la aplicación desde allí.
+   Abra la Teams (o inicie sesión en `https://teams.microsoft.com` ).  Presione el triple punto en la barra lateral y, a continuación, **seleccione Todas las aplicaciones**.  La aplicación se colocará en las **aplicaciones creadas para tu categoría de** organización.  Puedes agregar la aplicación desde allí.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Captura de pantalla que muestra la aplicación en Teams":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Captura de pantalla que muestra la aplicación en Teams":::
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
-- [Crear una aplicación de Teams con React](first-app-react.md)
-- [Crear una aplicación de Teams con Blazor](first-app-blazor.md)
-- [Crear una extensión de mensajería](first-message-extension.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Crear una aplicación de bots de conversación](first-app-bot.md)
+* [Introducción a tutoriales](code-samples.md)
+* [Crear una aplicación de bots de conversación](first-app-bot.md)
+* [Crear una extensión de mensajería](first-message-extension.md)
+* [Muestras de código](https://github.com/OfficeDev/Microsoft-Teams-Samples)

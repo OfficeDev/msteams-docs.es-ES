@@ -3,14 +3,14 @@ title: Controladores de actividad de bots
 author: surbhigupta
 description: Comprender los controladores de actividad del bot en Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4ecc40abca84466887466ef6a25ab6e57a38328c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d9d9dee13a59a0727bf3bc7889f6e0fc2acd06f1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069031"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157098"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 

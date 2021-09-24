@@ -4,18 +4,18 @@ author: Rajeshwari-v
 description: Cómo usar el SDK Teams cliente de JavaScript para aprovechar las funcionalidades de ubicación
 keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
-localization_priority: Normal
-ms.author: lajanuar
-ms.openlocfilehash: 47fd11c918725b3195636f972ba37cbdde0c4a60
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.localizationpriority: medium
+ms.author: surbhigupta
+ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630750"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157609"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
-Este documento te guía sobre cómo integrar las capacidades de ubicación del dispositivo nativo con tu Teams aplicación.  
+Puedes integrar las funcionalidades de ubicación del dispositivo nativo con la Teams aplicación.  
 
 Puedes usar Microsoft Teams [SDK de cliente de JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona las herramientas necesarias para que la aplicación pueda tener acceso a las capacidades del dispositivo nativo del [usuario.](native-device-permissions.md) Usa las API de ubicación, como [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) y [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) para integrar las funcionalidades dentro de la aplicación. 
 
@@ -34,7 +34,7 @@ Para integrar las funcionalidades de ubicación, debes actualizar el archivo de 
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
-Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/manifest-schema.md#devicepermissions) agregando la propiedad `devicePermissions` y especificando `geolocation` . Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación.
+Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/manifest-schema.md#devicepermissions) agregando la propiedad `devicePermissions` y especificando `geolocation` . Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación. La actualización del manifiesto de la aplicación es la siguiente:
 
 ``` json
 "devicePermissions": [
@@ -57,23 +57,11 @@ Debes usar el siguiente conjunto de API para habilitar las capacidades de ubicac
 > [!NOTE]
 > La `getLocation()` API incluye las siguientes [configuraciones de entrada](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)y `allowChooseLocation` `showMap` . <br/> Si el valor de `allowChooseLocation` es *true*, los usuarios pueden elegir cualquier ubicación de su elección.<br/>  Si el valor es *false*, los usuarios no pueden cambiar su ubicación actual.<br/> Si el valor de `showMap` es *false*, se captura la ubicación actual sin mostrar el mapa. `showMap` se omite si `allowChooseLocation` se establece en *true*.
 
-**Experiencia de aplicación web para funcionalidades de ubicación** 
- ![ experiencia de la aplicación web para funcionalidades de ubicación](../../assets/images/tabs/location-capability.png)
+En la siguiente imagen se muestra la experiencia de la aplicación web de las funcionalidades de ubicación:
 
-## <a name="error-handling"></a>Control de errores
+![experiencia de la aplicación web para funcionalidades de ubicación](../../assets/images/tabs/location-capability.png)
 
-Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
-
-|Código de error |  Nombre del error     | Condición|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
-| **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
-| **1000** | PERMISSION_DENIED |El usuario ha denegado los permisos de ubicación Teams app o web-app .|
-| **4000** | INVALID_ARGUMENTS | La API se invoca con argumentos obligatorios incorrectos o insuficientes.|
-| **8000** | USER_ABORT |El usuario canceló la operación.|
-| **9000** | OLD_PLATFORM | El usuario se encuentra en una compilación de plataforma antigua donde la implementación de la API no está presente. La actualización de la compilación debe resolver el problema.|
-
-## <a name="code-snippets"></a>Fragmentos de código
+### <a name="code-snippets"></a>Fragmentos de código
 
 **Llamar `getLocation` a la API para recuperar la ubicación:**
 
@@ -101,7 +89,21 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="error-handling"></a>Control de errores
+
+Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
+
+|Código de error |  Nombre del error     | Condition|
+| --------- | --------------- | -------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
+| **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
+| **1000** | PERMISSION_DENIED |El usuario ha denegado los permisos de ubicación Teams app o web-app .|
+| **4000** | INVALID_ARGUMENTS | La API se invoca con argumentos obligatorios incorrectos o insuficientes.|
+| **8000** | USER_ABORT |El usuario canceló la operación.|
+| **9000** | OLD_PLATFORM | El usuario se encuentra en una compilación de plataforma antigua donde la implementación de la API no está presente. La actualización de la compilación debe resolver el problema.|
+
+## <a name="see-also"></a>Vea también
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)
+* [Integrar el selector de personas en Teams](people-picker-capability.md)

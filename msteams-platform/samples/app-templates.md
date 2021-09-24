@@ -3,15 +3,15 @@ title: Microsoft Teams de aplicación
 description: Vínculos y descripciones de plantillas de aplicación para la Microsoft Teams plataforma
 ms.topic: reference
 keywords: Microsoft Teams de ejemplos de plantillas
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
-ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
+ms.openlocfilehash: 4a186997365499f30fe777a911d27a0b37fb7440
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53111192"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157382"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -23,7 +23,7 @@ Todas las plantillas de aplicación se proporcionan en los términos [de licenci
 
 **&#9734; indica las plantillas de aplicación recién publicadas.**
 
-### <a name="key-benefits"></a>Ventajas clave
+### <a name="key-benefits"></a>Ventajas principales
 
 * **Implemente directamente en la nube:** Todas las plantillas de aplicación incluyen scripts de implementación que te permiten hospedar todos los servicios necesarios en Microsoft Azure o en power platform. 
 * **Código de ejemplo recomendado:** Las plantillas de la aplicación se ajustan a los procedimientos recomendados en materia de seguridad e infraestructura. Se revisan todos los cambios enviados por la comunidad a las plantillas de la aplicación para garantizar la conformidad.
@@ -286,9 +286,9 @@ Preguntas conversacionales&Bots son una forma sencilla de proporcionar respuesta
 
 La aplicación Obtener soporte técnico la usan las organizaciones que usan Microsoft Teams, para permitir que cualquier conjunto de usuarios solicite asistencia a los supervisores. Esta aplicación incluye las siguientes características:
 * Solicitar asistencia en distintas categorías desde una Power App.
-* Notificaciones enviadas a los solicitantes que les informan de quién tiene asignada la liebre.
+* Notificaciones enviadas a los solicitantes para informarles de quién está asignado.
 * Notificaciones enviadas a supervisores asignados que les informan de quién necesita asistencia. 
-* Análisis de escalaciones y patrones en SharePoint y PowerBI.S.
+* Análisis de escalaciones y patrones en SharePoint y Power BI.
 
 [Obtenerlo en GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 

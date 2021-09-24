@@ -3,15 +3,15 @@ title: Diseño de la extensión de mensajería
 description: Obtenga información sobre cómo diseñar una extensión de mensajería de Teams y obtener el kit de interfaz de usuario de Microsoft Teams.
 keywords: teams diseño instrucciones referencia extensiones de mensajería sugerencias procedimientos recomendados
 author: heath-hamilton
-localization_priority: Priority
+ms.localizationpriority: high
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: f4d1ba1e6e0b71b37e2b7b2d2a32fb729822ba1c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 3cc9ac28bd07d3d79894a59cb2ff436fa43dda0d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037673"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157099"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Diseño de la extensión de mensajería de Microsoft Teams
 
@@ -32,17 +32,15 @@ Puede agregar una extensión de mensajería en los siguientes contextos de Teams
 * Desde la tienda de Teams.
 * En un canal, chat o reunión (antes, durante y después) cerca del cuadro de redacción. Vale la pena recalcar que, si agrega una extensión de mensajería en uno de estos lugares, solo usted podrá usarla en ese contexto.
 
-En el ejemplo siguiente, se muestra cómo agregar una extensión de mensajería en un canal:
+Los ejemplos siguientes muestran cómo agregar una extensión de mensajería en un canal:
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="En el ejemplo, se muestra cómo agregar una extensión de mensajería cerca del cuadro de redacción en un canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="El ejemplo muestra cómo agregar en un canal una extensión de mensajería cerca del cuadro de redacción en un dispositivo móvil." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="En el ejemplo, se muestra cómo agregar una extensión de mensajería cerca del cuadro de redacción en un dispositivo móvil." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="El ejemplo muestra cómo agregar en un canal una extensión de mensajería cerca del cuadro de redacción." border="false":::
 
 ## <a name="set-up-a-messaging-extension"></a>Configurar una extensión de mensajería
 
@@ -50,15 +48,13 @@ La autenticación no es obligatoria, pero si la aplicación es algo parecida a u
 
 Con el fin de mantener la coherencia entre las aplicaciones de Teams, no es posible personalizar la pantalla de inicio de sesión. Si usa la autenticación de inicio de sesión único (SSO), los usuarios iniciarán sesión automáticamente.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="En el ejemplo, se muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión en dispositivos móviles." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="En el ejemplo, se muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión en dispositivos móviles." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión." border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>Tipos de extensiones de mensajería
 
@@ -68,15 +64,13 @@ Las extensiones de mensajería pueden tener comandos de búsqueda, comandos de a
 
 Con los comandos de búsqueda, los usuarios pueden usar la extensión de mensajería para buscar rápidamente contenido externo e insertarlo en un mensaje. Los comandos de búsqueda suelen estar disponibles en el cuadro de redacción. Por ejemplo, puede iniciar o agregar contenido a una discusión al compartir algún contenido sin necesidad de salir de Teams.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="En el ejemplo, se muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="El ejemplo muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción en dispositivos móviles." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="En el ejemplo, se muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción en dispositivos móviles." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="El ejemplo muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción." border="false":::
 
 #### <a name="compose-box-layout-options"></a>Opciones de diseño del cuadro de redacción
 
@@ -98,46 +92,25 @@ El cuadro de redacción y los mensajes o publicaciones son los contextos princip
 
 Una vez agregada, los usuarios pueden abrir la extensión de mensajería seleccionando el icono de la aplicación debajo del cuadro de redacción. En estos ejemplos, la extensión tiene comandos de búsqueda y acción.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="En el ejemplo, se muestra cómo abrir una extensión de mensajería desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde el cuadro de redacción en un dispositivo móvil." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="En el ejemplo, se muestra cómo abrir una extensión de mensajería desde el cuadro de redacción en un dispositivo móvil." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde el cuadro de redacción." border="false":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>Desde un mensaje de chat o publicación de canal
 
 Una vez agregado, los usuarios pueden seleccionar el icono **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: en el mensaje de chat o en la publicación del canal para buscar los comandos de acción de la extensión. La extensión puede aparecer en **Más acciones** en función de su uso.
 
-> [!NOTE]
-> La compatibilidad con más acciones desde un mensaje de chat o publicación del canal no está disponible en la plataforma móvil de Microsoft Teams. 
-
 #### <a name="chat-message"></a>Mensaje de chat
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde un mensaje de chat." border="false":::
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="En el ejemplo, se muestra cómo abrir una extensión de mensajería desde un mensaje de chat." border="false":::
+#### <a name="channel-post"></a>Publicación del canal
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="En el ejemplo, se muestra cómo abrir una extensión de mensajería desde una publicación de chat en dispositivos móviles." border="false":::
-
----
-
-#### Channel post
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde una publicación del canal en un dispositivo móvil." border="false":::
 
 ## <a name="use-a-messaging-extension"></a>Usar una extensión de mensajería
 
@@ -147,53 +120,33 @@ En los escenarios siguientes, se muestran las principales formas en que los usua
 
 **1. Seleccione una extensión de mensajería**. Los usuarios pueden buscar el contenido que quieran compartir desde el cuadro de redacción.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="En el ejemplo, se muestra un usuario que busca contenido para insertar desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción en dispositivos móviles." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="En el ejemplo, se muestra un usuario que busca contenido para insertar desde el cuadro de redacción en dispositivos móviles." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción." border="false":::
 
 **2. Inserte el contenido**. Una vez publicado, otros usuarios pueden responder o seleccionar el contenido para ver más información en la aplicación.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="En el ejemplo, se muestra un usuario publicando contenido en una conversación de canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="El ejemplo muestra a un usuario publicando contenido en una conversación del canal en un dispositivo móvil." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="En el ejemplo, se muestra un usuario publicando contenido en una conversación de canal en un dispositivo móvil." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="El ejemplo muestra a un usuario publicando contenido en una conversación del canal." border="false":::
 
 ### <a name="take-action-on-a-message"></a>Realizar una acción en un mensaje
 
 **1. Seleccione una extensión de mensajería**. La aplicación puede incluir uno o varios comandos de acción.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="El ejemplo muestra a un usuario que selecciona un comando de acción de la extensión de mensajería." border="false":::
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="En el ejemplo, se muestra un usuario que selecciona un comando de acción de la extensión de mensajería." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="En el ejemplo, se muestra un usuario que selecciona un comando de acción de la extensión de mensajería en un dispositivo móvil." border="false":::
-
----
-
-**2. Complete la acción**. Su aplicación puede recibir y procesar cualquier contenido o dato enviado por la acción del mensaje. Esto permite que los usuarios permanezcan en su conversación y, en el ejemplo siguiente, que no se preocupen por tener que escribir información directamente en la aplicación.
-
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+**2. Complete la acción**. Su aplicación puede recibir y procesar cualquier contenido o dato enviado por la acción del mensaje. Los usuarios completan la acción en la aplicación mientras permanecen en su conversación.
 
 :::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Ejemplo sobre cómo realizar acciones en un mensaje." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="Ejemplo sobre cómo realizar acciones en un mensaje en dispositivos móviles." border="false":::
-
----
 
 ### <a name="preview-links"></a>Vínculos de vista previa
 
@@ -201,27 +154,23 @@ Las extensiones de mensajería también permiten insertar "rich links" desde una
 
 **1. Pegue un vínculo reconocido** en el cuadro de redacción.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="En el ejemplo, se muestra un usuario pegando un vínculo en el cuadro de diálogo." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de texto en un dispositivo móvil." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="En el ejemplo, se muestra un usuario pegando un vínculo en el cuadro de texto en un dispositivo móvil." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de diálogo." border="false":::
 
 **2. Inserte el contenido**. Si la aplicación reconoce la dirección URL en el cuadro de redacción, esta representará el vínculo como una tarjeta que proporciona una vista previa completa del contenido web. (Consulte [Instrucciones de diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md) para obtener más información).
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="En el ejemplo, se muestra cómo la dirección URL, desde su reconocimiento por parte de la aplicación, incluye contenido enriquecido en el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción en un dispositivo móvil." border="false":::
 
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+#### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="En el ejemplo, se muestra cómo la dirección URL, desde su reconocimiento por parte de la aplicación, incluye contenido enriquecido en el cuadro de redacción en un dispositivo móvil." border="false":::
-
----
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción." border="false":::
 
 ## <a name="manage-a-messaging-extension"></a>Administrar una extensión de mensajería
 
@@ -231,9 +180,22 @@ Al hacer clic con el botón derecho en su icono, los usuarios pueden anclar, qui
 
 ### <a name="messaging-extension-in-the-compose-box"></a>Extensión de mensajería en el cuadro de redacción
 
-El ejemplo siguiente es una extensión de mensajería abierta desde el cuadro de redacción.
+Los siguientes ejemplos muestran una extensión de mensajería abierta desde el cuadro de redacción.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
+#### <a name="mobile"></a>Móvil
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Ilustración en la que se muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción en un dispositivo móvil." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|1|**Nombre de la aplicación**: nombre completo de la aplicación.|
+|2|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
+|3|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
+|4|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
+|5|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
+|6|**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
+
+#### <a name="desktop"></a>Escritorio
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción." border="false":::
 
@@ -247,21 +209,6 @@ El ejemplo siguiente es una extensión de mensajería abierta desde el cuadro de
 |6|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
 |7|**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda. El ejemplo siguiente usa el diseño de lista (el diseño de cuadrícula es otra opción).|
 |8|**Logotipo de la aplicación**: icono de esquema del logotipo de la aplicación.|
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Ilustración en la que se muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción en un dispositivo móvil." border="false":::
-
-|Contador|Descripción|
-|----------|-----------|
-|1|**Nombre de la aplicación**: nombre completo de la aplicación.|
-|2|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
-|3|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
-|4|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
-|5|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
-|6|**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
-
----
 
 ### <a name="messaging-extension-management-menu"></a>Menú de administración de extensiones de mensajería
 
@@ -284,7 +231,7 @@ Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 #### <a name="do-integrate-with-single-sign-on"></a>Qué hacer: Integración con el inicio de sesión único
 
-El inicio de sesión único (SSO) hace que el proceso de inicio de sesión sea más fácil, rápido y seguro. Además, si un usuario ya ha iniciado sesión en su aplicación personal, no tendrá que volver a iniciar sesión para acceder a la extensión de mensajería.
+SSO hace que el proceso de inicio de sesión sea más fácil, rápido y seguro. Además, si un usuario ya ha iniciado sesión en su aplicación personal, no tendrá que volver a iniciar sesión para acceder a la extensión de mensajería.
 
    :::column-end:::
    :::column span="":::

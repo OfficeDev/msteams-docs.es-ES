@@ -1,15 +1,15 @@
 ---
 title: DevTools para pestañas de Microsoft Teams
 description: Describe cómo llegar a DevTools al usar el Microsoft Teams de escritorio
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: herramientas de desarrollo de depuración de herramientas para desarrolladores de cliente de escritorio chrome móvil
-ms.openlocfilehash: 70c9a2bab94ceb97e8dcd5cf5cdb98261d037f74
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 9aee38c6b063e54c876d11bfc498a9fcce9fbcf1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101831"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157206"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 

@@ -2,15 +2,15 @@
 title: Ofrecer mantenimiento y soporte técnico de su aplicación publicada
 description: Qué pensar una vez que la tienda aparece en la Teams y AppSource.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8e4656ea7ca9f373123026a50ecb837d1a64e3fa
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230921"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157377"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación Microsoft Teams publicada
 
@@ -56,6 +56,6 @@ Crea el vínculo con la siguiente dirección URL anexada con el identificador de
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) ofrece garantías de que los datos y la privacidad están protegidos y protegidos adecuadamente cuando se instala un Aplicación de Office o complemento de terceros en su ecosistema de Microsoft 365 usuario. La certificación confirma que la aplicación es compatible con las tecnologías de Microsoft, cumple con los procedimientos recomendados de seguridad de aplicaciones en la nube y es compatible con Microsoft.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Monetizar su aplicación a través del Marketplace comercial de Microsoft](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

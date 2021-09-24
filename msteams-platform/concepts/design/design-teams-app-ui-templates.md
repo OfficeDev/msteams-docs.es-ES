@@ -3,18 +3,18 @@ title: Diseño de la aplicación con plantillas de interfaz de usuario
 author: heath-hamilton
 description: Diseña tu aplicación más rápido con componentes de interfaz de usuario estandarizados, diseños y patrones que se ven comúnmente en Microsoft Teams.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644856"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157617"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
-Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de componentes basados en fluent ui que funcionan en casos de uso Teams comunes, lo que te da más tiempo para averiguar la mejor experiencia para los usuarios.
+Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de Fluent componentes basados en la interfaz de usuario que funcionan en casos de uso Teams comunes, lo que te da más tiempo para averiguar la mejor experiencia para los usuarios.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Introducción a herramientas y ejemplos
 
@@ -56,15 +56,13 @@ Un panel muestra diferentes tipos de contenido en una ubicación central (Teams 
 * Métricas de informes
 * Organizar información diferente en un solo lugar
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de panel en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de panel en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de panel en el escritorio." border="false":::
 
 ## <a name="data-visualization"></a>Visualización de datos
 
@@ -75,15 +73,13 @@ Puede usar diferentes tamaños de tarjeta (single, double y full) para apilar y 
 * Mostrar información compleja
 * Crear un panel
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de visualización de datos en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de visualización de datos en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de visualización de datos en el escritorio." border="false":::
 
 ## <a name="empty-state"></a>Estado vacío
 
@@ -96,15 +92,13 @@ La plantilla de estado vacío se puede usar para muchos escenarios, como inicio 
 * Mensajes de éxito
 * Mensajes de error
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de estado vacía en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de estado vacía en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de estado vacía en el escritorio." border="false":::
 
 ## <a name="filter"></a>Filtro
 
@@ -121,7 +115,7 @@ Organizar contenido en:
 
 :::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="En el ejemplo se muestra una plantilla de filtro." border="false":::
 
-## <a name="form"></a>Form
+## <a name="form"></a>Formulario
 
 Los formularios se usan para recopilar, validar y enviar la entrada del usuario de forma estructurada. El etiquetado claro y las agrupaciones lógicas de campos de entrada son fundamentales para una buena experiencia del usuario.
 
@@ -132,15 +126,13 @@ Los formularios se usan para recopilar, validar y enviar la entrada del usuario 
 * Configuración
 * Colección de entrada de usuario
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de formulario en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de formulario en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de formulario en el escritorio." border="false":::
 
 ## <a name="list"></a>Lista
 
@@ -151,15 +143,13 @@ Puede usar una lista para mostrar elementos relacionados en un formato analizabl
 * Mostrar datos
 * Acciones contextuales en el contenido de la aplicación
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de lista en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de lista en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de lista en el escritorio." border="false":::
 
 ## <a name="sign-in"></a>Iniciar sesión
 
@@ -169,15 +159,13 @@ Puedes diseñar flujos de inicio de sesión de aplicaciones para diferentes Team
 
 * Autenticar usuarios
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de inicio de sesión en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de inicio de sesión en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de inicio de sesión en el escritorio." border="false":::
 
 ## <a name="settings"></a>Configuración
 
@@ -199,15 +187,13 @@ Un panel de tareas, a veces denominado tablero de kanban o carriles de natación
 * Lluvia de ideas. Agregar ideas en distintas categorías
 * Ordenar ejercicios. Organizar cualquier tipo de información en cubos
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del panel de tareas en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del panel de tareas en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del panel de tareas en el escritorio." border="false":::
 
 ## <a name="wizard"></a>Asistente
 
@@ -219,12 +205,10 @@ Un asistente guía a un usuario a través de varias pantallas para completar una
 * Incorporación
 * Experiencias de primera ejecución
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del asistente en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de asistente en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del asistente en el escritorio." border="false":::

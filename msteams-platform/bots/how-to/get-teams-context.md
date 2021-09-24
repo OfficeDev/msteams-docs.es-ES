@@ -3,14 +3,14 @@ title: Obtener Teams contexto específico para el bot
 author: surbhigupta
 description: Cómo obtener el contexto específico de Microsoft Team para el bot, incluida la lista de conversaciones, los detalles y la lista de canales.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ccbc04cbc1b2eb3162e886cd77273a4a0c37a6ec
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 8baf33c7c66ebee69248306cd9273c33b6123db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068974"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157646"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtener Teams contexto específico para el bot
 

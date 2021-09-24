@@ -1,15 +1,15 @@
 ---
 title: Iniciar acciones con extensiones de mensajería
 description: Crear extensiones de mensajería basadas en acciones para permitir a los usuarios desencadenar servicios externos
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Búsqueda de extensiones de mensajería de extensiones de mensajería de teams
-ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566743"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157290"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Iniciar acciones con extensiones de mensajería
 
@@ -244,7 +244,7 @@ Cuando un usuario elige un comando con parámetros estáticos, Teams generará u
 
 En este método, el servicio puede definir una tarjeta adaptable personalizada para recopilar la entrada del usuario final. Para este enfoque, establezca el `fetchTask` parámetro en en el `true` manifiesto. Tenga en cuenta que si establece en cualquier parámetro `fetchTask` estático definido para el comando se `true` omitirá.
 
-En este método, el servicio recibirá un evento y debe responder con una respuesta de módulo de tareas basada en tarjeta `composeExtension/fetchTask` [adaptable.](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) A continuación se muestra una respuesta de ejemplo con una tarjeta adaptable:
+En este método, el servicio recibe un evento y responde con una respuesta del módulo de tareas basada en tarjeta `composeExtension/fetchTask` [adaptable](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). A continuación se muestra una respuesta de ejemplo con una tarjeta adaptable:
 
 ```json
 {
@@ -295,7 +295,7 @@ El bot también puede responder con una respuesta de autenticación o configurac
 
 En este método, el servicio puede mostrar un widget basado para mostrar cualquier interfaz de usuario personalizada `<iframe>` y recopilar la entrada del usuario. Para este enfoque, establezca el `fetchTask` parámetro en en el `true` manifiesto.
 
-Al igual que en el flujo de tarjeta adaptable, el servicio enviará un evento y debe responder con una respuesta de módulo de `fetchTask` tareas basada [en url.](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) A continuación se muestra una respuesta de ejemplo con una tarjeta adaptable:
+Al igual que en el flujo de tarjeta adaptable, el servicio envía un evento y responde con una respuesta de módulo de `fetchTask` tareas basada [en url.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) A continuación se muestra una respuesta de ejemplo con una tarjeta adaptable:
 
 ```json
 {

@@ -3,14 +3,14 @@ title: Diseñar la aplicación con componentes de interfaz de usuario avanzados
 author: heath-hamilton
 description: Obtenga información sobre los componentes de la interfaz de usuario usados Teams .
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ae1c2793586dc638d56051e105482aac92e01091
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644945"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157625"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados
 
@@ -18,7 +18,7 @@ Los siguientes componentes son una combinación de componentes básicos de [la](
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Basado en la interfaz de usuario <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">fluent,</a>Microsoft Teams kit de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de</a>usuario, el kit Microsoft Teams de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -32,15 +32,13 @@ Las rutas de navegación son una ayuda de navegación que transmite la jerarquí
 * Jerarquía de comunicación
 * Navegación
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el escritorio." border="false":::
 
 ## <a name="left-nav"></a>Navegación izquierda
 
@@ -51,15 +49,13 @@ Use la navegación izquierda para examinar varias páginas dentro de la Teams pe
 * Examinar varias páginas dentro de una Teams pestaña.
 * Dividir aplicaciones complejas en varias páginas.
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el escritorio." border="false":::
 
 ## <a name="notification-bar"></a>Barra de notificaciones
 
@@ -71,38 +67,34 @@ Una barra de notificaciones es un área dedicada para mostrar mensajes breves e 
 * Mensajes de éxito
 * Mensajes informativos o promocionales
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="En el ejemplo se muestra la plantilla de interfaz de usuario de la barra de notificaciones en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio." border="false":::
 
 ## <a name="stage"></a>Etapa
 
-Stage ofrece una forma de que los usuarios abran una entidad (como una imagen, un archivo o un sitio web) en Teams en lugar de abrirlo en otra aplicación o explorador. El caso de uso principal de la fase es la visualización; la superficie no debe usarse para interacciones complejas.
+Stage permite a los usuarios ver contenido (como una imagen, un archivo o un sitio web) en una superficie grande Teams sin cambiar de contexto. La fase es principalmente para ver contenido. No use fases para interacciones complejas.
 
-(Nota de implementación: cree la fase con un módulo [de tareas grande](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
+Obtenga información sobre cómo implementar [la fase](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Abra una entidad en Teams en lugar de otra aplicación o explorador
-* Contenido multimedia destacado u otro contenido
+* Mostrar contenido en una superficie grande dentro de Teams en lugar de otra aplicación o explorador
+* Contenido multimedia destacado u otro contenido enriquecido
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 La aplicación puede iniciar una fase desde una tarjeta adaptable, un vínculo compartido o componentes visuales (como un gráfico).
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el escritorio." border="false":::
 
 ## <a name="toolbar"></a>Barra de herramientas
 
@@ -114,12 +106,10 @@ Una barra de herramientas es un contenedor para agrupar un conjunto de controles
 * Filtro contextual y búsqueda
 * Navegación y rutas de navegación
 
-# <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el escritorio." border="false":::
-
-# <a name="mobile"></a>[Móvil](#tab/mobile)
+### <a name="mobile"></a>Móvil
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el móvil." border="false":::
 
----
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el escritorio." border="false":::

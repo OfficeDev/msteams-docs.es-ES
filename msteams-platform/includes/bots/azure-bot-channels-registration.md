@@ -4,12 +4,12 @@ description: describe los canales de bot de Azure para el registro
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12
-ms.openlocfilehash: 3cbbd204daf98f1c3528dcb6efcfde299a402912
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 96d7ed857074547d0c3da5b412b8065d063f3a3100da6a7431fd65879bfa91ff
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020952"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703816"
 ---
 1. En [Azure Portal](https://ms.portal.azure.com/#home), en Servicios de Azure, seleccione **Crear un recurso**.
 1. En el cuadro de búsqueda, escriba "bot". Y en la lista desplegable, seleccione **Registro de canales de bot.**

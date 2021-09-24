@@ -2,14 +2,14 @@
 title: Vista previa del desarrollador
 description: Describe las características de public developer preview de Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Características para desarrolladores de teams preview
-ms.openlocfilehash: f19268afd81fe9fa7ae2116740e7b9d4ff8225cb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 975dc5b29fce984b9c8321ee9b8fc9fa3d53b822
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019723"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157461"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar de desarrolladores públicos para Microsoft Teams
 
@@ -52,6 +52,5 @@ Para habilitar la vista previa del desarrollador público en un cliente móvil, 
 
 Usa el mismo elemento de menú en Acerca de → vista previa del desarrollador y haz clic en él para desactivarlo.
 
-## <a name="features-available-in-developer-preview"></a>Características disponibles en versión preliminar para desarrolladores
 
-Para obtener una lista completa de las características habilitadas actualmente en la vista previa del desarrollador, vea: [Características en la versión preliminar del desarrollador público.](../../resources/dev-preview/developer-preview-features.md)
+

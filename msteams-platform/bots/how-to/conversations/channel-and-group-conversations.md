@@ -3,14 +3,14 @@ title: Conversaciones de canal y grupo con un bot
 author: surbhigupta
 description: Cómo enviar, recibir y controlar mensajes de un bot en un chat de canal o grupo.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 399f7d7487b4992e70d4ee515b26101e2b253a62
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069006"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157094"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversaciones de chat de canal y grupo con un bot
 
@@ -148,7 +148,7 @@ El bot puede mencionar a otros usuarios en mensajes publicados en canales.
 
 El `Mention` objeto tiene dos propiedades que debe establecer con lo siguiente:
 
-* Incluya <at>@username</at> en el texto del mensaje.
+* Incluya *@username* en el texto del mensaje.
 * Incluya el objeto de mención dentro de la colección de entidades.
 
 El SDK de Bot Framework proporciona métodos auxiliares y objetos para crear menciones.

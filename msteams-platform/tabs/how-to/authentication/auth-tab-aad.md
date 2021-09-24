@@ -2,14 +2,14 @@
 title: Autenticación para pestañas mediante Azure Active Directory
 description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: fichas de autenticación de teams AAD
-ms.openlocfilehash: 138575ab28280f167c0627731c8219eccb07b7d9
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6bd963a0ff6eee8b239693904fdf30798fd192d0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629987"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157074"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una Microsoft Teams pestaña
 
@@ -159,6 +159,6 @@ Para obtener más información sobre single Sign-On (SSO), consulte el artículo
 
 Código de ejemplo que muestra el proceso de autenticación de tabulación con Azure AD:
 
-| **Nombre de ejemplo** | **description** | **.NET** | **Node.js** |
+| **Ejemplo de nombre** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teams de pestañas | Proceso de autenticación de tabulación con Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |

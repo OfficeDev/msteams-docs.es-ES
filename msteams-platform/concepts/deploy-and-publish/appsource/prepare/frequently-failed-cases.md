@@ -2,15 +2,15 @@
 title: Sugerencias de envío de aplicaciones y casos con frecuencia con errores
 description: describe sugerencias para un envío de Teams de almacenamiento y motivos comunes por los que los envíos fallan
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Sugerencias de envío de aplicaciones con frecuencia con errores en las directrices de validación de casos
-ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630001"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157534"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío Microsoft Teams aplicación correcta
 

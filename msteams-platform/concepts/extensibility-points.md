@@ -3,14 +3,14 @@ title: Puntos de entrada para aplicaciones de Teams
 author: heath-hamilton
 description: Describe dónde pueden los usuarios descubrir y usar su aplicación en Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c26b938f56af6f09c0e4ba274b9b3f4da19d08ee
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566176"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157342"
 ---
 # <a name="entry-points-for-teams-apps"></a>Puntos de entrada para aplicaciones de Teams
 
@@ -45,9 +45,10 @@ En la siguiente lista se muestra cómo Teams funcionalidades se usan comúnmente
 
 * [**Las pestañas**](~/tabs/what-are-tabs.md) proporcionan una experiencia web incrustada a pantalla completa que es significativa para el usuario que la está viendo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Teams de diseño de aplicaciones](../concepts/design/design-teams-app-overview.md)
+[Teams de diseño de aplicaciones](../concepts/design/design-teams-app-overview.md) <br>
+[Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

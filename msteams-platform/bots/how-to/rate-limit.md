@@ -2,14 +2,14 @@
 title: Optimizar un bot con la limitación de volumen en Teams
 description: Limitación de tasas y procedimientos recomendados en Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: limitación de velocidad de bots de teams
-ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230963"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157157"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
@@ -51,7 +51,7 @@ El uso de un retroceso exponencial con un vibración aleatoria es la forma recom
 Después de controlar `HTTP 429` las respuestas, puede seguir el ejemplo para detectar excepciones transitorias.
 
 > [!NOTE]
-> Además de volver a seleccionar el código de error **429**, también se deben volver a seleccionar los códigos de error **412**, **502** y **504.**
+> Además de reintentar el código de error **429**, también se deben volver a intentar los códigos de error **412**, **502** y **504.**
 
 ## <a name="detect-transient-exceptions-example"></a>Ejemplo de detección de excepciones transitorias
 
@@ -63,20 +63,23 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
         // List of error codes to retry on
         List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public bool IsTransient(Exception ex)
-        {
-            if (ex.Message.Contains("429"))
-                return true;
+        public static bool IsTransient(Exception ex)
+          {
+              if (ex.Message.Contains("429"))
+                  return true;
 
-            var httpOperationException = ex as HttpOperationException;
-            if (httpOperationException != null)
-            {
-                return httpOperationException.Response != null &&
-                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
-            }
-
-            return false;
-        }
+              HttpResponseMessageWrapper? response = null;
+              if (ex is HttpOperationException httpOperationException)
+              {
+                  response = httpOperationException.Response;
+              }
+              else
+              if (ex is ErrorResponseException errorResponseException)
+              {
+                  response = errorResponseException.Response;
+              }
+              return response != null && transientErrorStatusCodes.Contains((int)response.StatusCode);
+          }
     }
 ```
 

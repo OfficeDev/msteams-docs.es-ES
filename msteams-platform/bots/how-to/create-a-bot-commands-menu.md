@@ -3,14 +3,14 @@ title: Crear un menú de comandos para el bot
 author: surbhigupta
 description: Cómo crear un menú de comandos para el Microsoft Teams bot
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069001"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157222"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos bot
 
@@ -44,7 +44,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debes edi
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. En **App Studio,** seleccione la **pestaña Editor de manifiestos.** Si no tienes un paquete de aplicación existente, puedes crear o importar una aplicación existente. Para obtener más información, [consulta Actualizar un paquete de la aplicación](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. En **App Studio,** seleccione la **pestaña Editor de manifiestos.** Si no tienes un paquete de aplicación existente, puedes crear o importar una aplicación existente. Para obtener más información, [consulta Actualizar un paquete de la aplicación](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
 
 3. En el panel izquierdo del **editor de manifiestos** y en la sección **Funcionalidades,** seleccione **Bots**.
 

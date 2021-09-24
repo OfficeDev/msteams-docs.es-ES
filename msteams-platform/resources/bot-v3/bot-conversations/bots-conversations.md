@@ -2,15 +2,15 @@
 title: Enviar y recibir mensajes con un bot
 description: Describe cómo enviar y recibir mensajes con bots en Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: mensajes de bots de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630463"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157413"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación con un Microsoft Teams bot
 
@@ -81,12 +81,12 @@ Se recomienda especificar el alto y el ancho de cada imagen mediante XML. Si usa
 * Use `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * No usar `![Duck on a rock](http://aka.ms/Fo983c)`
 
-## <a name="receiving-messages&quot;></a>Recepción de mensajes
+## <a name="receiving-messages"></a>Recepción de mensajes
 
 Según los ámbitos declarados, el bot puede recibir mensajes en los siguientes contextos:
 
 * **chat personal** Los usuarios pueden interactuar en una conversación privada con un bot simplemente seleccionando el bot agregado en el historial de chat o escribiendo su nombre o identificador de aplicación en el cuadro Para: en un nuevo chat.
-* **Canales** Se puede mencionar un bot (&quot;@_botname")_ en un canal si se ha agregado al equipo. Tenga en cuenta que las respuestas adicionales a un bot en un canal requieren mencionar el bot. No responderá a las respuestas en las que no se menciona.
+* **Canales** Se puede mencionar un bot ("@_botname")_ en un canal si se ha agregado al equipo. Tenga en cuenta que las respuestas adicionales a un bot en un canal requieren mencionar el bot. No responderá a las respuestas en las que no se menciona.
 
 Para los mensajes entrantes, el bot recibe un [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) de tipo `messageType: message` . Aunque el objeto puede contener otros tipos de información, como las actualizaciones de canal enviadas al bot, el tipo representa la comunicación `Activity` entre bot y [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` usuario.
 

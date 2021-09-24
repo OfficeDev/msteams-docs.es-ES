@@ -2,15 +2,15 @@
 title: Crear y enviar el módulo de tareas
 author: surbhigupta
 description: Cómo controlar la acción de invocación inicial y responder con un módulo de tarea desde un comando de extensión de mensajería de acción
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f3d34a4e574169aadf49180ee8b857c8ee2b60a8
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069058"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157057"
 ---
 # <a name="create-and-send-the-task-module"></a>Crear y enviar el módulo de tareas
 
@@ -24,7 +24,7 @@ Puede crear el módulo de tareas mediante una tarjeta adaptable o una vista web 
 
 En el proceso de la solicitud de invocación inicial, el servicio recibe un objeto de tipo y debe responder con un objeto que contenga una tarjeta adaptable o una dirección URL a la vista `Activity` `composeExtension/fetchTask` web `task` incrustada. Junto con las propiedades de actividad del bot estándar, la carga inicial de invocación contiene los siguientes metadatos de solicitud:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud. Debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
@@ -74,7 +74,7 @@ El código de la solicitud de invocación inicial se muestra en el siguiente eje
 
 Las propiedades de actividad de carga cuando se invoca un módulo de tareas desde el chat 1:1 se enumeran de la siguiente manera:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud. Debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
@@ -120,11 +120,12 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
   "name": "composeExtension/fetchTask"
 }
 ```
+
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>Propiedades de actividad de carga cuando se invoca un módulo de tarea desde un chat de grupo 
 
 Las propiedades de actividad de carga cuando se invoca un módulo de tareas desde un chat de grupo se enumeran de la siguiente manera:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud. Debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
@@ -177,11 +178,53 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 }
 ```
 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>Propiedades de actividad de carga cuando se invoca un módulo de tareas desde un chat de reunión
+
+Las propiedades de actividad de carga cuando se invoca un módulo de tareas desde un chat de reunión se dan en el siguiente ejemplo:
+
+```json
+{
+   "type": "invoke",
+   "id": "f:4d271f11-4eed-622f-e820-6d82bf91692f",
+   "channelId": "msteams",
+   "from": {
+      "id": "29:1yLsdbTM1UjxqqD8cjduNUCI1jm8xZaH3lx9u5JQ04t2bknuTCkP45TXdfROTOWk1LzN1AqTgFZUEqHIVGn_qUA",
+      "name": "MOD Administrator",
+      "aadObjectId": "ef16aa89-5b26-4a2c-aebb-761b551577c0"
+   },
+   "conversation": {
+      "tenantId": "c9f9aafd-64ac-4f38-8e05-12feba3fb090",
+      "id": "19:meeting_NTk4ZDY4ZmYtOWEzZS00OTRkLThhY2EtZmUzZmUzMDQyM2M0@thread.v2",
+      "name": "Test meeting"
+   },   
+   "channelData": {
+      "tenant": {
+         "id": "c9f9aafd-64ac-4f38-8e05-12feba3fb090"
+      },
+      "source": {
+         "name": "compose"
+      },
+      "meeting": {
+         "id": "MCMxOTptZWV0aW5nX05UazRaRFk0Wm1ZdE9XRXpaUzAwT1RSa0xUaGhZMkV0Wm1VelptVXpNRFF5TTJNMEB0aHJlYWQudjIjMA=="
+      }
+   },
+   "value": {
+      "commandId": "Test",
+      "commandContext": "compose",
+      "requestId": "c46a6b53573f42b5bc801716e5ccc960",
+      "context": {
+         "theme": "default"
+      }
+   },
+   "name": "composeExtension/fetchTask",
+}
+```
+
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>Propiedades de actividad de carga cuando se invoca un módulo de tarea desde un canal (nueva publicación) 
 
 Las propiedades de actividad de carga cuando se invoca un módulo de tareas desde un canal (nueva publicación) se enumeran de la siguiente manera:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud. Debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
@@ -247,7 +290,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 
 Las propiedades de actividad de carga cuando se invoca un módulo de tareas desde un canal (respuesta al subproceso) se enumeran de la siguiente manera:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud. Debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
@@ -356,7 +399,7 @@ Las propiedades de actividad de carga cuando se invoca un módulo de tareas desd
 
 Las propiedades de actividad de carga cuando se invoca un módulo de tareas desde un cuadro de comandos se enumeran de la siguiente manera:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud. Debe ser `invoke` . |
 |`name`| Tipo de comando que se emite al servicio. Debe ser `composeExtension/fetchTask` . |
@@ -602,14 +645,14 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Responda a la solicitud de invocación con un objeto que contenga un objeto con la tarjeta adaptable o la dirección URL web, o `task` un mensaje de cadena `taskInfo` simple.
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`type`| Puede ser para `continue` presentar un formulario o para un elemento emergente `message` simple. |
 |`value`| Un `taskInfo` objeto para un formulario o un `string` para un mensaje. |
 
 El esquema del objeto taskInfo es:
 
-|Nombre de propiedad|Objetivo|
+|Nombre de la propiedad|Objetivo|
 |---|---|
 |`title`| El título del módulo de tareas.|
 |`height`| Debe ser un entero (en píxeles) o `small` , `medium` , `large` .|
@@ -942,7 +985,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Consulte también
 

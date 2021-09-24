@@ -2,14 +2,14 @@
 title: Crear vínculos profundos
 description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949682"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475779"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -156,13 +156,18 @@ Los parámetros de consulta son:
 
 * `tenantId`: Ejemplo de identificador de inquilino, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Tipo de archivo compatible, como docx, pptx, xlsx y pdf
-* `objectUrl`: Dirección URL del objeto del archivo, `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: Dirección URL base del archivo, `https://microsoft.sharepoint.com/teams`
-* `serviceName`: Nombre del servicio, id. de la aplicación
+* `objectUrl`: Dirección URL del objeto del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por ejemplo: `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Dirección URL base del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por ejemplo: `https://microsoft.sharepoint.com/teams`
+* `serviceName`: Nombre del servicio, id. de aplicación. Por ejemplo, teams.
 * `threadId`: el threadId es el identificador de equipo del equipo donde se almacena el archivo. Es opcional y no se puede establecer para los archivos almacenados en la carpeta de OneDrive usuario. threadId : 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: Id. de grupo del archivo, ae063b79-5315-4ddb-ba70-27328ba6c31e
+* `groupId`: Id. de grupo del archivo, ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
-A continuación se muestra el formato de ejemplo de vínculo profundo a archivos:
+> [!NOTE]
+> Puede ver y `threadId` en la dirección URL desde el `groupId` canal.  
+
+El siguiente formato de vínculo profundo se usa en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+El siguiente formato de ejemplo muestra el vínculo profundo a los archivos:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
@@ -214,6 +219,9 @@ Use el siguiente formato para un vínculo profundo que puede usar en un bot, con
 
 Ejemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
+> [!NOTE]
+> Los parámetros de búsqueda no admiten `+` la señal en lugar de espacios en blanco ( ` ` ). Asegúrese de que el código de codificación uri devuelve `%20` espacios por ejemplo, `?subject=test%20subject` es bueno, pero es `?subject=test+subject` malo.
+
 Los parámetros de consulta son:
 
 * `attendees`: la lista opcional separada por comas de los id. de usuario que representan a los asistentes a la reunión. El usuario que realiza la acción es el organizador de la reunión. Actualmente, el campo Id. de usuario solo es compatible con UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico.
@@ -241,22 +249,22 @@ En caso de una llamada de vídeo, el cliente pedirá confirmación y activará e
 | Vínculo profundo | Formato | Ejemplo |
 |-----------|--------|---------|
 | Realizar una llamada de audio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Realizar una llamada de audio y vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
-|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Realizar una llamada de audio y vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
+|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
 | Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | https://teams.microsoft.com/l/call/0/0?users=&lt&gt;;user1,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Estos son los parámetros de consulta:
 * `users`: lista separada por comas de los id. de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite userPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en caso de una llamada RTC, admite una rtc mri 4: &lt; phonenumber &gt; .
-* `Withvideo`: este es un parámetro opcional, que puede usar para realizar una llamada de vídeo. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de una llamada de audio o audio y vídeo a través de la Teams de notificación de llamadas. 
+* `withVideo`: este es un parámetro opcional, que puede usar para realizar una llamada de vídeo. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de una llamada de audio o audio y vídeo a través de la Teams de notificación de llamadas. 
 * `Source`: se trata de un parámetro opcional, que informa sobre el origen del vínculo profundo.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo | Descripción | C# |Node.js|
+| Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Id. de subentidad de consumo de vínculos profundos  |Microsoft Teams aplicación de ejemplo para demostrar el vínculo profundo desde el chat del bot hasta el identificador de subentidad de consumo de pestañas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 

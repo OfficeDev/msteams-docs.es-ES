@@ -3,15 +3,15 @@ title: Instalar Moodle LMS
 description: Cómo instalar y configurar la aplicación de integración de Moodle para Microsoft Teams
 keywords: Teams Complementos de integración de aplicaciones de Moodle
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 54f4fec4e240f866c686ed715bd5093a319a2a48
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: bdf5ea5b6f08c638bd00a69df59ae2e25b76b0ad
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069172"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157076"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -228,7 +228,7 @@ Después de generar el identificador de aplicación y la contraseña, implemente
 
 Una vez que los recursos hayan completado la implementación en Azure, debe configurar los complementos Microsoft 365 Moodle con un punto de conexión de mensajería. Debe obtener el punto de conexión del bot en Azure:
 
-1. Inicie sesión en el [portal de Azure](https://portal.azure.com).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com).
 
 1. En el panel izquierdo, seleccione **Grupos de recursos** y seleccione el grupo de recursos que usó o creó, mientras implementa el bot.
 
@@ -288,7 +288,7 @@ Cuando se sincroniza un curso de Moodle, Microsoft Teams instala automáticament
 > [!NOTE]
 > Para compartir cualquier solicitud de característica o comentarios con nosotros, visite nuestra página [De voz de usuario](https://microsoftteams.uservoice.com/forums/916759-moodle).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 - [Moodle](https://moodle.org/)

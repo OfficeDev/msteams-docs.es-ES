@@ -4,17 +4,18 @@ author: Rajeshwari-v
 description: Una introducción a la integración de aplicaciones web y capacidades de dispositivo con Microsoft Teams aplicación.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.localizationpriority: none
+ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630449"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157453"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
 Puede proporcionar una experiencia de usuario enriquecida integrando las características de una aplicación web existente en Microsoft Teams plataforma. Asegúrate de seguir [las Teams de diseño para](~/concepts/design/understand-use-cases.md) que tu aplicación sea nativa de Teams.
-En este documento se proporciona información general sobre los requisitos previos para integrar aplicaciones web con Teams, la plataforma Power para crear aplicaciones de Power, Power Virtual Agents, Asistente virtual, plantillas de aplicaciones, conectores de turnos, LMS de Moodle, creación de un botón Compartir a Teams para el sitio web, agregar una pestaña Microsoft Teams en SharePoint, crear vínculos profundos e integrar las capacidades del dispositivo.
+En este documento se proporciona información general sobre los requisitos previos para integrar aplicaciones web con Teams, power platform para crear aplicaciones de Power, Power Virtual Agents, Virtual Assistant, plantillas de aplicaciones, conectores de turnos, LMS de Moodle, creación de un botón compartir a Teams para el sitio web, agregar una pestaña Microsoft Teams en SharePoint, crear vínculos profundos e integrar las capacidades del dispositivo.
 
 ## <a name="prerequisites"></a>Requisitos previos   
 
@@ -37,7 +38,7 @@ Las plataformas de código bajos proporcionan un enfoque intuitivo para el desar
 
 La plataforma Microsoft Power combina cuatro tecnologías sólidas de Microsoft, como Power BI, Power Apps, Power Automate y Power Virtual Agents una plataforma de aplicaciones eficaz. Estas tecnologías le permiten crear soluciones, automatizar procesos, analizar datos y crear agentes virtuales en un entorno unificado e integrado.
 
-### <a name="power-apps"></a>PowerApps
+### <a name="power-apps"></a>Power Apps
 
 Con Power Apps, puede crear aplicaciones empresariales que se conecten a sus datos empresariales y se adapten a las necesidades de su organización. Power Apps una amplia variedad de escenarios de aplicaciones para resolver los desafíos empresariales a través de aplicaciones de lienzo. Después de crear la aplicación, puedes exportarla desde el portal Power Apps creador e insertarla en Microsoft Teams.
 
@@ -59,7 +60,7 @@ Teams Los conectores de administración de fuerza de trabajo de turnos son integ
 
 ## <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
-Moodle es un popular sistema de administración de aprendizaje de código abierto (LMS). Ahora está integrado con Microsoft Teams. Esta integración ayuda a los formadores y profesores a colaborar en torno a los cursos de Moodle, hacer preguntas sobre calificaciones y asignaciones y mantenerse actualizados con las notificaciones directamente dentro de Teams.
+Moodle es un popular sistema de administración Learning de código abierto (LMS). Ahora está integrado con Microsoft Teams. Esta integración ayuda a los formadores y profesores a colaborar en torno a los cursos de Moodle, hacer preguntas sobre calificaciones y asignaciones y mantenerse actualizados con las notificaciones directamente dentro de Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Creación de un botón Compartir en Teams para el sitio web
 
@@ -77,6 +78,10 @@ Puede crear vínculos profundos a las entidades de Teams. Puede crear vínculos 
 
 Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams mejorada permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente de JavaScript de Microsoft Teams. 
 
+## <a name="integrate-people-picker"></a>Integrar Selector de personas
+
+Puedes integrar el control Teams selector de personas nativas que permite a los usuarios buscar y seleccionar personas en la experiencia de la aplicación web.
+
 ## <a name="see-also"></a>Consulte también
 
 * [Asignar los casos de uso de la aplicación a Teams funcionalidades de plataforma](~/concepts/design/map-use-cases.md)
@@ -92,3 +97,4 @@ Microsoft Teams plataforma está mejorando continuamente las capacidades de los 
 * [Añadir una pestaña de Teams a SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Crear vínculos profundos](~/concepts/build-and-test/deep-links.md)
 * [Funciones del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [control de selector de personas](~/concepts/device-capabilities/people-picker-capability.md)
