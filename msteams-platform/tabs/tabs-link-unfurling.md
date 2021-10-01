@@ -5,12 +5,12 @@ description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pesta�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157490"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017306"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -104,10 +104,10 @@ La siguiente imagen muestra una vista de fase invocada a través de un vínculo 
 
 ### <a name="syntax"></a>Sintaxis
 
-A continuación se muestra la sintaxis de vínculo profundo:  
- 
-https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"[contentUrl]","websiteUrl":"[websiteUrl]","name":"[name]"}
+A continuación se muestra la sintaxis de vínculo profundo: 
 
+https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" : \" "[contentUrl]" \" , \" websiteUrl : \" \" "[websiteUrl]" \" , name : Contoso \" \" \" \" }
+ 
 ### <a name="examples"></a>Ejemplos
 
 Cuando un usuario escribe una dirección URL, se despliega en una tarjeta adaptable.
@@ -130,17 +130,17 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
-| `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
-| `contentUrl` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
-| `websiteUrl?` | Cadena | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
-| `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
+| `entityId` | String | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
+| `name` | String | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
+| `contentUrl` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
+| `websiteUrl?` | String | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
+| `removeUrl?` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Ejemplo de nombre | Descripción | C # |Node.js|
+| Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
 |Ficha en la vista fase |Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña en la vista fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
-ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
+ms.openlocfilehash: 56219323f6106619a9dd4f1b26289ecf86d297f3
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59487483"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017320"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Requisitos previos para las aplicaciones en las reuniones de Teams
 
@@ -79,11 +79,11 @@ La `GetParticipant` API permite que un bot obtenga información de los participa
 
 La `GetParticipant` API incluye los siguientes parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| Cadena | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
+|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
 
 #### <a name="example"></a>Ejemplo
 
@@ -184,9 +184,9 @@ La API permite proporcionar señales de reunión que se entregan mediante la API
 
 La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
+|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
 #### <a name="examples"></a>Ejemplos
 
@@ -279,7 +279,7 @@ Para usar la `Meeting Details` API, debe obtener permisos de RSC. Use el siguien
 
 La `Meeting Details` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 
@@ -290,17 +290,8 @@ La `Meeting Details` API incluye los siguientes ejemplos:
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
-string content;
-if (response.Content != null)
-{
-    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-}
+MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
@@ -481,22 +472,25 @@ Para deserializar la carga JSON, se introduce un objeto de modelo para obtener l
       
 El código siguiente muestra cómo capturar los metadatos de una reunión que es , , , , y desde un evento de inicio y finalización de `MeetingType` `Title` la `Id` `JoinUrl` `StartTime` `EndTime` reunión:
 
+Evento Inicio de reunión
+
 ```csharp
 protected override async Task OnEventActivityAsync(
 ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Event Name is either 'application/vnd.microsoft.meetingStart' or 'application/vnd.microsoft.meetingEnd'
-    var meetingEventName = turnContext.Activity.Name;
-    // Value contains meeting information (ex: meeting type, start time, etc).
-    var meetingEventInfo = turnContext.Activity.Value as JObject; 
-    var meetingEventInfoObject =
-meetingEventInfo.ToObject<MeetingStartEndEventValue>();
-    // Create a very simple adaptive card with meeting information
-var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
-meetingEventInfoObject);
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
+
+Evento de fin de reunión
+
+```csharp
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
+
 * Tener parámetros `meetingId` , y en la dirección URL de la API de `userId` `tenantId` reunión. Los parámetros están disponibles como parte de la actividad Teams SDK de cliente y bot. Además, puede recuperar información confiable para el identificador de usuario y el identificador de inquilino mediante la [autenticación de SSO de tabulación.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 * Tener un registro de bot y un identificador en la `GetParticipant` API para generar tokens de autenticación. Para obtener más información, vea [bot registration and ID](../build-your-first-app/build-bot.md).

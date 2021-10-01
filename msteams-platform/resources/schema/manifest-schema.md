@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: d1fa68cc4ae69e8a35c0d812192bb5c15a7cf130
-ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
+ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59491684"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017327"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -419,7 +419,7 @@ Iconos usados dentro de la Teams aplicación. Los archivos de icono deben inclui
 
 ## <a name="accentcolor"></a>accentColor
 
-**Opcional**: código de color Hexadecimal HTML
+**Obligatorio**:código de color Hexadecimal HTML
 
 Color que se usará y como fondo para los iconos de esquema.
 
@@ -451,10 +451,10 @@ Este elemento es una matriz (máximo de 16 elementos) con todos los elementos de
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`entityId`|string|64 caracteres|✔|Identificador único para la entidad que muestra la pestaña.|
-|`name`|cadena|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
+|`name`|string|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
 |`contentUrl`|string||✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
-|`websiteUrl`|string|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
-|`searchUrl`|string|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
+|`websiteUrl`|cadena|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
+|`searchUrl`|cadena|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito, lo que significa que solo se puede aprovisionar como `personal` parte de la experiencia personal.|
 |`context` | matriz de enumeraciones| 2|| Conjunto de `contextItem` ámbitos donde se admite una pestaña.|
 
@@ -494,7 +494,7 @@ Una lista opcional de comandos que el bot puede recomendar a los usuarios. El ob
 |Nombre| Tipo| Tamaño máximo | Necesario | Description|
 |---|---|---|---|---|
 |title|string|12 |✔|Nombre del comando bot.|
-|description|cadena|128 caracteres|✔|Una descripción de texto simple o un ejemplo de la sintaxis del comando y sus argumentos.|
+|description|string|128 caracteres|✔|Una descripción de texto simple o un ejemplo de la sintaxis del comando y sus argumentos.|
 
 ## <a name="connectors"></a>conectores
 
@@ -521,13 +521,13 @@ Define una extensión de mensajería para la aplicación.
 
 El elemento es una matriz (máximo de un elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan una extensión de mensajería.
 
-|Nombre| Tipo | Tamaño máximo | Necesario | Descripción|
+|Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. El identificador puede ser el mismo que el identificador general de la aplicación.|
 |`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería.|
 |`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
 |`messageHandlers`|matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
-|`messageHandlers.type`|cadena|||El tipo de controlador de mensajes. Debe ser `"link"`.|
+|`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -539,20 +539,20 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|64 caracteres|✔|El identificador del comando.|
-|`title`|string|32 caracteres|✔|Nombre de comando fácil de usar.|
-|`type`|string|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
+|`title`|cadena|32 caracteres|✔|Nombre de comando fácil de usar.|
+|`type`|cadena|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
 |`description`|cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|boolean|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
 |`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
 |`fetchTask`|boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se debe cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
-|`taskInfo.width`|string|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.width`|cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.height`|cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.url`|cadena|||Dirección URL de vista web inicial.|
 |`parameters`|matriz de objeto|5 elementos|✔|La lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
 |`parameters.name`|cadena|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
-|`parameters.title`|cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
+|`parameters.title`|string|32 caracteres|✔|Título fácil de usar para el parámetro.|
 |`parameters.description`|cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
 |`parameters.value`|cadena|512 caracteres||Valor inicial del parámetro.|
 |`parameters.inputType`|string|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
@@ -714,7 +714,7 @@ Cuando se selecciona un ámbito de instalación de grupo, se definirá la funcio
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`team`|string|||Cuando el ámbito de instalación seleccionado es `team` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`groupchat`|string|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`groupchat`|cadena|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
 |`meetings`|string|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
 
 ## <a name="configurableproperties"></a>configurableProperties
