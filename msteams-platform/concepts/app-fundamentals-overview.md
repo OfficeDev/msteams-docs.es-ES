@@ -5,12 +5,12 @@ description: Describir los conceptos fundamentales del Teams de plataformas.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157545"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119653"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de desarrollo de aplicaciones
 
@@ -32,6 +32,9 @@ Puede reconocer problemas de usuario e identificar las respuestas a algunos prob
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Se proporciona información para compartir la aplicación y colaborar en elementos de un sistema externo. También puede aprender a iniciar flujos de trabajo y enviar notificaciones a los usuarios. Obtén sugerencias adicionales sobre dónde empezar, cómo crear redes sociales con los usuarios, bots de conversación y combinar varias características.
+
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>Plan responsive tabs for Teams mobile
+[Planear pestañas dinámicas para Teams móvil](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) cubre escenarios comunes y ayuda con la planeación de aplicaciones para Teams móvil. El documento guía sobre cómo crear estrategias para aplicaciones en dispositivos móviles. También puedes obtener información sobre los diferentes satges y los diferentes tipos de Teams aplicación.
 
 ## <a name="integrate-device-capabilities"></a>Integrar funcionalidades de dispositivos
 

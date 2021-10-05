@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: d456e4892cdbd93d9dde51f64972c836724c4f1b
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096545"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119660"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|10/05/2021|Planear las aplicaciones para Teams móvil|[Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams identificador de objeto de AAD y UPN en la mención de usuario para bots y webhooks entrantes. |[Id. de objeto de AAD y UPN en mención de usuario](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Tarjetas- Información general](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Compatibilidad con la validación de entrada en tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots). |[Validación de entrada](/adaptive-cards/authoring-cards/input-validation), [Acciones universales para tarjetas adaptables v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
@@ -107,7 +108,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | El parámetro de las cargas enviadas a un bot ya no está cifrado, lo que permite usar este valor para crear `replyToId` vínculos profundos a estos mensajes. Las cargas del mensaje incluyen los valores cifrados en el parámetro `legacy.replyToId` .  |
 | 11/05/2019 | Inicio de sesión único con el Teams SDK de JavaScript. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -137,7 +138,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2018</b></summary>
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
