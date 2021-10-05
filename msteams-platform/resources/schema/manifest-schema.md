@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017327"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60127262"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
-El Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . También se admiten las versiones anteriores 1.0, 1.1,..., y 1.6 (con "v1.x" en la dirección URL).
+El Teams describe cómo se integra la aplicación en el Microsoft Teams producto. El manifiesto debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) . También se admiten las versiones anteriores 1.0, 1.1,..., y 1.11 (con "v1.x" en la dirección URL).
 Para obtener más información sobre los cambios realizados en cada versión, vea [registro de cambios de manifiesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad:
@@ -23,8 +23,8 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.10",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -290,6 +290,8 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
       }
     ]
   },
+  "defaultBlockUntilAdminAction": true,
+  "publisherDocsUrl": "https://website.com/app-info",
   "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
     "meetings": "tab", 
@@ -437,7 +439,7 @@ Se usa cuando la experiencia de la aplicación tiene una experiencia de pestaña
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
 |`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: **true**.|
 |`context` |matriz de enumeraciones|6 ||Conjunto de `contextItem` ámbitos donde se admite [una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
+|`sharePointPreviewImage`|string|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|matriz de enumeraciones|1||Define cómo la pestaña está disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -453,8 +455,8 @@ Este elemento es una matriz (máximo de 16 elementos) con todos los elementos de
 |`entityId`|string|64 caracteres|✔|Identificador único para la entidad que muestra la pestaña.|
 |`name`|string|128 caracteres|✔|Nombre para mostrar de la pestaña en la interfaz de canal.|
 |`contentUrl`|string||✔|Dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario.|
-|`websiteUrl`|cadena|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
-|`searchUrl`|cadena|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
+|`websiteUrl`|string|||La https:// dirección URL que se debe apuntar si un usuario opta por ver en un explorador.|
+|`searchUrl`|string|||La https:// dirección URL que se va a apuntar a las consultas de búsqueda de un usuario.|
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito, lo que significa que solo se puede aprovisionar como `personal` parte de la experiencia personal.|
 |`context` | matriz de enumeraciones| 2|| Conjunto de `contextItem` ámbitos donde se admite una pestaña.|
 
@@ -539,25 +541,25 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|64 caracteres|✔|El identificador del comando.|
-|`title`|cadena|32 caracteres|✔|Nombre de comando fácil de usar.|
-|`type`|cadena|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
-|`description`|cadena|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
+|`title`|string|32 caracteres|✔|Nombre de comando fácil de usar.|
+|`type`|string|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
+|`description`|string|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|boolean|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
 |`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
 |`fetchTask`|boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se debe cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
-|`taskInfo.width`|cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.height`|cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.url`|cadena|||Dirección URL de vista web inicial.|
+|`taskInfo.width`|string|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.height`|string|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.url`|string|||Dirección URL de vista web inicial.|
 |`parameters`|matriz de objeto|5 elementos|✔|La lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
-|`parameters.name`|cadena|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
+|`parameters.name`|string|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
 |`parameters.title`|string|32 caracteres|✔|Título fácil de usar para el parámetro.|
-|`parameters.description`|cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
-|`parameters.value`|cadena|512 caracteres||Valor inicial del parámetro.|
+|`parameters.description`|string|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
+|`parameters.value`|string|512 caracteres||Valor inicial del parámetro.|
 |`parameters.inputType`|string|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 elementos||Las opciones de elección para `choiceset` el archivo . Use solo cuando `parameter.inputType` es `choiceset` .|
-|`parameters.choices.title`|cadena|128 caracteres|✔|Título de la elección.|
+|`parameters.choices.title`|string|128 caracteres|✔|Título de la elección.|
 |`parameters.choices.value`|string|512 caracteres|✔|Valor de la elección.|
 
 ## <a name="permissions"></a>permissions
@@ -607,7 +609,7 @@ Proporcione su Azure Active Directory de aplicación (AAD) y microsoft Graph inf
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔|Id. de aplicación de AAD de la aplicación. Este identificador debe ser un GUID.|
-|`resource`|cadena|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir token de autenticación para SSO. </br> **NOTA:** Si no usa SSO, asegúrese de escribir un valor de cadena ficticia en este campo en el manifiesto de la aplicación, por ejemplo, para evitar https://notapplicable una respuesta de error. |
+|`resource`|string|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir token de autenticación para SSO. </br> **NOTA:** Si no usa SSO, asegúrese de escribir un valor de cadena ficticia en este campo en el manifiesto de la aplicación, por ejemplo, para evitar https://notapplicable una respuesta de error. |
 |`applicationPermissions`|matriz de cadenas|128 caracteres||Especifique el consentimiento [específico del recurso pormenorizados](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions).|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -643,7 +645,7 @@ Define las propiedades que usa la aplicación para publicar una fuente de activi
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔|Tipo de notificación. *Vea a continuación*.|
-|`description`|cadena|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
+|`description`|string|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
 |`templateText`|string|128 caracteres|✔|Ex: "{actor} created task {taskId} for you"|
 
 ```json
@@ -714,7 +716,7 @@ Cuando se selecciona un ámbito de instalación de grupo, se definirá la funcio
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`team`|string|||Cuando el ámbito de instalación seleccionado es `team` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
-|`groupchat`|cadena|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
+|`groupchat`|string|||Cuando el ámbito de instalación seleccionado es `groupchat` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
 |`meetings`|string|||Cuando el ámbito de instalación seleccionado es `meetings` , este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab` `bot` , o `connector` .|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -737,3 +739,17 @@ Puede definir cualquiera de las siguientes propiedades:
 * `developerUrl`: la dirección URL HTTPS del sitio web del desarrollador.
 * `privacyUrl`: la dirección URL HTTPS de la directiva de privacidad del desarrollador.
 * `termsOfUseUrl`: la dirección URL HTTPS de los términos de uso del desarrollador.
+
+## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
+
+**Optional**—boolean
+ 
+Cuando `defaultBlockUntilAdminAction` la propiedad se establece en **true,** la aplicación se oculta a los usuarios de forma predeterminada hasta que el administrador lo permita. Si se establece en **true,** la aplicación está oculta para todos los inquilinos y usuarios finales. Los administradores de inquilinos pueden ver la aplicación en el Teams de administración y realizar acciones para permitir o bloquear la aplicación. El valor predeterminado es **False**.
+
+## <a name="publisherdocsurl"></a>publisherDocsUrl
+
+**Opcional** : cadena
+
+**Tamaño máximo:** 128 caracteres
+
+La propiedad depende de `defaultBlockUntilAdminAction` . Cuando la propiedad se establece en true, la dirección URL HTTPS proporciona una página de información para que los administradores obtengan directrices antes de permitir una aplicación, que `defaultBlockUntilAdminAction` está bloqueada de forma  `publisherDocsUrl` predeterminada.
