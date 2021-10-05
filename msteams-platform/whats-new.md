@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: 7bc3aebbe0acdbef410beb18041d1ac998216ebe
-ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
+ms.openlocfilehash: d456e4892cdbd93d9dde51f64972c836724c4f1b
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59485771"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096545"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|10/04/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams identificador de objeto de AAD y UPN en la mención de usuario para bots y webhooks entrantes. |[Id. de objeto de AAD y UPN en mención de usuario](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Tarjetas- Información general](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Compatibilidad con la validación de entrada en tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots). |[Validación de entrada](/adaptive-cards/authoring-cards/input-validation), [Acciones universales para tarjetas adaptables v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|La fase de reunión ya está disponible en GA.|[Habilitar y configurar las aplicaciones para Teams reuniones](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
@@ -72,7 +73,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Integración de plataforma de identidad con Teams Toolkit y Visual Studio Code para pestañas.|[Autenticación de inicio de sesión único con Teams Toolkit y Visual Studio Code para pestañas](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams de aplicación actualizado a la versión 1.8.|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -181,7 +182,6 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentimiento específico de recursos para chats. |[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md) [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
-|05/25/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/24/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Vínculo de tabulaciones y vista de fase|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
 

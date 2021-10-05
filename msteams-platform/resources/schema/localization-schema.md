@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 keywords: localización del esquema de manifiesto de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 8c5f32fb8244f70fadc610ed7c193d97f11171f2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7b9853772996764e185ed4de44683df9f5f57711
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157209"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096538"
 ---
 # <a name="localize-json-schema-reference"></a>Localizar la referencia de esquema JSON
 
@@ -38,13 +38,16 @@ Ejemplo de esquema JSON de localización es el siguiente:
 }
 ```
 
+> [!NOTE]
+>  App Studio pronto se depricará. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
+
 El esquema define las siguientes propiedades:
 
 |Propiedad|Tipo|Longitud máxima|Descripción|
 |---------------|--------|---------|------------------|
 |`$schema`|URI|N/D|La https:// url que hace referencia al esquema JSON para el manifiesto.|
 |`name.short`|Cadena|30|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`name.full`|Cadena|100|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
+|`name.full`|Cadena|60W|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
 |`description.short`|Cadena|80|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
 |`description.full`|Cadena|4000|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
 |`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
@@ -58,6 +61,6 @@ El esquema define las siguientes propiedades:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|Cadena|64|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 > [Localizar la aplicación](~/concepts/build-and-test/apps-localization.md)

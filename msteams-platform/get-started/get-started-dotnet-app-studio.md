@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360734"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096698"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Crear la primera aplicación Teams con C #
 
@@ -125,32 +125,35 @@ Visual Studio compatibilidad integrada para la implementación de aplicaciones e
 
 **Actualizar el paquete de la aplicación**
 
+> [!NOTE]
+>  App Studio pronto se depricará. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
+
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 # <a name="developer-portal"></a>[Portal para desarrolladores](#tab/DP)
 
-**Para instalar Developer Portal (versión preliminar) en Teams**
+**Para configurar el paquete de la aplicación en el Portal de desarrolladores (versión preliminar) en Teams**
 
 
-1. Selecciona el **icono Aplicaciones** en la parte inferior de la barra izquierda y busca Portal **para desarrolladores.**
+1. 1.Vaya al **[portal de desarrolladores.](https://dev.teams.microsoft.com/)**
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-1. Seleccione **Portal para desarrolladores** y **seleccione Abrir**.
+1. Vaya a **Aplicaciones**.
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
-1. Selecciona la pestaña Aplicaciones y selecciona **Importar una aplicación existente.**
+1. Selecciona **Importar una aplicación existente**.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Seleccione **Hello World** y seleccione **Importar**. La **aplicación Hello World** se importa en el Portal de desarrolladores. 
 
     Puedes configurar la aplicación mediante el portal Teams Developer Portal. El manifiesto se encuentra en Distribuir. Puedes usar el manifiesto para configurar las capacidades, los recursos necesarios y otros atributos importantes para la aplicación. Para obtener más información sobre cómo configurar la aplicación mediante el Portal de desarrolladores, [consulta Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/tdp/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>
@@ -205,7 +208,7 @@ Ahora puede probar el bot en Teams.
 
     <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)

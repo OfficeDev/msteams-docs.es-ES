@@ -5,12 +5,12 @@ description: Información general sobre los comandos de acción de extensión de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157054"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096670"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -66,6 +66,13 @@ Para agregar el comando action al manifiesto de la aplicación, debes agregar un
 
 ### <a name="create-an-action-command-using-app-studio"></a>Crear un comando de acción con App Studio
 
+Puede crear un comando de acción mediante ** App Studio** o **Portal para desarrolladores**.
+
+> [!NOTE]
+>  App Studio pronto se depricará. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
 > [!NOTE]
 > El requisito previo para crear un comando de acción es que ya ha creado una extensión de mensajería. Para obtener información sobre cómo crear una extensión de mensajería, vea [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
@@ -117,11 +124,61 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 1. Seleccione **Guardar**.
 1. Para agregar más parámetros, seleccione el **botón Agregar** en la **sección Parámetros.**
 
+# <a name="developer-portal"></a>[Portal para desarrolladores](#tab/DP)
+
+**Para crear un comando de acción con Developer Portal**
+
+1. Vaya a **[Portal para desarrolladores.](https://dev.teams.microsoft.com/)**
+    
+      ![Captura de pantalla de TDP](~/assets/images/tdp/tdp_home_1.png)
+
+1. Vaya a **Aplicaciones**.
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. Si ya has creado el paquete de la aplicación en **el Portal de desarrolladores,** selecciónelo en la lista. Si no es así, **selecciona Importar una aplicación existente**.
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. Vaya a **Características de la aplicación**. 
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. Seleccione **Extensiones de mensajería de** las características de la **aplicación**. Aparece una ventana emergente para configurar la extensión de mensajería.
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+ 
+1. Seleccione **un bot de extensión de** mensaje de la lista desplegable en Id. de extensiones de **Messag** y seleccione **Guardar**.
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. Seleccione **Agregar un comando**. Aparece una ventana emergente para agregar un comando.
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. Seleccione el tipo del comando como Basado **en acciones** para configurar la extensión de mensajería. Seleccione **Parámetros dinámicos** para crear un comando de acción dinámica.
+
+    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
+
+1. Seleccione **Parámetros estáticos** para crear un comando de acción estática.   
+
+    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
+
+1. Escriba los campos de comando. 
+
+    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
+
+1. Escriba campos de parámetro y **seleccione Guardar**.
+
+    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
+ 
+---
+
 ### <a name="create-an-action-command-manually"></a>Crear un comando de acción manualmente
 
 Para agregar manualmente el comando de extensión de mensajería basada en acciones al manifiesto de la aplicación, debe agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna a este comando. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
@@ -131,7 +188,7 @@ Para agregar manualmente el comando de extensión de mensajería basada en accio
 
 Si usa una lista estática de parámetros, también debe agregar los siguientes parámetros:
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Solo se usa cuando `fetchTask` es `false` . | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -141,7 +198,7 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 
 Si usa una vista web incrustada, opcionalmente puede agregar el objeto para capturar la vista `taskInfo` web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al de usar una lista estática de parámetros. En el caso de que la primera interacción con el bot [responde al módulo de tareas enviar acción](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto, debe establecer el `fetchTask` parámetro en `false` .
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 |`taskInfo`|Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería. | No | 1.4 |
 |`taskInfo.title`|Título del módulo de tareas inicial. |No | 1.4 |

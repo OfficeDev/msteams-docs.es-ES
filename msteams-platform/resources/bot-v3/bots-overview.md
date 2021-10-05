@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: desarrollo de bots de teams
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 939a4b2830d14b0b1a82f09d361e56d5651a1592
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: afa83478ee478d74dbdedb5cd805719fc8434070
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157080"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096552"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Agregar bots a Microsoft Teams aplicaciones
 
@@ -52,7 +52,7 @@ Las extensiones del SDK instalan dependencias, incluido el SDK de Bot Builder.
 > [!IMPORTANT]
 > Puede desarrollar aplicaciones Teams en cualquier otra tecnología de programación web y llamar a las API de REST de [Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) directamente, pero debe realizar el control de todos los tokens usted mismo.
 
-*Teams App Studio* te ayuda a crear y configurar el manifiesto de la aplicación y puedes crear el bot de Bot Framework por ti. También contiene una biblioteca React control y un generador de tarjetas interactivas.
+*Teams App Studio* te ayuda a crear y configurar el manifiesto de la aplicación y puedes crear el bot de Bot Framework por ti. También contiene una biblioteca React control y un generador de tarjetas interactivas. 
 
 ## <a name="outgoing-webhooks"></a>Webhooks salientes
 
@@ -73,6 +73,6 @@ Los siguientes temas le guiarán a través del proceso de creación de un gran b
 * [Usar pestañas con bots:](~/resources/bot-v3/bots-with-tabs.md)hacer que las pestañas y los bots funcionen juntos.
 * [Prueba el bot:](~/resources/bot-v3/bots-test.md)agrega el bot para conversaciones personales o de equipo para verlo en acción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
