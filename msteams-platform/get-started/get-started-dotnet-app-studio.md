@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: dac0874850094c7f3bbe83f6cbc4f26209213410
+ms.sourcegitcommit: 5bb12fd185a3bd6e308cc3a65b54341a5ae10af9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096698"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60116757"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Crear la primera aplicación Teams con C #
 
@@ -134,10 +134,10 @@ Visual Studio compatibilidad integrada para la implementación de aplicaciones e
 
 # <a name="developer-portal"></a>[Portal para desarrolladores](#tab/DP)
 
-**Para configurar el paquete de la aplicación en el Portal de desarrolladores (versión preliminar) en Teams**
+**Para configurar el paquete de la aplicación en Developer Portal en Teams**
 
 
-1. 1.Vaya al **[portal de desarrolladores.](https://dev.teams.microsoft.com/)**
+1. Vaya a **[Portal para desarrolladores.](https://dev.teams.microsoft.com/)**
 
      <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
@@ -208,7 +208,7 @@ Ahora puede probar el bot en Teams.
 
     <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [Introducción a tutoriales](code-samples.md)
 * [Crear una aplicación de bots de conversación](first-app-bot.md)
