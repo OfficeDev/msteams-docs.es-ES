@@ -44,6 +44,8 @@
       href: concepts/design/understand-use-cases.md
     - name: Asignación de casos de uso a las funciones de la aplicación de Teams
       href: concepts/design/map-use-cases.md
+    - name: Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: Funciones del dispositivo
       items:
         - name: Información general
@@ -92,7 +94,7 @@
           href: task-modules-and-cards/task-modules/design-teams-task-modules.md
         - name: Notificaciones de fuente de actividades
           href: concepts/design/activity-feed-notifications.md
-    - name: Habilitar la personalización de aplicaciones
+    - name: Personalización de aplicaciones
       href: concepts/design/enable-app-customization.md
 - name: Herramientas y SDK
   items:
