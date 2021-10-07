@@ -4,12 +4,12 @@ description: Describe la autenticación en Teams y cómo usarla en las aplicacio
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Autenticación de teams OAuth SSO AAD
-ms.openlocfilehash: a49c209b3f421006b2a75f314fb0cbe4a591d86c
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: fc10fe795dd278eec2da12b38915a27465a2df9d
+ms.sourcegitcommit: cbc6e8f363b4e80b6cbee098508f9f8affbfac09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096713"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "60221862"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
@@ -51,7 +51,7 @@ Ejemplos de autenticación de Bot Framework v4.
 
 ## <a name="configure-the-identity-provider"></a>Configurar el proveedor de identidades
 
-Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de los ejemplos y tutoriales tratan principalmente con el uso de AAD como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades.
+Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de los ejemplos y tutoriales tratan principalmente con el uso de AAD como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades. 
 
 Para obtener más información, vea [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
