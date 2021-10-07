@@ -4,12 +4,12 @@ description: Ejemplo de vistas específicas del usuario mediante acciones univer
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 10f9b63f59629e592f2dee75d3e91bab97ff9a08
+ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157138"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "60223044"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
@@ -43,7 +43,8 @@ El siguiente código proporciona un ejemplo de tarjetas adaptables:
       "title": "Refresh",
       "verb": "editOrResolveView",
       "data": {
-              "refresh info": "<refresh info>"
+            "refresh info": "<refresh info>"
+      }
     },
     "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
