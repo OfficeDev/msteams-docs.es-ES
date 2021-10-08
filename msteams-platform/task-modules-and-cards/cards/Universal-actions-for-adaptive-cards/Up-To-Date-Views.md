@@ -4,12 +4,12 @@ description: Ejemplo de vistas actualizadas con Bot universal
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
+ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157373"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60238240"
 ---
 # <a name="up-to-date-cards"></a>Tarjetas actualizadas
 
@@ -22,7 +22,7 @@ Al usar Vistas específicas del usuario,  se puede mostrar una tarjeta con boton
 
 * Para mantener siempre actualizado el estado de la tarjeta, Teams se puede usar el mecanismo de edición de mensajes. Por ejemplo, para cada aprobación, el bot puede desencadenar una edición de mensaje para todos los usuarios. Esta edición de mensajes del bot desencadena una solicitud de invocación para todos los usuarios de actualización automática, a la que el bot puede responder con la tarjeta específica `adaptiveCard/action` del usuario actualizada.
 
-Para obtener más información, [vea cómo realizar una edición de mensaje de bot](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+Para obtener más información, [vea cómo realizar una edición de mensaje de bot](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## <a name="approval-base-card"></a>Tarjeta base de aprobación
 
