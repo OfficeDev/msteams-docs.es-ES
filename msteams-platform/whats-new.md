@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: 13e749352662872d0b457085cc919b2357e9c348
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+ms.openlocfilehash: 61f11363246bd250df1dc03e3cd2bb9638d53c73
+ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127290"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60249783"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -30,8 +30,9 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|10/08/2021|Nuevos procedimientos recomendados para diseñar tarjetas adaptables.|[Diseño de tarjetas adaptables para tu Teams aplicación](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Oculta Teams aplicación hasta que el administrador permita mostrar la aplicación. | [Ocultar Teams aplicación hasta que el administrador lo apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
-|10/05/2021|Planear las aplicaciones para Teams móvil|[Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
+|10/05/2021|Planear las aplicaciones para Teams móvil|[Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams identificador de objeto de AAD y UPN en la mención de usuario para bots y webhooks entrantes. |[Id. de objeto de AAD y UPN en mención de usuario](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Tarjetas- Información general](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |09/08/2021|La fase de reunión ya está disponible en GA.|[Habilitar y configurar las aplicaciones para Teams reuniones](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
@@ -110,7 +111,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | El parámetro de las cargas enviadas a un bot ya no está cifrado, lo que permite usar este valor para crear `replyToId` vínculos profundos a estos mensajes. Las cargas del mensaje incluyen los valores cifrados en el parámetro `legacy.replyToId` .  |
 | 11/05/2019 | Inicio de sesión único con el Teams SDK de JavaScript. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -179,7 +180,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |06/23/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
