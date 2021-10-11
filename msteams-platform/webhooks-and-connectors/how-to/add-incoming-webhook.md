@@ -6,12 +6,12 @@ keywords: webhook saliente de pestañas de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157055"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260704"
 ---
 # <a name="create-incoming-webhook"></a>Crear webhook entrante
 
@@ -29,7 +29,7 @@ En la tabla siguiente se proporcionan las características y la descripción del
 | ------- | ----------- |
 |Tarjetas adaptables con un webhook entrante|Las tarjetas adaptables se pueden enviar a través de webhooks entrantes. Para obtener más información, vea [Enviar tarjetas adaptables mediante webhooks entrantes.](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)|
 |Compatibilidad con mensajes que se pueden tomar medidas|Las tarjetas de mensaje que pueden actuar se admiten en todos Office 365 grupos, incluidos Teams. Si envía mensajes a través de tarjetas, debe usar el formato de tarjeta de mensaje que se puede usar. Para obtener más información, vea [referencia de](/outlook/actionable-messages/message-card-reference) tarjeta de mensaje heredada y área de juegos de [tarjetas de mensaje.](https://messagecardplayground.azurewebsites.net)|
-|Compatibilidad con mensajería HTTPS independiente|Las tarjetas proporcionan información de forma clara y coherente. Cualquier herramienta o marco que pueda enviar solicitudes HTTPS POST, puede enviar mensajes a Teams a través de un webhook entrante.|
+|Compatibilidad con mensajería HTTPS independiente|Las tarjetas proporcionan información de forma clara y coherente. Cualquier herramienta o marco que pueda enviar solicitudes HTTPS POST puede enviar mensajes a Teams a través de un webhook entrante.|
 |Compatibilidad con Markdown|Todos los campos de texto de las tarjetas de mensajería que pueden actuar admiten Markdown básico. No use el marcado HTML en las tarjetas. puesto que se omite y se trata como texto sin formato.|
 |Configuración con ámbito|El webhook entrante está en el ámbito y configurado en el nivel de canal.|
 |Definiciones de recursos seguros|Los mensajes tienen formato de carga JSON. Esta estructura de mensajería declarativa impide la inserción de código malintencionado.|

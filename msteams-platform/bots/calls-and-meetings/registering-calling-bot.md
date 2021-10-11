@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157574"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260669"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar llamadas y reuniones bot para Microsoft Teams
 
@@ -21,12 +21,12 @@ Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un b
 
 ## <a name="new-manifest-settings"></a>Nueva configuración del manifiesto
 
-Los bots de llamadas y reuniones en línea tienen las siguientes dos opciones de configuración adicionales en el manifest.jsque habilitan audio o vídeo para el bot en Teams.
+Los bots de llamadas y reuniones en línea tienen las siguientes dos opciones de configuración adicionales en el manifest.json que habilitan audio o vídeo para el bot en Teams.
 
 * `bots[0].supportsCalling`. Si está presente y se establece en , Teams permite que el `true` bot participe en llamadas y reuniones en línea.
 * `bots[0].supportsVideo`. Si está presente y se establece en `true` , Teams sabe que el bot admite vídeo.
 
-Si desea que el IDE valide correctamente el manifest.jsen el esquema para el bot de llamadas y reuniones para estos valores, puede cambiar el atributo de la `$schema` siguiente manera:
+Si desea que el IDE valide correctamente el esquema manifest.json para el bot de llamadas y reuniones para estos valores, puede cambiar el atributo de la `$schema` siguiente manera:
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -84,7 +84,7 @@ Debe configurar los permisos de aplicación para el bot con antelación mediante
 
 Para las aplicaciones que usan el punto de conexión de AAD V1, un administrador de inquilinos puede dar su consentimiento a los permisos de la aplicación mediante [Azure Portal](https://portal.azure.com) cuando la aplicación está instalada en su organización. Como alternativa, puedes proporcionar una experiencia de registro en la aplicación a través de la cual los administradores pueden dar su consentimiento a los permisos configurados. Una vez que AAD registra el consentimiento de administrador, la aplicación puede solicitar tokens sin tener que volver a solicitar el consentimiento.
 
-Puede confiar en un administrador para conceder los permisos que necesita la aplicación en [Azure Portal](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el punto de conexión de AAD `/adminconsent` V2. Para obtener más información, vea [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent).
+Puede confiar en un administrador para conceder los permisos que necesita la aplicación en [Azure Portal](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el punto de conexión de AAD `/adminconsent` V2. Para obtener más información, vea [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Para crear la dirección URL de consentimiento de administrador del espacio empresarial, se requiere un URI de redireccionamiento configurado o una dirección URL de respuesta en el [portal de registro de](https://apps.dev.microsoft.com/) aplicaciones. Para agregar direcciones URL de respuesta para el bot, acceda al registro del bot, elija **Opciones avanzadas** Editar manifiesto  >  **de aplicación**. Agregue la dirección URL de redireccionamiento a la `replyUrls` colección.

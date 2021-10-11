@@ -5,16 +5,16 @@ ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157538"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260638"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir la aplicación Microsoft Teams aplicación
 
-Puedes proporcionar la aplicación Microsoft Teams a una persona, equipo, organización o cualquier persona que quiera usarla. La forma de distribuir depende de varios factores, como las necesidades de los usuarios, los requisitos profesionales y técnicos y los objetivos de la aplicación.
+Puedes proporcionar la aplicación Microsoft Teams a una persona, equipo, organización o cualquier persona que quiera usarla. La forma de distribuir depende de varios factores, como las necesidades de los usuarios, la empresa, los requisitos técnicos y los objetivos de la aplicación.
 
 ## <a name="upload-your-app-in-teams"></a>Upload la aplicación en Teams
 
@@ -44,9 +44,9 @@ Haz que la aplicación esté disponible para todos los usuarios. Este tipo de di
 
 Para obtener más información, [vea publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-* [Cumplimiento de Aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)
+* [Programa de cumplimiento de aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)
 
 ## <a name="next-step"></a>Paso siguiente
 

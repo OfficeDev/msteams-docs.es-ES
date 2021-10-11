@@ -3,12 +3,12 @@ title: Empaquetar la aplicación
 description: Aprende a empaquetar tu aplicación Microsoft Teams para probar, cargar y publicar en la tienda.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157486"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260676"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete Microsoft Teams aplicación
 
@@ -21,7 +21,7 @@ Necesitas un paquete de la aplicación sin embargo planeas distribuir tu Microso
 
 El archivo de manifiesto de la aplicación debe estar en el nivel superior del paquete con el nombre `manifest.json` . 
 
-Al publicar en el almacén Teams, asegúrese de que el manifiesto haga referencia al esquema [más reciente](~/resources/schema/manifest-schema.md).
+Al publicar en el almacén de Teams, asegúrese de que el manifiesto hace referencia al esquema [más reciente](~/resources/schema/manifest-schema.md).
 
 ## <a name="app-icons"></a>Iconos de la aplicación
 
@@ -34,7 +34,7 @@ Para que la aplicación pase Teams la tienda, estos iconos deben cumplir los sig
 
 ### <a name="color-icon"></a>Icono de color
 
-La versión de color del icono se muestra en la mayoría Teams escenarios y debe ser de 192 x 192 píxeles. El símbolo del icono (96 x 96 píxeles) puede ser cualquier color, pero debe estar sobre un fondo cuadrado sólido o totalmente transparente.
+La versión en color de su icono se muestra en la mayoría de los escenarios de Teams y debe tener 192x192 píxeles. El símbolo del icono (96 x 96 píxeles) puede ser cualquier color, pero debe estar sobre un fondo cuadrado sólido o totalmente transparente.
 
 Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bot. Para recortar el símbolo sin perder ningún detalle, incluya 48 píxeles de relleno alrededor del símbolo.
 

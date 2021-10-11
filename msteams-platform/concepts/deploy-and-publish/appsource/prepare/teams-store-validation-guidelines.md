@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475709"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260536"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -83,8 +83,8 @@ Recuerde lo siguiente si su aplicación autentifica a los usuarios con un servic
 
 * **Iniciar sesión, cerrar sesión y registrar experiencias**:
   * Las aplicaciones que dependen de cuentas o servicios externos deben ofrecer experiencias claras y sencillas de entrada, salida y registro.
-  * Cuando un usuario cierra la sesión, debe salir sólo de la aplicación y permanecer conectado a Teams.
-* **Experiencias para compartir contenidos**: Las aplicaciones que requieren autenticación con un servicio externo para compartir contenidos en los canales de Teams deben indicar claramente en la documentación de ayuda (o recursos similares) cómo desconectar o dejar de compartir contenidos si esa función es compatible con el servicio externo. Esto no significa que la capacidad de no compartir contenido deba estar presente en su aplicación de Teams.
+  * Cuando un usuario cierra la sesión, debe cerrar la sesión solo desde la aplicación y permanecer conectado a Teams.
+* **Contenido de experiencias de uso compartido**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o recursos similares) cómo desconectar o dejar de compartir contenido si esa característica es compatible con el servicio externo. Esto no significa que la capacidad de dejar de compartir contenido debe estar presente en la aplicación de Teams.
 
 #### <a name="government-community-cloud-listings"></a>Listados de Government Community Cloud
 
@@ -148,7 +148,7 @@ El manifiesto de la aplicación Teams define las configuraciones de tu aplicaci�
 
 * Su manifiesto debe ajustarse al último esquema de manifiesto. Para más información, consulte la [referencia del manifiesto](~/resources/schema/manifest-schema.md).
 * Si su aplicación incluye un bot o una extensión de mensajería, su manifiesto debe ser coherente con los metadatos de Bot Framework, incluidos el nombre del bot, el logotipo, el vínculo de la directiva de privacidad y el vínculo de las condiciones de servicio.
-* Si su aplicación utiliza Azure Active Directory (Azure AD) para la autenticación, incluya el ID de la aplicación Azure AD (cliente) en el manifiesto. Para obtener más información, consulte la [referencia del manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Si la aplicación usa Azure Active Directory (Azure AD) para la autenticación, incluya el identificador de aplicación (cliente) Azure AD en el manifiesto. Para obtener más información, consulte la referencia [manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Iconos de la aplicación
 
@@ -251,7 +251,7 @@ Las capturas de pantalla proporcionan una destacada vista previa de su aplicaci�
 
 ### <a name="privacy-policy"></a>Directiva de privacidad
 
-La directiva de privacidad puede ser específica para su aplicación Teams o una directiva general para todos sus servicios.
+La directiva de privacidad puede ser específica de la aplicación de Teams o una directiva general para todos los servicios.
 
 * Si usa una plantilla de directiva de privacidad genérica, debe hacer referencia a los **servicios**, **aplicaciones**, y **plataformas** para incluir su aplicación de Teams y su servicio o sitio web.
 * Debe incluir cómo maneja el almacenamiento, la retención y la eliminación de los datos de los usuarios. También debe describir los controles de seguridad que utiliza para la protección de datos.
@@ -341,7 +341,7 @@ Analizar las entradas del usuario y predecir sus intenciones es complicado. Los 
 * Los bots de sólo notificación deben enviar un mensaje de bienvenida que transmita que no responderá a los mensajes de los usuarios.
 
 > [!TIP]
-> En los mensajes de bienvenida a los usuarios individuales, un recorrido en carrusel puede proporcionar una visión general eficaz de su bot y cualquier otra característica de la aplicación. Se recomienda incluir botones que permitan a los usuarios probar los comandos de los bots. Por ejemplo, **Crear una tarea**.
+> En los mensajes de bienvenida a los usuarios individuales, un recorrido en carrusel puede proporcionar una visión general eficaz de su bot y cualquier otra característica de la aplicación. Se recomienda incluir botones para que los usuarios prueben los comandos del bot. Por ejemplo, **Crear una tarea**.
 
 ### <a name="bot-message-spamming"></a>Mensajes de correo no deseado de bots
 

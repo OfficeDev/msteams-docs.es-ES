@@ -6,16 +6,16 @@ keywords: atributos cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157497"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260666"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite 
 
-Las cookies son cadenas de texto, enviadas desde sitios web y almacenadas en un equipo por el explorador web. Se usan para la autenticación y personalización. Por ejemplo, las cookies se usan para recuperar información con estado, conservar la configuración del usuario, registrar la actividad de exploración y mostrar anuncios relevantes. Las cookies siempre están vinculadas a un dominio determinado y las instalan varias partes. 
+Las cookies son cadenas de texto enviadas desde sitios web y almacenadas en un equipo por el explorador web. Se usan para la autenticación y personalización. Por ejemplo, las cookies se usan para recuperar información con estado, conservar la configuración del usuario, registrar la actividad de exploración y mostrar anuncios relevantes. Las cookies siempre están vinculadas a un dominio determinado y las instalan varias partes. 
 
 ## <a name="types-of-cookies"></a>Tipos de cookies
 
@@ -43,7 +43,7 @@ Chrome 80, publicado en febrero de 2020, introduce nuevos valores de cookies e i
  
 Los atributos de cookie SameSite son los siguientes:
 
-|Setting | Aplicación | Valor |Especificación de atributos |
+|Configuración | Aplicación | Valor |Especificación de atributos |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Las cookies se envían automáticamente solo en un **contexto de primera** parte y con solicitudes HTTP GET. Las cookies de SameSite se retienen en solicitudes de subsitio entre sitios, como llamadas para cargar imágenes o iframes. Se envían cuando un usuario navega a la dirección URL desde un sitio externo, por ejemplo, siguiendo un vínculo.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estricto** |El explorador solo envía cookies para solicitudes de contexto de primera parte. Se trata de solicitudes procedentes del sitio que establecen la cookie. Si la solicitud se originó desde una dirección URL diferente a la de la ubicación actual, no se enviará ninguna de las cookies `Strict` etiquetadas con el atributo.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|

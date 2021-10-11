@@ -4,12 +4,12 @@ description: Describe las características de public developer preview de Micros
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Características para desarrolladores de teams preview
-ms.openlocfilehash: 975dc5b29fce984b9c8321ee9b8fc9fa3d53b822
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8cf3f4faf4387aba6ea6238b0469bae840aba87f
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157461"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260639"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar de desarrolladores públicos para Microsoft Teams
 
@@ -20,7 +20,7 @@ Developer Preview es un programa público para desarrolladores que proporciona a
 
 ## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de vista previa del desarrollador
 
-Muchas características habilitadas en la vista previa del desarrollador requerirán alteraciones en el archivo JSON del manifiesto de la aplicación. Para ello, tendrás que usar [](~/resources/schema/manifest-schema-dev-preview.md) el esquema de manifiesto de vista previa del desarrollador Si usas este esquema, no podrás usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para realizar estos cambios ni podrás usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrás que hacer clic en el icono de la barra de aplicaciones y, a `More apps` continuación, selecciona `Upload a custom app link` . Con este método solo puedes cargar una versión comprimida del paquete de la aplicación.
+Muchas características habilitadas en la vista previa del desarrollador requerirán alteraciones en el archivo JSON del manifiesto de la aplicación. Para ello, deberá usar el esquema de manifiesto [de vista previa del desarrollador](~/resources/schema/manifest-schema-dev-preview.md). Si usas este esquema, no podrás usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para realizar estos cambios ni podrás usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrás que hacer clic en el icono de la barra de aplicaciones y, a `More apps` continuación, selecciona `Upload a custom app link` . Con este método solo puedes cargar una versión comprimida del paquete de la aplicación.
 
 Es posible que te sea útil usar App Studio para crear las partes de vista previa no para desarrolladores del paquete de la aplicación, luego exportar ese paquete y editar manualmente el archivo para agregar las características de vista previa del desarrollador que quieras `manifest.json` usar. Una vez que hayas agregado características de vista previa de desarrolladores al archivo, no podrás volver a importar `manifest.json` el paquete en App Studio.
 

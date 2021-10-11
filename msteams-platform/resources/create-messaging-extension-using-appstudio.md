@@ -5,12 +5,12 @@ description: Obtén información sobre cómo crear una Microsoft Teams de mensaj
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b7de5b5178d893e391b0e97a699f1cba029d59d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157210"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260667"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería usando App Studio
 
@@ -42,7 +42,8 @@ El corazón de la extensión de mensajería es el servicio web. Definirá una so
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Registrar el servicio web con Bot Framework
 
-Las extensiones de mensajería aprovechan el esquema de mensajería del Bot Framework y el protocolo de comunicación segura; si aún no tiene uno, deberá registrar el servicio web en Bot Framework. El Id. de aplicación de Microsoft (nos referiremos a esto como el Identificador de bot desde dentro de Teams, para identificarlo desde otros identificadores de aplicación con los que podría estar trabajando) y el extremo de mensajería con el que se registrará con Bot Framework se usará en la extensión de mensajería para recibir y responder a las solicitudes. Si usa un registro existente, asegúrese de habilitar el canal [Microsoft Teams .](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)
+Las extensiones de mensajería aprovechan el esquema de mensajería del Bot Framework y el protocolo de comunicación segura; si aún no tiene uno, deberá registrar el servicio web en Bot Framework. El Id. de aplicación de Microsoft (nos referiremos a esto como el Identificador de bot desde dentro de Teams, para identificarlo desde otros identificadores de aplicación con los que podría estar trabajando) y el extremo de mensajería con el que se registrará con Bot Framework se usará en la extensión de mensajería para recibir y responder a las solicitudes. Si usa un registro existente, asegúrese de habilitar el canal [Microsoft Teams .](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)
+
 
 Si sigue uno de los inicios rápidos o empieza desde uno de los ejemplos disponibles, se le guiará a través del registro del servicio web. Si desea registrar manualmente el servicio, tiene tres opciones para hacerlo. Si decide registrarse sin usar una suscripción de Azure, no podrá aprovechar el flujo simplificado de autenticación de OAuth proporcionado por Bot Framework. Podrás migrar el registro a Azure después de la creación.
 
@@ -82,7 +83,7 @@ Para agregar una extensión de mensajería, incluya una nueva estructura JSON de
 
 La definición de extensión es un objeto que tiene la siguiente estructura:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? |
+| Nombre de propiedad | Finalidad | ¿Necesario? |
 |---|---|---|
 | `botId` | El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Normalmente, debería ser el mismo que el identificador de la aplicación Teams general. | Sí |
 | `canUpdateConfiguration` | Habilita **Configuración** elemento de menú. | No |
@@ -242,7 +243,7 @@ Una vez que se inicia una reunión, Teams participantes pueden interactuar direc
 
 1. **Experiencia del usuario**. La extensión de mensajería debe tener el mismo aspecto y comportamiento que fuera de una reunión.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 * [Crear comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Crear comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)

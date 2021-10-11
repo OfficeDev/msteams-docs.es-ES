@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: túnel ngrok de desarrollo local
 ms.date: 11/18/2018
-ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b3da582f6529fd676ae8964acb09a038e39162a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157172"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260668"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Desarrollar bots de llamadas y reuniones en línea en el equipo local
 
@@ -119,4 +119,6 @@ var mediaPlatform = new MediaPlatformSettings
 
 - Las cuentas gratuitas de Ngrok **no proporcionan** cifrado de extremo a extremo. Los datos HTTPS terminan en la dirección URL de ngrok y los flujos de datos sin cifrar de ngrok a `localhost` . Si necesita cifrado de extremo a extremo, considere la posibilidad de una cuenta de ngrok de pago. Consulte [Túneles TLS para](https://ngrok.com/docs#tls) ver los pasos para configurar túneles seguros de extremo a extremo.
 - Dado que la dirección URL de devolución de llamada del bot es dinámica, los escenarios de llamadas entrantes requieren que actualices con frecuencia los puntos de conexión de ngrok. Una forma de solucionar esto es usar una cuenta de ngrok de pago que proporciona subdominios fijos a los que puede apuntar el bot y la plataforma.
-- Los túneles Ngrok también se pueden usar con [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). Para ver un ejemplo de cómo hacerlo, consulta la aplicación [de ejemplo HueBot](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot).
+- Los túneles Ngrok también se pueden usar con [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). Para ver un ejemplo de cómo hacerlo, consulta la aplicación [de ejemplo HueBot](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).
+
+ 
