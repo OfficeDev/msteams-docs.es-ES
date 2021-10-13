@@ -5,12 +5,12 @@ description: Describe cómo responder a la acción de envío del módulo de tare
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157689"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291642"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -30,7 +30,7 @@ Tiene las siguientes opciones para responder:
 
 Para la autenticación o configuración, después de que el usuario complete el proceso, la invocación original se resiente al servicio web. En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación de invocación `commandContext` de la extensión de mensajería: 
 
-|Tipo de respuesta | Redacción | Barra de comandos | Mensaje |
+|Tipo de respuesta | Redacción | Barra de comandos | Message |
 |--------------|:-------------:|:-------------:|:---------:|
 |Respuesta de tarjeta | ✔ | ✔ | ✔ |
 |Otro módulo de tareas | ✔ | ✔ | ✔ |
@@ -584,11 +584,11 @@ Para usar la atribución de usuario en teams, debe agregar la entidad de menció
 
 La siguiente sección es una descripción de las entidades de la `OnBehalfOf` matriz:
 
-|Field|Tipo|Descripción|
+|Campo|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|Cadena|Describe la mención de una "persona".|
-|`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
+|`mentionType`|String|Describe la mención de una "persona".|
+|`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
 |`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
 ## <a name="code-sample"></a>Ejemplo de código

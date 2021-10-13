@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: medium
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475597"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291663"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -363,7 +363,7 @@ En la tabla siguiente se proporcionan las propiedades de una tarjeta de lista:
 | Propiedad | Tipo  | Description |
 | --- | --- | --- |
 | title | Texto enriquecido  | Título de la tarjeta. Máximo de 2 líneas.|
-| elementos | Matriz de elementos de lista | Conjunto de elementos aplicables a la tarjeta.|
+| items | Matriz de elementos de lista | Conjunto de elementos aplicables a la tarjeta.|
 | botones | Matriz de objetos de acción | Conjunto de acciones aplicables a la tarjeta actual. Máximo 6. |
 
 ### <a name="example-of-a-list-card"></a>Ejemplo de una tarjeta de lista

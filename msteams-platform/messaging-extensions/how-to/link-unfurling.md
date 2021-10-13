@@ -5,18 +5,18 @@ description: Cómo realizar el despliegue de vínculos con la extensión de mens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76e58602bde9dbb3cb58882163f1e86b6e9adef3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157301"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291726"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento te guía sobre cómo agregar la actualización de vínculos al manifiesto de la aplicación con App studio y manualmente. Con la apertura de vínculos su aplicación puede registrarse para recibir una actividad `invoke` cuando se pegan las direcciones URL con un dominio en particular en el área de redacción de mensajes. Contiene la dirección URL completa pegada en el área del mensaje de redacción y puede responder con una tarjeta que el usuario pueda deshacer, proporcionando información o `invoke` acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
+Este documento te guía sobre cómo agregar la actualización de vínculos al manifiesto de la aplicación con App studio y manualmente. Con la actualización de vínculos, la aplicación puede registrarse para recibir una actividad cuando las direcciones URL con un dominio determinado se `invoke` pegan en el área del mensaje de redacción. Contiene la dirección URL completa pegada en el área del mensaje de redacción y puede responder con una tarjeta que el usuario pueda deshacer, proporcionando información o `invoke` acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
 
 > [!NOTE]
 > * Actualmente, la desafución de vínculos no se admite en clientes móviles.
@@ -179,7 +179,7 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Consulte también 
+## <a name="see-also"></a>Vea también 
 
 * [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
 * [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)

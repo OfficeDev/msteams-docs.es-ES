@@ -3,22 +3,22 @@ title: Autenticación silenciosa
 description: Describe la autenticación silenciosa
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: AAD silencioso de SSO de autenticación de teams
-ms.openlocfilehash: 02078775ef3349ae5bb35e999e0f65587ab943d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Autenticación de teams SSO silenciosa AAD
+ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157073"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291628"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 
 > [!NOTE]
-> Para que la autenticación funcione para su pestaña en clientes móviles, asegúrese de que está usando al menos la versión 1.4.1 del SDK Teams JavaScript.
+> Para que la autenticación funcione para la pestaña en clientes móviles, asegúrese de que está usando al menos la versión 1.4.1 del SDK Teams JavaScript.
 
 La autenticación silenciosa Azure Active Directory (AAD) minimiza el número de veces que un usuario escribe sus credenciales de inicio de sesión actualizando silenciosamente el token de autenticación. Para obtener soporte para el inicio de sesión único verdadero, vea [la documentación de SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-Si desea mantener el código completamente del lado cliente, puede usar la biblioteca de autenticación de [AAD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obtener un token de acceso de AAD de forma silenciosa. Si el usuario ha iniciado sesión recientemente, nunca verá un cuadro de diálogo emergente.
+Si desea mantener el código completamente del lado cliente, puede usar la biblioteca de autenticación de [AAD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obtener un token de acceso AAD de forma silenciosa. Si el usuario ha iniciado sesión recientemente, nunca verá un cuadro de diálogo emergente.
 
 Aunque la biblioteca ADAL.js está optimizada para aplicaciones angularJS, también funciona con aplicaciones de página única de JavaScript puras.
 
@@ -27,13 +27,13 @@ Aunque la biblioteca ADAL.js está optimizada para aplicaciones angularJS, tambi
 
 ## <a name="how-silent-authentication-works"></a>Cómo funciona la autenticación silenciosa
 
-La ADAL.js crea un iframe oculto para el flujo de concesión implícito de OAuth 2.0. Pero la biblioteca especifica `prompt=none` , por lo que Azure AD nunca muestra la página de inicio de sesión. Si la interacción del usuario es necesaria porque el usuario necesita iniciar sesión o conceder acceso a la aplicación, AAD devuelve inmediatamente un error que ADAL.js informes a la aplicación. En este punto, la aplicación puede mostrar un botón de inicio de sesión si es necesario.
+La ADAL.js crea un iframe oculto para el flujo de concesión implícito de OAuth 2.0. Pero la biblioteca especifica `prompt=none` , por lo que Azure AD muestra la página de inicio de sesión. Si es necesaria la interacción del usuario porque el usuario necesita iniciar sesión o conceder acceso a la aplicación, AAD devuelve inmediatamente un error que ADAL.js informes a la aplicación. En este punto, la aplicación puede mostrar un botón de inicio de sesión si es necesario.
 
 ## <a name="how-to-do-silent-authentication"></a>Cómo realizar la autenticación silenciosa
 
 El código de este artículo proviene de la Teams de ejemplo que se Teams [de ejemplo de autenticación.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-[Inicie la pestaña configurable de autenticación](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) silenciosa y sencilla con AAD y siga las instrucciones para ejecutar el ejemplo en el equipo local.
+[Inicie la pestaña configurable de autenticación](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) silenciosa y sencilla AAD y siga las instrucciones para ejecutar el ejemplo en el equipo local.
 
 ### <a name="include-and-configure-adal"></a>Incluir y configurar ADAL
 
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 Use el siguiente código para controlar el flujo de salida en AAD Auth:
 
 > [!NOTE]
-> Mientras se realiza el cierre Teams la pestaña o bot, también se borra la sesión actual.
+> Al cerrar sesión desde Teams o bot, se borra la sesión actual.
 
 ```javascript
 function logout() {

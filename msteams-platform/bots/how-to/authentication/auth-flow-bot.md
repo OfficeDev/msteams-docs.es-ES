@@ -4,12 +4,12 @@ description: Describe Microsoft Teams de autenticación en bots
 keywords: bots de flujo de autenticación de teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: afaffa47058b994aa3241797db9b03a32a1b69fe
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f62725e87239cedcaa585b7c5da6a627e70d74cd
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157160"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291656"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flujo de autenticación para bots en Microsoft Teams
 
@@ -25,7 +25,7 @@ Consulte el ejemplo Microsoft Teams [](https://github.com/OfficeDev/Microsoft-Te
 3. El bot construye la dirección URL en la página de inicio del flujo de autenticación y envía una tarjeta al usuario con una `signin` acción. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
     Al igual que otros flujos de autenticación de aplicación en Teams, la página de inicio debe estar en un dominio que esté en la lista y en el mismo dominio que la página de redireccionamiento posterior `validDomains` al inicio de sesión.
     > [!IMPORTANT] 
-    > El flujo de concesión de código de autorización de OAuth 2.0 llama a un parámetro de la solicitud de autenticación que contiene un token de sesión único para evitar un ataque de falsificación de solicitudes `state` [entre sitios.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) En el ejemplo se usa un GUID generado aleatoriamente.
+    > El flujo de concesión de código de autorización de OAuth 2.0 llama a un parámetro de la solicitud de autenticación, que contiene un token de sesión único para evitar un ataque de falsificación de solicitudes entre `state` [sitios](https://en.wikipedia.org/wiki/Cross-site_request_forgery). En el ejemplo se usa un GUID generado aleatoriamente.
 4. Cuando el usuario selecciona el botón *de* inicio de sesión, Teams abre una ventana emergente y navega a la página de inicio.
    > [!NOTE]
    > El tamaño de la ventana emergente se puede controlar mediante parámetros de cadena de consulta de ancho y alto en la dirección URL. Por ejemplo, si agrega width=600 y height=600, el tamaño de la ventana emergente es de 600 x 600 píxeles. El tamaño real de la ventana emergente se recueste como un porcentaje del Teams de la ventana principal. Si la Teams es pequeña, la ventana emergente es menor que las dimensiones especificadas.

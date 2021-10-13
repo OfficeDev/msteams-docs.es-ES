@@ -4,18 +4,29 @@ description: Describe las tarjetas y cómo se usan en bots, conectores y extensi
 ms.localizationpriority: medium
 keywords: mensajes de tarjetas de bots de conectores
 ms.topic: overview
-ms.openlocfilehash: 50e8aa690d4de4dc5464a7e42dbc017e87afe35a
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 9ddfada39f6170e7fc81092028747230b87e35e3
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475800"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291614"
 ---
 # <a name="cards"></a>Tarjetas
 
 Una tarjeta es un contenedor de interfaz de usuario (UI) para información breve o relacionada. Las tarjetas pueden tener varias propiedades y datos adjuntos y pueden incluir botones, que desencadenan [acciones de tarjeta](~/task-modules-and-cards/cards/cards-actions.md). Con las tarjetas, puede organizar la información en grupos y dar a los usuarios la oportunidad de interactuar con partes específicas de la información.
 
-Los bots para Teams admiten los siguientes tipos de tarjetas: tarjeta adaptable, tarjeta de héroe, tarjeta de lista, tarjeta de conector Office 365, tarjeta de recibo, tarjeta de inicio de sesión, tarjeta miniatura y colecciones de tarjetas. Puede agregar formato de texto enriquecido a las tarjetas mediante Markdown o HTML, según el tipo de tarjeta. Tarjetas usadas por bots y extensiones de mensajería en Microsoft Teams, agregar y responder a estas acciones de tarjeta, `openUrl` , , , y `messageBack` `imBack` `invoke` `signin` .
+Los bots para Teams admiten los siguientes tipos de tarjetas:
+ 
+- Tarjeta adaptable
+- Tarjeta de héroe
+- Tarjeta de lista
+- Office 365 Tarjeta de conector
+- Tarjeta de recibo
+- Tarjeta de inicio de sesión
+- Tarjeta miniatura
+- Colecciones de tarjetas
+
+Puede agregar formato de texto enriquecido a las tarjetas mediante Markdown o HTML, según el tipo de tarjeta. Tarjetas usadas por bots y extensiones de mensajería en Microsoft Teams, agregar y responder a estas acciones de tarjeta, `openUrl` , , , y `messageBack` `imBack` `invoke` `signin` .
 
 Teams usa tarjetas en tres lugares diferentes:
 
@@ -62,9 +73,9 @@ Además de las tarjetas adaptables, Teams admite otros dos tipos de tarjetas:
 
 Las tarjetas adaptables con webhooks entrantes permiten usar las capacidades enriquecibles y flexibles de las tarjetas adaptables. Envía datos mediante webhooks entrantes en Teams desde su servicio web.
 
-## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Compatibilidad con el identificador de objeto de AAD y UPN en la mención del usuario 
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Compatibilidad con AAD identificador de objeto y UPN en la mención del usuario 
 
-Los bots con tarjetas adaptables admiten identificadores de mención de usuario, como id. de objeto de AAD y nombre de principio de usuario (UPN), además de los identificadores existentes. Los webhooks entrantes comienzan a admitir la mención de usuario en la tarjeta adaptable con el identificador de objeto de AAD y UPN.
+Los bots con tarjetas adaptables admiten identificadores de mención de usuario, como el identificador de objeto AAD y el nombre de principio de usuario (UPN), además de los identificadores existentes. Los webhooks entrantes comienzan a admitir la mención de usuario en la tarjeta adaptable con el AAD de objeto y UPN.
 
 ## <a name="see-also"></a>Vea también
 
