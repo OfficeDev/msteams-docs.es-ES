@@ -5,12 +5,12 @@ keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 84f3e5724adf3256fff3086158345fc3777513bb
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 41aade2eaedee2095e60288a7e4021897bb1a3fa
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096580"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378915"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administrar tus aplicaciones con el Portal de desarrolladores para Microsoft Teams
 
@@ -118,3 +118,7 @@ El Portal de desarrolladores también incluye herramientas que le ayudarán a cr
 * **Scene studio:** [diseñe escenas personalizadas](~/apps-in-teams-meetings/teams-together-mode.md) del Modo conjunto para Teams reuniones.
 * **Editor de tarjetas adaptables:** crea y previsualiza tarjetas adaptables para incluir con tus aplicaciones.
 * **Plataforma de identidad de Microsoft:** registre sus aplicaciones con Azure Active Directory (Azure AD) para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
+
+## <a name="see-also"></a>Vea también
+
+[Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
