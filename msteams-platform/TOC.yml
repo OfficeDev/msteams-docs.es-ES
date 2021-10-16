@@ -432,6 +432,9 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Mantener la aplicación publicada
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: Incluir una oferta de SaaS con la aplicación
+          href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+- name: Recursos
 - name: Manifiesto de la aplicación
   items:
     - name: Esquema del manifiesto de la aplicación
