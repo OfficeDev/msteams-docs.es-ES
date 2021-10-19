@@ -6,12 +6,12 @@ keywords: Medios de permisos de dispositivo nativos de las capacidades de micró
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 907409b9fec308b118e8e323b91fe6d740abf85e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6c69aa266eb337f6936cd78ecc1128ffcf95855
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157101"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496203"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
 
@@ -28,11 +28,12 @@ Es importante familiarizarse con los errores de respuesta [de la API](#error-han
 
 > [!NOTE] 
 > * Actualmente, Microsoft Teams compatibilidad con funcionalidades multimedia solo está disponible para clientes móviles.   
-> * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel lateral de la reunión.    
+> * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel lateral de la reunión.   
+> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md). 
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
-Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/manifest-schema.md#devicepermissions) agregando la propiedad `devicePermissions` y especificando `media` . Permite a la aplicación solicitar los permisos necesarios a  los usuarios antes de empezar a usar la cámara para capturar  la imagen, abrir la galería para seleccionar una imagen para enviar como datos adjuntos o usar el micrófono para grabar la conversación. La actualización del manifiesto de la aplicación es la siguiente:
+Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-schema.md#devicepermissions) la aplicación agregando la propiedad y `devicePermissions` especificando `media` . Permite a la aplicación solicitar los permisos necesarios a  los usuarios antes de empezar a usar la cámara para capturar  la imagen, abrir la galería para seleccionar una imagen para enviar como datos adjuntos o usar el micrófono para grabar la conversación. La actualización del manifiesto de la aplicación es la siguiente:
 
 ``` json
 "devicePermissions": [
@@ -80,9 +81,9 @@ En la siguiente imagen se muestra la experiencia de la aplicación web `selectMe
 
 Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
+| **60W** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **404** | FILE_NOT_FOUND | El archivo especificado no se encuentra en la ubicación determinada.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
 | **1000** | PERMISSION_DENIED |El usuario deniega el permiso.|

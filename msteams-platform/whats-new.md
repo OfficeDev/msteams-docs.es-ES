@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: 3f32691f13632a695c04f7d1007c78b16040a611
-ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
+ms.openlocfilehash: 3e2c7a2002192b7d752602f33865aafb12a8239f
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/19/2021
-ms.locfileid: "60483488"
+ms.locfileid: "60496217"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -181,8 +181,9 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|10/19/2021|Permisos de dispositivo para el explorador.| [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
 |10/14/2021 | Monetice la aplicación Teams con una oferta SaaS transaccionable. | [Incluye una oferta SaaS con tu Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
 |06/23/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

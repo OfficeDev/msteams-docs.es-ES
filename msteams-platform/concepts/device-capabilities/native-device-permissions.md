@@ -4,12 +4,12 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 33a0fc390dc2123ccb77901acb7967b1b9732e77
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 84c866ddaae371b2c0e40defcbb1cef7c1194f0d
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157370"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496210"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para la Microsoft Teams aplicación
 
@@ -32,7 +32,8 @@ Al obtener acceso a las capacidades del dispositivo, puedes crear experiencias m
 * Use la información de ubicación del usuario para mostrar información relevante.
 
 > [!NOTE]
-> Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel del lado de la reunión.
+> * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel del lado de la reunión.    
+> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md).
 
 ## <a name="access-device-permissions"></a>Permisos de dispositivo de acceso
 
@@ -195,7 +196,7 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 |---------------|--------------|--------|
 |Permisos de dispositivo | Usar Microsoft Teams de ejemplo de pestaña para demostrar los permisos del dispositivo |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)

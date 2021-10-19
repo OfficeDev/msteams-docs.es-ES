@@ -6,12 +6,12 @@ keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157609"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496147"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -34,7 +34,7 @@ Para integrar las funcionalidades de ubicación, debes actualizar el archivo de 
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
-Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/manifest-schema.md#devicepermissions) agregando la propiedad `devicePermissions` y especificando `geolocation` . Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación. La actualización del manifiesto de la aplicación es la siguiente:
+Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-schema.md#devicepermissions) la aplicación agregando la propiedad y `devicePermissions` especificando `geolocation` . Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación. La actualización del manifiesto de la aplicación es la siguiente:
 
 ``` json
 "devicePermissions": [
@@ -43,7 +43,8 @@ Actualice el Teams aplicaciónmanifest.js[el archivo](../../resources/schema/man
 ```
 
 > [!NOTE]
-> El **símbolo del sistema Solicitar permisos** se muestra automáticamente cuando se inicia una API de Teams relevante. Para obtener más información, consulta [solicitar permisos de dispositivo](native-device-permissions.md).
+> * El **símbolo del sistema Solicitar permisos** se muestra automáticamente cuando se inicia una API de Teams relevante. Para obtener más información, consulta [solicitar permisos de dispositivo](native-device-permissions.md).    
+> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md).   
 
 ## <a name="location-apis"></a>API de ubicación
 
@@ -93,9 +94,9 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
+| **60W** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
 | **1000** | PERMISSION_DENIED |El usuario ha denegado los permisos de ubicación Teams app o web-app .|
 | **4000** | INVALID_ARGUMENTS | La API se invoca con argumentos obligatorios incorrectos o insuficientes.|

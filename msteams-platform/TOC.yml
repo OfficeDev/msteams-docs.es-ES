@@ -52,6 +52,8 @@
           href: concepts/device-capabilities/device-capabilities-overview.md
         - name: Solicitar permisos de dispositivo
           href: concepts/device-capabilities/native-device-permissions.md
+        - name: Permisos de dispositivo para el explorador
+          href: concepts/device-capabilities/browser-device-permissions.md
         - name: Integrar capacidades multimedia
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: Integrar la función de escáner de código QR o de códigos de barras
