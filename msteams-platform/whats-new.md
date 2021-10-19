@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: 691f37f2b68cb83f23ba7acd4078dda5adfaa221
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 3f32691f13632a695c04f7d1007c78b16040a611
+ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378922"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60483488"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|10/18/2021|Vínculo de tabulaciones y vista de fase|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
 |10/08/2021|Nuevos procedimientos recomendados para diseñar tarjetas adaptables.|[Diseño de tarjetas adaptables para tu Teams aplicación](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Oculta Teams aplicación hasta que el administrador permita mostrar la aplicación. | [Ocultar Teams aplicación hasta que el administrador lo apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|Planear las aplicaciones para Teams móvil|[Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
@@ -77,7 +78,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2020</b></summary>
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Integración de plataforma de identidad con Teams Toolkit y Visual Studio Code para pestañas.|[Autenticación de inicio de sesión único con Teams Toolkit y Visual Studio Code para pestañas](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams de aplicación actualizado a la versión 1.8.|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -111,7 +112,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2019</b></summary>
 
-| **Fecha** | **Notas** | **Temas cambiados** |
+| **Date** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | El parámetro de las cargas enviadas a un bot ya no está cifrado, lo que permite usar este valor para crear `replyToId` vínculos profundos a estos mensajes. Las cargas del mensaje incluyen los valores cifrados en el parámetro `legacy.replyToId` .  |
 | 11/05/2019 | Inicio de sesión único con el Teams SDK de JavaScript. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -180,7 +181,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 |10/14/2021 | Monetice la aplicación Teams con una oferta SaaS transaccionable. | [Incluye una oferta SaaS con tu Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
 |06/23/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
@@ -188,7 +189,6 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 |06/16/2021| Consentimiento específico de recursos para chats. |[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md) [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
 |05/24/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021|Vínculo de tabulaciones y vista de fase|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
 
 Para obtener más información, [vea public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 

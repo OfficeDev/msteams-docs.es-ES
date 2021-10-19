@@ -5,17 +5,14 @@ description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pesta�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
+ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017306"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60483502"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
-
-> [!NOTE]
-> Esta característica solo está disponible en [la versión preliminar del](../resources/dev-preview/developer-preview-intro.md) desarrollador público.
 
 Stage View es un nuevo componente de interfaz de usuario (UI), que te permite representar el contenido que se abre en pantalla completa en Teams y anclado como una pestaña.
  
@@ -130,13 +127,13 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
+| `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
 | `name` | String | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
-| `contentUrl` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
-| `websiteUrl?` | String | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
-| `removeUrl?` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
+| `contentUrl` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
+| `websiteUrl?` | Cadena | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
+| `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
 
 ## <a name="code-sample"></a>Ejemplo de código
 
