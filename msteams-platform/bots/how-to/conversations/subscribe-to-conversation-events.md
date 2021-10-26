@@ -5,12 +5,12 @@ description: Cómo trabajar con eventos de conversación desde el Microsoft Team
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157649"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566256"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -229,7 +229,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>Canal eliminado
 
-El evento de eliminación de canal se envía al bot cada vez que se elimina un canal en un equipo donde está instalado el bot.
+El evento de eliminación de canal se envía al bot, siempre que se elimine un canal en un equipo donde esté instalado el bot.
 
 El siguiente código muestra un ejemplo de evento eliminado del canal:
 
@@ -313,7 +313,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>Canal restaurado
 
-El evento restaurado del canal se envía al bot cada vez que se restaura un canal que se eliminó anteriormente en un equipo en el que el bot ya está instalado.
+El evento restaurado del canal se envía al bot, siempre que se restaure un canal que se eliminó anteriormente en un equipo en el que el bot ya está instalado.
 
 El código siguiente muestra un ejemplo de evento restaurado del canal:
 
@@ -402,7 +402,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Miembros del equipo agregados
 
-El evento se envía al bot la primera vez que se `teamMemberAdded` agrega a una conversación. El evento se envía al bot cada vez que se agrega un nuevo usuario a un chat de grupo o equipo donde está instalado el bot. La información del usuario que es id. es única para el bot y puede almacenarse en caché para su uso futuro por el servicio, como enviar un mensaje a un usuario específico.
+El evento se envía al bot la primera vez que se `teamMemberAdded` agrega a una conversación. El evento se envía al bot cada vez que se agrega un nuevo usuario a un chat de grupo o equipo donde está instalado el bot. La información del usuario que es id., es única para el bot y puede almacenarse en caché para su uso futuro por el servicio, como enviar un mensaje a un usuario específico.
 
 El código siguiente muestra un ejemplo de evento agregado por los miembros del equipo:
 
@@ -658,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Se cambió el nombre del equipo
 
-El bot recibe una notificación cuando se ha cambiado el nombre del equipo en el que está. Recibe un `conversationUpdate` evento con en el `eventType.teamRenamed` `channelData` objeto.
+El bot se notifica cuando se cambia el nombre del equipo. Recibe un `conversationUpdate` evento con en el `eventType.teamRenamed` `channelData` objeto.
 
 El siguiente código muestra un ejemplo de evento con el nombre de equipo:
 
@@ -738,7 +738,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>Equipo eliminado
 
-El bot recibe una notificación cuando se ha eliminado el equipo en el que se encuentra. Recibe un `conversationUpdate` evento con en el `eventType.teamDeleted` `channelData` objeto.
+El bot se notifica cuando se elimina el equipo. Recibe un `conversationUpdate` evento con en el `eventType.teamDeleted` `channelData` objeto.
 
 El código siguiente muestra un ejemplo de evento eliminado por el equipo:
 
@@ -894,7 +894,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>Equipo archivado
 
-El bot recibe una notificación cuando se archiva el equipo en el que está instalado. Recibe un `conversationUpdate` evento con en el `eventType.teamarchived` `channelData` objeto.
+El bot recibe una notificación cuando el equipo está instalado y archivado. Recibe un `conversationUpdate` evento con en el `eventType.teamarchived` `channelData` objeto.
 
 El siguiente código muestra un ejemplo de evento archivado por el equipo:
 
@@ -975,7 +975,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>Equipo desarchivado
 
-El bot recibe una notificación cuando el equipo en el que está instalado no estárchivo. Recibe un `conversationUpdate` evento con en el `eventType.teamUnarchived` `channelData` objeto.
+El bot recibe una notificación cuando el equipo está instalado y sin jerarquía. Recibe un `conversationUpdate` evento con en el `eventType.teamUnarchived` `channelData` objeto.
 
 En el código siguiente se muestra un ejemplo de evento de equipo no anárquico:
 

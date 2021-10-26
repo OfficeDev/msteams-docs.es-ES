@@ -5,12 +5,12 @@ description: Identifica cómo pueden funcionar los casos de uso de la aplicació
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157141"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566291"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
@@ -46,7 +46,7 @@ Los siguientes escenarios te guiarán en la comprensión de la selección de pun
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Crear, compartir y colaborar en elementos de un sistema externo
 
-La aplicación Microsoft Teams es una excelente manera de interactuar con los datos y hay una variedad de puntos de integración entre los que elegir.
+Las aplicaciones Microsoft Teams es una excelente manera de interactuar con los datos y hay una variedad de puntos de integración entre los que elegir.
 
 * **Extensiones de mensajería con comandos de búsqueda:** busque sistemas externos y comparta los resultados como una tarjeta interactiva.
 
@@ -102,6 +102,6 @@ Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que pu
 
 Dicho esto, las mejores aplicaciones suelen combinar varias características, creando una aplicación que involucre a los usuarios en el contexto correcto con la funcionalidad adecuada en el momento adecuado. No debe forzar ninguna funcionalidad en un lugar al que no pertenezca. El hecho de que tenga un buen bot de conversación uno a uno no significa que lo agregue a ningún equipo. Los distintos puntos de extensibilidad son buenos para diferentes cosas y juegan a sus puntos fuertes para crear una aplicación correcta.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Crear la primera Microsoft Teams aplicación](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

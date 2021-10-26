@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157566"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566284"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -90,8 +90,8 @@ Los mensajes de bienvenida deficientes pueden provocar que los usuarios bloqueen
 Para enviar notificaciones mediante mensajería proactiva, asegúrese de que los usuarios tienen una ruta de acceso clara para realizar acciones comunes en función de la notificación. Asegúrese de que los usuarios comprendan claramente por qué han recibido una notificación. Por lo general, los mensajes de notificación de buena calidad incluyen lo siguiente:
 
 * Qué ocurrió: una indicación clara de lo que ocurrió para provocar la notificación.
-* Cuál fue el resultado: debe estar claro qué elemento se actualizó para provocar la notificación.
-* Quién o lo que lo desencadenó: Quién o qué acción llevó a que se enviara la notificación.
+* Cuál fue el resultado: debe ser claro, qué elemento se actualiza para obtener la notificación.
+* Quién o lo que lo desencadenó: Quién o lo que hizo que se enviara la notificación.
 * Qué pueden hacer los usuarios en respuesta: facilita que los usuarios realicen acciones en función de las notificaciones.
 * Cómo pueden optar por no participar los usuarios: debe proporcionar una ruta de acceso para que los usuarios no puedan participar en notificaciones adicionales.
 
@@ -115,7 +115,7 @@ Solo puedes instalar aplicaciones que estén en el catálogo de aplicaciones de 
 
 Consulta [instalar aplicaciones para usuarios en](/graph/api/userteamwork-post-installedapps) la documentación Graph y la instalación proactiva de [bots](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)y la mensajería en Teams con Graph . También hay un ejemplo [de Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
 
-## <a name="samples"></a>Ejemplos
+## <a name="samples"></a>Muestras
 
 El siguiente código muestra cómo enviar mensajes proactivos:
 

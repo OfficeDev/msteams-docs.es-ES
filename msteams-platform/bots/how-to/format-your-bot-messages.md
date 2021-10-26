@@ -5,12 +5,12 @@ description: Agregar formato enriquecido a los mensajes del bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157218"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566228"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
@@ -64,7 +64,7 @@ La compatibilidad con el formato de texto varía según el tipo de mensaje y la 
 
 ### <a name="text-only-messages"></a>Mensajes de solo texto
 
-En la tabla siguiente se proporciona una lista de estilos y cuáles de estos estilos se admiten en escritorio, iOS y Android:
+En la tabla siguiente se proporciona una lista de estilos, que se admiten en escritorio, iOS y Android:
 
 | Estilo                     | Escritorio | iOS | Android |
 | ---                       | :---: | :---: | :---: |

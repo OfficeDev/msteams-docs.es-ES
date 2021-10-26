@@ -5,12 +5,12 @@ description: Información general sobre las herramientas y SDK para crear Micros
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157097"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566347"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -78,7 +78,11 @@ En los casos en los que los bots funcionan mejor en un canal también funcionan 
 
 ### <a name="in-a-one-to-one-chat"></a>En un chat uno a uno
 
-El chat uno a uno es una forma tradicional de que un bot conversacional interactúe con un usuario. Algunos ejemplos de bots conversacionales de uno a uno son los bots de Q&A, bots que inician flujos de trabajo en otros sistemas, bots que cuentan bromas y bots que toman notas. Antes de crear bots de chat de uno a uno, considere si una interfaz basada en conversación es la mejor manera de presentar la funcionalidad.
+El chat uno a uno es una forma tradicional de que un bot conversacional interactúe con un usuario. Algunos ejemplos de bots de conversación uno a uno son:
+* P&bots A
+* bots que inician flujos de trabajo en otros sistemas 
+* bots que cuentan chistes
+* bots that take notes Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
 
 ## <a name="disadvantages-of-bots"></a>Desventajas de los bots
 

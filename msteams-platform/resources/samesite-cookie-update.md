@@ -6,12 +6,12 @@ keywords: atributos cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260666"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566130"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite 
 

@@ -5,14 +5,14 @@ description: Guía para planear la creación de una aplicación en Teams móvil
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: a2c8c601ef2c007c112f1e0e5309f0aa90fce106
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60123929"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566151"
 ---
-# <a name="plan-responsive-tabs-for-teams-mobile"></a>Plan responsive tabs for Teams mobile
+# <a name="plan-responsive-tabs-for-teams-mobile"></a>Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
 
  Teams plataforma ofrece la oportunidad de crear aplicaciones en dispositivos móviles y de escritorio. Los usuarios de la aplicación pueden preferir el escritorio o el móvil, o ambos. Los usuarios pueden preparar datos en el escritorio, pero consumir y compartir más datos con el móvil. La clave para crear cualquier aplicación es comprender y satisfacer las necesidades de los usuarios. Hay capacidades como bots, extensiones de mensajería y conectores que funcionan sin problemas en escritorio y móvil. Sin embargo, la creación de pestañas y módulos de tareas requiere planear el hospedaje de la experiencia web en Teams móvil. El documento guía para planear las páginas web con capacidad de respuesta Teams móvil.
 
@@ -183,6 +183,6 @@ En la tercera fase, proporcione experiencia completa a los usuarios. Puede habil
 Las siguientes directrices de diseño y validación ayudan en función del ámbito de la aplicación:
 
 * [Diseño de la pestaña](../../tabs/design/tabs.md)
-* [Diseño del bot](../../bots/design/bots.md)
+* [Cómo diseñar su bot](../../bots/design/bots.md)
 * [Diseño de módulos de tareas](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Validación de directrices](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

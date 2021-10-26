@@ -4,12 +4,12 @@ description: Cómo crear un Virtual Assistant bot y habilidades para su uso en M
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots de asistente virtual de teams
-ms.openlocfilehash: 1231520278f97fc48ad53937af80c127021bd9c2
-ms.sourcegitcommit: 25a88715d9b06b2afeac14de86177bb34161b0cf
+ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60266637"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566249"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual 
 
@@ -70,7 +70,7 @@ En la siguiente sección se muestra un código de ejemplo de datos de acción de
     };
 ```
 
-A `SkillCardActionData` continuación, la clase de la Virtual Assistant se presenta para extraer `skillId` de la carga de la acción de tarjeta.
+A `SkillCardActionData` continuación, se presenta la clase Virtual Assistant plantilla para extraer de `skillId` la carga de la acción de tarjeta.
 En la siguiente sección se muestra un fragmento de código para extraer de la carga de acción de la  `skillId` tarjeta:
 
 ```csharp
@@ -224,7 +224,7 @@ Además, debe incluir todos los dominios de habilidad en la sección del archivo
 
 ### <a name="handle-collaborative-app-scopes"></a>Controlar ámbitos de aplicaciones de colaboración
 
-Teams aplicaciones pueden existir en varios ámbitos, incluido el chat 1:1, el chat de grupo y los canales. La plantilla Virtual Assistant principal está diseñada para chats 1:1. Como parte de la experiencia de incorporación, Virtual Assistant solicita a los usuarios el nombre y mantiene el estado del usuario. Dado que esa experiencia de incorporación no es adecuada para el chat de grupo o los ámbitos de canal, se ha quitado.
+Teams aplicaciones pueden existir en varios ámbitos, incluido el chat 1:1, el chat de grupo y los canales. La plantilla Virtual Assistant principal está diseñada para chats 1:1. Como parte de la experiencia de incorporación, Virtual Assistant solicita a los usuarios el nombre y mantiene el estado del usuario. Dado que la experiencia de incorporación no es adecuada para ámbitos de canal o chat de grupo, se ha quitado.
 
 Las habilidades deben controlar actividades en varios ámbitos, como chat 1:1, chat de grupo y conversación de canal. Si alguno de estos ámbitos no es compatible, las aptitudes deben responder con un mensaje adecuado.
 
@@ -263,7 +263,7 @@ El fragmento de código del archivo de manifiesto de una habilidad se muestra en
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....
+    ....   
 ```
 
 El fragmento Virtual Assistant código de archivo de manifiesto correspondiente se muestra en la siguiente sección:
@@ -277,7 +277,7 @@ El fragmento Virtual Assistant código de archivo de manifiesto correspondiente 
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....
+    .... 
 ```
 
 Una vez que un usuario invoca los comandos, el Virtual Assistant puede identificar una habilidad asociada mediante el análisis del identificador de comando, actualizar la actividad quitando el sufijo adicional del identificador de comando y reenviarlo a la habilidad `:<skill_id>` correspondiente. El código de una habilidad no necesita controlar el sufijo adicional. Por lo tanto, se evitan conflictos entre los IDs de comandos entre las habilidades. Con este enfoque, todos los comandos de búsqueda y acción de una habilidad en todos los contextos, como **redacción,** **commandBox** y **mensaje,** están alimentados por un Virtual Assistant.

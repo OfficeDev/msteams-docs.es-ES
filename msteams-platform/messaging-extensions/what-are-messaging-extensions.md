@@ -5,12 +5,12 @@ description: Información general sobre las extensiones de mensajería en la Mic
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157417"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566144"
 ---
 # <a name="messaging-extensions"></a>Extensiones de mensajería
 
@@ -19,6 +19,9 @@ Las extensiones de mensajería permiten a los usuarios interactuar con el servic
 La siguiente imagen muestra las ubicaciones desde las que se invocan las extensiones de mensajería:
 
 ![ubicaciones de invocación de extensión de mensajería](~/assets/images/messaging-extension-invoke-locations.png)
+
+> [!NOTE]
+> @mentioning extensiones de mensaje ya no se admiten en el cuadro de redacción.
 
 ## <a name="scenarios-where-messaging-extensions-are-used"></a>Escenarios en los que se usan extensiones de mensajería
 

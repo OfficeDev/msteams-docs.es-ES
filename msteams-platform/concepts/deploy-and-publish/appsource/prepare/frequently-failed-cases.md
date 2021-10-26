@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Sugerencias de envío de aplicaciones con frecuencia con errores en las directrices de validación de casos
-ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b080bc49c60e70fda66bf45b3f04a79241f8a57f
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157534"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566312"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Sugerencias para un envío Microsoft Teams aplicación correcta
 
@@ -82,7 +82,7 @@ En este artículo se abordan los motivos comunes por los que las aplicaciones en
 
 Para obtener información adicional sobre la autenticación, vea:
 
-* [Documentación de autenticación](../../../authentication/authentication.md)
+* [Documentación sobre autenticación](../../../authentication/authentication.md)
 * [Ejemplo de autenticación de bot en Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Ejemplo de autenticación de tabulación en Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Autenticación de tabulación/bot en C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
@@ -180,7 +180,7 @@ Consulte la siguiente sección para obtener información sobre los requisitos de
 * Incluya una propuesta de valor con el tour de bienvenida.
 * Proporcionar instrucciones de avance para usar la aplicación.
 * Incluya instrucciones sobre cómo registrarse y configurar la aplicación.
-* Presente texto fácil de leer y diálogos sencillos, preferiblemente una tarjeta con un botón de recorrido de bienvenida que cargue un módulo de tareas.
+* Presente texto fácil de leer y diálogos directos, preferiblemente una tarjeta con un botón de recorrido de bienvenida que cargue un módulo de tareas.
 * Mantenlo sencillo y usable con botones y tarjetas: evita el texto largo, el diálogo de chat.
 * Incluye tarjetas adaptables y botones para que el mensaje de bienvenida sea más utilizable.
 * Invoque el mensaje de bienvenida con un ping, no dos o más pings simultáneos.
@@ -192,7 +192,7 @@ Consulte la siguiente sección para obtener información sobre los requisitos de
 #### <a name="avoid-welcome-message-spamming"></a>Evitar el correo no deseado de mensajes de bienvenida
 
 * **Canal de mensaje por bot**. No spam users by creating separate new chat posts. Cree una entrada de subproceso única con respuestas en el mismo subproceso.
-* **Chat personal por bot**. No envíe varios mensajes. Envíe un mensaje con información completa. No se permite repetir el mismo mensaje de bienvenida durante intervalos regulares y se considera correo no deseado.
+* **Chat personal por bot**. No envíe varios mensajes. Envíe un mensaje con la información completa. No se permite repetir el mismo mensaje de bienvenida durante intervalos regulares y se considera correo no deseado.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Mensajes de bienvenida del bot de solo notificación
 
@@ -246,7 +246,7 @@ Advierto a los usuarios antes de que la aplicación descargue los archivos o arc
 * Consulte la guía [de solución de problemas](/azure/active-directory/develop/troubleshoot-publisher-verification) para obtener información adicional.
 * Complete la autoaestación a través del centro de partners. Rellene el cuestionario Self-Assessment en **Cumplimiento de aplicaciones**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Más información sobre las Teams de aprobación de aplicaciones](/legal/marketplace/certification-policies#1140-teams)
 * [Sección 100: General](/legal/marketplace/certification-policies#100-general)
