@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: d079d015826759e86b9888029d4f8925a6cc5730
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 40b4f428c6e1c493a360588ce3dc569e067d4d0a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291607"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720200"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -54,13 +54,13 @@ La `GetParticipant` API permite que un bot obtenga información de los participa
 
 La `GetParticipant` API incluye los siguientes parámetros de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. | 
+|**tenantId**| Cadena | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. | 
 
-### <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo:
 
 La `GetParticipant` API incluye los siguientes ejemplos:
 
@@ -159,9 +159,9 @@ Todos los usuarios de una reunión reciben las notificaciones enviadas a través
 
 La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
-|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
+|**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -254,11 +254,11 @@ Para usar la API de detalles de reunión, debe obtener permisos de RSC. Use el s
 
 La API de detalles de reunión incluye el siguiente parámetro de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 
-### <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo:
 
 La API de detalles de la reunión incluye los siguientes ejemplos:
 
@@ -308,9 +308,6 @@ El cuerpo de la respuesta JSON para la API de detalles de reunión es el siguien
 ```
 
 ## <a name="real-time-teams-meeting-events"></a>Eventos de reuniones Teams en tiempo real
-
-> [!NOTE]
-> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
 
 El usuario puede recibir eventos de reunión en tiempo real. Tan pronto como cualquier aplicación está asociada a una reunión, la hora real de inicio y finalización de la reunión se comparten con el bot.
 
@@ -465,7 +462,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Ejemplo de nombre | Descripción | C # | Node.js | 
+|Ejemplo de nombre | Descripción | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | Extensibilidad de reuniones | Microsoft Teams extensibilidad de reunión para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de burbuja de contenido de reunión | Microsoft Teams de extensibilidad de reuniones para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
@@ -480,7 +477,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)

@@ -120,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Integrar conectores shifts listos para producción
-    - title: Community
+    - title: Comunidad
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -149,7 +149,7 @@ conceptualContent:
           itemType: concept
           text: Usuarios finales
 tools:
-  title: SDK y herramientas
+  title: Herramientas y SDK
   items:
     - title: Microsoft Teams Toolkit para Visual Studio Code
       imageSrc: /media/logos/logo_vs-code.svg
@@ -157,6 +157,12 @@ tools:
     - title: Microsoft Teams Toolkit para Visual Studio
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
+    - title: Portal para desarrolladores
+      imageSrc: ./assets/icons/devp-logo.png
+      url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
+    - title: SDK de Microsoft Graph
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - title: SDK de cliente de JavaScript para pestañas y otras experiencias hospedadas
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
@@ -166,12 +172,6 @@ tools:
     - title: SDK de Bot Framework .NET para bots y extensiones de mensajería
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: SDK de Microsoft Graph
-      imageSrc: ./assets/icons/graph-icon-1.png
-      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
-    - title: Microsoft Teams App Studio
-      imageSrc: ./assets/icons/AppStudioIcon.png
-      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
     - title: Generador de Yeoman para Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

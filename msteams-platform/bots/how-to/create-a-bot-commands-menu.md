@@ -5,12 +5,12 @@ description: Cómo crear un menú de comandos para el Microsoft Teams bot
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157222"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720109"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos bot
 
@@ -44,7 +44,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debes edi
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. En **App Studio,** seleccione la **pestaña Editor de manifiestos.** Si no tienes un paquete de aplicación existente, puedes crear o importar una aplicación existente. Para obtener más información, [consulta Actualizar un paquete de la aplicación](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. En **App Studio,** seleccione la **pestaña Editor de manifiestos.** Si no tienes un paquete de aplicación existente, puedes crear o importar una aplicación existente. Para obtener más información, [consulta Actualizar un paquete de la aplicación](~/get-started/deploy-csharp-app-studio.md).
 
 3. En el panel izquierdo del **editor de manifiestos** y en la sección **Funcionalidades,** seleccione **Bots**.
 
@@ -60,7 +60,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debes edi
 
     ![Botón de menú Nuevos comandos de App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Crear un menú de comandos para el bot editando Manifest.js
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Para crear un menú de comandos para el bot, edite Manifest.json
 
 Otra forma de crear un menú de comandos es crearlo directamente en el archivo de manifiesto mientras se desarrolla el código fuente del bot. Para usar este método, siga estos puntos:
 

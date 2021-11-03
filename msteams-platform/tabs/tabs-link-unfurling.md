@@ -5,27 +5,24 @@ description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pesta�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
-ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
+ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60483502"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720347"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
 Stage View es un nuevo componente de interfaz de usuario (UI), que te permite representar el contenido que se abre en pantalla completa en Teams y anclado como una pestaña.
  
-> [!NOTE]
-> Actualmente, Teams los clientes móviles no admiten el desafusado de pestañas y la vista fase. Los clientes móviles usan el atributo proporcionado por el desarrollador para abrir la página en el `websiteUrl` explorador web del dispositivo.
-
 ## <a name="stage-view"></a>Vista fase
 
 Stage View es un componente de interfaz de usuario de pantalla completa que puedes invocar para mostrar el contenido web. El servicio de desamuestración de vínculos existente se actualiza para que se use para convertir direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Cuando un usuario envía una dirección URL en un chat o canal, la dirección URL se despliega en una tarjeta adaptable. El usuario puede seleccionar **Ver en** la tarjeta y anclar el contenido como una pestaña directamente desde vista fase.
 
 ## <a name="advantage-of-stage-view"></a>Ventaja de la vista fase
 
-Stage View ayuda a proporcionar una experiencia más fluida de visualización de contenido en Teams. Los usuarios pueden abrir y ver el contenido proporcionado por la aplicación sin salir del contexto y pueden anclar el contenido al chat o canal para un acceso rápido futuro. Esto lleva a una mayor interacción del usuario con la aplicación.
+Stage View ayuda a proporcionar una experiencia más fluida de visualización de contenido en Teams. Los usuarios pueden abrir y ver el contenido proporcionado por la aplicación sin salir del contexto, y pueden anclar el contenido al chat o canal para un acceso rápido futuro, lo que permite una mayor interacción del usuario con la aplicación.
 
 ## <a name="stage-view-vs-task-module"></a>Módulo vista fase frente a tarea
 
@@ -50,7 +47,7 @@ Las siguientes imágenes muestran una fase abierta desde una tarjeta adaptable:
 
 <img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
 
-### <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo:
 
 A continuación se muestra el código para abrir una fase desde una tarjeta adaptable:
 
@@ -89,7 +86,7 @@ A continuación se muestra el proceso para invocar la vista fase:
 * El bot responde con un `200` código.
 
 > [!NOTE]
-> Actualmente, Teams los clientes móviles no admiten la funcionalidad Vista de fase. Cuando un usuario selecciona **Ver** en un cliente móvil, el usuario se toma en el explorador del dispositivo. El explorador abre la dirección URL especificada en el `websiteUrl` parámetro del `TabInfo` objeto.
+> En Teams móviles, invocar stage view para aplicaciones distribuidas a través de la tienda [Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. El explorador abre la dirección URL especificada en el `websiteUrl` parámetro del `TabInfo` objeto.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar vista de fase a través de un vínculo profundo
 
@@ -122,15 +119,14 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > * El `name` vínculo es opcional en profundidad. Si no se incluye, el nombre de la aplicación lo reemplaza.
 > * El vínculo profundo también se puede pasar a través de una `OpenURL` acción.
-> * Actualmente, Teams los clientes móviles no admiten la funcionalidad Vista de fase. Cuando los usuarios seleccionan un vínculo profundo a una vista de fase, se les traslada al explorador web de su dispositivo. El explorador web abre la dirección URL especificada en el `websiteUrl` parámetro del vínculo profundo.
 > * Cuando inicies una fase desde un contexto determinado, asegúrate de que la aplicación funciona en ese contexto. Por ejemplo, si la vista fase se inicia desde una aplicación personal, debes asegurarte de que la aplicación tenga un ámbito personal.
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
-| `name` | String | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
+| `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
 | `contentUrl` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
 | `websiteUrl?` | Cadena | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
 | `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|

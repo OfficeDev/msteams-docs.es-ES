@@ -4,19 +4,19 @@ description: Describe la autenticación en Teams y cómo usarla en las aplicacio
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Autenticación de teams OAuth SSO AAD
-ms.openlocfilehash: fc10fe795dd278eec2da12b38915a27465a2df9d
-ms.sourcegitcommit: cbc6e8f363b4e80b6cbee098508f9f8affbfac09
+ms.openlocfilehash: 1705e85843fbe8d75af978da8baff081b58c6ca1
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60221862"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720316"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
 > [!Note]
 > La autenticación basada en web en clientes móviles requiere la versión 1.4.1 o posterior del SDK de cliente Teams JavaScript.
 
-Para obtener acceso a la información de usuario protegida por Azure Active Directory (AAD) y acceder a datos de servicios como Facebook y Twitter, la aplicación establece una conexión de confianza con esos proveedores. Si la aplicación usa las API Graph Microsoft en el ámbito de usuario, autentique al usuario para recuperar los tokens de autenticación adecuados.
+Para obtener acceso a la información de usuario protegida por Azure Active Directory (AAD) y acceder a datos de servicios como Facebook y Twitter, la aplicación establece una conexión de confianza con dichos proveedores. Si la aplicación usa las API Graph Microsoft en el ámbito de usuario, autentique al usuario para recuperar los tokens de autenticación adecuados.
 
 En Teams, hay dos flujos de autenticación diferentes para la aplicación. Realice un flujo de autenticación basado en web tradicional en [una](~/tabs/how-to/create-tab-pages/content-page.md) página de contenido incrustada en una pestaña, una página de configuración o un módulo de tareas. Si la aplicación contiene un bot de conversación, use el flujo de OAuthPrompt y, opcionalmente, el servicio de tokens de Azure Bot Framework para autenticar a un usuario como parte de una conversación.
 
@@ -26,8 +26,8 @@ Use el flujo de autenticación basado en web para las [pestañas](~/tabs/what-ar
 
 * [Agregar autenticación al bot Teams describe](~/bots/how-to/authentication/add-authentication.md) cómo usar el flujo de autenticación basado en web con un bot de conversación.
 * [El flujo de autenticación en las pestañas](~/tabs/how-to/authentication/auth-flow-tab.md) describe cómo funciona la autenticación de pestañas en Teams. Esto muestra un flujo de autenticación basado en web típico usado para las pestañas.
-* [La autenticación de AAD](~/tabs/how-to/authentication/auth-tab-AAD.md) en pestañas describe cómo conectarse a AAD desde dentro de una pestaña de la aplicación en Teams.
-* [La autenticación silenciosa AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) describe cómo reducir los mensajes de inicio de sesión o de consentimiento en la aplicación mediante AAD.
+* [AAD autenticación en pestañas](~/tabs/how-to/authentication/auth-tab-AAD.md) describe cómo conectarse a AAD desde dentro de una pestaña de la aplicación en Teams.
+* [La autenticación AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) describe cómo reducir los mensajes de inicio de sesión o de consentimiento en la aplicación mediante AAD.
 * [.Net o C#,](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [JavaScript o Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) proporciona ejemplos para la autenticación basada en web.
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Flujo OAuthPrompt para bots conversacionales
@@ -41,7 +41,7 @@ Para obtener más información sobre el uso de OAuthPrompt, vea:
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-Ejemplos de autenticación de Bot Framework v4.
+proporciona un ejemplo de SDK de autenticación de bot v3.
 
 | **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -51,7 +51,10 @@ Ejemplos de autenticación de Bot Framework v4.
 
 ## <a name="configure-the-identity-provider"></a>Configurar el proveedor de identidades
 
-Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de los ejemplos y tutoriales tratan principalmente con el uso de AAD como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades. 
+Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de los ejemplos y tutoriales tratan principalmente con el AAD como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades. 
 
 Para obtener más información, vea [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
+## <a name="third-party-cookies-on-ios"></a>Cookies de terceros en iOS
+
+Después de la actualización de iOS 14, Apple ha bloqueado el [acceso a cookies](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) de terceros para todas las aplicaciones de forma predeterminada. Por lo tanto, las aplicaciones que aprovechan cookies de terceros para la autenticación en sus pestañas Canal o Chat y Aplicaciones personales no podrán completar sus flujos de trabajo de autenticación en Teams clientes de iOS. Para cumplir con los requisitos de privacidad y seguridad, debe pasar a un sistema basado en tokens o usar cookies de origen para los flujos de trabajo de autenticación de usuario.

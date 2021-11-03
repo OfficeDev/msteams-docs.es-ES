@@ -5,22 +5,35 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: eb45c741bc60bea3466edeb6abe3f21b4453bec8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c653e8a27da47ab38b4209eee5a57d3cf00ab1a9
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157136"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719780"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de administración de aprendizaje de Moodle
 
-Moodle es el sistema de administración de aprendizaje de código abierto más grande del mundo. Esta aplicación ayuda a los profesores a crear y organizar sus cursos a través de características valiosas que incluyen una sólida herramienta de cuestionarios, discusiones y una variedad de tipos de tareas para que los alumnos participen con el contenido.  
+Moodle es el sistema de administración de aprendizaje de código abierto más grande del mundo. 
+
+Esta aplicación ayuda a los formadores a crear y organizar sus cursos a través de características valiosas, que incluyen:
+* Herramienta de cuestionarios sólida 
+* Discusiones con calificaciones
+* Varios tipos de asignación para que los alumnos interactúen con el contenido  
  
-Moodle se integra con Microsoft Teams. Teams es el centro de colaboración en tiempo real, trabajo en equipo y productividad. Con una integración perfecta con Office 365, cientos de aplicaciones, chat y capacidades de reunión en directo de hasta 300 participantes, Teams ofrece a los profesores y alumnos la capacidad de trabajar juntos de forma más eficaz independientemente de dónde estén. 
+Moodle se integra con Microsoft Teams. Teams es el centro de colaboración en tiempo real, trabajo en equipo y productividad. Con una integración perfecta con Office 365, cientos de aplicaciones, chat y capacidades de reunión en directo de hasta 300 participantes. Teams ofrece a los profesores y alumnos la capacidad de trabajar juntos de forma más eficaz, independientemente de dónde estén. 
  
-Además, los complementos Microsoft 365 Moodle complementan a Moodle proporcionando una experiencia completa para profesores y estudiantes. Con los complementos de Microsoft 365 Moodle, los administradores del sitio pueden sincronizar usuarios entre Office 365 y Moodle, automatizar la coincidencia de usuarios, sincronizar cursos con Microsoft Teams y repositorios de archivos, conectar asignaciones OneNote e insertar documentos Office.  
+Microsoft 365 Los complementos de Moodle complementan a Moodle proporcionando una experiencia completa para profesores y alumnos. Con los Microsoft 365 de Moodle, los administradores del sitio pueden sincronizar usuarios con:
+
+* Office 365 y Moodle
+* Automatizar la coincidencia de usuarios
+* Sincronizar cursos con repositorios Microsoft Teams archivos
+* Conectar OneNote tareas
+* Insertar Office documentos
  
-Además, Microsoft Teams aplicaciones como mConnect de Skooler y los complementos de Microsoft 365 Moodle, que integra Moodle en Teams, los profesores y los alumnos pueden disfrutar de lo mejor de ambos mundos aprovechando las características únicas de Moodle mientras participan en la comunicación y colaboración en tiempo real.
+Microsoft Teams aplicaciones como mConnect de Skooler y Microsoft 365 Complementos de Moodle integran Moodle en Teams.
+
+Los profesores y los alumnos pueden aprovechar las características únicas de Moodle en la comunicación y colaboración en tiempo real.
 
 ## <a name="mconnect-app-by-skooler"></a>aplicación mConnect de Skooler
 

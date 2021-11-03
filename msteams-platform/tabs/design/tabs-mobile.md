@@ -3,12 +3,12 @@ title: Pestañas en dispositivos móviles
 description: Describe las consideraciones de los desarrolladores para implementar pestañas en Microsoft Teams móvil.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bc853c995e0a580a2a2580caa8d7c420f7d9680e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b540369b2da9fb0d6eae5d6fd8ddf121992147d
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157119"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719857"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
@@ -60,14 +60,14 @@ En la tabla siguiente se describe la disponibilidad y el comportamiento de las p
 
 | Funcionalidad | ¿Disponibilidad móvil? | Comportamiento móvil |
 |----------|-----------|------------|
-|Pestaña Canal y grupo|Sí|La pestaña se abre en el explorador predeterminado del dispositivo en lugar del cliente móvil de Teams mediante la configuración de la aplicación, que también debe incluirse en la función del código `websiteUrl` `setSettings()` [fuente](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true). Sin embargo, los usuarios pueden ver la pestaña en  el cliente móvil de Teams seleccionando Más junto a la aplicación y **seleccionando Abrir**, que desencadena la configuración de la `contentUrl` aplicación.|
+|Pestaña Canal y grupo|Sí|La pestaña se abre en el explorador predeterminado del dispositivo en lugar del cliente móvil de Teams mediante la configuración de la aplicación, que también debe incluirse en la función del código `websiteUrl` `setSettings()` [fuente](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace). Sin embargo, los usuarios pueden ver la pestaña en  el cliente móvil de Teams seleccionando Más junto a la aplicación y **seleccionando Abrir**, que desencadena la configuración de la `contentUrl` aplicación.|
 |Aplicación personal|No|No aplicable|
 
 ### <a name="apps-not-on-teams-store"></a>Aplicaciones que no están Teams tienda
 
 Si vas a descargar localmente la aplicación o publicarla en el catálogo de aplicaciones de una organización, el comportamiento de las pestañas es el mismo que las aplicaciones de la tienda Teams aprobadas por Microsoft para dispositivos móviles.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de pestañas](~/tabs/design/tabs.md)
 * [Teams pestañas](~/tabs/what-are-tabs.md)

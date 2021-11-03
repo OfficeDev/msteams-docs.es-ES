@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable estático
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157052"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720317"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -83,7 +83,7 @@ A partir [del esquema de manifiesto v1.7,](../../../resources/schema/manifest-sc
 > [!NOTE]
 > * El comportamiento de los clientes móviles no se puede configurar a través de la propiedad del indicador de carga nativo. Los clientes móviles muestran este indicador de forma predeterminada en las páginas de contenido y los módulos de tareas basados en iframe. Este indicador en el móvil se muestra cuando se realiza una solicitud para capturar contenido y se descarta en cuanto se completa la solicitud.
 
-Si indicas en el manifiesto de la aplicación, todas las páginas de configuración, contenido y eliminación de pestañas y todos los módulos de tareas basados en iframe deben `showLoadingIndicator : true`  seguir estos pasos:
+Si indicas en el manifiesto de la aplicación, toda la configuración de pestañas, el contenido, las páginas de eliminación y todos los módulos de tareas basados en `showLoadingIndicator : true`  iframe deben seguir estos pasos:
 
 **Para mostrar el indicador de carga**
 
@@ -107,7 +107,6 @@ Si indicas en el manifiesto de la aplicación, todas las páginas de configuraci
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
 
 ## <a name="next-step"></a>Paso siguiente
 

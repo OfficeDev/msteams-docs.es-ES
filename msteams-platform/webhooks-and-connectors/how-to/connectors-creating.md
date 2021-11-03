@@ -6,12 +6,12 @@ keywords: teams o365 conector
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 39c2533f112f5cb3c72446ad8a5638687dd3db2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d2f245b63d58c8de775786304026a41fd65081e3
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157056"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720207"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -19,9 +19,9 @@ Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 exist
 
 ## <a name="add-a-connector-to-teams-app"></a>Agregar un conector a Teams aplicación
 
-Puede [empaquetar y](~/concepts/build-and-test/apps-package.md) [publicar el](~/concepts/deploy-and-publish/apps-publish.md) conector como parte del envío de AppSource. Puedes distribuir el conector registrado como parte del paquete Teams aplicación. Para obtener información sobre los puntos de entrada Teams aplicación, consulta [funcionalidades](~/concepts/extensibility-points.md). También puede proporcionar el paquete a los usuarios directamente para cargarlo en Teams.
+Puede crear un paquete [y](~/concepts/build-and-test/apps-package.md) [publicar el](~/concepts/deploy-and-publish/apps-publish.md) conector como parte del envío de AppSource. Puedes distribuir el conector registrado como parte del paquete Teams aplicación. Para obtener información sobre los puntos de entrada Teams aplicación, consulta [funcionalidades](~/concepts/extensibility-points.md). También puede proporcionar el paquete a los usuarios directamente para cargarlo en Teams.
 
-Para distribuir el conector, debe registrarse a través [del Panel de desarrolladores de Conectores.](https://outlook.office.com/connectors/home/login/#/publish) Cuando se registra un conector, se supone que funciona en todos los Office 365 compatibles con aplicaciones, incluidos Outlook y Teams. Si ese no es el caso y debe crear un conector que solo funcione en Microsoft Teams, póngase en contacto con: Microsoft Teams correo electrónico [de envíos de aplicaciones](mailto:teamsubm@microsoft.com).
+Para distribuir el conector, debe registrarse a través [del Panel de desarrolladores de Conectores.](https://aka.ms/connectorsdashboard) Cuando se registra un conector, se supone que funciona en todos los Office 365 compatibles con aplicaciones, incluidos Outlook y Teams. Si ese no es el caso y debe crear un conector que solo funcione en Microsoft Teams, póngase en contacto con: Microsoft Teams correo electrónico [de envíos de aplicaciones](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
 > El conector se registra después de seleccionar **Guardar** en el Panel de desarrolladores de conectores. Si quieres publicar el conector en AppSource, sigue las instrucciones de publicar la aplicación Microsoft Teams [en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no quieres publicar la aplicación en AppSource, distribuyela directamente a la organización. Después [de publicar conectores para la organización,](#publish-connectors-for-the-organization)no se requiere ninguna acción adicional en el Panel del conector.
@@ -158,12 +158,12 @@ Descargue el auto generado `Teams app manifest` desde el portal. Realice los sig
 1. [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modifique la `icons` parte del manifiesto para incluir los nombres de archivo de los iconos en lugar de las direcciones URL.
 
-La siguiente manifest.jsen el archivo contiene los elementos necesarios para probar y enviar la aplicación:
+El siguiente archivo manifest.json contiene los elementos necesarios para probar y enviar la aplicación:
 
 > [!NOTE]
 > Reemplace `id` y en el siguiente ejemplo por el GUID del `connectorId` conector.
 
-#### <a name="example-of-manifestjson-with-connector"></a>Ejemplo de manifest.jscon conector
+#### <a name="example-of-manifestjson-with-connector"></a>Ejemplo de manifest.json con connector
 
 ```json
 {

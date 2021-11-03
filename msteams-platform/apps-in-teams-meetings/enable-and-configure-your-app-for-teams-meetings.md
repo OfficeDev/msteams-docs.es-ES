@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para Teams reuniones
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360485"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720214"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -97,6 +97,7 @@ Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones
 En un chat de reunión, escriba la **@** clave y seleccione Obtener **bots**.
 
 > [!NOTE]
+> * La burbuja de contenido publica una tarjeta adaptable o una tarjeta simultáneamente en el chat de reunión al que pueden acceder los usuarios. Esto ayuda a los usuarios cuando se minimiza la reunión o Teams aplicación.
 > * La identidad del usuario debe confirmarse con [tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la `GetParticipant` API.
 > * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y presentadores crear un nuevo sondeo.
 > * Las asignaciones de roles se pueden cambiar mientras se está en curso una reunión. Para obtener más información, vea [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).

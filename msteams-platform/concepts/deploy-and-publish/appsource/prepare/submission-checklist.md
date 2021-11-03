@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260543"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720354"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío Microsoft Teams almacén
 
@@ -27,9 +27,7 @@ Aunque la aplicación puede estar funcionando en un entorno de prueba, debes com
 
 La Microsoft Teams de validación de aplicaciones te ayuda a identificar y solucionar problemas antes de enviarte al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
 
-1. Ve a [Microsoft Teams de validación de aplicaciones en](https://dev.teams.microsoft.com/validation) el portal de desarrolladores. 
-    > [!NOTE]
-    > La herramienta de validación de aplicaciones también está disponible en [App Studio](../../../build-and-test/app-studio-overview.md).
+1. Vaya a la [herramienta Microsoft Teams validación de aplicaciones.](https://dev.teams.microsoft.com/appvalidation.html) (Nota: La herramienta también está disponible en [App Studio](../../../build-and-test/app-studio-overview.md).)
 1. Upload el paquete de la aplicación para ejecutar las pruebas automatizadas.
 1. Vaya a la **lista de comprobación preliminar** y revise los casos de prueba que son difíciles de automatizar.
 1. [Se solucionan problemas con las configuraciones](~/resources/schema/manifest-schema.md) o la aplicación en general. Estos problemas se producen si las pruebas automatizadas le dan errores o no ha cumplido todos los criterios de la lista de comprobación.

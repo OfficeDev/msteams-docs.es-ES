@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157116"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720193"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -25,7 +25,7 @@ Una página de configuración es un tipo especial de [página de contenido](cont
 
 La aplicación debe hacer referencia al [sdk Microsoft Teams cliente de JavaScript y](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) llamar a `microsoft.initialize()` . Las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube.
 
-### <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo:
 
 En la siguiente imagen se muestra un ejemplo de una página de configuración:
 
@@ -90,11 +90,11 @@ El siguiente código es un ejemplo de código correspondiente para la página de
 
 Elija seleccionar **el botón Gris** o **Seleccionar** rojo en la página de configuración para mostrar el contenido de la pestaña con un icono gris o rojo.
 
-La siguiente imagen muestra el contenido de la pestaña con un icono gris:
+La siguiente imagen muestra el contenido de la pestaña con **el icono** Gris seleccionado:
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-La siguiente imagen muestra el contenido de la pestaña con un icono rojo:
+La siguiente imagen muestra el contenido de la pestaña con **el icono** Rojo seleccionado:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
@@ -200,7 +200,7 @@ microsoftTeams.settings.setSettings({
 
 Si decide que la pestaña canal o grupo aparezca en el Teams móviles, la configuración `setSettings()` debe tener un valor para `websiteUrl` . Para obtener más información, consulte [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

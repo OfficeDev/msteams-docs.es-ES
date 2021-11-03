@@ -1,24 +1,21 @@
 ---
-title: Incluir una oferta SaaS con la aplicación
+title: Incluir una oferta de SaaS con la aplicación
 description: Aprende a monetizar tu aplicación Microsoft Teams con planes de suscripción.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: e408d1e96b0abe2493d9c801ab947da702b749da
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 72dbbfe62e6f5f975a09b7c0538e0847520670d9
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378955"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719801"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
 :::row:::
    :::column span="3":::
-
-> [!NOTE]
-> Esta característica está disponible actualmente solo en [la versión preliminar del desarrollador](~/resources/dev-preview/developer-preview-intro.md) público.
 
 Con una oferta de Software como servicio (SaaS) transaccionable, puedes monetizar tu aplicación de Teams mediante la venta de planes de suscripción directamente desde la descripción de la tienda Teams cliente. Por ejemplo, diga que tiene una aplicación gratuita que cualquier persona puede obtener en la tienda. Ahora puedes ofrecer planes premium y de empresa para los usuarios que quieran más características.
 
@@ -203,6 +200,6 @@ Si desvinculas una oferta SaaS incluida en la descripción Teams tienda, debes v
    1. Seleccione **Distribuir > publicar en el almacén Teams .**
    1. Selecciona **Abrir centro de partners** para iniciar el proceso de volver a publicar la aplicación sin la oferta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Mantenimiento y soporte técnico de la aplicación publicada](../post-publish/overview.md)

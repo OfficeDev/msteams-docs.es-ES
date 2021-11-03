@@ -5,12 +5,12 @@ description: Obtén información sobre cómo diseñar notificaciones de fuentes 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157529"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719920"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Diseño de notificaciones de fuente de actividad para la Microsoft Teams aplicación
 
@@ -36,8 +36,8 @@ La fuente de actividad es una superficie para que los usuarios puedan acceder a 
 |2|**Icono de tipo de actividad/aplicación:** muestra el tipo de actividad. Para las notificaciones de aplicaciones, el icono de línea se reemplaza por un icono de aplicación.|
 |3|**Título (primera línea): Actor + motivo**: *Actor*: Nombre del usuario o aplicación que inició la actividad. *Motivo:* describe la actividad.|
 |4 |**Marca de** tiempo: muestra cuándo se produjo la actividad.|
-|5 |**Ubicación (segunda línea):** muestra dónde se produjo la actividad en Teams.|
-|6 |**Información terciaria (tercera línea):** opcional. Muestra texto de vista previa o información adicional.|
+|5|**Ubicación (segunda línea):** muestra dónde se produjo la actividad en Teams.|
+|6 |**Vista previa de texto (tercera línea):** muestra una línea truncada desde el inicio de la notificación.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Tipos de tarjetas de notificación de fuente de actividad
 

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017341"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720116"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams aplicaciones aportan información clave, herramientas comunes y 
 Las aplicaciones son la forma en que Teams para adaptarse a sus necesidades. Crea algo nuevo para Teams o integra una aplicación existente.
 
 > [!div class="nextstepaction"]
-> [Comenzar aquí](get-started/prerequisites.md)
+> [Comenzar aquí](get-started/get-started-overview.md)
 
 ## <a name="what-are-teams-apps"></a>¿Qué Teams aplicaciones?
 
@@ -153,7 +153,7 @@ Teams aplicaciones son una combinación de [funcionalidades.](concepts/capabilit
 Familiarícese rápidamente con la creación de Teams mediante la configuración del entorno y la creación de una aplicación sencilla.
 
 > [!div class="nextstepaction"]
-> [Compilar una aplicación por primera vez](get-started/prerequisites.md)
+> [Compilar una aplicación por primera vez](get-started/get-started-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -209,7 +209,7 @@ No es necesario ser un programador experto para crear una aplicación Teams web.
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
 * [Diseñar la aplicación Teams aplicación](concepts/design/design-teams-app-overview.md)

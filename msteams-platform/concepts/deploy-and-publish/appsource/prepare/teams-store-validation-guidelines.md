@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378901"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720228"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -191,7 +191,7 @@ La descripción larga puede proporcionar una narración atractiva que destaque l
 
 **Sí:**
 
-* Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) para dar formato a la descripción.
+* Use Markdown para dar formato a la descripción.
 * Use la voz activa y hable directamente a los usuarios. Por ejemplo, *Puede ...*.
 * Enumere las características con viñetas para que sea más fácil escanear la descripción.
 * Describa las limitaciones de forma clara, condiciones o excepciones a la funcionalidad, las características y los resultados descritos en el listado y los materiales relacionados antes de que el usuario instale su aplicación.. Las funciones de Teams que admita su aplicación deben estar relacionadas con las funciones principales que describe su listado.

@@ -5,12 +5,12 @@ description: Información general sobre los comandos de acción de extensión de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291677"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720144"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -124,64 +124,14 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 1. Seleccione **Guardar**.
 1. Para agregar más parámetros, seleccione el **botón Agregar** en la **sección Parámetros.**
 
-# <a name="developer-portal"></a>[Portal para desarrolladores](#tab/DP)
-
-**Para crear un comando de acción con Developer Portal**
-
-1. Vaya a **[Portal para desarrolladores.](https://dev.teams.microsoft.com/)**
-    
-      ![Captura de pantalla de TDP](~/assets/images/tdp/tdp_home_1.png)
-
-1. Vaya a **Aplicaciones**.
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. Si ya has creado el paquete de la aplicación en **el Portal de desarrolladores,** selecciónelo en la lista. Si no es así, **selecciona Importar una aplicación existente**.
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Vaya a **Características de la aplicación**. 
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Seleccione **Extensiones de mensajería de** las características de la **aplicación**. Aparece una ventana emergente para configurar la extensión de mensajería.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
- 
-1. Seleccione **un bot de extensión de** mensaje de la lista desplegable en Id. de extensiones de **Messag** y seleccione **Guardar**.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Seleccione **Agregar un comando**. Aparece una ventana emergente para agregar un comando.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Seleccione el tipo del comando como Basado **en acciones** para configurar la extensión de mensajería. Seleccione **Parámetros dinámicos** para crear un comando de acción dinámica.
-
-    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
-
-1. Seleccione **Parámetros estáticos** para crear un comando de acción estática.   
-
-    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
-
-1. Escriba los campos de comando. 
-
-    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
-
-1. Escriba campos de parámetro y **seleccione Guardar**.
-
-    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
- 
----
-
 ### <a name="create-an-action-command-manually"></a>Crear un comando de acción manualmente
 
 Para agregar manualmente el comando de extensión de mensajería basada en acciones al manifiesto de la aplicación, debe agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
 | Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `id` | Esta propiedad es un identificador único que se asigna a este comando. La solicitud de usuario incluye este identificador. | Yes | 1.0 |
-| `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario. | Yes | 1.0 |
+| `id` | Esta propiedad es un identificador único que se asigna a este comando. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
+| `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
 | `type` | Esta propiedad debe ser `action` un . | No | 1.4 |
 | `fetchTask` | Esta propiedad se establece en para una tarjeta adaptable o una vista web incrustada para el módulo de tareas, y para una lista estática de parámetros o al cargar la vista `true` `false` web mediante un `taskInfo` . | No | 1.4 |
 | `context` | Esta propiedad es una matriz opcional de valores que define desde dónde se invoca la extensión de mensajería. Los valores posibles son`message`, `compose` o `commandBox`. El valor predeterminado es `["compose", "commandBox"]`. | No | 1,5 |
@@ -191,9 +141,9 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 | Nombre de propiedad | Finalidad | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Solo se usa cuando `fetchTask` es `false` . | No | 1.0 |
-| `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Yes | 1.0 |
-| `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Yes | 1.0 |
-| `parameter.title` | Esta propiedad es un título o etiqueta de parámetros fáciles de usar. | Yes | 1.0 |
+| `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
+| `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
+| `parameter.title` | Esta propiedad es un título o etiqueta de parámetros fáciles de usar. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada necesario. Los valores posibles `text` incluyen , , , , , `textarea` `number` `date` `time` `toggle` . El valor predeterminado se establece en `text` . | No | 1.4 |
 
 Si usa una vista web incrustada, opcionalmente puede agregar el objeto para capturar la vista `taskInfo` web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al de usar una lista estática de parámetros. En el caso de que la primera interacción con el bot [responde al módulo de tareas enviar acción](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto, debe establecer el `fetchTask` parámetro en `false` .

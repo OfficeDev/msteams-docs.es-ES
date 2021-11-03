@@ -5,12 +5,12 @@ description: Identifica cómo pueden funcionar los casos de uso de la aplicació
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566291"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720389"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Asignar los casos de uso a Teams funcionalidades de la aplicación
 
@@ -60,7 +60,7 @@ Las aplicaciones Microsoft Teams es una excelente manera de interactuar con los 
 
 ## <a name="initiate-workflows-and-processes"></a>Iniciar flujos de trabajo y procesos
 
-A veces, solo necesita una forma rápida de iniciar un proceso o flujo de trabajo en un sistema externo.
+A veces solo necesita una forma rápida de iniciar un proceso o flujo de trabajo en un sistema externo.
 
 * Comandos de acción extensiones **de mensajería:** desencadenador de mensajes, lo que permite a los usuarios enviar rápidamente el contenido de un mensaje a los servicios web.
 
@@ -94,14 +94,14 @@ Una plataforma de colaboración es inherentemente una plataforma social. Deje qu
 
 Las pestañas son páginas web incrustadas. Prácticamente cualquier cosa que puedas hacer en un SPA, puedes hacer en una pestaña en Teams. Asegúrese de prestar atención al ámbito. Las pestañas de grupo y canal son para experiencias compartidas y las pestañas personales son para experiencias personales. La lista de cosas del equipo va en la pestaña canal y la lista de tus cosas va en la pestaña personal.
 
-## <a name="start-small"></a>Iniciar pequeño
+## <a name="initiate-small"></a>Iniciar pequeño
 
-¿No está seguro de dónde empezar? ¿Se siente un poco abrumado por la increíble variedad de opciones disponibles para usted? Debes elegir una característica principal de la aplicación e iniciarla. Después de tener una idea del flujo de información a través de los distintos contextos de Teams, resulta mucho más sencillo imaginar una interacción más compleja.
+¿No está seguro de dónde iniciar? ¿Se siente un poco abrumado por la increíble variedad de opciones disponibles para usted? Debes elegir una característica principal de la aplicación e iniciarla allí. Después de tener una idea del flujo de información a través de los distintos contextos de Teams, resulta mucho más sencillo imaginar una interacción más compleja.
 
 ## <a name="put-it-all-together"></a>Poner todo junto
 
 Dicho esto, las mejores aplicaciones suelen combinar varias características, creando una aplicación que involucre a los usuarios en el contexto correcto con la funcionalidad adecuada en el momento adecuado. No debe forzar ninguna funcionalidad en un lugar al que no pertenezca. El hecho de que tenga un buen bot de conversación uno a uno no significa que lo agregue a ningún equipo. Los distintos puntos de extensibilidad son buenos para diferentes cosas y juegan a sus puntos fuertes para crear una aplicación correcta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Crear la primera Microsoft Teams aplicación](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Crear la primera Microsoft Teams aplicación](../../get-started/get-started-overview.md)

@@ -6,12 +6,12 @@ keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496147"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719794"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación 
 
@@ -96,14 +96,20 @@ Debes asegurarte de controlar estos errores correctamente en tu Teams aplicació
 
 |Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
-| **60W** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
+| **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
 | **1000** | PERMISSION_DENIED |El usuario ha denegado los permisos de ubicación Teams app o web-app .|
 | **4000** | INVALID_ARGUMENTS | La API se invoca con argumentos obligatorios incorrectos o insuficientes.|
 | **8000** | USER_ABORT |El usuario canceló la operación.|
 | **9000** | OLD_PLATFORM | El usuario se encuentra en una compilación de plataforma antigua donde la implementación de la API no está presente. La actualización de la compilación debe resolver el problema.|
 
-## <a name="see-also"></a>Vea también
+### <a name="code-sample"></a>Ejemplo de código
+
+|Ejemplo de nombre | Descripción | C# | Node.js | 
+|----------------|-----------------|--------------|--------------|
+| Ubicación actual de la aplicación de check-in | Los usuarios pueden comprobar la ubicación actual y ver todas las check-ins de ubicación anteriores.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
+
+## <a name="see-also"></a>Consulte también
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)

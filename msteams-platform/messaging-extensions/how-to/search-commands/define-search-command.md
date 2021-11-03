@@ -5,12 +5,12 @@ description: Definir comandos de búsqueda de extensión de mensajería para Mic
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566368"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720130"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
@@ -38,17 +38,9 @@ En la siguiente imagen se muestran las ubicaciones de invocación del comando de
 
 Para agregar el comando de búsqueda al manifiesto de la aplicación, debes agregar un nuevo objeto al nivel superior del JSON del `composeExtension` manifiesto de la aplicación. Puedes agregar el comando de búsqueda con la ayuda de App Studio o manualmente.
 
-### <a name="create-a-search-command"></a>Crear un comando de búsqueda 
+### <a name="create-a-search-command-using-app-studio"></a>Crear un comando de búsqueda con App Studio
 
-Puede crear un comando de búsqueda mediante ** App Studio** o **Developer Portal**.
-
-> [!NOTE]
->  App Studio pronto se depricará. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
-
-> [!NOTE]
-> El requisito previo para crear un comando de búsqueda es que ya debe haber creado una extensión de mensajería. Para obtener información sobre cómo crear una extensión de mensajería, vea [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+El requisito previo para crear un comando de búsqueda es que ya debe haber creado una extensión de mensajería. Para obtener información sobre cómo crear una extensión de mensajería, vea [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **Para crear un comando de búsqueda**
 
@@ -78,54 +70,11 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 1. Agregue el parámetro de búsqueda y **seleccione Guardar**.
 
-# <a name="developer-portal"></a>[Portal para desarrolladores](#tab/DP)
-
-**Para crear un comando de búsqueda con Portal de desarrolladores**
-
-1. Vaya a **[Portal para desarrolladores.](https://dev.teams.microsoft.com/)**
-    
-   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
-    
-1. Vaya a **Aplicaciones**.
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. Si ya creaste el paquete de la aplicación en **el Portal de desarrolladores,** selecciónelo en la lista. Si no has creado un paquete de aplicación, selecciona **Importar una aplicación existente.**
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Vaya a **Características de la aplicación**.  
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Seleccione **Extensiones de mensajería de** las características de la **aplicación**. Aparece una ventana emergente para configurar la extensión de mensajería.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
-
-1. Seleccione **un bot de extensión de** mensaje de la lista desplegable en **Id. de extensiones de mensaje** y seleccione **Guardar**.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Seleccione **Agregar un comando**. Aparece una ventana emergente para agregar un comando.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Seleccione **basado en búsqueda para** buscar el comando y escriba campos de comando.
-
-    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
-
-1. Escriba campos de parámetro y **seleccione Guardar**.
-
-    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
-
----
-
-
 ### <a name="create-a-search-command-manually"></a>Crear un comando de búsqueda manualmente 
 
 Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, debes agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
@@ -136,7 +85,7 @@ Para agregar manualmente el comando de búsqueda de extensión de mensajería al
 
 Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el Teams cliente.
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Finalidad | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -144,7 +93,7 @@ Debe agregar los detalles del parámetro de búsqueda, que define el texto visib
 | `parameter.title` | Esta propiedad es un título o etiqueta de parámetros fáciles de usar. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada necesaria. Los valores posibles `text` incluyen , , , , , `textarea` `number` `date` `time` `toggle` . El valor predeterminado se establece en `text` . | No | 1.4 |
 
-#### <a name="example"></a>Ejemplo
+#### <a name="example"></a>Ejemplo:
 
 En la siguiente sección se muestra un ejemplo del manifiesto de aplicación simple del `composeExtensions` objeto que define un comando de búsqueda: 
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566284"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720081"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -24,7 +24,7 @@ Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a u
 
 Para que el bot envíe un mensaje proactivo a un usuario, chat de grupo o equipo, debe tener acceso para enviar el mensaje. Para un chat de grupo o un equipo, la aplicación que contiene el bot debe instalarse primero en esa ubicación. Puedes instalar [proactivamente](#proactively-install-your-app-using-graph) la aplicación con Microsoft Graph en un equipo, [](/microsoftteams/teams-custom-app-policies-and-settings) si es necesario, o usar una directiva de aplicación para enviar aplicaciones a equipos y usuarios de tu inquilino. Para los usuarios, la aplicación debe estar instalada para el usuario o el usuario debe formar parte de un equipo donde esté instalada la aplicación.
 
-Enviar un mensaje proactivo es diferente del envío de un mensaje normal. No hay ningún activo `turnContext` que usar para una respuesta. Debe crear la conversación antes de enviar el mensaje. Por ejemplo, un nuevo chat uno a uno o un nuevo hilo de conversación en un canal. No puede crear un nuevo chat de grupo o un nuevo canal en un equipo con mensajería proactiva.
+Enviar un mensaje proactivo es diferente del envío de un mensaje normal. No hay ningún activo `turnContext` que usar para una respuesta. Debe crear la conversación antes de enviar el mensaje. Por ejemplo, un nuevo chat uno a uno o un nuevo hilo de conversación en un canal. No puedes crear un nuevo chat de grupo o un nuevo canal en un equipo con mensajería proactiva.
 
 **Para enviar un mensaje proactivo**
 
@@ -49,7 +49,7 @@ Para crear un nuevo hilo de conversación o conversación en un canal, debe tene
 
 Independientemente de cómo obtenga la información, debe almacenar el o para `tenantId` `userId` crear una nueva `channelId` conversación. También puede usar el para crear un nuevo subproceso de conversación en el canal `teamId` general o predeterminado de un equipo.
 
-El `userId` es único para el identificador del bot y un usuario en particular. No puede volver a usar `userId` los bots entre. El `channelId` es global. Sin embargo, el bot debe instalarse en el equipo para poder enviar un mensaje proactivo a un canal.
+El `userId` es único para el identificador del bot y un usuario en particular. No puede volver a usar los `userId` bots entre. El `channelId` es global. Sin embargo, el bot debe instalarse en el equipo para poder enviar un mensaje proactivo a un canal.
 
 Después de tener la información del usuario o del canal, debe crear la conversación.
 
@@ -67,13 +67,13 @@ Después de obtener la información de dirección adecuada, puede enviar el mens
 
 ## <a name="send-the-message"></a>Enviar el mensaje
 
-Ahora que tiene la información de dirección correcta, puede enviar el mensaje. Si usa el SDK, debe usar el método `continueConversation` y y realizar una llamada directa a la `conversationId` `tenantId` API. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje. Vea la [sección de](#samples) ejemplos o use uno de los ejemplos enumerados en la sección de [ejemplo de](#code-sample) código.
+Ahora que tiene la información de dirección correcta, puede enviar el mensaje. Si usa el SDK, debe usar el método y `continueConversation` y realizar una llamada directa a la `conversationId` `tenantId` API. Debe establecer `conversationParameters` correctamente para enviar correctamente el mensaje. Vea la [sección de](#samples) ejemplos o use uno de los ejemplos enumerados en la sección de [ejemplo de](#code-sample) código.
 
 Ahora que ha enviado el mensaje proactivo, debe seguir estos procedimientos recomendados mientras envía mensajes proactivos para un mejor intercambio de información entre los usuarios y el bot.
 
 ## <a name="best-practices-for-proactive-messaging"></a>Procedimientos recomendados para mensajería proactiva
 
-Enviar mensajes proactivos a los usuarios es una forma muy eficaz de comunicarse con los usuarios. Sin embargo, desde su punto de vista, este mensaje puede aparecer completamente sin respuesta y, en el caso de los mensajes de bienvenida, es la primera vez que interactúan con la aplicación. Por lo tanto, es muy importante usar la mensajería proactiva con moderación, no enviar correo no deseado a los usuarios y proporcionar suficiente información para que los usuarios comprendan por qué están recibiendo los mensajes.
+Enviar mensajes proactivos a los usuarios es una forma eficaz de comunicarse con los usuarios. Sin embargo, desde la perspectiva del usuario, el mensaje no aparece. Si hay un mensaje de bienvenida, será la primera vez que interactúen con la aplicación. Es importante usar esta funcionalidad y proporcionar la información completa al usuario para comprender el propósito de este mensaje.
 
 ### <a name="welcome-messages"></a>Mensajes de bienvenida
 
@@ -82,8 +82,7 @@ Cuando se usa la mensajería proactiva para enviar un mensaje de bienvenida a un
 * Por qué un usuario recibe el mensaje: debe ser muy claro para el usuario por qué está recibiendo el mensaje. Si el bot se instaló en un canal y envió un mensaje de bienvenida a todos los usuarios, háles saber en qué canal se instaló y quién lo instaló.
 * Qué ofrece: los usuarios deben ser capaces de identificar lo que pueden hacer con la aplicación y qué valor puede aportarles.
 * Qué deben hacer a continuación: Invitar a los usuarios a probar un comando o interactuar con la aplicación.
-
-Los mensajes de bienvenida deficientes pueden provocar que los usuarios bloqueen el bot. Escribe en el punto y borra los mensajes de bienvenida. Itera en los mensajes de bienvenida si no tienen el efecto deseado.
+Los mensajes de bienvenida deficientes pueden llevar a los usuarios a bloquear el bot. Escribe en el punto y borra los mensajes de bienvenida. Itera en los mensajes de bienvenida si no tienen el efecto deseado.
 
 ### <a name="notification-messages"></a>Mensajes de notificación
 
@@ -101,7 +100,7 @@ Para enviar mensajes a un gran grupo de usuarios, por ejemplo, a su organizació
 
 Al usar la mensajería proactiva para enviar mensajes programados a los usuarios, compruebe que la zona horaria se actualiza a su zona horaria. Esto garantiza que los mensajes se entreguen a los usuarios en el momento correspondiente. Por lo general, los mensajes de programación incluyen:
 
-* ¿Por qué recibe el usuario el mensaje?: Haga que sea fácil para los usuarios comprender el motivo por el que están recibiendo el mensaje.
+* ¿Por qué recibe el usuario el mensaje?: Facilita que los usuarios comprendan el motivo por el que reciben el mensaje.
 * Qué puede hacer el usuario a continuación: los usuarios pueden realizar la acción necesaria en función del contenido del mensaje.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Instale proactivamente la aplicación con Graph

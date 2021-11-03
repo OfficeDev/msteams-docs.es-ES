@@ -5,12 +5,12 @@ description: Al planear la Microsoft Teams, primero debes comprender qué proble
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 151e9d24015f45f9085bd07604bc1cc7882266de
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157614"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720158"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -18,19 +18,19 @@ La Microsoft Teams ofrece una gran variedad de puntos de entrada y elementos de 
 > [!NOTE]
 > Antes de empezar a crear los casos de uso, debe tener una buena comprensión de las Teams y de lo que es posible en la plataforma Teams usarlas.
 
-Cada método de interacción con los usuarios tiene sus puntos fuertes y débiles. Crear una aplicación Teams es encontrar la combinación adecuada para satisfacer las necesidades del usuario. If you are going to meet those needs, you first need to understand them.
+Cada método de interacción con los usuarios tiene sus puntos fuertes y débiles. Crear una aplicación Teams es encontrar la combinación adecuada para satisfacer las necesidades del usuario. If you're going to meet those needs, you first need to understand them.
 
 ## <a name="understand-the-problem"></a>Comprender el problema
 
-Cada aplicación buena tiene un problema principal o una necesidad que está intentando resolver. Antes de empezar a crear una aplicación, debes expresar cuál es ese problema. En su corazón, Teams es una plataforma de colaboración, por lo que las aplicaciones que puentean las diferencias para lograr una colaboración eficaz son un gran ajuste. También es una plataforma social, es nativamente multiplataforma, se encuentra en el centro de Office 365 y ofrece un lienzo personal para crear aplicaciones. En esta plataforma social, hay una amplia variedad de necesidades que se pueden resolver con una Teams aplicación. Puede resolver una amplia variedad de problemas, siempre que comprenda cuál está intentando resolver. Antes de empezar a crear una aplicación, haga preguntas relevantes, como:
+Cada aplicación tiene un problema principal o una necesidad de resolver. Antes de empezar a crear una aplicación, debes expresar cuál es ese problema. En su corazón, Teams es una plataforma de colaboración, por lo que las aplicaciones que puentean las diferencias para lograr una colaboración eficaz son un gran ajuste. También es una plataforma social, es nativamente multiplataforma, se encuentra en el centro de Office 365 y ofrece un lienzo personal para crear aplicaciones. En esta plataforma social, hay una amplia variedad de necesidades que se pueden resolver con una Teams aplicación. Puede resolver una amplia variedad de problemas, siempre que comprenda cuál está intentando resolver. Antes de empezar a crear una aplicación, haga preguntas relevantes, como:
 
 * ¿Cuáles son las ventajas y desventajas del sistema de estado actual que usan los usuarios?
-* ¿Cuáles son los puntos de dolor a los que se enfrentan los usuarios a partir de hoy que desea abordar?
+* ¿Cuáles son los problemas a los que se enfrentan los usuarios que desea abordar?
 * ¿Qué características o capacidades les gustan y les gusta a los usuarios en su forma actual de realizar el proceso?
 
 ## <a name="understand-your-user"></a>Comprender al usuario
 
-Comprenda quién es su usuario y puede identificar el modelo de distribución correcto, pero lo más importante, le ayuda a identificar cómo usan los usuarios Teams. Haga preguntas relevantes, como:
+Comprenda quién es su usuario y puede identificar el modelo de distribución adecuado. Le ayuda a identificar cómo usan los usuarios Teams. Haga preguntas relevantes, como:
 
 * ¿Los usuarios son principalmente trabajadores de primera línea en clientes móviles?
 * ¿Esperas que muchos usuarios invitados necesiten acceso a la aplicación?
@@ -42,7 +42,7 @@ A veces, la respuesta es que queremos resolver este problema para todos los *Tea
 
 ## <a name="understand-the-limitations-of-the-app"></a>Comprender las limitaciones de la aplicación
 
-Conocer las limitaciones de las aplicaciones en términos de accesibilidad de datos y requisito de residencia de datos le ayudará a diseñar mejores aplicaciones. Esto es importante, ya que tener información sobre quién es el propietario de los datos y la disponibilidad de las API afecta a la arquitectura de la solución. De nuevo, haga preguntas relevantes, como:
+Conocer las limitaciones de las aplicaciones para la accesibilidad de datos y el requisito de residencia de datos te ayudará a diseñar mejores aplicaciones. Esto es importante, ya que tener información sobre quién es el propietario de los datos y la disponibilidad de las API afecta a la arquitectura de la solución. De nuevo, haga preguntas relevantes, como:
 
 * ¿Cuáles son los desafíos con la integración back-end de la aplicación actual?
 * Quién es propietario de los datos back-end? In-house or third-party.
@@ -63,15 +63,15 @@ Debe identificar desde el principio si necesita proteger los servicios que está
 Tanto si estás creando algo nuevo o llevando una solución existente a Teams, es importante decidir si toda la aplicación va a estar dentro del Teams cliente. Compruebe si tiene sentido traer solo una parte de la experiencia. Con una combinación de pestañas, extensiones de mensajería, módulos de tareas, tarjetas adaptables y bots conversacionales, puedes crear aplicaciones complejas completamente en Teams.
 Recuerde quiénes son los usuarios y el problema que está intentando resolver. ¿Ya tienen un sistema para resolver la mayor parte del problema o solo necesita extender un subgrupo de la funcionalidad a Teams? Normalmente, si va a incluir una parte de la solución, debe centrarse en compartir, colaborar, iniciar y supervisar flujos de trabajo.
 
-## <a name="plan-the-onboarding-experience"></a>Planear la experiencia de incorporación
+## <a name="plan-the-onboarding-experience"></a>Planificar la experiencia de incorporación
 
 La experiencia de incorporación puede ser la diferencia entre el éxito o el error de la aplicación. Para cada funcionalidad de la aplicación y cada contexto en el que se pueda instalar la funcionalidad, debes tener un plan de cómo te vas a presentar. La forma en que se presenta el bot de conversación cuando se instala en un canal con mil personas es diferente cuando se instala en un chat uno a uno. ¿Qué sucede cuando un usuario configura la pestaña por primera vez en un canal? Si estás compartiendo tarjetas con una extensión de mensajería, ¿tiene sentido agregar un pequeño vínculo **a** una página más para ayudar a introducir a los usuarios a lo que puede hacer la aplicación?
 
-Saber quiénes son los usuarios le ayuda a crear la experiencia correcta. ¿Esperas que la mayoría de las personas ya tengan algún contexto de para qué está la aplicación o que ya han usado los servicios en otro contexto? ¿Vienen a la aplicación sin conocimientos previos? Crea tu experiencia de incorporación pensando en los usuarios clave.
+Saber quiénes son los usuarios, le ayuda a crear la experiencia correcta. ¿Esperas que la mayoría de las personas ya tengan algún contexto de para qué está la aplicación o que ya han usado los servicios en otro contexto? ¿Vienen a la aplicación sin conocimientos previos? Crea tu experiencia de incorporación pensando en los usuarios clave.
 
 Recuerde que los usuarios pueden descubrir la aplicación de varias maneras. Pueden ser los que la instalan o pueden introducirse en la aplicación cuando otro usuario la usa para compartir contenido. Si quieres que más usuarios usen la aplicación, debes buscar formas de presentarte a todos.
 
-Sobre todo, recuerde que a nadie le gusta el correo no deseado. La limpieza de mensajes personales y de canal es una buena forma de deshacer la instalación rápidamente.
+Sobre todo, recuerda que a nadie le gusta el correo no deseado. La limpieza de mensajes personales y de canal es una buena forma de deshacer la instalación rápidamente.
 
 ## <a name="plan-for-the-future"></a>Planear el futuro
 

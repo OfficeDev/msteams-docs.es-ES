@@ -5,12 +5,12 @@ description: Obtenga información sobre los componentes de la interfaz de usuari
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157625"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719850"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados
 
@@ -75,11 +75,11 @@ Una barra de notificaciones es un área dedicada para mostrar mensajes breves e 
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio." border="false":::
 
-## <a name="stage"></a>Etapa
+## <a name="stage-view"></a>Vista fase
 
-Stage permite a los usuarios ver contenido (como una imagen, un archivo o un sitio web) en una superficie grande Teams sin cambiar de contexto. La fase es principalmente para ver contenido. No use fases para interacciones complejas.
+La vista fase permite a los usuarios ver contenido (como una imagen, un archivo o un sitio web) en una superficie grande Teams sin cambiar de contexto. Este componente es principalmente para ver contenido. No lo use para interacciones complejas.
 
-Obtenga información sobre cómo implementar [la fase](~/tabs/tabs-link-unfurling.md).
+Vea cómo implementar la [vista de fase](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 

@@ -5,12 +5,12 @@ description: Guía de inicio rápido para crear una pestaña personal con el Gen
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157117"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719941"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -66,11 +66,11 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
     yo teams
     ```
 
-1. A continuación, proporcione una serie de valores que se usan en el archivo demanifest.js **aplicación:**
+1. A continuación, proporcione una serie de valores que se usan en el archivo **manifest.json** de la aplicación:
 
     ![captura de pantalla de apertura del generador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    **¿Cuál es el nombre de la solución?**
+    **¿Cómo se llama su solución?**
 
     El nombre de la solución es el nombre del proyecto. Puede aceptar el nombre sugerido seleccionando **Entrar**.
 
@@ -136,7 +136,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Necesita compatibilidad con el inicio de sesión único de Azure AD para la pestaña?**
 
-    Elija **no incluir** la compatibilidad de inicio de sesión único de Azure AD para la pestaña. El valor predeterminado es sí, escriba **n**.
+    Elija **no** incluir la Azure AD inicio de sesión único para la pestaña. El valor predeterminado es sí, escriba **n**.
 
     > [!IMPORTANT]
     > El componente de ruta **de acceso yourDefaultTabNameTab** es el valor que escribió en el generador **para Default Tab Name** más la palabra **Tab**.
@@ -169,13 +169,13 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
     </html>
     ```
 
-1. Guarde **personal.html** en la carpeta web de **la** aplicación en la siguiente ubicación:
+1. Guarde **personal.html** en la carpeta **web de la** aplicación en la siguiente ubicación:
 
     ```bash
     ./src/app/web/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Abra **manifest.jsdesde** la siguiente ubicación en el editor de código:
+1. Abra **manifest.json** desde la siguiente ubicación en el editor de código:
 
     ```bash
     ./src/manifest/manifest.json/
@@ -195,7 +195,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
 1. Actualice el componente de ruta de acceso **contentURL** **yourDefaultTabNameTab** con el nombre de pestaña real.
 
-1. Guarde el archivo **manifest.jsactualizado.**
+1. Guarde el archivo **manifest.json** actualizado.
 
 1. Para proporcionar la página de contenido en un IFrame, abra **Tab.ts** en el editor de código desde la siguiente ruta de acceso:
 
@@ -221,9 +221,9 @@ Debes tener un paquete de aplicación para probar la pestaña en Teams. Es una c
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
+- Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
-El paquete se crea a través de una tarea gulp que valida el archivo manifest.jsen y genera la carpeta zip en el **directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
+El paquete se crea a través de una tarea gulp que valida el archivo manifest.json y genera la carpeta zip en **el directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
 
 ```bash
 gulp manifest
@@ -364,7 +364,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
+- Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un iframe <y lo representa `contentUrl` \> en la pestaña.
 
@@ -439,7 +439,7 @@ En Visual Studio, presione **F5** o elija **Iniciar depuración** en el menú **
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>Upload la pestaña con App Studio para Teams
 
 > [!NOTE]
-> **App Studio** se puede usar para editar el **archivomanifest.jsarchivo** y cargar el paquete completado en Teams. También puede editar manualmentemanifest.js **en**. Si lo hace, asegúrese de volver a crear la solución para crear el **archivoTab.zip** cargar.
+> **App Studio** se puede usar para editar el **archivo manifest.json** y cargar el paquete completado en Teams. También puede editar manualmente **manifest.json**. Si lo hace, asegúrese de volver a crear la solución para crear el **archivoTab.zip** cargar.
 
 **Para cargar la pestaña con App Studio**
 
@@ -461,7 +461,7 @@ Después de cargar el paquete de la aplicación en App Studio, debes configurarl
 
 Seleccione el icono de la pestaña recién importada de la página de bienvenida del editor de manifiesto.
 
-Hay una lista de pasos en el lado izquierdo del editor de manifiestos. En el lado derecho del editor de manifiesto hay una lista de propiedades que deben tener valores para cada uno de esos pasos. El usuario ha proporcionado gran parte de la **informaciónmanifest.js,** pero hay campos que debe actualizar.
+Hay una lista de pasos en el lado izquierdo del editor de manifiestos. En el lado derecho del editor de manifiesto hay una lista de propiedades que deben tener valores para cada uno de esos pasos. El **manifest.json** ha proporcionado gran parte de la información, pero hay campos que debe actualizar.
 
 ##### <a name="details-app-details"></a>Detalles: Detalles de la aplicación
 
@@ -588,7 +588,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 * Un **icono de color completo** que mide 192 x 192 píxeles.
 * Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-* Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
+* Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un IFrame y lo representa `contentUrl` en la pestaña.
 
@@ -681,7 +681,71 @@ Si creas un bot con un **ámbito personal,** aparece en la primera posición de 
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Agregar `registerOnFocused` API para pestañas o aplicaciones personales
+
+La `registerOnFocused` API del SDK le permite usar un teclado en Teams. Puedes volver a una aplicación personal y mantener el foco en una pestaña o aplicación personal con la ayuda de las teclas Ctrl, Mayús y F6. Por ejemplo, puedes alejarte de la aplicación personal para buscar algo y luego volver a la aplicación personal o usar Ctrl+F6 para desplazarte por los lugares requeridos. 
+
+El código siguiente proporciona un ejemplo de definición de controlador en SDK cuando el foco `registerFocusEnterHandler` debe devolverse a la pestaña o a la aplicación personal:
+
+```csharp
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+```
+
+Después de que el controlador se desencadene con la palabra clave , el controlador se invoca con una función de devolución de llamada que `focusEnter` toma un parámetro denominado `registerFocusEnterHandler` `focusEnterHandler` `navigateForward` . El valor de `navigateForward` determina el tipo de eventos. Ctrl+F6 invoca el valor solo `focusEnterHandler` y no la tecla de tabulación.   
+Las claves útiles para mover eventos dentro Teams son las siguientes:    
+* Forward event -> Ctrl+F6 keys
+* Evento Backward -> Ctrl+Mayús+F6
+
+```csharp
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+```
+
+### <a name="personal-app"></a>Aplicación personal
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="En el ejemplo se muestran las opciones para agregar la API registerOnFocussed" border="false":::
+
+#### <a name="personal-app---forward-event"></a>Aplicación personal: evento Forward
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="En el ejemplo se muestran las opciones para agregar el movimiento hacia delante de la API registerOnFocussed" border="false":::
+
+#### <a name="personal-app---backward-event"></a>Aplicación personal: evento Backward
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="En el ejemplo se muestran las opciones para agregar el movimiento hacia atrás de la API registerOnFocussed" border="false":::
+
+### <a name="tab"></a>Tab
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="En el ejemplo se muestran las opciones para agregar la API registerOnFocussed para la pestaña" border="false":::
+
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

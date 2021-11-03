@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: 385dd74cddc9c09a861c1bfb214c1d393bae77a1
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: ad3d18365eb513576379706d4bddd02efa71d96e
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566375"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720179"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -29,32 +29,34 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 <summary><b>2021</b></summary>
 
 | **Fecha** | **Notas** | **Temas cambiados** |
-| -------- | --------- | ------------------ |
-|10/20/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
-|10/18/2021|Vínculo de tabulaciones y vista de fase|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md) |
+| -------- | --------- | ----------------|
+|10/28/2021 | Monetice la aplicación Teams con una oferta SaaS transaccionable.| [Incluir una oferta SaaS con tu Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
+|10/25/2021| Módulo Get started updated for Microsoft Teams Developer Documentation con nueva estructura y procedimientos en una guía paso a paso.| [Introducción a la primera aplicación Teams aplicación](get-started/get-started-overview.md)|
+|10/21/2021| Agrega una `registerOnFocused` API para pestañas o aplicaciones personales. |[Agregar `registerOnFocused` API para pestañas o aplicaciones personales](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
+|10/20/2021| La fase de reunión ya está disponible en GA.|[Habilitar y configurar las aplicaciones para Teams reuniones](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
+|10/20/2021| API de detalles de reunión y eventos de Teams en tiempo real. | [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api)|
+|10/18/2021|Las pestañas vinculan el despliegue y la vista de fase.|[Vínculo de tabulaciones y vista de fase](tabs/tabs-link-unfurling.md)|
 |10/08/2021|Nuevos procedimientos recomendados para diseñar tarjetas adaptables.|[Diseño de tarjetas adaptables para tu Teams aplicación](task-modules-and-cards/cards/design-effective-cards.md)|
-|10/05/2021| Oculta Teams aplicación hasta que el administrador permita mostrar la aplicación. | [Ocultar Teams aplicación hasta que el administrador lo apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
-|10/05/2021|Planear las aplicaciones para Teams móvil|[Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones. | [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|Teams admite AAD identificador de objeto y UPN en la mención de usuario para bots y webhooks entrantes. |[AAD id. de objeto y UPN](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)en mención de usuario , [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
-|09/08/2021|La fase de reunión ya está disponible en GA.|[Habilitar y configurar las aplicaciones para Teams reuniones](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|08/16/2021| Compatibilidad con la validación de entrada en tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots). |[Validación de entrada](/adaptive-cards/authoring-cards/input-validation), [Acciones universales para tarjetas adaptables v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|08/09/2021|La fase de reunión ya está disponible en GA.|[Habilitar y configurar las aplicaciones para Teams reuniones](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|08/30/2021| La característica de escenas del modo combinado personalizado combina a los participantes en una única escena virtual y coloca sus secuencias de vídeo en puestos predefinidos. | [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md) |
-|08/25/2021| Guía paso a paso introducida para crear un bot Teams con inicio de sesión único (SSO). | [Guía paso a paso para crear un bot Teams con SSO](sbs-bots-with-sso.yml) |
-|08/19/2021| Evento de actualización de instalación recibido al instalar un bot en un subproceso de conversación. | [Evento de actualización de instalación](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
-|08/12/2021|Compilar pestañas con tarjetas adaptables|[Compilar pestañas con tarjetas adaptables](tabs/how-to/build-adaptive-card-tabs.md)|
-|08/04/2021|Las pestañas ya no tendrán márgenes alrededor de sus experiencias.  | [Quitar márgenes de tabulación](resources/removing-tab-margins.md) |
+|10/05/2021| Oculta Teams aplicación hasta que el administrador permita ocultar la aplicación.| [Ocultar Teams aplicación hasta que el administrador lo apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)|
+|10/05/2021|Planee las aplicaciones para Teams móvil.|[Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
+|10/04/2021| Nuevo Portal para desarrolladores para Teams se introdujo para administrar sus Teams aplicaciones.| [Portal para desarrolladores de Teams](concepts/build-and-test/teams-developer-portal.md)|
+|09/21/2021|Teams admite AAD identificador de objeto y UPN en la mención de usuario para bots y webhooks entrantes.|[AAD id. de objeto y UPN](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)en mención de usuario , [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|08/16/2021| Compatibilidad con la validación de entrada en tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots). |[Validación de entrada](/adaptive-cards/authoring-cards/input-validation), [Acciones universales para tarjetas adaptables v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)|
+|08/30/2021| La característica de escenas del modo combinado personalizado combina a los participantes en una única escena virtual y coloca sus secuencias de vídeo en puestos predefinidos.| [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md)|
+|08/25/2021| Guía paso a paso introducida para crear un bot Teams con inicio de sesión único (SSO).| [Guía paso a paso para crear un bot Teams con SSO](sbs-bots-with-sso.yml)|
+|08/19/2021| Evento de actualización de instalación recibido al instalar un bot en un subproceso de conversación.| [Evento de actualización de instalación](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event)|
+|08/12/2021|Crear pestañas con tarjetas adaptables.|[Compilar pestañas con tarjetas adaptables](tabs/how-to/build-adaptive-card-tabs.md)|
+|08/04/2021|Las pestañas ya no tendrán márgenes alrededor de sus experiencias.| [Quitar márgenes de tabulación](resources/removing-tab-margins.md)|
 |07/08/2021|Teams móvil agrega compatibilidad con aplicaciones en reuniones. |[Extensibilidad de la aplicación para reuniones](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrar la funcionalidad selector de personas.|[Integrar de la funcionalidad de Selector de usuarios](concepts/device-capabilities/people-picker-capability.md)|  
-|06/25/2021| Guía paso a paso introducida para enviar mensajes proactivos. | [Guía paso a paso para enviar mensajes proactivos](sbs-send-proactive.yml) |
-|06/09/2021| Vista de fase de imágenes en tarjetas adaptables con `allowExpand` atributo. | [Vista de fase para imágenes en tarjetas adaptables](~/task-modules-and-cards/cards/cards-format.md) |
-|05/31/2021| Pestañas conversacionales. | [Iniciar y continuar conversaciones sobre el contenido en las pestañas](~/tabs/how-to/conversational-tabs.md) |
-|05/24/2021| Se Teams directrices de diseño de aplicaciones con patrones móviles y mucho más.|[Diseño de la Teams aplicación](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021| Se agregó información sobre mConnect y Skooler.|[Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)
+|06/25/2021| Guía paso a paso introducida para enviar mensajes proactivos.| [Guía paso a paso para enviar mensajes proactivos](sbs-send-proactive.yml)|
+|06/09/2021| Vista de fase de imágenes en tarjetas adaptables con `allowExpand` atributo.| [Vista de fase para imágenes en tarjetas adaptables](~/task-modules-and-cards/cards/cards-format.md)|
+|05/31/2021| Pestañas conversacionales. | [Iniciar y continuar conversaciones sobre el contenido en las pestañas](~/tabs/how-to/conversational-tabs.md)|
+|05/24/2021| Se Teams directrices de diseño de aplicaciones con patrones móviles.|[Diseño de la Teams aplicación](~/concepts/design/design-teams-app-overview.md)|
+|05/13/2021| Se agregó información sobre mConnect y Skooler.|[Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |05/10/2021| Manifiesto de la aplicación v1.10 publicado.|[Esquema del manifiesto](resources/schema/manifest-schema.md) |
-|05/10/2021| Nueva característica de personalización de aplicaciones.| [Habilitar organizaciones para personalizar la aplicación](concepts/design/enable-app-customization.md) |
-|05/07/2021| Vínculos profundos para llamadas de audio y vídeo en el chat. |[Vínculos profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|05/10/2021| Nueva característica de personalización de aplicaciones.| [Habilitar organizaciones para personalizar la aplicación](concepts/design/enable-app-customization.md)|
+|05/07/2021| Vínculos profundos para llamadas de audio y vídeo en el chat. |[Vínculos profundos](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)|
 |04/30/2021|Nueva guía sobre cómo publicar aplicaciones en la Teams tienda.|[Publicar la aplicación en la tienda Teams,](concepts/deploy-and-publish/appsource/publish.md)Teams [directrices de validación de la tienda](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Compatibilidad con acciones universales para tarjetas adaptables v1.4. | [Acciones universales para tarjetas adaptables](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | Vistas específicas del usuario. | [Vistas específicas de usuario](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
@@ -143,7 +145,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notas** | **Temas cambiados** |
+| **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
 | 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -184,12 +186,10 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
-|10/19/2021|Permisos de dispositivo para el explorador.| [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
-|10/14/2021 | Monetice la aplicación Teams con una oferta SaaS transaccionable. | [Incluye una oferta SaaS con tu Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
-|06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot | [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Consentimiento específico de recursos para chats. |[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md) [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
-|05/25/2021| Se Teams Toolkit para [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) y [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Introducción al desarrollo Teams aplicaciones](~/get-started/prerequisites.md) |
-|05/24/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
+|10/28/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md)|
+|10/19/2021|Permisos de dispositivo para el explorador.| [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md)|
+|06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot.| [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|06/16/2021| Consentimiento específico de recursos para chats.|[Consentimiento específico de recursos,](graph-api/rsc/resource-specific-consent.md) [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 Para obtener más información, [vea public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
