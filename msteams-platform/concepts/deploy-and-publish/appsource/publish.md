@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 5f401e940b5c3f4c4d47ae4fcb77142809a2ff01
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a05ff22944756151842a58fa0cd955c61d2c1c5c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157533"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888520"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar la aplicación en la tienda Microsoft Teams cliente
 
@@ -44,13 +44,15 @@ Cuando sientas que la aplicación está lista para la producción, puedes comenz
    :::column-end:::
 :::row-end:::
 
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Revisar las instrucciones de validación de la tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+
 ## <a name="see-also"></a>Consulte también
 
 * [Publicación en Microsoft 365 app stores](/office/dev/store/)
 * [Upload aplicación Teams aplicación](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publicar la aplicación Teams en la organización](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Revisar las instrucciones de validación de la tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Planear la experiencia de incorporación para los usuarios](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Distribución de aplicaciones de pestañas en dispositivos móviles](../../../tabs/design/tabs-mobile.md#distribution)

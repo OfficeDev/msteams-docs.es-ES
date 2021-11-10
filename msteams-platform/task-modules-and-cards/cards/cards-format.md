@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475820"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887612"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -165,20 +165,20 @@ El siguiente código muestra un ejemplo de tarjeta adaptable con una mención:
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>Id. de objeto de AAD y UPN en mención de usuario 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD Id. de objeto y UPN en mención de usuario 
 
-Teams plataforma permite mencionar a los usuarios con su identificador de objeto de AAD y el nombre de principio de usuario (UPN), además de los identificadores de mención existentes. Los bots con tarjetas adaptables y conectores con webhooks entrantes admiten los dos id. de mención del usuario. 
+Teams plataforma permite mencionar a los usuarios con su identificador de objeto AAD y el nombre de principio de usuario (UPN), además de los identificadores de mención existentes. Los bots con tarjetas adaptables y conectores con webhooks entrantes admiten los dos id. de mención del usuario. 
 
 En la tabla siguiente se describen los id. de mención de usuario que se han admitido recientemente:
 
 |IDs  | Capacidades de soporte técnico |   Descripción | Ejemplo |
 |----------|--------|---------------|---------|
-| Id. de objeto de AAD | Bot, conector |  Id. de objeto del usuario de AAD |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, conector | UPN del usuario de AAD | john.smith@microsoft.com |
+| AAD de objeto | Bot, conector |  AAD de objeto del usuario |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, conector | AAD UPN del usuario | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mención de usuario en bots con tarjetas adaptables 
 
-Los bots admiten la mención de usuario con el identificador de objeto de AAD y UPN, además de los identificadores existentes. La compatibilidad con dos nuevos IDs está disponible en bots para mensajes de texto, cuerpo de tarjetas adaptables y respuesta de extensión de mensajería. Bots support the mention IDs in conversation and `invoke` scenarios. El usuario obtiene la notificación de fuente de actividad cuando se @mentioned con los id. 
+Los bots admiten la mención de usuario AAD identificador de objeto y UPN, además de los identificadores existentes. La compatibilidad con dos nuevos IDs está disponible en bots para mensajes de texto, cuerpo de tarjetas adaptables y respuesta de extensión de mensajería. Bots support the mention IDs in conversation and `invoke` scenarios. El usuario obtiene la notificación de fuente de actividad cuando se @mentioned con los id. 
 
 > [!NOTE]
 > La actualización del esquema y los cambios en la interfaz de usuario y la experiencia de usuario no son necesarios para las menciones de usuario con tarjetas adaptables en bot.
@@ -227,11 +227,11 @@ La siguiente imagen ilustra la mención del usuario con la tarjeta adaptable en 
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mención de usuario en Webhook entrante con tarjetas adaptables 
 
-Los webhooks entrantes comienzan a admitir la mención de usuario en tarjetas adaptables con el identificador de objeto de AAD y UPN.
+Los webhooks entrantes comienzan a admitir la mención de usuario en tarjetas adaptables con el AAD de objeto y UPN.
 
 > [!NOTE]    
-> * Habilite la mención de usuario en el esquema para webhooks entrantes para admitir el identificador de objeto de AAD y UPN. 
-> * Los cambios en la interfaz de usuario y la experiencia de usuario no son necesarios para las menciones de usuario con identificador de objeto de AAD y UPN.      
+> * Habilite la mención de usuario en el esquema para webhooks entrantes para admitir AAD id. de objeto y UPN. 
+> * Los cambios en la interfaz de usuario y la experiencia de usuario no son necesarios para las menciones de usuario con AAD id. de objeto y UPN.      
 > * La notificación de fuente de actividad para Webhook entrante con mención de usuario estará disponible en la versión futura.
 
 ##### <a name="example"></a>Ejemplo 
@@ -648,7 +648,9 @@ Puedes probar el formato en tus propias tarjetas modificando este código.
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Acciones de tarjeta](./cards-actions.md)
+* [Uso de módulos de tareas desde los bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Módulos de tareas](~/task-modules-and-cards/cards/cards-format.md)
+* [Formatear los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)

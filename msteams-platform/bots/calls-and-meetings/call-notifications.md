@@ -1,16 +1,16 @@
 ---
 title: Notificaciones de llamadas entrantes
-description: Información técnica detallada sobre cómo controlar las notificaciones de llamadas entrantes
+description: Obtenga información técnica detallada sobre cómo controlar las notificaciones de llamadas entrantes, redirigir y autenticar llamadas mediante ejemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: afinidad de región de devolución de llamada de llamadas de llamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: eb05499b32a0e62b9aa5b073770632c081b8526a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157095"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889163"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 

@@ -6,12 +6,12 @@ keywords: Teams tabs group channel configurable remove delete
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157139"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889240"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -19,7 +19,7 @@ Puedes ampliar y mejorar la experiencia del usuario si admites opciones de elimi
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar la pestaña para volver a configurarse después de la instalación
 
-El **manifest.jsen** define las características y capacidades de la pestaña. La propiedad de instancia de tabulación toma un valor booleano que indica si un usuario puede modificar o `canUpdateConfiguration` volver a configurar la pestaña después de crearla. En la tabla siguiente se proporcionan los detalles de la propiedad:
+El **archivo manifest.json** define las características y capacidades de la pestaña. La propiedad de instancia de tabulación toma un valor booleano que indica si un usuario puede modificar o `canUpdateConfiguration` volver a configurar la pestaña después de crearla. En la tabla siguiente se proporcionan los detalles de la propiedad:
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -29,7 +29,7 @@ Cuando la pestaña se carga en un canal o un chat de grupo, Teams un menú despl
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Configuración            |   √    |       |La página se vuelve a cargar en un IFrame que permite al usuario volver a `configurationUrl` configurar la pestaña. |
+|     Configuraciones            |   √    |       |La página se vuelve a cargar en un IFrame que permite al usuario volver a `configurationUrl` configurar la pestaña. |
 |     Cambiar nombre              |   √    |   √   | El usuario puede cambiar el nombre de la pestaña tal como aparece en la barra de pestañas.          |
 |     Eliminar               |   √    |   √   |  Si la propiedad y el valor se incluyen en la página de configuración, la página de eliminación se carga en un `removeURL` IFrame y se presenta al usuario.   Si no se incluye una página de eliminación, se muestra al usuario un cuadro de diálogo de confirmación.          |
 
@@ -91,14 +91,14 @@ Después de ejecutar el controlador de eliminación o notificar Teams el resulta
 > * Teams activa el **botón Quitar** después de cinco segundos, incluso si la pestaña no ha llamado `setValidityState()` a .
 > * Cuando el usuario selecciona **Quitar**, Teams quita la pestaña después de 30 segundos, independientemente de si las acciones se han completado o no.
 
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
+
 ## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

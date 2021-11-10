@@ -5,12 +5,12 @@ description: Diseña tu aplicación más rápido con componentes de interfaz de 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157617"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887806"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
@@ -123,7 +123,7 @@ Los formularios se usan para recopilar, validar y enviar la entrada del usuario 
 
 * Iniciar sesión
 * Perfiles de usuario
-* Configuración
+* Configuraciones
 * Colección de entrada de usuario
 
 ### <a name="mobile"></a>Móvil
@@ -167,7 +167,7 @@ Puedes diseñar flujos de inicio de sesión de aplicaciones para diferentes Team
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de inicio de sesión en el escritorio." border="false":::
 
-## <a name="settings"></a>Configuración
+## <a name="settings"></a>Configuraciones
 
 Configuración pantallas son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: Configuración es un contenedor para componentes de interfaz [de usuario básicos](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
@@ -212,3 +212,9 @@ Un asistente guía a un usuario a través de varias pantallas para completar una
 ### <a name="desktop"></a>Escritorio
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del asistente en el escritorio." border="false":::
+
+## <a name="see-also"></a>Consulte también
+
+* [Diseñar la aplicación con componentes básicos Fluent interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [Formatear los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)

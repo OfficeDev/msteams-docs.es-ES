@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720081"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889303"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -278,11 +278,13 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 > [!div class="nextstepaction"]
 > [Teams de código de mensajería proactiva](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Vea también
-
-[**Teams de código de mensajería proactiva**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Formatear los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [**Teams de código de mensajería proactiva**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [Conversaciones de chat de canal y grupo con un bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Responder a la acción de envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 28fe69d59757bf53ddd105fde403d625d5faf419
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157454"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889247"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 
@@ -30,7 +30,7 @@ Teams documentación forma parte de la biblioteca de documentación técnica de 
 > * Instalar en VS Code:
 
    1. Seleccione el **icono Extensiones** en la barra de actividad lateral o use el comando Ver = **> Extensiones** o Ctrl+Mayús+X y busque **Microsoft Docs Authoring Pack**.
-   1. Haga clic en **Instalar**.
+   1. Seleccione **Instalar**.
    1. Después de la instalación, **el botón Instalar** cambia al botón **Administrar** engranaje.
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisar la Guía de colaboradores de Microsoft Docs
@@ -69,6 +69,11 @@ Para obtener más información sobre hipervínculos y rutas de acceso a archivos
 
 Los ejemplos de código desempeñan un papel importante para usar api y SDK de forma eficaz. Los ejemplos de código bien presentados pueden comunicar cómo funcionan las cosas más claramente que el texto descriptivo y la información de instrucciones solo. Los ejemplos de código deben ser precisos, concisos, bien documentados y fáciles de usar para el lector. El código fácil de leer debe ser fácil de comprender, probar, depurar, mantener, modificar y extender. Para obtener más información, [vea cómo incluir código en los documentos](/contribute/code-in-docs).
 
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Obtener actualizaciones de Microsoft Docs y los anuncios más recientes](/teamblog)
+
 ## <a name="see-also"></a>Consulte también
 
 * [Microsoft Docs](/)
@@ -77,9 +82,3 @@ Los ejemplos de código desempeñan un papel importante para usar api y SDK de f
 * [Cutting Edge : Source Code Readability Sugerencias](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentación](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
-
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Obtener actualizaciones de Microsoft Docs y los anuncios más recientes](/teamblog)

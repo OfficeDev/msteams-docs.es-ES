@@ -1,17 +1,17 @@
 ---
 title: Creación de una página de configuración
 author: surbhigupta
-description: cómo crear una página de configuración
+description: Obtenga información sobre cómo crear una página de configuración para configurar un chat de canal o grupo para la configuración, como obtener datos de contexto, insertar marcadores de posición y autenticación mediante ejemplos de código.
 keywords: Canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720193"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888023"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -25,7 +25,7 @@ Una página de configuración es un tipo especial de [página de contenido](cont
 
 La aplicación debe hacer referencia al [sdk Microsoft Teams cliente de JavaScript y](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) llamar a `microsoft.initialize()` . Las direcciones URL usadas deben estar protegidas con puntos de conexión HTTPS y disponibles desde la nube.
 
-### <a name="example"></a>Ejemplo:
+### <a name="example"></a>Ejemplo
 
 En la siguiente imagen se muestra un ejemplo de una página de configuración:
 
@@ -200,15 +200,15 @@ microsoftTeams.settings.setSettings({
 
 Si decide que la pestaña canal o grupo aparezca en el Teams móviles, la configuración `setSettings()` debe tener un valor para `websiteUrl` . Para obtener más información, consulte [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md)

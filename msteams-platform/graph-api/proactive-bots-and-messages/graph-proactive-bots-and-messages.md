@@ -1,17 +1,17 @@
 ---
 title: Use Microsoft Graph para autorizar la instalación proactiva de bots y la mensajería en Teams
-description: Describe la mensajería proactiva en Teams y cómo implementar.
+description: Describe la mensajería proactiva en Teams y cómo implementarla. Obtenga información sobre cómo habilitar la instalación proactiva de aplicaciones y la mensajería mediante el ejemplo de código.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: instalación proactiva de chat de mensajería de teams Graph
-ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3b7ffd24f7601c8247f1f11c6fe1a562d9cd847
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157418"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888009"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalación proactiva de aplicaciones con Graph API para enviar mensajes
 
@@ -42,14 +42,14 @@ Los permisos de tipo de recurso [teamsAppInstallation](/graph/api/resources/team
 
 Para usar estos permisos, debe agregar una clave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) al manifiesto de la aplicación con los siguientes valores:
 
-* **id:** el Azure Active Directory de aplicación (AAD).
+* **id:** El identificador Azure Active Directory aplicación (AAD).
 * **recurso:** la dirección URL del recurso para la aplicación.
 
 > [!NOTE]
 >
 > * El bot requiere permisos delegados de aplicación y no de usuario porque la instalación es para otros usuarios.
 >
-> * Un administrador de inquilinos de AAD debe [conceder explícitamente permisos a una aplicación](/graph/security-authorization#grant-permissions-to-an-application). Después de conceder permisos a la aplicación, todos los miembros del inquilino de AAD obtienen los permisos concedidos.
+> * Un AAD de inquilinos debe [conceder explícitamente permisos a una aplicación](/graph/security-authorization#grant-permissions-to-an-application). Después de conceder permisos a la aplicación, todos los miembros del AAD obtienen los permisos concedidos.
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Habilitar la instalación proactiva de aplicaciones y la mensajería
 
@@ -194,13 +194,14 @@ El bot puede [enviar mensajes proactivos](/azure/bot-service/bot-builder-howto-p
 
 | **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo usar la instalación proactiva de la aplicación para los usuarios y enviar notificaciones proactivas llamando a las API Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-## <a name="see-also"></a>Consulte también
-
-* [**Administrar directivas de configuración de aplicaciones en Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [Enviar notificaciones proactivas a usuarios SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo usar la instalación proactiva de la aplicación para los usuarios y enviar notificaciones proactivas llamando a las API Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
 ## <a name="additional-code-samples"></a>Ejemplos de código adicionales
 >
 > [!div class="nextstepaction"]
 > [**Teams de código de mensajería proactiva**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
+## <a name="see-also"></a>Consulte también
+
+* [**Administrar directivas de configuración de aplicaciones en Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [Enviar notificaciones proactivas a usuarios SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)

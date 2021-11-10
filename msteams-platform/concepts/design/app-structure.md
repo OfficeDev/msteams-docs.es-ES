@@ -5,12 +5,13 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: wireframe channel chat meeting messaging extensions mobile desktop
+ms.openlocfilehash: 3d63cc705ac567b0b19db2e3caf4a84420dae9bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157526"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887577"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprender la estructura Microsoft Teams aplicación
 

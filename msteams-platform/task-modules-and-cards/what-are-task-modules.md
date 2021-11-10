@@ -5,12 +5,12 @@ description: Agregar experiencias emergentes modales para recopilar o mostrar in
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a82552f43456aa1ddee0b68f13a8c5435165ed64
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157493"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888303"
 ---
 # <a name="task-modules"></a>Módulos de tareas
 
@@ -50,11 +50,11 @@ Un módulo de tareas incluye lo siguiente como se muestra en la imagen anterior:
 6. Si va a mostrar una tarjeta adaptable mediante la propiedad `card` del [objeto TaskInfo,](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) el relleno se agregará automáticamente. Para obtener más información, vea [módulo de tareas CSS para módulos de tareas HTML o JavaScript](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
 7. Los botones de tarjeta adaptable se representan después de **seleccionar Registrarse.** Cuando use su propia página, cree sus propios botones.
 
-## <a name="see-also"></a>Consulte también
-
-[Tarjetas](~/task-modules-and-cards/what-are-cards.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Invocar y descartar módulos de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Tarjetas](~/task-modules-and-cards/what-are-cards.md)

@@ -1,16 +1,16 @@
 ---
 title: Apertura de vínculos
 author: surbhigupta
-description: Cómo realizar el despliegue de vínculos con la extensión de mensajería en una Microsoft Teams aplicación.
+description: Obtén información sobre cómo agregar la actualización de vínculos con la extensión de mensajería en una aplicación Microsoft Teams con el manifiesto de la aplicación o manualmente con ejemplos y ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291726"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889401"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -179,7 +179,7 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 
 * [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
 * [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)

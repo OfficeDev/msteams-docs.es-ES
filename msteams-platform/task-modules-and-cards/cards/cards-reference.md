@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: medium
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 03aa96d0007129946f54ac250f339b74462fd8ec
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291663"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889128"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -949,7 +949,9 @@ Bot Framework implementa las siguientes tarjetas, pero no son compatibles con Te
 * Tarjetas de audio
 * Tarjetas de vídeo
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md)
 * [Dar formato a tarjetas](~/task-modules-and-cards/cards/cards-format.md)
+* [Tarjetas actualizadas](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Trabajar con Acciones universales para tarjetas adaptables](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)

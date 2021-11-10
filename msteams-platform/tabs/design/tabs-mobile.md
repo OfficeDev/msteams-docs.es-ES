@@ -1,14 +1,15 @@
 ---
 title: Pestañas en dispositivos móviles
-description: Describe las consideraciones de los desarrolladores para implementar pestañas en Microsoft Teams móvil.
+description: Obtenga información sobre cómo implementar pestañas en Microsoft Teams móvil, su autenticación, conexión de ancho de banda bajo, pruebas en clientes móviles, distribución y mucho más.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b540369b2da9fb0d6eae5d6fd8ddf121992147d
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: Distribución de autenticación de grupo de canal de pestaña móvil de la aplicación
+ms.openlocfilehash: d2b1190ee5bb7122557aa64fb18065f542291f3a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719857"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888436"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
@@ -67,14 +68,15 @@ En la tabla siguiente se describe la disponibilidad y el comportamiento de las p
 
 Si vas a descargar localmente la aplicación o publicarla en el catálogo de aplicaciones de una organización, el comportamiento de las pestañas es el mismo que las aplicaciones de la tienda Teams aprobadas por Microsoft para dispositivos móviles.
 
-## <a name="see-also"></a>Vea también
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de pestañas](~/tabs/design/tabs.md)
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Obtención del contexto de Teams para la pestaña](~/tabs/how-to/access-teams-context.md)
+* [Plan for Teams mobile - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)

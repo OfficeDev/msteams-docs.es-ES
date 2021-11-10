@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de acción de extensión de mensajería
 author: surbhigupta
-description: Información general sobre los comandos de acción de extensión de mensajería
+description: Introducción a los comandos de acción de extensión de mensajería con el ejemplo de manifiesto de la aplicación
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720144"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887995"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -128,7 +128,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 Para agregar manualmente el comando de extensión de mensajería basada en acciones al manifiesto de la aplicación, debe agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna a este comando. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
@@ -138,7 +138,7 @@ Para agregar manualmente el comando de extensión de mensajería basada en accio
 
 Si usa una lista estática de parámetros, también debe agregar los siguientes parámetros:
 
-| Nombre de propiedad | Finalidad | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Solo se usa cuando `fetchTask` es `false` . | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -148,7 +148,7 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 
 Si usa una vista web incrustada, opcionalmente puede agregar el objeto para capturar la vista `taskInfo` web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al de usar una lista estática de parámetros. En el caso de que la primera interacción con el bot [responde al módulo de tareas enviar acción](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto, debe establecer el `fetchTask` parámetro en `false` .
 
-| Nombre de propiedad | Finalidad | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 |`taskInfo`|Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería. | No | 1.4 |
 |`taskInfo.title`|Título del módulo de tareas inicial. |No | 1.4 |
@@ -226,4 +226,3 @@ Si usa los parámetros o una vista web incrustada con un `taskInfo` objeto, el s
 
 > [!div class="nextstepaction"]
 > [Responder al envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

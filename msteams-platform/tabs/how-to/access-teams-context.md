@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439700"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887547"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -27,7 +27,7 @@ El contexto sobre el usuario, el equipo o la empresa puede ser especialmente út
 * Se inicia un flujo de autenticación Azure Active Directory (AAD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario. Para obtener más información, vea [autenticar a un usuario en la Microsoft Teams pestaña](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
-> Aunque esta información de usuario puede ayudar a proporcionar una experiencia de usuario fluida, no debe usarla como prueba de identidad. Por ejemplo, un atacante puede cargar la página en un explorador y representar información o solicitudes nocivas.
+> Aunque esta información de usuario puede ayudar a proporcionar una experiencia de usuario fluida, no debe usarla como prueba de identidad.  Por ejemplo, un atacante puede cargar la página en un explorador y representar información o solicitudes nocivas.
 
 ## <a name="access-context-information"></a>Acceder a información de contexto
 
@@ -44,10 +44,10 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 * {subEntityId}: el identificador que proporcionó al generar un [vínculo](~/concepts/build-and-test/deep-links.md) profundo para un elemento específico dentro de esta pestaña. Esto debe usarse para restaurar a un estado específico dentro de una entidad; por ejemplo, desplazarse a o activar un elemento de contenido específico.
 * {loginHint}: valor adecuado como sugerencia de inicio de sesión para AAD. Normalmente, este es el nombre de inicio de sesión del usuario actual en su inquilino principal.
 * {userPrincipalName}: el nombre principal de usuario del usuario actual en el inquilino actual.
-* {userObjectId}: el identificador de objeto AAD del usuario actual en el inquilino actual.
+* {userObjectId}: el AAD de objeto del usuario actual en el inquilino actual.
 * {theme}: el tema actual de la interfaz de usuario (UI) como `default` , `dark` o `contrast` .
 * {groupId}: el identificador del grupo Office 365 en el que reside la pestaña.
-* {tid}: el identificador de inquilino de AAD del usuario actual.
+* {tid}: el AAD de inquilino del usuario actual.
 * {locale}: la configuración regional actual del usuario con formato de languageId-countryId. Por ejemplo, en-us.
 
 > [!NOTE]
@@ -135,14 +135,15 @@ Puedes registrar la aplicación para que se te informe si el tema cambia llamand
 
 El `theme` argumento de la función es una cadena con un valor de , o `default` `dark` `contrast` .
 
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
+
 ## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de pestañas](../../tabs/design/tabs.md)
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

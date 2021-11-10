@@ -1,16 +1,16 @@
 ---
 title: Descripción de los casos de uso de la aplicación
 author: heath-hamilton
-description: Al planear la Microsoft Teams, primero debes comprender qué problemas intenta resolver la aplicación.
+description: Planear la aplicación, comprender el usuario y sus necesidades, comprender los problemas de usuario que resolvería la aplicación, planear la autenticación de usuario y su experiencia de incorporación
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720158"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888422"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -81,3 +81,7 @@ Identifique qué nuevas características prefiere tener el usuario en la soluci�
 
 > [!div class="nextstepaction"]
 > [Asignar los casos de uso](../../concepts/design/map-use-cases.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Funciones del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)

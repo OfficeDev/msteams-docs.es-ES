@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en sus aplicaciones
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: vínculo profundo de teams deeplink
-ms.openlocfilehash: fbf4d933db63ee634000bb5fc277c385fc3cfa44
-ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
+ms.openlocfilehash: 0d1ad5b74c434a20a1e2d7f55e970e5811c34890
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60223051"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889156"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -140,7 +140,7 @@ Ejemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 Los parámetros de consulta son:
 
-* `users`: lista separada por comas de id. de usuario que representa a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario admite userPrincipalName de Azure AD, como solo una dirección de correo electrónico.
+* `users`: lista separada por comas de id. de usuario que representa a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario admite Azure AD UserPrincipalName, como una dirección de correo electrónico solamente.
 * `topicName`: un campo opcional para el nombre para mostrar del chat, en el caso de un chat con 3 o más usuarios. Si no se especifica este campo, el nombre para mostrar del chat se basa en los nombres de los participantes.
 * `message`: un campo opcional para el texto del mensaje que desea insertar en el cuadro de redacción del usuario actual mientras el chat está en un estado de borrador.
 
@@ -226,7 +226,7 @@ Ejemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 Los parámetros de consulta son:
 
-* `attendees`: la lista opcional separada por comas de los id. de usuario que representan a los asistentes a la reunión. El usuario que realiza la acción es el organizador de la reunión. Actualmente, el campo Id. de usuario solo es compatible con UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico.
+* `attendees`: la lista opcional separada por comas de los id. de usuario que representan a los asistentes a la reunión. El usuario que realiza la acción es el organizador de la reunión. Actualmente, el campo Id. de usuario solo admite Azure AD UserPrincipalName, normalmente una dirección de correo electrónico.
 * `startTime`: la hora de inicio opcional del evento. Debe tener un formato [LARGO ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), por *ejemplo, 2018-03-12T23:55:25+02:00*.
 * `endTime`: la hora de finalización opcional del evento, también en formato ISO 8601.
 * `subject`: un campo opcional para el asunto de la reunión.
@@ -246,6 +246,9 @@ En caso de una llamada de vídeo, el cliente pedirá confirmación y activará e
 > [!NOTE]
 > Este vínculo profundo no se puede usar para invocar una reunión.
 
+> [!NOTE]
+> Actualmente, deeplink to call no se admite en Teams dispositivos móviles.
+
 ### <a name="generate-a-deep-link-to-a-call"></a>Generar un vínculo profundo a una llamada
 
 | Vínculo profundo | Formato | Ejemplo |
@@ -256,7 +259,7 @@ En caso de una llamada de vídeo, el cliente pedirá confirmación y activará e
 | Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | https://teams.microsoft.com/l/call/0/0?users=&lt&gt;;user1,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Estos son los parámetros de consulta:
-* `users`: lista separada por comas de los id. de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite userPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en caso de una llamada RTC, admite una rtc mri 4: &lt; phonenumber &gt; .
+* `users`: lista separada por comas de los id. de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite el Azure AD UserPrincipalName, normalmente una dirección de correo electrónico, o en caso de una llamada RTC, admite una rtc mri 4: &lt; phonenumber &gt; .
 * `withVideo`: este es un parámetro opcional, que puede usar para realizar una llamada de vídeo. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de una llamada de audio o audio y vídeo a través de la Teams de notificación de llamadas. 
 * `Source`: se trata de un parámetro opcional, que informa sobre el origen del vínculo profundo.
 
@@ -268,5 +271,5 @@ Estos son los parámetros de consulta:
 
 ## <a name="see-also"></a>Consulte también
 
-[Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
-
+* [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

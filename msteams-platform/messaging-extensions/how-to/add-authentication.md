@@ -1,16 +1,16 @@
 ---
 title: Agregar autenticación a la extensión de mensajería
 author: surbhigupta
-description: Cómo agregar autenticación a una extensión de mensajería
+description: Obtenga información sobre cómo agregar autenticación a una extensión de mensajería mediante ejemplos de código y ejemplo
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 85353608e062d30529d67184716f65c3e2de1863
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719864"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889408"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Agregar autenticación a la extensión de mensajería
 
@@ -138,4 +138,6 @@ En este momento, la ventana se cierra y el control se pasa al Teams cliente. El 
 |----------------|-----------------|--------------|----------------|
 |Extensiones de mensajería: autenticación y configuración | Una extensión de mensajería que tiene una página de configuración, acepta solicitudes de búsqueda y devuelve resultados después de que el usuario haya iniciado sesión. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
- 
+## <a name="see-also"></a>Consulte también
+
+[Compatibilidad con inicio de sesión único (SSO) para extensiones de mensajería](~/messaging-extensions/how-to/enable-sso-auth-me.md)

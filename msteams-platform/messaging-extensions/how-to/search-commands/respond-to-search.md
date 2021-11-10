@@ -1,16 +1,16 @@
 ---
 title: Responder al comando de búsqueda
 author: surbhigupta
-description: Cómo responder al comando de búsqueda desde una extensión de mensajería en una Microsoft Teams aplicación.
+description: Aprende a responder al comando de búsqueda desde una extensión de mensajería en una aplicación Microsoft Teams usando ejemplos y ejemplos de código
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157053"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889380"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -344,16 +344,13 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
-
-## <a name="see-also"></a>Consulte también
-
-[Agregar configuración a una extensión de mensajería](~/get-started/first-message-extension.md)
+|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Agregar autenticación a una extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)
 
+## <a name="see-also"></a>Consulte también
 
-
+[Agregar configuración a una extensión de mensajería](~/get-started/first-message-extension.md)

@@ -1,16 +1,16 @@
 ---
 title: Expansión del vínculo de la pestaña y vista de fases
 author: Rajeshwari-v
-description: Cómo deshacer un vínculo, abrir la vista fase y anclar una pestaña con Microsoft Teams aplicación.
+description: Aprende a desplegar un vínculo, abrir la vista fase y anclar una pestaña con Microsoft Teams aplicación. Obtenga información sobre la vista de fase e invocarla mediante tarjeta adaptable mediante el ejemplo de código y el ejemplo.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720347"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887570"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -47,7 +47,7 @@ Las siguientes imágenes muestran una fase abierta desde una tarjeta adaptable:
 
 <img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
 
-### <a name="example"></a>Ejemplo:
+### <a name="example"></a>Ejemplo
 
 A continuación se muestra el código para abrir una fase desde una tarjeta adaptable:
 
@@ -123,20 +123,25 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
-| `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
+| `name` | String | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
 | `contentUrl` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
 | `websiteUrl?` | Cadena | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
-| `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
+| `removeUrl?` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
 
 ## <a name="code-sample"></a>Ejemplo de código
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Ficha en la vista fase |Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña en la vista fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Ficha en la vista fase |Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña en la vista fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
 
 ## <a name="see-also"></a>Consulte también
 
@@ -144,8 +149,3 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)

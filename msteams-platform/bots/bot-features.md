@@ -5,12 +5,12 @@ description: Información general sobre las herramientas y SDK para crear Micros
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d6a1ce32fce03ada547cf769ff5a634f9d6f01de
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566347"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888429"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -122,3 +122,11 @@ Una de las desventajas de los bots es que es difícil mantener una gran base de 
 
 > [!div class="nextstepaction"]
 > [Controladores de actividad de bots](~/bots/bot-basics.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Llamadas y reuniones en el bot](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Conversaciones de bot](~/bots/how-to/conversations/conversation-basics.md)
+* [Menús de comandos bot](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Flujo de autenticación para bots en Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
+* [Uso de módulos de tareas desde los bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

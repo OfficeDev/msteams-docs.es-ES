@@ -1,16 +1,17 @@
 ---
 title: Introducción a los conceptos básicos de desarrollo de aplicaciones
 author: heath-hamilton
-description: Describir los conceptos fundamentales del Teams de plataformas.
+description: Describa los conceptos fundamentales del Teams de la plataforma, como las capacidades de la aplicación y los puntos de entrada, comprender los casos de uso y asignarlos a las funcionalidades de la aplicación y planear aplicaciones.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: f94a53c8aec4ca158745853d31ab7f2b8db2bd40
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: extensibilidad de puntos de entrada usa casos de funcionalidad del dispositivo
+ms.openlocfilehash: 63a11c949a56bf024632efc7cad5ef38ce918c2b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566382"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889275"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de desarrollo de aplicaciones
 
@@ -38,15 +39,14 @@ Puede reconocer problemas de usuario e identificar las respuestas a algunos prob
 
 ## <a name="integrate-device-capabilities"></a>Integrar funcionalidades de dispositivos
 
-Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams mejorada permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente de JavaScript de Microsoft Teams. 
-
-## <a name="see-also"></a>Vea también
-
-* [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)
-* [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md) 
+Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams mejorada permite a los asociados acceder e integrar las capacidades de dispositivo nativo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación mediante API dedicadas disponibles en el SDK de cliente de JavaScript de Microsoft Teams.
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Comprender Teams funcionalidades de la aplicación](capabilities-overview.md)
 
+## <a name="see-also"></a>Consulte también
+
+* [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)
+* [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)

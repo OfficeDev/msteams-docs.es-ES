@@ -1,16 +1,17 @@
 ---
 title: Diseño de su aplicación personal
-description: Aprende a diseñar una aplicación Teams personal y obtener el kit Microsoft Teams interfaz de usuario.
+description: Aprende a diseñar una aplicación Teams personal y a obtener el kit de interfaz de usuario de Microsoft Teams, crear componentes, como, panel, formulario, panel de tareas para la experiencia de escritorio y móvil. Obtén información sobre los procedimientos recomendados para desarrollar aplicaciones personales.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+keywords: Plantilla de formulario de panel iframe de la pestaña del bot de navegación webview de ui kit personal app webview
+ms.openlocfilehash: 44196ee6b1d91754e29b62dd3f6c6e40b3246602
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360721"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888163"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñar tu aplicación personal para Microsoft Teams
 
@@ -18,7 +19,7 @@ Una aplicación personal puede ser un bot, un área de trabajo privada o ambos. 
 
 Para guiar el diseño de la aplicación, la siguiente información describe e ilustra cómo las personas pueden agregar, usar y administrar aplicaciones personales en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Puedes encontrar instrucciones completas de diseño de aplicaciones personales, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario. El kit de interfaz de usuario también tiene temas esenciales, como la accesibilidad y el tamaño dinámico que no se tratan aquí.
 
@@ -55,7 +56,7 @@ Con un área de trabajo privada, los usuarios pueden ver contenido de la aplicac
 |Contador|Descripción|
 |----------|-----------|
 |A|**Pestañas:** proporciona navegación para tu aplicación personal.|
-|1|**webview:** muestra el contenido de la aplicación.|
+|1|**webview**: muestra el contenido de la aplicación.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -73,17 +74,17 @@ Con un área de trabajo privada, los usuarios pueden ver contenido de la aplicac
 |Contador|Descripción|
 |----------|-----------|
 |A|**Pestañas:** proporciona navegación para tu aplicación personal.|
-|1|**iframe:** muestra el contenido de la aplicación.|
+|1|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-with-ui-templates-and-advanced-components"></a>Diseño con plantillas de interfaz de usuario y componentes avanzados
 
 Use una de las siguientes plantillas Teams y componentes para ayudar a diseñar la pestaña personal:
 
-* [Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.
-* [Panel de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tareas: un panel de tareas, a veces denominado tablero de kanban o carriles de natación, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
-* [Panel:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.
-* [Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.
-* [Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): Las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o en elementos individuales.
+* [Panel de tareas](../../concepts/design/design-teams-app-ui-templates.md#task-board): un panel de tareas, a veces denominado panel kanban o carril, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
+* [Panel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.
+* [Formulario](../../concepts/design/design-teams-app-ui-templates.md#form): Los formularios son para recopilar, validar y enviar el input del usuario de forma estructurada.
+* [Estado vacío](../../concepts/design/design-teams-app-ui-templates.md#empty-state): La plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.
 * [Navegación izquierda:](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav)el componente de navegación izquierdo puede ayudar si la aplicación personal requiere algo de navegación. En general, debe mantener la navegación al mínimo.
 
 ## <a name="use-a-personal-app-bot"></a>Usar una aplicación personal (bot)

@@ -1,15 +1,15 @@
 ---
 title: Crear un botón Compartir en Teams
-description: Cómo agregar el botón Compartir a Teams insertado en su sitio web
+description: Aprenda a agregar el botón Compartir Teams incrustado en su sitio web, con una vista previa del sitio web, con ejemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartir Teams compartir a Teams
-ms.openlocfilehash: 0d0fb0d7baf18038cfe87b648d2550bbd20b593a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157092"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889289"
 ---
 # <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
@@ -94,12 +94,12 @@ Para los profesores que usan el botón Compartir Teams, hay una opción adiciona
 
 | Propiedad | Atributo HTML | Tipo | Predeterminado | Descripción |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | No aplicable | Href del contenido que se debe compartir. |
+| href | `data-href` | cadenas | No aplicable | Href del contenido que se debe compartir. |
 | preview | `data-preview` | boolean (como una cadena) | `true` | Mostrar o no una vista previa del contenido que se va a compartir. |
 | iconPxSize | `data-icon-px-size` | número (como una cadena) | `32` | Tamaño en píxeles del botón Compartir a Teams que se representará. |
-| msgText | `data-msg-text` | string | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
-| assignInstr | `data-assign-instr` | string | No aplicable | Texto predeterminado que se va a insertar en el campo de asignaciones "Instrucciones". El número máximo de caracteres es 200. |
-| assignTitle | `data-assign-title` | string | No aplicable | Texto predeterminado que se va a insertar en el campo asignaciones "Título". El número máximo de caracteres es 50. |
+| msgText | `data-msg-text` | cadenas | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
+| assignInstr | `data-assign-instr` | cadenas | No aplicable | Texto predeterminado que se va a insertar en el campo de asignaciones "Instrucciones". El número máximo de caracteres es 200. |
+| assignTitle | `data-assign-title` | cadenas | No aplicable | Texto predeterminado que se va a insertar en el campo asignaciones "Título". El número máximo de caracteres es 50. |
 
 ### <a name="methods"></a>Métodos
 

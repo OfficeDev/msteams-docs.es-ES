@@ -1,16 +1,16 @@
 ---
 title: Agregar datos de prueba al inquilino Microsoft 365 prueba
-description: Configurar la suscripción de Office 365 programa para desarrolladores para realizar pruebas correctas de Microsoft Teams aplicaciones
+description: Configurar la suscripción de Office 365 programa para desarrolladores para realizar pruebas correctas de Microsoft Teams aplicaciones con fragmentos de código
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157542"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888415"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino Microsoft 365 prueba
 
@@ -22,7 +22,7 @@ Puedes probar la aplicación Microsoft Teams con datos de ejemplo con una Micros
 2. [Configurar una suscripción Microsoft 365 desarrollador](/office/developer-program/office-365-developer-program-get-started).
 3. [Use paquetes de datos de ejemplo Microsoft 365 suscripción de desarrollador para instalar el paquete de contenido Usuarios](/office/developer-program/install-sample-packs).
 4. [Instale el Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
-5. [Instale el módulo de PowerShell de Azure AD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
+5. [Instale el Azure AD de PowerShell](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
 > Debe tener permisos de administrador global en el espacio empresarial para ejecutar los scripts.

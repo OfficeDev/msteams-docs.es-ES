@@ -1,15 +1,15 @@
 ---
 title: Llamadas multimedia en tiempo real y reuniones en línea con Microsoft Teams
-description: Comprender conceptos clave en la creación de bots que pueden realizar llamadas de audio y vídeo en tiempo real y reuniones en línea.
+description: Comprender conceptos clave en la creación de bots que pueden realizar llamadas de audio y vídeo en tiempo real y reuniones en línea. Obtenga información sobre las sesiones multimedia, la velocidad de fotogramas, el formato de audio y vídeo y la referencia a recursos de desarrolladores
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media hosted media service-hosted media
-ms.openlocfilehash: 5c7fce3e8d584781037b5d1169706c9f197e3a96
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157570"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889065"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Llamadas multimedia en tiempo real y reuniones con Microsoft Teams
 
@@ -69,3 +69,7 @@ Los bots multimedia hospedados en aplicaciones requieren .NET o C# y Windows Ser
 
 > [!div class="nextstepaction"]
 > [Registrar un bot de llamadas](~/bots/calls-and-meetings/registering-calling-bot.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Formatos multimedia admitidos para bots](~/resources/media-formats.md)

@@ -1,15 +1,15 @@
 ---
 title: Flujos de trabajo secuenciales
-description: Ejemplo de flujos de trabajo secuenciales mediante acciones universales
+description: Obtenga información sobre flujos de trabajo secuenciales para tarjetas adaptables mediante acciones universales con ejemplos de código
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157257"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889114"
 ---
 # <a name="sequential-workflows"></a>Flujos de trabajo secuenciales
 

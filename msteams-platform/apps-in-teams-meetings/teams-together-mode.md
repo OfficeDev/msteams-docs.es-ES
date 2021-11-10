@@ -3,12 +3,12 @@ title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 0558b3914ba3cabf2af3937a4a4cadb9342c3844
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 051924aa8a8f02c6e9a075639014e4fc3290d8c0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475604"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887633"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -240,6 +240,8 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
+[Aplicaciones para Teams reuniones](teams-apps-in-meetings.md) 
+ [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
+ [Llamadas multimedia en](~/bots/calls-and-meetings/real-time-media-concepts.md) tiempo real y reuniones con Microsoft Teams

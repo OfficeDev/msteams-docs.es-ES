@@ -1,17 +1,18 @@
 ---
 title: Comprender las funcionalidades de la aplicación
 author: heath-hamilton
-description: Teams de aplicaciones explicadas
+description: Descripción de Teams de aplicaciones, como pestañas, bots, extensiones de mensajería y webhooks y conectores.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: eae30ddfd735730208c4f1ac47cfd5ec2a8c2c88
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: tabs bots messaging extensions webhooks connectors gcc
+ms.openlocfilehash: e4db8bde75d2d396ada5c0789b8cc06731701443
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566298"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888149"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprender Microsoft Teams funcionalidades de la aplicación
 
@@ -64,12 +65,12 @@ La siguiente lista ayuda a identificar la disponibilidad de GCC, GCC-High y DOD 
 * Para las aplicaciones de instalación local, consulta habilitar la aplicación [Teams](../concepts/design/enable-app-customization.md) [personalizada,](../concepts/deploy-and-publish/apps-publish-overview.md)distribuir la aplicación Microsoft Teams y Upload la aplicación en [Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Para los conectores personalizados, vea [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
-## <a name="see-also"></a>Vea también
-
-[Crear aplicaciones para Teams](../overview.md) 
- [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Puntos de entrada de la aplicación de Teams](../concepts/extensibility-points.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Crear aplicaciones para Teams](../overview.md) 
+ [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)

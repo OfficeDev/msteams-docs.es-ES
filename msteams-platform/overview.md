@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720116"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888037"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Desarrollar aplicaciones para Microsoft Teams
 
@@ -211,8 +211,6 @@ No es necesario ser un programador experto para crear una aplicación Teams web.
 
 ## <a name="see-also"></a>Consulte también
 
-* [Agregar un botón Compartir a Teams a su sitio web](concepts/build-and-test/share-to-teams.md)
-* [Diseñar la aplicación Teams aplicación](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams SDK de cliente de JavaScript](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* Sdk de Bot Framework para [JavaScript](https://github.com/Microsoft/botbuilder-js) y [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Distribuir la aplicación Teams aplicación](concepts/deploy-and-publish/apps-publish-overview.md)
+* [Conceptos básicos de aplicación](~/concepts/app-fundamentals-overview.md)
+* [Diseñar la aplicación Teams aplicación](~/concepts/design/design-teams-app-process.md)
+* [Asignar los casos de uso a Teams funcionalidades de la aplicación](~/concepts/design/map-use-cases.md)

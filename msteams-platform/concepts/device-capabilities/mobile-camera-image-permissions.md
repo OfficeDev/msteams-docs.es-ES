@@ -1,21 +1,21 @@
 ---
 title: Integrar capacidades multimedia
 author: Rajeshwari-v
-description: Cómo usar el SDK Teams cliente de JavaScript para habilitar funcionalidades multimedia
-keywords: Medios de permisos de dispositivo nativos de las capacidades de micrófono de imagen de cámara
+description: Obtenga información sobre cómo usar Teams SDK de cliente de JavaScript para habilitar funcionalidades multimedia con ejemplos de código
+keywords: Api multimedia de permisos de dispositivo nativo de capacidades de micrófono de imagen de cámara
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: f1c091195b85bab84d01ea88cc8234d2e415b9f7
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2540383b0c546dea956cf8f534ba0669c0c16fa9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566123"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887737"
 ---
-# <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia 
+# <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia
 
-Puedes integrar las capacidades nativas del dispositivo, como la **cámara** y el **micrófono** con la Teams aplicación. Para la integración, puedes usar Microsoft Teams SDK de cliente de [JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona las herramientas necesarias para que la aplicación tenga acceso a los permisos [de dispositivo de un usuario.](native-device-permissions.md) Usa las API de funcionalidad multimedia adecuadas para  integrar  las capacidades del dispositivo, como la cámara y el micrófono con la plataforma Teams dentro de la aplicación móvil de Microsoft Teams y crear una experiencia más enriquecte. 
+Puedes integrar las capacidades nativas del dispositivo, como la **cámara** y el **micrófono** con la Teams aplicación. Para la integración, puedes usar Microsoft Teams SDK de cliente de [JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona las herramientas necesarias para que la aplicación tenga acceso a los permisos [de dispositivo de un usuario.](native-device-permissions.md) Usa las API de funcionalidad multimedia adecuadas para  integrar  las capacidades del dispositivo, como la cámara y el micrófono con la plataforma Teams dentro de la aplicación móvil de Microsoft Teams y crear una experiencia más enriquecte.
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Ventaja de integrar capacidades multimedia
 
@@ -26,10 +26,10 @@ Para una integración eficaz, debe tener una buena comprensión de los fragmento
 
 Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la Teams aplicación.
 
-> [!NOTE] 
-> * Actualmente, Microsoft Teams compatibilidad con funcionalidades multimedia solo está disponible para clientes móviles.   
-> * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel del lado de la reunión.   
-> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md). 
+> [!NOTE]
+> * Actualmente, Microsoft Teams compatibilidad con funcionalidades multimedia solo está disponible para clientes móviles.
+> * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel del lado de la reunión.
+> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md).
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
@@ -251,9 +251,9 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Integrar la funcionalidad de escáner de códigos QR o códigos de barras en Teams](qr-barcode-scanner-capability.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)
 * [Integrar el selector de personas en Teams](people-picker-capability.md)
-
+* [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

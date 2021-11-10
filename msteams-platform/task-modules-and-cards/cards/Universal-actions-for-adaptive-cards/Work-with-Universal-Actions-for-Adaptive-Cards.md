@@ -1,16 +1,16 @@
 ---
 title: Trabajar con acciones universales para tarjetas adaptables
-description: Trabajar con las acciones universales para tarjetas adaptables.
+description: Aprenda a trabajar con las acciones universales para tarjetas adaptables, incluido el esquema de UniversalActions para tarjetas adaptables, el modelo Refresh y la compatibilidad con versiones anteriores con ejemplos de código.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157253"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888366"
 ---
-# <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con acciones universales para tarjetas adaptables
+# <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con Acciones universales para tarjetas adaptables
 
 Las acciones universales para tarjetas adaptables proporcionan una forma de implementar escenarios basados en tarjetas adaptables para ambos, Teams y Outlook. En este documento se tratan los temas siguientes:
 
@@ -112,3 +112,5 @@ Para obtener más información, consulte [compatibilidad con versiones anteriore
 
 * [Acciones de tarjeta adaptable en Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Cómo funcionan los bots](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [Flujos de trabajo secuenciales](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
+* [Tarjetas actualizadas](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)

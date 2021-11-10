@@ -4,12 +4,12 @@ description: Describe la autenticación en Teams y cómo usarla en las aplicacio
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Autenticación de teams OAuth SSO AAD
-ms.openlocfilehash: 1705e85843fbe8d75af978da8baff081b58c6ca1
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: b2f8dc18afac3b088c1ec05812a3a39e2b378182
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720316"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889082"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
@@ -58,3 +58,9 @@ Para obtener más información, vea [configuring an identity provider](~/concept
 ## <a name="third-party-cookies-on-ios"></a>Cookies de terceros en iOS
 
 Después de la actualización de iOS 14, Apple ha bloqueado el [acceso a cookies](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) de terceros para todas las aplicaciones de forma predeterminada. Por lo tanto, las aplicaciones que aprovechan cookies de terceros para la autenticación en sus pestañas Canal o Chat y Aplicaciones personales no podrán completar sus flujos de trabajo de autenticación en Teams clientes de iOS. Para cumplir con los requisitos de privacidad y seguridad, debe pasar a un sistema basado en tokens o usar cookies de origen para los flujos de trabajo de autenticación de usuario.
+
+## <a name="see-also"></a>Consulte también
+
+* [Microsoft Teams de autenticación para pestañas](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [Compatibilidad con inicio de sesión único para bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Agregar autenticación a la extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)

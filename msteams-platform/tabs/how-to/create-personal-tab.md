@@ -1,16 +1,17 @@
 ---
 title: Crear una pestaña personal
 author: laujan
-description: Guía de inicio rápido para crear una pestaña personal con el Generador de Yeoman para Microsoft Teams.
+description: Una guía de inicio rápido para crear una pestaña personal con el Generador de Yeoman, ASP.NET Core o ASP.NET Core MVC para Microsoft Teams usar Node.js y actualizar el manifiesto de la aplicación.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: yeoman ASP.NET almacén de permisos de dominio de conversación de aplicación de paquete MVC
+ms.openlocfilehash: 98f72b41e13c9b06f00a1b32a1fb52bb6b82fd2e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719941"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888044"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -745,14 +746,14 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="En el ejemplo se muestran las opciones para agregar la API registerOnFocussed para la pestaña" border="false":::
 
-## <a name="see-also"></a>Vea también
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 * [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)

@@ -1,17 +1,17 @@
 ---
 title: 'Funcionalidades del dispositivo: información general'
 author: Rajeshwari-v
-description: Información general sobre las capacidades nativas del dispositivo.
+description: Información general sobre las capacidades de dispositivo nativo, como cámara, imagen, medios, micrófono, micrófono, código qr y mucho más.
 ms.author: surbhigupta
 keywords: Cámara image media microphone mic qr code qrcode bar code barcode scan scanner location capabilities native device permissions
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9c08b727808f33ad128709ce15ecab2ecc3602b3
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566270"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889142"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 

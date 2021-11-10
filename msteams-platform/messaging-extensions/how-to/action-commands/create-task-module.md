@@ -1,19 +1,19 @@
 ---
 title: Crear y enviar el módulo de tareas
 author: surbhigupta
-description: Cómo controlar la acción de invocación inicial y responder con un módulo de tarea desde un comando de extensión de mensajería de acción
+description: Obtenga información sobre cómo controlar la acción de invocación inicial y responder con un módulo de tareas desde un comando de extensión de mensajería de acción mediante ejemplos y ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b30388e88505e9d0049da5271187c06c68efd5f5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157057"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889184"
 ---
 # <a name="create-and-send-the-task-module"></a>Crear y enviar el módulo de tareas
-
+ 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 Puede crear el módulo de tareas mediante una tarjeta adaptable o una vista web incrustada. Para crear un módulo de tareas, debe realizar el proceso denominado solicitud de invocación inicial. Este documento trata la solicitud de invocación inicial, las propiedades de actividad de carga cuando se invoca un módulo de tareas desde el chat 1:1, el chat de grupo, el canal (nueva publicación), el canal (respuesta al subproceso) y el cuadro de comandos. 
@@ -985,15 +985,13 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
-
-## <a name="see-also"></a>Consulte también
-
-[Definir comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
+|Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"] 
 > [Responder al comando action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
+## <a name="see-also"></a>Consulte también
+
+[Definir comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)

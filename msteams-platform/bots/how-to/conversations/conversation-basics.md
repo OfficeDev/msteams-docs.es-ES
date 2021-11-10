@@ -1,16 +1,16 @@
 ---
 title: Conceptos básicos de la conversación
-description: Introducción a las conversaciones
+description: Introducción a conversaciones de bots en un canal, chat personal y un entorno de chat de grupo.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: conversations basics messages
-ms.openlocfilehash: 767efd3b6351e3f771f6ffe5cb6ff36181009f4b
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keyword: conversations basics messages groupchap group channel
+ms.openlocfilehash: ec8e5b2d632912aac6cc9e1e06e6db3a7f1ed948
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157653"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887444"
 ---
 # <a name="conversation-basics"></a>Conceptos básicos de la conversación
 

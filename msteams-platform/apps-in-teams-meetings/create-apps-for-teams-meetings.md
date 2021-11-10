@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 9ac6e87a8f85d0e8d73c6bf58dd705a55f887f43
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720235"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887702"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Requisitos previos para las aplicaciones en las reuniones de Teams
 
@@ -51,13 +51,14 @@ Una vez que hayas pasado por los requisitos previos, puedes usar las referencias
 > [!NOTE]
 > Teams SDK de JavaScript (_versión_: 1.10 y versiones posteriores) para que SSO funcione en el panel lateral de la reunión.
 
-## <a name="see-also"></a>Vea también
-
-* [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-* [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Referencias API de aplicaciones de reuniones](API-references.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
+* [Teams api de bots para capturar miembros de equipo o chat](~/resources/team-chat-member-api-changes.md)

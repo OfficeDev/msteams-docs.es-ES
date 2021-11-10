@@ -1,16 +1,16 @@
 ---
 title: Probar y depurar el bot localmente
 author: surbhigupta
-description: Probar y depurar el bot localmente con un IDE
+description: Obtenga información sobre cómo probar y depurar el bot localmente con un IDE en un entorno de Teams mediante la instalación local, fuera de Teams mediante el emulador bot y hablando directamente con el bot.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c07d1a9eb8a28b328a1a60ba299f05d39b460fbe
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 9ac6e2f7bf173e68e111b0d792ec89ba266c188f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096559"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888233"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -20,11 +20,8 @@ Al probar el bot, debes tener en cuenta los contextos en los que quieres que se 
 
 La forma más completa de probar el bot es crear un paquete de aplicación y cargarlo en Teams. Este es el único método para probar la funcionalidad completa disponible para el bot, en todos los ámbitos.
 
-> [!NOTE]
->  App Studio pronto se depricará. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
-
 Hay dos métodos para cargar la aplicación:
-* Usa [Portal para desarrolladores](https://dev.teams.microsoft.com/) [o App Studio](~/concepts/build-and-test/app-studio-overview.md).
+* Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Crea un paquete de aplicación](~/concepts/build-and-test/apps-package.md) manualmente y, a continuación, carga la [aplicación](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
@@ -96,7 +93,7 @@ Para impedir que el bot reciba mensajes, vaya al **Panel de bots** y edite el Mi
 
 Para quitar el bot completamente de Teams, vaya al **Panel de bots** y edite el Microsoft Teams. Elija el **botón** Eliminar en la parte inferior. Esto evita que los usuarios detecten, agreguen e interactúen con el bot. Esto no quita el bot de las instancias de Teams de otro usuario, pero también deja de funcionar para ellas.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Depurar el bot de llamadas y reuniones de forma local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

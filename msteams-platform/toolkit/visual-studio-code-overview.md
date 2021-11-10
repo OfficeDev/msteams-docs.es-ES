@@ -5,12 +5,12 @@ keywords: Kit de herramientas de código visual studio de teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4425ea5ac6daa400d33497e031cf37639cd2722a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157072"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889324"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Crear aplicaciones con el Teams Toolkit y Visual Studio Code
 
@@ -99,7 +99,7 @@ En su núcleo, la aplicación Teams abarca tres componentes:
 
       > [!div class="checklist"]
       >
-      > - El manifest.jsen.
+      > - Manifest.json.
       > - Icono [de color para](../resources/schema/manifest-schema.md#icons) que la aplicación se muestre en el catálogo de aplicaciones públicas u de la organización.
       > - Icono [de esquema para](../resources/schema/manifest-schema.md#icons) mostrar en la barra Teams actividad.
 
@@ -108,7 +108,7 @@ El manifiesto y los iconos se almacenan en la carpeta del proyecto antes de `.fx
 1. Para configurar la aplicación, vaya a la **pestaña Teams Toolkit** en Visual Studio Code.
 1. Seleccione **Editor de manifiestos** **en Project** sección.
 
-La edición de los campos de la página detalles de la aplicación actualiza el contenido del archivo manifest.jsque, en última instancia, se envía como parte del paquete de la aplicación.
+La edición de los campos de la página detalles de la aplicación actualiza el contenido del archivo manifest.json que finalmente se envía como parte del paquete de la aplicación.
 
 ## <a name="install-and-run-your-app-locally"></a>Instalar y ejecutar la aplicación localmente
 
@@ -144,3 +144,8 @@ Si usa el hospedaje de Azure, debe haber aprovisionado e implementado en la nube
 
 > [!div class="nextstepaction"]
 > [Mantenimiento y soporte técnico de la aplicación publicada](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Crear aplicaciones con el Teams Toolkit y Visual Studio](~/toolkit/visual-studio-overview.md)
+* [Crear pestañas y otras experiencias hospedadas con el SDK Microsoft Teams cliente de JavaScript](~/tabs/how-to/using-teams-client-sdk.md)

@@ -1,27 +1,28 @@
 ---
 title: Diseño de la extensión de reunión
 author: heath-hamilton
-description: Obtén información sobre cómo diseñar aplicaciones en Teams reuniones y obtener el kit Microsoft Teams interfaz de usuario.
+description: Obtén información sobre cómo diseñar aplicaciones en reuniones Teams y obtener el kit de interfaz de usuario de Microsoft Teams, la pestaña en la reunión y los casos de uso, el comportamiento dinámico y la fase de reunión compartida, y el tema y la navegación.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: Fase de reunión compartida de comportamiento dinámico de plantilla de kit de interfaz de usuario en la reunión
+ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475702"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887848"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
 Puedes crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una reunión o que envíen un aviso rápido que no interrumpa el flujo de la reunión.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Puedes encontrar instrucciones de diseño más completas, incluidos los elementos que puedes agarrar y modificar según sea necesario, en el kit de interfaz Microsoft Teams usuario.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Agregar una extensión de reunión
 
@@ -59,20 +60,20 @@ Antes de una reunión, la aplicación está disponible para los usuarios en una 
 
 |Contador|Descripción|
 |----------|-----------|
-|1|**Nombre de la pestaña:** etiqueta de navegación para la pestaña.|
-|2|**Desbordamiento de** tabulación: abre acciones de tabulación, como cambiar el nombre y quitar.|
-|3|**iframe:** muestra el contenido de la aplicación.|
+|1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
+|2|**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
+|3|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
 
 Usa una de las siguientes plantillas Teams interfaz de usuario para ayudar a diseñar la pestaña de reunión:
 
-* [Lista:](../../concepts/design/design-teams-app-ui-templates.md#list)las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o elementos individuales.
-* [Panel de](../../concepts/design/design-teams-app-ui-templates.md#task-board)tareas: un panel de tareas, a veces denominado tablero de kanban o carriles de natación, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
-* [Panel:](../../concepts/design/design-teams-app-ui-templates.md#dashboard)un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.
-* [Formulario:](../../concepts/design/design-teams-app-ui-templates.md#form)los formularios son para recopilar, validar y enviar la entrada del usuario de forma estructurada.
-* [Estado vacío:](../../concepts/design/design-teams-app-ui-templates.md#empty-state)la plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.
-* [Navegación izquierda:](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)el componente de navegación izquierdo puede ayudar si la pestaña requiere algo de navegación. En general, debe mantener la navegación al mínimo.
+* [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): Las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o en elementos individuales.
+* [Panel de tareas](../../concepts/design/design-teams-app-ui-templates.md#task-board): un panel de tareas, a veces denominado panel kanban o carril, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
+* [Panel](../../concepts/design/design-teams-app-ui-templates.md#dashboard): un panel es un lienzo que contiene varias tarjetas que proporcionan información general sobre los datos o el contenido.
+* [Formulario](../../concepts/design/design-teams-app-ui-templates.md#form): Los formularios son para recopilar, validar y enviar el input del usuario de forma estructurada.
+* [Estado vacío](../../concepts/design/design-teams-app-ui-templates.md#empty-state): La plantilla de estado vacío se puede usar para muchos escenarios, incluidos el inicio de sesión, las experiencias de primera ejecución, los mensajes de error y mucho más.
+* [Navegación izquierda](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): el componente de navegación izquierda puede ayudar si la pestaña requiere algo de navegación. En general, debe mantener la navegación al mínimo.
 
 ## <a name="use-an-in-meeting-tab"></a>Usar una pestaña en la reunión
 
@@ -103,9 +104,9 @@ Las personas pueden usar la pestaña en la reunión para:
 |1|**Icono de aplicación (seleccionado):** logotipo de aplicación transparente de 16 píxeles.|
 |2|**Nombre de la aplicación**|
 |3|**Encabezado:** incluye el nombre de la aplicación.|
-|4 |**Botón Cerrar:** descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
+|4|**Botón Cerrar:** descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
 |5|**Barra de notificaciones:** las alertas de error se muestran directamente debajo del encabezado y presionan el contenido del iframe hacia abajo en 20 píxeles.|
-|6 |**iframe:** muestra el contenido de la aplicación.|
+|6 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="spacing"></a>Spacing
 
@@ -157,7 +158,7 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 |Contador|Descripción|
 |----------|-----------|
 |1|**Encabezado:** incluye el icono de la aplicación, el nombre, la cadena de acción y el icono cerrar.|
-|2|**iframe:** muestra el contenido de la aplicación.|
+|2|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomía: encabezado del cuadro de diálogo En la reunión
 
@@ -170,7 +171,7 @@ Hay dos variantes de encabezado. Cuando sea posible, usa la variante con el avat
 |1|**Avatar:** persona que inicia el cuadro de diálogo en la reunión.|
 |2|**Icono de aplicación**|
 |3|**Nombre de la aplicación**|
-|4 |**Botón Cerrar:** descarta el cuadro de diálogo.|
+|4|**Botón Cerrar:** descarta el cuadro de diálogo.|
 |5|**Cadena de acción:** normalmente describe quién inició el cuadro de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamiento dinámico: cuadros de diálogo en la reunión
@@ -191,7 +192,7 @@ La fase de reunión compartida ayuda a los participantes a interactuar y colabor
 Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase se vuelve a reorientar para todos los participantes de la reunión.
 
 > [!NOTE]
-> Actualmente, si una aplicación se comparte en fase en el escritorio, se mostrará solo para los usuarios en reuniones móviles.
+> Todos los usuarios que se reúnen pueden ver la aplicación cuando se comparten desde el escritorio. Sin embargo, la capacidad de compartir una aplicación en fase desde el móvil no está disponible actualmente.
  
 ### <a name="use-cases"></a>Casos de uso
 
@@ -244,8 +245,8 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
 |----------|-----------|
 |1|**Icono de la** aplicación: el icono resaltado indica que la pestaña en la reunión de la aplicación está abierta.|
 |2|**Botón Compartir a fase de reunión:** punto de entrada para compartir la aplicación a la fase de reunión. Muestra si configuras la aplicación para que use la fase de reunión compartida.|
-|3|**iframe:** muestra el contenido de la aplicación.|
-|4 |**Botón Detener uso compartido:** deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
+|3|**iframe**: muestra el contenido de la aplicación.|
+|4|**Botón Detener uso compartido:** deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 |5|**Atribución del moderador:** muestra el nombre del participante que compartió la aplicación.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamiento dinámico: fase de reunión compartida

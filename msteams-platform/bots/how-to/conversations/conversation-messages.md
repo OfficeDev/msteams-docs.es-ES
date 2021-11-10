@@ -1,16 +1,16 @@
 ---
 title: Mensajes en conversaciones de bot
-description: Describe formas de tener una conversación con un Microsoft Teams bot
+description: Describe maneras de tener una conversación con un Microsoft Teams bot. Obtenga información sobre Teams canal, notificación al mensaje, mensajes de imagen, tarjetas adaptables mediante ejemplos de código.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566242"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889338"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -391,15 +391,16 @@ A continuación se desenván los códigos de estado y sus valores de mensaje y c
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
-
-## <a name="see-also"></a>Consulte también
-
-- [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
-
-- [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Menús de comandos bot](~/bots/how-to/create-a-bot-commands-menu.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md)
+* [Enviar identificador de inquilino e identificador de conversación a los encabezados de solicitud del bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)

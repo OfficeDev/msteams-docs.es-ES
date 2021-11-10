@@ -1,17 +1,17 @@
 ---
 title: Crear pestañas de conversación
 author: surbhigupta
-description: Crear chat de subentidad conversacional para las pestañas de canal
+description: Aprenda a crear chat de subentidad conversacional para las pestañas de canal, para administrar conversaciones con ejemplos de código
 keywords: Canal de pestañas de teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720375"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889366"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -94,7 +94,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Crear pestaña Conversación| Microsoft Teams aplicación de muestra de pestaña para mostrar la pestaña crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Crear pestaña Conversación| Microsoft Teams aplicación de muestra de pestaña para mostrar la pestaña crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
 
 ## <a name="see-also"></a>Consulte también
 
@@ -103,8 +108,3 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 * [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)

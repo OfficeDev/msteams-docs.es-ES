@@ -1,16 +1,16 @@
 ---
 title: Requisitos y consideraciones para bots multimedia hospedados en aplicaciones
-description: Comprender los requisitos y consideraciones importantes relacionados con la creación de bots multimedia hospedados en aplicaciones para Microsoft Teams.
+description: Comprenda los requisitos y consideraciones importantes, así como las consideraciones de escalabilidad y rendimiento relacionadas con la creación de bots multimedia hospedados en aplicaciones para Microsoft Teams ejemplo de código y ejemplos.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Máquina virtual de Azure de Windows Server multimedia hospedada por la aplicación
 ms.date: 11/16/2018
-ms.openlocfilehash: e8f776b647beda2745a7bdbc03794e491a942b54
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0597e99b1933270ee4ee85d1adc18378da3c3114
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157569"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887416"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos y consideraciones para bots multimedia hospedados en aplicaciones
 
@@ -71,7 +71,12 @@ Los ejemplos de bots multimedia hospedados en la aplicación son los siguientes:
 | **Ejemplo de nombre** | **Descripción** | **Graph** |
 |------------|-------------|-----------|
 | Ejemplo de medios locales | Ejemplos que ilustran diferentes escenarios de medios locales. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Ejemplo de medios remotos | Ejemplos que ilustran diferentes escenarios multimedia remotos. | [Ver](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Ejemplo de medios remotos | Ejemplos que ilustran diferentes escenarios multimedia remotos. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Formatos multimedia admitidos](~/resources/media-formats.md)
 
 ## <a name="see-also"></a>Consulte también
 
@@ -86,8 +91,3 @@ En la siguiente sección se proporcionan ejemplos que ilustran diferentes escena
 
 - [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 - [Graph documentación del SDK de llamada](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Formatos multimedia admitidos](~/resources/media-formats.md)

@@ -1,16 +1,17 @@
 ---
 title: Diseñar la aplicación con componentes básicos Fluent interfaz de usuario
 author: heath-hamilton
-description: Obtén información sobre los componentes de interfaz de usuario primitivos que se usan habitualmente para crear Microsoft Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario.
+description: Obtén información sobre los componentes de interfaz de usuario primitivos que se usan habitualmente para crear Microsoft Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario. Obtenga información sobre componentes, como rutas de navegación, tarjeta, carrusel, desplegable, marca de entrenador, selector, pivot, alternancia, información sobre herramientas y mucho más.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Información sobre herramientas de alternancia dinámica del selector de marcadores desplegables de carrusel de tarjetas de navegación del kit de interfaz de usuario fluent kit
+ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157369"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887500"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación Microsoft Teams con componentes Fluent interfaz de usuario básica
 
@@ -45,7 +46,7 @@ En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blan
 
 :::image type="content" source="../../assets/images/components/carousel.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de carrusel." border="false":::
 
-## <a name="checkbox"></a>Casilla
+## <a name="checkbox"></a>Casilla de verificación
 
 :::image type="content" source="../../assets/images/components/checkbox.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de casilla." border="false":::
 

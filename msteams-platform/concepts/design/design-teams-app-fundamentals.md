@@ -1,16 +1,17 @@
 ---
 title: 'Diseñar la aplicación: comprender el sistema de diseño'
-description: Obtén información sobre los conceptos básicos del diseño de Microsoft Teams aplicación, incluido el diseño, la combinación de colores y mucho más.
+description: Obtén información sobre los conceptos básicos del diseño de Microsoft Teams aplicación, incluidos los avatares, el diseño, los iconos, la combinación de colores y mucho más.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: avatares de cuadrícula de diseño iconos segoe ui typography
+ms.openlocfilehash: 6e372f049b18e5e95b1381c81f8f2f1f1f2a1e8d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157622"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887751"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de diseño de aplicaciones
 

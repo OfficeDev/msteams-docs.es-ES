@@ -5,12 +5,13 @@ description: Comprender cómo Teams los administradores pueden personalizar la a
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 4e6699d2c021eb15f5a977517b616aeb256430c1
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+keywords: marca de color de énfeño ocultar la aprobación de la aplicación
+ms.openlocfilehash: 3519ad5dc91b27d947c752161bfe3c477281f1f7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127281"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888170"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar la Teams aplicación
 
@@ -50,6 +51,8 @@ Si de forma predeterminada, no quieres que la aplicación esté oculta, puedes a
 > [!NOTE]
 > `defaultBlockUntilAdminAction` no es compatible con aplicaciones de LOB. Si cargas una aplicación de LOB con esta propiedad, no se bloqueará la aplicación.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
-[Personalizar aplicaciones en el Centro Teams administración](/MicrosoftTeams/customize-apps)
+* [Esquema de manifesh de aplicaciones](/MicrosoftTeams/manifest-schema)
+* [Personalizar aplicaciones en el Centro Teams administración](/MicrosoftTeams/customize-apps)
+

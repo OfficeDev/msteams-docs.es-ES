@@ -1,16 +1,17 @@
 ---
 title: Crear pestañas de tarjeta adaptable
 author: KirtiPereira
-description: Crear pestañas con tarjetas adaptables
+description: Obtenga información sobre cómo crear pestañas con tarjetas adaptables con ejemplos de código, como invocar actividades, comprender el flujo de trabajo del módulo de tareas y la autenticación.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 09e5a6133ac4c2b33dbf6ffae273e8107a4c67ce
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: flujo de datos de autenticación de aplicaciones personales de tarjeta adaptable
+ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720333"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887563"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -376,7 +377,7 @@ El código siguiente proporciona un ejemplo de `tab/fetch` respuesta de autentic
 }
 ```
 
-### <a name="example"></a>Ejemplo:
+### <a name="example"></a>Ejemplo
 
 El código siguiente muestra un ejemplo de solicitud ree emitida:
 
@@ -426,7 +427,12 @@ El código siguiente muestra un ejemplo de solicitud ree emitida:
 
 |**Ejemplo de nombre** | **Descripción** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar tarjetas adaptables en Teams pestaña | Microsoft Teams ejemplo de pestaña, que muestra cómo mostrar tarjetas adaptables en Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar tarjetas adaptables en Teams pestaña | Microsoft Teams ejemplo de pestaña, que muestra cómo mostrar tarjetas adaptables en Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Consulte también
 
@@ -435,8 +441,3 @@ El código siguiente muestra un ejemplo de solicitud ree emitida:
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)

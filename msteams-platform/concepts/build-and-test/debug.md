@@ -1,15 +1,15 @@
 ---
 title: Elegir una configuración para probar y depurar la aplicación
-description: Describe las opciones para probar y depurar Microsoft Teams aplicaciones
-keywords: teams ejecutar aplicaciones de depuración
+description: Describe las opciones para probar y depurar Microsoft Teams aplicaciones en entornos locales y hospedados en la nube.
+keywords: teams ejecutar aplicaciones de depuración host hospedado en la nube local
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c20f10fc0f3fb7265921ded2bf412271695bbcd9
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157058"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889084"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elige una configuración para probar y depurar tu Microsoft Teams aplicación
 
@@ -19,7 +19,7 @@ Microsoft Teams aplicaciones contienen una o más capacidades y las formas de ej
 * **Locally hosted in Teams:** This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. Esto te permite ejecutar y depurar fácilmente la aplicación en el Teams cliente.
 * **Hospedado en la nube en Teams:** esto realmente simula la compatibilidad de nivel de producción para una Teams aplicación. Implica cargar la solución en el servidor accesible externamente [](~/concepts/build-and-test/apps-package.md) o el proveedor de nube de elección y crear un paquete para cargarlo [en](~/concepts/deploy-and-publish/apps-upload.md) Teams.
 
-Ejecute la experiencia desde su propio equipo para realizar pruebas de Teams locales. Al hacerlo, puede compilar y ejecutar en el entorno de desarrollo integrado y aprovechar al máximo técnicas, como puntos de interrupción y depuración de pasos. 
+Ejecute la experiencia desde su propio equipo para realizar pruebas de Teams locales. Al hacerlo, puede compilar y ejecutar en el entorno de desarrollo integrado y aprovechar al máximo técnicas, como puntos de interrupción y depuración de pasos.
 
 > [!NOTE]
 > Para la depuración y las pruebas a escala de producción, se recomienda seguir las directrices de su propia empresa para asegurarse de que puede admitir pruebas, almacenamiento provisional e implementación a través de sus propios procesos.
@@ -54,7 +54,7 @@ Aunque puedes usar cualquier herramienta que prefieras, usamos y recomendamos [n
 > [!NOTE]
 > Si detiene y reinicia ngrok, la dirección URL cambia.
 
-Para usar ngrok en el proyecto en función de las capacidades que está usando, debe reemplazar todas las referencias de dirección URL del código, configuración y manifest.jsarchivo para usar este extremo de dirección URL.
+Para usar ngrok en el proyecto en función de las capacidades que está usando, debe reemplazar todas las referencias de dirección URL del código, la configuración y el archivo manifest.json para usar este extremo de dirección URL.
 
 Para los bots registrados en el Microsoft Bot Framework, actualice el extremo de mensajería del bot para usar este nuevo extremo de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok está funcionando probando la respuesta del bot en la ventana de chat de prueba del portal de Bot Framework. De nuevo, al igual que el emulador, esta prueba no permite acceder a Teams funcionalidad específica.
 
@@ -80,3 +80,6 @@ Para cargar y ejecutar la experiencia en Microsoft Teams, debe crear un paquete 
 > [!div class="nextstepaction"] 
 > [Añadir datos de prueba al entorno](~/concepts/build-and-test/test-data.md)
 
+## <a name="see-also"></a>Consulte también
+
+[Probar y depurar el bot localmente](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)

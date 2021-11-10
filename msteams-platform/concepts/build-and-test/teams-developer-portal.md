@@ -1,16 +1,16 @@
 ---
 title: Administrar las aplicaciones con el Portal de desarrolladores
-description: Aprende a administrar tus aplicaciones mediante el Portal de desarrolladores para Microsoft Teams.
+description: Aprende a configurar, distribuir y administrar tus aplicaciones mediante el Portal de desarrolladores para Microsoft Teams.
 keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c8a31f55131fb594a8d47c05e40533512e7de689
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720396"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888555"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administrar tus aplicaciones con el Portal de desarrolladores para Microsoft Teams
 
@@ -87,6 +87,6 @@ El Portal de desarrolladores también incluye herramientas que le ayudarán a cr
 * **Editor de tarjetas adaptables:** crea y previsualiza tarjetas adaptables para incluir con tus aplicaciones.
 * **Plataforma de identidad de Microsoft:** registre sus aplicaciones con Azure Active Directory (Azure AD) para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

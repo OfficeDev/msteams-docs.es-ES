@@ -1,15 +1,15 @@
 ---
 title: Aplicaciones de reuniones unificadas
 author: surbhigupta
-description: Comprender las aplicaciones de reuniones unificadas
+description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 15a43721e8f5091f0a0bb3b69f781f1472b8e681
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 920c0ee23ffeb2ea7943579254a115bf2d82fea3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720186"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887730"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -201,14 +201,14 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 | Invitado, parte del espacio empresarial AAD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión |
 | Para obtener más información, vea Usuarios no [estándar.](/microsoftteams/non-standard-users) | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión |
 
-## <a name="see-also"></a>Vea también
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md)
 * [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)

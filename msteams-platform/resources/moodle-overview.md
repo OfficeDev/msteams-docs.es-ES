@@ -5,12 +5,13 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: c653e8a27da47ab38b4209eee5a57d3cf00ab1a9
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: vínculos profundos de mConnect de lms de moodle
+ms.openlocfilehash: beaac8d139b164b26f791b46a089a44cd8a4681d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719780"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888457"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de administración de aprendizaje de Moodle
 

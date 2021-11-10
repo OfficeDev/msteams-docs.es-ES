@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de búsqueda de extensión de mensajería
 author: surbhigupta
-description: Definir comandos de búsqueda de extensión de mensajería para Microsoft Teams aplicaciones.
+description: Obtenga información sobre los comandos de búsqueda de extensión de mensajería para Microsoft Teams aplicaciones, para crear un comando de búsqueda a través del manifiesto de la aplicación y usar manualmente ejemplos de código y ejemplo.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720130"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889387"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
@@ -70,11 +70,11 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 1. Agregue el parámetro de búsqueda y **seleccione Guardar**.
 
-### <a name="create-a-search-command-manually"></a>Crear un comando de búsqueda manualmente 
+### <a name="create-a-search-command-manually"></a>Crear un comando de búsqueda manualmente
 
 Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, debes agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de propiedad | Finalidad | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
@@ -85,7 +85,7 @@ Para agregar manualmente el comando de búsqueda de extensión de mensajería al
 
 Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el Teams cliente.
 
-| Nombre de propiedad | Finalidad | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -93,9 +93,9 @@ Debe agregar los detalles del parámetro de búsqueda, que define el texto visib
 | `parameter.title` | Esta propiedad es un título o etiqueta de parámetros fáciles de usar. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada necesaria. Los valores posibles `text` incluyen , , , , , `textarea` `number` `date` `time` `toggle` . El valor predeterminado se establece en `text` . | No | 1.4 |
 
-#### <a name="example"></a>Ejemplo:
+#### <a name="example"></a>Ejemplo
 
-En la siguiente sección se muestra un ejemplo del manifiesto de aplicación simple del `composeExtensions` objeto que define un comando de búsqueda: 
+En la siguiente sección se muestra un ejemplo del manifiesto de aplicación simple del `composeExtensions` objeto que define un comando de búsqueda:
 
 ```json
 {

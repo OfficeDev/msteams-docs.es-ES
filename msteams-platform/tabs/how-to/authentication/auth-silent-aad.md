@@ -1,15 +1,15 @@
 ---
 title: Autenticación silenciosa
-description: Describe la autenticación silenciosa
+description: Describe autenticación silenciosa, inicio de sesión único, Azure Active Directory para pestañas
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Autenticación de teams SSO silenciosa AAD
-ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: ficha de inicio de sesión AAD autenticación de teams
+ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291628"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888030"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 
@@ -135,3 +135,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## <a name="see-also"></a>Consulte también
+
+[Configurar proveedores de identidades para que usen AAD](~/concepts/authentication/configure-identity-provider.md)

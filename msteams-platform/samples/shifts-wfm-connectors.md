@@ -1,24 +1,24 @@
 ---
 title: Conectores de turnos listos para producción
-description: Administración de personal Conectores de turnos para Teams
+description: Obtenga información sobre las ventajas de usar los conectores shifts de administración de workforce para Teams, como el conector de turnos de Kronos a Teams y el conector de turnos de JDA a Teams
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams conectores de Microsoft Teams kronos
 ms.author: lajanuar
-ms.openlocfilehash: f734bc4491826f5afee4147b55fdbc10b69fd433
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 063957556c13d5325eaf00ab8cd80017c0821e3c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157133"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889226"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de turnos listos para producción  
 
-Teams Los conectores de administración de personal de turnos (WFM) son integraciones basadas en la comunidad, listas para producción y de código abierto, útiles para los trabajadores de primera línea. Ofrecen una experiencia perfecta y un proceso rápido para la transformación digital de trabajadores de primera línea con Teams Shifts. 
+Teams Los conectores de administración de personal de turnos (WFM) son integraciones basadas en la comunidad, listas para producción y de código abierto, útiles para los trabajadores de primera línea. Ofrecen una experiencia perfecta y un proceso rápido para la transformación digital de trabajadores de primera línea con Teams Shifts.
 
-Cada conector proporciona instrucciones detalladas para la implementación e integración en la organización. El código fuente completo está disponible en GitHub repositorio. Puede explorar en detalle o bifurcar, y personalizar para satisfacer sus necesidades específicas.   
+Cada conector proporciona instrucciones detalladas para la implementación e integración en la organización. El código fuente completo está disponible en GitHub repositorio. Puede explorar en detalle o bifurcar, y personalizar para satisfacer sus necesidades específicas.
 
 En este documento se ofrece información general sobre las principales ventajas de los conectores WFM de Teams Shifts, el conector De Kronos a Teams Shifts y el conector de turnos de Teams JDA a Teams.
 
@@ -70,6 +70,6 @@ Con código de código abierto, puedes integrar JDA, como BlueYonder versión 17
 
 Para obtener más información sobre la contribución y la sugerencia, vea [Obtenerla en GitHub](https://aka.ms/JDAShiftsConnector).</br></br>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

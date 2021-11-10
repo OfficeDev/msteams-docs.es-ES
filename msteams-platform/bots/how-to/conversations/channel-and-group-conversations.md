@@ -1,16 +1,16 @@
 ---
 title: Conversaciones de canal y grupo con un bot
 author: surbhigupta
-description: Cómo enviar, recibir y controlar mensajes de un bot en un chat de canal o grupo.
+description: Cómo enviar, recibir y controlar mensajes de un bot en un chat de canal o grupo. Obtenga información sobre las directrices de diseño, la creación de subprocesos de conversación, @mentions el uso de ejemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ab856bb7d07e23d9dc6d6fed318313262779b79f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157094"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889317"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversaciones de chat de canal y grupo con un bot
 
@@ -270,11 +270,11 @@ No envíe un mensaje en los siguientes casos:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>Consulte también
-
-[Obtener Teams contexto](~/bots/how-to/get-teams-context.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Obtener Teams contexto](~/bots/how-to/get-teams-context.md)

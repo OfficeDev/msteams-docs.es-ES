@@ -1,14 +1,14 @@
 ---
 title: Información general sobre las acciones universales para tarjetas adaptables
-description: Una introducción rápida a las acciones universales para tarjetas adaptables.
+description: Una introducción rápida a las acciones universales para tarjetas adaptables, como vistas específicas del usuario, compatibilidad con flujos de trabajo secuenciales y mucho más para entornos de escritorio y móviles
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: c294e235074bd6a2c9ae148c20e355a9c86325c5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475716"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889359"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
@@ -111,14 +111,14 @@ Las tarjetas adaptables son una combinación de contenido, como texto y gráfico
 
 Puede empezar actualizando escenarios mediante la guía [de inicio rápido](Work-with-universal-actions-for-adaptive-cards.md) y aprovechar las acciones universales.
 
-## <a name="see-also"></a>Vea también
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Qué son los bots](~/bots/what-are-bots.md)
 * [Información general sobre tarjetas adaptables](~/task-modules-and-cards/what-are-cards.md)
 * [Tarjetas adaptables a Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Tarjetas adaptables @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)

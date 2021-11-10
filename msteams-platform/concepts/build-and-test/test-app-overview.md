@@ -1,15 +1,15 @@
 ---
 title: Introducción a la prueba de la aplicación
-description: Describe el proceso para probar la aplicación Teams personalizada en Microsoft 365
+description: Describe el proceso para probar y depurar la aplicación Teams personalizada en Microsoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Configurar Microsoft 365 inquilino Teams cargar la aplicación de prueba
-ms.openlocfilehash: 045159133b53b83e256eea9bab09f71e45bf02cf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9cbb650fc248d12fc310cc8b1aaaded7b9a87140
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157113"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889268"
 ---
 # <a name="test-your-app"></a>Probar la aplicación
 
@@ -35,13 +35,13 @@ Para ver los registros de la consola, ver o modificar las solicitudes html, css 
 
 Agregue los datos de prueba a Microsoft 365 inquilino de prueba. Para obtener más información, vea [Agregar](~/concepts/build-and-test/test-data.md)datos de prueba al inquilino de prueba Office 365 y completar todos los requisitos previos antes de empezar a cargar los datos de prueba.
 
-## <a name="see-also"></a>Vea también
-
-* [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
-* [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
-* [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Preparar el espacio empresarial de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
+* [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)

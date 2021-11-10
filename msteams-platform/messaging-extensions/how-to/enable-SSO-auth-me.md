@@ -1,16 +1,16 @@
 ---
 title: Compatibilidad con SSO para las extensiones de mensajería
 author: KirtiPereira
-description: Cómo habilitar la compatibilidad con SSO para las extensiones de mensajería
+description: Obtenga información sobre cómo habilitar la compatibilidad con SSO para las extensiones de mensajería con ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720060"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889394"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Compatibilidad con inicio de sesión único para extensiones de mensajería
  
@@ -119,4 +119,3 @@ Una vez completados los requisitos previos, puede habilitar SSO para extensiones
 * [Agregar autenticación a las extensiones de mensajería](add-authentication.md)
 * [Usar SSO para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Apertura de vínculos](link-unfurling.md)
-

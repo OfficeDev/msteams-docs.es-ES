@@ -1,24 +1,24 @@
 ---
 title: Crear un asistente virtual
-description: Cómo crear un Virtual Assistant bot y habilidades para su uso en Microsoft Teams
+description: Obtenga información sobre cómo crear un bot Virtual Assistant para Microsoft Teams código con ejemplos de código y fragmentos de código con características como, tarjetas adaptables; controlar interrupciones, solicitudes de módulo de tareas, ámbitos de aplicaciones de colaboración y extensiones de mensajes; usar el manifiesto de habilidad; Compatibilidad con varios idiomas, validación de notificación, integración de LUIS y modo.
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots de asistente virtual de teams
-ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2082e160387bd6ad80fa526e3dab39b385a6e955
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566249"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889233"
 ---
-# <a name="create-virtual-assistant"></a>Crear un asistente virtual 
+# <a name="create-virtual-assistant"></a>Crear un asistente virtual
 
 Virtual Assistant es una plantilla de código abierto de Microsoft que le permite crear una solución conversacional sólida y mantener el control total de la experiencia del usuario, la personalidad de marca de la organización y los datos necesarios. La [plantilla](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) principal de Virtual Assistant es el bloque de creación básico que reúne las tecnologías de Microsoft necesarias para crear un Virtual Assistant, incluido el SDK de [Bot Framework,](https://github.com/microsoft/botframework-sdk) [Language Understanding (LUIS)](https://www.luis.ai/)y [QnA Maker](https://www.qnamaker.ai/). También reúne las capacidades esenciales, como el registro de aptitudes, las cuentas vinculadas, la intención conversacional básica de ofrecer a los usuarios una amplia variedad de interacciones y experiencias sin problemas. Además, las capacidades de plantilla incluyen ejemplos enriquecidos de habilidades conversacionales [reutilizables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Las habilidades individuales se integran en Virtual Assistant solución para habilitar varios escenarios. Con el SDK de Bot Framework, las habilidades se presentan en forma de código fuente, lo que permite personalizar y ampliar según sea necesario. Para obtener más información sobre las habilidades de Bot Framework, vea [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). Este documento le guía sobre Virtual Assistant de implementación para las organizaciones, cómo crear un Virtual Assistant centrado en Teams, ejemplo relacionado, ejemplo de código y limitaciones de Virtual Assistant.
 En la siguiente imagen se muestra la introducción al asistente virtual:
 
 ![Virtual Assistant de información general](../assets/images/bots/virtual-assistant/overview.png)
 
-Las actividades de mensajes de texto se enrutan a las aptitudes asociadas mediante el Virtual Assistant principal mediante un modelo [de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) distribución. 
+Las actividades de mensajes de texto se enrutan a las aptitudes asociadas mediante el Virtual Assistant principal mediante un modelo [de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) distribución.
 
 ## <a name="implementation-considerations"></a>Consideraciones de implementación
 
@@ -29,7 +29,7 @@ La decisión de agregar un Virtual Assistant incluye muchos determinantes y difi
 * Las aplicaciones existentes son personalizables, pertenecen a la organización y se convierten en aptitudes para un Virtual Assistant.
 * El equipo de experiencias de los empleados centrales puede influir en las personalizaciones de las aplicaciones existentes. También proporciona instrucciones necesarias para integrar aplicaciones existentes como habilidades en Virtual Assistant experiencia.
 
-En la siguiente imagen se muestran las funciones empresariales de Virtual Assistant: 
+En la siguiente imagen se muestran las funciones empresariales de Virtual Assistant:
 
 ![El equipo central mantiene el asistente y los equipos de funciones empresariales contribuyen con habilidades](../assets/images/bots/virtual-assistant/business-functions.png)
 

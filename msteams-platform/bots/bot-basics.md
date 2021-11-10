@@ -5,12 +5,13 @@ description: Comprender los controladores de actividad del bot en Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9d9dee13a59a0727bf3bc7889f6e0fc2acd06f1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Evento del canal de consentimiento de tarjeta de bot del controlador de actividades
+ms.openlocfilehash: 6350d9f0e280f345780eeac277e334fef867a67f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157098"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889135"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 

@@ -4,12 +4,12 @@ description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de equipos
-ms.openlocfilehash: fb1ff1df6e91c17efd5a01123935fb03f0a0ed98
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157250"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889331"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -556,12 +556,14 @@ El siguiente código muestra un ejemplo de tarjetas adaptables `invoke`con la ac
   }
 }
 ```
-
-## <a name="see-also"></a>Consulte también
-
-[Referencia de tarjetas](./cards-reference.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Acciones universales para tarjetas adaptables](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Referencia de tarjetas](./cards-reference.md)
+* [Uso de módulos de tareas desde los bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Tarjetas adaptables en bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Acciones universales para tarjetas adaptables](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)

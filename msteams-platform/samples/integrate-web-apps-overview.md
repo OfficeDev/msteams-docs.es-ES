@@ -5,12 +5,13 @@ description: Una introducción a la integración de aplicaciones web y capacidad
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 7d4056a23f126d636de3920d02a316440e51564e
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+keywords: El selector de personas de power platform power apps vincula profundamente el recurso compartido con el asistente de agente virtual Teams
+ms.openlocfilehash: 54f5345f44c35abbefabba642899a92d515e0aa2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017313"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889219"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
@@ -89,7 +90,7 @@ Las aplicaciones de Azure Communication Services pueden usar la funcionalidad de
 
 También puede integrar una identidad Microsoft 365 para crear aplicaciones externas que inserten vídeo y llamadas RTC en nombre de un Teams usuario. Si ha usado [sdk](/skype-sdk/appsdk/skypeappsdk) Skype Empresarial en el pasado, estas funcionalidades como parte de Azure Communication Services se recomiendan como reemplazo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Asignar los casos de uso de la aplicación a Teams funcionalidades de plataforma](~/concepts/design/map-use-cases.md)
 * [Determinar los puntos de entrada de la aplicación](~/concepts/extensibility-points.md)

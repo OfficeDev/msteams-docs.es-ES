@@ -1,16 +1,17 @@
 ---
 title: Preparar el envío de la tienda
-description: Describe los pasos finales antes de enviar Microsoft Teams aplicación para que aparezca en la tienda.
+description: Describe los pasos finales antes de enviar Microsoft Teams aplicación para que aparezca en la tienda. Aprende a validar el paquete de la aplicación, compilar instrucciones de prueba y crear los detalles de la descripción de la tienda.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: Localización de directrices de paquete de aplicación de validación del almacén de envíos
+ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720354"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889170"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío Microsoft Teams almacén
 
@@ -213,3 +214,7 @@ El Centro de partners admite [listados de almacenes localizados.](/office/dev/st
 
 > [!div class="nextstepaction"]
 > [Enviar la aplicación](/office/dev/store/add-in-submission-guide)
+
+## <a name="see-also"></a>Consulte también
+
+[Resolver problemas si se produce Microsoft Teams envío del almacén](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

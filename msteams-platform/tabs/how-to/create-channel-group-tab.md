@@ -1,16 +1,16 @@
 ---
 title: Crear una pestaña de canal o grupo
 author: laujan
-description: Guía de inicio rápido para crear una pestaña de canal y grupo con el Generador de Yeoman para Microsoft Teams.
+description: Guía de inicio rápido para crear una pestaña de canal y grupo con el Generador de Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 94e26c1edbc6f8a92cad6c5b4b19c422cb09bc70
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157118"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887451"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Crear una pestaña de canal o grupo
 
@@ -66,11 +66,11 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
     yo teams
     ```
 
-1. A continuación, proporcione una serie de valores que se usan en el archivo demanifest.js **aplicación:**
+1. A continuación, proporcione una serie de valores que se usan en el archivo **manifest.json** de la aplicación:
 
     ![captura de pantalla de apertura del generador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    **¿Cuál es el nombre de la solución?**
+    **¿Cómo se llama su solución?**
 
     Este es el nombre del proyecto. Puede aceptar el nombre sugerido seleccionando la **tecla** Entrar.
 
@@ -136,7 +136,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Necesita compatibilidad con el inicio de sesión único de Azure AD para la pestaña?**
 
-    Elija **no incluir** la compatibilidad de inicio de sesión único de Azure AD para la pestaña. El valor predeterminado es sí, escriba **n**.
+    Elija **no** incluir la Azure AD inicio de sesión único para la pestaña. El valor predeterminado es sí, escriba **n**.
 
     **¿Desea que esta pestaña esté disponible en SharePoint Online? (Y/n)**
 
@@ -175,9 +175,9 @@ Debes tener un paquete de aplicación para probar la pestaña en Teams. Es una c
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
+- Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
-El paquete se crea a través de una tarea gulp que valida el archivo manifest.jsen y genera la carpeta zip en el **directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
+El paquete se crea a través de una tarea gulp que valida el archivo manifest.json y genera la carpeta zip en **el directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
 
 ```bash
 gulp manifest
@@ -320,7 +320,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
+- Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña a Teams. Cuando un usuario elige agregar o actualizar la pestaña, Microsoft Teams carga el especificado en el manifiesto, lo inserta en un IFrame y lo representa en `configurationUrl` la pestaña.
 
@@ -435,7 +435,7 @@ Vaya a la **carpeta Shared,** abra **_Layout.cshtml** y agregue lo siguiente a l
 ### <a name="upload-your-tab-for-teams"></a>Upload la pestaña para Teams
 
 > [!NOTE]
-> App Studio se puede usar para editar el **archivomanifest.jsarchivo** y cargar el paquete completado en Teams. También puede editar manualmente el **archivomanifest.jsen.** Si lo hace, asegúrese de volver a crear la solución para crear el **archivotab.zip** cargar.
+> App Studio se puede usar para editar el **archivo manifest.json** y cargar el paquete completado en Teams. También puede editar manualmente el **archivo manifest.json.** Si lo hace, asegúrese de volver a crear la solución para crear el **archivotab.zip** cargar.
 
 **Para cargar la pestaña con App Studio**
 
@@ -457,7 +457,7 @@ Después de cargar el paquete de la aplicación en App Studio, debes configurarl
 
 Seleccione el icono de la pestaña recién importada en el panel derecho de la página de bienvenida del editor de manifiesto.
 
-Hay una lista de pasos en el lado izquierdo del editor de manifiesto y, a la derecha, una lista de propiedades que deben tener valores para cada uno de esos pasos. El usuario ha proporcionado gran parte de la **informaciónmanifest.js,** pero hay campos que debe actualizar.
+Hay una lista de pasos en el lado izquierdo del editor de manifiesto y, a la derecha, una lista de propiedades que deben tener valores para cada uno de esos pasos. El **manifest.json** ha proporcionado gran parte de la información, pero hay campos que debe actualizar.
 
 ##### <a name="details-app-details"></a>Detalles: Detalles de la aplicación
 
@@ -574,7 +574,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 - Un **icono de color completo** que mide 192 x 192 píxeles.
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **manifest.jsen** el archivo que especifica los atributos de la aplicación.
+- Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña a Teams.
 
@@ -636,14 +636,15 @@ En **Tab.cshtml,** la aplicación presenta al usuario dos botones de opción par
 
 ---
 
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
+
 ## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 * [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Crear una página de eliminación](~/tabs/how-to/create-tab-pages/removal-page.md)

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: b84975296b443ad71fb78042729f225a31ba9afe
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157175"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887695"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para Teams reuniones
 
@@ -37,16 +37,16 @@ Para personalizar Teams con aplicaciones para reuniones, habilite las aplicacion
 
 La nueva característica de escenas personalizadas del modo junto permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
 
-## <a name="see-also"></a>Consulte también
-
-* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [Bot](../bots/what-are-bots.md)
-* [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md)
-* [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
-* [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Extensibilidad de la aplicación para reuniones](meeting-app-extensibility.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
+* [Diseño de la extensión Microsoft Teams reunión](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Referencias de API de aplicaciones de reunión: Teams](~/apps-in-teams-meetings/api-references.md)
+* [Escenas del modo conjunto personalizado](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Habilitar y configurar las aplicaciones para Teams reuniones](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Ciclo de vida de la reunión](meeting-app-extensibility.md#meeting-lifecycle)

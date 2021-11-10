@@ -1,17 +1,17 @@
 ---
 title: Referencias API de aplicaciones de reuniones
 author: surbhigupta
-description: Identificar referencias de API de aplicaciones de reunión
+description: Identificar referencias de API de aplicaciones de reunión con ejemplos y ejemplos de código
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 40b4f428c6e1c493a360588ce3dc569e067d4d0a
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: consulta de señal de notificación usercontext de las reuniones de aplicaciones de teams
+ms.openlocfilehash: 29e0e797b3b55dd3fa25071929072957c8d43fd8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720200"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887709"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -58,9 +58,9 @@ La `GetParticipant` API incluye los siguientes parámetros de consulta:
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| Cadena | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. | 
+|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. | 
 
-### <a name="example"></a>Ejemplo:
+### <a name="example"></a>Ejemplo
 
 La `GetParticipant` API incluye los siguientes ejemplos:
 
@@ -161,7 +161,7 @@ La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
 |Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
-|**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
+|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -258,7 +258,7 @@ La API de detalles de reunión incluye el siguiente parámetro de consulta:
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 
-### <a name="example"></a>Ejemplo:
+### <a name="example"></a>Ejemplo
 
 La API de detalles de la reunión incluye los siguientes ejemplos:
 

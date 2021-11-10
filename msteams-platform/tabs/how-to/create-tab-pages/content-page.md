@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable estático
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: a3db1f535532fb00589cdff408e04d7addba234e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720317"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888387"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Crear una página de contenido para la pestaña
 
@@ -102,13 +102,15 @@ Si indicas en el manifiesto de la aplicación, toda la configuración de pestañ
     }
     ```
 
-## <a name="see-also"></a>Vea también
-
-* [Teams pestañas](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
-
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
+
+## <a name="see-also"></a>Consulte también
+ 
+* [Teams pestañas](~/tabs/what-are-tabs.md)
+* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
+* [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
+* [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [DevTools para pestañas de Microsoft Teams](~/tabs/how-to/developer-tools.md)

@@ -6,12 +6,12 @@ keywords: tab removing margins padding
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 79c4d887a028d9da722325985f9bbd62740e3781
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157662"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888079"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -48,7 +48,7 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 > * El cambio de eliminación del margen de tabulación se aplica a todas las pestañas. No hay forma de participar o no participar en el cambio. 
 > * El cambio de los márgenes de tabulación puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes que rodean su interfaz de usuario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

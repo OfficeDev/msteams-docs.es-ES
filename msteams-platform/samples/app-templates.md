@@ -6,12 +6,12 @@ keywords: Microsoft Teams de ejemplos de plantillas
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 4fefbee5a1310e9aa1c92b31a21f6132e04546d7
-ms.sourcegitcommit: 25a88715d9b06b2afeac14de86177bb34161b0cf
+ms.openlocfilehash: e99b6c347ce23b8d58bc8e632c8345ce6b09598f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60266644"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889198"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -121,8 +121,9 @@ En la tabla siguiente se describen ejemplos de código de plantilla de aplicaci�
 
 Para proporcionar comentarios, consulta [Comentarios de plantilla de aplicación](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
-
-
+* [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+* [Comprender Microsoft Teams funcionalidades de la aplicación] (.. /concepts/capabilities-overview.md)
+* [Diseñar tu aplicación personal para Microsoft Teams](../concepts/design/personal-apps.md)
+* [Sistema de diseño](../concepts/design/design-teams-app-fundamentals.md)

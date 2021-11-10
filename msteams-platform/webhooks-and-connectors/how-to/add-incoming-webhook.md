@@ -6,12 +6,12 @@ keywords: webhook saliente de pestañas de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260704"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888317"
 ---
 # <a name="create-incoming-webhook"></a>Crear webhook entrante
 
@@ -91,8 +91,10 @@ El webhook está disponible en el canal Teams web.
 
     El webhook se quita del Teams canal.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Crear un webhook saliente](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Crear un botón Compartir en Teams](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

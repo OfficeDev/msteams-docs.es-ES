@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Aplicaciones web
-ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157135"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889212"
 ---
 # <a name="web-apps"></a>Aplicaciones web 
 
@@ -82,9 +82,9 @@ Obtenga más información sobre cómo obtener contexto para su Teams [o](../tabs
 
 ***Escenarios de integración:** aplicaciones independientes, aplicaciones de colaboración, SharePoint*
 
-Azure Active Directory (AD) es el proveedor de identidades para Teams. Si la aplicación usa un proveedor de identidades diferente, debe realizar un ejercicio de asignación de identidades o combinarlo con Azure AD.
+Azure Active Directory (AD) es el proveedor de identidades para Teams. Si la aplicación usa un proveedor de identidades diferente, debes realizar un ejercicio de asignación de identidades o combinar con Azure AD.
 
-Teams tiene mecanismos de inicio de sesión único (SSO) con Azure AD para aplicaciones de terceros. También proporciona instrucciones para flujos de autenticación a otros proveedores de identidades mediante estándares como OAuth y Open ID Conectar, conocidos como OIDC.
+Teams mecanismos de inicio de sesión único (SSO) con Azure AD aplicaciones de terceros. También proporciona instrucciones para flujos de autenticación a otros proveedores de identidades mediante estándares como OAuth y Open ID Conectar, conocidos como OIDC.
 
 > [!IMPORTANT]
 > Actualmente, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC) pero no están disponibles para GCC-High y departamento de defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros para GCC, consulta Administrar directivas de permisos [de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones.](/microsoftteams/manage-apps)
@@ -111,11 +111,11 @@ Puede crear vínculos a información y características dentro de Teams. Usa [v�
 
 Usa un [bot](../bots/what-are-bots.md) en tu aplicación Teams para conversaciones multiproceso, ya que ofrece más flexibilidad que un [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Los bots también permiten enviar mensajes **proactivos** a usuarios o canales individuales. Los mensajes proactivos son mensajes no proactivos desencadenados por un evento externo y no un mensaje enviado a un bot. Por ejemplo, el bot envía un mensaje de bienvenida cuando está instalado o un nuevo usuario se une a un canal. 
+Los bots también permiten enviar mensajes **proactivos** a usuarios o canales individuales. Los mensajes proactivos son mensajes no proactivos desencadenados por un evento externo y no un mensaje enviado a un bot. Por ejemplo, el bot envía un mensaje de bienvenida cuando está instalado o un nuevo usuario se une a un canal.
 
 El envío de mensajes proactivos requiere Teams identificadores específicos. Puede capturar la información mediante [la captura de](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)datos de lista o perfil de usuario, la suscripción a eventos de conversación o el uso de Microsoft [Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams). [](../bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-No enviar correo no deseado a los usuarios con mensajes excesivos. Si la Teams la admite, los usuarios pueden configurar las opciones de notificación para la aplicación.   
+No enviar correo no deseado a los usuarios con mensajes excesivos. Si la Teams la admite, los usuarios pueden configurar las opciones de notificación para la aplicación.
 A continuación se muestra un ejemplo de un mensaje de notificación: **No me envíe mensajes no probados.**
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Usar SharePoint para el almacenamiento de archivos y datos
@@ -124,6 +124,10 @@ A continuación se muestra un ejemplo de un mensaje de notificación: **No me en
 
 Cuando se crea un equipo, también [se aprovisiona SharePoint](/microsoftteams/sharepoint-onedrive-interact) colección de sitios para admitir el almacenamiento de archivos y datos para ese equipo. La aplicación debe aprovechar esta característica si interactúa con archivos. Use la colección de sitios para almacenar datos sin procesar en SharePoint listas y Excel.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+* [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
+* [Soluciones de código bajo y sin código para Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Crear un botón Compartir en Teams](../concepts/build-and-test/share-to-teams.md)
+* [Atributos de cookie SameSite](~/resources/samesite-cookie-update.md)
+* [Integrar Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

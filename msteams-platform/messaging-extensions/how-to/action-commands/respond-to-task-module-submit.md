@@ -1,16 +1,16 @@
 ---
 title: Responder a la acción de envío del módulo de tareas
 author: surbhigupta
-description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensajería
+description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensajería con un mensaje proactivo, otro módulo de tareas, un bot de tarjeta adaptable y más mediante ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 92a7080d57b1ea6de3924da53a968d3fc960029a
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566389"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889415"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -30,7 +30,7 @@ Tiene las siguientes opciones para responder:
 
 Para la autenticación o configuración, después de que el usuario complete el proceso, la invocación original se resiente al servicio web. En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación de invocación `commandContext` de la extensión de mensajería: 
 
-|Tipo de respuesta | Redacción | Barra de comandos | Mensaje |
+|Tipo de respuesta | Redacción | Barra de comandos | Message |
 |--------------|:-------------:|:-------------:|:---------:|
 |Respuesta de tarjeta | ✔ | ✔ | ✔ |
 |Otro módulo de tareas | ✔ | ✔ | ✔ |
@@ -586,10 +586,10 @@ Para usar la atribución de usuario en teams, debe agregar la entidad de menció
 
 La siguiente sección es una descripción de las entidades de la `OnBehalfOf` matriz:
 
-|Field|Tipo|Descripción|
+|Campo|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|String|Describe la mención de una "persona".|
+|`mentionType`|Cadena|Describe la mención de una "persona".|
 |`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
 |`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
@@ -605,3 +605,6 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 > [!div class="nextstepaction"]
 > [Definición de comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
+## <a name="see-also"></a>Consulte también
+
+[Responder al comando de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
