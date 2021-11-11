@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 62423d92537cc6cb2d0f8f409d8e50b492fa00fd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 17add35ef0b2d2cbb3ce2e6658d11d6d58dd8d2d
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887716"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912223"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -164,10 +164,15 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad equitativa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Referencias API de aplicaciones de reuniones](API-references.md)
 
 ## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Agregar aplicaciones a reuniones a través de Microsoft Graph](/graph/api/chat-post-installedapps.md)
+* [Agregar aplicaciones a reuniones a través de Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http)

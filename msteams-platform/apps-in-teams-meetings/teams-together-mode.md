@@ -3,12 +3,12 @@ title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 051924aa8a8f02c6e9a075639014e4fc3290d8c0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887633"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912244"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -242,6 +242,6 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ## <a name="see-also"></a>Consulte también
 
-[Aplicaciones para Teams reuniones](teams-apps-in-meetings.md) 
- [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
- [Llamadas multimedia en](~/bots/calls-and-meetings/real-time-media-concepts.md) tiempo real y reuniones con Microsoft Teams
+* [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
+* [Bots de llamadas y reuniones ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Llamadas multimedia en tiempo real y reuniones con Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)

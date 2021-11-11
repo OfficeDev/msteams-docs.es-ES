@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6838471befd48c439caf9cfbf81589f3bdf75a79
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887702"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912200"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Requisitos previos para las aplicaciones en las reuniones de Teams
 
@@ -54,7 +54,7 @@ Una vez que hayas pasado por los requisitos previos, puedes usar las referencias
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Referencias API de aplicaciones de reuniones](API-references.md)
+> [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Consulte también
 

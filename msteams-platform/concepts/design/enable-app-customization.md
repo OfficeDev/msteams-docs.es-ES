@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 keywords: marca de color de énfeño ocultar la aprobación de la aplicación
-ms.openlocfilehash: 3519ad5dc91b27d947c752161bfe3c477281f1f7
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2061b638034a0b6359f1853163c49f7d696381c6
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888170"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912216"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar la Teams aplicación
 
@@ -53,6 +53,6 @@ Si de forma predeterminada, no quieres que la aplicación esté oculta, puedes a
 
 ## <a name="see-also"></a>Consulte también
 
-* [Esquema de manifesh de aplicaciones](/MicrosoftTeams/manifest-schema)
+* [Esquema del manifiesto de la aplicación](/MicrosoftTeams/manifest-schema)
 * [Personalizar aplicaciones en el Centro Teams administración](/MicrosoftTeams/customize-apps)
 

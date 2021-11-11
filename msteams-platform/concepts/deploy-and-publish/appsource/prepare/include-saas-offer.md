@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 72dbbfe62e6f5f975a09b7c0538e0847520670d9
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 868c41ad0df976fec60b9f579b8447a310344d9a
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719801"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912237"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
@@ -57,13 +57,13 @@ Al planear cómo monetizar la aplicación Teams, estos son algunos aspectos a te
 
 La integración con las API de cumplimiento saas es necesaria para monetizar tu Teams aplicación. Estas API le ayudan a administrar el ciclo de vida de un plan de suscripción una vez que un usuario las compra.
 
-Para obtener instrucciones completas y referencia a la API, consulte la documentación de las API de [cumplimiento saas.](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) En general, implementará los siguientes pasos mediante las API una vez que se compre una suscripción:
+Para obtener instrucciones completas y referencia a la API, consulte la documentación de las API de [cumplimiento saas.](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis) En general, implementará los siguientes pasos mediante las API una vez que se compre una suscripción:
 
-1.  Recibe un [*token de identificación de compra*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2#purchased-but-not-yet-activated-pendingfulfillmentstart) a través de la dirección URL de la página de aterrizaje.
+1. Recibe un [*token de identificación de compra*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) a través de la dirección URL de la página de aterrizaje.
 
-1.  Use el token para recuperar los detalles de la suscripción.
+1. Use el token para recuperar los detalles de la suscripción.
 
-1.  Notificar al mercado comercial que la suscripción está activada.
+1. Notificar al mercado comercial que la suscripción está activada.
 
 ### <a name="best-practices-for-implementing-subscription-management"></a>Procedimientos recomendados para implementar la administración de suscripciones
 

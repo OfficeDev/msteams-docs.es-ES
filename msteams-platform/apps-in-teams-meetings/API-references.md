@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de señal de notificación usercontext de las reuniones de aplicaciones de teams
-ms.openlocfilehash: 29e0e797b3b55dd3fa25071929072957c8d43fd8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887709"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912202"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -58,7 +58,7 @@ La `GetParticipant` API incluye los siguientes parámetros de consulta:
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. | 
+|**tenantId**| Cadena | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. | 
 
 ### <a name="example"></a>Ejemplo
 
@@ -161,7 +161,7 @@ La `NotificationSignal` API incluye el siguiente parámetro de consulta:
 
 |Valor|Tipo|Necesario|Descripción|
 |---|---|----|---|
-|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
+|**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -476,8 +476,3 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
-
-## <a name="next-steps"></a>Siguientes pasos
-
-> [!div class="nextstepaction"]
-> [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)

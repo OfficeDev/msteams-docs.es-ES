@@ -4,17 +4,17 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con permisos de dispositivo para aplicaciones en nuestro cliente web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: b2e83ca784e5459edfd80a3862610ebab2f8df30
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 32ccdc732fb05b82ab36b631c5e35f25f8c6c7dc
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496251"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912188"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
 > [!NOTE]
-> El cambio en la forma en que los permisos de dispositivo se controlan en el explorador está disponible actualmente solo en [la versión preliminar del desarrollador](../../resources/dev-preview/developer-preview-intro.md) público. Este cambio estará disponible generalmente (GA) antes del 21 de enero de 2022.
+> El cambio en la forma en que los permisos de dispositivo se controlan en el explorador está disponible actualmente solo en [la versión preliminar del desarrollador](../../resources/dev-preview/developer-preview-intro.md) público. Este cambio estará disponible generalmente (GA) antes del 01 de febrero de 2022.
 
 Las aplicaciones que requieren permisos de dispositivo ,como el acceso a cámara o micrófono, ahora requieren que los usuarios concedan el consentimiento manualmente en un nivel de aplicación en el explorador web. Anteriormente, el explorador controló cómo se concedieron estos permisos, pero ahora estos permisos se controlarán en Microsoft Teams. Esto tiene implicaciones en el diseño de la aplicación si requieren estos permisos en el explorador.
 
@@ -36,7 +36,7 @@ Microsoft Teams aplicaciones que requieren permisos de dispositivo en el explora
 
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a las funcionalidades de dispositivos](device-capabilities-overview.md)
 * [Solicitar permisos de dispositivo](native-device-permissions.md)
