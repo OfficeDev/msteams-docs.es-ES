@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo diseñar Tarjetas adaptables para 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
-ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
+ms.openlocfilehash: b016df98d57b9a3f5fe03e6cf26b31ad2d7b8db9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60249806"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887967"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de Tarjetas adaptables para la aplicación de Microsoft Teams
 
@@ -679,3 +679,11 @@ Tarjetas adaptables debe presentar contenido rápido y accionable. Demasiadas ac
 #### <a name="do-be-concise"></a>Do: Sea conciso
 
 Es fácil enviar varias tarjetas a una conversación, pero una vez que las tarjetas se desplazan fuera de la vista, resultan menos útiles. Intente limitarse a lo esencial. Esto es especialmente cierto en un canal en el que los usuarios tienen menos tolerancia a lo que perciben como "ruido".
+
+## <a name="see-also"></a>Consulte también
+
+* [Tarjetas y módulos de tareas](~/task-modules-and-cards/cards-and-task-modules.md)
+* [Tarjetas y módulos de tareas admitidos en el bot de Teams](~/task-modules-and-cards/what-are-task-modules.md)
+* [Trabajar con Acciones universales para tarjetas adaptables](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Responder a la acción de envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Vistas específicas de usuario](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)

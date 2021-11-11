@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 5b485e08029ba6a1028ffa19482cd767007b2444
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720228"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888513"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -466,3 +466,10 @@ Las aplicaciones no deben mostrar publicidad, incluidos los anuncios dinámicos,
 
 > [!div class="nextstepaction"]
 > [Crear una cuenta del Centro de partners](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+
+## <a name="see-also"></a>Consulte también
+
+* [Distribuir la aplicación](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [Preparar el envío de la tienda](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Prueba y depuración de la aplicación](~/concepts/build-and-test/debug.md)
+* [Crear una cuenta de desarrollador del Centro de partners](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
