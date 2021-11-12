@@ -5,12 +5,12 @@ description: Diseña tu aplicación más rápido con componentes de interfaz de 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887806"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948449"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
@@ -20,14 +20,14 @@ Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz d
 
 Los siguientes recursos pueden ayudarte a diseñar y desarrollar tu aplicación con plantillas de interfaz de usuario.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Toma plantillas de interfaz de usuario para el diseño de la aplicación desde el kit de interfaz de usuario de Microsoft Teams, que también incluye información extensa sobre el uso, la anatomía, la accesibilidad y los procedimientos recomendados.
 
 > [!div class="nextstepaction"]
 > [Obtener el kit de interfaz de usuario (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Biblioteca de interfaz de usuario
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams de interfaz de usuario
 
 Ver y probar plantillas de Teams de interfaz de usuario individuales y componentes relacionados en el explorador.
 
@@ -115,7 +115,7 @@ Organizar contenido en:
 
 :::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="En el ejemplo se muestra una plantilla de filtro." border="false":::
 
-## <a name="form"></a>Formulario
+## <a name="form"></a>Form
 
 Los formularios se usan para recopilar, validar y enviar la entrada del usuario de forma estructurada. El etiquetado claro y las agrupaciones lógicas de campos de entrada son fundamentales para una buena experiencia del usuario.
 

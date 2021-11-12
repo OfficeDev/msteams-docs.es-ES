@@ -5,12 +5,12 @@ description: Guía para planear la creación de una aplicación en Teams móvil
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 60aab6b9c81dbc28fbbfe0d9a985b42c22ddee47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566151"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948400"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
 
@@ -178,11 +178,11 @@ En la tercera fase, proporcione experiencia completa a los usuarios. Puede habil
 
 </details>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 Las siguientes directrices de diseño y validación ayudan en función del ámbito de la aplicación:
 
 * [Diseño de la pestaña](../../tabs/design/tabs.md)
 * [Cómo diseñar su bot](../../bots/design/bots.md)
 * [Diseño de módulos de tareas](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Validación de directrices](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Directrices de validación de la Tienda](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

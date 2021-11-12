@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: extensibilidad de puntos de entrada usa casos de funcionalidad del dispositivo
-ms.openlocfilehash: 63a11c949a56bf024632efc7cad5ef38ce918c2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889275"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948428"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de desarrollo de aplicaciones
 
@@ -48,5 +48,5 @@ Microsoft Teams plataforma está mejorando continuamente las capacidades de los 
 
 ## <a name="see-also"></a>Consulte también
 
-* [Integrar aplicaciones web con Teams](../samples/integrating-web-apps.md)
+* [Consideraciones para la Teams integración](../samples/integrating-web-apps.md)
 * [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)

@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888058"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948610"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -51,7 +51,7 @@ Teams pestañas deben cumplir los siguientes requisitos previos:
 ## <a name="see-also"></a>Consulte también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
-* [Cree la primera aplicación con React](../../get-started/first-app-react.md)
+* [Compile su primera aplicación con JavaScript](../../get-started/first-app-react.md)
 * [Cree la primera aplicación con Blazor](../../get-started/first-app-blazor.md)
 * [Cree la primera aplicación con SPFx](../../get-started/first-app-spfx.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

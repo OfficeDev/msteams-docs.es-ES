@@ -5,12 +5,12 @@ description: Obtén información sobre cómo diseñar Microsoft Teams aplicacion
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888142"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948568"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la Microsoft Teams aplicación
 
@@ -139,14 +139,14 @@ En función Fluent interfaz de usuario, estos son los elementos principales que 
 
 Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
 Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario. El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.
 
 > [!div class="nextstepaction"]
 > [Obtener el kit de interfaz de usuario (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Biblioteca de interfaz de usuario
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams de interfaz de usuario
 
 Ver y probar plantillas de Teams de interfaz de usuario individuales y componentes relacionados en el explorador.
 
@@ -169,7 +169,7 @@ Puedes cargar una aplicación de ejemplo para ver cómo deben verse y comportars
 
 Para obtener más información, pruebe uno de los siguientes recursos:
 
-### <a name="fluent-ui-documentation"></a>Fluent Documentación de la interfaz de usuario
+### <a name="fluent-ui-documentation"></a>Fluent de la interfaz de usuario
 
 Obtenga ejemplos de código y detalles de implementación para los componentes Fluent interfaz de usuario básicas que se usan para crear Teams experiencias.
 

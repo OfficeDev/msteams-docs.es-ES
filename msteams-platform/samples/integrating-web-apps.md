@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Consideraciones para la Teams integración
-ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912258"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948575"
 ---
 # <a name="considerations-for-teams-integration"></a>Consideraciones para la Teams integración 
 
@@ -48,7 +48,7 @@ La aplicación Teams debe incluir características de colaboración necesarias y
 
 La integración de todas las características de una aplicación existente en Teams a menudo conduce a una experiencia de usuario forzada o no natural, especialmente en aplicaciones más grandes. Comience con las características más impactantes y las que se integran de forma más natural con Teams. Puedes permitir que los usuarios inicien la aplicación principal y accedan a su conjunto completo de características.
 
-**Requisitos previos para integrar la aplicación con Teams** A continuación se indican los requisitos previos para integrar la aplicación con Teams. 
+**Los requisitos previos para integrar la aplicación con Teams** siguientes son los requisitos previos para integrar la aplicación con Teams. 
 
 1. [Asigna los casos de uso de la aplicación a Teams funcionalidades de plataforma.](../concepts/design/map-use-cases.md)
 1. [Determinar los puntos de entrada de la aplicación](../concepts/extensibility-points.md). ¿Es para uso personal, colaboración o ambos?

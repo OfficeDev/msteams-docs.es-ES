@@ -5,12 +5,12 @@ description: Describe cómo responder a la acción de envío del módulo de tare
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889415"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948414"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -589,7 +589,7 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 |Campo|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|Cadena|Describe la mención de una "persona".|
+|`mentionType`|String|Describe la mención de una "persona".|
 |`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
 |`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   

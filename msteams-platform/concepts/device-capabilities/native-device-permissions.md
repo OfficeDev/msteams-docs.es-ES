@@ -4,12 +4,12 @@ keywords: Teams apps capabilities permissions device native scan qr barcode imag
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario, como las capacidades de escáner qr, código de barras, imagen, audio y vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 185552c213d6313ea6c8b50af72a0220d9abe7fc
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 04518d8620ce95d5d3ca72c86684ff0208b1333f
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889121"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948435"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para la Microsoft Teams aplicación
 
@@ -192,17 +192,16 @@ Los permisos de dispositivo se almacenan para cada sesión de inicio de sesión.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **Node.js** |
+| **Nombre de ejemplo** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 |Permisos de dispositivo | Usar Microsoft Teams de ejemplo de pestaña para demostrar los permisos del dispositivo |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrar la funcionalidad de escáner de códigos QR o códigos de barras en Teams](qr-barcode-scanner-capability.md)
+## <a name="see-also"></a>Consulte también
 
-> [!div class="nextstepaction"]
-> [Integrar las capacidades de ubicación en Teams](location-capability.md)
+* [Integrar la funcionalidad de escáner de códigos QR o códigos de barras en Teams](qr-barcode-scanner-capability.md)
+* [Integrar las capacidades de ubicación en Teams](location-capability.md)

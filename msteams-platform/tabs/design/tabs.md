@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Kit de interfaz de usuario administración de la configuración de pestañas de inicio de sesión único vinculación en profundidad de inicio de sesión único discusión de subproceso de vista basada en roles
-ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887925"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948589"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
 

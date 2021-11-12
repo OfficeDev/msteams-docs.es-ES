@@ -6,17 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: El selector de personas de power platform power apps vincula profundamente el recurso compartido con el asistente de agente virtual Teams
-ms.openlocfilehash: 54f5345f44c35abbefabba642899a92d515e0aa2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 77daf673fd20c82803b0498487d04fe5232c28ef
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889219"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948582"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
 Puede proporcionar una experiencia de usuario enriquecida integrando las características de una aplicación web existente en Microsoft Teams plataforma. Asegúrate de seguir [las Teams de diseño para](~/concepts/design/understand-use-cases.md) que tu aplicación sea nativa de Teams.
-En este documento se proporciona información general sobre los requisitos previos para integrar aplicaciones web con Teams, power platform para crear aplicaciones de Power, Power Virtual Agents, Virtual Assistant, plantillas de aplicaciones, conectores de turnos, LMS de Moodle, creación de un botón compartir a Teams para el sitio web, agregar una pestaña Microsoft Teams en SharePoint, crear vínculos profundos e integrar las capacidades del dispositivo.
+En este documento se proporciona información general sobre los requisitos previos para integrar aplicaciones web con Teams, la plataforma Power para crear aplicaciones de Power, Power Virtual Agents, Virtual Assistant, plantillas de aplicaciones, conectores de turno, LMS de Moodle, creación de un botón Compartir a Teams para su sitio web y agregar un Microsoft Teams  tab en SharePoint, crear vínculos profundos e integrar las capacidades del dispositivo.
 
 ## <a name="prerequisites"></a>Requisitos previos   
 
@@ -55,9 +55,9 @@ Virtual Assistant es una plantilla de código abierto de Microsoft que le permit
 
 Puedes usar la plantilla de aplicación para crear aplicaciones personalizadas que se adapten a tus necesidades organizativas. Se trata de aplicaciones preparadas para producción Microsoft Teams que están controladas por la comunidad, de código abierto y disponibles en GitHub. Cada plantilla contiene instrucciones detalladas para implementar e instalar la aplicación para su organización. Proporciona una aplicación lista para usar que puede instalar y empezar a usar inmediatamente. 
 
-## <a name="teams-shifts-work-force-management-connectors"></a>Teams Conectores de administración de fuerza de trabajo de turnos
+## <a name="teams-shifts-work-force-management-connectors"></a>Teams de administración de fuerzas de trabajo de turnos
 
-Teams Los conectores de administración de fuerza de trabajo de turnos son integraciones basadas en la producción, de código abierto y basadas en la comunidad. Ofrecen una experiencia perfecta y un proceso rápido para la transformación digital de trabajadores de primera línea con Teams Shifts.
+Teams los conectores de administración de fuerza de trabajo de turnos de trabajo son integraciones basadas en la comunidad, listas para producción y de código abierto. Ofrecen una experiencia perfecta y un proceso rápido para la transformación digital de trabajadores de primera línea con Teams Shifts.
 
 ## <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -94,7 +94,7 @@ También puede integrar una identidad Microsoft 365 para crear aplicaciones exte
 
 * [Asignar los casos de uso de la aplicación a Teams funcionalidades de plataforma](~/concepts/design/map-use-cases.md)
 * [Determinar los puntos de entrada de la aplicación](~/concepts/extensibility-points.md)
-* [Integrar aplicaciones web](~/samples/integrating-web-apps.md)
+* [Consideraciones para la Teams integración](~/samples/integrating-web-apps.md)
 * [Crear aplicaciones personalizadas de código bajo para Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Añadir un bot de chat de Power Virtual Agents](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Crear asistente virtual](~/samples/virtual-assistant.md)

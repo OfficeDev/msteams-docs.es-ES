@@ -3,7 +3,7 @@ title: Microsoft Teams documentación para desarrolladores
 summary: 'Obtenga documentación, código de ejemplo, tutoriales y mucho más para ayudarle a crear aplicaciones Microsoft Teams personalizadas.'
 brand: teams
 metadata:
-  title: Microsoft Teams Documentación para desarrolladores de plataformas
+  title: Microsoft Teams de desarrolladores de plataformas
   description: 'La plataforma de desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios para mejorar la productividad, tomar decisiones con mayor rapidez, prestar atención al reducir el cambio de contexto y crear colaboración en torno al contenido y los flujos de trabajo existentes.'
   ms.service: msteams
   ms.topic: hub-page
@@ -74,7 +74,7 @@ conceptualContent:
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: Aplicaciones para Teams reuniones
-        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+        - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Tarjetas y módulos de tareas
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
@@ -120,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Integrar conectores shifts listos para producción
-    - title: Comunidad
+    - title: Community
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -133,7 +133,7 @@ conceptualContent:
           text: Anuncios
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Respuesta y Community desarrollador
+          text: Microsoft Teams developer Community y respuesta
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Contribuir a la Microsoft Teams documentación
