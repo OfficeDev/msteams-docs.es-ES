@@ -1,16 +1,17 @@
 ---
 title: Pestañas de diseño para escritorio, web y móvil
-description: Obtenga información sobre cómo diseñar una pestaña Teams para escritorio, web y móvil, y obtenga el kit de la interfaz de usuario de Microsoft Teams.
+description: Obtenga información sobre cómo diseñar una pestaña Teams para escritorio, web y móvil, y obtenga el kit de la interfaz de usuario de Microsoft Teams. Obtenga información sobre la funcionalidad y la apariencia de las pestañas, la creación de la autenticación de usuario, las notificaciones de pestañas y la vinculación en profundidad en pestañas.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 99588b35e5de0a4d6c06e5d1353af312429081cc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: Kit de interfaz de usuario administración de la configuración de pestañas de inicio de sesión único vinculación en profundidad de inicio de sesión único discusión de subproceso de vista basada en roles
+ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475632"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887925"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
 
@@ -62,9 +63,9 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 |3|**iframe**: espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
 |4|**Acerca del vínculo**: abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
 |5|**Botón Cerrar**: cierra el cuadro de diálogo.|
-|6|**Opción Notificar a los miembros del equipo**: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.|
-|7|**Botón Atrás**: va al paso anterior en función de dónde se abrió el cuadro de diálogo.|
-|8|**Botón Guardar**: completa la configuración de la pestaña.|
+|6 |**Opción Notificar a los miembros del equipo**: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.|
+|7 |**Botón Atrás**: va al paso anterior en función de dónde se abrió el cuadro de diálogo.|
+|8 |**Botón Guardar**: completa la configuración de la pestaña.|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>Autenticación de pestaña con inicio de sesión único
 
@@ -282,3 +283,7 @@ Si no usa los tokens de color de Teams, sus diseños serán menos escalables y a
 
    :::column-end:::
 :::row-end:::
+
+## <a name="see-also"></a>Consulte también
+
+[Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
