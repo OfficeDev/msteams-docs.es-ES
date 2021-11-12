@@ -4,12 +4,12 @@ description: Describe autenticación silenciosa, inicio de sesión único, Azure
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: ficha de inicio de sesión AAD autenticación de teams
-ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e5e8de1878aaec29c8ae1cd8dc1350a110d38b5e
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888030"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949050"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 

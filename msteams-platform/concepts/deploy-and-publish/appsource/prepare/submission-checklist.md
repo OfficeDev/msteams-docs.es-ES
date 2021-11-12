@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Localización de directrices de paquete de aplicación de validación del almacén de envíos
-ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889170"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949071"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío Microsoft Teams almacén
 
@@ -159,7 +159,7 @@ Recuerde los siguientes procedimientos recomendados sobre capturas de pantalla:
 
 Para obtener los procedimientos recomendados, consulte los siguientes recursos:
 
-* [Teams Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Crear imágenes eficaces para almacenes de aplicaciones de Microsoft](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>Crear un vídeo

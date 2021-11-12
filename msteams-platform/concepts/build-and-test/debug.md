@@ -4,12 +4,12 @@ description: Describe las opciones para probar y depurar Microsoft Teams aplicac
 keywords: teams ejecutar aplicaciones de depuración host hospedado en la nube local
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2c28090d82737d5231ed68a2fd3ef6896d701022
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889084"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949022"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elige una configuración para probar y depurar tu Microsoft Teams aplicación
 

@@ -6,12 +6,12 @@ author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: implementar la carga de aplicaciones de publicación gcc
-ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889191"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949113"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir la aplicación Microsoft Teams aplicación
 
@@ -52,4 +52,4 @@ Para obtener más información, [vea publish to the Teams store](~/concepts/depl
 
 ## <a name="see-also"></a>Consulte también
 
-* [Cumplimiento de Aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)
+[Programa de cumplimiento de aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)

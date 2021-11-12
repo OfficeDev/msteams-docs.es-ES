@@ -4,12 +4,12 @@ description: Describe la autenticación en Teams y cómo usarla en las aplicacio
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Autenticación de teams OAuth SSO AAD
-ms.openlocfilehash: b2f8dc18afac3b088c1ec05812a3a39e2b378182
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8a148fc6d36a94afe88d4738711b7b86850f8be9
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889082"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949029"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
@@ -43,7 +43,7 @@ Para obtener más información sobre el uso de OAuthPrompt, vea:
 
 proporciona un ejemplo de SDK de autenticación de bot v3.
 
-| **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
+| **Ejemplo de nombre** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Autenticación de bot | En este ejemplo se muestra cómo empezar con la autenticación en un bot para Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Sso de pestaña, bot y mensajería (ME) | En este ejemplo se muestra SSO para Tab, Bot y ME: búsqueda, acción, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | No disponible |
