@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d6a984f4e0816cd3a2312f82f669b8299467948b
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889247"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949645"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 
@@ -77,7 +77,7 @@ Los ejemplos de código desempeñan un papel importante para usar api y SDK de f
 ## <a name="see-also"></a>Consulte también
 
 * [Microsoft Docs](/)
-* [guía de colaboradores](/contribute)
+* [Guía de colaboradores](/contribute)
 * [Inicio rápido de voz y estilo de documentos](/contribute/style-quick-start)
 * [Cutting Edge : Source Code Readability Sugerencias](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentación](/microsoftteams/platform/overview)

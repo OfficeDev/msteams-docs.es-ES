@@ -5,12 +5,12 @@ description: Comprenda cómo los webhooks y conectores pueden conectar los servi
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6530462d3b0fe23ae6703dd059bba59d72f321b8
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 6fd3b24f5c33fb31e96b7fd69eb72e9d77e36096
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949057"
+ms.locfileid: "60949568"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks y conectores
 
@@ -52,4 +52,3 @@ Los mensajes que se pueden usar permiten a los usuarios tomar medidas sin salir 
 * [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
-

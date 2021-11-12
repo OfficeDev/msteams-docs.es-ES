@@ -4,12 +4,12 @@ description: Describe el flujo de autenticación en pestañas, OAuth por AAD y p
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: pestañas de flujo de autenticación de teams
-ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2d054ef841bf4f05be4e662d77b999c654670f45
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888450"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949652"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams de autenticación para pestañas
 
@@ -49,11 +49,11 @@ Aunque el contexto de pestaña proporciona información útil sobre el usuario, 
 
 Código de ejemplo que muestra el proceso de autenticación de tabulación:
 
-| **Ejemplo de nombre** | **Descripción** | **C#** | **Node.js** |
+| **Ejemplo de nombre** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams de pestañas | Proceso de autenticación para pestañas que usan AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams de pestañas | Proceso de autenticación para pestañas que usan AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## <a name="more-details"></a>Más detalles
+## <a name="see-also"></a>Consulte también
 
 Para obtener una implementación detallada para la autenticación de pestañas AAD, vea:
 

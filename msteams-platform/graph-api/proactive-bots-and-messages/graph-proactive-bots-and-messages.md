@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: instalación proactiva de chat de mensajería de teams Graph
-ms.openlocfilehash: a3b7ffd24f7601c8247f1f11c6fe1a562d9cd847
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a52d36150ee384841cde73e9a00510cabc31f144
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888009"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949582"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalación proactiva de aplicaciones con Graph API para enviar mensajes
 
@@ -192,7 +192,7 @@ El bot puede [enviar mensajes proactivos](/azure/bot-service/bot-builder-howto-p
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** |
+| **Nombre de ejemplo** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo usar la instalación proactiva de la aplicación para los usuarios y enviar notificaciones proactivas llamando a las API Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
@@ -203,5 +203,5 @@ El bot puede [enviar mensajes proactivos](/azure/bot-service/bot-builder-howto-p
 
 ## <a name="see-also"></a>Consulte también
 
-* [**Administrar directivas de configuración de aplicaciones en Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [Administrar directivas de configuración de aplicación en Microsoft Teams](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Enviar notificaciones proactivas a usuarios SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
