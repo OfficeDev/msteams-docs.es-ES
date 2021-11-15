@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest
-ms.openlocfilehash: ad3d18365eb513576379706d4bddd02efa71d96e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 370a23392c8b6233802b9faa0cc1edb9a6215e73
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720179"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960163"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ----------------|
+|11/13/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md) [información general sobre la conversación](~/bots/how-to/conversations/conversation-basics.md)del bot y conversaciones de canal y [grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)|
 |10/28/2021 | Monetice la aplicación Teams con una oferta SaaS transaccionable.| [Incluir una oferta SaaS con tu Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
 |10/25/2021| Módulo Get started updated for Microsoft Teams Developer Documentation con nueva estructura y procedimientos en una guía paso a paso.| [Introducción a la primera aplicación Teams aplicación](get-started/get-started-overview.md)|
 |10/21/2021| Agrega una `registerOnFocused` API para pestañas o aplicaciones personales. |[Agregar `registerOnFocused` API para pestañas o aplicaciones personales](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
@@ -95,14 +96,14 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 |08/06/2020|Compatibilidad con la autenticación de SSO de pestañas.|[Desarrollar una pestaña de Microsoft Teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph bots y mensajes proactivos (versión preliminar pública).|[Habilitar la instalación proactiva de bots y la mensajería proactiva en Teams con Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |07/22/2020 |Actualizaciones de funcionalidad de dispositivo móvil.|[Solicitar permisos de dispositivo para la Microsoft Teams pestaña](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|Teams Herramienta de validación de aplicaciones para envíos de AppSource.|[Teams Herramienta de validación de aplicaciones](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+|07/20/2020|Teams herramienta de validación de aplicaciones para envíos de AppSource.|[Teams de validación de aplicaciones](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Cree un asistente virtual para Teams.|[Virtual Assistant para Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Mostrar una documentación de indicador de carga nativa.|[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Empieza a crear Teams aplicaciones con el Visual Studio Code Toolkit.|[Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Inicio de sesión único para las pestañas GA para Teams web y de escritorio.|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Esquema de manifiesto actualizado a la versión 1.7.| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|Integre Power Virtual Agents con Teams.|[Integrar un Power Virtual Agents chatbot con Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
-|04/01/2020|Integre sistemas WFM con Shifts Connector para Teams.|[Microsoft Teams Cambia los conectores WFM](samples/shifts-wfm-connectors.md)
+|04/01/2020|Integre sistemas WFM con Shifts Connector para Teams.|[Microsoft Teams shifts conectores WFM](samples/shifts-wfm-connectors.md)
 |03/24/2020 | Se agregó compatibilidad para recuperar un solo miembro de una conversación y compatibilidad adicional para recuperar miembros paginados. | [Obtención del contexto de Teams para un bot](~/bots/how-to/get-teams-context.md) |
 
 <br>
@@ -186,6 +187,7 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Notas** | **Temas cambiados** |
 | -------- | --------- | ------------------ |
+|11/15/2021|Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office|[Extender Teams aplicaciones en Microsoft 365](m365-apps/overview.md)
 |10/28/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).|[Recibir todos los mensajes con RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)información general de la conversación del [bot,](~/bots/how-to/conversations/conversation-basics.md)conversaciones de canal [y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md)y esquema de manifiesto de vista previa [del desarrollador](~/resources/schema/manifest-schema-dev-preview.md)|
 |10/19/2021|Permisos de dispositivo para el explorador.| [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md)|
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot.| [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
