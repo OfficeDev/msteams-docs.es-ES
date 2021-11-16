@@ -104,6 +104,8 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: SDK para cliente de JavaScript en Teams
       href: tabs/how-to/using-teams-client-sdk.md
+    - name: Versión preliminar del SDK v2 de cliente de JavaScript en Teams
+      href: m365-apps/using-teams-client-sdk-preview.md
     - name: Bot Framework de Node.js para bots y extensiones de mensajería (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: Bot Framework de .NET para bots y extensiones de mensajería (GitHub)
@@ -368,6 +370,16 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
+- name: "Ampliar la aplicación en todo Microsoft\_365"
+  items:
+    - name: Información general
+      href: m365-apps/overview.md
+    - name: Requisitos previos
+      href: m365-apps/prerequisites.md
+    - name: Habilitar una pestaña personal de Teams para Office y Outlook
+      href: m365-apps/extend-m365-teams-personal-tab.md
+    - name: Habilitar una extensión de mensajería de Teams para Outlook
+      href: m365-apps/extend-m365-teams-message-extension.md
 - name: Probar la aplicación
   items:
     - name: Información general
@@ -480,8 +492,6 @@
           href: resources/schema/localization-schema.md
     - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
-    - name: Casos con errores frecuentes para los envíos de la tienda
-      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Contribuir a este contenido
       href: resources/teams-contributor-reference.md
 - name: Soporte técnico y comentarios
