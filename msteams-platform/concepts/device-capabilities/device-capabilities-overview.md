@@ -6,18 +6,18 @@ ms.author: surbhigupta
 keywords: Cámara image media microphone mic qr code qrcode bar code barcode scan scanner location capabilities native device permissions
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d51b9532822a6cb9df2f69975722d16da6ee2531
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889142"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041716"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 
 Microsoft Teams plataforma está mejorando continuamente las capacidades de los desarrolladores que se alinean con las experiencias integradas de primera persona. La plataforma de Teams permite a los partners integrar las capacidades del dispositivo, como cámara, escáner qr o código de barras, galería de fotos, micrófono y ubicación con sus aplicaciones web. Esta integración reduce la barrera del desarrollo de aplicaciones, acelera el ciclo de desarrollo y crea nuevos escenarios o casos de uso para la comunidad de desarrolladores.
 
-Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md).
+Los permisos de dispositivo son diferentes en el explorador. Anteriormente, el explorador controló cómo conceder permisos de acceso y ahora estos permisos se controlan en Microsoft Teams. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Funcionalidades de dispositivo nativo
 

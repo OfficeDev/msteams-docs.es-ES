@@ -4,36 +4,40 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con permisos de dispositivo para aplicaciones en nuestro cliente web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 32ccdc732fb05b82ab36b631c5e35f25f8c6c7dc
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 8ace96ea1e9582c6087d0f551dc021e69a4a8de2
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912188"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041723"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
 > [!NOTE]
-> El cambio en la forma en que los permisos de dispositivo se controlan en el explorador está disponible actualmente solo en [la versión preliminar del desarrollador](../../resources/dev-preview/developer-preview-intro.md) público. Este cambio estará disponible generalmente (GA) antes del 01 de febrero de 2022.
+> La actualización más reciente sobre cómo se administran los permisos de dispositivo en el explorador está disponible solo en [la versión preliminar del desarrollador](../../resources/dev-preview/developer-preview-intro.md) público. Esta actualización estará disponible generalmente (GA) antes del 01 de febrero de 2022.
 
-Las aplicaciones que requieren permisos de dispositivo ,como el acceso a cámara o micrófono, ahora requieren que los usuarios concedan el consentimiento manualmente en un nivel de aplicación en el explorador web. Anteriormente, el explorador controló cómo se concedieron estos permisos, pero ahora estos permisos se controlarán en Microsoft Teams. Esto tiene implicaciones en el diseño de la aplicación si requieren estos permisos en el explorador.
 
-## <a name="change-in-behavior"></a>Cambio de comportamiento
-Si la aplicación ha declarado que necesita permisos de dispositivo en el manifiesto de la [aplicación,](native-device-permissions.md)se mostrará a los usuarios una opción "permisos de aplicación" donde puedan habilitar los permisos de dispositivo de una aplicación. La opción "permisos de aplicación" se puede encontrar en aplicaciones personales, cuadros de diálogo del módulo de tareas y pestañas en chats, canales o reuniones.
+Teams que requieren permisos de dispositivo, como acceso a cámara o micrófono, ahora requieren que los usuarios concedan permisos manualmente a un nivel de aplicación en el explorador web. Anteriormente, el explorador controló cómo conceder permisos de acceso, pero ahora estos permisos se controlan en Microsoft Teams. Esto tiene implicaciones en el diseño de la aplicación y si requieren estos permisos en el explorador.
 
-### <a name="personal-apps-and-task-module-dialogs"></a>Cuadros de diálogo de módulos de tareas y aplicaciones personales
-La configuración "permisos de aplicación" se encuentra en la parte superior derecha.
+## <a name="enable-apps-device-permissions"></a>Habilitar los permisos de dispositivo de la aplicación
+Si la aplicación Teams ha declarado [](native-device-permissions.md#specify-permissions) en el manifiesto de la aplicación  que necesita permisos de dispositivo, aparecerá la opción Permisos de la aplicación para que los usuarios habiliten los permisos de dispositivo de la aplicación. La **opción Permisos de** la aplicación está disponible en las siguientes funcionalidades: 
+
+* **Cuadros de diálogo de módulos** de tareas y aplicaciones personales: la opción **Permisos** de la aplicación está disponible en la esquina superior derecha de la página.
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
-### <a name="chat-channel-or-meeting-tabs"></a>Pestañas de chat, canal o reunión
-La configuración "permisos de aplicación" se puede encontrar en el desplegable de pestañas.
-![Lista desplegable de permisos de aplicación](../../assets/images/tabs/drop-downapppermissions.png)
+* **Chats, canales o pestañas de** reunión: la **opción Permisos** de la aplicación está disponible en el desplegable de la pestaña. ![ Lista desplegable de permisos de aplicación](../../assets/images/tabs/drop-downapppermissions.png)
 
-Un usuario tendrá que habilitar estos permisos en el explorador para que estos permisos entren en vigor. Cuando un usuario cambie los permisos de dispositivo de una aplicación en el explorador, se le pedirá que vuelva a cargar la aplicación en Teams. Es importante que los usuarios conozcan a dónde ir para habilitar estos permisos en Microsoft Teams.
+Una vez **seleccionada la** opción Permisos de la aplicación, aparece un elemento emergente donde el usuario puede habilitar el botón de permisos.
+
+Un usuario tendrá que habilitar estos permisos en el explorador para que estos permisos entren en vigor. Después de que el usuario cambie los permisos de dispositivo de la aplicación en el explorador, se le pedirá que vuelva a cargar la aplicación en Teams.
+
+> [!IMPORTANT]
+> Debes hacer que los usuarios conozcan a dónde ir para habilitar estos permisos **de** aplicación en Microsoft Teams.
 
 ## <a name="recommendation"></a>Recomendación
-Microsoft Teams aplicaciones que requieren permisos de dispositivo en el explorador deben mostrar instrucciones a los usuarios sobre dónde buscar y habilitar estos permisos en la interfaz Teams usuario. Según el contexto en el que se ejecute la aplicación, deberá asegurarse de que las instrucciones indican al usuario que corrija la ubicación para obtener acceso a estos permisos, ya que difieren en aplicaciones personales, cuadros de diálogo de módulos de tareas y pestañas en chats, canales o reuniones.
+Teams que requieren permisos de dispositivo en el explorador deben mostrar instrucciones a los usuarios sobre dónde buscar y habilitar estos permisos en la interfaz Teams usuario. Según el contexto en el que se ejecute la aplicación, debe asegurarse de que las instrucciones indican al usuario que corrija la ubicación para tener acceso a estos permisos, ya que difieren en aplicaciones personales, cuadros de diálogo de módulos de tareas, pestañas en chats y canales o reuniones.
 
+</br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
 
 ## <a name="see-also"></a>Consulte también

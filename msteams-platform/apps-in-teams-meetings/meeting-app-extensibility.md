@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 920c0ee23ffeb2ea7943579254a115bf2d82fea3
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887730"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041709"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -115,11 +115,13 @@ En la siguiente imagen se muestra el panel lateral de la reunión:
 
 ---
 
-En la tabla siguiente se describe el comportamiento de la aplicación cuando se aprueba y no se aprueba:
+En la tabla siguiente se describe el comportamiento de la aplicación cuando se valida y no se valida:
 
-|Funcionalidad de la aplicación | La aplicación está aprobada | La aplicación no está aprobada |
+|Funcionalidad de la aplicación | La aplicación se valida | La aplicación no se valida |
 |---|---|---|
 | Extensibilidad de reuniones | La aplicación aparecerá en reuniones. | La aplicación no aparecerá en las reuniones de los clientes móviles. |
+
+Para obtener más información, vea [Directrices de validación de almacén](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 #### <a name="post-meeting-app-experience"></a>Experiencia de aplicación posterior a la reunión
 

@@ -1,0 +1,103 @@
+### YamlMime:Landing
+title: Microsoft Teams de desarrolladores
+summary: Le damos la bienvenida a información general Microsoft Teams documentación para desarrolladores. Microsoft Teams aplicaciones aportan información clave, herramientas comunes y procesos de confianza a los que las personas se reúnen, aprenden y trabajan cada vez más.
+metadata:
+  title: Microsoft Teams de desarrolladores
+  description: Introducción a la creación de aplicaciones para Teams
+  ms.date: 11/10/2021
+  ms.topic: landing-page
+  ms.openlocfilehash: 2389ccf6df9670b173d74c7b5c40baed48a20349
+  ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/16/2021
+  ms.locfileid: "61041747"
+landingContent:
+- title: Explorar lo más reciente
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office (versión preliminar)
+      url: ~/m365-apps/overview.md
+    - text: Permitir que los bots reciban todos los mensajes de canal mediante el consentimiento específico de recursos (RSC)
+      url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
+    - text: Monetice la aplicación Teams con una oferta SaaS transaccionable
+      url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - text: Crear aplicaciones personalizadas de código bajo
+      url: ~/samples/teams-low-code-solutions.md
+- title: Tutoriales
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Mensajes proactivos
+      url: ~/bots/how-to/conversations/send-proactive-messages.md
+    - text: Agregar autenticación a bots
+      url: ~/bots/how-to/authentication/add-authentication.md
+  - linkListType: tutorial
+    links:
+    - text: Guía paso a paso para mensajes proactivos
+      url: ~/sbs-send-proactive.yml
+    - text: Guía paso a paso para agregar autenticación a bots
+      url: ~/sbs-bots-with-sso.yml
+- title: Introducción
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Introducción a la creación de aplicaciones
+      url: ../msteams-platform/get-started/get-started-overview.md
+  - linkListType: tutorial
+    links:
+    - text: Crear aplicación con JavaScript
+      url: sbs-gs-javascript.yml
+    - text: Crear aplicación con Blazor
+      url: sbs-gs-blazor.yml
+    - text: Crear aplicación con SPFx
+      url: sbs-gs-spfx.yml
+    - text: Crear aplicación con C# o .NET
+      url: sbs-gs-csharp.yml
+    - text: Crear aplicación con Node.js
+      url: sbs-gs-nodejs.yml
+- title: Crear aplicaciones para Teams
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Desarrollar aplicaciones para Microsoft Teams
+      url: ../msteams-platform/overview.md
+    - text: Conceptos básicos de aplicación
+      url: ~/concepts/app-fundamentals-overview.md
+    - text: Diseño de la aplicación
+      url: ~/concepts/design/design-teams-app-overview.md
+  - linkListType: whats-new
+    links:
+    - text: Novedades
+      url: ../msteams-platform/whats-new.md
+- title: Capacidades de la aplicación de compilación
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Crear pestañas
+      url: ~/tabs/what-are-tabs.md
+    - text: Crear bots
+      url: ~/bots/what-are-bots.md
+    - text: Crear extensiones de mensaje
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Compilar aplicaciones para reuniones de Teams
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Crear webhooks y conectores
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: Crear módulos de tareas y tarjetas
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
+    - text: Manifiesto de la aplicación
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Publicar y distribuir
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Distribución
+      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
+    - text: Publicar en Teams Store
+      url: ~/concepts/deploy-and-publish/appsource/publish.md
+    - text: Directrices de validación de la Tienda
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: Mantener la aplicación publicada
+      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md

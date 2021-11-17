@@ -1,17 +1,17 @@
 ---
 title: Referencias API de aplicaciones de reuniones
 author: surbhigupta
-description: Identificar referencias de API de aplicaciones de reunión con ejemplos y ejemplos de código
+description: Identificar las referencias de api de aplicaciones de reunión con ejemplos y ejemplos de código
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de señal de notificación usercontext de las reuniones de aplicaciones de teams
-ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: ba7996e0c33823c3f296d18350ea33421c844c68
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912202"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041632"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -40,13 +40,13 @@ En la tabla siguiente se proporcionan los métodos del SDK de Bot Framework para
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-Para identificar y recuperar información contextual para el contenido de la pestaña, vea [Obtener contexto para su Teams pestaña](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). se usa en una pestaña al ejecutarse en el contexto de la reunión y `meetingId` se agrega para la carga de respuesta.
+Para identificar y recuperar información contextual para el contenido de la pestaña, vea obtener contexto para la pestaña [Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). se usa en una pestaña al ejecutarse en el contexto de la reunión y se agrega para la carga de `meetingId` respuesta.
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 > * No almacenar en caché los roles de los participantes, ya que el organizador de la reunión puede cambiar los roles en cualquier momento.
-> * Teams actualmente no admite listas de distribución grandes ni tamaños de lista de más de 350 participantes para la `GetParticipant` API.
+> * Teams actualmente no admite listas de distribución grandes ni tamaños de lista de más de 350 participantes `GetParticipant` API.
 
 La `GetParticipant` API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. La API incluye parámetros de consulta, ejemplos y códigos de respuesta.
 
