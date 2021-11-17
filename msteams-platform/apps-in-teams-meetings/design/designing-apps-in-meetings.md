@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Fase de reunión compartida de comportamiento dinámico de plantilla de kit de interfaz de usuario en la reunión
-ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
+ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887848"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61051199"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
@@ -192,7 +192,7 @@ La fase de reunión compartida ayuda a los participantes a interactuar y colabor
 Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase se vuelve a reorientar para todos los participantes de la reunión.
 
 > [!NOTE]
-> Todos los usuarios que se reúnen pueden ver la aplicación cuando se comparten desde el escritorio. Sin embargo, la capacidad de compartir una aplicación en fase desde el móvil no está disponible actualmente.
+> Todos los usuarios que se reúnen pueden ver la aplicación cuando se comparten desde el escritorio. Actualmente, los usuarios móviles no pueden compartir contenido de la aplicación en la fase de reunión.
  
 ### <a name="use-cases"></a>Casos de uso
 

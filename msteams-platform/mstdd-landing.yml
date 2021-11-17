@@ -6,12 +6,12 @@ metadata:
   description: Introducción a la creación de aplicaciones para Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 2389ccf6df9670b173d74c7b5c40baed48a20349
-  ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+  ms.openlocfilehash: 9d08880e0cb4d1788d0a88f5f3b38cc71bdfc396
+  ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/16/2021
-  ms.locfileid: "61041747"
+  ms.lasthandoff: 11/17/2021
+  ms.locfileid: "61051192"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -67,6 +67,8 @@ landingContent:
       url: ~/concepts/app-fundamentals-overview.md
     - text: Diseño de la aplicación
       url: ~/concepts/design/design-teams-app-overview.md
+    - text: Ejemplos de código
+      url: https://github.com/OfficeDev/Microsoft-Teams-Samples
   - linkListType: whats-new
     links:
     - text: Novedades
