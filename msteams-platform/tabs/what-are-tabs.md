@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d84a0a293ad4c0de507dfc56078db4d214649b1d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ea777a615358467f12a6f98c5e06fc5dd14b7418
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887402"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075433"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -26,11 +26,6 @@ La siguiente imagen muestra pestañas personales:
 En la siguiente imagen se muestran las pestañas del canal contoso:
 
 ![Pestañas de canal o grupo](../assets/images/tabs/tabs.png)
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
-
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/T2a8yJC3VcQ]
 
 Hay pocos requisitos previos que debe superar antes de trabajar en pestañas.
 
@@ -89,7 +84,7 @@ Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales
 > [!div class="nextstepaction"]
 > [Requisitos previos](~/tabs/how-to/tab-requirements.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

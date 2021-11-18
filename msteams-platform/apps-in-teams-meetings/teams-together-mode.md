@@ -3,12 +3,12 @@ title: Escenas personalizadas del modo conjunto
 description: Trabajar con escenas personalizadas del modo de colaboración
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 3820a711dfa759e3ad9429efd6b848cbe47e4623
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912244"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075461"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -17,8 +17,6 @@ Las escenas personalizadas del Modo Microsoft Teams proporcionan un entorno de r
 * Reúne a las personas y anímelas a activar su vídeo. 
 * Combina los participantes digitalmente en una sola escena virtual. 
 * Coloca las secuencias de vídeo de los participantes en puestos predefinidos diseñados y fijos por el creador de la escena.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 En las escenas personalizadas del Modo conjunto, la escena es un artefacto. La escena la crea el desarrollador de la escena mediante el estudio de escena de Microsoft. En una configuración de escena pensada, los participantes tienen puestos con secuencias de vídeo. Los vídeos se representan en esos puestos. Solo se recomiendan las aplicaciones de escena, ya que la experiencia de estas aplicaciones es clara.
 
@@ -240,7 +238,7 @@ Puedes compartir el paquete de escena que es un archivo .zip recuperado del estu
 
 ![Archivo zip de escena](../assets/images/apps-in-meetings/scene-zip-file.png)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
 * [Bots de llamadas y reuniones ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)

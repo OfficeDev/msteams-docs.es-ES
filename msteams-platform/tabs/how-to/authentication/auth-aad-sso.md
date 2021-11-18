@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Autenticación de teams SSO AAD api de inicio de sesión único
-ms.openlocfilehash: e242562c4e533b1a79f14598ad6edcf2bf561b03
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 627c63d758705884adb7c1b5629ecf8f3d13d834
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720340"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075440"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -69,7 +69,7 @@ En esta sección se describen las tareas relacionadas con la creación de una Te
 > * Solo se admiten permisos Graph API de nivel de usuario, es decir, correo electrónico, perfil, offline_access, OpenId. Si debe tener acceso a otros ámbitos Graph, como o , vea Obtener un token de acceso `User.Read` `Mail.Read` con Graph [permisos](#get-an-access-token-with-graph-permissions).
 > * Es importante que el nombre de dominio de la aplicación sea el mismo que el nombre de dominio registrado para la AAD aplicación.
 > * Actualmente, no se admiten varios dominios por aplicación.
-> * El usuario debe `accessTokenAcceptedVersion` establecerse `v2` en para una nueva aplicación.
+> * El usuario debe `accessTokenAcceptedVersion` establecerse `2` en para una nueva aplicación.
 
 **Para registrar la aplicación a través del portal AAD web**
 
@@ -171,7 +171,7 @@ Después de recibir el token de acceso en la devolución de llamada correcta, de
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|**Ejemplo de nombre**|**Descripción**|**C#**|**Node.js**|
+|**Ejemplo de nombre**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams de ejemplo para pestañas Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 

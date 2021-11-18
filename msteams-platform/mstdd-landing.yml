@@ -6,12 +6,12 @@ metadata:
   description: Introducción a la creación de aplicaciones para Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
-  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+  ms.openlocfilehash: 30e47cc11a2799442aa8f7639000f13690046d21
+  ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61061954"
+  ms.lasthandoff: 11/18/2021
+  ms.locfileid: "61075579"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -19,7 +19,7 @@ landingContent:
     links:
     - text: Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office (versión preliminar)
       url: ~/m365-apps/overview.md
-    - text: Búsqueda de punta de punta en tarjeta adaptable
+    - text: Búsqueda de escritura anticipada en la tarjeta adaptable
       url: ~/task-modules-and-cards/cards/dynamic-search.md
     - text: Permitir que los bots reciban todos los mensajes de canal mediante el consentimiento específico de recursos (RSC)
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
@@ -51,8 +51,6 @@ landingContent:
     links:
     - text: Crear aplicación con JavaScript
       url: sbs-gs-javascript.yml
-    - text: Crear aplicación con Blazor
-      url: sbs-gs-blazor.yml
     - text: Crear aplicación con SPFx
       url: sbs-gs-spfx.yml
     - text: Crear aplicación con C# o .NET
@@ -93,6 +91,14 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: Manifiesto de la aplicación
       url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Teams escenarios de aplicaciones
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Escenarios de compilación para Teams aplicación
+      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - text: Procedimientos recomendados para Teams escenarios de aplicaciones
+      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: Publicar y distribuir
   linkLists:
   - linkListType: concept

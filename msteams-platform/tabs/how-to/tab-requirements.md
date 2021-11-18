@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 42d022bb5083e97996da74d033866a1eb92ecc7a
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948610"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075426"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -48,10 +48,9 @@ Teams pestañas deben cumplir los siguientes requisitos previos:
 > [!div class="nextstepaction"]
 > [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Compile su primera aplicación con JavaScript](../../get-started/first-app-react.md)
-* [Cree la primera aplicación con Blazor](../../get-started/first-app-blazor.md)
 * [Cree la primera aplicación con SPFx](../../get-started/first-app-spfx.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

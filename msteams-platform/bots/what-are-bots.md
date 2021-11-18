@@ -5,12 +5,12 @@ description: Una introducción a los bots en Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c02fe1508261c1392472f87e7266e38fed7c12b1
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887855"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075610"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots en Microsoft Teams
 
@@ -18,8 +18,6 @@ Un bot también conocido como bot de chat o bot de conversación es una aplicaci
 
 > [!IMPORTANT]
 > Actualmente, los bots están disponibles en Government Community Cloud (GCC) pero no están disponibles en GCC-High departamento de defensa (DOD).
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
 Los robots de conversación permiten que los usuarios interactúen con el servicio web mediante texto, tarjetas interactivas y módulos de tareas.
 
@@ -54,7 +52,7 @@ Puede usar las API Teams bot para obtener información para uno o más miembros 
 > [!div class="nextstepaction"]
 > [Bots y SDK](~/bots/bot-features.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Creación de un bot para Teams](~/bots/how-to/create-a-bot-for-teams.md)
 * [Registrar llamadas y reuniones bot para Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)

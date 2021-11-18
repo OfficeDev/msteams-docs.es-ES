@@ -5,17 +5,14 @@ description: Describe la búsqueda de punta de tipo con el control Input.ChoiceS
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: ef77d35bc92726ac0d9d0264585a32249dbeb75b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61062085"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075586"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de punta de punta en tarjetas adaptables  
-
-> [!NOTE]
-> Actualmente, esta característica solo está disponible en [la versión preliminar del desarrollador](~/resources/dev-preview/developer-preview-intro.md) público.
+# <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de punta de punta en tarjetas adaptables
 
 La funcionalidad de búsqueda typeahead en tarjetas adaptables proporciona una experiencia de búsqueda mejorada en `input.choiceset` el componente. Proporciona una lista de opciones para escribir texto en el campo de búsqueda. Puede incorporar la búsqueda de punta de tipo con tarjetas adaptables para buscar y seleccionar datos.
 
@@ -81,14 +78,14 @@ En la siguiente imagen se muestra la experiencia móvil de la búsqueda de punta
 
 Las propiedades siguientes son las nuevas adiciones al [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) esquema para habilitar la búsqueda de punta de tipo:
 
-| Propiedad| Tipo | Necesario | Descripción |
+| Propiedad| Tipo | Necesario | Description |
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Agrega estilo filtrado a la lista de validaciones admitidas para el tipo estático por delante.|
 | choices.data | Data.Query | No | Habilita el tipo dinámico a medida que el usuario escribe, mediante la captura de un conjunto remoto de opciones de un back-end. |
 
 ### <a name="dataquery-definition"></a>Definición Data.Query
 
-| Propiedad| Tipo | Necesario | Descripción |
+| Propiedad| Tipo | Necesario | Description |
 |-----------|------|----------|-------------|
 | tipo | Data.Query | Sí | Especifica que es un objeto Data.Query.|
 | conjunto de datos | Cadena | Sí | Especifica el tipo de datos que se captura dinámicamente. |
@@ -300,4 +297,7 @@ La carga de ejemplo que contiene la búsqueda de punta de tipo estática y diná
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
+
+* [Acciones universales para tarjetas adaptables](Universal-actions-for-adaptive-cards/Overview.md)
+* [Módulos de tareas](../what-are-task-modules.md)

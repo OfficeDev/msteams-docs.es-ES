@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de roles de participantes de reuniones de aplicaciones de teams
-ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0ae8a3b5f080258e870e4b21c91071de6aac4fd5
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887695"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075454"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para Teams reuniones
 
@@ -22,8 +22,6 @@ Los usuarios pueden acceder a las aplicaciones durante las reuniones mediante la
 * Pre-stage a Kanban board.
 * Inicie un cuadro de diálogo que se puede ejecutar en la reunión.
 * Crear una encuesta posterior a la reunión.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
 La siguiente ilustración le ofrece una idea de las características de extensibilidad de la aplicación de reunión:
 
@@ -42,7 +40,7 @@ La nueva característica de escenas personalizadas del modo junto permite a los 
 > [!div class="nextstepaction"]
 > [Extensibilidad de la aplicación para reuniones](meeting-app-extensibility.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
 * [Diseño de la extensión Microsoft Teams reunión](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)

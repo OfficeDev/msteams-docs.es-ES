@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: 51e04b9a43cab20b6854ae9dc8a08b174f36add7
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041709"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075468"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -18,8 +18,6 @@ Teams de reuniones unificadas se basan en los siguientes conceptos:
 * El ciclo de vida de la reunión tiene diferentes fases: antes de la reunión, en la reunión y después de la reunión.  
 * Hay tres roles de participante distintos en una reunión: organizador, moderador y asistente. Para obtener más información, vea [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Hay varios tipos [de usuario](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) en una reunión: usuarios anónimos, [](/microsoftteams/guest-access)invitados, invitados y federados. [](/microsoftteams/manage-external-access)
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
 En este artículo se describe la información sobre el ciclo de vida de la reunión y cómo integrar pestañas, bots y extensiones de mensajería. Identifica diferentes roles de participante y tipos de usuario.
 
@@ -208,7 +206,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

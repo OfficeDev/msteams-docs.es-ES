@@ -4,14 +4,14 @@ description: Introducción a Introducción a la documentación Microsoft Teams p
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams de desarrolladores
-ms.openlocfilehash: 0b2ded130bf68f1db8715c8ff6e10336db6aeb2c
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720097"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075482"
 ---
-# <a name="get-started"></a>Comenzar
+# <a name="get-started"></a>Introducción
 
 Bienvenido a Introducción para crear e implementar aplicaciones personalizadas para Microsoft Teams!
 
@@ -53,9 +53,6 @@ Ahora, vamos a crear la primera Teams aplicación. Pero en primer lugar, elija e
 > [Crear una aplicación Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
-> [Crear una Teams con Blazor](../sbs-gs-blazor.yml)
-
-> [!div class="nextstepaction"]
 > [Crear una aplicación Teams con SPFx](../sbs-gs-spfx.yml)
 
 > [!div class="nextstepaction"]
@@ -63,4 +60,3 @@ Ahora, vamos a crear la primera Teams aplicación. Pero en primer lugar, elija e
 
 > [!div class="nextstepaction"]
 > [Crear una aplicación Teams con Node.js](../sbs-gs-nodejs.yml)
-

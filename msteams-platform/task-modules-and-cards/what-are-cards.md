@@ -4,12 +4,12 @@ description: Describe las tarjetas y cómo se usan en bots, conectores y extensi
 ms.localizationpriority: medium
 keywords: mensajes de tarjetas de bots de conectores
 ms.topic: overview
-ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061961"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075447"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -54,8 +54,6 @@ Todas las tarjetas usadas por Teams se enumeran en [tipos de tarjetas](~/task-mo
 
 ## <a name="adaptive-cards"></a>Tarjetas adaptables
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
 [Las tarjetas](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) adaptables son una nueva especificación entre productos para tarjetas en productos de Microsoft, incluidos bots, Cortana, Outlook y Windows. Son el tipo de tarjeta recomendado para el nuevo Teams desarrollo. Para obtener información general del equipo de tarjetas adaptables, vea [Adaptive Cards overview](/adaptive-cards). Puedes usar tarjetas adaptables en cualquier lugar que uses tarjetas de héroe existentes, tarjetas Office 365 y tarjetas en miniatura.
 
 Además de las tarjetas adaptables, Teams admite otros dos tipos de tarjetas:
@@ -68,8 +66,6 @@ Además de las tarjetas adaptables, Teams admite otros dos tipos de tarjetas:
 Escriba la búsqueda avanzada agregada como control de entrada en tarjetas adaptables para habilitar la [experiencia](~/task-modules-and-cards/cards/dynamic-search.md) de búsqueda dinámica desde un conjunto de datos cargado dinámicamente. También permite a los usuarios realizar una búsqueda estática de tipo delante dentro de una lista con un número limitado de opciones. Los clientes móviles y de escritorio admiten el tipo delante de la experiencia de búsqueda dinámica. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Tarjetas adaptables y webhooks entrantes
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
 
 > [!NOTE]
 > * Todos los elementos nativos del esquema de tarjeta adaptable, excepto `Action.Submit` , son totalmente compatibles.
@@ -86,7 +82,7 @@ Los bots con tarjetas adaptables admiten identificadores de mención de usuario,
 > [!div class="nextstepaction"]
 > [Tipos de tarjetas](~/task-modules-and-cards/cards/cards-reference.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Dar formato a las tarjetas Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Diseñar tarjetas adaptables](~/task-modules-and-cards/cards/design-effective-cards.md)

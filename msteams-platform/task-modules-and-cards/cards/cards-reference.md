@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: medium
 keywords: referencia de tarjetas bots
 ms.topic: reference
-ms.openlocfilehash: 03aa96d0007129946f54ac250f339b74462fd8ec
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 47e87ea28a1e003838152cd7f535a23d6861ac6f
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889128"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075593"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -46,12 +46,12 @@ Encontrará información adicional sobre cómo usar tarjetas en la documentació
 
 Puede identificar y usar diferentes tipos de tarjetas según los requisitos de la aplicación. En la tabla siguiente se muestran los tipos de tarjetas disponibles:
 
-| Tipo de tarjeta | Descripción |
+| Tipo de tarjeta | Description |
 | --- | --- |
 | [Tarjeta adaptable](#adaptive-card) | Esta tarjeta es altamente personalizable y puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. |
 | [Tarjeta de héroe](#hero-card) | Esta tarjeta normalmente contiene una sola imagen grande, uno o varios botones y una pequeña cantidad de texto. |
 | [Tarjeta de lista](#list-card) | Esta tarjeta contiene una lista de desplazamiento de elementos. |
-| [Office 365 Tarjeta de conector](#office-365-connector-card) | Esta tarjeta tiene un diseño flexible con varias secciones, campos, imágenes y acciones. |
+| [Office 365 connector](#office-365-connector-card) | Esta tarjeta tiene un diseño flexible con varias secciones, campos, imágenes y acciones. |
 | [Tarjeta de recibo](#receipt-card) | Esta tarjeta proporciona un recibo al usuario. |
 | [Tarjeta de inicio de sesión](#signin-card) | Esta tarjeta permite que un bot solicite que un usuario inicia sesión. |
 | [Tarjeta miniatura](#thumbnail-card) | Esta tarjeta normalmente contiene una sola imagen en miniatura, texto corto y uno o más botones. |
@@ -62,7 +62,7 @@ Puede identificar y usar diferentes tipos de tarjetas según los requisitos de l
 | Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhooks entrantes | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Tarjeta adaptable | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 Tarjeta de conector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365 connector | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Tarjeta de héroe | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Tarjeta miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Tarjeta de lista | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -89,7 +89,7 @@ Las imágenes deben tener como máximo 1024×1024 y en formato PNG, JPEG o GIF. 
 
 En la tabla siguiente se proporcionan las propiedades de las imágenes de tarjetas en línea:
 
-| Propiedad | Tipo  | Descripción |
+| Propiedad | Tipo  | Description |
 | --- | --- | --- |
 | url | URL | DIRECCIÓN URL HTTPS a la imagen. |
 | alt | Cadena | Descripción accesible de la imagen. |
@@ -110,8 +110,6 @@ Para obtener más información sobre el formato de texto en tarjetas, vea [forma
 Después de identificar las propiedades comunes de todas las tarjetas, ahora puedes trabajar con tarjetas adaptables, lo que te ayudará a aumentar la interacción y la eficacia agregando el contenido que se puede usar directamente en las aplicaciones que usas.
 
 ## <a name="adaptive-card"></a>Tarjeta adaptable
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
 Una tarjeta adaptable es una tarjeta personalizable que puede contener cualquier combinación de texto, voz, imágenes, botones y campos de entrada. Para obtener más información, vea [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
@@ -447,7 +445,7 @@ En la tabla siguiente se proporcionan las propiedades de la Office 365 de conect
 
 ### <a name="additional-information-on-the-office-365-connector-card"></a>Información adicional sobre la tarjeta Office 365 Connector
 
-Office 365 Las tarjetas de conector funcionan correctamente Microsoft Teams, incluidas las [ `ActionCard` acciones](/outlook/actionable-messages/card-reference#actioncard-action).
+Office 365 las tarjetas connector funcionan correctamente en Microsoft Teams, incluidas las [ `ActionCard` acciones](/outlook/actionable-messages/card-reference#actioncard-action).
 
 La diferencia importante entre usar tarjetas de conector desde un conector y usar tarjetas de conector en el bot es el control de las acciones de tarjeta. En la tabla siguiente se muestra la diferencia:
 
@@ -466,7 +464,7 @@ Si especifica la `themeColor` propiedad, invalida la `accentColor` propiedad en 
 
 Para especificar el estilo de representación `activityImage` para , puede `activityImageType` establecerlo como se muestra en la tabla siguiente:
 
-| Valor | Descripción |
+| Valor | Description |
 | --- | --- |
 | `avatar` | Valor predeterminado, `activityImage` se recorta como un círculo. |
 | `article` | `activityImage` se muestra como un rectángulo y conserva su relación de aspecto. |
@@ -949,7 +947,7 @@ Bot Framework implementa las siguientes tarjetas, pero no son compatibles con Te
 * Tarjetas de audio
 * Tarjetas de vídeo
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Módulos de tareas](~/task-modules-and-cards/what-are-task-modules.md)
 * [Dar formato a tarjetas](~/task-modules-and-cards/cards/cards-format.md)
