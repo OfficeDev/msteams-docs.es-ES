@@ -4,12 +4,12 @@ description: Describe las tarjetas y cómo se usan en bots, conectores y extensi
 ms.localizationpriority: medium
 keywords: mensajes de tarjetas de bots de conectores
 ms.topic: overview
-ms.openlocfilehash: a6e7f706d114422e99668b6a123dd3feb2cf886c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888296"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061961"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -20,7 +20,7 @@ Los bots para Teams admiten los siguientes tipos de tarjetas:
 - Tarjeta adaptable
 - Tarjeta de héroe
 - Tarjeta de lista
-- Office 365 Tarjeta de conector
+- Office 365 connector
 - Tarjeta de recibo
 - Tarjeta de inicio de sesión
 - Tarjeta miniatura
@@ -62,6 +62,10 @@ Además de las tarjetas adaptables, Teams admite otros dos tipos de tarjetas:
 
 * Tarjetas de conector: se usan como parte de Office 365 conectores.
 * Tarjetas sencillas: se usan desde Bot Framework, como la miniatura y las tarjetas de héroe.
+
+### <a name="type-ahead-search-in-adaptive-cards"></a>Búsqueda de tipo por adelantado en tarjetas adaptables  
+
+Escriba la búsqueda avanzada agregada como control de entrada en tarjetas adaptables para habilitar la [experiencia](~/task-modules-and-cards/cards/dynamic-search.md) de búsqueda dinámica desde un conjunto de datos cargado dinámicamente. También permite a los usuarios realizar una búsqueda estática de tipo delante dentro de una lista con un número limitado de opciones. Los clientes móviles y de escritorio admiten el tipo delante de la experiencia de búsqueda dinámica. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Tarjetas adaptables y webhooks entrantes
 

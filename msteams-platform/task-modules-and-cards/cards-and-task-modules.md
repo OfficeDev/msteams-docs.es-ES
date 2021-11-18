@@ -4,12 +4,12 @@ description: Obtén información sobre los tipos de tarjetas admitidas en bots p
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 08128a81c913134c8c2e7d5b124c796661636b85
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888275"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061975"
 ---
 # <a name="cards-and-task-modules"></a>Tarjetas y módulos de tareas
 
@@ -22,7 +22,7 @@ Los siguientes tipos de tarjetas se admiten en bots para Teams:
 * Tarjeta adaptable
 * Tarjeta de héroe
 * Tarjeta de lista
-* Office 365 Tarjeta de conector
+* Office 365 connector
 * Tarjeta de recibo
 * Tarjeta de inicio de sesión
 * Tarjeta miniatura
@@ -35,6 +35,7 @@ Puede agregar y responder a acciones de tarjeta que:
 * Enviar mensajes y carga al bot
 * Iniciar flujo de OAuth
 
+Puede proporcionar una experiencia [de búsqueda dinámica](~/task-modules-and-cards/cards/dynamic-search.md) dentro de un conjunto de datos grande mediante el control de tipo delante en tarjetas adaptables. También puede realizar una búsqueda estática de tipo delante dentro de un número limitado de opciones. Puede invocar los módulos de tareas en pestañas de canal o personales, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos puede mejorarse agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde Teams bots usando botones en tarjetas adaptables y tarjetas de Bot Framework.
 Puede invocar los módulos de tareas en pestañas de canal o personales, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos puede mejorarse agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde Teams bots usando botones en tarjetas adaptables y tarjetas de Bot Framework.
 
 ## <a name="see-also"></a>Consulte también
