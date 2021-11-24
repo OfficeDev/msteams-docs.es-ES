@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: ba1dab69442ec7693462456fd26bb58b9223df6c
-ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
+ms.openlocfilehash: d5c84010937478788ddc5836b53906b120cdbf4e
+ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61078749"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61156617"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+| 11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
 | 11/17/2021| Directrices de validación Microsoft Teams almacén actualizados|[Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Búsqueda de typeahead estática y dinámica para usuarios móviles y de escritorio.| • Crear tarjetas y módulos de tareas > crear tarjetas > [búsqueda de typeahead en tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > crear tarjetas > información general > búsqueda de tipo  [por delante en tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > información general > [tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office (versión preliminar) | [Extender Teams aplicaciones en Microsoft 365](~/m365-apps/overview.md) |
@@ -37,8 +38,9 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2021</b></summary>
 
-| **Fecha** | **Actualización** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+| 11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Directrices de validación Microsoft Teams almacén actualizados|[Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Búsqueda de typeahead estática y dinámica para usuarios móviles y de escritorio.| • Crear tarjetas y módulos de tareas > crear tarjetas > [búsqueda de typeahead en tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > crear tarjetas > información general > búsqueda de tipo  [por delante en tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > información general > [tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
 |11/13/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC). | • Crear bots > bots > Mensajes en conversaciones de bots > Recibir todos los mensajes [de canal con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots para > bots > [introducción a la conversación del bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots para > bots > [canal y conversaciones de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
@@ -96,7 +98,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2020</b></summary>
 
-| **Fecha** | **Actualización** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Integración de plataforma de identidad con Teams Toolkit y Visual Studio Code para pestañas.|[Autenticación de inicio de sesión único con Teams Toolkit y Visual Studio Code para pestañas](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams de aplicación actualizado a la versión 1.8.|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -130,7 +132,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2019</b></summary>
 
-| **Fecha** | **Actualización** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | El parámetro de las cargas enviadas a un bot ya no está cifrado, lo que permite usar este valor para crear `replyToId` vínculos profundos a estos mensajes. Las cargas del mensaje incluyen los valores cifrados en el parámetro `legacy.replyToId` .  |
 | 11/05/2019 | Inicio de sesión único con el Teams SDK de JavaScript. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -160,7 +162,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2018</b></summary>
 
-| **Fecha** | **Actualización** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 | 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -200,7 +202,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Fecha** | **Actualización** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 | 11/15/2021 | Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Extender Teams aplicaciones en Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).| • Crear bots > bots > Mensajes en conversaciones de bots > Recibir todos [los mensajes con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots para > bots > [introducción a la conversación de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots para > bots > [conversaciones de canal y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifiesto de la aplicación > Versión preliminar del > [esquema de manifiesto de vista previa del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
