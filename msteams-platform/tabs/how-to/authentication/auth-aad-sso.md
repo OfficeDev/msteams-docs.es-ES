@@ -4,16 +4,16 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Autenticación de teams SSO AAD api de inicio de sesión único
-ms.openlocfilehash: 627c63d758705884adb7c1b5629ecf8f3d13d834
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 96916d526dba7a6ff7b019fb070b53943b3c216c
+ms.sourcegitcommit: 345d713a680c0e0978d7f82c0330c1fd0d6b3e7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075440"
+ms.lasthandoff: 11/23/2021
+ms.locfileid: "61151900"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
-Los usuarios inician sesión en Microsoft Teams a través de su cuenta de trabajo, escuela o Microsoft que es Office 365, Outlook, puede aprovechar la ventaja al permitir un inicio de sesión único para autorizar su pestaña o módulo de tareas de Teams en clientes de escritorio o móviles. Si un usuario inicia sesión una vez, no tiene que volver a iniciar sesión en otro dispositivo cuando haya iniciado sesión automáticamente. Además, el token de acceso se captura previamente para mejorar el rendimiento y los tiempos de carga.
+Los usuarios inician sesión en Microsoft Teams a través de su cuenta de trabajo, escuela o Microsoft que es Office 365, Outlook, puede aprovechar la ventaja al permitir un inicio de sesión único para autorizar su pestaña o módulo de tareas de Teams en clientes de escritorio o móviles. Si un usuario inicia sesión una vez, no tiene que volver a iniciar sesión en otro dispositivo al iniciar sesión automáticamente. Además, el token de acceso se captura previamente para mejorar el rendimiento y los tiempos de carga.
 
 > [!NOTE]
 > **Teams versiones de cliente móvil compatibles con SSO**  
@@ -171,7 +171,7 @@ Después de recibir el token de acceso en la devolución de llamada correcta, de
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|**Ejemplo de nombre**|**Description**|**C#**|**Node.js**|
+|**Ejemplo de nombre**|**Descripción**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams de ejemplo para pestañas Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
