@@ -5,12 +5,12 @@ description: Aprende a responder al comando de búsqueda desde una extensión de
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889380"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178288"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -98,7 +98,7 @@ Teams admite los siguientes tipos de tarjeta:
 
 * [Tarjeta miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Tarjeta de conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 Para tener una mejor comprensión e información general sobre las tarjetas, vea [qué son las tarjetas](~/task-modules-and-cards/what-are-cards.md).
@@ -107,13 +107,18 @@ Para obtener información sobre cómo usar los tipos de miniatura y de tarjeta d
 
 Para obtener información adicional acerca de la Office 365 Connector, vea [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
+
 La lista de resultados se muestra en la Microsoft Teams de usuario con una vista previa de cada elemento. La vista previa se genera de una de las dos maneras:
 
-* Uso de `preview` la propiedad dentro del `attachment` objeto. Los `preview` datos adjuntos solo pueden ser una tarjeta Hero o Thumbnail.
-* Extraído de las propiedades `title` `text` básicas , y `image` de los datos adjuntos. Solo se usan si la `preview` propiedad no está establecida y estas propiedades están disponibles.
-* No se admiten en la tarjeta de vista previa el botón de la tarjeta De héroe o miniatura ni las acciones de pulsación, excepto invocar.
+* Uso de `preview` la propiedad dentro del `attachment` objeto. Los `preview` datos adjuntos solo pueden ser un hero o una tarjeta thumbnail.
+* Extracción de las `title` propiedades `text` básicas , y `image` del `attachment` objeto. Las propiedades básicas solo se usan si no `preview` se especifica la propiedad.
 
-Puede mostrar una vista previa de una tarjeta adaptable o una tarjeta Office 365 Connector en la lista de resultados mediante su propiedad de vista previa. La propiedad preview no es necesaria si los resultados ya son tarjetas Hero o Thumbnail. Si usas los datos adjuntos de vista previa, debe ser una tarjeta hero o thumbnail. Si no se especifica ninguna propiedad de vista previa, se produce un error en la vista previa de la tarjeta y no se muestra nada.
+Para la tarjeta De héroe o Miniatura, excepto la acción invocar otras acciones como botón y pulsación no se admiten en la tarjeta de vista previa.
+
+Para enviar una tarjeta adaptable o una tarjeta Deiice 365 Connector, debe incluir una vista previa. La `preview` propiedad debe ser una tarjeta Hero o Thumbnail. Si no especifica la propiedad preview en el objeto, no se genera `attachment` una vista previa.
+
+Para las tarjetas hero y Thumbnail, no es necesario especificar una propiedad de vista previa, una vista previa se genera de forma predeterminada. En el ejemplo siguiente se muestra la característica de desamuestra de vínculos cuando se pega un vínculo en la extensión de mensajería:  
+![desafusado de vínculos](~/assets/images/messaging-extension/link-unfurl.gif)
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -312,6 +317,76 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
+### <a name="enable-and-handle-tap-actions"></a>Habilitar y controlar acciones de pulsación
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
+{
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
+
+    var card = new ThumbnailCard
+    {
+        Title = "Card Select Item",
+        Subtitle = description
+    };
+
+    var attachment = new MessagingExtensionAttachment
+    {
+        ContentType = ThumbnailCard.ContentType,
+        Content = card,
+    };
+
+    return Task.FromResult(new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+        {
+            Type = "result",
+            AttachmentLayout = "list",
+            Attachments = new List<MessagingExtensionAttachment> { attachment }
+        }
+    });
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+async handleTeamsMessagingExtensionSelectItem(context, obj) {
+        return {
+            composeExtension: {
+                  type: 'result',
+                  attachmentLayout: 'list',
+                  attachments: [CardFactory.thumbnailCard(obj.Item3)]
+            }
+        };
+    } 
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "name": "composeExtension/selectItem",
+    "type": "invoke",
+    "value": {
+        "Item1": "Package_Name",
+        "Item2": "Version",
+        "Item3": "Package Description"
+    },
+    .
+    .
+    .
+}
+```
+
+* * *
+
+> [!NOTE]
+> `OnTeamsMessagingExtensionSelectItemAsync` no se desencadena en la aplicación de equipos móviles.
+
 ## <a name="default-query"></a>Consulta predeterminada
 
 Si se establece en en el manifiesto, Microsoft Teams una consulta predeterminada cuando el usuario abre por primera vez `initialRun` `true` la extensión de mensajería.  El servicio puede responder a esta consulta con un conjunto de resultados rellenados previamente. Esto resulta útil cuando el comando de búsqueda requiere autenticación o configuración, mostrando elementos vistos recientemente, favoritos o cualquier otra información que no dependa de la entrada del usuario.
@@ -351,6 +426,6 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 > [!div class="nextstepaction"]
 > [Agregar autenticación a una extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Agregar configuración a una extensión de mensajería](~/get-started/first-message-extension.md)

@@ -5,12 +5,12 @@ description: Describe cómo responder a la acción de envío del módulo de tare
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fba79695458374e80cfe604377fd7d7c5e05a2ff
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948414"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178289"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -21,16 +21,16 @@ Después de que un usuario envíe el módulo de tareas, el servicio web recibe u
 
 Tiene las siguientes opciones para responder:
 
-* Sin respuesta: use la acción enviar para desencadenar un proceso en un sistema externo y no proporcionar comentarios al usuario, es útil para procesos de larga ejecución y seleccione proporcionar comentarios alternativamente. Por ejemplo, puede enviar comentarios con un [mensaje proactivo](~/bots/how-to/conversations/send-proactive-messages.md).
+* Sin respuesta: use la acción enviar para desencadenar un proceso en un sistema externo y no proporcionar comentarios al usuario. Es útil para procesos de larga ejecución y proporcionar comentarios alternativamente. Por ejemplo, puede enviar comentarios con un [mensaje proactivo](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Otro módulo de](#respond-with-another-task-module)tareas: puede responder con un módulo de tareas adicional como parte de una interacción de varios pasos.
 * [Respuesta de](#respond-with-a-card-inserted-into-the-compose-message-area)tarjeta: puede responder con una tarjeta con la que el usuario puede interactuar o insertar en un mensaje.
 * [Tarjeta adaptable desde el bot:](#bot-response-with-adaptive-card)inserte una tarjeta adaptable directamente en la conversación.
 * [Solicitar al usuario que autentique](~/messaging-extensions/how-to/add-authentication.md).
-* [Solicitar al usuario que proporcione una configuración adicional]~/get-started/first-message-extension.md).
+* [Solicite al usuario que proporcione una configuración adicional](~/get-started/first-message-extension.md).
 
 Para la autenticación o configuración, después de que el usuario complete el proceso, la invocación original se resiente al servicio web. En la tabla siguiente se muestran los tipos de respuestas disponibles en función de la ubicación de invocación `commandContext` de la extensión de mensajería: 
 
-|Tipo de respuesta | Redacción | Barra de comandos | Message |
+|Tipo de respuesta | Redacción | Barra de comandos | Mensaje |
 |--------------|:-------------:|:-------------:|:---------:|
 |Respuesta de tarjeta | ✔ | ✔ | ✔ |
 |Otro módulo de tareas | ✔ | ✔ | ✔ |
@@ -589,9 +589,9 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 |Campo|Tipo|Descripción|
 |:---|:---|:---|
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0` .|
-|`mentionType`|String|Describe la mención de una "persona".|
-|`mri`|String|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
-|`displayName`|String|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
+|`mentionType`|Cadena|Describe la mención de una "persona".|
+|`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como " \<user\> a \<bot name\> través de ".|
+|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
 ## <a name="code-sample"></a>Ejemplo de código
 
@@ -605,6 +605,6 @@ La siguiente sección es una descripción de las entidades de la `OnBehalfOf` ma
 > [!div class="nextstepaction"]
 > [Definición de comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Responder al comando de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

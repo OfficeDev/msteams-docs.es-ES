@@ -5,12 +5,12 @@ description: Obtén información sobre cómo agregar la actualización de víncu
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889401"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178296"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -40,6 +40,7 @@ Para agregar la implementación de vínculos al manifiesto de la aplicación, ag
 1. En la **página Extensión de** mensajería, agregue el dominio que desea buscar en la sección Controladores **de** mensajes. En la siguiente imagen se explica el proceso:
 
     ![sección controladores de mensajes en App Studio](~/assets/images/link-unfurling.png)
+
     
 ### <a name="add-link-unfurling-manually"></a>Agregar la actualización manual de vínculos
 
@@ -76,10 +77,10 @@ Se admiten los siguientes tipos de tarjeta:
 
 * [Tarjeta miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Tarjeta de conector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Puede mostrar una vista previa de una tarjeta adaptable o una tarjeta Office 365 Connector en la lista de resultados mediante su propiedad de vista previa. La propiedad preview no es necesaria si los resultados ya son tarjetas Hero o Thumbnail. Si usas los datos adjuntos de vista previa, debe ser una tarjeta hero o thumbnail. Si no se especifica ninguna propiedad de vista previa, se produce un error en la vista previa de la tarjeta y no se muestra nada.
+Para obtener más información, vea [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### <a name="example"></a>Ejemplo
 
@@ -179,7 +180,7 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Consulte también 
+## <a name="see-also"></a>Vea también 
 
 * [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
 * [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)

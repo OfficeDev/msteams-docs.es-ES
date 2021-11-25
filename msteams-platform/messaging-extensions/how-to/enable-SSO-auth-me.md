@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo habilitar la compatibilidad con SS
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889394"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178254"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Compatibilidad con inicio de sesión único para extensiones de mensajería
  
@@ -87,15 +87,16 @@ Una vez completados los requisitos previos, puede habilitar SSO para extensiones
                 JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
                 var tokenExchangeRequest =
                 ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
-                tokenExchangeResponse = await (turnContext.Adapter as IExtendedUserTokenProvider).ExchangeTokenAsync(
-                 turnContext,
-                 _connectionName,
-                 turnContext.Activity.From.Id,
-                 new TokenExchangeRequest
+                var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+                tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                                turnContext.Activity.From.Id,
+                                 _connectionName,
+                                 turnContext.Activity.ChannelId,
+                                 new TokenExchangeRequest
                  {
                      Token = tokenExchangeRequest.Token,
                  },
-                 cancellationToken).ConfigureAwait(false);
+                  cancellationToken).ConfigureAwait(false);
             }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
             catch
@@ -114,7 +115,7 @@ Una vez completados los requisitos previos, puede habilitar SSO para extensiones
     
     ```    
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Agregar autenticación a las extensiones de mensajería](add-authentication.md)
 * [Usar SSO para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)

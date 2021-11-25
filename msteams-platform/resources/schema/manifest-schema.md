@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912209"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178247"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -559,7 +559,7 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`parameters.name`|string|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. El nombre del parámetro se incluye en la solicitud de usuario.|
 |`parameters.title`|string|32 caracteres|✔|Título fácil de usar para el parámetro.|
 |`parameters.description`|string|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
-|`parameters.value`|string|512 caracteres||Valor inicial del parámetro.|
+|`parameters.value`|string|512 caracteres||Valor inicial del parámetro. Actualmente no se admite el valor|
 |`parameters.inputType`|string|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 elementos||Las opciones de elección para `choiceset` el archivo . Use solo cuando `parameter.inputType` es `choiceset` .|
 |`parameters.choices.title`|string|128 caracteres|✔|Título de la elección.|
@@ -767,7 +767,7 @@ Especifica la oferta SaaS asociada a la aplicación.
 |---|---|---|---|---|
 |`offerId`| string | 2.048 caracteres | ✔ | Un identificador único que incluye el identificador Publisher y el identificador de oferta, que puede encontrar en [el Centro de partners](https://partner.microsoft.com/dashboard). Debe dar formato a la cadena como `publisherId.offerId` .|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Comprender la estructura Microsoft Teams aplicación](~/concepts/design/app-structure.md)
 * [Habilitar la personalización de aplicaciones](~/concepts/design/enable-app-customization.md)
