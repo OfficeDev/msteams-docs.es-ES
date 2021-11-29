@@ -4,12 +4,12 @@ description: Describe cómo llegar a DevTools al usar el Microsoft Teams de escr
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: pestaña herramientas para desarrolladores de cliente de escritorio chrome para depuración de devtools
-ms.openlocfilehash: 6844648df311bd9ae326e74919cc64e871e54b05
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: b9bc3f5afa43684b260f8618b5450e94c91e95f1
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887423"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216209"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 
@@ -35,7 +35,7 @@ Aunque la versión web y la versión de escritorio de Teams son casi iguales, ex
 
 En el ejemplo siguiente se muestra DevTools abierto e inspeccionando un cuadro de diálogo de configuración de tabulación:
 
-   ![Tab y DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+   [![Tab y DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
 
 ## <a name="access-devtools-from-an-android-device"></a>Access DevTools desde un dispositivo Android
 

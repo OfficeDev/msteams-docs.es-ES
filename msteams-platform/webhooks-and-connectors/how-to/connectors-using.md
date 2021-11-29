@@ -5,12 +5,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams o365 conector
-ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887395"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216198"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -18,7 +18,7 @@ Puede crear mensajes que puedan realizar acciones y enviarlos a través de Webho
 
 ## <a name="create-actionable-messages"></a>Crear mensajes que pueden actuar
 
-Los mensajes que pueden actuar incluyen tres botones visibles en la tarjeta. Cada botón se define en la propiedad del mensaje mediante acciones, cada una con un tipo de entrada, un campo de texto, un selector de fechas o una lista de `potentialAction` `ActionCard` opciones múltiples. Cada `ActionCard` uno tiene una acción asociada, por ejemplo `HttpPOST` .
+Los mensajes que pueden actuar incluyen seis botones visibles en la tarjeta. Cada botón se define en la propiedad del mensaje mediante acciones, cada una con un tipo de entrada, un campo de texto, un selector de fechas o una lista de `potentialAction` `ActionCard` opciones múltiples. Cada `ActionCard` uno tiene una acción asociada, por ejemplo `HttpPOST` .
 
 Las tarjetas de conector admiten las siguientes acciones:
 
@@ -282,8 +282,9 @@ Estos límites se aplican para reducir el correo no deseado de un canal por un c
 
 ## <a name="see-also"></a>Consulte también
 
-* [Office 365 Conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Office 365 conectores para Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un webhook saliente](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Limitación de velocidad para Teams bots](~/bots/how-to/rate-limit.md)
 * [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Dar formato a tarjetas en Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)

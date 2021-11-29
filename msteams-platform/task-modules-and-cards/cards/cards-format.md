@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887612"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216233"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -31,7 +31,7 @@ Puedes dar formato a tarjetas adaptables y Office 365 connector con Markdown que
 Los siguientes tipos de tarjeta admiten el formato Markdown en Teams:
 
 * Tarjetas adaptables: Markdown se admite en el campo Tarjeta `Textblock` adaptable, así como `Fact.Title` en `Fact.Value` . Html no se admite en tarjetas adaptables.
-* Office 365 Tarjetas de conector: Markdown y HTML limitado se admiten Office 365 tarjetas connector en los campos de texto.
+* Office 365 connector: Markdown y HTML limitado se admiten en las Office 365 connector en los campos de texto.
 
 Puedes usar líneas nuevas para tarjetas adaptables mediante `\r` o `\n` secuencias de escape para las líneas nuevas de las listas. El formato es diferente entre el escritorio y las versiones móviles de Teams para tarjetas adaptables. Las menciones basadas en tarjetas se admiten en clientes web, de escritorio y móviles. Puede usar la propiedad de enmascaramiento de información para enmascarar información específica, como contraseña o información confidencial de los usuarios dentro del elemento de entrada Tarjeta `Input.Text` adaptable. Puede expandir el ancho de una tarjeta adaptable mediante el `width` objeto. Puede habilitar la compatibilidad con typeahead en tarjetas adaptables y filtrar el conjunto de opciones de entrada a medida que el usuario escribe la entrada. Puede usar la propiedad `msteams` para agregar la capacidad de mostrar imágenes en la vista de fase de forma selectiva.
 
@@ -165,7 +165,7 @@ El siguiente código muestra un ejemplo de tarjeta adaptable con una mención:
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD Id. de objeto y UPN en mención de usuario 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AAD id. de objeto y UPN en mención de usuario 
 
 Teams plataforma permite mencionar a los usuarios con su identificador de objeto AAD y el nombre de principio de usuario (UPN), además de los identificadores de mención existentes. Los bots con tarjetas adaptables y conectores con webhooks entrantes admiten los dos id. de mención del usuario. 
 
@@ -392,7 +392,7 @@ En una tarjeta adaptable, puedes usar la propiedad para agregar la capacidad de 
             "msTeams": {
               "allowExpand": true
             }
-          },
+          }
      ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.2"
@@ -506,7 +506,7 @@ El siguiente código muestra un ejemplo de formato para tarjetas de conector mar
 
 Los siguientes tipos de tarjeta admiten el formato HTML en Teams:
 
-* Office 365 Tarjetas de conector: el markdown limitado y el formato HTML se admiten Office 365 tarjetas connector.
+* Office 365 de conector: se admite el markdown limitado y el formato HTML en Office 365 connector.
 * Tarjetas de miniatura y de héroe: las etiquetas HTML son compatibles con tarjetas sencillas, como las tarjetas de miniatura y de héroe.
 
 El formato es diferente entre el escritorio y las versiones móviles de Teams para tarjetas Office 365 Connector y tarjetas sencillas. En esta sección, puede ir a través del ejemplo de formato HTML para tarjetas de conector y tarjetas sencillas.

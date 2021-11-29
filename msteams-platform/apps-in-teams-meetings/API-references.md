@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de señal de notificación usercontext de las reuniones de aplicaciones de teams
-ms.openlocfilehash: ba7996e0c33823c3f296d18350ea33421c844c68
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: 251f8bbd65bf8ba563f09302b16bf7285a5c4267
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041632"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216072"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -25,10 +25,13 @@ En la tabla siguiente se proporciona una lista de API:
 
 |API|Descripción|Solicitud|Origen|
 |---|---|----|---|
-|**GetUserContext**| Esta API le permite obtener información contextual para mostrar contenido relevante en una Teams pestaña. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK de cliente|
-|**GetParticipant**| Esta API permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | Esta API le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Le permite señalar en función de la acción del usuario que muestra un cuadro de diálogo en la reunión. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Detalles de la reunión** | Esta API le permite obtener metadatos estáticos de reunión. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**GetUserContext**| Permite obtener información contextual para mostrar contenido relevante en una Teams pestaña. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams SDK de cliente|
+|**GetParticipant**| Permite que un bot obtenga información de los participantes mediante el identificador de reunión y el identificador de participante. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** | Permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Le permite señalar en función de la acción del usuario que muestra un cuadro de diálogo en la reunión. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**Detalles de la reunión** | Permite obtener metadatos estáticos de reunión. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**shareAppContentToStage**| Permite compartir partes específicas de la aplicación a la fase de reunión desde el panel lateral de la aplicación en una reunión. |_**microsoftTeams.meeting.shareAppContentToStage((err, result) => {} , appContentUrl)**_|Microsoft Teams SDK de cliente|
+|**getAppContentStageSharingState**| Permite obtener información sobre el estado de uso compartido de las aplicaciones en la fase de reunión. |_**microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {}**_|Microsoft Teams SDK de cliente|
+|**getAppContentStageSharingCapabilities**| Permite capturar las capacidades de las aplicaciones para compartir en la fase de reunión. |_**microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {}**_|Microsoft Teams SDK de cliente|
 
 En la tabla siguiente se proporcionan los métodos del SDK de Bot Framework para las API:
 
@@ -307,6 +310,185 @@ El cuerpo de la respuesta JSON para la API de detalles de reunión es el siguien
 } 
 ```
 
+## <a name="shareappcontenttostage-api"></a>API shareAppContentToStage
+
+La `shareAppContentToStage` API te permite compartir partes específicas de la aplicación en la fase de reunión. La API está disponible a través del SDK Teams cliente.
+
+### <a name="prerequisite"></a>Requisito previo
+
+Para usar la `shareAppContentToStage` API, debe obtener los permisos de RSC. En el manifiesto de la aplicación, configure la `authorization` propiedad y y en el `name` `type` `resourceSpecific` campo. Por ejemplo:
+
+```json
+"authorization": {
+    "permission": { 
+    "resourceSpecific": [
+      { 
+      "name": "MeetingStage.Write.Chat",
+      "type": "Delegated"
+      }
+    ]
+   }
+}
+ ```
+
+### <a name="query-parameter"></a>Parámetro de consulta
+
+La `shareAppContentToStage` API incluye los siguientes parámetros:
+
+|Valor|Tipo|Necesario|Descripción|
+|---|---|----|---|
+|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError*, en caso de error, o null cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un valor true, en caso de un recurso compartido correcto, o null cuando se produce un error en el recurso compartido.|
+|**appContentURL**| Cadena | Sí | Dirección URL que se compartirá en la fase.|
+
+### <a name="example"></a>Ejemplo
+
+Los siguientes códigos proporcionan ejemplos de `shareAppContentToStage` API:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+No disponible
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```typescript
+
+const appContentUrl = "https://www.bing.com/";
+
+microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
+if(result) {
+  this.setState({ isAppSharing: true });
+ }
+if(err) {
+  this.setState({ sharingError: err, isAppSharing: false })
+ }
+}, appContentUrl); 
+
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+No disponible
+
+---
+
+### <a name="response-codes"></a>Códigos de respuesta
+
+La `shareAppContentToStage` API devuelve los siguientes códigos de respuesta:
+
+|Código de respuesta|Descripción|
+|---|---|
+| **500** | Error interno. |
+| **501** | La API no se admite en el contexto actual.|
+| **1000** | La aplicación no tiene permisos adecuados para permitir el uso compartido en fase.|
+
+## <a name="getappcontentstagesharingstate-api"></a>API getAppContentStageSharingState
+
+La API te permite obtener información sobre el uso compartido de `getAppContentStageSharingState` aplicaciones en la fase de reunión.
+
+### <a name="query-parameter"></a>Parámetro de consulta
+
+La `getAppContentStageSharingState` API incluye el parámetro siguiente:
+
+|Valor|Tipo|Necesario|Descripción|
+|---|---|----|---|
+|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError*, en caso de error, o null cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un objeto, que indica una recuperación `AppContentStageSharingState` correcta, o null, que indica un error de recuperación.|
+
+### <a name="example"></a>Ejemplo
+
+Los siguientes códigos proporcionan ejemplos de `getAppContentStageSharingState` API:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+No disponible
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
+  if(result.isAppSharing) {
+    this.setState({ isGameSessionOver: false });
+   }
+  });
+``` 
+
+# <a name="json"></a>[JSON](#tab/json)
+
+No disponible
+
+---
+
+El cuerpo de la respuesta JSON para la `getAppContentStageSharingState` API es:
+
+```json
+{
+   "isAppSharing":true
+  }
+  
+```
+
+
+### <a name="response-codes"></a>Códigos de respuesta
+
+La `getAppContentStageSharingState` API devuelve los siguientes códigos de respuesta:
+
+|Código de respuesta|Descripción|
+|---|---|
+| **500** | Error interno. |
+| **501** | La API no se admite en el contexto actual.|
+| **1000** | La aplicación no tiene permisos adecuados para permitir el uso compartido en fase.|
+
+## <a name="getappcontentstagesharingcapabilities-api"></a>API getAppContentStageSharingCapabilities
+
+La API te permite capturar las capacidades de las `getAppContentStageSharingCapabilities` aplicaciones para compartir en la fase de reunión.
+
+### <a name="query-parameter"></a>Parámetro de consulta
+
+Incluye `getAppContentStageSharingCapabilities` los siguientes parámetros:
+
+|Valor|Tipo|Necesario|Descripción|
+|---|---|----|---|
+|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError*, en caso de error, o null cuando el recurso compartido se realiza correctamente. El resultado puede contener un objeto, que indica una recuperación `AppContentStageSharingState` correcta, o null, que indica un error de recuperación.|
+
+### <a name="example"></a>Ejemplo
+
+Los siguientes códigos proporcionan ejemplos de `getAppContentStageSharingCapabilities` API:
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+No disponible
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
+  if(result.doesAppHaveSharePermission) {
+    this.setState({ isAppAllowedToShare: true });
+   }
+  });
+``` 
+
+# <a name="json"></a>[JSON](#tab/json)
+
+No disponible
+
+---
+
+El cuerpo de la respuesta JSON `getAppContentStageSharingCapabilities` para la API es:
+
+```json
+{
+   "doesAppHaveSharePermission":true
+  }
+  
+```
+
+### <a name="response-codes"></a>Códigos de respuesta
+
+La `getAppContentStageSharingCapabilities` API devuelve los siguientes códigos de respuesta:
+
+|Código de respuesta|Descripción|
+|---|---|
+| **500** | Error interno. |
+| **1000** | La aplicación no tiene permisos para permitir el uso compartido en fase.|
+
 ## <a name="real-time-teams-meeting-events"></a>Eventos de reuniones Teams en tiempo real
 
 El usuario puede recibir eventos de reunión en tiempo real. Tan pronto como cualquier aplicación está asociada a una reunión, la hora real de inicio y finalización de la reunión se comparten con el bot.
@@ -472,7 +654,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 |Ejemplo de contratación de reuniones|Aplicación de ejemplo para mostrar la experiencia de reunión para el escenario de contratación.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Instalación de aplicaciones con código QR|Aplicación de ejemplo que genera el código QR e instala la aplicación con el código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
+
 ## <a name="see-also"></a>Consulte también
 
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para Teams reuniones](teams-apps-in-meetings.md)
+
+## <a name="next-steps"></a>Siguientes pasos
+
+> [!div class="nextstepaction"]
+> [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)

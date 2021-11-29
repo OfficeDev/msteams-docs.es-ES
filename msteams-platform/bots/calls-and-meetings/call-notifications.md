@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: afinidad de región de devolución de llamada de llamadas de llamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889163"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216093"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
@@ -39,7 +39,8 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Habilite el bot para responder a una llamada entrante mediante la API [de respuesta.](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) Puede especificar el para `callbackUri` controlar esta llamada en particular. Esto es útil para instancias con estado en las que una partición determinada controla la llamada y desea insertar esta información en el enrutamiento a `callbackUri` la instancia correcta.
+Habilite el bot para responder a una llamada entrante mediante la API [de respuesta.](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) Puede especificar el para `callbackUri` controlar esta llamada en particular. Esto es útil para instancias con estado en las que una partición determinada controla la llamada y desea insertar esta información en el enrutamiento a `callbackUri` la instancia correcta.
+
 
 La siguiente sección proporciona detalles sobre la autenticación de la devolución de llamada inspeccionando el token publicado en el webhook.
 

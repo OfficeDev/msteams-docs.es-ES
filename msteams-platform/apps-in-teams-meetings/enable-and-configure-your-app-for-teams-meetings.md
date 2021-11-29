@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: e9411306b1d3016008cfcf3699c8b154506418a7
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156603"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216083"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -129,13 +129,22 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 
 #### <a name="shared-meeting-stage"></a>Fase de reunión compartida
 
-La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real.
+> [!NOTE]
+> Actualmente, esta característica solo está disponible en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
 
-El contexto necesario está `meetingStage` en el manifiesto de la aplicación. Un requisito previo es tener el `meetingSidePanel` contexto y habilita **Compartir** en `meetingSidePanel` el .
+La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real. Puedes compartir tus aplicaciones en la fase de reunión de colaboración de las siguientes maneras:
 
-![Compartir en fase durante la experiencia de reunión](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+* [Compartir toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir a fase en Teams cliente.
+* [Compartir partes específicas de la aplicación para faser](#share-specific-parts-of-the-app-to-stage) el uso de API en el SDK Teams cliente.
 
-Para habilitar la fase de reunión compartida, configure el manifiesto de la aplicación de la siguiente manera:
+##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en fase
+
+Los participantes pueden compartir toda la aplicación en la fase de reunión de colaboración con el botón compartir a fase desde el panel lateral de la aplicación.
+
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+Para compartir toda la aplicación en fase, en el manifiesto de la aplicación debes configurar y `meetingStage` `meetingSidePanel` como contextos de marco. Por ejemplo:
 
 ```json
 "configurableTabs": [
@@ -153,7 +162,16 @@ Para habilitar la fase de reunión compartida, configure el manifiesto de la apl
   ]
 ```
 
-Vea cómo diseñar [una experiencia de fase de reunión compartida.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+Para obtener más información, consulta [manifiesto de la aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartir partes específicas de la aplicación en fase
+
+Los participantes pueden compartir partes específicas de la aplicación a la fase de reunión de colaboración mediante el uso del recurso compartido para configurar las API. Las API están disponibles en el SDK Teams cliente y se invocan desde el panel del lado de la aplicación.
+
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+Para compartir partes específicas de la aplicación en fase, debes invocar las API relacionadas en la Teams SDK de cliente. Para obtener más información, vea [Referencia de API](API-references.md).
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 
@@ -175,7 +193,9 @@ Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar el 
 > [!div class="nextstepaction"]
 > [Referencias API de aplicaciones de reuniones](API-references.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Directrices de diseño de la experiencia de fase de reunión compartida](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Agregar aplicaciones a reuniones a través de Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

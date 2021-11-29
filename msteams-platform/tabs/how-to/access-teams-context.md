@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887547"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216107"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -24,7 +24,9 @@ La pestaña requiere información contextual para mostrar contenido relevante:
 El contexto sobre el usuario, el equipo o la empresa puede ser especialmente útil cuando:
 
 * Creas o asocias recursos en la aplicación con el usuario o equipo especificado.
-* Se inicia un flujo de autenticación Azure Active Directory (AAD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario. Para obtener más información, vea [autenticar a un usuario en la Microsoft Teams pestaña](~/concepts/authentication/authentication.md).
+* Se inicia un flujo de autenticación Azure Active Directory (AAD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
+
+Para obtener más información, consulte [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Aunque esta información de usuario puede ayudar a proporcionar una experiencia de usuario fluida, no debe usarla como prueba de identidad.  Por ejemplo, un atacante puede cargar la página en un explorador y representar información o solicitudes nocivas.
@@ -48,7 +50,7 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 * {theme}: el tema actual de la interfaz de usuario (UI) como `default` , `dark` o `contrast` .
 * {groupId}: el identificador del grupo Office 365 en el que reside la pestaña.
 * {tid}: el AAD de inquilino del usuario actual.
-* {locale}: la configuración regional actual del usuario con formato de languageId-countryId. Por ejemplo, en-us.
+* {locale}: la configuración regional actual del usuario con el formato languageId-countryId(es-es).
 
 > [!NOTE]
 > El marcador de posición `{upn}` anterior está en desuso. Para la compatibilidad con versiones anteriores, actualmente es un sinónimo de `{loginHint}`.
@@ -106,7 +108,8 @@ El código siguiente proporciona un ejemplo de variable de contexto:
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -115,7 +118,9 @@ El código siguiente proporciona un ejemplo de variable de contexto:
 > [!Note]
 > Los canales privados están actualmente en la versión preliminar privada para desarrolladores.
 
-Cuando la página de contenido se carga en un canal privado, los datos que recibe de la llamada se ocultan para proteger la `getContext` privacidad del canal. Los siguientes campos se cambian cuando la página de contenido está en un canal privado:
+Cuando la página de contenido se carga en un canal privado, los datos que recibe de la llamada se ocultan para proteger la `getContext` privacidad del canal. 
+
+Los siguientes campos se cambian cuando la página de contenido está en un canal privado:
 
 * `groupId`: No definido para canales privados
 * `teamId`: Establecer en el threadId del canal privado

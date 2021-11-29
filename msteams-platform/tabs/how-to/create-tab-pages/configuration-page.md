@@ -6,12 +6,12 @@ keywords: Canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888023"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216219"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -108,6 +108,7 @@ El código de página de configuración informa Teams que los requisitos de conf
 
 >[!NOTE]
 >
+>* You have 30 seconds to complete the save operation (the callback to registerOnSaveHandler) before the timeout. Después del tiempo de espera, aparece un mensaje de error genérico.
 >* Si registra un controlador de guardado mediante , la devolución de llamada debe invocar o indicar `microsoftTeams.settings.registerOnSaveHandler()` el resultado de la `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` configuración.
 >* Si no registra un controlador de guardado, la llamada se realiza `saveEvent.notifySuccess()` automáticamente cuando el usuario selecciona **Guardar**.
 
@@ -184,7 +185,7 @@ Autentica antes de permitir que un usuario configure la aplicación. De lo contr
 
 Establezca la propiedad del manifiesto en , que permite a los usuarios `canUpdateConfiguration` modificar, reconfigurar o cambiar el nombre `true` de una pestaña de canal o grupo. Además, indica lo que sucede con el contenido cuando se quita una pestaña, incluyendo una página de opciones de eliminación en la aplicación y estableciendo un valor para la propiedad `removeUrl` en la  `setSettings()` configuración. El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, [vea crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setSettings()`Microsoft Teams configuración para la página de eliminación:
+Microsoft Teams para `setSettings()` la página de eliminación:
 
 ```javascript
 microsoftTeams.settings.setSettings({

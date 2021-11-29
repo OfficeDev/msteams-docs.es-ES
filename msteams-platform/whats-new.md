@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: d5c84010937478788ddc5836b53906b120cdbf4e
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: 9b4593fc2a0affb2e6e529a55cf51c05daca69aa
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156617"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216114"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+|11/29/2021|Modo interactivo para compartir la fase de reunión.|[Fase de reunión compartida,](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) [referencias de API de aplicaciones de reunión](apps-in-teams-meetings/API-references.md)y esquema de manifiesto de vista previa del [desarrollador](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
 | 11/17/2021| Directrices de validación Microsoft Teams almacén actualizados|[Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Búsqueda de typeahead estática y dinámica para usuarios móviles y de escritorio.| • Crear tarjetas y módulos de tareas > crear tarjetas > [búsqueda de typeahead en tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > crear tarjetas > información general > búsqueda de tipo  [por delante en tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > información general > [tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
@@ -204,7 +205,8 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
-| 11/15/2021 | Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Extender Teams aplicaciones en Microsoft 365](~/m365-apps/overview.md) |
+|11/29/2021|Modo interactivo para compartir la fase de reunión.|[Fase de reunión compartida,](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) [referencias de API de aplicaciones de reunión](apps-in-teams-meetings/API-references.md)y esquema de manifiesto de vista previa del [desarrollador](resources/schema/manifest-schema-dev-preview.md)|
+|11/15/2021| Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Extender Teams aplicaciones en Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).| • Crear bots > bots > Mensajes en conversaciones de bots > Recibir todos [los mensajes con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots para > bots > [introducción a la conversación de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots para > bots > [conversaciones de canal y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifiesto de la aplicación > Versión preliminar del > [esquema de manifiesto de vista previa del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Permisos de dispositivo para el explorador.| Conceptos básicos de > funcionalidades de dispositivo > [permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|Comportamiento de desinstalación de la aplicación personal con bot.| Crear bots > bots > Desinstalar actualizaciones de comportamiento en [aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
