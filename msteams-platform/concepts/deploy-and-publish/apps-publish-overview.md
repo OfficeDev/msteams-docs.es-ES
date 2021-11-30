@@ -2,20 +2,28 @@
 title: 'Información general: distribuir la aplicación'
 description: Describe las opciones para publicar la aplicación Microsoft Teams, cargar la aplicación y GCC.
 ms.topic: conceptual
-author: KirtiPereira
+author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: implementar la carga de aplicaciones de publicación gcc
-ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 567abdb058f3618236840c993a0ab1a4d638c016
+ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949113"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "61233501"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir la aplicación Microsoft Teams aplicación
 
 Puedes proporcionar la aplicación Microsoft Teams a una persona, equipo, organización o cualquier persona que quiera usarla. La forma de distribuir depende de varios factores, como las necesidades de los usuarios, la empresa, los requisitos técnicos y los objetivos de la aplicación.
+
+## <a name="configure-default-install-options"></a>Configurar las opciones de instalación predeterminadas
+
+Configure las opciones de instalación predeterminadas. Por ejemplo, si la funcionalidad principal de la aplicación es un bot, también puedes convertir el bot en la funcionalidad predeterminada cuando un usuario instala la aplicación en un equipo.
+
+## <a name="create-your-app-package"></a>Crear el paquete de aplicación
+
+Para distribuir la Microsoft Teams, debes tener un paquete de aplicación válido.  Un paquete de la aplicación es un archivo zip que contiene un **manifiesto de la aplicación y** los iconos de la **aplicación.**
 
 ## <a name="upload-your-app-in-teams"></a>Upload la aplicación en Teams
 
