@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: 5aa0d3c29f8a9e5e2d5c80cb0d7fa1b59418c784
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227855"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246074"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+| 11/30/2021 | Compilación actualizada de la primera aplicación SPFx guía paso a paso para Teams Toolkit actualizaciones de 3.0.0. | Introducción a > [crear la primera aplicación con SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Teams Toolkit para Visual Studio Code > Teams Toolkit [básicos](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |Modo interactivo para compartir la fase de reunión.|• Crear aplicaciones para Teams reuniones > [fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para Teams reuniones > [API de aplicaciones de reunión](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de aplicación > Versión preliminar del desarrollador > [esquema de manifiesto de vista previa del desarrollador](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021 | Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
@@ -134,7 +135,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
   
 <summary><b>2019</b></summary>
 
-| **Fecha** | **Actualizar** | **Buscar aquí** |
+| **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | El parámetro de las cargas enviadas a un bot ya no está cifrado, lo que permite usar este valor para crear `replyToId` vínculos profundos a estos mensajes. Las cargas del mensaje incluyen los valores cifrados en el parámetro `legacy.replyToId` .  |
 | 11/05/2019 | Inicio de sesión único con el Teams SDK de JavaScript. | [Inicio de sesión único](tabs/how-to/authentication/auth-aad-sso.md) |

@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: tabs bots messaging extensions webhooks connectors gcc
-ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948407"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246081"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprender Microsoft Teams funcionalidades de la aplicación
 
@@ -44,6 +44,11 @@ Por ejemplo, puedes recopilar la entrada del usuario en un formulario creado com
 
 Government Community Cloud es una copia del entorno comercial centrada en el gobierno. Los contratistas federales y del Departamento de Defensa deben cumplir los estrictos requisitos de seguridad cibernética y cumplimiento. Para este fin, GCC-High se creó para satisfacer las necesidades de los contratistas federales y del DEPARTAMENTO de Defensa. GCC-High es una copia de la nube de DOD, pero existe en su propio entorno soberana. La nube de DOD se ha creado solo para el Departamento de Defensa.
 
+> [!NOTE]
+> Teams ha evolucionado:
+> 
+> Anteriormente, las aplicaciones de LOB se actualizaban seleccionando los puntos suspensivos del icono. Con la experiencia Teams tienda, ahora puedes actualizar las aplicaciones de LOB iniciando sesión en el Centro de administración [de Teams.](https://admin.teams.microsoft.com)
+
 En la tabla siguiente se Teams características y disponibilidad para GCC, GCC-High y DOD:
 
 | Características   | GCC | GCC-High | DOD |
@@ -70,7 +75,7 @@ La siguiente lista ayuda a identificar la disponibilidad de GCC, GCC-High y DOD 
 > [!div class="nextstepaction"]
 > [Puntos de entrada de la aplicación de Teams](../concepts/extensibility-points.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Recursos adicionales
 
 * [Crear aplicaciones para Teams](../overview.md)
 * [Crear la primera Microsoft Teams aplicación](../build-your-first-app/build-first-app-overview.md)
