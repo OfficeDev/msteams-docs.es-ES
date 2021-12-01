@@ -11,17 +11,19 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
-  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+  ms.openlocfilehash: f7b9281097adfb5fc86722f4cba584b7d37285c7
+  ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/30/2021
-  ms.locfileid: "61227831"
+  ms.lasthandoff: 12/01/2021
+  ms.locfileid: "61246702"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
   - linkListType: concept
     links:
+    - text: Icono de tienda nuevo introducido
+      url: ~/concepts/design/personal-apps.md
     - text: Teams Toolkit para Visual Studio Code (versión preliminar)
       url: ~/toolkit/teams-toolkit-fundamentals.md
     - text: Modo interactivo para compartir la fase de reunión (versión preliminar)

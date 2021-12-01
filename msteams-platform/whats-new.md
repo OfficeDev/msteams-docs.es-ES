@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 9138e0b73ce6b96a6e3bd4d087294785280c6383
+ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246074"
+ms.locfileid: "61246709"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+|12/01/2021 | Icono de tienda nuevo introducido | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/30/2021 | Compilación actualizada de la primera aplicación SPFx guía paso a paso para Teams Toolkit actualizaciones de 3.0.0. | Introducción a > [crear la primera aplicación con SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Teams Toolkit para Visual Studio Code > Teams Toolkit [básicos](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |Modo interactivo para compartir la fase de reunión.|• Crear aplicaciones para Teams reuniones > [fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para Teams reuniones > [API de aplicaciones de reunión](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de aplicación > Versión preliminar del desarrollador > [esquema de manifiesto de vista previa del desarrollador](resources/schema/manifest-schema-dev-preview.md)|
@@ -43,6 +44,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|12/01/2021 | Icono de tienda nuevo introducido | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Directrices de validación Microsoft Teams almacén actualizados|[Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Búsqueda de typeahead estática y dinámica para usuarios móviles y de escritorio.| • Crear tarjetas y módulos de tareas > crear tarjetas > [búsqueda de typeahead en tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > crear tarjetas > información general > búsqueda de tipo  [por delante en tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > información general > [tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
