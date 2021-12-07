@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Autenticación de teams SSO AAD api de inicio de sesión único
-ms.openlocfilehash: 96916d526dba7a6ff7b019fb070b53943b3c216c
-ms.sourcegitcommit: 345d713a680c0e0978d7f82c0330c1fd0d6b3e7b
+ms.openlocfilehash: 3e941e905f2c75825c502f67f49bb4cec5e601fa
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2021
-ms.locfileid: "61151900"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323292"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -55,13 +55,6 @@ La API de SSO también funciona en [módulos de tareas](../../../task-modules-an
 En esta sección se describen las tareas relacionadas con la creación de una Teams que usa SSO. Estas tareas son independientes del lenguaje y del marco.
 
 ### <a name="1-create-your-aad-application"></a>1. Cree su AAD aplicación
-
-**Para registrar la aplicación en la información [general AAD portal](https://azure.microsoft.com/features/azure-portal/)**
-
-1. Obtenga el [identificador AAD de aplicación](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). 
-1. Especifique los permisos que la aplicación necesita para el punto de conexión AAD y, opcionalmente, Graph.
-1. [Conceda permisos para](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) Teams escritorio, web y aplicaciones móviles.
-1. Pre-authorize Teams seleccionando el botón Agregar **un** ámbito y en el panel que se abre, escriba **access_as_user** como **nombre de ámbito**.
 
 > [!NOTE]
 > Hay algunas restricciones importantes que debe saber:

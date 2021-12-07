@@ -6,12 +6,12 @@ keywords: Teams tabs group channel configurable remove delete
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 094e12667fc17db9cc02c0cdf50eaa935dc7ced9
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889240"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323299"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -79,7 +79,6 @@ A continuación se muestra un bloque de código de eliminación de fichas de eje
     }
   </script>
 </body>
-
 ```
 
 Cuando un usuario selecciona **Quitar** del menú desplegable de la pestaña, Teams carga la página opcional asignada en la página de configuración `removeUrl` , en un IFrame.  Se muestra al usuario un botón cargado con la función que llama y habilita el botón Quitar que se muestra en la parte inferior de la página `onClick()` `microsoftTeams.settings.setValidityState(true)` de eliminación IFrame. 
@@ -88,7 +87,7 @@ Después de ejecutar el controlador de eliminación o notificar Teams el resulta
 
 >[!NOTE]
 > * Para asegurarse de que no se inhiba el control de un usuario autorizado sobre una pestaña, Teams elimina la pestaña en los casos de éxito y error.
-> * Teams activa el **botón Quitar** después de cinco segundos, incluso si la pestaña no ha llamado `setValidityState()` a .
+> * Después de invocar el `registerOnRemoveHandler` controlador de eventos, tendrás 15 segundos para responder al método. De forma predeterminada, Teams el **botón Quitar** después de cinco segundos incluso si no llama `setValidityState(true)` a . 
 > * Cuando el usuario selecciona **Quitar**, Teams quita la pestaña después de 30 segundos, independientemente de si las acciones se han completado o no.
 
 ## <a name="next-step"></a>Paso siguiente
@@ -96,7 +95,7 @@ Después de ejecutar el controlador de eliminación o notificar Teams el resulta
 > [!div class="nextstepaction"]
 > [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
