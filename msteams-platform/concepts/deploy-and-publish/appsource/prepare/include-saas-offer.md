@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: c66a7aad6b56ca5be50ffa20384bb648a3750ba5
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: 711f40ad24a0d714f4555ceb134009d6810b947f
+ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949666"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61348359"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
@@ -96,6 +96,9 @@ Ten en cuenta los siguientes enfoques al crear una página de aterrizaje para la
 ## <a name="create-your-saas-offer"></a>Crear su oferta SaaS
 
 Una vez que haya integrado las API de saas fulfillment y haya creado la página de aterrizaje donde los usuarios puedan administrar sus suscripciones, es el momento de crear, probar y publicar oficialmente la oferta SaaS transaccionable.
+
+> [!IMPORTANT]
+> Teams admite actualmente solo el modelo de precios **por** usuario (usuario/mes y usuario/año) para las ofertas saas. Para obtener más información, vea [Modelos de precios SaaS](/azure/marketplace/plan-saas-offer#saas-pricing-models).
 
 ### <a name="create-the-offer"></a>Crear la oferta
 
