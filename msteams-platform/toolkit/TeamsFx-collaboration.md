@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: bb58e7f54fe3ad75b2a52148540119ae5dbbc9e6
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 42949c9cdd3cb8e117925f170b2ab44e3bda1a1d
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228125"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391683"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colaborar en Teams proyecto mediante Teams Toolkit
 
@@ -82,9 +82,7 @@ Teams Toolkit ahora admite la característica de colaboración para permitir que
       4. Vaya a [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), seleccione **Registro de aplicaciones** en el panel izquierdo y busque la aplicación AAD aplicación.
       5. Dentro de la AAD administración de aplicaciones, seleccione **Propietarios** en el panel izquierdo.
       6. Busque y quite el colaborador.
-    
 
-1. La característica de colaboración solo admite proyectos hospedados en Azure, SPFx proyecto hospedado será compatible en el futuro.
 
 1. El colaborador agregado al proyecto no recibirá ninguna notificación. Project propietario debe notificar a los colaboradores sin conexión.
 

@@ -3,12 +3,13 @@ title: Extender una extensión Teams mensaje a través de Microsoft 365
 description: Este es el modo de actualizar la extensión de mensajería de Teams basada en búsqueda para que se ejecute en Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 6adde57b6c5f59d28234afaacc721fba3812bd24
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960395"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391361"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Extender una extensión Teams mensaje a través de Microsoft 365
 
@@ -42,7 +43,9 @@ Para completar este tutorial, necesitará:
 
 Si tienes una extensión de mensajería existente, haz una copia o una rama del proyecto de producción para probar y actualizar tu id. de aplicación en el manifiesto de la aplicación para usar un nuevo identificador (distinto del id. de aplicación de producción).
 
-Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos de configuración de Teams [ejemplo](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) de búsqueda de extensión de mensajería para crear y registrar rápidamente un bot.
+Si desea usar código de ejemplo para completar este tutorial, siga los pasos de configuración del ejemplo de búsqueda de extensión de mensajería de [Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) para crear rápidamente una extensión de mensajería basada en Microsoft Teams búsqueda. O bien, puede empezar con el mismo ejemplo de búsqueda de extensiones de mensajería de Teams actualizado para [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) y continuar con La vista previa de la extensión de mensajería [en Outlook](#preview-your-message-extension-in-outlook). El ejemplo actualizado también está disponible en la Teams Toolkit: *Ejemplos de* vista de desarrollo  >    >  **NPM Search Connector**.
+
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="Ejemplo de NPM Search Connector en Teams Toolkit":::
 
 ## <a name="update-the-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
@@ -129,7 +132,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Outlook en Window
 
 Para obtener una vista previa de la aplicación que se Outlook en la Web, inicie sesión [en outlook.com](https://www.outlook.com) con las credenciales del inquilino de prueba. Haga clic en **Nuevo mensaje**. Abre el **menú desplegable Más aplicaciones** en la parte inferior de la ventana de composición. Se mostrará la extensión de mensaje. Puede invocarlo desde allí y usarlo tal como lo haría al redactar un mensaje en Teams.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook habilitadas para Teams de mensajería están en versión preliminar y no son compatibles con el uso de producción. Este es el modo de distribuir la extensión de Outlook de mensajería habilitada para obtener una vista previa de audiencias con fines de prueba.
 

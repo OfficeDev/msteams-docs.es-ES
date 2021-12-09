@@ -3,16 +3,17 @@ title: Microsoft Teams sdk de cliente de JavaScript v2 Preview
 description: Comprender los cambios que se Microsoft Teams sdk de cliente de JavaScript v2 Preview
 ms.date: 11/15/2021
 ms.topic: conceptual
-ms.openlocfilehash: cabe8d6858db43b1fc0d153abb74af6c63a23a47
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 646bebc22a31f01ea98cb367b8c8292b07c2e8f3
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960387"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391342"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams sdk de cliente de JavaScript v2 Preview
 
-Con Microsoft Teams JavaScript client SDK v2 Preview, el [SDK](/javascript/api/@microsoft/teams-js/) de Teams existente ( , o simplemente ) se ha `@microsoft/teams-js` `TeamsJS` refactorizado para permitir Teams los desarrolladores de Teams la capacidad de ampliar las aplicaciones de Teams para que se ejecuten en [Outlook y Office](overview.md). Desde una perspectiva funcional, el SDK de TeamsJS v2 Preview ( ) es un superconjunto del SDK de TeamsJS actual, admite la funcionalidad de la aplicación Teams existente al tiempo que agrega la capacidad de hospedar aplicaciones Teams en Outlook y `@microsoft/teams-js@next` Office.
+Con la versión preliminar del SDK de cliente de JavaScript de [Microsoft Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)el SDK de Teams existente ( , o simplemente ) se ha `@microsoft/teams-js` `TeamsJS` refactorizado para permitir Teams los desarrolladores de Teams la capacidad de ampliar las aplicaciones de [Teams](overview.md)para que se ejecuten en Outlook y Office . Desde una perspectiva funcional, el SDK de TeamsJS v2 Preview ( ) es un superconjunto del SDK de TeamsJS actual, admite la funcionalidad de la aplicación Teams existente al tiempo que agrega la capacidad de hospedar aplicaciones Teams en Outlook y `@microsoft/teams-js@next` Office.
 
 Hay dos cambios significativos en teamsJS SDK v2 Preview que el código tendrá que tener en cuenta para poder ejecutarse en otras Microsoft 365 aplicaciones:
 
@@ -27,7 +28,7 @@ Hay dos cambios significativos en teamsJS SDK v2 Preview que el código tendrá 
 > 1. Dependencia de la `@microsoft/teams-js@2.0.0-beta.1` o posterior, y
 > 2. Modificar el código de aplicación existente de acuerdo con los cambios necesarios descritos en este documento.
 >
->  Si hace referencia al SDK desde una aplicación de Teams existente, verá advertencias de desuso si el código llama `@microsoft/teams-js@2.0.0-beta.1` a api que han cambiado. Se proporciona una capa de traducción de API (asignación del SDK actual a las llamadas a la API del SDK de vista previa) para permitir que las aplicaciones de Teams existentes continúen trabajando en Teams hasta que puedan actualizar el código para que funcione con teamsJS SDK v2 Preview. Después de actualizar el código con los cambios descritos en este artículo, la pestaña personal también se ejecutará en Outlook y Office.
+>  Si hace referencia (o posterior) desde una aplicación de Teams existente, verá advertencias de desuso si el código llama a las API que `@microsoft/teams-js@2.0.0-beta.1` han cambiado. Se proporciona una capa de traducción de API (asignación del SDK actual a las llamadas a la API del SDK de vista previa) para permitir que las aplicaciones de Teams existentes continúen trabajando en Teams hasta que puedan actualizar el código para que funcione con teamsJS SDK v2 Preview. Después de actualizar el código con los cambios descritos en este artículo, la pestaña personal también se ejecutará en Outlook y Office.
 
 ## <a name="updating-to-the-teams-client-sdk-v2-preview"></a>Actualización a la versión preliminar Teams SDK de cliente de Teams versión preliminar
 
@@ -67,13 +68,13 @@ Si usó Teams Toolkit para crear su aplicación personal, también puede usarla 
 
 ### <a name="2-update-sdk-references"></a>2. Actualizar referencias de SDK
 
-Para ejecutar en Outlook y Office, la aplicación tendrá que depender del paquete [npm](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0-beta.1) `@microsoft/teams-js@2.0.0-beta.1` o superior. Para realizar estos pasos manualmente y para obtener más información sobre los cambios en la API, consulte las siguientes secciones sobre devoluciones de llamada convertida en [promesas](#callbacks-converted-to-promises) y API organizadas [en funcionalidades.](#apis-organized-into-capabilities)
+Para ejecutar en Outlook y Office, la aplicación tendrá que depender del paquete [npm](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0-beta.1) `@microsoft/teams-js@2.0.0-beta.1` (o de una versión *beta* posterior). Para realizar estos pasos manualmente y para obtener más información sobre los cambios en la API, consulte las siguientes secciones sobre devoluciones de llamada convertida en [promesas](#callbacks-converted-to-promises) y API organizadas [en funcionalidades.](#apis-organized-into-capabilities)
 
 1. Asegúrese de que tiene [Teams Toolkit](https://aka.ms/teams-toolkit) `v2.10.0` o posterior
 1. Abra la *paleta Comandos*: `Ctrl+Shift+P`
 1. Ejecutar el comando `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Después de finalizar, la utilidad habrá actualizado el archivo con la dependencia TeamsJS SDK v2 Preview ( ) y los archivos y se `package.json` `@microsoft/teams-js@2.0.0-beta.1` `*.js/.ts` `*.jsx/.tsx` actualizarán con:
+Después de finalizar, la utilidad habrá actualizado el archivo con la dependencia `package.json` de TeamsJS SDK v2 Preview (o posterior) y los archivos y se `@microsoft/teams-js@2.0.0-beta.1` `*.js/.ts` `*.jsx/.tsx` actualizarán con:
 
 > [!div class="checklist"]
 > * `package.json` referencias a TeamsJS SDK v2 Preview
@@ -179,7 +180,7 @@ El nombre del host en el que se ejecuta la aplicación se expone como una propie
 * **No suponga que** cierta funcionalidad está o no está disponible en un host en función del valor de *la propiedad hostName.* En su lugar, compruebe si hay compatibilidad con la funcionalidad ( `isSupported` ).
 * **No use** *hostName* para puerta de llamadas API. En su lugar, compruebe si hay compatibilidad con la funcionalidad ( `isSupported` ).
 * **Use** *hostName para* diferenciar el tema de la aplicación en función del host en el que se ejecuta. Por ejemplo, puede usar el Microsoft Teams púrpura como color de énfeño principal al ejecutarse en Teams y Outlook azul cuando se ejecuta en Outlook.
-* **Use** *hostName para* diferenciar los mensajes que se muestran al usuario en función del host en el que se ejecuta. Por ejemplo, muestra Administrar las tareas en *Office* cuando se  ejecuta en Microsoft Office Inicio y Administrar las tareas en Teams cuando se ejecutan en Microsoft Teams.
+* **Use** *hostName para* diferenciar los mensajes que se muestran al usuario en función del host en el que se ejecuta. Por ejemplo, muestra *Administrar las* tareas en Office cuando se ejecutan en Office en la Web y Administrar las tareas en *Teams* cuando se ejecutan en Microsoft Teams.
 
 ### <a name="namespaces"></a>Espacios de nombres
 
@@ -358,9 +359,9 @@ También puede visualizar los cambios revisando la función en el origen  [`tran
 | `userDisplayName` | `app.Context.user.displayName` |
 | N/D | `app.Context.app.host.name`|
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
-También puede obtener más información sobre cómo romper los cambios en el registro de cambios de [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md).
+También puede obtener más información sobre cómo romper los cambios en el registro de cambios de [TeamsJS SDK v2 Preview y](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md) en la Referencia de api de vista previa del [SDK de TeamsJS v2](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true).
 
 Cuando estés listo para probar las aplicaciones Teams que se ejecutan en Outlook y Office, consulta:
 

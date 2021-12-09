@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889422"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391676"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Crear una cuenta de desarrollador del Centro de partners
 
@@ -128,16 +128,6 @@ Recuerde lo siguiente sobre el proceso de verificación de correo electrónico:
 * El vínculo de verificación de correo electrónico solo es válido durante siete días.
 * Para solicitar que se vuelva a enviar el correo electrónico, visite la página de perfil de socio y seleccione el vínculo Volver a enviar correo electrónico **de verificación.**
 * Para asegurarse de recibir el correo electrónico, la lista **segura microsoft.com** como un dominio seguro y comprobar las carpetas de correo no deseado.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>¿Cómo puedo obtener más soporte técnico para los problemas relacionados con mi cuenta?</b></summary>
-
-Para [obtener información, consulte el soporte técnico del programa De Marketplace](/azure/marketplace/partner-center-portal/support) comercial en el Centro de partners.
 
 <br>
 

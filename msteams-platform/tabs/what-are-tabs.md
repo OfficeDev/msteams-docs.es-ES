@@ -5,12 +5,12 @@ description: Introducción a las pestañas personalizadas en la Teams web
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ea777a615358467f12a6f98c5e06fc5dd14b7418
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075433"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391732"
 ---
 # <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
 
@@ -33,7 +33,10 @@ Hay dos tipos de pestañas disponibles en Teams, personal y canal o grupo. [Las 
 
 Puede crear [una página de contenido como](~/tabs/how-to/create-tab-pages/content-page.md) parte de una pestaña personal, una pestaña de canal o grupo o un módulo de tareas. Puedes crear [una página](~/tabs/how-to/create-tab-pages/configuration-page.md) de configuración que permita Microsoft Teams los usuarios configurar una aplicación y usarla para configurar una pestaña de chat de canal o grupo, una extensión de mensajería o un conector de Office 365. Puede permitir a los usuarios volver a configurar la pestaña después de la instalación y [crear una página de](~/tabs/how-to/create-tab-pages/removal-page.md) eliminación de pestañas para la aplicación. Al crear una aplicación Teams que incluya una pestaña, debes probar cómo funciona la pestaña en los clientes de android [y Teams iOS.](~/tabs/design/tabs-mobile.md) La pestaña debe [obtener contexto a](~/tabs/how-to/access-teams-context.md) través de la información básica, la configuración regional y la información del tema, y eso identifica lo que hay en la `entityId` `subEntityId` pestaña.
 
-Puedes crear pestañas con tarjetas adaptables y centralizar todas las funcionalidades de la aplicación Teams eliminando la necesidad de un back-end diferente para los bots y pestañas. [Stage View](~/tabs/tabs-link-unfurling.md) es un nuevo componente de interfaz de usuario que te permite representar el contenido abierto en pantalla completa Teams anclado como una pestaña. El servicio [de desamuestración](~/tabs/tabs-link-unfurling.md) de vínculos existente se actualiza, de modo que se usa para convertir las direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Puede crear [pestañas](~/tabs/how-to/conversational-tabs.md) conversacionales con sub-entidades conversacionales que permitan a los usuarios tener conversaciones sobre sub entidades en la pestaña, como tareas específicas, pacientes y oportunidades de ventas, en lugar de analizar toda la pestaña. Puedes realizar cambios en los [márgenes de tabulación](~/resources/removing-tab-margins.md) para mejorar la experiencia del desarrollador al crear aplicaciones.
+Puedes crear pestañas con tarjetas adaptables y centralizar todas las funcionalidades de la aplicación Teams eliminando la necesidad de un back-end diferente para los bots y pestañas. [Stage View](~/tabs/tabs-link-unfurling.md) es un nuevo componente de interfaz de usuario que te permite representar el contenido abierto en pantalla completa Teams anclado como una pestaña. El servicio [de desamuestración](~/tabs/tabs-link-unfurling.md) de vínculos existente se actualiza, de modo que se usa para convertir las direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Puede crear [pestañas](~/tabs/how-to/conversational-tabs.md) conversacionales con sub-entidades conversacionales que permitan a los usuarios tener conversaciones sobre sub entidades en la pestaña, como tareas específicas, pacientes y oportunidades de ventas, en lugar de analizar toda la pestaña. Puedes realizar cambios en los [márgenes de tabulación](~/resources/removing-tab-margins.md) para mejorar la experiencia del desarrollador al crear aplicaciones. Puedes arrastrar la pestaña y colocarla en la posición deseada para intercambiar las posiciones de pestaña dentro de tus aplicaciones personales y chats de canal o grupo. 
+
+> [!NOTE]
+> **Las** **pestañas** Publicaciones, Archivos y **Chat** no se pueden mover desde sus posiciones.
 
 ## <a name="tab-features"></a>Características de tabulación
 
@@ -84,7 +87,7 @@ Puedes tener varios canales o pestañas de grupo y hasta 16 pestañas personales
 > [!div class="nextstepaction"]
 > [Requisitos previos](~/tabs/how-to/tab-requirements.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)

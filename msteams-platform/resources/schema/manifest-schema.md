@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178247"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61392375"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -373,7 +373,7 @@ El nombre de la experiencia de la aplicación, que se muestra a los usuarios en 
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
 
-## <a name="description"></a>description
+## <a name="description"></a>descripción
 
 **Required**—object
 
@@ -440,7 +440,7 @@ Se usa cuando la experiencia de la aplicación tiene una experiencia de pestaña
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|La https:// url que se va a usar al configurar la pestaña.|
 |`scopes`|matriz de enumeraciones|1|✔|Actualmente, las pestañas configurables solo admiten `team` los `groupchat` ámbitos y. |
-|`canUpdateConfiguration`|booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: **true**.|
+|`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de su creación. Valor predeterminado: **true**.|
 |`context` |matriz de enumeraciones|6 ||Conjunto de `contextItem` ámbitos donde se admite [una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de tabulación para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|matriz de enumeraciones|1||Define cómo la pestaña está disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
@@ -479,11 +479,11 @@ El elemento es una matriz (máximo de un solo elemento actualmente solo se permi
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. El identificador puede ser el mismo que el identificador general [de la aplicación](#id).|
 |`scopes`|matriz de enumeraciones|3|✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia específica para un solo usuario (`personal`). Estas opciones no son exclusivas.|
-|`needsChannelSelector`|booleano|||Describe si el bot usa o no una sugerencia de usuario para agregar el bot a un canal específico. Valor predeterminado: **`false`**|
-|`isNotificationOnly`|booleano|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Valor predeterminado: **`false`**|
-|`supportsFiles`|booleano|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Valor predeterminado: **`false`**|
-|`supportsCalling`|booleano|||Valor que indica dónde un bot admite llamadas de audio. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
-|`supportsVideo`|booleano|||Valor que indica dónde un bot admite videollamadas. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
+|`needsChannelSelector`|boolean|||Describe si el bot usa o no una sugerencia de usuario para agregar el bot a un canal específico. Valor predeterminado: **`false`**|
+|`isNotificationOnly`|boolean|||Indica si un bot es un bot unidireccional de solo notificación o un bot de conversación. Valor predeterminado: **`false`**|
+|`supportsFiles`|boolean|||Indica si el bot es compatible con la capacidad para cargar y descargar archivos en chat personal. Valor predeterminado: **`false`**|
+|`supportsCalling`|boolean|||Valor que indica dónde un bot admite llamadas de audio. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
+|`supportsVideo`|boolean|||Valor que indica dónde un bot admite videollamadas. **IMPORTANTE:** Esta propiedad es actualmente experimental. Es posible que las propiedades experimentales no estén completas y que se someten a cambios antes de estar totalmente disponibles.  La propiedad se proporciona solo con fines de prueba y exploración y no debe usarse en aplicaciones de producción. Valor predeterminado: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -526,11 +526,11 @@ Define una extensión de mensajería para la aplicación.
 
 El elemento es una matriz (máximo de un elemento) con todos los elementos de tipo `object` . Este bloque solo es necesario para las soluciones que proporcionan una extensión de mensajería.
 
-|Nombre| Tipo | Tamaño máximo | Necesario | Descripción|
+|Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|El identificador único de la aplicación de Microsoft para el bot que hace una copia de seguridad de la extensión de mensajería, tal como se registró con Bot Framework. El identificador puede ser el mismo que el identificador general de la aplicación.|
 |`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería.|
-|`canUpdateConfiguration`|booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
+|`canUpdateConfiguration`|boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
 |`messageHandlers`|matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|string|||El tipo de controlador de mensajes. Debe ser `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
@@ -547,9 +547,9 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`title`|string|32 caracteres|✔|Nombre de comando fácil de usar.|
 |`type`|string|64 caracteres||Tipo del comando. Uno de `query` o `action` . Valor predeterminado: **consulta**.|
 |`description`|string|128 caracteres||La descripción que se muestra a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|booleano|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
+|`initialRun`|boolean|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
 |`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose` , `commandBox` , `message` . El valor predeterminado es `["compose","commandBox"]`.|
-|`fetchTask`|booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
+|`fetchTask`|boolean|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se debe cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|string|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
@@ -565,7 +565,7 @@ Cada elemento de comando es un objeto con la siguiente estructura:
 |`parameters.choices.title`|string|128 caracteres|✔|Título de la elección.|
 |`parameters.choices.value`|string|512 caracteres|✔|Valor de la elección.|
 
-## <a name="permissions"></a>permissions
+## <a name="permissions"></a>permisos
 
 **Opcional**:matriz de cadenas
 
@@ -755,7 +755,7 @@ Cuando `defaultBlockUntilAdminAction` la propiedad se establece en **true,** la 
 
 **Tamaño máximo:** 128 caracteres
 
-La propiedad depende de `defaultBlockUntilAdminAction` . Cuando la propiedad se establece en true, la dirección URL HTTPS proporciona una página de información para que los administradores obtengan directrices antes de permitir una aplicación, que `defaultBlockUntilAdminAction` está bloqueada de forma  `publisherDocsUrl` predeterminada.
+Es una dirección URL HTTPS a una página de información para que los administradores obtengan directrices antes de permitir una aplicación, que `publisherDocsUrl` está bloqueada de forma predeterminada. También se puede usar para proporcionar instrucciones o información sobre la aplicación que pueda ser útil para el administrador de inquilinos.
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -767,7 +767,7 @@ Especifica la oferta SaaS asociada a la aplicación.
 |---|---|---|---|---|
 |`offerId`| string | 2.048 caracteres | ✔ | Un identificador único que incluye el identificador Publisher y el identificador de oferta, que puede encontrar en [el Centro de partners](https://partner.microsoft.com/dashboard). Debe dar formato a la cadena como `publisherId.offerId` .|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Comprender la estructura Microsoft Teams aplicación](~/concepts/design/app-structure.md)
 * [Habilitar la personalización de aplicaciones](~/concepts/design/enable-app-customization.md)

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: e9411306b1d3016008cfcf3699c8b154506418a7
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 21cbe3c038644ec3d28e4fbd68e91d0b0212eca0
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216083"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391669"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -127,52 +127,6 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 > * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams módulo de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no `from.id` `from` en los `from.aadObjectId` metadatos de la solicitud. `from.id`es el identificador de usuario `from.aadObjectId` y es el Azure Active Directory (AAD) del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### <a name="shared-meeting-stage"></a>Fase de reunión compartida
-
-> [!NOTE]
-> Actualmente, esta característica solo está disponible en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
-
-La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real. Puedes compartir tus aplicaciones en la fase de reunión de colaboración de las siguientes maneras:
-
-* [Compartir toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir a fase en Teams cliente.
-* [Compartir partes específicas de la aplicación para faser](#share-specific-parts-of-the-app-to-stage) el uso de API en el SDK Teams cliente.
-
-##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en fase
-
-Los participantes pueden compartir toda la aplicación en la fase de reunión de colaboración con el botón compartir a fase desde el panel lateral de la aplicación.
-
-
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
-
-Para compartir toda la aplicación en fase, en el manifiesto de la aplicación debes configurar y `meetingStage` `meetingSidePanel` como contextos de marco. Por ejemplo:
-
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "groupchat"
-      ],
-      "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
-```
-
-Para obtener más información, consulta [manifiesto de la aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
-
-##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartir partes específicas de la aplicación en fase
-
-Los participantes pueden compartir partes específicas de la aplicación a la fase de reunión de colaboración mediante el uso del recurso compartido para configurar las API. Las API están disponibles en el SDK Teams cliente y se invocan desde el panel del lado de la aplicación.
-
-
-<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
-
-Para compartir partes específicas de la aplicación en fase, debes invocar las API relacionadas en la Teams SDK de cliente. Para obtener más información, vea [Referencia de API](API-references.md).
-
 ### <a name="after-a-meeting"></a>Después de una reunión
 
 Las configuraciones de las reuniones después [y antes](#before-a-meeting) son las mismas.
@@ -183,10 +137,13 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 |----------------|-----------------|--------------|----------------|
 | Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad equitativa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Panel lateral de la reunión | Aplicación de ejemplo para mostrar cómo agregar agenda en un panel del lado de la reunión | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
-## <a name="step-by-step-guide"></a>Guía paso a paso
+## <a name="step-by-step-guides"></a>Guías paso a paso
 
-Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar el token de reunión en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar token de **reunión** en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meetings-sidepanel.yml) generar **meetingSidePanel** en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meetings-stage-view.yml) generar la vista Fase de reuniones en su Teams reunión.
 
 ## <a name="next-step"></a>Paso siguiente
 

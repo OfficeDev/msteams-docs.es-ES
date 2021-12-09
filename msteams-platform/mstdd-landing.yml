@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: babeb1470a5488d6dd31f0d905b64220cbc66a87
-  ms.sourcegitcommit: 96a4a118d31dcb3c273f880e282042f38757f5f7
+  ms.openlocfilehash: bf0225a26d5d6a65fa3e3ae9e357eeaded27c819
+  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/03/2021
-  ms.locfileid: "61285559"
+  ms.lasthandoff: 12/09/2021
+  ms.locfileid: "61391662"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -46,6 +46,8 @@ landingContent:
       url: ~/bots/how-to/conversations/send-proactive-messages.md
     - text: Agregar autenticación a bots
       url: ~/bots/how-to/authentication/add-authentication.md
+    - text: Habilitar y configurar las aplicaciones para reuniones
+      url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
     - text: Guía paso a paso para mensajes proactivos
@@ -54,7 +56,11 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: Guía paso a paso para generar token de reunión
       url: ~/sbs-meeting-token-generator.yml
-- title: Comenzar
+    - text: Guía paso a paso para crear el panel lateral de reuniones
+      url: ~/sbs-meetings-sidepanel.yml
+    - text: Guía paso a paso para la vista fase de reuniones
+      url: ~/sbs-meetings-stage-view.yml
+- title: Introducción
   linkLists:
   - linkListType: get-started
     links:

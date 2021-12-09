@@ -3,19 +3,20 @@ title: Extender una aplicación Teams pestaña personal en Microsoft 365
 description: Extender una aplicación Teams pestaña personal en Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 8dcdb04b995206af05430bfdfb7c27992c8cd781
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 507cd74332ced731701e675554b11205715cfc58
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960399"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391370"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
 > [!NOTE]
 > *La extensión de una Teams personal en Microsoft 365* está disponible actualmente solo en la versión preliminar del desarrollador [público.](../resources/dev-preview/developer-preview-intro.md) Es posible que las características incluidas en la versión preliminar no estén completas y que se someten a cambios antes de estar disponibles en la versión pública. Solo se proporcionan con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
 
-Las pestañas personales proporcionan una excelente forma de mejorar la Microsoft Teams experiencia. Con las pestañas personales, puede proporcionar a un usuario acceso a su aplicación directamente dentro de Teams, sin que el usuario tenga que dejar la experiencia o volver a iniciar sesión. Con esta vista previa, las pestañas personales pueden iluminarse dentro de otras Microsoft 365 aplicaciones. En este tutorial se muestra el proceso de tomar una pestaña personal de Teams existente y actualizarla para que se ejecute en experiencias de escritorio y web de Outlook, y también Microsoft Office inicio (office.com).
+Las pestañas personales proporcionan una excelente forma de mejorar la Microsoft Teams experiencia. Con las pestañas personales, puede proporcionar a un usuario acceso a su aplicación directamente dentro de Teams, sin que el usuario tenga que dejar la experiencia o volver a iniciar sesión. Con esta vista previa, las pestañas personales pueden iluminarse dentro de otras Microsoft 365 aplicaciones. En este tutorial se muestra el proceso de tomar una pestaña personal de Teams existente y actualizarla para que se ejecute en experiencias de escritorio y web de Outlook, y también Office en la Web (office.com).
 
 Actualizar la aplicación personal para que se ejecute en Outlook y Office Inicio implica estos pasos:
 
@@ -52,7 +53,7 @@ Si tienes una aplicación de pestaña personal existente, haz una copia o una ra
 
 Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos de configuración de Introducción a [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para crear una aplicación de pestaña personal con la extensión Teams Toolkit para Visual Studio Code. O bien, puede empezar con el mismo ejemplo de lista todo actualizado para [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) y continuar con La vista previa de la pestaña personal en otras [Microsoft 365 experiencias.](#preview-your-personal-tab-in-other-microsoft-365-experiences) El ejemplo actualizado también está disponible en Teams Toolkit extensión: *Ejemplos* de vista de desarrollo Lista de todo (Funciona en  >    >  **Teams, Outlook y Office).**
 
-:::image type="content" source="images/toolkit-todo-sample.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-todo-sample.png" alt-text="Ejemplo de lista todo (funciona en Teams, Outlook y Office) en Teams Toolkit":::
 
 
 ## <a name="update-the-app-manifest"></a>Actualizar el manifiesto de la aplicación
@@ -84,14 +85,14 @@ Si usó Teams Toolkit para crear su aplicación personal, también puede usarla 
 
 ## <a name="update-sdk-references"></a>Actualizar referencias de SDK
 
-Para ejecutar en Outlook y Office, la aplicación tendrá que depender del paquete npm `@microsoft/teams-js@2.0.0-beta.1` o superior. Si bien el código con versiones de nivel inferior de se admite en Outlook y Office, las advertencias de desuso se registrarán y la compatibilidad con las versiones de nivel inferior de Outlook y `@microsoft/teams-js` `@microsoft/teams-js` Office terminarán.
+Para ejecutar en Outlook y Office, la aplicación tendrá que depender del paquete npm `@microsoft/teams-js@2.0.0-beta.1` (o de una versión *beta* posterior). Si bien el código con versiones de nivel inferior de se admite en Outlook y Office, las advertencias de desuso se registrarán y la compatibilidad con las versiones de nivel inferior de Outlook y `@microsoft/teams-js` `@microsoft/teams-js` Office terminarán.
 
 Puede usar Teams Toolkit para automatizar algunos de los cambios de código para adoptar la siguiente versión de , pero si desea realizar los pasos manualmente, consulte `@microsoft/teams-js` [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) para obtener más información.
 
 1. Abra la *paleta Comandos*: `Ctrl+Shift+P`
 1. Ejecutar el comando `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Una vez completada, la utilidad habrá actualizado el archivo con la dependencia Vista previa del SDK de TeamsJS ( ) y los archivos y se `package.json` `@microsoft/teams-js@2.0.0-beta.1` `*.js/.ts` `*.jsx/.tsx` actualizarán con:
+Una vez completada, la utilidad habrá actualizado el archivo con la dependencia de TeamsJS SDK Preview (o posterior) y los archivos y se `package.json` `@microsoft/teams-js@2.0.0-beta.1` `*.js/.ts` `*.jsx/.tsx` actualizarán con:
 
 > [!div class="checklist"]
 > * `package.json` referencias a TeamsJS SDK Preview
@@ -115,7 +116,7 @@ Si la aplicación [](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/C
 |Microsoft 365 host| permiso frame-ancestor|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Oficina | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-aad-app-registration-for-sso"></a>Actualizar AAD de aplicaciones para SSO
@@ -169,7 +170,7 @@ Puedes anclar la aplicación para obtener acceso rápido o puedes encontrar la a
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Obtener una vista previa de la pestaña personal en otras Microsoft 365 experiencias
 
-Al actualizar la pestaña personal Teams y cargarla localmente en Teams, también se ejecutará en clientes de escritorio y web Outlook y en Microsoft Office Inicio (office.com). Este es el modo de obtener una vista previa de estas Microsoft 365 experiencias.
+Al actualizar la pestaña personal Teams y cargarla localmente en Teams, también se ejecutará en clientes de escritorio y web Outlook y Office en la Web (office.com). Este es el modo de obtener una vista previa de estas Microsoft 365 experiencias.
 
 ### <a name="outlook"></a>Outlook
 
@@ -185,13 +186,13 @@ Para ver la aplicación en Outlook en la Web, visita https://outlook.office.com 
 
 Haz clic en el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
-### <a name="microsoft-office-home"></a>Microsoft Office inicio
+### <a name="office-on-the-web"></a>Office en la web
 
-Para obtener una vista previa de la aplicación que se ejecuta en Microsoft Office inicio, inicie sesión office.com con las credenciales de inquilino de prueba. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
+Para obtener una vista previa de la aplicación que se ejecuta en Office en la Web, inicie sesión office.com con las credenciales de inquilino de prueba. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
 
 Haz clic en el icono de la aplicación para iniciar la aplicación en Office inicio.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook pestañas personales habilitadas Office están en versión preliminar y no se admiten para el uso de producción. Aquí te explicamos cómo distribuir tu aplicación de pestaña personal para obtener una vista previa de audiencias con fines de prueba.
 

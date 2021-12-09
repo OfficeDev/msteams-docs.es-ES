@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: 180d1f02353b0a04a89b16e040be0927f568f916
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: 2f5ec4d3ab2c9be9480dd4400aed1ba503879940
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323285"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391746"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,8 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+| 12/09/2021| Guía paso a paso introducida para crear un panel lateral de reuniones. | Crear aplicaciones para reuniones Teams > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear el panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Guía paso a paso introducida en la vista fase de reuniones. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear la vista fase [de reuniones](sbs-meetings-stage-view.yml)| 
 |12/01/2021 | Icono de tienda nuevo introducido | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
 |
 
@@ -35,8 +37,10 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Actualizar** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+| 12/09/2021| Guía paso a paso introducida para crear un panel lateral de reuniones. | Crear aplicaciones para reuniones Teams > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear el panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Guía paso a paso introducida en la vista fase de reuniones. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear la vista fase [de reuniones](sbs-meetings-stage-view.yml)|
 |12/01/2021 | Icono de tienda nuevo introducido | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Directrices de validación Microsoft Teams almacén actualizados|[Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
@@ -160,7 +164,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Actualizar** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 | 12/11/2018 | Las pestañas del chat de grupo ahora están disponibles en la versión publicada de Teams. Como parte de este trabajo, se ha reelaborado la sección pestañas para mayor claridad.| [Pestañas configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La introducción a Node JS y .NET/C# se ha actualizado para usar App Studio en Teams y se ha agregado una nueva sección al hospedar aplicaciones basadas en node Teams en Azure. | Introducción a la plataforma Microsoft Teams con [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)y App Studio , Introducción a la plataforma Microsoft Teams con Node JS y [App Studio](~/get-started/get-started-nodejs-app-studio.md), Hospedar la aplicación node Teams en [Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -200,7 +204,7 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 La vista previa de desarrolladores es un programa público que proporciona acceso anticipado a las características Teams plataforma sin Teams versión preliminar.  
 
-| **Date** | **Actualizar** | **Buscar aquí** |
+| **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
 | 11/30/2021 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Teams Toolkit para Visual Studio Code > Teams Toolkit [básicos](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Extender Teams aplicaciones en Microsoft 365](~/m365-apps/overview.md) |

@@ -3,12 +3,13 @@ title: Extender Teams aplicaciones en Microsoft 365 (versión preliminar)
 description: Extender las experiencias Teams aplicaciones a otras áreas de uso alto de Microsoft 365
 ms.date: 11/15/2021
 ms.topic: overview
-ms.openlocfilehash: 97bbec718d2bff33cfca99bf2cedaae9533fbd92
-ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
+ms.custom: m365apps
+ms.openlocfilehash: 23251d06c38df847a98d27bbc7010b76681a4ea9
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61233508"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391335"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Extender Teams aplicaciones en Microsoft 365
 
@@ -19,14 +20,14 @@ Puede probar las aplicaciones de Teams que se ejecutan en Microsoft Office y Out
 
 Con esta vista previa, puede:
 
-- Extienda las Teams pestañas personales [existentes](/microsoftteams/platform/tabs/how-to/create-personal-tab) a Outlook para escritorio y en la web, y también Microsoft Office inicio (office.com).
+- Extender las Teams [pestañas personales existentes](/microsoftteams/platform/tabs/how-to/create-personal-tab) a Outlook para escritorio y en la web, y también Office en la Web (office.com).
 - Amplíe las extensiones Teams de mensajería basadas en [búsquedas existentes](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) a Outlook para escritorio y en la web.
 
 Para obtener comentarios y problemas, siga usando los canales Microsoft Teams de la comunidad [de desarrolladores.](/microsoftteams/platform/feedback)
 
 ## <a name="teams-personal-tabs-in-office-and-outlook"></a>Teams pestañas personales en Office y Outlook
 
-Con esta vista previa, puede ampliar una aplicación de pestaña personal de Teams para que se ejecute en Outlook en el escritorio y la web de Windows, y también puede Microsoft Office inicio (office.com).
+Con esta vista previa, puede extender una aplicación de pestaña personal Teams para que se ejecute en Outlook en Windows escritorio y la web, y también Office en la Web.
 
 Después de realizar la Teams, la pestaña personal aparece como una de las aplicaciones instaladas en Outlook y Office.
 
