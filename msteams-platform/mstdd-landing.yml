@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: bf0225a26d5d6a65fa3e3ae9e357eeaded27c819
-  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+  ms.openlocfilehash: 22d603225eb3dacc15b6491ea2daede0fdcfc690
+  ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
   ms.translationtype: MT
   ms.contentlocale: es-ES
   ms.lasthandoff: 12/09/2021
-  ms.locfileid: "61391662"
+  ms.locfileid: "61392368"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -56,7 +56,7 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: Guía paso a paso para generar token de reunión
       url: ~/sbs-meeting-token-generator.yml
-    - text: Guía paso a paso para crear el panel lateral de reuniones
+    - text: Guía paso a paso para crear un panel lateral de reunión
       url: ~/sbs-meetings-sidepanel.yml
     - text: Guía paso a paso para la vista fase de reuniones
       url: ~/sbs-meetings-stage-view.yml

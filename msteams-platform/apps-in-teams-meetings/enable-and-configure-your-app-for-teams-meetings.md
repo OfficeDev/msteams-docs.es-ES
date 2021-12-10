@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 21cbe3c038644ec3d28e4fbd68e91d0b0212eca0
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391669"
+ms.locfileid: "61392494"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -142,7 +142,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 ## <a name="step-by-step-guides"></a>Guías paso a paso
 
 * Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar token de **reunión** en su Teams reunión.
-* Siga la [guía paso a paso para](../sbs-meetings-sidepanel.yml) generar **meetingSidePanel** en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meetings-sidepanel.yml) generar un panel lateral de **reunión** en su Teams reunión.
 * Siga la [guía paso a paso para](../sbs-meetings-stage-view.yml) generar la vista Fase de reuniones en su Teams reunión.
 
 ## <a name="next-step"></a>Paso siguiente
