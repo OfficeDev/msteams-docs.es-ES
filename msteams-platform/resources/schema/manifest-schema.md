@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: esquema de manifiesto de teams
-ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 358aa6e35e2916dd554b7f9bbf1655601ce77820
+ms.sourcegitcommit: 2e0764cdb955cf12c5dce7b9ec671a653fec218c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392375"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "61424103"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -373,7 +373,7 @@ El nombre de la experiencia de la aplicación, que se muestra a los usuarios en 
 |`short`|30 caracteres|✔|El nombre para mostrar corto de la aplicación.|
 |`full`|100 caracteres||El nombre completo de la aplicación, que se usa si el nombre completo de la aplicación supera los 30 caracteres.|
 
-## <a name="description"></a>descripción
+## <a name="description"></a>description
 
 **Required**—object
 
@@ -631,7 +631,7 @@ Indica si se va a mostrar el indicador de carga cuando se carga una aplicación 
 Indica dónde se representa una aplicación personal con o sin una barra de encabezado de pestaña. El valor predeterminado es **false**.
 
 > [!NOTE]
-> `isFullScreen`solo funciona con SharePoint pestañas y aplicaciones de almacenamiento.
+> `isFullScreen` solo funciona para las aplicaciones publicadas en su organización.
 
 ## <a name="activities"></a>activities
 
