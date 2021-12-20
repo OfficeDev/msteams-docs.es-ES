@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifiesto del bot de registro del canal del bot del grupo de recursos
-ms.openlocfilehash: da3a506ef4c1eeb77f97ce517a68005750026915
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887904"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569528"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot Teams usuario
 
@@ -83,7 +83,7 @@ Se usa un grupo de recursos para crear recursos individuales para Bot Framework.
 El registro de canales de bot registra el servicio web como un bot con Bot Framework, siempre que tenga un identificador de aplicación de Microsoft y una contraseña de aplicación (secreto de cliente).
 
 > [!IMPORTANT]
-> Solo necesita registrar el bot si no está hospedado en Azure. Si [creó un bot a](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) través de Azure Portal, ya está registrado en el servicio. Si creó el bot a través de [Bot Framework](https://dev.botframework.com/bots/new) o [AppStudio,](~/concepts/build-and-test/app-studio-overview.md) el bot no está registrado en Azure.
+> Solo necesita registrar el bot si no está hospedado en Azure. Si [creó un bot a](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) través de Azure Portal, ya está registrado en el servicio. Si creó el bot a través del [Bot Framework](https://dev.botframework.com/bots/new) o [el Portal](../../../concepts/build-and-test/teams-developer-portal.md) de desarrolladores, el bot no está registrado en Azure.
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -95,7 +95,7 @@ Para obtener más información, vea [Create a bot for Teams](../create-a-bot-for
 ## <a name="create-the-identity-provider"></a>Crear el proveedor de identidades
 
 Necesita un proveedor de identidades que se pueda usar para la autenticación.
-En este procedimiento, usará un proveedor de Azure AD; también Azure AD otros proveedores de identidad compatibles.
+En este procedimiento, usará un proveedor de Azure AD y también Azure AD proveedores de identidades compatibles.
 
 1. En [**azure portal**][azure-portal], en el panel de navegación izquierdo, seleccione **Azure Active Directory**.
     > [!TIP]
@@ -126,7 +126,7 @@ En este procedimiento, usará un proveedor de Azure AD; también Azure AD otros 
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurar la conexión del proveedor de identidades y registrarla con el bot
 
-Nota: hay dos opciones para los proveedores de servicios aquí Azure AD V1 y Azure AD V2.  Las diferencias entre los dos proveedores se resumen [aquí,](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)pero, en general, V2 proporciona más flexibilidad con respecto a cambiar los permisos del bot.  Graph Los permisos de API se enumeran en el campo ámbitos y, a medida que se agregan los nuevos, los bots permitirán a los usuarios dar su consentimiento a los nuevos permisos en el siguiente inicio de sesión.  Para V1, el usuario debe eliminar el consentimiento del bot para que se pidan nuevos permisos en el cuadro de diálogo OAuth. 
+Nota: hay dos opciones para los proveedores de servicios aquí Azure AD V1 y Azure AD V2.  Las diferencias entre los dos proveedores se resumen [aquí,](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)pero, en general, V2 proporciona más flexibilidad con respecto a cambiar los permisos del bot.  Graph permisos de API se enumeran en el campo ámbitos y, a medida que se agregan nuevos, los bots permitirán a los usuarios dar su consentimiento a los nuevos permisos en el siguiente inicio de sesión.  Para V1, el usuario debe eliminar el consentimiento del bot para que se pidan nuevos permisos en el cuadro de diálogo OAuth. 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
@@ -172,7 +172,7 @@ La siguiente imagen muestra la selección correspondiente en la página de recur
     1. **Proveedor de servicios**. Seleccione **Azure Active Directory v2**. Una vez seleccionado, se mostrarán Azure AD campos específicos del usuario.
     1. **Id. de cliente**. Escriba el identificador de aplicación (cliente) que registró para la aplicación proveedora de identidades de Azure en los pasos anteriores.
     1. **Secreto de cliente**. Escriba el secreto que registró para la aplicación proveedora de identidades de Azure en los pasos anteriores.
-    1. **Dirección URL Exchange token**. Deje esto en blanco.
+    1. **Dirección URL Exchange token**. Déjelo en blanco.
     1. **Identificador de inquilino**, escriba el id. de directorio  **(espacio empresarial)** que registró anteriormente para la aplicación de identidad de Azure o común según el tipo de cuenta admitido seleccionado al crear la aplicación del proveedor de identidades. Para decidir qué valor asignar, siga estos criterios:
 
         - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o Cuentas  en cualquier directorio de la organización(Directorio de Microsoft AAD - *Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación AAD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.

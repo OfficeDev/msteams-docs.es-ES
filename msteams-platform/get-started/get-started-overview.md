@@ -4,14 +4,14 @@ description: Introducción a Introducción a la documentación Microsoft Teams p
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams de desarrolladores
-ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075482"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569500"
 ---
-# <a name="get-started"></a>Introducción
+# <a name="get-started"></a>Comenzar
 
 Bienvenido a Introducción para crear e implementar aplicaciones personalizadas para Microsoft Teams!
 
@@ -25,7 +25,7 @@ Esta es una idea de lo que aprenderá:
 
 Echemos un vistazo rápido a las opciones del entorno de compilación entre las que puedes elegir y la hoja de ruta para crear e implementar una Teams aplicación.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración que muestra los pasos básicos para crear e implementar una Teams aplicación.":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración que muestra los pasos básicos para crear e implementar una Teams aplicación":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Funcionalidades de aplicaciones y herramientas de desarrollo
 
@@ -60,3 +60,7 @@ Ahora, vamos a crear la primera Teams aplicación. Pero en primer lugar, elija e
 
 > [!div class="nextstepaction"]
 > [Crear una aplicación Teams con Node.js](../sbs-gs-nodejs.yml)
+
+## <a name="see-also"></a>Consulte también
+
+[Microsoft Teams ejemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)

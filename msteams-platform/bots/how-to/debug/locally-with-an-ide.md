@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo probar y depurar el bot localmente
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9ac6e2f7bf173e68e111b0d792ec89ba266c188f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888233"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569577"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -21,11 +21,13 @@ Al probar el bot, debes tener en cuenta los contextos en los que quieres que se 
 La forma más completa de probar el bot es crear un paquete de aplicación y cargarlo en Teams. Este es el único método para probar la funcionalidad completa disponible para el bot, en todos los ámbitos.
 
 Hay dos métodos para cargar la aplicación:
+
 * Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Crea un paquete de aplicación](~/concepts/build-and-test/apps-package.md) manualmente y, a continuación, carga la [aplicación](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
-> Si necesitas modificar el manifiesto y volver a cargar la aplicación, debes eliminar el [bot](#delete-a-bot-from-teams) antes de cargar el paquete de la aplicación modificado.
+> Para modificar el manifiesto y volver a cargar la aplicación, [elimina el bot](#delete-a-bot-from-teams) antes de cargar el paquete de la aplicación modificado.
+> Para probar el bot, habilite la instalación local en Teams. Vea [enable sideloading](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## <a name="debug-your-bot-locally"></a>Depurar el bot localmente
 
@@ -35,7 +37,7 @@ Si hospeda el bot localmente durante el desarrollo, debe usar un servicio de tú
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Usa el punto de conexión https proporcionado por ngrok en el manifiesto de la aplicación. 
+Usa el punto de conexión https proporcionado por ngrok en el manifiesto de la aplicación.
 
 > [!NOTE]
 > Si cierra la ventana de comandos y se reinicia, se genera una nueva dirección URL y necesita actualizar la dirección del extremo del bot para usarla.

@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216233"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569535"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -171,7 +171,7 @@ Teams plataforma permite mencionar a los usuarios con su identificador de objeto
 
 En la tabla siguiente se describen los id. de mención de usuario que se han admitido recientemente:
 
-|IDs  | Capacidades de soporte técnico |   Descripción | Ejemplo |
+|IDs  | Capacidades de soporte técnico |   Description | Ejemplo |
 |----------|--------|---------------|---------|
 | AAD de objeto | Bot, conector |  AAD de objeto del usuario |  49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, conector | AAD UPN del usuario | john.smith@microsoft.com |
@@ -296,7 +296,7 @@ Use la propiedad de enmascaramiento de información para enmascarar información
 > [!NOTE]
 > La característica solo admite el enmascaramiento de información del lado cliente. El texto de entrada enmascarado se envía como texto sin formato a la dirección del extremo HTTPS que se especificó durante la [configuración del bot](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
 
-Para enmascarar la información en tarjetas adaptables, agregue la propiedad `isMasked` **al tipo** y establezca su valor `Input.Text` en **true**.
+Para enmascarar la información en tarjetas adaptables, agregue la propiedad para escribir `style` y establezca su valor en  `input.text` **Password**.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Tarjeta adaptable de ejemplo con la propiedad masking
 

@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: mensajes de bots de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 49b05e48a82208776beaa0b62b1b44f8fec0652f
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157413"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569521"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación con un Microsoft Teams bot
 
@@ -158,12 +158,10 @@ Al interactuar en un canal, el bot debe ser inteligente para desconectar determi
 
 El objeto contiene Teams información específica y es el origen definitivo de `channelData` los IDs de equipo y canal. Debe almacenar en caché y usar estos identificadores como claves para el almacenamiento local.
 
-El objeto no se incluye en los mensajes de las conversaciones personales, ya que se llevan a `channelData` cabo fuera de cualquier canal.
-
 Un objeto channelData típico de una actividad enviada al bot contiene la siguiente información:
 
 * `eventType`Teams tipo de evento; se pasa solo en casos de [eventos de modificación de canal](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id`Azure Active Directory de inquilino; pasado en todos los contextos.
+* `tenant.id`Azure Active Directory de inquilino; se pasa en todos los contextos.
 * `team` Se pasa solo en contextos de canal, no en chat personal.
   * `id` GUID del canal.
   * `name`Nombre del equipo; se pasa solo en casos de [eventos de cambio de nombre de equipo.](~/resources/bot-v3/bots-notifications.md#team-name-updates)
@@ -219,7 +217,7 @@ El nuevo mensaje no necesita coincidir con el tipo original. Por ejemplo, si el 
 > [!NOTE]
 > Solo puede actualizar el contenido enviado en mensajes de datos adjuntos únicos y diseños de carrusel. No se admite la publicación de actualizaciones en mensajes con varios datos adjuntos en el diseño de lista.
 
-### <a name="rest-api"></a>API REST
+### <a name="rest-api"></a>API de REST
 
 Para emitir una actualización de mensaje, solo tiene que realizar una solicitud PUT en el `/v3/conversations/<conversationId>/activities/<activityId>/` extremo mediante un identificador de actividad determinado. Para completar este escenario, debe almacenar en caché el identificador de actividad devuelto por la llamada POST original.
 

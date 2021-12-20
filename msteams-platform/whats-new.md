@@ -4,12 +4,12 @@ description: Describe todas las nuevas características de desarrollador en Micr
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: 81c050bd36e2b07fa0dfbc1a96c1d0b1fe7e1724
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 70531b0fc772e282d8fead5b11831b6ae84651e3
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392382"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569514"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,10 +22,12 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+|12/20/2021 | Directrices introducidas para la aplicación vinculada a la oferta SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams de > Revisar directrices de validación del almacén > directrices para aplicaciones vinculadas a la oferta [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+|12/20/2021| Guía paso a paso introducida para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Agregar > de > usar la autenticación de SSO > guía paso a paso con SSO para [pestañas](sbs-tabs-and-messaging-extensions-with-SSO.yml) y extensiones de mensajería|
+| 12/20/2021| Guía paso a paso introducida para crear una burbuja de contenido de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear burbujas de contenido de [reuniones](sbs-meeting-content-bubble.yml) |
+| 12/09/2021| Guía paso a paso introducida para la vista de fase de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear una vista de fase [de reuniones](sbs-meetings-stage-view.yml)|
 | 12/09/2021| Guía paso a paso introducida para crear un panel lateral de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear un panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
-| 12/09/2021| Guía paso a paso introducida en la vista fase de reuniones. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear la vista fase [de reuniones](sbs-meetings-stage-view.yml)| 
-|12/01/2021 | Icono de tienda nuevo introducido | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
-|
+|12/01/2021 | Se introdujo el nuevo icono de la tienda. | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -39,10 +41,13 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-| 12/09/2021| Guía paso a paso introducida para crear un panel lateral de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear un panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
-| 12/09/2021| Guía paso a paso introducida en la vista fase de reuniones. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear la vista fase [de reuniones](sbs-meetings-stage-view.yml)|
-|12/01/2021 | Icono de tienda nuevo introducido | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
-| 11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
+|12/20/2021 | Directrices introducidas para la aplicación vinculada a la oferta SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams de > Revisar directrices de validación del almacén > directrices para aplicaciones vinculadas a la oferta [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+|12/20/2021| Guía paso a paso introducida para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Agregar > de > usar la autenticación de SSO > guía paso a paso con SSO para [pestañas](sbs-tabs-and-messaging-extensions-with-SSO.yml) y extensiones de mensajería|
+|12/20/2021| Guía paso a paso introducida para crear una burbuja de contenido de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear burbujas de contenido de [reuniones](sbs-meeting-content-bubble.yml) |
+|12/09/2021| Guía paso a paso introducida para la vista de fase de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear una vista de fase [de reuniones](sbs-meetings-stage-view.yml)|
+|12/09/2021| Guía paso a paso introducida para crear un panel lateral de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear un panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
+|12/01/2021 | Se introdujo el nuevo icono de la tienda. | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
+|11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Directrices de validación Microsoft Teams almacén actualizados|[Directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Búsqueda de typeahead estática y dinámica para usuarios móviles y de escritorio.| • Crear tarjetas y módulos de tareas > crear tarjetas > [búsqueda de typeahead en tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > crear tarjetas > información general > búsqueda de tipo  [por delante en tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > información general > [tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
 |11/13/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC). | • Crear bots > bots > Mensajes en conversaciones de bots > Recibir todos los mensajes [de canal con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots para > bots > [introducción a la conversación del bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots para > bots > [canal y conversaciones de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |

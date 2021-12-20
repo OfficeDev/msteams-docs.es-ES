@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392494"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569423"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -55,7 +55,7 @@ El manifiesto de la aplicación debe incluir el siguiente fragmento de código:
 
 La propiedad determina lo que debe mostrarse cuando un usuario invoca una aplicación en una reunión en función del lugar en el que el usuario `context` invoca la aplicación. La pestaña y las propiedades te permiten determinar dónde debe aparecer `context` `scopes` la aplicación. Las pestañas del `team` ámbito or pueden tener más de un `groupchat` contexto. Estos son los valores de la propiedad desde `context` la que puede usar todos o algunos de los valores:
 
-|Valor|Descripción|
+|Valor|Description|
 |---|---|
 | **channelTab** | Pestaña en el encabezado de un canal de grupo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios, no en el contexto de un equipo o reunión. |
@@ -141,9 +141,10 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 
 ## <a name="step-by-step-guides"></a>Guías paso a paso
 
-* Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar token de **reunión** en su Teams reunión.
-* Siga la [guía paso a paso para](../sbs-meetings-sidepanel.yml) generar un panel lateral de **reunión** en su Teams reunión.
-* Siga la [guía paso a paso para](../sbs-meetings-stage-view.yml) generar la vista Fase de reuniones en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar el token de reunión en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meetings-sidepanel.yml) generar un panel lateral de reunión en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meetings-stage-view.yml) generar una vista de fase de reunión en su Teams reunión.
+* Siga la [guía paso a paso para](../sbs-meeting-content-bubble.yml) generar una burbuja de contenido de reunión en su Teams reunión.
 
 ## <a name="next-step"></a>Paso siguiente
 
