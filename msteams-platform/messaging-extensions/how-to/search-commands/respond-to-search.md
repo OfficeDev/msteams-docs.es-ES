@@ -5,12 +5,12 @@ description: Aprende a responder al comando de búsqueda desde una extensión de
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: b31bdc167c033785edc971b96b2ebfc44c265995
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178288"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573417"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -25,7 +25,7 @@ Este documento le guía sobre cómo responder a solicitudes de usuario en forma 
 
 Los parámetros de solicitud se encuentran en el `value` objeto de la solicitud, que incluye las siguientes propiedades:
 
-| Nombre de la propiedad | Objetivo |
+| Nombre de propiedad | Finalidad |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
 | `parameters` | Matriz de parámetros. Cada objeto de parámetro contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
@@ -83,7 +83,7 @@ Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP
 
 El servicio debe responder con los resultados que coincidan con la consulta del usuario. La respuesta debe indicar un código de estado HTTP y una aplicación válida `200 OK` o un objeto JSON con las siguientes propiedades:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Finalidad|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
 |`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería <br>`message`: muestra un mensaje de texto sin formato |
@@ -115,10 +115,9 @@ La lista de resultados se muestra en la Microsoft Teams de usuario con una vista
 
 Para la tarjeta De héroe o Miniatura, excepto la acción invocar otras acciones como botón y pulsación no se admiten en la tarjeta de vista previa.
 
-Para enviar una tarjeta adaptable o una tarjeta Deiice 365 Connector, debe incluir una vista previa. La `preview` propiedad debe ser una tarjeta Hero o Thumbnail. Si no especifica la propiedad preview en el objeto, no se genera `attachment` una vista previa.
+Para enviar una tarjeta adaptable o una Office 365 Connector, debe incluir una vista previa. La `preview` propiedad debe ser una tarjeta Hero o Thumbnail. Si no especifica la propiedad preview en el objeto, no se genera `attachment` una vista previa.
 
-Para las tarjetas hero y Thumbnail, no es necesario especificar una propiedad de vista previa, una vista previa se genera de forma predeterminada. En el ejemplo siguiente se muestra la característica de desamuestra de vínculos cuando se pega un vínculo en la extensión de mensajería:  
-![desafusado de vínculos](~/assets/images/messaging-extension/link-unfurl.gif)
+Para las tarjetas hero y Thumbnail, no es necesario especificar una propiedad de vista previa, una vista previa se genera de forma predeterminada.
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -416,7 +415,7 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
+| Nombre de ejemplo           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
@@ -426,6 +425,6 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 > [!div class="nextstepaction"]
 > [Agregar autenticación a una extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Agregar configuración a una extensión de mensajería](~/get-started/first-message-extension.md)

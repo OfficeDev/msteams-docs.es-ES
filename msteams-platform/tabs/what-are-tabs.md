@@ -5,14 +5,14 @@ description: Introducción a las pestañas personalizadas en la Teams web
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: b48091c0701ebbb84e87e80cc3378f788bcb30b3
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391732"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573566"
 ---
-# <a name="microsoft-teams-tabs"></a>Pestañas de Microsoft Teams
+# <a name="build-tabs-for-microsoft-teams"></a>Crear pestañas para Microsoft Teams
 
 Las pestañas Teams páginas web que se integran en Microsoft Teams. Son etiquetas sencillas html <iframe que apuntan a dominios declarados en el manifiesto de la aplicación y se pueden agregar como parte de un canal dentro de un equipo, chat de grupo o aplicación personal para un usuario \> individual. Puedes incluir pestañas personalizadas con la aplicación para insertar tu propio contenido web en Teams o agregar una funcionalidad específica Teams al contenido web. Para obtener más información, [vea Teams SDK de cliente de JavaScript](/javascript/api/overview/msteams-client).
 
@@ -36,7 +36,7 @@ Puede crear [una página de contenido como](~/tabs/how-to/create-tab-pages/conte
 Puedes crear pestañas con tarjetas adaptables y centralizar todas las funcionalidades de la aplicación Teams eliminando la necesidad de un back-end diferente para los bots y pestañas. [Stage View](~/tabs/tabs-link-unfurling.md) es un nuevo componente de interfaz de usuario que te permite representar el contenido abierto en pantalla completa Teams anclado como una pestaña. El servicio [de desamuestración](~/tabs/tabs-link-unfurling.md) de vínculos existente se actualiza, de modo que se usa para convertir las direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Puede crear [pestañas](~/tabs/how-to/conversational-tabs.md) conversacionales con sub-entidades conversacionales que permitan a los usuarios tener conversaciones sobre sub entidades en la pestaña, como tareas específicas, pacientes y oportunidades de ventas, en lugar de analizar toda la pestaña. Puedes realizar cambios en los [márgenes de tabulación](~/resources/removing-tab-margins.md) para mejorar la experiencia del desarrollador al crear aplicaciones. Puedes arrastrar la pestaña y colocarla en la posición deseada para intercambiar las posiciones de pestaña dentro de tus aplicaciones personales y chats de canal o grupo. 
 
 > [!NOTE]
-> **Las** **pestañas** Publicaciones, Archivos y **Chat** no se pueden mover desde sus posiciones.
+> **Las** **publicaciones y los** archivos no se pueden mover desde sus posiciones.
 
 ## <a name="tab-features"></a>Características de tabulación
 
