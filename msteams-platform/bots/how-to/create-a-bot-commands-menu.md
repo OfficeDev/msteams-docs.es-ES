@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: comando menú redacción de mensajes de conversación @mention
-ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888240"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591795"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos bot
 
@@ -163,7 +163,7 @@ Debes controlar los comandos de menú en el código del bot mientras controlas c
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>Controlar comandos de menú en el código del bot
 
-Los bots de un grupo o canal responden solo cuando se `@botname` mencionan en un mensaje. Cada mensaje recibido por un bot cuando se encuentra en un ámbito de grupo o canal contiene su nombre en el texto del mensaje devuelto. Antes de controlar el comando que se devuelve, el análisis de mensajes debe controlar el mensaje recibido por un bot con su nombre.
+Los bots de un grupo o canal responden solo cuando se `@botname` mencionan en un mensaje. Cada mensaje recibido por un bot cuando se encuentra en un ámbito de grupo o canal contiene su nombre en el texto del mensaje. Antes de controlar el comando que se devuelve, el análisis de mensajes debe controlar el mensaje recibido por un bot con su nombre.
 
 > [!NOTE]
 > Para controlar los comandos en el código, se envían al bot como un mensaje normal. Debe controlarlos como controlaría cualquier otro mensaje de los usuarios. Los comandos del código insertan texto preconfigurado en el cuadro de texto. A continuación, el usuario debe enviar ese texto como lo hace con cualquier otro mensaje.

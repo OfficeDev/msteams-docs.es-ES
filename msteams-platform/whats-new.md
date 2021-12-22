@@ -1,15 +1,15 @@
 ---
 title: Novedades
-description: Describe todas las nuevas características de desarrollador en Microsoft Teams
+description: Describe todas las características de desarrollador nuevas o más recientes de Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: 70531b0fc772e282d8fead5b11831b6ae84651e3
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e1ab810630a27cf83b8b104d0d0087ae5a709ec6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569514"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591802"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,9 +22,10 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
-|12/20/2021 | Directrices introducidas para la aplicación vinculada a la oferta SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams de > Revisar directrices de validación del almacén > directrices para aplicaciones vinculadas a la oferta [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+| 12/21/2021 | Se han actualizado los módulos Introducción a JavaScript, C# y Node.js para Teams Toolkit 3.0.0. | • Introducción a > [crear la primera aplicación con JavaScript](sbs-gs-javascript.yml) <br> • Introducción a > [crear la primera aplicación con C# o .NET](sbs-gs-csharp.yml) <br> • Introducción a> [crear la primera aplicación con Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Guía paso a paso introducida para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Agregar > de > usar la autenticación de SSO > guía paso a paso con SSO para [pestañas](sbs-tabs-and-messaging-extensions-with-SSO.yml) y extensiones de mensajería|
 | 12/20/2021| Guía paso a paso introducida para crear una burbuja de contenido de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear burbujas de contenido de [reuniones](sbs-meeting-content-bubble.yml) |
+|12/13/2021 | Directrices introducidas para la aplicación vinculada a la oferta SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams de > Revisar directrices de validación del almacén > directrices para aplicaciones vinculadas a la oferta [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
 | 12/09/2021| Guía paso a paso introducida para la vista de fase de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear una vista de fase [de reuniones](sbs-meetings-stage-view.yml)|
 | 12/09/2021| Guía paso a paso introducida para crear un panel lateral de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear un panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
 |12/01/2021 | Se introdujo el nuevo icono de la tienda. | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
@@ -41,10 +42,11 @@ Microsoft Teams de plataforma que están disponibles para todos los desarrollado
 
 | **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-|12/20/2021 | Directrices introducidas para la aplicación vinculada a la oferta SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams de > Revisar directrices de validación del almacén > directrices para aplicaciones vinculadas a la oferta [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+| 12/21/2021 | Se han actualizado los módulos Introducción a JavaScript, C# y Node.js para Teams Toolkit 3.0.0. | • Introducción a > [crear la primera aplicación con JavaScript](sbs-gs-javascript.yml) <br> • Introducción a > [crear la primera aplicación con C# o .NET](sbs-gs-csharp.yml) <br> • Introducción a> [crear la primera aplicación con Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Guía paso a paso introducida para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Agregar > de > usar la autenticación de SSO > guía paso a paso con SSO para [pestañas](sbs-tabs-and-messaging-extensions-with-SSO.yml) y extensiones de mensajería|
 |12/20/2021| Guía paso a paso introducida para crear una burbuja de contenido de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear burbujas de contenido de [reuniones](sbs-meeting-content-bubble.yml) |
 |12/09/2021| Guía paso a paso introducida para la vista de fase de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear una vista de fase [de reuniones](sbs-meetings-stage-view.yml)|
+|12/13/2021 | Directrices introducidas para la aplicación vinculada a la oferta SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams de > Revisar directrices de validación del almacén > directrices para aplicaciones vinculadas a la oferta [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
 |12/09/2021| Guía paso a paso introducida para crear un panel lateral de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear un panel lateral de reuniones [en Teams](sbs-meetings-sidepanel.yml)|
 |12/01/2021 | Se introdujo el nuevo icono de la tienda. | • Diseñar las funcionalidades de > aplicaciones > [diseño de la aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar los componentes de la > de la > diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario [avanzados](concepts/design/design-teams-app-advanced-ui-components.md) |
 |11/24/2021| Guía paso a paso introducida para generar token de reunión. | Crear aplicaciones para Teams reuniones > Habilitar y configurar aplicaciones para reuniones > guía paso a paso para crear token de [reunión en Teams](sbs-meeting-token-generator.yml)|

@@ -6,19 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff5b77b7891d36e63f2fd3260ae114cbf536384d
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: acd12a96365bf97bd419045c415e71efd3a118e2
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228164"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591781"
 ---
 # <a name="ci-or-cd-support-for-teams-application-developers"></a>Compatibilidad con CI o CD para Teams programadores de aplicaciones
 
 TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al crear Teams aplicación. El documento proporciona herramientas y plantillas preconcebadas para empezar a configurar canalizaciones de CI o CD con las plataformas de desarrollo más populares, incluidos GitHub, Azure Devops y Jenkins.
 
-
-|Herramientas y plantillas|Descripción|
+|Herramientas y plantillas|Description|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|Una acción de GitHub lista para usar que se integra con la CLI de TeamsFx.|
 |[github-ci-template.yml y](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub plantillas de CI o CD para una Teams aplicación. |
@@ -53,11 +52,11 @@ Los siguientes pasos para personalizar el flujo de trabajo de CD:
 1. Quite los scripts de prueba si no tiene pruebas.
 
 > [!Note]
-> El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar la aprovisionamiento dentro de Teams Toolkit, CLI de TeamsFx o mediante un flujo de trabajo seperado. Recuerde confirmar después del aprovisionamiento (los resultados del aprovisionamiento se depositarán dentro de la carpeta) y guardar el contenido del archivo en secretos de repositorio de GitHub con el nombre para su uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [](https://docs.github.com/en/actions/reference/encrypted-secrets) `USERDATA_CONTENT` futuro.
+> El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar provision Within Teams Toolkit, CLI de TeamsFx o usar un flujo de trabajo separado. Recuerde confirmar después del aprovisionamiento (los resultados del aprovisionamiento se depositarán dentro de la carpeta) y guardar el contenido del archivo en secretos de repositorio de GitHub con el nombre para su uso `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [](https://docs.github.com/en/actions/reference/encrypted-secrets) `USERDATA_CONTENT` futuro.
 
 ### <a name="environment-variables"></a>Variables de entorno
 
-Pasos para crear variables de entorno en GitHub:
+Pasos para crear variables de entorno en GitHub::
 
 1. En la página de **Configuración** proyecto, vaya a **la sección Entornos** y seleccione **Nuevo entorno**.
 1. Escriba un nombre para el entorno. El nombre de entorno predeterminado proporcionado en la plantilla es `test_environment` . Seleccione **Configurar entorno para** continuar.
@@ -72,7 +71,9 @@ Pasos para crear variables de entorno en GitHub:
 |Microsoft 365_ACCOUNT_NAME|La Microsoft 365 cuenta para crear y publicar la Teams app.|
 |Microsoft 365_ACCOUNT_PASSWORD|La contraseña de la Microsoft 365 cuenta.|
 |Microsoft 365_TENANT_ID|Para identificar el espacio empresarial en el que se Teams se creará o publicará la aplicación. Este valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Obtenga más información [sobre cómo encontrar el identificador Microsoft 365 inquilino](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
-> Nota: Consulte Configure [Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) para asegurarse de que ha deshabilitado multifactor Authentication and Security Defaults para las credenciales usadas en el flujo de trabajo.
+
+> [!NOTE]
+> Consulte Configure [Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) para asegurarse de que ha deshabilitado multifactor Authentication and Security Defaults para las credenciales usadas en el flujo de trabajo.
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar ci o cd Pipelines con Azure DevOps
 
@@ -146,7 +147,6 @@ steps:
   env:
     AZURE_ACCOUNT_NAME: $(AZURE_ACCOUNT_NAME)
     AZURE_ACCOUNT_PASSWORD: $(AZURE_ACCOUNT_PASSWORD)
-    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
     Microsoft 365_ACCOUNT_NAME: $(Microsoft 365_ACCOUNT_NAME)
     Microsoft 365_ACCOUNT_PASSWORD: $(Microsoft 365_ACCOUNT_PASSWORD)
@@ -184,7 +184,8 @@ Pasos para crear variables de canalización en Azure DevOps:
 |Microsoft 365_ACCOUNT_PASSWORD|La contraseña de la Microsoft 365 cuenta.|
 |Microsoft 365_TENANT_ID|Para identificar el espacio empresarial en el que se Teams se creará o publicará la aplicación. Este valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Obtenga más información [sobre cómo encontrar el identificador Microsoft 365 inquilino](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
-> ! Nota Consulte Configure [Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) para asegurarse de que ha deshabilitado multifactor Authentication and Security Defaults para las credenciales usadas en el flujo de trabajo.
+> [!NOTE]
+> El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar la aprovisionamiento dentro de Teams Toolkit, CLI de TeamsFx o mediante un flujo de trabajo seperado. Recuerde confirmar después del aprovisionamiento (los resultados del aprovisionamiento se depositarán dentro de la carpeta) y guardar el contenido del archivo en credenciales de Jenkins para `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` su uso futuro.
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Plantillas de canalización de CI o CD en Jenkins
 
@@ -219,7 +220,7 @@ Cambie los siguientes pasos para personalizar la canalización de CD:
 1. Quite los scripts de prueba si no tiene pruebas.
 
 > [!Note]
- El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar la aprovisionamiento dentro de Teams Toolkit, CLI de TeamsFx o mediante un flujo de trabajo seperado. Recuerde confirmar después del aprovisionamiento (los resultados del aprovisionamiento se depositarán dentro de la carpeta) y guardar el contenido del archivo en credenciales de Jenkins para `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` su uso futuro.
+ El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar provision Within Teams Toolkit, CLI de TeamsFx o usar un flujo de trabajo separado. Recuerde confirmar después del aprovisionamiento (los resultados del aprovisionamiento se depositarán dentro de la carpeta) y guardar el contenido del archivo en credenciales de Jenkins para `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` su uso futuro.
 
 ### <a name="environment-variables-for-jenkins"></a>Variables de entorno para Jenkins
 
@@ -249,6 +250,19 @@ Los scripts se basan en una herramienta de línea de comandos teamsFx multiplata
 > Para habilitar `@microsoft/teamsfx-cli` la ejecución en modo CI, activa `CI_ENABLED` `export CI_ENABLED=true` . En el modo CI, `@microsoft/teamsfx-cli` es fácil de usar para CI o CD.
 
 Asegúrese de establecer las credenciales de Azure y M365 en las variables de entorno de forma segura. Por ejemplo, si usa GitHub como repositorio de código fuente, puede usar los secretos de [Github](https://docs.github.com/en/actions/reference/encrypted-secrets) para almacenar de forma segura las variables de entorno.
+
+## <a name="publish-teams-app-using-teams-developer-portal"></a>Publicar Teams aplicación con Teams Developer Portal
+
+Si hay algún cambio relacionado con el archivo de manifiesto de Teams aplicación, es posible que quieras volver a publicar la aplicación Teams para actualizar el manifiesto.
+
+Para publicar Teams aplicación manualmente, puedes aprovechar el Portal de [desarrolladores para Teams](https://dev.teams.microsoft.com/home).
+
+**Para publicar la aplicación**
+
+1. Inicie sesión [en Portal de desarrolladores Teams](https://dev.teams.microsoft.com) la cuenta correspondiente.
+2. Importe el paquete de la aplicación en zip seleccionando `App -> Import app -> Replace` .
+3. Selecciona la aplicación de destino en la lista de aplicaciones y irás a la página de información general.
+4. Publicar la aplicación seleccionando `Publish -> Publish to your org`
 
 ### <a name="see-also"></a>Consulte también
 

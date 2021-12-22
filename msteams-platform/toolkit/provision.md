@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e11c66e7e818a090305e320ed21080c7ca897856
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: c8899131876533fdd64913fb6790cff9f258e8f5
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228192"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591788"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para aprovisionar recursos en la nube
 
@@ -94,7 +94,7 @@ Al crear un nuevo proyecto, obtiene todos los recursos de Azure que se crearán.
 | Servidor OAuth de administración de API | Permite que Microsoft Power Platform obtenga acceso a las API hospedadas en Function App |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure |
 
-## <a name="customize-resource-provision"></a>Personalizar la provisión de recursos 
+## <a name="customize-resource-provision"></a>Personalizar la provisión de recursos
 
 Teams Toolkit permite usar una infraestructura como método de código para definir qué recursos de Azure desea aprovisionar y cómo desea configurarlos. Las herramientas usan ARM plantilla para definir recursos de Azure. La ARM es un conjunto de archivos bíceps que define la infraestructura y la configuración del proyecto. Puede personalizar los recursos de Azure creados modificando la ARM plantilla. Para obtener más información, vea [el documento bícep](/azure/azure-resource-manager/bicep.md). Aprovisionar con ARM implica cambiar los siguientes dos conjuntos de archivos, parámetros y plantillas:
 
