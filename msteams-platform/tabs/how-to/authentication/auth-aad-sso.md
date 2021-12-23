@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Autenticación de teams SSO AAD api de inicio de sesión único
-ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 107c03fe7ecb2bc6fd38ede7797e6a2a23bac012
+ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569507"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598951"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -200,9 +200,10 @@ La solución de autenticación descrita anteriormente solo funciona para aplicac
 > [!NOTE]
 > Sso es compatible con aplicaciones de propiedad del cliente dentro de AAD inquilinos B2C.
 
-## <a name="step-by-step-guide"></a>Guía paso a paso
+## <a name="step-by-step-guides"></a>Guías paso a paso
 
-Siga la [guía paso a paso para](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) autenticar pestañas y extensiones de mensajería.
+* Siga la [guía paso a paso para](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) autenticar pestañas y extensiones de mensajería.
+* Sigue la [guía paso a paso para](../../../sbs-tab-with-adaptive-cards.yml) crear pestañas con tarjetas adaptables.
 
 ## <a name="see-also"></a>Consulte también
 [Teams bot con inicio de sesión único](../../../sbs-bots-with-sso.yml)
