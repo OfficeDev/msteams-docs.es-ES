@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo probar y depurar el bot localmente
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: d9ddbb3aa4f93b8981fbba03d879a77f4175e81e
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569577"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608464"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -74,6 +74,9 @@ También puedes iniciar una conversación con el bot mediante su identificador. 
 
    3. Seleccione el bot y envíe un mensaje para iniciar una conversación.
       Como alternativa, puedes pegar el identificador de la aplicación del bot en el cuadro de búsqueda de la parte superior izquierda de Microsoft Teams. En la página de resultados de búsqueda, vaya a la **pestaña** Personas para ver el bot y empezar a chatear con él.
+
+> [!Note]
+> Para Microsoft Teams hacer referencia al identificador de aplicación del bot, habilite [la instalación local de aplicaciones](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).      
 
 El bot recibe el `conversationUpdate` evento al agregar los bots a un equipo, sin la información del equipo en el `channelData` objeto.
 

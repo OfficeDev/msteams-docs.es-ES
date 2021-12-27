@@ -4,12 +4,12 @@ description: Describe cómo obtener un token de usuario. Actualmente, un desarro
 keywords: token, token de usuario, compatibilidad con SSO para bots, permiso, Microsoft Graph, AAD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b33bb933d8f4cdfc3bdc4ba04082d992021decbb
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: f9934d29b9c340b7e3543420a212ae9304ba22e6
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323392"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608450"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -386,3 +386,7 @@ Abra [Teams ejemplo de autenticación](https://github.com/microsoft/BotBuilder-S
 |**Ejemplo de nombre** | **Descripción** |**.NET** | 
 |----------------|-----------------|--------------|
 |SDK de marco de bots | Ejemplo para usar el SDK del marco de bots. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso,](../../../sbs-bots-with-sso.yml)que le ayuda a crear un bot con autenticación de SSO habilitada.

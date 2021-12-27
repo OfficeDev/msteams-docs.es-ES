@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams what's new latest updates and features
-ms.openlocfilehash: 16558a8dede8033e8258696e1913a206e3531813
-ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
+ms.openlocfilehash: a1fcc2bd015d8260dd0282010cbcbd0e20226d10
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2021
-ms.locfileid: "61598958"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608380"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra Microsoft Teams de plataforma que están disponibles generalmente (GA) 
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+|12/24/2021| Se introdujo una guía paso a paso para conceder permisos de dispositivo Tab. | Conceptos básicos de > funcionalidades de dispositivo > guía paso a paso para conceder permisos de [dispositivo Tab](sbs-tab-device-permissions.yml) |
 |12/23/2021| Se introdujo una guía paso a paso para crear pestañas con tarjetas adaptables.| Agregar > de > usar la autenticación de SSO > guía paso a paso para crear pestañas con [tarjetas adaptables](sbs-tab-with-adaptive-cards.yml) |
 | 12/21/2021 | Se han actualizado los módulos Introducción a JavaScript, C# y Node.js para Teams Toolkit 3.0.0. | • Introducción a > [crear la primera aplicación con JavaScript](sbs-gs-javascript.yml) <br> • Introducción a > [crear la primera aplicación con C# o .NET](sbs-gs-csharp.yml) <br> • Introducción a> [crear la primera aplicación con Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Guía paso a paso introducida para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Agregar > de > usar la autenticación de SSO > guía paso a paso con SSO para [pestañas](sbs-tabs-and-messaging-extensions-with-SSO.yml) y extensiones de mensajería|
@@ -215,6 +216,7 @@ La vista previa de desarrolladores es un programa público que proporciona acces
 
 | **Fecha** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+|12/24/2021| Se introdujo una guía paso a paso para conceder permisos de dispositivo Tab. | Conceptos básicos de > funcionalidades de dispositivo > guía paso a paso para conceder permisos de [dispositivo Tab](sbs-tab-device-permissions.yml) |
 |11/30/2021 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Teams Toolkit para Visual Studio Code > Teams Toolkit [básicos](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Extender Teams aplicaciones en Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico de recursos (RSC).| • Crear bots > bots > Mensajes en conversaciones de bots > Recibir todos [los mensajes con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots para > bots > [introducción a la conversación de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots para > bots > [conversaciones de canal y grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifiesto de la aplicación > Versión preliminar del > [esquema de manifiesto de vista previa del desarrollador](~/resources/schema/manifest-schema-dev-preview.md) |

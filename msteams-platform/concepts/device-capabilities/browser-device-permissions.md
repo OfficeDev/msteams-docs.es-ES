@@ -4,12 +4,12 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con permisos de dispositivo para aplicaciones en nuestro cliente web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348352"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608387"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
@@ -44,8 +44,11 @@ Teams que requieren permisos de dispositivo en el explorador deben mostrar instr
 
 |Ejemplo de nombre | Descripción | Node.js |
 |----------------|-----------------|--------------|
-| Permisos de dispositivo de tabulación para el explorador | El código de ejemplo muestra cómo mostrar los permisos del dispositivo para el explorador. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+| Permisos de dispositivo de tabulación para el explorador | El código de ejemplo muestra cómo mostrar los permisos del dispositivo para el explorador. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso para](../../sbs-tab-device-permissions.yml) conceder permiso de dispositivo de pestaña en Microsoft Teams.
 
 ## <a name="see-also"></a>Consulte también
 

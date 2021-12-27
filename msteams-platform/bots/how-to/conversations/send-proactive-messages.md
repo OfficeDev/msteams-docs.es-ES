@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: enviar un mensaje obtener id. de usuario Id. id. de conversación de conversación
-ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c4e84461af7a9e162c9f4391a01284be735392de
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889303"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608443"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -269,7 +269,7 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 
 | **Nombre de ejemplo** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams Conceptos básicos de conversación  | Muestra los conceptos básicos de las conversaciones Teams, incluido el envío de mensajes proactivos de uno a uno.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Teams conceptos básicos de conversación  | Muestra los conceptos básicos de las conversaciones Teams, incluido el envío de mensajes proactivos de uno a uno.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar nuevo subproceso en un canal | Muestra la creación de un nuevo subproceso en un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 | Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo usar la instalación proactiva de la aplicación para los usuarios y enviar notificaciones proactivas llamando a las API Graph Microsoft. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
@@ -277,6 +277,10 @@ En la tabla siguiente se proporciona un ejemplo de código simple que incorpora 
 
 > [!div class="nextstepaction"]
 > [Teams de código de mensajería proactiva](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso,](../../../sbs-send-proactive.yml)que le ayuda a enviar un mensaje proactivo desde un bot.
 
 ## <a name="next-step"></a>Paso siguiente
 
