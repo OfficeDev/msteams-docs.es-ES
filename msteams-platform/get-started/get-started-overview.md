@@ -4,14 +4,14 @@ description: Introducción a Introducción a la documentación Microsoft Teams p
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams de desarrolladores
-ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
+ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569500"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "61619805"
 ---
-# <a name="get-started"></a>Comenzar
+# <a name="get-started"></a>Introducción
 
 Bienvenido a Introducción para crear e implementar aplicaciones personalizadas para Microsoft Teams!
 
@@ -63,4 +63,5 @@ Ahora, vamos a crear la primera Teams aplicación. Pero en primer lugar, elija e
 
 ## <a name="see-also"></a>Consulte también
 
-[Microsoft Teams ejemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teams ejemplos](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git y GitHub recursos](/contribute/additional-resources)
