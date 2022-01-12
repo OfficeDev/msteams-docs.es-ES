@@ -6,12 +6,12 @@ keywords: webhook saliente de pestañas de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9950bc6d610b280deff83c44ff26a5e4359d3b98
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: c398776e2858283a8c4a8f7b5087e2efd365c7d3
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608394"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768143"
 ---
 # <a name="create-incoming-webhook"></a>Crear webhook entrante
 
@@ -58,7 +58,7 @@ En la tabla siguiente se proporcionan las características y la descripción del
 
 El webhook está disponible en el canal Teams web.
 
-Puede crear y enviar mensajes que pueden realizar acciones a través de Webhook entrante o Office 365 Connector. Para obtener más información, vea [Create and send messages](/webhooks-and-connectors/how-to/connectors-using?tabs=cURL).
+Puede crear y enviar mensajes que pueden realizar acciones a través de Webhook entrante o Office 365 Connector. Para obtener más información, vea [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 > [!NOTE]
 > En Teams, seleccione **Configuración** Permisos de miembro Permitir a los miembros crear, actualizar y quitar conectores, de modo que cualquier miembro del equipo pueda agregar, modificar o eliminar  >    >  un conector.
@@ -93,7 +93,7 @@ Puede crear y enviar mensajes que pueden realizar acciones a través de Webhook 
 
     El webhook se quita del Teams canal.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Crear un webhook saliente](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

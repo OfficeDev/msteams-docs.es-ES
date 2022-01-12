@@ -3,12 +3,12 @@ title: Trabajar con acciones universales para tarjetas adaptables
 description: Aprenda a trabajar con las acciones universales para tarjetas adaptables, incluido el esquema de UniversalActions para tarjetas adaptables, el modelo Refresh y la compatibilidad con versiones anteriores con ejemplos de código.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888366"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768611"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con Acciones universales para tarjetas adaptables
 
@@ -73,6 +73,16 @@ Estas son las características de UserIds en la actualización:
 * Se ha agregado la propiedad UserIds porque los canales de Teams pueden incluir un gran número de miembros. Si todos los miembros ven el canal al mismo tiempo, una actualización automática incondicional da como resultado muchas llamadas simultáneas al bot. La propiedad siempre debe incluirse para identificar qué usuarios deben obtener una actualización automática con un máximo de `userIds` *60 (60) MRIs de usuario.*
 
 * Puede capturar los TEAMS de usuario del miembro de la conversación. Para obtener más información sobre cómo agregar en la lista userIds en la sección de actualización de la tarjeta adaptable, vea [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+
+ Puede obtener la MRI del usuario para canal, chat en grupo o chat 1:1 mediante el siguiente ejemplo:
+
+ 1. Uso de TurnContext  
+
+     `userMRI= turnContext.Activity.From.Id`
+
+ 1. Uso del método GetMemberAsync
+  
+     `var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);var userMRI = member.Id;`
 
 * Un ejemplo de MRI de usuario de Teams es`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 

@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo agregar autenticación a una exten
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949099"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768450"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Agregar autenticación a la extensión de mensajería
 
@@ -67,7 +67,8 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 ```
 
 > [!NOTE]
-> Para que la experiencia de inicio de sesión se hospeda en una ventana emergente de Teams, la parte de dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, [vea validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
+> * Para que la experiencia de inicio de sesión se hospeda en una ventana emergente de Teams, la parte de dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, [vea validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
+> * El tamaño de la ventana emergente de autenticación se puede definir mediante la inclusión de parámetros de cadena de consulta de ancho y alto, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` .
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar el flujo de inicio de sesión
 
@@ -134,7 +135,7 @@ En este momento, la ventana se cierra y el control se pasa al Teams cliente. El 
 ```
 
 ## <a name="code-sample"></a>Ejemplo de código
-|**Ejemplo de nombre** | **Description** |**.NET** | **Node.js**|
+|**Ejemplo de nombre** | **Descripción** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 |Extensiones de mensajería: autenticación y configuración | Una extensión de mensajería que tiene una página de configuración, acepta solicitudes de búsqueda y devuelve resultados después de que el usuario haya iniciado sesión. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[Ver](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 

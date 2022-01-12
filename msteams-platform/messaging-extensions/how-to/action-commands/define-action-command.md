@@ -5,12 +5,12 @@ description: Introducción a los comandos de acción de extensión de mensajerí
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3590309abf3e994333c907c69785f58af0162890
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887995"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768241"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -29,11 +29,20 @@ Antes de crear el comando de acción, debe decidir los siguientes factores:
 En primer lugar, debe decidir la ubicación desde la que se debe invocar el comando de acción. Al especificar el manifiesto de la aplicación, se puede invocar el comando `context` desde una o varias de las siguientes ubicaciones:
 
 * Área de redacción de mensajes: los botones situados en la parte inferior del área del mensaje de redacción.
-* Cuadro de comando: @mentioning la aplicación en el cuadro de comandos. 
+
+    Contexto de comando = redacción
+
+* Cuadro de comando: @mentioning la aplicación en el cuadro de comandos.
+
+    Contexto de comandos = commandBox
+
    > [!NOTE]
    > Si se invoca la extensión de mensajería desde el cuadro de comandos, no puede responder con un mensaje de bot insertado directamente en la conversación.
 
-* Mensaje: directamente desde un mensaje existente a través del `...` menú de desbordamiento de un mensaje. 
+* Mensaje: directamente desde un mensaje existente a través del `...` menú de desbordamiento de un mensaje.
+
+    Contexto de comandos = mensaje
+
     > [!NOTE] 
     > La invocación inicial al bot incluye un objeto JSON que contiene el mensaje desde el que se invocó. Puede procesar el mensaje antes de presentarlo con un módulo de tareas.
 
@@ -128,7 +137,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 Para agregar manualmente el comando de extensión de mensajería basada en acciones al manifiesto de la aplicación, debe agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna a este comando. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
@@ -138,7 +147,7 @@ Para agregar manualmente el comando de extensión de mensajería basada en accio
 
 Si usa una lista estática de parámetros, también debe agregar los siguientes parámetros:
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Solo se usa cuando `fetchTask` es `false` . | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -148,7 +157,7 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 
 Si usa una vista web incrustada, opcionalmente puede agregar el objeto para capturar la vista `taskInfo` web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al de usar una lista estática de parámetros. En el caso de que la primera interacción con el bot [responde al módulo de tareas enviar acción](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto, debe establecer el `fetchTask` parámetro en `false` .
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 |`taskInfo`|Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería. | No | 1.4 |
 |`taskInfo.title`|Título del módulo de tareas inicial. |No | 1.4 |

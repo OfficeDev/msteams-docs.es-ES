@@ -1,37 +1,37 @@
 ---
 title: Vista Teams manifiesto de la aplicación en Teams Toolkit
 author: zyxiaoyuer
-description: Vista previa Teams manifiesto de la aplicación
+description: Vista previa del manifiesto de la aplicación de Teams
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 8c86f85aa917edb3afcaebd430a7d11bc039e7ea
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 3555725fdea8ff858c842ed26ed652bb13e82b7f
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227801"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768598"
 ---
-# <a name="preview-teams-app-manifest-in-teams-toolkit"></a>Vista previa Teams manifiesto de la aplicación en Teams Toolkit
+# <a name="preview-teams-app-manifest-in-teams-toolkit"></a>Vista Teams manifiesto de la aplicación en Teams Toolkit
 
-Después de scaffolding, se obtienen dos archivos de plantilla de manifiesto en `templates/appPackage` la carpeta.
+Después de scaffolding, los siguientes son los archivos de plantilla de manifiesto disponibles en la `templates/appPackage` carpeta:
 
 - `manifest.local.template.json` - Aplicación de equipos de depuración local.
 - `manifest.remote.template.json` - compartido entre todos los entornos remotos.
 
-Estos archivos de plantilla que contienen algunos marcadores de posición y los valores reales de Teams Toolkit se resolverán en archivos en `.fx/configs` y `.fx/states` .
+Los archivos Template que constan de marcadores de posición y los valores reales de Teams Toolkit se resuelven en archivos en `.fx/configs` y `.fx/states` .
 
 ## <a name="prerequisite"></a>Requisito previo
 
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
 
 > [!TIP]
-> Ya debería tener abierto un proyecto Teams aplicación en el código VS.
+> Asegúrate de que tienes Teams proyecto de aplicación abierto en código VS.
 
 ## <a name="preview-manifest"></a>Manifiesto de vista previa
 
-Para obtener una vista previa del manifiesto con contenido real, Teams Toolkit generará archivos de manifiesto de vista previa en la `build/appPackage` carpeta:
+Para obtener una vista previa del manifiesto con contenido real, Teams Toolkit genera archivos de manifiesto de vista previa en la `build/appPackage` carpeta:
 
 ```text
 └───build
@@ -42,58 +42,59 @@ Para obtener una vista previa del manifiesto con contenido real, Teams Toolkit g
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-### <a name="local-debug-teams-app"></a>Aplicación de depuración Teams local
+### <a name="preview-local-manifest-file"></a>Vista previa del archivo de manifiesto local
 
-Para obtener una vista previa del archivo de manifiesto de la aplicación de teams local, debes presionar **F5** para ejecutar primero la depuración local. Este paso generará la configuración local predeterminada y, a continuación, el paquete de la aplicación y el manifiesto de vista previa se crearán en la carpeta **build/appPackage.**
+Para obtener una vista previa del archivo de manifiesto de la aplicación de teams local, debes presionar **F5** para ejecutar la depuración local. Genera la configuración local predeterminada y, a continuación, el paquete de la aplicación y las compilaciones de manifiesto de vista previa en la carpeta **build/appPackage.**
 
-Las otras formas son:
+También puede obtener una vista previa del manifiesto local siguiendo los pasos siguientes:
 
-- Seleccione **Vista** previa en los codelens del **archivo manifest.local.template.json**
-- Seleccione **Vista previa del archivo de** manifiesto en la barra de menús del archivo **manifest.local.template.json**
-- Seleccione **Zip Teams de metadatos en** Treeview y seleccione **Local** La vista previa local aparece como se muestra en la siguiente imagen:
+1. Seleccione **Vista** previa en los codelens del **archivo manifest.local.template.json.**
+2. Seleccione **Vista previa del archivo de** manifiesto en la barra de menús del archivo **manifest.local.template.json.**
+3. Seleccione **Zip Teams de metadatos** en Treeview y seleccione **Local**.
+La vista previa local aparece como se muestra en la imagen:
 
-![vista previa local](./images/preview.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="Versión preliminar":::
 
-### <a name="remote-environment"></a>Entorno remoto
+### <a name="preview-manifest-in-remote-environment"></a>Manifiesto de vista previa en entorno remoto
 
-Para obtener una vista previa del archivo  de manifiesto de la aplicación de teams remotos, debes seleccionar Aprovisionar en la nube en Teams Toolkit el panel DESARROLLO de una extensión Treeview o desencadenar **Teams:** Aprovisionar en la nube desde la paleta de comandos primero. Este paso generará configuraciones para la aplicación de teams remotos y, a continuación, el paquete de la aplicación y el manifiesto de vista previa se crearán en la carpeta **build/appPackage.**
+Para obtener una vista previa  del archivo de manifiesto de la aplicación de teams remotos, selecciona Aprovisionar en la nube en Teams Toolkit **el** panel DESARROLLO de la extensión Treeview o desencadenar **Teams:** Aprovisionar en la nube desde la paleta de comandos. Genera configuración para la aplicación de teams remotos y compila el paquete y el manifiesto de vista previa en la **carpeta build/appPackage.**
 
-Las otras formas son:
+También puede obtener una vista previa del manifiesto en un entorno remoto siguiendo los pasos siguientes:
 
-- Seleccione **Vista** previa en los codelens del **archivo manifest.remote.template.json.**
-- Seleccione **Vista previa del archivo de** manifiesto en la barra de menús del archivo **manifest.remote.template.json.**
-- Seleccione **Zip Teams de metadatos en** Treeview y seleccione el entorno.
+1. Seleccione **Vista** previa en los codelens del **archivo manifest.remote.template.json.**
+2. Seleccione **Vista previa del archivo de** manifiesto en la barra de menús del archivo **manifest.remote.template.json.**
+3. Seleccione **Zip Teams de metadatos en** Treeview.
+4. Seleccione el entorno.
 
-![vista previa remota](./images/preview-remote.png)
+Si hay más de un entorno, debe seleccionar el entorno que desea obtener una vista previa como se muestra en la imagen:
 
-> Si hay más de un entorno, debe seleccionar la env que desea obtener una vista previa como se muestra en la imagen:
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Agregar env":::
 
-![seleccionar env](./images/select-env.png)
+## <a name="sync-local-changes-to-dev-portal"></a>Sincronizar cambios locales en el portal de desarrollo
 
-## <a name="sync-local-changes-to-dev-portal"></a>Sincronizar cambios locales en el Portal de desarrollo
+Después de obtener una vista previa del archivo de manifiesto, puede sincronizar los cambios locales en el portal de desarrollo siguiendo los pasos siguientes:
 
-Después de obtener una vista previa del archivo de manifiesto, puede sincronizar los cambios locales en el Portal de desarrollo de las siguientes maneras:
+1.  Seleccione **Actualizar para Teams plataforma** en la esquina superior izquierda de`manifest.{env}.json`
+2. Seleccione **Teams: Actualizar manifiesto a Teams plataforma** en la barra de menús de`manifest.{env}.json`
 
-- Seleccione **Actualizar para Teams plataforma** en la esquina superior izquierda de`manifest.{env}.json`
-- Seleccione **Teams: Actualizar manifiesto a Teams plataforma** en la barra de menús de`manifest.{env}.json`
-- Trigger **Teams: update manifest to Teams platform** from command palette
+ También puede desencadenar **Teams: actualizar manifiesto a Teams desde la** paleta de comandos
 
-![update ](./images/updatetoteamsplatform.png)
- ![ update-cmd](./images/update_manifest_cmp.png)
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="vista de árbol":::
 
 > [!NOTE]
-> El desencadenador de codelens del editor o el botón de título actualizará el archivo de manifiesto actual a Teams plataforma. El desencadenador de la paleta de comandos requerirá seleccionar el entorno de destino.
+> Trigger from editor codelens or **title** will update current manifest file to Teams platform. El desencadenador de la paleta de comandos requiere seleccionar el entorno de destino.
 
-Si el archivo de manifiesto está obsoleto debido al cambio de archivo de configuración o al cambio de plantilla, se pedirá al usuario que confirme su acción: ![ manifiesto obsoleto](./images/manifest_outdated_dialog.png)
+Si el archivo de manifiesto está obsoleto debido al cambio de archivo de configuración o al cambio de plantilla, asegúrese de confirmar la siguiente acción:
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 - **Solo vista previa:** el archivo de manifiesto local se sobrescribirá según la configuración actual
-- **Vista previa y actualización:** el archivo de manifiesto local se sobrescribirá según la configuración actual y también se actualizará Teams plataforma al mismo tiempo
+- **Vista previa y actualización:** el archivo de manifiesto local se sobrescribirá según la configuración actual y también se actualizará a Teams plataforma
 - **Cancelar**: no hacer nada
 
 > [!NOTE]
 > Los cambios se actualizarán al portal de desarrollo. Si tiene algunas actualizaciones manuales en el portal de desarrollo, se sobrescribirá.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-> [!div class="nextstepaction"]
-> [Personalizar Teams de aplicación en Teams Toolkit](TeamsFx-manifest-customization.md)
+[Personalizar Teams de aplicación en Teams Toolkit](TeamsFx-manifest-customization.md)
