@@ -5,12 +5,12 @@ description: Describe la búsqueda de punta de tipo con el control Input.ChoiceS
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
+ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075586"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "61722185"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de punta de punta en tarjetas adaptables
 
@@ -78,14 +78,14 @@ En la siguiente imagen se muestra la experiencia móvil de la búsqueda de punta
 
 Las propiedades siguientes son las nuevas adiciones al [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) esquema para habilitar la búsqueda de punta de tipo:
 
-| Propiedad| Tipo | Necesario | Description |
+| Propiedad| Tipo | Obligatorio | Descripción |
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Agrega estilo filtrado a la lista de validaciones admitidas para el tipo estático por delante.|
 | choices.data | Data.Query | No | Habilita el tipo dinámico a medida que el usuario escribe, mediante la captura de un conjunto remoto de opciones de un back-end. |
 
 ### <a name="dataquery-definition"></a>Definición Data.Query
 
-| Propiedad| Tipo | Necesario | Description |
+| Propiedad| Tipo | Obligatorio | Descripción |
 |-----------|------|----------|-------------|
 | tipo | Data.Query | Sí | Especifica que es un objeto Data.Query.|
 | conjunto de datos | Cadena | Sí | Especifica el tipo de datos que se captura dinámicamente. |
@@ -297,7 +297,125 @@ La carga de ejemplo que contiene la búsqueda de punta de tipo estática y diná
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="code-snippets-for-invoke-request-and-response"></a>Fragmentos de código para invocar solicitud y respuesta
+
+### <a name="invoke-request"></a>Invocar solicitud
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### <a name="response"></a>Respuesta
+
+#### <a name="c"></a>[C#](#tab/csharp)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "application/search")
+    {
+    var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+    var searchResponseData = new
+    {
+        type = "application/vnd.microsoft.search.searchResponse",
+        value = new
+        {
+        results = packages
+        }
+    };
+    var jsonString = JsonConvert.SerializeObject(searchResponseData);
+    JObject jsonData = JObject.Parse(jsonString);
+    return new InvokeResponse()
+    {
+        Status = 200,
+        Body = jsonData
+    };
+    }
+
+    return null;
+}
+```
+
+#### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
+                },
+                {
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
+                }
+            ]
+        }
+    }
+}
+```
+
+---
+
+## <a name="code-sample"></a>Ejemplo de código
+
+|Ejemplo de nombre | Descripción | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Escribir el control de búsqueda en tarjetas adaptables | En el ejemplo se muestran las características del tipo estático y dinámico delante del control de búsqueda en tarjetas adaptables. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+
+## <a name="see-also"></a>Consulte también
 
 * [Acciones universales para tarjetas adaptables](Universal-actions-for-adaptive-cards/Overview.md)
 * [Módulos de tareas](../what-are-task-modules.md)
