@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e157828f4070e13b4ef73fb02fef8d1cebdb34fa
+ms.sourcegitcommit: 241b17ee149aa096b787d12afa8bcbd16513b0e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569535"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61934015"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -171,7 +171,7 @@ Teams plataforma permite mencionar a los usuarios con su identificador de objeto
 
 En la tabla siguiente se describen los id. de mención de usuario que se han admitido recientemente:
 
-|IDs  | Capacidades de soporte técnico |   Description | Ejemplo |
+|IDs  | Capacidades de soporte técnico |   Descripción | Ejemplo |
 |----------|--------|---------------|---------|
 | AAD de objeto | Bot, conector |  AAD de objeto del usuario |  49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, conector | AAD UPN del usuario | john.smith@microsoft.com |
@@ -232,7 +232,6 @@ Los webhooks entrantes comienzan a admitir la mención de usuario en tarjetas ad
 > [!NOTE]    
 > * Habilite la mención de usuario en el esquema para webhooks entrantes para admitir AAD id. de objeto y UPN. 
 > * Los cambios en la interfaz de usuario y la experiencia de usuario no son necesarios para las menciones de usuario con AAD id. de objeto y UPN.      
-> * La notificación de fuente de actividad para Webhook entrante con mención de usuario estará disponible en la versión futura.
 
 ##### <a name="example"></a>Ejemplo 
 
@@ -427,7 +426,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML.
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Texto con formato previo | `text` | ``preformatted text`` |
 | Blockquote | >texto de bloques | `>blockquote text` |
-| Hipervínculo | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | Vínculo imagen |![Agacharse en una roca](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 En las tarjetas de conector, las líneas nuevas se representan `\n\n` para , pero no para o `\n` `\r` .
@@ -525,7 +524,7 @@ Las tarjetas de conector admiten markdown limitado y formato HTML.
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Texto con formato previo | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Vínculo imagen | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 En las tarjetas de conector, las líneas nuevas se representan en HTML mediante la `<p>` etiqueta.
@@ -615,7 +614,7 @@ Las etiquetas HTML son compatibles con tarjetas sencillas, como las tarjetas de 
 | Lista ordenada | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | Texto con formato previo | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hipervínculo | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | Vínculo imagen |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Diferencias de escritorio y móvil para tarjetas sencillas
@@ -648,7 +647,7 @@ Puedes probar el formato en tus propias tarjetas modificando este código.
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Acciones de tarjeta](./cards-actions.md)
 * [Uso de módulos de tareas desde los bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
