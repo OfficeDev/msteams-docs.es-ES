@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversación de reacción de mensaje de canal de bot de eventos
-ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
+ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888282"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "62014559"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -1322,7 +1322,17 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-No disponible
+```typescript
+async onInstallationUpdateActivity(context: TurnContext) {
+        var activity = context.activity.action;
+        if(activity == "Add") {
+            await context.sendActivity(MessageFactory.text("Added"));
+        }
+        else {
+            await context.sendActivity(MessageFactory.text("Uninstalled"));
+        }
+    }
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1381,7 +1391,13 @@ No disponible
 
 # <a name="python"></a>[Python](#tab/python)
 
-No disponible
+```python
+async def on_installation_update(self, turn_context: TurnContext):
+   if turn_context.activity.action == "add":   
+       await turn_context.send_activity(MessageFactory.text("Added"))
+   else:
+       await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+```
 
 ---
 

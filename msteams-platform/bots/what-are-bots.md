@@ -5,21 +5,21 @@ description: Una introducción a los bots en Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c02fe1508261c1392472f87e7266e38fed7c12b1
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: a9f53654ba3240b973b77c05cd64a22c80237350
+ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075610"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "62014566"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots en Microsoft Teams
 
-Un bot también conocido como bot de chat o bot de conversación es una aplicación que ejecuta tareas automatizadas simples y repetitivas realizadas por los usuarios, como el servicio de atención al cliente o el personal de soporte técnico. Algunos ejemplos de bots de uso diario incluyen bots que proporcionan información sobre el tiempo, reservan la cena o proporcionan información de viaje. Una interacción de bot puede ser una pregunta y una respuesta rápidas, o puede ser una conversación compleja que proporciona acceso a los servicios.
+Un bot también se conoce como bot de chat o bot conversacional. Es una aplicación que ejecuta tareas sencillas y repetitivas por parte de los usuarios, como el servicio de atención al cliente o el personal de soporte técnico. El uso diario de bots incluye bots que proporcionan información sobre el tiempo, reservan la cena o proporcionan información de viaje. Las interacciones con bots pueden responder y preguntas rápidas o pueden ser una conversación compleja.
 
 > [!IMPORTANT]
-> Actualmente, los bots están disponibles en Government Community Cloud (GCC) pero no están disponibles en GCC-High departamento de defensa (DOD).
+> Actualmente, los bots están disponibles en Government Community Cloud (GCC) y no están disponibles en GCC-High y departamento de defensa (DOD).
 
-Los robots de conversación permiten que los usuarios interactúen con el servicio web mediante texto, tarjetas interactivas y módulos de tareas.
+Los bots conversacionales permiten a los usuarios interactuar con el servicio web mediante texto, tarjetas interactivas y módulos de tareas.
 
 ![Invocar bot con texto](~/assets/images/invokebotwithtext.png)
 
@@ -27,32 +27,41 @@ Los robots de conversación permiten que los usuarios interactúen con el servic
 
 <img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
 
-Los bots conversacionales son increíblemente flexibles y se pueden tener en cuenta para controlar algunos comandos simples o tareas complejas, basadas en inteligencia artificial y procesamiento de lenguaje natural. Pueden ser un aspecto de una aplicación más grande o ser completamente independientes.
+Los bots conversacionales son increíblemente flexibles. Los bots pueden controlar algunos comandos básicos o tareas complejas que implican inteligencia artificial y procesamiento de lenguaje natural. Los bots pueden formar parte de una aplicación más grande o ser independientes.
 
-Encontrar la combinación adecuada de tarjetas, texto y módulos de tareas es clave para crear un bot útil. En la siguiente imagen se muestra a un usuario conversando con un bot en un chat uno a uno con tarjetas interactivas y de texto:
+Use la combinación correcta de tarjetas, texto y módulos de tareas para crear un bot útil. En la siguiente imagen se muestra a un usuario conversando con un bot en un chat uno a uno con texto y tarjetas interactivas.
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Bot de preguntas frecuentes de ejemplo" border="true":::
 
-Cada interacción entre el usuario y el bot se representa como una actividad. Cuando un bot recibe una actividad, la pasa a sus controladores de actividad. Para obtener más información, vea [controladores de actividad de bot .](~/bots/bot-basics.md) 
+Cada interacción entre el usuario y el bot se representa como una actividad. Cuando un bot recibe una actividad, la pasa a sus controladores de actividad. Vea [controladores de actividad de bot](~/bots/bot-basics.md).
 
-Además, los bots son aplicaciones que tienen una interfaz de conversación. Puedes interactuar con un bot con texto, tarjetas interactivas y voz. Un bot se comporta de forma diferente en función de si la conversación es un canal o una conversación de chat de grupo, o si es una conversación uno a uno. Las conversaciones se controlan a través del conector de Bot Framework. Para obtener más información, vea [conceptos básicos de la conversación](~/bots/how-to/conversations/conversation-basics.md).
+Los bots son aplicaciones que tienen una interfaz de conversación. Puedes interactuar con un bot con texto, tarjetas interactivas y voz. Un bot se comporta de forma diferente en una conversación de chat de canal o grupo y en una conversación uno a uno. Las conversaciones se controlan a través del conector de Bot Framework. Vea [conceptos básicos de la conversación](~/bots/how-to/conversations/conversation-basics.md).
 
-El bot requiere información contextual, como los detalles del perfil de usuario para tener acceso al contenido relevante y mejorar la experiencia del bot. Para obtener más información, vea [obtener Teams contexto](~/bots/how-to/get-teams-context.md). 
+El bot requiere información contextual, como los detalles del perfil de usuario para tener acceso al contenido relevante y mejorar la experiencia del bot. Vea [obtener Teams contexto](~/bots/how-to/get-teams-context.md).
 
-También puede enviar y recibir archivos a través del bot mediante Graph API o Teams API de bots. Para obtener más información, [vea Enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md).
+Puede enviar y recibir archivos a través del bot Graph API o Teams API de bot. Vea [enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md).
 
-Además, la limitación de velocidad se usa para optimizar los bots usados para la Teams aplicación. Para proteger Microsoft Teams y sus usuarios, las API del bot proporcionan un límite de velocidad para las solicitudes entrantes. Para obtener más información, vea [optimizar el bot con limitación de](~/bots/how-to/rate-limit.md)velocidad en Teams .
+La limitación de velocidad se usa para optimizar los bots usados para la Teams aplicación. Para proteger Microsoft Teams y sus usuarios, las API del bot proporcionan un límite de velocidad para las solicitudes entrantes. Consulta [optimizar el bot con limitación de](~/bots/how-to/rate-limit.md)velocidad en Teams .
 
-Con las API Graph Microsoft para llamadas y reuniones en línea, Microsoft Teams aplicaciones ahora pueden interactuar con los usuarios mediante voz y vídeo. Para obtener más información, vea [bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). 
+Con las API Graph Microsoft para llamadas y reuniones en línea, Microsoft Teams aplicaciones ahora pueden interactuar con los usuarios mediante voz y vídeo. Vea [bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
-Puede usar las API Teams bot para obtener información para uno o más miembros de un chat o equipo. Para obtener más información, vea [cambios en las API Teams bot para capturar miembros de equipo o chat.](~/resources/team-chat-member-api-changes.md)
+Puedes usar las API Teams bot para obtener información para los miembros de un chat o equipo. Vea [cambios en las API Teams bot para obtener miembros de equipo o chat.](~/resources/team-chat-member-api-changes.md)
+
+<!--- TBD: For quick scanning, see if the above information can be itemized as a list.
+--->
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Bots y SDK](~/bots/bot-features.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="code-sample"></a>Ejemplo de código
+
+|Ejemplo de nombre | Descripción | C # | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Aviso de tarea diaria del bot| Muestra cómo programar una tarea periódica y obtener un aviso a una hora programada. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+
+## <a name="see-also"></a>Consulte también
 
 * [Creación de un bot para Teams](~/bots/how-to/create-a-bot-for-teams.md)
 * [Registrar llamadas y reuniones bot para Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
