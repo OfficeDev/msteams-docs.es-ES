@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: cba73e27b352c462000876fe01e329b2a0a043a4
-  ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+  ms.openlocfilehash: 803120578195772ae13405baeb0d61d03b2282eb
+  ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/12/2022
-  ms.locfileid: "61768562"
+  ms.lasthandoff: 01/17/2022
+  ms.locfileid: "62059092"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -41,7 +41,7 @@ landingContent:
     - text: Monetice la aplicación Teams con una oferta SaaS transaccionable
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Explorar aplicaciones de código bajo para Teams
-      url: ~/samples/teams-low-code-solutions
+      url: ~/samples/teams-low-code-solutions.md
 - title: Tutoriales
   linkLists:
   - linkListType: concept

@@ -6,18 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5ca5f81fd857296f2e81dbce97673f5a10c66ab7
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768576"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059071"
 ---
 # <a name="cicd-guide"></a>Guía de CI/CD
 
 TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al crear Teams aplicación. El documento proporciona herramientas y plantillas para empezar a configurar canalizaciones de CI o CD con GitHub, Azure Devops y Jenkins.
 
-|Herramientas y plantillas|Descripción| 
+|Herramientas y plantillas|Description| 
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub acción que se integra con la CLI de TeamsFx.|
 |[github-ci-template.yml y](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub plantillas de CI o CD para Teams aplicación. |
@@ -77,11 +77,9 @@ En la tabla siguiente se enumeran todos los secretos necesarios para crear un en
 |M365_ACCOUNT_PASSWORD|La contraseña de la cuenta M365.|
 |M365_TENANT_ID|Para identificar el espacio empresarial en el que se Teams se creará o publicará la aplicación. Este valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Para obtener más información, vea cómo encontrar el identificador de [inquilino de M365](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
-> [!NOTE]
-> Actualmente, el estilo de autenticación no interactiva para M365 se usa en flujos de trabajo de CI o CD, asegúrese de que su cuenta M365 tenga privilegios suficientes en su inquilino y no tenga habilitada la autenticación multifactor u otras características de seguridad avanzada. Para obtener más información, vea [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled multi-factor authentication and security defaults for the credentials used in the workflow.
 
 > [!NOTE]
-> Actualmente, la entidad de servicio para Azure se usa en flujos de trabajo de CI/CD. Para obtener más información, vea[create azure service principles](#create-azure-service-principals).
+> Actualmente, la entidad de servicio para Azure se usa en flujos de trabajo de CI/CD. Para obtener más información, vea [create azure service principles](#create-azure-service-principals).
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurar canalizaciones de CI o CD con Azure DevOps
 

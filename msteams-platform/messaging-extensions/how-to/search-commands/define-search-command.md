@@ -5,12 +5,12 @@ description: Obtenga información sobre los comandos de búsqueda de extensión 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4cfbb57176f5c1bdcac5e120e23284b6bd705df3
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889387"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059078"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
@@ -64,7 +64,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Agregue un **identificador de comando** y un **título**.
-1. Seleccione la ubicación desde la que se debe invocar el comando de búsqueda. Seleccionar mensaje **no** modifica actualmente el comportamiento del comando de búsqueda. La siguiente imagen muestra la ubicación de invocación del comando de búsqueda:
+1. Seleccione la ubicación desde la que se debe invocar el comando de búsqueda. La siguiente imagen muestra la ubicación de invocación del comando de búsqueda:
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
@@ -74,7 +74,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, debes agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
@@ -85,7 +85,7 @@ Para agregar manualmente el comando de búsqueda de extensión de mensajería al
 
 Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el Teams cliente.
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -125,7 +125,7 @@ Para ver el manifiesto completo de la aplicación, consulta [Esquema de manifies
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |   
+| Nombre de ejemplo           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
