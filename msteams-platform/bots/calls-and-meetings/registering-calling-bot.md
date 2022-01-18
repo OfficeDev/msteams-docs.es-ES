@@ -4,18 +4,18 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948624"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062512"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar llamadas y reuniones bot para Microsoft Teams
 
 Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un bot de Microsoft Teams normal con las siguientes características adicionales usadas para registrar el bot:
 
-* Hay una nueva versión del manifiesto Teams aplicación con dos configuraciones `supportsCalling` adicionales y `supportsVideo` . Esta configuración se incluye en la versión [preliminar](../../resources/dev-preview/developer-preview-intro.md) del desarrollador del manifiesto Teams aplicación.
+* Hay una nueva versión del manifiesto Teams aplicación con dos configuraciones `supportsCalling` adicionales y `supportsVideo` . Esta configuración se incluye en el [esquema manifiesto para Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Los Graph microsoft deben](./registering-calling-bot.md#add-graph-permissions) configurarse para el identificador de aplicación de Microsoft del bot.
 * Los Graph de llamadas y reuniones en línea requieren el consentimiento del administrador del espacio empresarial.
 
@@ -29,7 +29,7 @@ Los bots de llamadas y reuniones en línea tienen las siguientes dos opciones de
 Si desea que el IDE valide correctamente el esquema manifest.json para el bot de llamadas y reuniones para estos valores, puede cambiar el atributo de la `$schema` siguiente manera:
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 La siguiente sección le permite crear un nuevo bot o agregar funcionalidades de llamada al bot existente.
@@ -97,7 +97,7 @@ Puede confiar en un administrador para conceder los permisos que necesita la apl
 > [!div class="nextstepaction"]
 > [Notificaciones de llamadas entrantes](~/bots/calls-and-meetings/call-notifications.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Notificaciones de llamadas entrantes](~/bots/calls-and-meetings/call-notifications.md)
 * [Desarrollar bots de llamadas y reuniones en línea en el equipo local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

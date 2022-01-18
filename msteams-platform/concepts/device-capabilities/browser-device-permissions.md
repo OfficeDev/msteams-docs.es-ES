@@ -2,14 +2,14 @@
 title: Permisos de dispositivo para el explorador
 keywords: permisos de capacidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con permisos de dispositivo para aplicaciones en nuestro cliente web
-localization_priority: Normal
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: fbdca08c813d341c12fcfc824d21a6ff96d02749
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608387"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059789"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
@@ -50,7 +50,7 @@ Teams que requieren permisos de dispositivo en el explorador deben mostrar instr
 
 Siga la [guía paso a paso para](../../sbs-tab-device-permissions.yml) conceder permiso de dispositivo de pestaña en Microsoft Teams.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Introducción a las funcionalidades de dispositivos](device-capabilities-overview.md)
 * [Solicitar permisos de dispositivo](native-device-permissions.md)

@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889338"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059782"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -137,15 +137,17 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```typescript
 
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            await context.sendActivity('Hello and welcome!');
-            await next();
-        });
-    }
-}
+    this.onMembersAddedActivity(async (context, next) => {
+        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
+            if (member.id !== context.activity.recipient.id) {
+                await context.sendActivity(
+                    `Welcome to the team ${member.givenName} ${member.surname}`
+                );
+            }
+        }));
+
+        await next();
+    });
 ```
 
 # <a name="python"></a>[Python](#tab/python)
@@ -212,7 +214,7 @@ Un objeto `channelData` típico de una actividad enviada al bot contiene la sigu
 * `channelData.teamsTeamId`: En desuso. Esta propiedad solo se incluye por compatibilidad con versiones anteriores.
 * `channelData.teamsChannelId`: En desuso. Esta propiedad solo se incluye por compatibilidad con versiones anteriores.
 
-### <a name="example-channeldata-object-or-channelcreated-event"></a>Evento channelData de ejemplo o channelCreated
+### <a name="example-channeldata-object-channelcreated-event"></a>Objeto channelData de ejemplo (evento channelCreated)
 
 El siguiente código muestra un ejemplo del objeto channelData:
 
@@ -232,22 +234,20 @@ El siguiente código muestra un ejemplo del objeto channelData:
 }
 ```
 
-Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de contenido de mensaje.
-
 ## <a name="message-content"></a>Contenido del mensaje
+
+Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de contenido de mensaje.
 
 | Formato    | De usuario a bot | De bot a usuario | Notas                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texto enriquecido  | ✔                | ✔                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
 | Imágenes  | ✔                | ✔                | Máximo 1024×1024 y 1 MB en formato PNG, JPEG o GIF. Gif animado no es compatible.  |
 | Tarjetas     | ✖                | ✔                | Consulta la [referencia Teams tarjeta para](~/task-modules-and-cards/cards/cards-reference.md) las tarjetas admitidas. |
-| Emojis    | ✖                | ✔                | Teams admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
-
-También puede agregar notificaciones al mensaje mediante la `Notification.Alert` propiedad.
+| Emojis    | ✔                | ✔                | Teams admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
 
 ## <a name="notifications-to-your-message"></a>Notificaciones al mensaje
 
-Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o lo que deben ver insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadene desde el mensaje del bot, establezca la `TeamsChannelData` propiedad objects en `Notification.Alert` *true*. Si se genera o no una notificación depende de la configuración de Teams usuario individual y no se puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
+También puede agregar notificaciones al mensaje mediante la `Notification.Alert` propiedad. Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o lo que deben ver insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadene desde el mensaje del bot, establezca la `TeamsChannelData` propiedad objects en `Notification.Alert` *true*. Si se genera o no una notificación depende de la configuración de Teams usuario individual y no se puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
 
 > [!NOTE]
 > El **campo Resumen** muestra cualquier texto del usuario como un mensaje de notificación en la fuente.
@@ -398,7 +398,7 @@ A continuación se desenván los códigos de estado y sus valores de mensaje y c
 > [!div class="nextstepaction"]
 > [Menús de comandos bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

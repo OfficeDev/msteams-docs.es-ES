@@ -4,12 +4,13 @@ description: Extender una aplicación Teams pestaña personal en Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 507cd74332ced731701e675554b11205715cfc58
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.localizationpriority: medium
+ms.openlocfilehash: 17ad9b3a2e30a2daf25dd31344b4e674f3db3d25
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391370"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059633"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -186,7 +187,7 @@ Para ver la aplicación en Outlook en la Web, visita https://outlook.office.com 
 
 Haz clic en el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
-### <a name="office-on-the-web"></a>Office en la web
+### <a name="office-on-the-web"></a>Office en la Web
 
 Para obtener una vista previa de la aplicación que se ejecuta en Office en la Web, inicie sesión office.com con las credenciales de inquilino de prueba. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
 

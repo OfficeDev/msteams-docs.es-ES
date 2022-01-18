@@ -10,13 +10,13 @@ metadata:
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Leer más para habilitar y configurar aplicaciones para reuniones
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: 0dc94d828c0669f2345aa2101a901bf22dfb9682
-  ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+  ms.localizationpriority: high
+  ms.openlocfilehash: ccd5a3935bcf304fe2f283e1cf74d2398b4c552a
+  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/04/2022
-  ms.locfileid: "61722199"
+  ms.lasthandoff: 01/17/2022
+  ms.locfileid: "62059661"
 items:
 - durationInMinutes: 1
   content: "La vista fase de reuniones ayuda a habilitar y configurar las aplicaciones para Teams reuniones. Ayuda a los usuarios a compartir la fase de reuniones, permite a los participantes de la reunión agregar detalles de estado de tareas pasadas, presentes y futuras, lo que mejora la Teams de la reunión. \n\n**Características clave de la vista fase de reuniones**\n\n* Agregue detalles de estado en el panel lateral.\n* Agregue detalles para la colaboración.\n\nEsta guía paso a paso le ayuda a generar la vista Fase de reuniones para agregar detalles de estado para la colaboración en Teams. Verá el resultado siguiente:\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"vista de fase de reuniones\" border=\"false\":::\n"

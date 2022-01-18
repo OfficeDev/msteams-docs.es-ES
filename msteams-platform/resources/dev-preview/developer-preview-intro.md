@@ -1,57 +1,57 @@
 ---
-title: Vista previa del desarrollador
-description: Describe las características de public developer preview de Microsoft Teams
+title: Versión preliminar para desarrolladores
+description: Describe las características en la versión preliminar para desarrolladores de Microsoft Teams
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: Características para desarrolladores de teams preview
-ms.openlocfilehash: 9337a0fbc89b02783db9253cc2975a68658b4268
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Características para desarrolladores en versión preliminar de Teams
+ms.openlocfilehash: ee367daaf1570e75a5da7518cc2b0e27704741c4
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949589"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059796"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar de desarrolladores públicos para Microsoft Teams
+# <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar para desarrolladores públicos para Microsoft Teams
 
 >[!NOTE]
->Es posible que las características incluidas en la versión preliminar no estén completas y que se someten a cambios antes de estar disponibles en la versión pública. Solo se proporcionan con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
+>Es posible que las características incluidas en la versión preliminar no estén completas y experimenten cambios antes de estar disponibles en la versión pública. Se proporcionan solo con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
 
-Developer Preview es un programa público para desarrolladores que proporciona acceso anticipado a características inéditas en Microsoft Teams. Esto te permite explorar y probar las próximas características para la posible inclusión en tu Microsoft Teams aplicación. También agradecemos los [comentarios](~/feedback.md) sobre cualquier característica en la vista previa del desarrollador. La vista previa del desarrollador está habilitada Microsoft Teams cliente, por lo que no es necesario preocuparse por afectar a toda la organización.
+La versión preliminar para desarrolladores es un programa público para desarrolladores que proporciona acceso anticipado a características inéditas en Microsoft Teams. Esto le permite explorar y probar las próximas características para su posible inclusión en la aplicación de Microsoft Teams También agradecemos los [comentarios](~/feedback.md) sobre cualquier característica en la versión preliminar para desarrolladores. La versión preliminar para desarrolladores está habilitada por cliente de Microsoft Teams, por lo que no tiene que preocuparse por que afecte a toda la organización.
 
-## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de vista previa del desarrollador
+## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de la versión preliminar para desarrolladores
 
-Muchas características habilitadas en la vista previa del desarrollador requerirán alteraciones en el archivo JSON del manifiesto de la aplicación. Para ello, deberá usar el esquema de manifiesto [de vista previa del desarrollador](~/resources/schema/manifest-schema-dev-preview.md). Si usas este esquema, no podrás usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para realizar estos cambios ni podrás usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrás que hacer clic en el icono de la barra de aplicaciones y, a `More apps` continuación, selecciona `Upload a custom app link` . Con este método solo puedes cargar una versión comprimida del paquete de la aplicación.
+Muchas características habilitadas en la versión preliminar para desarrolladores requerirán modificaciones en el archivo JSON del manifiesto de la aplicación. Para ello, deberá usar el [esquema de manifiesto de la versión preliminar de desarrolladores](~/resources/schema/manifest-schema-dev-preview.md). Si usas este esquema, no podrás usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para realizar estos cambios ni podrás usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrá que hacer clic en el icono `More apps` de la barra de aplicaciones y, a continuación, seleccionar `Upload a custom app link`. Con este método solo puede cargar una versión comprimida del paquete de la aplicación.
 
-Es posible que te sea útil usar App Studio para crear las partes de vista previa no para desarrolladores del paquete de la aplicación, luego exportar ese paquete y editar manualmente el archivo para agregar las características de vista previa del desarrollador que quieras `manifest.json` usar. Una vez que hayas agregado características de vista previa de desarrolladores al archivo, no podrás volver a importar `manifest.json` el paquete en App Studio.
+Es posible que le resulte útil usar App Studio para crear las partes de la versión preliminar que no sean para desarrolladores del paquete de la aplicación, exportar ese paquete y editar manualmente el archivo `manifest.json` para agregar las características de versión preliminar para desarrolladores que desea usar. Una vez que hayas agregado características de versión preliminar para desarrolladores al archivo `manifest.json`, no podrá volver a importar el paquete en App Studio.
 
-## <a name="enable-developer-preview"></a>Habilitar la vista previa del desarrollador
+## <a name="enable-developer-preview"></a>Habilitar la versión preliminar para desarrolladores
 
-La vista previa del desarrollador está habilitada por cliente, pero la opción de activar la vista previa del desarrollador se controla en el nivel de la organización. Para habilitar la opción para activar la vista previa del desarrollador para un individuo, debes asegurarte de que tienen la capacidad de cargar aplicaciones personalizadas. Consulte [Configurar el espacio empresarial](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obtener información adicional.
+La versión preliminar para desarrolladores está habilitada por cliente, pero la opción de activar la versión preliminar para desarrolladores se controla a nivel de la organización. Para habilitar la opción de activar la versión preliminar para desarrolladores para un individuo, debes asegurarte de que tienen la capacidad de cargar aplicaciones personalizadas. Consulte [Configurar el espacio empresarial](~/concepts/build-and-test/prepare-your-o365-tenant.md) para obtener información adicional.
 
-El uso de una aplicación que contiene características de vista previa para desarrolladores puede hacer que los clientes que no han habilitado la vista previa del desarrollador se comporten inesperadamente. Si no ve una entrada para la vista previa del desarrollador, lo más probable es que su organización no esté configurada para la carga de aplicaciones.
+El uso de una aplicación que contiene características de la versión preliminar para desarrolladores puede hacer que los clientes que no han habilitado la versión preliminar para desarrolladores se comporten inesperadamente. Si no ve una entrada para la versión preliminar para desarrolladores, lo más probable es que su organización no esté configurada para la carga de aplicaciones.
 
-### <a name="on-a-desktop-or-web-client"></a>En un cliente de escritorio o web
+### <a name="on-a-desktop-or-web-client"></a>En un escritorio o cliente web
 
-Para habilitar la vista previa del desarrollador público en un cliente de escritorio o web, debe hacer lo siguiente:
+Para habilitar la versión preliminar pública para desarrolladores en un escritorio o cliente web, tiene que hacer lo siguiente:
 
-1. Habilitar la carga de aplicaciones en la consola de administración de su inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Haga clic en el perfil (en la parte superior derecha o inferior izquierda de la Teams interfaz) para mostrar el Teams menú.
-1. Selecciona Acerca de → versión preliminar del desarrollador.
-1. Seleccione **Cambiar a vista previa del programador**.
+1. Habilitar la carga de aplicaciones en la consola de administración del inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+1. Haga clic en el perfil (en la parte superior derecha o inferior izquierda de la interfaz de Teams) para mostrar el menú de Teams.
+1. Seleccione Acerca de → Versión preliminar para desarrolladores.
+1. Seleccione **Cambiar a la versión preliminar para desarrolladores**.
 
 ### <a name="on-a-mobile-client"></a>En un cliente móvil
 
-Para habilitar la vista previa del desarrollador público en un cliente móvil, debe hacer lo siguiente:
+Para habilitar la versión preliminar pública para desarrolladores en un cliente móvil, debe hacer lo siguiente:
 
-1. Habilitar la carga de aplicaciones en la consola de administración de su inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-1. Abra el menú hamburguesa en la parte superior izquierda y, a continuación, **seleccione Configuración**.
-1. Seleccione **Acerca de**.
-1. Haga clic en el botón de alternancia Vista previa del programador.
+1. Habilitar la carga de aplicaciones en la consola de administración del inquilino como se describe [aquí](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+1. Abra el menú hamburguesa en la parte superior izquierda y, a continuación, seleccione **Configuración**.
+1. Seleccione **Información**.
+1. Haga clic en el botón de alternancia Versión preliminar para desarrolladores.
 
-## <a name="disable-developer-preview"></a>Deshabilitar la vista previa del desarrollador
+## <a name="disable-developer-preview"></a>Deshabilite la versión preliminar para desarrolladores
 
-Usa el mismo elemento de menú en Acerca de → vista previa del desarrollador y haz clic en él para desactivarlo.
+Use el mismo elemento de menú en Acerca de → versión preliminar para desarrolladores y haga clic en él para desactivarlo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Probar y depurar la Microsoft Teams aplicación](~/concepts/build-and-test/debug.md)
+[Probar y depurar la aplicación Microsoft Teams](~/concepts/build-and-test/debug.md)

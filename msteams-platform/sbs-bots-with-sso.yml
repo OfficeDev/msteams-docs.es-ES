@@ -10,13 +10,13 @@ metadata:
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Más información sobre la autenticación de bots
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: 961fd4f491162144d820202c71e9b47806225cf8
-  ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+  ms.localizationpriority: high
+  ms.openlocfilehash: 49665992436574ee92da917a8c1a3b32719d7df6
+  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/04/2022
-  ms.locfileid: "61722206"
+  ms.lasthandoff: 01/17/2022
+  ms.locfileid: "62059710"
 items:
 - durationInMinutes: 1
   content: "Teams bots son bots conversacionales que ejecutan tareas automatizadas repetitivas realizadas por los usuarios, como el servicio de atención al cliente. El usuario debe iniciar sesión con sus credenciales varias veces para realizar tareas repetitivas. El método de autenticación de inicio de sesión único (SSO) en Azure Active Directory (AAD) actualiza silenciosamente el token de autenticación. Esto se traduce en una reducción del número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión. \n\nUn bot se comporta de forma diferente en función de la conversación en la que está implicado:\n\n* Bots in channel and group chat conversations require the user to @mention the bot.\n* Los bots en una conversación uno a uno no requieren una @mención. Todos los mensajes enviados por el usuario se enruta al bot.\n\nEsta guía paso a paso le ayuda a crear un bot con autenticación de SSO habilitada. Verá el resultado siguiente:\n\n![Mobile ha iniciado sesión en el bot](~/assets/images/bots/sbs-desktop-mobile.png)\n"

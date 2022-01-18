@@ -4,12 +4,13 @@ description: Estos son los requisitos previos para extender las aplicaciones Tea
 ms.date: 11/15/2021
 ms.topic: how-to
 ms.custom: m365apps
-ms.openlocfilehash: 2b11f940eba27fb3a2f44a89f3617d9d932881a7
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.localizationpriority: medium
+ms.openlocfilehash: cd9136b2442b8b39169592be13071136ab39c645
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391724"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059731"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>Configurar el entorno de desarrollo para ampliar Teams aplicaciones en M365
 
@@ -51,7 +52,7 @@ Para inscribir el inquilino de prueba Office 365 versiones dirigidas:
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centro de administración de Microsoft 365 menú &quot;Preferencias de publicación&quot; con la opción de versión dirigida seleccionada":::
     
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 Para obtener más información sobre Office 365 de lanzamiento, vea Configurar las opciones [de](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) versión estándar o dirigida *en Centro de administración de Microsoft 365 ayuda*.
 
@@ -106,7 +107,7 @@ Opcionalmente, puedes usar [Visual Studio Code](https://code.visualstudio.com/) 
 
 La extensión Teams Toolkit para [Visual Studio Code](https://aka.ms/teams-toolkit) ( o posterior) proporciona comandos que pueden ayudar a modificar el código de Teams existente para que sea compatible con Outlook y `v2.10.0` Office. Para obtener más información, vea [habilitar Teams pestaña personal para Office y Outlook](extend-m365-teams-personal-tab.md).
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 - [Habilitar una pestaña personal de Teams para Office y Outlook](extend-m365-teams-personal-tab.md)
 - [Habilitar una extensión de mensajería de Teams para Outlook](extend-m365-teams-message-extension.md)

@@ -10,13 +10,13 @@ metadata:
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Leer más para habilitar y configurar aplicaciones para reuniones
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: 3ecd64df7fc6a8ad0d93a5292ed3497581cf72af
-  ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+  ms.localizationpriority: high
+  ms.openlocfilehash: 561843a8b8e09997a287fc75b2f8d125a8e5095f
+  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/12/2022
-  ms.locfileid: "61768276"
+  ms.lasthandoff: 01/17/2022
+  ms.locfileid: "62059406"
 items:
 - durationInMinutes: 1
   content: >
