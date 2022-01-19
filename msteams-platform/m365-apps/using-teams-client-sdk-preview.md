@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8b5ed919cac07b1d0710a1f23c0ade0cca2ffb
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 4214cc4a738b979a7fa95b2bd9c5110ea0360c68
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059824"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081096"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams sdk de cliente de JavaScript v2 Preview
 
@@ -112,7 +112,7 @@ Debe actualizarse a:
 ```js
 import { app, Context } from "@microsoft/teams-js";
 
-app.getContext().then((context: Context) => {
+app.getContext().then((context) => {
     /*...*/
 });
 ```

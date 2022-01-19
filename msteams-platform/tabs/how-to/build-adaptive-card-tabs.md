@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: flujo de datos de autenticación de aplicaciones personales de tarjeta adaptable
-ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216100"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080970"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -432,12 +432,13 @@ El código siguiente muestra un ejemplo de solicitud ree emitida:
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
+> [Desafusado de vínculos de pestañas y vista fase](~/tabs/tabs-link-unfurling.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tarjeta adaptable](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
 * [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
+* [Comentarios de finalización de formularios](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

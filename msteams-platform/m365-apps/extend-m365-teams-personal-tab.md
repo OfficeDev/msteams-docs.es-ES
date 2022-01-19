@@ -5,17 +5,17 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ad9b3a2e30a2daf25dd31344b4e674f3db3d25
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059633"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081087"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
 > [!NOTE]
-> *La extensión de una Teams personal en Microsoft 365* está disponible actualmente solo en la versión preliminar del desarrollador [público.](../resources/dev-preview/developer-preview-intro.md) Es posible que las características incluidas en la versión preliminar no estén completas y que se someten a cambios antes de estar disponibles en la versión pública. Solo se proporcionan con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
+> *La extensión de una Teams personal en Microsoft 365* está disponible actualmente solo en la versión preliminar del desarrollador [público.](../resources/dev-preview/developer-preview-intro.md) Es posible que las características incluidas en la versión preliminar no estén completas y experimenten cambios antes de estar disponibles en la versión pública. Se proporcionan solo con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
 
 Las pestañas personales proporcionan una excelente forma de mejorar la Microsoft Teams experiencia. Con las pestañas personales, puede proporcionar a un usuario acceso a su aplicación directamente dentro de Teams, sin que el usuario tenga que dejar la experiencia o volver a iniciar sesión. Con esta vista previa, las pestañas personales pueden iluminarse dentro de otras Microsoft 365 aplicaciones. En este tutorial se muestra el proceso de tomar una pestaña personal de Teams existente y actualizarla para que se ejecute en experiencias de escritorio y web de Outlook, y también Office en la Web (office.com).
 
@@ -144,7 +144,7 @@ En la **sección Aplicaciones cliente autorizadas,** asegúrese de que se agrega
 |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-app-in-teams"></a>Descarga local de la aplicación en Teams
+## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Teams
 
 El último paso es cargar localmente la pestaña personal actualizada ([paquete de](/microsoftteams/platform/concepts/build-and-test/apps-package)la aplicación ) en Microsoft Teams. Una vez completada, la aplicación estará disponible para ejecutarse en Office y Outlook, además de Teams.
 
@@ -177,7 +177,7 @@ Al actualizar la pestaña personal Teams y cargarla localmente en Teams, tambié
 
 Para ver la aplicación que se ejecuta en Outlook en Windows escritorio, inicie Outlook e inicie sesión con su cuenta de inquilino de desarrollo. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Haga clic en la opción puntos suspensivos ('Más aplicaciones') de la barra lateral para ver las pestañas personales instaladas":::
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Haga clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de Office cliente de escritorio para ver las pestañas personales instaladas":::
 
 Haz clic en el icono de la aplicación para iniciar la aplicación en Outlook.
 
@@ -185,9 +185,14 @@ Haz clic en el icono de la aplicación para iniciar la aplicación en Outlook.
 
 Para ver la aplicación en Outlook en la Web, visita https://outlook.office.com e inicia sesión con tu cuenta de inquilino de desarrollo. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
 
+:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de outlook.com para ver las pestañas personales instaladas":::
+
 Haz clic en el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
-### <a name="office-on-the-web"></a>Office en la Web
+### <a name="office-on-the-web"></a>Office en la web
+
+> [!IMPORTANT]
+> Consulta las actualizaciones más recientes de [Microsoft Teams:](https://devblogs.microsoft.com/microsoft365dev/) blog para desarrolladores de Microsoft 365 para comprobar si Office.com admite aplicaciones personales Teams tu inquilino de prueba.
 
 Para obtener una vista previa de la aplicación que se ejecuta en Office en la Web, inicie sesión office.com con las credenciales de inquilino de prueba. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
 

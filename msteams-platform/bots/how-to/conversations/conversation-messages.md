@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059782"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081115"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -370,7 +370,25 @@ El siguiente código muestra un ejemplo de envío de una tarjeta adaptable senci
 }
 ```
 
-Para obtener más información acerca de las tarjetas y las tarjetas de los bots, consulte [la documentación sobre tarjetas](~/task-modules-and-cards/what-are-cards.md).
+### <a name="form-completion-feedback"></a>Comentarios de finalización de formularios
+
+El mensaje de finalización del formulario aparece en Tarjetas adaptables mientras se envía una respuesta al bot. El mensaje puede ser de dos tipos, error o éxito:
+
+* **Error:** cuando una respuesta enviada al bot no se realiza correctamente, **algo salió mal, aparece el mensaje Intentar de** nuevo.
+
+    ![Mensaje de error](~/assets/images/Cards/error-message.png)
+
+* **Correcto:** cuando una respuesta enviada al bot se realiza correctamente, **aparece La respuesta se envió al mensaje de** la aplicación.
+
+    ![Mensaje de correcto](~/assets/images/Cards/success.PNG)
+
+Puedes seleccionar Cerrar **o** cambiar el chat para descartar el mensaje.    
+
+**Respuesta en móvil:**
+
+El mensaje de error aparece en la parte inferior de la tarjeta adaptable.
+
+Para obtener más información sobre tarjetas y tarjetas en bots, vea [la documentación sobre tarjetas](~/task-modules-and-cards/what-are-cards.md).
 
 ## <a name="status-code-responses"></a>Respuestas de código de estado
 
@@ -391,7 +409,7 @@ A continuación se desenván los códigos de estado y sus valores de mensaje y c
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 

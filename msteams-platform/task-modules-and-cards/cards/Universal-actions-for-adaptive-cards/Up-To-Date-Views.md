@@ -5,12 +5,12 @@ author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: tarjeta base de aprobación rechazar adaptable
-ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0fce06ee940a172c02b00c3ae417f6b31090f5e0
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887409"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081152"
 ---
 # <a name="up-to-date-cards"></a>Tarjetas actualizadas
 
@@ -270,3 +270,4 @@ El código siguiente proporciona un ejemplo de tarjetas adaptables enviadas como
 
 * [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
 * [Vistas específicas de usuario](User-Specific-Views.md)
+* [Comentarios de finalización de formularios](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
