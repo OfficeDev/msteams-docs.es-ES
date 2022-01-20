@@ -3,13 +3,13 @@ title: Novedades
 description: Describe todas las características de desarrollador nuevas o más recientes de Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
-keywords: Características nuevas y novedades más recientes de Teams
-ms.openlocfilehash: af25a14d8caa230f0462f1c4194a1e60f27b8bda
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
+ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062505"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080963"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,9 +22,9 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+|19/1/2022| Comentarios sobre la finalización de formularios de Tarjetas adaptables | Crear bots > Conversaciones bots > Mensajes en conversaciones de bots > [Comentarios de finalización del formulario](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Selector de personas en tarjetas adaptables (versión preliminar de desarrolladores para móviles y GA para escritorio) | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
-|
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -38,8 +38,13 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|19/1/2022| Comentarios sobre la finalización de formularios de Tarjetas adaptables | Crear bots > Conversaciones bots > Mensajes en conversaciones de bots > [Comentarios de finalización del formulario](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Selector de personas en tarjetas adaptables para escritorio | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 
+<br>
+
+</details>
+  
 <br>
 
 <details>
@@ -56,34 +61,34 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 |09/12/2021| Se ha introducido una guía paso a paso para la vista de la escenas de reunión. | Crear aplicaciones para reuniones de Teams > Habilitar y configurar aplicaciones para reuniones > [Guía paso a paso para crear la vista de la escenas de reuniones](sbs-meetings-stage-view.yml)|
 |13/12/2021 | Se han introducido directrices para la aplicación vinculada a la oferta de SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams > Revisar las directrices de validación de la tienda > [Directrices para las aplicaciones vinculadas a la oferta de SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
 |09/12/2021| Guía paso a paso introducida para crear un panel lateral de reuniones. | Crear aplicaciones para reuniones de Teams > Habilitar y configurar aplicaciones para reuniones > [Guía paso a paso para crear un panel lateral de reuniones en Teams](sbs-meetings-sidepanel.yml)|
-|01/12/2021 | Se introdujo el nuevo icono de la tienda. | • Diseñar la aplicación > Funcionalidades de la aplicación > [Diseñar su aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar la aplicación > Componentes de la interfaz de usuario > [Diseñar la aplicación de Microsoft Teams con componentes avanzados de interfaz de usuario](concepts/design/design-teams-app-advanced-ui-components.md) |
+|01/12/2021 | Se introdujo el nuevo icono de la tienda | • Diseñar la aplicación > Funcionalidades de la aplicación > [Diseñar su aplicación personal para Microsoft Teams](concepts/design/personal-apps.md)</br> • Diseñar la aplicación > Componentes de la interfaz de usuario > [Diseñar la aplicación de Microsoft Teams con componentes avanzados de interfaz de usuario](concepts/design/design-teams-app-advanced-ui-components.md) |
 |24/11/2021| Guía paso a paso introducida para crear un token de reuniones. | Crear aplicaciones para reuniones de Teams > Habilitar y configurar aplicaciones para reuniones > [Guía paso a paso para crear un token de reuniones en Teams](sbs-meeting-token-generator.yml)|
 |17/11/2021| Directrices actualizadas de validación de la tienda de Microsoft Teams|[Directrices de validación de la tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
-|17/11/2021| Búsqueda de escritura anticipada estática y dinámica para usuarios de escritorio y móviles.| • Crear tarjetas y módulos de tareas > Crear tarjetas > [Búsqueda de escritura anticipada en Tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > Información general > [Búsqueda de escritura anticipada en Tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > Información general > [Tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
-|13/11/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico del recurso (RSC). | • Crear bots > Conversaciones de bots > Mensajes en conversaciones de bots > [Recibir todos los mensajes del canal con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots > Conversaciones de bots > [Información general sobre las conversaciones de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots > Conversaciones de bots > [Conversaciones de canal y de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|28/10/2021| Monetice la aplicación Teams con una oferta SaaS transaccionable.| Distribuir la aplicación > Publicar en el almacén de Teams > [Incluir una oferta de SaaS con la aplicación de Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
-|25/10/2021| Se ha actualizado el módulo de introducción para la documentación destinada a desarrolladores de Microsoft Teams con una nueva estructura y procedimientos en una guía paso a paso.| Introducción > [Introducción a su primera aplicación de Teams](get-started/get-started-overview.md) |
-|21/10/2021| Añada una API `registerOnFocused` para pestañas o aplicaciones personales. | Crear pestañas > Crear pestañas personales > [Añadir la API `registerOnFocused`para pestañas o aplicaciones personales](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
+|17/11/2021| Búsqueda de escritura anticipada estática y dinámica para usuarios de escritorio y móviles | • Crear tarjetas y módulos de tareas > Crear tarjetas > [Búsqueda de escritura anticipada en Tarjetas adaptables](task-modules-and-cards/cards/dynamic-search.md) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > Información general > [Búsqueda de escritura anticipada en Tarjetas adaptables](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Crear tarjetas y módulos de tareas > Información general > [Tarjetas y módulos de tareas](task-modules-and-cards/cards-and-task-modules.md)|
+|13/11/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico del recurso (RSC) | • Crear bots > Conversaciones de bots > Mensajes en conversaciones de bots > [Recibir todos los mensajes del canal con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots > Conversaciones de bots > [Información general sobre las conversaciones de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots > Conversaciones de bots > [Conversaciones de canal y de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|28/10/2021| Monetice la aplicación Teams con una oferta SaaS que se pueda usar como transacción. | Distribuir la aplicación > Publicar en el almacén de Teams > [Incluir una oferta de SaaS con la aplicación de Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|25/10/2021| Se ha actualizado el módulo de introducción para la documentación destinada a desarrolladores de Microsoft Teams con una nueva estructura y procedimientos en una guía paso a paso | Introducción > [Introducción a su primera aplicación de Teams](get-started/get-started-overview.md) |
+|21/10/2021| Añadir una API `registerOnFocused` para pestañas o aplicaciones personales | Crear pestañas > Crear pestañas personales > [Añadir la API `registerOnFocused`para pestañas o aplicaciones personales](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20/10/2021| La escena de reunión ya está disponible en GA. | Crear aplicaciones para reuniones de Teams > [Habilitar y configurar las aplicaciones para reuniones de Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|20/10/2021| API de detalles de reuniones y eventos de reuniones de Teams en tiempo real. | Crear aplicaciones para reuniones de Teams > [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|20/10/2021| API de Detalles de reuniones y eventos de reuniones de Teams en tiempo real | Crear aplicaciones para reuniones de Teams > [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |18/10/2021| Expansión de vínculos de pestañas y vista de fases | Crear pestañas > [Expansión de vínculos de pestañas y vista de fases](tabs/tabs-link-unfurling.md) |
-|08/10/2021| Nuevos procedimientos recomendados para diseñar Tarjetas adaptables. | Diseñar la aplicación > Componentes de la interfaz de usuario > [Diseñar Tarjetas adaptables para la aplicación de Teams](task-modules-and-cards/cards/design-effective-cards.md) |
+|08/10/2021| Nuevos procedimientos recomendados para diseñar Tarjetas adaptables | Diseñar la aplicación > Componentes de la interfaz de usuario > [Diseñar Tarjetas adaptables para la aplicación de Teams](task-modules-and-cards/cards/design-effective-cards.md) |
 |05/10/2021| Ocultar la aplicación de Teams hasta que el administrador permita mostrar la aplicación.| Diseñar la aplicación > [Ocultar la aplicación de Teams hasta que el administrador la apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |05/10/2021| Planee sus aplicaciones de Teams para dispositivos móviles. | Conceptos básicos de la aplicación > [Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
-|04/10/2021| Nuevo portal para desarrolladores para Teams introducido a fin de administrar sus aplicaciones de Teams.| Herramientas y SDK > [Portal para desarrolladores para Teams](concepts/build-and-test/teams-developer-portal.md) |
-|21/09/2021|Teams admite el identificador de objeto y el UPN de AAD en la mención de usuario para bots y webhooks entrantes.| • Crear tarjetas y módulos de tareas > Crear tarjetas > [ID de objeto y UPN de AAD en la mención del usuario](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > [Tarjetas- Información general](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
-|16/08/2021| Compatibilidad con la validación de entrada en Tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots). | • Tarjetas adaptables > Crear tarjetas > [Validación de entrada](/adaptive-cards/authoring-cards/input-validation)</br> • Crear tarjetas y módulos de tareas > Crear tarjetas > Acciones universales para tarjetas adaptables > [Acciones universales para Tarjetas adaptable v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|30/08/2021| La característica de escenas personalizadas en modo conferencia combina los participantes en una sola escena virtual y coloca sus secuencias de vídeo en ubicaciones predefinidas.| Crear aplicaciones para reuniones de Teams > [Personalizar escenas del modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md) |
+|04/10/2021| Nuevo portal para desarrolladores para Teams introducido a fin de administrar sus aplicaciones de Teams | Herramientas y SDK > [Portal para desarrolladores para Teams](concepts/build-and-test/teams-developer-portal.md) |
+|21/09/2021|Teams admite el identificador de objeto y el UPN de AAD en la mención de usuario para bots y Webhooks entrantes | • Crear tarjetas y módulos de tareas > Crear tarjetas > [ID de objeto y UPN de AAD en la mención del usuario](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > [Tarjetas- Información general](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|16/08/2021| Compatibilidad con la validación de entrada en Tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots) | • Tarjetas adaptables > Crear tarjetas > [Validación de entrada](/adaptive-cards/authoring-cards/input-validation)</br> • Crear tarjetas y módulos de tareas > Crear tarjetas > Acciones universales para tarjetas adaptables > [Acciones universales para Tarjetas adaptable v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|30/08/2021| La característica de escenas personalizadas en Modo conferencia combina los participantes en una sola escena virtual y coloca sus secuencias de vídeo en ubicaciones predefinidas | Crear aplicaciones para reuniones de Teams > [Personalizar escenas del modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md) |
 |25/08/2021| Guía paso a paso introducida para crear un bot de Teams con inicio de sesión único (SSO).| Agregar autenticación > Bots > [Guía paso a paso para crear un bot de Teams con SSO](sbs-bots-with-sso.yml) |
 |19/08/2021| Evento de actualización de instalación recibido al instalar un bot en un subproceso de conversación.| Crear bots > Conversaciones de bots > [Evento de actualización de instalación](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
-|12/08/2021|Crear pestañas con Tarjetas adaptables.| Crear pestañas > [Crear pestañas con Tarjetas adaptables](tabs/how-to/build-adaptive-card-tabs.md) |
-|04/08/2021|Las pestañas ya no tendrán márgenes alrededor de sus experiencias.| Crear pestañas > [Quitar márgenes de pestañas](resources/removing-tab-margins.md) |
-|08/07/2021|Teams para móviles añade compatibilidad con aplicaciones en reuniones. | Crear aplicaciones para reuniones de Teams > [Extensibilidad de aplicaciones de reuniones](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|12/08/2021|Compilar pestañas con tarjetas adaptables| Crear pestañas > [Crear pestañas con Tarjetas adaptables](tabs/how-to/build-adaptive-card-tabs.md) |
+|04/08/2021|Las pestañas ya no tendrán márgenes alrededor de sus experiencias | Crear pestañas > [Quitar márgenes de pestañas](resources/removing-tab-margins.md) |
+|08/07/2021|Teams para móviles añade compatibilidad con aplicaciones en reuniones | Crear aplicaciones para reuniones de Teams > [Extensibilidad de aplicaciones de reuniones](apps-in-teams-meetings/meeting-app-extensibility.md) |
 |28/06/2021|Integrar la funcionalidad de selector de personas. | Integrar con Teams > [Integrar la funcionalidad del selector de personas](concepts/device-capabilities/people-picker-capability.md) |  
-|25/06/2021| Guía paso a paso introducida para enviar mensajes proactivos. | Crear bots > Conversación de bots> Mensajes proactivos > [Guía paso a paso para enviar mensajes proactivos](sbs-send-proactive.yml) |
+|25/06/2021| Guía paso a paso introducida para enviar mensajes proactivos | Crear bots > Conversación de bots> Mensajes proactivos > [Guía paso a paso para enviar mensajes proactivos](sbs-send-proactive.yml) |
 |09/06/2021| Vista de fase de imágenes en Tarjetas adaptables con el atributo `allowExpand`.| Crear tarjetas y módulos de tareas > Crear tarjetas > [Vista de fases para imágenes en Tarjetas adaptables](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
 |31/05/2021| Pestañas conversacionales. | Crear pestañas > [Iniciar y continuar conversaciones sobre el contenido en las pestañas](~/tabs/how-to/conversational-tabs.md) |
-|24/05/2021| Se han actualizado las directrices de diseño de aplicaciones de Teams con patrones móviles. | Diseñar la aplicación > [Diseñar la aplicación Teams](~/concepts/design/design-teams-app-overview.md) |
+|24/05/2021| Se han actualizado las directrices de diseño de aplicaciones de Teams con patrones móviles | Diseñar la aplicación > [Diseñar la aplicación Teams](~/concepts/design/design-teams-app-overview.md) |
 |13/05/2021| Se ha agregado información sobre mConnect y Skooler.| Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |10/05/2021| Manifiesto de aplicación v1.10 publicado. | Manifiesto de la aplicación > [Esquema del manifiesto](resources/schema/manifest-schema.md) |
 |10/05/2021| Nueva característica de personalización de aplicaciones. | Diseñar la aplicación > [Habilitar organizaciones para personalizar la aplicación](concepts/design/enable-app-customization.md) |
