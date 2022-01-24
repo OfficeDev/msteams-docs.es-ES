@@ -4,12 +4,12 @@ description: Obtenga información sobre las vistas específicas del usuario medi
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081068"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185438"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
@@ -181,7 +181,9 @@ El siguiente código proporciona un ejemplo de una tarjeta de respuesta adaptive
 
 El código siguiente proporciona un ejemplo de una respuesta de invocación para devolver tarjetas adaptables:
 
-```C#
+### <a name="c"></a>[C#](#tab/C)
+
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -192,6 +194,26 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```
+
+---
 
 Directrices de diseño de tarjetas a tener en cuenta al diseñar vistas específicas del usuario:
 
