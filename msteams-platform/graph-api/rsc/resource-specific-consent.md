@@ -5,13 +5,13 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: autorización de OAuth SSO AAD rsc Graph
-ms.openlocfilehash: abd56787c89fde44f7cc4c72f0f59e66b05af9aa
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: autorización de OAuth SSO Azure AD rsc Graph
+ms.openlocfilehash: 6a7c55cefa77d67ff41f8e8154ac05aacb5efe5b
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291635"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212366"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 
@@ -28,7 +28,7 @@ Los permisos de RSC pormenorizados, Teams específicos de la aplicación definen
 
 ### <a name="resource-specific-permissions-for-a-team"></a>Permisos específicos de recursos para un equipo
 
-|Permiso de aplicación| Acción |
+|Permiso de aplicación| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtén la configuración de este equipo.|
 |TeamSettings.ReadWrite.Group|Actualice la configuración de este equipo.|
@@ -51,7 +51,7 @@ Para obtener más información, vea [permisos de consentimiento específicos de 
 
 En la tabla siguiente se proporcionan permisos específicos de recursos para un chat:
 
-|Permiso de aplicación| Acción |
+|Permiso de aplicación| Action |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | Obtén la configuración de este chat.                                    |
 | ChatSettings.ReadWrite.Chat    | Actualice la configuración de este chat.                          |
@@ -71,15 +71,15 @@ En la tabla siguiente se proporcionan permisos específicos de recursos para un 
 Para obtener más información, vea [permisos de consentimiento específicos de recursos de chat.](/graph/permissions-reference#chat-resource-specific-consent-permissions)
 
 > [!NOTE]
-> Los permisos específicos de recursos solo están disponibles para Teams aplicaciones instaladas en el cliente de Teams y actualmente no forman parte del portal Azure Active Directory (AAD).
+> Los permisos específicos de recursos solo están disponibles Teams aplicaciones instaladas en el cliente Teams y actualmente no forman parte del portal de Azure Active Director.
 
 ## <a name="enable-rsc-in-your-application"></a>Habilitar RSC en la aplicación
 
-1. [Configure las opciones de consentimiento en AAD portal](#configure-consent-settings-in-the-aad-portal).
+1. [Configure las opciones de consentimiento en Azure AD portal](#configure-consent-settings-in-the-azure-ad-portal).
     1. [Configurar la configuración de consentimiento del propietario del grupo para RSC en un equipo](#configure-group-owner-consent-settings-for-rsc-in-a-team).
     1. [Configurar las opciones de consentimiento del usuario para RSC en un chat](#configure-user-consent-settings-for-rsc-in-a-chat).
-1. [Registra la aplicación con Plataforma de identidad de Microsoft el portal AAD .](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
-1. [Revise los permisos de la aplicación en AAD portal](#review-your-application-permissions-in-the-aad-portal).
+1. [Registra tu aplicación con Plataforma de identidad de Microsoft el](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)portal Azure AD .
+1. [Revise los permisos de la aplicación en Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtener un token de acceso de la plataforma de identidad](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Actualizar el manifiesto Teams aplicación](#update-your-teams-app-manifest).
 1. [Instala la aplicación directamente en Teams](#sideload-your-app-in-teams).
@@ -87,7 +87,7 @@ Para obtener más información, vea [permisos de consentimiento específicos de 
     1. [Comprueba que la aplicación tenga permisos de RSC agregados en un equipo](#check-your-app-for-added-rsc-permissions-in-a-team).
     1. [Comprueba que la aplicación tenga permisos RSC agregados en un chat.](#check-your-app-for-added-rsc-permissions-in-a-chat)
 
-## <a name="configure-consent-settings-in-the-aad-portal"></a>Configurar las opciones de consentimiento en el portal AAD usuario
+## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>Configurar las opciones de consentimiento en el portal Azure AD usuario
 
 ### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>Configurar la configuración de consentimiento del propietario del grupo para RSC en un equipo
 
@@ -113,30 +113,30 @@ Puede habilitar o deshabilitar el [consentimiento del usuario](/azure/active-dir
 
 Además, puede habilitar o deshabilitar el consentimiento de usuario con PowerShell, siga los pasos descritos en configurar el consentimiento de usuario [con PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
 
-## <a name="register-your-app-with-microsoft-identity-platform-using-the-aad-portal"></a>Registrar la aplicación con Plataforma de identidad de Microsoft el portal AAD aplicación
+## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Registrar la aplicación con Plataforma de identidad de Microsoft el portal de Azure AD aplicación
 
-El portal AAD proporciona una plataforma central para que se registren y configuren las aplicaciones. La aplicación debe estar registrada en el portal de AAD para integrarse con la plataforma de identidad y llamar a las API Graph Microsoft. Para obtener más información, vea [registrar una aplicación con la plataforma de identidad](/graph/auth-register-app-v2).
+El Azure AD web proporciona una plataforma central para que se registren y configuren las aplicaciones. La aplicación debe estar registrada en el portal de Azure AD para integrarse con la plataforma de identidad y llamar a las API Graph Microsoft. Para obtener más información, vea [registrar una aplicación con la plataforma de identidad](/graph/auth-register-app-v2).
 
 > [!WARNING]
-> Un AAD de aplicación no debe compartirse entre varias Teams aplicaciones. Debe haber una asignación 1:1 entre una Teams y una AAD aplicación. Los intentos de instalar varias Teams que están asociadas con el mismo AAD de aplicación provocarán errores de instalación o tiempo de ejecución.
+> Un Azure AD de aplicación no debe compartirse entre varias Teams aplicaciones. Debe haber una asignación 1:1 entre una Teams y una Azure AD aplicación. Los intentos de instalar varias Teams que están asociadas con el mismo identificador Azure AD aplicación provocarán errores de instalación o tiempo de ejecución.
 
-## <a name="review-your-application-permissions-in-the-aad-portal"></a>Revisar los permisos de la aplicación en el portal AAD aplicación
+## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Revise los permisos de la aplicación en el portal Azure AD aplicación
 
 1. Ve a la **página Registros** de la  >  **aplicación principal** y selecciona la aplicación RSC.
 1. Elija **permisos de API** en el panel izquierdo y vaya a la lista de permisos **configurados** para la aplicación. Si la aplicación solo realiza llamadas Graph API de RSC, elimina todos los permisos de esa página. Si la aplicación también realiza llamadas que no son RSC, mantén esos permisos según sea necesario.
 
 > [!IMPORTANT]
-> El AAD no se puede usar para solicitar permisos RSC. Actualmente, los permisos RSC son exclusivos de las aplicaciones Teams instaladas en el cliente de Teams y se declaran en el archivo de manifiesto de Teams aplicación (JSON).
+> El Azure AD no se puede usar para solicitar permisos de RSC. Actualmente, los permisos RSC son exclusivos de las aplicaciones Teams instaladas en el cliente de Teams y se declaran en el archivo de manifiesto de Teams aplicación (JSON).
 
 ## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Obtener un token de acceso de la Plataforma de identidad de Microsoft
 
-Para realizar Graph API, debes obtener un token de acceso para la aplicación desde la plataforma de identidad. Para que la aplicación pueda obtener un token de la plataforma de identidad, debe registrarse en el portal AAD identidad. El token de acceso contiene información sobre la aplicación y los permisos que tiene para los recursos y las API disponibles a través de Microsoft Graph.
+Para realizar Graph API, debes obtener un token de acceso para la aplicación desde la plataforma de identidad. Para que la aplicación pueda obtener un token de la plataforma de identidad, debe registrarse en el portal Azure AD identidad. El token de acceso contiene información sobre la aplicación y los permisos que tiene para los recursos y las API disponibles a través de Microsoft Graph.
 
-Debe tener los siguientes valores del proceso de registro AAD para recuperar un token de acceso de la plataforma de identidad:
+Debe tener los siguientes valores del proceso de registro Azure AD para recuperar un token de acceso de la plataforma de identidad:
 
 - Id. **de aplicación** asignado por el portal de registro de aplicaciones. Si la aplicación admite el inicio de sesión único (SSO), debes usar el mismo identificador de aplicación para tu aplicación y SSO.
 - El **secreto de cliente/contraseña** o un par de claves pública o privada que es **Certificate**. Esto no es necesario para las aplicaciones nativas.
-- Uri **de redireccionamiento** o dirección URL de respuesta para que la aplicación reciba respuestas de AAD.
+- Uri **de redireccionamiento** o dirección URL de respuesta para que la aplicación reciba respuestas de Azure AD.
 
 Para obtener más información, [vea obtener acceso en nombre de un usuario y](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) obtener acceso sin un [usuario](/graph/auth-v2-service).
 
@@ -146,7 +146,7 @@ Los permisos RSC se declaran en el archivo JSON del manifiesto de la aplicación
 
 |Nombre| Tipo | Descripción|
 |---|---|---|
-|`id` |String |Tu AAD de aplicación. Para obtener más información, [consulta registrar la aplicación en el portal AAD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
+|`id` |Cadena |Tu Azure AD de aplicación. Para obtener más información, [consulta registrar la aplicación en el portal Azure AD .](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
 |`resource`|String| Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; cualquier cadena lo hará.|
 |`applicationPermissions`|Matriz de cadenas|Permisos RSC para la aplicación. Para obtener más información, [consulte resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
@@ -208,7 +208,7 @@ Los permisos RSC se declaran en el archivo JSON del manifiesto de la aplicación
 > [!NOTE]
 > Si la aplicación está pensada para admitir la instalación en ámbitos de equipo y chat, los permisos de equipo y chat se pueden especificar en el mismo manifiesto en `applicationPermissions` .
 
-## <a name="sideload-your-app-in-teams"></a>Descarga local de la aplicación en Teams
+## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Teams
 
 Si el Teams permite cargas de aplicaciones personalizadas, puedes realizar la instalación local de la aplicación directamente en un equipo o chat específico. [](~/concepts/deploy-and-publish/apps-upload.md)
 

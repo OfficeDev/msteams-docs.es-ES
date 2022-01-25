@@ -5,14 +5,14 @@ keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888555"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212541"
 ---
-# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administrar tus aplicaciones con el Portal de desarrolladores para Microsoft Teams
+# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams
 
 Portal <a href="https://dev.teams.microsoft.com" target="_blank">para desarrolladores para Teams</a> es la herramienta principal para configurar, distribuir y administrar las aplicaciones Microsoft Teams aplicaciones. Con el Portal de desarrolladores, puedes colaborar con compañeros de la aplicación, configurar entornos en tiempo de ejecución y mucho más.
 
@@ -75,7 +75,7 @@ En la **página Información** general, puedes ver el número total de usuarios 
 | Métrica | Definición |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *R30 mensual* | Métrica de uso predeterminada. Muestra el recuento de usuarios activos únicos que usaron la aplicación dentro de esa ventana móvil de 30 días en UTC. |
-| *Diario* | Muestra el recuento de usuarios activos únicos que usaron la aplicación en un día determinado en UTC. |
+| *A diario* | Muestra el recuento de usuarios activos únicos que usaron la aplicación en un día determinado en UTC. |
 
 El uso mensual y diario se muestra durante los últimos siete, 30 días y 60 días. Debería ver el uso reflejado durante un día determinado en un plazo de 24-48 horas. El uso de nuevas aplicaciones puede tardar entre 3 y 5 días en mostrarse.
 
@@ -85,8 +85,8 @@ El Portal de desarrolladores también incluye herramientas que le ayudarán a cr
 
 * **Scene studio:** [diseñe escenas personalizadas](~/apps-in-teams-meetings/teams-together-mode.md) del Modo conjunto para Teams reuniones.
 * **Editor de tarjetas adaptables:** crea y previsualiza tarjetas adaptables para incluir con tus aplicaciones.
-* **Plataforma de identidad de Microsoft:** registre sus aplicaciones con Azure Active Directory (Azure AD) para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
+* **Plataforma de identidad de Microsoft:** registre sus aplicaciones con Azure Active Directory para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

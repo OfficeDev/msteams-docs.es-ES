@@ -3,20 +3,20 @@ title: Autenticación para pestañas mediante Azure Active Directory
 description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: pestañas de autenticación de teams AAD
-ms.openlocfilehash: 1c3c5a69d7b42589a104755968a6d6949efbcca2
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+keywords: fichas de autenticación de teams Azure AD
+ms.openlocfilehash: 6fb7e608cd89183a6207fc16b4e42a0e31e4db32
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949043"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212443"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una Microsoft Teams pestaña
 
 > [!Note]
 > Para que la autenticación funcione para su pestaña en clientes móviles, debe asegurarse de que está usando la versión 1.4.1 o posterior del SDK de JavaScript de Teams.
 
-Es posible que quieras consumir muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams. Teams información de perfil de usuario se almacena en Azure Active Directory (Azure AD) con Microsoft Graph y este artículo se centrará en la autenticación mediante Azure AD para obtener acceso a esta información.
+Es posible que quieras consumir muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams. Teams información de perfil de usuario se almacena en Azure Active Directory con Microsoft Graph y este artículo se centrará en la autenticación mediante Azure AD para obtener acceso a esta información.
 
 OAuth 2.0 es un estándar abierto para la autenticación que usan Azure AD y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. Los ejemplos siguientes usan el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información de perfil del usuario de Azure AD y Microsoft Graph.
 

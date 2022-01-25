@@ -1,25 +1,25 @@
 ---
-title: Agregar autenticación al bot Teams usuario
+title: Agregar autenticación al bot de Teams
 author: surbhigupta
-description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Teams mediante AAD. Obtenga información sobre cómo crear, implementar e integrar bots habilitados para autenticación.
+description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Teams mediante Azure AD. Obtenga información sobre cómo crear, implementar e integrar bots habilitados para autenticación.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifiesto del bot de registro del canal del bot del grupo de recursos
-ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 6ca9706dc946fcd98f573b9f7cdb05368156184d
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569528"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212499"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot Teams usuario
+# <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
 Hay ocasiones en las que es posible que necesite crear bots en Microsoft Teams que puedan tener acceso a recursos en nombre del usuario, como un servicio de correo.
 
 En este artículo se muestra cómo usar la autenticación del SDK de Azure Bot Service v4, basada en OAuth 2.0. Esto facilita el desarrollo de un bot que puede usar tokens de autenticación en función de las credenciales del usuario. La clave en todo esto es el uso de proveedores **de identidades,** como veremos más adelante.
 
-OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams.
+OAuth 2.0 es un estándar abierto para la autenticación y autorización que usan Azure Active Directory y muchos otros proveedores de identidades. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams.
 
 Consulta [OAuth 2 Simplified para](https://aka.ms/oauth2-simplified) obtener una descripción básica y [OAuth 2.0](https://oauth.net/2/) para obtener la especificación completa.
 
@@ -146,9 +146,9 @@ La siguiente imagen muestra la selección correspondiente en la página de recur
     1. **Dirección URL de inicio de** sesión . Escriba `https://login.microsoftonline.com` .
     1. **Identificador de inquilino**, escriba el id. de directorio  **(espacio empresarial)** que registró anteriormente para la aplicación de identidad de Azure o común según el tipo de cuenta admitido seleccionado al crear la aplicación del proveedor de identidades. Para decidir qué valor asignar, siga estos criterios:
 
-        - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o Cuentas  en cualquier directorio de la organización(Directorio de Microsoft AAD - *Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación AAD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.
+        - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o Cuentas  en cualquier directorio de la organización(Directorio de Microsoft AAD - *Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación Azure AD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.
 
-        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox, Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, AAD la aplicación comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
+        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox, Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, Azure AD la aplicación comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
 
     h. En **Dirección URL de** recurso , escriba `https://graph.microsoft.com/` . Esto no se usa en el ejemplo de código actual.  
     i. Deje **ámbitos en** blanco. La siguiente imagen es un ejemplo:
@@ -175,9 +175,9 @@ La siguiente imagen muestra la selección correspondiente en la página de recur
     1. **Dirección URL Exchange token**. Déjelo en blanco.
     1. **Identificador de inquilino**, escriba el id. de directorio  **(espacio empresarial)** que registró anteriormente para la aplicación de identidad de Azure o común según el tipo de cuenta admitido seleccionado al crear la aplicación del proveedor de identidades. Para decidir qué valor asignar, siga estos criterios:
 
-        - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o Cuentas  en cualquier directorio de la organización(Directorio de Microsoft AAD - *Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación AAD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.
+        - Si seleccionó Cuentas solo en este directorio de la organización *(Solo Microsoft -* Inquilino único) o Cuentas  en cualquier directorio de la organización(Directorio de Microsoft AAD - *Inquilino múltiple)* escriba el identificador de inquilino que registró anteriormente para la aplicación Azure AD. Este será el espacio empresarial asociado con los usuarios que se pueden autenticar.
 
-        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox, Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, AAD la aplicación comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
+        - Si seleccionó Cuentas en cualquier directorio de la organización (cualquier directorio AAD: cuentas de Microsoft multiinquilino y personales, por *ejemplo, Skype, Xbox, Outlook)* escriba la palabra **común** en lugar de un identificador de inquilino. De lo contrario, Azure AD la aplicación comprobará a través del inquilino cuyo identificador se seleccionó y excluirá las cuentas personales de Microsoft.
 
     1. Para **Ámbitos,** escriba una lista delimitada por espacios de permisos de gráfico que esta aplicación requiere, por ejemplo: User.Read User.ReadBasic.All Mail.Read 
 
@@ -567,7 +567,7 @@ En el siguiente paso de diálogo, compruebe la presencia de un token en el resul
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Agregar autenticación a través del servicio bot de Azure](https://aka.ms/azure-bot-add-authentication)
 

@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 828b3fa2886782d8e7a28f506bbb6526b4b9c848
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081087"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212064"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -25,7 +25,7 @@ Actualizar la aplicación personal para que se ejecute en Outlook y Office Inici
 > * Actualizar el manifiesto de la aplicación
 > * Actualizar las referencias del SDK de TeamsJS 
 > * Modificar los encabezados de la directiva de seguridad de contenido
-> * Actualizar el registro AAD aplicación para inicio de sesión único (SSO)
+> * Actualizar el registro Azure AD aplicación para inicio de sesión único (SSO)
 
 La prueba de la aplicación requerirá los siguientes pasos:
 
@@ -63,7 +63,7 @@ Tendrás que usar el esquema de manifiesto de vista previa del desarrollador de 
 
 Puedes usar Teams Toolkit para actualizar el manifiesto de la aplicación o aplicar los cambios manualmente:
 
-# <a name="teams-toolkit"></a>[Teams Toolkit](#tab/manifest-teams-toolkit)
+# <a name="teams-toolkit"></a>[Kit de herramientas de Teams](#tab/manifest-teams-toolkit)
 
 1. Abra la *paleta Comandos*: `Ctrl+Shift+P`
 1. Ejecute el `Teams: Upgrade Teams manifest to support Outlook and Office apps` comando y seleccione el archivo de manifiesto de la aplicación. Los cambios se realizarán en su lugar.
@@ -120,9 +120,9 @@ Si la aplicación [](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/C
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-aad-app-registration-for-sso"></a>Actualizar AAD de aplicaciones para SSO
+## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
 
-Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), sin embargo, deberá agregar varios identificadores de aplicación cliente al registro de aplicación de AAD de la aplicación de pestaña en el portal de registros de *aplicaciones del* inquilino.
+Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams,](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)sin embargo, deberá agregar varios identificadores de aplicación cliente al registro de aplicación Azure AD de la aplicación de pestaña en el portal de registros de *aplicaciones del* inquilino.
 
 1. Inicie sesión en [Azure Portal con](https://portal.azure.com) su cuenta de espacio aislado.
 1. Abra la **hoja Registros de aplicaciones.**

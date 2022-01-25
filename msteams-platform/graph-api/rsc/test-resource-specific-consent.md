@@ -5,13 +5,13 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: autorización de OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: fc926e307c2e3ee5d1336c09e264930abe20d9d0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: autorización de OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: fe3819b0da9783a6cf3aacac08a6045337e27600
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887723"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212485"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos de recursos en Teams
 
@@ -23,7 +23,7 @@ El consentimiento específico de recursos (RSC) es una integración de api de Mi
 > [!NOTE]
 > Para probar los permisos de RSC, el archivo de manifiesto Teams aplicación debe incluir una clave **webApplicationInfo** rellenada con los campos siguientes:
 >
-> - **id:** el Azure AD de la aplicación, consulta [Registrar la aplicación en el portal Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
+> - **id:** el Azure AD de la aplicación, consulta [Registrar la aplicación en el portal Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)
 > - **resource**: Any string, see the note in [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **permisos de aplicación:** permisos RSC para la aplicación, consulta [Permisos específicos de recursos](resource-specific-consent.md#resource-specific-permissions).
 
@@ -81,7 +81,7 @@ El consentimiento específico de recursos (RSC) es una integración de api de Mi
 >[!NOTE]
 >Si la aplicación está pensada para admitir la instalación en ámbitos de equipo y chat, los permisos de equipo y chat se pueden especificar en el mismo manifiesto en `applicationPermissions` .
 
->Si la aplicación está destinada a tener acceso a las API de llamadas/medios, el debe ser el identificador AAD aplicación `webApplicationInfo.Id` de un servicio de bot de [Azure](/graph/cloud-communications-get-started#register-a-bot).
+>Si la aplicación está destinada a tener acceso a las API de llamadas/medios, el debe ser el identificador de aplicación Azure AD de un servicio `webApplicationInfo.Id` de bot de [Azure](/graph/cloud-communications-get-started#register-a-bot).
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Probar los permisos RSC agregados a un equipo mediante la aplicación Postman
 
@@ -105,7 +105,7 @@ Para comprobar si la carga de solicitud de API está respetando los permisos RSC
 * `azureADAppId`: El identificador de aplicación Azure AD aplicación.
 * `azureADAppSecret`: la Azure AD de la aplicación.
 * `token_scope`: el ámbito es necesario para obtener un token. establezca el valor en https://graph.microsoft.com/.default .
-* `tenantId`: el nombre o el AAD de objeto del inquilino.
+* `tenantId`: el nombre o el Azure AD de objeto del inquilino.
 * `chatId`: Puede obtener el identificador de subproceso de chat del Teams *web* de la siguiente manera:
 
     1. En el Teams web, seleccione **Chat** en la barra de navegación de la izquierda.
@@ -133,7 +133,7 @@ Ejecute toda la colección de permisos para cada llamada a la API. Los permisos 
     2. [Probar los permisos RSC agregados a un chat con Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Compruebe todos los códigos de estado de respuesta para confirmar que las llamadas API específicas han fallado con un código de estado **HTTP 403**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [API Graph Microsoft y Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 * [Consentimiento específico del recurso](~/graph-api/rsc/resource-specific-consent.md)

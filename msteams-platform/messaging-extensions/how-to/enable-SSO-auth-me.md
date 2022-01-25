@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo habilitar la compatibilidad con SS
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: de0f08cf73c5ba353398693b95c94d45be2eb727
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178254"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212555"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Compatibilidad con inicio de sesión único para extensiones de mensajería
  
@@ -21,8 +21,9 @@ Este documento le guía sobre cómo habilitar el SSO y almacenar el token de aut
 ## <a name="prerequisites"></a>Requisitos previos
 
 Los requisitos previos para habilitar SSO para extensiones de mensajería y desafutización de vínculos son los siguientes:
+
 * Debe tener una [cuenta de Azure.](https://azure.microsoft.com/free/)
-* Debes configurar la aplicación a través del portal de AAD y actualizar el manifiesto de la aplicación Teams tu bot tal como se define en registrar la aplicación AAD [portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
+* Debes configurar la aplicación Azure AD través del portal de Azure AD y actualizar el manifiesto de la aplicación Teams tu bot tal como se define en registrar la aplicación Azure AD [portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
 
 > [!NOTE]
 > Para obtener más información sobre cómo crear una cuenta de Azure y actualizar el manifiesto de la aplicación, consulte [Single sign-on (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).

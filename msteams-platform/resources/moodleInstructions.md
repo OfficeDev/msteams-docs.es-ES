@@ -1,17 +1,17 @@
 ---
 title: Instalar Moodle LMS
 description: Cómo instalar y configurar la aplicación de integración de Moodle para Microsoft Teams
-keywords: Teams Complementos de integración de aplicaciones de Moodle
+keywords: Teams de integración de aplicaciones de Moodle
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: f87264adc75e504feddc10f470f739747fb3d96b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7460a4f6e1a15df30ebc9b1c50f43b561908c7d4
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888135"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212387"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -20,7 +20,7 @@ En este artículo aprenderá a instalar el LMS de Moodle.
 > [!NOTE]
 > Para ayudar a los administradores de TI a configurar fácilmente La integración de Moodle y Teams, los complementos de código Microsoft 365 de Moodle se actualizan para lo siguiente:
 >
-> * Registro automático del servidor de Moodle [con Azure Active Directory (Azure AD).](https://azure.microsoft.com/services/active-directory/)
+> * Registro automático del servidor de Moodle con [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
 >
 > * Implementación con un solo clic del bot asistente de Moodle en Azure.
 >
@@ -57,7 +57,7 @@ Asegúrese de instalar y descargar lo siguiente antes de continuar con la instal
     >
     > Además, los complementos [Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams) son muy recomendables.
 
-### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Complementos de Moodle
+### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 complementos de Moodle
 
 1. Inicie sesión en el servidor de  Moodle como administrador y seleccione Administración del sitio en el bloque [Configuración](https://docs.moodle.org/22/en/Settings_block) ubicado en el panel de navegación izquierdo.
 
@@ -75,7 +75,7 @@ Asegúrese de instalar y descargar lo siguiente antes de continuar con la instal
     >
     > * Si no tiene un sitio de Moodle existente, vaya al repositorio [de Moodle en Azure](https://github.com/azure/moodle) e implemente rápidamente una instancia de Moodle y personalízala según sus necesidades.
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory-azure-ad"></a>2. Configurar la conexión entre los complementos Microsoft 365 y Azure Active Directory (Azure AD)
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory"></a>2. Configure la conexión entre los complementos Microsoft 365 y Azure Active Directory
 
 Debe configurar la conexión entre los complementos Microsoft 365 y Azure AD.
 
@@ -228,7 +228,7 @@ Después de generar el identificador de aplicación y la contraseña, implemente
 
 Una vez que los recursos hayan completado la implementación en Azure, debe configurar los complementos Microsoft 365 Moodle con un punto de conexión de mensajería. Debe obtener el punto de conexión del bot en Azure:
 
-1. Inicie sesión en [Azure Portal](https://portal.azure.com).
+1. Inicie sesión en el [Azure Portal](https://portal.azure.com).
 
 1. En el panel izquierdo, seleccione **Grupos de recursos** y seleccione el grupo de recursos que usó o creó, mientras implementa el bot.
 

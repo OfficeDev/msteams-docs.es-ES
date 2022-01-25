@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c0bb7eb75ee982e7c08d3039e59f03fc7f18146
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 5aa701bc884a290c5030d54c67d31dd47d794d94
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768467"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212471"
 ---
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>Administrar varios entornos en Teams Toolkit
 
@@ -78,8 +78,8 @@ En la tabla siguiente se enumeran los escenarios comunes admitidos para la provi
 | Escenarios | Ubicación| Descripción |
 | --- | --- | --- |
 | Personalizar recurso de Azure | <ul> <li>Archivos Bicep en `templates/azure` .</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [Personalizar ARM parámetros y plantillas](provision.md#customize-arm-parameters-and-templates). |
-| Reutilizar la aplicación AAD existente para Teams aplicación | <ul> <li>`auth` sección en `.fx/config.<envName>.json` .</li> </ul> |  [Usa una aplicación de AAD existente para tu Teams aplicación](provision.md#use-an-existing-aad-app-for-your-teams-app). |
-| Reutilizar la aplicación AAD existente para bot | <ul> <li>`bot` sección en `.fx/config.<envName>.json` .</li> </ul> | [Usa una aplicación de AAD existente para el bot](provision.md#use-an-existing-aad-app-for-your-bot). |
+| Reutilizar la aplicación Azure AD existente para Teams aplicación | <ul> <li>`auth` sección en `.fx/config.<envName>.json` .</li> </ul> |  [Usa una aplicación de Azure AD existente para tu Teams aplicación](provision.md#use-an-existing-azure-ad-app-for-your-teams-app). |
+| Reutilizar la aplicación Azure AD existente para bot | <ul> <li>`bot` sección en `.fx/config.<envName>.json` .</li> </ul> | [Usa una aplicación Azure AD existente para el bot](provision.md#use-an-existing-azure-ad-app-for-your-bot). |
 | Omitir la adición de usuarios al aprovisionar SQL | <ul> <li>`skipAddingSqlUser` propiedad en `.fx/config.<envName>.json` .</li> </ul> | [Omitir la adición de usuario SQL base de datos](provision.md#skip-adding-user-for-sql-database). |
 | Personalizar manifiesto de aplicación | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` sección en `.fx/config.<envName>.json` .</li>  </ul> | [Personalizar Teams de aplicación en Teams Toolkit](TeamsFx-manifest-customization.md). |
 

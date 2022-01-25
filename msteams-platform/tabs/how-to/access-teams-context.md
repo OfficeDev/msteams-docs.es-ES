@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216107"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212422"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -24,7 +24,7 @@ La pestaña requiere información contextual para mostrar contenido relevante:
 El contexto sobre el usuario, el equipo o la empresa puede ser especialmente útil cuando:
 
 * Creas o asocias recursos en la aplicación con el usuario o equipo especificado.
-* Se inicia un flujo de autenticación Azure Active Directory (AAD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
+* Se inicia un flujo de autenticación Azure Active Directory otro proveedor de identidades y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
 
 Para obtener más información, consulte [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -44,12 +44,12 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 
 * {entityId}: el id. que proporcionó para el elemento en esta pestaña al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md) por primera vez.
 * {subEntityId}: el identificador que proporcionó al generar un [vínculo](~/concepts/build-and-test/deep-links.md) profundo para un elemento específico dentro de esta pestaña. Esto debe usarse para restaurar a un estado específico dentro de una entidad; por ejemplo, desplazarse a o activar un elemento de contenido específico.
-* {loginHint}: valor adecuado como sugerencia de inicio de sesión para AAD. Normalmente, este es el nombre de inicio de sesión del usuario actual en su inquilino principal.
+* {loginHint}: valor adecuado como sugerencia de inicio de sesión para Azure AD. Normalmente, este es el nombre de inicio de sesión del usuario actual en su inquilino principal.
 * {userPrincipalName}: el nombre principal de usuario del usuario actual en el inquilino actual.
-* {userObjectId}: el AAD de objeto del usuario actual en el inquilino actual.
+* {userObjectId}: el Azure AD de objeto del usuario actual en el inquilino actual.
 * {theme}: el tema actual de la interfaz de usuario (UI) como `default` , `dark` o `contrast` .
 * {groupId}: el identificador del grupo Office 365 en el que reside la pestaña.
-* {tid}: el AAD de inquilino del usuario actual.
+* {tid}: el id. del espacio empresarial de Azure AD del usuario actual.
 * {locale}: la configuración regional actual del usuario con el formato languageId-countryId(es-es).
 
 > [!NOTE]
@@ -145,7 +145,7 @@ El `theme` argumento de la función es una cadena con un valor de , o `default` 
 > [!div class="nextstepaction"]
 > [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de pestañas](../../tabs/design/tabs.md)
 * [Teams pestañas](~/tabs/what-are-tabs.md)

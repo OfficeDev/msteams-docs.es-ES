@@ -1,17 +1,17 @@
 ---
-title: Registrar llamadas y reuniones bot para Microsoft Teams
+title: Registro de llamadas y bots de reuniones para Microsoft teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams, crear un nuevo bot o agregar funcionalidad de llamada y agregar permisos de gráfico.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 2d2a3411d8db09c6bdf2199efb9cb5e721701135
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062512"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212492"
 ---
-# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrar llamadas y reuniones bot para Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
 Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un bot de Microsoft Teams normal con las siguientes características adicionales usadas para registrar el bot:
 
@@ -78,13 +78,13 @@ En la tabla siguiente se proporciona una lista de permisos de aplicación para r
 
 ### <a name="assign-permissions"></a>Asignar permisos
 
-Debe configurar los permisos de aplicación para el bot por adelantado mediante [Azure Portal](https://aka.ms/aadapplist) si prefiere usar el punto de conexión Azure Active Directory [(AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Debe configurar los permisos de aplicación para el bot por adelantado mediante [Azure Portal](https://aka.ms/aadapplist) si prefiere usar el punto de conexión [Azure Active Directory V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obtener el consentimiento del administrador de inquilinos
 
-Para las aplicaciones que usan el punto de conexión AAD V1, un administrador de inquilinos puede dar su consentimiento a los permisos de la aplicación mediante [Azure Portal](https://portal.azure.com) cuando la aplicación está instalada en su organización. Como alternativa, puedes proporcionar una experiencia de registro en la aplicación a través de la cual los administradores pueden dar su consentimiento a los permisos configurados. Una vez que el consentimiento del administrador AAD, la aplicación puede solicitar tokens sin tener que volver a solicitar el consentimiento.
+Para las aplicaciones que usan el punto de conexión Azure AD V1, un administrador de inquilinos puede dar su consentimiento a los permisos de la aplicación mediante [Azure Portal](https://portal.azure.com) cuando la aplicación está instalada en su organización. Como alternativa, puedes proporcionar una experiencia de registro en la aplicación a través de la cual los administradores pueden dar su consentimiento a los permisos configurados. Una vez que el consentimiento del administrador Azure AD, la aplicación puede solicitar tokens sin tener que volver a solicitar el consentimiento.
 
-Puede confiar en un administrador para conceder los permisos que necesita la aplicación en [Azure Portal](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el AAD de `/adminconsent` V2. Para obtener más información, vea [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/uth-v2-service#3-get-administrator-consent).
+Puede confiar en un administrador para conceder los permisos que necesita la aplicación en [Azure Portal](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el Azure AD de `/adminconsent` V2. Para obtener más información, vea [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Para crear la dirección URL de consentimiento de administrador del espacio empresarial, se requiere un URI de redireccionamiento configurado o una dirección URL de respuesta en el [portal de registro de](https://apps.dev.microsoft.com/) aplicaciones. Para agregar direcciones URL de respuesta para el bot, acceda al registro del bot, elija **Opciones avanzadas** Editar manifiesto  >  **de aplicación**. Agregue la dirección URL de redireccionamiento a la `replyUrls` colección.

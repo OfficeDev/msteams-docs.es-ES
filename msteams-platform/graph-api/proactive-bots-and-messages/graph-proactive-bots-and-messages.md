@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: instalación proactiva de chat de mensajería de teams Graph
-ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 6802c7aed4664969d32b7b183a2dbe6729939493
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185431"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212408"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalación proactiva de aplicaciones con Graph API para enviar mensajes
 
@@ -39,14 +39,14 @@ Los permisos de tipo de recurso [teamsAppInstallation](/graph/api/resources/team
 
 Para usar estos permisos, debe agregar una clave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) al manifiesto de la aplicación con los siguientes valores:
 
-* **id:** El identificador Azure Active Directory aplicación (AAD).
+* **id:** El Azure Active Directory de la aplicación.
 * **recurso:** la dirección URL del recurso para la aplicación.
 
 > [!NOTE]
 >
 > * El bot requiere permisos delegados de aplicación y no de usuario porque la instalación es para otros usuarios.
 >
-> * Un AAD de inquilinos debe [conceder explícitamente permisos a una aplicación](/graph/security-authorization#grant-permissions-to-an-application). Después de conceder permisos a la aplicación, todos los miembros del AAD obtienen los permisos concedidos.
+> * Un Azure AD de inquilinos debe [conceder explícitamente permisos a una aplicación](/graph/security-authorization#grant-permissions-to-an-application). Después de conceder permisos a la aplicación, todos los miembros del Azure AD obtienen los permisos concedidos.
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Habilitar la instalación proactiva de aplicaciones y la mensajería
 

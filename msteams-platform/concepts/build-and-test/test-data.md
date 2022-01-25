@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888415"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212562"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino Microsoft 365 prueba
 
@@ -168,7 +168,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
 
             $creds = Get-Credential
 
-            # Connecting to AAD PowerShell
+            # Connecting to Azure AD PowerShell
             Connect-AzureAD -Credential $creds | Out-Null
 
             # Connect to Microsoft Teams PowerShell
@@ -246,7 +246,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
 
 5. Una vez finalizado el script, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Depurar la pestaña](~/tabs/how-to/developer-tools.md) 
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)

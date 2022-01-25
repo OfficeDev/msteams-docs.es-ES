@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569423"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212029"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -55,7 +55,7 @@ El manifiesto de la aplicación debe incluir el siguiente fragmento de código:
 
 La propiedad determina lo que debe mostrarse cuando un usuario invoca una aplicación en una reunión en función del lugar en el que el usuario `context` invoca la aplicación. La pestaña y las propiedades te permiten determinar dónde debe aparecer `context` `scopes` la aplicación. Las pestañas del `team` ámbito or pueden tener más de un `groupchat` contexto. Estos son los valores de la propiedad desde `context` la que puede usar todos o algunos de los valores:
 
-|Valor|Description|
+|Valor|Descripción|
 |---|---|
 | **channelTab** | Pestaña en el encabezado de un canal de grupo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios, no en el contexto de un equipo o reunión. |
@@ -125,7 +125,7 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 
 > [!NOTE]
 > * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams módulo de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no `from.id` `from` en los `from.aadObjectId` metadatos de la solicitud. `from.id`es el identificador de usuario `from.aadObjectId` y es el Azure Active Directory (AAD) del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Si quieres que la aplicación admita usuarios anónimos, la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no `from.id` `from` en los `from.aadObjectId` metadatos de la solicitud. `from.id`es el identificador de usuario `from.aadObjectId` y es el Azure Active Directory del usuario. Para obtener más información, vea [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) y create and send the task [module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 
@@ -151,7 +151,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 > [!div class="nextstepaction"]
 > [Referencias API de aplicaciones de reuniones](API-references.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

@@ -6,12 +6,12 @@ keywords: control de selector de personas
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0c4bac7a92042d339f35c4b3eeb2c7302e5f0e1a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157366"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212583"
 ---
 # <a name="integrate-people-picker"></a>Integrar Selector de personas  
 
@@ -45,9 +45,9 @@ La `selectPeople` API incluye las siguientes configuraciones de entrada:
 |Parámetro Configuration|Tipo|Descripción| Valor predeterminado|
 |-----|------|--------------|------|
 |`title`| Cadena| Es un parámetro opcional. Establece el título del control Selector de personas. | Seleccionar personas|
-|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar los ID de AAD de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
+|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar los Azure AD de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
 |`openOrgWideSearchInChatOrChannel`|Booleano | Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas en el ámbito de toda la organización incluso si la aplicación se agrega a un chat o canal. |Falso|
-|`singleSelect`|Booleano|Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas que restringe la selección a un solo usuario. |Falso|
+|`singleSelect`|Boolean|Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas que restringe la selección a un solo usuario. |Falso|
 
 En la siguiente imagen se muestra la experiencia del selector de personas en una aplicación web de ejemplo:
 
@@ -82,7 +82,7 @@ En la siguiente imagen se muestra la experiencia del selector de personas en una
 
 Debes asegurarte de controlar los errores correctamente en la aplicación web. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
 
-|Código de error |  Nombre del error     | Condition|
+|Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al iniciar el Selector de personas.|
@@ -90,7 +90,7 @@ Debes asegurarte de controlar los errores correctamente en la aplicación web. E
 | **8000** | USER_ABORT |El usuario canceló la operación.|
 | **9000** | OLD_PLATFORM | El usuario se encuentra en una compilación de plataforma antigua donde la implementación de la API no está presente.  La actualización de la compilación resuelve el problema.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b358b7bbdd780851eedb78ca2151bc062d402f99
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 597896d79408fa596e9949166fceda97ef440d07
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059619"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212008"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
@@ -49,7 +49,7 @@ Al planear cómo monetizar la aplicación Teams, estos son algunos aspectos a te
 
 * Decida el modelo de suscripción. Una oferta SaaS transaccionable puede incluir varios planes de suscripción. Los planes de suscripción públicos disponibles para cualquier persona son más comunes, pero es posible que también quieras dirigirte a clientes específicos con ofertas solo para ellos. Para obtener más información, [vea ofertas privadas en el mercado comercial de Microsoft.](/azure/marketplace/private-offers)
 * Lee la opción Vender a través de [ *Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para la oferta SaaS, que es necesaria si quieres que los usuarios compren planes de suscripción para tu aplicación directamente a través de la Teams tienda.
-* Obtenga información [sobre Azure Active Directory (Azure AD) de](/azure/marketplace/azure-ad-saas) inicio de sesión único (SSO) ayuda a sus clientes a comprar y administrar suscripciones. (Azure AD SSO es necesario para Teams aplicaciones con ofertas SaaS).
+* Obtenga información [sobre Azure Active Directory inicio de sesión único (SSO)](/azure/marketplace/azure-ad-saas) ayuda a sus clientes a comprar y administrar suscripciones. (Azure AD SSO es necesario para Teams aplicaciones con ofertas SaaS).
 * Comprenda que es responsable de administrar y pagar la infraestructura necesaria para admitir el uso de sus clientes de su oferta saas.
 * Planee el móvil. Para evitar infringir las directivas de la tienda de aplicaciones de terceros, la aplicación no puede incluir vínculos que permitan a los usuarios comprar planes de suscripción en el móvil. Sin embargo, aún puedes indicar si la aplicación tiene características que requieren un plan de suscripción. Para obtener más información, vea las directivas relacionadas [de certificación del mercado comercial.](/legal/marketplace/certification-policies#114048-mobile-experience)
 

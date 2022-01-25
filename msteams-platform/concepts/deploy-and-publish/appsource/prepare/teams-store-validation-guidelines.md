@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: HT
+ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768283"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212127"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -271,7 +271,7 @@ El manifiesto de la aplicación de Teams define la configuración de la aplicaci
 
 * El manifiesto debe cumplir con un esquema de manifiesto publicado de forma pública. Para obtener más información, vea [referencia de manifiesto](~/resources/schema/manifest-schema.md). No deberá enviarse la aplicación con una versión preliminar del manifiesto.
 * Si la aplicación incluye un bot o una extensión de mensajería, los detalles del manifiesto de la aplicación deben ser coherentes con los metadatos de Bot Framework, incluidos el nombre del bot, el logotipo, el vínculo a la directiva de privacidad y el vínculo a las condiciones de servicio.
-* Si la aplicación usa Azure Active Directory (Azure AD) para la autenticación, incluya el identificador de aplicación (cliente) Azure AD en el manifiesto. Para obtener más información, consulte la referencia [manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Si la aplicación usa Azure Active Directory autenticación, incluya el identificador Azure AD aplicación (cliente) en el manifiesto. Para obtener más información, consulte la [referencia del manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Iconos de la aplicación
 
@@ -1423,7 +1423,7 @@ Si la aplicación usa las [API de fuente de actividades proporcionadas por Micro
 
 El Programa de cumplimiento de aplicaciones de Microsoft 365 está destinado a ayudar a las organizaciones a evaluar y administrar el riesgo mediante la evaluación de la información de seguridad y cumplimiento de su aplicación. Si publica una aplicación en la tienda de Teams, debe completar los siguientes niveles del programa: 
 
-  * **Verificación de editores**: Ayuda a los administradores y usuarios finales a comprender la autenticidad de los desarrolladores de aplicaciones que se integran en la plataforma de identidad de Microsoft. Una vez completado, aparecerá un distintivo azul de **verificado** en el diálogo de consentimiento de Azure Active Directory (Azure AD) y en otras pantallas. Para obtener más información, consulte [Marcar la aplicación como verificada por el publicador](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+  * **Verificación de editores**: Ayuda a los administradores y usuarios finales a comprender la autenticidad de los desarrolladores de aplicaciones que se integran en la plataforma de identidad de Microsoft. Cuando se completa, se muestra un distintivo **azul** comprobado en el Azure Active Directory de consentimiento y otras pantallas. Para obtener más información, consulte [Marcar la aplicación como verificada por el publicador](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row::: 
     :::column span="":::

@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e68596e9d109fcfa54708a76570874951fe326b2
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: d6365cf7e513a1fbf8b5e4f443fdcf2c805f3b10
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768618"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212373"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para aprovisionar recursos en la nube
 
@@ -39,7 +39,7 @@ La aprovisionamiento se realiza con un solo comando en Teams Toolkit para Visual
 
 Al desencadenar el comando de aprovisionamiento en Teams Toolkit CLI de TeamsFx, puede obtener los siguientes recursos:
 
-* AAD aplicación en el inquilino Microsoft 365 usuario
+* Azure AD aplicación en el inquilino Microsoft 365 usuario
 * Teams registro de la aplicación en la Microsoft 365 de la plataforma de Teams inquilino
 * Recursos de Azure en la suscripción de Azure seleccionada
 
@@ -95,9 +95,9 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Recursos creados al incluir Azure Key Vault en el proyecto
 
-|Recursos|Finalidad de este recurso|
+|Resources|Finalidad de este recurso|
 |----------|--------------------------------|
-| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, AAD secreto de cliente de la aplicación) usados por otros servicios de Azure |
+| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, Azure AD secreto de cliente de aplicaciones) usados por otros servicios de Azure |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure |
 
 ## <a name="customize-resource-provision"></a>Personalizar la provisión de recursos
@@ -161,18 +161,18 @@ En la tabla siguiente se proporciona una lista de parámetros predefinidos dispo
 
 Mientras tanto, los siguientes parámetros están disponibles con valores rellenados durante la provisión. El propósito de estos marcadores de posición es garantizar que podamos crear nuevos recursos en un entorno nuevo. Los valores reales se resuelven desde `.fx/states/state.{env}.json` .
 
-##### <a name="aad-application-related-parameters"></a>AAD parámetros relacionados con la aplicación
+##### <a name="azure-ad-application-related-parameters"></a>Azure AD parámetros relacionados con la aplicación
 
 | Nombre del parámetro | Soporte de posición de valor predeterminado | Significado del soporte de la posición | Cómo personalizar |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | El identificador de cliente de AAD de la aplicación creado durante la provisión | [Personalizar el valor](#use-an-existing-aad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Secreto de cliente de aplicación AAD la aplicación creada durante la provisión | [Personalizar el valor](#use-an-existing-aad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Identificador de inquilino de la aplicación AAD aplicación | [Personalizar el valor](#use-an-existing-aad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | Host de autoridad de OAuth de la aplicación AAD aplicación | [Personalizar el valor](#use-an-existing-aad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Identificador de cliente de AAD aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-aad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Secreto de cliente AAD aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-aad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | Identificador de cliente de AAD apim creado durante la aprovisionamiento | Eliminar el marcador de posición y rellenar el valor real |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Secreto de cliente de AAD apim creado durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | El identificador de cliente de Azure AD la aplicación creada durante la aprovisionamiento | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Secreto de cliente de aplicación Azure AD la aplicación creada durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Identificador de inquilino de la aplicación Azure AD aplicación | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | Host de autoridad de OAuth de la aplicación Azure AD aplicación | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Identificador de cliente de Azure AD de aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Secreto de cliente de Azure AD de aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-bot) |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | Identificador de cliente de Azure AD apim creado durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Secreto de cliente de Azure AD apim creado durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
 
 ##### <a name="azure-resource-related-parameters"></a>Parámetros relacionados con recursos de Azure
 
@@ -212,15 +212,15 @@ Para garantizar que la herramienta TeamsFx funciona correctamente, asegúrese de
 
 Puede personalizar los siguientes escenarios:
 
-#### <a name="use-an-existing-aad-app-for-your-teams-app"></a>Usar una aplicación de AAD existente para tu Teams aplicación
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Usar una aplicación de Azure AD existente para tu Teams aplicación
 
-Puedes agregar el siguiente fragmento de código de configuración al archivo para usar una aplicación AAD creada por ti mismo `.fx/configs/config.{env}.json` para tu Teams aplicación. Para crear una aplicación AAD, consulta <https://aka.ms/teamsfx-existing-aad-doc> .
+Puedes agregar el siguiente fragmento de código de configuración al archivo para usar una aplicación Azure AD creada por ti `.fx/configs/config.{env}.json` mismo para tu Teams aplicación. Para crear una Azure AD, consulta <https://aka.ms/teamsfx-existing-aad-doc> .
 
 ```json
 "auth": {
-    "clientId": "<your AAD app client id>",
+    "clientId": "<your Azure AD app client id>",
     "clientSecret": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}",
-    "objectId": "<your AAD app object id>",
+    "objectId": "<your Azure AD app object id>",
     "accessAsUserScopeId": "<id of the access_as_user scope>"
 }
 ```
@@ -228,15 +228,15 @@ Puedes agregar el siguiente fragmento de código de configuración al archivo pa
 Después de agregar el fragmento de código, agregue el secreto a la variable de entorno relacionada para que la herramienta pueda resolver el secreto real durante la provisión.
 
 > [!NOTE]
-> Asegúrate de no compartir la misma AAD aplicación en varios entornos. Si no tienes permiso para actualizar la aplicación AAD, puedes obtener una advertencia con instrucciones sobre cómo actualizar manualmente la AAD aplicación. Sigue las instrucciones para actualizar la aplicación AAD después de aprovisionar.
+> Asegúrate de no compartir la misma Azure AD aplicación en varios entornos. Si no tienes permiso para actualizar la aplicación Azure AD, puedes obtener una advertencia con instrucciones sobre cómo actualizar manualmente la Azure AD aplicación. Sigue las instrucciones para actualizar la aplicación Azure AD después de aprovisionar.
 
-#### <a name="use-an-existing-aad-app-for-your-bot"></a>Usar una aplicación de AAD existente para el bot
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Usar una aplicación de Azure AD existente para el bot
 
-Puedes agregar el siguiente fragmento de código de configuración al archivo para usar una aplicación AAD creada por `.fx/configs/config.{env}.json` ti mismo para el bot:
+Puedes agregar el siguiente fragmento de código de configuración al archivo para usar una aplicación Azure AD creada por `.fx/configs/config.{env}.json` ti mismo para el bot:
 
 ```json
 "bot": {
-    "appId": "<your AAD app client id>",
+    "appId": "<your Azure AD app client id>",
     "appPassword": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}"
 }
 ```
@@ -365,6 +365,6 @@ Puedes seguir [aprovisionar SharePoint aplicación basada en archivos](/microsof
 
 ## <a name="see-also"></a>Vea también
 
-* [Implementar Teams aplicación en la nube](deploy.md)
+* [Implementar la aplicación de Teams en la nube](deploy.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)
 * [Colaborar con otros desarrolladores en Teams proyecto](TeamsFx-collaboration.md)

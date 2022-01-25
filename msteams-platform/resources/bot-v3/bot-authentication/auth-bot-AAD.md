@@ -1,22 +1,22 @@
 ---
 title: Autenticación para bots que usan Azure Active Directory
 description: Describe Azure AD autenticación en Teams y cómo usarla en los bots
-keywords: bots de autenticación de teams AAD
+keywords: bots de autenticación de teams Azure AD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f13e561e94029f007ff055627f335d00ee1c441
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 7456580b3c0cd45ed9f2032e08068d542986cfea
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720074"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212401"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Autenticar un usuario en un bot de Microsoft Teams de autenticación
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Es posible que quieras usar muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener el acceso. Los Servicios incluyen Facebook, Twitter y Teams. Los usuarios de Teams tienen información de perfil de usuario almacenada en Azure Active Directory (Azure AD) mediante Microsoft Graph. Este tema se centra en la autenticación mediante Azure AD para obtener acceso.
+Es posible que quieras usar muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener el acceso. Los Servicios incluyen Facebook, Twitter y Teams. Los usuarios de Teams tienen información de perfil de usuario almacenada en Azure Active Directory con Microsoft Graph. Este tema se centra en la autenticación mediante Azure AD para obtener acceso.
 OAuth 2.0 es un estándar abierto para la autenticación que usan Azure AD y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. En los ejemplos siguientes se usa el flujo de concesión implícita de OAuth 2.0 para leer finalmente la información de perfil del usuario de Azure AD y Microsoft Graph.
 
 El flujo de autenticación descrito en este tema es similar a las pestañas, excepto que las pestañas pueden usar el flujo de autenticación basado en web y los bots requieren que la autenticación se controle desde el código. Los conceptos de este tema también serán útiles al implementar la autenticación desde la plataforma móvil.

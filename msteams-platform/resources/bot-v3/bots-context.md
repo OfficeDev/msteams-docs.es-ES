@@ -5,12 +5,12 @@ keywords: contexto de bots de teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4d737564a77cdccc693a8fa3889476a1cf015be2
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157409"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212043"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtener contexto para el Microsoft Teams bot
 
@@ -26,7 +26,7 @@ El bot puede tener acceso a contexto adicional sobre el equipo o el chat, como e
 
 ## <a name="fetch-the-team-roster"></a>Capturar la lista de equipos
 
-El bot puede consultar la lista de miembros del equipo y sus perfiles básicos. Los perfiles básicos incluyen Teams de usuario e información Azure Active Directory (AAD), como el nombre y el identificador de objeto. Puede usar esta información para correlacionar identidades de usuario. Por ejemplo, compruebe si un usuario que ha iniciado sesión en una pestaña a través de las credenciales de AAD es un miembro del equipo.
+El bot puede consultar la lista de miembros del equipo y sus perfiles básicos. Los perfiles básicos incluyen Teams de usuario e información Azure Active Directory como el nombre y el identificador de objeto. Puede usar esta información para correlacionar identidades de usuario. Por ejemplo, compruebe si un usuario ha iniciado sesión en una pestaña a través Azure AD credenciales es un miembro del equipo.
 
 ### <a name="rest-api-example"></a>Ejemplo de API de REST
 

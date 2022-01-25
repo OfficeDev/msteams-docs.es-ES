@@ -1,19 +1,19 @@
 ---
-title: Microsoft Teams Flujo de autenticación para bots
+title: Microsoft Teams de autenticación para bots
 description: Describe Microsoft Teams de autenticación en bots con ejemplo de código.
 keywords: bots de flujo de autenticación de teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9413a4a894ff7b67a2158f34c35bdfecd935b7a5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 05f175941d7e1daa6e0ff26571499582af89cd21
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887862"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212436"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flujo de autenticación para bots en Microsoft Teams
 
-OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams; [esta es una buena introducción](https://aaronparecki.com/oauth-2-simplified/) que es más fácil de seguir que la [especificación formal](https://oauth.net/2/). El flujo de autenticación para pestañas y bots es un poco diferente: las pestañas son muy similares a los sitios web para que puedan usar OAuth 2.0 directamente, mientras que los bots no son y deben hacer algunas cosas de forma diferente, pero los conceptos básicos son idénticos.
+OAuth 2.0 es un estándar abierto para la autenticación y autorización que usan Azure Active Directory y muchos otros proveedores de identidades. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams; [esta es una buena introducción](https://aaronparecki.com/oauth-2-simplified/) que es más fácil de seguir que la [especificación formal](https://oauth.net/2/). El flujo de autenticación para pestañas y bots es un poco diferente: las pestañas son muy similares a los sitios web para que puedan usar OAuth 2.0 directamente, mientras que los bots no son y deben hacer algunas cosas de forma diferente, pero los conceptos básicos son idénticos.
 
 Consulte el ejemplo Microsoft Teams [](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) de autenticación de repositorio de GitHub para ver un ejemplo que muestra el flujo de autenticación para bots que usan Node.js y el tipo de concesión de código de autorización [de OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/).
 
@@ -59,4 +59,4 @@ Código de ejemplo que muestra el proceso de autenticación del bot:
 
 ## <a name="see-also"></a>Consulte también
 
-[Agregar autenticación al bot Teams usuario](add-authentication.md)
+[Agregar autenticación al bot de Teams](add-authentication.md)

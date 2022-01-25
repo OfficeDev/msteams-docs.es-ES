@@ -5,14 +5,14 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246088"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212415"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación Microsoft Teams publicada
+# <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
 Con la aplicación incluida en la Microsoft Teams, empieza a pensar en cómo mantendrás la aplicación en el futuro y aumentarás las descargas y el uso.
 
@@ -44,7 +44,7 @@ Sin embargo, si realizas alguno de los siguientes cambios en la aplicación, los
 * Agregue una pestaña personal.
 * Agregue una pestaña de canal y grupo.
 * Agregue un conector.
-* Modifique las configuraciones relacionadas con el registro Azure Active Directory aplicación (Azure AD). Para obtener más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modifique las configuraciones relacionadas con el registro Azure Active Directory aplicación. Para obtener más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corregir problemas con la aplicación publicada
 
@@ -60,6 +60,6 @@ Crea el vínculo con la siguiente dirección URL anexada con el identificador de
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) ofrece garantías de que los datos y la privacidad están protegidos y protegidos adecuadamente cuando se instala un Aplicación de Office o complemento de terceros en su ecosistema de Microsoft 365 usuario. La certificación confirma que la aplicación es compatible con las tecnologías de Microsoft, cumple con los procedimientos recomendados de seguridad de aplicaciones en la nube y es compatible con Microsoft.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Vea también
 
 [Monetizar su aplicación a través del Marketplace comercial de Microsoft](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
