@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: a723a0d0d72f032b08addd1df68aa5c2f688d184
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059696"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212022"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -607,11 +607,11 @@ El objeto es una matriz con todos los elementos del tipo `string`.
 
 Objeto **opcional**
 
-Proporcione el id. de aplicación de Azure Active Directory (AAD) e información de Microsoft Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación. Si la aplicación está registrada en AAD, debe proporcionar el id. de aplicación. Los administradores pueden revisar fácilmente los permisos y conceder consentimiento en el Centro de administración de Teams.
+Proporcione su identificador de aplicación de Azure Active Directory e información Microsoft Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación. Si la aplicación está registrada en Azure AD, debe proporcionar el identificador de aplicación. Los administradores pueden revisar fácilmente los permisos y conceder consentimiento en el Centro de administración de Teams.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|Id. de aplicación de AAD de la aplicación. Este identificador debe ser un GUID.|
+|`id`|string|36 caracteres|✔|Azure AD identificador de aplicación de la aplicación. Este identificador debe ser un GUID.|
 |`resource`|string|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** si no usa SSO, asegúrese de introducir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, https://notapplicable para evitar una respuesta de error. |
 |`applicationPermissions`|matriz de cadenas|128 caracteres||Especifique un [consentimiento específico de recurso](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) pormenorizado.|
 
