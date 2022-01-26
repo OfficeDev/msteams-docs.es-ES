@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 64a8de2dc81d7b108dee86acf52a7c4830fb8ca7
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080963"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212464"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -76,7 +76,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 |05/10/2021| Ocultar la aplicación de Teams hasta que el administrador permita mostrar la aplicación.| Diseñar la aplicación > [Ocultar la aplicación de Teams hasta que el administrador la apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |05/10/2021| Planee sus aplicaciones de Teams para dispositivos móviles. | Conceptos básicos de la aplicación > [Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |04/10/2021| Nuevo portal para desarrolladores para Teams introducido a fin de administrar sus aplicaciones de Teams | Herramientas y SDK > [Portal para desarrolladores para Teams](concepts/build-and-test/teams-developer-portal.md) |
-|21/09/2021|Teams admite el identificador de objeto y el UPN de AAD en la mención de usuario para bots y Webhooks entrantes | • Crear tarjetas y módulos de tareas > Crear tarjetas > [ID de objeto y UPN de AAD en la mención del usuario](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > [Tarjetas- Información general](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|21/09/2021|Teams admite el identificador de objeto y el UPN de Azure AD en la mención de usuario para bots y webhooks entrantes | • Crear tarjetas y módulos de tareas > Crear tarjetas > [Id. de objeto y UPN de Azure AD en la mención del usuario](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > [Tarjetas- Información general](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
 |16/08/2021| Compatibilidad con la validación de entrada en Tarjetas adaptables (v1.3 para todas las funcionalidades) y acciones universales (v1.4 para tarjetas enviadas por bots) | • Tarjetas adaptables > Crear tarjetas > [Validación de entrada](/adaptive-cards/authoring-cards/input-validation)</br> • Crear tarjetas y módulos de tareas > Crear tarjetas > Acciones universales para tarjetas adaptables > [Acciones universales para Tarjetas adaptable v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |30/08/2021| La característica de escenas personalizadas en Modo conferencia combina los participantes en una sola escena virtual y coloca sus secuencias de vídeo en ubicaciones predefinidas | Crear aplicaciones para reuniones de Teams > [Personalizar escenas del modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md) |
 |25/08/2021| Guía paso a paso introducida para crear un bot de Teams con inicio de sesión único (SSO).| Agregar autenticación > Bots > [Guía paso a paso para crear un bot de Teams con SSO](sbs-bots-with-sso.yml) |
@@ -206,7 +206,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 | 29/05/2018 | Las tarjetas adaptables se admiten Teams. | [Acciones de tarjeta adaptable en Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 17/04/2018 | Se ha añadido replyToID a la carga para las tarjetas de acciones `Invoke` y `MessageBack`. Esto es especialmente útil si necesita actualizar el mensaje del que provenía la acción de la tarjeta. | [Acciones de tarjeta](~/concepts/cards/cards-actions.md)|
 | 12/04/2018 | Se ha agregado este tema para realizar un seguimiento de los cambios en la interfaz de programación de Teams y en este conjunto de documentación. | [Novedades](~/whats-new.md)|
-| 10/04/2018 | Se han cambiado las direcciones URL de autenticación para usar de forma coherente el identificador de inquilino en la ruta de acceso. | [Flujo de autenticación para pestañas](~/concepts/authentication/auth-flow-tab.md), [Autenticación de pestañas en AAD](~/concepts/authentication/auth-tab-AAD.md)|
+| 10/04/2018 | Se han cambiado las direcciones URL de autenticación para usar de forma coherente el identificador de inquilino en la ruta de acceso. | [Flujo de autenticación para pestañas](~/concepts/authentication/auth-flow-tab.md), [Autenticación de pestañas en Azure AD](~/concepts/authentication/auth-tab-AAD.md)|
 | 06/04/2018 | Se han añadido instrucciones de diseño para usar el cuadro de comandos. |[Cuadro de comandos](~/resources/design/framework/command-box.md)|
 | 02/04/2018 | Usar bots para enviar notificaciones para la aplicación. |[Bots de solo notificación](~/concepts/bots/bots-notification-only.md)|
 | 27/03/2018 | Documentación ampliada para mensajería proactiva. |[Inicio de una conversación](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
