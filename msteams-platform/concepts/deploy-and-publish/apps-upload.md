@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fa67f6b1261619565cb62d5e1333367904089244
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059612"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281759"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -38,6 +38,9 @@ Puede transferir localmente la aplicación a un equipo, chat, reunión o para su
 1. Seleccione el archivo .zip del paquete de la aplicación. Se muestra un cuadro de diálogo de instalación.
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Recorte de pantalla que muestra un ejemplo de un cuadro de diálogo de instalación de aplicación de Teams.":::
 1. Agregue la aplicación a Teams.
+
+> [!NOTE]
+> Al agregar el bot a Microsoft Teams, no puede obtener la configuración regional de Microsoft Teams porque la acción del usuario no inicia la actividad del bot, como enviar un mensaje, por lo que `turnContext.Activity.GetLocale();` devuelve un valor nulo.
 
 ## <a name="troubleshoot-upload-issues"></a>Solucionar problemas de carga
 
