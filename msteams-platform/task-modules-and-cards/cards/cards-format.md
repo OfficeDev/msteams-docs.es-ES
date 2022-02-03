@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: d660d58b00624b4d91ce4241829b204c66ba95df
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059605"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212380"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -165,20 +165,20 @@ El siguiente código muestra un ejemplo de Tarjeta adaptable con mención:
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>Id. de objeto de AAD y UPN en mención de usuario 
+### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>Id. de objeto de Azure AD y UPN en la mención del usuario 
 
-La plataforma de Teams permite mencionar a los usuarios con su id. de objeto de AAD y su nombre principal de usuario (UPN), además de los identificadores de mención existentes. Los bots con Tarjetas adaptables y conectores con Webhooks entrantes admiten los dos id. de mención de usuario. 
+La plataforma de Teams permite mencionar a los usuarios con su Id. de objeto de Azure AD y su nombre principal de usuario (UPN), además de los identificadores de mención existentes. Los bots con Tarjetas adaptables y conectores con Webhooks entrantes admiten los dos id. de mención de usuario. 
 
 En la tabla siguiente se describen los id. de mención de usuario que se han admitido recientemente:
 
 |Identificadores  | Capacidades de compatibilidad |   Descripción | Ejemplo |
 |----------|--------|---------------|---------|
-| Id. del objeto de AAD | Bot, conector |  Id. de objeto de usuario de AAD |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, conector | UPN de usuario de AAD | john.smith@microsoft.com |
+| Id. de objeto de Azure AD | Bot, conector |  Id. de objeto del usuario de Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, conector | UPN de usuario de Azure AD | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mención de usuario en bots con Tarjetas adaptables 
 
-Los bots admiten la mención de usuario con el id. de objeto de AAD y el UPN, además de los identificadores existentes. La compatibilidad con dos nuevos identificadores está disponible en bots para mensajes de texto, cuerpo de Tarjetas adaptables y respuesta de extensión de mensajería. Los bots admiten los id. de mención en escenarios de conversaciones y `invoke`. El usuario recibe una notificación de fuente de actividades cuando se le @menciona con los identificadores. 
+Los bots admiten la mención de usuario con el Id. de objeto de Azure AD y el UPN, además de los identificadores existentes. La compatibilidad con dos nuevos identificadores está disponible en bots para mensajes de texto, cuerpo de Tarjetas adaptables y respuesta de extensión de mensajería. Los bots admiten los id. de mención en escenarios de conversaciones y `invoke`. El usuario recibe una notificación de fuente de actividades cuando se le @menciona con los identificadores. 
 
 > [!NOTE]
 > La actualización del esquema y los cambios en la interfaz de usuario y la experiencia de usuario, no son necesarios para las menciones de usuario con Tarjetas adaptables en bot.
@@ -195,7 +195,7 @@ Ejemplo de mención de usuario en bots con Tarjetas adaptables:
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
     }
   ],
   "msteams": {
@@ -210,7 +210,7 @@ Ejemplo de mención de usuario en bots con Tarjetas adaptables:
       },
       {
         "type": "mention",
-        "text": "<at>Adele AAD</at>",
+        "text": "<at>Adele Azure AD</at>",
         "mentioned": {
           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
           "name": "Adele Vance"
@@ -227,11 +227,11 @@ La siguiente imagen ilustra la mención de usuario con la Tarjeta adaptable en b
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mención de usuario en Webhook entrante con Tarjetas adaptables 
 
-Los webhooks entrantes comienzan a admitir la mención de usuario en Tarjetas adaptables con el id.de objeto de AAD y UPN.
+Los webhooks entrantes comienzan a admitir la mención de usuario en Tarjetas adaptables con el Id.de objeto de Azure AD y el UPN.
 
 > [!NOTE]    
-> * Habilite la mención de usuario en el esquema para que los webhooks entrantes admitan el id. de objeto de AAD y UPN. 
-> * No se requieren cambios en la interfaz y/o experiencia de usuario para las menciones de usuario con el id. de objeto de AAD y UPN.      
+> * Habilite la mención de usuario en el esquema para que los webhooks entrantes admitan el Id. de objeto de Azure AD y el UPN. 
+> * No se requieren cambios en la interfaz y/o experiencia de usuario para las menciones de usuario con el Id. de objeto de Azure AD y el UPN.      
 
 ##### <a name="example"></a>Ejemplo 
 
@@ -254,7 +254,7 @@ Ejemplo de mención de usuario en Webhook entrante:
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -271,7 +271,7 @@ Ejemplo de mención de usuario en Webhook entrante:
                       },
                       {
                         "type": "mention",
-                        "text": "<at>Adele AAD</at>",
+                        "text": "<at>Adele Azure AD</at>",
                         "mentioned": {
                           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
                           "name": "Adele Vance"

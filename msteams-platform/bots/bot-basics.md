@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Evento del canal de consentimiento de tarjeta de bot del controlador de actividades
-ms.openlocfilehash: 6350d9f0e280f345780eeac277e334fef867a67f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 54583fedadbd5a9791daaebf6df842b83aff1f6f
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889135"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214338"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
@@ -33,6 +33,68 @@ En la Teams controlador de actividad, hay dos controladores de Teams principales
 
 Para implementar la lógica Teams controladores de actividad específicos, debe invalidar los métodos del bot como se muestra en la [sección lógica del](#bot-logic) bot. No hay ninguna implementación base para estos controladores, por lo tanto, debe agregar la lógica que desee en su invalidación.
 
+Fragmentos de código para Teams de actividad:
+
+`OnTeamsChannelCreatedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersAddedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+        {
+            // Code logic here
+        }
+```
+
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaje, el controlador de turnos recibe una notificación de esa actividad entrante. A continuación, el controlador de turnos envía la actividad entrante al `onMessage` controlador de actividad. En Teams, esta funcionalidad sigue siendo la misma. Si el bot recibe una actividad de actualización de conversación, el controlador de turnos recibe una notificación de esa actividad entrante y envía la actividad entrante a `dispatchConversationUpdateActivity` . El Teams de actividad comprueba primero si hay Teams eventos específicos. Si no se encuentra ningún evento, los pasa al controlador de actividad de Bot Framework.
@@ -40,6 +102,68 @@ Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaj
 En la Teams controlador de actividad, hay dos controladores de Teams principales y `dispatchConversationUpdateActivity` `onInvokeActivity` . `dispatchConversationUpdateActivity`enruta todas las actividades de actualización de conversación y `onInvokeActivity` enruta todas Teams invocar actividades.
 
 Para implementar la lógica Teams controladores de actividad específicos, debe invalidar los métodos del bot como se muestra en la [sección lógica del](#bot-logic) bot. Defina la lógica del bot para estos controladores y, a continuación, asegúrese de llamar `next()` al final. Al `next()` llamar, asegúrese de que se ejecute el siguiente controlador.
+
+Fragmentos de código para Teams de actividad:
+
+`OnTeamsChannelCreatedAsync`
+
+```javascript
+
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```javascript
+
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```javascript
+
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```javascript
+
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsMembersAddedAsync`
+
+```javascript
+
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```javascript
+
+onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
 
 # <a name="python"></a>[Python](#tab/python)
 
