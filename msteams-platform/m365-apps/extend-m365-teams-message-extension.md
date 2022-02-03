@@ -4,12 +4,12 @@ description: Este es el modo de actualizar la extensión de mensajería de Teams
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: f019f82c4e617e3cf6aa7caa499e125dc448b1c3
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
+ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281745"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62345383"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Extender una extensión Teams de mensajería a través de Microsoft 365
 
@@ -92,6 +92,28 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Panel Canales del bot de Azure que enumera Microsoft Teams y Outlook canales":::
 
+## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
+
+> [!NOTE]
+> Puedes omitir el paso si usas un ejemplo de búsqueda de extensión de mensajería de [Teams, ya](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) que el escenario no implica Azure Active Directory (AAD) autenticación de Sign-On única.
+
+Azure Active Directory Inicio de sesión único (SSO) para extensiones de mensajería funciona de la misma manera en Outlook que en [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de aplicación cliente al registro de aplicaciones de Azure AD del bot en *el portal de* registros de aplicaciones del inquilino.
+
+1. Inicie sesión en [Azure Portal con](https://portal.azure.com) su cuenta de espacio aislado.
+1. Abra **Registros de aplicaciones**.
+1. Seleccione el nombre de la aplicación para abrir el registro de la aplicación.
+1. Seleccione  **Exponer una API** (en *Administrar*).
+
+En la **sección Aplicaciones cliente autorizadas** , asegúrese de que se enumeran todos los valores `Client Id` siguientes:
+
+|Microsoft 365 cliente | Id. de cliente |
+|--|--|
+|Teams escritorio y móvil |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+|Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+|Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+
 ## <a name="sideload-your-updated-messaging-extension-in-teams"></a>Descargar localmente la extensión de mensajería actualizada en Teams
 
 El último paso es cargar localmente la extensión de mensajería actualizada (paquete [de](/microsoftteams/platform/concepts/build-and-test/apps-package) la aplicación) en Microsoft Teams. Una vez completada, la extensión de mensajería aparecerá en las aplicaciones *instaladas desde el* área del mensaje de redacción.
@@ -131,7 +153,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Outlook en Window
 
 Para obtener una vista previa de la aplicación que se Outlook en la Web, inicie sesión [en outlook.com](https://www.outlook.com) con las credenciales del inquilino de prueba. Haga clic en **Nuevo mensaje**. Abre el **menú desplegable Más aplicaciones** en la parte inferior de la ventana de composición. Aparecerá la extensión de mensajería. Puede invocarlo desde allí y usarlo tal como lo haría al redactar un mensaje en Teams.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook habilitadas para Teams de mensajería están en versión preliminar y no son compatibles con el uso de producción. Este es el modo de distribuir la extensión de Outlook de mensajería habilitada para obtener una vista previa de audiencias con fines de prueba.
 
