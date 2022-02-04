@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Información sobre herramientas de alternancia dinámica del selector de marcadores desplegables de carrusel de tarjetas de navegación del kit de interfaz de usuario fluent kit
-ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 40a0c789275d98ab5bfbe74a61aa04a0e2daee32
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887500"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362966"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación Microsoft Teams con componentes Fluent interfaz de usuario básica
 
@@ -21,14 +21,14 @@ Las ilustraciones de esta página muestran cómo se ven los componentes Teams lo
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de</a>usuario, el kit Microsoft Teams de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interfaz de</a> usuario, el kit de interfaz Microsoft Teams incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerta
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de alerta." border="false":::
+:::image type="content" source="../../assets/images/components/alert-button.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de alerta." border="false":::
 
 ## <a name="button"></a>Botón
 
@@ -70,7 +70,7 @@ En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blan
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de lista de grupos." border="false":::
 
-## <a name="hyperlink"></a>Hipervínculo
+## <a name="hyperlink"></a>Hyperlink
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de hipervínculo." border="false":::
 

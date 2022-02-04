@@ -5,12 +5,12 @@ description: Diseña tu aplicación más rápido con componentes de interfaz de 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948449"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362945"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
@@ -20,7 +20,7 @@ Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz d
 
 Los siguientes recursos pueden ayudarte a diseñar y desarrollar tu aplicación con plantillas de interfaz de usuario.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Toma plantillas de interfaz de usuario para el diseño de la aplicación desde el kit de interfaz de usuario de Microsoft Teams, que también incluye información extensa sobre el uso, la anatomía, la accesibilidad y los procedimientos recomendados.
 
@@ -46,9 +46,23 @@ Instala una aplicación de ejemplo para ver cómo se ven y se comportan las plan
 > [!div class="nextstepaction"]
 > [Obtener la aplicación de ejemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
+## <a name="calendar"></a>Calendar
+
+En Teams, un calendario es donde un usuario ve, programa y administra eventos próximos y pasados para sí mismos o un grupo.
+
+### <a name="top-use-cases"></a>Casos de uso principales
+
+* Programar reuniones y eventos
+* Obtener avisos de próximas reuniones y eventos
+* Ver programaciones
+
+### <a name="desktop"></a>Escritorio
+
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de calendario en el escritorio." border="false":::
+
 ## <a name="dashboard"></a>Panel
 
-Un panel muestra diferentes tipos de contenido en una ubicación central (Teams aplicación o pestaña personal). Los usuarios deben poder personalizar al menos parte de lo que ven en un panel.
+Un panel muestra diferentes tipos de contenido en una ubicación central (como una Teams o pestaña personal). Los usuarios deben poder personalizar al menos parte de lo que ven en un panel.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
@@ -115,7 +129,7 @@ Organizar contenido en:
 
 :::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="En el ejemplo se muestra una plantilla de filtro." border="false":::
 
-## <a name="form"></a>Form
+## <a name="form"></a>Formulario
 
 Los formularios se usan para recopilar, validar y enviar la entrada del usuario de forma estructurada. El etiquetado claro y las agrupaciones lógicas de campos de entrada son fundamentales para una buena experiencia del usuario.
 
@@ -169,7 +183,7 @@ Puedes diseñar flujos de inicio de sesión de aplicaciones para diferentes Team
 
 ## <a name="settings"></a>Configuraciones
 
-Configuración pantallas son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: Configuración es un contenedor para componentes de interfaz [de usuario básicos](~/concepts/design/design-teams-app-basic-ui-components.md).)
+Configuración pantallas son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: Configuración es un contenedor para componentes básicos [de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)).
 
 ### <a name="top-use-case"></a>Caso de uso superior
 

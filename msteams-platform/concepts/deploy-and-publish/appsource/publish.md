@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a05ff22944756151842a58fa0cd955c61d2c1c5c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2949d8611600b8841a5a4e3e945c5944f0b11f49
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888520"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362812"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar la aplicación en la tienda Microsoft Teams cliente
 
 Puedes distribuir la aplicación directamente a la tienda dentro de Microsoft Teams y llegar a millones de usuarios de todo el mundo. Si la aplicación también se incluye en la tienda, puedes llegar al instante a los clientes potenciales.
 
-Las aplicaciones publicadas en la tienda Teams también listan automáticamente en [Microsoft AppSource](https://appsource.microsoft.com), que es el mercado oficial para Microsoft 365 aplicaciones y soluciones.
+Las aplicaciones publicadas en la Teams también se incluyen automáticamente en [Microsoft AppSource](https://appsource.microsoft.com), que es el mercado oficial para Microsoft 365 aplicaciones y soluciones.
 
 ## <a name="understand-the-publishing-process"></a>Comprender el proceso de publicación
 
@@ -28,11 +28,11 @@ Cuando sientas que la aplicación está lista para la producción, puedes comenz
 > [!TIP]
 > Seguir los pasos previos al envío puede aumentar la posibilidad de que Microsoft apruebe la aplicación para su publicación.
 
-1. [Revisa las Teams de](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) validación de la tienda para asegurarte de que la aplicación cumple Teams estándares de la aplicación y la tienda.
+1. [Revisa las Teams de validación de la](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) tienda para asegurarte de que la aplicación cumple Teams estándares de la aplicación y la tienda.
 1. [Crear una cuenta de desarrollador del Centro de partners](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
-1. [Prepare el envío de](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)la tienda, que incluye la ejecución de pruebas automatizadas, la compilación de notas de pruebas, la creación de una descripción de la tienda, entre otras tareas importantes para ayudar a acelerar el proceso de revisión.
+1. [Prepare el envío de](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md) la tienda, que incluye la ejecución de pruebas automatizadas, la compilación de notas de pruebas, la creación de una descripción de la tienda, entre otras tareas importantes para ayudar a acelerar el proceso de revisión.
 1. [Envía tu aplicación a través](/office/dev/store/add-in-submission-guide) del Centro de partners.
-1. Si se produce un error en el envío, trabaje con Microsoft directamente para resolver los problemas y [volver a enviar la aplicación](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
+1. Si se produce un error en el envío, trabaje con Microsoft directamente para [resolver los problemas y volver a enviar la aplicación](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
    :::column-end:::
    :::column span="1":::
@@ -56,3 +56,4 @@ Cuando sientas que la aplicación está lista para la producción, puedes comenz
 * [Publicar la aplicación Teams en la organización](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 * [Planear la experiencia de incorporación para los usuarios](../../design/understand-use-cases.md#plan-the-onboarding-experience)
 * [Distribución de aplicaciones de pestañas en dispositivos móviles](../../../tabs/design/tabs-mobile.md#distribution)
+* [Vista previa de prueba para aplicaciones monetizadas](prepare/Test-preview-for-monetized-apps.md)

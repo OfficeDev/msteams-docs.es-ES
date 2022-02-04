@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 597896d79408fa596e9949166fceda97ef440d07
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 0efaea87af8128086db3e0e6416014d97f0af5a2
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212008"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362777"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
@@ -21,17 +21,17 @@ Con una oferta de Software como servicio (SaaS) transaccionable, puedes monetiza
 
 Esta es una idea general de cómo monetizar la aplicación:
 
-1.  [Plan your SaaS offer](#plan-your-saas-offer).
+1.  [Planee su oferta saas](#plan-your-saas-offer).
 
-1.  [Integre con las API de cumplimiento saas.](#integrate-with-the-saas-fulfillment-apis)
+1.  [Integre con las API de cumplimiento saas](#integrate-with-the-saas-fulfillment-apis).
 
-1.  [Cree una página de aterrizaje para la administración de suscripciones.](#build-a-landing-page-for-subscription-management)
+1.  [Cree una página de aterrizaje para la administración de suscripciones](#build-a-landing-page-for-subscription-management).
 
 1.  [Cree su oferta SaaS](#create-your-saas-offer).
 
-1.  [Configurar la aplicación para la oferta SaaS](#configure-your-app-for-the-saas-offer).
+1.  [Configura la aplicación para la oferta SaaS](#configure-your-app-for-the-saas-offer).
 
-1.  [Publicar la aplicación en la tienda Teams .](#publish-your-app)
+1.  [Publique la aplicación en la Teams tienda](#publish-your-app).
 
    :::column-end:::
    :::column span="1":::
@@ -43,21 +43,21 @@ Esta es una idea general de cómo monetizar la aplicación:
 
 ## <a name="plan-your-saas-offer"></a>Plan your SaaS offer
 
-Para obtener instrucciones completas, [vea cómo planear una oferta SaaS para el mercado comercial de Microsoft.](/azure/marketplace/plan-saas-offer)
+Para obtener instrucciones completas, [vea cómo planear una oferta SaaS para el mercado comercial de Microsoft](/azure/marketplace/plan-saas-offer).
 
 Al planear cómo monetizar la aplicación Teams, estos son algunos aspectos a tener en cuenta:
 
-* Decida el modelo de suscripción. Una oferta SaaS transaccionable puede incluir varios planes de suscripción. Los planes de suscripción públicos disponibles para cualquier persona son más comunes, pero es posible que también quieras dirigirte a clientes específicos con ofertas solo para ellos. Para obtener más información, [vea ofertas privadas en el mercado comercial de Microsoft.](/azure/marketplace/private-offers)
-* Lee la opción Vender a través de [ *Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para la oferta SaaS, que es necesaria si quieres que los usuarios compren planes de suscripción para tu aplicación directamente a través de la Teams tienda.
+* Decida el modelo de suscripción. Una oferta SaaS transaccionable puede incluir varios planes de suscripción. Los planes de suscripción públicos disponibles para cualquier persona son más comunes, pero es posible que también quieras dirigirte a clientes específicos con ofertas solo para ellos. Para obtener más información, [vea ofertas privadas en el mercado comercial de Microsoft](/azure/marketplace/private-offers).
+* Lee la opción [*Vender a través de Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para la oferta SaaS, que es necesaria si quieres que los usuarios compren planes de suscripción para tu aplicación directamente a través de la Teams tienda.
 * Obtenga información [sobre Azure Active Directory inicio de sesión único (SSO)](/azure/marketplace/azure-ad-saas) ayuda a sus clientes a comprar y administrar suscripciones. (Azure AD SSO es necesario para Teams aplicaciones con ofertas SaaS).
 * Comprenda que es responsable de administrar y pagar la infraestructura necesaria para admitir el uso de sus clientes de su oferta saas.
-* Planee el móvil. Para evitar infringir las directivas de la tienda de aplicaciones de terceros, la aplicación no puede incluir vínculos que permitan a los usuarios comprar planes de suscripción en el móvil. Sin embargo, aún puedes indicar si la aplicación tiene características que requieren un plan de suscripción. Para obtener más información, vea las directivas relacionadas [de certificación del mercado comercial.](/legal/marketplace/certification-policies#114048-mobile-experience)
+* Planee el móvil. Para evitar infringir las directivas de la tienda de aplicaciones de terceros, la aplicación no puede incluir vínculos que permitan a los usuarios comprar planes de suscripción en el móvil. Sin embargo, aún puedes indicar si la aplicación tiene características que requieren un plan de suscripción. Para obtener más información, consulte las directivas de certificación del [mercado comercial relacionadas](/legal/marketplace/certification-policies#114048-mobile-experience).
 
 ## <a name="integrate-with-the-saas-fulfillment-apis"></a>Integración con las API de cumplimiento saas
 
 La integración con las API de cumplimiento saas es necesaria para monetizar tu Teams aplicación. Estas API le ayudan a administrar el ciclo de vida de un plan de suscripción una vez que un usuario las compra.
 
-Para obtener instrucciones completas y referencia a la API, consulte la documentación de las API de [cumplimiento saas.](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis) En general, implementará los siguientes pasos mediante las API una vez que se compre una suscripción:
+Para obtener instrucciones completas y referencia de API, consulte la [documentación de las API de cumplimiento saas](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis). En general, implementará los siguientes pasos mediante las API una vez que se compre una suscripción:
 
 1. Recibe un [*token de identificación de compra*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) a través de la dirección URL de la página de aterrizaje.
 
@@ -79,9 +79,9 @@ Para obtener instrucciones completas, [consulte build the landing page for your 
 
 ### <a name="best-practices-for-landing-pages"></a>Procedimientos recomendados para páginas de aterrizaje
 
-Ten en cuenta los siguientes enfoques al crear una página de aterrizaje para la Teams que estás monetizando. Vea una página de aterrizaje de ejemplo en la [experiencia de compra del usuario final.](#end-user-purchasing-experience)
+Ten en cuenta los siguientes enfoques al crear una página de aterrizaje para la Teams que estás monetizando. Vea una página de aterrizaje de ejemplo en la [experiencia de compra del usuario final](#end-user-purchasing-experience).
 
-* Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas Azure AD credenciales que usaron para comprar la suscripción. Para obtener más información, [vea Azure AD y ofertas saas transaccionables en el mercado comercial.](/azure/marketplace/azure-ad-saas)
+* Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas Azure AD credenciales que usaron para comprar la suscripción. Para obtener más información, [vea Azure AD y ofertas saas transaccionables en el mercado comercial](/azure/marketplace/azure-ad-saas).
 * Permitir a los usuarios realizar las siguientes acciones en la página de aterrizaje. No olvide tener en cuenta lo que es apropiado para el rol y los permisos de un usuario (por ejemplo, puede que desee permitir que solo los administradores de suscripciones busquen usuarios):
   * Busque usuarios en su organización mediante correo electrónico u otra forma de identidad.
   * Consulta los usuarios a los que pueden asignar licencias en una lista.
@@ -98,7 +98,7 @@ Ten en cuenta los siguientes enfoques al crear una página de aterrizaje para la
 Una vez que haya integrado las API de saas fulfillment y haya creado la página de aterrizaje donde los usuarios puedan administrar sus suscripciones, es el momento de crear, probar y publicar oficialmente la oferta SaaS transaccionable.
 
 > [!IMPORTANT]
-> Teams admite actualmente solo el modelo de precios **por** usuario (usuario/mes y usuario/año) para las ofertas saas. Para obtener más información, vea [Modelos de precios SaaS](/azure/marketplace/plan-saas-offer#saas-pricing-models).
+> Teams actualmente solo admite el modelo de precios **por** usuario (usuario/mes y usuario/año) para ofertas saas. Para obtener más información, vea [Modelos de precios SaaS](/azure/marketplace/plan-saas-offer#saas-pricing-models).
 
 ### <a name="create-the-offer"></a>Crear la oferta
 
@@ -108,9 +108,9 @@ Consulta [Crear una oferta SaaS para](/azure/marketplace/create-new-saas-offer) 
 
 1.  Configure los planes de suscripción, los detalles de precios y mucho más para su oferta SaaS transaccionable. En particular, asegúrese de completar los pasos siguientes:
 
-    * En **Detalles del programa de** instalación, seleccione la opción Sí para especificar que va a vender la oferta a través de Microsoft. 
+    * En **Detalles del** programa de instalación, seleccione la **opción Sí** para especificar que vende la oferta a través de Microsoft.
      
-    * En **Microsoft 365 integración,** agrega el vínculo AppSource a la descripción de la aplicación. Este paso garantiza que las personas puedan comprar sus planes de suscripción en AppSource además de Teams.
+    * En **Microsoft 365 integración**, agrega el vínculo AppSource a la descripción de la aplicación. Este paso garantiza que las personas puedan comprar sus planes de suscripción en AppSource además de Teams.
 
 1. Almacena tu editor y ofrece id. (Los necesitas más adelante para vincular la oferta a tu aplicación en el Portal de desarrolladores).
 
@@ -118,10 +118,10 @@ Consulta [Crear una oferta SaaS para](/azure/marketplace/create-new-saas-offer) 
 
 ### <a name="test-the-offer"></a>Probar la oferta
 
-Le recomendamos encarecidamente que compruebe la experiencia de compra de un extremo a otro antes de publicar su oferta saas. Para ello, cree una oferta independiente solo para pruebas. Para obtener información completa, vea Introducción a [la oferta de](/azure/marketplace/plan-saas-offer#test-offer)prueba, crear una oferta de [prueba](/azure/marketplace/create-saas-dev-test-offer)y obtener una vista previa de [la oferta](/azure/marketplace/test-publish-saas-offer).
+Le recomendamos encarecidamente que compruebe la experiencia de compra de un extremo a otro antes de publicar su oferta saas. Para ello, cree una oferta independiente solo para pruebas. Para obtener información completa, consulte [Introducción a la oferta de prueba](/azure/marketplace/plan-saas-offer#test-offer), [crear una oferta de prueba](/azure/marketplace/create-saas-dev-test-offer) y [obtener una vista previa de la oferta](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Debe probar la oferta SaaS transaccionable en AppSource. Actualmente, no puedes probar una transacción de un extremo a otro en Teams hasta que la aplicación complete la validación de la tienda.
+> Puedes probar una transacción de un extremo a otro en Teams hasta que la aplicación complete la validación de la tienda. Para obtener más información, [consulta Probar vista previa de aplicaciones monetizadas](Test-preview-for-monetized-apps.md).
 
 Desde un punto Teams, estas pruebas deben comprobar que el número de licencias y asignaciones coincide con lo que hay en el centro de administración de Teams cuando los usuarios:
 
@@ -131,19 +131,19 @@ Desde un punto Teams, estas pruebas deben comprobar que el número de licencias 
 
 ### <a name="publish-the-offer"></a>Publicar la oferta
 
-Una vez que haya terminado de probar, [publique la oferta en directo.](/azure/marketplace/test-publish-saas-offer#publish-your-offer-live)
+Una vez que termines de probar, [publica la oferta en directo](/azure/marketplace/test-publish-saas-offer#publish-your-offer-live).
 
 ## <a name="configure-your-app-for-the-saas-offer"></a>Configurar la aplicación para la oferta SaaS
 
 Has publicado la oferta de SaaS, pero aún debes vincularla a tu aplicación de Teams para que los usuarios puedan ver los planes de suscripción en la Teams tienda.
 
-1. Vaya al [Portal de desarrolladores](https://dev.teams.microsoft.com/) y seleccione **Aplicaciones**.
-1. En la **página Aplicaciones,** selecciona la aplicación a la que vinculas la oferta SaaS.
+1. Ve al [Portal de desarrolladores](https://dev.teams.microsoft.com/) y selecciona **Aplicaciones**.
+1. En la **página Aplicaciones** , selecciona la aplicación a la que vinculas la oferta SaaS.
 1. Vaya a la **página Planes y precios** y especifique su editor y ofrezca id. (Puede encontrar estos IDs en el Centro de partners si no los tiene disponibles fácilmente).
 1. Selecciona **Ver** para obtener una vista previa de los planes de suscripción de la oferta SaaS.
-1. Si todo se ve bien, seleccione **Guardar**.
+1. Si todo se ve bien, selecciona **Guardar**.
 
-   La `subscriptionOffer` propiedad se agrega al manifiesto de la [aplicación](~/resources/schema/manifest-schema-dev-preview.md#subscriptionoffer).
+   La `subscriptionOffer` propiedad se agrega al manifiesto [de la aplicación](~/resources/schema/manifest-schema-dev-preview.md#subscriptionoffer).
 
    ```json
       "subscriptionOffer": {
@@ -153,30 +153,30 @@ Has publicado la oferta de SaaS, pero aún debes vincularla a tu aplicación de 
 
 ## <a name="publish-your-app"></a>Publicar la aplicación
 
-Has creado la oferta SaaS y la has vinculado a tu aplicación Teams, ahora es el momento de publicar la aplicación en la Teams tienda. Para obtener instrucciones completas, [consulta Publicar la aplicación en la tienda Teams.](~/concepts/deploy-and-publish/appsource/publish.md)
+Has creado la oferta SaaS y la has vinculado a tu aplicación Teams, ahora es el momento de publicar la aplicación en la Teams tienda. Para obtener instrucciones completas, [consulta Publicar la aplicación en Teams tienda](~/concepts/deploy-and-publish/appsource/publish.md).
 
 > [!IMPORTANT]
 > Incluso si la aplicación ya aparece en la tienda Teams, debes volver a pasar por el proceso de validación de la tienda para incluir tu oferta SaaS.
 
-Una vez publicado, los usuarios verán una opción Comprar una suscripción en el cuadro de diálogo detalles de la aplicación cuando intenten agregar la aplicación **a** Teams.
+Una vez publicado, los usuarios verán una opción **Comprar** una suscripción en el cuadro de diálogo detalles de la aplicación cuando intenten agregar la aplicación a Teams.
 
 ## <a name="end-user-purchasing-experience"></a>Experiencia de compra del usuario final
 
 En el ejemplo siguiente se muestra cómo los usuarios pueden comprar planes de suscripción para una aplicación ficticia Teams llamada *Recloud*.
 
-1. En la Teams, busca y selecciona la *aplicación Recloud.*
+1. En la Teams, busca y selecciona la *aplicación Recloud*.
 
-1. En el cuadro de diálogo detalles de la aplicación, **selecciona Comprar una suscripción.**
+1. En el cuadro de diálogo detalles de la aplicación, **selecciona Comprar una suscripción**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Comprar la suscripción para la aplicación seleccionada.":::
 
 1. Seleccione su país para ver los planes de suscripción para su ubicación.
 
-1. En el **cuadro de diálogo** Elegir un plan de suscripción, elija el plan que desee y seleccione **Checkout**. (Nota: Los planes privados solo son visibles para los usuarios de las organizaciones a las que proporcionas la oferta. Estos planes se indican con un **icono de oferta** :::image type="icon" source="~/assets/icons/special-icon.png"::: especial).
+1. En el **cuadro de diálogo Elegir un plan de** suscripción, elija el plan que desee y seleccione **Desprotección**. (Nota: Los planes privados solo son visibles para los usuarios de las organizaciones a las que proporcionas la oferta. Estos planes se indican con un **icono de oferta** :::image type="icon" source="~/assets/icons/special-icon.png"::: especial).
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Seleccionar el plan de suscripción adecuado.":::
 
-1. En el **cuadro de diálogo** Desprotección, proporcione la información necesaria y seleccione Realizar **pedido.**
+1. En el **cuadro de diálogo** Desprotección, proporcione la información necesaria y seleccione **Realizar pedido**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Realizar el pedido de suscripción.":::
 
@@ -184,25 +184,25 @@ En el ejemplo siguiente se muestra cómo los usuarios pueden comprar planes de s
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Configurar la suscripción.":::
 
-1. Administrar el plan de suscripción a través del sitio web *de Recloud* (también conocido como página [de aterrizaje).](#build-a-landing-page-for-subscription-management)
+1. Administra tu plan de suscripción a través del *sitio web de Recloud* (también conocido como página [de aterrizaje](#build-a-landing-page-for-subscription-management)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuración de licencias de usuario.":::
 
 ## <a name="admin-purchasing-experience"></a>Experiencia de compra de administrador
 
-Los administradores pueden comprar planes de suscripción de aplicaciones [en Teams centro de administración.](/MicrosoftTeams/purchase-third-party-apps)
+Los administradores pueden comprar planes de suscripción de aplicaciones [en el Teams de administración](/MicrosoftTeams/purchase-third-party-apps).
 
 ## <a name="remove-a-saas-offer-from-your-app"></a>Quitar una oferta SaaS de la aplicación
 
 Si desvinculas una oferta SaaS incluida en la descripción Teams tienda, debes volver a publicar la aplicación para ver el cambio en la tienda.
 
-1. Vaya al [Portal de desarrolladores](https://dev.teams.microsoft.com/) y seleccione **Aplicaciones**.
-1. En la **página Aplicaciones,** selecciona la aplicación de la que estás quitando la oferta.
-1. Vaya a la **página Planes y precios** y seleccione **Revertir**.
+1. Ve al [Portal de desarrolladores](https://dev.teams.microsoft.com/) y selecciona **Aplicaciones**.
+1. En la **página Aplicaciones** , selecciona la aplicación de la que estás quitando la oferta.
+1. Vaya a la **página Planes y precios y** seleccione **Revertir**.
 1. Una vez desvinculada la oferta, haga lo siguiente para actualizar la descripción de la tienda:
-   1. Seleccione **Distribuir > publicar en el almacén Teams .**
+   1. Selecciona **Distribuir > publicar en el Teams almacén**.
    1. Selecciona **Abrir centro de partners** para iniciar el proceso de volver a publicar la aplicación sin la oferta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Mantenimiento y soporte técnico de la aplicación publicada](../post-publish/overview.md)

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: e0bf9f06d9a72f711e45291cd5f212ef1b2718c3
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: cc1e3abc2801e750cc838a73459e707ed1913271
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323179"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362770"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -119,13 +119,59 @@ La extensión de mensajería funciona según lo esperado cuando un usuario está
 
 #### <a name="in-meeting-dialog-box"></a>Cuadro de diálogo En la reunión
 
-El cuadro de diálogo en la reunión se usa para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Usa la [`NotificationSignal`](API-references.md#notificationsignal-api) API para desencadenar una notificación de burbuja. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
+El cuadro de diálogo en la reunión se usa para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use la [API SendNotificationSignal](API-references.md#send-notification-signal-api) para desencadenar una notificación de burbuja. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
 
 El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar la burbuja de contenido en una reunión. Puede usar el método para `submitTask` enviar datos en un chat de reunión.
 
 > [!NOTE]
-> * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true).
-> * Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Azure Active Directory del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
+> * Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Azure Active Directory (AAD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+#### <a name="shared-meeting-stage"></a>Fase de reunión compartida
+
+> [!NOTE]
+> Actualmente, esta característica solo está disponible en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
+
+La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real. Puedes compartir tus aplicaciones en la fase de reunión de colaboración de las siguientes maneras:
+
+* [Compartir toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir a fase en Teams cliente.
+* [Compartir partes específicas de la aplicación para faser](#share-specific-parts-of-the-app-to-stage) el uso de API en el SDK Teams cliente.
+
+##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en fase
+
+Los participantes pueden compartir toda la aplicación en la fase de reunión de colaboración con el botón compartir a fase desde el panel lateral de la aplicación.
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+Para compartir toda la aplicación en fase, en el manifiesto de la aplicación debes configurar `meetingStage` `meetingSidePanel` y como contextos de marco. Por ejemplo:
+
+```json
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
+
+Para obtener más información, consulta [manifiesto de la aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartir partes específicas de la aplicación en fase
+
+Los participantes pueden compartir partes específicas de la aplicación a la fase de reunión de colaboración mediante el uso del recurso compartido para configurar las API. Las API están disponibles en el SDK Teams cliente y se invocan desde el panel del lado de la aplicación.
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+Para compartir partes específicas de la aplicación en fase, debes invocar las API relacionadas en la Teams SDK de cliente. Para obtener más información, vea [Referencia de API](API-references.md).
+
+Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Azure Active Directory del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 
@@ -136,7 +182,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad equitativa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |Panel lateral de la reunión | Aplicación de ejemplo para mostrar cómo agregar agenda en un panel del lado de la reunión | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Guías paso a paso
@@ -151,7 +197,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 > [!div class="nextstepaction"]
 > [Referencias API de aplicaciones de reuniones](API-references.md)
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

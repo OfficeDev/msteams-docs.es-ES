@@ -5,12 +5,12 @@ description: Obtenga información sobre los Teams de interfaz de usuario, como r
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d42205ff7d62d1c65956baed4f7841c8fe70b2e5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: dc3cb279ada3f130aeb6cd2626e6a36fcc8ecdc9
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889261"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362917"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados
 
@@ -18,7 +18,7 @@ Los siguientes componentes son una combinación de componentes básicos de [la](
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de</a>usuario, el kit Microsoft Teams de interfaz de usuario incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interfaz de</a> usuario, el kit de interfaz Microsoft Teams incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -60,6 +60,8 @@ Use la navegación izquierda para examinar varias páginas dentro de la Teams pe
 ## <a name="notification-bar"></a>Barra de notificaciones
 
 Una barra de notificaciones es un área dedicada para mostrar mensajes breves e importantes que no requieren que el usuario tome medidas inmediatas. Los iconos y los colores de fondo específicos están asociados con tipos específicos de mensajes (vea a continuación).
+
+Puedes implementar una barra de notificaciones mediante el Fluent de [alerta de interfaz de](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) usuario.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
