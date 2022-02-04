@@ -5,13 +5,8 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 455809e64a934384d28e00bdf721ae8c66cb7d19
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62363470"
 ---
+
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
 Microsoft Teams las API que puedes usar para implementar las compras desde la aplicación para actualizar de aplicaciones gratuitas a Teams de pago. La compra desde la aplicación te permite convertir usuarios de planes gratuitos a de pago directamente desde tu aplicación.
@@ -106,8 +101,12 @@ En el ejemplo siguiente se muestra a los usuarios comprar planes de suscripción
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de aterrizaje de la suscripción." border="true":::
 
+## <a name="next-step"></a>Paso siguiente
 
-## <a name="see-also"></a>Consulte también
+> [!div class="nextstepaction"]
+> [Vista previa de prueba para aplicaciones monetizadas](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
+
+## <a name="see-also"></a>Vea también
 
 * [Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [Crear una oferta de software como servicio (SaaS)](include-saas-offer.md#create-your-saas-offer)

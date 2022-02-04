@@ -1,21 +1,22 @@
 ---
 title: Empaquetar la aplicación
-description: Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y publicar en la tienda.
+description: 'Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y publicar en la tienda.'
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 002da681a464770a31fa6963e96fdff54701b35f
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059682"
 ---
+
 # <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete de aplicación de Microsoft Teams
 
 Necesita un paquete de aplicación, pero planea distribuir la aplicación de Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
 
 * **Manifiesto de aplicación**: describe cómo se configura la aplicación, incluidas sus funcionalidades, los recursos necesarios y otros atributos importantes.
 * **Iconos de la aplicación**: cada paquete requiere un icono de color y contorno para la aplicación.
+
+## <a name="teams-doesnt-host-your-app"></a>Teams no hospeda su aplicación
+
+Cuando un usuario instala la aplicación en Teams, instala un paquete de aplicación que contiene un solo archivo de configuración (también conocido como manifiesto de aplicación) y los iconos de la aplicación. La lógica y el almacenamiento de datos de la aplicación se hospedan en otro lugar, como localhost durante el desarrollo y Azure Web Services. Teams accede a estos recursos a través de HTTPS.
+
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustración que muestra el hospedaje de aplicaciones para aplicación de Teams" border="true":::
 
 ## <a name="app-manifest"></a>Manifiesto de la aplicación
 
