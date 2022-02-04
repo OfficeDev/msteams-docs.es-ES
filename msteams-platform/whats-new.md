@@ -3,14 +3,9 @@ title: Novedades
 description: Describe todas las características de desarrollador nuevas o más recientes de Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
-keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214345"
+keywords: 'novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams'
 ---
+
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
 Descubra las características de la plataforma Microsoft Teams que están disponibles con carácter general (GA) y en la versión preliminar para desarrolladores.
@@ -22,7 +17,11 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
-|01/25/2022| API de CARRO DE COMPRA | Crear aplicaciones para reuniones de Teams > Referencias de la API de aplicaciones de reuniones> [Referencias de la API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md#cart-api)|
+|03/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación |  • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
+|03/02/2022 |Modo interactivo para compartir la fase de reunión|• Crear aplicaciones para reuniones de Teams > [Fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para reuniones de Teams > [Referencias de API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de la versión preliminar para desarrolladores](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas (versión preliminar para desarrolladores)| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|03/02/2022| Flujo de compra desde la aplicación para la monetización de aplicaciones (versión preliminar para desarrolladores) | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|01/25/2022| Enviar API de subtítulos en tiempo real | Crear aplicaciones para reuniones de Teams > Referencias de la API de aplicaciones de reuniones> [Referencias de la API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/1/2022| Comentarios sobre la finalización de formularios de Tarjetas adaptables | Crear bots > Conversaciones bots > Mensajes en conversaciones de bots > [Comentarios de finalización del formulario](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Selector de personas en tarjetas adaptables (versión preliminar de desarrolladores para móviles y GA para escritorio) | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
@@ -39,7 +38,8 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-|01/25/2022| API de CARRO DE COMPRA | Crear aplicaciones para reuniones de Teams > Referencias de la API de aplicaciones de reuniones> [Referencias de la API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md#cart-api)|
+|02/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) |
+|01/25/2022| Enviar API de subtítulos en tiempo real | Crear aplicaciones para reuniones de Teams > Referencias de la API de aplicaciones de reuniones> [Referencias de la API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/1/2022| Comentarios sobre la finalización de formularios de Tarjetas adaptables | Crear bots > Conversaciones bots > Mensajes en conversaciones de bots > [Comentarios de finalización del formulario](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Selector de personas en tarjetas adaptables para escritorio | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 
@@ -72,7 +72,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 |25/10/2021| Se ha actualizado el módulo de introducción para la documentación destinada a desarrolladores de Microsoft Teams con una nueva estructura y procedimientos en una guía paso a paso | Introducción > [Introducción a su primera aplicación de Teams](get-started/get-started-overview.md) |
 |21/10/2021| Añadir una API `registerOnFocused` para pestañas o aplicaciones personales | Crear pestañas > Crear pestañas personales > [Añadir la API `registerOnFocused`para pestañas o aplicaciones personales](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20/10/2021| La escena de reunión ya está disponible en GA. | Crear aplicaciones para reuniones de Teams > [Habilitar y configurar las aplicaciones para reuniones de Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|20/10/2021| API de Detalles de reuniones y eventos de reuniones de Teams en tiempo real | Crear aplicaciones para reuniones de Teams > [Crear aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|20/10/2021| API de detalles de reuniones y eventos de reuniones de Teams en tiempo real. | Crear aplicaciones para reuniones de Teams > [Obtener la API de detalles de la reunión](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Expansión de vínculos de pestañas y vista de fases | Crear pestañas > [Expansión de vínculos de pestañas y vista de fases](tabs/tabs-link-unfurling.md) |
 |08/10/2021| Nuevos procedimientos recomendados para diseñar Tarjetas adaptables | Diseñar la aplicación > Componentes de la interfaz de usuario > [Diseñar Tarjetas adaptables para la aplicación de Teams](task-modules-and-cards/cards/design-effective-cards.md) |
 |05/10/2021| Ocultar la aplicación de Teams hasta que el administrador permita mostrar la aplicación.| Diseñar la aplicación > [Ocultar la aplicación de Teams hasta que el administrador la apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
@@ -228,6 +228,10 @@ La versión preliminar para desarrolladores es un programa público que proporci
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+|02/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
+|03/02/2022 |Modo interactivo para compartir la fase de reunión|• Crear aplicaciones para reuniones de Teams > [Fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para reuniones de Teams > [Referencias de API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de la versión preliminar para desarrolladores](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|03/02/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |17/01/2022| Selector de personas en tarjetas adaptables para móviles  | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
 |24/12/2021| Se ha introducido la guía paso a paso para conceder permisos para pestañas en dispositivos | Aspectos básicos de la aplicación > Funcionalidades del dispositivo > [Guía paso a paso para conceder permisos para pestañas en dispositivos](sbs-tab-device-permissions.yml) |
