@@ -6,13 +6,8 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 8aedcef132eee34a72f0f2f873bdae3a45529c7c
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768528"
 ---
+
 # <a name="add-capabilities-to-your-teams-apps"></a>Agregar funcionalidades a tus Teams aplicaciones
 
 Puedes crear una nueva aplicación Teams con una de las Teams de la aplicación. Durante el desarrollo de aplicaciones, puedes usar Teams Toolkit para agregar más funcionalidades a tu Teams aplicación. En la tabla siguiente se enumeran las Teams funcionalidades de la aplicación:
@@ -25,7 +20,7 @@ Puedes crear una nueva aplicación Teams con una de las Teams de la aplicación.
 
 ## <a name="prerequisite"></a>Requisito previo
 
-* [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
+[Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
 
 > [!TIP]
 > Asegúrate de que tienes Teams proyecto de aplicación abierto en código VS.
@@ -58,7 +53,7 @@ Las funcionalidades seleccionadas se agregan correctamente al proyecto. El Teams
 1. Cambie el directorio al **directorio del proyecto**.
 1. Ejecute el siguiente comando para agregar diferentes funcionalidades al proyecto:
 
-   |Capacidad y escenario| Get-Help|
+   |Capacidad y escenario| Comando|
    |-----------------------|----------|
    |Para agregar pestaña|`teamsfx capability add tab`|
    |Para agregar bot|`teamsfx capability add bot`|
@@ -71,46 +66,43 @@ Aparte de las capacidades que ya Teams aplicación, puedes elegir agregar difere
 |Capacidades existentes|Se pueden agregar otras funcionalidades compatibles|
 |--------------------|--------------------|
 |Pestañas con SPFx|Ninguno|
-|Pestañas con Azure|Bots y extensiones de mensajería|
-|Bots|Pestañas|
-|Extensiones de mensajería|Pestañas|
-|Pestañas y bots|Ninguno|
-|Pestañas y extensiones de mensajería|Ninguno|
-|Pestañas, bots y extensiones de mensajería|Ninguno|
+|Pestañas con Azure|Bot y extensión de mensajería|
+|Bot|Pestañas|
+|Extensión de mensajería|Pestañas y bot|
+|Pestañas y bot|Pestañas y extensión de mensaje|
+|Pestañas y extensión de mensajería|Pestañas y bot|
+|Pestañas, bot y extensión de mensajería|Pestañas|
+|Pestañas |Bot y extensión de mensaje|
 
 ## <a name="add-capabilities"></a>Agregar funcionalidades
 
 Después de agregar la extensión de bot y mensajería, los cambios en el proyecto son los siguientes:
 
-- Se agrega un código de plantilla de bot a una subcarpeta con ruta de `yourProjectFolder/bot` acceso. Esto incluye una plantilla **de aplicación** de bot hello world en el proyecto.
-- `launch.json`y en carpeta se actualizan, que incluye scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la `task.json` `.vscode` aplicación localmente. 
-- `manifest.remote.template.json`y se actualiza el archivo en carpeta, que incluye información relacionada con bots en el archivo de manifiesto que representa la `manifest.local.template.json` aplicación en la Teams `templates/appPackage` plataforma. Estos son los cambios:
+- Se agrega un código de plantilla de bot a una subcarpeta con ruta de acceso `yourProjectFolder/bot`. Esto incluye una plantilla **de aplicación** de bot hello world en el proyecto.
+- `launch.json`y `task.json` en `.vscode` carpeta se actualizan, que incluye scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la aplicación localmente. 
+- `manifest.remote.template.json`y `manifest.local.template.json` el archivo en `templates/appPackage` carpeta se actualizan, lo que incluye información relacionada con bots en el archivo de manifiesto que representa la aplicación en la Teams plataforma. Estos son los cambios:
   - El identificador del bot.
   - Los ámbitos del bot.
   - Los comandos a los que la aplicación de bot hello world puede responder.
-- Los archivos debajo se actualizarán y se regenerará el archivo `templates/azure/teamsfx` `templates/azure/provision/xxx` .bicep.
-- Los archivos debajo se regeneran, lo que garantiza que el proyecto esté configurado con configuraciones `.fx/config` correctas para la funcionalidad recién agregada.
+- Los archivos debajo `templates/azure/teamsfx` se actualizarán y `templates/azure/provision/xxx`se regenerará el archivo .bicep.
+- Los archivos debajo `.fx/config` se regeneran, lo que garantiza que el proyecto esté configurado con configuraciones correctas para la funcionalidad recién agregada.
 
 Después de agregar la pestaña, los cambios en el proyecto son los siguientes:
 
-- Se agrega un código de plantilla de pestaña front-end a una subcarpeta con ruta de acceso, que incluye una plantilla de aplicación de `yourProjectFolder/tab` pestaña **hello world** en el proyecto.
-- `launch.json`y en carpeta se actualizan, que incluye scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la `task.json` `.vscode` aplicación localmente. 
-- `manifest.remote.template.json`y el archivo en carpeta se actualizan, que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la plataforma Teams, los cambios son `manifest.local.template.json` `templates/appPackage` los siguientes:
+- Se agrega un código de plantilla de pestaña front-end a `yourProjectFolder/tab`una subcarpeta con ruta de acceso, que incluye una plantilla de aplicación de pestaña **hello world** en el proyecto.
+- `launch.json`y `task.json` en `.vscode` carpeta se actualizan, que incluye scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la aplicación localmente. 
+- `manifest.remote.template.json`y `manifest.local.template.json` el archivo en `templates/appPackage` carpeta se actualizan, que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la plataforma Teams, los cambios son los siguientes:
   - Pestañas configurables y estáticas.
   - Los ámbitos de las pestañas.
-- Los archivos debajo se actualizarán y se regenerará el archivo `templates/azure/teamsfx` `templates/azure/provision/xxx` .bicep.
-- El archivo debajo se regenera, lo que garantiza que el proyecto esté configurado con configuraciones `.fx/config` correctas para la funcionalidad recién agregada.
+- Los archivos debajo `templates/azure/teamsfx` se actualizarán y `templates/azure/provision/xxx`se regenerará el archivo .bicep.
+- El archivo debajo `.fx/config` se regenera, lo que garantiza que el proyecto esté configurado con configuraciones correctas para la funcionalidad recién agregada.
 
 ## <a name="limitations"></a>Limitaciones
 
-Las limitaciones con TeamsFx al agregar más funcionalidades son las siguientes:
+Las limitaciones de TeamsFx al agregar más funcionalidades son las siguientes:
 
-- No puede agregar capacidad de proyecto para más de una instancia.
-- No puede agregar funcionalidades de bot si el proyecto contiene extensión de mensajería.
-- No puede agregar una extensión de mensajería si el proyecto contiene un bot.
-
-> [!NOTE]
-> Si desea incluir las funciones de bot y extensión de mensajería, selecciónelos al mismo tiempo. Solo puede agregarlas al crear un nuevo proyecto o una aplicación de pestaña.
+* Puede agregar pestañas de hasta 16 instancias.
+* Puede agregar bot y extensión de mensajería para una instancia cada una.
 
 ## <a name="see-also"></a>Vea también
 
