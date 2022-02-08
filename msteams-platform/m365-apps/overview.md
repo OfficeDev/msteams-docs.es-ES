@@ -5,26 +5,26 @@ ms.date: 11/15/2021
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dc1ab5323944a319e4a729639212d25ec92ccfc
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: ef2aff7d7f23d45b16041404e7a530596e978fb5
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059724"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443911"
 ---
-# <a name="extend-teams-apps-across-microsoft-365"></a>Extender Teams aplicaciones en Microsoft 365
+# <a name="extend-teams-apps-across-microsoft-365"></a>Ampliar las aplicaciones de Teams en Microsoft 365
 
 > [!NOTE]
-> Esta versión preliminar para desarrolladores está diseñada para proporcionar Teams desarrolladores con [](/microsoftteams/platform/feedback) aplicaciones existentes la oportunidad de probar la nueva funcionalidad y proporcionar comentarios sobre esta expansión de la plataforma de desarrolladores de Teams en otras áreas de alto uso del ecosistema de Microsoft 365.
+> Esta versión preliminar para desarrolladores está diseñada para proporcionar Teams desarrolladores con aplicaciones existentes la oportunidad de probar la nueva funcionalidad [](/microsoftteams/platform/feedback) y proporcionar comentarios sobre esta expansión de la plataforma de desarrolladores de Teams en otras áreas de alto uso del ecosistema de Microsoft 365.
 
-Puede probar las aplicaciones de Teams que se ejecutan en Microsoft Office y Outlook actualizando el código para usar el nuevo manifiesto de vista previa del SDK de cliente de JavaScript de [Microsoft Teams v2 Preview](using-teams-client-sdk-preview.md) y Microsoft Teams Developer [preview](../resources/schema/manifest-schema-dev-preview.md).
+Puede probar las aplicaciones de Teams que se ejecutan en Microsoft Office y Outlook actualizando el código para usar el nuevo manifiesto de vista previa del SDK de [cliente de JavaScript de Microsoft Teams v2 Preview](using-teams-client-sdk-preview.md) y Microsoft Teams [Developer](../resources/schema/manifest-schema-dev-preview.md).
 
 Con esta vista previa, puede:
 
-- Extender las Teams [pestañas personales existentes](/microsoftteams/platform/tabs/how-to/create-personal-tab) a Outlook para escritorio y en la web, y también Office en la Web (office.com).
-- Amplíe las extensiones Teams de mensajería basadas en [búsquedas existentes](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) a Outlook para escritorio y en la web.
+- Extienda las Teams [pestañas personales existentes](/microsoftteams/platform/tabs/how-to/create-personal-tab) a Outlook para escritorio y en la web, y también Office en la Web (office.com).
+- Extienda las Teams [de mensajería basadas en búsquedas existentes](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) Outlook para escritorio y en la web.
 
-Para obtener comentarios y problemas, siga usando los canales Microsoft Teams de la comunidad [de desarrolladores.](/microsoftteams/platform/feedback)
+Para obtener comentarios y problemas, siga usando los canales Microsoft Teams [comunidad de desarrolladores relevantes](/microsoftteams/platform/feedback).
 
 ## <a name="teams-personal-tabs-in-office-and-outlook"></a>Teams pestañas personales en Office y Outlook
 
@@ -40,7 +40,7 @@ Con esta vista previa, puede extender las extensiones de mensajería de Teams ba
 
 Después de realizar la Teams, la extensión de mensajería aparece como una de las aplicaciones instaladas dentro del área de Outlook de mensajes de redacción.
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Pestaña personal que se ejecuta en outlook.com":::
+:::image type="content" source="~/assets/images/git-issue-msging-extension.png" alt-text="extensión de mensajería" lightbox="~/assets/images/git-issue-msging-extension.png" border="true":::
 
 ## <a name="next-step"></a>Paso siguiente
 

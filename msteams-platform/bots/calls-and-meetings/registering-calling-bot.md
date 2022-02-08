@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: 5368f8e5b5241ba91a1e4ad14b5d46f9ab778a12
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435156"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443933"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -56,7 +56,7 @@ El Graph proporciona permisos granulares para controlar el acceso que las aplica
 
 En la tabla siguiente se proporciona una lista de permisos de aplicación para llamadas:
 
-|Permiso    |Cadena de presentación   |Description |Se requiere el consentimiento de administrador |
+|Permiso    |Cadena de presentación   |Descripción |Se requiere el consentimiento de administrador |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Inicia llamadas salientes 1:1 desde la vista previa de la aplicación. |Permite a la aplicación realizar llamadas a un único usuario y transferir las llamadas a usuarios en el directorio de su organización, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
 | Calls.InitiateGroupCall.All |Iniciar llamadas de grupo salientes desde la vista previa de la aplicación. |Permite a la aplicación realizar llamadas a varios usuarios y agregar a participantes a las reuniones de su organización, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
@@ -91,6 +91,10 @@ Puedes confiar en un administrador para conceder los permisos que la aplicación
 
 > [!IMPORTANT]
 > Cada vez que realice un cambio en los permisos de la aplicación, también debe repetir el proceso de consentimiento de administrador. Los cambios realizados en el portal de registro de aplicaciones no se reflejan hasta que el administrador del espacio empresarial haya proporcionado el consentimiento.
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso para](../../sbs-calling-and-meeting.yml) configurar llamadas y reuniones en un bot.
 
 ## <a name="next-step"></a>Paso siguiente
 
