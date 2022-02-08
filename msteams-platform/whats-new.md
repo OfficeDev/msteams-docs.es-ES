@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 1172e0c94d89e36b1a48851fbef02264f0007777
-ms.sourcegitcommit: 7c627372e4eb838a1f437618473406fa9764a8fd
+ms.openlocfilehash: a33e704b8c66d460b6946b60947601bac9fb9269
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62432735"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443975"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,15 +22,16 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí  |
 | --- | --- | --- |
+|02/08/2022| Guía paso a paso introducida para crear un bot de llamadas y reuniones.| Crear bots > Bots de llamadas y reuniones > Bot de registro de llamadas y reuniones > [Guía paso a paso para crear bots de llamadas y reuniones](sbs-calling-and-meeting.yml) |
 |07/02/2022| Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
 |03/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
-|03/02/2022 |Modo interactivo para compartir la fase de reunión| • Crear aplicaciones para reuniones de Teams > [Fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para reuniones de Teams > [Referencias de API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de la versión preliminar para desarrolladores](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022| Modo interactivo para compartir la fase de reunión| • Crear aplicaciones para reuniones de Teams > [Fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para reuniones de Teams > [Referencias de API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de la versión preliminar para desarrolladores](resources/schema/manifest-schema-dev-preview.md)|
 |03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas (versión preliminar para desarrolladores)| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flujo de compra desde la aplicación para la monetización de aplicaciones (versión preliminar para desarrolladores) | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |01/25/2022| Enviar API de subtítulos en tiempo real | Crear aplicaciones para reuniones de Teams > Referencias de la API de aplicaciones de reuniones> [Referencias de la API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/1/2022| Comentarios sobre la finalización de formularios de Tarjetas adaptables | Crear bots > Conversaciones bots > Mensajes en conversaciones de bots > [Comentarios de finalización del formulario](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Selector de personas en tarjetas adaptables (versión preliminar de desarrolladores para móviles y GA para escritorio) | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
-|10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
+|10/01/2022| Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -44,6 +45,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|02/08/2022| Guía paso a paso introducida para crear un bot de llamadas y reuniones.| Crear bots > Bots de llamadas y reuniones > Bot de registro de llamadas y reuniones > [Guía paso a paso para crear bots de llamadas y reuniones](sbs-calling-and-meeting.yml) |
 |02/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) |
 |01/25/2022| Enviar API de subtítulos en tiempo real | Crear aplicaciones para reuniones de Teams > Referencias de la API de aplicaciones de reuniones> [Referencias de la API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/1/2022| Comentarios sobre la finalización de formularios de Tarjetas adaptables | Crear bots > Conversaciones bots > Mensajes en conversaciones de bots > [Comentarios de finalización del formulario](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
