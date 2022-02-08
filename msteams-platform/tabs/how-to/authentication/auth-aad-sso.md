@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Autenticación SSO de Teams Azure AD API de inicio de sesión único
-ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 065b8a75348e026a7e4bc2514438c70dbef479d7
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212359"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435163"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -29,7 +29,7 @@ Los usuarios inician sesión en Microsoft Teams a través de su cuenta profesion
 > [!NOTE]
 > **Inicio rápido**  
 >
-> La ruta de acceso más sencilla para empezar con la pestaña SSO es con el kit de herramientas de Teams para Visual Studio Code. Para obtener más información, consulte [SSO con el kit de herramientas de Teams y Visual Studio Code para pestañas](../../../toolkit/visual-studio-code-tab-sso.md)
+> La ruta de acceso más sencilla para empezar con la pestaña SSO es con el kit de herramientas de Teams para Microsoft Visual Studio Code. Para obtener más información, consulte [SSO con el kit de herramientas de Teams y Visual Studio Code para pestañas](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Cómo funciona el SSO en tiempo de ejecución
 

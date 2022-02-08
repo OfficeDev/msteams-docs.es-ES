@@ -3,19 +3,19 @@ title: Extender una aplicación Teams pestaña personal en Microsoft 365
 description: Extender una aplicación Teams pestaña personal en Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.custom: m365apps
+ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 828b3fa2886782d8e7a28f506bbb6526b4b9c848
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 529dd82276f4e11dc6256d23b6e8eb622a1651a0
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212064"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435275"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
 > [!NOTE]
-> *La extensión de una Teams personal en Microsoft 365* está disponible actualmente solo en la versión preliminar del desarrollador [público.](../resources/dev-preview/developer-preview-intro.md) Es posible que las características incluidas en la versión preliminar no estén completas y experimenten cambios antes de estar disponibles en la versión pública. Se proporcionan solo con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
+> *La extensión de una Teams personal en Microsoft 365* está disponible solo en [la versión preliminar del desarrollador público](../resources/dev-preview/developer-preview-intro.md). Es posible que las características incluidas en la versión preliminar no estén completas y experimenten cambios antes de estar disponibles en la versión pública. Se proporcionan solo con fines de prueba y exploración. No deben usarse en aplicaciones de producción.
 
 Las pestañas personales proporcionan una excelente forma de mejorar la Microsoft Teams experiencia. Con las pestañas personales, puede proporcionar a un usuario acceso a su aplicación directamente dentro de Teams, sin que el usuario tenga que dejar la experiencia o volver a iniciar sesión. Con esta vista previa, las pestañas personales pueden iluminarse dentro de otras Microsoft 365 aplicaciones. En este tutorial se muestra el proceso de tomar una pestaña personal de Teams existente y actualizarla para que se ejecute en experiencias de escritorio y web de Outlook, y también Office en la Web (office.com).
 
@@ -30,7 +30,7 @@ Actualizar la aplicación personal para que se ejecute en Outlook y Office Inici
 La prueba de la aplicación requerirá los siguientes pasos:
 
 > [!div class="checklist"]
-> * Inscribir el inquilino M365 *en Office 365 versiones dirigidas*
+> * Inscribir el inquilino Microsoft 365 en *Office 365 versiones dirigidas*
 > * Configurar tu cuenta para tener acceso a las versiones preliminares de Outlook y Office aplicaciones
 > * Descargar localmente la aplicación actualizada en Teams
 
@@ -43,7 +43,7 @@ Para completar este tutorial, necesitará:
 * Inquilino Microsoft 365 espacio aislado del Programa para desarrolladores
 * El inquilino de espacio aislado inscrito en *Office 365 versiones dirigidas*
 * Una máquina con Office aplicaciones instaladas desde el canal *Aplicaciones Microsoft 365 beta*
-* (Opcional) [Teams Toolkit](https://aka.ms/teams-toolkit) extensión de Visual Studio Code para ayudar a actualizar el código
+* (Opcional) [Teams Toolkit](https://aka.ms/teams-toolkit) de Microsoft Visual Studio para ayudar a actualizar el código
 
 > [!div class="nextstepaction"]
 > [Requisitos previos para la instalación](prerequisites.md)
@@ -52,14 +52,14 @@ Para completar este tutorial, necesitará:
 
 Si tienes una aplicación de pestaña personal existente, haz una copia o una rama del proyecto de producción para probar y actualizar tu id. de aplicación en el manifiesto de la aplicación para usar un nuevo identificador (distinto del id. de aplicación de producción).
 
-Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos de configuración de Introducción a [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para crear una aplicación de pestaña personal con la extensión Teams Toolkit para Visual Studio Code. O bien, puede empezar con el mismo ejemplo de lista todo actualizado para [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) y continuar con La vista previa de la pestaña personal en otras [Microsoft 365 experiencias.](#preview-your-personal-tab-in-other-microsoft-365-experiences) El ejemplo actualizado también está disponible en Teams Toolkit extensión: *Ejemplos* de vista de desarrollo Lista de todo (Funciona en  >    >  **Teams, Outlook y Office).**
+Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos de configuración de Introducción a [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para crear una aplicación de pestaña personal con la extensión Teams Toolkit para Visual Studio Code. O bien, puede empezar con el mismo ejemplo de lista [de todo actualizado para TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) y continuar con La vista previa de la pestaña personal en otras [Microsoft 365 experiencias.](#preview-your-personal-tab-in-other-microsoft-365-experiences) El ejemplo actualizado también está disponible en Teams Toolkit extensión: *DevelopmentView* >  *samplesTodo* >  **List (Funciona en Teams, Outlook y Office).**.
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Ejemplo de lista todo (funciona en Teams, Outlook y Office) en Teams Toolkit":::
 
 
 ## <a name="update-the-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
-Tendrás que usar el esquema de manifiesto de vista previa del desarrollador de [Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) y la versión del manifiesto para permitir que la pestaña personal de Teams se ejecute en Office y `m365DevPreview` Outlook.
+Tendrás que usar el esquema de manifiesto de vista previa del desarrollador de [Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `Microsoft 365 DevPreview` y la versión del manifiesto para permitir que tu pestaña personal Teams se ejecute en Office y Outlook.
 
 Puedes usar Teams Toolkit para actualizar el manifiesto de la aplicación o aplicar los cambios manualmente:
 
@@ -70,7 +70,7 @@ Puedes usar Teams Toolkit para actualizar el manifiesto de la aplicación o apli
 
 # <a name="manual-steps"></a>[Pasos manuales](#tab/manifest-manual)
 
-Abre el Teams de la aplicación y actualiza `$schema` el y con los siguientes `manifestVersion` valores:
+Abre el Teams de la aplicación y actualiza el `$schema` y `manifestVersion` con los siguientes valores:
 
 ```json
 {
@@ -80,58 +80,58 @@ Abre el Teams de la aplicación y actualiza `$schema` el y con los siguientes `m
 ```
 ---
 
-Si usó Teams Toolkit para crear su aplicación personal, también puede usarla para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la paleta de comandos y busque Teams: validar el archivo de manifiesto o seleccione la opción en el menú Implementación del Teams Toolkit (busque el icono Teams a la izquierda de `Ctrl+Shift+P` Visual Studio Code). 
+Si usó Teams Toolkit para crear su aplicación personal, también puede usarla para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la `Ctrl+Shift+P` paleta de comandos y busque **Teams:** validar el archivo de manifiesto o seleccione la opción en el menú Implementación del Teams Toolkit (busque el icono Teams en el lado izquierdo de Visual Studio Code).
 
 :::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit &quot;Validar archivo de manifiesto&quot; en el menú &quot;Implementación&quot;":::
 
 ## <a name="update-sdk-references"></a>Actualizar referencias de SDK
 
-Para ejecutar en Outlook y Office, la aplicación tendrá que depender del paquete npm `@microsoft/teams-js@2.0.0-beta.1` (o de una versión *beta* posterior). Si bien el código con versiones de nivel inferior de se admite en Outlook y Office, las advertencias de desuso se registrarán y la compatibilidad con las versiones de nivel inferior de Outlook y `@microsoft/teams-js` `@microsoft/teams-js` Office terminarán.
+Para ejecutar en Outlook y Office, la aplicación tendrá que depender del paquete npm `@microsoft/teams-js@2.0.0-beta.1` (o de una versión *beta* posterior). `@microsoft/teams-js` Si bien el código con versiones de nivel inferior de se admite en Outlook y Office, las advertencias `@microsoft/teams-js` de desuso se registrarán y la compatibilidad con las versiones de nivel inferior de Outlook y Office terminarán.
 
-Puede usar Teams Toolkit para automatizar algunos de los cambios de código para adoptar la siguiente versión de , pero si desea realizar los pasos manualmente, consulte `@microsoft/teams-js` [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) para obtener más información.
+Puede usar Teams Toolkit `@microsoft/teams-js`para automatizar algunos de los cambios de código para adoptar la siguiente versión de , pero si desea realizar los pasos manualmente, consulte [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) para obtener más información.
 
 1. Abra la *paleta Comandos*: `Ctrl+Shift+P`
 1. Ejecutar el comando `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Una vez completada, la utilidad habrá actualizado el archivo con la dependencia de TeamsJS SDK Preview (o posterior) y los archivos y se `package.json` `@microsoft/teams-js@2.0.0-beta.1` `*.js/.ts` `*.jsx/.tsx` actualizarán con:
+Una vez completada, la utilidad habrá `package.json` actualizado el archivo con la dependencia de TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1` o posterior) `*.js/.ts` y los archivos y `*.jsx/.tsx` se actualizarán con:
 
 > [!div class="checklist"]
 > * `package.json` referencias a TeamsJS SDK Preview
 > * Instrucciones Import para TeamsJS SDK Preview
 > * [Llamadas de función, enumeración e interfaz](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) a TeamsJS SDK Preview
-> * `TODO` avisos de comentarios para revisar las áreas que podrían estar afectadas por los [cambios en](using-teams-client-sdk-preview.md#updates-to-the-context-interface) la interfaz de contexto
-> * `TODO` avisos de comentarios para asegurarse de que la conversión [a funciones de promesas](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) de funciones de estilo de devolución de llamada ha ido bien en cada sitio de llamada que encontró la herramienta
+> * `TODO` avisos de comentarios para revisar las áreas que podrían estar afectadas por los [cambios en la interfaz](using-teams-client-sdk-preview.md#updates-to-the-context-interface) de contexto
+> * `TODO` avisos de comentarios para asegurarse de [que la conversión a funciones de promesas](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) de funciones de estilo de devolución de llamada ha ido bien en cada sitio de llamada que encontró la herramienta
 
 > [!IMPORTANT]
 > El código *.html* archivos no es compatible con las herramientas de actualización y requerirá cambios manuales.
 
 > [!NOTE]
-> Si desea actualizar manualmente el código, consulte Microsoft Teams Versión preliminar del SDK de cliente de [JavaScript](using-teams-client-sdk-preview.md) para obtener información sobre los cambios necesarios.
+> Si desea actualizar manualmente el código, consulte Microsoft Teams Versión preliminar del SDK de cliente [de JavaScript](using-teams-client-sdk-preview.md) para obtener información sobre los cambios necesarios.
 
 ## <a name="configure-content-security-policy-headers"></a>Configurar encabezados de directiva de seguridad de contenido
 
-[Al igual que en Microsoft Teams,](/microsoftteams/platform/tabs/what-are-tabs)las aplicaciones de tabulación se hospedan en ([elementos iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)) en Office y Outlook web.
+[Al igual que Microsoft Teams](/microsoftteams/platform/tabs/what-are-tabs), las aplicaciones de tabulación se hospedan en (elementos [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)) en Office y Outlook clientes web.
 
-Si la aplicación [](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) usa encabezados de directiva de seguridad de contenido (CSP), asegúrate de permitir todos los siguientes antecesores [de fotogramas](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) en los encabezados CSP:
+Si la aplicación usa encabezados de directiva de seguridad de [contenido (CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) ), asegúrate de permitir todos los siguientes antecesores [de fotogramas en los encabezados](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) CSP:
 
 |Microsoft 365 host| permiso frame-ancestor|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
+| Oficina | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
 
-Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams,](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)sin embargo, deberá agregar varios identificadores de aplicación cliente al registro de aplicación Azure AD de la aplicación de pestaña en el portal de registros de *aplicaciones del* inquilino.
+Azure Active Directory El inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), pero deberá agregar varios identificadores de aplicación cliente al registro de la aplicación Azure AD de la aplicación de pestaña en el portal de registros de *aplicaciones* del inquilino.
 
-1. Inicie sesión en [Azure Portal con](https://portal.azure.com) su cuenta de espacio aislado.
-1. Abra la **hoja Registros de aplicaciones.**
+1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
+1. Abra la **hoja Registros de aplicaciones** .
 1. Selecciona el nombre de la aplicación de pestaña personal para abrir el registro de la aplicación. 
 1. Seleccione  **Exponer una API** (en *Administrar*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar identificadores de cliente desde la hoja *Registros de aplicaciones* en Azure Portal":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar identificadores de cliente desde la hoja *Registros de aplicaciones* en Microsoft Azure web":::
 
-En la **sección Aplicaciones cliente autorizadas,** asegúrese de que se agregan todos los `Client Id` valores siguientes:
+En la **sección Aplicaciones cliente autorizadas** , asegúrese de que se agregan todos los valores `Client Id` siguientes:
 
 |Microsoft 365 cliente | Id. de cliente |
 |--|--|
@@ -146,17 +146,17 @@ En la **sección Aplicaciones cliente autorizadas,** asegúrese de que se agrega
 
 ## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Teams
 
-El último paso es cargar localmente la pestaña personal actualizada ([paquete de](/microsoftteams/platform/concepts/build-and-test/apps-package)la aplicación ) en Microsoft Teams. Una vez completada, la aplicación estará disponible para ejecutarse en Office y Outlook, además de Teams.
+El último paso es cargar localmente la pestaña personal actualizada (paquete [de](/microsoftteams/platform/concepts/build-and-test/apps-package) la aplicación) en Microsoft Teams. Una vez completada, la aplicación estará disponible para ejecutarse en Office y Outlook, además de Teams.
 
-1. Empaqueta la Teams (iconos de manifiesto e [aplicación)](/microsoftteams/platform/resources/schema/manifest-schema#icons)en un archivo zip. Si usó Teams Toolkit para crear la aplicación, puede hacerlo fácilmente con la opción paquete  de metadatos **Zip Teams** en el menú Implementación de Teams Toolkit o en la paleta de comandos de `Ctrl+Shift+P` Visual Studio Code:
+1. Empaqueta tu Teams (iconos de manifiesto e [aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo zip. Si usó Teams Toolkit para crear la aplicación, puede hacerlo fácilmente con la opción Paquete de metadatos **Zip Teams** en el menú Implementación de Teams Toolkit  `Ctrl+Shift+P` o en la Paleta de comandos de Visual Studio Code:
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Opción &quot;Paquete Teams metadatos zip&quot; en Teams Toolkit extensión para Visual Studio Code":::
 
-1. Inicie sesión en Teams con su cuenta de espacio aislado de espacio aislado y asegúrese de que está en public Developer Preview. Puede comprobar que está en vista previa en el cliente de Teams haciendo clic en el menú  de puntos  suspensivos (**...**) del perfil de usuario y abriendo Acerca de comprobar que la opción Vista previa del programador está activa.
+1. Inicie sesión en Teams con su cuenta de espacio aislado de espacio aislado y asegúrese de que está en public Developer Preview. Puede comprobar que está en vista previa en el cliente de Teams haciendo clic en el menú de puntos suspensivos (**...**) del perfil de usuario y abriendo Acerca de comprobar  que la opción Vista previa  del programador está activa.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="En Teams de puntos suspensivos, abra &quot;Acerca&quot; y compruebe que la opción &quot;Vista previa del programador&quot; esté activada.":::
 
-1. Abra el *panel* Aplicaciones y haga clic **Upload una aplicación personalizada** y, a continuación, Upload para mí o **mis equipos**.
+1. Abre el *panel* Aplicaciones y haz clic **Upload una aplicación personalizada** y, a continuación **, Upload para mí o mis equipos**.
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Botón &quot;Upload una aplicación personalizada&quot; en el panel Teams &quot;Aplicaciones&quot;":::
 
@@ -189,7 +189,7 @@ Para ver la aplicación en Outlook en la Web, visita https://outlook.office.com 
 
 Haz clic en el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
-### <a name="office-on-the-web"></a>Office en la web
+### <a name="office-on-the-web"></a>Office en la Web
 
 > [!IMPORTANT]
 > Consulta las actualizaciones más recientes de [Microsoft Teams:](https://devblogs.microsoft.com/microsoft365dev/) blog para desarrolladores de Microsoft 365 para comprobar si Office.com admite aplicaciones personales Teams tu inquilino de prueba.
@@ -198,7 +198,7 @@ Para obtener una vista previa de la aplicación que se ejecuta en Office en la W
 
 Haz clic en el icono de la aplicación para iniciar la aplicación en Office inicio.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 Outlook pestañas personales habilitadas Office están en versión preliminar y no se admiten para el uso de producción. Aquí te explicamos cómo distribuir tu aplicación de pestaña personal para obtener una vista previa de audiencias con fines de prueba.
 
@@ -208,15 +208,15 @@ Outlook y Office pestañas personales habilitadas para la vista previa se pueden
 
 #### <a name="teams-client"></a>Teams cliente
 
-En el *menú* Aplicaciones, selecciona *Administrar tus aplicaciones* Enviar una aplicación a tu  >  **organización.** Esto requiere la aprobación del administrador de TI.
+En el *menú* Aplicaciones, selecciona *Administrar las aplicacionesSubmit* >  **una aplicación a tu organización**. Esto requiere la aprobación del administrador de TI.
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams de administración
 
-Como administrador Teams, puede cargar e instalar previamente el paquete de la aplicación para el inquilino de la organización desde https://admin.teams.microsoft.com/ . Consulta [Upload aplicaciones personalizadas en el Centro Microsoft Teams administración para](/MicrosoftTeams/upload-custom-apps) obtener más información.
+Como administrador Teams, puede cargar e instalar previamente el paquete de la aplicación para el inquilino de la organización desde https://admin.teams.microsoft.com/. Consulta [Upload aplicaciones personalizadas en el Centro Microsoft Teams administración para](/MicrosoftTeams/upload-custom-apps) obtener más información.
 
 #### <a name="microsoft-admin-center"></a>Centro de administración de Microsoft
 
-Como administrador global, puedes cargar e instalar previamente el paquete de la aplicación desde https://admin.microsoft.com/ . Consulta [Probar e implementar Aplicaciones Microsoft 365 asociados en el portal de aplicaciones integradas](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obtener más información.
+Como administrador global, puedes cargar e instalar previamente el paquete de la aplicación desde https://admin.microsoft.com/. Consulta [Probar e implementar Aplicaciones Microsoft 365 asociados en el portal de aplicaciones integradas](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obtener más información.
 
 ### <a name="multi-tenant-distribution"></a>Distribución multiinquilino
 

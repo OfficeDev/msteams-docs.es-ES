@@ -6,8 +6,13 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 3e704b08caa9a3aafc388fe4aa2e8851292c944f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435806"
 ---
-
 # <a name="add-capabilities-to-your-teams-apps"></a>Agregar funcionalidades a tus Teams aplicaciones
 
 Puedes crear una nueva aplicación Teams con una de las Teams de la aplicación. Durante el desarrollo de aplicaciones, puedes usar Teams Toolkit para agregar más funcionalidades a tu Teams aplicación. En la tabla siguiente se enumeran las Teams funcionalidades de la aplicación:
@@ -30,7 +35,7 @@ Puedes crear una nueva aplicación Teams con una de las Teams de la aplicación.
 > [!IMPORTANT]
 > Debes realizar la provisión para cada entorno después de agregar correctamente funcionalidades a tu Teams aplicación.
 
-1. Abra **Visual Studio Code**.
+1. Abra **Microsoft Visual Studio código**.
 1. Seleccione **Teams Toolkit** desde el panel izquierdo.
 1. Seleccione **Agregar funcionalidades**:
 

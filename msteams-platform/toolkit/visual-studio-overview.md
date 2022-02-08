@@ -5,14 +5,14 @@ keywords: Kit de herramientas de visual studio de teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: e4caacc495fdd7510575a373f33db129c08bad87
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 2fa11fbf0b4bfb3d7c9b4fe376b6517e0313338f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075475"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435855"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Crear aplicaciones con el Teams Toolkit y Visual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-microsoft-visual-studio"></a>Crear aplicaciones con el Teams Toolkit y Microsoft Visual Studio
 
 El kit de herramientas de Microsoft Teams le permite crear aplicaciones personalizadas de Teams directamente desde el entorno de desarrollo integrado (IDE) de Visual Studio. El kit de herramientas de Microsoft Teams le orienta en el proceso y le ofrece todo lo que necesita para crear, depurar e iniciar su aplicación de Teams.
 
@@ -41,9 +41,9 @@ El Microsoft Teams Toolkit para Visual Studio está disponible para su descarga 
 1. Inicie Visual Studio 2019.
 2. Seleccione **Crear un nuevo proyecto**.
 3. Busque la **Microsoft Teams y** seleccione **Siguiente**.
-4. En Configure **your new project**, escriba el nombre **Project**, **Location** y **Solution name**.
+4. En Configurar **el nuevo proyecto**, escriba el nombre **Project**, **Ubicación** y **Nombre de la solución**.
 5. Selecciona **Siguiente** para escribir un nombre para la aplicación.
-6. En la pantalla Información adicional, escribe **un** nombre de aplicación y un nombre de **desarrollador** o compañía para tu Teams aplicación.
+6. En la pantalla Información adicional, **escribe un nombre** de aplicación y **un nombre de desarrollador** o de empresa para tu Teams aplicación.
 
 ## <a name="configure-your-app"></a>Configurar la aplicación
 
@@ -64,11 +64,11 @@ Cuando se instala una aplicación, el cliente Teams analiza el archivo de manifi
 > [!NOTE]
 >Si aún no lo ha hecho, debe iniciar sesión en su cuenta de Microsoft 365 para continuar con el proceso de desarrollo.
 >
-> Si no tiene una cuenta Microsoft 365, puede registrarse para una suscripción Microsoft 365 [Programa para desarrolladores.](https://developer.microsoft.com/microsoft-365/dev-program) Es gratuito durante 90 días y se renueva siempre que lo use para la actividad de desarrollo. Si tiene una suscripción Visual Studio Enterprise o Professional, ambos programas incluyen una suscripción Microsoft 365 desarrollador [gratuita,](https://aka.ms/MyVisualStudioBenefits)activa durante la vida de su Visual Studio suscripción. Para obtener más información, vea [Configurar una Microsoft 365 de desarrollador](/office/developer-program/office-365-developer-program-get-started).
+> Si no tiene una cuenta Microsoft 365, puede registrarse para una suscripción Microsoft 365 [Programa para desarrolladores](https://developer.microsoft.com/microsoft-365/dev-program). Es gratuito durante 90 días y se renueva siempre que lo use para la actividad de desarrollo. Si tiene una suscripción Visual Studio Enterprise o Professional, ambos programas incluyen una suscripción Microsoft 365 desarrollador [gratuita, activa](https://aka.ms/MyVisualStudioBenefits) durante la vida de su Visual Studio suscripción. Para obtener más información, consulta [Configurar una suscripción Microsoft 365 desarrollador.](/office/developer-program/office-365-developer-program-get-started)
 
 ### <a name="configuration-steps"></a>Pasos de la configuración 
 
-1. Para configurar la aplicación, selecciona el menú **Project > TeamsFx > Configurar para SSO....**
+1. Para configurar la aplicación, selecciona el menú **Project > TeamsFx > Configurar para SSO**....
 
 Cuando se le pida, inicie sesión en su cuenta microsoft que tenga un inquilino M365.
 
@@ -82,7 +82,7 @@ El **Project > TeamsFx Validate > Teams manifest** permite comprobar que el paqu
 
 ## <a name="publish-your-app-to-teams"></a>Publicar la aplicación en Teams
 
-En el Portal de desarrolladores de [Teams,](https://dev.teams.microsoft.com/home)puedes cargar la aplicación en un equipo, enviar la aplicación a la tienda de aplicaciones personalizada de tu empresa para los usuarios de tu organización o enviar la aplicación a App Source para todos los usuarios Teams usuario.
+En [el Portal](https://dev.teams.microsoft.com/home) de desarrolladores de Teams, puedes cargar la aplicación en un equipo, enviar la aplicación a la tienda de aplicaciones personalizada de tu empresa para los usuarios de tu organización o enviar la aplicación a App Source para todos los usuarios Teams usuario.
 
 - El administrador de TI revisará estas entregas.
 - Puedes volver a la **página Publicar** para comprobar el estado del envío y saber si tu administrador de TI aprobó o rechazó la aplicación. Aquí también puedes enviar actualizaciones a la aplicación o cancelar cualquier envío activo actualmente.

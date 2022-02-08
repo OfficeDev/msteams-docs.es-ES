@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 82fff61f174b4dc08d30c466d9d404042bb3a4e0
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212562"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435848"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino Microsoft 365 prueba
 
@@ -18,18 +18,18 @@ Puedes probar la aplicación Microsoft Teams con datos de ejemplo con una Micros
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-1. [Únase al Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), si no tiene un inquilino de prueba.
+1. [Únase al programa Microsoft 365 desarrollador](/office/developer-program/office-365-developer-program), si no tiene un inquilino de prueba.
 2. [Configurar una suscripción Microsoft 365 desarrollador](/office/developer-program/office-365-developer-program-get-started).
-3. [Use paquetes de datos de ejemplo Microsoft 365 suscripción de desarrollador para instalar el paquete de contenido Usuarios](/office/developer-program/install-sample-packs).
+3. [Use paquetes de datos de ejemplo con Microsoft 365 suscripción de desarrollador para instalar el paquete de contenido Usuarios](/office/developer-program/install-sample-packs).
 4. [Instale el Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
-5. [Instale el Azure AD de PowerShell](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
+5. [Instale el Azure AD PowerShell](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
 > Debe tener permisos de administrador global en el espacio empresarial para ejecutar los scripts.
 
 ## <a name="allow-users-to-upload-apps"></a>Permitir a los usuarios cargar aplicaciones
 
-De forma predeterminada, solo los administradores globales o Teams administradores de servicios pueden cargar (instalación local) aplicaciones en un inquilino. También puedes permitir que los usuarios carguen aplicaciones personalizadas para su propio uso o en equipos para realizar pruebas. Para obtener más información, consulta Administrar las directivas y la configuración de aplicaciones [personalizadas en Teams](/microsoftteams/teams-custom-app-policies-and-settings).
+De forma predeterminada, solo los administradores globales o Teams administradores de servicios pueden cargar (instalación local) aplicaciones en un inquilino. También puedes permitir que los usuarios carguen aplicaciones personalizadas para su propio uso o en equipos para realizar pruebas. Para obtener más información, consulta [Administrar las directivas y la configuración de aplicaciones personalizadas en Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## <a name="create-teams-and-channels-for-testing"></a>Crear equipos y canales para pruebas
 
@@ -164,7 +164,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
 
         try {
 
-            # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 

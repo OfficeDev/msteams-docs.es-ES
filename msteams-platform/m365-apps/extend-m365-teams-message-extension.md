@@ -4,12 +4,12 @@ description: Este es el modo de actualizar la extensión de mensajería de Teams
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
+ms.openlocfilehash: a72f4781c6765c908748a8be16d096bca866fe36
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345383"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435813"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Extender una extensión Teams de mensajería a través de Microsoft 365
 
@@ -34,7 +34,7 @@ Para completar este tutorial, necesitará:
  - Inquilino Microsoft 365 espacio aislado del Programa para desarrolladores
  - El inquilino de espacio aislado inscrito en *Office 365 versiones dirigidas*
  - Un entorno de prueba con Office aplicaciones instaladas desde el Aplicaciones Microsoft 365 *beta*
- - Visual Studio Code con la Teams Toolkit (versión preliminar) (opcional)
+ - Microsoft Visual Studio código con la Teams Toolkit (versión preliminar) (opcional)
 
 > [!div class="nextstepaction"]
 > [Requisitos previos para la instalación](prerequisites.md)
@@ -80,7 +80,7 @@ En Microsoft Teams, una extensión de mensajería consta de un servicio web que 
 
 Para que los usuarios interactúen con la extensión de mensajería desde Outlook, deberá agregar un canal de Outlook al bot:
 
-1. Desde [Azure Portal](https://portal.azure.com) (o [el portal de Bot Framework](https://dev.botframework.com) si se registró anteriormente allí), vaya al recurso bot.
+1. Desde [Microsoft Azure portal](https://portal.azure.com) (o [portal de Bot Framework](https://dev.botframework.com) si se registró anteriormente allí), vaya al recurso bot.
 
 1. En *Configuración*, seleccione **Canales**.
 
@@ -153,7 +153,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Outlook en Window
 
 Para obtener una vista previa de la aplicación que se Outlook en la Web, inicie sesión [en outlook.com](https://www.outlook.com) con las credenciales del inquilino de prueba. Haga clic en **Nuevo mensaje**. Abre el **menú desplegable Más aplicaciones** en la parte inferior de la ventana de composición. Aparecerá la extensión de mensajería. Puede invocarlo desde allí y usarlo tal como lo haría al redactar un mensaje en Teams.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 Outlook habilitadas para Teams de mensajería están en versión preliminar y no son compatibles con el uso de producción. Este es el modo de distribuir la extensión de Outlook de mensajería habilitada para obtener una vista previa de audiencias con fines de prueba.
 

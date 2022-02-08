@@ -2,16 +2,14 @@
 title: Configurar el entorno de desarrollo para ampliar Teams aplicaciones en Microsoft 365
 description: Estos son los requisitos previos para extender las aplicaciones Teams en Microsoft 365
 ms.date: 11/15/2021
-ms.topic: how-to
-ms.custom: m365apps
-ms.openlocfilehash: e024b11f03c605144a5d1cac6904cdd0095ec15c
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: 3fe9d9ea02ff1e7f607d8870ca6817b48556c81f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281703"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435666"
 ---
-# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>Configurar el entorno de desarrollo para ampliar Teams aplicaciones en M365
+# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar el entorno de desarrollo para ampliar Teams aplicaciones en Microsoft 365
 
 > [!NOTE]
 > Extender la aplicación de teams Microsoft 365 está disponible actualmente solo en [la versión preliminar del desarrollador público](~/resources/dev-preview/developer-preview-intro.md).
@@ -21,11 +19,11 @@ El entorno de desarrollo para extender Teams aplicaciones en Microsoft 365 es si
 Para configurar el entorno de desarrollo:
 
 > [!div class="checklist"]
-> * [Obtener inquilino de M365 Developer (sandbox) y habilitar la instalación local](#prepare-a-developer-tenant-for-testing)
-> * [Inscribir el inquilino M365 *en Office 365 versiones dirigidas*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [Obtener Microsoft 365 inquilino del desarrollador (espacio aislado) y habilitar la instalación local](#prepare-a-developer-tenant-for-testing)
+> * [Inscribir el inquilino Microsoft 365 en *Office 365 de destino*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configurar la cuenta para obtener acceso a las versiones preliminares de Outlook y Office](#install-office-apps-in-your-test-environment)
 > * [Cambie a la versión de vista previa del desarrollador de Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Opcional*] [Instalar Teams Toolkit extensión para Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*Opcional*] [Instalar Teams Toolkit para el Microsoft Visual Studio código](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>Preparar un inquilino para desarrolladores para pruebas
 

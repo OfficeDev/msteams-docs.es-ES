@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación de aplicación de paquete MVC
-ms.openlocfilehash: 98f72b41e13c9b06f00a1b32a1fb52bb6b82fd2e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8062add7411ebc583ef29ac8ac003cda81766f5f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888044"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435883"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -24,26 +24,26 @@ Puede crear una pestaña personal con Node.js Yeoman Generator, ASP.NET Core o A
 ### <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator"></a>Crear una pestaña personal personalizada con Node.js y el generador de Yeoman
 
 > [!NOTE]
-> En este artículo se describen los pasos descritos en la compilación del primer [wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) de la aplicación Microsoft Teams que se encuentra en el repositorio GitHub Microsoft OfficeDev.
+> En este artículo se describen los pasos descritos en la compilación del [primer wiki de](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Microsoft Teams aplicación que se encuentra en el repositorio GitHub Microsoft OfficeDev.
 
-Puede crear una pestaña personal personalizada mediante el [generador Teams Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). La aplicación también se carga en Teams.
+Puede crear una pestaña personal personalizada con el [generador Teams Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). La aplicación también se carga en Teams.
 
 ### <a name="prerequisites-for-teams-apps"></a>Requisitos previos para Teams aplicaciones
 
 Debe comprender los siguientes requisitos previos:
 
-- Debes tener un inquilino Office 365 y un equipo configurado con **Permitir la carga de aplicaciones personalizadas** habilitada. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Debes tener un inquilino Office 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, vea [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si no tiene una cuenta Office 365, puede registrarse para obtener una suscripción gratuita a través del programa Office 365 desarrolladores. La suscripción permanece activa siempre que la esté usando para el desarrollo continuo. Vea [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- Cualquier editor de texto o IDE. Puede instalar y [usar](https://code.visualstudio.com/download) Visual Studio Code de forma gratuita.
+- Cualquier editor de texto o IDE. Puede instalar y usar Microsoft Visual Studio [code](https://code.visualstudio.com/download) de forma gratuita.
 
 - [Node.js/npm](https://nodejs.org/en/). Use la versión LTS más reciente. El nodo Administrador de paquetes (npm) se instala en el sistema con la instalación de Node.js.
 
-- Una vez que haya instalado correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando el siguiente comando en el símbolo del sistema:
+- Después de instalar correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando el siguiente comando en el símbolo del sistema:
 
     ```bash
     npm install yo gulp-cli --global
@@ -67,7 +67,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
     yo teams
     ```
 
-1. A continuación, proporcione una serie de valores que se usan en el archivo **manifest.json** de la aplicación:
+1. A continuación, proporcione una serie de valores que se usan en el archivo **manifest.json de la** aplicación:
 
     ![captura de pantalla de apertura del generador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -97,11 +97,11 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **Escriba su id. de partner de Microsoft, si tiene uno. (Dejar en blanco para omitir)**
 
-    Este campo no es necesario y debe usarse solo si ya forma parte de la red [de partners de Microsoft](https://partner.microsoft.com).
+    Este campo no es necesario y debe usarse solo si ya forma parte de la [Red de partners de Microsoft](https://partner.microsoft.com).
 
     **¿Qué desea agregar al proyecto?**
 
-    Seleccione **( ) Una &ast; pestaña**.
+    Seleccione **( &ast; ) Una pestaña**.
 
     **¿La dirección URL donde hospedará esta solución?**
 
@@ -125,7 +125,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Desea usar azure applications Ideas para telemetría? (y/N)**
 
-    Elija **no incluir** la aplicación de Azure [Ideas](/azure/azure-monitor/app/app-insights-overview). El valor predeterminado es no; escriba **n**.
+    Elija **no incluir** azure [application Ideas](/azure/azure-monitor/app/app-insights-overview). El valor predeterminado es no; escriba **n**.
 
     **Nombre de tabulación predeterminado (máximo 16 caracteres)?**
 
@@ -133,16 +133,16 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Qué tipo de tab le gustaría crear?**
 
-    Use las teclas de flecha para **seleccionar Personal (estático).**
+    Use las teclas de flecha para **seleccionar Personal (estático).**.
 
     **¿Necesita compatibilidad con el inicio de sesión único de Azure AD para la pestaña?**
 
     Elija **no** incluir la Azure AD inicio de sesión único para la pestaña. El valor predeterminado es sí, escriba **n**.
 
     > [!IMPORTANT]
-    > El componente de ruta **de acceso yourDefaultTabNameTab** es el valor que escribió en el generador **para Default Tab Name** más la palabra **Tab**.
+    > El componente de **ruta de acceso yourDefaultTabNameTab** es el valor que escribió en el generador **para Nombre de tabulación** predeterminado más la palabra **Tab**.
     >
-    > Por ejemplo: DefaultTabName: **MyTab**  >  **/MyTabTab/**
+    > Por ejemplo: DefaultTabName: **MyTab** > **/MyTabTab/**
 
 ### <a name="add-a-personal-tab"></a>Agregar una pestaña personal
 
@@ -182,7 +182,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
     ./src/manifest/manifest.json/
     ```
 
-1. Agregue lo siguiente a la matriz `staticTabs` vacía ( ) y agregue el siguiente objeto `staticTabs":[]` JSON:
+1. Agregue lo siguiente a la matriz `staticTabs` vacía (`staticTabs":[]`) y agregue el siguiente objeto JSON:
 
     ```json
     {
@@ -194,7 +194,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
     }
     ```
 
-1. Actualice el componente de ruta de acceso **contentURL** **yourDefaultTabNameTab** con el nombre de pestaña real.
+1. Actualice el **componente de ruta de acceso contentURL** **yourDefaultTabNameTab** con el nombre de pestaña real.
 
 1. Guarde el archivo **manifest.json** actualizado.
 
@@ -210,7 +210,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
      @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
     ```
 
-1. Guarde el archivo **Tab.ts actualizado.** El código de pestaña se ha completado.
+1. Guarde el archivo **Tab.ts actualizado** . El código de pestaña se ha completado.
 
 ### <a name="build-and-run-your-application"></a>Compilar y ejecutar la aplicación
 
@@ -224,7 +224,7 @@ Debes tener un paquete de aplicación para probar la pestaña en Teams. Es una c
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
 - Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
-El paquete se crea a través de una tarea gulp que valida el archivo manifest.json y genera la carpeta zip en **el directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
+El paquete se crea a través de una tarea gulp que valida el archivo manifest.json y genera la carpeta zip en el **directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
 
 ```bash
 gulp manifest
@@ -232,7 +232,7 @@ gulp manifest
 
 #### <a name="build-your-application"></a>Compilar la aplicación
 
-El comando build transpila la solución en la **carpeta ./dist.** Escriba el siguiente comando en el símbolo del sistema:
+El comando build transpila la solución en la **carpeta ./dist** . Escriba el siguiente comando en el símbolo del sistema:
 
 ```bash
 gulp build
@@ -246,11 +246,11 @@ gulp build
     gulp serve
     ```
 
-1. Escriba en el explorador, reemplace por el nombre de la pestaña y vea la página principal de la aplicación como se `http://localhost:3007/<yourDefaultAppNameTab>/` muestra en la siguiente `**<yourDefaultAppNameTab>**` imagen:
+1. Escriba `http://localhost:3007/<yourDefaultAppNameTab>/` en el explorador, reemplace por `**<yourDefaultAppNameTab>**` el nombre de la pestaña y vea la página principal de la aplicación como se muestra en la siguiente imagen:
 
     ![captura de pantalla de la página principal](~/assets/images/tab-images/homePage.png)
 
-1. Para ver la pestaña personal, vaya a `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` .
+1. Para ver la pestaña personal, vaya a `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
 
     >![Captura de pantalla de pestaña personal](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -258,7 +258,7 @@ gulp build
 
 Microsoft Teams es un producto basado en la nube y requiere que el contenido de la pestaña esté disponible desde la nube mediante puntos de conexión HTTPS. Teams no permite el hospedaje local. Publique la pestaña en una dirección URL pública o use un proxy que exponga el puerto local a una dirección URL orientada a Internet.
 
-Para probar la extensión de pestaña, [use ngrok](https://ngrok.com/docs), que está integrado en esta aplicación. Ngrok es una herramienta de software de proxy inverso. Ngrok crea un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Los puntos de conexión web del servidor están disponibles durante la sesión actual en el equipo. Cuando el equipo se apaga o se queda en reposo, el servicio ya no está disponible.
+Para probar la extensión de pestaña, usa [ngrok](https://ngrok.com/docs), que está integrado en esta aplicación. Ngrok es una herramienta de software de proxy inverso. Ngrok crea un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Los puntos de conexión web del servidor están disponibles durante la sesión actual en el equipo. Cuando el equipo se apaga o se queda en reposo, el servicio ya no está disponible.
 
 En el símbolo del sistema, salga de localhost y escriba el siguiente comando:
 
@@ -273,10 +273,10 @@ gulp ngrok-serve
 
 **Para cargar la aplicación en Teams**
 
-1. Vaya a Microsoft Teams. Si usa la versión [basada en web,](https://teams.microsoft.com)puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador.](~/tabs/how-to/developer-tools.md)
+1. Vaya a Microsoft Teams. Si usa la versión [basada en web](https://teams.microsoft.com), puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador](~/tabs/how-to/developer-tools.md).
 1. En la esquina inferior izquierda, selecciona **Aplicaciones**.
-1. En la esquina inferior izquierda, elige **Upload una aplicación personalizada.**
-1. Vaya al directorio del proyecto, vaya a **la carpeta ./package,** seleccione la carpeta zip y elija **Abrir**.
+1. En la esquina inferior izquierda, elige **Upload una aplicación personalizada**.
+1. Vaya al directorio del proyecto, vaya a **la carpeta ./package** , seleccione la carpeta zip y elija **Abrir**.
 
     ![Agregar la pestaña personal](../../assets/images/tab-images/addingpersonaltab.png)
 
@@ -298,18 +298,18 @@ Puedes crear una pestaña personal personalizada con C# páginas ASP.NET Core De
 
 Debe comprender los siguientes requisitos previos:
 
-- Debes tener un inquilino Office 365 y un equipo configurado con **Permitir la carga de aplicaciones personalizadas** habilitada. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Debes tener un inquilino Office 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, vea [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si no tiene una cuenta Microsoft 365, puede registrarse para obtener una suscripción gratuita a través del [Programa para desarrolladores de Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). La suscripción permanece activa siempre que la esté usando para el desarrollo continuo.
 
-- Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca ![ App ](~/assets/images/tab-images/storeApp.png) **Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
+- Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** ![](~/assets/images/tab-images/storeApp.png) de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca **App Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
 - La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tienes Visual Studio, puedes descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) versión gratuita.
 
-- La herramienta de proxy [inverso ngrok.](https://ngrok.com) Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
+- La [herramienta de proxy inverso ngrok](https://ngrok.com) . Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obtener el código fuente
 
@@ -323,7 +323,7 @@ Como alternativa, puede recuperar el código fuente descargando la carpeta zip y
 
 **Para compilar y ejecutar el proyecto de tabulación**
 
-1. Después de obtener el código fuente, vaya **a** Visual Studio y seleccione Abrir un proyecto o solución .
+1. Después de obtener el código fuente, vaya a Visual Studio y seleccione **Abrir un proyecto o solución**.
 1. Vaya al directorio de la aplicación de tabulación y abra **PersonalTab.sln**.
 1. Para compilar y ejecutar la aplicación, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
 1. En un explorador, vaya a las siguientes direcciones URL para comprobar que la aplicación se cargó correctamente:
@@ -337,7 +337,7 @@ Como alternativa, puede recuperar el código fuente descargando la carpeta zip y
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía ASP.NET Core aplicación web 2.2 con la casilla Avanzadas **- Configurar** para HTTPS activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al método `Configure()` con el código siguiente:
+Este proyecto se creó a partir de una plantilla vacía ASP.NET Core aplicación web 2.2 con la casilla Avanzadas **- Configurar para HTTPS** activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware `Configure()` de archivos estáticos se agrega al método con el código siguiente:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -367,7 +367,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 - Un **icono de esquema transparente** que mide 32 x 32 píxeles.
 - Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un iframe <y lo representa `contentUrl` \> en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un iframe\> <y lo representa en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
@@ -395,9 +395,9 @@ En la Visual Studio Explorador de soluciones, haga clic con el botón secundario
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Para que la pestaña se muestre en Teams, debe incluir el SDK de cliente Microsoft Teams **JavaScript** e incluir una llamada después de `microsoftTeams.initialize()` que se cargue la página. La pestaña y la Teams se comunican de esta manera:
+Para que la pestaña se muestre en Teams, debe incluir el SDK de cliente Microsoft Teams **JavaScript** e incluir una llamada después `microsoftTeams.initialize()` de que se cargue la página. La pestaña y la Teams se comunican de esta manera:
 
-Vaya a la **carpeta Shared,** abra **_Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
+Vaya a la **carpeta Shared** , abra **_Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -406,9 +406,9 @@ Vaya a la **carpeta Shared,** abra **_Layout.cshtml** y agregue lo siguiente a l
 
 #### <a name="personaltabcshtml"></a>PersonalTab.cshtml
 
-Abra **PersonalTab.cshtml** y actualice las etiquetas `<script>` incrustadas llamando a `microsoftTeams.initialize()` .
+Abra **PersonalTab.cshtml** y actualice las etiquetas `<script>` incrustadas llamando a `microsoftTeams.initialize()`.
 
-Asegúrese de guardar el **objeto PersonalTab.cshtml actualizado.**
+Asegúrese de guardar el **PersonalTab.cshtml** actualizado.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab-for-teams"></a>Establecer un túnel seguro en la pestaña para Teams
 
@@ -424,7 +424,7 @@ Para probar la pestaña, use [ngrok](https://ngrok.com/docs). Los puntos de cone
     ngrok http https://localhost:44325 -host-header="localhost:44325"
     ```
 
-    Ngrok escucha las solicitudes de Internet y las enruta a la aplicación cuando se ejecuta en el puerto 44325. Es similar a `https://y8rPrT2b.ngrok.io/` donde **y8rPrT2b** se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
+    Ngrok escucha las solicitudes de Internet y las enruta a la aplicación cuando se ejecuta en el puerto 44325. Es similar a donde `https://y8rPrT2b.ngrok.io/` **y8rPrT2b** se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
 
     Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome nota de la dirección URL.
 
@@ -444,17 +444,17 @@ En Visual Studio, presione **F5** o elija **Iniciar depuración** en el menú **
 
 **Para cargar la pestaña con App Studio**
 
-1. Vaya a Microsoft Teams. Si usa la versión [basada en web,](https://teams.microsoft.com)puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador.](~/tabs/how-to/developer-tools.md)
+1. Vaya a Microsoft Teams. Si usa la versión [basada en web](https://teams.microsoft.com), puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador](~/tabs/how-to/developer-tools.md).
 
-1. Ve a **App Studio** y selecciona la pestaña Editor **de manifiestos.**
+1. Ve a **App Studio** y selecciona la **pestaña Editor de manifiestos** .
 
-1. Selecciona **Importar una aplicación existente en** el editor de **manifiestos** para empezar a actualizar el paquete de la aplicación para la pestaña. El código fuente viene con su propio manifiesto parcialmente completo. El nombre del paquete de la **aplicación estab.zip**. Está disponible desde la siguiente ruta de acceso:
+1. Selecciona **Importar una aplicación existente en** el **editor de manifiestos** para empezar a actualizar el paquete de la aplicación para la pestaña. El código fuente viene con su propio manifiesto parcialmente completo. El nombre del paquete de la aplicación es **tab.zip**. Está disponible desde la siguiente ruta de acceso:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Upload **tab.zip** a App **Studio**.
+1. Upload **tab.zip** a **App Studio**.
 
 #### <a name="update-your-app-package-with-manifest-editor"></a>Actualizar el paquete de la aplicación con el editor de manifiestos
 
@@ -468,27 +468,27 @@ Hay una lista de pasos en el lado izquierdo del editor de manifiestos. En el lad
 
 En la **sección Detalles de la** aplicación:
 
-1. En **Identificación,** selecciona **Generar** para generar un nuevo identificador de aplicación para la aplicación.
+1. En **Identificación**, selecciona **Generar** para generar un nuevo identificador de aplicación para tu aplicación.
 
-1. En **Información para desarrolladores,** actualice **el** sitio web con la dirección URL HTTPS de **ngrok.**
+1. En **Información del desarrollador**, actualice **el** sitio web con la dirección URL HTTPS de **ngrok** .
 
     ![Direcciones URL de la aplicación actualizadas](../../assets/images/tab-images/appurls.png)
 
-1. En **Direcciones URL de la** aplicación, actualice la declaración **privacidad** y `https://<yourngrokurl>/privacy` los **Términos** de uso `https://<yourngrokurl>/tou` para>.
+1. En **Direcciones URL de la** aplicación, actualice la **declaración privacidad y** `https://<yourngrokurl>/privacy` **los Términos de uso** `https://<yourngrokurl>/tou` para>.
 
 ##### <a name="capabilities-tabs"></a>Capacidades: pestañas
 
-En la **sección Pestañas:**
+En la **sección Pestañas** :
 
-1. En **Agregar una pestaña personal,** seleccione **Agregar**. Aparece un cuadro de diálogo emergente.
+1. En **Agregar una pestaña personal**, seleccione **Agregar**. Aparece un cuadro de diálogo emergente.
 
-1. Escriba un nombre para la ficha personal en **Nombre**.
+1. Escriba un nombre para la pestaña personal en **Nombre**.
 
 1. Escriba el **id. de entidad**.
 
-1. Actualizar **dirección URL de contenido** con `https://<yourngrokurl>/personalTab` .
+1. Actualizar **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`.
 
-    Deje el **campo Dirección URL** del sitio web en blanco.
+    Deje el **campo Dirección URL del sitio** web en blanco.
 
     ![Detalles de pestañas personales](../../assets/images/tab-images/personaltabdetails.png)
 
@@ -496,18 +496,18 @@ En la **sección Pestañas:**
 
 ##### <a name="finish-domains-and-permissions"></a>Finalizar: dominios y permisos
 
-En la **sección Dominios y permisos,** los dominios de las **pestañas** deben contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io/` .
+En la **sección Dominios y permisos** , **los dominios de las pestañas** deben contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io/`.
 
 ###### <a name="finish-test-and-distribute"></a>Finalizar: probar y distribuir
 
 > [!IMPORTANT]
-> A la derecha, en **Descripción,** verá la siguiente advertencia:
+> A la derecha, en **Descripción**, verá la siguiente advertencia:
 >
-> &#9888; La **matriz 'validDomains' no puede contener un sitio de túnel...**
+> &#9888; **La matriz 'validDomains' no puede contener un sitio de túnel...**
 >
 > Esta advertencia puede omitirse mientras se prueba la pestaña.
 
-1. En la **sección Probar y distribuir,** seleccione **Instalar**.
+1. En la **sección Probar y distribuir** , seleccione **Instalar**.
 
 1. En el cuadro de diálogo emergente, seleccione **Agregar** y se muestra la pestaña.
 
@@ -527,18 +527,18 @@ Puede crear una pestaña personal personalizada con C# y ASP.NET Core MVC. [App 
 
 ### <a name="prerequisites-for-personal-tab-with-aspnet-core-mvc"></a>Requisitos previos para ficha personal con ASP.NET Core MVC
 
-- Debes tener un inquilino Microsoft 365 y un equipo configurado con **Permitir la carga de aplicaciones personalizadas** habilitada. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Debes tener un inquilino Microsoft 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, vea [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si no tiene una cuenta Microsoft 365, puede registrarse para obtener una suscripción gratuita a través del [Programa para desarrolladores de Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). La suscripción permanece activa siempre que la esté usando para el desarrollo continuo.
 
-- Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca ![ App ](~/assets/images/tab-images/storeApp.png) **Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
+- Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** ![](~/assets/images/tab-images/storeApp.png) de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca **App Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
 - La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tienes Visual Studio, puedes descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) versión gratuita.
 
-- La herramienta de proxy [inverso ngrok.](https://ngrok.com) Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
+- La [herramienta de proxy inverso ngrok](https://ngrok.com) . Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obtener el código fuente
 
@@ -552,8 +552,8 @@ Como alternativa, puede recuperar el código fuente descargando la carpeta zip y
 
 **Para compilar y ejecutar el proyecto de tabulación**
 
-1. Después de tener el código fuente, vaya **a** Visual Studio y seleccione Abrir un proyecto o solución .
-1. Vaya al directorio de la aplicación de tabulación y abra **PersonalTabMVC.sln**.
+1. Después de tener el código fuente, vaya a Visual Studio y seleccione **Abrir un proyecto o solución**.
+1. Vaya al directorio de la aplicación de pestaña y abra **PersonalTabMVC.sln**.
 1. Para compilar y ejecutar la aplicación, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
 1. En un explorador, vaya a las siguientes direcciones URL para comprobar que la aplicación se cargó correctamente:
 
@@ -565,7 +565,7 @@ Como alternativa, puede recuperar el código fuente descargando la carpeta zip y
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía ASP.NET Core aplicación web 2.2 con la casilla Avanzadas **- Configurar** para HTTPS activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al método `Configure()` con el código siguiente:
+Este proyecto se creó a partir de una plantilla vacía ASP.NET Core aplicación web 2.2 con la casilla Avanzadas **- Configurar para HTTPS** activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware `Configure()` de archivos estáticos se agrega al método con el código siguiente:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -591,7 +591,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 * Un **icono de esquema transparente** que mide 32 x 32 píxeles.
 * Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el especificado en el manifiesto, lo inserta en un IFrame y lo representa `contentUrl` en la pestaña.
+Estos archivos deben comprimirse en un paquete de la aplicación para usarlos al cargar la pestaña a Teams. Microsoft Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
@@ -617,7 +617,7 @@ En la Visual Studio Explorador de soluciones, haga clic con el botón secundario
 
 #### <a name="models"></a>Modelos
 
-**PersonalTab.cs** presenta un objeto Message y métodos a los que se llama desde **PersonalTabController** cuando un usuario selecciona un botón en la **vista PersonalTab.**
+**PersonalTab.cs** presenta un objeto Message y métodos a los que se llama desde **PersonalTabController** cuando un usuario selecciona un botón en la **vista PersonalTab** .
 
 #### <a name="views"></a>Vistas
 
@@ -629,7 +629,7 @@ Estas vistas son las diferentes vistas de ASP.NET Core MVC:
 
 #### <a name="controllers"></a>Controladores
 
-Los controladores usan la `ViewBag` propiedad para transferir valores dinámicamente a las vistas.
+Los controladores usan la propiedad `ViewBag` para transferir valores dinámicamente a las vistas.
 
 [!INCLUDE [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
@@ -643,7 +643,7 @@ Los controladores usan la `ViewBag` propiedad para transferir valores dinámicam
     ngrok http https://localhost:44345 -host-header="localhost:44345"
     ```
 
-    Ngrok escucha las solicitudes de Internet y las enruta a la aplicación cuando se ejecuta en el puerto 44325. Es similar a `https://y8rPrT2b.ngrok.io/` donde **y8rPrT2b** se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
+    Ngrok escucha las solicitudes de Internet y las enruta a la aplicación cuando se ejecuta en el puerto 44325. Es similar a donde `https://y8rPrT2b.ngrok.io/` **y8rPrT2b** se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
 
     Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de tomar nota de la dirección URL.
 
@@ -662,9 +662,9 @@ En Visual Studio, presione **F5** o elija **Iniciar depuración** en el menú **
 
 ## <a name="reorder-static-personal-tabs"></a>Reordenar pestañas personales estáticas
 
-A partir de la versión 1.7 del manifiesto, los desarrolladores pueden reorganizar todas las pestañas de su aplicación personal. En concreto, un desarrollador puede mover la pestaña de chat del **bot,** que siempre se sitúa de forma predeterminada en la primera posición, en cualquier lugar del encabezado de pestaña de la aplicación personal. Se declaran `entityId` dos palabras clave de tabulación reservadas, **conversaciones** y **acerca de**.
+A partir de la versión 1.7 del manifiesto, los desarrolladores pueden reorganizar todas las pestañas de su aplicación personal. En concreto, un desarrollador puede mover la pestaña de **chat del bot** , que siempre se sitúa de forma predeterminada en la primera posición, en cualquier lugar del encabezado de pestaña de la aplicación personal. Se declaran dos palabras `entityId` clave de tabulación reservadas, **conversaciones** y **acerca de.**
 
-Si creas un bot con un **ámbito personal,** aparece en la primera posición de pestaña de una aplicación personal de forma predeterminada. Si desea moverlo a otra posición, debe agregar un objeto tab estático al manifiesto con la palabra clave reservada, **conversaciones**. La **pestaña de** conversación aparece en la web o en el escritorio en función de dónde agregue la pestaña **de** conversación en la `staticTabs` matriz.
+Si creas un bot con un **ámbito personal** , aparece en la primera posición de pestaña de una aplicación personal de forma predeterminada. Si desea moverlo a otra posición, debe agregar un objeto tab estático al manifiesto con la palabra clave reservada, **conversaciones**. La **pestaña de** conversación aparece en la web o en el escritorio en función de dónde agregue la **pestaña de** conversación en la `staticTabs` matriz.
 
 ```json
 {
@@ -686,7 +686,7 @@ Si creas un bot con un **ámbito personal,** aparece en la primera posición de 
 
 La `registerOnFocused` API del SDK le permite usar un teclado en Teams. Puedes volver a una aplicación personal y mantener el foco en una pestaña o aplicación personal con la ayuda de las teclas Ctrl, Mayús y F6. Por ejemplo, puedes alejarte de la aplicación personal para buscar algo y luego volver a la aplicación personal o usar Ctrl+F6 para desplazarte por los lugares requeridos. 
 
-El código siguiente proporciona un ejemplo de definición de controlador en SDK cuando el foco `registerFocusEnterHandler` debe devolverse a la pestaña o a la aplicación personal:
+El código siguiente proporciona un ejemplo de definición de controlador en `registerFocusEnterHandler` SDK cuando el foco debe devolverse a la pestaña o a la aplicación personal:
 
 ```csharp
 export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
@@ -703,7 +703,7 @@ function handleFocusEnter(navigateForward: boolean): void
 }
 ```
 
-Después de que el controlador se desencadene con la palabra clave , el controlador se invoca con una función de devolución de llamada que `focusEnter` toma un parámetro denominado `registerFocusEnterHandler` `focusEnterHandler` `navigateForward` . El valor de `navigateForward` determina el tipo de eventos. Ctrl+F6 invoca el valor solo `focusEnterHandler` y no la tecla de tabulación.   
+Después de que el controlador se desencadene con la palabra `focusEnter`clave , `registerFocusEnterHandler` el controlador se invoca con una función de `focusEnterHandler` devolución de llamada que toma un parámetro denominado `navigateForward`. El valor de `navigateForward` determina el tipo de eventos. Ctrl `focusEnterHandler` +F6 invoca el valor solo y no la tecla de tabulación.   
 Las claves útiles para mover eventos dentro Teams son las siguientes:    
 * Forward event -> Ctrl+F6 keys
 * Evento Backward -> Ctrl+Mayús+F6
@@ -742,7 +742,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="En el ejemplo se muestran las opciones para agregar el movimiento hacia atrás de la API registerOnFocussed" border="false":::
 
-### <a name="tab"></a>Tab
+### <a name="tab"></a>Pestaña
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="En el ejemplo se muestran las opciones para agregar la API registerOnFocussed para la pestaña" border="false":::
 
@@ -751,7 +751,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 > [!div class="nextstepaction"]
 > [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

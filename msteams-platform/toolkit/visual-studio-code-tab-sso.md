@@ -1,25 +1,25 @@
 ---
-title: Autenticación de inicio de sesión único con Teams Toolkit y Visual Studio Code para pestañas
+title: Autenticación de inicio de sesión único con el kit de herramientas de Teams y Visual Studio Code para pestañas
 description: Cree una pestaña que admita el inicio de sesión único y microsoft Graph llamadas directamente dentro de Visual Studio Code con el Microsoft Teams Toolkit
 keywords: Teams visual studio code toolkit tabs sso graph authentication Azure identity platform
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 75e3a6b9c1a777b48d5d1a896c7547f53702eaf4
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157489"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435862"
 ---
-# <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Autenticación de inicio de sesión único con Teams Toolkit y Visual Studio Code para pestañas
+# <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Autenticación de inicio de sesión único con el kit de herramientas de Teams y Visual Studio Code para pestañas
 
 > [!IMPORTANT]
 > **Este documento hace referencia a una versión antigua de Teams Toolkit**
 >
 > Para obtener información actual, lea los [requisitos previos](../get-started/prerequisites.md) y siga uno de los tutoriales más recientes.
 
-La Microsoft Teams Toolkit permite crear la autenticación de inicio de sesión único (SSO) para aplicaciones de pestañas directamente en Visual Studio Code. El kit de herramientas lo guía a través del proceso y proporciona todo lo que necesita, incluido el aprovisionamiento Plataforma de identidad de Microsoft registro en Azure Portal.
+La Microsoft Teams Toolkit permite crear la autenticación de inicio de sesión único (SSO) para aplicaciones de pestañas directamente en Visual Studio Code. El kit de herramientas le guía a través del proceso y proporciona todo lo que necesita, incluido el aprovisionamiento de Plataforma de identidad de Microsoft registro en el portal Microsoft Azure web.
 
 ## <a name="get-started--create-a-project"></a>Introducción: crear un proyecto
 
@@ -34,25 +34,25 @@ La Microsoft Teams Toolkit permite crear la autenticación de inicio de sesión 
 
 1. Para habilitar SSO en Teams, la aplicación debe tener un recurso de registro de aplicaciones de Azure. El Teams Toolkit aprovisionará el registro de la aplicación en su nombre.
 1. Escribe la dirección URL donde se hospedará la aplicación y selecciona **siguiente**. El registro de la aplicación se configurará con la dirección URL proporcionada.
-1. Los detalles de configuración del registro de la aplicación se almacenarán en `.env` los archivos del código fuente del proyecto.
+1. Los detalles de configuración del registro de la aplicación se almacenarán en los `.env` archivos del código fuente del proyecto.
 
-Si desea obtener más información sobre cómo se aprovisionará  el registro de la aplicación de Azure, consulte nuestra documentación sobre el inicio de sesión único [(SSO) para las pestañas.](../tabs/how-to/authentication/auth-aad-sso.md)
+Si desea obtener más información sobre cómo se aprovisionará el registro de la aplicación de Azure, consulte  nuestra documentación sobre el inicio de sesión único [(SSO) para las pestañas](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!TIP]
-> Tendrá que ir a Registros de aplicaciones de **Azure** y actualizar el URI de *la API* y redirigir las direcciones *URL* siempre que cambie esta dirección URL.
+> Tendrá que ir a Registros de **aplicaciones de Azure** y actualizar el *URI de la API* y redirigir las direcciones *URL* siempre que cambie esta dirección URL.
 
 ## <a name="run-your-project"></a>Ejecutar el proyecto
 
 1. Seleccione **npm install** en la `api-server` carpeta. A **continuación, npm start**.
 1. Seleccione **npm install** en la `.src` carpeta. A **continuación, npm start**.
-1. Si usa un servicio de túnel como [ngrok,](https://ngrok.com/)ejecutelo y asegúrese de que la dirección URL coincida con lo que ha escrito en el asistente para la creación del proyecto. Si no lo hace, deberá actualizar el URI de _la API_ y redirigir la _dirección URL_ en el registro de la aplicación que se creó en Azure.
+1. Si usa un servicio de túnel como [ngrok](https://ngrok.com/), ejecutarlo y asegúrese de que la dirección URL coincide con lo que ha especificado en el asistente para la creación del proyecto. Si no lo hace, deberá actualizar el _URI de la API_ y redirigir la _dirección URL_ en el registro de la aplicación que se creó en Azure.
 1. Vaya a la barra de actividades de la parte izquierda de la ventana Visual Studio Code actividad.
-1. Seleccione el **icono Ejecutar** para mostrar la vista **Ejecutar y** depurar.
+1. Seleccione el **icono Ejecutar** para mostrar la **vista Ejecutar y** depurar.
 1. También puede usar el método abreviado de **teclado Ctrl+Mayús+D**.
 
 > [!TIP]
 > Es posible que no veas el diálogo de instalación de la aplicación en el explorador si las ventanas emergentes están deshabilitadas para el explorador. Si esto sucede, habilita las ventanas emergentes y actualiza la página.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Crear aplicaciones con el Microsoft Teams Toolkit y Visual Studio Code](visual-studio-code-overview.md)
+[Crear aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](visual-studio-code-overview.md)

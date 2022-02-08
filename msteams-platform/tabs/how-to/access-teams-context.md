@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 0d4e9b7e9559d5b6ccfe1e391579876abe78422f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212422"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435722"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -17,7 +17,7 @@ La pestaña requiere información contextual para mostrar contenido relevante:
 
 * Información básica sobre el usuario, el equipo o la compañía.
 * Información sobre la configuración regional y el tema.
-* Lea el `entityId` o que identifica lo que hay en esta `subEntityId` pestaña.
+* Lea el `entityId` o `subEntityId` que identifica lo que hay en esta pestaña.
 
 ## <a name="user-context"></a>Contexto del usuario
 
@@ -26,7 +26,7 @@ El contexto sobre el usuario, el equipo o la empresa puede ser especialmente út
 * Creas o asocias recursos en la aplicación con el usuario o equipo especificado.
 * Se inicia un flujo de autenticación Azure Active Directory otro proveedor de identidades y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
 
-Para obtener más información, consulte [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
+Para obtener más información, vea [autenticar un usuario en su Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Aunque esta información de usuario puede ayudar a proporcionar una experiencia de usuario fluida, no debe usarla como prueba de identidad.  Por ejemplo, un atacante puede cargar la página en un explorador y representar información o solicitudes nocivas.
@@ -47,7 +47,7 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 * {loginHint}: valor adecuado como sugerencia de inicio de sesión para Azure AD. Normalmente, este es el nombre de inicio de sesión del usuario actual en su inquilino principal.
 * {userPrincipalName}: el nombre principal de usuario del usuario actual en el inquilino actual.
 * {userObjectId}: el Azure AD de objeto del usuario actual en el inquilino actual.
-* {theme}: el tema actual de la interfaz de usuario (UI) como `default` , `dark` o `contrast` .
+* {theme}: el tema actual de la interfaz de usuario (UI) como `default`, `dark`o `contrast`.
 * {groupId}: el identificador del grupo Office 365 en el que reside la pestaña.
 * {tid}: el id. del espacio empresarial de Azure AD del usuario actual.
 * {locale}: la configuración regional actual del usuario con el formato languageId-countryId(es-es).
@@ -55,11 +55,11 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 > [!NOTE]
 > El marcador de posición `{upn}` anterior está en desuso. Para la compatibilidad con versiones anteriores, actualmente es un sinónimo de `{loginHint}`.
 
-Por ejemplo, en el manifiesto de la pestaña se establece el atributo en , el usuario que ha iniciado sesión `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` tiene los siguientes atributos:
+Por ejemplo, en el manifiesto de la pestaña se establece el `configURL` atributo en `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`, el usuario que ha iniciado sesión tiene los siguientes atributos:
 
 * Su nombre de usuario **es user@example.com**.
-* Su identificador de inquilino de empresa **es e2653c-etc.**
-* Son miembros del grupo de Office 365 con el identificador **00209384-etc.**
+* Su identificador de inquilino de empresa **es e2653c-etc**.
+* Son miembros del grupo de Office 365 con el identificador **00209384-etc**.
 * El usuario ha establecido su Teams en **oscuro**.
 
 Al configurar la pestaña, Teams llama a la siguiente dirección URL:
@@ -86,7 +86,7 @@ El código siguiente proporciona un ejemplo de variable de contexto:
     "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
-    "groupId": "Guid identifying the current O365 Group ID",
+    "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
     "teamType": "The type of team",
@@ -118,7 +118,7 @@ El código siguiente proporciona un ejemplo de variable de contexto:
 > [!Note]
 > Los canales privados están actualmente en la versión preliminar privada para desarrolladores.
 
-Cuando la página de contenido se carga en un canal privado, los datos que recibe de la llamada se ocultan para proteger la `getContext` privacidad del canal. 
+Cuando la página de contenido se carga en un canal privado, `getContext` los datos que recibe de la llamada se ocultan para proteger la privacidad del canal. 
 
 Los siguientes campos se cambian cuando la página de contenido está en un canal privado:
 
@@ -129,16 +129,16 @@ Los siguientes campos se cambian cuando la página de contenido está en un cana
 * `teamSitePath`: Se establece en la ruta de acceso de un sitio de SharePoint distinto y único para el canal privado
 * `teamSiteDomain`: Se establece en el dominio de un dominio de sitio SharePoint único para el canal privado
 
-Si la página usa cualquiera de estos valores, debe comprobar el campo para determinar si la página se carga en un canal privado y `channelType` responder correctamente.
+Si la página usa cualquiera de estos valores, `channelType` debe comprobar el campo para determinar si la página se carga en un canal privado y responder correctamente.
 
 > [!Note]
 > `teamSiteUrl` también funciona bien para los canales estándar.
 
 ## <a name="handle-theme-change"></a>Controlar el cambio de tema
 
-Puedes registrar la aplicación para que se te informe si el tema cambia llamando a `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
+Puedes registrar la aplicación para que se te informe si el tema cambia llamando a `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-El `theme` argumento de la función es una cadena con un valor de , o `default` `dark` `contrast` .
+El `theme` argumento de la función es una cadena con un valor de `default`, `dark`o `contrast`.
 
 ## <a name="next-step"></a>Paso siguiente
 

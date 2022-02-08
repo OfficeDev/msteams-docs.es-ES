@@ -6,8 +6,13 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 87420b5e2b133de32b8c27a4a8d34a90072a3c76
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435827"
 ---
-
 # <a name="add-cloud-resources-to-your-teams-app"></a>Agregar recursos en la nube a la Teams aplicación
 
 TeamsFx ayuda a aprovisionar recursos en la nube para el hospedaje de aplicaciones. También puede agregar recursos en la nube que se adapten a sus necesidades de desarrollo.
@@ -17,14 +22,14 @@ TeamsFx ayuda a aprovisionar recursos en la nube para el hospedaje de aplicacion
 [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
 
 > [!TIP]
-> Asegúrate de tener Teams proyecto de aplicación en VS Code.
+> Asegúrate de tener Teams proyecto de aplicación en Visual Studio Code.
 
 ## <a name="add-cloud-resources-using-teams-toolkit"></a>Agregar recursos en la nube mediante Teams Toolkit
 
 > [!IMPORTANT]
 > Debe aprovisionar cada entorno después de agregar un recurso.
 
-1. Abra **Visual Studio Code**.
+1. Abra **Microsoft Visual Studio código**.
 1. Seleccione **Teams Toolkit** desde el panel izquierdo.
 1. En el panel Teams Toolkit barra lateral, seleccione **Agregar recursos en la nube**:
 
@@ -76,7 +81,7 @@ Después de agregar resouces, los cambios adicionales en el proyecto son los sig
 
 |Recursos|Cambios|Descripción|
 |---------------|---------------|-----------------------------|
-|Funciones de Azure|Se agrega un código de plantilla de funciones de Azure a una subcarpeta con ruta de acceso `yourProjectFolder/api`</br></br>`launch.json` y `task.json` se actualiza en carpeta `.vscode` .| Incluye una plantilla de desencadenador http hello world en el proyecto.</br></br> Incluye scripts necesarios para Visual Studio Code ejecutar cuando desee depurar la aplicación localmente.|
+|Funciones de Azure|Se agrega un código de plantilla de funciones de Azure a una subcarpeta con ruta de acceso `yourProjectFolder/api`</br></br>`launch.json` y `task.json` se actualiza en carpeta `.visual studio code` .| Incluye una plantilla de desencadenador http hello world en el proyecto.</br></br> Incluye scripts necesarios para Visual Studio Code ejecutar cuando desee depurar la aplicación localmente.|
 |Administración de API de Azure|Un archivo de especificación de API abierto agregado a una subcarpeta con ruta de acceso `yourProjectFolder/openapi`|Define la API después de la publicación, es el archivo de especificación de la API .|
 
 ## <a name="limitation"></a>Limitación
