@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: b78ca5b46442f30db3adfe314d627d3fc95682be
+ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081115"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62043234"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -214,7 +214,7 @@ Un objeto `channelData` típico de una actividad enviada al bot contiene la sigu
 * `channelData.teamsTeamId`: En desuso. Esta propiedad solo se incluye por compatibilidad con versiones anteriores.
 * `channelData.teamsChannelId`: En desuso. Esta propiedad solo se incluye por compatibilidad con versiones anteriores.
 
-### <a name="example-channeldata-object-channelcreated-event"></a>Objeto channelData de ejemplo (evento channelCreated)
+### <a name="example-channeldata-object-or-channelcreated-event"></a>Evento channelData de ejemplo o channelCreated
 
 El siguiente código muestra un ejemplo del objeto channelData:
 
@@ -234,20 +234,22 @@ El siguiente código muestra un ejemplo del objeto channelData:
 }
 ```
 
-## <a name="message-content"></a>Contenido del mensaje
-
 Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de contenido de mensaje.
+
+## <a name="message-content"></a>Contenido del mensaje
 
 | Formato    | De usuario a bot | De bot a usuario | Notas                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texto enriquecido  | ✔                | ✔                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
 | Imágenes  | ✔                | ✔                | Máximo 1024×1024 y 1 MB en formato PNG, JPEG o GIF. Gif animado no es compatible.  |
 | Tarjetas     | ✖                | ✔                | Consulta la [referencia Teams tarjeta para](~/task-modules-and-cards/cards/cards-reference.md) las tarjetas admitidas. |
-| Emojis    | ✔                | ✔                | Teams admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
+| Emojis    | ✖                | ✔                | Teams admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
+
+También puede agregar notificaciones al mensaje mediante la `Notification.Alert` propiedad.
 
 ## <a name="notifications-to-your-message"></a>Notificaciones al mensaje
 
-También puede agregar notificaciones al mensaje mediante la `Notification.Alert` propiedad. Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o lo que deben ver insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadene desde el mensaje del bot, establezca la `TeamsChannelData` propiedad objects en `Notification.Alert` *true*. Si se genera o no una notificación depende de la configuración de Teams usuario individual y no se puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
+Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o lo que deben ver insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadene desde el mensaje del bot, establezca la `TeamsChannelData` propiedad objects en `Notification.Alert` *true*. Si se genera o no una notificación depende de la configuración de Teams usuario individual y no se puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
 
 > [!NOTE]
 > El **campo Resumen** muestra cualquier texto del usuario como un mensaje de notificación en la fuente.
@@ -370,25 +372,7 @@ El siguiente código muestra un ejemplo de envío de una tarjeta adaptable senci
 }
 ```
 
-### <a name="form-completion-feedback"></a>Comentarios de finalización de formularios
-
-El mensaje de finalización del formulario aparece en Tarjetas adaptables mientras se envía una respuesta al bot. El mensaje puede ser de dos tipos, error o éxito:
-
-* **Error:** cuando una respuesta enviada al bot no se realiza correctamente, **algo salió mal, aparece el mensaje Intentar de** nuevo.
-
-    ![Mensaje de error](~/assets/images/Cards/error-message.png)
-
-* **Correcto:** cuando una respuesta enviada al bot se realiza correctamente, **aparece La respuesta se envió al mensaje de** la aplicación.
-
-    ![Mensaje de correcto](~/assets/images/Cards/success.PNG)
-
-Puedes seleccionar Cerrar **o** cambiar el chat para descartar el mensaje.    
-
-**Respuesta en móvil:**
-
-El mensaje de error aparece en la parte inferior de la tarjeta adaptable.
-
-Para obtener más información sobre tarjetas y tarjetas en bots, vea [la documentación sobre tarjetas](~/task-modules-and-cards/what-are-cards.md).
+Para obtener más información acerca de las tarjetas y las tarjetas de los bots, consulte [la documentación sobre tarjetas](~/task-modules-and-cards/what-are-cards.md).
 
 ## <a name="status-code-responses"></a>Respuestas de código de estado
 
@@ -409,7 +393,7 @@ A continuación se desenván los códigos de estado y sus valores de mensaje y c
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -6,8 +6,13 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de señal de notificación de contexto de usuario de las reuniones de aplicaciones de teams
+ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
+ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62470791"
 ---
-
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
 La extensibilidad de la reunión proporciona API para mejorar la experiencia de la reunión. Puede realizar lo siguiente con la ayuda de las API enumeradas:
@@ -47,7 +52,7 @@ Para identificar y recuperar información contextual para el contenido de la pes
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Obligatorio|Description|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
 |**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams Client SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
@@ -124,7 +129,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 En la tabla siguiente se proporcionan los códigos de respuesta:
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **403** | Obtener información de participante no se comparte con la aplicación. Si la aplicación no está instalada en la reunión, desencadena la respuesta de error 403. Si el administrador del espacio empresarial deshabilita o bloquea la aplicación durante la migración del sitio en directo, desencadena la respuesta de error 403. |
 | **200** | La información del participante se recupera correctamente.|
@@ -143,7 +148,7 @@ Todos los usuarios de una reunión reciben las notificaciones enviadas a través
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Obligatorio|Description|
 |---|---|----|---|
 |**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
@@ -202,7 +207,7 @@ POST /v3/conversations/{conversationId}/activities
 
 En la tabla siguiente se incluyen los códigos de respuesta:
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **201** | La actividad con señal se envía correctamente. |
 | **401** | La aplicación responde con un token no válido. |
@@ -309,7 +314,7 @@ Use el siguiente ejemplo para configurar la propiedad del manifiesto de la aplic
 
 En la tabla siguiente se muestra el parámetro de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Necesario|Description|
 |---|---|----|---|
 |**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
 
@@ -372,7 +377,7 @@ Puede obtener la dirección URL del CARRO para el extremo POST desde la **págin
 
 La dirección URL de CART incluye los siguientes parámetros de consulta:
 
-|Valor|Tipo|Obligatorio|Descripción|
+|Valor|Tipo|Obligatorio|Description|
 |---|---|----|----|
 |**meetingId**| Cadena | Sí |El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. <br/>Por ejemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42441-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| Cadena | Sí |Token de autorización.<br/> Por ejemplo, token=04751eac |
@@ -383,7 +388,7 @@ La dirección URL de CART incluye los siguientes parámetros de consulta:
 https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
 ```
 
-### <a name="method"></a>Método
+### <a name="method"></a>Method
 
 |Recurso|Método|Descripción|
 |----|----|----|
@@ -426,7 +431,7 @@ Para usar la `shareAppContentToStage` API, debe obtener los permisos de RSC. En 
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",
@@ -441,7 +446,7 @@ Para usar la `shareAppContentToStage` API, debe obtener los permisos de RSC. En 
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Necesario|Description|
 |---|---|----|---|
 |**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o null cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un valor true, en caso de un recurso compartido correcto, o null cuando se produce un error en el recurso compartido.|
 |**appContentURL**| Cadena | Sí | Dirección URL que se compartirá en la fase.|
@@ -465,7 +470,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 En la tabla siguiente se proporcionan los códigos de respuesta:
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **500** | Error interno. |
 | **501** | La API no se admite en el contexto actual.|
@@ -479,7 +484,7 @@ La `getAppContentStageSharingState` API te permite obtener información sobre el
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Necesario|Description|
 |---|---|----|---|
 |**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError*, en caso de error, o null cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un objeto `AppContentStageSharingState` , que indica una recuperación correcta, o null, que indica un error de recuperación.|
 
@@ -505,7 +510,7 @@ El cuerpo de la respuesta JSON para la `getAppContentStageSharingState` API es:
 
 En la tabla siguiente se proporcionan los códigos de respuesta:
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **500** | Error interno. |
 | **501** | La API no se admite en el contexto actual.|
@@ -519,7 +524,7 @@ La `getAppContentStageSharingCapabilities` API te permite capturar las capacidad
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Necesario|Description|
 |---|---|----|---|
 |**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o null cuando el recurso compartido se realiza correctamente. El resultado puede contener un objeto `AppContentStageSharingState` , que indica una recuperación correcta, o null, que indica un error de recuperación.|
 
@@ -545,7 +550,7 @@ El cuerpo de la respuesta JSON para `getAppContentStageSharingCapabilities` la A
 
 En la tabla siguiente se proporcionan los códigos de respuesta:
 
-|Código de respuesta|Descripción|
+|Código de respuesta|Description|
 |---|---|
 | **500** | Error interno. |
 | **1000** | La aplicación no tiene permisos para permitir el uso compartido en fase.|
@@ -753,7 +758,7 @@ El código siguiente proporciona un ejemplo de carga del evento de fin de reuni�
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para reuniones de Teams](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)
