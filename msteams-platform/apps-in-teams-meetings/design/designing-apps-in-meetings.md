@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Fase de reunión compartida de comportamiento dinámico de plantilla de kit de interfaz de usuario en la reunión
-ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
-ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61051199"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523798"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
@@ -30,7 +30,7 @@ Los usuarios pueden agregar una extensión de reunión antes y durante las reuni
 
 ### <a name="add-before-a-meeting"></a>Agregar antes de una reunión
 
-En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una** pestaña + para abrir el control desplegable de la aplicación y buscar aplicaciones optimizadas para reuniones.
+En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una pestaña +** para abrir el control desplegable de la aplicación y buscar aplicaciones optimizadas para reuniones.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión antes de una reunión." border="false":::
 
@@ -38,13 +38,13 @@ En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una** 
 
 #### <a name="mobile"></a>Móvil
 
-Una vez agregada la aplicación (por ejemplo, en el escritorio), los usuarios pueden acceder a la aplicación en una reunión seleccionando **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
+Una vez agregada la aplicación (por ejemplo, en el escritorio), los usuarios pueden acceder a la aplicación en una reunión seleccionando **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión en el móvil." border="false":::
 
 #### <a name="desktop"></a>Escritorio
 
-En una reunión, los usuarios pueden **seleccionar Más** agregar :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **una aplicación** y seleccionar la aplicación que desean.
+En una reunión, los usuarios pueden **seleccionar Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **agregar una aplicación** y seleccionar la aplicación que desean.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión." border="false":::
 
@@ -103,9 +103,9 @@ Las personas pueden usar la pestaña en la reunión para:
 |----------|-----------|
 |1|**Icono de aplicación (seleccionado):** logotipo de aplicación transparente de 16 píxeles.|
 |2|**Nombre de la aplicación**|
-|3|**Encabezado:** incluye el nombre de la aplicación.|
-|4|**Botón Cerrar:** descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
-|5|**Barra de notificaciones:** las alertas de error se muestran directamente debajo del encabezado y presionan el contenido del iframe hacia abajo en 20 píxeles.|
+|3|**Encabezado**: incluye el nombre de la aplicación.|
+|4|**Botón Cerrar**: descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
+|5|**Barra de notificaciones**: las alertas de error se muestran directamente debajo del encabezado y presionan el resto del contenido del iframe hacia abajo 20 píxeles.|
 |6 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="spacing"></a>Spacing
@@ -157,7 +157,7 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 
 |Contador|Descripción|
 |----------|-----------|
-|1|**Encabezado:** incluye el icono de la aplicación, el nombre, la cadena de acción y el icono cerrar.|
+|1|**Encabezado**: incluye el icono de la aplicación, el nombre, la cadena de acción y el icono de cierre.|
 |2|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomía: encabezado del cuadro de diálogo En la reunión
@@ -168,32 +168,36 @@ Hay dos variantes de encabezado. Cuando sea posible, usa la variante con el avat
 
 |Contador|Descripción|
 |----------|-----------|
-|1|**Avatar:** persona que inicia el cuadro de diálogo en la reunión.|
+|1|**Avatar**: persona que inicia el cuadro de diálogo en la reunión.|
 |2|**Icono de aplicación**|
 |3|**Nombre de la aplicación**|
-|4|**Botón Cerrar:** descarta el cuadro de diálogo.|
-|5|**Cadena de acción:** normalmente describe quién inició el cuadro de diálogo.|
+|4|**Botón Cerrar**: descarta el cuadro de diálogo.|
+|5|**Cadena de acción**: normalmente describe quién inició el cuadro de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamiento dinámico: cuadros de diálogo en la reunión
 
 Los cuadros de diálogo en reunión pueden variar en tamaño para tener en cuenta diferentes escenarios. Asegúrese de mantener el relleno y los tamaños de los componentes.
 
-* **Width:** puede especificar el ancho del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido.
-* **Alto:** puede especificar el alto del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido. También puedes permitir que los usuarios se desplacen verticalmente si el contenido de la aplicación supera el alto máximo.
-
-Para implementar, especifique el ancho y el alto con la [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) clave.
+* **Width**: puede especificar el ancho del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido.
+* **Alto**: puede especificar el alto del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido. También puedes permitir que los usuarios se desplacen verticalmente si el contenido de la aplicación supera el alto máximo.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="En el ejemplo se muestra el cuadro de diálogo en la reunión. Ancho: Min-280 píxeles (248 píxeles iframe). Máximo: 460 píxeles (428 píxeles de iframe). Alto: 300 píxeles (iframe)." border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Usar la fase de reunión compartida
 
-La fase de reunión compartida ayuda a los participantes a interactuar y colaborar con el contenido de la aplicación en tiempo real. Por ejemplo, los usuarios pueden centrar su reunión en editar un documento, hacer una lluvia de ideas con una pizarra o revisar un panel.
+Puedes permitir que los usuarios compartan e interactúen con parte o todo el contenido de la aplicación en la fase de reunión. Estos son ejemplos de cómo las personas pueden usar esta característica durante una reunión:
 
-Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase se vuelve a reorientar para todos los participantes de la reunión.
+* Edición de un documento
+* Pizarra
+* Revisión de un panel
+* Ver un vídeo
+* Jugar a un juego
+
+Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase también se reorienta para todos los participantes de la reunión de la misma manera.
 
 > [!NOTE]
-> Todos los usuarios que se reúnen pueden ver la aplicación cuando se comparten desde el escritorio. Actualmente, los usuarios móviles no pueden compartir contenido de la aplicación en la fase de reunión.
- 
+> Actualmente, los usuarios móviles no pueden compartir contenido de la aplicación en la fase de reunión. Sin embargo, pueden ver contenido compartido desde el escritorio.
+
 ### <a name="use-cases"></a>Casos de uso
 
 La fase de reunión compartida tiene que ver con la colaboración y la participación. Estos son algunos escenarios de ejemplo que le ayudarán a empezar.
@@ -201,12 +205,14 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
 :::row:::
    :::column span="1":::
 
-**Editar y revisar:** profundizar en los paneles y la planeación con todos los usuarios de la reunión.
+**Editar y revisar**: profundizar en los paneles y planear con todos los usuarios de la reunión.
 
    :::column-end:::
    :::column span="3":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="En el ejemplo se muestra un panel que se está revisando en la fase de reunión compartida." border="false":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="En el ejemplo se muestra un componente de panel que se está revisando en la fase de reunión compartida." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -227,7 +233,7 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
 :::row:::
    :::column span="1":::
 
-**Cuestionario:** Pruebe los conocimientos y obtenga información con materiales interactivos.
+**Cuestionario**: Probar conocimientos y obtener información con materiales interactivos.
 
    :::column-end:::
    :::column span="3":::
@@ -237,24 +243,36 @@ La fase de reunión compartida tiene que ver con la colaboración y la participa
    :::column-end:::
 :::row-end:::
 
-### <a name="anatomy-shared-meeting-stage"></a>Anatomía: fase de reunión compartida
+### <a name="anatomy-share-all-app-content-to-a-meeting"></a>Anatomía: compartir todo el contenido de la aplicación en una reunión
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida cuando se comparte todo el contenido de la aplicación." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de la** aplicación: el icono resaltado indica que la pestaña en la reunión de la aplicación está abierta.|
-|2|**Botón Compartir a fase de reunión:** punto de entrada para compartir la aplicación a la fase de reunión. Muestra si configuras la aplicación para que use la fase de reunión compartida.|
-|3|**iframe**: muestra el contenido de la aplicación.|
-|4|**Botón Detener uso compartido:** deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
-|5|**Atribución del moderador:** muestra el nombre del participante que compartió la aplicación.|
+|2|**Botón Compartir a reunión**: el punto de entrada para compartir la aplicación con la reunión. Muestra si configuras la aplicación para que use la fase de reunión compartida.|
+|3|**Atribución del moderador**: muestra el nombre del participante que compartió la aplicación.|
+|4|**iframe**: muestra el contenido de la aplicación.|
+|5|**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
+
+### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomía: compartir contenido específico de la aplicación en una reunión
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida cuando solo se comparte contenido específico de la aplicación." border="false":::
+
+|Contador|Descripción|
+|----------|-----------|
+|1|**Icono de la** aplicación: el icono resaltado indica que la pestaña en la reunión de la aplicación está abierta.|
+|2|**Botón Compartir a reunión**: el punto de entrada para compartir la aplicación con la reunión. Para una experiencia coherente, use siempre el icono Teams recurso compartido estándar. **Compartir a reunión** es el texto predeterminado recomendado, pero también puede personalizarlo para los casos de uso. Por ejemplo, **Reproducir juntos** para una aplicación de juegos o **Ver juntos** una aplicación de vídeo. En cualquier caso, asegúrese de que la acción creará una experiencia compartida e interactiva con todos los usuarios de la reunión.|
+|3|**Atribución del moderador**: muestra el nombre del participante que compartió la aplicación.|
+|4|**iframe**: muestra el contenido de la aplicación.|
+|5|**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamiento dinámico: fase de reunión compartida
 
 Las aplicaciones compartidas en la fase de reunión varían en tamaño según el estado de la reunión y el modo en que el usuario cambia el tamaño de la ventana. Mantenga el relleno y el diseño dinámico de la navegación y los controles tal como lo haría en un explorador.
 
-* **Panel lateral:** un usuario puede tener el panel lateral abierto en cualquier momento durante una reunión para chatear, ver la lista o usar una aplicación (es decir, pestaña en la reunión). La fase reorganiza dinámicamente cuando el panel está abierto.
-* **Cuadrícula de vídeo y audio:** la cuadrícula de vídeo y audio siempre está visible para mostrar a los participantes de la reunión. Cuando un usuario destaca o ancla a alguien en la reunión, esto aumenta el alto o el ancho de la cuadrícula de participantes en función de la orientación.
+* **Panel lateral**: un usuario puede tener el panel lateral abierto en cualquier momento durante una reunión para chatear, ver la lista o usar una aplicación (es decir, pestaña en la reunión). La fase reorganiza dinámicamente cuando el panel está abierto.
+* **Cuadrícula de vídeo y audio**: la cuadrícula de vídeo y audio siempre está visible para mostrar a los participantes de la reunión. Cuando un usuario destaca o ancla a alguien en la reunión, esto aumenta el alto o el ancho de la cuadrícula de participantes en función de la orientación.
 
 #### <a name="meeting-stage-without-side-panel"></a>Fase de reunión (sin panel lateral)
 
@@ -270,7 +288,7 @@ Cuando el panel lateral está abierto, la fase de reunión es de 918 x 540 píxe
 
 ## <a name="after-a-meeting"></a>Después de una reunión
 
-Puedes volver a una reunión después de que finalice y ver el contenido de la aplicación. En este ejemplo, el organizador de la reunión puede ver los resultados del sondeo en la pestaña **Contoso.** (Nota: Desde el punto de vista del diseño, no hay ninguna diferencia entre la experiencia de tabulación anterior y posterior a la reunión).
+Puedes volver a una reunión después de que finalice y ver el contenido de la aplicación. En este ejemplo, el organizador de la reunión puede ver los resultados del sondeo en la pestaña **Contoso** . (Nota: Desde el punto de vista del diseño, no hay ninguna diferencia entre la experiencia de tabulación anterior y posterior a la reunión).
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="La ilustración de ejemplo muestra una pestaña posterior a la reunión." border="false":::
 
@@ -449,7 +467,7 @@ Teams reuniones están optimizadas para temas oscuros para ayudar a reducir el r
 
 #### <a name="dont-use-unfamiliar-colors"></a>No usar: usar colores desconocidos
 
-Los colores que entren en conflicto con el entorno de reunión pueden ser molestos y parecer menos nativos de Teams. Obtenga información sobre la Teams [de color,](https://developer.microsoft.com/fluentui#/styles/web/colors/products)incluidos los neutros del tema de llamada.
+Los colores que entren en conflicto con el entorno de reunión pueden ser molestos y parecer menos nativos de Teams. Obtenga información sobre la Teams [de color](https://developer.microsoft.com/fluentui#/styles/web/colors/products), incluidos los neutros del tema de llamada.
 
    :::column-end:::
 :::row-end:::

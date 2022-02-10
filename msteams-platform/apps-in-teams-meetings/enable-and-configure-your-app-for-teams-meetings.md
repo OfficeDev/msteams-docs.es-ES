@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 45c12a52758bc86f2ab05112a69a8342ade9a5af
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518040"
+ms.locfileid: "62523783"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -129,9 +129,6 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 
 #### <a name="shared-meeting-stage"></a>Fase de reunión compartida
 
-> [!NOTE]
-> Actualmente, esta característica solo está disponible en [la versión preliminar del desarrollador](../resources/dev-preview/developer-preview-intro.md) público.
-
 La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real. Puedes compartir tus aplicaciones en la fase de reunión de colaboración de las siguientes maneras:
 
 * [Compartir toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir a fase en Teams cliente.
@@ -197,7 +194,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 > [!div class="nextstepaction"]
 > [Referencias API de aplicaciones de reuniones](API-references.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

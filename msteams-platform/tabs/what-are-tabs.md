@@ -5,12 +5,12 @@ description: Información general sobre pestañas personalizadas en la plataform
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c9d4e7a97cc9272faab32408683f6d8d43338a0d
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435184"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518348"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Pestañas de compilación para Microsoft Teams
 
@@ -43,7 +43,7 @@ Puede crear pestañas con tarjetas adaptables y centralizar todas las funcionali
 Las características de pestañas son las siguientes:
 
 * Si se agrega una pestaña a una aplicación que también tiene un bot, el bot también se agrega al equipo.
-* Reconocimiento del identificador de Azure Active Directory del usuario actual.
+* Reconocimiento del id. del usuario actual de Microsoft Azure Active Directory (Azure AD).
 * Reconocimiento de configuración regional para que el usuario indique el idioma que es `en-us`.
 * Funcionalidad de inicio de sesión único (SSO), si se admite.
 * Capacidad de usar bots o notificaciones de aplicación para vincular en profundidad a la pestaña o a una subentidad dentro del servicio, por ejemplo, un elemento de trabajo individual.

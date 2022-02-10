@@ -5,8 +5,13 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
+ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518362"
 ---
-
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
 El manifiesto de Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe ajustarse al esquema alojado en [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json). También se admiten las versiones anteriores 1.0, 1.1,..., y 1.12 (con "v1.x" en la dirección URL).
@@ -619,11 +624,11 @@ El objeto es una matriz con todos los elementos del tipo `string`.
 
 Objeto **opcional**
 
-Proporcione su identificador de aplicación de Azure Active Directory e información Microsoft Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación. Si la aplicación está registrada en Azure AD, debe proporcionar el identificador de aplicación. Los administradores pueden revisar fácilmente los permisos y conceder consentimiento en el Centro de administración de Teams.
+Proporcione su identificador de aplicación de Azure Active Directory e información Microsoft Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación. Si la aplicación está registrada en Microsoft Azure Active Directory (Azure AD), deberá proporcionar el identificador de la aplicación. Los administradores pueden revisar fácilmente los permisos y conceder consentimiento en el Centro de administración de Teams.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`id`|string|36 caracteres|✔|Azure AD identificador de aplicación de la aplicación. Este identificador debe ser un GUID.|
+|`id`|string|36 caracteres|✔|Id. de aplicación de la aplicación de Microsoft Azure Active Directory (Azure AD). Este identificador debe ser un GUID.|
 |`resource`|string|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** si no usa SSO, asegúrese de introducir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, https://notapplicable para evitar una respuesta de error. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
