@@ -5,12 +5,12 @@ description: Aprende a desplegar un vínculo, abrir la vista fase y anclar una p
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 48c7ae69b10702d58be933b5619fd6bdeb8cecf3
+ms.sourcegitcommit: 3332ca6f61d2d60ddb20140f6d163905ea177157
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178273"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62516522"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -39,7 +39,7 @@ Puede invocar la vista fase de las siguientes maneras:
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>Invocar la vista fase desde la tarjeta adaptable
 
-Cuando el usuario escribe una dirección URL en el cliente de escritorio [](../task-modules-and-cards/cards/cards-actions.md) Teams, el bot se invoca y devuelve una tarjeta adaptable con la opción de abrir la dirección URL en una fase. Después de iniciar una fase y de proporcionarla, puede agregar la capacidad de anclar `tabInfo` la fase como una pestaña.  
+Cuando el usuario escribe una dirección URL en el cliente de escritorio Teams, el bot se invoca y devuelve una tarjeta [](../task-modules-and-cards/cards/cards-actions.md) adaptable con la opción de abrir la dirección URL en una fase. Después de iniciar una fase y `tabInfo` de proporcionarla, puede agregar la capacidad de anclar la fase como una pestaña.  
 
 Las siguientes imágenes muestran una fase abierta desde una tarjeta adaptable:
 
@@ -72,16 +72,16 @@ A continuación se muestra el código para abrir una fase desde una tarjeta adap
 } 
 ```
 
-El `invoke` tipo de solicitud debe ser `composeExtension/queryLink` .
+El `invoke` tipo de solicitud debe ser `composeExtension/queryLink`.
 
 > [!NOTE]
 > * `invoke` flujo de trabajo es similar al flujo de trabajo `appLinking` actual. 
-> * Para mantener la coherencia, se recomienda nombrar `Action.Submit` como `View` .
+> * Para mantener la coherencia, se recomienda nombrar como `Action.Submit` `View`.
 > * `websiteUrl` es una propiedad necesaria que se debe pasar en el `TabInfo` objeto.
 
 A continuación se muestra el proceso para invocar la vista fase:
 
-* Cuando el usuario selecciona **Ver,** el bot recibe una `invoke` solicitud. El tipo de solicitud es `composeExtension/queryLink` .
+* Cuando el usuario selecciona **Ver**, el bot recibe una `invoke` solicitud. El tipo de solicitud es `composeExtension/queryLink`.
 * `invoke` respuesta del bot contiene una tarjeta adaptable con tipo `tab/tabInfoAction` en él.
 * El bot responde con un `200` código.
 
@@ -92,15 +92,11 @@ A continuación se muestra el proceso para invocar la vista fase:
 
 Para invocar la vista de fase a través del vínculo profundo desde la pestaña, debe ajustar la dirección URL del vínculo profundo en la `microsoftTeams.executeDeeplink(url)` API. El vínculo profundo también se puede pasar a través de una `OpenURL` acción en la tarjeta.
 
-La siguiente imagen muestra una vista de fase invocada a través de un vínculo profundo:
-
-<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
-
 ### <a name="syntax"></a>Sintaxis
 
 A continuación se muestra la sintaxis de vínculo profundo: 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" : \" "[contentUrl]" \" , \" websiteUrl : \" \" "[websiteUrl]" \" , name : Contoso \" \" \" \" }
+https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### <a name="examples"></a>Ejemplos
 
@@ -110,13 +106,28 @@ A continuación se muestran los ejemplos de vínculos profundos para invocar la 
 
 **Ejemplo 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name"Contoso"}
+No codificado
+ 
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx",websiteUrl::"websiteUrl:" "https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name"Contoso"}
+
+Codificado
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 **Ejemplo 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name"Contoso"}
+No codificado
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"websiteUrl"https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"name"Contoso"}
+
+Codificado
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 > [!NOTE]
+> Todos los vínculos profundos deben codificarse antes de pegar la dirección URL. No se admiten direcciones URL sin codificar.
 > * El `name` vínculo es opcional en profundidad. Si no se incluye, el nombre de la aplicación lo reemplaza.
 > * El vínculo profundo también se puede pasar a través de una `OpenURL` acción.
 > * Cuando inicies una fase desde un contexto determinado, asegúrate de que la aplicación funciona en ese contexto. Por ejemplo, si la vista fase se inicia desde una aplicación personal, debes asegurarte de que la aplicación tenga un ámbito personal.
