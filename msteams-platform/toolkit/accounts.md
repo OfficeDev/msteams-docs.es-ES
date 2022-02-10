@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff46e951122a74860e4518634e274ec4afdb1d21
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435687"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518327"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar cuentas para crear Teams aplicaciones
 
@@ -46,7 +46,7 @@ Puede registrarse en el programa de desarrolladores con uno de los siguientes ti
 
 - **Cuenta de trabajo para empresas**
 
-  Proporciona acceso a todos los servicios en la nube de Microsoft de nivel empresarial pequeño, mediano y empresarial, como Azure, Microsoft Intune o Microsoft 365. Cuando inicia sesión como una organización en uno de estos servicios, un directorio en la nube se aprovisiona automáticamente en Azure Active Directory para representar a su organización.
+  Proporciona acceso a todos los servicios en la nube de Microsoft de nivel empresarial pequeño, mediano y empresarial, como Azure, Microsoft Intune o Microsoft 365. Cuando se registra en uno de estos servicios como organización, un directorio basado en la nube se aprovisiona automáticamente en Microsoft Azure Active Directory (Azure AD) para representar a su organización.
 
 - **Visual Studio id.**
 

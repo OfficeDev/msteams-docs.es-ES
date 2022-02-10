@@ -6,18 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e9292dc6d3157df4d226d39ea0d0fb0ac53c2c5d
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435750"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518117"
 ---
 # <a name="cicd-guide"></a>Guía de CI/CD
 
 TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al crear Teams aplicación. El documento proporciona herramientas y plantillas para empezar a configurar canalizaciones de CI o CD con GitHub, Azure Devops y Jenkins.
 
-|Herramientas y plantillas|Description| 
+|Herramientas y plantillas|Descripción| 
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub acción que se integra con la CLI de TeamsFx.|
 |[github-ci-template.yml y](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub plantillas de CI o CD para Teams aplicación. |
@@ -244,9 +244,9 @@ Asegúrese de establecer las credenciales de Azure y Microsoft365 en las variabl
 Para aprovisionar e implementar recursos destinados a Azure dentro de CI/CD, debe crear una entidad de servicio de Azure para su uso.
 
 Realice los siguientes pasos para crear entidades de servicio de Azure:
-1. Registrar una aplicación Azure AD en un único inquilino.
-2. Asigne un rol a la aplicación Azure AD para obtener acceso a la suscripción de Azure y `Contributor` se recomienda el rol. 
-3. Cree un nuevo secreto Azure AD aplicación.
+1. Registrar una aplicación Microsoft Azure Active Directory (Azure AD) en un único inquilino.
+2. Asigne un rol a la Microsoft Azure Active Directory (Azure AD) para tener acceso a la suscripción de Azure y `Contributor` se recomienda el rol. 
+3. Cree un nuevo Microsoft Azure Active Directory de aplicación de Azure AD (Azure AD).
 
 > [!TIP]
 > Guarde el identificador de inquilino, el identificador de aplicación(AZURE_SERVICE_PRINCIPAL_NAME) y el secreto(AZURE_SERVICE_PRINCIPAL_PASSWORD) para su uso futuro.

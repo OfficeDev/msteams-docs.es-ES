@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorización de OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 50e26c78333068b180b374e4aae31f0727aee103
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: dbbda0dced53530c1688faa626bc63fe0bf1be76
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435743"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518166"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 
@@ -145,7 +145,7 @@ Para obtener más información, vea [obtener acceso en nombre de un usuario y](/
 Los permisos RSC se declaran en el archivo JSON del manifiesto de la aplicación. 
 
 > [!IMPORTANT]
-> Los permisos que no son RSC se almacenan en Azure Portal. No los agregues al manifiesto de la aplicación.
+> Los permisos que no son RSC se almacenan en el Microsoft Azure web. No los agregues al manifiesto de la aplicación.
 
 ### <a name="manifest-changes-for-resource-specific-consent"></a>Cambios de manifiesto para el consentimiento específico de recursos
 

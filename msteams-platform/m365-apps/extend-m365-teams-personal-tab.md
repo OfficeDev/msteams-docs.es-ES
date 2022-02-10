@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 529dd82276f4e11dc6256d23b6e8eb622a1651a0
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435275"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518026"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -25,7 +25,7 @@ Actualizar la aplicación personal para que se ejecute en Outlook y Office Inici
 > * Actualizar el manifiesto de la aplicación
 > * Actualizar las referencias del SDK de TeamsJS 
 > * Modificar los encabezados de la directiva de seguridad de contenido
-> * Actualizar el registro Azure AD aplicación para inicio de sesión único (SSO)
+> * Actualizar el registro Microsoft Azure Active Directory aplicación (Azure AD) para inicio de sesión único (SSO)
 
 La prueba de la aplicación requerirá los siguientes pasos:
 
@@ -117,12 +117,12 @@ Si la aplicación usa encabezados de directiva de seguridad de [contenido (CSP](
 |Microsoft 365 host| permiso frame-ancestor|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Oficina | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Actualizar Microsoft Azure Active Directory (Azure AD) de aplicaciones para SSO
 
-Azure Active Directory El inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), pero deberá agregar varios identificadores de aplicación cliente al registro de la aplicación Azure AD de la aplicación de pestaña en el portal de registros de *aplicaciones* del inquilino.
+Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), pero deberá agregar varios identificadores de aplicación cliente al Microsoft Azure Active Directory ( Azure AD) registro de aplicaciones de la aplicación de pestaña en el portal de *registros de aplicaciones del* inquilino.
 
 1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
 1. Abra la **hoja Registros de aplicaciones** .

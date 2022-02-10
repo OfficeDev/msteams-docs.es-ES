@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recibir todos los mensajes de canal con permisos de RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 520b409b7c3335bf7c936efb4e0bdb46f9d94a89
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: d573e6e52f09537a9cb5e815529ff9ee2ab31cae
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281906"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518314"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recibir todos los mensajes de canal con RSC
 
@@ -28,14 +28,14 @@ El `ChannelMessage.Read.Group` permiso RSC se extiende a los bots. Con el consen
 > * Los bots deben usar el `ChannelMessage.Read.Group` permiso RSC adecuadamente para crear y mejorar la experiencia atractiva para los usuarios del equipo o no aprobarán la aprobación de la tienda. La descripción de la aplicación debe incluir cómo el bot usa los datos que lee.
 > * Los `ChannelMessage.Read.Group` bots no pueden usar el permiso RSC como una forma de extraer grandes cantidades de datos de clientes. 
 
-## <a name="update-app-manifest"></a>Actualizar manifiesto de la aplicación
+## <a name="update-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
 Para que el bot reciba todos los mensajes de canal, RSC `ChannelMessage.Read.Group` debe configurarse en el manifiesto Teams aplicación con el permiso especificado en la `webApplicationInfo` propiedad.
-![Actualizar manifiesto de la aplicación](~/bots/how-to/conversations/Media/appmanifest.png)
+![Actualizar el manifiesto de la aplicación](~/bots/how-to/conversations/Media/appmanifest.png)
 
 A continuación se muestra un ejemplo del `webApplicationInfo` objeto:
 
-* **id**: El Azure Active Directory de la aplicación. Puede ser el mismo que el identificador del bot.
+* **id**: El identificador Microsoft Azure Active Directory aplicación (Azure AD). Puede ser el mismo que el identificador del bot.
 * **resource**: Any string. Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar la respuesta de error.
 * **applicationPermissions**: se deben especificar los permisos de RSC `ChannelMessage.Read.Group` para la aplicación con. Para obtener más información, vea [permisos específicos de recursos](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 

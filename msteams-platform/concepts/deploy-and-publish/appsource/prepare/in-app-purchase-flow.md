@@ -5,8 +5,13 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518243"
 ---
-
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
 Microsoft Teams las API que puedes usar para implementar las compras desde la aplicación para actualizar de aplicaciones gratuitas a Teams de pago. La compra desde la aplicación te permite convertir usuarios de planes gratuitos a de pago directamente desde tu aplicación.
@@ -38,10 +43,11 @@ Para habilitar la experiencia de compra desde la aplicación, actualice el archi
     "permissions": {
         "resourceSpecific": [
             {
-             "name": "InAppPurchase.Allow.User",
-             "type": "Delegated"
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated"
             }
         ]
+    }
 }
 ```
 
@@ -104,7 +110,7 @@ En el ejemplo siguiente se muestra a los usuarios comprar planes de suscripción
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Vista previa de prueba para aplicaciones monetizadas](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
+> [Versión preliminar de prueba para aplicaciones monetizadas](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>Vea también
 

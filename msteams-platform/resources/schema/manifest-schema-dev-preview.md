@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c014495e3ae2a969bbebc28aed62aded18576c82
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362938"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518551"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Esquema de manifiesto de vista previa del desarrollador público para Microsoft Teams
 
@@ -394,11 +394,11 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
-|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña tras su creación. Valor predeterminado: `true`|
+|`configurationUrl`|String|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña tras su creación. Valor predeterminado: `true`|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingDetailsTab``meetingChatTab`, `meetingSidePanel`y `meetingStage`.|
-|`sharePointPreviewImage`|String|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
+|`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
 |`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo la pestaña estará disponible en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart`. |
 
 ## <a name="statictabs"></a>staticTabs
@@ -415,8 +415,8 @@ El objeto es una matriz (máximo de 16 elementos) con todos los elementos del ti
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Un identificador único de la entidad que la pestaña muestra.|
-|`name`|Cadena|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz del canal.|
-|`contentUrl`|Cadena|2048 caracteres|✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
+|`name`|String|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz del canal.|
+|`contentUrl`|String|2048 caracteres|✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`contentBotId`|   | | | El Microsoft Teams de aplicación especificado para el bot en el portal de Bot Framework. |
 |`websiteUrl`|Cadena|2048 caracteres||La https:// dirección URL para apuntar si un usuario opta por ver en un explorador.|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
@@ -456,7 +456,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
+|`configurationUrl`|String|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
 |`scopes`|Matriz de enumeración|1|✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia específica para un solo usuario (`personal`). Actualmente, solo se admite el ámbito `team`.|
 
@@ -473,7 +473,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
-|`botId`|Cadena|64|✔|El identificador único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. Esto puede ser lo mismo que el identificador general [de la aplicación](#id).|
+|`botId`|String|64|✔|El identificador único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. Esto puede ser lo mismo que el identificador general [de la aplicación](#id).|
 |`canUpdateConfiguration`|Booleano|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
 |`commands`|Matriz de objeto|10|✔|Matriz de comandos que admite la extensión de mensajería|
 
@@ -488,26 +488,26 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`id`|String|64 caracteres|✔|Id. para el comando.|
 |`type`|String|64 caracteres||Tipo de comando. Uno de `query` o `action`. Valor predeterminado: `query`|
 |`title`|String|32 caracteres|✔|Nombre del comando fácil de usar.|
-|`description`|Cadena|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|Booleano|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
+|`description`|String|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
+|`initialRun`|Boolean|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
 |`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensajería. Cualquier combinación de `compose`, `commandBox`, `message`. El valor predeterminado es `["compose", "commandBox"]`|
 |`fetchTask`|Booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.height`|Cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.url`|Cadena|||Dirección URL de la vista web inicial.|
+|`taskInfo.height`|String|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.url`|String|||Dirección URL de la vista web inicial.|
 |`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones. Los dominios también deben aparecer en `validDomains`.|
-|`messageHandlers.type`|String|||Tipo de controlador de mensajes. Debe ser `"link"`.|
+|`messageHandlers.type`|Cadena|||Tipo de controlador de mensajes. Debe ser `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 |`parameters`|Matriz de objeto|5|✔|Lista de parámetros que toma el comando. Mínimo: 1; máximo: 5|
 |`parameter.name`|String|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. Esto se incluye en la solicitud de usuario.|
-|`parameter.title`|Cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
-|`parameter.description`|Cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
-|`parameter.inputType`|Cadena|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true`. Uno de `text`, `textarea`, `number`, `date`, `time`, , `choiceset``toggle`.|
+|`parameter.title`|String|32 caracteres|✔|Título fácil de usar para el parámetro.|
+|`parameter.description`|String|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
+|`parameter.inputType`|String|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true`. Uno de `text`, `textarea`, `number`, `date`, `time`, , `choiceset``toggle`.|
 |`parameter.choices`|Matriz de objetos|10||Las opciones de elección para `choiceset`el archivo . Use solo cuando `parameter.inputType` es `choiceset`.|
 |`parameter.choices.title`|Cadena|128||Título de la elección.|
-|`parameter.choices.value`|String|512||Valor de la elección.|
+|`parameter.choices.value`|Cadena|512||Valor de la elección.|
 
 ## <a name="permissions"></a>permissions
 
@@ -549,12 +549,12 @@ El objeto es una matriz con todos los elementos del tipo `string`.
 
 **Optional**
 
-Especifica el Azure AD de aplicación y la Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de Auzre AD.
+Especifica tu Microsoft Azure Active Directory de aplicación (Azure AD) e información Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de Auzre AD.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`id`|Cadena|36 caracteres|✔|Azure AD identificador de aplicación de la aplicación. Este identificador debe ser un GUID.|
-|`resource`|Cadena|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO.|
+|`id`|Cadena|36 caracteres|✔|Microsoft Azure Active Directory (Azure AD) de aplicación de la aplicación. Este identificador debe ser un GUID.|
+|`resource`|String|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO.|
 |`applicationPermissions`|Matriz|Máximo de 100 elementos|✔|Permisos de recursos para la aplicación.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -617,28 +617,28 @@ Especifica la oferta de SaaS asociada a la aplicación.
 
 Objeto **opcional**
 
-Especifique la definición de extensión de reunión. Para obtener más información, vea [escenas personalizadas del modo conjunto en Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Especifique la definición de la extensión de reunión. Para obtener más información, vea [escenas personalizadas del Modo conferencia en Teams](../../apps-in-teams-meetings/teams-together-mode.md)
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`scenes`|matriz de objetos| 5 elementos||Escenas compatibles con reuniones.|
+|`scenes`|matriz de objetos| 5 elementos||Escenas admitidas de la reunión.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
 |Nombre| Tipo|Tamaño máximo|Necesario |Descripción|
 |---|---|---|---|---|
 |`id`|||✔| Identificador único de la escena. Este identificador debe ser un GUID. |
-|`name`| string | 128 caracteres |✔| El nombre de la escena. |
-|`file`|||✔| Ruta de acceso de archivo relativa al archivo json de metadatos de las escenas. |
-|`preview`|||✔| Ruta de acceso de archivo relativa al icono de vista previa PNG de las escenas. |
-|`maxAudience`| integer | 50  |✔| El número máximo de audiencias admitidas en la escena. |
-|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| Número de puestos reservados para organizadores o presentadores.|
+|`name`| string | 128 caracteres |✔| Nombre de la escena. |
+|`file`|||✔| Ruta de acceso relativa al archivo JSON de metadatos de las escenas. |
+|`preview`|||✔| Ruta de acceso relativa del archivo al icono de vista previa PNG de las escenas. |
+|`maxAudience`| integer | 50  |✔| Número máximo de audiencias admitidas en la escena. |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| Número de puestos reservados para organizadores o moderadores.|
 
-## <a name="authorization"></a>autorización
+## <a name="authorization"></a>Autorización
 
-**Opcional** : objeto
+**Opcional** — Objeto
 
-Especifique y consolide la información relacionada con la autorización para la aplicación.
+Especifique y consolide la información relacionada con la autorización de la aplicación.
 
 |Nombre| Tipo|Tamaño máximo|Necesario |Descripción|
 |---|---|---|---|---|
@@ -648,41 +648,41 @@ Especifique y consolide la información relacionada con la autorización para la
 
 |Nombre| Tipo|Tamaño máximo|Necesario |Descripción|
 |---|---|---|---|---|
-|`resourceSpecific`| matriz de objetos|16 elementos||Permisos que protegen el acceso a datos en el nivel de instancia de recursos.|
+|`resourceSpecific`| matriz de objetos|16 elementos||Permisos que protege el acceso a los datos en el nivel de instancia de recursos.|
 
 ### <a name="authorizationpermissionsresourcespecific"></a>authorization.permissions.resourceSpecific
 
 |Nombre| Tipo|Tamaño máximo|Necesario |Descripción|
 |---|---|---|---|---|
-|`type`|string||✔| El tipo del permiso específico del recurso. Opciones: `Application` y `Delegated`.|
-|`name`|string|128 caracteres|✔|El nombre del permiso específico del recurso. <br> Para obtener más información, vea [Permisos de aplicación](../../graph-api/rsc/resource-specific-consent.md) y [Permisos delegados](#delegated-permissions).|
+|`type`|string||✔| Tipo del permiso específico del recurso. Opciones: `Application` y `Delegated`.|
+|`name`|string|128 caracteres|✔|Nombre del permiso específico del recurso. <br> Para obtener más información, vea [Aplicación de permisos](../../graph-api/rsc/resource-specific-consent.md) y [permisos delegados](#delegated-permissions).|
 
 ### <a name="delegated-permissions"></a>Permisos delegados
 
-Los permisos delegados permiten que la aplicación tenga acceso a los datos en nombre del usuario que ha iniciado sesión.
+Los permisos delegados permiten a la aplicación acceder a los datos en nombre del usuario que ha iniciado sesión.
 
 * **Permisos específicos de recursos para equipos**
 
     |**Nombre**|**Descripción**|
     |---|---|
-    |`ChannelMeetingParticipant.Read.Group`| Permite que la aplicación lea la información de los participantes, incluidos el nombre, el rol, el identificador, las horas unidas y las izquierdas, de las reuniones de canal asociadas con este equipo, en nombre del usuario que ha iniciado sesión.|
-    |`InAppPurchase.Allow.Group`| Permite que la aplicación muestre las ofertas de marketplace a los usuarios de este equipo y complete sus compras dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
-    |`ChannelMeetingStage.Write.Group`| Permite que la aplicación muestre contenido en la fase de reunión en reuniones de canal asociadas con este equipo, en nombre del usuario que ha iniciado sesión.|
+    |`ChannelMeetingParticipant.Read.Group`| Permite que la aplicación lea la información de los participantes, incluidos el nombre, rol, identificador, horas de unión y salida de las reuniones de canal asociadas a este equipo, en nombre del usuario que ha iniciado sesión.|
+    |`InAppPurchase.Allow.Group`| Permite que la aplicación muestre ofertas de Marketplace a los usuarios de este equipo y complete sus compras dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
+    |`ChannelMeetingStage.Write.Group`| Permite que la aplicación muestre contenido en la escena de reunión en reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
 
-* **Permisos específicos de recursos para chats o reuniones**
-
-    |**Nombre**|**Descripción**|
-    |---|---|
-    |`InAppPurchase.Allow.Chat`|Permite que la aplicación muestre ofertas de Marketplace a los usuarios en este chat y cualquier reunión asociada, y complete sus compras dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
-    |`MeetingStage.Write.Chat`|Permite que la aplicación muestre contenido en la fase de reunión en reuniones asociadas con este chat, en nombre del usuario que ha iniciado sesión.|
-    |`OnlineMeetingParticipant.Read.Chat`|Permite que la aplicación lea la información de los participantes, incluidos el nombre, el rol, el identificador, las horas unidas y las izquierdas, de la reunión asociada a este chat, en nombre del usuario que ha iniciado sesión.|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permite a la aplicación alternar el audio entrante de los participantes en reuniones asociadas con este chat, en nombre del usuario que ha iniciado sesión.|
-
-* **Permisos específicos de recursos para usuarios**
+* **Permisos específicos del recurso para chats o reuniones**
 
     |**Nombre**|**Descripción**|
     |---|---|
-    |`InAppPurchase.Allow.User`|Permite que la aplicación muestre las ofertas del mercado de usuarios y complete las compras del usuario dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
+    |`InAppPurchase.Allow.Chat`|Permite que la aplicación muestre ofertas de Marketplace a los usuarios de este chat y a cualquier reunión asociada, y complete sus compras en la aplicación, en nombre del usuario que ha iniciado sesión.|
+    |`MeetingStage.Write.Chat`|Permite que la aplicación muestre contenido en la fase de reunión en reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
+    |`OnlineMeetingParticipant.Read.Chat`|Permite que la aplicación lea la información de los participantes, incluidos el nombre, rol, identificador, horas de unión y salida de las reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permite que la aplicación alterne el audio entrante para los participantes en las reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
+
+* **Permisos específicos del recurso para los usuarios**
+
+    |**Nombre**|**Descripción**|
+    |---|---|
+    |`InAppPurchase.Allow.User`|Permite que la aplicación muestre las ofertas de Marketplace del usuario y complete las compras del usuario dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
 
 ## <a name="see-also"></a>Vea también
 

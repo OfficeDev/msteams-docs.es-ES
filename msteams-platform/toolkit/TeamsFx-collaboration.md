@@ -6,16 +6,16 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5b08923d92e8b1ea7a6292754f62899669de4804
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: af96227df93bb2c236607791e3870b1882d2da5f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435170"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518376"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colaborar en Teams proyecto mediante Teams Toolkit
 
-Varios desarrolladores pueden trabajar juntos para depurar, aprovisionar e implementar para el mismo proyecto de TeamsFx, pero requiere establecer manualmente los permisos adecuados de Teams App y Azure AD App.Teams Toolkit admite la característica de colaboración para permitir que los desarrolladores y el propietario del proyecto inviten a otros desarrolladores o colaboradores al proyecto de TeamsFx para depurar, aprovisionar e implementar la misma característica  Proyecto TeamsFx.
+Varios desarrolladores pueden trabajar juntos para depurar, aprovisionar e implementar para el mismo proyecto de TeamsFx, pero requiere establecer manualmente los permisos correctos de Teams App y Microsoft Azure Active Directory (Azure AD) App.Teams Toolkit  admite la característica de colaboración para permitir que los desarrolladores y el propietario del proyecto inviten a otros desarrolladores o colaboradores al proyecto de TeamsFx para depurar, aprovisionar e implementar el mismo proyecto de TeamsFx.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -44,11 +44,11 @@ La siguiente lista nos guía para comprender el proceso de colaboración y su li
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="colaboradores":::
 
-* Selecciona **Agregar Microsoft 365 Teams app (con Azure AD app) y** agrega otra dirección Microsoft 365 de correo electrónico de la cuenta como colaborador. La cuenta que se va a agregar debe estar en el mismo inquilino que el propietario del proyecto para la depuración remota, como se muestra en la imagen:
+* Selecciona **Agregar Microsoft 365 Teams app (con Microsoft Azure Active Directory (Azure AD) App) y** agrega otra dirección de correo electrónico Microsoft 365 cuenta como colaborador. La cuenta que se va a agregar debe estar en el mismo inquilino que el propietario del proyecto para la depuración remota, como se muestra en la imagen:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="agregar envi":::
 
-* Para ver colaboradores en el entorno actual, seleccione Enumerar Microsoft 365 Teams Propietarios de la aplicación **(con Azure AD App) y, a** continuación, los colaboradores aparecen en el canal de salida como se muestra en la siguiente imagen:
+* Para ver colaboradores en el entorno actual, seleccione Enumerar los propietarios de la aplicación Microsoft 365 Teams (con la aplicación **Microsoft Azure Active Directory (Azure AD)** y, a continuación, los colaboradores aparecen en el canal de salida como se muestra en la siguiente imagen:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="lista":::
 
@@ -77,8 +77,8 @@ No puede quitar colaboradores directamente de Teams Toolkit extensión. Realice 
   1. Ve a Teams Developer Portal y selecciona tu Teams por nombre o id. de aplicación.
   2. Seleccione **Propietarios** en el panel izquierdo.
   3. Seleccione y quite el colaborador.
-  4. Ve a [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecciona **Registro de aplicaciones** en el panel izquierdo y busca la aplicación Azure AD aplicación.
-  5. Selecciona **Propietarios** en el panel izquierdo Azure AD página Administración de aplicaciones.
+  4. Ve a [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecciona **Registro de** aplicaciones en el panel izquierdo y busca la aplicación Microsoft Azure Active Directory (Azure AD).
+  5. Seleccione **Propietarios** en el panel izquierdo Microsoft Azure Active Directory (Azure AD) Página de administración de aplicaciones.
   6. Seleccione y quite el colaborador.
 
 > [!NOTE]

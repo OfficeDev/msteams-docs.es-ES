@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 0d4e9b7e9559d5b6ccfe1e391579876abe78422f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: ca77ba61a880bb12067f884e8c294700938cc6be
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435722"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518131"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -24,7 +24,7 @@ La pestaña requiere información contextual para mostrar contenido relevante:
 El contexto sobre el usuario, el equipo o la empresa puede ser especialmente útil cuando:
 
 * Creas o asocias recursos en la aplicación con el usuario o equipo especificado.
-* Se inicia un flujo de autenticación Azure Active Directory otro proveedor de identidades y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
+* Se inicia un flujo de autenticación Microsoft Azure Active Directory (Azure AD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
 
 Para obtener más información, vea [autenticar un usuario en su Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -44,12 +44,12 @@ Use marcadores de posición en la configuración o en las direcciones URL de con
 
 * {entityId}: el id. que proporcionó para el elemento en esta pestaña al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md) por primera vez.
 * {subEntityId}: el identificador que proporcionó al generar un [vínculo](~/concepts/build-and-test/deep-links.md) profundo para un elemento específico dentro de esta pestaña. Esto debe usarse para restaurar a un estado específico dentro de una entidad; por ejemplo, desplazarse a o activar un elemento de contenido específico.
-* {loginHint}: valor adecuado como sugerencia de inicio de sesión para Azure AD. Normalmente, este es el nombre de inicio de sesión del usuario actual en su inquilino principal.
+* {loginHint}: valor adecuado como sugerencia de inicio de sesión para Microsoft Azure Active Directory (Azure AD). Normalmente, este es el nombre de inicio de sesión del usuario actual en su inquilino principal.
 * {userPrincipalName}: el nombre principal de usuario del usuario actual en el inquilino actual.
-* {userObjectId}: el Azure AD de objeto del usuario actual en el inquilino actual.
+* {userObjectId}: el Microsoft Azure Active Directory de objeto (Azure AD) del usuario actual en el espacio empresarial actual.
 * {theme}: el tema actual de la interfaz de usuario (UI) como `default`, `dark`o `contrast`.
 * {groupId}: el identificador del grupo Office 365 en el que reside la pestaña.
-* {tid}: el id. del espacio empresarial de Azure AD del usuario actual.
+* {tid}: el Microsoft Azure Active Directory (Azure AD) del inquilino del usuario actual.
 * {locale}: la configuración regional actual del usuario con el formato languageId-countryId(es-es).
 
 > [!NOTE]
@@ -82,10 +82,10 @@ El código siguiente proporciona un ejemplo de variable de contexto:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
-    "tid": "The Azure AD tenant ID of the current user",
+    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
+    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",

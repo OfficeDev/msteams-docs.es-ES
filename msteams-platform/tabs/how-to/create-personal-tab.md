@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación de aplicación de paquete MVC
-ms.openlocfilehash: 8062add7411ebc583ef29ac8ac003cda81766f5f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435883"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518033"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -135,9 +135,9 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     Use las teclas de flecha para **seleccionar Personal (estático).**.
 
-    **¿Necesita compatibilidad con el inicio de sesión único de Azure AD para la pestaña?**
+    **¿Necesita Microsoft Azure Active Directory (Azure AD) de inicio de sesión único para la pestaña?**
 
-    Elija **no** incluir la Azure AD inicio de sesión único para la pestaña. El valor predeterminado es sí, escriba **n**.
+    Elija **no** incluir la Microsoft Azure Active Directory inicio de sesión único (Azure AD) para la pestaña. El valor predeterminado es sí, escriba **n**.
 
     > [!IMPORTANT]
     > El componente de **ruta de acceso yourDefaultTabNameTab** es el valor que escribió en el generador **para Nombre de tabulación** predeterminado más la palabra **Tab**.

@@ -1,21 +1,21 @@
 ---
 title: Configurar proveedores de identidades de OAuth 2.0
-description: Describe cómo configurar proveedores de identidades con un enfoque en Azure AD
+description: Describe cómo configurar proveedores de identidades con un enfoque en Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: autenticación de Azure AD proveedor de identidades de oauth
-ms.openlocfilehash: 0e0b1e21bf3c2e877ddef790677ba2f4c227339e
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+keywords: proveedor de identidades de Microsoft Azure Active Directory teams (Azure AD)
+ms.openlocfilehash: 93622275a8bfc9007af751d8b9f6304a73450ec7
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212338"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517977"
 ---
 # <a name="configure-identity-providers"></a>Configurar proveedores de identidades
 
-## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Configuración de una aplicación para usar Azure Active Directory como proveedor de identidades
+## <a name="configuring-an-application-to-use-microsoft-azure-active-directory-azure-ad-as-an-identity-provider"></a>Configuración de una aplicación para usar Microsoft Azure Active Directory (Azure AD) como proveedor de identidades
 
-Los proveedores de identidades que admiten OAuth 2.0 no autenticarán solicitudes de aplicaciones desconocidas; las aplicaciones deben registrarse con antelación. Para hacerlo con Azure AD, siga estos pasos:
+Los proveedores de identidades que admiten OAuth 2.0 no autenticarán solicitudes de aplicaciones desconocidas; las aplicaciones deben registrarse con antelación. Para hacerlo con Microsoft Azure Active Directory (Azure AD), siga estos pasos:
 
 1. Abra el [Portal de registro de aplicaciones](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
@@ -25,7 +25,7 @@ Los proveedores de identidades que admiten OAuth 2.0 no autenticarán solicitude
 
     Direcciones URL de redireccionamiento: `https://<hostname>/bot-auth/simple-start`
 
-Reemplace por el host real, que puede ser un sitio de hospedaje dedicado como Azure, Glitch o un túnel ngrok para localhost en el equipo de desarrollo, `<hostname>` como `abcd1234.ngrok.io` . Es posible que no tenga esta información si no ha completado o hospedado la aplicación (o la aplicación de ejemplo mencionada anteriormente), pero siempre puede volver a esta página cuando se conozca esa información.
+Reemplace `<hostname>` por el host real, que puede ser un sitio de hospedaje dedicado como Azure, Glitch o un túnel ngrok para localhost en el equipo de desarrollo, como `abcd1234.ngrok.io`. Es posible que no tenga esta información si no ha completado o hospedado la aplicación (o la aplicación de ejemplo mencionada anteriormente), pero siempre puede volver a esta página cuando se conozca esa información.
 
 ## <a name="other-authentication-providers"></a>Otros proveedores de autenticación
 

@@ -1,27 +1,27 @@
 ---
 title: Autenticación silenciosa
-description: Describe autenticación silenciosa, inicio de sesión único, Azure Active Directory para pestañas
+description: Describe la autenticación silenciosa, inicio de sesión único, Microsoft Azure Active Directory (Azure AD) para pestañas
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: ficha de inicio de sesión Azure AD autenticación de teams
-ms.openlocfilehash: bf50f1840996371292b94ef6d3b2f16d5377a3f9
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+keywords: autenticación de teams sso silent Microsoft Azure Active Directory (Azure AD)
+ms.openlocfilehash: 700f0d3f752beb7b09b76a805f2bbcd7adf82fb9
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043220"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518467"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 
 > [!IMPORTANT]
-> El soporte técnico y el desarrollo de Microsoft para la Biblioteca de autenticación de Active Directory (ADAL), incluidas las correcciones de seguridad, finaliza el 30 de junio de **2022**. Actualice las aplicaciones para que usen la Biblioteca de autenticación de Microsoft (MSAL) para seguir recibiendo soporte técnico. Vea [Migrar aplicaciones a la Biblioteca de autenticación de Microsoft (MSAL).](/azure/active-directory/develop/msal-migration)
+> El soporte técnico y el desarrollo de Microsoft para la Biblioteca de autenticación de Active Directory (ADAL), incluidas las correcciones de seguridad, finaliza el 30 de junio de **2022**. Actualice las aplicaciones para que usen la Biblioteca de autenticación de Microsoft (MSAL) para seguir recibiendo soporte técnico. Consulte [Migrar aplicaciones a la Biblioteca de autenticación de Microsoft (MSAL).](/azure/active-directory/develop/msal-migration)
 
 > [!NOTE]
 > Para que la autenticación funcione para su pestaña en clientes móviles, asegúrese de que está usando Teams SDK de JavaScript versión 1.4.1 o posterior.
 
-La autenticación silenciosa Azure Active Directory minimiza el número de veces que un usuario escribe sus credenciales actualizando silenciosamente el token de autenticación. Para obtener soporte para el inicio de sesión único verdadero, vea [la documentación de SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
+La autenticación silenciosa Microsoft Azure Active Directory (Azure AD) minimiza el número de veces que un usuario escribe sus credenciales actualizando silenciosamente el token de autenticación. Para obtener compatibilidad con el inicio de sesión único verdadero, consulte [la documentación de SSO](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-Para mantener el lado cliente de código, use la biblioteca de autenticación Azure AD [de](/azure/active-directory/develop/active-directory-authentication-libraries) JavaScript para obtener un token de acceso Azure AD de forma silenciosa. Si el usuario ha iniciado sesión recientemente, no verá un cuadro de diálogo emergente.
+Para mantener el lado cliente de código, use la biblioteca de autenticación Microsoft Azure Active Directory [(Azure AD)](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obtener un token de acceso Microsoft Azure Active Directory (Azure AD) de forma silenciosa. Si el usuario ha iniciado sesión recientemente, no verá un cuadro de diálogo emergente.
 
 Aunque la biblioteca de autenticación de Active Directory está optimizada para aplicaciones angularJS, también funciona con aplicaciones de página única (SPA) de JavaScript.
 
@@ -30,13 +30,13 @@ Aunque la biblioteca de autenticación de Active Directory está optimizada para
 
 ## <a name="how-silent-authentication-works"></a>Cómo funciona la autenticación silenciosa
 
-La biblioteca de autenticación de Active Directory crea un iframe oculto para el flujo de concesión implícito de OAuth 2.0. Pero la biblioteca especifica `prompt=none` , por lo Azure AD no muestra la página de inicio de sesión. La interacción del usuario puede ser necesaria si el usuario necesita iniciar sesión o conceder acceso a la aplicación. Si es necesaria la interacción del usuario, Azure AD devuelve un error que la biblioteca informa a la aplicación. Si es necesario, la aplicación ahora puede mostrar una opción de inicio de sesión.
+La biblioteca de autenticación de Active Directory crea un iframe oculto para el flujo de concesión implícito de OAuth 2.0. Pero la biblioteca especifica `prompt=none`, por lo que Microsoft Azure Active Directory (Azure AD)no muestra la página de inicio de sesión. La interacción del usuario puede ser necesaria si el usuario necesita iniciar sesión o conceder acceso a la aplicación. Si es necesaria la interacción del usuario, Microsoft Azure Active Directory (Azure AD) devuelve un error que la biblioteca informa a la aplicación. Si es necesario, la aplicación ahora puede mostrar una opción de inicio de sesión.
 
 ## <a name="how-to-do-silent-authentication"></a>Cómo realizar la autenticación silenciosa
 
-El código de este artículo proviene de la Teams de ejemplo que se Teams [de ejemplo de autenticación.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
+El código de este artículo proviene de la Teams de ejemplo que se Teams [de ejemplo de autenticación](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
-[Inicie la pestaña configurable de autenticación](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) silenciosa y sencilla Azure AD y siga las instrucciones para ejecutar el ejemplo en el equipo local.
+[Inicie la pestaña configurable de](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) autenticación silenciosa y sencilla Microsoft Azure Active Directory (Azure AD) y siga las instrucciones para ejecutar el ejemplo en el equipo local.
 
 ### <a name="include-and-configure-active-directory-authentication-library"></a>Incluir y configurar la biblioteca de autenticación de Active Directory
 
@@ -48,7 +48,7 @@ Incluya la biblioteca de autenticación de Active Directory en las páginas de p
     // Active Directory Authentication Library configuration
     let config = {
         clientId: "YOUR_APP_ID_HERE",
-        // redirectUri must be in the list of redirect URLs for the Azure AD app
+        // redirectUri must be in the list of redirect URLs for the Microsoft Azure Active Directory (Azure AD) app
         redirectUri: window.location.origin + "/tab-auth/silent-end",
         cacheLocation: "localStorage",
         navigateToLoginRequestUrl: false,
@@ -58,7 +58,7 @@ Incluya la biblioteca de autenticación de Active Directory en las páginas de p
 
 ### <a name="get-the-user-context"></a>Obtener el contexto de usuario
 
-En la página de contenido de la pestaña, llama para obtener una sugerencia de inicio de `microsoftTeams.getContext()` sesión para el usuario actual. La sugerencia se usa como una `loginHint` en la llamada a Azure AD.
+En la página de contenido de la pestaña, llama `microsoftTeams.getContext()` para obtener una sugerencia de inicio de sesión para el usuario actual. La sugerencia se usa como una en `loginHint` la llamada a Microsoft Azure Active Directory (Azure AD).
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -73,7 +73,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Autenticar
 
-Si la biblioteca de autenticación de Active Directory tiene un token no explorado almacenado en caché para el usuario, use el token. Como alternativa, llama `acquireToken(resource, callback)` para recibir silenciosamente un token. La biblioteca llama a una función de devolución de llamada con el token solicitado o genera un error si se produce un error en la autenticación.
+Si la biblioteca de autenticación de Active Directory tiene un token no explorado almacenado en caché para el usuario, use el token. Como alternativa, llama para `acquireToken(resource, callback)` recibir silenciosamente un token. La biblioteca llama a una función de devolución de llamada con el token solicitado o genera un error si se produce un error en la autenticación.
 
 Si obtiene un error en la función de devolución de llamada, muestre y use una opción de inicio de sesión explícita.
 
@@ -108,9 +108,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Procesar el valor devuelto
 
-La biblioteca de autenticación de Active Directory analiza el resultado de Azure AD llamando a la página de devolución `AuthenticationContext.handleWindowCallback(hash)` de llamada de inicio de sesión.
+La biblioteca de autenticación de Active Directory analiza el resultado de Microsoft Azure Active Directory (Azure AD) `AuthenticationContext.handleWindowCallback(hash)` llamando a la página de devolución de llamada de inicio de sesión.
 
-Compruebe que tiene un usuario válido y llame o para notificar el estado a la página de contenido `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` de la pestaña principal.
+Compruebe que tiene un usuario válido y llame `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` o para notificar el estado a la página de contenido de la pestaña principal.
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 
 ### <a name="handle-the-sign-out-flow"></a>Controlar el flujo de salida
 
-Use el siguiente código para controlar el flujo de salida en Azure AD autenticación:
+Use el siguiente código para controlar el flujo de salida en Microsoft Azure Active Directory (Azure AD):
 
 > [!NOTE]
 > Al cerrar sesión desde Teams o bot, se borra la sesión actual.
@@ -141,5 +141,5 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 ## <a name="see-also"></a>Vea también
 
-* [Configurar proveedores de identidades para que usen Azure AD](../../../concepts/authentication/configure-identity-provider.md)
+* [Configurar proveedores de identidades para Microsoft Azure Active Directory (Azure AD)](../../../concepts/authentication/configure-identity-provider.md)
 * [Información sobre la Biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview)

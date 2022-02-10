@@ -6,17 +6,17 @@ keywords: Selector de personas de tarjetas adaptables
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212478"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518306"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Selector de usuarios en Tarjetas adaptables
 
 >[!NOTE]
-> Actualmente, el Selector de personas [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) en tarjetas adaptables solo está disponible en la versión preliminar de desarrolladores públicos para dispositivos móviles y, por lo general, disponible (GA) para escritorio.
+> Actualmente, el Selector de personas en tarjetas adaptables [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) solo está disponible en la versión preliminar de desarrolladores públicos para dispositivos móviles y, por lo general, disponible (GA) para escritorio.
 
 El Selector de personas ayuda a los usuarios a buscar y seleccionar usuarios en la tarjeta adaptable. Puedes agregar el Selector de personas como control de entrada a la tarjeta adaptable, que funciona en chats, canales, módulos de tareas y pestañas. El Selector de personas admite las siguientes características:        
 
@@ -84,18 +84,18 @@ La siguiente imagen muestra el escenario de reasignación:
 
 ## <a name="implement-people-picker"></a>Implementar selector de personas
 
-El selector de personas se implementa como una extensión del control [Input.ChoiceSet.](https://adaptivecards.io/explorer/Input.ChoiceSet.html) El control de entrada incluye las siguientes selecciones:   
+El selector de personas se implementa como una extensión del control [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) . El control de entrada incluye las siguientes selecciones:   
 
 * Desplegable, como una selección expandida.
 * Botón de radio, como una sola selección.
 * Casillas, como varias selecciones.  
 
 > [!NOTE]
-> El `Input.ChoiceSet` control se basa en las propiedades `style` `isMultiSelect` y.  
+> El `Input.ChoiceSet` control se basa en las `style` propiedades y `isMultiSelect` .  
 
 ### <a name="update-schema"></a>Actualizar esquema
 
-Las siguientes propiedades son adiciones al esquema para habilitar la experiencia del selector `Input.ChoiceSet` de personas en la tarjeta:  
+Las siguientes propiedades son adiciones al esquema `Input.ChoiceSet` para habilitar la experiencia del selector de personas en la tarjeta:  
 
 #### <a name="inputchoiceset-control"></a>Control Input.ChoiceSet
 
@@ -160,8 +160,8 @@ Para habilitar la búsqueda en una lista de miembros de conversación, use el co
 
 ### <a name="data-submission"></a>Envío de datos
 
-Puede usar o `Action.Submit` `Action.Execute` enviar datos seleccionados al bot. La carga recibida en el bot es una lista de Azure AD de datos o los `invoke` IDs proporcionados en la lista estática.
-En el Selector de personas, cuando se selecciona un usuario en el control, el del usuario `Azure AD ID` es el valor devuelto. Se `Azure AD ID` trata de una cadena e identifica de forma única a un usuario en el directorio.
+Puede usar o `Action.Submit` enviar `Action.Execute` datos seleccionados al bot. La `invoke` carga recibida en el bot es una lista de Microsoft Azure Active Directory (Azure AD) o los IDs proporcionados en la lista estática.
+En el Selector de personas, cuando se selecciona un usuario en el control, `Microsoft Azure Active Directory (Azure AD) ID` el del usuario es el valor devuelto. Se `Microsoft Azure Active Directory (Azure AD) ID` trata de una cadena e identifica de forma única a un usuario en el directorio.
 
 El formato del valor enviado al bot depende del valor de la `isMultiSelect` propiedad:
 
@@ -170,15 +170,15 @@ El formato del valor enviado al bot depende del valor de la `isMultiSelect` prop
 |false _(selección única)_|<selected_Azure_AD_ID>|
 |true _(selección múltiple)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Con el `Azure AD ID` selector de personas, se selecciona previamente el usuario correspondiente. 
+Con el `Azure AD ID`selector de personas, se selecciona previamente el usuario correspondiente. 
 
 ## <a name="preselection-of-user"></a>Selección previa del usuario
 
-El Selector de personas admite la selección previa del usuario en el control, al crear y enviar una tarjeta adaptable. `Input.ChoiceSet` admite la `value` propiedad que se usa para preseleccionar un usuario. El formato de esta propiedad es el mismo que el formato `value` de valor enviado en el envío de [datos](#data-submission).  
+El Selector de personas admite la selección previa del usuario en el control, al crear y enviar una tarjeta adaptable. `Input.ChoiceSet` admite la `value` propiedad que se usa para preseleccionar un usuario. El formato de esta propiedad `value` es el mismo que el formato de valor enviado en [el envío de datos](#data-submission).  
 La siguiente lista proporciona la información para preseleccionar usuarios:
 
-* Para un solo usuario del control, especifique el `Azure AD ID` del usuario como `value` . 
-* Para varios usuarios, como es , especifique una cadena separada `isMultiSelect` `true` por comas de `Azure AD ID` s.  
+* Para un solo usuario del control, especifique el `Microsoft Azure Active Directory (Azure AD) ID` del usuario como `value`. 
+* Para varios usuarios, como `isMultiSelect` es `true`, especifique una cadena separada por comas de `Microsoft Azure Active Directory (Azure AD) ID`s.  
 
 En el ejemplo siguiente se describe la selección previa de un solo usuario:
 
@@ -251,12 +251,12 @@ En el siguiente ejemplo se describe la selección previa de varios usuarios:
  
 ## <a name="static-choices"></a>Opciones estáticas
 
-Las opciones estáticas admiten escenarios donde los perfiles personalizados deben insertarse en los conjuntos de datos predefinidos. `Input.ChoiceSet` admite la `choices` especificación estática en el json. La opción estática se usa para crear las opciones entre las que el usuario puede seleccionar.
+Las opciones estáticas admiten escenarios donde los perfiles personalizados deben insertarse en los conjuntos de datos predefinidos. `Input.ChoiceSet` admite la especificación `choices` estática en el json. La opción estática se usa para crear las opciones entre las que el usuario puede seleccionar.
 
 > [!NOTE]
-> Los `choices` estáticos se usan con conjuntos de datos dinámicos. 
+> Los estáticos `choices` se usan con conjuntos de datos dinámicos. 
 
-La elección consta de `title` y `value` . Cuando se usa junto con el selector de personas, estas opciones se convierten en perfiles de usuario que tienen el nombre y `title` `value` el como identificador. Estos perfiles personalizados también forman parte de los resultados de búsqueda cuando la consulta de búsqueda coincide con el `title` .    
+La elección consta de `title` y `value`. Cuando se usa junto con el selector de personas, `title` estas opciones se convierten en perfiles de usuario que tienen el nombre y el `value` como identificador. Estos perfiles personalizados también forman parte de los resultados de búsqueda cuando la consulta de búsqueda coincide con el .`title`    
 En el siguiente ejemplo se describen las opciones estáticas: 
 
 ```json

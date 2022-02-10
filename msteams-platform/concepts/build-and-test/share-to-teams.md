@@ -4,19 +4,19 @@ description: Aprenda a agregar el botón Compartir Teams incrustado en su sitio 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartir Teams compartir a Teams
-ms.openlocfilehash: dc70e35d8a02d4dc6349a062d0b4a38fd0a2f0a3
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435708"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518495"
 ---
 # <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
 Los sitios web de terceros pueden usar el script del iniciador para insertar botones de share-to-Teams en sus páginas web. Cuando selecciona, inicia la experiencia compartir a Teams en una ventana emergente. Esto le permite compartir un vínculo directamente con cualquier persona o canal Microsoft Teams sin cambiar el contexto. Este documento le guía sobre cómo crear e insertar un botón Compartir a Teams para su sitio web, crear la vista previa del sitio web y ampliar Share-to-Teams para Educación.
 
 > [!NOTE]
-> * Solo se admiten las versiones de escritorio Microsoft Edge y Google Chrome.
+> * Solo se admiten las versiones de escritorio de MicrosoftEdge&nbsp; y Google Chrome.
 > * No se admite el uso de freemium o cuentas de invitado.  
 
 En la siguiente imagen se muestra la experiencia Teams emergente de Share-to-
@@ -97,11 +97,11 @@ Para los profesores que usan el botón Compartir Teams, hay una opción adiciona
 | href | `data-href` | string | N/D | Href del contenido que se debe compartir. |
 | preview | `data-preview` | boolean (como una cadena) | `true` | Mostrar o no una vista previa del contenido que se va a compartir. |
 | iconPxSize | `data-icon-px-size` | número (como una cadena) | `32` | Tamaño en píxeles del botón Compartir a Teams que se representará. |
-| msgText | `data-msg-text` | string | N/D | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
+| msgText | `data-msg-text` | string | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
 | assignInstr | `data-assign-instr` | string | N/D | Texto predeterminado que se va a insertar en el campo de asignaciones "Instrucciones". El número máximo de caracteres es 200. |
 | assignTitle | `data-assign-title` | string | N/D | Texto predeterminado que se va a insertar en el campo asignaciones "Título". El número máximo de caracteres es 50. |
 
-### <a name="methods"></a>Métodos
+### <a name="methods"></a>Methods
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 

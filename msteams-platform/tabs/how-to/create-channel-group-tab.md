@@ -5,12 +5,12 @@ description: Guía de inicio rápido para crear una pestaña de canal y grupo co
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: a536a5f0a17c0c3b02015d38d3c49b2b9e072903
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435380"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518264"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Crear una pestaña de canal o grupo
 
@@ -134,9 +134,9 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     Puede seleccionar un equipo o un chat de grupo.
 
-    **¿Necesita compatibilidad con el inicio de sesión único de Azure AD para la pestaña?**
+    **¿Necesita Microsoft Azure Active Directory (Azure AD) de inicio de sesión único para la pestaña?**
 
-    Elija **no** incluir la Azure AD inicio de sesión único para la pestaña. El valor predeterminado es sí, escriba **n**.
+    Elija **no** incluir la Microsoft Azure Active Directory inicio de sesión único (Azure AD) para la pestaña. El valor predeterminado es sí, escriba **n**.
 
     **¿Desea que esta pestaña esté disponible en SharePoint Online? (Y/n)**
 

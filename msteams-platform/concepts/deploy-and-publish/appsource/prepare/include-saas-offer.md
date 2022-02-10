@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 0efaea87af8128086db3e0e6416014d97f0af5a2
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362777"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517991"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
@@ -49,7 +49,7 @@ Al planear cómo monetizar la aplicación Teams, estos son algunos aspectos a te
 
 * Decida el modelo de suscripción. Una oferta SaaS transaccionable puede incluir varios planes de suscripción. Los planes de suscripción públicos disponibles para cualquier persona son más comunes, pero es posible que también quieras dirigirte a clientes específicos con ofertas solo para ellos. Para obtener más información, [vea ofertas privadas en el mercado comercial de Microsoft](/azure/marketplace/private-offers).
 * Lee la opción [*Vender a través de Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) para la oferta SaaS, que es necesaria si quieres que los usuarios compren planes de suscripción para tu aplicación directamente a través de la Teams tienda.
-* Obtenga información [sobre Azure Active Directory inicio de sesión único (SSO)](/azure/marketplace/azure-ad-saas) ayuda a sus clientes a comprar y administrar suscripciones. (Azure AD SSO es necesario para Teams aplicaciones con ofertas SaaS).
+* Obtenga información [sobre Azure Active Directory inicio de sesión único (SSO)](/azure/marketplace/azure-ad-saas) ayuda a sus clientes a comprar y administrar suscripciones. (Microsoft Azure Active Directory (Azure AD) se requiere SSO para Teams aplicaciones con ofertas saas).
 * Comprenda que es responsable de administrar y pagar la infraestructura necesaria para admitir el uso de sus clientes de su oferta saas.
 * Planee el móvil. Para evitar infringir las directivas de la tienda de aplicaciones de terceros, la aplicación no puede incluir vínculos que permitan a los usuarios comprar planes de suscripción en el móvil. Sin embargo, aún puedes indicar si la aplicación tiene características que requieren un plan de suscripción. Para obtener más información, consulte las directivas de certificación del [mercado comercial relacionadas](/legal/marketplace/certification-policies#114048-mobile-experience).
 
@@ -81,7 +81,7 @@ Para obtener instrucciones completas, [consulte build the landing page for your 
 
 Ten en cuenta los siguientes enfoques al crear una página de aterrizaje para la Teams que estás monetizando. Vea una página de aterrizaje de ejemplo en la [experiencia de compra del usuario final](#end-user-purchasing-experience).
 
-* Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas Azure AD credenciales que usaron para comprar la suscripción. Para obtener más información, [vea Azure AD y ofertas saas transaccionables en el mercado comercial](/azure/marketplace/azure-ad-saas).
+* Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas Microsoft Azure Active Directory (Azure AD) que usaron para comprar la suscripción. Para obtener más información, [vea Microsoft Azure Active Directory (Azure AD) y ofertas SaaS transaccionables en el mercado comercial](/azure/marketplace/azure-ad-saas).
 * Permitir a los usuarios realizar las siguientes acciones en la página de aterrizaje. No olvide tener en cuenta lo que es apropiado para el rol y los permisos de un usuario (por ejemplo, puede que desee permitir que solo los administradores de suscripciones busquen usuarios):
   * Busque usuarios en su organización mediante correo electrónico u otra forma de identidad.
   * Consulta los usuarios a los que pueden asignar licencias en una lista.
@@ -203,6 +203,6 @@ Si desvinculas una oferta SaaS incluida en la descripción Teams tienda, debes v
    1. Selecciona **Distribuir > publicar en el Teams almacén**.
    1. Selecciona **Abrir centro de partners** para iniciar el proceso de volver a publicar la aplicación sin la oferta.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Mantenimiento y soporte técnico de la aplicación publicada](../post-publish/overview.md)

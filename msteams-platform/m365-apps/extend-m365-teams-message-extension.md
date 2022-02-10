@@ -4,12 +4,12 @@ description: Este es el modo de actualizar la extensión de mensajería de Teams
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: a72f4781c6765c908748a8be16d096bca866fe36
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 410f019beeed078ed51c37c241e08511572e18b8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435813"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518110"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Extender una extensión Teams de mensajería a través de Microsoft 365
 
@@ -92,14 +92,14 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Panel Canales del bot de Azure que enumera Microsoft Teams y Outlook canales":::
 
-## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Actualizar Microsoft Azure Active Directory (Azure AD) de aplicaciones para SSO
 
 > [!NOTE]
 > Puedes omitir el paso si usas un ejemplo de búsqueda de extensión de mensajería de [Teams, ya](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) que el escenario no implica Azure Active Directory (AAD) autenticación de Sign-On única.
 
-Azure Active Directory Inicio de sesión único (SSO) para extensiones de mensajería funciona de la misma manera en Outlook que en [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de aplicación cliente al registro de aplicaciones de Azure AD del bot en *el portal de* registros de aplicaciones del inquilino.
+Azure Active Directory inicio de sesión único (SSO) para extensiones de mensajería funciona de la misma manera en Outlook que en [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de aplicación cliente al Microsoft Azure Active Directory (Azure AD ) registro de la aplicación del bot en el portal de registros *de aplicaciones del* inquilino.
 
-1. Inicie sesión en [Azure Portal con](https://portal.azure.com) su cuenta de espacio aislado.
+1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
 1. Abra **Registros de aplicaciones**.
 1. Seleccione el nombre de la aplicación para abrir el registro de la aplicación.
 1. Seleccione  **Exponer una API** (en *Administrar*).

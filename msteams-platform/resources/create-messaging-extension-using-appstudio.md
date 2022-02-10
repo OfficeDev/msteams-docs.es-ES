@@ -5,12 +5,12 @@ description: Obtén información sobre cómo crear una Microsoft Teams de mensaj
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 6fb16b173e8660b85d7152ad1d88b1180cd61981
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435876"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518159"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería usando App Studio
 
@@ -47,7 +47,7 @@ Las extensiones de mensajería aprovechan el esquema de mensajería del Bot Fram
 
 Si sigue uno de los inicios rápidos o empieza desde uno de los ejemplos disponibles, se le guiará a través del registro del servicio web. Si desea registrar manualmente el servicio, tiene tres opciones para hacerlo. Si decide registrarse sin usar una suscripción de Azure, no podrá aprovechar el flujo simplificado de autenticación de OAuth proporcionado por Bot Framework. Podrás migrar el registro a Azure después de la creación.
 
-* Si tiene una suscripción de Azure (o desea crear una nueva), puede registrar el servicio web manualmente mediante el portal de Microsoft Azure web. Cree un recurso "Registro de canales de bot". Puedes elegir el nivel de precios gratuito, ya que los mensajes de Microsoft Teams no cuentan para el total de mensajes permitidos al mes.
+* Si tiene una suscripción de Azure (o desea crear una nueva), puede registrar el servicio web manualmente mediante el portal Microsoft Azure web. Cree un recurso "Registro de canales de bot". Puedes elegir el nivel de precios gratuito, ya que los mensajes de Microsoft Teams no cuentan para el total de mensajes permitidos al mes.
 * Si no desea usar una suscripción de Azure, puede usar el [portal de registro heredado](https://dev.botframework.com/bots/new).
 * App Studio también puede ayudarte a registrar el servicio web (bot). Los servicios web registrados a través de App Studio no están registrados en Azure. Puede usar el [portal heredado para](https://dev.botframework.com/bots) ver, administrar y migrar los registros.
 
