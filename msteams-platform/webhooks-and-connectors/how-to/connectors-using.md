@@ -5,12 +5,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: conector de Office365 de teams
-ms.openlocfilehash: 478bf9805c5f045e1f8c43ff7647dd418f6bd8af
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435869"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517970"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -45,7 +45,7 @@ Para más información sobre las acciones de tarjeta de conector, vea [Acciones]
 
 > [!NOTE]
 > * Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.
-> * Para la acción HttpPOST, el token de usuario se incluye con las solicitudes. Este token incluye la identidad de Azure AD del usuario de Office 365 que realizó la acción.
+> * Para la acción HttpPOST, el token de usuario se incluye con las solicitudes. Este token incluye la identidad de Microsoft Azure Active Directory (Azure AD) del usuario de Office 365 que realizó la acción.
 
 ## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>Enviar un mensaje a través del webhook entrante o del conector de Office 365
 
