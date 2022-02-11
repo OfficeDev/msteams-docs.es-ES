@@ -4,12 +4,12 @@ description: Describe las tarjetas y cómo se usan en bots, conectores y extensi
 ms.localizationpriority: high
 keywords: conectores bots tarjetas mensajería
 ms.topic: overview
-ms.openlocfilehash: 39fec1897aaf660acd5d5d4d4335c777015e4f8f
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 3cbe26e9c84996242a22e8d0325914e7bde87f8c
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212331"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517984"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -79,7 +79,7 @@ Las tarjetas adaptables con webhooks entrantes permiten usar las funcionalidades
 
 ## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Compatibilidad con el identificador de objeto de Azure AD y el UPN en la mención de usuario 
 
-Los bots con Tarjetas adaptables admiten identificadores de mención de usuario, como el identificador de objeto de Azure AD y el nombre principal de usuario (UPN), además de los identificadores existentes. Los webhooks entrantes comienzan a admitir la mención de usuario en Tarjetas adaptables con el identificador de objeto de Azure AD y el UPN.
+Los bots con Tarjetas adaptables admiten identificadores de mención de usuario, como el identificador de objeto de Microsoft Azure Active Directory (Azure AD) y el nombre principal de usuario (UPN), además de los identificadores existentes. Los webhooks entrantes empiezan a admitir la mención de usuario en la tarjeta adaptable con el identificador de objeto de Microsoft Azure Active Directory (Azure AD) y el UPN.
 
 ## <a name="next-step"></a>Paso siguiente
 

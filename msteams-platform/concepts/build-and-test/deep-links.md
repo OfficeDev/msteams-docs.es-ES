@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en las aplicaciones
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: vínculo profundo de teams
-ms.openlocfilehash: 63aa2849360d709e261c88472090caaf066f98c1
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059308"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518250"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -140,7 +140,7 @@ Ejemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 Los parámetros de consulta son:
 
-* `users`: lista separada por comas de identificadores de usuario que representan a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Azure AD, como solo una dirección de correo electrónico.
+* `users`: lista separada por comas de identificadores de usuario que representan a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Microsoft Azure Active Directory (Azure AD), como solo una dirección de correo electrónico.
 * `topicName`: un campo opcional para el nombre para mostrar del chat, en el caso de un chat con 3 o más usuarios. Si no se especifica este campo, el nombre para mostrar del chat se basa en los nombres de los participantes.
 * `message`: un campo opcional para el texto del mensaje que quiere insertar en el cuadro de redacción del usuario actual mientras el chat está en un estado de borrador.
 
@@ -226,7 +226,7 @@ Ejemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 Los parámetros de consulta son:
 
-* `attendees`: lista opcional separada por comas de identificadores de usuario que representan a los asistentes a la reunión. El usuario que realiza la acción es el organizador de la reunión. Actualmente, el campo Id. de usuario solo admite el UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico.
+* `attendees`: lista opcional separada por comas de identificadores de usuario que representan a los asistentes a la reunión. El usuario que realiza la acción es el organizador de la reunión. Actualmente, el campo Id. de usuario solo admite el UserPrincipalName de Microsoft Azure Active Directory (Azure AD), por lo general, una dirección de correo electrónico.
 * `startTime`: la hora de inicio opcional del evento. Debe tener [formato ISO 8601 largo](https://en.wikipedia.org/wiki/ISO_8601), por ejemplo, *2018-03-12T23:55:25+02:00*.
 * `endTime`: la hora de finalización opcional del evento, también en formato ISO 8601.
 * `subject`: un campo opcional para el asunto de la reunión.
@@ -259,7 +259,7 @@ En el caso de una videollamada, el cliente pedirá confirmación y activará el 
 | Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | https://teams.microsoft.com/l/call/0/0?users=&lt;usuario1&gt;,4:&lt;número de teléfono&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Estos son los parámetros de consulta:
-* `users`: lista separada por comas de identificadores de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en el caso de una llamada RTC, admite un mri 4:&lt;número de teléfono&gt; de rtc.
+* `users`: lista separada por comas de identificadores de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Microsoft Azure Active Directory (Azure AD), por lo general, una dirección de correo electrónico, o en el caso de una llamada RTC, admite una rtc mri 4:&lt;número de teléfono&gt;.
 * `withVideo`: este es un parámetro opcional que puede usar para realizar una videollamada. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de llamada de audio o de audio y vídeo a través de la ventana de notificación de llamadas de Teams. 
 * `Source`: este es un parámetro opcional, que informa sobre el origen del vínculo profundo.
 
