@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: b1c728fd27b1cecdf8e2fd7c62e6eaabf01b3cc7
-  ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+  ms.openlocfilehash: 5c6428985d0220cb4578c082214dd2d935ea55b9
+  ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/08/2022
-  ms.locfileid: "62443898"
+  ms.lasthandoff: 02/14/2022
+  ms.locfileid: "62801379"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -57,6 +57,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Envío y recepción de archivos
+      url: bots/how-to/bots-filesv4.md
     - text: Teams de llamadas y reuniones
       url: bots/calls-and-meetings/registering-calling-bot.md
     - text: Permiso de dispositivo para explorador
@@ -71,6 +73,8 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
+    - text: Upload archivos para Teams desde un bot
+      url: ~/sbs-file-handling-in-bot.yml
     - text: Crear bot de llamadas y reuniones
       url: ~/sbs-calling-and-meeting.yml
     - text: Configurar permisos de dispositivo tab
@@ -89,8 +93,6 @@ landingContent:
       url: ~/sbs-meetings-sidepanel.yml
     - text: Generar una vista de fase de reuniones
       url: ~/sbs-meetings-stage-view.yml
-    - text: Interactuar con el bot de burbuja de contenido en reuniones
-      url: ~/sbs-meeting-content-bubble.yml
 - title: Introducción
   linkLists:
   - linkListType: get-started

@@ -6,12 +6,12 @@ keywords: conector de Office365 de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 719d73394c3ab072c61f08b826b42e35c3475ca1
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435149"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801386"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -21,7 +21,9 @@ Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 exist
 
 Puede crear un paquete [y](~/concepts/build-and-test/apps-package.md) [publicar el](~/concepts/deploy-and-publish/apps-publish.md) conector como parte del envío de AppSource. Puedes distribuir el conector registrado como parte del paquete Teams aplicación. Para obtener información sobre los puntos de entrada Teams aplicación, consulta [funcionalidades](~/concepts/extensibility-points.md). También puede proporcionar el paquete a los usuarios directamente para cargarlo en Teams.
 
-Para distribuir el conector, debe registrarse a través del [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard). Cuando se registra un conector, se supone que funciona en todos los Office 365 compatibles con aplicaciones, incluidos Outlook y Teams. Si ese no es el caso y debe crear un conector que solo funcione en Microsoft Teams, póngase en contacto con: [Microsoft Teams correo electrónico de envíos de aplicaciones](mailto:teamsubm@microsoft.com).
+Para distribuir el conector, regístrelo en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).
+
+Para que un conector funcione solo en Microsoft Teams, siga las instrucciones para enviar el conector en publicar la aplicación en el [Microsoft Teams tienda](~/concepts/deploy-and-publish/appsource/publish.md). De lo contrario, un conector registrado funciona en todos los Office 365 que admiten aplicaciones, incluidos Outlook y Teams.
 
 > [!IMPORTANT]
 > El conector se registra después de seleccionar **Guardar** en el Panel de desarrolladores de conectores. Si quieres publicar el conector en AppSource, sigue las instrucciones de publicar la [aplicación Microsoft Teams app en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no quieres publicar la aplicación en AppSource, distribuyela directamente a la organización. Después [de publicar conectores para la organización](#publish-connectors-for-the-organization), no se requiere ninguna acción adicional en el Panel de conectores.
@@ -267,11 +269,11 @@ En la tabla siguiente se proporciona el nombre de ejemplo y su descripción:
 
 |**Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Conectores    | Sample Office 365 Connector que genera notificaciones en Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Conectores    | Sample Office 365 Connector que genera notificaciones en Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Ejemplo de conectores genéricos |Código de ejemplo para un conector genérico que es fácil de personalizar para cualquier sistema que admita webhooks.|  | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Consulte también
 
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Crear un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Creación de un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

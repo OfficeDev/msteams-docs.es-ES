@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Medios hospedados por la aplicación Windows máquina virtual de Azure del servidor
 ms.date: 11/16/2018
-ms.openlocfilehash: c3c6f76b5062f003902c9967191be9cd0be336aa
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 1e9fa106376a3068039dd74c8e0b4f2b8c8802d6
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435715"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801372"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisitos y consideraciones para bots multimedia hospedados en aplicaciones
 
-Un bot multimedia hospedado por la aplicación requiere que [la biblioteca`Microsoft.Graph.Communications.Calls.Media` .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) obtenga acceso a las secuencias multimedia de audio y vídeo. El bot debe implementarse en un equipo Windows Server o en un Windows operativo invitado del servidor en Azure.
+Un bot multimedia hospedado por la aplicación requiere que [la biblioteca`Microsoft.Graph.Communications.Calls.Media` .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) obtenga acceso a las secuencias multimedia de audio y vídeo. El bot debe implementarse en una máquina Windows server local o en un sistema operativo invitado de Windows server en Azure.
 
 > [!NOTE]
 > * Las instrucciones para desarrollar mensajes y bots de respuesta de voz interactiva (IVR) no se aplican por completo a la creación de bots multimedia hospedados en aplicaciones.
@@ -70,7 +70,7 @@ Los ejemplos de bots multimedia hospedados en la aplicación son los siguientes:
 
 | **Ejemplo de nombre** | **Descripción** | **Graph** |
 |------------|-------------|-----------|
-| Ejemplo de medios locales | Ejemplos que ilustran diferentes escenarios de medios locales. | [Ver](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Ejemplo de medios locales | Ejemplos que ilustran diferentes escenarios de medios locales. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Ejemplo de medios remotos | Ejemplos que ilustran diferentes escenarios multimedia remotos. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="next-step"></a>Paso siguiente
