@@ -4,23 +4,23 @@ description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: pestañas de autenticación Microsoft Azure Active Directory teams (Azure AD)
-ms.openlocfilehash: 65020b91931782b985243a410792a4f7aab3b01e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2ceca46148c79b07dd417e84b0736f69ee520b8b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518558"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821720"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una Microsoft Teams pestaña
 
 > [!Note]
 > Para que la autenticación funcione para su pestaña en clientes móviles, debe asegurarse de que está usando la versión 1.4.1 o posterior del SDK de JavaScript de Teams.
 
-Es posible que quieras consumir muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams. Teams información de perfil de usuario se almacena en Microsoft Azure Active Directory (Azure AD) con Microsoft Graph y este artículo se centrará en la autenticación mediante Microsoft Azure Active Directory (Azure AD ) para obtener acceso a esta información.
+Es posible que quieras consumir muchos servicios dentro de la aplicación Teams y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams. Teams información de perfil de usuario se almacena en Azure AD con Microsoft Graph y este artículo se centrará en la autenticación mediante Azure AD para obtener acceso a esta información.
 
-OAuth 2.0 es un estándar abierto para la autenticación que usan Microsoft Azure Active Directory (Azure AD) y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Microsoft Azure Active Directory (Azure AD). Los ejemplos siguientes usan el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información de perfil del usuario de Microsoft Azure Active Directory (Azure AD) y Microsoft Graph.
+OAuth 2.0 es un estándar abierto para la autenticación que usan Azure AD y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. Los ejemplos siguientes usan el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información de perfil del usuario de Azure AD y Microsoft Graph.
 
-El código de este artículo proviene de la aplicación Teams ejemplo de Microsoft Teams [de autenticación de pestañas (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual desde Microsoft Azure Active Directory (Azure AD).
+El código de este artículo proviene de la aplicación Teams ejemplo de Microsoft Teams [de autenticación de pestañas (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual desde Azure AD.
 
 Para obtener información general sobre el flujo de autenticación de las pestañas, vea [Flujo de autenticación en pestañas](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -28,7 +28,7 @@ El flujo de autenticación en las pestañas difiere ligeramente del flujo de aut
 
 ## <a name="configuring-identity-providers"></a>Configuración de proveedores de identidades
 
-Consulte el tema [Configurar](~/concepts/authentication/configure-identity-provider.md) proveedores de identidades para obtener pasos detallados sobre cómo configurar las direcciones URL de redireccionamiento de devolución de llamada de OAuth 2.0 al usar Microsoft Azure Active Directory (Azure AD) como proveedor de identidades.
+Consulte el tema [Configurar](~/concepts/authentication/configure-identity-provider.md) proveedores de identidades para obtener pasos detallados sobre cómo configurar las direcciones URL de redireccionamiento de devolución de llamada de OAuth 2.0 al usar Azure AD como proveedor de identidades.
 
 ## <a name="initiate-authentication-flow"></a>Iniciar flujo de autenticación
 
@@ -36,7 +36,7 @@ El flujo de autenticación debe desencadenarse mediante una acción del usuario.
 
 Agregue un botón a la página de configuración o contenido para permitir que el usuario inicie sesión cuando sea necesario. Esto se puede hacer en la página de configuración [de pestañas](~/tabs/how-to/create-tab-pages/configuration-page.md) o en cualquier [página de](~/tabs/how-to/create-tab-pages/content-page.md) contenido.
 
-Microsoft Azure Active Directory (Azure AD), como la mayoría de los proveedores de identidades, no permite que su contenido se coloque en un iframe. Esto significa que tendrá que agregar una página emergente para hospedar el proveedor de identidades. En el siguiente ejemplo, esta página es `/tab-auth/simple-start`. Usa la `microsoftTeams.authenticate()` función del SDK Microsoft Teams cliente para iniciar esta página cuando se selecciona el botón.
+Azure AD, como la mayoría de los proveedores de identidades, no permite que su contenido se coloque en un iframe. Esto significa que tendrá que agregar una página emergente para hospedar el proveedor de identidades. En el siguiente ejemplo, esta página es `/tab-auth/simple-start`. Usa la `microsoftTeams.authenticate()` función del SDK Microsoft Teams cliente para iniciar esta página cuando se selecciona el botón.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -54,7 +54,7 @@ microsoftTeams.authentication.authenticate({
 
 ### <a name="notes"></a>Notas
 
-* La dirección URL a la que se pasa `microsoftTeams.authentication.authenticate()` es la página de inicio del flujo de autenticación. En este ejemplo que es `/tab-auth/simple-start`. Esto debe coincidir con lo que registró en el portal de registro de aplicaciones [Microsoft Azure Active Directory (Azure AD).](https://apps.dev.microsoft.com)
+* La dirección URL a la que se pasa `microsoftTeams.authentication.authenticate()` es la página de inicio del flujo de autenticación. En este ejemplo que es `/tab-auth/simple-start`. Esto debe coincidir con lo que registró en el [Azure AD de registro de aplicaciones](https://apps.dev.microsoft.com).
 
 * El flujo de autenticación debe iniciarse en una página que se encuentra en su dominio. Este dominio también debe aparecer en la [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) sección del manifiesto. Si no lo hace, se mostrará una ventana emergente vacía.
 
@@ -62,7 +62,7 @@ microsoftTeams.authentication.authenticate({
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>Vaya a la página de autorización desde la página emergente
 
-Cuando se muestra la página emergente (`/tab-auth/simple-start`) se ejecuta el siguiente código. El objetivo principal de esta página es redirigir al proveedor de identidades para que el usuario pueda iniciar sesión. Esta redirección podría realizarse en el lado del servidor mediante HTTP 302, pero en este caso se realiza en el lado cliente mediante una llamada `window.location.assign()`a . Esto también permite `microsoftTeams.getContext()` usarse para recuperar información de sugerencias, que se puede pasar a Microsoft Azure Active Directory (Azure AD).
+Cuando se muestra la página emergente (`/tab-auth/simple-start`) se ejecuta el siguiente código. El objetivo principal de esta página es redirigir al proveedor de identidades para que el usuario pueda iniciar sesión. Esta redirección podría realizarse en el lado del servidor mediante HTTP 302, pero en este caso se realiza en el lado cliente mediante una llamada `window.location.assign()`a . Esto también permite `microsoftTeams.getContext()` usarse para recuperar información de sugerencias, que se puede pasar a Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -70,7 +70,7 @@ microsoftTeams.getContext(function (context) {
     let state = _guid(); // _guid() is a helper function in the sample
     localStorage.setItem("simple.state", state);
     localStorage.removeItem("simple.error");
-    // Go to the Microsoft Azure Active Directory (Azure AD) authorization endpoint
+    // Go to the Azure AD authorization endpoint
     let queryParams = {
         client_id: "YOUR_APP_ID_HERE",
         response_type: "id_token token",
@@ -93,28 +93,28 @@ Una vez que el usuario completa la autorización, se redirige al usuario a la p�
 
 ### <a name="notes"></a>Notas
 
-* Consulte [Obtener información de contexto de usuario](~/tabs/how-to/access-teams-context.md) para obtener ayuda para crear solicitudes de autenticación y direcciones URL. Por ejemplo, puede `login_hint` usar el nombre de inicio de sesión del usuario como valor para el inicio de sesión de Microsoft Azure Active Directory (Azure AD), lo que significa que es posible que el usuario necesite escribir menos. Recuerde que no debe usar este contexto directamente como prueba de identidad, ya que un atacante podría cargar la página en un explorador malintencionado y proporcionarle la información que desee.
+* Consulte [Obtener información de contexto de usuario](~/tabs/how-to/access-teams-context.md) para obtener ayuda para crear solicitudes de autenticación y direcciones URL. Por ejemplo, puede usar el `login_hint` nombre de inicio de sesión del usuario como valor para Azure AD inicio de sesión, lo que significa que es posible que el usuario necesite escribir menos. Recuerde que no debe usar este contexto directamente como prueba de identidad, ya que un atacante podría cargar la página en un explorador malintencionado y proporcionarle la información que desee.
 * Aunque el contexto de pestaña proporciona información útil sobre el usuario, no use esta información para autenticar al usuario, ya sea que la obtenga como parámetros de dirección URL en la dirección URL `microsoftTeams.getContext()` de contenido de la pestaña o llamando a la función en el SDK de cliente de Microsoft Teams. Un actor malintencionado podría invocar la dirección URL de contenido de la pestaña con sus propios parámetros y una página web que suplanta Microsoft Teams podría cargar la dirección URL de contenido de la pestaña en un iframe `getContext()` y devolver sus propios datos a la función. Debe tratar la información relacionada con la identidad en el contexto de la pestaña simplemente como sugerencias y validarlas antes de usarlas.
 * El `state` parámetro se usa para confirmar que el servicio que llama al URI de devolución de llamada es el servicio al que llamó. Si el `state` parámetro de la devolución de llamada no coincide con el parámetro que envió durante la llamada, la llamada de devolución no se comprueba y debe finalizarse.
 * No es necesario incluir el dominio del proveedor de identidades en la `validDomains` lista en el archivo manifest.json de la aplicación.
 
 ## <a name="the-callback-page"></a>La página de devolución de llamada
 
-En la última sección, llamó al servicio de autorización de Microsoft Azure Active Directory (Azure AD) y pasó información de usuario y aplicación para que Microsoft Azure Active Directory (Azure AD) pudiera presentar al usuario su propia autorización monolítica. experiencia. La aplicación no tiene control sobre lo que sucede en esta experiencia. Todo lo que sabe es lo que se devuelve Microsoft Azure Active Directory (Azure AD) llama a la página de devolución de llamada que proporcionó (`/tab-auth/simple-end`).
+En la última sección, llamó al servicio de autorización Azure AD y pasó información de usuario y aplicación para que Azure AD pudiera presentar al usuario su propia experiencia de autorización monolítica. La aplicación no tiene control sobre lo que sucede en esta experiencia. Todo lo que sabe es lo que se devuelve Azure AD llama a la página de devolución de llamada que proporcionó (`/tab-auth/simple-end`).
 
-En esta página debe determinar el éxito o error en función de la información devuelta por Microsoft Azure Active Directory (Azure AD) y llamar `microsoftTeams.authentication.notifySuccess()` o `microsoftTeams.authentication.notifyFailure()`. Si el inicio de sesión se ha realizado correctamente, tendrá acceso a los recursos de servicio.
+En esta página debe determinar el éxito o el error en función de la información devuelta por Azure AD y llame o `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()`. Si el inicio de sesión se ha realizado correctamente, tendrá acceso a los recursos de servicio.
 
 ````javascript
-// Split the key-value pairs passed from Microsoft Azure Active Directory (Azure AD)
+// Split the key-value pairs passed from Azure AD
 // getHashParameters is a helper function that parses the arguments sent
-// to the callback URL by Microsoft Azure Active Directory (Azure AD) after the authorization call
+// to the callback URL by Azure AD after the authorization call
 let hashParams = getHashParameters();
 if (hashParams["error"]) {
     // Authentication/authorization failed
     microsoftTeams.authentication.notifyFailure(hashParams["error"]);
 } else if (hashParams["access_token"]) {
     // Get the stored state parameter and compare with incoming state
-    // This validates that the data is coming from Microsoft Azure Active Directory (Azure AD)
+    // This validates that the data is coming from Azure AD
     let expectedState = localStorage.getItem("simple.state");
     if (expectedState !== hashParams["state"]) {
         // State does not match, report error
@@ -134,7 +134,7 @@ if (hashParams["error"]) {
 }
 ````
 
-Este código analiza los pares clave-valor recibidos de Microsoft Azure Active Directory (Azure AD) en `window.location.hash` el uso de la `getHashParameters()` función auxiliar. Si encuentra `access_token`un y `state` el valor es el mismo que el proporcionado al principio del flujo de autenticación, devuelve el token `notifySuccess()`de acceso a la pestaña llamando; de lo contrario, informa de un error con `notifyFailure()`.
+Este código analiza los pares clave-valor recibidos de Azure AD en el `window.location.hash` uso de la `getHashParameters()` función auxiliar. Si encuentra `access_token`un y `state` el valor es el mismo que el proporcionado al principio del flujo de autenticación, devuelve el token `notifySuccess()`de acceso a la pestaña llamando; de lo contrario, informa de un error con `notifyFailure()`.
 
 ### <a name="notes"></a>Notas
 
@@ -157,11 +157,11 @@ Para obtener más información sobre single Sign-On (SSO), consulte el artículo
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-Código de ejemplo que muestra el proceso de autenticación de tabulación Microsoft Azure Active Directory (Azure AD):
+Código de ejemplo que muestra el proceso de autenticación de tabulación Azure AD:
 
 | **Ejemplo de nombre** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
-| Microsoft Teams de pestañas | Proceso de autenticación de tabulación Microsoft Azure Active Directory (Azure AD). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+| Microsoft Teams de pestañas | Proceso de autenticación de tabulación Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 

@@ -4,19 +4,19 @@ description: Describe la autenticación en Teams y cómo usarla en las aplicacio
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Autenticación de teams OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: cf8ab3d0f861187d304f26a1804ac3d953e9e5ac
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 79b50b8e2ba91d8b141cb36b38f0d94713131d43
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518285"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821363"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
 > [!Note]
 > La autenticación basada en web en clientes móviles requiere la versión 1.4.1 o posterior del SDK de cliente Teams JavaScript.
 
-Para obtener acceso a la información de usuario protegida por Microsoft Azure Active Directory (Azure AD) y acceder a datos de servicios como Facebook y Twitter, la aplicación establece una conexión de confianza con esos proveedores. Si la aplicación usa las API Graph Microsoft en el ámbito de usuario, autentique al usuario para recuperar los tokens de autenticación adecuados.
+Para obtener acceso a la información de usuario protegida por Azure AD y acceder a datos de servicios como Facebook y Twitter, la aplicación establece una conexión de confianza con esos proveedores. Si la aplicación usa las API Graph Microsoft en el ámbito de usuario, autentique al usuario para recuperar los tokens de autenticación adecuados.
 
 En Teams, hay dos flujos de autenticación diferentes para la aplicación. Realice un flujo de autenticación basado en web tradicional [en una página](~/tabs/how-to/create-tab-pages/content-page.md) de contenido incrustada en una pestaña, una página de configuración o un módulo de tareas. Si la aplicación contiene un bot de conversación, use el flujo de OAuthPrompt y, opcionalmente, el servicio de tokens de Azure Bot Framework para autenticar a un usuario como parte de una conversación.
 
@@ -26,8 +26,8 @@ Usa el flujo de autenticación basado en web para [pestañas](~/tabs/what-are-ta
 
 * [Agregar autenticación al bot Teams describe](~/bots/how-to/authentication/add-authentication.md) cómo usar el flujo de autenticación basado en web con un bot conversacional.
 * [El flujo de autenticación en las pestañas](~/tabs/how-to/authentication/auth-flow-tab.md) describe cómo funciona la autenticación de pestañas en Teams. Esto muestra un flujo de autenticación basado en web típico usado para las pestañas.
-* [Microsoft Azure Active Directory (Azure AD) en pestañas](~/tabs/how-to/authentication/auth-tab-AAD.md) describe cómo conectarse a Microsoft Azure Active Directory (Azure AD) desde una pestaña de la aplicación en Teams.
-* [El Microsoft Azure Active Directory de autenticación silenciosa (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) describe cómo reducir los mensajes de inicio de sesión o consentimiento en la aplicación mediante Microsoft Azure Active Directory (Azure AD).
+* [Azure AD autenticación en pestañas](~/tabs/how-to/authentication/auth-tab-AAD.md) describe cómo conectarse a Azure AD desde dentro de una pestaña de la aplicación en Teams.
+* [La autenticación Azure AD](~/tabs/how-to/authentication/auth-silent-AAD.md) describe cómo reducir los mensajes de inicio de sesión o consentimiento en la aplicación mediante Azure AD.
 * [.Net o C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [JavaScript o Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) proporciona ejemplos para la autenticación basada en web.
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Flujo OAuthPrompt para bots conversacionales
@@ -45,13 +45,13 @@ proporciona un ejemplo de SDK de autenticación de bot v3.
 
 | **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Autenticación de bot | En este ejemplo se muestra cómo empezar con la autenticación en un bot para Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Autenticación de bot | En este ejemplo se muestra cómo empezar con la autenticación en un bot para Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Sso de pestaña, bot y mensajería (ME) | En este ejemplo se muestra SSO para Tab, Bot y ME: búsqueda, acción, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | No disponible |
 
 
 ## <a name="configure-the-identity-provider"></a>Configurar el proveedor de identidades
 
-Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de los ejemplos y tutoriales tratan principalmente con el Microsoft Azure Active Directory (Azure AD) como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades. 
+Independientemente del flujo de autenticación de la aplicación, configure el proveedor de identidades para que se comunique con la Teams aplicación. La mayoría de las muestras y los recorridos se tratan principalmente con el Azure AD como proveedor de identidades. Sin embargo, los conceptos se aplican independientemente del proveedor de identidades. 
 
 Para obtener más información, vea [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 

@@ -4,12 +4,12 @@ description: Describe cómo obtener un token de usuario. Actualmente, un desarro
 keywords: token, token de usuario, compatibilidad con SSO para bots, permiso, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 0c354c4f60ff334ba5cc8a98fb3d3a346a8bb06e
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 760c9f964298e120dfaf5cfadd199f5a7d02454f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435694"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821601"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -159,7 +159,7 @@ Los pasos para registrar la aplicación a través del portal de Azure AD son sim
 
 #### <a name="update-manifest-in-microsoft-azure-portal"></a>Actualizar manifiesto en Microsoft Azure portal
 
-Los pasos siguientes le guiarán para actualizar el manifiesto del bot en Microsoft Azure portal:
+Los siguientes pasos le guiarán para actualizar el manifiesto del bot en Azure Portal:
 
 1. Seleccione **Manifiesto** en el panel izquierdo.
 1. Asegúrese de que el elemento de configuración está **establecido en "accessTokenAcceptedVersion": 2**. Si no es así, cambie su valor a **2**.
@@ -170,13 +170,13 @@ Los pasos siguientes le guiarán para actualizar el manifiesto del bot en Micros
    >[!NOTE]
    > Si ya estás probando el bot en Teams, debes cerrar sesión desde esta aplicación y cerrar sesión desde Teams. A continuación, vuelva a iniciar sesión para ver este cambio.
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>Actualizar Azure Portal con la conexión de OAuth
 
-Los siguientes pasos le guiarán para actualizar el portal de Microsoft Azure con la conexión de OAuth:
+Los pasos siguientes le guiarán para actualizar Azure Portal con la conexión de OAuth:
 
-1. En el portal Microsoft Azure, vaya a [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. En Azure Portal, vaya a [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. Vaya a **Configuración** en el panel izquierdo.
 1. Seleccione **Agregar conexión de OAuth Configuración**.
 
@@ -197,7 +197,7 @@ Los siguientes pasos le guiarán para actualizar el portal de Microsoft Azure co
     * Para la **dirección URL Exchange** token, use el valor de ámbito definido en Actualizar el [manifiesto Teams aplicación para el bot](#update-your-teams-application-manifest-for-your-bot). La dirección URL Exchange token indica al SDK que esta Azure AD está configurada para SSO.
     * En el **identificador de inquilino**, escriba *common*.
     * Agregue todos los **ámbitos configurados** al especificar permisos para las API de nivel inferior para la Azure AD aplicación. Con el identificador de cliente y el secreto de cliente proporcionados, el almacén de tokens intercambia el token para un token de gráfico con permisos definidos.
-    * Seleccione **Guardar**.
+    * Haga clic en **Guardar**.
     * Seleccione **Aplicar**.
    
     ![Configuración de conexión](~/assets/images/authentication/Bot-connection-setting.png)

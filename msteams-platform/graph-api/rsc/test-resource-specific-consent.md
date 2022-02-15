@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorización de OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 15a2a80a8f1ce280b462ed6e6e99242fb30f0dc3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 4e8affcc75682390f403be5b2c0ebb99029dbe19
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518124"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821629"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos de recursos en Teams
 
@@ -34,7 +34,7 @@ Agregue una [clave webApplicationInfo](../../resources/schema/manifest-schema.md
 
 |Nombre| Tipo | Descripción|
 |---|---|---|
-|`id` |String |El Microsoft Azure Active Directory de aplicación Azure AD (Azure AD). Para obtener más información, [consulta registrar la aplicación en el Microsoft Azure Active Directory (Azure AD).](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
+|`id` |String |Tu Azure AD de aplicación. Para obtener más información, [consulta Registrar la aplicación en el portal de Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; cualquier cadena lo hará.|
 
 Especifica los permisos necesarios para la aplicación.
@@ -200,8 +200,8 @@ Agregue una [clave webApplicationInfo](../../resources/schema/manifest-schema.md
 
 |Nombre| Tipo | Descripción|
 |---|---|---|
-|`id` |String |El Microsoft Azure Active Directory de aplicación Azure AD (Azure AD). Para obtener más información, [consulta registrar la aplicación en el Microsoft Azure Active Directory (Azure AD).](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
-|`resource`|String| Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; cualquier cadena lo hará.|
+|`id` |String |Tu Azure AD de aplicación. Para obtener más información, [consulta Registrar la aplicación en el portal de Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|Cadena| Este campo no tiene ninguna operación en RSC, pero debe agregarse y tener un valor para evitar una respuesta de error; cualquier cadena lo hará.|
 |`applicationPermissions`|Matriz de cadenas|Permisos RSC para la aplicación. Para obtener más información, vea [permisos específicos de recursos](resource-specific-consent.md#resource-specific-permissions).|
 
 Ejemplo de RSC en un equipo
@@ -265,14 +265,14 @@ Ejemplo de RSC en un chat
 > En el manifiesto de la aplicación, solo incluye los permisos de RSC que quieras que tenga la aplicación.
 
 > [!NOTE]
-> Si la aplicación está destinada a tener acceso a las API de llamadas o medios, `webApplicationInfo.Id` debe ser el identificador de aplicación Microsoft Azure Active Directory (Azure AD) de un servicio [bot de Azure](/graph/cloud-communications-get-started#register-a-bot).
+> Si la aplicación está destinada a tener acceso a las API de llamadas/medios, `webApplicationInfo.Id` debe ser el identificador Azure AD aplicación de un servicio [de bot de Azure](/graph/cloud-communications-get-started#register-a-bot).
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Probar los permisos RSC agregados a un equipo mediante la aplicación Postman
 
 Para comprobar si la carga de solicitud de API está respetando los permisos RSC, debe copiar el código de prueba [JSON de RSC](test-team-rsc-json-file.md) para el equipo en el entorno local y actualizar los siguientes valores:
 
-* `azureADAppId`: El identificador de aplicación Microsoft Azure Active Directory aplicación (Azure AD) de la aplicación.
-* `azureADAppSecret`: La contraseña Microsoft Azure Active Directory aplicación de Azure AD (Azure AD).
+* `azureADAppId`: El identificador de aplicación Azure AD aplicación.
+* `azureADAppSecret`: la Azure AD de la aplicación.
 * `token_scope`: el ámbito es necesario para obtener un token. establezca el valor en https://graph.microsoft.com/.default.
 * `teamGroupId`: Puede obtener el identificador de grupo de grupo del Teams de la siguiente manera:
 
@@ -286,10 +286,10 @@ Para comprobar si la carga de solicitud de API está respetando los permisos RSC
 
 Para comprobar si la carga de solicitud de API está respetando los permisos RSC, debe copiar el código de prueba [JSON de RSC para chats](test-chat-rsc-json-file.md) en el entorno local y actualizar los siguientes valores:
 
-* `azureADAppId`: El identificador de aplicación Microsoft Azure Active Directory aplicación (Azure AD) de la aplicación.
-* `azureADAppSecret`: La contraseña Microsoft Azure Active Directory aplicación de Azure AD (Azure AD).
+* `azureADAppId`: El identificador de aplicación Azure AD aplicación.
+* `azureADAppSecret`: la Azure AD de la aplicación.
 * `token_scope`: el ámbito es necesario para obtener un token. establezca el valor en https://graph.microsoft.com/.default.
-* `tenantId`: el nombre o el Microsoft Azure Active Directory de objeto (Azure AD) del espacio empresarial.
+* `tenantId`: el nombre o el Azure AD de objeto del inquilino.
 * `chatId`: Puede obtener el identificador de subproceso de chat del Teams *web* de la siguiente manera:
 
     1. En el Teams web, seleccione **Chat** en la barra de navegación de la izquierda.

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523783"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821594"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -127,7 +127,7 @@ El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módu
 > * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Microsoft Azure Active Directory (Azure AD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### <a name="shared-meeting-stage"></a>Fase de reunión compartida
+#### <a name="shared-meeting-stage"></a>Escena de reunión compartida
 
 La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real. Puedes compartir tus aplicaciones en la fase de reunión de colaboración de las siguientes maneras:
 
@@ -168,7 +168,7 @@ Los participantes pueden compartir partes específicas de la aplicación a la fa
 
 Para compartir partes específicas de la aplicación en fase, debes invocar las API relacionadas en la Teams SDK de cliente. Para obtener más información, vea [Referencia de API](API-references.md).
 
-Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Microsoft Azure Active Directory (Azure AD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el id. de usuario `from.aadObjectId` y es Azure AD id. del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 
@@ -194,7 +194,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 > [!div class="nextstepaction"]
 > [Referencias API de aplicaciones de reuniones](API-references.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)

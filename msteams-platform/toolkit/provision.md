@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6a922c98dc158105abf1225a6f292c95d063428d
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: db295beddf8b0492816c757703e89f3010666eab
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517963"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821566"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para aprovisionar recursos en la nube
 
@@ -50,7 +50,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Creación de recursos para Teams tab
 
-|Recurso|Objetivo|Descripción |
+|Resource|Objetivo|Descripción |
 |----------|--------------------------------|-----|
 | Almacenamiento de Azure | Hospedar la aplicación de pestaña | Habilita la característica de aplicación web estática para hospedar la aplicación de pestañas |
 | Plan de app service para autenticación sencilla | Hospedar la aplicación web de Simple Auth |No aplicable |
@@ -59,7 +59,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Creación de recursos para Teams bot o aplicación de extensión de mensajería
 
-|Recurso|Objetivo| Descripción |
+|Resource|Objetivo| Descripción |
 |----------|--------------------------------|-----|
 | Servicio de bots de Azure | Registra la aplicación como un bot con el marco del bot | Conecta el bot a Teams |
 | Plan de servicio de aplicaciones para bot | Hospedar la aplicación web del bot |No aplicable |
@@ -68,7 +68,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>Creación de recursos para Azure Functions en el proyecto
 
-|Recurso|Objetivo| Descripción|
+|Resource|Objetivo| Descripción|
 |----------|--------------------------------|-----|
 | Plan de servicio de aplicaciones para la aplicación de función | Hospedar la aplicación de función |No aplicable |
 | Aplicación function | Hospedar las API de funciones de Azure | Agrega la identidad asignada por el usuario para obtener acceso a otros recursos de Azure. <br /> Agrega una regla de uso compartido de recursos entre orígenes (CORS) para permitir solicitudes desde la aplicación de pestañas <br /> Agrega la configuración de autenticación que solo permite las solicitudes de Teams aplicación. <br /> Agrega la configuración de la aplicación requerida [por el SDK de TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -77,7 +77,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>Creación de recursos para Azure SQL en el proyecto
 
-|Recurso|Objetivo | Descripción |
+|Resource|Objetivo | Descripción |
 |----------|--------------------------------|-----|
 | Servidor SQL Azure | Hospedar la instancia de base de SQL azure | Permite que todos los servicios de Azure accedan al servidor |
 | Base de datos SQL Azure | Almacenar datos para la aplicación | Concede al usuario permiso de identidad asignada, lectura o escritura en la base de datos |
@@ -85,9 +85,9 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Creación de recursos para Azure API Management en el proyecto
 
-|Recurso|Objetivo|
+|Resource|Objetivo|
 |----------|--------------------------------|
-| Microsoft Azure Active Directory (Azure AD) para el servicio de administración de API | Permite a las API de acceso de Microsoft Power Platform administradas por el servicio de administración de API |
+| Azure AD aplicación para el servicio de administración de API | Permite a las API de acceso de Microsoft Power Platform administradas por el servicio de administración de API |
 | Servicio de administración de API | Administrar las API hospedadas en la aplicación de función |
 | Producto de administración de API | Agrupar las API, definir términos de uso y directivas de tiempo de ejecución |
 | Servidor OAuth de administración de API | Permite que Microsoft Power Platform acceda a las API hospedadas en la aplicación de función |
@@ -97,7 +97,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 |Recursos|Finalidad de este recurso|
 |----------|--------------------------------|
-| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, el secreto de cliente Microsoft Azure Active Directory (Azure AD) de aplicaciones) usado por otros servicios de Azure |
+| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, Azure AD secreto de cliente de aplicaciones) usados por otros servicios de Azure |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure |
 
 ## <a name="customize-resource-provision"></a>Personalizar la provisión de recursos
@@ -214,7 +214,7 @@ Puede personalizar los siguientes escenarios:
 
 #### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Usar una aplicación de Azure AD existente para el bot
 
-Puedes agregar el siguiente fragmento de código `.fx/configs/config.{env}.json` de configuración al archivo para usar una aplicación Microsoft Azure Active Directory (Azure AD) creada por ti mismo para tu Teams aplicación. Para crear una aplicación Microsoft Azure Active Directory (Azure AD), consulta <https://aka.ms/teamsfx-existing-aad-doc>.
+Puedes agregar el siguiente fragmento de código de `.fx/configs/config.{env}.json` configuración al archivo para usar una aplicación Azure AD creada por ti mismo para tu Teams aplicación. Para crear una aplicación Azure AD, consulta <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -228,11 +228,11 @@ Puedes agregar el siguiente fragmento de código `.fx/configs/config.{env}.json`
 Después de agregar el fragmento de código, agregue el secreto a la variable de entorno relacionada para que la herramienta pueda resolver el secreto real durante la provisión.
 
 > [!NOTE]
-> Asegúrate de no compartir la misma Microsoft Azure Active Directory (Azure AD) en varios entornos. Si no tienes permiso para actualizar la aplicación Microsoft Azure Active Directory (Azure AD), puedes obtener una advertencia con instrucciones sobre cómo actualizar manualmente la aplicación Microsoft Azure Active Directory (Azure AD). Sigue las instrucciones para actualizar la aplicación Microsoft Azure Active Directory (Azure AD) después de aprovisionar.
+> Asegúrate de no compartir la misma Azure AD aplicación en varios entornos. Si no tienes permiso para actualizar la aplicación Azure AD, puedes obtener una advertencia con instrucciones sobre cómo actualizar manualmente la Azure AD aplicación. Sigue las instrucciones para actualizar la aplicación Azure AD después de aprovisionar.
 
 #### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Usar una aplicación de Azure AD existente para tu Teams aplicación
 
-Puedes agregar el siguiente fragmento de código de `.fx/configs/config.{env}.json` configuración al archivo para usar una aplicación Microsoft Azure Active Directory (Azure AD) creada por ti mismo para el bot:
+Puedes agregar el siguiente fragmento de código de `.fx/configs/config.{env}.json` configuración al archivo para usar una aplicación Azure AD creada por ti mismo para el bot:
 
 ```json
 "bot": {

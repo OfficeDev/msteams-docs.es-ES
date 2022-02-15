@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 965f74bd2756fc4a2beb9c65ebf8da577f12dc89
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 08c78748039fd8feccc1750abd17af7bcbc2d441
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518355"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821678"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -181,8 +181,8 @@ En la tabla siguiente se describen los id. de mención de usuario que se han adm
 
 |Identificadores  | Capacidades de compatibilidad |   Descripción | Ejemplo |
 |----------|--------|---------------|---------|
-| Id. de objeto de Microsoft Azure Active Directory (Azure AD) | Bot, conector |  Id. de objeto de usuario de Microsoft Azure Active Directory (Azure AD) |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, conector | UPN de usuario de Microsoft Azure Active Directory (Azure AD) | john.smith@microsoft.com |
+| Id. de objeto de Azure AD | Bot, conector |  Id. de objeto del usuario de Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, conector | UPN de usuario de Azure AD | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mención de usuario en bots con Tarjetas adaptables 
 
@@ -235,11 +235,11 @@ La siguiente imagen ilustra la mención de usuario con la Tarjeta adaptable en b
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mención de usuario en Webhook entrante con Tarjetas adaptables 
 
-Los webhooks entrantes comienzan a admitir la mención de usuario en tarjetas adaptables con el identificador de objeto Microsoft Azure Active Directory (Azure AD) y UPN.
+Los webhooks entrantes comienzan a admitir la mención de usuario en Tarjetas adaptables con el Id.de objeto de Azure AD y el UPN.
 
 > [!NOTE]    
-> * Habilite la mención de usuario en el esquema para webhooks entrantes para admitir el id. de objeto de Microsoft Azure Active Directory (Azure AD) y UPN. 
-> * Los cambios en la interfaz de usuario y la experiencia de usuario no son necesarios para las menciones de usuario con la id. de objeto de Microsoft Azure Active Directory (Azure AD) y UPN.      
+> * Habilite la mención de usuario en el esquema para que los webhooks entrantes admitan el Id. de objeto de Azure AD y el UPN. 
+> * No se requieren cambios en la interfaz y/o experiencia de usuario para las menciones de usuario con el Id. de objeto de Azure AD y el UPN.      
 
 ##### <a name="example"></a>Ejemplo 
 

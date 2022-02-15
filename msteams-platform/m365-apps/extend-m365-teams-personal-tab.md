@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9c6c88835dc24c64f93605d09ac15da5409add0f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518026"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821419"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -120,16 +120,16 @@ Si la aplicación usa encabezados de directiva de seguridad de [contenido (CSP](
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Actualizar Microsoft Azure Active Directory (Azure AD) de aplicaciones para SSO
+## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
 
-Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), pero deberá agregar varios identificadores de aplicación cliente al Microsoft Azure Active Directory ( Azure AD) registro de aplicaciones de la aplicación de pestaña en el portal de *registros de aplicaciones del* inquilino.
+Azure Active Directory El inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), pero deberá agregar varios identificadores de aplicación cliente al registro de la aplicación Azure AD de la aplicación de pestaña en el portal de registros de *aplicaciones* del inquilino.
 
 1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
 1. Abra la **hoja Registros de aplicaciones** .
 1. Selecciona el nombre de la aplicación de pestaña personal para abrir el registro de la aplicación. 
 1. Seleccione  **Exponer una API** (en *Administrar*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar identificadores de cliente desde la hoja *Registros de aplicaciones* en Microsoft Azure web":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar identificadores de cliente desde la hoja *Registros de aplicaciones* en Azure Portal":::
 
 En la **sección Aplicaciones cliente autorizadas** , asegúrese de que se agregan todos los valores `Client Id` siguientes:
 
@@ -198,7 +198,7 @@ Para obtener una vista previa de la aplicación que se ejecuta en Office en la W
 
 Haz clic en el icono de la aplicación para iniciar la aplicación en Office inicio.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook pestañas personales habilitadas Office están en versión preliminar y no se admiten para el uso de producción. Aquí te explicamos cómo distribuir tu aplicación de pestaña personal para obtener una vista previa de audiencias con fines de prueba.
 

@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación de aplicación de paquete MVC
-ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 6fd5abaf21458560c65626982f57ae4a8eac722e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518033"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821685"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -137,7 +137,7 @@ Además, este proyecto requiere que tenga lo siguiente instalado en el entorno d
 
     **¿Necesita Microsoft Azure Active Directory (Azure AD) de inicio de sesión único para la pestaña?**
 
-    Elija **no** incluir la Microsoft Azure Active Directory inicio de sesión único (Azure AD) para la pestaña. El valor predeterminado es sí, escriba **n**.
+    Elija **no** incluir la Azure AD inicio de sesión único para la pestaña. El valor predeterminado es sí, escriba **n**.
 
     > [!IMPORTANT]
     > El componente de **ruta de acceso yourDefaultTabNameTab** es el valor que escribió en el generador **para Nombre de tabulación** predeterminado más la palabra **Tab**.
@@ -492,7 +492,7 @@ En la **sección Pestañas** :
 
     ![Detalles de pestañas personales](../../assets/images/tab-images/personaltabdetails.png)
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 ##### <a name="finish-domains-and-permissions"></a>Finalizar: dominios y permisos
 
@@ -742,7 +742,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="En el ejemplo se muestran las opciones para agregar el movimiento hacia atrás de la API registerOnFocussed" border="false":::
 
-### <a name="tab"></a>Pestaña
+### <a name="tab"></a>Tab
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="En el ejemplo se muestran las opciones para agregar la API registerOnFocussed para la pestaña" border="false":::
 

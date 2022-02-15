@@ -4,12 +4,12 @@ description: Este es el modo de actualizar la extensión de mensajería de Teams
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 410f019beeed078ed51c37c241e08511572e18b8
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 93775e543610500452da6ebd6535c1945d2f8dda
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518110"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821657"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Extender una extensión Teams de mensajería a través de Microsoft 365
 
@@ -97,9 +97,9 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 > [!NOTE]
 > Puedes omitir el paso si usas un ejemplo de búsqueda de extensión de mensajería de [Teams, ya](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) que el escenario no implica Azure Active Directory (AAD) autenticación de Sign-On única.
 
-Azure Active Directory inicio de sesión único (SSO) para extensiones de mensajería funciona de la misma manera en Outlook que en [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de aplicación cliente al Microsoft Azure Active Directory (Azure AD ) registro de la aplicación del bot en el portal de registros *de aplicaciones del* inquilino.
+Azure Active Directory Inicio de sesión único (SSO) para extensiones de mensajería funciona de la misma manera en Outlook que en [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de aplicación cliente al registro de aplicaciones de Azure AD del bot en *el portal de* registros de aplicaciones del inquilino.
 
-1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
+1. Inicie sesión en [Azure Portal con](https://portal.azure.com) su cuenta de espacio aislado.
 1. Abra **Registros de aplicaciones**.
 1. Seleccione el nombre de la aplicación para abrir el registro de la aplicación.
 1. Seleccione  **Exponer una API** (en *Administrar*).
@@ -153,7 +153,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Outlook en Window
 
 Para obtener una vista previa de la aplicación que se Outlook en la Web, inicie sesión [en outlook.com](https://www.outlook.com) con las credenciales del inquilino de prueba. Haga clic en **Nuevo mensaje**. Abre el **menú desplegable Más aplicaciones** en la parte inferior de la ventana de composición. Aparecerá la extensión de mensajería. Puede invocarlo desde allí y usarlo tal como lo haría al redactar un mensaje en Teams.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook habilitadas para Teams de mensajería están en versión preliminar y no son compatibles con el uso de producción. Este es el modo de distribuir la extensión de Outlook de mensajería habilitada para obtener una vista previa de audiencias con fines de prueba.
 

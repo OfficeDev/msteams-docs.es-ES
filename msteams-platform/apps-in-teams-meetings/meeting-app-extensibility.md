@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 8b5726dff792ee6f4e63ea4cfd89a90b88fc52b5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518019"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821608"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -177,7 +177,7 @@ Los tipos de usuario, como organizador, moderador o asistente en una reunión, p
 En la siguiente lista se detallan los distintos tipos de usuario junto con su accesibilidad y rendimiento:
 
 * **In-tenant**: los usuarios del espacio empresarial pertenecen a la organización y tienen credenciales en Microsoft Azure Active Directory (Azure AD) para el inquilino. Son empleados a tiempo completo, in situ o remotos. Un usuario en el espacio empresarial puede ser organizador, moderador o asistente.
-* **Invitado**: un invitado es un participante de otra organización invitado a tener acceso a Teams u otros recursos en el inquilino de la organización. Los invitados se agregan a la organización Microsoft Azure Active Directory (Azure AD) y tienen las mismas Teams que un miembro nativo del equipo. Tienen acceso a chats de equipo, reuniones y archivos. Un invitado puede ser organizador, moderador o asistente. Para obtener más información, vea [acceso de invitado en Teams](/microsoftteams/guest-access).
+* **Invitado**: un invitado es un participante de otra organización invitado a tener acceso a Teams u otros recursos en el inquilino de la organización. Los invitados se agregan a la organización Azure AD y tienen las mismas Teams que un miembro nativo del equipo. Tienen acceso a chats de equipo, reuniones y archivos. Un invitado puede ser organizador, moderador o asistente. Para obtener más información, vea [acceso de invitado en Teams](/microsoftteams/guest-access).
 * **Federado o externo**: un usuario federado es un usuario Teams externo de otra organización al que se ha invitado a unirse a una reunión. Los usuarios federados tienen credenciales válidas con socios federados y están autorizados por Teams. No tienen acceso a los equipos ni a otros recursos compartidos de la organización. El acceso de invitado es una mejor opción para que los usuarios externos tengan acceso a equipos y canales. Para obtener más información, vea [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
@@ -186,7 +186,7 @@ En la siguiente lista se detallan los distintos tipos de usuario junto con su ac
     > [!IMPORTANT]
     > Actualmente, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC) pero no están disponibles para GCC-High y departamento de defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros para GCC, consulta Administrar directivas de permisos [de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones](/microsoftteams/manage-apps).
 
-* **Anónimo**: los usuarios anónimos no tienen una Microsoft Azure Active Directory (Azure AD) y no están federados con un inquilino. Los participantes anónimos son como usuarios externos, pero su identidad no se muestra en la reunión. Los usuarios anónimos no pueden acceder a las aplicaciones en una ventana de reunión. Un usuario anónimo no puede ser un organizador, pero puede ser moderador o asistente.
+* **Anónimo**: los usuarios anónimos no tienen una Azure AD identidad y no están federados con un inquilino. Los participantes anónimos son como usuarios externos, pero su identidad no se muestra en la reunión. Los usuarios anónimos no pueden acceder a las aplicaciones en una ventana de reunión. Un usuario anónimo no puede ser un organizador, pero puede ser moderador o asistente.
 
     > [!NOTE]
     > Los usuarios anónimos heredan la directiva de permisos de aplicación predeterminada global. Para obtener más información, consulta [Administrar aplicaciones](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
@@ -198,7 +198,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 | Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión | Burbuja de contenido |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede ver e interactuar con la aplicación en la fase de reunión | No disponible |
-| Invitado, parte del espacio empresarial Microsoft Azure Active Directory (Azure AD) | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión | Disponible |
+| Invitado, parte del espacio empresarial Azure AD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión | Disponible |
 | Para obtener más información, vea [Usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión | No disponible |
 
 ## <a name="next-step"></a>Paso siguiente

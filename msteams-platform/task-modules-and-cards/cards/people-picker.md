@@ -6,12 +6,12 @@ keywords: Selector de personas de tarjetas adaptables
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518306"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821636"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Selector de usuarios en Tarjetas adaptables
 
@@ -161,7 +161,7 @@ Para habilitar la búsqueda en una lista de miembros de conversación, use el co
 ### <a name="data-submission"></a>Envío de datos
 
 Puede usar o `Action.Submit` enviar `Action.Execute` datos seleccionados al bot. La `invoke` carga recibida en el bot es una lista de Microsoft Azure Active Directory (Azure AD) o los IDs proporcionados en la lista estática.
-En el Selector de personas, cuando se selecciona un usuario en el control, `Microsoft Azure Active Directory (Azure AD) ID` el del usuario es el valor devuelto. Se `Microsoft Azure Active Directory (Azure AD) ID` trata de una cadena e identifica de forma única a un usuario en el directorio.
+En el Selector de personas, cuando se selecciona un usuario en el control, `Azure AD ID` el del usuario es el valor devuelto. Se `Azure AD ID` trata de una cadena e identifica de forma única a un usuario en el directorio.
 
 El formato del valor enviado al bot depende del valor de la `isMultiSelect` propiedad:
 
@@ -177,8 +177,8 @@ Con el `Azure AD ID`selector de personas, se selecciona previamente el usuario c
 El Selector de personas admite la selección previa del usuario en el control, al crear y enviar una tarjeta adaptable. `Input.ChoiceSet` admite la `value` propiedad que se usa para preseleccionar un usuario. El formato de esta propiedad `value` es el mismo que el formato de valor enviado en [el envío de datos](#data-submission).  
 La siguiente lista proporciona la información para preseleccionar usuarios:
 
-* Para un solo usuario del control, especifique el `Microsoft Azure Active Directory (Azure AD) ID` del usuario como `value`. 
-* Para varios usuarios, como `isMultiSelect` es `true`, especifique una cadena separada por comas de `Microsoft Azure Active Directory (Azure AD) ID`s.  
+* Para un solo usuario del control, especifique el `Azure AD ID` del usuario como `value`. 
+* Para varios usuarios, como `isMultiSelect` es `true`, especifique una cadena separada por comas de `Azure AD ID`s.  
 
 En el ejemplo siguiente se describe la selección previa de un solo usuario:
 

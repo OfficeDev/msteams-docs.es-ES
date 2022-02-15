@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorización de OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: dbbda0dced53530c1688faa626bc63fe0bf1be76
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 613416c7363de8a9351e56f5cdb2a6a339b74392
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518166"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821692"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 
@@ -93,7 +93,7 @@ Para obtener más información, consulte [Permisos de consentimiento específico
 
 Puede habilitar o deshabilitar el consentimiento del [propietario del grupo](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directamente en el portal Microsoft Azure grupo:
 
-1. Inicie sesión en el [portal Microsoft Azure como](https://portal.azure.com) administrador [global o administrador de la compañía](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com) como administrador [global o administrador de la compañía](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Seleccione **Azure Active Directory** >  **Enterprise applicationsConsent** >  **y permissionsUsuario** >  [**de configuración de consentimiento**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado Consentimiento del propietario **del grupo para que las aplicaciones accedan a los datos**. El valor predeterminado es **Permitir el consentimiento del propietario del grupo para todos los propietarios del grupo**. Para que el propietario de un equipo instale una aplicación con RSC, el consentimiento del propietario del grupo debe estar habilitado para ese usuario.
 
@@ -103,9 +103,9 @@ Además, puede habilitar o deshabilitar el consentimiento del propietario del gr
 
 ### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Configurar las opciones de consentimiento del usuario para RSC en un chat
 
-Puede habilitar o deshabilitar el [consentimiento del usuario](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directamente en el portal Microsoft Azure usuario:
+Puede habilitar o deshabilitar el [consentimiento del usuario](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directamente en Azure Portal:
 
-1. Inicie sesión en el [portal Microsoft Azure como](https://portal.azure.com) administrador [global o administrador de la compañía](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com) como administrador [global o administrador de la compañía](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Seleccione **Azure Active Directory** >  **Enterprise applicationsConsent** >  **y permissionsUsuario** >  [**de configuración de consentimiento**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Habilitar, deshabilitar o limitar el consentimiento del usuario con el control etiquetado **Consentimiento de usuario para aplicaciones**. El valor predeterminado es **Permitir el consentimiento del usuario para las aplicaciones**. Para que un miembro de chat instale una aplicación con RSC, el consentimiento del usuario debe estar habilitado para ese usuario.
 
@@ -145,7 +145,7 @@ Para obtener más información, vea [obtener acceso en nombre de un usuario y](/
 Los permisos RSC se declaran en el archivo JSON del manifiesto de la aplicación. 
 
 > [!IMPORTANT]
-> Los permisos que no son RSC se almacenan en el Microsoft Azure web. No los agregues al manifiesto de la aplicación.
+> Los permisos que no son RSC se almacenan en Azure Portal. No los agregues al manifiesto de la aplicación.
 
 ### <a name="manifest-changes-for-resource-specific-consent"></a>Cambios de manifiesto para el consentimiento específico de recursos
 

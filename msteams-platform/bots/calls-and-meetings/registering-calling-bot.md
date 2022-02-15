@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: 33163314f5d1d37b79562532ec2f15b6002d90ce
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518292"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821370"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -82,9 +82,9 @@ Debe configurar los permisos de aplicación para el bot por adelantado mediante 
 
 ### <a name="get-tenant-administrator-consent"></a>Obtener el consentimiento del administrador de inquilinos
 
-Para las aplicaciones que usan el punto de conexión Microsoft Azure Active Directory (Azure AD) V1, un administrador de inquilinos puede dar su consentimiento a los permisos de la aplicación mediante el [portal de Microsoft Azure](https://portal.azure.com) cuando la aplicación esté instalada en su organización. Como alternativa, puedes proporcionar una experiencia de registro en la aplicación a través de la cual los administradores pueden dar su consentimiento a los permisos configurados. Una vez que el consentimiento del administrador Microsoft Azure Active Directory (Azure AD), la aplicación puede solicitar tokens sin tener que volver a solicitar el consentimiento.
+Para las aplicaciones que usan el punto de conexión Azure AD V1, un administrador de inquilinos puede dar su consentimiento a los permisos de la aplicación mediante el [portal de Microsoft Azure](https://portal.azure.com) cuando la aplicación está instalada en su organización. Como alternativa, puedes proporcionar una experiencia de registro en la aplicación a través de la cual los administradores pueden dar su consentimiento a los permisos configurados. Una vez que el consentimiento del administrador Azure AD, la aplicación puede solicitar tokens sin tener que volver a solicitar el consentimiento.
 
-Puedes confiar en un administrador para conceder los permisos que la aplicación necesita en [el portal Microsoft Azure web](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el Microsoft Azure Active Directory (Azure AD) V2`/adminconsent`. Para obtener más información, consulta [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/uth-v2-service#3-get-administrator-consent).
+Puedes confiar en un administrador para conceder los permisos que la aplicación necesita en [el portal Microsoft Azure web](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el Azure AD de V2`/adminconsent`. Para obtener más información, consulta [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Para crear la dirección URL de consentimiento de administrador del espacio empresarial, se requiere un URI de redireccionamiento configurado o una dirección URL de respuesta en el [portal de registro de](https://apps.dev.microsoft.com/) aplicaciones. Para agregar direcciones URL de respuesta para el bot, acceda al registro del bot y elija **Opciones** >  **avanzadasEdit Application Manifest**. Agregue la dirección URL de redireccionamiento a la `replyUrls` colección.

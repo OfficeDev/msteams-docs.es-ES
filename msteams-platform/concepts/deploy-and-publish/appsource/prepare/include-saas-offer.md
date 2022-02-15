@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 450afc9728a0c5f727dc772909da5c0e1b92f55b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517991"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821713"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluir una oferta SaaS con tu Microsoft Teams aplicación
 
@@ -81,7 +81,7 @@ Para obtener instrucciones completas, [consulte build the landing page for your 
 
 Ten en cuenta los siguientes enfoques al crear una página de aterrizaje para la Teams que estás monetizando. Vea una página de aterrizaje de ejemplo en la [experiencia de compra del usuario final](#end-user-purchasing-experience).
 
-* Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas Microsoft Azure Active Directory (Azure AD) que usaron para comprar la suscripción. Para obtener más información, [vea Microsoft Azure Active Directory (Azure AD) y ofertas SaaS transaccionables en el mercado comercial](/azure/marketplace/azure-ad-saas).
+* Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas Azure AD credenciales que usaron para comprar la suscripción. Para obtener más información, [vea Azure AD y ofertas saas transaccionables en el mercado comercial](/azure/marketplace/azure-ad-saas).
 * Permitir a los usuarios realizar las siguientes acciones en la página de aterrizaje. No olvide tener en cuenta lo que es apropiado para el rol y los permisos de un usuario (por ejemplo, puede que desee permitir que solo los administradores de suscripciones busquen usuarios):
   * Busque usuarios en su organización mediante correo electrónico u otra forma de identidad.
   * Consulta los usuarios a los que pueden asignar licencias en una lista.

@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 1ae613332f7a07ae0d0ae9ed65b75429db64b429
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518117"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821580"
 ---
 # <a name="cicd-guide"></a>Guía de CI/CD
 
@@ -245,8 +245,8 @@ Para aprovisionar e implementar recursos destinados a Azure dentro de CI/CD, deb
 
 Realice los siguientes pasos para crear entidades de servicio de Azure:
 1. Registrar una aplicación Microsoft Azure Active Directory (Azure AD) en un único inquilino.
-2. Asigne un rol a la Microsoft Azure Active Directory (Azure AD) para tener acceso a la suscripción de Azure y `Contributor` se recomienda el rol. 
-3. Cree un nuevo Microsoft Azure Active Directory de aplicación de Azure AD (Azure AD).
+2. Asigne un rol a la aplicación Azure AD para obtener acceso a la suscripción de Azure y `Contributor` se recomienda el rol. 
+3. Cree un nuevo secreto Azure AD aplicación.
 
 > [!TIP]
 > Guarde el identificador de inquilino, el identificador de aplicación(AZURE_SERVICE_PRINCIPAL_NAME) y el secreto(AZURE_SERVICE_PRINCIPAL_PASSWORD) para su uso futuro.
