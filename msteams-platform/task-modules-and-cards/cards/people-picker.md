@@ -6,12 +6,12 @@ keywords: Selector de personas de tarjetas adaptables
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4fda2916c6eaeb3cc0878911c21eb20e276844f3
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821636"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855896"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Selector de usuarios en Tarjetas adaptables
 
@@ -99,7 +99,7 @@ Las siguientes propiedades son adiciones al esquema `Input.ChoiceSet` para habil
 
 #### <a name="inputchoiceset-control"></a>Control Input.ChoiceSet
 
-|Propiedad |Tipo |Necesario |Descripción |
+|Propiedad |Tipo |Obligatorio |Descripción |
 |----|----|----|----|
 |**choices.data** |**Data.Query** |No |Habilita el autocompletar dinámico para diferentes tipos de usuario mediante la captura de resultados del conjunto de datos especificado. |
 
@@ -307,7 +307,14 @@ En la siguiente imagen se muestra el Selector de personas en tarjetas adaptables
 
 Puede implementar el selector de personas para una administración eficiente de tareas en diferentes escenarios.  
 
-## <a name="see-also"></a>Vea también
+## <a name="code-sample"></a>Ejemplo de código
+
+| Nombre de ejemplo           | Descripción | C#    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Control de selector de personas en tarjetas adaptables| En este ejemplo se muestra cómo usar el control de selector de personas en tarjetas adaptables.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
+
+
+## <a name="see-also"></a>Consulte también
 
 [Referencia de tarjetas](cards-reference.md)
 
