@@ -4,12 +4,12 @@ description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: pestañas de autenticación Microsoft Azure Active Directory teams (Azure AD)
-ms.openlocfilehash: 2ceca46148c79b07dd417e84b0736f69ee520b8b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821720"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897938"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una Microsoft Teams pestaña
 
@@ -165,7 +165,7 @@ Código de ejemplo que muestra el proceso de autenticación de tabulación Azure
 
 ## <a name="see-also"></a>Consulte también
 
-* [Planear la autenticación de usuarios](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Planear la autenticación de usuarios](../../../concepts/design/understand-use-cases.md)
 * [Diseñar la pestaña para Microsoft Teams](~/tabs/design/tabs.md)
 * [Autenticación silenciosa](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [Agregar autenticación a la extensión de mensajería](~/messaging-extensions/how-to/add-authentication.md)
