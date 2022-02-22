@@ -2,11 +2,19 @@
   href: mstdd-landing.yml
 - name: Novedades
   href: whats-new.md
+- name: Glosario
+  href: get-started/glossary.md
 - name: Información general
   expanded: false
   items:
-    - name: Desarrollar aplicaciones para Microsoft Teams
+    - name: Aplicación de Teams adaptable
       href: overview.md
+    - name: De ideas a la aplicación de Teams
+      href: overview-story.md
+    - name: Explorar las características de la plataforma de Teams
+      href: overview-explore.md
+    - name: La solución de Teams
+      href: overview-solution.md
 - name: Introducción
   expanded: false
   items:
@@ -22,34 +30,18 @@
       href: sbs-gs-nodejs.yml
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
-- name: Conceptos básicos de aplicación
+- name: Planear la aplicación
   items:
     - name: Información general
       href: concepts/app-fundamentals-overview.md
-    - name: Funciones de la aplicación de Teams
-      href: concepts/capabilities-overview.md
-    - name: Puntos de entrada de la aplicación de Teams
-      href: concepts/extensibility-points.md
-    - name: Entender los casos de uso
+    - name: Entender el caso de uso
       href: concepts/design/understand-use-cases.md
-    - name: Asignación de casos de uso a las funciones de la aplicación de Teams
+    - name: Asignar el caso de uso a las características de Teams
       href: concepts/design/map-use-cases.md
+    - name: Lista de comprobación de planeamiento de la aplicación de Teams
+      href: concepts/design/planning-checklist.md
     - name: Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-    - name: Funciones del dispositivo
-      items:
-        - name: Información general
-          href: concepts/device-capabilities/device-capabilities-overview.md
-        - name: Solicitar permisos de dispositivo
-          href: concepts/device-capabilities/native-device-permissions.md
-        - name: Permisos de dispositivo para el explorador
-          href: concepts/device-capabilities/browser-device-permissions.md
-        - name: Integrar capacidades multimedia
-          href: concepts/device-capabilities/mobile-camera-image-permissions.md
-        - name: Integrar la función de escáner de código QR o de códigos de barras
-          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-        - name: Integrar capacidades de ubicación
-          href: concepts/device-capabilities/location-capability.md
 - name: Diseño de la aplicación
   items:
     - name: Información general
@@ -381,6 +373,20 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: Habilitar SSO para extensiones de mensajería
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+- name: Integrar las funcionalidades del dispositivo
+  items:
+    - name: Información general
+      href: concepts/device-capabilities/device-capabilities-overview.md
+    - name: Solicitar permisos de dispositivo
+      href: concepts/device-capabilities/native-device-permissions.md
+    - name: Permisos de dispositivo para el explorador
+      href: concepts/device-capabilities/browser-device-permissions.md
+    - name: Integrar capacidades multimedia
+      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+    - name: Integrar la función de escáner de código QR o de códigos de barras
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: Integrar capacidades de ubicación
+      href: concepts/device-capabilities/location-capability.md
 - name: Usar los datos de Teams con Microsoft Graph
   items:
     - name: Información general
