@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en las aplicaciones
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: vínculo profundo de teams
-ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821391"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897917"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos 
 
@@ -80,16 +80,32 @@ Los parámetros de consulta son:
 | `entityId`&emsp; | Identificador del elemento de la pestaña, que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md).|Lista de tareas123|
 | `entityWebUrl` o `subEntityWebUrl`&emsp; | Campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` |
 | `entityLabel` o `subEntityLabel`&emsp; | Etiqueta del elemento de la pestaña que se va a usar al mostrar el vínculo profundo. | Lista de tareas 123 o "Tarea 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Objeto JSON que contiene los campos siguientes:</br></br> * Identificador del elemento dentro de la pestaña. </br></br> * El identificador de canal de Microsoft Teams que está disponible en la pestaña de [contexto](~/tabs/how-to/access-teams-context.md). | 
-| `subEntityId`&emsp; | Identificador del elemento dentro de la pestaña. |Tarea 456 |
-| `channelId`&emsp; | El identificador de canal de Microsoft Teams que está disponible en la pestaña de [contexto](~/tabs/how-to/access-teams-context.md). Esta propiedad solo está disponible en pestañas configurables con un ámbito de **equipo**. No está disponible en pestañas estáticas, que tienen un ámbito **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | Identificador del elemento dentro de la pestaña. |Tarea 456 |
+| `context.channelId`&emsp; | Id. de canal de Microsoft Teams que está disponible en la pestaña [contexto](~/tabs/how-to/access-teams-context.md). Esta propiedad solo está disponible en pestañas configurables con un ámbito de **equipo**. No está disponible en pestañas estáticas, que tienen un ámbito **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `chatId`&emsp; | ChatId que está disponible desde el [contexto](~/tabs/how-to/access-teams-context.md) de la pestaña para el chat de grupo y de reunión | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `contextType`&emsp; |  Chat es el único contextType admitido para reuniones | chat |
 
-Ejemplos:
+**Ejemplos**:
 
-* Vínculo a una pestaña configurable: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Vínculo a un elemento de tarea en la pestaña configurable: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Vínculo a una pestaña estática: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Vínculo a un elemento de tarea dentro de la pestaña estática: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Vínculo a una pestaña estática (personal):
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* Vínculo a un elemento de tarea dentro de la pestaña estática (personal):
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+
+* Vínculo a una pestaña configurable: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Vínculo a un elemento de tarea en la pestaña configurable: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+    
+* Vínculo a una aplicación de pestaña agregada a una reunión o chat grupal: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Asegúrese de que todos los parámetros de consulta estén correctamente codificados por URI. Debe seguir los ejemplos anteriores con el último ejemplo:
