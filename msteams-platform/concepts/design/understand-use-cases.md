@@ -1,81 +1,184 @@
 ---
-title: Descripción de los casos de uso de la aplicación
+title: Descripción de los casos de uso y las características de Teams de la aplicación
 author: heath-hamilton
-description: Planear la aplicación, comprender el usuario y sus necesidades, comprender los problemas de usuario que resolvería la aplicación, planear la autenticación de usuario y su experiencia de incorporación
+description: Planear la aplicación, comprender al usuario y sus necesidades, comprender los problemas de usuario que resolvería la aplicación, planear la autenticación del usuario y su experiencia de incorporación
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948392"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898157"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
-La Microsoft Teams ofrece una gran variedad de puntos de entrada y elementos de [interfaz](../../concepts/extensibility-points.md) de usuario que la aplicación puede aprovechar.
+En el marco social colaborativo de Teams, hay una amplia variedad de necesidades de usuario que puede resolver con una aplicación de Teams. Por ejemplo, una aplicación que cubre la brecha a la hora de lograr una colaboración eficaz es una buena opción.
+
+El usuario de la aplicación y los requisitos de la aplicación son las directrices básicas que determinan todas las opciones de aplicación que se van a tomar. La creación del diseño de aplicaciones, la selección de funcionalidades, la determinación del entorno de compilación y prueba y la distribución de aplicaciones siguen los requisitos del usuario de la aplicación.
+
+Si va a cumplir los requisitos de usuario con la aplicación, primero debe comprenderlos.
+
+- **Comprender al usuario**:
+  - Reconozca problemas de usuario e identifique las soluciones a algunos problemas comunes a los que se enfrentan los usuarios.
+  - Cree su aplicación de Teams buscando la combinación adecuada de características de Teams para satisfacer las necesidades de su usuario.
+  - Comprenda los casos de uso para saber cómo interactúa un usuario final con la aplicación.
+
+- **Comprenda el problema**: vea el problema principal que debe resolver la aplicación.
+
+- **Considere la posibilidad de integrar**: identifique las aplicaciones y los servicios que requiere la aplicación, como la autenticación, Microsoft Graph o las aplicaciones web.
+
+## <a name="microsoft-teams-app-features"></a>Características de aplicaciones de Microsoft Teams
+
+Hay varias maneras de ampliar Teams, por lo que cada aplicación es única. Las características de la aplicación de Teams ofrecen:
+
+- [Capacidades de la aplicación](#app-capabilities)
+- [Ámbito de la aplicación](#app-scope)
+
+### <a name="app-capabilities"></a>Capacidades de la aplicación
+
+Las funcionalidades son las capacidades principales que se pueden compilar en la aplicación. También se denominan puntos de entrada o extensión porque permiten la integración y la interacción.
+
+Las aplicaciones de Teams tienen una o todas las funcionalidades principales siguientes:
+
+:::row:::
+   :::column span="":::
+
+#### <a name="personal-apps"></a>Aplicaciones personales
+
+Una [aplicación personal](../../concepts/design/personal-apps.md) es un espacio dedicado o un bot para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades relevantes.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Representación conceptual de cómo son las aplicaciones personales en el cliente de Teams." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="tabs"></a>Pestañas
+
+Muestre el contenido basado en web en una [pestaña](../../tabs/what-are-tabs.md) donde los usuarios puedan analizarlo y trabajar en él juntos.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Representación conceptual de cómo son las pestañas en el cliente de Teams." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="bots"></a>Bots
+
+Las conversaciones suelen dar lugar a la necesidad de hacer algo (generar un pedido, revisar código, comprobar el estado del vale, etc.). Un [bot](../../bots/what-are-bots.md) puede iniciar estos tipos de flujos de trabajo directamente dentro de Teams.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Representación conceptual de cómo son los bots en el cliente de Teams." border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="messaging-extensions"></a>Extensiones de mensajería
+
+Con [extensiones de mensajería](../../messaging-extensions/what-are-messaging-extensions.md), puede buscar y compartir información externa. También puede actuar sobre un mensaje, como crear una incidencia de ayuda basada en el contenido de una publicación del canal.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de mensajería en el cliente de Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="meeting-extensions"></a>Extensiones de reunión
+
+Hay algunas opciones para [incorporar la aplicación a la experiencia de llamada de Teams](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de reunión en el cliente de Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="webhooks-and-connectors"></a>Webhooks y conectores
+
+[Los webhooks entrantes](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) son una manera sencilla de enviar automáticamente notificaciones desde otra aplicación a un canal de Teams. Con [webhooks salientes](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), puede enviar un mensaje al servicio web con una @mención.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Representación conceptual de cómo son los conectores en el cliente de Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para Teams
+
+La [API de Microsoft Graph para Teams](/graph/teams-concept-overview) proporciona acceso a información sobre equipos, canales, usuarios y mensajes que pueden ayudarle a crear o mejorar características para su aplicación.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
 > [!NOTE]
-> Antes de empezar a crear los casos de uso, debe tener una buena comprensión de las Teams y de lo que es posible en la plataforma Teams usarlas.
+> La tienda de Teams ha evolucionado:
+> 
+> Anteriormente, las aplicaciones LOB se actualizaban seleccionando los puntos suspensivos en el icono. Con la experiencia actualizada de la tienda de Teams, ahora puede actualizar las aplicaciones LOB iniciando sesión en el [Centro de administración de Teams](https://admin.teams.microsoft.com).
 
-Cada método de interacción con los usuarios tiene sus puntos fuertes y débiles. Crear una aplicación Teams es encontrar la combinación adecuada para satisfacer las necesidades del usuario. If you're going to meet those needs, you first need to understand them.
+### <a name="app-scope"></a>Ámbito de la aplicación
 
-## <a name="understand-the-problem"></a>Comprender el problema
+La aplicación puede tener uno de los siguientes ámbitos:
 
-Cada aplicación tiene un problema principal o una necesidad de resolver. Antes de empezar a crear una aplicación, debes expresar cuál es ese problema. En su corazón, Teams es una plataforma de colaboración, por lo que las aplicaciones que puentean las diferencias para lograr una colaboración eficaz son un gran ajuste. También es una plataforma social, es nativamente multiplataforma, se encuentra en el centro de Office 365 y ofrece un lienzo personal para crear aplicaciones. En esta plataforma social, hay una amplia variedad de necesidades que se pueden resolver con una Teams aplicación. Puede resolver una amplia variedad de problemas, siempre que comprenda cuál está intentando resolver. Antes de empezar a crear una aplicación, haga preguntas relevantes, como:
+- **Experiencia de aplicación personal**: una aplicación personal es un bot o un espacio dedicado para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
+- **Experiencia de aplicación compartida**: el equipo, el canal y el chat son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para todos los usuarios de ese espacio. Normalmente, los espacios de colaboración se centran en los flujos de trabajo para las interacciones de la aplicación o para desbloquear nuevas interacciones sociales.
 
-* ¿Cuáles son las ventajas y desventajas del sistema de estado actual que usan los usuarios?
-* ¿Cuáles son los problemas a los que se enfrentan los usuarios que desea abordar?
-* ¿Qué características o capacidades les gustan y les gusta a los usuarios en su forma actual de realizar el proceso?
+Una aplicación puede existir en distintos ámbitos. Por ejemplo:
 
-## <a name="understand-your-user"></a>Comprender al usuario
+- La aplicación puede mostrar datos en una ubicación compartida central, es decir, una pestaña.
+- También puede presentar esa misma información a través de una interfaz conversacional personal, es decir, un bot.
 
-Comprenda quién es su usuario y puede identificar el modelo de distribución adecuado. Le ayuda a identificar cómo usan los usuarios Teams. Haga preguntas relevantes, como:
-
-* ¿Los usuarios son principalmente trabajadores de primera línea en clientes móviles?
-* ¿Esperas que muchos usuarios invitados necesiten acceso a la aplicación?
-* ¿Usan equipos y canales o principalmente chats de grupo?
-* ¿Qué tan sofisticados técnicamente son los usuarios principales?
-* ¿Necesita una experiencia de incorporación exhaustiva o algunos punteros pueden hacer?
-
-A veces, la respuesta es que queremos resolver este problema para todos los *Teams en todas partes.* Si ese es el caso, dedóstese un poco de tiempo en comprender lo que se necesita para [publicarse en AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
-
-## <a name="understand-the-limitations-of-the-app"></a>Comprender las limitaciones de la aplicación
-
-Conocer las limitaciones de las aplicaciones para la accesibilidad de datos y el requisito de residencia de datos te ayudará a diseñar mejores aplicaciones. Esto es importante, ya que tener información sobre quién es el propietario de los datos y la disponibilidad de las API afecta a la arquitectura de la solución. De nuevo, haga preguntas relevantes, como:
-
-* ¿Cuáles son los desafíos con la integración back-end de la aplicación actual?
-* Quién es propietario de los datos back-end? In-house or third-party.
-* ¿Hay firewalls que afectan al funcionamiento de la aplicación?
-* ¿Hay API para tener acceso a los datos que necesitas para el funcionamiento de la aplicación? 
-
-## <a name="provide-authentication"></a>Proporcionar autenticación
-
-Debe identificar desde el principio si necesita proteger los servicios que está exponiendo y en qué nivel. Recuerde que los servicios web expuestos en la aplicación Teams están disponibles públicamente a través de Internet. Por lo tanto, si necesita protegerlos, empiece a pensar en ello ahora. Si necesita una solución que requiera proporcionar acceso de invitado a los usuarios externos al inquilino, se deben colocar restricciones y permisos de acceso para proteger la información confidencial. Deberás diseñar aplicaciones teniendo en cuenta las limitaciones que vienen con el acceso de usuario invitado. Por lo tanto, haga preguntas, como: 
-
-* ¿Tendrán los usuarios acceso a diferentes vistas de datos en función de sus roles?
-* ¿Hay PII implicado?
-* ¿Las interacciones también se basarán en los roles de usuario?
-* ¿Los usuarios externos tendrán acceso a la aplicación?
-
-## <a name="decide-what-goes-in-teams"></a>Decida qué va en Teams
-
-Tanto si estás creando algo nuevo o llevando una solución existente a Teams, es importante decidir si toda la aplicación va a estar dentro del Teams cliente. Compruebe si tiene sentido traer solo una parte de la experiencia. Con una combinación de pestañas, extensiones de mensajería, módulos de tareas, tarjetas adaptables y bots conversacionales, puedes crear aplicaciones complejas completamente en Teams.
-Recuerde quiénes son los usuarios y el problema que está intentando resolver. ¿Ya tienen un sistema para resolver la mayor parte del problema o solo necesita extender un subgrupo de la funcionalidad a Teams? Normalmente, si va a incluir una parte de la solución, debe centrarse en compartir, colaborar, iniciar y supervisar flujos de trabajo.
-
-## <a name="plan-the-onboarding-experience"></a>Planificar la experiencia de incorporación
-
-La experiencia de incorporación puede ser la diferencia entre el éxito o el error de la aplicación. Para cada funcionalidad de la aplicación y cada contexto en el que se pueda instalar la funcionalidad, debes tener un plan de cómo te vas a presentar. La forma en que se presenta el bot de conversación cuando se instala en un canal con mil personas es diferente cuando se instala en un chat uno a uno. ¿Qué sucede cuando un usuario configura la pestaña por primera vez en un canal? Si estás compartiendo tarjetas con una extensión de mensajería, ¿tiene sentido agregar un pequeño vínculo **a** una página más para ayudar a introducir a los usuarios a lo que puede hacer la aplicación?
-
-Saber quiénes son los usuarios, le ayuda a crear la experiencia correcta. ¿Esperas que la mayoría de las personas ya tengan algún contexto de para qué está la aplicación o que ya han usado los servicios en otro contexto? ¿Vienen a la aplicación sin conocimientos previos? Crea tu experiencia de incorporación pensando en los usuarios clave.
-
-Recuerde que los usuarios pueden descubrir la aplicación de varias maneras. Pueden ser los que la instalan o pueden introducirse en la aplicación cuando otro usuario la usa para compartir contenido. Si quieres que más usuarios usen la aplicación, debes buscar formas de presentarte a todos.
-
-Sobre todo, recuerda que a nadie le gusta el correo no deseado. La limpieza de mensajes personales y de canal es una buena forma de deshacer la instalación rápidamente.
-
-## <a name="plan-for-the-future"></a>Planear el futuro
-
-Identifique qué nuevas características prefiere tener el usuario en la solución actual. Si tienes una guía básica para nuevas características que agregar a la aplicación, el diseño y la arquitectura se verán afectados.
+Un usuario puede interactuar con una aplicación en una pestaña de lienzo para realizar una actividad o puede optar por hacer lo mismo con un bot de conversación.
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -84,4 +187,4 @@ Identifique qué nuevas características prefiere tener el usuario en la soluci�
 
 ## <a name="see-also"></a>Consulte también
 
-[Funciones del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
+[Integrar las funcionalidades del dispositivo](~/concepts/device-capabilities/device-capabilities-overview.md)
