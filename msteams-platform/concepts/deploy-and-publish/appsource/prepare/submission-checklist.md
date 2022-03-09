@@ -6,29 +6,29 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: Localización de directrices de paquete de aplicación de validación del almacén de envíos
-ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949071"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356430"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío Microsoft Teams almacén
 
 Has diseñado, creado y probado tu Microsoft Teams aplicación. Ahora estás listo para enumerar para que los usuarios puedan descubrir y empezar a usar la aplicación.
 
-Antes de enviar la aplicación al [Centro de partners,](/office/dev/store/use-partner-center-to-submit-to-appsource)asegúrate de que has hecho lo siguiente.
+Antes de enviar la aplicación al [Centro de partners](/office/dev/store/use-partner-center-to-submit-to-appsource), asegúrate de haber hecho lo siguiente.
 
 ## <a name="validate-your-app-package"></a>Validar el paquete de la aplicación
 
 Aunque la aplicación puede estar funcionando en un entorno de prueba, debes comprobar el paquete de la aplicación para evitar que se presenten problemas durante el proceso de envío.
 
 > [!NOTE]
->  App Studio pronto estará en desuso. Configurar, distribuir y administrar las aplicaciones Teams con el nuevo [Portal de desarrolladores](https://dev.teams.microsoft.com/)
+>  App Studio pronto estará en desuso. Configurar, distribuir y administrar las aplicaciones Teams con el nuevo Portal [de desarrolladores](https://dev.teams.microsoft.com/)
 
-La Microsoft Teams de validación de aplicaciones te ayuda a identificar y solucionar problemas antes de enviarte al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
+La Microsoft Teams de validación de aplicaciones te ayuda a identificar y solucionar problemas antes de enviarlos al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
 
-1. Vaya a la [herramienta Microsoft Teams validación de aplicaciones.](https://dev.teams.microsoft.com/appvalidation.html) (Nota: La herramienta también está disponible en [App Studio](../../../build-and-test/app-studio-overview.md).)
+1. Vaya a la [herramienta Microsoft Teams de validación de aplicaciones](https://dev.teams.microsoft.com/appvalidation.html). (Nota: La herramienta también está disponible en [App Studio](../../../build-and-test/app-studio-overview.md)).
 1. Upload el paquete de la aplicación para ejecutar las pruebas automatizadas.
 1. Vaya a la **lista de comprobación preliminar** y revise los casos de prueba que son difíciles de automatizar.
 1. [Se solucionan problemas con las configuraciones](~/resources/schema/manifest-schema.md) o la aplicación en general. Estos problemas se producen si las pruebas automatizadas le dan errores o no ha cumplido todos los criterios de la lista de comprobación.
@@ -68,13 +68,13 @@ Proporciona una grabación de la aplicación para que Microsoft pueda comprender
 
 ## <a name="create-your-store-listing-details"></a>Crear los detalles de la descripción de la tienda
 
-La información que envías al Centro de partners [&#8212;](https://partner.microsoft.com) incluyendo tu nombre, descripciones, iconos e imágenes&#8212;se convierte en la tienda Teams y la descripción de Microsoft AppSource para tu aplicación.
+La información que envías al Centro de [partners&#8212;incluyendo](https://partner.microsoft.com) tu nombre, descripciones, iconos e imágenes&#8212;se convierte en la descripción de la tienda Teams y Microsoft AppSource para la aplicación.
 
 Una descripción de la tienda puede ser la primera impresión de alguien de la aplicación. Aumente las instalaciones con una descripción que transmita eficazmente las ventajas, la funcionalidad y la marca de la aplicación.
 
 ### <a name="specify-a-short-name"></a>Especificar un nombre corto
 
-El nombre de la aplicación (específicamente, su [*nombre*](~/resources/schema/manifest-schema.md#name)corto) desempeña un papel fundamental en la forma en que los usuarios lo descubren en la tienda.
+El nombre de la aplicación (específicamente, su [*nombre*](~/resources/schema/manifest-schema.md#name) corto) desempeña un papel fundamental en la forma en que los usuarios lo descubren en la tienda.
 
 :::row:::
 
@@ -86,7 +86,7 @@ El nombre de la aplicación (específicamente, su [*nombre*](~/resources/schema/
 
 :::row-end:::
 
-Asegúrese de que su nombre corto se adhiera a las [directrices de validación de la tienda.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name)
+Asegúrese de que su nombre corto se adhiera a las [directrices de validación de la tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
 ### <a name="write-descriptions"></a>Escribir descripciones
 
@@ -106,7 +106,7 @@ Un resumen conciso de la aplicación que debe ser original, atractivo y dirigido
 
 :::row-end:::
 
-Asegúrese de que su breve descripción se adhiera a las [directrices de validación de la tienda.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)
+Asegúrese de que la descripción breve se adhiera a las [directrices de validación de la tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description).
 
 #### <a name="long-description"></a>Descripción larga
 
@@ -128,13 +128,13 @@ Aunque esta descripción puede tener hasta 4 000 caracteres, la mayoría de los 
 
 :::row-end:::
 
-Asegúrese de que la descripción larga se adhiera a las [directrices de validación de la tienda.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)
+Asegúrese de que la descripción larga se adhiera a las [directrices de validación del almacén](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
 
 ### <a name="adhere-to-icon-design-guidelines"></a>Cumplir las directrices de diseño de iconos
 
-Los iconos son uno de los elementos principales que los usuarios ven al navegar por la tienda. Los iconos deben comunicar la marca y el propósito de la aplicación, al tiempo que se adhieren a Teams requisitos.
+Los iconos son uno de los elementos principales que los usuarios ven al navegar por la tienda. Los iconos deben comunicar la marca y el propósito de la aplicación, a la vez que se adhieren a Teams requisitos.
 
-Para obtener más información, consulta las instrucciones para [crear Teams iconos de la aplicación](~/concepts/build-and-test/apps-package.md#app-icons).
+Para obtener más información, consulta [instrucciones sobre cómo crear Teams de aplicaciones](~/concepts/build-and-test/apps-package.md#app-icons).
 
 ### <a name="capture-screenshots"></a>Capturar capturas de pantalla
 
@@ -153,20 +153,20 @@ Las capturas de pantalla proporcionan una destacada vista previa de su aplicaci�
 Recuerde los siguientes procedimientos recomendados sobre capturas de pantalla:
 
 * Puede tener hasta cinco capturas de pantalla por anuncio.
-* Los tipos de archivo admitidos son PNG, JPEG y GIF.
-* Las dimensiones deben ser de 1366x768 píxeles.
+* Los tipos de archivo admitidos incluyen .png, .jpeg y formatos de imagen gif.
+* Las dimensiones deben ser de 1366 x 768 píxeles.
 * Tamaño máximo de 1 024 KB.
 
 Para obtener los procedimientos recomendados, consulte los siguientes recursos:
 
-* [Teams directrices de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams de validación de la Tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Crear imágenes eficaces para almacenes de aplicaciones de Microsoft](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>Crear un vídeo
 
 Un vídeo de la descripción puede ser la forma más eficaz de comunicar por qué las personas deben usar la aplicación. En un vídeo, se abordan las siguientes preguntas:
 
-* Quién Cuál es tu aplicación?
+* Quién Es la aplicación para?
 * ¿Qué problemas puede resolver la aplicación?
 * ¿Cómo funciona la aplicación?
 * ¿Qué otras ventajas obtienes al usar la aplicación?
@@ -197,13 +197,13 @@ Durante el envío, se te pide que clasifices tu aplicación. En la tabla siguien
 
 ### <a name="localize-your-store-listing"></a>Localización de la descripción de la tienda
 
-El Centro de partners admite [listados de almacenes localizados.](/office/dev/store/prepare-localized-solutions) Para obtener más información, [consulta cómo encontrar la descripción](../../../../concepts/build-and-test/apps-localization.md)Teams aplicación .
+El Centro de partners admite [listados de almacenes localizados](/office/dev/store/prepare-localized-solutions). Para obtener más información, [consulta cómo encontrar la descripción Teams aplicación.](../../../../concepts/build-and-test/apps-localization.md)
 
 ## <a name="complete-publisher-verification"></a>Verificación Publisher completa
 
-[Publisher se requiere](/azure/active-directory/develop/publisher-verification-overview) la verificación de Teams aplicaciones enumeradas en la tienda. Para obtener más información, consulte [las preguntas más frecuentes](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [cómo marcar su aplicación como verificada por el editor](/azure/active-directory/develop/mark-app-as-publisher-verified), y [cómo solucionar el problema de la verificación del editor](/azure/active-directory/develop/troubleshoot-publisher-verification).
+[Publisher verificación es](/azure/active-directory/develop/publisher-verification-overview) necesaria para Teams aplicaciones enumeradas en la tienda. Para obtener más información, consulte [las preguntas más frecuentes](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [cómo marcar su aplicación como verificada por el editor](/azure/active-directory/develop/mark-app-as-publisher-verified), y [cómo solucionar el problema de la verificación del editor](/azure/active-directory/develop/troubleshoot-publisher-verification).
 
-## <a name="complete-publisher-attestation"></a>Certificación Publisher completa
+## <a name="complete-publisher-attestation"></a>Completar Publisher atestación
 
 [Publisher atestación también](/microsoft-365-app-certification/docs/attestation) es necesaria para Teams aplicaciones enumeradas en la Tienda. El proceso incluye completar una autoevaluación de las prácticas de seguridad, control de datos y cumplimiento de la aplicación. El proceso puede ayudar a los clientes potenciales a tomar decisiones fundamentadas sobre el uso de la aplicación.
 
@@ -215,6 +215,6 @@ El Centro de partners admite [listados de almacenes localizados.](/office/dev/st
 > [!div class="nextstepaction"]
 > [Enviar la aplicación](/office/dev/store/add-in-submission-guide)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Resolver problemas si se produce Microsoft Teams envío del almacén](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[Resolver problemas si se produce un error Microsoft Teams envío de la tienda de almacenamiento](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

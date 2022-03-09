@@ -5,16 +5,16 @@ description: Diseña tu aplicación más rápido con componentes de interfaz de 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: f77517774237cce49976990a790987972d79118d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362945"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356437"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseñar la aplicación Microsoft Teams con plantillas de interfaz de usuario
 
-Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de Fluent componentes basados en la interfaz de usuario que funcionan en casos de uso Teams comunes, lo que te da más tiempo para averiguar la mejor experiencia para los usuarios.
+Diseña tu aplicación Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de componentes Fluent basados en la interfaz de usuario que funcionan en casos de uso Teams comunes, lo que te da más tiempo para averiguar la mejor experiencia para los usuarios.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Introducción a herramientas y ejemplos
 
@@ -46,7 +46,7 @@ Instala una aplicación de ejemplo para ver cómo se ven y se comportan las plan
 > [!div class="nextstepaction"]
 > [Obtener la aplicación de ejemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="calendar"></a>Calendar
+## <a name="calendar"></a>Calendario
 
 En Teams, un calendario es donde un usuario ve, programa y administra eventos próximos y pasados para sí mismos o un grupo.
 
@@ -146,7 +146,7 @@ Los formularios se usan para recopilar, validar y enviar la entrada del usuario 
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de formulario en el escritorio." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario de formulario en el escritorio." border="false":::
 
 ## <a name="list"></a>Lista
 
@@ -183,7 +183,7 @@ Puedes diseñar flujos de inicio de sesión de aplicaciones para diferentes Team
 
 ## <a name="settings"></a>Configuraciones
 
-Configuración pantallas son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: Configuración es un contenedor para componentes básicos [de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)).
+Configuración pantallas son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: Configuración es un contenedor para componentes [básicos de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)).
 
 ### <a name="top-use-case"></a>Caso de uso superior
 
@@ -227,7 +227,7 @@ Un asistente guía a un usuario a través de varias pantallas para completar una
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del asistente en el escritorio." border="false":::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Diseñar la aplicación con componentes básicos Fluent interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)
 * [Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados](~/concepts/design/design-teams-app-advanced-ui-components.md)

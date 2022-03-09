@@ -4,22 +4,22 @@ description: Describe las opciones para probar y depurar Microsoft Teams aplicac
 keywords: teams ejecutar aplicaciones de depuración host hospedado en la nube local
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 2c28090d82737d5231ed68a2fd3ef6896d701022
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: eddcd41a7bebae183df079bc5dfe67deed65056e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949022"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355709"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elige una configuración para probar y depurar tu Microsoft Teams aplicación
 
 Microsoft Teams aplicaciones contienen una o más capacidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, use una de las siguientes maneras:
 
-* **Puramente local:** para bots, puede probar su experiencia en el bot Emulator. Para otro contenido, puede ejecutar localmente en el explorador y dirigir el contenido a través `http://localhost` de .
-* **Locally hosted in Teams:** This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. Esto te permite ejecutar y depurar fácilmente la aplicación en el Teams cliente.
-* **Hospedado en la nube en Teams:** esto realmente simula la compatibilidad de nivel de producción para una Teams aplicación. Implica cargar la solución en el servidor accesible externamente [](~/concepts/build-and-test/apps-package.md) o el proveedor de nube de elección y crear un paquete para cargarlo [en](~/concepts/deploy-and-publish/apps-upload.md) Teams.
+* **Puramente local**: para los bots, puede probar su experiencia en el bot Emulator. Para otro contenido, puede ejecutar localmente en el explorador y dirigir el contenido a través de `http://localhost`.
+* **Hospedado localmente en Teams**: esto implica ejecutar la aplicación localmente en el software de túnel y crear un paquete [](~/concepts/build-and-test/apps-package.md) para cargarlo en [](~/concepts/deploy-and-publish/apps-upload.md) Teams. Esto te permite ejecutar y depurar fácilmente la aplicación en el Teams cliente.
+* **Hospedado en la nube en Teams**: esto realmente simula la compatibilidad de nivel de producción para una Teams aplicación. Implica cargar la solución en el servidor accesible externamente o el proveedor de nube de elección y crear un [paquete para](~/concepts/build-and-test/apps-package.md) cargarlo [en Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
-Ejecute la experiencia desde su propio equipo para realizar pruebas de Teams locales. Al hacerlo, puede compilar y ejecutar en el entorno de desarrollo integrado y aprovechar al máximo técnicas, como puntos de interrupción y depuración de pasos.
+Ejecute la experiencia desde su propio equipo para realizar pruebas de Teams local o local. Al hacerlo, puede compilar y ejecutar en el entorno de desarrollo integrado y aprovechar al máximo técnicas, como puntos de interrupción y depuración de pasos.
 
 > [!NOTE]
 > Para la depuración y las pruebas a escala de producción, se recomienda seguir las directrices de su propia empresa para asegurarse de que puede admitir pruebas, almacenamiento provisional e implementación a través de sus propios procesos.
@@ -41,14 +41,14 @@ El bot puede ejecutarse en el bot Emulator. Esto le permite probar parte de la l
 
 ## <a name="locally-hosted"></a>Hospedado localmente
 
-Microsoft Teams es un producto totalmente basado en la nube, requiere que todos los servicios a los que tiene acceso estén disponibles públicamente mediante puntos de conexión HTTPS. Por lo tanto, para permitir que tu aplicación funcione dentro de Teams, debes publicar el código en la nube de tu elección o hacer que nuestra instancia de ejecución local sea accesible externamente. Podemos hacerlo con software de túnel.
+Microsoft Teams es un producto totalmente basado en la nube, requiere que todos los servicios a los que tiene acceso estén disponibles públicamente mediante puntos de conexión HTTPS. Por lo tanto, para permitir que la aplicación funcione dentro de Teams, debes publicar el código en la nube de tu elección o hacer que nuestra instancia de ejecución local sea accesible externamente. Podemos hacerlo con software de túnel.
 
-Aunque puedes usar cualquier herramienta que prefieras, usamos y recomendamos [ngrok](https://ngrok.com/download), que crea una dirección URL direccionable externamente para un puerto que abras localmente en el equipo. 
+Aunque puedes usar cualquier herramienta que prefieras, usamos y recomendamos [ngrok](https://ngrok.com/download), que crea una dirección URL direccionable externamente para un puerto que abras localmente en el equipo.
 
-**Para configurar ngrok en preparación para ejecutar la aplicación Microsoft Teams localmente**
+Para configurar ngrok en preparación para ejecutar la aplicación Microsoft Teams localmente, siga estos pasos:
 
 1. Vaya al directorio en el que ngrok.exe instalado en una aplicación terminal. Es posible que desee agregarlo como una variable de ruta de acceso para evitar este paso.
-2. Ejecute, por ejemplo, `ngrok http 3978 --host-header=localhost:3978` o reemplace el número de puerto según sea necesario.
+2. Ejecute, por ejemplo, `ngrok http 3978 --host-header=localhost:3978`o reemplace el número de puerto según sea necesario.
    Esto inicia ngrok para enumerar en el puerto especificado. A cambio, le proporciona una dirección URL direccionable externamente válida mientras ngrok se esté ejecutando.
 
 > [!NOTE]
@@ -56,7 +56,7 @@ Aunque puedes usar cualquier herramienta que prefieras, usamos y recomendamos [n
 
 Para usar ngrok en el proyecto en función de las capacidades que está usando, debe reemplazar todas las referencias de dirección URL del código, la configuración y el archivo manifest.json para usar este extremo de dirección URL.
 
-Para los bots registrados en el Microsoft Bot Framework, actualice el extremo de mensajería del bot para usar este nuevo extremo de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok está funcionando probando la respuesta del bot en la ventana de chat de prueba del portal de Bot Framework. De nuevo, al igual que el emulador, esta prueba no permite acceder a Teams funcionalidad específica.
+Para los bots registrados en el Microsoft Bot Framework, actualice el extremo de mensajería del bot para usar este nuevo extremo de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok está funcionando probando la respuesta del bot en la ventana de chat de prueba del portal de Bot Framework. De nuevo, al igual que el emulador, esta prueba no permite tener acceso a Teams funcionalidad específica.
 
 > [!NOTE]
 > Para actualizar el extremo de mensajería de un bot, debe usar bot Framework. Seleccione el bot en [la lista de bots en Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puedes actualizar el punto de conexión de mensajería a través [de App Studio](~/concepts/build-and-test/app-studio-overview.md).
@@ -66,20 +66,20 @@ Para los bots registrados en el Microsoft Bot Framework, actualice el extremo de
 Puede usar cualquier servicio direccionable externamente para hospedar el código de desarrollo y producción y sus puntos de conexión HTTPS. No hay ninguna expectativa de que sus capacidades residan en el mismo servicio. Se requiere que se tenga acceso a todos los dominios desde Microsoft Teams aplicaciones enumeradas en el [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) objeto del `manifest.json` archivo.
 
 > [!NOTE]
-> Para garantizar un entorno seguro, sea explícito sobre el dominio exacto y los subdominios a los que hace referencia y esos dominios deben estar en su control. Por ejemplo, `*.azurewebsites.net` no se recomienda, pero `contoso.azurewebsites.net` se recomienda.
+> Para garantizar un entorno seguro, sea explícito sobre el dominio exacto y los subdominios a los que hace referencia y esos dominios deben estar en su control. Por ejemplo, `*.azurewebsites.net` no se recomienda, pero se `contoso.azurewebsites.net` recomienda.
 
 ## <a name="load-and-run-your-experience"></a>Cargar y ejecutar la experiencia
 
-Para cargar y ejecutar la experiencia en Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para más información, vea:
+Para cargar y ejecutar la experiencia en Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para obtener más información, vea:
 
 * [Crea el paquete para tu Microsoft Teams aplicación](~/concepts/build-and-test/apps-package.md).
 * [Upload la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
 ## <a name="next-step"></a>Paso siguiente
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Añadir datos de prueba al entorno](~/concepts/build-and-test/test-data.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Probar y depurar el bot localmente](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)

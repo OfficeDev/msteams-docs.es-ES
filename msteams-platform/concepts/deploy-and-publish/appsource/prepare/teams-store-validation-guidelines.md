@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2aa433731d71f672182339bca82f851a61ec5895
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518236"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356066"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -19,7 +19,7 @@ Seguir estas directrices aumenta las posibilidades de que la aplicación pase el
 > [!NOTE]
 > * Algunas directrices pueden no ser aplicables a su aplicación. Por ejemplo, si la aplicación no incluye un bot, puede omitir las directrices relacionadas con los bots.
 > * Hemos cruzado estas directrices con las directivas de certificación comercial de Microsoft y hemos agregado Do’s y Don’ts con ejemplos de escenarios de superación o error encontrados en nuestro proceso de validación.
-> * Algunas directrices se marcan como *Corrección obligatoria*. Si el envío de la aplicación no cumple estas directrices obligatorias, recibirás un informe de errores de nosotros con los pasos necesarios para remediarlos. El envío de la aplicación pasará la Validación de la Tienda de Microsoft Teams solo después de que se solucionen los problemas. 
+> * Algunas directrices se marcan como *Corrección obligatoria*. Si el envío de la aplicación no cumple estas directrices obligatorias, recibirás un informe de errores de nosotros con los pasos necesarios para remediarlos. El envío de la aplicación pasará Microsoft Teams validación de la tienda solo después de solucionar los problemas. 
 > * Otras directrices se marcan como *Corrección sugerida.* Para obtener una experiencia ideal de usuario, te sugerimos que corrijas los problemas; sin embargo, el envío de la aplicación no se bloqueará para que no se publique en la tienda de Teams si decides no corregir los problemas. 
 
 
@@ -103,7 +103,7 @@ Para obtener más información sobre cómo implementar la autenticación de apli
   * Las aplicaciones que requieren que el administrador de inquilinos complete una instalación única deben llamar a la dependencia del administrador de inquilinos para configurar la aplicación (antes de que cualquier otro usuario del inquilino pueda instalar y usar la aplicación).  
   Se debe destacar la dependencia en el manifiesto de la aplicación, la descripción larga de AppSource, todos los puntos de contacto de la experiencia de primera ejecución (mensaje de bienvenida del bot, configuración de pestañas o página de configuración), texto de ayuda según se considere necesario como parte de la respuesta del bot, la extensión de redacción o el contenido de pestañas estáticas.
   
-* **Experiencias de uso compartido de contenidos**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o en recursos similares) cómo desconectar o dejar de compartir contenidos si esa característica se admite en el servicio externo. Ello no significa que la capacidad de no compartir contenidos deba estar presente en la aplicación de Teams.
+* **Experiencias de uso compartido de contenidos**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o en recursos similares) cómo desconectar o dejar de compartir contenidos si esa característica se admite en el servicio externo. Esto no significa que la capacidad de desa compartir contenido debe estar presente en la Teams aplicación.
 
 ## <a name="security"></a>Seguridad
 > [!NOTE]  
@@ -191,7 +191,7 @@ Los bots siempre deben pedir permiso para cargar un archivo y mostrar un mensaje
 > [!NOTE]
 > Esta sección está en línea con [ la directiva del marketplace comercial de Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) y proporciona instrucciones para desarrolladores sobre el uso de dominios restringidos en la propiedad de manifiesto `validDomains` .
 
-No incluya dominios fuera del control de su organización (incluidos los caracteres comodín) ni servicios de tunelización en las configuraciones de dominio de la aplicación. Las excepciones son las siguientes:
+No incluya dominios fuera del control de la organización (incluidos caracteres comodín) ni servicios de túnel en las configuraciones de dominio de la aplicación. Las excepciones son las siguientes:
 
   * Si su aplicación utiliza la tarjeta OAuthCard de Azure Bot Service, debe incluirla `token.botframework.com` como dominio válido o el botón de **inicio de sesión** no funcionará.
   * Si su aplicación depende de SharePoint, puede incluir el sitio raíz de SharePoint asociado como un dominio válido utilizando la `{teamSiteDomain}` propiedad de contexto.
@@ -279,7 +279,7 @@ El manifiesto de la aplicación de Teams define la configuración de la aplicaci
 
 Los iconos son uno de los principales elementos que la gente ve cuando navega por la tienda de Teams. Los iconos deben comunicar la marca y el propósito de la aplicación a la vez que cumplen los siguientes requisitos:
 
-* El paquete de su aplicación debe incluir dos versiones PNG del icono de su aplicación: Un icono de color y un icono de contorno.
+* El paquete de la aplicación debe incluir dos .png del icono de la aplicación: un icono de color y un icono de esquema.
 * La versión de color del icono debe ser de 192 x 192 píxeles. El símbolo de icono puede ser cualquier color o colores, pero debe situarse sobre un fondo cuadrado sólido o totalmente transparente.
 * La versión de esquema del icono se muestra en los escenarios siguientes:
   * Cuando la aplicación está en uso y **hospedada** en la barra de aplicaciones del lado izquierdo de Teams.
@@ -1367,7 +1367,7 @@ Use las siguientes directrices para las extensiones de reuniones:
 * No debe utilizar módulos de tareas.
 * Debe alinearse con el centro del escenario de la reunión.
 
-:::row::: 
+:::row:::
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1375,13 +1375,12 @@ Use las siguientes directrices para las extensiones de reuniones:
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end::: 
-     
+:::row-end:::
 
 * Debe descartarse después de que un usuario seleccione un botón o realice una acción.
 
-* **Modo conferencia**: cerciórese de tener en cuenta los siguientes procedimientos recomendados para una experiencia de creación de escenas: 
-  * Todas las imágenes están en formato PNG.
+* **Modo conferencia**: cerciórese de tener en cuenta los siguientes procedimientos recomendados para una experiencia de creación de escenas:
+  * Todas las imágenes están en .png formato.
   * El paquete final con todas las imágenes juntas no debe superar la resolución de 1920 x 1080. La resolución es un número par. Esta resolución es un requisito para que las escenas se muestren correctamente.
   * El tamaño máximo de la escena es de 10 MB.
   * El tamaño máximo de cada imagen es de 5 MB. Una escena es una colección de varias imágenes. El límite es para cada imagen individual.

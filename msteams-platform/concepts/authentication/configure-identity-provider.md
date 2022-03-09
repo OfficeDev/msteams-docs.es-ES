@@ -4,12 +4,12 @@ description: Describe cómo configurar proveedores de identidades con un enfoque
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: autenticación de Azure AD proveedor de identidades de oauth
-ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821356"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356416"
 ---
 # <a name="configure-identity-providers"></a>Configurar proveedores de identidades
 
@@ -32,3 +32,11 @@ Reemplace `<hostname>` por el host real, que puede ser un sitio de hospedaje ded
 * **LinkedIn:** Siga las instrucciones de [Configuración de la aplicación LinkedIn](/linkedin/talent/apply-with-linkedin)
 
 * **Google:** Obtener credenciales de cliente de OAuth 2.0 desde la consola [de la API de Google](https://console.developers.google.com/)
+
+* **Proveedores externos de OAuth de pestañas:** Para obtener más información, vea [Usar proveedores de OAuth externos](../../tabs/how-to/authentication/auth-oauth-provider.md)
+
+## <a name="see-also"></a>Vea también 
+
+* [Autenticar un usuario en un bot Microsoft Teams de autenticación](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Compatibilidad con inicio de sesión único (SSO) para pestañas](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [Autenticar un usuario en una Microsoft Teams pestaña](../../tabs/how-to/authentication/auth-tab-aad.md)

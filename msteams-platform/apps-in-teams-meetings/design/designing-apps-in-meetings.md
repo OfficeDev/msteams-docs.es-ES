@@ -6,16 +6,16 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Fase de reunión compartida de comportamiento dinámico de plantilla de kit de interfaz de usuario en la reunión
-ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: bb83da351a6b9d2b1219ef1e265e5e6269b34f26
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523798"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355828"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseño de la extensión Microsoft Teams reunión
 
-Puedes crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una reunión o que envíen un aviso rápido que no interrumpa el flujo de la reunión.
+Puede crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una reunión o que envíen un aviso rápido que no interrumpa el flujo de la reunión.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
@@ -97,7 +97,7 @@ Las personas pueden usar la pestaña en la reunión para:
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomía: pestaña En la reunión
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de una pestaña en reunión." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de una pestaña en reunión." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -153,7 +153,7 @@ Los cuadros de diálogo en la reunión son desencadenados por un usuario (como e
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomía: cuadro de diálogo en la reunión
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de un cuadro de diálogo en reunión." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de un cuadro de diálogo en reunión." border="false":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -392,7 +392,7 @@ Se recomienda colocar la acción más intensa visualmente en la ubicación más 
 
 #### <a name="dont-left-or-center-align-actions"></a>No: acciones de alineación izquierda o central
 
-Esto se desvía del patrón de Teams estándar para la colocación de controles en un cuadro de diálogo y puede conflicto con un cuadro de diálogo detrás del superior.
+Esto se desvía del patrón de Teams estándar para la colocación de controles en un cuadro de diálogo y puede estar en conflicto con un cuadro de diálogo detrás del superior.
 
    :::column-end:::
 :::row-end:::

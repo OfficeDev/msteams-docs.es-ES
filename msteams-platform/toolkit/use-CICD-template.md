@@ -1,26 +1,26 @@
 ---
-title: Compatibilidad de CI o CD para desarrolladores Teams aplicaciones
+title: Compatibilidad de CI o CD Teams desarrolladores de aplicaciones
 author: MuyangAmigo
 description: Plantillas CICD
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1ae613332f7a07ae0d0ae9ed65b75429db64b429
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821580"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356178"
 ---
 # <a name="cicd-guide"></a>Guía de CI/CD
 
 TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al crear Teams aplicación. El documento proporciona herramientas y plantillas para empezar a configurar canalizaciones de CI o CD con GitHub, Azure Devops y Jenkins.
 
-|Herramientas y plantillas|Descripción| 
+|Herramientas y plantillas|Descripción|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub acción que se integra con la CLI de TeamsFx.|
-|[github-ci-template.yml y](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub plantillas de CI o CD para Teams aplicación. |
+|[github-ci-template.yml y](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub de CI o CD para Teams aplicación. |
 |[jenkins-ci-template. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) y [jenkins-cd-template. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|Plantillas de CI o CD de Jenkins para una Teams aplicación.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) y [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Plantillas de script para la automatización fuera de GitHub. |
 
@@ -38,7 +38,7 @@ TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al crear Teams apl
 
 Realice los siguientes pasos para adaptar el flujo de trabajo del proyecto:
 
-1. Cambiar el flujo de CI. 
+1. Cambiar el flujo de CI.
 1. Use el script de compilación npm o personalice la forma en que compila el proyecto en el código de automatización.
 1. Use el script de prueba npm que devuelve cero para el éxito y cambie los comandos de prueba.
 
@@ -47,12 +47,12 @@ Realice los siguientes pasos para adaptar el flujo de trabajo del proyecto:
 Siga estos pasos para personalizar el flujo de trabajo de CD:
 
 1. De forma predeterminada, el flujo de trabajo de CD se desencadena cuando se realizan nuevas confirmaciones en la `main` rama.
-1. Cree GitHub [secretos de repositorio por](https://docs.github.com/en/actions/reference/encrypted-secrets) entorno para contener la entidad de seguridad de servicio de Azure y Microsoft 365 de inicio de sesión de la cuenta. Para obtener más información, [vea GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Cree GitHub [secretos de repositorio por](https://docs.github.com/en/actions/reference/encrypted-secrets) entorno para contener la entidad de seguridad de servicio de Azure y Microsoft 365 credenciales de inicio de sesión de la cuenta. Para obtener más información, [vea GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Cambie los scripts de compilación si es necesario.
 1. Quite los scripts de prueba según sea necesario.
 
 > [!NOTE]
-> El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar la aprovisionamiento en Teams Toolkit, CLI de TeamsFx o mediante un flujo de trabajo independiente. Asegúrese de confirmar después del aprovisionamiento. Los resultados del aprovisionamiento se depositan en carpeta `.fx` .
+> El paso de aprovisionamiento no se incluye en la plantilla de CD, ya que normalmente se ejecuta solo una vez. Puede ejecutar la aprovisionamiento dentro de Teams Toolkit, CLI de TeamsFx o mediante un flujo de trabajo independiente. Asegúrese de confirmar después del aprovisionamiento. Los resultados del aprovisionamiento se depositan en carpeta `.fx` .
 
 ### <a name="github-secrets"></a>Secretos de Github
 
@@ -61,7 +61,7 @@ En la tabla siguiente se enumeran todos los secretos que necesita para crear un 
 1. Seleccione **Configuración**.
 1. Vaya a **la sección Entornos** .
 1. Seleccione **Nuevo entorno**.
-1. Escriba un nombre para el entorno. El nombre de entorno predeterminado proporcionado en la plantilla es `test_environment`. 
+1. Escriba un nombre para el entorno. El nombre de entorno predeterminado proporcionado en la plantilla es `test_environment`.
 1. Seleccione **Configurar entorno**.
 1. Seleccione **Agregar secreto**.
 
@@ -172,17 +172,17 @@ Realice los siguientes pasos para crear variables de canalización en Azure DevO
 |---|---|
 |`AZURE_SERVICE_PRINCIPAL_NAME`|El nombre principal de servicio de Azure usado para aprovisionar recursos.|
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|La contraseña de la entidad de servicio de Azure.|
-|`AZURE_SUBSCRIPTION_ID`|Para identificar la suscripción en la que se aprovisionarán los recursos.|
+|`AZURE_SUBSCRIPTION_ID`|Para identificar la suscripción en la que se aprovisionan los recursos.|
 |`AZURE_TENANT_ID`|Para identificar el espacio empresarial en el que reside la suscripción.|
-|`M365_ACCOUNT_NAME`|La Microsoft 365 cuenta para crear y publicar la Teams app.|
+|`M365_ACCOUNT_NAME`|Cuenta Microsoft 365 para crear y publicar la Teams app.|
 |`M365_ACCOUNT_PASSWORD`|La contraseña de la Microsoft 365 cuenta.|
-|`M365_TENANT_ID`|Para identificar el espacio empresarial en el que se Teams se creará o publicará la aplicación. Este valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Obtenga más información [sobre cómo encontrar el identificador Microsoft 365 inquilino](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|`M365_TENANT_ID`|Para identificar el espacio empresarial en el que se crea Teams o se publica la aplicación. Este valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Obtenga más información [sobre cómo encontrar el identificador Microsoft 365 inquilino](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Plantillas de canalización de CI o CD en Jenkins
 
 Para agregar estas plantillas al repositorio, necesita las versiones de [jenkins-ci-template. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) y  [jenkins-cd-template. Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) que se ubicará en el repositorio por rama.
 
-Además, debe crear canalizaciones de CI o CD en Jenkins que apunten al **jenkinsfile** específico correspondientemente.
+Además, debe crear canalizaciones de CI o CD en Jenkins que apunten a la especificación `Jenkinsfile` correspondiente.
 
 Siga los pasos para comprobar cómo conectar Jenkins con diferentes plataformas SCM:
 
@@ -204,8 +204,8 @@ Estos son algunos de los cambios que puede realizar para adaptar su proyecto:
 
 Realice los pasos siguientes para personalizar la canalización de CD:
 
-1. Cambie el nombre del archivo de plantilla **a Jenkinsfile** y colódelo debajo de la rama de destino, por ejemplo, la **rama** principal.
-1. Cambiar el flujo de CD. Usamos de forma predeterminada los desencadenadores de **pollSCM** cuando se inserta un nuevo cambio en la **rama** principal.
+1. Cambie el nombre del archivo de plantilla `Jenkinsfile`a y colómelo en la rama de destino, por ejemplo, la `main` rama.
+1. Cambiar el flujo de CD. Usamos de forma predeterminada los desencadenadores de `pollSCM` cuándo se inserta un nuevo cambio en la `main` rama.
 1. Cree credenciales [de canalización de](https://www.jenkins.io/doc/book/using/using-credentials/) Jenkins para contener la entidad de servicio de Azure y Microsoft 365 de inicio de sesión de la cuenta.
 1. Cambie los scripts de compilación si es necesario.
 1. Quite los scripts de prueba si no tiene pruebas.
@@ -220,7 +220,7 @@ Siga [using-credentials para](https://www.jenkins.io/doc/book/using/using-creden
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|La contraseña de la entidad de servicio de Azure.|
 |`AZURE_SUBSCRIPTION_ID`|Para identificar la suscripción en la que se aprovisionarán los recursos.|
 |`AZURE_TENANT_ID`|Para identificar el espacio empresarial en el que reside la suscripción.|
-|`M365_ACCOUNT_NAME`|La Microsoft 365 cuenta para crear y publicar la Teams app.|
+|`M365_ACCOUNT_NAME`|Cuenta Microsoft 365 para crear y publicar la Teams app.|
 |`M365_ACCOUNT_PASSWORD`|La contraseña de la Microsoft 365 cuenta.|
 |`M365_TENANT_ID`|Para identificar el espacio empresarial en el que se crea Teams o se publica la aplicación. El valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Obtenga más información [sobre cómo encontrar el identificador Microsoft 365 inquilino](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
@@ -235,33 +235,37 @@ Los scripts se basan en una herramienta de línea de comandos teamsFx multiplata
 
 > [!NOTE]
 > * Para habilitar la `@microsoft/teamsfx-cli` ejecución en modo CI, activa `CI_ENABLED` `export CI_ENABLED=true`. En el modo CI, `@microsoft/teamsfx-cli` es fácil de usar para CI o CD.
-> * Para habilitar la `@microsoft/teamsfx-cli` ejecución en modo no interactivo, establezca una configuración global con el comando : `teamsfx config set -g interactive false`. En modo no interactivo, `@microsoft/teamsfx-cli` no hará preguntas sobre entradas de forma interactiva.
+> * Para habilitar `@microsoft/teamsfx-cli` la ejecución en el modo no interactivo, establezca una configuración global con el comando: `teamsfx config set -g interactive false`. En el modo no interactivo, `@microsoft/teamsfx-cli` no solicita entradas.
 
-Asegúrese de establecer las credenciales de Azure y Microsoft365 en las variables de entorno de forma segura. Por ejemplo, si usa GitHub como repositorio de código fuente. Para obtener más información, vea [Secretos de Github](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Asegúrese de establecer azure y Microsoft 365 credenciales en las variables de entorno de forma segura. Por ejemplo, si usa GitHub como repositorio de código fuente. Para obtener más información, vea [Secretos de Github](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 ## <a name="create-azure-service-principals"></a>Crear entidades de servicio de Azure
 
 Para aprovisionar e implementar recursos destinados a Azure dentro de CI/CD, debe crear una entidad de servicio de Azure para su uso.
 
 Realice los siguientes pasos para crear entidades de servicio de Azure:
-1. Registrar una aplicación Microsoft Azure Active Directory (Azure AD) en un único inquilino.
-2. Asigne un rol a la aplicación Azure AD para obtener acceso a la suscripción de Azure y `Contributor` se recomienda el rol. 
+
+1. Registrar una Microsoft Azure Active Directory (Azure AD) en un único inquilino.
+2. Asigne un rol a la aplicación Azure AD para obtener acceso a la suscripción de Azure y `Contributor` se recomienda el rol.
 3. Cree un nuevo secreto Azure AD aplicación.
 
 > [!TIP]
 > Guarde el identificador de inquilino, el identificador de aplicación(AZURE_SERVICE_PRINCIPAL_NAME) y el secreto(AZURE_SERVICE_PRINCIPAL_PASSWORD) para su uso futuro.
 
-Para obtener más información, consulte [Azure service principals guidelines](/azure/active-directory/develop/howto-create-service-principal-portal). Las siguientes son las tres formas de crear la entidad de servicio: 
+Para obtener más información, consulte [Azure service principals guidelines](/azure/active-directory/develop/howto-create-service-principal-portal). Las siguientes son las tres formas de crear la entidad de servicio:
+
 * [Microsoft Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Publicar Teams aplicación con Teams Developer Portal
-Si hay algún cambio relacionado con el archivo de manifiesto de Teams aplicación, es posible que quieras volver a publicar la aplicación Teams para actualizar el manifiesto.
+
+Si hay algún cambio relacionado con el archivo de manifiesto de Teams aplicación, es posible que quieras publicar la aplicación Teams para actualizar el manifiesto.
 
 Para publicar Teams aplicación manualmente, puedes aprovechar [el Portal de desarrolladores para Teams](https://dev.teams.microsoft.com/home).
 
 Realice los siguientes pasos para publicar la aplicación:
+
 1. Inicie sesión en [el portal de desarrolladores Teams](https://dev.teams.microsoft.com) la cuenta correspondiente.
 2. Importe el paquete de la aplicación en zip seleccionando `App -> Import app -> Replace`.
 3. Selecciona la aplicación de destino en la lista de aplicaciones.

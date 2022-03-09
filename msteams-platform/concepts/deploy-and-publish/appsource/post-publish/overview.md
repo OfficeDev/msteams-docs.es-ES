@@ -1,25 +1,31 @@
 ---
 title: Ofrecer mantenimiento y soporte técnico de su aplicación publicada
-description: Qué pensar una vez que la tienda aparece en la Teams y AppSource.
+description: Qué pensar una vez que la tienda aparece en la Teams store y AppSource.
 ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518565"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356017"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
 Con la aplicación incluida en la Microsoft Teams, empieza a pensar en cómo mantendrás la aplicación en el futuro y aumentarás las descargas y el uso.
 
+## <a name="analyze-app-usage"></a>Analizar el uso de la aplicación
+
+Puedes realizar un seguimiento del uso de la aplicación [en el informe Teams uso de la aplicación en](/office/dev/store/teams-apps-usage) el Centro de partners. Las métricas incluyen usuarios activos mensuales, diarios y semanales, y gráficos de retención e intensidad que permiten realizar un seguimiento de la rotación y la frecuencia de uso.
+
+Los datos de las aplicaciones recién publicadas tardan aproximadamente una semana en aparecer en el informe.
+
 ## <a name="publish-updates-to-your-app"></a>Publicar actualizaciones en la aplicación
 
 > [!NOTE]
-> Teams ha evolucionado:
+> La tienda de Teams ha evolucionado:
 > 
 > Anteriormente, los vínculos se copiaban seleccionando puntos suspensivos en el icono de la aplicación. Con la experiencia Teams de la tienda, accederá a la misma desde la pestaña detalles de las aplicaciones. Esta actualización estará disponible generalmente (GA) antes del 01 de marzo de 2022.
 
@@ -58,7 +64,7 @@ Crea el vínculo con la siguiente dirección URL anexada con el identificador de
 
 ## <a name="complete-microsoft-365-certification"></a>Certificación Microsoft 365 completa
 
-[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) ofrece garantías de que los datos y la privacidad están protegidos y protegidos adecuadamente cuando se instala un Aplicación de Office o complemento de terceros en su ecosistema Microsoft 365 usuario. La certificación confirma que la aplicación es compatible con las tecnologías de Microsoft, cumple con los procedimientos recomendados de seguridad de aplicaciones en la nube y es compatible con Microsoft.
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) ofrece garantías de que los datos y la privacidad están protegidos y protegidos adecuadamente cuando se instala un Aplicación de Office o un complemento de terceros en su ecosistema Microsoft 365 usuario. La certificación confirma que la aplicación es compatible con las tecnologías de Microsoft, cumple con los procedimientos recomendados de seguridad de aplicaciones en la nube y es compatible con Microsoft.
 
 ## <a name="see-also"></a>Vea también
 

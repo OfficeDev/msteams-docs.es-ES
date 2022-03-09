@@ -4,16 +4,19 @@ description: Obtenga información sobre las vistas específicas del usuario medi
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185438"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356367"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
-Anteriormente, si se enviaron tarjetas adaptables en una Teams conversación, todos los usuarios verán exactamente el mismo contenido de la tarjeta. Con la introducción del modelo de acciones universales y las tarjetas adaptables, los desarrolladores de bots ahora pueden proporcionar vistas específicas del usuario de tarjetas adaptables `refresh` a los usuarios. La misma tarjeta adaptable ahora puede actualizarse a una tarjeta adaptable específica del usuario. Un máximo de 60 usuarios diferentes pueden ver una versión diferente de la tarjeta con información o acciones adicionales. La tarjeta adaptable proporciona escenarios eficaces como aprobaciones, controles de creador de sondeos, vales, administración de incidentes y tarjetas de administración de proyectos.
+Anteriormente, si se enviaron tarjetas adaptables en una Teams conversación, todos los usuarios verán exactamente el mismo contenido de la tarjeta. Con la introducción del modelo de acciones universales `refresh` y las tarjetas adaptables, los desarrolladores de bots ahora pueden proporcionar vistas específicas del usuario de tarjetas adaptables a los usuarios. La misma tarjeta adaptable ahora puede actualizarse a una tarjeta adaptable específica del usuario. Un máximo de 60 usuarios diferentes pueden ver una versión diferente de la tarjeta con información o acciones adicionales. La tarjeta adaptable proporciona escenarios eficaces como aprobaciones, controles de creador de sondeos, vales, administración de incidentes y tarjetas de administración de proyectos.
+
+> [!NOTE]
+> La vista específica del usuario es compatible con las tarjetas adaptables enviadas por un bot y depende de las acciones universales.
 
 Por ejemplo, Megan, un inspector de seguridad de Contoso, quiere crear un incidente y asignarlo a Alex. Megan también quiere que todos los miembros del equipo sean conscientes del incidente. Megan usa la extensión de mensaje de informes de incidentes de Contoso con tecnología de acciones universales para tarjetas adaptables.
 
@@ -64,9 +67,9 @@ El siguiente código proporciona un ejemplo de tarjetas adaptables:
 **Para enviar tarjetas adaptables, actualizar vistas específicas del usuario e invocar solicitudes al bot**
 
 1. Cuando Megan crea un nuevo incidente, el bot envía la tarjeta adaptable o la tarjeta común con detalles de incidentes en la Teams conversación.
-2. Ahora, esta tarjeta se actualiza automáticamente a la vista específica del usuario para Megan y Alex. Los MRIs de usuario de Alex y Megan se agregan en propiedad `userIds` de la propiedad del JSON de tarjeta `refresh` adaptable. La tarjeta sigue siendo la misma para otros usuarios de la conversación.
-3. Para Megan, la actualización automática desencadena una `adaptiveCard/action` solicitud de invocación al bot. El bot puede devolver una tarjeta de creador de incidentes con `Edit` botón como respuesta a esta solicitud de invocación.
-4. De forma similar para Alex, la actualización automática desencadena otra `adaptiveCard/action` solicitud de invocación al bot. El bot puede devolver un botón de tarjeta de propietario `Resolve` de incidentes como respuesta a esta solicitud de invocación.
+2. Ahora, esta tarjeta se actualiza automáticamente a la vista específica del usuario para Megan y Alex. Los MRIs `userIds` `refresh` de usuario de Alex y Megan se agregan en propiedad de la propiedad del JSON de tarjeta adaptable. La tarjeta sigue siendo la misma para otros usuarios de la conversación.
+3. Para Megan, la actualización automática desencadena una solicitud `adaptiveCard/action` de invocación al bot. El bot puede devolver una tarjeta de creador de incidentes con `Edit` botón como respuesta a esta solicitud de invocación.
+4. De forma similar para Alex, la actualización automática desencadena otra solicitud `adaptiveCard/action` de invocación al bot. El bot puede devolver un botón de tarjeta de `Resolve` propietario de incidentes como respuesta a esta solicitud de invocación.
 
 ## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Invocar solicitud enviada desde Teams cliente al bot
 
@@ -220,7 +223,7 @@ Directrices de diseño de tarjetas a tener en cuenta al diseñar vistas específ
 * Puede crear un máximo de **60** vistas específicas de usuario para una tarjeta determinada enviada a un chat o canal especificando sus `userIds` en la `refresh` sección.
 * **Tarjeta base:** La versión base de la tarjeta que el desarrollador del bot envía al chat. La versión base es la versión de la tarjeta adaptable para todos los usuarios que no están especificados en la `userIds` sección.
 * Se puede usar una actualización de mensajes para actualizar la tarjeta base y actualizar simultáneamente la tarjeta específica del usuario. Al abrir el chat o el canal, también se actualiza la tarjeta para los usuarios con la actualización habilitada.
-* Para escenarios con grupos más grandes donde los usuarios cambian a una vista de acción, que necesita actualizaciones dinámicas para los respondedores, puede seguir sumando hasta 60 usuarios a la `userIds` lista. Puede quitar el primer respondedor de la lista cuando el usuario número 61 responda. Para los usuarios que se quitan de la lista, puede proporcionar un botón de actualización manual o usar el botón actualizar en el menú opciones del mensaje para `userIds` obtener el resultado más reciente.
+* Para escenarios con grupos más grandes donde los usuarios cambian a una vista de acción, que necesita actualizaciones dinámicas para los respondedores, puede seguir sumando hasta 60 usuarios a la `userIds` lista. Puede quitar el primer respondedor de la lista cuando el usuario número 61 responda. Para los usuarios que se `userIds` quitan de la lista, puede proporcionar un botón de actualización manual o usar el botón actualizar en el menú opciones del mensaje para obtener el resultado más reciente.
 * Pida a los usuarios que obtengan una vista específica del usuario, donde solo ven una vista determinada de la tarjeta o algunas acciones.
 
 ## <a name="code-sample"></a>Ejemplo de código

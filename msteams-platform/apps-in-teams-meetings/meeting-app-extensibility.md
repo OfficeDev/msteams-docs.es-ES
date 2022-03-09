@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821608"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355596"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -34,7 +34,7 @@ Las pestañas permiten a los miembros del equipo acceder a los servicios y el co
 
 > [!NOTE]
 > * Las reuniones programadas privadas solo admiten aplicaciones.
-> * La opción Agregar aplicación para Teams de la pestaña de extensión de reunión no se admite en Teams cliente web.
+> * La opción Agregar aplicación para Teams pestaña de extensión de reunión no se admite en Teams cliente web.
 
 #### <a name="pre-meeting-app-experience"></a>Experiencia de la aplicación previa a la reunión
 
@@ -61,7 +61,7 @@ Con la experiencia de la aplicación previa a la reunión, se pueden buscar y ag
 
 Después de agregar las pestañas a una reunión existente en dispositivos móviles, puedes ver las mismas aplicaciones en la experiencia previa a la reunión en **La** sección Más detalles de la reunión.
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
@@ -69,7 +69,7 @@ Después de agregar las pestañas a una reunión existente en dispositivos móvi
 
 Con la experiencia de la aplicación durante la reunión, puedes interactuar con los participantes durante la reunión mediante las aplicaciones y el cuadro de diálogo durante la reunión. Las aplicaciones de reunión se hospedan en la barra de herramientas de la ventana de reunión como una pestaña durante la reunión. Usa el cuadro de diálogo durante la reunión para mostrar el contenido que pueden usar los participantes de la reunión. Para obtener más información, consulta [Crear aplicaciones para Teams reuniones](create-apps-for-teams-meetings.md).
 
-Para dispositivos móviles, las aplicaciones de reunión **están disponibles >** puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Selecciona **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
+Para dispositivos móviles, las aplicaciones de reunión están disponibles en **Aplicaciones** > puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Selecciona **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
 
 **Para usar pestañas durante una reunión**
 
@@ -85,7 +85,7 @@ Para dispositivos móviles, las aplicaciones de reunión **están disponibles >*
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
-Después de entrar en la reunión y agregar la aplicación desde el escritorio o la web, la aplicación está visible en la reunión de aplicaciones Teams móvil en la **sección** Aplicaciones. Selecciona **Aplicaciones** para mostrar la lista de aplicaciones. El usuario puede iniciar cualquiera de las aplicaciones como un panel del lado de la reunión de la aplicación.
+Después de entrar en la reunión y agregar la aplicación desde el escritorio o la web, la aplicación está visible en la reunión Teams móvil en la **sección** Aplicaciones. Selecciona **Aplicaciones** para mostrar la lista de aplicaciones. El usuario puede iniciar cualquiera de las aplicaciones como un panel del lado de la reunión de la aplicación.
 
 Se muestra el cuadro de diálogo en la reunión donde puede escribir la respuesta como comentarios.
 
@@ -97,7 +97,7 @@ Se muestra el cuadro de diálogo en la reunión donde puede escribir la respuest
 ---
 
 > [!NOTE]
-> * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso `meetingId`a , `userMri`y `frameContext` representar la experiencia correctamente.
+> * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso `meetingId`al , `userMri`y `frameContext` para representar la experiencia correctamente.
 > * Si el cuadro de diálogo en la reunión se representa correctamente, envía una notificación de que los resultados se descargan correctamente.
 > * El manifiesto de la aplicación especifica los lugares en los que quieres que aparezcan las aplicaciones. Para ello, especifique un campo de contexto en el manifiesto. También forma parte de una experiencia de fase de reunión de compartir, sujeto a las directrices de [diseño especificadas](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
 
@@ -105,7 +105,7 @@ En la siguiente imagen se muestra el panel lateral de la reunión:
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-![Panel lateral en la reunión](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![Panel lateral en la reunión](../assets/images/in-meeting-dialog.png)
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
@@ -178,13 +178,13 @@ En la siguiente lista se detallan los distintos tipos de usuario junto con su ac
 
 * **In-tenant**: los usuarios del espacio empresarial pertenecen a la organización y tienen credenciales en Microsoft Azure Active Directory (Azure AD) para el inquilino. Son empleados a tiempo completo, in situ o remotos. Un usuario en el espacio empresarial puede ser organizador, moderador o asistente.
 * **Invitado**: un invitado es un participante de otra organización invitado a tener acceso a Teams u otros recursos en el inquilino de la organización. Los invitados se agregan a la organización Azure AD y tienen las mismas Teams que un miembro nativo del equipo. Tienen acceso a chats de equipo, reuniones y archivos. Un invitado puede ser organizador, moderador o asistente. Para obtener más información, vea [acceso de invitado en Teams](/microsoftteams/guest-access).
-* **Federado o externo**: un usuario federado es un usuario Teams externo de otra organización al que se ha invitado a unirse a una reunión. Los usuarios federados tienen credenciales válidas con socios federados y están autorizados por Teams. No tienen acceso a los equipos ni a otros recursos compartidos de la organización. El acceso de invitado es una mejor opción para que los usuarios externos tengan acceso a equipos y canales. Para obtener más información, vea [manage external access in Teams](/microsoftteams/manage-external-access).
+* **Federado o externo**: un usuario federado es un usuario externo Teams en otra organización a la que se ha invitado a unirse a una reunión. Los usuarios federados tienen credenciales válidas con socios federados y están autorizados por Teams. No tienen acceso a los equipos ni a otros recursos compartidos de la organización. El acceso de invitado es una mejor opción para que los usuarios externos tengan acceso a equipos y canales. Para obtener más información, vea [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Los Teams pueden agregar aplicaciones cuando hospedan reuniones o chats con otras organizaciones. Los usuarios pueden usar aplicaciones compartidas por usuarios externos cuando los usuarios se unen a reuniones o chats hospedados por otras organizaciones. Las directivas de datos de la organización del usuario de hospedaje, así como las prácticas de uso compartido de datos de las aplicaciones de terceros compartidas por la organización de ese usuario, estarán en vigor.
 
     > [!IMPORTANT]
-    > Actualmente, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC) pero no están disponibles para GCC-High y departamento de defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros para GCC, consulta Administrar directivas de permisos [de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones](/microsoftteams/manage-apps).
+    > Actualmente, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC) pero no están disponibles para GCC-High y departamento de defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros para GCC, consulta [Administrar directivas de permisos de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones](/microsoftteams/manage-apps).
 
 * **Anónimo**: los usuarios anónimos no tienen una Azure AD identidad y no están federados con un inquilino. Los participantes anónimos son como usuarios externos, pero su identidad no se muestra en la reunión. Los usuarios anónimos no pueden acceder a las aplicaciones en una ventana de reunión. Un usuario anónimo no puede ser un organizador, pero puede ser moderador o asistente.
 

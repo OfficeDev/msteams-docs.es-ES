@@ -1,15 +1,15 @@
 ---
 title: Habilitar y configurar las aplicaciones para Teams reuniones
 author: surbhigupta
-description: Habilitar y configurar las aplicaciones para reuniones Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de la reunión, etc.
+description: Habilitar y configurar las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821594"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355803"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -104,7 +104,7 @@ En un chat de reunión, escriba la clave **@** y seleccione **Obtener bots**.
 
 ### <a name="during-a-meeting"></a>Durante una reunión
 
-Durante una reunión, puedes usar el `meetingSidePanel` cuadro de diálogo o en la reunión para crear experiencias únicas para tus aplicaciones.
+Durante una reunión, puedes usar la `meetingSidePanel` notificación o en la reunión para crear experiencias únicas para tus aplicaciones.
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
@@ -117,15 +117,13 @@ La extensión de mensajería funciona según lo esperado cuando un usuario está
 > [!NOTE]
 > Use la versión 1.7.0 o posterior de [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), ya que las versiones anteriores no admiten el panel lateral.
 
-#### <a name="in-meeting-dialog-box"></a>Cuadro de diálogo En la reunión
+#### <a name="in-meeting-notification"></a>Notificación en la reunión
 
-El cuadro de diálogo en la reunión se usa para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use la [API SendNotificationSignal](API-references.md#send-notification-signal-api) para desencadenar una notificación de burbuja. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
+La notificación en la reunión se usa para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use una [carga de notificación en la](API-references.md#send-an-in-meeting-notification) reunión para desencadenar una notificación en la reunión. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
 
-El cuadro de diálogo en la reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar la burbuja de contenido en una reunión. Puede usar el método para `submitTask` enviar datos en un chat de reunión.
+La notificación en reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar la notificación en la reunión. Puede usar el método para `submitTask` enviar datos en un chat de reunión.
 
-> [!NOTE]
-> * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
-> * Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Microsoft Azure Active Directory (Azure AD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="En el ejemplo se muestra cómo se puede usar un cuadro de diálogo en la reunión." border="true":::
 
 #### <a name="shared-meeting-stage"></a>Escena de reunión compartida
 
@@ -168,7 +166,7 @@ Los participantes pueden compartir partes específicas de la aplicación a la fa
 
 Para compartir partes específicas de la aplicación en fase, debes invocar las API relacionadas en la Teams SDK de cliente. Para obtener más información, vea [Referencia de API](API-references.md).
 
-Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el id. de usuario `from.aadObjectId` y es Azure AD id. del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Azure AD del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 

@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Vista previa del programador del esquema de manifiesto de teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: bf2bcb1d7c72dc1fbd02de6ecab9ec0848c604c4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518551"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356262"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Esquema de manifiesto de vista previa del desarrollador público para Microsoft Teams
 
 Para obtener información sobre cómo habilitar la vista previa del desarrollador, consulte [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Si no estás usando las características de vista previa de desarrollador Teams, incluida la ejecución de [pestañas](../../m365-apps/overview.md) personales y extensiones de mensajería en Outlook y Office, usa el manifiesto de la aplicación para las características de [GA](~/resources/schema/manifest-schema.md) en su lugar.
+> Si no estás usando características de vista previa de desarrollador Teams, como la ejecución de [pestañas](../../m365-apps/overview.md) personales y extensiones de mensajería en Outlook y Office, usa el manifiesto de la aplicación para las características de [GA](~/resources/schema/manifest-schema.md) en su lugar.
 
 El Microsoft Teams describe cómo se integra la aplicación en la Microsoft Teams plataforma. El manifiesto debe ajustarse al esquema alojado en [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -284,7 +284,7 @@ Dirección `https://` URL que hace referencia al esquema JSON para el manifiesto
 
 **Obligatorio** &ndash; String
 
-La versión del esquema de manifiesto que usa este manifiesto. Solo `m365DevPreview` se usa si estás previsualizando Teams [aplicaciones que se ejecutan en Office y Outlook](../../m365-apps/overview.md). De lo contrario, úselo `devPreview` para el resto Teams características de vista previa.
+La versión del esquema de manifiesto que usa este manifiesto. Solo `m365DevPreview` se usa si estás previsualizando Teams [aplicaciones que se ejecutan en Office y Outlook](../../m365-apps/overview.md). De lo contrario, úsese `devPreview` para todas las demás Teams de vista previa.
 
 ## <a name="version"></a>version
 
@@ -394,7 +394,7 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
+|`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
 |`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña tras su creación. Valor predeterminado: `true`|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingDetailsTab``meetingChatTab`, `meetingSidePanel`y `meetingStage`.|
@@ -415,10 +415,10 @@ El objeto es una matriz (máximo de 16 elementos) con todos los elementos del ti
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`entityId`|String|64 caracteres|✔|Un identificador único de la entidad que la pestaña muestra.|
-|`name`|String|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz del canal.|
-|`contentUrl`|String|2048 caracteres|✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
+|`name`|Cadena|128 caracteres|✔|El nombre para mostrar de la pestaña en la interfaz del canal.|
+|`contentUrl`|Cadena|2048 caracteres|✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`contentBotId`|   | | | El Microsoft Teams de aplicación especificado para el bot en el portal de Bot Framework. |
-|`websiteUrl`|Cadena|2048 caracteres||La https:// dirección URL para apuntar si un usuario opta por ver en un explorador.|
+|`websiteUrl`|Cadena|2048 caracteres||La dirección URL https:// para apuntar si un usuario opta por ver en un explorador.|
 |`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 
 ## <a name="bots"></a>bots
@@ -456,7 +456,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
+|`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
 |`scopes`|Matriz de enumeración|1|✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia específica para un solo usuario (`personal`). Actualmente, solo se admite el ámbito `team`.|
 
@@ -473,7 +473,7 @@ El objeto es una matriz (máximo de 1 elemento) con todos los elementos de tipo 
 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
-|`botId`|String|64|✔|El identificador único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. Esto puede ser lo mismo que el identificador general [de la aplicación](#id).|
+|`botId`|Cadena|64|✔|El identificador único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. Esto puede ser lo mismo que el identificador general [de la aplicación](#id).|
 |`canUpdateConfiguration`|Booleano|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
 |`commands`|Matriz de objeto|10|✔|Matriz de comandos que admite la extensión de mensajería|
 
@@ -487,24 +487,24 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |---|---|---|---|---|
 |`id`|String|64 caracteres|✔|Id. para el comando.|
 |`type`|String|64 caracteres||Tipo de comando. Uno de `query` o `action`. Valor predeterminado: `query`|
-|`title`|String|32 caracteres|✔|Nombre del comando fácil de usar.|
-|`description`|String|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
-|`initialRun`|Boolean|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
+|`title`|Cadena|32 caracteres|✔|Nombre del comando fácil de usar.|
+|`description`|Cadena|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
+|`initialRun`|Booleano|||Valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Valor predeterminado: `false`|
 |`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensajería. Cualquier combinación de `compose`, `commandBox`, `message`. El valor predeterminado es `["compose", "commandBox"]`|
-|`fetchTask`|Booleano|||Valor booleano que indica si debe capturar el módulo de tareas dinámicamente.|
+|`fetchTask`|Booleano|||Valor booleano que indica si se debe capturar dinámicamente el módulo de tareas.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.height`|String|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
-|`taskInfo.url`|String|||Dirección URL de la vista web inicial.|
+|`taskInfo.height`|Cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
+|`taskInfo.url`|Cadena|||Dirección URL de la vista web inicial.|
 |`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones. Los dominios también deben aparecer en `validDomains`.|
 |`messageHandlers.type`|Cadena|||Tipo de controlador de mensajes. Debe ser `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 |`parameters`|Matriz de objeto|5|✔|Lista de parámetros que toma el comando. Mínimo: 1; máximo: 5|
 |`parameter.name`|String|64 caracteres|✔|Nombre del parámetro tal como aparece en el cliente. Esto se incluye en la solicitud de usuario.|
-|`parameter.title`|String|32 caracteres|✔|Título fácil de usar para el parámetro.|
-|`parameter.description`|String|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
-|`parameter.inputType`|String|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true`. Uno de `text`, `textarea`, `number`, `date`, `time`, , `choiceset``toggle`.|
+|`parameter.title`|Cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
+|`parameter.description`|Cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
+|`parameter.inputType`|Cadena|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true`. Uno de `text`, `textarea`, `number`, `date`, `time`, , `choiceset``toggle`.|
 |`parameter.choices`|Matriz de objetos|10||Las opciones de elección para `choiceset`el archivo . Use solo cuando `parameter.inputType` es `choiceset`.|
 |`parameter.choices.title`|Cadena|128||Título de la elección.|
 |`parameter.choices.value`|Cadena|512||Valor de la elección.|
@@ -553,8 +553,8 @@ Especifica tu Microsoft Azure Active Directory de aplicación (Azure AD) e infor
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`id`|Cadena|36 caracteres|✔|Microsoft Azure Active Directory (Azure AD) de aplicación de la aplicación. Este identificador debe ser un GUID.|
-|`resource`|String|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO.|
+|`id`|Cadena|36 caracteres|✔|Id. de aplicación de la aplicación de Microsoft Azure Active Directory (Azure AD). Este identificador debe ser un GUID.|
+|`resource`|Cadena|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO.|
 |`applicationPermissions`|Matriz|Máximo de 100 elementos|✔|Permisos de recursos para la aplicación.|
 
 ## <a name="configurableproperties"></a>configurableProperties

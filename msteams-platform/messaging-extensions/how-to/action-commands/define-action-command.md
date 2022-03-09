@@ -5,12 +5,12 @@ description: Introducción a los comandos de acción de extensión de mensajerí
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1c533dacca3b50fb96311ad95a9828e9978ba5f9
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281913"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355891"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -54,7 +54,7 @@ La siguiente imagen muestra las ubicaciones desde las que se invoca el comando a
 
 Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representa dentro del módulo de tareas:   
 
-* **Lista estática de parámetros**: este es el método más sencillo. Puedes definir una lista de parámetros en el manifiesto de la aplicación que Teams cliente, pero no puedes controlar el formato en este caso.
+* **Lista estática de parámetros**: este es el método más sencillo. Puedes definir una lista de parámetros en el manifiesto de la aplicación que representa Teams cliente, pero no puedes controlar el formato en este caso.
 * **Tarjeta adaptable**: puedes seleccionar usar una tarjeta adaptable, que proporciona un mayor control sobre la interfaz de usuario, pero aún te limita a los controles y opciones de formato disponibles.
 * **Vista web incrustada**: puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles. 
 
@@ -137,7 +137,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 Para agregar manualmente el comando de extensión de mensajería basada en acciones al manifiesto de la aplicación, debe agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna a este comando. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
@@ -147,7 +147,7 @@ Para agregar manualmente el comando de extensión de mensajería basada en accio
 
 Si usa una lista estática de parámetros, también debe agregar los siguientes parámetros:
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Solo se usa cuando `fetchTask` es `false`. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -157,7 +157,7 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 
 Si usa una vista web incrustada, `taskInfo` opcionalmente puede agregar el objeto para capturar la vista web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al de usar una lista estática de parámetros. En que la primera interacción con el bot responde [a la acción de envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un objeto `taskInfo` , debe establecer el `fetchTask` parámetro en `false`.
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 |`taskInfo`|Especifique el módulo de tareas que se debe precargar al usar un comando de extensión de mensajería. | No | 1.4 |
 |`taskInfo.title`|Título del módulo de tareas inicial. |No | 1.4 |
@@ -221,7 +221,12 @@ La siguiente sección es un ejemplo de un objeto `composeExtensions` que define 
 
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams extensión de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso para](../../../sbs-meetingextension-action.yml) crear una Teams de mensajería basada en acciones.
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -234,3 +239,4 @@ Si usa los parámetros o una vista web incrustada con un `taskInfo` objeto, el s
 
 > [!div class="nextstepaction"]
 > [Responder al envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

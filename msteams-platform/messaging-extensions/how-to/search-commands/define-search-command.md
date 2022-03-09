@@ -5,12 +5,12 @@ description: Obtenga información sobre los comandos de búsqueda de extensión 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 9ff1d6c51320db07e0363dff9f72bd513acc6199
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281752"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356360"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
@@ -74,7 +74,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 
 Para agregar manualmente el comando de búsqueda de extensión de mensajería al manifiesto de la aplicación, debes agregar los siguientes parámetros a la `composeExtension.commands` matriz de objetos:
 
-| Nombre de la propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
@@ -83,9 +83,9 @@ Para agregar manualmente el comando de búsqueda de extensión de mensajería al
 |`initialRun` | Si esta propiedad se establece en **true**, indica que este comando debe ejecutarse en cuanto el usuario seleccione este comando en la interfaz de usuario. | No | 1.0 |
 | `context` | Esta propiedad es una matriz opcional de valores que define el contexto en el que está disponible la acción de búsqueda. Los valores posibles son`message`, `compose` o `commandBox`. El valor predeterminado es `["compose", "commandBox"]`. | No | 1,5 |
 
-Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el Teams cliente.
+Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el Teams búsqueda.
 
-| Nombre de la propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud de usuario. | Sí | 1.0 |
@@ -128,6 +128,10 @@ Para obtener el manifiesto completo de la aplicación, consulta [Esquema de mani
 | Nombre de ejemplo           | Descripción | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Teams de extensión de mensajería   |  Describe cómo definir comandos de búsqueda y responder a las búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso para](../../../sbs-messagingextension-searchcommand.yml) crear una extensión de mensajería basada en búsquedas.
 
 ## <a name="next-step"></a>Paso siguiente
 

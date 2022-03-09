@@ -1,13 +1,13 @@
 ---
 title: Configurar el entorno de desarrollo para ampliar Teams aplicaciones en Microsoft 365
-description: Estos son los requisitos previos para extender las aplicaciones Teams en Microsoft 365
-ms.date: 11/15/2021
-ms.openlocfilehash: 3fe9d9ea02ff1e7f607d8870ca6817b48556c81f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+description: Estos son los requisitos previos para extender las aplicaciones Teams aplicaciones en Microsoft 365
+ms.date: 02/11/2022
+ms.openlocfilehash: eec44e149e81b420c507b0580896d2c5a4a99cc2
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435666"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356003"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar el entorno de desarrollo para ampliar Teams aplicaciones en Microsoft 365
 
@@ -20,10 +20,10 @@ Para configurar el entorno de desarrollo:
 
 > [!div class="checklist"]
 > * [Obtener Microsoft 365 inquilino del desarrollador (espacio aislado) y habilitar la instalación local](#prepare-a-developer-tenant-for-testing)
-> * [Inscribir el inquilino Microsoft 365 en *Office 365 de destino*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [Inscriba Microsoft 365 inquilino en *Office 365 versiones dirigidas*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configurar la cuenta para obtener acceso a las versiones preliminares de Outlook y Office](#install-office-apps-in-your-test-environment)
-> * [Cambie a la versión de vista previa del desarrollador de Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Opcional*] [Instalar Teams Toolkit para el Microsoft Visual Studio código](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [Cambie a la versión de developer preview de Teams](#switch-to-the-developer-preview-version-of-teams)
+> * [*Opcional*] [Instalar Teams Toolkit para Microsoft Visual Studio código](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>Preparar un inquilino para desarrolladores para pruebas
 
@@ -36,11 +36,11 @@ Después de tener un inquilino, debe habilitar la instalación local para el inq
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Inscribir el inquilino del desarrollador para Office 365 versiones dirigidas
 
 > [!IMPORTANT]
-> Consulta las actualizaciones más recientes de [Microsoft Teams:](https://devblogs.microsoft.com/microsoft365dev/) blog para desarrolladores de Microsoft 365 para comprobar si Outlook.com y Office.com admiten aplicaciones Teams están disponibles para el inquilino de prueba.
+> Consulta las actualizaciones más recientes de [Microsoft Teams:](https://devblogs.microsoft.com/microsoft365dev/) blog para desarrolladores de Microsoft 365 para comprobar si Outlook.com y Office.com admiten aplicaciones de Teams están disponibles para el inquilino de prueba.
 
 Para inscribir el inquilino de prueba Office 365 versiones dirigidas:
 
-1. Inicie sesión en [Centro de administración de Microsoft 365](https://admin.microsoft.com) con las credenciales de inquilino de prueba.
+1. Inicie sesión en [Centro de administración de Microsoft 365](https://admin.microsoft.com) con las credenciales del inquilino de prueba.
 1. Vaya a **Configuración** >  **Org Configuración** >  **Organization profile**.
 1. Seleccione **Preferencias de versión**.
 1. Seleccione cualquier *preferencia de versión dirigida* :
@@ -51,19 +51,19 @@ Para inscribir el inquilino de prueba Office 365 versiones dirigidas:
     
 1. Seleccione **Guardar**.
 
-Para obtener más información Office 365 de lanzamiento, consulte [Configurar](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) las opciones de versión estándar o dirigida *en Centro de administración de Microsoft 365 ayuda*.
+Para obtener más información sobre Office 365 de lanzamiento, consulte Configurar las opciones [de](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) versión estándar o dirigida *en Centro de administración de Microsoft 365 ayuda*.
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Instalar Office aplicaciones en el entorno de prueba
 
 > [!IMPORTANT]
-> Consulte las actualizaciones más recientes de [Microsoft Teams:](https://devblogs.microsoft.com/microsoft365dev/) blog para desarrolladores de Microsoft 365 para comprobar si Outlook la compatibilidad de escritorio Windows para extensiones de mensajería de Teams está disponible para el inquilino de prueba.
+> Consulte las actualizaciones más recientes de [Microsoft Teams:](https://devblogs.microsoft.com/microsoft365dev/) blog para desarrolladores de Microsoft 365 para comprobar si Outlook la compatibilidad de escritorio Windows para las extensiones de mensajería de Teams está disponible para el inquilino de prueba.
 
-Puedes obtener una vista previa Teams aplicaciones que se Outlook en Windows escritorio mediante una compilación reciente del *Canal Beta*. Compruebe si tiene que cambiar el [canal de actualización Aplicaciones Microsoft 365](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) para que el inquilino de prueba instale una Office 365 de canal beta.
+Puedes obtener una vista previa Teams aplicaciones que se ejecutan en Outlook en Windows escritorio mediante una compilación *reciente del Canal Beta*. Compruebe si tiene que cambiar el [canal de actualización Aplicaciones Microsoft 365](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) para que el inquilino de prueba instale una Office 365 de canal beta.
 
 Para instalar Office 365 de canal beta en el entorno de prueba:
 
 1. Inicie sesión en el entorno de prueba con las credenciales del inquilino de prueba.
-1. Descargue la [herramienta Office implementación y](https://www.microsoft.com/download/details.aspx?id=49117) extraiga en una carpeta local.
+1. Descargue la [Office de implementación y](https://www.microsoft.com/download/details.aspx?id=49117) extraiga en una carpeta local.
 1. Vaya a la carpeta local y abra *configuration-Office365-x86.xml* (o **x64.xml*, según su entorno) en un editor de texto y actualice el valor *channel* a `BetaChannel`.
 1. Abra el símbolo del sistema y vaya a la ruta de acceso de carpeta local.
 1. Ejecute `setup.exe /configure configuration-Office365-x86.xml` (o use el archivo **x64.xml* , según la configuración).
@@ -72,37 +72,39 @@ Para instalar Office 365 de canal beta en el entorno de prueba:
    Si el número de compilación es **14416** o superior y el canal es *Canal beta*, estás ejecutando Microsoft 365 de canal beta.
 1. En la esquina superior derecha, activa el botón **de alternancia Próximamente** .
     
-    :::image type="content" source="images/outlook-coming-soon.png" alt-text="Más aplicaciones":::
+    :::image type="content" source="images/outlook-coming-soon.png" alt-text="Opción de alternancia &quot;Próximamente&quot; en Outlook":::
 
 > [!NOTE]
-> Es posible que deba cerrar Outlook y reiniciar el equipo para que aparezca el *botón* Próximamente.
+> Es posible que deba cerrar Outlook y reiniciar el equipo para que aparezca *el botón Próximamente*.
 
 Puede comprobar la compatibilidad de inquilinos de prueba para su cuenta de inquilino:
 
-* Para Teams pestañas personales que se ejecutan en office.com, outlook.com y Outlook Windows para un escritorio, inicie sesión con las credenciales de inquilino de prueba y compruebe si hay puntos suspensivos (**...**) en el panel inferior izquierdo.
+* Para Teams pestañas personales que se ejecutan en office.com, outlook.com y Outlook Windows para un escritorio, inicie sesión con las credenciales del inquilino de prueba y compruebe si hay puntos suspensivos (**...**) en la barra lateral izquierda de Office o Outlook.
 
-    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Puntos suspensivos" lightbox="images/outlook-desktop-ellipses.png":::
+    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Opción Elipses ('...') en la barra lateral izquierda de Outlook":::
 
-* Para extensiones de mensajería en outlook.com y Outlook para Windows, busca la opción Más aplicaciones en la cinta  Outlook de mensajes de redacción.
+* Para extensiones de mensajería en outlook.com y Outlook para Windows, busca la opción Más aplicaciones en la parte inferior del  Outlook de mensajes de redacción.
+
+    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Opción &quot;Más aplicaciones&quot; en el panel de Outlook de mensajes de redacción":::
 
 > [!NOTE]
 > Si has optado por las versiones del Canal Beta pero no ves estas opciones de puntos suspensivos, es probable que la compatibilidad con las características de vista previa esté en proceso de implementarse en el espacio empresarial. Para obtener las actualizaciones más recientes, [consulta Microsoft Teams blog para desarrolladores](https://devblogs.microsoft.com/microsoft365dev/).
 
-## <a name="switch-to-the-developer-preview-version-of-teams"></a>Cambie a la versión de vista previa del desarrollador de Teams
+## <a name="switch-to-the-developer-preview-version-of-teams"></a>Cambie a la versión de developer preview de Teams
 
-Asegúrese de cambiar a Public [Developer Preview](../resources/dev-preview/developer-preview-intro.md) desde el Microsoft Teams cliente.
+Asegúrese de cambiar a public [developer preview](../resources/dev-preview/developer-preview-intro.md) desde el Microsoft Teams cliente.
 
 1. Inicie sesión en Teams con las credenciales de espacio aislado del espacio aislado.
 1. En el menú de puntos suspensivos (**...**) junto al perfil de usuario, seleccione Vista previa **de AboutDeveloper** > . Aparece un cuadro de diálogo, **seleccione Cambiar a vista previa del desarrollador**.
 1. Después de Teams la aplicación, ve al menú de puntos suspensivos (**...**) junto al perfil de usuario y comprueba si **está** seleccionada la vista previa del desarrollador.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Versión preliminar pública para desarrolladores" lightbox="images/teams-dev-preview.png":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Opción de vista previa del desarrollador público en Teams":::
 
-## <a name="install-visual-studio-code-and-teams-toolkit-preview-extension"></a>Instalar Visual Studio Code y Teams Toolkit vista previa
+## <a name="install-visual-studio-code-and-teams-toolkit-preview-extension"></a>Instalar Visual Studio Code y Teams Toolkit de vista previa
 
 Opcionalmente, puedes [usar Visual Studio Code para](https://code.visualstudio.com/) extender Teams aplicaciones en Office y Outlook.
 
-La extensión [Teams Toolkit para Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` o posterior) proporciona comandos que pueden ayudar a modificar el código Teams existente para que sea compatible con Outlook y Office. Para obtener más información, vea [habilitar Teams pestaña personal para Office y Outlook](extend-m365-teams-personal-tab.md).
+La extensión [Teams Toolkit para Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` o posterior) proporciona comandos que pueden ayudar a modificar el código de Teams existente para que sea compatible con Outlook y Office. Para obtener más información, vea [habilitar Teams pestaña personal para Office y Outlook](extend-m365-teams-personal-tab.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

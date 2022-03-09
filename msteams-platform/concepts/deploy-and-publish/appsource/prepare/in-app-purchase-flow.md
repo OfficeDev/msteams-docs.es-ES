@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518243"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356474"
 ---
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
@@ -84,28 +84,27 @@ A continuación se muestra un ejemplo de cómo llamar a la API desde la aplicaci
 
 ## <a name="end-user-in-app-purchasing-experience"></a>Experiencia de compra desde la aplicación del usuario final
 
-En el ejemplo siguiente se muestra a los usuarios comprar planes de suscripción para una aplicación ficticia Teams llamada *Contoso Tasks for Teams*:
+En el ejemplo siguiente se muestra a los usuarios comprar planes de suscripción para una aplicación ficticia Teams llamada *Tareas de Contoso para Teams*:
 
 1. En la Teams **,** busca y selecciona la aplicación.
 
-1. En el cuadro de diálogo detalles de la aplicación, selecciona **Comprar una suscripción** o **Agregar para mí**. 
+1. En el cuadro de diálogo detalles de la aplicación, selecciona **Comprar una suscripción** o **Agregar para mí**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Comprar la suscripción para la aplicación seleccionada." border="true":::
 
-    
 1. **Agregar para mí ofrece** una versión de prueba gratuita de la aplicación y, posteriormente **, actualizarla** a una versión de pago.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Actualizar a la suscripción de la aplicación seleccionada." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Actualizar a la suscripción de la aplicación seleccionada." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
 1. En el **cuadro de diálogo Elegir un plan de** suscripción, elija el plan y seleccione **Desprotección**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Seleccionar el plan de suscripción adecuado." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Seleccionar el plan de suscripción adecuado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
 1. Complete la transacción y **seleccione Configurar ahora** para configurar la suscripción.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurar la suscripción." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurar la suscripción." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de aterrizaje de la suscripción." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de aterrizaje de la suscripción." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
 
 ## <a name="next-step"></a>Paso siguiente
 

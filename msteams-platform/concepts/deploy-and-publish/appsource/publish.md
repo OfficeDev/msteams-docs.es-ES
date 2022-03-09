@@ -1,16 +1,16 @@
 ---
-title: Introducción al proceso de publicación en la tienda de aplicaciones de Teams
+title: 'Información general: Publique su aplicación en la tienda de Microsoft Teams'
 description: Describe el proceso para enviar una aplicación al Centro de partners y publicarla en la tienda de Microsoft Teams (y en AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 777892c0e1437b3e8022cf2929b160e3602fe035
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898069"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355751"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publique su aplicación en la tienda de Microsoft Teams
 
@@ -57,27 +57,33 @@ Cuando sienta que su aplicación está lista para producirse, podrá comenzar el
 
   Si no hay ningún problema observado con la aplicación, se aprobará y se publicará en la tienda de Teams. Si hay problemas, recibirá un informe de validación automatizado por parte del Centro de partners con los detalles del error. Para ayudarle a publicar correctamente la aplicación en la tienda de Teams y guiarle en el proceso, el equipo de validación le enviará un correo electrónico personalizado desde nuestro servicio de soporte técnico [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) con la siguiente información:
 
-   * Resumen de todos los problemas
+  * Resumen de todos los problemas
 
-   * Detalles de los errores o problemas con los vínculos de la directiva y categorización: 
+  * Detalles de los errores o problemas con los vínculos de la directiva y categorización: 
 
-     * Corrección obligatoria: Estos problemas deben corregirse antes de la aprobación de la aplicación.
+    * Corrección obligatoria: Estos problemas deben corregirse antes de la aprobación de la aplicación.
 
-     * Corrección sugerida: Estos problemas se pueden corregir después de la aprobación de la aplicación, ya que son recomendaciones para mejorar la experiencia de la aplicación.
+    * Corrección sugerida: Estos problemas se pueden corregir después de la aprobación de la aplicación, ya que son recomendaciones para mejorar la experiencia de la aplicación.
 
-     * Bloqueador: Estos problemas impiden que el equipo de validación pueda probar aún mejor la funcionalidad de la aplicación y deben resolverse para que la validación continúe.
+    * Bloqueador: Estos problemas impiden que el equipo de validación pueda probar aún mejor la funcionalidad de la aplicación y deben resolverse para que la validación continúe.
 
-     * Consulta: Estas consultas se pueden compartir para obtener respuestas a preguntas específicas relacionadas con la aplicación.
+    * Consulta: Estas consultas se pueden compartir para obtener respuestas a preguntas específicas relacionadas con la aplicación.
 
-   * Pasos para recrear problemas mediante instrucciones escritas o en formato de vídeo.
+  * Pasos para recrear problemas mediante instrucciones escritas o en formato de vídeo.
 
-   * Recomendaciones para corregir los problemas notificados con vínculos a los documentos guía.
- 
+  * Recomendaciones para corregir los problemas notificados con vínculos a los documentos guía.
+
   Después de revisar la lista de problemas, corrija los problemas notificados y comparta el paquete de aplicación actualizado por correo electrónico para que el equipo de validación vuelva a validar la aplicación exhaustivamente. Si tiene alguna consulta relacionada con los problemas notificados, póngase en contacto con el equipo de validación a través de [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
   Si continúa habiendo problemas o se observan problemas de regresión en la aplicación, el equipo de validación compartirá con usted un informe de validación actualizado. Si la aplicación tuvo bloqueadores, es posible que se notifiquen nuevos problemas cuando se valide la aplicación después de que se resuelvan los bloqueadores. A veces, el equipo de validación también observa problemas de regresión en las aplicaciones después de implementadas las correcciones. Se necesita reenviar la aplicación varias veces más para cerrar todos los problemas relacionados con los errores y conseguir que se apruebe su publicación en la tienda de Teams.
 
   Una vez que se cierren todos los problemas notificados y se realice el envío final en el Centro de partners, el equipo de validación aprobará y publicará la aplicación. Permita que transcurra al menos un día laborable para que la aplicación esté disponible en la tienda de Teams.
+
+* **Analizar el uso de la aplicación**
+
+  Después de aprobar y publicar la aplicación, puedes realizar un seguimiento del uso de la aplicación en el [Informe de uso de aplicaciones de Teams](/office/dev/store/teams-apps-usage) en el Centro de asociados. Las métricas incluyen usuarios activos mensuales, diarios y semanales, y gráficos de retención e intensidad que permiten realizar un seguimiento del abandono y la frecuencia de uso.
+
+  Los datos de las aplicaciones recién publicadas tardan alrededor de una semana en aparecer en el informe.
 
 ## <a name="tips-for-rapid-approval-to-publish-your-app"></a>Sugerencias para una aprobación rápida que faciliten la publicación
 
@@ -96,7 +102,7 @@ Cuando sienta que su aplicación está lista para producirse, podrá comenzar el
      1. Valide el paquete de la aplicación a través del [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/home) para identificar y corregir los errores del paquete.
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Validación de aplicaciones de la tienda de Teams en el Portal para desarrolladores" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
- 
+
      1. Pruebe exhaustivamente la aplicación por su cuenta antes de enviarla para asegurarse de que cumpla con las directivas de la tienda. Transfiera localmente la aplicación en Teams y pruebe los flujos de usuario de un extremo a otro de la aplicación. Asegúrese de que la funcionalidad funcione según lo previsto, de que los vínculos funcionen, de que la experiencia del usuario no esté bloqueada y de que se resalten claramente las limitaciones.
 
      1. Pruebe la aplicación en clientes de escritorio, web y móviles. Asegúrese de que la aplicación responda en los diferentes factores de formulario.
@@ -133,3 +139,4 @@ Cuando sienta que su aplicación está lista para producirse, podrá comenzar el
 * [Planificar la experiencia de incorporación para los usuarios](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distribuir las aplicaciones de pestaña para dispositivos móviles](../../../tabs/design/tabs-mobile.md#distribution)
 * [Versión preliminar de prueba para aplicaciones monetizadas](prepare/Test-preview-for-monetized-apps.md)
+* [Parámetros de clasificación de la tienda de Microsoft Teams](post-publish/teams-store-ranking-parameters.md)

@@ -5,18 +5,21 @@ keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212541"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355716"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams
 
 Portal <a href="https://dev.teams.microsoft.com" target="_blank">para desarrolladores para Teams</a> es la herramienta principal para configurar, distribuir y administrar las aplicaciones Microsoft Teams aplicaciones. Con el Portal de desarrolladores, puedes colaborar con compañeros de la aplicación, configurar entornos en tiempo de ejecución y mucho más.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del Portal de desarrolladores para Teams.":::
+
+> [!NOTE] 
+> Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 
@@ -26,7 +29,7 @@ El Portal de desarrolladores proporciona un par de formas de registrar una Teams
 * Importar un paquete de aplicación existente
 
 > [!NOTE]
-> Si creas una aplicación con el [Microsoft Teams Toolkit para Visual Studio Code,](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)puedes administrarla en el Portal de desarrolladores.
+> Si creas una aplicación con el [Microsoft Teams Toolkit para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), puedes administrar esa aplicación en el Portal de desarrolladores.
 
 ## <a name="set-up-an-environment"></a>Configurar un entorno
 
@@ -47,7 +50,7 @@ Usa los nombres de las variables en lugar de los valores codificados de forma au
 
 ## <a name="identify-app-owners"></a>Identificar propietarios de aplicaciones
 
-Cada aplicación incluye una **página Propietarios,** donde puedes compartir el registro de la aplicación con compañeros de la organización. El **rol Colaborador** tiene los mismos permisos que el rol **Propietario,** excepto la capacidad de eliminar una aplicación.
+Cada aplicación incluye una **página Propietarios** , donde puedes compartir el registro de la aplicación con compañeros de la organización. El **rol Colaborador** tiene los mismos permisos que el rol **Propietario** , excepto la capacidad de eliminar una aplicación.
 
 ## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Configurar las capacidades de la aplicación y otros metadatos importantes
 
@@ -64,7 +67,7 @@ El Portal de desarrolladores proporciona opciones para probar y depurar la aplic
 
 ## <a name="distribute-your-app"></a>Distribuir la aplicación
 
-En el Portal de  desarrolladores, usa el botón Distribuir para descargar un paquete de aplicación, publicar en tu organización o publicar en la Teams aplicación.
+En el Portal de desarrolladores,  usa el botón Distribuir para descargar un paquete de aplicación, publicarlo en tu organización o publicarlo en la Teams aplicación.
 
 Para obtener más información, [consulta distribuir la Teams aplicación](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
@@ -83,8 +86,8 @@ El uso mensual y diario se muestra durante los últimos siete, 30 días y 60 dí
 
 El Portal de desarrolladores también incluye herramientas que le ayudarán a crear algunas características clave de Teams aplicaciones. Algunas de estas herramientas incluyen:
 
-* **Scene studio:** [diseñe escenas personalizadas](~/apps-in-teams-meetings/teams-together-mode.md) del Modo conjunto para Teams reuniones.
-* **Editor de tarjetas adaptables:** crea y previsualiza tarjetas adaptables para incluir con tus aplicaciones.
+* **Scene studio**: [diseñe escenas personalizadas del Modo conjunto](~/apps-in-teams-meetings/teams-together-mode.md) para Teams reuniones.
+* **Editor de tarjetas adaptables**: crea y previsualiza tarjetas adaptables para incluir con tus aplicaciones.
 * **Plataforma de identidad de Microsoft:** registre sus aplicaciones con Azure Active Directory para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
 
 ## <a name="see-also"></a>Vea también

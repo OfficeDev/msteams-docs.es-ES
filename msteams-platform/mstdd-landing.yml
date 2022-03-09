@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Microsoft Teams de desarrolladores
+title: Microsoft Teams documentación para desarrolladores
 summary: Le damos la bienvenida a información general Microsoft Teams documentación para desarrolladores. Las aplicaciones de Microsoft Teams aportan información importante, herramientas comunes y procesos de confianza con los que las personas se reúnen, aprenden y trabajan cada vez más.
 metadata:
-  title: Microsoft Teams de desarrolladores
+  title: Microsoft Teams documentación para desarrolladores
   description: Introducción a la creación de aplicaciones para Teams
   ms.service: service
   ms.subservice: subservice
@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 80cb52581677215ed199aba964ca626f46fdc915
-  ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+  ms.openlocfilehash: e9094868f72fa96df8d0301932b7032192eb2652
+  ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/18/2022
-  ms.locfileid: "62898022"
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63356115"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
   - linkListType: concept
     links:
+    - text: Menú desbordamiento de tarjetas adaptables
+      url: ~/task-modules-and-cards/cards/cards-format.md
     - text: Glosario
       url: ~/get-started/glossary.md
     - text: Información general
@@ -39,10 +41,8 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - text: Comentarios sobre la finalización de formularios de Tarjetas adaptables
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: Selector de usuarios en Tarjetas adaptables
-      url: ~/task-modules-and-cards/cards/people-picker.md
-    - text: Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office (versión preliminar)
-      url: ~/m365-apps/overview.md
+    - text: Autenticación con proveedores de OAuth externos
+      url: ~/tabs/how-to/authentication/auth-oauth-provider.md
 - title: Favoritos de todos los tiempos
   linkLists:
   - linkListType: concept
@@ -135,8 +135,16 @@ landingContent:
       url: ~/sbs-meeting-content-bubble.yml
   - linkListType: tutorial
     links:
-    - text: Upload archivos para Teams desde un bot
+    - text: Upload archivos a Teams desde un bot
       url: ~/sbs-file-handling-in-bot.yml
+    - text: Invocar módulos de tareas desde Microsoft Teams
+      url: ~/sbs-botbuilder-taskmodule.yml
+    - text: Crear extensión de mensajería basada en búsquedas
+      url: ~/sbs-messagingextension-searchcommand.yml
+    - text: Extensión de mensajería basada en acciones de compilación
+      url: ~/sbs-meetingextension-action.yml
+    - text: Crear webhooks salientes
+      url: ~/sbs-outgoing-webhooks.yml
 - title: Teams escenarios de aplicaciones
   linkLists:
   - linkListType: reference

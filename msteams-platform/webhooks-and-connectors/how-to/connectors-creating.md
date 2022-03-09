@@ -6,16 +6,16 @@ keywords: conector de Office365 de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801386"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356101"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
-Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 existente o crear uno nuevo dentro de Teams. Para obtener más información, [consulte build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+Con Microsoft Teams aplicaciones, puedes agregar el conector de Office 365 existente o crear uno nuevo en Teams. Para obtener más información, [consulte build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 ## <a name="add-a-connector-to-teams-app"></a>Agregar un conector a Teams aplicación
 
@@ -26,11 +26,11 @@ Para distribuir el conector, regístrelo en el [Panel de desarrolladores de cone
 Para que un conector funcione solo en Microsoft Teams, siga las instrucciones para enviar el conector en publicar la aplicación en el [Microsoft Teams tienda](~/concepts/deploy-and-publish/appsource/publish.md). De lo contrario, un conector registrado funciona en todos los Office 365 que admiten aplicaciones, incluidos Outlook y Teams.
 
 > [!IMPORTANT]
-> El conector se registra después de seleccionar **Guardar** en el Panel de desarrolladores de conectores. Si quieres publicar el conector en AppSource, sigue las instrucciones de publicar la [aplicación Microsoft Teams app en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no quieres publicar la aplicación en AppSource, distribuyela directamente a la organización. Después [de publicar conectores para la organización](#publish-connectors-for-the-organization), no se requiere ninguna acción adicional en el Panel de conectores.
+> El conector se registra después de seleccionar **Guardar** en el Panel de desarrolladores de conectores. Si quieres publicar el conector en AppSource, sigue las instrucciones de publicar la [aplicación Microsoft Teams en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no quieres publicar la aplicación en AppSource, distribuyela directamente a la organización. Después [de publicar conectores para la organización](#publish-connectors-for-the-organization), no se requiere ninguna acción adicional en el Panel de conectores.
 
 ### <a name="integrate-the-configuration-experience"></a>Integrar la experiencia de configuración
 
-Los usuarios pueden completar toda la experiencia de configuración del conector sin tener que salir del Teams cliente. Para obtener la experiencia, Teams puede insertar la página de configuración directamente dentro de un iframe. La secuencia de operaciones es la siguiente:
+Los usuarios pueden completar toda la experiencia de configuración del conector sin tener que abandonar el Teams cliente. Para obtener la experiencia, Teams puede insertar la página de configuración directamente dentro de un iframe. La secuencia de operaciones es la siguiente:
 
 1. El usuario selecciona el conector para iniciar el proceso de configuración.
 1. El usuario interactúa con la experiencia web para completar la configuración.
@@ -136,8 +136,8 @@ En la tabla siguiente se proporcionan los parámetros y los detalles de las prop
 | `configName`  | El nombre de configuración, establecido por el código al llamar a `setSettings()`. |
 | `contentUrl` | La dirección URL de la página de configuración, establecida por el código al llamar a `setSettings()`. |
 | `webhookUrl` | La dirección URL de webhook creada para el conector. Use la dirección URL de webhook para POST JSON estructurado para enviar tarjetas al canal. Se `webhookUrl` devuelve solo cuando la aplicación devuelve datos correctamente. |
-| `appType` | Los valores devueltos pueden ser `mail`, `groups`o `teams` correspondientes a los Office 365 Mail, Office 365 Groups o Microsoft Teams respectivamente. |
-| `userObjectId` | Identificador único que corresponde al Office 365 usuario que inició la configuración del conector. Debe estar protegido. Este valor se puede usar para asociar al usuario en Office 365, que ha configurado la configuración en el servicio. |
+| `appType` | Los valores devueltos pueden ser `mail`, `groups`o `teams` corresponder a los Office 365 Mail, Office 365 Groups o Microsoft Teams respectivamente. |
+| `userObjectId` | El identificador único que corresponde al Office 365 usuario que inició la configuración del conector. Debe estar protegido. Este valor se puede usar para asociar al usuario en Office 365, que ha configurado la configuración en el servicio. |
 
 #### <a name="handle-edits"></a>Controlar ediciones
 
@@ -207,9 +207,9 @@ El siguiente archivo manifest.json contiene los elementos necesarios para probar
 
 ## <a name="enable-or-disable-connectors-in-teams"></a>Habilitar o deshabilitar conectores en Teams
 
-El módulo Exchange Online PowerShell V2 usa la autenticación moderna y funciona con la autenticación multifactor, denominada MFA para conectarse Exchange todos los entornos de PowerShell relacionados en Microsoft 365. Los administradores pueden usar Exchange Online PowerShell para deshabilitar conectores para un inquilino completo o un buzón de grupo específico, lo que afecta a todos los usuarios de ese espacio empresarial o buzón. No es posible deshabilitar para algunos y no para otros. Además, los conectores están deshabilitados de forma predeterminada para Government Community Cloud, denominados GCC inquilinos.
+El Exchange Online PowerShell V2 usa la autenticación moderna y funciona con la autenticación multifactor, denominada MFA para conectarse Exchange todos los entornos de PowerShell relacionados en Microsoft 365. Los administradores pueden usar Exchange Online PowerShell para deshabilitar conectores para un inquilino completo o un buzón de grupo específico, lo que afecta a todos los usuarios de ese espacio empresarial o buzón. No es posible deshabilitar para algunos y no para otros. Además, los conectores están deshabilitados de forma predeterminada para Government Community Cloud, denominados GCC inquilinos.
 
-La configuración de nivel de espacio empresarial invalida la configuración de nivel de grupo. Por ejemplo, si un administrador habilita conectores para el grupo y los deshabilita en el inquilino, se deshabilitan los conectores para el grupo. Para habilitar un conector en Teams, conéctese a [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mediante la autenticación moderna con o sin MFA.
+La configuración de nivel de espacio empresarial invalida la configuración de nivel de grupo. Por ejemplo, si un administrador habilita conectores para el grupo y los deshabilita en el inquilino, se deshabilitan los conectores para el grupo. Para habilitar un conector en Teams, conéctese [a Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mediante la autenticación moderna con o sin MFA.
 
 ### <a name="commands-to-enable-or-disable-connectors"></a>Comandos para habilitar o deshabilitar conectores
 
@@ -259,7 +259,7 @@ El conector está disponible en la sección &#9679;&#9679;&#9679; > **Más** **o
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuir webhook y conector
 
-1. [Configure un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) directamente para su equipo.
+1. [Configure un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) directamente para su equipo.
 1. Agregue una [página de configuración](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) [y publique el webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) entrante en un Office 365 Connector.
 1. Empaquetar y publicar el conector como parte del envío [de AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) .
 
@@ -269,7 +269,7 @@ En la tabla siguiente se proporciona el nombre de ejemplo y su descripción:
 
 |**Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Conectores    | Sample Office 365 Connector que genera notificaciones en Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Conectores    | Ejemplo Office 365 Connector generando notificaciones en Teams canal.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Ejemplo de conectores genéricos |Código de ejemplo para un conector genérico que es fácil de personalizar para cualquier sistema que admita webhooks.|  | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>Consulte también
