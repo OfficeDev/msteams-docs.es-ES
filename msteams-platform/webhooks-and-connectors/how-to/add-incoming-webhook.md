@@ -6,12 +6,12 @@ keywords: webhook saliente de pestañas de teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8c38d3effd16a445caca72628978d8822e006b30
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355646"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399117"
 ---
 # <a name="create-an-incoming-webhook"></a>Crear un webhook entrante
 
@@ -38,6 +38,7 @@ La siguiente tabla proporciona las características y la descripción de un Webh
 --->
 
 > [!NOTE]
+>
 > * Los bots de Teams, las extensiones de mensajería, el Webhook entrante y el Bot Framework admiten Tarjetas adaptables. Las Tarjetas adaptables son un marco abierto de plataforma de tarjetas cruzadas que se utiliza en todas las plataformas como Windows, Android, iOS, etc. Actualmente, los [conectores de Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) no admiten Tarjetas adaptables. Sin embargo, es posible crear un [flujo](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) que publique Tarjetas adaptables en un canal de Teams.
 > * Para obtener más información sobre tarjetas y webhooks, vea [tarjetas adaptables y Webhooks entrantes](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 

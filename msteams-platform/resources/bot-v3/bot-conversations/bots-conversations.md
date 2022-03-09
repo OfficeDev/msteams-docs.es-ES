@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: mensajes de bots de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: ce3d3d1dd39707d08c720e75c67ec61b606f676a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518502"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399222"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación con un Microsoft Teams bot
 
@@ -49,7 +49,7 @@ La conversación básica se controla a través de Bot Framework Connector, una �
 
 ## <a name="message-content"></a>Contenido del mensaje
 
-El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot. Puede especificar el tipo de contenido que el bot puede controlar en la página Microsoft Teams configuración del bot.
+El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot. Puede especificar el tipo de contenido que el bot puede controlar en la Microsoft Teams de configuración del bot.
 
 | Formato | De usuario a bot  | De bot a usuario |  Notas |
 | --- | :---: | :---: | --- |
@@ -59,7 +59,7 @@ El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden
 | Emojis | ✖ | ✔ | Teams admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
 |
 
-Para obtener más información sobre los tipos de interacción de bot compatibles con Bot Framework, en los que se basan los bots de teams, consulte la documentación [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) de Bot Framework sobre el flujo de conversación y los conceptos relacionados en la documentación para bot [Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) y [bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
+Para obtener más información sobre los tipos de interacción de bot compatibles con Bot Framework, en los que se basan los bots de los equipos, consulte la [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) documentación de Bot Framework sobre el flujo de conversación y los conceptos relacionados en la documentación del SDK del generador de bots para [.NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) y el SDK del generador de [bots para Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
 
 ## <a name="message-formatting"></a>Formato de mensajes
 
@@ -76,7 +76,7 @@ Las imágenes se envían agregando datos adjuntos a un mensaje. Encontrará más
 
 Las imágenes pueden tener como máximo 1024×1024 y 1 MB en formato PNG, JPEG o GIF; GIF animado no es compatible.
 
-Se recomienda especificar el alto y el ancho de cada imagen mediante XML. Si usa Markdown, el tamaño de la imagen tiene el valor predeterminado 256×256. Por ejemplo:
+Se recomienda especificar el alto y el ancho de cada imagen mediante XML. Si usa Markdown, el tamaño de imagen es 256×256. Por ejemplo:
 
 * Use `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * No usar `![Duck on a rock](http://aka.ms/Fo983c)`
@@ -86,7 +86,7 @@ Se recomienda especificar el alto y el ancho de cada imagen mediante XML. Si usa
 Según los ámbitos declarados, el bot puede recibir mensajes en los siguientes contextos:
 
 * **chat personal** Los usuarios pueden interactuar en una conversación privada con un bot simplemente seleccionando el bot agregado en el historial de chat o escribiendo su nombre o identificador de aplicación en el cuadro Para: en un nuevo chat.
-* **Canales** Se puede mencionar un bot ("@_botname_") en un canal si se ha agregado al equipo. Tenga en cuenta que las respuestas adicionales a un bot en un canal requieren mencionar el bot. No responderá a las respuestas en las que no se menciona.
+* **Canales** Se puede mencionar un bot ("@*botname*") en un canal si se ha agregado al equipo. Tenga en cuenta que las respuestas adicionales a un bot en un canal requieren mencionar el bot. No responderá a las respuestas en las que no se menciona.
 
 Para los mensajes entrantes, el bot recibe un [objeto Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) de tipo `messageType: message`. Aunque el `Activity` objeto puede contener otros tipos de información, como [](~/resources/bot-v3/bots-notifications.md#channel-updates) las actualizaciones de canal enviadas al bot, `message` el tipo representa la comunicación entre bot y usuario.
 
@@ -161,7 +161,7 @@ El `channelData` objeto contiene Teams información específica y es el origen d
 Un objeto channelData típico de una actividad enviada al bot contiene la siguiente información:
 
 * `eventType`Teams tipo de evento; se pasa solo en casos de [eventos de modificación de canal](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id`Microsoft Azure Active Directory (Azure AD) de inquilino, pasado en todos los contextos.
+* `tenant.id`Microsoft Azure Active Directory (Azure AD) de inquilino; se pasa en todos los contextos.
 * `team` Se pasa solo en contextos de canal, no en chat personal.
   * `id` GUID del canal.
   * `name` Nombre del equipo; solo se pasa en casos de [eventos de cambio de nombre de equipo](~/resources/bot-v3/bots-notifications.md#team-name-updates).

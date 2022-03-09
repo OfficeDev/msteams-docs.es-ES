@@ -5,12 +5,12 @@ description: Guía de inicio rápido para crear una pestaña de canal y grupo co
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b576e2515df65dba06686740508c07a645fb5bd7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355849"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399341"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Crear una pestaña de canal o grupo
 
@@ -31,24 +31,24 @@ Puede crear una pestaña de canal o grupo personalizada mediante el [generador T
 
 Debe comprender los siguientes requisitos previos:
 
-- Debes tener un inquilino Office 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+* Debes tener un inquilino Office 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si actualmente no tiene una cuenta Office 365, puede registrarse para obtener una suscripción gratuita a través del programa Office 365 desarrolladores. La suscripción permanece activa siempre que la esté usando para el desarrollo continuo. Vea [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- Cualquier editor de texto o IDE. Puede instalar y usar Microsoft Visual Studio [code](https://code.visualstudio.com/download) de forma gratuita.
+* Cualquier editor de texto o IDE. Puede instalar y usar Microsoft Visual Studio [code](https://code.visualstudio.com/download) de forma gratuita.
 
-- [Node.js/npm](https://nodejs.org/en/). Use la versión LTS más reciente. El nodo Administrador de paquetes (npm) se instala en el sistema con la instalación de Node.js.
+* [Node.js/npm](https://nodejs.org/en/). Use la versión LTS más reciente. El nodo Administrador de paquetes (npm) se instala en el sistema con la instalación de Node.js.
 
-- Después de instalar correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando lo siguiente en el símbolo del sistema:
+* Después de instalar correctamente Node.js, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando lo siguiente en el símbolo del sistema:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Instale el generador Microsoft Teams aplicaciones mediante la introducción de lo siguiente en el símbolo del sistema:
+* Instale el generador Microsoft Teams aplicaciones mediante la introducción de lo siguiente en el símbolo del sistema:
 
     ```bash
     npm install generator-teams --global
@@ -173,9 +173,9 @@ En un símbolo del sistema, abra el directorio del proyecto para completar las s
 
 Debes tener un paquete de aplicación para probar la pestaña en Teams. Es una carpeta zip que contiene los siguientes archivos necesarios:
 
-- Un **icono de color completo** que mide 192 x 192 píxeles.
-- Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **archivo manifest.json** que especifica los atributos de la aplicación.
+* Un **icono de color completo** que mide 192 x 192 píxeles.
+* Un **icono de esquema transparente** que mide 32 x 32 píxeles.
+* Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 El paquete se crea a través de una tarea gulp que valida el archivo manifest.json y genera la carpeta zip en el **directorio ./package**. En el símbolo del sistema, escriba el siguiente comando:
 
@@ -253,15 +253,15 @@ Debe comprender los siguientes requisitos previos:
 - Debes tener un inquilino Office 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Si actualmente no tiene una cuenta Microsoft 365, puede registrarse para obtener una suscripción gratuita a través del [Programa para desarrolladores de Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). La suscripción permanece activa siempre que la esté usando para el desarrollo continuo.
+    > Si actualmente no tiene una cuenta Microsoft 365, puede registrarse para obtener una suscripción gratuita a través del [Programa para desarrolladores de Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). La suscripción permanece activa siempre que la esté usando para el desarrollo continuo.
 
-- Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** ![](~/assets/images/tab-images/storeApp.png) de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca **App Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
+* Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** ![](~/assets/images/tab-images/storeApp.png) de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca **App Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tiene Visual Studio, puede descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) de forma gratuita.
+* La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tiene Visual Studio, puede descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) de forma gratuita.
 
-- La [herramienta de proxy inverso ngrok](https://ngrok.com) . Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
+* La [herramienta de proxy inverso ngrok](https://ngrok.com) . Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obtener el código fuente
 
@@ -280,15 +280,15 @@ Como alternativa, puede recuperar el código fuente descargando la carpeta zip y
 1. Para compilar y ejecutar la aplicación, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
 1. En un explorador, vaya a las siguientes direcciones URL y compruebe que la aplicación se cargó correctamente:
 
-    - `http://localhost:44355`
-    - `http://localhost:44355/privacy`
-    - `http://localhost:44355/tou`
+    * `http://localhost:44355`
+    * `http://localhost:44355/privacy`
+    * `http://localhost:44355/tou`
 
 ### <a name="review-the-source-code"></a>Revisar el código fuente
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de ASP.NET Core plantilla vacía de aplicación web 2.2 con la casilla Avanzadas **- Configurar para HTTPS** activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware `Configure()` de archivos estáticos se agrega al método con el código siguiente:
+Este proyecto se creó a partir ASP.NET Core plantilla vacía de aplicación web 2.2 con la casilla Configuración avanzada *** para HTTPS** activada en el programa de instalación. Los servicios MVC están registrados por el método del marco de inserción de `ConfigureServices()` dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware `Configure()` de archivos estáticos se agrega al método con el código siguiente:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -318,9 +318,9 @@ Este C# contiene un método al que se llama desde **Tab.cshtml durante** la conf
 
 Esta carpeta contiene los siguientes archivos de paquete de aplicación necesarios:
 
-- Un **icono de color completo** que mide 192 x 192 píxeles.
-- Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **archivo manifest.json** que especifica los atributos de la aplicación.
+* Un **icono de color completo** que mide 192 x 192 píxeles.
+* Un **icono de esquema transparente** que mide 32 x 32 píxeles.
+* Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Cuando un usuario elige agregar o actualizar la pestaña, Microsoft Teams `configurationUrl` carga el especificado en el manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
 
@@ -352,15 +352,15 @@ Microsoft Teams es un producto basado en la nube y requiere que el contenido de 
 
 Para probar la pestaña, use [ngrok](https://ngrok.com/docs). Los puntos de conexión web del servidor están disponibles mientras ngrok se ejecuta en el equipo. En la versión gratuita de ngrok, si cierra ngrok, las direcciones URL son diferentes la próxima vez que la inicie.
 
-- En un símbolo del sistema en la raíz del directorio del proyecto, ejecute el siguiente comando:
+* En un símbolo del sistema en la raíz del directorio del proyecto, ejecute el siguiente comando:
 
     ```bash
     ngrok http https://localhost:44355 -host-header="localhost:44355"
     ```
 
-- Ngrok escucha las solicitudes de Internet y las enruta a la aplicación cuando se ejecuta en el puerto 44355. Debe ser similar a `https://y8rCgT2b.ngrok.io/` **donde y8rCgT2b** se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
+* Ngrok escucha las solicitudes de Internet y las enruta a la aplicación cuando se ejecuta en el puerto 44355. Debe ser similar a `https://y8rCgT2b.ngrok.io/` **donde y8rCgT2b** se reemplaza por la dirección URL HTTPS alfanumérico de ngrok.
 
-- Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de tomar nota de la dirección URL.
+* Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de tomar nota de la dirección URL.
 
 ### <a name="update-your-application"></a>Actualizar la aplicación
 
@@ -512,18 +512,18 @@ Puede crear una pestaña de canal o grupo personalizada con C# y ASP.Net Core MV
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>Requisitos previos para la pestaña de canal o grupo personalizada
 
-- Debes tener un inquilino Microsoft 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+* Debes tener un inquilino Microsoft 365 y un equipo configurado con **Permitir cargar aplicaciones personalizadas** habilitadas. Para obtener más información, [vea prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Si actualmente no tiene una cuenta Microsoft 365, puede registrarse para obtener una suscripción gratuita a través del [Programa para desarrolladores de Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). La suscripción permanece activa siempre que la esté usando para el desarrollo continuo.
+    > Si actualmente no tiene una cuenta Microsoft 365, puede registrarse para obtener una suscripción gratuita a través del [Programa para desarrolladores de Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). La suscripción permanece activa siempre que la esté usando para el desarrollo continuo.
 
-- Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** ![](~/assets/images/tab-images/storeApp.png) de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca **App Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
+* Usa App Studio para importar la aplicación a Teams. Para instalar App Studio, selecciona **Aplicación** ![](~/assets/images/tab-images/storeApp.png) de la Tienda de aplicaciones en la esquina inferior izquierda de la aplicación Teams y busca **App Studio**. Después de encontrar el icono, selecciónelo y elija **Agregar** en el cuadro de diálogo emergente para instalarlo.
 
 Además, este proyecto requiere que tenga lo siguiente instalado en el entorno de desarrollo:
 
-- La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tiene Visual Studio, puede descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) de forma gratuita.
+* La versión actual del IDE Visual Studio con la carga de trabajo de desarrollo **multiplataforma de .NET CORE** instalada. Si aún no tiene Visual Studio, puede descargar e instalar la última [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) de forma gratuita.
 
-- La [herramienta de proxy inverso ngrok](https://ngrok.com) . Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
+* La [herramienta de proxy inverso ngrok](https://ngrok.com) . Use ngrok para crear un túnel para los puntos de conexión HTTPS del servidor web que se ejecuta localmente. Puede descargar [ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obtener el código fuente
 
@@ -542,9 +542,9 @@ Como alternativa, puede recuperar el código fuente descargando la carpeta zip y
 1. Para compilar y ejecutar la aplicación, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
 1. En un explorador, vaya a las siguientes direcciones URL y compruebe que la aplicación se cargó correctamente:
 
-    - `http://localhost:44360`
-    - `http://localhost:44360/privacy`
-    - `http://localhost:44360/tou`
+    * `http://localhost:44360`
+    * `http://localhost:44360/privacy`
+    * `http://localhost:44360/tou`
 
 ### <a name="review-the-source-code"></a>Revisar el código fuente
 
@@ -572,9 +572,9 @@ En ASP.NET Core, la carpeta raíz web es donde la aplicación busca archivos est
 
 Esta carpeta contiene los siguientes archivos de paquete de aplicación necesarios:
 
-- Un **icono de color completo** que mide 192 x 192 píxeles.
-- Un **icono de esquema transparente** que mide 32 x 32 píxeles.
-- Un **archivo manifest.json** que especifica los atributos de la aplicación.
+* Un **icono de color completo** que mide 192 x 192 píxeles.
+* Un **icono de esquema transparente** que mide 32 x 32 píxeles.
+* Un **archivo manifest.json** que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams.
 
@@ -641,7 +641,7 @@ En **Tab.cshtml** , la aplicación presenta al usuario dos botones de opción pa
 > [!div class="nextstepaction"]
 > [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

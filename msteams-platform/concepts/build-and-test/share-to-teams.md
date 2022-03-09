@@ -4,18 +4,19 @@ description: Aprenda a agregar el botón Compartir Teams incrustado en su sitio 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartir Teams compartir a Teams
-ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ff558bc78206389fa5e39618488c1929968bf3b2
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355877"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399362"
 ---
 # <a name="create-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
 Los sitios web de terceros pueden usar el script del iniciador para insertar botones de share-to-Teams en sus páginas web. Cuando selecciona, inicia la experiencia compartir a Teams en una ventana emergente. Esto le permite compartir un vínculo directamente con cualquier persona o canal Microsoft Teams sin cambiar el contexto. Este documento le guía sobre cómo crear e insertar un botón Compartir a Teams para su sitio web, crear la vista previa de su sitio web y ampliar Share-to-Teams para Educación.
 
 > [!NOTE]
+>
 > * Solo se admiten las versiones de escritorio de MicrosoftEdge&nbsp; y Google Chrome.
 > * No se admite el uso de freemium o cuentas de invitado.  
 
@@ -53,6 +54,7 @@ En la siguiente imagen se muestra la experiencia Teams emergente De compartir a 
       data-icon-px-size="64">
     </div>
     ```
+
 1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de dirección URL del vínculo que se va a compartir no se representa correctamente en Teams, puede deshabilitar la vista previa de la dirección URL `data-preview` `false`agregando el atributo establecido en .
 
     ```html
@@ -69,7 +71,7 @@ En la siguiente imagen se muestra la experiencia Teams emergente De compartir a 
 
 Cuando el sitio web se comparte con Teams, la tarjeta que se inserta en el canal seleccionado contiene una vista previa del sitio web. Puedes controlar el comportamiento de esta vista previa asegurando que los metadatos adecuados se agregan al sitio web que se comparte, como la `data-href` dirección URL.  
 
-**Para mostrar la vista previa**
+Para mostrar la vista previa:
 
 * Debe incluir una imagen **en miniatura** o un **título** y una **descripción**. Para obtener los mejores resultados, incluya los tres.
 * La dirección URL compartida no requiere autenticación. Si requiere autenticación, puede compartirla, pero no se crea la vista previa.
@@ -86,7 +88,7 @@ Puede usar las versiones predeterminadas de HTML o la versión Graph html.
 
 ## <a name="share-to-teams-for-education"></a>Compartir a Teams para Educación
 
-Para los profesores que usan el botón Compartir Teams, hay una opción adicional para `Create an Assignment`. Esto le permite crear rápidamente una asignación en el equipo elegido, en función del vínculo compartido. En la siguiente imagen se muestra Share-to-Teams para educación: 
+Para los profesores que usan el botón Compartir Teams, hay una opción adicional para `Create an Assignment`. Esto le permite crear rápidamente una asignación en el equipo elegido, en función del vínculo compartido. En la siguiente imagen se muestra Share-to-Teams para educación:
 
 ![Compartir a Teams educación emergente](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -94,14 +96,14 @@ Para los profesores que usan el botón Compartir Teams, hay una opción adiciona
 
 | Propiedad | Atributo HTML | Tipo | Predeterminado | Descripción |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | N/D | Href del contenido que se debe compartir. |
+| href | `data-href` | string | No aplicable | Href del contenido que se debe compartir. |
 | preview | `data-preview` | Boolean (como una cadena) | `true` | Mostrar o no una vista previa del contenido que se va a compartir. |
 | iconPxSize | `data-icon-px-size` | número (como una cadena) | `32` | Tamaño en píxeles del botón Compartir a Teams que se representará. |
-| msgText | `data-msg-text` | string | N/D | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
-| assignInstr | `data-assign-instr` | string | N/D | Texto predeterminado que se va a insertar en el campo de asignaciones "Instrucciones". El número máximo de caracteres es 200. |
-| assignTitle | `data-assign-title` | string | N/D | Texto predeterminado que se va a insertar en el campo asignaciones "Título". El número máximo de caracteres es 50. |
+| msgText | `data-msg-text` | string | No aplicable | Texto predeterminado que se va a insertar antes del vínculo en el cuadro de redacción del mensaje. El número máximo de caracteres es 200. |
+| assignInstr | `data-assign-instr` | string | No aplicable | Texto predeterminado que se va a insertar en el campo de asignaciones "Instrucciones". El número máximo de caracteres es 200. |
+| assignTitle | `data-assign-title` | string | No aplicable | Texto predeterminado que se va a insertar en el campo asignaciones "Título". El número máximo de caracteres es 50. |
 
-### <a name="methods"></a>Methods
+### <a name="methods"></a>Métodos
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 

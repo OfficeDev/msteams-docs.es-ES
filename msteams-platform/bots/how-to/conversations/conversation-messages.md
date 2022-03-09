@@ -1,20 +1,20 @@
 ---
 title: Mensajes en conversaciones de bot
-description: Describe maneras de tener una conversación con un Microsoft Teams bot. Obtenga información sobre Teams canal, notificación al mensaje, mensajes de imagen, tarjetas adaptables mediante ejemplos de código.
+description: Describe formas de tener una conversación con un Microsoft Teams bot. Obtenga información sobre Teams de canal, notificación al mensaje, mensajes de imagen, tarjetas adaptables mediante ejemplos de código.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517998"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399355"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
-Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Teams el mensaje al bot. Teams envía un objeto JSON al extremo de mensajería del bot. El bot examina el mensaje para determinar su tipo y responde en consecuencia.
+Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Teams el mensaje en el bot. Teams envía un objeto JSON al extremo de mensajería del bot. El bot examina el mensaje para determinar su tipo y responde en consecuencia.
 
 Las conversaciones básicas se controlan a través del conector de Bot Framework, una única API de REST. Esta API permite que el bot se comunique con Teams y otros canales. El SDK de Bot Builder proporciona las siguientes características:
 
@@ -191,7 +191,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Esta actividad se divide en actividades independientes por Microsoft Teams, una con solo un mensaje de texto y otra con datos adjuntos. Como la actividad está dividida, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
+> La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Esta actividad se divide en actividades independientes Microsoft Teams, una con solo un mensaje de texto y la otra con datos adjuntos. Como la actividad está dividida, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
 
 Los mensajes enviados entre usuarios y bots incluyen datos de canal internos dentro del mensaje. Estos datos permiten al bot comunicarse correctamente en ese canal. El SDK del generador de bots permite modificar la estructura del mensaje.
 
@@ -342,7 +342,7 @@ Un bot conversacional puede incluir tarjetas adaptables que simplifican los fluj
 
 ## <a name="adaptive-cards"></a>Tarjetas adaptables
 
-Las tarjetas adaptables se pueden crear en un bot y mostrarse en varias aplicaciones, como Teams, el sitio web, y así sucesivamente. Para obtener más información, vea [Tarjetas adaptables](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Las tarjetas adaptables se pueden crear en un bot y mostrarse en varias aplicaciones, como Teams, el sitio web, entre otras. Para obtener más información, vea [Tarjetas adaptables](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 El siguiente código muestra un ejemplo de envío de una tarjeta adaptable sencilla:
 
@@ -382,7 +382,7 @@ El mensaje de finalización del formulario aparece en Tarjetas adaptables mientr
 
     ![Mensaje de correcto](~/assets/images/Cards/success.PNG)
 
-Puedes seleccionar Cerrar **o** cambiar el chat para descartar el mensaje.    
+Puedes seleccionar Cerrar **o** cambiar el chat para descartar el mensaje.
 
 **Respuesta en móvil**:
 
@@ -409,7 +409,7 @@ A continuación se desenván los códigos de estado y sus valores de mensaje y c
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Paso siguiente
 

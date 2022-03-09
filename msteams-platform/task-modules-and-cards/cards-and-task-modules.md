@@ -1,15 +1,15 @@
 ---
 title: Tarjetas y módulos de tareas
-description: Obtén información sobre los tipos de tarjetas admitidas en bots para Teams, como, tarjetas adaptables, tarjeta de héroe, tarjeta miniatura y mucho más. Obtenga información sobre acciones de tarjetas e invocar módulos de tareas en canales, bots o vínculos profundos.
+description: Obtenga información sobre los tipos de tarjetas admitidas en bots para Teams, como, tarjetas adaptables, tarjeta de héroe, tarjeta miniatura, etc. Obtenga información sobre acciones de tarjetas e invocar módulos de tareas en canales, bots o vínculos profundos.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5d7605b73d9aeb41bd41cca919e59fa47afff9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 516ca3a0fbfc1e1fb386632eb06c1c3a60918485
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062519"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399047"
 ---
 # <a name="cards-and-task-modules"></a>Tarjetas y módulos de tareas
 
@@ -22,7 +22,7 @@ Los siguientes tipos de tarjetas se admiten en bots para Teams:
 * Tarjeta adaptable
 * Tarjeta de héroe
 * Tarjeta de lista
-* Office 365 connector
+* Tarjeta conector de Office 365
 * Tarjeta de recibo
 * Tarjeta de inicio de sesión
 * Tarjeta miniatura
@@ -33,6 +33,7 @@ Puede dar formato al texto de la tarjeta con un subconjunto de formato XML o HTM
 [El Selector de personas en tarjetas](cards/people-picker.md) adaptables en tarjeta adaptable ayuda a buscar, seleccionar, reasignar y preseleccionar usuarios dentro del chat o canal.
 
 Puede agregar y responder a acciones de tarjeta que:
+
 * Abrir una dirección URL
 * Enviar mensajes y carga al bot
 * Iniciar flujo de OAuth

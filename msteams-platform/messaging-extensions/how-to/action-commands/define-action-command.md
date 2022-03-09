@@ -5,18 +5,18 @@ description: Introducción a los comandos de acción de extensión de mensajerí
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 938e37fac8cd27257e378fa1177916462b331023
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355891"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399271"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Los comandos de acción permiten presentar a los usuarios un elemento emergente modal denominado módulo de tareas en Teams. El módulo de tareas recopila o muestra información, procesa la interacción y envía la información de vuelta a Teams. Este documento le guía sobre cómo seleccionar ubicaciones de invocación de comandos de acción, crear el módulo de tareas, enviar el mensaje final o la tarjeta, crear un comando de acción con app studio o crearlo manualmente. 
+Los comandos de acción permiten presentar a los usuarios un elemento emergente modal denominado módulo de tareas en Teams. El módulo de tareas recopila o muestra información, procesa la interacción y envía la información de vuelta a Teams. Este documento le guía sobre cómo seleccionar ubicaciones de invocación de comandos de acción, crear el módulo de tareas, enviar el mensaje final o la tarjeta, crear un comando de acción con app studio o crearlo manualmente.
 
 Antes de crear el comando de acción, debe decidir los siguientes factores:
 
@@ -43,7 +43,7 @@ En primer lugar, debe decidir la ubicación desde la que se debe invocar el coma
 
     Contexto de comandos = mensaje
 
-    > [!NOTE] 
+    > [!NOTE]
     > La invocación inicial al bot incluye un objeto JSON que contiene el mensaje desde el que se invocó. Puede procesar el mensaje antes de presentarlo con un módulo de tareas.
 
 La siguiente imagen muestra las ubicaciones desde las que se invoca el comando action:
@@ -52,11 +52,11 @@ La siguiente imagen muestra las ubicaciones desde las que se invoca el comando a
 
 ## <a name="select-how-to-create-your-task-module"></a>Seleccionar cómo crear el módulo de tareas
 
-Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representa dentro del módulo de tareas:   
+Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representa dentro del módulo de tareas:
 
 * **Lista estática de parámetros**: este es el método más sencillo. Puedes definir una lista de parámetros en el manifiesto de la aplicación que representa Teams cliente, pero no puedes controlar el formato en este caso.
 * **Tarjeta adaptable**: puedes seleccionar usar una tarjeta adaptable, que proporciona un mayor control sobre la interfaz de usuario, pero aún te limita a los controles y opciones de formato disponibles.
-* **Vista web incrustada**: puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles. 
+* **Vista web incrustada**: puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles.
 
 Si selecciona crear el módulo de tareas con una lista estática de parámetros y cuando el usuario envía el módulo de tareas, se llama a la extensión de mensajería. Al usar una vista web incrustada o una tarjeta adaptable, la extensión de mensajería debe controlar un evento de invocación inicial del usuario, crear el módulo de tareas y devolverlo al cliente.
 
@@ -93,12 +93,12 @@ Puedes crear un comando de acción con **App Studio** o **Developer Portal**.
 1. Selecciona **Configurar en la** ventana para incluir la extensión de mensajería en la experiencia de la aplicación. En la siguiente imagen se muestra la ventana de configuración de la extensión de mensajería:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
-    
+
 1. Para crear una extensión de mensajería, necesita un bot registrado de Microsoft. Puede usar un bot existente o crear un bot nuevo. Seleccione **Crear nueva opción de bot** , asigne un nombre al nuevo bot y seleccione **Crear**. En la siguiente imagen se muestra la creación de bots para la extensión de mensajería:
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensajería para incluir los comandos que deciden el comportamiento de la extensión de mensajería.   
+1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensajería para incluir los comandos que deciden el comportamiento de la extensión de mensajería.
 La siguiente imagen muestra la adición de comandos para la extensión de mensajería:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -106,14 +106,14 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 1. Seleccione **Permitir que los usuarios desencadene acciones en servicios externos mientras están dentro de Teams**. En la siguiente imagen se muestra la selección de comandos de acción:
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
-    
-1. Para usar un conjunto estático de parámetros para crear el módulo de tareas, seleccione **Definir un conjunto de parámetros estáticos para el comando**. 
+
+1. Para usar un conjunto estático de parámetros para crear el módulo de tareas, seleccione **Definir un conjunto de parámetros estáticos para el comando**.
 
     En la imagen siguiente se muestra la selección del parámetro estático del comando de acción:
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/> 
-   
-    La siguiente imagen muestra un ejemplo de configuración de parámetros estáticos: 
+   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+
+    La siguiente imagen muestra un ejemplo de configuración de parámetros estáticos:
 
    <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
 
@@ -124,7 +124,7 @@ La siguiente imagen muestra la adición de comandos para la extensión de mensaj
 1. Para usar parámetros dinámicos, seleccione **Capturar un conjunto dinámico de parámetros del bot**. En la siguiente imagen se muestra la selección del parámetro de comando de acción:
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
-    
+
 1. Agregue un **identificador de comando** y un **título**.
 1. Seleccione la ubicación desde la que desea invocar el comando de acción. La siguiente imagen muestra la ubicación de invocación del comando de acción:
 
@@ -163,7 +163,7 @@ Si usa una vista web incrustada, `taskInfo` opcionalmente puede agregar el objet
 |`taskInfo.title`|Título del módulo de tareas inicial. |No | 1.4 |
 |`taskInfo.width`|Ancho del módulo de tareas, ya sea un número en píxeles o un diseño predeterminado como `large`, `medium`o `small`. |No | 1.4 |
 |`taskInfo.height`|Alto del módulo de tareas, ya sea un número en píxeles o un diseño predeterminado como `large`, `medium`o `small`.|No | 1.4 |
-|`taskInfo.url`|Dirección URL de vista web inicial.|No | 1.4 | 
+|`taskInfo.url`|Dirección URL de vista web inicial.|No | 1.4 |
 
 #### <a name="app-manifest-example"></a>Ejemplo de manifiesto de la aplicación
 
@@ -223,7 +223,6 @@ La siguiente sección es un ejemplo de un objeto `composeExtensions` que define 
 |:---------------------|:--------------|:---------|:--------|
 |Teams de mensajería| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
-
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
 Siga la [guía paso a paso para](../../../sbs-meetingextension-action.yml) crear una Teams de mensajería basada en acciones.
@@ -239,4 +238,3 @@ Si usa los parámetros o una vista web incrustada con un `taskInfo` objeto, el s
 
 > [!div class="nextstepaction"]
 > [Responder al envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

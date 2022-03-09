@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355596"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398851"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -33,6 +33,7 @@ Las pestañas permiten a los miembros del equipo acceder a los servicios y el co
 > Si has integrado una pestaña con la reunión, la aplicación debe seguir el flujo de autenticación Teams inicio de sesión único [(SSO) para las pestañas](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
+>
 > * Las reuniones programadas privadas solo admiten aplicaciones.
 > * La opción Agregar aplicación para Teams pestaña de extensión de reunión no se admite en Teams cliente web.
 
@@ -40,7 +41,7 @@ Las pestañas permiten a los miembros del equipo acceder a los servicios y el co
 
 Con la experiencia de la aplicación previa a la reunión, se pueden buscar y agregar aplicaciones de reunión. También se pueden realizar tareas previas a la reunión, como desarrollar un sondeo para encuestar a los participantes de la reunión.
 
-**Para agregar pestañas a una reunión existente**
+Para agregar pestañas a una reunión existente:
 
 1. En el calendario, seleccione una reunión a la que desee agregar una pestaña.
 1. Seleccione la **pestaña Detalles** y seleccione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Aparece la galería de pestañas.
@@ -50,6 +51,7 @@ Con la experiencia de la aplicación previa a la reunión, se pueden buscar y ag
 1. En la galería de pestañas, selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
 
    > [!NOTE]
+   >
    > * También puede agregar una pestaña a una reunión existente mediante la **pestaña Chat de** la reunión.
    > * El diseño de tabulación debe estar en un estado organizado, si hay más de 10 sondeos o encuestas.
 
@@ -71,7 +73,7 @@ Con la experiencia de la aplicación durante la reunión, puedes interactuar con
 
 Para dispositivos móviles, las aplicaciones de reunión están disponibles en **Aplicaciones** > puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Selecciona **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
 
-**Para usar pestañas durante una reunión**
+Para usar pestañas durante una reunión:
 
 1. Vaya a Teams.
 1. En el calendario, seleccione una reunión en la que desee usar una pestaña.
@@ -97,6 +99,7 @@ Se muestra el cuadro de diálogo en la reunión donde puede escribir la respuest
 ---
 
 > [!NOTE]
+>
 > * Las aplicaciones pueden aprovechar Teams SDK de cliente para obtener acceso `meetingId`al , `userMri`y `frameContext` para representar la experiencia correctamente.
 > * Si el cuadro de diálogo en la reunión se representa correctamente, envía una notificación de que los resultados se descargan correctamente.
 > * El manifiesto de la aplicación especifica los lugares en los que quieres que aparezcan las aplicaciones. Para ello, especifique un campo de contexto en el manifiesto. También forma parte de una experiencia de fase de reunión de compartir, sujeto a las directrices de [diseño especificadas](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).

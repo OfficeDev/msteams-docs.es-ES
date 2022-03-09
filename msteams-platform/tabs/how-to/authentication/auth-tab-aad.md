@@ -3,15 +3,15 @@ title: Autenticación para pestañas mediante Azure Active Directory
 description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: pestañas de autenticación Microsoft Azure Active Directory teams (Azure AD)
-ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+keywords: fichas de autenticación Microsoft Azure Active Directory teams (Azure AD)
+ms.openlocfilehash: ae0f14195ef686bf915884b86e1ba71c15c08133
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897938"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398991"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar a un usuario en una Microsoft Teams pestaña
+# <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticar un usuario en una Microsoft Teams pestaña
 
 > [!Note]
 > Para que la autenticación funcione para su pestaña en clientes móviles, debe asegurarse de que está usando la versión 1.4.1 o posterior del SDK de JavaScript de Teams.
@@ -20,7 +20,7 @@ Es posible que quieras consumir muchos servicios dentro de la aplicación Teams 
 
 OAuth 2.0 es un estándar abierto para la autenticación que usan Azure AD y muchos otros proveedores de servicios. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. Los ejemplos siguientes usan el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información de perfil del usuario de Azure AD y Microsoft Graph.
 
-El código de este artículo proviene de la aplicación Teams ejemplo de Microsoft Teams [de autenticación de pestañas (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual desde Azure AD.
+El código de este artículo proviene de la aplicación Teams ejemplo de Microsoft Teams [de autenticación de pestañas (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual de Azure AD.
 
 Para obtener información general sobre el flujo de autenticación de las pestañas, vea [Flujo de autenticación en pestañas](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -93,7 +93,7 @@ Una vez que el usuario completa la autorización, se redirige al usuario a la p�
 
 ### <a name="notes"></a>Notas
 
-* Consulte [Obtener información de contexto de usuario](~/tabs/how-to/access-teams-context.md) para obtener ayuda para crear solicitudes de autenticación y direcciones URL. Por ejemplo, puede usar el `login_hint` nombre de inicio de sesión del usuario como valor para Azure AD inicio de sesión, lo que significa que es posible que el usuario necesite escribir menos. Recuerde que no debe usar este contexto directamente como prueba de identidad, ya que un atacante podría cargar la página en un explorador malintencionado y proporcionarle la información que desee.
+* Consulte [Obtener información de contexto de usuario](~/tabs/how-to/access-teams-context.md) para obtener ayuda para crear solicitudes de autenticación y direcciones URL. Por ejemplo, puede usar el nombre `login_hint` de inicio de sesión del usuario como valor para Azure AD inicio de sesión, lo que significa que es posible que el usuario necesite escribir menos. Recuerde que no debe usar este contexto directamente como prueba de identidad, ya que un atacante podría cargar la página en un explorador malintencionado y proporcionarle la información que desee.
 * Aunque el contexto de pestaña proporciona información útil sobre el usuario, no use esta información para autenticar al usuario, ya sea que la obtenga como parámetros de dirección URL en la dirección URL `microsoftTeams.getContext()` de contenido de la pestaña o llamando a la función en el SDK de cliente de Microsoft Teams. Un actor malintencionado podría invocar la dirección URL de contenido de la pestaña con sus propios parámetros y una página web que suplanta Microsoft Teams podría cargar la dirección URL de contenido de la pestaña en un iframe `getContext()` y devolver sus propios datos a la función. Debe tratar la información relacionada con la identidad en el contexto de la pestaña simplemente como sugerencias y validarlas antes de usarlas.
 * El `state` parámetro se usa para confirmar que el servicio que llama al URI de devolución de llamada es el servicio al que llamó. Si el `state` parámetro de la devolución de llamada no coincide con el parámetro que envió durante la llamada, la llamada de devolución no se comprueba y debe finalizarse.
 * No es necesario incluir el dominio del proveedor de identidades en la `validDomains` lista en el archivo manifest.json de la aplicación.
@@ -102,7 +102,7 @@ Una vez que el usuario completa la autorización, se redirige al usuario a la p�
 
 En la última sección, llamó al servicio de autorización Azure AD y pasó información de usuario y aplicación para que Azure AD pudiera presentar al usuario su propia experiencia de autorización monolítica. La aplicación no tiene control sobre lo que sucede en esta experiencia. Todo lo que sabe es lo que se devuelve Azure AD llama a la página de devolución de llamada que proporcionó (`/tab-auth/simple-end`).
 
-En esta página debe determinar el éxito o el error en función de la información devuelta por Azure AD y llame o `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()`. Si el inicio de sesión se ha realizado correctamente, tendrá acceso a los recursos de servicio.
+En esta página debe determinar el éxito o el error en función de la información devuelta por Azure AD y llamar o `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()`. Si el inicio de sesión se ha realizado correctamente, tendrá acceso a los recursos de servicio.
 
 ````javascript
 // Split the key-value pairs passed from Azure AD
@@ -148,10 +148,9 @@ Si se realiza correctamente, puede actualizar o volver a cargar la página y mos
 La aplicación puede establecer su propia cookie de sesión para que el usuario no tenga que volver a iniciar sesión cuando vuelva a la pestaña en el dispositivo actual.
 
 > [!NOTE]
-> Chrome 80, programado para su lanzamiento a principios de 2020, introduce nuevos valores de cookies e impone directivas de cookies de forma predeterminada. Se recomienda establecer el uso previsto para las cookies en lugar de basarse en el comportamiento predeterminado del explorador. *Consulte* [Atributo de cookie SameSite (actualización de 2020).](../../../resources/samesite-cookie-update.md).
-
->[!NOTE]
->Para obtener el token correcto para Microsoft Teams usuarios invitados y gratuitos, es importante que las aplicaciones usen el punto de conexión específico del inquilino `https://login.microsoftonline.com/**{tenantId}**`. Puede obtener tenantId desde el contexto del mensaje del bot o de la pestaña. Si las aplicaciones usan `https://login.microsoftonline.com/common`, los usuarios recibirán tokens incorrectos e iniciarán sesión en el inquilino "hogar" en lugar del espacio empresarial en el que han iniciado sesión actualmente.
+>
+> * Chrome 80, programado para su lanzamiento a principios de 2020, introduce nuevos valores de cookies e impone directivas de cookies de forma predeterminada. Se recomienda establecer el uso previsto para las cookies en lugar de basarse en el comportamiento predeterminado del explorador. *Consulte* [Atributo de cookie SameSite (actualización de 2020).](../../../resources/samesite-cookie-update.md).
+> * Para obtener el token correcto para Microsoft Teams usuarios invitados y gratuitos, es importante que las aplicaciones usen el extremo específico del inquilino `https://login.microsoftonline.com/**{tenantId}**`. Puede obtener tenantId desde el contexto del mensaje del bot o de la pestaña. Si las aplicaciones usan `https://login.microsoftonline.com/common`, los usuarios recibirán tokens incorrectos e iniciarán sesión en el inquilino "hogar" en lugar del espacio empresarial en el que han iniciado sesión actualmente.
 
 Para obtener más información sobre single Sign-On (SSO), consulte el artículo [Autenticación silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

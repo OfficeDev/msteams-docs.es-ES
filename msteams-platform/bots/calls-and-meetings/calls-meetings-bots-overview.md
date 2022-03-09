@@ -1,19 +1,19 @@
 ---
 title: Bots de llamadas y reuniones en línea
-description: Obtenga información sobre cómo las aplicaciones Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo con las API de Microsoft Graph para llamadas y reuniones en línea y obtenga información sobre las secuencias multimedia en tiempo real
+description: Obtenga información sobre cómo las aplicaciones de Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo con las API de Microsoft Graph para llamadas y reuniones en línea y obtenga información sobre las secuencias multimedia en tiempo real
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a llamadas de audio video IVR voice online meetings real-time media streams bot
-ms.openlocfilehash: 17464683c8a5f6aa515d67be721968d56d1d2fb7
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a0172bff6487da25ff7d482a24fa797f97b049b6
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889149"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398676"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de llamadas y reuniones en línea
 
-Los bots pueden interactuar con Teams llamadas y reuniones mediante el uso compartido de pantalla, vídeo y voz en tiempo real. Con [las API de Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)para llamadas y reuniones en línea, Teams aplicaciones ahora pueden interactuar con los usuarios mediante voz y vídeo para mejorar la experiencia. Estas API le permiten agregar las siguientes características nuevas:
+Los bots pueden interactuar con Teams llamadas y reuniones mediante el uso compartido de pantalla, vídeo y voz en tiempo real. Con [las API Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true) Microsoft para llamadas y reuniones en línea, Teams aplicaciones ahora pueden interactuar con los usuarios mediante voz y vídeo para mejorar la experiencia. Estas API le permiten agregar las siguientes características nuevas:
 
 * Respuesta de voz interactiva (IVR).
 * Control de llamadas.
@@ -21,9 +21,9 @@ Los bots pueden interactuar con Teams llamadas y reuniones mediante el uso compa
 
 Para usar estas API Graph en una aplicación Teams, creas un bot y especificas información y permisos adicionales.
 
-Además, la Plataforma multimedia en tiempo real permite a los bots interactuar con Teams llamadas y reuniones mediante el uso compartido de voz, vídeo y pantalla en tiempo real. Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un bot Microsoft Teams normal con pocas características adicionales usadas para registrar el bot.
+Además, la Plataforma multimedia en tiempo real permite a los bots interactuar con Teams llamadas y reuniones mediante el uso compartido de pantalla, vídeo y voz en tiempo real. Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un bot de Microsoft Teams normal con pocas características adicionales usadas para registrar el bot.
 
-El manifiesto Teams aplicación con dos configuraciones adicionales y , Graph permisos para el identificador de aplicación de Microsoft del bot y el consentimiento de administrador de inquilinos permiten registrar `supportsCalling` `supportsVideo` el bot. Al registrar un bot de llamadas y reuniones para Teams, se menciona la dirección URL de webhook, que es el extremo de webhook para todas las llamadas entrantes al bot. Un bot multimedia hospedado por la aplicación requiere Microsoft. Graph. Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams supports only a specific set of media formats for audio and video content.
+El manifiesto Teams `supportsCalling` `supportsVideo`aplicación con dos configuraciones adicionales y, Graph permisos para el identificador de aplicación de Microsoft del bot y el consentimiento de administrador de inquilinos le permiten registrar el bot. Al registrar un bot de llamadas y reuniones para Teams, se menciona la dirección URL de webhook, que es el extremo de webhook para todas las llamadas entrantes al bot. Un bot multimedia hospedado por la aplicación requiere Microsoft. Graph. La biblioteca .NET Communications.Calls.Media para obtener acceso a las secuencias multimedia de audio y vídeo, y el bot debe implementarse en un equipo de servidor de Windows o en un sistema operativo invitado de Windows Server (SO) en Azure. Los bots Teams admiten solo un conjunto específico de formatos multimedia para el contenido de audio y vídeo.
 
 Ahora, debe comprender algunos conceptos básicos, terminología y convenciones.
 
@@ -49,7 +49,7 @@ Las llamadas son punto a punto entre una persona y el bot, o varias partes entre
 
 A continuación se enumeran los distintos tipos de llamadas y permisos necesarios para la llamada:
 
-* Un usuario puede iniciar una llamada punto a punto con el bot o invitar al bot a una llamada multiparte existente. La llamada multiparte aún no está habilitada en la interfaz Teams usuario.
+* Un usuario puede iniciar una llamada punto a punto con el bot o invitar al bot a una llamada multiparte existente. La llamada multiparte aún no está habilitada en la Teams de usuario.
 
     > [!NOTE]
     > Actualmente, las llamadas iniciadas por el usuario a un bot no se admiten Microsoft Teams plataforma móvil.
@@ -70,7 +70,7 @@ Hay dos tipos de señales, llamadas entrantes y llamadas entrantes. A continuaci
 
 ### <a name="calls-and-online-meetings"></a>Llamadas y reuniones en línea
 
-Desde la Teams del usuario, hay dos tipos de reuniones en línea, ad hoc y programadas. Desde la perspectiva de un bot, ambas reuniones en línea son las mismas. Para un bot, una reunión en línea es una llamada multipartid entre un conjunto de participantes e incluye coordenadas de reunión. Las coordenadas de reunión son los metadatos de la reunión, incluidos , asociados con la `botId` `chatId` reunión, `joinUrl` o , y `startTime` así `endTime` sucesivamente.
+Desde la Teams del usuario, hay dos tipos de reuniones en línea, ad hoc y programadas. Desde la perspectiva de un bot, ambas reuniones en línea son las mismas. Para un bot, una reunión en línea es una llamada multipartid entre un conjunto de participantes e incluye coordenadas de reunión. Las coordenadas de reunión son los metadatos de la reunión `botId`, incluidos , `chatId` asociados con la reunión, `joinUrl`o `startTime` `endTime`, y así sucesivamente.
 
 ### <a name="real-time-media"></a>Medios en tiempo real
 
@@ -80,32 +80,32 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 
 * **Medios hospedados en** el servicio: los bots se centran en administrar el flujo de trabajo de aplicaciones, como el enrutamiento de llamadas y la descarga de procesamiento de audio en la Plataforma multimedia en tiempo real de Microsoft. Con los medios hospedados en el servicio, tiene varias opciones para implementar y hospedar el bot. Puede implementar un bot de elementos multimedia hospedados en el servicio como servicio sin estado puesto que no procesa los elementos multimedia localmente. Los bots multimedia hospedados en el servicio pueden usar las siguientes API:
 
-    * `PlayPrompt` para reproducir un clip de audio.
-    * `Record` para grabar clips de audio.
-    * `SubscribeToTone` para suscribirse a tonos de frecuencia múltiple de tono dual (DTMF).
+  * `PlayPrompt` para reproducir un clip de audio.
+  * `Record` para grabar clips de audio.
+  * `SubscribeToTone` para suscribirse a tonos de frecuencia múltiple de tono dual (DTMF).
 
     Por ejemplo, saber cuándo un usuario ha presionado **0** para llegar al operador.
 
-* **Medios hospedados en aplicaciones:** para que un bot obtenga acceso directo a los medios, necesita un permiso Graph específico. Una vez que el bot tiene el permiso, la Biblioteca multimedia en tiempo [real](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)y el SDK de llamadas de Graph le [ayudarán a](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) crear bots de llamadas y medios enriquecidos en tiempo real. Un bot hospedado en la aplicación debe estar hospedado en un entorno de Windows. Para obtener más información, [vea bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md).
+* **Medios hospedados en aplicaciones**: para que un bot obtenga acceso directo a los medios, necesita un Graph específico. Una vez que el bot tiene el permiso, la Biblioteca multimedia en tiempo [real](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) y el SDK de llamadas de [Graph le ayudarán a](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) crear bots de llamadas y medios enriquecidos en tiempo real. Un bot hospedado en la aplicación debe estar hospedado en un entorno de Windows. Para obtener más información, [vea bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md).
 
 ## <a name="code-sample"></a>Ejemplo de código
 
 | **Ejemplo de nombre** | **Descripción** | **Graph** |
 |---------------|----------|--------|
-| Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Bot de llamadas y reuniones | La aplicación de ejemplo muestra cómo Bot puede crear llamadas, unirse a reuniones y transferir llamadas. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [Ver](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Bot de llamadas y reuniones | La aplicación de ejemplo muestra cómo Bot puede crear llamadas, unirse a reuniones y transferir llamadas. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Llamadas y reuniones multimedia en tiempo real](~/bots/calls-and-meetings/real-time-media-concepts.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Graph Referencia de API](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-- [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-- [Registro de un bot que admite llamadas y reuniones en línea](./registering-calling-bot.md)
-- [Graph permisos para bots de llamadas y reuniones en línea](./registering-calling-bot.md#add-graph-permissions)
-- [Cómo desarrollar bots de llamadas y reuniones en línea en el equipo](./debugging-local-testing-calling-meeting-bots.md)
-- [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md)
-- [Información técnica sobre cómo controlar las notificaciones de llamadas entrantes](./call-notifications.md)
+* [Graph api de referencia](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Registro de un bot que admite llamadas y reuniones en línea](./registering-calling-bot.md)
+* [Graph permisos para bots de llamadas y reuniones en línea](./registering-calling-bot.md#add-graph-permissions)
+* [Cómo desarrollar bots de llamadas y reuniones en línea en el equipo](./debugging-local-testing-calling-meeting-bots.md)
+* [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md)
+* [Información técnica sobre cómo controlar las notificaciones de llamadas entrantes](./call-notifications.md)

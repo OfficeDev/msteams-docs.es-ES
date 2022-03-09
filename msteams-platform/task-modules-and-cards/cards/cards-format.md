@@ -5,16 +5,17 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356444"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398739"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
 Las dos formas de agregar formato de texto enriquecido a las tarjetas son:
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -124,13 +125,14 @@ Las Tarjetas adaptables admiten emoji. El siguiente código muestra un ejemplo d
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Tarjeta adaptable con un emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### <a name="mention-support-within-adaptive-cards"></a>Compatibilidad de las menciones con las Tarjetas adaptables 
+### <a name="mention-support-within-adaptive-cards"></a>Compatibilidad de las menciones con las Tarjetas adaptables
 
 Puede agregar @menciones en el cuerpo de una Tarjeta adaptable para bots y respuestas de extensión de mensajería. Para agregar @menciones en las tarjetas, siga la misma lógica de notificación y representación que para las [menciones en conversaciones de chat y canales de grupo](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) basadas en mensajes.
 
 Los bots y las extensiones de mensajería pueden incluir menciones en el contenido de la tarjeta en [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) y elementos [FactSet](https://adaptivecards.io/explorer/FactSet.html).
 
 > [!NOTE]
+>
 > * Actualmente, los [elementos multimedia](https://adaptivecards.io/explorer/Media.html) no se admiten en Tarjetas adaptables en la plataforma de Teams.
 > * Las menciones de canal y equipo no se admiten en los mensajes de bot.
 
@@ -173,29 +175,29 @@ El siguiente código muestra un ejemplo de Tarjeta adaptable con mención:
 }
 ```
 
-### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Id. de objeto de Microsoft Azure Active Directory (Azure AD) y UPN en la mención de usuario 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Id. de objeto de Microsoft Azure Active Directory (Azure AD) y UPN en la mención de usuario
 
-La plataforma de Teams permite mencionar a los usuarios con su Id. de objeto de Azure AD y su nombre principal de usuario (UPN), además de los identificadores de mención existentes. Los bots con Tarjetas adaptables y conectores con Webhooks entrantes admiten los dos id. de mención de usuario. 
+La plataforma de Teams permite mencionar a los usuarios con su Id. de objeto de Azure AD y su nombre principal de usuario (UPN), además de los identificadores de mención existentes. Los bots con Tarjetas adaptables y conectores con Webhooks entrantes admiten los dos id. de mención de usuario.
 
 En la tabla siguiente se describen los id. de mención de usuario que se han admitido recientemente:
 
-|Identificadores  | Capacidades de compatibilidad |   Descripción | Ejemplo |
+|Identificadores  | Capacidades de compatibilidad | Descripción | Ejemplo |
 |----------|--------|---------------|---------|
-| Id. de objeto de Azure AD | Bot, conector |  Id. de objeto del usuario de Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| Id. de objeto de Azure AD | Bot, conector |  Id. de objeto del usuario de Azure AD | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, conector | UPN de usuario de Azure AD | john.smith@microsoft.com |
 
-#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mención de usuario en bots con Tarjetas adaptables 
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mención de usuario en bots con Tarjetas adaptables
 
-Los bots admiten la mención de usuario con el Id. de objeto de Azure AD y el UPN, además de los identificadores existentes. La compatibilidad con dos nuevos identificadores está disponible en bots para mensajes de texto, cuerpo de Tarjetas adaptables y respuesta de extensión de mensajería. Los bots admiten los id. de mención en escenarios de conversaciones y `invoke`. El usuario recibe una notificación de fuente de actividades cuando se le @menciona con los identificadores. 
+Los bots admiten la mención de usuario con el Id. de objeto de Azure AD y el UPN, además de los identificadores existentes. La compatibilidad con dos nuevos identificadores está disponible en bots para mensajes de texto, cuerpo de Tarjetas adaptables y respuesta de extensión de mensajería. Los bots admiten los id. de mención en escenarios de conversaciones y `invoke`. El usuario recibe una notificación de fuente de actividades cuando se le @menciona con los identificadores.
 
 > [!NOTE]
 > La actualización del esquema y los cambios en la interfaz de usuario y la experiencia de usuario, no son necesarios para las menciones de usuario con Tarjetas adaptables en bot.
 
-##### <a name="example"></a>Ejemplo 
+##### <a name="example"></a>Ejemplo
 
 Ejemplo de mención de usuario en bots con Tarjetas adaptables:
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -233,15 +235,16 @@ La siguiente imagen ilustra la mención de usuario con la Tarjeta adaptable en b
 
 ![Mención de usuario en bot con Tarjeta adaptable](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mención de usuario en Webhook entrante con Tarjetas adaptables 
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mención de usuario en Webhook entrante con Tarjetas adaptables
 
 Los webhooks entrantes comienzan a admitir la mención de usuario en Tarjetas adaptables con el Id.de objeto de Azure AD y el UPN.
 
-> [!NOTE]    
-> * Habilite la mención de usuario en el esquema para que los webhooks entrantes admitan el Id. de objeto de Azure AD y el UPN. 
-> * No se requieren cambios en la interfaz y/o experiencia de usuario para las menciones de usuario con el Id. de objeto de Azure AD y el UPN.      
+> [!NOTE]
+>
+> * Habilite la mención de usuario en el esquema para que los webhooks entrantes admitan el Id. de objeto de Azure AD y el UPN.
+> * No se requieren cambios en la interfaz y/o experiencia de usuario para las menciones de usuario con el Id. de objeto de Azure AD y el UPN.
 
-##### <a name="example"></a>Ejemplo 
+##### <a name="example"></a>Ejemplo
 
 Ejemplo de mención de usuario en Webhook entrante:
 
@@ -417,6 +420,7 @@ La imagen aparece en la vista extendida cuando el usuario selecciona el icono ex
 En la vista extendida, los usuarios pueden acercar y alejar la imagen. Puede seleccionar las imágenes de la Tarjeta adaptable que han de llevar esta funcionalidad.
 
 > [!NOTE]
+>
 > * La funcionalidad de acercar y alejar solo se aplica a los elementos de imagen que son tipo de imagen en una Tarjeta adaptable.
 > * Para las aplicaciones móviles de Teams, la funcionalidad de vista extendida para imágenes en Tarjetas adaptables está disponible de forma predeterminada. Los usuarios pueden ver imágenes de Tarjeta adaptable en la vista extendida al pulsar en la imagen, independientemente de si el atributo `allowExpand` esté presente o no.
 
@@ -427,7 +431,7 @@ Las tarjetas de conector admiten formato Markdown y HTML limitado.
 | Estilo | Ejemplo | Markdown |
 | --- | --- | --- |
 | Negrita | **text** | `**text**` |
-| Italic | *text* | `*text*` |
+| Italic | _text_ | `*text*` |
 | Encabezado (niveles 1&ndash;3) | **Texto** | `### Text`|
 | Tachado | ~~text~~ | `~~text~~` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -525,7 +529,7 @@ Las tarjetas de conector admiten formato Markdown y HTML limitado.
 | Estilo | Ejemplo | HTML |
 | --- | --- | --- |
 | Negrita | **text** | `<strong>text</strong>` |
-| Italic | *text* | `<em>text</em>` |
+| Italic | _text_ | `<em>text</em>` |
 | Encabezado (niveles 1&ndash;3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -615,7 +619,7 @@ Las etiquetas HTML son compatibles con las tarjetas simples, como las tarjetas m
 | Estilo | Ejemplo | HTML |
 | --- | --- | --- |
 | Negrita | **text** | `<strong>text</strong>` |
-| Italic | *text* | `<em>text</em>` |
+| Italic | _text_ | `<em>text</em>` |
 | Encabezado (niveles 1&ndash;3) | **Texto** | `<h3>Text</h3>` |
 | Tachado | ~~text~~ | `<strike>text</strike>` |
 | Lista no ordenada | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilitar y configurar las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355803"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398865"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
 
@@ -24,6 +24,7 @@ Para habilitar la aplicación para Teams reuniones, actualiza el manifiesto de l
 Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de la aplicación mediante `configurableTabs`las matrices , `scopes`y `context` . El ámbito define quién puede tener acceso y el contexto define dónde está disponible la aplicación.
 
 > [!NOTE]
+>
 > * Debes actualizar el manifiesto de la aplicación con el [esquema de manifiesto](../resources/schema/manifest-schema-dev-preview.md).
 > * Las aplicaciones de las reuniones requieren ámbito `groupchat` . El `team` ámbito solo funciona para pestañas en canales.
 
@@ -78,7 +79,7 @@ Teams reuniones proporcionan una experiencia de colaboración para su organizaci
 
 Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones de mensajería. Los usuarios con roles de organizador y moderador pueden agregar pestañas a una reunión.
 
-**Para agregar una pestaña a una reunión**
+Para agregar una pestaña a una reunión:
 
 1. En el calendario, seleccione una reunión a la que desee agregar una pestaña.
 1. Seleccione la **pestaña Detalles** y seleccione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -87,16 +88,17 @@ Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones
 
 1. En la galería de pestañas que aparece, selecciona la aplicación que quieres agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
 
-**Para agregar una extensión de mensajería a una reunión**
+Para agregar una extensión de mensajería a una reunión:
 
 1. Seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; ubicados en el área del mensaje de redacción en el chat.
 1. Selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una extensión de mensajería.
 
-**Para agregar un bot a una reunión**
+Para agregar un bot a una reunión:
 
 En un chat de reunión, escriba la clave **@** y seleccione **Obtener bots**.
 
 > [!NOTE]
+>
 > * La burbuja de contenido publica una tarjeta adaptable o una tarjeta simultáneamente en el chat de reunión al que pueden acceder los usuarios. Esto ayuda a los usuarios cuando se minimiza la reunión o Teams aplicación.
 > * La identidad del usuario debe confirmarse con [SSO de pestañas](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la `GetParticipant` API.
 > * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y presentadores crear un nuevo sondeo.
@@ -156,7 +158,7 @@ Para compartir toda la aplicación en fase, en el manifiesto de la aplicación d
   ]
 ```
 
-Para obtener más información, consulta [manifiesto de la aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+Para obtener más información, consulta [manifiesto de la aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartir partes específicas de la aplicación en fase
 

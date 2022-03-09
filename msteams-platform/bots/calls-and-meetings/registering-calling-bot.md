@@ -4,24 +4,24 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: c05f0e84dd0b56f9bdb503a73886cfa0cd5024fa
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821370"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398669"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
 Un bot que participa en llamadas de audio o vídeo y reuniones en línea es un bot de Microsoft Teams normal con las siguientes características adicionales usadas para registrar el bot:
 
-* Hay una nueva versión del manifiesto Teams aplicación con dos configuraciones adicionales y `supportsCalling` `supportsVideo`. Esta configuración se incluye en el [ esquema manifiesto para Microsoft Teams](../../resources/schema/manifest-schema.md).
+* Hay una nueva versión del manifiesto Teams aplicación con dos opciones de configuración adicionales y `supportsCalling` `supportsVideo`. Esta configuración se incluye en el [esquema manifiesto para Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Los Graph microsoft deben](./registering-calling-bot.md#add-graph-permissions) configurarse para el identificador de aplicación de Microsoft del bot.
 * Los Graph de llamadas y reuniones en línea requieren el consentimiento del administrador del espacio empresarial.
 
 ## <a name="new-manifest-settings"></a>Nueva configuración del manifiesto
 
-Los bots de llamadas y reuniones en línea tienen las siguientes dos opciones de configuración adicionales en el manifest.json que habilitan audio o vídeo para el bot en Teams.
+Los bots de llamadas y reuniones en línea tienen las dos opciones de configuración adicionales siguientes en manifest.json que habilitan audio o vídeo para el bot en Teams.
 
 * `bots[0].supportsCalling`. Si está presente y se establece en `true`, Teams permite que el bot participe en llamadas y reuniones en línea.
 * `bots[0].supportsVideo`. Si está presente y se establece en `true`, Teams sabe que el bot admite vídeo.
@@ -38,10 +38,10 @@ La siguiente sección le permite crear un nuevo bot o agregar funcionalidades de
 
 Para obtener información sobre la creación de bots, consulte [Create a bot for Teams](../how-to/create-a-bot-for-teams.md).
 
-**Para crear un nuevo bot para Teams**
+Para crear un nuevo bot para Teams:
 
 1. Use este vínculo para crear un nuevo bot, `https://dev.botframework.com/bots/new`. Como alternativa, si selecciona el botón Crear un **bot** en el portal de Bot Framework, cree el bot en Microsoft Azure, para el que debe tener una cuenta de Azure.
-1. Agregue el Teams canal.
+1. Agregue el Teams.
 1. Seleccione la **pestaña Llamada** en la página Teams canal. Seleccione **Habilitar llamadas** y, a continuación, actualice **Webhook (** para llamadas) con la dirección URL HTTPS donde recibe notificaciones entrantes, por ejemplo `https://contoso.com/teamsapp/api/calling`. Para obtener más información, consulte [configuración de canales](/bot-framework/portal-configure-channels).
 
     ![Configurar Teams de canal](~/assets/images/calls-and-meetings/configure-msteams-channel.png)

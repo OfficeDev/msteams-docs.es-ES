@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356080"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398816"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -39,7 +39,6 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 |03/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas (versión preliminar para desarrolladores)| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flujo de compra desde la aplicación para la monetización de aplicaciones (versión preliminar para desarrolladores) | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
-
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -71,7 +70,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 | 17/01/2022 | Selector de personas en tarjetas adaptables para escritorio | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
- 
+
 <br>
 
 <details>
@@ -79,7 +78,6 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 <br>
 Explore las actualizaciones de las versiones anteriores de GA que se enumeran aquí.
 <br><br>
-
 
 <details>
 <summary><b>2021</b></summary>
@@ -253,7 +251,7 @@ La versión preliminar para desarrolladores es un programa público que proporci
 |07/02/2022| Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
 |02/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
+|03/02/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |17/01/2022| Selector de personas en tarjetas adaptables para móviles  | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
 |24/12/2021| Se ha introducido la guía paso a paso para conceder permisos para pestañas en dispositivos | Aspectos básicos de la aplicación > Funcionalidades del dispositivo > [Guía paso a paso para conceder permisos para pestañas en dispositivos](sbs-tab-device-permissions.yml) |

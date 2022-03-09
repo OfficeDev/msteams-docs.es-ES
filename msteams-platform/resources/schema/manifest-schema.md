@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356423"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399103"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -481,7 +481,7 @@ Este elemento es una matriz (con un máximo de 16 elementos) y todos los element
 |`context` | Matriz de enumeración| 2|| El conjunto de ámbitos `contextItem` donde se admite una pestaña.|
 
 > [!NOTE]
->  La característica searchUrl no está disponible para los desarrolladores de terceros. Si las pestañas requieren información dependiente del contexto para mostrar contenido relevante o para iniciar un flujo de autenticación, consulte [Obtener contexto para la pestaña de Microsoft Teams](../../tabs/how-to/access-teams-context.md).
+> La característica searchUrl no está disponible para los desarrolladores de terceros. Si las pestañas requieren información dependiente del contexto para mostrar contenido relevante o para iniciar un flujo de autenticación, consulte [Obtener contexto para la pestaña de Microsoft Teams](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>bots
 
@@ -638,7 +638,6 @@ Indica si se va a mostrar o no el indicador de carga cuando se carga una aplicac
 >[!NOTE]
 >Si selecciona `showLoadingIndicator` como true en el manifiesto de la aplicación, para cargar la página correctamente, modifique las páginas de contenido de las pestañas y los módulos de tareas tal como se describe en el documento [Mostrar un indicador de carga nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
 
-
 ## <a name="isfullscreen"></a>IsFullScreen
 
  Booleano **opcional**
@@ -717,6 +716,7 @@ Defina las propiedades que usa la aplicación para publicar una fuente de activi
 Cadena **opcional**
 
 Especifica el ámbito de instalación definido para esta aplicación de forma predeterminada. El ámbito definido será la opción que se muestra en el botón cuando un usuario intenta agregar la aplicación. Las opciones son:
+
 * `personal`
 * `team`
 * `groupchat`
@@ -727,10 +727,11 @@ Especifica el ámbito de instalación definido para esta aplicación de forma pr
 Objeto **opcional**
 
 Cuando se selecciona un ámbito de instalación de grupo, definirá la funcionalidad predeterminada cuando el usuario instale la aplicación. Las opciones son:
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`team`|string|||Cuando el ámbito de instalación seleccionado es `team`, este campo especifica la funcionalidad predeterminada disponible. Opciones: `tab`, `bot`o `connector`.|
@@ -761,7 +762,7 @@ Puede definir cualquiera de las siguientes propiedades:
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 Booleano **opcional**
- 
+
 Cuando la propiedad `defaultBlockUntilAdminAction` se establece en **true**, la aplicación se oculta a los usuarios de forma predeterminada hasta que el administrador la permita. Si se establece en **true**, la aplicación se oculta para todos los inquilinos y usuarios finales. Los administradores de inquilinos pueden ver la aplicación en el Centro de administración de Teams y tomar medidas para permitir o bloquear la aplicación. El valor predeterminado es **False**. Para obtener más información sobre el bloque de aplicaciones predeterminado, consulte [Ocultar aplicación de Teams hasta que el administrador lo apruebe](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl

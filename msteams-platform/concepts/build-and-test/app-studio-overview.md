@@ -4,22 +4,22 @@ description: Comience a crear aplicaciones increíbles en Microsoft Teams a trav
 keywords: introducción a app studio de teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948638"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399180"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administrar tus aplicaciones con App Studio para Microsoft Teams
 
 > [!TIP]
-> **Pruebe el Portal para desarrolladores:** App Studio ha evolucionado. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
+> **Pruebe el Portal para desarrolladores**: App Studio ha evolucionado. Configure, distribuya y administre sus aplicaciones Teams con el nuevo [Portal de desarrolladores](https://dev.teams.microsoft.com/).
 
 Con App Studio, puede crear o integrar sus propias aplicaciones de Microsoft Teams, ya sea que desarrolle aplicaciones personalizadas para su empresa o aplicaciones SaaS para equipos de todo el mundo, mediante la simplificación del proceso de creación del manifiesto y del paquete de su aplicación y mediante herramientas útiles como el Editor de tarjetas y una biblioteca de control de React.
 
 > [!IMPORTANT]
-> App Studio actualmente no está disponible en los siguientes tipos Teams organizaciones:
+> App Studio no está disponible actualmente en los siguientes tipos de Teams organizaciones:
 >
 > * Government Community Cloud (GCC)
 > * GCC High
@@ -27,7 +27,7 @@ Con App Studio, puede crear o integrar sus propias aplicaciones de Microsoft Tea
 
 ## <a name="installing-app-studio"></a>Instalación de App Studio
 
-App Studio es una aplicación de Teams que puede encontrar en la tienda de Teams. Siga este vínculo para descargar directamente [App Studio](https://aka.ms/InstallTeamsAppStudio). También puedes encontrar la aplicación en la tienda de aplicaciones.
+App Studio es una aplicación de Teams que puede encontrar en la tienda de Teams. Sigue este vínculo para descargar directamente [App Studio](https://aka.ms/InstallTeamsAppStudio). También puedes encontrar la aplicación en la tienda de aplicaciones.
 
 En la tienda, busque App Studio.
 
@@ -76,7 +76,7 @@ La sección de funciones del Editor de manifiesto es donde están definidas las 
 
   También debe proporcionar los dominios adicionales desde los que la pestaña espera cargarse o con los que se vincula.
 
-* **Pestañas personales.** Esta sección te permite definir un conjunto de pestañas que se presentan de forma predeterminada en la experiencia de la aplicación personal (experiencia que un usuario tiene con la aplicación fuera del contexto de un equipo o canal). En esta sección, proporcione el nombre de pestaña, un identificador único, la dirección URL que apunta a la interfaz de usuario que se mostrará en Teams y, opcionalmente, la dirección URL que se usará si un usuario opta por ver la pestaña en un explorador. Con Teams pestañas, proporcione los dominios adicionales desde los que la pestaña espera cargarse o vincular a.
+* **Pestañas personales.** Esta sección te permite definir un conjunto de pestañas que se presentan de forma predeterminada en la experiencia de la aplicación personal (experiencia que un usuario tiene con la aplicación fuera del contexto de un equipo o canal). En esta sección, proporcione el nombre de pestaña, un identificador único, la dirección URL que apunta a la interfaz de usuario que se mostrará en Teams y, opcionalmente, la dirección URL que se usará si un usuario opta por ver la pestaña en un explorador. Con Teams pestañas, proporcione los dominios adicionales desde los que la pestaña espera cargar o vincular.
 
 ##### <a name="bots"></a>Bots
 
@@ -115,11 +115,12 @@ Cada comando necesita un título y un id. De manera opcional, el comando puede c
 Una vez que haya terminado de definir la aplicación, la sección Prueba y distribución le permite exportar la definición de la aplicación como un archivo zip que puede compartir y cargar en el cliente de Teams para realizar pruebas. Al hacer clic en exportar, se descarga el archivo zip *nombredeapp.zip* en el directorio de descarga predeterminado.
 
 ##### <a name="publish-your-app-to-teams"></a>Publicar la aplicación en Teams
+
 En la página principal del proyecto, puede cargar la aplicación a un equipo, enviarla a la tienda de aplicaciones personalizada de la organización para los usuarios de su organización o enviarla al origen de la aplicación para todos los usuarios de Teams. El administrador de TI revisará estas entregas. Puede volver a la página *Publicar* para comprobar el estado de entrega y saber si su administrador de TI aprobó o rechazó la aplicación. Aquí también es a donde deberá acudir para enviar las actualizaciones a su aplicación o cancelar cualquier entrega activa en este momento.
 
 ### <a name="card-editor"></a>Editor de tarjetas
 
-Una tarjeta es un contenedor para unidades de información breves o relacionadas. Microsoft Teams es compatible con las tarjetas, las cuales pueden tener varias propiedades y datos adjuntos. Las tarjetas son una forma clave de que los bots y los conectores retransmitan información que requiere acción a los usuarios. 
+Una tarjeta es un contenedor para unidades de información breves o relacionadas. Microsoft Teams es compatible con las tarjetas, las cuales pueden tener varias propiedades y datos adjuntos. Las tarjetas son una forma clave de que los bots y los conectores retransmitan información que requiere acción a los usuarios.
 
 Para que este proceso sea más fácil y menos propenso a errores, la pestaña Editor de tarjetas te permite crear tarjetas de héroe o tarjetas en miniatura con un formulario y comprobar y probar la tarjeta resultante (exactamente como lo vería un usuario) a través de un bot. También proporciona el código JSON, C# o Node.js correspondiente para la tarjeta que puede copiar y pegar en el código fuente de la aplicación.
 
@@ -128,7 +129,7 @@ Si ya tiene una tarjeta que le gustaría comprobar dentro de Teams, puede pegar 
 ### <a name="react-control-library"></a>Biblioteca de controles de React
 
 >[!Note]
-> Esta React de control está en desuso en el futuro. Considera la posibilidad [de usar los Fluent de react](https://microsoft.github.io/fluent-ui-react/) de la interfaz de usuario como una alternativa anteriormente Stardust UI.
+> Esta React de control está en desuso en el futuro. Considera el uso [de los Fluent de react de la interfaz de usuario como una alternativa anteriormente](https://microsoft.github.io/fluent-ui-react/) Stardust UI.
 
 Crear una aplicación que siga los procedimientos recomendados de Teams es una forma ideal de proporcionar a la aplicación una apariencia que se ajuste perfectamente a la experiencia del cliente de Teams. Los controles de la interfaz de usuario que use son fundamentales para lograr ese fin. Para facilitar la creación de una interfaz de usuario coherente, App Studio proporciona varias categorías de controles de interfaz de usuario que siguen los principios de diseño de Teams.
 
@@ -149,6 +150,6 @@ Los controles incluyen:
 * Tablas
 * Iconos
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Administrar tus aplicaciones con el Portal de desarrolladores para Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+[Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

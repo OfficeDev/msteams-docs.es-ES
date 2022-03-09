@@ -4,12 +4,12 @@ description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de equipos
-ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081061"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398606"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -27,6 +27,7 @@ Las tarjetas que usan los bots y las extensiones de mensajería en Teams admiten
 | `signin` | Inicia el flujo de OAuth, lo que permite a los bots conectarse con servicios seguros. |
 
 > [!NOTE]
+>
 >* Teams no admite `CardAction` tipos no enumerados en la tabla anterior.
 >* Teams no admite la `potentialActions` propiedad.
 >* Las acciones de tarjeta son diferentes a [las acciones sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en Bot Framework o Azure Bot Service. Las acciones sugeridas no se admiten en Microsoft Teams. Si desea que los botones aparezcan en un mensaje de bot de Teams, use una tarjeta.
@@ -556,6 +557,7 @@ El siguiente código muestra un ejemplo de tarjetas adaptables `invoke`con la ac
   }
 }
 ```
+
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]

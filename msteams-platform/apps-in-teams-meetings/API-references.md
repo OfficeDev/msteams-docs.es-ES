@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: consulta de señal de notificación de contexto de usuario de las reuniones de aplicaciones de teams
-ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355793"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398872"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -42,6 +42,7 @@ Para identificar y recuperar información contextual para el contenido de la pes
 ## <a name="get-participant-api"></a>Obtener API de participantes
 
 > [!NOTE]
+>
 > * No almacenar en caché los roles de los participantes, ya que el organizador de la reunión puede cambiar los roles en cualquier momento.
 > * Actualmente, la `GetParticipant` API solo es compatible con listas de distribuciones o listas con menos de 350 participantes.
 
@@ -141,11 +142,12 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 Todos los usuarios de una reunión reciben las notificaciones enviadas a través de la carga de notificación en la reunión. La carga de notificación en la reunión desencadena una notificación en la reunión y le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Puede enviar una notificación en la reunión en función de la acción del usuario. La carga está disponible a través de Bot Services.
 
 > [!NOTE]
+>
 > * Cuando se invoca una notificación en la reunión, el contenido se presenta como un mensaje de chat.
 > * Actualmente, no se admite el envío de notificaciones dirigidas ni compatibilidad con webapp.
 > * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Microsoft Azure Active Directory (Azure AD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
-
+>
 ### <a name="query-parameter"></a>Parámetro de consulta
 
 En la tabla siguiente se incluyen los parámetros de consulta:
@@ -159,6 +161,7 @@ En la tabla siguiente se incluyen los parámetros de consulta:
 Se `Bot ID` declara en el manifiesto y el bot recibe un objeto result.
 
 > [!NOTE]
+>
 > * El `completionBotId` parámetro de la es `externalResourceUrl` opcional en el ejemplo de carga solicitada.
 > * Los `externalResourceUrl` parámetros de ancho y alto deben estar en píxeles. Para obtener más información, consulte [Directrices de diseño](design/designing-apps-in-meetings.md).
 > * La dirección URL es la página, que se carga como `<iframe>` en la notificación en la reunión. El dominio debe estar en la matriz de aplicaciones `validDomains` en el manifiesto de la aplicación.
@@ -308,7 +311,7 @@ Use el siguiente ejemplo para configurar la propiedad del manifiesto de la aplic
 
 > [!NOTE]
 > El bot puede recibir eventos de inicio o finalización de reunión automáticamente de todas las reuniones creadas en todos los canales `ChannelMeeting.ReadBasic.Group` agregando un manifiesto para el permiso RSC.
- 
+
 ### <a name="query-parameter"></a>Parámetro de consulta
 
 En la tabla siguiente se muestra el parámetro de consulta:
@@ -389,7 +392,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>Método
 
-|Resource|Método|Descripción|
+|Recurso|Método|Descripción|
 |----|----|----|
 |/cartcaption|POST|Controlar los títulos de la reunión, que se inició|
 
@@ -495,7 +498,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 El cuerpo de la respuesta JSON para la `getAppContentStageSharingState` API es:
 
@@ -535,7 +538,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 El cuerpo de la respuesta JSON para `getAppContentStageSharingCapabilities` la API es:
 
@@ -614,6 +617,7 @@ El manifiesto de la aplicación debe tener la `webApplicationInfo` propiedad par
 El bot recibe un evento a través del `OnEventActivityAsync` controlador. Para deserializar la carga JSON, se introduce un objeto de modelo para obtener los metadatos de una reunión. Los metadatos de una reunión se encuentra en la `value` propiedad de la carga del evento. Se `MeetingStartEndEventvalue` crea el objeto model, cuyas variables de miembro corresponden a las claves de la `value` propiedad en la carga del evento.
 
 > [!NOTE]
+>
 > * Obtener el identificador de reunión de `turnContext.ChannelData`.
 > * No use el identificador de conversación como identificador de reunión.
 > * No use el identificador de reunión de la carga de eventos de reunión `turncontext.activity.value`.
@@ -621,6 +625,7 @@ El bot recibe un evento a través del `OnEventActivityAsync` controlador. Para d
 El código siguiente muestra cómo capturar los `MeetingType`metadatos de una reunión que es , `Title`, `Id`, `JoinUrl`, y `StartTime``EndTime` desde un evento de inicio y finalización de la reunión:
 
 Evento Inicio de reunión
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -629,6 +634,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Evento de fin de reunión
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -757,7 +763,7 @@ El código siguiente proporciona un ejemplo de carga del evento de fin de reuni�
 * [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para reuniones de Teams](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)

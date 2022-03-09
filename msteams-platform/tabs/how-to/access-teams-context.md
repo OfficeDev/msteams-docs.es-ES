@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b4e693e127b06469a1f31a486fa8db9cc7ab4ba5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356269"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398809"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -24,7 +24,7 @@ La pestaña requiere información contextual para mostrar contenido relevante:
 El contexto sobre el usuario, el equipo o la empresa puede ser especialmente útil cuando:
 
 * Creas o asocias recursos en la aplicación con el usuario o equipo especificado.
-* Se inicia un flujo de autenticación Microsoft Azure Active Directory (Azure AD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario. 
+* Se inicia un flujo de autenticación Microsoft Azure Active Directory (Azure AD) u otro proveedor de identidades, y no es necesario que el usuario vuelva a escribir su nombre de usuario.
 
 Para obtener más información, vea [autenticar un usuario en su Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -115,7 +115,7 @@ El código siguiente proporciona un ejemplo de variable de contexto:
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto en canales privados
 
-Cuando la página de contenido se carga en un canal privado, `getContext` los datos que recibe de la llamada se ocultan para proteger la privacidad del canal. 
+Cuando la página de contenido se carga en un canal privado, `getContext` los datos que recibe de la llamada se ocultan para proteger la privacidad del canal.
 
 Los siguientes campos se cambian cuando la página de contenido está en un canal privado:
 
@@ -133,7 +133,7 @@ Si la página usa cualquiera de estos valores, `channelType` el valor de field `
 > [!NOTE]
 > Actualmente, Microsoft Teams Conectar canales compartidos solo están en [versión preliminar para](../../resources/dev-preview/developer-preview-intro.md) desarrolladores.
 
-Cuando la página de contenido se carga en un canal Microsoft Teams Conectar compartido, `getContext` los datos que recibe de la llamada se modifican debido a la lista única de usuarios en canales compartidos. 
+Cuando la página de contenido se carga en un canal Microsoft Teams Conectar compartido, `getContext` los datos que recibe de la llamada se modifican debido a la lista única de usuarios en canales compartidos.
 
 Los siguientes campos se cambian cuando la página de contenido está en un canal compartido:
 

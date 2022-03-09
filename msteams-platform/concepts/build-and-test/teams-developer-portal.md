@@ -5,12 +5,12 @@ keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355716"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399327"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams
 
@@ -18,7 +18,7 @@ Portal <a href="https://dev.teams.microsoft.com" target="_blank">para desarrolla
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del Portal de desarrolladores para Teams.":::
 
-> [!NOTE] 
+> [!NOTE]
 > Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
 
 ## <a name="register-an-app"></a>Registrar una aplicación
@@ -35,18 +35,18 @@ El Portal de desarrolladores proporciona un par de formas de registrar una Teams
 
 Puedes configurar entornos y variables globales para ayudar a la transición de la aplicación de tu tiempo de ejecución local a la producción. Las variables globales se usan en todos los entornos.
 
-**Para configurar un entorno**
+Para configurar un entorno:
 
 1. En el Portal de desarrolladores, selecciona la aplicación en la que estás trabajando.
 2. Vaya a la **página Entornos** y seleccione **+ Agregar un entorno**.
 3. Seleccione **+ Agregar una variable** para crear variables de configuración para su entorno.
 
-**Para usar variables**
+Para usar variables:
 
 Usa los nombres de las variables en lugar de los valores codificados de forma automática para establecer las configuraciones de la aplicación.
 
 1. Escriba `{{` en cualquier campo del Portal de desarrolladores. Aparece un desplegable con todas las variables creadas para el entorno elegido junto con las variables globales.  
-1. Antes de descargar el paquete de la aplicación (por ejemplo, al prepararse para publicar en la tienda Teams), selecciona el entorno que quieras usar. Las configuraciones de la aplicación se actualizan automáticamente en función del entorno. 
+1. Antes de descargar el paquete de la aplicación (por ejemplo, al prepararse para publicar en la tienda Teams), selecciona el entorno que quieras usar. Las configuraciones de la aplicación se actualizan automáticamente en función del entorno.
 
 ## <a name="identify-app-owners"></a>Identificar propietarios de aplicaciones
 

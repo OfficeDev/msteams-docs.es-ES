@@ -6,22 +6,22 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Evento del canal de consentimiento de tarjeta de bot del controlador de actividades
-ms.openlocfilehash: af6823a0a1395c5f33af9d914c3199d76854a050
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435799"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398648"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
-Este documento se basa en el artículo sobre cómo funcionan los [bots](https://aka.ms/how-bots-work) en la [documentación básica de Bot Framework](https://aka.ms/azure-bot-service-docs). La diferencia principal entre los bots desarrollados para Microsoft Teams y el bot framework principal se encuentra en las características que se proporcionan en Teams.
+Este documento se basa en el artículo sobre cómo funcionan los [bots](https://aka.ms/how-bots-work) en la [documentación básica de Bot Framework](https://aka.ms/azure-bot-service-docs). La diferencia principal entre los bots desarrollados para Microsoft Teams y el marco de bots principal se encuentra en las características que se proporcionan en Teams.
 
-Para organizar la lógica de conversación del bot, se usa un controlador de actividades. Las actividades se controlan de dos maneras mediante Teams de actividad y lógica de bot. El controlador Teams de actividad agrega compatibilidad para Microsoft Teams eventos e interacciones específicos. El objeto bot contiene el razonamiento de conversación o la lógica de un turno y expone un controlador de turnos, que es el método que puede aceptar actividades entrantes del adaptador del bot.
+Para organizar la lógica de conversación del bot, se usa un controlador de actividades. Las actividades se controlan de dos maneras mediante Teams de actividad y lógica de bot. El Teams de actividad agrega compatibilidad con Microsoft Teams eventos e interacciones específicos del usuario. El objeto bot contiene el razonamiento de conversación o la lógica de un turno y expone un controlador de turnos, que es el método que puede aceptar actividades entrantes del adaptador del bot.
 
 ## <a name="teams-activity-handlers"></a>Teams de actividad
 
-Teams controlador de actividad se deriva del controlador de actividades de Microsoft Bot Framework. Enruta todas las Teams antes de permitir que se controle cualquier actividad que no Teams específicas.
+Teams controlador de actividad se deriva del controlador de actividades de Microsoft Bot Framework. Enruta todas las Teams antes de permitir que se controle cualquier actividad no Teams específicas.
 
 Cuando un bot para Teams recibe una actividad, se enruta a los controladores de actividad. Todas las actividades se enrutan a través de un controlador base denominado controlador de turnos. El controlador de turnos llama al controlador de actividad necesario para administrar cualquier actividad recibida. El Teams bot se deriva `TeamsActivityHandler` de la clase, que se deriva de la clase de `ActivityHandler` Bot Framework.
 
@@ -29,7 +29,7 @@ Cuando un bot para Teams recibe una actividad, se enruta a los controladores de 
 
 Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaje, el controlador de turnos recibe una notificación de esa actividad entrante. A continuación, el controlador de turnos envía la actividad entrante al controlador `OnMessageActivityAsync` de actividad. En Teams, esta funcionalidad sigue siendo la misma. Si el bot recibe una actividad de actualización de conversación, el controlador de turnos recibe una notificación de esa actividad entrante y envía la actividad entrante a `OnConversationUpdateActivityAsync`. El Teams de actividad comprueba primero si hay Teams eventos específicos. Si no se encuentra ningún evento, los pasa al controlador de actividad de Bot Framework.
 
-En la Teams controlador de actividad, hay dos controladores de Teams principales y `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`enruta todas las actividades de actualización de conversación y `OnInvokeActivityAsync` enruta todas Teams invocar actividades.
+En la Teams de controlador de actividad, hay dos controladores de Teams y `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`enruta todas las actividades de actualización de conversación y `OnInvokeActivityAsync` enruta todas Teams invocar actividades.
 
 Para implementar la lógica Teams controladores de actividad específicos, debe invalidar los métodos del bot como se muestra en la [sección lógica del](#bot-logic) bot. No hay ninguna implementación base para estos controladores, por lo tanto, debe agregar la lógica que desee en su invalidación.
 
@@ -60,9 +60,9 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsTeamRenamedAsync`
@@ -70,9 +70,9 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersAddedAsync`
@@ -80,9 +80,9 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 ```csharp
 
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersRemovedAsync`
@@ -90,16 +90,16 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 ```csharp
 
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaje, el controlador de turnos recibe una notificación de esa actividad entrante. A continuación, el controlador de turnos envía la actividad entrante al controlador `onMessage` de actividad. En Teams, esta funcionalidad sigue siendo la misma. Si el bot recibe una actividad de actualización de conversación, el controlador de turnos recibe una notificación de esa actividad entrante y envía la actividad entrante a `dispatchConversationUpdateActivity`. El Teams de actividad comprueba primero si hay Teams eventos específicos. Si no se encuentra ningún evento, los pasa al controlador de actividad de Bot Framework.
 
-En la Teams controlador de actividad, hay dos controladores de Teams principales y `dispatchConversationUpdateActivity` `onInvokeActivity`. `dispatchConversationUpdateActivity`enruta todas las actividades de actualización de conversación y `onInvokeActivity` enruta todas Teams invocar actividades.
+En la Teams de controlador de actividad, hay dos controladores de Teams y `dispatchConversationUpdateActivity` `onInvokeActivity`. `dispatchConversationUpdateActivity`enruta todas las actividades de actualización de conversación y `onInvokeActivity` enruta todas Teams invocar actividades.
 
 Para implementar la lógica Teams controladores de actividad específicos, debe invalidar los métodos del bot como se muestra en la [sección lógica del](#bot-logic) bot. Defina la lógica del bot para estos controladores y, a continuación, asegúrese de llamar `next()` al final. Al llamar `next()` , asegúrese de que se ejecute el siguiente controlador.
 
@@ -151,7 +151,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -161,7 +161,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -169,7 +169,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaje, el controlador de turnos recibe una notificación de esa actividad entrante. A continuación, el controlador de turnos envía la actividad entrante al controlador `on_message_activity` de actividad. En Teams, esta funcionalidad sigue siendo la misma. Si el bot recibe una actividad de actualización de conversación, el controlador de turnos recibe una notificación de esa actividad entrante y envía la actividad entrante a `on_conversation_update_activity`. El Teams de actividad comprueba primero si hay Teams eventos específicos. Si no se encuentra ningún evento, los pasa al controlador de actividad de Bot Framework.
 
-En la Teams controlador de actividad, hay dos controladores de Teams principales y `on_conversation_update_activity` `on_invoke_activity`. `on_conversation_update_activity`enruta todas las actividades de actualización de conversación y `on_invoke_activity` enruta todas Teams invocar actividades.
+En la Teams de controlador de actividad, hay dos controladores de Teams y `on_conversation_update_activity` `on_invoke_activity`. `on_conversation_update_activity`enruta todas las actividades de actualización de conversación y `on_invoke_activity` enruta todas Teams invocar actividades.
 
 Para implementar la lógica Teams controladores de actividad específicos, debe invalidar los métodos del bot como se muestra en la [sección lógica del](#bot-logic) bot. No hay ninguna implementación base para estos controladores, por lo tanto, debe agregar la lógica que desee en su invalidación.
 
@@ -177,7 +177,7 @@ Para implementar la lógica Teams controladores de actividad específicos, debe 
 
 ## <a name="bot-logic"></a>Lógica del bot
 
-La lógica del bot procesa las actividades entrantes de uno o más canales de bot y, en respuesta, genera actividades salientes. Esto sigue siendo así con los bots derivados de la clase de controlador de Teams de actividad, que primero comprueba si hay Teams actividades. Después de comprobar si Teams actividades, pasa todas las demás actividades al controlador de actividades de Bot Framework.
+La lógica del bot procesa las actividades entrantes de uno o más canales de bot y, en respuesta, genera actividades salientes. Esto sigue siendo así con los bots derivados de la clase Teams controlador de actividad, que primero comprueba si hay Teams actividades. Después de comprobar si Teams actividades, pasa todas las demás actividades al controlador de actividades del Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -208,7 +208,7 @@ Amplía `TeamsActivityHandler` la lista de controladores de la sección de contr
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | Este método se puede invalidar para controlar un canal Teams que se está creando. Para obtener más información, consulta [canal creado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelCreated | `OnTeamsChannelCreatedAsync` | Este método se puede invalidar para controlar un canal Teams que se va a crear. Para obtener más información, consulta [canal creado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Este método se puede invalidar para controlar un canal Teams que se va a eliminar. Para obtener más información, consulta [canal eliminado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | channelRenamed | `OnTeamsChannelRenamedAsync` | Este método se puede invalidar para controlar un canal Teams que se va a cambiar el nombre. Para obtener más información, vea [channel renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`Este método se puede invalidar para controlar un Teams equipo que se va a cambiar el nombre. Para obtener más información, vea [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
@@ -225,7 +225,7 @@ La lista de Teams controladores de actividad llamados `OnInvokeActivityAsync` de
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | Este método se invoca cuando el usuario acepta una tarjeta de consentimiento de archivo. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | Este método se invoca cuando se recibe una actividad de tarjeta de consentimiento de archivo desde el conector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | Este método se invoca cuando el usuario rechaza una tarjeta de consentimiento de archivo. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Este método se invoca cuando se recibe una Office 365 de acción de tarjeta de conector desde el conector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Este método se invoca cuando se recibe una Office 365 acción de tarjeta de conector desde el conector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | Este método se invoca cuando se recibe una actividad de estado signIn verify desde el conector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se captura un módulo de tareas. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se envía un módulo de tareas. |
@@ -260,7 +260,7 @@ Amplía `TeamsActivityHandler` la lista de controladores de la sección de contr
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | Este método se puede invalidar para controlar un canal Teams que se está creando. Para obtener más información, consulta [canal creado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelCreated | `OnTeamsChannelCreatedAsync` | Este método se puede invalidar para controlar un canal Teams que se va a crear. Para obtener más información, consulta [canal creado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | Este método se puede invalidar para controlar un canal Teams que se va a eliminar. Para obtener más información, consulta [canal eliminado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | channelRenamed | `OnTeamsChannelRenamedAsync` | Este método se puede invalidar para controlar un canal Teams que se va a cambiar el nombre. Para obtener más información, vea [channel renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`Este método se puede invalidar para controlar un Teams equipo que se va a cambiar el nombre. Para obtener más información, vea [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
@@ -271,13 +271,13 @@ Amplía `TeamsActivityHandler` la lista de controladores de la sección de contr
 
 La lista de Teams controladores de actividad llamados `onInvokeActivity` desde el Teams de actividad incluyen lo siguiente:
 
-| Invocar tipos                    | Controlador                              | Description                                                  |
+| Invocar tipos                    | Controlador                              | Descripción                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `handleTeamsCardActionInvoke`       | Este método se invoca cuando se recibe una actividad de invocación de acción de tarjeta desde el conector. |
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | Este método se invoca cuando el usuario acepta una tarjeta de consentimiento de archivo. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | Este método se invoca cuando se recibe una actividad de tarjeta de consentimiento de archivo desde el conector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | Este método se invoca cuando el usuario rechaza una tarjeta de consentimiento de archivo. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Este método se invoca cuando se recibe una Office 365 de acción de tarjeta de conector desde el conector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Este método se invoca cuando se recibe una Office 365 acción de tarjeta de conector desde el conector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | Este método se invoca cuando se recibe una actividad de estado signIn verify desde el conector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se captura un módulo de tareas. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se envía un módulo de tareas. |
@@ -313,7 +313,7 @@ Amplía `TeamsActivityHandler` la lista de controladores de la sección de contr
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
-| channelCreated | `on_teams_channel_created` | Este método se puede invalidar para controlar un canal Teams que se está creando. Para obtener más información, consulta [canal creado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelCreated | `on_teams_channel_created` | Este método se puede invalidar para controlar un canal Teams que se va a crear. Para obtener más información, consulta [canal creado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | channelDeleted | `on_teams_channel_deleted` | Este método se puede invalidar para controlar un canal Teams que se va a eliminar. Para obtener más información, consulta [canal eliminado en](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) eventos [de actualización de conversación](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | channelRenamed | `on_teams_channel_renamed` | Este método se puede invalidar para controlar un canal Teams que se va a cambiar el nombre. Para obtener más información, vea [channel renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;`Este método se puede invalidar para controlar un Teams equipo que se va a cambiar el nombre. Para obtener más información, vea [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
@@ -330,7 +330,7 @@ La lista de Teams controladores de actividad llamados `on_invoke_activity` desde
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | Este método se invoca cuando el usuario acepta una tarjeta de consentimiento de archivo. |
 | fileConsent/invoke              | `on_teams_file_consent`            | Este método se invoca cuando se recibe una actividad de tarjeta de consentimiento de archivo desde el conector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | Este método se invoca cuando el usuario rechaza una tarjeta de consentimiento de archivo. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Este método se invoca cuando se recibe una Office 365 de acción de tarjeta de conector desde el conector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Este método se invoca cuando se recibe una Office 365 acción de tarjeta de conector desde el conector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | Este método se invoca cuando se recibe una actividad de estado signIn verify desde el conector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se captura un módulo de tareas. |
 | task/submit                     | `on_teams_task_module_submit`       | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se envía un módulo de tareas. |
@@ -339,7 +339,7 @@ Las actividades de invocación enumeradas en esta sección son para bots de conv
 
 ---
 
-* * *
+---
 
 Ahora que ya se ha familiarizado con los controladores de actividad del bot, veamos cómo los bots se comportan de forma diferente en función de la conversación y los mensajes que recibe o envía.
 
