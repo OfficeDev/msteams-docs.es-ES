@@ -2,19 +2,19 @@
 title: Cargar la aplicación personalizada
 description: Obtenga información sobre cómo transferir localmente la aplicación en Microsoft Teams. La transferencia local es común al probar y depurar una aplicación durante el desarrollo.
 ms.topic: how-to
-author: KirtiPereira
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: bcb5661c4f6d09499700456bc44ce962ac710ea9
-ms.sourcegitcommit: 83d67e73427ea1e93bb9aea5a8ca8ae05b68e302
+ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62430302"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356283"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Cargar la aplicación en Microsoft Teams
 
-Puede transferir localmente aplicaciones de Microsoft Teams sin tener que publicarlas en su organización o en la tienda de Teams. Esto tiene sentido en los escenarios siguientes:
+Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publicarlas en su organización o en la tienda de Teams. Esto tiene sentido en los siguientes escenarios:
 
 * Quiere probar y depurar una aplicación de manera local usted mismo o con otros desarrolladores.
 * Ha creado una aplicación solo para usted. Por ejemplo, para automatizar un flujo de trabajo.
@@ -63,7 +63,7 @@ No tiene que transferir localmente la aplicación de nuevo si realiza cambios de
 Para quitar la aplicación, haga clic con el botón derecho en el icono de la aplicación en Teams y seleccione **Desinstalar**.
 
 > [!NOTE]
-> No puede quitar completamente la actividad personal del bot. Si quita la aplicación y la vuelve a agregar, la nueva comunicación con el bot se anexa a la conversación anterior con ella.
+> No puede eliminar por completo la actividad del bot personal. Si elimina la aplicación y la vuelve a agregar, la nueva comunicación con el bot se anexa a la conversación anterior con él.
 
 ## <a name="next-step"></a>Paso siguiente
 

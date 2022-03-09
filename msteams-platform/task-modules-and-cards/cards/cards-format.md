@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 08c78748039fd8feccc1750abd17af7bcbc2d441
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821678"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356444"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -20,9 +20,9 @@ Las dos formas de agregar formato de texto enriquecido a las tarjetas son:
 
 Las tarjetas solo admiten el formato en la propiedad de texto, no en las propiedades de título o subtítulo. El formato se puede especificar mediante un subconjunto de formato XML, HTML o Markdown, según el tipo de tarjeta. Para el desarrollo actual y futuro de las tarjetas adaptables, se recomienda utilizar el formato Markdown.
 
-La compatibilidad con el formato difiere en función de los tipos de tarjeta. La representación de la tarjeta puede diferir ligeramente entre el cliente de escritorio y de móvil de Microsoft Teams, así como en Teams en el explorador de escritorio.
+El soporte del formato difiere entre los tipos de tarjetas. La representación de la tarjeta puede diferir ligeramente entre los clientes de Microsoft Teams de escritorio y de móvil, así como de Teams en el explorador de escritorio.
 
-Puede incluir una imagen alineada en cualquier tarjeta de Teams. Las imágenes pueden adquirir formato como archivos `.png`, `.jpg` o `.gif` y no deben superar los 1024 ×1024 px o 1 MB. Los GIF animados no son compatibles. Para obtener más información, consulte [tipos de tarjetas](./cards-reference.md#inline-card-images).
+Puede incluir una imagen alineada en cualquier tarjeta de Teams. Los formatos de imagen admitidos son .png, .jpg o .gif. Mantenga las dimensiones dentro de 1024 x 1024 px y el tamaño del archivo menos de 1 MB. Las imágenes .gif animadas no son admitidas. Para obtener más información, consulte [tipos de tarjetas](./cards-reference.md#inline-card-images).
 
 Puede dar formato a Tarjetas adaptables y a tarjetas de conector de Office 365 mediante Markdown que incluye determinados estilos admitidos.
 
@@ -116,7 +116,7 @@ El siguiente código muestra un ejemplo de formato de Tarjetas adaptables:
 }
 ```
 
-Las tarjetas adaptables admiten emojis. El siguiente código muestra un ejemplo de tarjetas adaptables con un emoji:
+Las Tarjetas adaptables admiten emoji. El siguiente código muestra un ejemplo de Tarjetas adaptables con un emoji:
 
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
@@ -301,7 +301,7 @@ La siguiente imagen ilustra la mención de usuario en Webhook entrante:
 Use la propiedad de enmascaramiento de información para enmascarar información específica, por ejemplo, contraseñas o información confidencial de los usuarios dentro del elemento de entrada [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) de la Tarjeta adaptable.
 
 > [!NOTE]
-> La característica solo admite el enmascaramiento de información del lado cliente. El texto de entrada enmascarado se envía como texto no cifrado a la dirección del punto de conexión HTTPS que se especificó durante la [configuración del bot](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
+> La función sólo admite el enmascaramiento de información del lado del cliente. El texto de entrada enmascarado se envía como texto claro a la dirección del punto final HTTPS que se especificó durante la [configuración del bot](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
 
 Para enmascarar la información en Tarjetas adaptables, agregue la propiedad `style` al **tipo** `input.text` y establezca su valor en **contraseña**.
 
@@ -610,7 +610,7 @@ El siguiente código muestra un ejemplo de formato para tarjetas de conector HTM
 
 # <a name="html-format-for-hero-and-thumbnail-cards"></a>[Formato HTML para tarjetas de miniatura y de elemento principal](#tab/simple-html)
 
-Las etiquetas HTML son compatibles con tarjetas sencillas, como las tarjetas de miniatura y de elemento principal. Markdown no es compatible.
+Las etiquetas HTML son compatibles con las tarjetas simples, como las tarjetas miniaturas y de elemento principal. No se admite Markdown.
 
 | Estilo | Ejemplo | HTML |
 | --- | --- | --- |

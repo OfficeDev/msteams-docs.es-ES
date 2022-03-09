@@ -359,6 +359,8 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: Usar autenticación SSO
           href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: Utilizar proveedores OAuth externos
+          href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flujo de autenticación en bots
@@ -471,6 +473,8 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Mantener la aplicación publicada
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: Parámetros de clasificación de la tienda de Microsoft Teams
+          href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     - name: Rentabilizar la aplicación
       items:
         - name: Información general
