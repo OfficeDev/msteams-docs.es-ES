@@ -3,19 +3,19 @@ title: Escenas personalizadas del Modo conferencia
 description: Trabajar con escenas personalizadas del Modo conferencia
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0f2f57cb36ba7caed7acaffa3bcfc1e2e57c59c2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059668"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356087"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
 Las escenas personalizadas del Modo conferencia en Microsoft Teams proporcionan un entorno de reunión envolvente y le permiten hacer lo siguiente:
 
-* Integrar a las personas y animarlas a activar su vídeo. 
-* Combinar a los participantes digitalmente en una sola escena virtual. 
+* Integrar a las personas y animarlas a activar su vídeo.
+* Combinar a los participantes digitalmente en una sola escena virtual.
 * Colocar las secuencias de vídeo de los participantes en puestos predefinidos diseñados y establecidos por el creador de la escena.
 
 En las escenas personalizadas del Modo conferencia, la escena es un artefacto. El desarrollador de la escena la crea con el Estudio de escenas de Microsoft. En una configuración de escena concebida, los participantes tienen puestos con secuencias de vídeo. Los vídeos se representan en esos puestos. Se recomienda el uso de aplicaciones solo de escena, ya que la experiencia de estas aplicaciones es clara.
@@ -27,7 +27,7 @@ El siguiente proceso proporciona información general para crear una aplicación
 Una aplicación solo de escena sigue siendo una aplicación en Microsoft Teams. El Estudio de escenas se ocupa de la creación de paquetes de aplicaciones en segundo plano. Varias escenas de un único paquete de aplicación aparecen como una lista plana para los usuarios.
 
 > [!NOTE]
-> Los usuarios no pueden iniciar el Modo conferencia desde el móvil. Sin embargo, después de que un usuario se una a una reunión a través de un dispositivo móvil y se active el Modo conferencia desde el escritorio, los usuarios desde móviles que hayan activado el vídeo aparecerán en Modo conferencia en el escritorio. 
+> Los usuarios no pueden iniciar el Modo conferencia desde el móvil. Sin embargo, después de que un usuario se una a la reunión a través de un dispositivo móvil y se active el Modo conferencia desde el escritorio, los usuarios de móviles que hayan activado el vídeo aparecerán en Modo conferencia en el escritorio.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -54,7 +54,7 @@ Microsoft tiene un Estudio de escenas que le permite crear escenas. Está dispon
 
 Una escena en el contexto del Estudio de escenas es un artefacto que contiene los siguientes elementos:
 
-* Puestos reservados para el organizador de la reunión y los moderadores. El moderador no hace referencia al usuario que está compartiendo activamente. Hace referencia al [rol de la reunión](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Puestos reservados para el organizador de la reunión y los moderadores. El moderador no hace referencia al usuario que está compartiendo activamente. Hace referencia al [rol de la reunión](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Puesto e imagen para cada participante con un ancho y alto ajustables. Solo se admite el formato PNG para la imagen.
 
@@ -66,7 +66,7 @@ La siguiente imagen muestra cada puesto representado como un avatar para crear l
 
 ![Estudio de escenas](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**Para crear una escena con el Estudio de escenas**
+Para crear una escena con Estudio de escenas, siga estos pasos:
 
 1. Vaya a [Editor de escenas: Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/scenes).
 
@@ -86,7 +86,7 @@ La siguiente imagen muestra cada puesto representado como un avatar para crear l
     ![Agregar imágenes al entorno](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * Puede descargar los archivos [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) y [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) con las imágenes.
+    >Puede descargar los archivos [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) y [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) con las imágenes.
 
 1. Seleccione la imagen que ha agregado.
 
@@ -212,7 +212,7 @@ Ahora que le hemos explicado el ejemplo scene.json, puede activar las escenas pe
 
 Obtenga más información sobre cómo un usuario interactúa con las escenas personalizadas del Modo conferencia.
 
-**Cómo seleccionar escenas y activar escenas personalizadas del Modo conferencia**
+Para seleccionar escenas y activar escenas personalizadas en Modo conferencia, siga estos pasos:
 
 1. Crear una nueva reunión de prueba.
 
@@ -241,5 +241,5 @@ Puede compartir el paquete de escenas —que es un archivo .zip recuperado del E
 ## <a name="see-also"></a>Vea también
 
 * [Aplicaciones para reuniones de Teams](teams-apps-in-meetings.md)
-* [Bots para llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Reuniones y llamadas multimedia en tiempo real con Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
