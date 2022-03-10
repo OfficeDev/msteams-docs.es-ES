@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo diseñar Tarjetas adaptables para 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 86b5bdea89f49f6e98ce84920e3fbe1cdb4f378e
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948645"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398627"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de Tarjetas adaptables para la aplicación de Microsoft Teams
 
@@ -188,15 +188,15 @@ Las tarjetas diseñadas para una pantalla estrecha se escalan bien en pantallas 
 Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) para dar formato al contenido de la tarjeta en una tabla o cuadrícula. Hay varias opciones para dar formato al ancho de columna. Estas directrices le ayudan a comprender cuándo usar cada una de ellas.
 
 * `"width": "auto"`: cambia el tamaño de cada columna del `ColumnSet` para ajustarse al contenido de la aplicación que incluya en esa columna.
-   * **Hacer**: se usa cuando tiene contenido de ancho variable y no es necesario dar prioridad a una columna específica.
-   * **Hacer**: para cada `TextBlock`, establezca `"wrap": true` ya que el texto no se ajusta de forma predeterminada.
-   * **No hacer**: establezca `"width": "auto"` para cada contenedor de columnas. Por ejemplo, si tiene una entrada y un botón en paralelo, es posible que el botón se corte en algunas pantallas. En su lugar, establezca `auto` para la columna con botones y otro contenido que siempre debe estar completamente visible.
+  * **Hacer**: se usa cuando tiene contenido de ancho variable y no es necesario dar prioridad a una columna específica.
+  * **Hacer**: para cada `TextBlock`, establezca `"wrap": true` ya que el texto no se ajusta de forma predeterminada.
+  * **No hacer**: establezca `"width": "auto"` para cada contenedor de columnas. Por ejemplo, si tiene una entrada y un botón en paralelo, es posible que el botón se corte en algunas pantallas. En su lugar, establezca `auto` para la columna con botones y otro contenido que siempre debe estar completamente visible.
 * `"width": "stretch"`: tamaño de las columnas según el `ColumnSet`width disponible. Cuando varias columnas usan el valor `"stretch"`, comparten igualmente el ancho disponible.
-   * **Hacer**: se usa con una columna si todas las demás columnas tienen un ancho estático. Por ejemplo, tiene imágenes en miniatura en una columna de 50 píxeles de ancho.
-* `"width": "<number>"`: Ajusta el tamaño de las columnas con una proporción del ancho `ColumnSet` disponible. Por ejemplo, si establece tres columnas con `"width": "1"`, `"width": "4"` y `"width": "5"`, las columnas ocuparán un 10, 40 y un 50 por ciento del ancho disponible.
+  * **Hacer**: se usa con una columna si todas las demás columnas tienen un ancho estático. Por ejemplo, tiene imágenes en miniatura en una columna de 50 píxeles de ancho.
+* `"width": "<number>"`: Ajusta el tamaño de las columnas a partir de la proporción del `ColumnSet` ancho disponible. Por ejemplo, si establece tres columnas con `"width": "1"`, `"width": "4"` y `"width": "5"`, las columnas ocuparán un 10, 40, y un 50 por ciento del ancho disponible.
 * `"width": "<number>px"`: Ajusta tamaño de las columnas en un ancho de píxel específico. Este enfoque es útil al crear tablas.
-   * **Hacer**: se usa cuando no es necesario cambiar el ancho de lo que se muestra (por ejemplo, números y porcentajes).
-   * **No hacer**: supera accidentalmente el ancho de lo que puede mostrar la tarjeta. Recuerde que el ancho de pantalla disponible depende del dispositivo. Teams Mobile tampoco admite el desplazamiento horizontal como el escritorio de Teams.
+  * **Hacer**: se usa cuando no es necesario cambiar el ancho de lo que se muestra (por ejemplo, números y porcentajes).
+  * **No hacer**: supera accidentalmente el ancho de lo que puede mostrar la tarjeta. Recuerde que el ancho de pantalla disponible depende del dispositivo. Teams Mobile tampoco admite el desplazamiento horizontal como el escritorio de Teams.
 
 #### <a name="example-knowing-when-to-stretch-columns"></a>Ejemplo: saber cuándo se deben ampliar las columnas
 
@@ -647,9 +647,9 @@ Siga estas instrucciones al incluir imágenes en las tarjetas.
 * **Hacer**: si necesita controlar el tamaño exacto de las imágenes, use las propiedades `width` y `height`.
 * **No hacer**: incluir relleno con las imágenes. Esto suele introducir problemas de espaciado y diseño no deseados.
 * Con respecto al color de fondo:
-   * **Hacer**: use fondos transparentes para que las imágenes se adapten a cualquier tema de Teams. 
-   * **No hacer**: incluye un color de fondo fijo a menos que un color específico sea visible para los usuarios.
-   * **No hacer**: Agrega un color de fondo a un `TextBlock` que afecta a la legibilidad. Por ejemplo, si el fondo es oscuro, use un color de texto más claro y viceversa.
+  * **Hacer**: use fondos transparentes para que las imágenes se adapten a cualquier tema de Teams.
+  * **No hacer**: incluye un color de fondo fijo a menos que un color específico sea visible para los usuarios.
+  * **No hacer**: Agrega un color de fondo a un `TextBlock` que afecta a la legibilidad. Por ejemplo, si el fondo es oscuro, use un color de texto más claro y viceversa.
 
 ### <a name="actions"></a>Acciones
 
