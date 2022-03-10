@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Pestañas de equipos webhook salientes mensaje accionable comprobar webhook
-ms.openlocfilehash: 2b77118e76bfde8c0fac7c74fce4dab1d78c7dd5
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c849fd10c19a7af198147cb39fa90c2fdd5052a8
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356297"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399110"
 ---
 # <a name="create-outgoing-webhook"></a>Crear webhook saliente
 
@@ -42,13 +42,13 @@ En la tabla siguiente se proporcionan las características y la descripción de 
 
 Crear webhooks salientes y agregar bots personalizados a Teams.
 
-Para crear un Webhook saliente, siga estos pasos:
+Para crear un webhook saliente, siga estos pasos:
 
 1. Seleccione **Teams** en el panel izquierdo. La página de **Teams** aparece:
 
     ![Canal de Teams](~/assets/images/teamschannel.png)
 
-1. En la página de **Teams,** seleccione el equipo necesario para crear un Webhook saliente y seleccione &#8226;&#8226;&#8226;. En el menú desplegable, seleccione **Administrar equipo**:
+1. En la página de **Teams,** seleccione el equipo necesario para crear un webhook saliente y seleccione &#8226;&#8226;&#8226;. En el menú desplegable, seleccione **Administrar equipo**:
 
     ![Crear webhook saliente](~/assets/images/outgoingwebhook1.png)
 
@@ -67,7 +67,7 @@ Para crear un Webhook saliente, siga estos pasos:
     * **Descripción**: una cadena detallada que aparece en la tarjeta de perfil y en el panel de la aplicación de nivel de equipo.
     * **Imagen de perfil**: un icono de aplicación para el webhook, que es opcional.
 
-1. Seleccione **Crear**. El Webhook saliente se agrega al canal del equipo actual:
+1. Seleccione **Crear**. El webhook saliente se agrega al canal del equipo actual:
 
     ![crear webhook saliente](~/assets/images/outgoingwebhook.png)
 
@@ -101,7 +101,7 @@ Para asegurarse de que el servicio recibe llamadas solo de clientes reales de Te
 
 El código siempre debe validar la firma HMAC incluida en la solicitud de la siguiente manera:
 
-* Genere el token HMAC a partir del cuerpo de la solicitud del mensaje. Hay bibliotecas estándar para hacerlo en la mayoría de la plataforma, como [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js y [Teams ejemplo de webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) para C \#. Microsoft Teams usa criptografía SHA256 HMAC estándar. Debe convertir el cuerpo en una matriz de bytes en UTF8.
+* Genere el token HMAC a partir del cuerpo de la solicitud del mensaje. Hay bibliotecas estándar para hacerlo en la mayoría de la plataforma, como [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) para Node.js y [Ejemplo de webhook de Teams](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) para C\#. Microsoft Teams usa criptografía SHA256 HMAC estándar. Debe convertir el cuerpo en una matriz de bytes en UTF8.
 * Calcule el hash de la matriz de bytes del token de seguridad proporcionado por Teams cuando registró el webhook saliente en el cliente de Teams. Consulte [crear un Webhook de salida](#create-outgoing-webhook).
 * Convierta el hash en una cadena mediante codificación UTF-8.
 * Compare el valor de cadena del hash generado con el valor proporcionado en la solicitud HTTP.
@@ -110,7 +110,7 @@ El código siempre debe validar la firma HMAC incluida en la solicitud de la sig
 
 **Crear un método para enviar una respuesta correcta o errónea**
 
-Las respuestas de los Webhooks salientes aparecen en la misma cadena de respuesta que el mensaje original. Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP sincrónica al servicio y el código obtiene cinco segundos para responder al mensaje antes de que se agote el tiempo de espera de la conexión y finalice.
+Las respuestas de los webhooks salientes aparecen en la misma cadena de respuesta que el mensaje original. Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP sincrónica al servicio y el código obtiene cinco segundos para responder al mensaje antes de que se agote el tiempo de espera de la conexión y finalice.
 
 ### <a name="example-response"></a>Ejemplo de respuesta
 
@@ -124,8 +124,9 @@ Las respuestas de los Webhooks salientes aparecen en la misma cadena de respuest
 ---
 
 > [!NOTE]
-> * Puede enviar mensajes de texto, tarjetas prominentes y tarjetas adaptables como datos adjuntos con un Webhook saliente.
-> * Las tarjetas admiten el formato.Para obtener más información, consulte [formatear tarjetas con Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
+>
+> * Puede enviar mensajes de texto, tarjetas prominentes y tarjetas adaptables como datos adjuntos con un webhook saliente.
+> * Las tarjetas admiten el formato. Para más información, consulte [formatear tarjetas con Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 
 Los siguientes códigos son ejemplos de una respuesta de tarjeta adaptable:
 
@@ -198,30 +199,30 @@ var responseMsg = JSON.stringify({
 
 ```json
 {
-    "type": "message",
-    "attachments": [
-        {
-            "contentType": "application/vnd.microsoft.card.adaptive",
-            "content": {
-                "type": "AdaptiveCard",
-                "version": "1.4",
-                "body": [
-                    {
-                        "type": "TextBlock",
-                        "text": "Request sent by: Megan"
-                    },
-                    {
-                        "type": "Image",
-                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "Sample image for Adaptive Card.."
-                    }
-                ]
-            }
-        }
+ "type": "message",
+ "attachments": [
+  {
+   "contentType": "application/vnd.microsoft.card.adaptive",
+   "content": {
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Request sent by: Megan"
+     },
+     {
+      "type": "Image",
+      "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Sample image for Adaptive Card.."
+     }
     ]
+   }
+  }
+ ]
 }
 ```
 
@@ -233,10 +234,9 @@ var responseMsg = JSON.stringify({
 |----------------|------------------|--------|----------------|
 | Webhooks salientes | Ejemplos para crear bots personalizados para su uso en Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
-
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
-Siga la [guía paso a paso](../../sbs-outgoing-webhooks.yml) para crear Webhooks salientes en Teams.
+Siga la [guía paso a paso](../../sbs-outgoing-webhooks.yml) para crear webhooks salientes en Teams.
 
 ## <a name="see-also"></a>Vea también
 
