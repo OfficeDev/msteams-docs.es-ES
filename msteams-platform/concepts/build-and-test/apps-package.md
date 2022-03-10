@@ -1,10 +1,15 @@
 ---
 title: Empaquetar la aplicación
-description: 'Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y publicar en la tienda.'
+description: Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y publicar en la tienda.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356073"
 ---
-
 # <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete de aplicación de Microsoft Teams
 
 Necesita un paquete de aplicación, pero planea distribuir la aplicación de Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
@@ -20,13 +25,13 @@ Cuando un usuario instala la aplicación en Teams, instala un paquete de aplicac
 
 ## <a name="app-manifest"></a>Manifiesto de la aplicación
 
-El archivo de manifiesto de la aplicación debe estar en el nivel superior del paquete con el nombre `manifest.json`. 
+El archivo de manifiesto de la aplicación debe estar en el nivel superior del paquete con el nombre `manifest.json`.
 
 Al publicar en la tienda de Teams, asegúrese de que el manifiesto hace referencia al [esquema](~/resources/schema/manifest-schema.md) más reciente.
 
 ## <a name="app-icons"></a>Iconos de la aplicación
 
-El paquete de la aplicación debe incluir dos versiones PNG del icono de la aplicación: una versión de color y contorno.
+El paquete de la aplicación debe incluir dos versiones .png del icono de la aplicación: una versión de color y contorno.
 
 > [!Note]
 > Si la aplicación tiene un bot o una extensión de mensajería, los iconos también se incluirán en el registro de Microsoft Azure Bot Service.

@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API de inicio de sesión único de Microsoft Azure Active Directory (Azure AD), autenticación SSO de teams
-ms.openlocfilehash: edd7e08167c0efb93b7a578de12b7e1873aa193f
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821727"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398893"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -21,15 +21,21 @@ Los usuarios inician sesión en Microsoft Teams a través de su cuenta profesion
 > ✔Teams para Android (1416/1.0.0.2020073101 y versiones posteriores)
 >
 > ✔Teams para iOS (_Versión_: 2.0.18 y versiones posteriores)  
-> 
-> ✔Teams SDK de JavaScript (_Versión_: 1.10 y versiones posteriores) para que SSO funcione en el panel lateral de la reunión. 
 >
-> Para la mejor experiencia con Teams, use la última versión de iOS y Android.
-
-> [!NOTE]
+> ✔Teams SDK de JavaScript (_Versión_: 1.10 y versiones posteriores) para que SSO funcione en el panel lateral de la reunión.
+>
+> Para la mejor experiencia con Teams, use la última versión de iOS y Android.[!NOTE]
 > **Inicio rápido**  
 >
 > La ruta de acceso más sencilla para empezar con la pestaña SSO es con el kit de herramientas de Teams para Microsoft Visual Studio Code. Para obtener más información, consulte [SSO con el kit de herramientas de Teams y Visual Studio Code para pestañas](../../../toolkit/visual-studio-code-tab-sso.md)
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## <a name="how-sso-works-at-runtime"></a>Cómo funciona el SSO en tiempo de ejecución
 
@@ -64,13 +70,13 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
 > * Actualmente, no se admiten varios dominios por aplicación.
 > * El usuario debe establecer `accessTokenAcceptedVersion` en `2` para una nueva aplicación.
 
-**Para registrar su aplicación a través del portal de Azure AD**
+Para registrar la aplicación a través del portal de Azure AD, siga estos pasos:
 
 1. Registre una nueva aplicación en el portal de [registro de aplicaciones de Azure AD](https://go.microsoft.com/fwlink/?linkid=2083908).
 1. Seleccione **Nuevo registro**. Aparece la página **Registrar una aplicación**.
 1. En la página **Registrar una aplicación**, escriba los siguientes valores:
     1. Escriba un **nombre** para la aplicación.
-    2. Elija los **tipos de cuenta admitidos**, seleccione un tipo de cuenta de un único espacio empresarial o de varios espacios empresariales. ¹
+    2. Elija los **Tipos de cuenta admitidos**, seleccione un tipo de cuenta de un único espacio empresarial o de varios espacios empresariales. ¹
     * Deje **URI de redireccionamiento** vacía.
     3. Elija **Registrar**.
 1. En la página de información general, copie y guarde el **identificador de solicitud (cliente)**. Debe tenerlo más adelante al actualizar el manifiesto de aplicación de Teams.
@@ -80,7 +86,7 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
     > Si va a compilar una aplicación con un bot y una pestaña, escriba el URI del identificador de aplicación como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 1. Seleccione el vínculo **Establecer** para generar el URI de identificador de aplicación en el formulario `api://{AppID}`. Inserte el nombre de dominio completo con una barra inclinada "/" anexada al final, entre las barras inclinadas dobles y el GUID. El identificador completo debe tener el formato de `api://fully-qualified-domain-name.com/{AppID}`. ² Por ejemplo, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. El nombre de dominio completo es el nombre de dominio legible desde el que se sirve la aplicación. Si usa un servicio de tunelización como ngrok, debe actualizar este valor cada vez que cambie el subdominio de ngrok.
-1. Seleccione **Agregar un ámbito**. En el panel que se abre, escriba **access_as_user** como el **nombre de ámbito**.
+1. Seleccione **Agregar un ámbito**. En el panel que se abre, escriba **access_as_user** como **nombre de ámbito**.
 1. En el cuadro **¿Quién puede dar su consentimiento?**, escriba **administradores y usuarios**.
 1. Escriba los detalles en los cuadros para configurar las solicitudes de consentimiento del administrador y del usuario con los valores adecuados para el ámbito de `access_as_user`:
     * **Título de consentimiento del administrador:** Teams puede acceder al perfil del usuario.
@@ -112,7 +118,7 @@ En esta sección se describen las tareas implicadas en la creación de una pesta
     > [!NOTE]
     > La concesión implícita no es necesaria para el SSO de pestaña.
 
-¡Enhorabuena! Ha completado los requisitos previos de registro de la aplicación para continuar con la aplicación SSO de pestaña.
+Bien hecho. Ha completado los requisitos previos de registro de la aplicación para continuar con la aplicación SSO de pestaña.
 
 > [!NOTE]
 >
@@ -134,15 +140,18 @@ Use el siguiente código para agregar nuevas propiedades al manifiesto de Teams:
 * **WebApplicationInfo** es el elemento primario de los siguientes elementos:
 
 > [!div class="checklist"]
+>
 > * **id**: el Id. de cliente de la aplicación. Este es el identificador de aplicación que obtuvo como parte del registro de la aplicación con Azure AD.
 >* **resource**: el dominio y el subdominio de la aplicación. Este es el mismo URI (incluido el protocolo `api://`) que registró al crear el `scope` en el paso 6. No debe incluir la ruta de acceso `access_as_user` en el recurso. La parte de dominio de este identificador URI debe coincidir con el dominio, incluidos los subdominios, que se usan en las direcciones URL del manifiesto de la aplicación de Teams.
-
 > [!NOTE]
 >
 >* El recurso de una aplicación de Azure AD suele ser la raíz de la dirección URL de su sitio y el appID (por ejemplo, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). Este valor también se usa para garantizar que la solicitud procede del mismo dominio. Asegúrese de que el `contentURL` de la pestaña usa los mismos dominios que la propiedad de recurso.
 >* Debe usar la versión 1.5 del manifiesto o posterior para implementar el campo `webApplicationInfo`.
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. Obtener un token de acceso desde el código del lado cliente
+
+> [!NOTE]
+> Para evitar errores como `Teams SDK Error: resourceDisabled`, asegúrese de que el URI del identificador de aplicación esté configurado correctamente en el registro de aplicaciones de Azure AD y en la aplicación de Teams.
 
 Use la siguiente API de autenticación:
 
@@ -222,6 +231,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## <a name="code-sample"></a>Ejemplo de código
@@ -244,7 +254,7 @@ Una forma sencilla de dar su consentimiento en nombre de una organización como 
 
 Otro enfoque para obtener ámbitos de Graph es presentar un cuadro de diálogo de consentimiento mediante nuestro [enfoque de autenticación de Azure AD basado en web existente.](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page) Este enfoque implica la creación de un cuadro de diálogo de consentimiento de Azure AD.
 
-**Para solicitar consentimiento adicional mediante la API de autenticación**
+Para solicitar consentimiento adicional mediante la API de autenticación, siga estos pasos:
 
 1. El token recuperado `getAuthToken()` debe intercambiarse en el lado del servidor mediante el [flujo con derechos delegados](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) de Azure AD para obtener acceso a esas otras API de Graph. Asegúrese de usar el punto de conexión de Graph v2 para este intercambio.
 2. Si se produce un error en el intercambio, Azure AD devuelve una excepción de concesión no válida. Normalmente hay uno de los dos mensajes de error, `invalid_grant` o `interaction_required`.
@@ -268,4 +278,5 @@ La solución de autenticación descrita anteriormente solo funciona para aplicac
 * Sigue la [guía paso a paso](../../../sbs-tab-with-adaptive-cards.yml) para crear pestañas con tarjetas adaptables.
 
 ## <a name="see-also"></a>Vea también
+
 [Bot de Teams con inicio de sesión único](../../../sbs-bots-with-sso.yml)
