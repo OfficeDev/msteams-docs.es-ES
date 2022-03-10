@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo diseñar módulos de tareas para a
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1cf22c8ff94e5d1a6132bd382395067d3623b4bf
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475639"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355971"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la aplicación de Microsoft Teams
 
@@ -37,7 +37,7 @@ Los módulos de tareas se pueden iniciar desde casi cualquier lugar de la aplica
 
 ## <a name="anatomy"></a>Anatomía
 
-Los módulos de tareas proporcionan una superficie flexible para las experiencias de la aplicación hospedada. Se han creado con un iframe (escritorio) o una vista web (móvil), por lo que puedes diseñar módulos de tareas con nuestras plantillas de interfaz de usuario (recomendadas) o desde cero.
+Los módulos de tareas proporcionan una superficie flexible para experiencias de aplicaciones alojadas. Se han creado con un iframe (escritorio) o una vista web (móvil), por lo que puedes diseñar módulos de tareas con nuestras plantillas de interfaz de usuario (recomendadas) o desde cero.
 
 También se pueden crear con el marco [de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md), que puede ser una forma más sencilla y rápida de facilitar escenarios comunes (como formularios).
 
@@ -64,11 +64,11 @@ También se pueden crear con el marco [de tarjetas adaptables](../../task-module
 |3|**Encabezado**: Haga que los encabezados sean claros y concisos. Describa la tarea que desea que los usuarios completen.
 |4|**Botón Cerrar**: Cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
 |5|**iframe**: Espacio dinámico que hospeda el contenido de la aplicación.|
-|6|**Acciones (opcional)**: Botones relacionados con el contenido de la aplicación.|
+|6 |**Acciones (opcional)**: Botones relacionados con el contenido de la aplicación.|
 
 ## <a name="designing-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
 
-Considere la posibilidad de usar plantillas para diseños comunes dentro de los módulos de tareas. Cada una de ellas se compone de elementos más pequeños para crear un diseño elegante y dinámico que se puede usar de forma predeterminada o personalizarse para su escenario o con su apariencia de marca.
+Considere usar plantillas para diseños comunes dentro de sus módulos de tareas. Cada una de ellas se compone de elementos más pequeños para crear un diseño elegante y dinámico que se puede usar de forma predeterminada o personalizarse para su escenario o con su apariencia de marca.
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): Las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o en elementos individuales.
 * [Formulario](../../concepts/design/design-teams-app-ui-templates.md#form): Los formularios son para recopilar, validar y enviar el input del usuario de forma estructurada.
@@ -98,7 +98,7 @@ Los módulos de tareas son un excelente lugar para mostrar formularios con entra
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Formulario de ejemplo en un módulo de tareas." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Formulario de ejemplo en un módulo de tareas." border="false":::
 
 ### <a name="sign-in"></a>Iniciar sesión
 

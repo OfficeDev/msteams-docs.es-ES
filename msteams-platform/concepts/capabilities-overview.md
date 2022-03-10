@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: pestañas bots extensiones de mensajería webhooks conectores
-ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897973"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355548"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Comprender las características de la aplicación Microsoft Teams
 
@@ -23,7 +23,7 @@ Hay varias maneras de ampliar Teams para que cada aplicación sea única. Una ap
 
 Por ejemplo, un usuario puede interactuar con una aplicación en una pestaña de lienzo para realizar una actividad o puede optar por hacer lo mismo con un bot de conversación. Solo puede usar una funcionalidad, como un webhook, mientras que otros tienen más de una característica para ofrecer a los usuarios varias opciones.
 
-Estas funcionalidades pueden existir en distintos ámbitos. Por ejemplo, la aplicación puede mostrar datos en una ubicación compartida central, es decir, la pestaña, y presentar esa misma información a través de una interfaz de conversación personal, es decir, el bot.
+Estas capacidades pueden existir en diferentes ámbitos. Por ejemplo, su aplicación puede mostrar datos en una ubicación central compartida, es decir, la pestaña y presentar esa misma información a través de una interfaz de conversación personal, es decir, el bot.
 
 ## <a name="app-capabilities"></a>Capacidades de la aplicación
 
@@ -142,15 +142,15 @@ La [API de Microsoft Graph para Teams](/graph/teams-concept-overview) proporcion
 
    :::column-end:::
 
-> [!NOTE]
-> La tienda de Teams ha evolucionado:
-> 
-> Anteriormente, las aplicaciones LOB se actualizaban seleccionando los puntos suspensivos en el icono. Con la experiencia actualizada de la tienda de Teams, ahora puede actualizar las aplicaciones LOB iniciando sesión en el [Centro de administración de Teams](https://admin.teams.microsoft.com).
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams." border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> La tienda de Teams ha evolucionado: anteriormente, las aplicaciones LOB se actualizaban seleccionando los puntos suspensivos en el mosaico. Con la experiencia actualizada de la tienda de Teams, ahora puede actualizar las aplicaciones LOB iniciando sesión en el [Centro de administración de Teams](https://admin.teams.microsoft.com).
 
 ## <a name="choose-the-correct-scope-for-your-app"></a>Elegir el ámbito correcto para la aplicación
 

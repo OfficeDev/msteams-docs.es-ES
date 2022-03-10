@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: enviar un mensaje obtener el id. de usuario id. de canal id. de conversación
-ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896330"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355737"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -22,11 +22,12 @@ Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a u
 * Notificaciones
 * Mensajes programados
 
-Para que el bot envíe un mensaje proactivo a un usuario, chat grupal o equipo, debe tener acceso para enviar el mensaje. La aplicación que contiene el bot debe instalarse en primer lugar en un chat de grupo o de equipo. Puede instalar [proactivamente la aplicación con Microsoft Graph](#proactively-install-your-app-using-graph) en un equipo, si es necesario, o usar una [directiva de aplicación](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicaciones a equipos y usuarios en su inquilino. Si es usuario, debe tener la aplicación instalada o ser miembro del equipo en el que está instalada la aplicación.
+Para que el bot envíe un mensaje proactivo a un usuario, chat grupal o equipo, debe tener acceso para enviar el mensaje. La aplicación que contiene el bot debe instalarse en primer lugar en un chat de grupo o de equipo.
+Puede instalar [proactivamente la aplicación con Microsoft Graph](#proactively-install-your-app-using-graph) en un equipo, si es necesario, o usar una [directiva de aplicación](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicaciones a equipos y usuarios en su inquilino. Si es usuario, debe tener la aplicación instalada o ser miembro del equipo en el que está instalada la aplicación.
 
 Enviar un mensaje proactivo es diferente a enviar un mensaje normal. No hay ningún activo `turnContext` que usar como respuesta. Debe crear la conversación antes de enviar el mensaje. Por ejemplo, un nuevo chat individual o un nuevo hilo de conversación en un canal. No puede crear un nuevo chat grupal ni un canal nuevo en un equipo con mensajería proactiva.
 
-**Para enviar un mensaje proactivo**
+Para enviar un mensaje proactivo, siga estos pasos:
 
 1. [Obtenga el id. de usuario, id. de equipo o id. de canal,](#get-the-user-id-team-id-or-channel-id)si es necesario.
 1. [Cree la conversación](#create-the-conversation), si es necesario.

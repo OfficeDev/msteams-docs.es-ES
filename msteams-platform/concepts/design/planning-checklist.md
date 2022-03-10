@@ -5,12 +5,12 @@ description: Preguntas a tener en cuenta mientras planifica su aplicación, ente
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 8b8f60909f6e88caea46e38b21735cf2851036ed
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898223"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399320"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de comprobación de planeamiento de la aplicación de Teams
 
@@ -34,7 +34,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 3 | ¿Usan equipos y canales o, principalmente, chats grupales? |
 | 4 | ¿Qué grado de sofisticación técnica tienen sus usuarios principales? |
 | 5 | ¿Necesita una experiencia de incorporación completa o le bastan unos cuantos consejos? |
-|
+
 </details>
 <br>
 <details>
@@ -45,7 +45,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 1 | ¿Cuáles son las ventajas y desventajas del estado actual del sistema que usan sus usuarios? |
 | 2 | ¿Cuáles son los problemas a los que se enfrentan los usuarios que desea solucionar? |
 | 3 | ¿Qué características o funcionalidades les gustan y les encantan a sus usuarios en la forma actual de realizar el proceso? |
-|
+
 </details>
 <br>
 <details>
@@ -57,7 +57,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 2 | ¿Quién es el propietario de los datos del back-end: la empresa o terceros? |
 | 3 | ¿Hay firewalls que afecten al funcionamiento de la aplicación? |
 | 4 | ¿Existen API para acceder a los datos que necesita para el funcionamiento de su aplicación? |
-|
+
 </details>
 <br>
 <details>
@@ -69,7 +69,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 2 | ¿Hay datos personales involucrados? |
 | 3 | ¿Las interacciones también se basarán en los roles de usuario? |
 | 4 | ¿Podrán los usuarios externos acceder a la aplicación? |
-|
+
 </details>
 <br>
 <details>
@@ -81,7 +81,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 2 | Si está compartiendo tarjetas con una extensión de mensajería, ¿tiene sentido agregar un pequeño vínculo a una página de información para ayudar a presentar a los usuarios qué otras cosas puede hacer la aplicación? |
 | 3 | ¿Espera que la mayoría de la gente tenga ya algún contexto de para qué sirve la aplicación, o que ya haya usado sus servicios en otro contexto? |
 | 4 | ¿Llegan a la aplicación sin conocimientos previos? |
-|
+
 </details>
 <br>
 <details>
@@ -92,7 +92,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 1 | ¿Se requiere una interacción individual con la aplicación por razones de privacidad u otros motivos? Por ejemplo, la comprobación del saldo de las vacaciones u otra información privada. |
 | 2 | ¿Va a haber colaboración entre usuarios que pueden no tener ningún Teams en común? Por ejemplo, encontrar los próximos eventos de toda la organización en una empresa. |
 | 3 | ¿Hay notificaciones o mensajes personalizados que deban enviarse al usuario a lo largo de la experiencia de la aplicación Teams? |
-|
+
 </details>
 <br>
 <details>
@@ -102,8 +102,8 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | --- | --- |
 | 1 | ¿La información que presenta la aplicación, ya sea en ficha o a través de un bot, es relevante y útil para la mayoría de los miembros de un equipo? Por ejemplo, la aplicación Scrum. |
 | 2 | ¿Podría cambiar el contexto de la aplicación en función del equipo al que se agregue? Por ejemplo, las tareas de Planner son diferentes para distintos equipos. |
-| 3 | ¿Es posible que todos los miembros de un rol que necesiten colaborar formen parte de un único equipo? Por ejemplo, agentes que trabajan en un vale. |
-|
+| 3 | ¿Es posible que todos los miembros de un rol que necesiten colaborar formen parte de un único equipo? Por ejemplo, agentes que trabajan en la solución de un vale. |
+
 </details>
 <br>
 <details>
