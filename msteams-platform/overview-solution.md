@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 6bee9d01aa89d04eccbc1f20e9a7fca1efb62ab3
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898269"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398725"
 ---
 # <a name="the-teams-solution"></a>La solución de Teams
 
@@ -34,7 +34,6 @@ Recopilar y asignar requisitos a las características de Teams:
 | **Integración** | &nbsp; | &nbsp; | Microsoft Graph, Weather API |
 | **Scope** | &nbsp; | Aplicación personal | &nbsp; |
 | **Punto de Integración** | &nbsp; | Chat | &nbsp; |
-|
 
 **Solución de la aplicación Teams : Una aplicación** de chat bot personal *personal chat bot* de Teams que comprueba y *envía una notificación de previsión* a los *usuarios registrados* antes de su fecha de viaje.
 
@@ -122,7 +121,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         **Crear una aplicación**
     :::column-end:::
     :::column span="2":::
-        ¿Busca inspiración para el desarrollo de aplicaciones? Examine nuestra lista de escenarios reales y soluciones del sector conceptos ficticios de alta fidelidad para comprender las distintas formas en que una aplicación de Teams puede ayudar a los usuarios.
+        ¿Está buscando inspiración para el desarrollo de aplicaciones? Examine nuestra lista de escenarios reales y soluciones del sector conceptos ficticios de alta fidelidad para comprender las distintas formas en que una aplicación de Teams puede ayudar a los usuarios.
 
         > [!div class="nextstepaction"]
         > [Ver escenarios de aplicaciones](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -182,7 +181,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         **Con un poco de código se va muy lejos**
     :::column-end:::
     :::column span="2":::
-        No es necesario ser un programador experto para crear una aplicación excelente de Teams. Pruebe una de varias soluciones con poco código.
+        No es necesario ser un programador experto para crear una excelente aplicación de Teams. Pruebe una de varias soluciones con poco código.
 
         > [!div class="nextstepaction"]
         > [Crear una aplicación con poco código](samples/teams-low-code-solutions.md)

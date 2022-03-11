@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: high
 keywords: referencia de tarjetas de los bot
 ms.topic: reference
-ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081138"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399383"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -19,7 +19,7 @@ Antes de identificar los distintos tipos de tarjeta, comprenda cómo crear una t
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Crear una tarjeta de Elemento principal, una tarjeta en miniatura o una tarjeta adaptable
 
-**Crear una tarjeta de Elemento principal, una tarjeta en miniatura o una tarjeta adaptable desde App Studio**
+Para crear una tarjeta de elemento principal, una tarjeta en miniatura o una tarjeta adaptable desde App Studio:
 
 1. Vaya a **App Studio** desde Teams.
 1. Seleccione **Editor de tarjetas**.
@@ -59,7 +59,7 @@ Puede identificar y usar diferentes tipos de tarjetas en función de los requisi
 
 ## <a name="features-that-support-different-card-types"></a>Características que admiten distintos tipos de tarjeta
 
-| Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhook entrantes | Conectores de Office 365 |
+| Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhooks entrantes | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Tarjeta adaptable | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
 | Tarjeta conector de Office 365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
@@ -85,7 +85,7 @@ La tarjeta puede contener una imagen en línea al incluir un vínculo a la image
 
 Las imágenes se escalan hacia arriba o hacia abajo en tamaño para mantener la relación de aspecto para cubrir el área de imagen. Las imágenes se recortan desde el centro para lograr la relación de aspecto adecuada para la tarjeta.
 
-Las imágenes deben tener como máximo 1024×1024 y deben estar en formato PNG, JPEG o GIF. Los GIF animados no son compatibles.
+Las imágenes deben tener como máximo 1024×1024 y estar en formato PNG, JPEG o GIF. No se admite el GIF animado.
 
 En la tabla siguiente, se proporcionan las propiedades de las imágenes de tarjetas insertadas:
 
@@ -95,7 +95,7 @@ En la tabla siguiente, se proporcionan las propiedades de las imágenes de tarje
 | alt | Cadena | Descripción accesible de la imagen. |
 
 > [!NOTE]
-> Si una tarjeta incluye una dirección URL de imagen que se redirige antes de la imagen final, no se admitirá el redireccionamiento en la dirección URL de la imagen. Esto ocurre para las imágenes compartidas en la nube pública.
+> Si una tarjeta incluye una dirección URL de imagen que se redirige antes de la imagen final, no se admitirá el redireccionamiento en la dirección URL de la imagen. Esto ocurre con las imágenes que se comparten en la nube.
 
 ### <a name="buttons"></a>Botones
 
@@ -122,6 +122,7 @@ En la tabla siguiente se proporcionan las características que admiten las tarje
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * La plataforma Teams admite la versión 1.4 o anteriores de características de tarjeta adaptable para tarjetas enviadas por bot y extensiones de mensajería basadas en acciones.
 > * La plataforma Teams admite la versión 1.3 o las anteriores de características de tarjeta adaptable para otras funcionalidades, como tarjetas enviadas por el usuario (extensiones de mensajería basadas en búsquedas y despliegue de vínculos), pestañas y módulos de tareas.
 > * El estilo de acción positiva o destructiva no se admite en tarjetas adaptables en la plataforma Teams.
@@ -447,7 +448,7 @@ En la tabla siguiente se proporcionan las propiedades de la tarjeta de conector 
 
 Las tarjetas de conector de Office 365 funcionan correctamente en Microsoft Teams, incluyendo las [`ActionCard` acciones](/outlook/actionable-messages/card-reference#actioncard-action).
 
-La diferencia importante entre usar tarjetas de conector desde un conector y usar tarjetas de conector en el bot es el control de las acciones de tarjeta. En la tabla siguiente se muestra la diferencia:
+La diferencia importante entre el uso de tarjetas de conector de un conector y el uso de tarjetas de conector en el bot es el control de las acciones de tarjeta. En la tabla siguiente se muestra la diferencia:
 
 | Connector | Bot |
 | --- | --- |
