@@ -4,19 +4,19 @@ description: Describe vínculos profundos y cómo usarlos en las aplicaciones
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: vínculo profundo de teams
-ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897917"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399313"
 ---
-# <a name="create-deep-links"></a>Crear vínculos profundos 
+# <a name="create-deep-links"></a>Crear vínculos profundos
 
 Puede crear vínculos a información y características en Teams. Los escenarios en los que la creación de vínculos profundos es útil son los siguientes:
 
 * Llevar al usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la pestaña para que el usuario pueda ver más detalles sobre la actividad.
-* La aplicación automatiza o simplifica determinadas tareas de usuario, como crear un chat o programar una reunión, rellenando previamente los vínculos profundos con los parámetros necesarios. Esto evita la necesidad de que los usuarios escriban manualmente la información.
+* La aplicación automatiza o simplifica determinadas tareas de usuario, como crear un chat o programar una reunión, rellenando previamente los vínculos profundos con los parámetros necesarios. Esto evita la necesidad de que los usuarios indiquen la información de forma manual.
 
 > [!NOTE]
 >
@@ -38,12 +38,12 @@ Puede crear vínculos a información y características en Teams. Los escenarios
 
 Puede crear vínculos profundos a entidades en Teams. Se usa para crear vínculos que naveguen al contenido y a la información dentro de la pestaña. Por ejemplo, si la pestaña contiene una lista de tareas, los miembros del equipo pueden crear y compartir vínculos a tareas individuales. Al seleccionar el vínculo, navega a la pestaña que se centra en el elemento específico. Para implementar esto, agregue una acción **copiar vínculo** a cada elemento, de la manera que mejor se adapte a su interfaz de usuario. Cuando el usuario realiza esta acción, se llama a `shareDeepLink()` para mostrar un cuadro de diálogo que contiene un vínculo que el usuario puede copiar en el portapapeles. Al realizar esta llamada, también pasa un identificador para el elemento, que obtiene en el [contexto](~/tabs/how-to/access-teams-context.md) cuando se sigue el vínculo y se vuelve a cargar la pestaña.
 
-Como alternativa, también puede generar vínculos profundos mediante programación, con el formato especificado más adelante en este tema. Puede usar vínculos profundos en mensajes de [bot](~/bots/what-are-bots.md) y [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informan a los usuarios sobre los cambios en la pestaña o en los elementos que contiene.
+Como alternativa, también puede generar vínculos profundos mediante programación, con el formato especificado más adelante en este artículo. Puede usar vínculos profundos en mensajes de [bot](~/bots/what-are-bots.md) y [conector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) que informan a los usuarios sobre los cambios en la pestaña o en los elementos que contiene.
 
 > [!NOTE]
 > Este vínculo profundo es diferente de los vínculos proporcionados por el elemento de menú **Copiar vínculo a la pestaña**, que solo genera un vínculo profundo que apunta a esta pestaña.
 
->[!NOTE]
+>[!IMPORTANT]
 > Actualmente, shareDeepLink no funciona en plataformas móviles.
 
 ### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>Mostrar un vínculo profundo a un elemento de la pestaña
@@ -59,10 +59,9 @@ Proporcione los campos siguientes:
 ### <a name="generate-a-deep-link-to-your-tab"></a>Generar un vínculo profundo a la pestaña
 
 > [!NOTE]
-> Las pestañas personales tienen un ámbito `personal`, mientras que las pestañas de canal y grupo usan ámbitos `team` o `group`. Los dos tipos de pestaña tienen una sintaxis ligeramente diferente, ya que solo la pestaña configurable tiene una propiedad `channel` asociada a su objeto de contexto. Consulte la referencia del [manifiesto](~/resources/schema/manifest-schema.md) para más información sobre los ámbitos de pestaña.
-
-> [!NOTE]
-> Los vínculos profundos solo funcionan correctamente si la pestaña se configuró mediante la biblioteca v0.4 o posterior y por ello tiene un identificador de entidad. Los vínculos profundos a pestañas sin identificadores de entidad siguen navegando a la pestaña, pero no pueden proporcionar el identificador de subentidad a la pestaña.
+>
+> * Las pestañas personales tienen un ámbito `personal`, mientras que las pestañas de canal y grupo usan ámbitos `team` o `group`. Los dos tipos de pestaña tienen una sintaxis ligeramente diferente, ya que solo la pestaña configurable tiene una propiedad `channel` asociada a su objeto de contexto. Consulte la referencia del [manifiesto](~/resources/schema/manifest-schema.md) para más información sobre los ámbitos de pestaña.
+> * Los vínculos profundos solo funcionan correctamente si la pestaña se configuró mediante la biblioteca v0.4 o posterior y por ello tiene un identificador de entidad. Los vínculos profundos a pestañas sin identificadores de entidad siguen navegando a la pestaña, pero no pueden proporcionar el identificador de subentidad a la pestaña.
 
 Use el formato siguiente para un vínculo profundo que puede usar en un bot, conector o tarjeta de extensión de mensajería:
 
@@ -72,13 +71,24 @@ Use el formato siguiente para un vínculo profundo que puede usar en un bot, con
 > Si el bot envía un mensaje que contiene un `TextBlock` con un vínculo profundo, se abre una nueva pestaña del explorador cuando el usuario selecciona el vínculo. Esto sucede en Chrome y en la aplicación de escritorio de Microsoft Teams, ejecutados en Linux.
 > Si el bot envía la misma dirección URL de vínculo profundo a un `Action.OpenUrl`, la pestaña Teams se abre en la pestaña actual del explorador cuando el usuario selecciona el vínculo. No se abre una nueva pestaña del explorador.
 
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused. 
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
+* List items in the table are not formatted well in output.
+* Some headings use -ing verbs.
+* Example values and some URLs should be in backticks and not emphasized.
+* Codeblock are missing language.
+* Check for markdownlint errors.
+* Table with just a row is not really needed. Provide the content without tabulating it.
+--->
+
 Los parámetros de consulta son:
 
 | Nombre del parámetro | Descripción | Ejemplo |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | Identificador del manifiesto. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | Identificador del elemento de la pestaña, que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md).|Lista de tareas123|
-| `entityWebUrl` o `subEntityWebUrl`&emsp; | Campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` |
+| `entityWebUrl` o `subEntityWebUrl`&emsp; | Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` |
 | `entityLabel` o `subEntityLabel`&emsp; | Etiqueta del elemento de la pestaña que se va a usar al mostrar el vínculo profundo. | Lista de tareas 123 o "Tarea 456 |
 | `context.subEntityId`&emsp; | Identificador del elemento dentro de la pestaña. |Tarea 456 |
 | `context.channelId`&emsp; | Id. de canal de Microsoft Teams que está disponible en la pestaña [contexto](~/tabs/how-to/access-teams-context.md). Esta propiedad solo está disponible en pestañas configurables con un ámbito de **equipo**. No está disponible en pestañas estáticas, que tienen un ámbito **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
@@ -102,14 +112,14 @@ Los parámetros de consulta son:
 * Vínculo a un elemento de tarea en la pestaña configurable: 
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-    
-* Vínculo a una aplicación de pestaña agregada a una reunión o chat grupal: 
+
+* Vínculo a una aplicación de pestaña agregada a una reunión o chat grupal:
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Asegúrese de que todos los parámetros de consulta estén correctamente codificados por URI. Debe seguir los ejemplos anteriores con el último ejemplo:
-
+>
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -124,13 +134,13 @@ La llamada [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#get
 
 ## <a name="deep-linking-from-your-tab"></a>Vinculación profunda desde la pestaña
 
-Puede crear un vínculo profundo al contenido en Teams desde su pestaña. Esto es útil si la pestaña necesita vincular a otro contenido de Teams, como un canal, un mensaje, otra pestaña o incluso para abrir un cuadro de diálogo de programación. Para desencadenar un vínculo profundo desde la pestaña, debe llamar a:
+Puede crear un vínculo profundo al contenido en Teams desde su pestaña. Esto es útil si la pestaña necesita vincular a otro contenido de Teams, como un canal, un mensaje, otra pestaña o incluso para abrir un cuadro de diálogo de programación. Para desencadenar una vinculación profunda de su pestaña, llame a:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-Esta llamada le dirige a la dirección URL correcta o desencadena una acción de cliente, como abrir un cuadro de diálogo de programación o instalación de aplicaciones. Vea el ejemplo siguiente:
+Esta llamada le dirige a la dirección URL correcta o desencadena una acción de cliente, como abrir un cuadro de diálogo de programación o instalación de aplicaciones. Consulte el siguiente ejemplo:
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -170,26 +180,29 @@ El siguiente formato de vínculo profundo se puede usar en un bot, conector o ta
 
 Los parámetros de consulta son:
 
-* `fileId`: id. de archivo único de SharePoint Online, también conocido como sourcedoc. Por ejemplo, 1FA202A5-3762-4F10-B550-C04F81F6ACBD
-* `tenantId`: ejemplo de identificador de inquilino, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
-* `fileType`: tipo de archivo admitido, como docx, pptx, xlsx y pdf
-* `objectUrl`: dirección URL del objeto del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por ejemplo: `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: dirección URL base del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por ejemplo: `https://microsoft.sharepoint.com/teams`
-* `serviceName`: nombre del servicio, id. de aplicación. Por ejemplo, teams.
-* `threadId`: threadId es el identificador del equipo donde se almacena el archivo. Es opcional y no se puede establecer para los archivos almacenados en la carpeta de OneDrive de un usuario. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: id. de grupo del archivo, ae063b79-5315-4ddb-ba70-27328ba6c31e 
+* `fileId`: Identificador de archivo único de Sharepoint Online, también conocido como `sourcedoc`. Por ejemplo, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `tenantId`: identificador de inquilino como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `fileType`: tipo de archivo admitido, como docx, pptx, xlsx y pdf.
+* `objectUrl`: dirección URL del objeto del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por ejemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
+* `baseUrl`: dirección URL base del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Por ejemplo, `https://microsoft.sharepoint.com/teams`.
+* `serviceName`: nombre del servicio, id. de aplicación. Por ejemplo, `teams`.
+* `threadId`: threadId es el identificador del equipo donde se almacena el archivo. Es opcional y no se puede establecer para los archivos almacenados en la carpeta de OneDrive de un usuario. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId`: id. de grupo del archivo. Por ejemplo, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > Puede ver `threadId` y `groupId` en la dirección URL del canal.  
 
-El siguiente formato de vínculo profundo se usa en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+El siguiente formato de vínculo profundo se usa en un bot, conector o tarjeta de extensión de mensajería: 
+
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 En el siguiente formato de ejemplo se muestra el vínculo profundo a los archivos:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
-### <a name="serialization-of-this-object"></a>Serialización de este objeto:
-```
+### <a name="serialization-of-this-object"></a>Serialización de este objeto
+
+```javascript
 {
 fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
 tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
@@ -204,7 +217,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-app"></a>Vinculación profunda a una aplicación
 
-Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar la aplicación. 
+Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar la aplicación.
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculación profunda para pestañas de SharePoint Framework
 
@@ -216,13 +229,13 @@ El siguiente formato de vínculo profundo se puede usar en un bot, conector o ta
 
 Los parámetros de consulta son:
 
-* `appID`: el identificador del manifiesto, por ejemplo, **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `appID`: el identificador del manifiesto, por ejemplo, `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
-* `entityID`: el identificador de elemento que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md). Por ejemplo, **lista de tareas123**.
+* `entityID`: el identificador de elemento que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md). Por ejemplo, `tasklist123`.
 * `entityWebUrl`: campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña (`https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456`).
 * `entityName`: etiqueta del elemento de la pestaña que se usará al mostrar el vínculo profundo, Lista de tareas 123 o Tarea 456.
 
-Ejemplo: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+Ejemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
 ## <a name="deep-linking-to-the-scheduling-dialog"></a>Vinculación profunda al cuadro de diálogo de programación
 
@@ -249,13 +262,13 @@ Los parámetros de consulta son:
 * `content`: un campo opcional para el campo de detalles de la reunión.
 
 > [!NOTE]
-> Actualmente, no se admite la especificación de la ubicación. Debe especificar la diferencia horaria con UTC, que significa zonas horarias al generar las horas de inicio y finalización.
+> En estos momentos, no se puede especificar la ubicación. Debe especificar la diferencia horaria con UTC, que significa zonas horarias al generar las horas de inicio y finalización.
 
 Para usar este vínculo profundo con el bot, puede especificarlo como destino de la dirección URL en el botón de la tarjeta o pulsar la acción a través del tipo de acción `openUrl`.
 
 ## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Vinculación profunda a una llamada de audio o de audio y vídeo
 
-Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un único usuario o grupo de usuarios, especificando el tipo de llamada, como *audio* o *av*, y los participantes. Después de invocar el vínculo profundo y antes de realizar la llamada, el cliente de escritorio de Teams solicita una confirmación para realizar la llamada. En el caso de una llamada grupal, puede llamar a un conjunto de usuarios de VoIP y a un conjunto de usuarios de RTC en la misma invocación de vínculo profundo. 
+Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un único usuario o grupo de usuarios, especificando el tipo de llamada, como *audio* o *av*, y los participantes. Después de invocar el vínculo profundo y antes de realizar la llamada, el cliente de Teams solicita una confirmación para realizar la llamada. En el caso de una llamada grupal, puede llamar a un conjunto de usuarios de VoIP y a un conjunto de usuarios de RTC en la misma invocación de vínculo profundo.
 
 En el caso de una videollamada, el cliente pedirá confirmación y activará el vídeo del autor de la llamada para la llamada. El receptor de la llamada tiene la opción de responder solo a través de audio o con audio y vídeo, a través de la ventana de notificación de llamadas de Teams.
 
@@ -266,14 +279,15 @@ En el caso de una videollamada, el cliente pedirá confirmación y activará el 
 
 | Vínculo profundo | Formato | Ejemplo |
 |-----------|--------|---------|
-| Realizar una llamada de audio | https://teams.microsoft.com/l/call/0/0?users=&lt;usuario1&gt;,&lt;usuario2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Realizar una llamada de audio y vídeo | https://teams.microsoft.com/l/call/0/0?users=&lt;usuario1&gt;,&lt;usuario2&gt;&withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
-|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | https://teams.microsoft.com/l/call/0/0?users=&lt;usuario1&gt;,&lt;usuario2&gt;&withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
-| Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | https://teams.microsoft.com/l/call/0/0?users=&lt;usuario1&gt;,4:&lt;número de teléfono&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+| Realizar una llamada de audio | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com` |
+| Realizar una llamada de audio y vídeo | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true` |
+|Realizar una llamada de audio y vídeo con un origen de parámetros opcional | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true&source=demoApp` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp` |  
+| Realizar una llamada de audio y vídeo a una combinación de usuarios de VoIP y RTC | `https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210` |
   
 Estos son los parámetros de consulta:
+
 * `users`: lista separada por comas de identificadores de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en el caso de una llamada RTC, admite un mri 4:&lt;número de teléfono&gt; de rtc.
-* `withVideo`: este es un parámetro opcional que puede usar para realizar una videollamada. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de llamada de audio o de audio y vídeo a través de la ventana de notificación de llamadas de Teams. 
+* `withVideo`: este es un parámetro opcional que puede usar para realizar una videollamada. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de llamada de audio o de audio y vídeo a través de la ventana de notificación de llamadas de Teams.
 * `Source`: este es un parámetro opcional, que informa sobre el origen del vínculo profundo.
 
 ## <a name="code-sample"></a>Ejemplo de código

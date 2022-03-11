@@ -7,19 +7,19 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: pestañas bots extensiones de mensajería webhooks conectores
-ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 7200e785bc7c857aa65cf8b228720fe8e1d40a66
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355548"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398956"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Comprender las características de la aplicación Microsoft Teams
 
 Hay varias maneras de ampliar Teams para que cada aplicación sea única. Una aplicación de Teams puede manifestarse a sí misma para un usuario de maneras diferentes. Las características de una aplicación de Teams incluyen:
 
-- Capacidades de la aplicación
-- Ámbito de la aplicación
+* Capacidades de la aplicación
+* Ámbito de la aplicación
 
 Por ejemplo, un usuario puede interactuar con una aplicación en una pestaña de lienzo para realizar una actividad o puede optar por hacer lo mismo con un bot de conversación. Solo puede usar una funcionalidad, como un webhook, mientras que otros tienen más de una característica para ofrecer a los usuarios varias opciones.
 
@@ -33,6 +33,7 @@ Las aplicaciones Teams tienen una o todas las funcionalidades principales siguie
 
 :::row:::
    :::column span="":::
+
 ### <a name="personal-apps"></a>Aplicaciones personales
 
 Una [aplicación personal](../concepts/design/personal-apps.md) es un espacio dedicado o un bot para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
@@ -156,8 +157,8 @@ La [API de Microsoft Graph para Teams](/graph/teams-concept-overview) proporcion
 
 Puede elegir el ámbito de la aplicación entre los siguientes:
 
-- Experiencia de aplicación personal: una aplicación personal es un bot o espacio dedicado para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
-- Experiencia de aplicación compartida: el equipo, el canal y el chat son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para todos los usuarios de ese espacio. Normalmente, los espacios de colaboración se centran en los flujos de trabajo para las interacciones de la aplicación o para desbloquear nuevas interacciones sociales.
+* Experiencia de aplicación personal: una aplicación personal es un bot o espacio dedicado para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
+* Experiencia de aplicación compartida: el equipo, el canal y el chat son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para todos los usuarios de ese espacio. Normalmente, los espacios de colaboración se centran en los flujos de trabajo para las interacciones de la aplicación o para desbloquear nuevas interacciones sociales.
 
 ## <a name="see-also"></a>Consulte también
 
