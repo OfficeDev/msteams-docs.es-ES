@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 96728036f330eb2181f9818411e218e1ec3c2016
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898224"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398970"
 ---
 # <a name="explore-teams-platform-features"></a>Explorar las características de la plataforma Teams
 
@@ -23,7 +23,7 @@ Con Teams, puede compilar la aplicación en un entorno con muchas característic
 
 | Característica | Descripción | Útil para |
 | --- | --- | --- |
-|Pestañas | Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Teams. Puede agregarlos como parte de un canal dentro de un equipo, un chat de grupo o una aplicación personal para un usuario individual. | Pestaña personal, pestaña de canal o grupo, vista de fase y apertura de vínculos. |
+|Pestañas | Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Teams. Puede agregarlas como parte de un canal dentro de un equipo, un chat de grupo o una aplicación personal para un usuario individual. | Pestaña personal, pestaña de canal o grupo, vista de fase y apertura de vínculos. |
 | Bots | Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas automatizadas simples y repetitivas realizadas por los usuarios. Una interacción de bot puede ser una pregunta y una respuesta rápidas, o puede ser una conversación compleja que proporcione acceso a los servicios. | Servicio de atención al cliente, información sobre el tiempo, reservar cenas o facilitar información sobre viajes. |
 | Extensiones de mensajería | Las extensiones de mensajería permiten a los usuarios interactuar con el cliente de Teams del servicio web. Buscan o inician acciones en un sistema externo. Puede enviar el resultado de la interacción al cliente de Teams como una tarjeta con formato enriquecido. | Reserve un recurso y permita que el canal esté al corriente de la franja horaria reservada. Busque un elemento de trabajo y compártalo con el grupo como tarjeta adaptable. Cree un error en su sistema de seguimiento basado en un mensaje de Teams, asigne ese error a un usuario y envíe una tarjeta al hilo de conversación con los detalles del error. |
 |Extensiones de reunión | Puede crear aplicaciones para que las reuniones sean más productivas. | Pida a los usuarios que completen una encuesta durante una llamada o envíe un aviso rápido que no interrumpa el flujo de la reunión. |
@@ -32,7 +32,6 @@ Con Teams, puede compilar la aplicación en un entorno con muchas característic
 | Microsoft Graph | Microsoft Graph es la puerta de enlace a los datos y la inteligencia en Microsoft 365 y se puede incorporar en cualquier tipo de aplicación de Teams. | Cree, gestione, encuentre y archive un gran número de equipos y rellénelos con usuarios y canales. |
 | Tarjeta adaptable | Las tarjetas le ayudan a organizar la información en grupos y dan a los usuarios la oportunidad de interactuar con partes específicas de la información. | Uso compartido con texto e imágenes; recopilando información mediante formularios de entrada. |
 | Módulos de tareas | Los módulos de tareas le permiten crear experiencias emergentes modales en la aplicación de Teams. | Ejecute su propio código HTML o JavaScript personalizado. Mueste un widget basado en <`iframe`>, como un vídeo de YouTube o Microsoft Stream. |
-|
 
 ## <a name="dive-deeper"></a>Profundice en el tema
 
