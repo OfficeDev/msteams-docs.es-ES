@@ -5,12 +5,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: conector de Office365 de teams
-ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355639"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398879"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -44,6 +44,7 @@ Para mostrar la lista de selección múltiple en el estilo compacto, debe especi
 Para más información sobre las acciones de tarjeta de conector, vea [Acciones](/outlook/actionable-messages/card-reference#actions).
 
 > [!NOTE]
+>
 > * Especificar `compact` para la propiedad `style` en Microsoft Teams es igual que especificar `normal` para la propiedad `style` en Microsoft Outlook.
 > * Para la acción HttpPOST, el token de usuario se incluye con las solicitudes. Este token incluye la identidad de Microsoft Azure Active Directory (Azure AD) del usuario de Office 365 que realizó la acción.
 
@@ -187,14 +188,15 @@ Para publicar un mensaje en el webhook con PowerShell, siga estos pasos:
 
 1. Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook. Puede ver la nueva tarjeta publicada en el canal. Antes de usar el conector para probar o publicar la aplicación, debe hacer lo siguiente:
 
-    - [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Modifique la parte `icons` del manifiesto para hacer referencia a los nombres de archivo de los iconos en lugar de a las direcciones URL.
+    * [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
+    * Modifique la parte `icons` del manifiesto para hacer referencia a los nombres de archivo de los iconos en lugar de a las direcciones URL.
 
 ---
 
 ## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Enviar tarjetas adaptables con un webhook entrante
 
 > [!NOTE]
+>
 > * Todos los elementos de esquema de tarjetas adaptables nativas, excepto `Action.Submit`, son completamente compatibles.
 > * Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html) y [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
@@ -260,7 +262,7 @@ En la tabla siguiente se proporcionan los detalles de la transacción basada en 
 Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) puede mitigar la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Siga los [procedimientos recomendados](../../bots/how-to/rate-limit.md) para evitar alcanzar los límites de velocidad.
 
 > [!NOTE]
-> Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) puede mitigar la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Consulte las [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar superar los límites de velocidad.
+> Una [lógica de reintento con retroceso exponencial](/azure/architecture/patterns/retry) puede mitigar la limitación de velocidad en los casos en los que las solicitudes superan los límites en un segundo. Consulte [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar alcanzar los límites de velocidad.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
