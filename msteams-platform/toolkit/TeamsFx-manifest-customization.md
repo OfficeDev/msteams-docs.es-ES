@@ -6,19 +6,19 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ca06fe1c657d8cb2e437c1f6df2ff2cd880ed320
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 047cd9bcd86c103c3c9cab22793fb7d187f7493d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435771"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453603"
 ---
 # <a name="customize-app-manifest-in-teams-toolkit"></a>Personalizar manifiesto de aplicación en Teams Toolkit
 
 Teams Toolkit consta de los siguientes archivos de plantilla de manifiesto en la `templates/appPackage` carpeta:
 
-- `manifest.local.template.json` - Aplicación de equipos de depuración local
-- `manifest.remote.template.json` - compartido en todos los entornos
+* `manifest.local.template.json` - Aplicación de equipos de depuración local
+* `manifest.remote.template.json` - compartido en todos los entornos
 
 ## <a name="prerequisite"></a>Requisito previo
 
@@ -29,15 +29,15 @@ Teams Toolkit consta de los siguientes archivos de plantilla de manifiesto en la
 
 Durante la provisión, Teams Toolkit carga el manifiesto `manifest.remote.template.json`de , combinado con las configuraciones de `state.{env}.json` y `config.{env}.json`, y crea la aplicación teams en [el Portal de desarrollo](https://dev.teams.microsoft.com/apps).
 
-Durante la depuración local, Teams Toolkit carga el manifiesto `manifest.local.template.json`desde , combinado con `localSettings.json`las configuraciones de y crea la aplicación teams en [el Portal de desarrollo](https://dev.teams.microsoft.com/apps).
+Durante la depuración local, Teams Toolkit carga el manifiesto `manifest.local.template.json`de , combinado con `localSettings.json`las configuraciones de y crea la aplicación teams en [el Portal de desarrollo](https://dev.teams.microsoft.com/apps).
 
 ## <a name="supported-placeholder-in-manifestremotetemplatejson"></a>Marcador de posición admitido en manifest.remote.template.json
 
-- `{{state.xx}}`es un marcador de posición predefinido cuyo valor se resuelve Teams Toolkit, definido en `state.{env}.json`. Asegúrese de no modificar los valores en estado. {env}.json.
-- `{{config.manifest.xx}}` es marcador de posición personalizado cuyo valor se resuelve desde `config.{env}.json`.
-  - Puede agregar un parámetro personalizado de la siguiente manera:
-    - Agregue un marcador de posición en manifest.remote.template.json con pattern: `{{config.manifest.xx}}`
-    - Agregue un valor de configuración en config. {env}.json
+* `{{state.xx}}`es un marcador de posición predefinido cuyo valor se resuelve Teams Toolkit, definido en `state.{env}.json`. Asegúrese de no modificar los valores en estado. {env}.json.
+* `{{config.manifest.xx}}` es marcador de posición personalizado cuyo valor se resuelve desde `config.{env}.json`.
+  * Puede agregar un parámetro personalizado de la siguiente manera:
+    * Agregue un marcador de posición en manifest.remote.template.json con pattern: `{{config.manifest.xx}}`
+    * Agregue un valor de configuración en config. {env}.json
 
         ```json
         {
@@ -58,4 +58,4 @@ Durante la depuración local, Teams Toolkit carga el manifiesto `manifest.local.
 
 ## <a name="see-also"></a>Vea también
 
-[Vista Teams manifiesto de la aplicación en Teams Toolkit](TeamsFx-manifest-preview.md)
+[Vista Teams manifiesto de aplicación en Teams Toolkit](TeamsFx-manifest-preview.md)

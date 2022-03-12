@@ -3,12 +3,12 @@ title: Trabajar con acciones universales para tarjetas adaptables
 description: Aprenda a trabajar con las acciones universales para tarjetas adaptables, incluido el esquema de UniversalActions para tarjetas adaptables, el modelo Refresh y la compatibilidad con versiones anteriores con ejemplos de código.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: c0893f5aaa9e454ab8a4091ce5b08c132c110746
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080956"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452581"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con Acciones universales para tarjetas adaptables
 
@@ -22,7 +22,7 @@ Las acciones universales para tarjetas adaptables proporcionan una forma de impl
 ## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Guía de inicio rápido para usar acciones universales para tarjetas adaptables en Teams
 
 1. Reemplace todas las instancias de `Action.Submit` con `Action.Execute` para actualizar un escenario existente en Teams.
-2. Agregue una cláusula a la tarjeta adaptable, si desea usar el modelo de actualización automática o si su escenario `refresh` requiere vistas específicas del usuario.
+2. Agregue una `refresh` cláusula a la tarjeta adaptable, si desea usar el modelo de actualización automática o si su escenario requiere vistas específicas del usuario.
 
     >[!NOTE]
     > Especifique la propiedad `userIds` que se va a identificar, qué usuarios obtienen actualizaciones automáticas.
@@ -70,9 +70,9 @@ Estas son las características de UserIds en la actualización:
 
 * Si la lista de propiedad`userIds` se especifica como `userIds: []` en la sección de actualización de la tarjeta, la tarjeta no se actualiza automáticamente. En su lugar, se muestra al usuario una opción **Actualizar tarjeta** en el menú de puntos triples en la web o el escritorio, y en el menú contextual de larga duración en dispositivos móviles, es decir, Android o iOS para actualizar manualmente la tarjeta.
 
-* Se ha agregado la propiedad UserIds porque los canales de Teams pueden incluir un gran número de miembros. Si todos los miembros ven el canal al mismo tiempo, una actualización automática incondicional da como resultado muchas llamadas simultáneas al bot. La propiedad siempre debe incluirse para identificar qué usuarios deben obtener una actualización automática con un máximo de `userIds` *60 (60) MRIs de usuario.*
+* Se ha agregado la propiedad UserIds porque los canales de Teams pueden incluir un gran número de miembros. Si todos los miembros ven el canal al mismo tiempo, una actualización automática incondicional da como resultado muchas llamadas simultáneas al bot. La `userIds` propiedad siempre debe incluirse para identificar qué usuarios deben obtener una actualización automática con un máximo de *60 (60) MRIs de usuario*.
 
-* Puede capturar los TEAMS de usuario del miembro de la conversación. Para obtener más información sobre cómo agregar en la lista userIds en la sección de actualización de la tarjeta adaptable, vea [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* Puede capturar los TEAMS de usuario del miembro de la conversación. Para obtener más información sobre cómo agregar en la lista userIds en la sección actualizar de la tarjeta adaptable, vea [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
  Puede obtener la MRI del usuario para canal, chat en grupo o chat 1:1 mediante el siguiente ejemplo:
 

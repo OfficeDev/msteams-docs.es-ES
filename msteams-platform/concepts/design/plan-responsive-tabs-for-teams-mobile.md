@@ -5,16 +5,16 @@ description: Guía para planear la creación de una aplicación en Teams móvil
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 60aab6b9c81dbc28fbbfe0d9a985b42c22ddee47
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948400"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453526"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
 
- Teams plataforma ofrece la oportunidad de crear aplicaciones en dispositivos móviles y de escritorio. Los usuarios de la aplicación pueden preferir el escritorio o el móvil, o ambos. Los usuarios pueden preparar datos en el escritorio, pero consumir y compartir más datos con el móvil. La clave para crear cualquier aplicación es comprender y satisfacer las necesidades de los usuarios. Hay capacidades como bots, extensiones de mensajería y conectores que funcionan sin problemas en escritorio y móvil. Sin embargo, la creación de pestañas y módulos de tareas requiere planear el hospedaje de la experiencia web en Teams móvil. El documento guía para planear las páginas web con capacidad de respuesta Teams móvil.
+ Teams ofrece la oportunidad de crear aplicaciones en dispositivos móviles y de escritorio. Los usuarios de la aplicación pueden preferir el escritorio o el móvil, o ambos. Los usuarios pueden preparar datos en el escritorio, pero consumir y compartir más datos con el móvil. La clave para crear cualquier aplicación es comprender y satisfacer las necesidades de los usuarios. Hay capacidades como bots, extensiones de mensajería y conectores que funcionan sin problemas en escritorio y móvil. Sin embargo, la creación de pestañas y módulos de tareas requiere planear el hospedaje de la experiencia web en Teams móvil. El documento guía para planear las páginas web con capacidad de respuesta Teams móvil.
 
 ## <a name="identify-apps-scope"></a>Identificar el ámbito de aplicaciones
 
@@ -22,7 +22,7 @@ La siguiente lista proporciona la información clave para planear la creación d
 
 * Considera la funcionalidad entre dispositivos de Teams aplicación. Por ejemplo, si tienes una aplicación de buen rendimiento en el escritorio, puedes explorar para crear una aplicación similar en el móvil. Inicialmente, puede ser difícil cambiar toda la experiencia de escritorio en el móvil. Puede empezar con escenarios básicos pero comunes. Agregue funcionalidades y funcionalidades después de recopilar más información y comentarios de los usuarios.
 
-* Asegúrese de dirigirse a la persona de usuario adecuada en el móvil. Por ejemplo, si estás creando una aplicación que proporciona servicio a los usuarios finales y también proporciona acceso a datos a desarrolladores y administradores sénior, los usuarios finales pueden usar la aplicación más mientras empiezas a crear la aplicación en Teams móvil. Sin embargo, puedes atender a todas las personas que tienes en la aplicación de escritorio, pero se recomienda empezar con persona con una base más grande y posibles usuarios iniciales para una experiencia de pantalla más pequeña. Según el ejemplo, los usuarios finales son los usuarios adecuados. Puedes agregar funcionalidades gradualmente para admitir otras personas de usuario en tu Teams móvil. 
+* Asegúrese de dirigirse a la persona de usuario adecuada en el móvil. Por ejemplo, si estás creando una aplicación que proporciona servicio a los usuarios finales y también proporciona acceso a datos a desarrolladores y administradores sénior, los usuarios finales pueden usar la aplicación más mientras empiezas a crear la aplicación en Teams móvil. Sin embargo, puedes atender a todas las personas que tienes en la aplicación de escritorio, pero se recomienda empezar con persona con una base más grande y posibles usuarios iniciales para una experiencia de pantalla más pequeña. Según el ejemplo, los usuarios finales son los usuarios adecuados. Puedes agregar funcionalidades gradualmente para admitir otras personas de usuario en tu Teams móvil.
 
 ## <a name="understand-different-stages-to-build-apps"></a>Comprender diferentes fases para crear aplicaciones
 
@@ -41,7 +41,7 @@ Después de identificar el ámbito de la aplicación, es hora de comprender las 
    Proporcionar experiencias completas de la aplicación para interactuar con el móvil. A medida que los usuarios interactúan con la aplicación, proporciona una experiencia envolvente completa en el móvil, ya sea a la par o mejor que la experiencia de escritorio. Para proporcionar una buena experiencia a los usuarios, haga que todos los casos de uso respondan en el móvil.
 
 > [!TIP]
-> Para obtener información sobre las directrices de diseño, vea [proceso de diseño para Teams aplicaciones](design-teams-app-process.md).
+> Para obtener información sobre las directrices de diseño, consulta [Proceso de diseño para Teams aplicaciones](design-teams-app-process.md).
 
 ## <a name="use-cases"></a>Casos de uso
 
@@ -55,19 +55,19 @@ Veamos los siguientes casos de uso para comprender cómo planear diferentes tipo
 
 Puedes comprender cómo planear pestañas dinámicas para aplicaciones de visualización de paneles y datos en Teams plataforma móvil.
 
-**Consumo**
+Consumo:
 
 En la primera fase, puede implementar la experiencia de consumo más básica para ver los datos. El propósito de cualquier aplicación del dominio es mostrar datos en forma de visualizaciones. En la aplicación, puedes mostrar visualizaciones vistas recientemente en el escritorio o una lista de todos los gráficos autorizados para los usuarios. Después de crear paneles en el escritorio, los usuarios pueden obtener acceso a la información mediante dispositivos móviles. Puede mostrar una vista detallada de cualquier gráfico seleccionado por el usuario como una vista expandida en las pestañas o mediante módulos de tareas.
 
-Puede mostrar la siguiente información: 
+Puede mostrar la siguiente información:
 
 * Paneles y resúmenes
 * Elementos visuales de datos, mapas e infografías
-* Gráficos, gráficos y tablas 
+* Gráficos, gráficos y tablas
 
 ![Consumo de aplicaciones de visualización de datos y paneles](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
-**Acciones rápidas**
+Acciones rápidas:
 
 En la segunda fase, los usuarios pueden trabajar en los gráficos y elementos visuales existentes desde la experiencia de escritorio. Puede introducir las siguientes acciones:
 
@@ -77,17 +77,17 @@ En la segunda fase, los usuarios pueden trabajar en los gráficos y elementos vi
 
 ![Acciones rápidas de aplicaciones de visualización de paneles y datos](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
-**Activación**
+Habilitación:
 
 En la tercera fase, permita a los usuarios crear contenido como gráficos y gráficos desde cero. Asegúrate de introducir todas las funcionalidades de la aplicación para dispositivos móviles. Por ejemplo, puede usar módulos de tareas para ayudar a tener acceso a elementos de datos específicos con una vista detallada.
 
 Puede proporcionar el siguiente acceso a los usuarios:
+
 * Modificar título y descripción
 * Insertar elementos de datos para crear visualizaciones
 * Compartir visualizaciones en un chat de canal o grupo
 
 ![Habilitación de aplicaciones de visualización de datos y paneles](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
-
 
 <br>
 
@@ -99,31 +99,33 @@ Puede proporcionar el siguiente acceso a los usuarios:
 
 <summary><b>Aplicaciones de abordaje de tareas</b></summary>
 
-Puedes comprender cómo planear pestañas dinámicas para aplicaciones de abordaje de tareas en Teams plataforma móvil.
+Puedes comprender cómo planear pestañas adaptables para aplicaciones de abordaje de tareas en Teams plataforma móvil.
 
-**Consumo**
+Consumo:
 
-En la primera fase, la aplicación puede mostrar la lista de tareas al usuario en una pila vertical. Si hay varias categorías de tareas, como **Proposed**, **Active** y **Closed,** proporcione filtros para mostrar tareas agrupadas o como encabezados para ver las tareas agrupadas.
+En la primera fase, la aplicación puede mostrar la lista de tareas al usuario en una pila vertical. Si hay varias categorías de tareas, como **Proposed**, **Active** y **Closed** , proporcione filtros para mostrar tareas agrupadas o como encabezados para ver las tareas agrupadas.
 
 ![Consumo de aplicaciones de abordaje de tareas](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
-**Acciones rápidas**
+Acciones rápidas:
 
 En la segunda fase, puedes proporcionar a los usuarios el siguiente acceso a la aplicación:
+
 * Crear tareas o elementos con los campos obligatorios para reducir la carga cognitiva de los usuarios
 * Cambiar el tipo de tabla o la vista
 * Revisar tareas expandiendo la vista
 * Usar módulos de tareas para ver una vista detallada
-* Mover las tareas a diferentes categorías 
+* Mover las tareas a diferentes categorías
 * Compartir tareas relevantes en chats y canales a través de correos electrónicos y fuente de actividades
 
 ![Acciones rápidas de aplicaciones de abordaje de tareas](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
-**Activación**
+Habilitación:
 
 En la tercera fase, puede habilitar la experiencia de los usuarios con las siguientes actividades:
+
 * Agregar nuevos proyectos y paneles
-* Agregar y modificar diferentes categorías, como **Proposed**, **Active** y **Closed**
+* Agregar y modificar diferentes categorías, como **Propuesta**, **Activa** y **Cerrada**
 * Configurar las tareas para comentarios, datos adjuntos y otras características complejas
 
 ![Habilitación de aplicaciones de abordaje de tareas](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
@@ -137,9 +139,9 @@ En la tercera fase, puede habilitar la experiencia de los usuarios con las sigui
 
 <summary><b>Aplicaciones de coautoría y pizarra</b></summary>
 
-Puedes comprender cómo planear pestañas adaptables para aplicaciones de coautoría y pizarra en Teams plataforma móvil.
+Puedes comprender cómo planear pestañas dinámicas para aplicaciones de coautoría y pizarra en Teams plataforma móvil.
 
-**Consumo**
+Consumo:
 
 En la primera fase, puedes considerar la experiencia de escritorio para mostrar el contenido y los activos de la aplicación.  Puede mostrar las siguientes funciones:
 
@@ -149,7 +151,7 @@ En la primera fase, puedes considerar la experiencia de escritorio para mostrar 
 
 ![Consumo de aplicaciones de coautoría y pizarra](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
-**Acciones rápidas**
+Acciones rápidas:
 
 En la segunda fase, puede introducir las siguientes acciones:
 
@@ -162,7 +164,7 @@ En la segunda fase, puede introducir las siguientes acciones:
 
 ![Acciones rápidas de aplicaciones de coautoría y pizarra](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
 
-**Activación**
+Habilitación:
 
 En la tercera fase, proporcione experiencia completa a los usuarios. Puede habilitar la experiencia de los usuarios con las siguientes actividades:
 
@@ -170,7 +172,7 @@ En la tercera fase, proporcione experiencia completa a los usuarios. Puede habil
 * Navegar por el contenido
 * Agregar capas y filtros
 * Operaciones de eliminación, deshacer y rehacer
-* Obtenga acceso a la cámara y el micrófono con las API del SDK de JS. Para obtener más información sobre las capacidades del dispositivo, consulta [Información general sobre las funcionalidades del dispositivo.](../device-capabilities/device-capabilities-overview.md)
+* Obtenga acceso a la cámara y el micrófono con las API del SDK de JS. Para obtener más información sobre las capacidades del dispositivo, consulta [Información general sobre las funcionalidades del dispositivo](../device-capabilities/device-capabilities-overview.md).
 
 ![Habilitación de aplicaciones de coautoría y pizarra](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
 
@@ -178,11 +180,11 @@ En la tercera fase, proporcione experiencia completa a los usuarios. Puede habil
 
 </details>
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 Las siguientes directrices de diseño y validación ayudan en función del ámbito de la aplicación:
 
 * [Diseño de la pestaña](../../tabs/design/tabs.md)
 * [Cómo diseñar su bot](../../bots/design/bots.md)
 * [Diseño de módulos de tareas](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Directrices de validación de la Tienda](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Directrices de validación de la tienda](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

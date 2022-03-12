@@ -5,12 +5,12 @@ description: Identifique cómo pueden funcionar los casos de uso de la aplicaci�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398907"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452833"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Asignar los casos de uso a las funcionalidades de la aplicación de Teams
 
@@ -18,9 +18,9 @@ Un caso de uso bien definido le ayuda a trazar el marco de características que 
 
 Puede asignar el caso de uso en función de:
 
-- El uso compartido y la colaboración en elementos de un sistema externo.
-- El inicio de flujos de trabajo y el envío de notificaciones a los usuarios.
-- El uso de plataformas sociales, bots de conversación y combinación de varias características.
+* El uso compartido y la colaboración en elementos de un sistema externo.
+* El inicio de flujos de trabajo y el envío de notificaciones a los usuarios.
+* El uso de plataformas sociales, bots de conversación y combinación de varias características.
 
 ## <a name="common-use-cases-mapped-to-teams-capabilities"></a>Casos de uso comunes asignados a las funcionalidades de Teams
 
@@ -92,10 +92,10 @@ Echemos un vistazo a cómo las funcionalidades de Teams habilitan diferentes car
 
 Por ejemplo:
 
-- Use la capacidad de la **pestaña** para mostrar módulos de tareas, solicitar permisos de dispositivo, mostrar <`iframe`> contenido o usar vínculos profundos.
-- Use la capacidad de **extensión de mensajería** para enviar tarjetas, desatar vínculos o realizar acciones en los mensajes.
+* Use la capacidad de la **pestaña** para mostrar módulos de tareas, solicitar permisos de dispositivo, mostrar <`iframe`> contenido o usar vínculos profundos.
+* Use la capacidad de **extensión de mensajería** para enviar tarjetas, desatar vínculos o realizar acciones en los mensajes.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Lista de comprobación de la planificación](../design/planning-checklist.md)
-- [Crear su primera aplicación de Microsoft Teams](../../get-started/get-started-overview.md)
+* [Lista de comprobación de la planificación](../design/planning-checklist.md)
+* [Crear su primera aplicación de Microsoft Teams](../../get-started/get-started-overview.md)

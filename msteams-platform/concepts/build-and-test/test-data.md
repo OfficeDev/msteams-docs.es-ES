@@ -1,16 +1,16 @@
 ---
 title: Agregar datos de prueba al inquilino Microsoft 365 prueba
-description: Configurar la suscripción de Office 365 programa para desarrolladores para realizar pruebas correctas de Microsoft Teams aplicaciones con fragmentos de código
+description: Configurar la suscripción Office 365 programa para desarrolladores para realizar pruebas correctas de Microsoft Teams aplicaciones con fragmentos de código
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: equipos de programa de desarrolladores de aplicaciones de prueba
 ms.date: 11/01/2019
-ms.openlocfilehash: 82fff61f174b4dc08d30c466d9d404042bb3a4e0
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 907b6e7b6734a16afa1335cf5198d2d88cad645b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435848"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452707"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Agregar datos de prueba al inquilino Microsoft 365 prueba
 
@@ -20,7 +20,7 @@ Puedes probar la aplicación Microsoft Teams con datos de ejemplo con una Micros
 
 1. [Únase al programa Microsoft 365 desarrollador](/office/developer-program/office-365-developer-program), si no tiene un inquilino de prueba.
 2. [Configurar una suscripción Microsoft 365 desarrollador](/office/developer-program/office-365-developer-program-get-started).
-3. [Use paquetes de datos de ejemplo con Microsoft 365 suscripción de desarrollador para instalar el paquete de contenido Usuarios](/office/developer-program/install-sample-packs).
+3. [Use paquetes de datos de ejemplo con su Microsoft 365 de desarrollador para instalar el paquete de contenido Usuarios](/office/developer-program/install-sample-packs).
 4. [Instale el Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
 5. [Instale el Azure AD PowerShell](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
@@ -147,7 +147,7 @@ De forma predeterminada, solo los administradores globales o Teams administrador
     </Teams>
     ```
 
-2. Guarde el siguiente fragmento de código como un script de PowerShell (.ps1) y anote dónde lo guardó. Este script ejecuta los pasos para crear el equipo y el canal y agregar miembros a ellos:
+2. Guarde el siguiente fragmento de código como un script de PowerShell (.ps1) y anote dónde lo ha guardado. Este script ejecuta los pasos para crear el equipo y el canal y agregar miembros a ellos:
 
     ```powershell
     Param(
@@ -244,10 +244,10 @@ De forma predeterminada, solo los administradores globales o Teams administrador
     > [!Note]
     > No cierre la sesión de PowerShell, ya que el script tarda varios minutos en ejecutarse. Si ha modificado los usuarios de la suscripción a partir de lo que se crea en el paquete de contenido predeterminado, es posible que algunos usuarios no se agregó a Teams. Cuando el script se ejecuta, muestra acciones correctas o con errores.
 
-5. Una vez finalizado el script, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
+5. Una vez que el script haya finalizado la ejecución, puede iniciar sesión en el cliente de Teams con una de las cuentas de usuario y ver los equipos recién creados.
 
 ## <a name="see-also"></a>Vea también
 
-* [Depurar la pestaña](~/tabs/how-to/developer-tools.md) 
+* [Depurar la pestaña](~/tabs/how-to/developer-tools.md)
 * [Depurar los bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Probar permisos de RSC](~/graph-api/rsc/test-resource-specific-consent.md)

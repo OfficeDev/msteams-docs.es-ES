@@ -4,18 +4,18 @@ description: Describe Microsoft Teams de autenticación en bots con ejemplo de c
 keywords: bots de flujo de autenticación de teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 05f175941d7e1daa6e0ff26571499582af89cd21
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 30e7817ba72dbca50852b91b4c5791f8ece1a36a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212436"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453029"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flujo de autenticación para bots en Microsoft Teams
 
 OAuth 2.0 es un estándar abierto para la autenticación y autorización que usan Azure Active Directory y muchos otros proveedores de identidades. Un conocimiento básico de OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams; [esta es una buena introducción](https://aaronparecki.com/oauth-2-simplified/) que es más fácil de seguir que la [especificación formal](https://oauth.net/2/). El flujo de autenticación para pestañas y bots es un poco diferente: las pestañas son muy similares a los sitios web para que puedan usar OAuth 2.0 directamente, mientras que los bots no son y deben hacer algunas cosas de forma diferente, pero los conceptos básicos son idénticos.
 
-Consulte el ejemplo Microsoft Teams [](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) de autenticación de repositorio de GitHub para ver un ejemplo que muestra el flujo de autenticación para bots que usan Node.js y el tipo de concesión de código de autorización [de OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/).
+Consulte el ejemplo GitHub de [autenticación](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) Microsoft Teams de repositorio para ver un ejemplo que muestra el flujo de autenticación para bots que usan Node.js y el tipo de concesión de código de autorización [de OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/).
 
 ![Diagrama de secuencia de autenticación de bot](../../../assets/images/authentication/bot_auth_sequence_diagram.png)
 
@@ -23,25 +23,25 @@ Consulte el ejemplo Microsoft Teams [](https://github.com/OfficeDev/Microsoft-Te
 2. El bot determina si el usuario debe iniciar sesión.
    En este ejemplo, el bot almacena el token de acceso en su almacén de datos de usuario. Se pide al usuario que inicie sesión si no tiene un token validado para el proveedor de identidades seleccionado. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76))
 3. El bot construye la dirección URL en la página de inicio del flujo de autenticación y envía una tarjeta al usuario con una `signin` acción. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
-    Al igual que otros flujos de autenticación de aplicación en Teams, la página de inicio debe estar en un dominio que esté en la lista y en el mismo dominio que la página de redireccionamiento posterior `validDomains` al inicio de sesión.
-    > [!IMPORTANT] 
-    > El flujo de concesión de código de autorización de OAuth 2.0 llama a un parámetro de la solicitud de autenticación, que contiene un token de sesión único para evitar un ataque de falsificación de solicitudes entre `state` [sitios](https://en.wikipedia.org/wiki/Cross-site_request_forgery). En el ejemplo se usa un GUID generado aleatoriamente.
+    Al igual que otros flujos de autenticación de aplicación en Teams, `validDomains` la página de inicio debe estar en un dominio que esté en la lista y en el mismo dominio que la página de redireccionamiento posterior al inicio de sesión.
+    > [!IMPORTANT]
+    > El flujo de concesión de código de autorización de OAuth 2.0 llama a `state` un parámetro de la solicitud de autenticación, que contiene un token de sesión único para evitar un ataque de falsificación de solicitudes entre [sitios](https://en.wikipedia.org/wiki/Cross-site_request_forgery). En el ejemplo se usa un GUID generado aleatoriamente.
 4. Cuando el usuario selecciona el botón *de* inicio de sesión, Teams abre una ventana emergente y navega a la página de inicio.
    > [!NOTE]
-   > El tamaño de la ventana emergente se puede controlar mediante parámetros de cadena de consulta de ancho y alto en la dirección URL. Por ejemplo, si agrega width=600 y height=600, el tamaño de la ventana emergente es de 600 x 600 píxeles. El tamaño real de la ventana emergente se recueste como un porcentaje del Teams de la ventana principal. Si la Teams es pequeña, la ventana emergente es menor que las dimensiones especificadas.
+   > El tamaño de la ventana emergente se puede controlar mediante parámetros de cadena de consulta de ancho y alto en la dirección URL. Por ejemplo, si agrega width=600 y height=600, el tamaño de la ventana emergente es de 600 x 600 píxeles. El tamaño real de la ventana emergente se recorta como un porcentaje del Teams de la ventana principal. Si la Teams es pequeña, la ventana emergente es menor que las dimensiones especificadas.
 
 5. La página de inicio redirige al usuario al extremo del proveedor de `authorize` identidades. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. En el sitio del proveedor, el usuario inicia sesión y concede acceso al bot.
 7. El proveedor lleva al usuario a la página de redireccionamiento de OAuth del bot con un código de autorización.
-8. El bot canjea el código de autorización de un token de acceso y **asocia provisionalmente** el token con el usuario que inició el flujo de inicio de sesión. A continuación, le llamamos un *token provisional*.
-    * En el ejemplo, el bot asocia el valor del parámetro con el identificador del usuario que inició el proceso de inicio de sesión para que posteriormente pueda coincidir con el valor devuelto por el proveedor de `state` `state` identidades. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
-      > [!IMPORTANT] 
-      > El bot almacena el token que recibe del proveedor de identidades y lo asocia con un usuario específico, pero se marca como "validación pendiente". 
+8. El bot canjea el código de autorización de un token de acceso y **asocia provisionalmente** el token con el usuario que inició el flujo de inicio de sesión. A continuación, se llama a esto un *token provisional*.
+    * En el ejemplo, el bot `state` asocia el valor del parámetro con el identificador `state` del usuario que inició el proceso de inicio de sesión para que posteriormente pueda coincidir con el valor devuelto por el proveedor de identidades. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
+      > [!IMPORTANT]
+      > El bot almacena el token que recibe del proveedor de identidades y lo asocia con un usuario específico, pero se marca como "validación pendiente".
     * El token provisional no se puede usar sin una validación adicional.
-      1. **Valide lo que se recibe del proveedor de identidades.** El valor del `state` parámetro debe confirmarse con respecto a lo que se guardó anteriormente. 
-      1. **Valide lo que se recibe de Teams.** Se [realiza una validación de](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) autenticación en dos pasos para garantizar que el usuario que autorizó el bot con el proveedor de identidades sea el mismo usuario que está chateando con el bot. Esto protege contra ataques de suplantación de identidad [(phishing) y](https://en.wikipedia.org/wiki/Phishing) de [man-in-the-middle.](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) El bot genera un código de verificación y lo almacena, asociado con el usuario. El código de verificación se envía automáticamente Teams como se describe a continuación. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
-9. La devolución de llamada de OAuth representa una página que llama a `notifySuccess("<verification code>")` . ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
-10. Teams cierra la ventana emergente y envía el envío al `<verification code>` `notifySuccess()` bot. El bot recibe un [mensaje de invocación](/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) con `name = signin/verifyState` .
+      1. **Valide lo que se recibe del proveedor de identidades.** El valor del parámetro `state` debe confirmarse con respecto a lo que se guardó anteriormente.
+      1. **Valide lo que se recibe de Teams.** Se [realiza una validación de](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) autenticación en dos pasos para garantizar que el usuario que autorizó el bot con el proveedor de identidades sea el mismo usuario que está chateando con el bot. Esto protege contra ataques de suplantación de identidad ([phishing) y](https://en.wikipedia.org/wiki/Phishing) de [man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack). El bot genera un código de verificación y lo almacena, asociado con el usuario. El código de verificación se envía automáticamente Teams como se describe a continuación. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
+9. La devolución de llamada de OAuth representa una página que llama a `notifySuccess("<verification code>")`. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
+10. Teams cierra la ventana emergente y envía el `<verification code>` envío `notifySuccess()` al bot. El bot recibe un [mensaje de invocación](/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) con `name = signin/verifyState`.
 11. El bot comprueba el código de comprobación entrante con el código de verificación almacenado con el token provisional del usuario. ([Ver código](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
 12. Si coinciden, el bot marca el token como validado y listo para su uso. De lo contrario, se produce un error en el flujo de autenticación y el bot elimina el token provisional.
 

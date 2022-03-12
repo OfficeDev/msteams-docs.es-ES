@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: El selector de personas de power apps de la plataforma de energía vincula profundamente el recurso compartido con el asistente de agente virtual Teams
-ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 274525b61ae95021cde41095e4bb37133e05b3e8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355961"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453694"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
@@ -40,6 +40,9 @@ Las plataformas de código bajos proporcionan un enfoque intuitivo para el desar
 ## <a name="microsoft-power-platform"></a>Plataforma de Microsoft Power
 
 La plataforma Microsoft Power combina cuatro tecnologías sólidas de Microsoft, como Power BI, Power Apps, Power Automate y Power Virtual Agents una plataforma de aplicaciones eficaz. Estas tecnologías le permiten crear soluciones, automatizar procesos, analizar datos y crear agentes virtuales en un entorno unificado e integrado.
+
+>[!NOTE]
+>No debes usar Microsoft Power Platform para crear aplicaciones que se van a publicar en la Teams de aplicaciones. Las aplicaciones de Microsoft Power Platform solo se pueden publicar en la tienda de aplicaciones de una organización.
 
 ### <a name="power-apps"></a>Power Apps
 
@@ -93,7 +96,7 @@ Las aplicaciones de Azure Communication Services pueden usar la funcionalidad de
 
 También puede integrar una identidad Microsoft 365 para crear aplicaciones externas que inserten vídeo y llamadas RTC en nombre de un Teams usuario. Si ha usado [sdk Skype Empresarial en](/skype-sdk/appsdk/skypeappsdk) el pasado, estas funcionalidades como parte de Azure Communication Services se recomiendan como reemplazo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Asignar los casos de uso de la aplicación a Teams funcionalidades de plataforma](~/concepts/design/map-use-cases.md)
 * [Determinar los puntos de entrada de la aplicación](~/concepts/extensibility-points.md)

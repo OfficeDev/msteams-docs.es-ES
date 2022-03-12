@@ -6,22 +6,22 @@ keywords: tab removing margins padding
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7260c0baf6a33b69988d07cb6d0aef7f90b6c62f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888079"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452840"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
-En este documento se describe cómo la eliminación de márgenes alrededor de todas las pestañas de Microsoft Teams mejora la experiencia de creación de aplicaciones. Esta es una mejora introducida en Microsoft Teams 2021.
-Puedes crear aplicaciones que parezcan más nativas Teams quitando los márgenes alrededor de todas las pestañas. Las pestañas con márgenes quitados se alinean con Microsoft Teams diseños del kit de [interfaz de usuario de Microsoft Teams](~/tabs/design/tabs.md). La mayoría de las aplicaciones tienen un aspecto mejorado sin márgenes.
+En este documento se describe cómo la eliminación de márgenes alrededor de todas las pestañas Microsoft Teams mejora la experiencia de creación de aplicaciones. Esta es una mejora introducida en Microsoft Teams 2021.
+Puedes crear aplicaciones que parezcan más nativas Teams quitando los márgenes alrededor de todas las pestañas. Las pestañas con márgenes eliminados se alinean con Microsoft Teams del [kit de interfaz de usuario de Microsoft Teams.](~/tabs/design/tabs.md) La mayoría de las aplicaciones tienen un aspecto mejorado sin márgenes.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Inteligencia de tabulación y sin márgenes" border="false":::
 
 > [!NOTE]
-> Esta característica no se aplica a los clientes móviles, ya que las pestañas vistas en los clientes móviles no tienen márgenes. 
+> Esta característica no se aplica a los clientes móviles, ya que las pestañas vistas en los clientes móviles no tienen márgenes.
 
 ## <a name="guidelines"></a>Instrucciones
 
@@ -31,7 +31,7 @@ La eliminación de márgenes de tabulación afecta Teams aplicaciones que usan p
 
 **¿Está bien que chrome de la aplicación, como la barra de encabezado o la barra de tareas, toque los bordes de nuestros diseños?**
 
-Sí, esto está bien y Teams fomenta este diseño. Ayuda a la aplicación a sentirse nativa.
+Sí, esto está bien y Teams este tipo de diseño. Ayuda a la aplicación a sentirse nativa.
 
 **¿Está bien que el contenido de la aplicación, como texto, logotipos e imágenes, toque los bordes izquierdo y derecho de nuestros diseños?**
 
@@ -44,11 +44,12 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 * Inferior: 0px
 
 > [!IMPORTANT]
+>
 > * Todas las pestañas tienen sus márgenes quitados: pestañas personales, pestañas de chat (grupo), pestañas de reunión y pestañas de canal.
-> * El cambio de eliminación del margen de tabulación se aplica a todas las pestañas. No hay forma de participar o no participar en el cambio. 
+> * El cambio de eliminación del margen de tabulación se aplica a todas las pestañas. No hay forma de participar o no participar en el cambio.
 > * El cambio de los márgenes de tabulación puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes que rodean su interfaz de usuario.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

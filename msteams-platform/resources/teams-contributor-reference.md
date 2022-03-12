@@ -5,16 +5,16 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 5ee1be71c0ba07612808dc8d1cfb766e2f40c36b
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 10c7bbf952311dd1668a3fa1b013228d9dd58000
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435261"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453126"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 
-Teams documentación forma parte de la biblioteca **de documentación técnica de Microsoft Docs**. El contenido se organiza en grupos denominados docsets, cada uno que representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso url **después de docs.microsoft.com**. Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta Teams de archivo docset. Teams artículos se escriben en la sintaxis de Markdown y se hospedan en GitHub.
+Teams documentación forma parte de la biblioteca **de documentación técnica de Microsoft Docs**. El contenido se organiza en grupos denominados docsets, cada uno que representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso url después **de docs.microsoft.com**. Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta Teams de archivo docset. Teams artículos se escriben en la sintaxis de Markdown y se hospedan en GitHub.
 
 ## <a name="set-up-your-workspace"></a>Configurar el área de trabajo
 
@@ -24,7 +24,6 @@ Teams documentación forma parte de la biblioteca **de documentación técnica d
 > * Instalar [Microsoft Visual Studio (](https://code.visualstudio.com/)VS Code).
 > * Instale [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directamente desde VS Code Marketplace.
 <br>&emsp;&emsp; o
-
 > [!div class="checklist"]
 >
 > * Instalar en VS Code:
@@ -35,7 +34,7 @@ Teams documentación forma parte de la biblioteca **de documentación técnica d
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Revisar la Guía de colaboradores de Microsoft Docs
 
-La guía de colaboradores proporciona instrucciones para crear, publicar y actualizar contenido técnico en la **plataforma de Microsoft Docs** . 
+La guía de colaboradores proporciona instrucciones para crear, publicar y actualizar contenido técnico en la **plataforma de Microsoft Docs** .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guías de contenido, estilo y escritura de Microsoft
 
@@ -52,17 +51,18 @@ La guía de colaboradores proporciona instrucciones para crear, publicar y actua
 ## <a name="file-paths"></a>Rutas de acceso a archivos
 
 Al usar rutas de acceso relativas y crear vínculos a otros conjuntos de documentos, es importante establecer una ruta de acceso de archivo válida para hipervínculos en la documentación. La compilación se ejecuta GitHub solo si la ruta de acceso del archivo es correcta o válida.
- 
+
 Para obtener más información sobre hipervínculos y rutas de acceso a archivos, [vea usar vínculos en la documentación](/contribute/how-to-write-links).
 
 > [!IMPORTANT]
 > Para hacer referencia a un artículo que **forma parte del** Teams docset de la plataforma:<br>
-> &emsp;&#x2714; use una ruta relativa sin una barra diagonal hacia delante.<br>
+> &emsp;&#x2714; usar una ruta relativa sin una barra diagonal hacia delante.<br>
 > &emsp;&#x2714; incluir la extensión de archivo Markdown.<br>
 >Por ejemplo: **directorio primario/directorio/ruta de acceso a article.md** :> [Crear una aplicación para Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> Para hacer referencia a un artículo de biblioteca de Microsoft Docs que **no forma parte del** Teams docset de la plataforma:<br>
-> &emsp;&#x2714; use una ruta relativa que comience por una barra diagonal.<br>
-> &emsp;&#x2714; No incluya la extensión de archivo. <br> Ex: **/docset/address-to-file-location** —> [Use la API de Microsoft Graph para trabajar con Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> Para hacer referencia a un artículo de biblioteca de Microsoft Docs que no **forma parte del** conjunto de documentos Teams plataforma:<br>
+> &emsp;&#x2714; use una ruta relativa que comience con una barra diagonal.<br>
+> &emsp;&#x2714; No incluya la extensión de archivo. <br>
+> Ex: **/docset/address-to-file-location** —> [Use la API de Microsoft Graph para trabajar con Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Para hacer referencia a una página fuera de la biblioteca de Microsoft Docs, como GitHub, use la ruta de acceso de `https` archivo completa.<br>
 
 ## <a name="code-samples-and-snippets"></a>Ejemplos de código y fragmentos de código

@@ -6,32 +6,33 @@ keywords: control de selector de personas
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 7a7a229bdeab7d83f71f8dbe3b24da8b44b3db32
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: b12cda18e8144c64e7b533af63f8a49283fff593
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518145"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453001"
 ---
 # <a name="integrate-people-picker"></a>Integrar Selector de personas  
 
 Selector de personas es un control para buscar y seleccionar personas. Esta es una funcionalidad nativa disponible en Teams plataforma. Puedes integrar Teams de entrada del selector de personas nativo con tus aplicaciones web. Puede seleccionar entre una o varias selecciones y configuraciones, como limitar la búsqueda en un chat, canales o en toda la organización.
 
-Puedes usar Microsoft Teams [SDK de cliente de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), que `selectPeople` proporciona API para integrar el Selector de personas dentro de la aplicación web. 
+Puedes usar Microsoft Teams [SDK de cliente de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), que `selectPeople` proporciona API para integrar el selector de personas en la aplicación web.
 
-## <a name="advantages-of-integrating-the-native-people-picker"></a>Ventajas de integrar el selector de personas nativo 
+## <a name="advantages-of-integrating-the-native-people-picker"></a>Ventajas de integrar el selector de personas nativo
 
-* El control selector de personas funciona en todas Teams superficies, como un módulo de tareas, un chat, un canal, una pestaña de reunión y una aplicación personal.
+* El control selector de personas funciona en todas Teams superficies, como el módulo de tareas, un chat, un canal, una pestaña de reunión y una aplicación personal.
 * Este control le permite buscar y seleccionar usuarios dentro de un chat, canal o toda la organización.
-* El Selector de personas ayuda con escenarios que implican la asignación de tareas, el etiquetado y la notificación a un usuario. 
+* El Selector de personas ayuda con escenarios que implican la asignación de tareas, el etiquetado y la notificación a un usuario.
 * Puedes usar este control fácilmente disponible en la aplicación web. Ahorra el esfuerzo y el tiempo de forma significativa para crear un control de este tipo por su cuenta.
 
-Debes llamar a la `selectPeople` API para integrar el control selector de personas en tu Teams aplicación. Para una integración eficaz, debe comprender el fragmento de [código](#code-snippet) para llamar a la API. Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la aplicación web.
+Debes llamar a la `selectPeople` API para integrar el control selector de personas en tu Teams aplicación. Para una integración eficaz, debe comprender el fragmento de [código](#code-snippet) para llamar a la API.
+Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la aplicación web.
 
-> [!NOTE] 
+> [!NOTE]
 > Actualmente, Microsoft Teams compatibilidad con el selector de personas solo está disponible para clientes móviles.
 
-## <a name="selectpeople-api"></a>`selectPeople` API 
+## <a name="selectpeople-api"></a>`selectPeople` API
 
 `selectPeople`La API le permite agregar Teams nativa `People Picker input control` a las aplicaciones web.  
 La descripción de la API es la siguiente:
@@ -45,9 +46,9 @@ La `selectPeople` API incluye las siguientes configuraciones de entrada:
 |Parámetro Configuration|Tipo|Descripción| Valor predeterminado|
 |-----|------|--------------|------|
 |`title`| String| Es un parámetro opcional. Establece el título del control Selector de personas. | Seleccionar personas|
-|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar Microsoft Azure Active Directory (Azure AD) de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null| 
-|`openOrgWideSearchInChatOrChannel`|Booleano | Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas en el ámbito de toda la organización incluso si la aplicación se agrega a un chat o canal. |Falso|
-|`singleSelect`|Boolean|Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas que restringe la selección a un solo usuario. |Falso|
+|`setSelected`|String| Es un parámetro opcional. Debe pasar Microsoft Azure Active Directory (Azure AD) de las personas que se elegirán previamente. Este parámetro preselecciona a los usuarios al iniciar el control Selector de personas. En caso de selección única, solo el primer usuario válido se prepopultó ignorando el resto. |Null|
+|`openOrgWideSearchInChatOrChannel`|Booleano | Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas en el ámbito de toda la organización incluso si la aplicación se agrega a un chat o canal. |False|
+|`singleSelect`|Booleano|Es un parámetro opcional. Cuando se establece en true, inicia el Selector de personas que restringe la selección a un solo usuario. |False|
 
 En la siguiente imagen se muestra la experiencia del selector de personas en una aplicación web de ejemplo:
 
@@ -80,7 +81,7 @@ En la siguiente imagen se muestra la experiencia del selector de personas en una
 
 ## <a name="error-handling"></a>Control de errores
 
-Debes asegurarte de controlar los errores correctamente en la aplicación web. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
+Debes asegurarte de controlar los errores correctamente en la aplicación web. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores:
 
 |Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |

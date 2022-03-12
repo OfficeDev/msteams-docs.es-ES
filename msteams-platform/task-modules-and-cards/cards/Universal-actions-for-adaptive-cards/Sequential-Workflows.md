@@ -4,18 +4,18 @@ description: Obtenga información sobre flujos de trabajo secuenciales para tarj
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: ce715749d1b9fb5e1cff6457eebd3cac9674c58c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081054"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453253"
 ---
 # <a name="sequential-workflows"></a>Flujos de trabajo secuenciales
 
 Las tarjetas adaptables ahora admiten flujos de trabajo secuenciales que se actualizan en la acción del usuario. Con flujos de trabajo secuenciales, las tarjetas adaptables se actualizan en la acción del usuario y el usuario puede avanzar a través de una serie de tarjetas que requieren la entrada del usuario. `Action.Execute` admite flujos de trabajo secuenciales, lo que permite a los desarrolladores de bots devolver tarjetas adaptables en respuesta a una acción del usuario.
 
-Por ejemplo, tome un escenario en el que la cafetería quiera realizar un pedido para un equipo o canal. Con la elección del usuario para varios elementos, como comidas y bebidas, se pueden `Action.Execute` registrar secuencialmente. El usuario también puede ir y venir a través de las tarjetas según la lógica definida por el desarrollador del bot. <br/>
+Por ejemplo, tome un escenario en el que la cafetería quiera realizar un pedido para un equipo o canal. Con `Action.Execute` la elección del usuario para varios elementos, como comidas y bebidas, se pueden registrar secuencialmente. El usuario también puede ir y venir a través de las tarjetas según la lógica definida por el desarrollador del bot. <br/>
 
 La siguiente imagen muestra el flujo de trabajo secuencial:
 
@@ -129,7 +129,6 @@ var adaptiveCardResponse = JObject.FromObject(new
 |----------------|-----------------|--------------|--------------|
 | Bot de servicio de alimentos de Teams | Crea un bot que acepte el pedido de alimentos con tarjetas adaptables. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Aún no disponible |
 | Tarjetas adaptables de flujos de trabajo secuenciales | Muestra cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y tarjetas adaptables actualizadas en bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
-
 
 ## <a name="see-also"></a>Consulte también
 

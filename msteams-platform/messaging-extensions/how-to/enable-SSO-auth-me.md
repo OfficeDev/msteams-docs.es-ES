@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo habilitar la compatibilidad con SS
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a0aaae8637a80dd2e6f48cf9ae3081b4e796824f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 3543d86d15755642a1617e07514db95a6a812313
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435701"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453470"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Compatibilidad con inicio de sesión único para extensiones de mensajería
- 
-La compatibilidad con inicio de sesión único (SSO) ya está disponible para extensiones de mensajería y desamuesar vínculos. Al habilitar el inicio de sesión único para las extensiones de mensajería de forma predeterminada, se actualiza el token de autenticación, lo que minimiza el número de veces que necesita escribir las credenciales de inicio de sesión para Microsoft Teams.
+
+La compatibilidad con inicio de sesión único (SSO) ya está disponible para extensiones de mensajería y desamuesar vínculos. Habilitar el inicio de sesión único para extensiones de mensajería de forma predeterminada actualiza el token de autenticación, lo que minimiza el número de veces que necesita escribir las credenciales de inicio de sesión para Microsoft Teams.
 
 Este documento le guía sobre cómo habilitar el SSO y almacenar el token de autenticación, si es necesario.
 
@@ -23,7 +23,7 @@ Este documento le guía sobre cómo habilitar el SSO y almacenar el token de aut
 Los requisitos previos para habilitar SSO para extensiones de mensajería y desafutización de vínculos son los siguientes:
 
 * Debe tener una [cuenta de Azure](https://azure.microsoft.com/free/) .
-* Debes configurar la aplicación a través del portal de Azure AD y actualizar un manifiesto de aplicación Teams tu bot tal como se define en registrar la aplicación a través del [portal de Azure AD web](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
+* Debes configurar la aplicación Azure AD través del portal de Azure AD y actualizar el manifiesto de la aplicación Teams tu bot tal como se define en registrar la aplicación Azure AD [portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
 
 > [!NOTE]
 > Para obtener más información sobre cómo crear una cuenta de Azure y actualizar el manifiesto de la aplicación, consulte [Single sign-on (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
@@ -32,7 +32,8 @@ Los requisitos previos para habilitar SSO para extensiones de mensajería y desa
 
 Una vez completados los requisitos previos, puede habilitar SSO para extensiones de mensajería y deshacer vínculos.
 
-**Para habilitar SSO**
+Para habilitar SSO:
+
 1. Actualice los detalles de conexión [de OAuth de](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) bots en Microsoft Azure portal.
 2. Descargue el [ejemplo de extensiones de mensajería](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) y siga las instrucciones de configuración proporcionadas por el asistente.
    > [!NOTE]
@@ -41,7 +42,7 @@ Una vez completados los requisitos previos, puede habilitar SSO para extensiones
 
     > [!NOTE]
     > No se admiten otros controladores SSO, `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` excepto el archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs.
-   
+
 4. El token se recibe en el `OnTeamsMessagingExtensionQueryAsync` controlador en la `turnContext.Activity.Value` carga o `OnTeamsAppBasedLinkQueryAsync`en el , según el escenario en el que se habilita el SSO para:
 
     ```json
@@ -55,7 +56,7 @@ Una vez completados los requisitos previos, puede habilitar SSO para extensiones
      ```
   
     Si usa la conexión OAuth, agregue el siguiente código al archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs para actualizar o agregar el token en el almacén:
-    
+
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
@@ -114,7 +115,7 @@ Una vez completados los requisitos previos, puede habilitar SSO para extensiones
             return true;
         }
     
-    ```    
+    ```
 
 ## <a name="see-also"></a>Vea también
 

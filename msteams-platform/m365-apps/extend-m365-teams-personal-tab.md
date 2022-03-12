@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e914793fcd0d7bbaa2442f282224c4ca94d99a85
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356316"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453722"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -22,14 +22,16 @@ Las pestañas personales proporcionan una excelente forma de mejorar la experien
 Actualizar la aplicación personal para que se ejecute en Outlook y Office Inicio implica estos pasos:
 
 > [!div class="checklist"]
+>
 > * Actualizar el manifiesto de la aplicación
-> * Actualizar las referencias del SDK de TeamsJS 
+> * Actualizar las referencias del SDK de TeamsJS
 > * Modificar los encabezados de la directiva de seguridad de contenido
 > * Actualizar el registro Microsoft Azure Active Directory aplicación (Azure AD) para inicio de sesión único (SSO)
 
 La prueba de la aplicación requerirá los siguientes pasos:
 
 > [!div class="checklist"]
+>
 > * Inscriba Microsoft 365 inquilino en *Office 365 versiones dirigidas*
 > * Configurar tu cuenta para tener acceso a las versiones preliminares de Outlook y Office aplicaciones
 > * Descargar localmente la aplicación actualizada en Teams
@@ -56,7 +58,6 @@ Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Ejemplo de lista todo (funciona en Teams, Outlook y Office) en Teams Toolkit":::
 
-
 ## <a name="update-the-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
 Tendrás que usar el esquema de manifiesto de vista previa del desarrollador de [Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `Microsoft 365 DevPreview` y la versión del manifiesto para permitir que tu pestaña personal Teams se ejecute en Office y Outlook.
@@ -78,6 +79,7 @@ Abre el Teams de la aplicación y actualiza el `$schema` y con `manifestVersion`
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Si usaste Teams Toolkit para crear tu aplicación personal, también puedes usarla para validar los cambios en el archivo de manifiesto e identificar cualquier error. Abra la `Ctrl+Shift+P` paleta de comandos y busque **Teams:** validar el archivo de manifiesto o seleccione la opción en el menú Implementación del Teams Toolkit (busque el icono Teams en el lado izquierdo de Visual Studio Code).
@@ -96,6 +98,7 @@ Puede usar Teams Toolkit `@microsoft/teams-js`para automatizar algunos de los ca
 Una vez completada, la utilidad habrá `package.json` actualizado el archivo con la dependencia de TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1` o posterior) `*.js/.ts` y los archivos y `*.jsx/.tsx` se actualizarán con:
 
 > [!div class="checklist"]
+>
 > * `package.json` referencias a TeamsJS SDK Preview
 > * Instrucciones Import para TeamsJS SDK Preview
 > * [Llamadas de función, enumeración e interfaz](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) a TeamsJS SDK Preview
@@ -117,7 +120,7 @@ Si la aplicación usa encabezados de directiva de seguridad de [contenido (CSP](
 |Microsoft 365 host| permiso frame-ancestor|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
+| Oficina | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
@@ -126,7 +129,7 @@ Azure Active Directory Inicio de sesión único (SSO) para pestañas personales 
 
 1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
 1. Abra la **hoja Registros de aplicaciones** .
-1. Selecciona el nombre de la aplicación de pestaña personal para abrir el registro de la aplicación. 
+1. Selecciona el nombre de la aplicación de pestaña personal para abrir el registro de la aplicación.
 1. Seleccione  **Exponer una API** (en *Administrar*).
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar identificadores de cliente desde la hoja *Registros de aplicaciones* en Azure Portal":::
@@ -179,7 +182,7 @@ Para ver la aplicación que se ejecuta en Outlook en Windows escritorio:
 
 1. Inicie Outlook e inicie sesión con su cuenta de inquilino de desarrollo.
 1. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
-1.  Haz clic en el icono de la aplicación para iniciar la aplicación en Outlook.
+1. Haz clic en el icono de la aplicación para iniciar la aplicación en Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de Outlook cliente de escritorio para ver las pestañas personales instaladas":::
 
@@ -187,13 +190,13 @@ Para ver la aplicación que se ejecuta en Outlook en Windows escritorio:
 
 Para ver la aplicación en Outlook en la Web:
 
-1. Vaya a https://outlook.office.com e inicie sesión con su cuenta de inquilino de desarrollo.
+1. Vaya a [Outlook en la Web](https://outlook.office.com) e inicie sesión con su cuenta de inquilino de desarrollo.
 1. Haga clic en los puntos suspensivos (**...**) de la barra lateral. El título de la aplicación de instalación local aparecerá entre las aplicaciones instaladas.
 1. Haz clic en el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de outlook.com para ver las pestañas personales instaladas":::
 
-### <a name="office"></a>Office
+### <a name="office"></a>Oficina
 
 Para ver la aplicación que se ejecuta en Office en Windows escritorio:
 
@@ -213,7 +216,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Office en la Web:
 
 :::image type="content" source="images/office-web-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de office.com para ver las pestañas personales instaladas":::
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook y Office las pestañas personales habilitadas para aplicaciones están en versión preliminar y no se admiten para el uso de producción. Aquí te explicamos cómo distribuir tu aplicación de pestaña personal para obtener una vista previa de audiencias con fines de prueba.
 
@@ -227,11 +230,11 @@ En el *menú* Aplicaciones, selecciona *Administrar las aplicacionesSubmit* >  *
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams centro de administración
 
-Como administrador Teams, puede cargar e instalar previamente el paquete de la aplicación para el inquilino de la organización desde https://admin.teams.microsoft.com/. Consulta [Upload aplicaciones personalizadas en el Centro Microsoft Teams administración para](/MicrosoftTeams/upload-custom-apps) obtener más información.
+Como administrador Teams, puede cargar e instalar previamente el paquete de la aplicación para el inquilino de la organización [desde Teams administrador](https://admin.teams.microsoft.com/). Consulta [Upload aplicaciones personalizadas en el Centro Microsoft Teams administración para](/MicrosoftTeams/upload-custom-apps) obtener más información.
 
 #### <a name="microsoft-admin-center"></a>Centro de administración de Microsoft
 
-Como administrador global, puedes cargar e instalar previamente el paquete de la aplicación desde https://admin.microsoft.com/. Consulta [Probar e implementar Aplicaciones Microsoft 365 asociados en el portal de aplicaciones integradas](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obtener más información.
+Como administrador global, puedes cargar e instalar previamente el paquete de la aplicación desde el administrador [de Microsoft](https://admin.microsoft.com/). Consulta [Probar e implementar Aplicaciones Microsoft 365 asociados en el portal de aplicaciones integradas](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obtener más información.
 
 ### <a name="multitenant-distribution"></a>Distribución multitenente
 

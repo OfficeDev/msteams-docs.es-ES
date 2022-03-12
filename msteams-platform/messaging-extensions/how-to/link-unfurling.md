@@ -5,47 +5,46 @@ description: Obtén información sobre cómo agregar la actualización de víncu
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 1ecab904f21d84cfa329e1c390d51ebade6a8e05
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178296"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453869"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento te guía sobre cómo agregar la actualización de vínculos al manifiesto de la aplicación con App studio y manualmente. Con la actualización de vínculos, la aplicación puede registrarse para recibir una actividad cuando las direcciones URL con un dominio determinado se `invoke` pegan en el área del mensaje de redacción. Contiene la dirección URL completa pegada en el área del mensaje de redacción y puede responder con una tarjeta que el usuario pueda deshacer, proporcionando información o `invoke` acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
+Este documento te guía sobre cómo agregar la actualización de vínculos al manifiesto de la aplicación con App studio y manualmente. Con la actualización de vínculos, la `invoke` aplicación puede registrarse para recibir una actividad cuando las direcciones URL con un dominio determinado se pegan en el área del mensaje de redacción. Contiene `invoke` la dirección URL completa pegada en el área del mensaje de redacción y puede responder con una tarjeta que el usuario pueda deshacer, proporcionando información o acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
 
 > [!NOTE]
+>
 > * Actualmente, la desafución de vínculos no se admite en clientes móviles.
 > * El resultado de la descarga de vínculos se almacena en caché durante 30 minutos.
 
-La Azure DevOps de mensajería usa la desamuestra de vínculos para buscar direcciones URL pegadas en el área de mensaje de redacción que apunten a un elemento de trabajo. En la siguiente imagen, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps, que la extensión de mensajería ha resuelto en una tarjeta:
+La Azure DevOps de mensajería usa la desamuestra de vínculos para buscar direcciones URL pegadas en el área de mensaje de redacción que apunten a un elemento de trabajo. En la imagen siguiente, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps, que la extensión de mensajería ha resuelto en una tarjeta:
 
 ![Ejemplo de desafusado de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregar la implementación de vínculos al manifiesto de la aplicación
 
-Para agregar la implementación de vínculos al manifiesto de la aplicación, agrega una nueva matriz a la sección json del manifiesto `messageHandlers` `composeExtensions` de la aplicación. Puedes agregar la matriz con la ayuda de App Studio o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com` . Esto coincide exactamente con un segmento del dominio; si necesita hacer `a.b.example.com` coincidir, use `*.*.example.com` .
+Para agregar la implementación de vínculos al manifiesto de la aplicación, agrega una nueva matriz a `messageHandlers` la `composeExtensions` sección json del manifiesto de la aplicación. Puedes agregar la matriz con la ayuda de App Studio o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. Esto coincide exactamente con un segmento del dominio; si necesita hacer coincidir, `a.b.example.com` use `*.*.example.com`.
 
 > [!NOTE]
-> No agregue dominios que no estén en su control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Además, los dominios de nivel superior están prohibidos. Por ejemplo, `*.com` , `*.org` .
+> No agregue dominios que no estén en su control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Además, los dominios de nivel superior están prohibidos. Por ejemplo, `*.com`, `*.org`.
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Agregar un despliegue de vínculos con App Studio
 
-1. Abre **App Studio** desde el Microsoft Teams y selecciona la pestaña Editor **de** manifiestos.
+1. Abre **App Studio** desde el Microsoft Teams y selecciona la **pestaña Editor de** manifiestos.
 1. Cargue el manifiesto de la aplicación.
-1. En la **página Extensión de** mensajería, agregue el dominio que desea buscar en la sección Controladores **de** mensajes. En la siguiente imagen se explica el proceso:
+1. En la **página Extensión de** mensajería, agregue el dominio que desea buscar en la sección **Controladores de** mensajes. En la siguiente imagen se explica el proceso:
 
     ![sección controladores de mensajes en App Studio](~/assets/images/link-unfurling.png)
 
-    
 ### <a name="add-link-unfurling-manually"></a>Agregar la actualización manual de vínculos
 
-Para habilitar la extensión de mensajería para que interactúe con vínculos, primero debes agregar la `messageHandlers` matriz al manifiesto de la aplicación. En el siguiente ejemplo se explica cómo agregar manualmente la actualización de vínculos: 
-
+Para habilitar la extensión de mensajería para que interactúe con vínculos, primero debes agregar la `messageHandlers` matriz al manifiesto de la aplicación. En el siguiente ejemplo se explica cómo agregar manualmente la actualización de vínculos:
 
 ```json
 ...
@@ -69,7 +68,7 @@ Para habilitar la extensión de mensajería para que interactúe con vínculos, 
 
 Para obtener un ejemplo de manifiesto completo, vea [referencia de manifiesto](~/resources/schema/manifest-schema.md).
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>Controlar la `composeExtension/queryLink` invocación
+## <a name="handle-the-composeextensionquerylink-invoke"></a>Controlar la invocación `composeExtension/queryLink`
 
 Después de agregar el dominio al manifiesto de la aplicación, debes actualizar el código del servicio web para controlar la solicitud de invocación. Use la dirección URL recibida para buscar en el servicio y crear una respuesta de tarjeta. Si responde con más de una tarjeta, solo se usará la primera respuesta de tarjeta.
 
@@ -77,10 +76,10 @@ Se admiten los siguientes tipos de tarjeta:
 
 * [Tarjeta miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Tarjeta conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Para obtener más información, vea [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
+Para obtener más información, vea [Invocar tipo de acción](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### <a name="example"></a>Ejemplo
 
@@ -129,7 +128,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-A continuación se muestra un ejemplo `invoke` del bot enviado:
+A continuación se muestra un ejemplo del `invoke` bot enviado:
 
 ```json
 {
@@ -180,7 +179,7 @@ A continuación se muestra un ejemplo de la respuesta:
 
 * * *
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Vea también
 
 * [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
 * [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)

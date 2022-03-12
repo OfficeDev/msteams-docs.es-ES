@@ -5,12 +5,12 @@ keywords: Búsqueda de extensiones de mensajería de extensiones de mensajería 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443989"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453715"
 ---
 # <a name="search-with-messaging-extensions"></a>Búsqueda con extensiones de mensajería
 
@@ -24,11 +24,11 @@ En las secciones siguientes se describe cómo hacerlo:
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="search-type-message-extensions"></a>Extensiones de mensaje de tipo de búsqueda
+## <a name="search-type-message-extensions"></a>Extensiones de mensaje de tipo de búsqueda
 
 Para la extensión de mensajería basada en búsqueda, establezca el `type` parámetro en `query`. A continuación se muestra un ejemplo de un manifiesto con un único comando de búsqueda. Una sola extensión de mensajería puede tener hasta 10 comandos diferentes asociados. Esto puede incluir varias búsquedas y varios comandos basados en acción.
 
-#### <a name="complete-app-manifest-example"></a>Ejemplo de manifiesto de aplicación completa
+### <a name="complete-app-manifest-example"></a>Ejemplo de manifiesto de aplicación completa
 
 ```json
 {
@@ -85,7 +85,7 @@ Para la extensión de mensajería basada en búsqueda, establezca el `type` par�
 }
 ```
 
-### <a name="test-via-uploading"></a>Probar mediante carga
+## <a name="test-via-uploading"></a>Probar mediante carga
 
 Puedes probar la extensión de mensajería cargando la aplicación.
 
@@ -97,7 +97,7 @@ La mayoría del trabajo implica el evento `onQuery` , que controla todas las int
 
 Si se establece `canUpdateConfiguration` en en `true` el manifiesto, se habilita el elemento de menú **Configuración** para la extensión de mensajería y también debe controlar `onQuerySettingsUrl` y `onSettingsUpdate`.
 
-### <a name="handle-onquery-events"></a>Controlar eventos onQuery
+## <a name="handle-onquery-events"></a>Controlar eventos onQuery
 
 Una extensión de mensajería recibe un `onQuery` evento cuando ocurre algo en la ventana de extensión de mensajería o se envía a la ventana.
 
@@ -109,7 +109,7 @@ A continuación, compruebe si `initialRun` está establecido; si es así, tome l
 
 El resto del controlador solicita `onQuery` información al usuario, muestra una lista de tarjetas de vista previa y devuelve la tarjeta seleccionada por el usuario.
 
-### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Controlar eventos onQuerySettingsUrl y onSettingsUpdate
+## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Controlar eventos onQuerySettingsUrl y onSettingsUpdate
 
 Los `onQuerySettingsUrl` eventos y `onSettingsUpdate` funcionan juntos para habilitar el **Configuración** de menú.
 
@@ -127,7 +127,7 @@ Cuando un usuario realiza una consulta, Microsoft Teams envía al servicio un ob
 
 Además de las propiedades de actividad del bot estándar, la carga contiene los siguientes metadatos de solicitud:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud; debe ser `invoke`. |
 |`name`| Tipo de comando que se emite al servicio. Actualmente se admiten los siguientes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
@@ -141,7 +141,7 @@ Además de las propiedades de actividad del bot estándar, la carga contiene los
 
 Los parámetros de solicitud en sí se encuentran en el objeto value, que incluye las siguientes propiedades:
 
-| Nombre de la propiedad | Objetivo |
+| Nombre de propiedad | Objetivo |
 |---|---|
 | `commandId` | Nombre del comando invocado por el usuario, que coincide con uno de los comandos declarados en el manifiesto de la aplicación. |
 | `parameters` | Matriz de parámetros: cada objeto de parámetro contiene el nombre del parámetro, junto con el valor del parámetro proporcionado por el usuario. |
@@ -195,7 +195,7 @@ Los parámetros de solicitud en sí se encuentran en el objeto value, que incluy
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>Recibir solicitudes de vínculos insertados en el cuadro de mensaje de redacción
 
-Como alternativa (o además) a la búsqueda en el servicio externo, puede usar una dirección URL insertada en el cuadro de mensaje de redacción para consultar el servicio y devolver una tarjeta. En la captura de pantalla siguiente, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps que la extensión de mensajería ha resuelto en una tarjeta.
+Como alternativa (o además) a la búsqueda en el servicio externo, puede usar una dirección URL insertada en el cuadro de mensaje de redacción para consultar el servicio y devolver una tarjeta. En la captura de pantalla siguiente, un usuario ha pegado en una dirección URL un elemento de trabajo en Azure DevOps que la extensión de mensajería ha resuelto en una tarjeta.
 
 ![Ejemplo de desafusado de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -239,7 +239,7 @@ Cuando el usuario realiza una consulta, Microsoft Teams emite una solicitud HTTP
 
 El servicio debe responder con los resultados que coincidan con la consulta de usuario. La respuesta debe indicar un código de estado HTTP y `200 OK` un objeto application/json válido con el siguiente cuerpo:
 
-|Nombre de la propiedad|Objetivo|
+|Nombre de propiedad|Objetivo|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
 |`composeExtension.type`|Tipo de respuesta. Se admiten los siguientes tipos: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensajería <br>`message`: muestra un mensaje de texto sin formato |
@@ -263,7 +263,7 @@ Para obtener información sobre cómo usar los tipos de miniaturas y tarjetas de
 
 Para obtener documentación adicional acerca de la Office 365 Connector, consulte [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-La lista de resultados se muestra en la Microsoft Teams de usuario con una vista previa de cada elemento. La vista previa se genera de dos maneras:
+La lista de resultados se muestra en la interfaz Microsoft Teams con una vista previa de cada elemento. La vista previa se genera de dos maneras:
 
 * Uso de la `preview` propiedad dentro del `attachment` objeto. Los `preview` datos adjuntos solo pueden ser una tarjeta Hero o Thumbnail.
 * Extraído de las propiedades `title`básicas , `text`y `image` de los datos adjuntos. Solo se usan si la `preview` propiedad no está establecida y estas propiedades están disponibles.
@@ -486,13 +486,13 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 ```
 
 > [!NOTE]
-> Para que la experiencia de inicio de sesión se hospeda en una ventana emergente de Teams, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, [vea validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
+> Para que la experiencia de inicio de sesión se hospeda en una ventana emergente de Teams, la parte de dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, [vea validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar el flujo de inicio de sesión
 
 La experiencia de inicio de sesión debe responder y caber dentro de una ventana emergente. Debe integrarse con el SDK [Microsoft Teams cliente de JavaScript](/javascript/api/overview/msteams-client), que usa el paso de mensajes.
 
-Al igual que con otras experiencias incrustadas que se ejecutan Microsoft Teams, el código dentro de la ventana debe llamar primero`microsoftTeams.initialize()`. Si el código realiza un flujo de OAuth, puede pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
+Al igual que con otras experiencias incrustadas que se ejecutan Microsoft Teams, el código dentro de la ventana debe llamar primero`microsoftTeams.initialize()`. Si el código realiza un flujo de OAuth, puedes pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Completar el flujo de inicio de sesión
 
@@ -556,7 +556,7 @@ En este momento, la ventana se cierra y el control se pasa al Teams cliente. El 
 
 ### <a name="net"></a>.NET
 
-Para recibir y controlar consultas con el SDK de Bot Builder para .NET, `invoke` puede comprobar el tipo de acción en la actividad entrante y, a continuación, usar el método auxiliar en el paquete de NuGet [Microsoft.Bot.Connector.Teams para determinar](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) si se trata de una actividad de extensión de mensajería.
+Para recibir y controlar consultas con el SDK de Bot Builder para .NET, `invoke` puede comprobar el tipo de acción en la actividad entrante y, a continuación, usar el método auxiliar en el paquete de NuGet [Microsoft.Bot.Connector.Teams para](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) determinar si se trata de una actividad de extensión de mensajería.
 
 #### <a name="example-code-in-net"></a>Código de ejemplo en .NET
 

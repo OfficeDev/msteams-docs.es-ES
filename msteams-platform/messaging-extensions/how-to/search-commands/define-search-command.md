@@ -5,12 +5,12 @@ description: Obtenga información sobre los comandos de búsqueda de extensión 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ba8fdf2426fbedb88d7df11cee1957deaba9b721
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356360"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452973"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Definir comandos de búsqueda de extensión de mensajería
 
@@ -42,12 +42,12 @@ Para agregar el comando de búsqueda al manifiesto de la aplicación, debes agre
 
 El requisito previo para crear un comando de búsqueda es que ya debe haber creado una extensión de mensajería. Para obtener información sobre cómo crear una extensión de mensajería, vea [Crear una extensión de mensajería](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**Para crear un comando de búsqueda**
+Para crear un comando de búsqueda:
 
 1. Abre **App Studio** desde el Microsoft Teams y selecciona la **pestaña Editor de** manifiestos.
-1.  Si ya creaste el paquete de la aplicación **en App Studio**, selecciona de la lista. Si no has creado un paquete de aplicación, importa uno existente.
+1. Si ya creaste el paquete de la aplicación **en App Studio**, selecciona de la lista. Si no has creado un paquete de aplicación, importa uno existente.
 1. Después de importar el paquete de la aplicación, selecciona **Extensiones de mensajería en** **Funcionalidades**. Obtiene una ventana emergente para configurar la extensión de mensajería.
-1. Selecciona **Configurar en la** ventana para incluir la extensión de mensajería en la experiencia de la aplicación. En la siguiente imagen se muestra la página de configuración de extensión de mensajería: 
+1. Selecciona **Configurar en la** ventana para incluir la extensión de mensajería en la experiencia de la aplicación. En la siguiente imagen se muestra la página de configuración de extensión de mensajería:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -55,7 +55,7 @@ El requisito previo para crear un comando de búsqueda es que ya debe haber crea
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensajería para incluir los comandos que deciden el comportamiento de la extensión de mensajería.   
+1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensajería para incluir los comandos que deciden el comportamiento de la extensión de mensajería.
 La siguiente imagen muestra la adición de comandos para la extensión de mensajería:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -121,6 +121,7 @@ En la siguiente sección se muestra un ejemplo del manifiesto de aplicación sim
 ...
 }
 ```
+
 Para obtener el manifiesto completo de la aplicación, consulta [Esquema de manifiesto de aplicación](~/resources/schema/manifest-schema.md).
 
 ## <a name="code-sample"></a>Ejemplo de código
@@ -137,4 +138,3 @@ Siga la [guía paso a paso para](../../../sbs-messagingextension-searchcommand.y
 
 > [!div class="nextstepaction"]
 > [Responder a los comandos de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

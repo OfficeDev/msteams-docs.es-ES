@@ -6,31 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 1e78827d4105eefb112bef40d059804a94050f2d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453624"
 ---
-
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>SDK de TeamsFx para TypeScript o JavaScript
 
 TeamsFx tiene como objetivo reducir las tareas de implementación de identidad y acceso a recursos en la nube a instrucciones de línea única con configuración cero.
 
 Use la biblioteca para:
 
-- Obtenga acceso a las funcionalidades principales en el entorno de cliente y servidor de forma similar.
-- Escribir código de autenticación de usuario de forma simplificada.
+* Obtenga acceso a las funcionalidades principales en el entorno de cliente y servidor de forma similar.
+* Escribir código de autenticación de usuario de forma simplificada.
 
-## <a name="get-started"></a>Introducción
+## <a name="get-started"></a>Comenzar
 
 El SDK de TeamsFx está preconfigurado en un proyecto con scaffolding mediante el kit de herramientas de TeamsFx o la CLI.
 Para obtener más información, [consulta Teams proyecto de aplicación](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-- Node.js versión o `10.x.x` posterior.
-- Si el proyecto ha instalado paquetes `botbuilder` [relacionados](https://github.com/Microsoft/botbuilder-js#packages) como dependencias, asegúrese de que son de la misma versión y de que la versión es `>= 4.9.3`. ([Problema: todos los paquetes BOTBUILDER deben ser la misma versión](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* Node.js versión o `10.x.x` posterior.
+* Si el proyecto ha instalado paquetes `botbuilder` [relacionados](https://github.com/Microsoft/botbuilder-js#packages) como dependencias, asegúrese de que son de la misma versión y de que la versión es `>= 4.9.3`. ([Problema: todos los paquetes BOTBUILDER deben ser la misma versión](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 Para más información, vea:
-* [Código fuente](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-* [Paquete (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-* [Documentación de referencia de API](https://aka.ms/teamsfx-sdk-help) 
+
+* [Código fuente](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [Paquete (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [Documentación de referencia de API](https://aka.ms/teamsfx-sdk-help)
 * [Muestras](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Instalar el `@microsoft/teamsfx` paquete
@@ -45,7 +51,7 @@ npm install @microsoft/teamsfx
 
 Para crear un objeto de cliente de gráfico para obtener acceso Graph API de Microsoft, necesitará las credenciales para autenticarse. El SDK proporciona varias clases de credenciales para elegir que cumplen varios requisitos. Debe cargar la configuración antes de usar las credenciales.
 
-- En el entorno del explorador, debe pasar explícitamente los parámetros de configuración. El proyecto scaffolded React ha proporcionado variables de entorno para su uso.
+* En el entorno del explorador, debe pasar explícitamente los parámetros de configuración. El proyecto scaffolded React ha proporcionado variables de entorno para su uso.
 
 ```ts
 loadConfiguration({
@@ -56,7 +62,7 @@ loadConfiguration({
 });
 ```
 
-- En entornos NodeJS como Azure Function, solo puede llamar a `loadConfiguration`. Se cargará desde variables de entorno de forma predeterminada.
+* En entornos NodeJS como Azure Function, solo puede llamar a `loadConfiguration`. Se cargará desde variables de entorno de forma predeterminada.
 
 ```ts
 loadConfiguration();
@@ -77,10 +83,11 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
-> [!NOTE]
-> Puede usar esta clase de credenciales en la aplicación del explorador, como Teams tab app.
 
-#### <a name="using-microsoft-365-tenant-credential"></a>Usar Microsoft 365 de inquilino
+> [!NOTE]
+> Puede usar esta clase de credenciales en la aplicación del explorador, como Teams Tab App.
+
+#### <a name="using-microsoft-365-tenant-credential"></a>Uso Microsoft 365 credencial de inquilino
 
 Microsoft 365 credenciales de inquilino no requieren interactuar con Teams usuario de la aplicación. Puede llamar a Microsoft Graph como aplicación.
 
@@ -196,7 +203,7 @@ const response = await axios.default.get(apiConfig.endpoint + "api/httptrigger1"
 
 ### <a name="access-sql-database-in-azure-function"></a>Access SQL base de datos en función de Azure
 
-Use `tedious` la biblioteca para obtener acceso SQL y aprovechar que `DefaultTediousConnectionConfiguration` administra la autenticación.
+Use `tedious` la biblioteca para obtener acceso SQL y aprovechar `DefaultTediousConnectionConfiguration` la autenticación.
 Además de `tedious`, también puede crear configuraciones de conexión de otras bibliotecas SQL basadas en el resultado de `sqlConnectionConfig.getConfig()`.
 
 ```ts

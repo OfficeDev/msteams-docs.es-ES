@@ -1,84 +1,85 @@
 ---
 title: Crear aplicaciones con el Teams Toolkit y Visual Studio
-description: Empieza a crear aplicaciones personalizadas excelentes directamente Visual Studio con el Microsoft Teams Toolkit. Aprende a configurar la aplicación en Visual Studio, validar la aplicación y publicarla desde Visual Studio portal de desarrolladores.
+description: Empieza a crear aplicaciones personalizadas excelentes directamente Visual Studio con el Microsoft Teams Toolkit. Aprende a configurar la aplicación en Visual Studio, validar la aplicación y publicarla desde Visual Studio y portal de desarrolladores.
 keywords: Kit de herramientas de visual studio de teams
 ms.localizationpriority: medium
 ms.topic: overview
+ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 2fa11fbf0b4bfb3d7c9b4fe376b6517e0313338f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c34f1113cd4da5f1b416dba6bc950b3588accecf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435855"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453435"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-microsoft-visual-studio"></a>Crear aplicaciones con el Teams Toolkit y Microsoft Visual Studio
+# <a name="teams-toolkit-for-visual-studio"></a>Kit de herramientas de Teams para Visual Studio
 
-El kit de herramientas de Microsoft Teams le permite crear aplicaciones personalizadas de Teams directamente desde el entorno de desarrollo integrado (IDE) de Visual Studio. El kit de herramientas de Microsoft Teams le orienta en el proceso y le ofrece todo lo que necesita para crear, depurar e iniciar su aplicación de Teams.
+Cree, pruebe y desarrolle para Teams dentro de su IDE.
 
-## <a name="prerequisites"></a>Requisitos previos
+La extensión de Teams Toolkit para Visual Studio facilita la creación de nuevos proyectos para Teams, la configuración automática de aplicaciones en el Portal de desarrolladores de Teams, la ejecución y depuración en Teams, la configuración del hospedaje en la nube y el uso de [TeamsFx](https://github.com/OfficeDev/teamsfx) desde el IDE.
 
-1. [Habilitar la vista previa del desarrollador](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
+## <a name="install-teams-toolkit-for-visual-studio"></a>Instalar Teams Toolkit para Visual Studio
 
-2. Asegúrese de que el **<span>ASP.NET</span> y el** módulo de desarrollo web se han agregado a la instancia Visual Studio web. Para obtener más información, [vea Modify Visual Studio by adding or removing workloads and components](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true).
+>[!NOTE]
+> Como requisito previo, asegúrese de usar Visual Studio 2022 17.1 Versión preliminar 2 o posterior para seguir las instrucciones siguientes.
 
-![Módulo de asp.net Visual studio](../assets/images/visual-studio-web-dev-module.png)
+1. Si ya tiene Visual Studio 2022 17.1 Preview 2 instalado, vaya al paso siguiente. De lo [contrario, Visual Studio versión preliminar de 2022](https://visualstudio.microsoft.com/vs/preview/).
+2. Abra el Instalador de Visual Studio.
+3. Seleccione **Modificar para** la instalación existente de VS 2022 Preview.
+4. Seleccione la carga **ASP.NET de trabajo de desarrollo web y** de desarrollo web.
+5. A la derecha, expanda la **sección ASP.NET desarrollo web** y seleccione Microsoft Teams **de** desarrollo en la lista Opcional de componentes.
+6. Seleccione **Instalar** o **Modificar** en el Instalador de Visual Studio para completar el proceso de instalación.
 
-## <a name="install-the-teams-toolkit"></a>Instale el Teams Toolkit
+![Selección de las Microsoft Teams de desarrollo en el Visual Studio instalación).](images/teams-development-tools-vs-installer.png)
 
-El Microsoft Teams Toolkit para Visual Studio está disponible para su descarga desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) o directamente desde el menú **Extensiones** de Visual Studio.
+## <a name="get-started-quickly-with-a-new-project"></a>Introducción rápida a un nuevo proyecto
 
-## <a name="use-the-toolkit"></a>Usar el kit de herramientas
+Teams Toolkit plantillas de proyecto proporcionan todo el código, los archivos y la configuración que necesita para empezar con un proyecto de Teams aplicación.
 
-- [Configurar un nuevo proyecto](#set-up-a-new-teams-project)
-- [Configurar la aplicación](#configure-your-app)
-- [Ejecute la aplicación en Teams](#install-and-run-your-app-locally)
-- [Valide su aplicación](#validate-your-app)
-- [Publicar la aplicación](#publish-your-app-to-teams)
-
-## <a name="set-up-a-new-teams-project"></a>Configurar un nuevo proyecto Teams proyecto
-
-1. Inicie Visual Studio 2019.
-2. Seleccione **Crear un nuevo proyecto**.
-3. Busque la **Microsoft Teams y** seleccione **Siguiente**.
-4. En Configurar **el nuevo proyecto**, escriba el nombre **Project**, **Ubicación** y **Nombre de la solución**.
-5. Selecciona **Siguiente** para escribir un nombre para la aplicación.
-6. En la pantalla Información adicional, **escribe un nombre** de aplicación y **un nombre de desarrollador** o de empresa para tu Teams aplicación.
-
-## <a name="configure-your-app"></a>Configurar la aplicación
-
-En su núcleo, la aplicación Teams abarca tres componentes:
-
-- El Microsoft Teams (web, de escritorio o móvil) donde los usuarios interactúan con la aplicación.
-- Un servidor que responde a las solicitudes de contenido que se muestran en Teams. Por ejemplo, contenido de pestaña HTML o una tarjeta adaptable de bot.
-- Un Teams de la aplicación consta de tres archivos:
-
-    > [!div class="checklist"]
-    >
-    > - Manifest.json
-    > - Icono [de color para](../resources/schema/manifest-schema.md#icons) que la aplicación se muestre en el catálogo de aplicaciones públicas u de la organización.
-    > - Icono [de esquema para](../resources/schema/manifest-schema.md#icons) mostrar en la barra Teams actividad.
-
-Cuando se instala una aplicación, el cliente Teams analiza el archivo de manifiesto para determinar la información necesaria, como el nombre de la aplicación y la dirección URL donde se encuentran los servicios.
+La Microsoft Teams de proyecto de aplicación te permite especificar una cuenta de Microsoft 365 que sea necesaria para registrar y configurar automáticamente la nueva aplicación Teams aplicación.
 
 > [!NOTE]
->Si aún no lo ha hecho, debe iniciar sesión en su cuenta de Microsoft 365 para continuar con el proceso de desarrollo.
->
-> Si no tiene una cuenta Microsoft 365, puede registrarse para una suscripción Microsoft 365 [Programa para desarrolladores](https://developer.microsoft.com/microsoft-365/dev-program). Es gratuito durante 90 días y se renueva siempre que lo use para la actividad de desarrollo. Si tiene una suscripción Visual Studio Enterprise o Professional, ambos programas incluyen una suscripción Microsoft 365 desarrollador [gratuita, activa](https://aka.ms/MyVisualStudioBenefits) durante la vida de su Visual Studio suscripción. Para obtener más información, consulta [Configurar una suscripción Microsoft 365 desarrollador.](/office/developer-program/office-365-developer-program-get-started)
+> Si no tiene una cuenta Microsoft 365, puede registrarse para una [suscripción Microsoft 365 Programa para desarrolladores](https://developer.microsoft.com/microsoft-365/dev-program). Es gratuito durante 90 días y se renueva siempre que lo use para la actividad de desarrollo. Si tiene una suscripción Visual Studio Enterprise o Professional, ambos programas incluyen una suscripción Microsoft 365 desarrollador [gratuita, activa](https://aka.ms/MyVisualStudioBenefits) durante la vida de su Visual Studio suscripción. Para obtener más información, consulta [Configurar una suscripción Microsoft 365 desarrollador.](/office/developer-program/office-365-developer-program-get-started)
 
-### <a name="configuration-steps"></a>Pasos de la configuración 
+1. Inicie Visual Studio 2022.
+1. En la ventana inicio, elija **Crear un nuevo proyecto**.
+1. En el **cuadro Buscar plantillas**, escriba Microsoft Teams app.
+1. Seleccione la **Microsoft Teams aplicación** y seleccione **Siguiente**.
+1. En la **ventana Configurar el nuevo proyecto**, escriba o escriba _HelloTeams_ en el **cuadro Project nombre**. A continuación, **seleccione Crear**.
+1. En la **ventana Crear una nueva Teams** aplicación, elija o inicie sesión en una cuenta de Microsoft 365 con el selector **Elegir una** cuenta. A continuación, **seleccione Crear**.
 
-1. Para configurar la aplicación, selecciona el menú **Project > TeamsFx > Configurar para SSO**....
+![Crear un nuevo proyecto Microsoft Teams app en Visual Studio.](images/teams-toolkit-vs-new-project.png)
 
-Cuando se le pida, inicie sesión en su cuenta microsoft que tenga un inquilino M365.
+Visual Studio abrirá el nuevo proyecto y Teams Toolkit configurará el nuevo proyecto en Teams Developer Portal. El proyecto se agregará para la organización Teams vinculada a la cuenta de Microsoft 365 que eligió en los pasos anteriores y creará un nuevo registro Azure Active Directory usuario. Esto es necesario para que la aplicación se ejecute en Teams.
 
-## <a name="install-and-run-your-app-locally"></a>Instalar y ejecutar la aplicación localmente
+## <a name="run-and-debug-your-app-in-teams"></a>Ejecutar y depurar la aplicación en Teams
 
-Presione F5 para iniciar la depuración. El cuadro de diálogo de instalación de la aplicación aparece en el Teams cliente.
+Puedes iniciar el proyecto de aplicación ejecutándose localmente desde Visual Studio.
 
-## <a name="validate-your-app"></a>Valide su aplicación
+1. Abra o [cree un proyecto Teams aplicación.](#get-started-quickly-with-a-new-project)
+2. Presione **F5** o seleccione **Depurar > Iniciar depuración** en Visual Studio.
 
-El **Project > TeamsFx Validate > Teams manifest** permite comprobar que el paquete de la aplicación es válido.
+Visual Studio iniciará el proyecto Teams aplicación en un explorador e iniciará la depuración.
+
+## <a name="host-your-teams-app-in-the-cloud-and-preview-it"></a>Hospedar la Teams en la nube y obtener una vista previa de ella
+
+Puede crear y configurar automáticamente recursos en la nube para hospedar la aplicación en Azure mediante Teams Toolkit.
+
+1. Seleccione el **Project > Teams Toolkit > Aprovisionar en el menú Nube**.
+2. En la ventana Seleccionar su suscripción, elija la suscripción de Azure con la que desea crear recursos.
+
+Teams Toolkit creará recursos de Azure en esta suscripción, pero no se implementa ningún código durante este paso. Para implementar el proyecto en estos nuevos recursos:
+
+1. Seleccione el **Project > Teams Toolkit > implementar en el menú Nube**.
+
+## <a name="preview-your-app-running-from-cloud-resources"></a>Vista previa de la aplicación que se ejecuta desde recursos en la nube
+
+Puedes ejecutar la aplicación en un explorador con los recursos remotos para comprobar que todo funciona. Todavía no es posible depurar durante este escenario.
+
+1. Selecciona el **Project > Teams Toolkit > vista Teams menú de la** aplicación.
+
+La aplicación se abrirá en un explorador y usará los recursos creados mediante los pasos Aprovisionar e implementar.
 
 ## <a name="publish-your-app-to-teams"></a>Publicar la aplicación en Teams
 

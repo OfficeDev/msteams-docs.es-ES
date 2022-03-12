@@ -5,17 +5,17 @@ description: Aprende a desplegar un vínculo, abrir la vista fase y anclar una p
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 3119e444c8dd2b654f26b2fad5638f7c831619ac
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 1608f6e24ef4fbd3c979dcb7081c754d3b7cc30f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518257"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453848"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
 Stage View es un nuevo componente de interfaz de usuario (UI), que te permite representar el contenido que se abre en pantalla completa en Teams y anclado como una pestaña.
- 
+
 ## <a name="stage-view"></a>Vista fase
 
 Stage View es un componente de interfaz de usuario de pantalla completa que puedes invocar para mostrar el contenido web. El servicio de desamuestración de vínculos existente se actualiza para que se use para convertir direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Cuando un usuario envía una dirección URL en un chat o canal, la dirección URL se despliega en una tarjeta adaptable. El usuario puede seleccionar **Ver en** la tarjeta y anclar el contenido como una pestaña directamente desde vista fase.
@@ -45,7 +45,7 @@ Las siguientes imágenes muestran una fase abierta desde una tarjeta adaptable:
 
 [![Abrir una fase desde la tarjeta adaptable](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-[![Abrir una fase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
+[![Abrir una fase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
 ### <a name="example"></a>Ejemplo
 
@@ -75,7 +75,8 @@ A continuación se muestra el código para abrir una fase desde una tarjeta adap
 El `invoke` tipo de solicitud debe ser `composeExtension/queryLink`.
 
 > [!NOTE]
-> * `invoke` flujo de trabajo es similar al flujo de trabajo `appLinking` actual. 
+>
+> * `invoke` flujo de trabajo es similar al flujo de trabajo `appLinking` actual.
 > * Para mantener la coherencia, se recomienda nombrar como `Action.Submit` `View`.
 > * `websiteUrl` es una propiedad necesaria que se debe pasar en el `TabInfo` objeto.
 
@@ -94,7 +95,7 @@ Para invocar la vista de fase a través del vínculo profundo desde la pestaña,
 
 ### <a name="syntax"></a>Sintaxis
 
-A continuación se muestra la sintaxis de vínculo profundo: 
+A continuación se muestra la sintaxis de vínculo profundo:
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
@@ -107,13 +108,12 @@ A continuación se muestran los ejemplos de vínculos profundos para invocar la 
 **Ejemplo 1: dirección URL con threadId**
 
 Dirección URL sin codificar:
- 
+
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 Dirección URL codificada:
 
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
-
 
 **Ejemplo 2: DIRECCIÓN URL sin threadId**
 
@@ -125,29 +125,28 @@ Codificado
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
-
 > [!NOTE]
 > Todos los vínculos profundos deben codificarse antes de pegar la dirección URL. No se admiten direcciones URL sin codificar.
+>
 > * El `name` vínculo es opcional en profundidad. Si no se incluye, el nombre de la aplicación lo reemplaza.
 > * El vínculo profundo también se puede pasar a través de una `OpenURL` acción.
 > * Cuando inicies una fase desde un contexto determinado, asegúrate de que la aplicación funciona en ese contexto. Por ejemplo, si la vista fase se inicia desde una aplicación personal, debes asegurarte de que la aplicación tenga un ámbito personal.
 
 ## <a name="tab-information-property"></a>Propiedad tab information
 
-| Nombre de la propiedad | Tipo | Número de caracteres | Descripción |
+| Nombre de propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
-| `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
+| `entityId` | String | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
+| `name` | String | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz de canal. Este campo es opcional.|
 | `contentUrl` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se va a mostrar en el Teams usuario. Este campo es obligatorio.|
-| `websiteUrl?` | Cadena | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
-| `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
+| `websiteUrl?` | String | 2048 | Esta propiedad es la https:// url a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
+| `removeUrl?` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se va a mostrar cuando el usuario elimina la pestaña. Este es un campo opcional.|
 
 ## <a name="code-sample"></a>Ejemplo de código
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Ficha en la vista fase |Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña en la vista fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
-    
+|Ficha en la vista fase |Microsoft Teams aplicación de muestra de pestaña para mostrar la pestaña en la vista fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Paso siguiente
 

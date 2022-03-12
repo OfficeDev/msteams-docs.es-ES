@@ -6,30 +6,30 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518327"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452574"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar cuentas para crear Teams aplicaciones
 
 Para desarrollar Teams aplicación, necesitas al menos una cuenta Microsoft 365 con suscripción válida. Si desea hospedar los recursos back-end en Azure, necesita una cuenta de Azure. La cuenta de Azure es opcional si la aplicación existente está hospedada en otro proveedor de nube y desea integrar la aplicación existente en Teams plataforma.
 
-## <a name="microsoft-365-account"></a>Microsoft 365 cuenta
+## <a name="microsoft-365-account"></a>Cuenta de Microsoft 365
 
-Si no tiene una cuenta de Microsoft 365 existente con una suscripción válida, puede crear una uniéndose al programa [Microsoft 365 desarrollador.](https://developer.microsoft.com/microsoft-365/dev-program) El Microsoft 365 para desarrolladores incluye una suscripción Microsoft 365 E5 desarrollador que puede usar para crear su propio espacio aislado y desarrollar soluciones independientes del entorno de producción.
+Si no tiene una cuenta de Microsoft 365 existente con una suscripción válida, puede crear una uniéndose al programa [Microsoft 365 desarrollador.](https://developer.microsoft.com/microsoft-365/dev-program) El Microsoft 365 para desarrolladores incluye una suscripción Microsoft 365 E5 desarrollador que puedes usar para crear tu propio espacio aislado y desarrollar soluciones independientes del entorno de producción.
 
 ## <a name="azure-account"></a>Cuenta de Azure
 
 Si quieres hospedar los recursos relacionados con la aplicación o acceder a recursos dentro de Azure, debes tener una suscripción a Azure. Puede crear [una cuenta gratuita antes](https://azure.microsoft.com/free/) de comenzar.
 
-## <a name="join-microsoft-365-developer-program"></a>Unirse Microsoft 365 programa para desarrolladores 
+## <a name="join-microsoft-365-developer-program"></a>Unirse Microsoft 365 programa para desarrolladores
 
 Si no tienes una cuenta Microsoft 365, debes registrarte para una suscripción Microsoft 365 [programa para desarrolladores](https://developer.microsoft.com/microsoft-365/dev-program). La suscripción es gratuita durante 90 días y continúa renovando mientras la use para la actividad de desarrollo. Si tienes una suscripción Visual Studio Enterprise o Professional, ambos programas incluyen una suscripción Microsoft 365 [desarrollador gratuita](https://aka.ms/MyVisualStudioBenefits). Está activo siempre que la suscripción Visual Studio esté activa. Para obtener más información, consulta [Configurar una suscripción Microsoft 365 desarrollador.](https://developer.microsoft.com/microsoft-365/dev-program)
 
-1. Vaya al programa [Microsoft 365 desarrolladores](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Vaya al programa [Microsoft 365 desarrollador](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Seleccione **Unirse ahora**.
 3. Selecciona **Configurar suscripción A5**.
 4. Configurar la cuenta de administrador. Después de finalizar, debería ver la siguiente pantalla:
@@ -40,22 +40,22 @@ Si no tienes una cuenta Microsoft 365, debes registrarte para una suscripción M
 
 Puede registrarse en el programa de desarrolladores con uno de los siguientes tipos de cuenta:
 
-- **Cuenta de Microsoft para uso personal** 
+* **Cuenta de Microsoft para uso personal**
 
   Proporciona acceso a todos los productos y servicios en la nube de Microsoft orientados al consumidor, como Outlook, Messenger, OneDrive, MSN, Xbox Live o Microsoft 365. Al registrarse en un buzón de Outlook.com se crea automáticamente una cuenta de Microsoft. Después de crear una cuenta de Microsoft, puede usarla para obtener acceso a los servicios en la nube de Microsoft relacionados con el consumidor o Azure.
 
-- **Cuenta de trabajo para empresas**
+* **Cuenta de trabajo para empresas**
 
-  Proporciona acceso a todos los servicios en la nube de Microsoft de nivel empresarial pequeño, mediano y empresarial, como Azure, Microsoft Intune o Microsoft 365. Cuando se registra en uno de estos servicios como organización, un directorio basado en la nube se aprovisiona automáticamente en Microsoft Azure Active Directory (Azure AD) para representar a su organización.
+  Proporciona acceso a todos los servicios en la nube de Microsoft de nivel empresarial, mediano y pequeño, como Azure, Microsoft Intune o Microsoft 365. Cuando se registra en uno de estos servicios como organización, un directorio basado en la nube se aprovisiona automáticamente en Microsoft Azure Active Directory (Azure AD) para representar a su organización.
 
-- **Visual Studio id.**
+* **Visual Studio id.**
 
   Puede crear para sus suscripciones de Visual Studio Professional o Enterprise: se recomienda usar esta opción para unirse al programa de desarrolladores desde la Galería de Visual Studio para obtener todas las ventajas como suscriptor Visual Studio.
 
-## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teams de carga o instalación local de la aplicación de cliente
+## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teams de carga o instalación local de la aplicación del cliente
 
 > [!IMPORTANT]
-> Durante el desarrollo, debes cargar la aplicación dentro del Teams sin distribuirla. Esto se conoce como **instalación local**.
+> Durante el desarrollo, debes cargar la aplicación dentro de tu Teams sin distribuirla. Esto se conoce como **instalación local**.
 
 En la siguiente lista se proporcionan pasos para comprobar si está habilitado el permiso de la aplicación de instalación local. Las dos formas diferentes son las siguientes:
 
@@ -104,12 +104,12 @@ Si no puedes ver **una Upload aplicación** personalizada, esto indica que no ti
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="alternar":::
 
-5. Seleccione **Guardar**. 
+5. Seleccione **Guardar**.
 
 > [!Note]
 > La instalación local puede tardar hasta 24 horas en estar activa. Mientras tanto, puedes usar la carga **del espacio empresarial** para probar la aplicación. Para cargar el archivo .zip paquete de la aplicación, consulta [Cargar aplicaciones personalizadas](/microsoftteams/teams-app-setup-policies).
 
-Para obtener más información, consulta [Administrar directivas y configuraciones](/microsoftteams/teams-custom-app-policies-and-settings) de aplicaciones personalizadas en Teams y [administrar directivas de configuración de aplicaciones en Teams](/microsoftteams/teams-app-setup-policies).
+Para obtener más información, consulta [Administrar directivas](/microsoftteams/teams-custom-app-policies-and-settings) y configuraciones de aplicaciones personalizadas en Teams y [administrar directivas de configuración de aplicaciones en Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="see-also"></a>Vea también
 

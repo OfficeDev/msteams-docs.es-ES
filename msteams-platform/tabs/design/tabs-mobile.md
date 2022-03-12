@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo implementar pestañas en Microsoft
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Distribución de autenticación de grupo de canal de pestaña móvil de la aplicación
-ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356374"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452595"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
@@ -25,6 +25,7 @@ Las [aplicaciones distribuidas a Teams store tienen](~/concepts/deploy-and-publi
 | **Pestañas canal y grupo** | La pestaña se abre en el Teams con `contentUrl`. | La pestaña se abre en un explorador fuera del Teams mediante `websiteUrl`. |
 
 > [!NOTE]
+>
 > * Las aplicaciones enviadas a [AppSource](https://appsource.microsoft.com) para su publicación en Teams se evalúan automáticamente para la capacidad de respuesta móvil. Para cualquier consulta, llegue a teamsubm@microsoft.com.
 > * Para todas las aplicaciones que no se distribuyen a través de AppSource, las pestañas se abren en una vista web desde la aplicación dentro de los clientes de Teams de forma predeterminada y no se requiere ningún proceso de aprobación independiente.
 > * El comportamiento predeterminado de las aplicaciones solo es aplicable si se distribuye a través Teams tienda. De forma predeterminada, todas las pestañas se abren en el Teams cliente.

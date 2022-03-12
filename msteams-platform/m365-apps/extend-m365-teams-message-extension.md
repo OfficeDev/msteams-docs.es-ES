@@ -4,12 +4,12 @@ description: Este es el modo de actualizar la extensión de mensajería de Teams
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356010"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453519"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Extender una extensión Teams de mensajería a través de Microsoft 365
 
@@ -21,6 +21,7 @@ Las extensiones de [mensajería basadas en búsquedas](/microsoftteams/platform/
 El proceso para actualizar la extensión de mensajería basada Teams búsqueda para que se ejecute Outlook implica estos pasos:
 
 > [!div class="checklist"]
+>
 > * Actualizar el manifiesto de la aplicación
 > * Agregar un canal Outlook para el bot
 > * Cargar localmente la aplicación actualizada en Teams
@@ -31,10 +32,10 @@ El resto de esta guía le guiará por estos pasos y le mostrará cómo obtener u
 
 Para completar este tutorial, necesitará:
 
- - Inquilino Microsoft 365 espacio aislado del Programa para desarrolladores
- - El inquilino de espacio aislado inscrito en *Office 365 versiones dirigidas*
- - Un entorno de prueba con Office aplicaciones instaladas desde el Aplicaciones Microsoft 365 *beta*
- - Microsoft Visual Studio code con la Teams Toolkit (versión preliminar) (opcional)
+* Inquilino Microsoft 365 espacio aislado del Programa para desarrolladores
+* El inquilino de espacio aislado inscrito en *Office 365 versiones dirigidas*
+* Un entorno de prueba con Office aplicaciones instaladas desde el Aplicaciones Microsoft 365 *beta*
+* Microsoft Visual Studio code con la Teams Toolkit (versión preliminar) (opcional)
 
 > [!div class="nextstepaction"]
 > [Requisitos previos para la instalación](prerequisites.md)
@@ -68,6 +69,7 @@ Abre el Teams de la aplicación y actualiza el `$schema` y con `manifestVersion`
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Si usó Teams Toolkit para crear la aplicación de extensión de mensajería, puede usarla para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la `Ctrl+Shift+P` paleta de comandos y busque **Teams:** validar el archivo de manifiesto o seleccione la opción en el menú Implementación del Teams Toolkit (busque el icono Teams en el lado izquierdo de Visual Studio Code).
@@ -167,7 +169,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Outlook en Window
 
 Aparecerá la extensión de mensajería. Puede invocarlo desde allí y usarlo del mismo modo que lo haría al redactar un mensaje en Teams.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook habilitadas para Teams de mensajería están en versión preliminar y no son compatibles con el uso de producción. Este es el modo de distribuir la extensión de Outlook de mensajería habilitada para obtener una vista previa de las audiencias con fines de prueba.
 
@@ -181,11 +183,11 @@ En el *menú* Aplicaciones, selecciona *Administrar las aplicacionesSubmit* >  *
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams centro de administración
 
-Como administrador Teams, puede cargar e instalar previamente el paquete de la aplicación para el inquilino de la organización desde https://admin.teams.microsoft.com/. Consulta [Upload aplicaciones personalizadas en el Centro Microsoft Teams administración para](/MicrosoftTeams/upload-custom-apps) obtener más información.
+Como administrador Teams, puede cargar e instalar previamente el paquete de la aplicación para el inquilino de la organización [desde Teams administrador](https://admin.teams.microsoft.com/). Consulta [Upload aplicaciones personalizadas en el Centro Microsoft Teams administración para](/MicrosoftTeams/upload-custom-apps) obtener más información.
 
 #### <a name="microsoft-admin-center"></a>Centro de administración de Microsoft
 
-Como administrador global, puedes cargar e instalar previamente el paquete de la aplicación desde https://admin.microsoft.com/. Consulta [Probar e implementar Aplicaciones Microsoft 365 asociados en el portal de aplicaciones integradas](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obtener más información.
+Como administrador global, puedes cargar e instalar previamente el paquete de la aplicación desde el administrador [de Microsoft](https://admin.microsoft.com/). Consulta [Probar e implementar Aplicaciones Microsoft 365 asociados en el portal de aplicaciones integradas](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) para obtener más información.
 
 ### <a name="multitenant-distribution"></a>Distribución multitenente
 

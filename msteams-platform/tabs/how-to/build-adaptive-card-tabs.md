@@ -6,16 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: flujo de datos de autenticación de aplicaciones personales de tarjeta adaptable
-ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355866"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453267"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
 > [!IMPORTANT]
+>
 > * Las pestañas con tarjetas adaptables actualmente solo se admiten como aplicaciones personales.
 
 Al desarrollar una pestaña con el método tradicional, puede encontrarse con estos problemas:
@@ -107,6 +108,7 @@ A continuación se muestra un manifiesto de ficha Tarjeta adaptable de ejemplo:
 La comunicación entre la pestaña Tarjeta adaptable y el bot se realiza a través de actividades `invoke` . Cada `invoke` actividad tiene un nombre **correspondiente**. Use el nombre de cada actividad para diferenciar cada solicitud. `tab/fetch` y `tab/submit` son las actividades que se tratan en esta sección.
 
 > [!NOTE]
+>
 > * Los bots deben enviar todas las respuestas a la [dirección URL del servicio](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). La dirección URL del servicio se recibe como parte de la carga `activity` entrante.
 > * El tamaño de la carga de invocación ha aumentado a 80 kb.
 
@@ -235,6 +237,7 @@ Con la introducción de la pestaña Tarjeta adaptable, hay un cambio en la forma
 El código siguiente proporciona ejemplos de solicitud `task/fetch` y respuesta:
 
 **`task/fetch` solicitud**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {

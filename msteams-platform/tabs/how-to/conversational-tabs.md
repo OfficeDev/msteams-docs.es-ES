@@ -6,12 +6,12 @@ keywords: Canal de pestañas de teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ac58448ec390d0e954c0737d5b0700d0d91b04b1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889366"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452602"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -21,7 +21,7 @@ Las sub entidades conversacionales solo se admiten en canales. Se pueden usar de
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para admitir sub entidades conversacionales, la aplicación web de tabulación debe tener la capacidad de almacenar una asignación entre sub entidades ↔ conversaciones en una base de datos back-end. El se proporciona, pero debe almacenarlo y devolverlo a Teams para que los usuarios `conversationId` `conversationId` puedan continuar la conversación.
+Para admitir sub entidades conversacionales, la aplicación web de pestañas debe tener la capacidad de almacenar una asignación entre conversaciones de sub ↔ entidades en una base de datos back-end. El `conversationId` se proporciona, pero debe almacenarlo `conversationId` y devolverlo a Teams para que los usuarios puedan continuar la conversación.
 
 ## <a name="start-a-new-conversation"></a>Iniciar una nueva conversación
 
@@ -33,12 +33,12 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation** toma las siguientes entradas para iniciar una conversación en un canal:
 
-* **subEntityId:** el identificador de la subentidad específica. Por ejemplo, task-123.
-* **entityId:** el identificador de la instancia de tabulación cuando se creó. El identificador es importante para volver a hacer referencia a la misma instancia de pestaña.
-* **channelId:** canal en el que reside la instancia de tabulación.
+* **subEntityId**: el identificador de la subentidad específica. Por ejemplo, task-123.
+* **entityId**: el identificador de la instancia de tabulación cuando se creó. El identificador es importante para volver a hacer referencia a la misma instancia de pestaña.
+* **channelId**: canal en el que reside la instancia de tabulación.
    > [!NOTE]
    > El **channelId** es opcional para las pestañas de canal. Sin embargo, se recomienda mantener la implementación en todas las pestañas estáticas y de canal.
-* **title:** el título que se muestra al usuario en el panel de chat.
+* **title**: el título que se muestra al usuario en el panel de chat.
 
 La mayoría de estos valores también se pueden recuperar de la `getContext` API.
 
@@ -62,7 +62,7 @@ El `conversationResponse` objeto contiene información relacionada con la conver
 
 ## <a name="continue-a-conversation"></a>Continuar una conversación
 
-Después de iniciar una conversación, las llamadas posteriores que se requieren, que también proporcione las mismas entradas que al iniciar una nueva conversación, pero también `openConversation()` incluya **el conversationId** [](#start-a-new-conversation). El panel de conversación se abre para los usuarios con la conversación adecuada en vista. Los usuarios pueden ver mensajes nuevos o entrantes en tiempo real.
+Después de que se inicie una conversación, `openConversation()` las llamadas posteriores que se requieran, que también proporcione las mismas entradas que al iniciar una nueva [conversación, pero](#start-a-new-conversation) también incluya **el conversationId**. El panel de conversación se abre para los usuarios con la conversación adecuada en vista. Los usuarios pueden ver mensajes nuevos o entrantes en tiempo real.
 
 La siguiente imagen muestra el panel de conversación con la conversación adecuada:
 
@@ -72,7 +72,7 @@ La siguiente imagen muestra el panel de conversación con la conversación adecu
 
 Es importante que la pestaña incluya [vínculos profundos a la subentidad](~/concepts/build-and-test/deep-links.md). Por ejemplo, el usuario que selecciona el vínculo profundo de tabulación de la conversación de canal. El comportamiento esperado es recibir el vínculo profundo, abrir esa subentidad y, a continuación, abrir el panel de conversación para esa subentidad.
 
-Para admitir sub entidades conversacionales desde la pestaña personal o estática, no tiene que cambiar nada en la implementación. Solo se admiten conversaciones iniciales o continuas desde pestañas de canal que ya están ancladas. Admitir pestañas estáticas permite proporcionar una única ubicación para que los usuarios interactúen con todas las sub entidades. Es importante guardar el , y cuando la pestaña se crea originalmente en un canal para tener las propiedades correctas al abrir la vista de conversación en `subEntityId` `entityId` una pestaña `channelId` estática.
+Para admitir sub entidades conversacionales desde la pestaña personal o estática, no tiene que cambiar nada en la implementación. Solo se admiten conversaciones iniciales o continuas desde pestañas de canal que ya están ancladas. Admitir pestañas estáticas permite proporcionar una única ubicación para que los usuarios interactúen con todas las sub entidades. Es importante guardar el `subEntityId`, `entityId`y `channelId` cuando la pestaña se crea originalmente en un canal para tener las propiedades correctas al abrir la vista de conversación en una pestaña estática.
 
 ## <a name="close-a-conversation"></a>Cerrar una conversación
 
@@ -94,14 +94,14 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Crear pestaña Conversación| Microsoft Teams aplicación de muestra de pestaña para mostrar la pestaña crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Crear pestaña Conversación| Microsoft Teams muestra de pestaña para mostrar la pestaña crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

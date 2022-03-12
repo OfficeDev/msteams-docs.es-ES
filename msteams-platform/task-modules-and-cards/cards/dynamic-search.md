@@ -1,20 +1,20 @@
 ---
-title: Búsqueda de punta de punta en tarjetas adaptables
+title: Búsqueda de escritura anticipada en Tarjetas adaptables
 author: Rajeshwari-v
 description: Describe la búsqueda de punta de tipo con el control Input.ChoiceSet en tarjetas adaptables
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
-ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2022
-ms.locfileid: "61722185"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453834"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de punta de punta en tarjetas adaptables
+# <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de escritura anticipada en Tarjetas adaptables
 
-La funcionalidad de búsqueda typeahead en tarjetas adaptables proporciona una experiencia de búsqueda mejorada en `input.choiceset` el componente. Proporciona una lista de opciones para escribir texto en el campo de búsqueda. Puede incorporar la búsqueda de punta de tipo con tarjetas adaptables para buscar y seleccionar datos.
+La funcionalidad de búsqueda typeahead en tarjetas adaptables proporciona una experiencia de búsqueda mejorada en el `input.choiceset` componente. Proporciona una lista de opciones para escribir texto en el campo de búsqueda. Puede incorporar la búsqueda de punta de tipo con tarjetas adaptables para buscar y seleccionar datos.
 
 Puede usar la búsqueda de punta de tipo para las siguientes búsquedas:
 
@@ -51,7 +51,7 @@ John es un empleado de la tienda que trabaja en una tienda comercial de Xbox. La
 **Para usar la búsqueda de punta de tipo en tarjetas adaptables**
 
 1. El usuario A abre el bot de la tienda.
-1. El usuario A envía un comando al bot para una **nueva solicitud de cliente**. El bot responde con la tarjeta adaptable que tiene `Input.ChoiceSet` componente.
+1. El usuario A envía un comando al bot para una **nueva solicitud de cliente**. El bot responde con la tarjeta adaptable que tiene componente `Input.ChoiceSet` .
 1. El usuario A usa la búsqueda de punta de tipo para buscar y seleccionar la información según la elección del cliente.
 
 En la siguiente imagen se muestra la experiencia móvil de la búsqueda de punta de tipo:
@@ -89,8 +89,8 @@ Las propiedades siguientes son las nuevas adiciones al [`Input.ChoiceSet`](https
 |-----------|------|----------|-------------|
 | tipo | Data.Query | Sí | Especifica que es un objeto Data.Query.|
 | conjunto de datos | Cadena | Sí | Especifica el tipo de datos que se captura dinámicamente. |
-| value | Cadena | No | Se rellena para la solicitud de invocación al bot con la entrada que el usuario proporcionó al `ChoiceSet` . |
-| count | Número | No | Se rellena para la solicitud de invocación al bot para especificar el número de elementos que se deben devolver. El bot lo omite, si los usuarios desean enviar una cantidad diferente. | 
+| value | Cadena | No | Se rellena para la solicitud de invocación al bot con la entrada que el usuario proporcionó al `ChoiceSet`. |
+| count | Número | No | Se rellena para la solicitud de invocación al bot para especificar el número de elementos que se deben devolver. El bot lo omite, si los usuarios desean enviar una cantidad diferente. |
 | skip | Número | No | Se rellena para la solicitud de invocación al bot para indicar que los usuarios desean paginar y avanzar en la lista. |
 
 ### <a name="example"></a>Ejemplo
@@ -328,25 +328,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 {
     if (turnContext.Activity.Name == "application/search")
     {
-    var packages = new[] {
-            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-            new { title = "Fluent UI Library", value = "FluentUI" }};
+ var packages = new[] {
+   new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+   new { title = "Fluent UI Library", value = "FluentUI" }};
 
-    var searchResponseData = new
-    {
-        type = "application/vnd.microsoft.search.searchResponse",
-        value = new
-        {
-        results = packages
-        }
-    };
-    var jsonString = JsonConvert.SerializeObject(searchResponseData);
-    JObject jsonData = JObject.Parse(jsonString);
-    return new InvokeResponse()
-    {
-        Status = 200,
-        Body = jsonData
-    };
+ var searchResponseData = new
+ {
+     type = "application/vnd.microsoft.search.searchResponse",
+     value = new
+     {
+  results = packages
+     }
+ };
+ var jsonString = JsonConvert.SerializeObject(searchResponseData);
+ JObject jsonData = JObject.Parse(jsonString);
+ return new InvokeResponse()
+ {
+     Status = 200,
+     Body = jsonData
+ };
     }
 
     return null;
@@ -354,7 +354,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 #### <a name="nodejs"></a>[Node.js](#tab/nodejs)
- 
+
 ```nodejs
   async onInvokeActivity(context) {
     if (context._activity.name == 'application/search') {
@@ -384,7 +384,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
   }
 ```
 
-####  <a name="json"></a>[JSON](#tab/json)
+#### <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -411,9 +411,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Ejemplo de nombre | Descripción | C# | Node.js |
+|**Ejemplo de nombre** | **Descripción** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Escribir el control de búsqueda en tarjetas adaptables | En el ejemplo se muestran las características del tipo estático y dinámico delante del control de búsqueda en tarjetas adaptables. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Control de búsqueda typeahead en tarjetas adaptables | En el ejemplo se muestran las características del control de búsqueda de cabezal de tipo estático y dinámico en tarjetas adaptables. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 

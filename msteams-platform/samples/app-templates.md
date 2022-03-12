@@ -6,12 +6,12 @@ keywords: Microsoft Teams demostración de ejemplos de plantillas
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5821894793ae99ae559ebedba068331a48b1aed
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 961ad0ff22a528dc1267023d4f4ff288ba7202ca
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398746"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453141"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -111,7 +111,8 @@ La incorporación de nuevos empleados es una solución integrada de incorporaci�
 Los ejemplos de código de plantilla de aplicación son una colección de aplicaciones de ejemplo para Microsoft Teams de plataforma.
 
 > [!NOTE]
-> Microsoft no está administrando activamente el código fuente. El código fuente completo es de código abierto y puede explorar, bifurcar y modificar el código fuente para satisfacer sus requisitos específicos.
+> * Microsoft no está administrando activamente el código fuente. El código fuente completo es de código abierto y puede explorar, bifurcar y modificar el código fuente para satisfacer sus requisitos específicos.
+> * No debes usar Microsoft Power Platform para crear aplicaciones que se van a publicar en la Teams de aplicaciones. Las aplicaciones de Microsoft Power Platform solo se pueden publicar en la tienda de aplicaciones de una organización.
 
 En la tabla siguiente se describen ejemplos de código de plantilla de aplicación:  
 

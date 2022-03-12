@@ -6,23 +6,23 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 08afc6a5d83d49f1fa6c2543f8a0ee4e001a3dc4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: edc8fc04c652c1317949194a958da8614dc59af0
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60721841"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452987"
 ---
 # <a name="update-c-app-package-in-app-studio"></a>Actualizar C# de la aplicación en App Studio
 
 > [!TIP]
-> **Pruebe el Portal para desarrolladores:** App Studio ha evolucionado. Configure, distribuya y administre las aplicaciones Teams con el nuevo [Portal de desarrolladores.](https://dev.teams.microsoft.com/)
+> **Pruebe el Portal para desarrolladores**: App Studio ha evolucionado. Configure, distribuya y administre sus aplicaciones Teams con el nuevo [Portal de desarrolladores](https://dev.teams.microsoft.com/).
 
 App Studio es una Teams que puedes instalar desde la Teams tienda. Simplifica la creación y el registro de una aplicación.
 
 Siga estos pasos para actualizar el paquete de la aplicación:
 
-1. Para instalar App Studio en Teams,  selecciona el icono Aplicaciones en la parte inferior de la barra izquierda y busca **App Studio**:
+1. Para instalar App Studio en Teams, selecciona el icono Aplicaciones en  la parte inferior de la barra izquierda y busca **App Studio**:
 
     <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
@@ -30,18 +30,17 @@ Siga estos pasos para actualizar el paquete de la aplicación:
 
     <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-1. Para crear el paquete de la aplicación para Teams aplicación, selecciona la pestaña Editor de **manifiestos** en **App Studio**:
+1. Para crear el paquete de la aplicación para Teams aplicación, selecciona la pestaña **Editor de manifiestos** en **App Studio**:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
+    El ejemplo viene con su propio manifiesto y está diseñado para crear un paquete de aplicación cuando se crea el proyecto. El archivo manifest.json se puede encontrar en Visual Studio en Manifiesto en ```Microsoft.Teams.Samples.HelloWorld.Web```.
 
-    El ejemplo viene con su propio manifiesto y está diseñado para crear un paquete de aplicación cuando se crea el proyecto. El archivo manifest.json se puede encontrar en Visual Studio en Manifiesto en ```Microsoft.Teams.Samples.HelloWorld.Web``` .
+     En Visual Studio, el archivo manifest.json se encuentra en **manifiesto** en `Microsoft.Teams.Samples.HelloWorld.Web`. Este paso se describe en la siguiente imagen:  
 
-     En Visual Studio, el archivo manifest.json se encuentra en **manifiesto** en `Microsoft.Teams.Samples.HelloWorld.Web` . Este paso se describe en la siguiente imagen:  
-    
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
 
-1. Ahora, para modificar este paquete de aplicación, selecciona **Importar una aplicación existente** en el editor de **manifiestos:**
+1. Ahora, para modificar este paquete de aplicación, selecciona **Importar una aplicación existente** en el **editor de manifiestos**:
 
     <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
@@ -55,31 +54,31 @@ Siga estos pasos para actualizar el paquete de la aplicación:
 
     En el lado izquierdo del editor de manifiesto hay una lista de pasos. En el lado derecho hay una lista de propiedades que deben rellenarse para cada paso. Al empezar con una aplicación de ejemplo, gran parte de la información ya se ha completado. Los siguientes pasos te permiten actualizar las propiedades de la aplicación Hello World.
 
-#### <a name="app-details"></a>Detalles de la aplicación
+## <a name="app-details"></a>Detalles de la aplicación
 
-Seleccione **Detalles de la aplicación** en **Detalles**. Selecciona el **botón** Generar para crear un nuevo identificador de aplicación.
+Selecciona **Detalles de la aplicación** en **Detalles**. Selecciona el **botón** Generar para crear un nuevo identificador de aplicación.
 
-El nuevo identificador de aplicación es similar a `2322041b-72bf-459d-b107-f4f335bc35bd` .
+El nuevo identificador de aplicación es similar a `2322041b-72bf-459d-b107-f4f335bc35bd`.
 
 Consulta los detalles de la aplicación en el panel derecho, incluida la información del **desarrollador** y los **detalles de personal** de marca. Estos detalles son importantes si vas a escribir una nueva aplicación para su distribución.
 
-#### <a name="tabs"></a>Pestañas
+## <a name="tabs"></a>Pestañas
 
 Es sencillo agregar pestañas a una Teams aplicación. La aplicación de ejemplo ya admite varias pestañas y puedes habilitarlas.
 
-##### <a name="team-tab"></a>Ficha Equipo
+### <a name="team-tab"></a>Ficha Equipo
 
 La aplicación solo puede tener una pestaña Equipo:
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-En este ejemplo, la pestaña Equipo es donde se muestra la página de configuración. Seleccione el **símbolo ...** de la dirección URL de **configuración tab** y elija **Editar** en el menú desplegable. Cambie la dirección URL a `https://yourteamsapp.ngrok.io/configure` donde `yourteamsapp.ngrok.io` debe reemplazarse por la dirección URL que usó al hospedar la aplicación.
+En este ejemplo, la pestaña Equipo es donde se muestra la página de configuración. Seleccione el **símbolo ...** de la **dirección URL de configuración tab** y **elija Editar** en el menú desplegable. Cambie la dirección URL a donde `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` debe reemplazarse por la dirección URL que usó al hospedar la aplicación.
 
-##### <a name="personal-tabs"></a>Pestañas personales
+### <a name="personal-tabs"></a>Pestañas personales
 
 La aplicación puede tener hasta 16 pestañas, incluida la pestaña Equipo.
 
-Las pestañas personales son diferentes de la pestaña Equipo. **Hello Tab** ya aparece en la lista de pestañas personales con un valor de marcador de posición `com.contoso.helloworld.hellotab` . Seleccione el **símbolo ...** de la dirección URL de **configuración tab** y elija **Editar** en el menú desplegable. Aparece el siguiente cuadro de diálogo:
+Las pestañas personales son diferentes de la pestaña Equipo. **Hello Tab** ya aparece en la lista de pestañas personales con un valor de marcador de posición `com.contoso.helloworld.hellotab`. Seleccione el **símbolo ...** de la **dirección URL de configuración tab** y **elija Editar** en el menú desplegable. Aparece el siguiente cuadro de diálogo:
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
@@ -92,7 +91,7 @@ Reemplace `yourteamsapp.ngrok.io` por la dirección URL que usó al hospedar la 
 
 #### <a name="bots"></a>Bots
 
-Es fácil agregar la funcionalidad de bots a la aplicación. La aplicación de ejemplo **Hello World** ya tiene un bot como parte de la muestra, pero debes registrarlo con Microsoft:
+Es fácil agregar la funcionalidad de bots a la aplicación. La **aplicación de ejemplo Hello World** ya tiene un bot como parte de la muestra, pero debes registrarlo con Microsoft:
 
 <img  width="450px" alt="Adding a bot" src="~/assets/images/get-started/Bots.png"/>
 
@@ -103,16 +102,16 @@ El bot que se importó desde el ejemplo no tiene un identificador de aplicación
 
 Siga estos pasos para configurar el bot:
 
-1. Seleccione **Eliminar** junto al bot importado en la lista de bots. Ahora no quedan bots que mostrar. 
-1. Seleccione **Configurar** para mostrar el cuadro de diálogo Configurar **un bot.**
+1. Seleccione **Eliminar** junto al bot importado en la lista de bots. Ahora no quedan bots que mostrar.
+1. Seleccione **Configurar** para mostrar **el cuadro de diálogo Configurar un bot** .
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-1. Agregue un bot name **Contoso bot** y active las tres casillas en **Scope**.
-1. Elija **Guardar** para salir del cuadro de diálogo. App Studio registra el bot con Microsoft y muestra el nuevo bot en la lista de bots. 
+1. Agregue un bot name **Contoso bot** y active las tres casillas en **Ámbito**.
+1. Elija **Guardar** para salir del cuadro de diálogo. App Studio registra el bot con Microsoft y muestra el nuevo bot en la lista de bots.
 1. Ahora abra un archivo de texto en el bloc de notas y copie y pegue el nuevo identificador de bot en él.
 1. Haga **clic en Generar nueva contraseña** y anote la contraseña en el mismo archivo de texto que anotó el id. de la aplicación del bot.
-1. Actualice la **dirección del extremo bot** a y reemplace por la dirección URL que `https://yourteamsapp.ngrok.io/api/messages` `yourteamsapp.ngrok.io` usó al hospedar la aplicación.
+1. Actualice la **dirección del extremo bot** a `https://yourteamsapp.ngrok.io/api/messages`y reemplace `yourteamsapp.ngrok.io` por la dirección URL que usó al hospedar la aplicación.
 1. Ahora guarda el archivo de texto, ya que debes agregar la información del archivo a la aplicación hospedada para permitir una comunicación segura con el bot.
 
 #### <a name="messaging-extensions"></a>Extensiones de mensajería
@@ -127,23 +126,23 @@ Siga estos pasos para configurar la extensión de mensajería:
 
     La extensión de mensajería de ejemplo se muestra en el panel **Extensiones de** mensajería.
 
-1. Seleccione **Eliminar** para quitar la extensión de mensajería, **seleccione Configurar** y siga los mismos pasos usados para [bots](#bots). Se **muestra el cuadro de diálogo** Extensión de mensajería.
-1. Seleccione la **pestaña Usar bot existente** y Seleccionar de uno de mis **bots existentes**.
-1. Selecciona el bot que creaste en el menú desplegable. Agregue un **nombre bot y** seleccione **Guardar** para cerrar el cuadro de diálogo.
-1. En la **sección Comando,** seleccione **Agregar**. Para agregar un comando basado en búsqueda, seleccione la opción Permitir a los usuarios consultar su servicio para obtener información e **insertarla en un mensaje.**
+1. Seleccione **Eliminar** para quitar la extensión de mensajería, **seleccione Configurar** y siga los mismos pasos que se usan para [los bots](#bots). Se **muestra el cuadro de diálogo** Extensión de mensajería.
+1. Selecciona la **pestaña Usar bot existente** y **Seleccionar de uno de mis bots existentes**.
+1. Selecciona el bot que creaste en el menú desplegable. Agregue un **nombre bot y** **seleccione Guardar** para cerrar el cuadro de diálogo.
+1. En la **sección Comando** , seleccione **Agregar**. Para agregar un comando basado en búsqueda, seleccione la opción Permitir a los usuarios consultar su servicio para obtener información e **insertarla en un mensaje** .
 1. En el **cuadro de diálogo Nuevo** comando, escriba los siguientes valores:
 
     En **Nuevo comando**:
 
-    - **Identificador de comando:** escriba texto aleatorio
+    - **Identificador de comando**: escriba texto aleatorio
     - **Title**: Enter random title
-    - **Descripción:** escriba una descripción aleatoria
+    - **Descripción**: escriba una descripción aleatoria
 
     En **Parámetro**:
 
-    - **Nombre:** escriba el nombre del parámetro
-    - **Título:** escriba el título de la tarjeta
-    - **Descripción:** escriba la descripción de la tarjeta
+    - **Nombre**: escriba el nombre del parámetro
+    - **Título**: escriba el título de la tarjeta
+    - **Descripción**: escriba la descripción de la tarjeta
 
 1. Después de escribir la información, seleccione **Guardar** para cerrar el cuadro de diálogo.
 
@@ -152,7 +151,7 @@ Siga estos pasos para configurar la extensión de mensajería:
 Después de especificar los detalles de la aplicación, siga estos pasos para registrar la aplicación en Teams:
 
 1. Usa **Probar y distribuir** App Studio para instalar la aplicación en Teams.
-1. Actualice la aplicación hospedada con el identificador de aplicación y la contraseña del bot. Para la aplicación de ejemplo, usa el mismo id. de la aplicación y la misma contraseña para bot y extensión de mensajería. 
+1. Actualice la aplicación hospedada con el identificador de aplicación y la contraseña del bot. Para la aplicación de ejemplo, usa el mismo id. de la aplicación y la misma contraseña para bot y extensión de mensajería.
 1. Seleccione **Probar y distribuir en** **Finalizar** en el panel izquierdo de App Studio:
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
@@ -160,9 +159,9 @@ Después de especificar los detalles de la aplicación, siga estos pasos para re
 1. Para cargar la aplicación en Teams, selecciona el botón **Instalar** en **Probar y distribuir**:
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
-    
+
     > [!NOTE]
-    > Si no puedes realizar la instalación local de la aplicación, comprueba si has habilitado [la carga personalizada de la aplicación](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
+    > Si no puedes realizar la instalación local de la aplicación, comprueba si has habilitado [la carga de aplicaciones personalizadas](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
 1. Selecciona el **cuadro** Buscar en la **sección Agregar a un** equipo y selecciona un equipo para agregar la aplicación de ejemplo. Puede configurar un equipo especial para las pruebas.
 1. Seleccione el **botón** Instalar en la parte inferior del cuadro de diálogo.
@@ -175,7 +174,7 @@ Después de especificar los detalles de la aplicación, siga estos pasos para re
 
 Después de especificar los detalles de la aplicación, siga estos pasos para registrar la aplicación en Teams:
 
-1. Usa **Vista** previa del Portal de desarrolladores para instalar la aplicación en Teams.
+1. Usa **Vista previa** del Portal de desarrolladores para instalar la aplicación en Teams.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Imagen que muestra el botón Vista previa" border="false":::
 
@@ -186,7 +185,7 @@ Después de especificar los detalles de la aplicación, siga estos pasos para re
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Imagen que muestra la opción Publicar en el panel izquierdo" border="false":::
 
     > [!NOTE]
-    > Si no puedes realizar la instalación local de la aplicación, comprueba si has habilitado [la carga personalizada de la aplicación](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
+    > Si no puedes realizar la instalación local de la aplicación, comprueba si has habilitado [la carga de aplicaciones personalizadas](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
 1. Selecciona **Agregar** para instalar la aplicación en Teams.
 
@@ -211,35 +210,35 @@ La aplicación de ejemplo requiere que las variables de entorno se establezcan e
 
     Después de realizar estos cambios, vuelve a generar la aplicación. Si usas ngrok, puedes ejecutar la aplicación localmente y, si la has hospedado en Azure, vuelve a implementar la aplicación.
 
-## <a name="test-the-app-capabilities-in-teams"></a>Probar las capacidades de la aplicación en Teams
+## <a name="test-the-app-capabilities-in-teams"></a>Probar las funcionalidades de la aplicación en Teams
 
 ### <a name="test-your-tab"></a>Probar la pestaña
 
-Después de instalar la aplicación en Teams, configúrela para que muestre la pestaña que desea que se cargue la aplicación.
+Después de instalar la aplicación en Teams, configúrela para que muestre la pestaña que desea que se cargue.
 
-**Para configurar la pestaña de la aplicación**
+Para configurar la pestaña de la aplicación:
 
 1. Ve a un canal del equipo donde instalaste la aplicación de ejemplo y selecciona el botón **"+"** para agregar una nueva pestaña.
-1. Seleccione **Hello World** en la lista Agregar **una** pestaña. Se muestra un cuadro de diálogo de configuración que permite seleccionar la pestaña que se va a mostrar en este canal.
+1. Seleccione **Hello World** en la **lista Agregar una** pestaña. Se muestra un cuadro de diálogo de configuración que permite seleccionar la pestaña que se va a mostrar en este canal.
 1. Seleccione **Guardar**. La `Hello World` pestaña se carga con la pestaña.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
-### <a name="test-your-bot-in-teams"></a>Pruebe el bot en Teams
+### <a name="test-your-bot-in-teams"></a>Probar el bot en Teams
 
 Ahora puede probar el bot en Teams.
 
-**Para probar el bot**
+Para probar el bot:
 
-- Selecciona un canal en el equipo donde registraste la aplicación y escribe `@your-bot-name` . Este tipo de mensaje se denomina **\@ mención**. El bot responde a cualquier mensaje que envíe.
+- Selecciona un canal en el equipo donde registraste la aplicación y escribe `@your-bot-name`. Este tipo de mensaje se denomina una **\@mención**. El bot responde a cualquier mensaje que envíe.
 
     <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Probar la extensión de mensajería
 
-**Para probar la extensión de mensajería**
+Para probar la extensión de mensajería:
 
-1. Seleccione **... debajo** del cuadro de entrada de la vista de conversación. Se muestra un menú con la aplicación **"Hello World".**
+1. Seleccione **... debajo** del cuadro de entrada de la vista de conversación. Se muestra un menú **con la aplicación "Hello World** ".
 1. Seleccione el menú, se muestra un conjunto de textos aleatorios. Puede seleccionar uno de los textos aleatorios y que se inserta en la conversación.
 
     <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />

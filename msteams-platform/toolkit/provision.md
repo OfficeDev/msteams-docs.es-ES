@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: db295beddf8b0492816c757703e89f3010666eab
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: adf168daf1e85370324f114e8dc74b509d9fd9c2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821566"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453575"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para aprovisionar recursos en la nube
 
@@ -21,13 +21,13 @@ TeamsFx se integra con Azure y Microsoft 365 nube, lo que le permite colocar la 
 
 * Requisitos previos de la cuenta Para aprovisionar recursos en la nube, debe tener las siguientes cuentas:
 
-    * Microsoft 365 cuenta con suscripción válida
-    * Azure con suscripción válida Para obtener más información, vea [cómo preparar cuentas para crear Teams aplicación](accounts.md).
+  * Microsoft 365 cuenta con suscripción válida
+  * Azure con suscripción válida Para obtener más información, vea [cómo preparar cuentas para crear Teams aplicación](accounts.md).
 
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
 
 > [!TIP]
-> Asegúrate de que tienes Teams proyecto de aplicación abierto en código VS.
+> Asegúrate de que tienes Teams proyecto de aplicación abierto en el código VS.
 
 ## <a name="provision-using-teams-toolkit"></a>Aprovisionar mediante Teams Toolkit
 
@@ -39,18 +39,18 @@ La aprovisionamiento se realiza con un solo comando en Teams Toolkit para Visual
 
 Al desencadenar el comando de aprovisionamiento en Teams Toolkit CLI de TeamsFx, puede obtener los siguientes recursos:
 
-* Microsoft Azure Active Directory (Azure AD) bajo el inquilino Microsoft 365 usuario
+* Microsoft Azure Active Directory (Azure AD) en el espacio empresarial Microsoft 365 usuario
 * Teams registro de la aplicación en la Microsoft 365 de la plataforma de Teams inquilino
 * Recursos de Azure en la suscripción de Azure seleccionada
 
-Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM define todos los recursos de Azure y ayuda a crear los recursos de Azure necesarios durante la provisión. Al agregar [un nuevo recurso de funcionalidad](./add-resource.md) a un proyecto existente, la plantilla de ARM actualizada refleja el cambio más reciente.
+Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM define todos los recursos de Azure y ayuda a crear los recursos de Azure necesarios durante la provisión. Al agregar [un nuevo recurso de funcionalidad](./add-resource.md) a un proyecto existente, la plantilla de ARM plantilla refleja el cambio más reciente.
 
 > [!NOTE]
 > Los servicios de Azure incurren en costos en la suscripción, para obtener más información sobre la estimación de costos, consulte [la calculadora de precios](https://azure.microsoft.com/pricing/calculator/).
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Creación de recursos para Teams tab
 
-|Resource|Objetivo|Descripción |
+|Recurso|Objetivo|Descripción |
 |----------|--------------------------------|-----|
 | Almacenamiento de Azure | Hospedar la aplicación de pestaña | Habilita la característica de aplicación web estática para hospedar la aplicación de pestañas |
 | Plan de app service para autenticación sencilla | Hospedar la aplicación web de Simple Auth |No aplicable |
@@ -59,33 +59,33 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Creación de recursos para Teams bot o aplicación de extensión de mensajería
 
-|Resource|Objetivo| Descripción |
+|Recurso|Objetivo| Descripción |
 |----------|--------------------------------|-----|
-| Servicio de bots de Azure | Registra la aplicación como un bot con el marco del bot | Conecta el bot a Teams |
+| Servicio de bots de Azure | Registra la aplicación como un bot con el marco del bot | Conecta bot a Teams |
 | Plan de servicio de aplicaciones para bot | Hospedar la aplicación web del bot |No aplicable |
 | Aplicación web para bot | Hospedar la aplicación bot | Agrega la identidad asignada por el usuario para obtener acceso a otros recursos de Azure. <br /> Agrega la configuración de la aplicación requerida [por el SDK de TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure | Compartido entre diferentes capacidades y recursos |
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>Creación de recursos para Azure Functions en el proyecto
 
-|Resource|Objetivo| Descripción|
+|Recurso|Objetivo| Descripción|
 |----------|--------------------------------|-----|
 | Plan de servicio de aplicaciones para la aplicación de función | Hospedar la aplicación de función |No aplicable |
-| Aplicación function | Hospedar las API de funciones de Azure | Agrega la identidad asignada por el usuario para obtener acceso a otros recursos de Azure. <br /> Agrega una regla de uso compartido de recursos entre orígenes (CORS) para permitir solicitudes desde la aplicación de pestañas <br /> Agrega la configuración de autenticación que solo permite las solicitudes de Teams aplicación. <br /> Agrega la configuración de la aplicación requerida [por el SDK de TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
+| Aplicación function | Hospedar las API de funciones de Azure | Agrega la identidad asignada por el usuario para obtener acceso a otros recursos de Azure. <br /> Agrega una regla de uso compartido de recursos entre orígenes (CORS) para permitir solicitudes desde la aplicación de pestañas <br /> Agrega la configuración de autenticación que solo permite las solicitudes de la Teams aplicación. <br /> Agrega la configuración de la aplicación requerida [por el SDK de TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Azure Storage para la aplicación de función | Necesario para crear una aplicación de función |No aplicable|
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure | Compartido entre diferentes capacidades y recursos |
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>Creación de recursos para Azure SQL en el proyecto
 
-|Resource|Objetivo | Descripción |
+|Recurso|Objetivo | Descripción |
 |----------|--------------------------------|-----|
-| Servidor SQL Azure | Hospedar la instancia de base de SQL azure | Permite que todos los servicios de Azure accedan al servidor |
+| Servidor SQL Azure | Hospedar la instancia de base de datos SQL Azure | Permite que todos los servicios de Azure accedan al servidor |
 | Base de datos SQL Azure | Almacenar datos para la aplicación | Concede al usuario permiso de identidad asignada, lectura o escritura en la base de datos |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure | Compartido entre diferentes capacidades y recursos |
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Creación de recursos para Azure API Management en el proyecto
 
-|Resource|Objetivo|
+|Recurso|Objetivo|
 |----------|--------------------------------|
 | Azure AD aplicación para el servicio de administración de API | Permite a las API de acceso de Microsoft Power Platform administradas por el servicio de administración de API |
 | Servicio de administración de API | Administrar las API hospedadas en la aplicación de función |
@@ -97,12 +97,12 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 |Recursos|Finalidad de este recurso|
 |----------|--------------------------------|
-| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, Azure AD secreto de cliente de aplicaciones) usados por otros servicios de Azure |
+| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, Azure AD de cliente de aplicaciones) usados por otros servicios de Azure |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure |
 
 ## <a name="customize-resource-provision"></a>Personalizar la provisión de recursos
 
-Teams Toolkit permite usar una infraestructura como método de código para definir qué recursos de Azure desea aprovisionar y cómo desea configurar. La herramienta usa ARM plantilla para definir recursos de Azure. La ARM es un conjunto de archivos bíceps que define la infraestructura y la configuración del proyecto. Puede personalizar los recursos de Azure modificando la ARM plantilla. Para obtener más información, vea [documento bícep](/azure/azure-resource-manager/bicep.md). 
+Teams Toolkit permite usar una infraestructura como método de código para definir qué recursos de Azure desea aprovisionar y cómo desea configurar. La herramienta usa ARM plantilla para definir recursos de Azure. La ARM es un conjunto de archivos bíceps que define la infraestructura y la configuración del proyecto. Puede personalizar los recursos de Azure modificando la ARM plantilla. Para obtener más información, vea [documento bícep](/azure/azure-resource-manager/bicep.md).
 
 Aprovisionar con ARM implica cambiar los siguientes conjuntos de archivos, parámetros y plantillas:
 
@@ -165,21 +165,21 @@ Mientras tanto, los siguientes parámetros están disponibles con valores rellen
 
 | Nombre del parámetro | Soporte de posición de valor predeterminado | Significado del soporte de la posición | Cómo personalizar |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | El identificador de cliente de Azure AD la aplicación creada durante la aprovisionamiento | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | El identificador de cliente de Azure AD de aplicación de la aplicación creado durante la aprovisionamiento | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Secreto de cliente de aplicación Azure AD la aplicación creada durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Identificador de inquilino de la aplicación Azure AD aplicación | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | Host de autoridad de OAuth de la aplicación Azure AD aplicación | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Identificador de cliente de Azure AD de aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Secreto de cliente de Azure AD de aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Identificador de cliente de Azure AD aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Secreto de cliente de Azure AD aplicación de bot creado durante la provisión | [Personalizar el valor](#use-an-existing-azure-ad-app-for-your-bot) |
 | apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | Identificador de cliente de Azure AD apim creado durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Secreto de cliente de Azure AD apim creado durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | Secreto de cliente de Azure AD aplicación de APIM creado durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
 
 ##### <a name="azure-resource-related-parameters"></a>Parámetros relacionados con recursos de Azure
 
 | Nombre del parámetro | Soporte de posición de valor predeterminado | Significado del soporte de la posición | Cómo personalizar |
 | --- | --- | --- | --- |
 | azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Cuenta SQL Server administrador de Azure que proporcionó durante la aprovisionamiento | Eliminar el marcador de posición y rellenar el valor real |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Contraseña SQL Server administrador de Azure que proporcionó durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server contraseña de administrador que proporcionó durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | Correo electrónico del editor de APIM, el valor predeterminado es su cuenta de Azure | Eliminar el marcador de posición y rellenar el valor real |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | Nombre del editor de APIM, el valor predeterminado es su cuenta de Azure | Eliminar el marcador de posición y rellenar el valor real |
 
@@ -195,18 +195,18 @@ En el ejemplo siguiente se lee el valor del parámetro `mySelfHostedDbConnection
 ...
 ```
 
-#### <a name="customize-arm-template-files"></a>Personalizar ARM de plantilla
+#### <a name="customize-arm-template-files"></a>Personalizar ARM archivos de plantilla
 
-Si las plantillas predefinidas no cumplen los requisitos de la aplicación, puede personalizar las plantillas ARM en la `templates/azure` carpeta. Por ejemplo, puedes personalizar la plantilla ARM para crear algunos recursos de Azure adicionales para la aplicación. Debe tener conocimientos básicos del idioma bícep, que se usa para crear ARM plantilla. Puede empezar con el bícep en la [documentación del bícep](/azure/azure-resource-manager/bicep/?branch).
+Si las plantillas predefinidas no cumplen los requisitos de la aplicación, puede personalizar las plantillas ARM en la `templates/azure` carpeta. Por ejemplo, puedes personalizar la plantilla ARM para crear algunos recursos de Azure adicionales para la aplicación. Debe tener conocimientos básicos del idioma del bícep, que se usa para crear ARM plantilla. Puede empezar con el bícep en la [documentación del bícep](/azure/azure-resource-manager/bicep/?branch).
 
 > [!NOTE]
 > Todos los ARM comparten la plantilla de configuración. Puede usar la [implementación condicional si](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) el comportamiento de aprovisionamiento varía entre entornos.
 
-Para garantizar que la herramienta TeamsFx funciona correctamente, asegúrese de personalizar ARM plantilla, lo que satisface los siguientes requisitos. Si usa otra herramienta para el desarrollo posterior, puede omitir estos requisitos.
+Para asegurarse de que la herramienta TeamsFx funciona correctamente, asegúrese de personalizar ARM plantilla, que cumple los siguientes requisitos. Si usa otra herramienta para el desarrollo posterior, puede omitir estos requisitos.
 
 * Mantenga la estructura de carpetas y el nombre del archivo sin cambios. La herramienta puede anexar contenido nuevo a los archivos existentes al agregar más recursos o funcionalidades al proyecto.
 * Mantenga el nombre de los parámetros generados automáticamente, así como sus nombres de propiedad sin cambios. Los parámetros generados automáticamente pueden usarse al agregar más recursos o funcionalidades al proyecto.
-* Mantenga el resultado de la plantilla generada automáticamente ARM sin cambios. Puede agregar resultados adicionales a ARM plantilla. El resultado es `.fx/states/state.{env}.json` y se puede usar en otras características, como implementar, validar el archivo de manifiesto.
+* Mantenga el resultado de la plantilla generada automáticamente ARM sin cambios. Puede agregar salidas adicionales a ARM plantilla. El resultado es `.fx/states/state.{env}.json` y se puede usar en otras características, como implementar, validar el archivo de manifiesto.
 
 ### <a name="customization-scenarios"></a>Escenarios de personalización
 
@@ -214,7 +214,7 @@ Puede personalizar los siguientes escenarios:
 
 #### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Usar una aplicación de Azure AD existente para el bot
 
-Puedes agregar el siguiente fragmento de código de `.fx/configs/config.{env}.json` configuración al archivo para usar una aplicación Azure AD creada por ti mismo para tu Teams aplicación. Para crear una aplicación Azure AD, consulta <https://aka.ms/teamsfx-existing-aad-doc>.
+Puedes agregar el siguiente fragmento de código de `.fx/configs/config.{env}.json` configuración al archivo para usar una aplicación Azure AD creada por ti mismo para tu Teams aplicación. Para crear una Azure AD, consulta <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -243,7 +243,7 @@ Puedes agregar el siguiente fragmento de código de `.fx/configs/config.{env}.js
 
 Después de agregar el fragmento de código anterior, agrega el secreto a la variable de entorno relacionada para que la herramienta resuelva el secreto real durante la provisión.
 
-#### <a name="skip-adding-user-for-sql-database"></a>Omitir agregar usuario para la SQL base de datos
+#### <a name="skip-adding-user-for-sql-database"></a>Omitir la adición de usuarios para SQL base de datos
 
 Si no tiene un error de permiso insuficiente cuando la herramienta intenta agregar un usuario SQL una base de datos, `.fx/configs/config.{env}.json` puede agregar el siguiente fragmento de código de configuración al archivo para omitir la adición de SQL de base de datos:
 
@@ -280,9 +280,9 @@ Los siguientes pasos son:
     }
     ```
 
-### <a name="scenerio"></a>Scenerio 
+### <a name="scenerio"></a>Scenerio
 
-**Para agregar otro recurso o almacenamiento de Azure a la aplicación**
+Para agregar otro recurso o almacenamiento de Azure a la aplicación:
 
 Tenga en cuenta el escenario, desea agregar Azure Storage al back-end de la función de Azure para almacenar datos de blobs. No hay ningún flujo automático para actualizar la plantilla de bícep con compatibilidad con Azure Storage. Sin embargo, puede editar el archivo bícep y agregar el recurso. Los pasos son los siguientes:
 
@@ -357,7 +357,6 @@ Puedes seguir la [aprovisionamiento SharePoint aplicación basada en aplicacione
 
 > [!NOTE]
 > Actualmente, la aplicación de creación Teams con sharepoint framework con Teams Toolkit no tiene integración directa con Azure, el contenido del documento no se aplica SPFx aplicaciones basadas en SPFx.
-
 
 <br>
 

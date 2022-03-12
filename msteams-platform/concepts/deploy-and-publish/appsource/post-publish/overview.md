@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356017"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453582"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
@@ -18,15 +18,15 @@ Con la aplicación incluida en la Microsoft Teams, empieza a pensar en cómo man
 
 ## <a name="analyze-app-usage"></a>Analizar el uso de la aplicación
 
-Puedes realizar un seguimiento del uso de la aplicación [en el informe Teams uso de la aplicación en](/office/dev/store/teams-apps-usage) el Centro de partners. Las métricas incluyen usuarios activos mensuales, diarios y semanales, y gráficos de retención e intensidad que permiten realizar un seguimiento de la rotación y la frecuencia de uso.
+Puedes realizar un seguimiento del uso de la aplicación [en el informe Teams uso de la aplicación en](/office/dev/store/teams-apps-usage) el Centro de partners. Las métricas incluyen usuarios activos mensuales, diarios y semanales, y gráficos de retención e intensidad que permiten realizar un seguimiento del abandono y la frecuencia de uso.
 
-Los datos de las aplicaciones recién publicadas tardan aproximadamente una semana en aparecer en el informe.
+Los datos de las aplicaciones recién publicadas tardan alrededor de una semana en aparecer en el informe.
 
 ## <a name="publish-updates-to-your-app"></a>Publicar actualizaciones en la aplicación
 
 > [!NOTE]
 > La tienda de Teams ha evolucionado:
-> 
+>
 > Anteriormente, los vínculos se copiaban seleccionando puntos suspensivos en el icono de la aplicación. Con la experiencia Teams de la tienda, accederá a la misma desde la pestaña detalles de las aplicaciones. Esta actualización estará disponible generalmente (GA) antes del 01 de marzo de 2022.
 
 Puedes enviar cambios a la aplicación (como nuevas características o incluso metadatos) en el Centro de partners. Estos cambios requieren un nuevo proceso de revisión.

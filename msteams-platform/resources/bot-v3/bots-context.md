@@ -1,18 +1,18 @@
 ---
-title: Obtener contexto para el Microsoft Teams bot
+title: Obtener contexto para el bot Microsoft Teams de datos
 description: Describe cómo obtener contexto para bots en Microsoft Teams
 keywords: contexto de bots de teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 94d94f3f4c9c522a0fbccb448ba371e96da6c070
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: c4f2df1168b5e429b1d5a1107cd07264e10243bc
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443996"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453148"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>Obtener contexto para el Microsoft Teams bot
+# <a name="get-context-for-your-microsoft-teams-bot"></a>Obtener contexto para el bot Microsoft Teams de datos
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -20,7 +20,7 @@ El bot puede tener acceso a contexto adicional sobre el equipo o el chat, como e
 
 > [!NOTE]
 >
-> * Microsoft Teams api de bots específicas se accede mejor a través de nuestras extensiones para el SDK de Bot Builder.
+> * Microsoft Teams a las API de bot específicas se accede mejor a través de nuestras extensiones para el SDK de Bot Builder.
 > * Para C# o .NET, descargue nuestro [paquete Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet.
 > * Para Node.js desarrollo, la funcionalidad del Generador de bots para Teams se incorpora al [SDK de Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
 
@@ -165,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>Ejemplo de .NET
 
-En el ejemplo siguiente se usa la `FetchChannelList` llamada desde [las extensiones Teams para el SDK de Bot Builder para .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
+En el siguiente ejemplo se usa la `FetchChannelList` llamada desde [las extensiones Teams para el SDK de Bot Builder para .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -173,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js ejemplo
 
-En el ejemplo siguiente se `fetchChannelList` usa la llamada desde [el Teams para el SDK del generador de bots para Node.js](https://www.npmjs.com/package/botbuilder-teams):
+En el ejemplo siguiente se `fetchChannelList` usa la llamada [desde el Teams para el SDK del generador de bots para Node.js](https://www.npmjs.com/package/botbuilder-teams):
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

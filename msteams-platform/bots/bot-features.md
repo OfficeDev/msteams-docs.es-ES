@@ -5,12 +5,12 @@ description: Información general sobre las herramientas y SDK para crear Micros
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398662"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453890"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -44,6 +44,9 @@ El Teams bot consta de lo siguiente:
 ## <a name="bots-with-power-virtual-agents"></a>Bots con Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) es un servicio de chatbot basado en la plataforma Microsoft Power y Bot Framework. El proceso de desarrollo de Power Virtual Agent usa un enfoque de interfaz gráfica y sin código guiado que permite a los miembros del equipo crear y mantener fácilmente un agente virtual inteligente. Después de crear el chatbot en [el portal de Power Virtual Agents](https://powervirtualagents.microsoft.com), puede [integrarlo fácilmente con Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Para obtener más información sobre cómo empezar, [consulte Power Virtual Agents documentación](/power-virtual-agents).
+
+>[!NOTE]
+>No debes usar Microsoft Power Platform para crear aplicaciones que se van a publicar en la Teams de aplicaciones. Las aplicaciones de Microsoft Power Platform solo se pueden publicar en la tienda de aplicaciones de una organización.
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots con webhooks y conectores
 
@@ -190,7 +193,7 @@ this.onMessage(async (context, next) => {
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -199,7 +202,7 @@ this.onMessage(async (context, next) => {
 
 ## <a name="see-also"></a>Vea también
 
-* [Llamadas y reuniones en el bot](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversaciones de bot](~/bots/how-to/conversations/conversation-basics.md)
 * [Menús de comandos bot](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Flujo de autenticación para bots en Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

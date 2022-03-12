@@ -5,11 +5,16 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: e371bcfe003ec2ff7122444e66df009c2436db7a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453323"
 ---
-
 # <a name="monetize-your-app"></a>Rentabilizar la aplicación
 
-Microsoft Teams app Store proporciona características que te permiten monetizar tus aplicaciones y obtener clientes al interactuar con los usuarios. En los temas de esta sección se muestra cómo crear estas características en la aplicación.
+Microsoft Teams app Store proporciona características que te permiten rentabilizar tus aplicaciones y obtener clientes mediante la participación de los usuarios. En los temas de esta sección se muestra cómo crear estas características en la aplicación.
 
 ## <a name="choose-a-pricing-model"></a>Elegir un modelo de precios
 
@@ -19,7 +24,7 @@ Microsoft Teams app Store proporciona características que te permiten monetizar
     :::column-end:::
     :::column span="2":::
 
-**Incluir una oferta de SaaS con la aplicación**
+Incluye una oferta SaaS con la aplicación:
 
 Con una oferta [de Software como servicio (SaaS)](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) transaccionable, puedes monetizar tu aplicación de Teams mediante la venta de planes de suscripción directamente desde la descripción de la tienda Teams cliente.
 
@@ -32,7 +37,7 @@ Con una oferta [de Software como servicio (SaaS)](~/concepts/deploy-and-publish/
     :::column-end:::
     :::column span="2":::
 
-**Pruebas gratuitas**
+Pruebas gratuitas:
 
 Puedes ofrecer una versión de prueba gratuita de la aplicación para que más clientes la prueben. Para invitar a los clientes a comprar la versión completa, puede limitar las características de la versión de prueba (por ejemplo, solo incluir un número limitado de respuestas durante una semana) o especificar un período de tiempo para la versión de prueba.
 
@@ -56,14 +61,15 @@ Tanto si cobras un precio por la aplicación como si lo ofreces de forma gratuit
     :::column-end:::
     :::column span="2":::
 
-**Vista previa de prueba de la aplicación monetizada**
+Vista previa de prueba de la aplicación monetizada:
 
 Con una oferta de Software como servicio (SaaS) transaccionable, puedes probar la experiencia de compra de un extremo a otro para tus aplicaciones monetizadas en Teams antes de publicar.
 
-[Vista previa de prueba para aplicaciones monetizadas](Test-preview-for-monetized-apps.md)
+[Versión preliminar de prueba para aplicaciones monetizadas](Test-preview-for-monetized-apps.md)
 
     :::column-end:::
 :::row-end:::
+
 ## <a name="next-step"></a>Paso siguiente
 
 [Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

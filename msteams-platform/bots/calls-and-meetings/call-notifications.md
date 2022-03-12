@@ -5,26 +5,26 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: afinidad de región de devolución de llamada de llamadas de llamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216093"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453057"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
-Al [registrar un bot de llamadas](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)y reuniones para Microsoft Teams , se menciona el webhook para la dirección URL de llamada. Esta dirección URL es el extremo de webhook para todas las llamadas entrantes al bot.
+Al [registrar un bot de llamadas y reuniones para Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), se menciona el webhook para la dirección URL de llamada. Esta dirección URL es el extremo de webhook para todas las llamadas entrantes al bot.
 
 ## <a name="protocol-determination"></a>Determinación del protocolo
 
-La notificación entrante se proporciona en un formato heredado para la compatibilidad con el protocolo [Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para convertir la llamada al protocolo microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporcionar la siguiente respuesta:
+La notificación entrante se proporciona en un formato heredado para la compatibilidad con el protocolo [Skype anterior](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Para convertir la llamada al protocolo de microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporcionar la siguiente respuesta:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-El bot recibe la notificación de nuevo, pero esta vez en el protocolo Graph Microsoft.
+El bot vuelve a recibir la notificación, pero esta vez en el protocolo Graph Microsoft.
 
 En una versión futura de la Plataforma multimedia en tiempo real, puede configurar el protocolo que admite la aplicación para evitar recibir la devolución de llamada inicial en el formato heredado.
 
@@ -39,8 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Habilite el bot para responder a una llamada entrante mediante la API [de respuesta.](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) Puede especificar el para `callbackUri` controlar esta llamada en particular. Esto es útil para instancias con estado en las que una partición determinada controla la llamada y desea insertar esta información en el enrutamiento a `callbackUri` la instancia correcta.
-
+Habilite el bot para responder a una llamada entrante mediante la API [de respuesta](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) . Puede especificar el para `callbackUri` controlar esta llamada en particular. Esto es útil para instancias con estado en las que una partición determinada controla la llamada y `callbackUri` desea insertar esta información en el enrutamiento a la instancia correcta.
 
 La siguiente sección proporciona detalles sobre la autenticación de la devolución de llamada inspeccionando el token publicado en el webhook.
 
@@ -86,11 +85,11 @@ La configuración de OpenID publicada en <https://api.aps.skype.com/v1/.well-kno
 
 * `aud` donde audiencia es el URI de id. de aplicación especificado para la aplicación.
 * `tid` es el identificador de inquilino para Contoso.com.
-* `iss` es el emisor de tokens, `https://api.botframework.com` .
+* `iss` es el emisor de tokens, `https://api.botframework.com`.
 
 Para el control de código, el webhook debe validar el token, asegurarse de que no ha expirado y comprobar si ha sido firmado por la configuración de OpenID publicada. También debes comprobar si aud coincide con tu id. de aplicación antes de aceptar la solicitud de devolución de llamada.
 
-Para obtener más información, vea [validate inbound requests](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
+Para obtener más información, vea [Validar solicitudes entrantes](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -5,16 +5,16 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: 1d4fc957eb8511e9da2b3ebacd3a6b025e048e78
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391676"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453554"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Crear una cuenta de desarrollador del Centro de partners
 
-Para publicar la aplicación en la Microsoft Teams, debes configurar tu cuenta de desarrollador [del Centro de partners.](/office/dev/store/open-a-developer-account) Según el escenario, es posible que puedas usar una cuenta existente.
+Para publicar la aplicación en la Microsoft Teams, debes [configurar tu cuenta de desarrollador del Centro de partners](/office/dev/store/open-a-developer-account). Según el escenario, es posible que puedas usar una cuenta existente.
 
 ## <a name="faq"></a>Preguntas más frecuentes
 
@@ -28,8 +28,8 @@ Obtén respuestas a algunas preguntas comunes sobre cómo administrar tu cuenta 
 
 Puede crear una cuenta del Centro de partners de una de las siguientes maneras:
 
-* Si es nuevo en el Centro de partners y no tiene una cuenta de Microsoft Network, cree una cuenta con la página de inscripción del Centro [de partners.](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)
-* Si ya está inscrito en Microsoft Partner Network, cree una cuenta directamente desde el Centro de partners con las inscripciones [existentes](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)del Centro de partners de Microsoft .
+* Si es nuevo en el Centro de partners y no tiene una cuenta de Microsoft Network, cree una cuenta con la página de inscripción del [Centro de partners](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
+* Si ya está inscrito en Microsoft Partner Network, cree una cuenta directamente desde el Centro de partners con las inscripciones [existentes del Centro de partners de Microsoft](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 
 <br>
 
@@ -55,7 +55,7 @@ Abra un [vale de soporte técnico del Centro de partners](https://partner.micros
 
 <summary><b>¿Dónde puedo obtener soporte técnico para problemas de mi cuenta del Centro de partners?</b></summary>
 
-Visite la [página de soporte técnico de editores](https://aka.ms/marketplacepublishersupport) para buscar el problema. Si las instrucciones no son útiles, cree un vale de soporte [técnico del Centro de partners.](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)
+Visite la [página de soporte técnico de editores](https://aka.ms/marketplacepublishersupport) para buscar el problema. Si las instrucciones no son útiles, cree un vale [de soporte técnico del Centro de partners](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
 <br>
 
@@ -95,7 +95,7 @@ Consulta [Administrar la configuración de la cuenta y la información de perfil
 
 <summary><b>¿Por qué veo un mensaje "Esta cuenta no es apta para publicación" cuando intento enviar mi aplicación?</b></summary>
 
-Ha recibido este mensaje de error porque el [estado de comprobación de la](/partner-center/verification-responses) cuenta está pendiente. Compruebe su estado en el panel del Centro de [partners](https://partner.microsoft.com/dashboard). Seleccione el **icono Configuración** engranaje y elija Configuración del programador > Configuración **> cuenta**.
+Ha recibido este mensaje de error porque el [estado de comprobación de la](/partner-center/verification-responses) cuenta está pendiente. Compruebe su estado en el panel del Centro de [partners](https://partner.microsoft.com/dashboard). Selecciona el **icono Configuración** engranaje y elige Configuración del desarrollador **> Configuración > Cuenta**.
 
 ![Estado de comprobación del Centro de partners](~/assets/images/partner-center-verification-status.png)
 
@@ -107,11 +107,11 @@ Ha recibido este mensaje de error porque el [estado de comprobación de la](/par
 
 <summary><b>¿Qué se comprueba en el proceso de verificación de cuentas del Centro de partners?</b></summary>
 
-Hay tres áreas de verificación, **Propiedad de correo** electrónico, **Empleo** y **Empresa.** Para obtener más información, vea [lo que se comprueba y cómo responder](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
+Hay tres áreas de verificación, **Propiedad del correo electrónico**, **Empleo** y **Empresa**. Para obtener más información, vea [lo que se comprueba y cómo responder](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
 Si eres el contacto principal, el administrador global o el administrador de la cuenta, puedes supervisar el estado de verificación y realizar un seguimiento del progreso en la página de perfil.
 
-Una vez completado el proceso de comprobación, el estado de la inscripción en la página de perfil cambia de *pendiente* a *autorizado.* A continuación, el contacto principal recibe un correo electrónico de Microsoft en unos días laborables.
+Una vez completado el proceso de comprobación, el estado de la inscripción en la página de perfil cambia de *pendiente* a *autorizado*. A continuación, el contacto principal recibe un correo electrónico de Microsoft en unos días laborables.
 
 <br>
 
@@ -121,12 +121,12 @@ Una vez completado el proceso de comprobación, el estado de la inscripción en 
 
 <summary><b>El estado de comprobación de mi cuenta no ha avanzado más allá de la propiedad del correo electrónico. ¿Cómo debo continuar?</b></summary>
 
-Durante el proceso **de comprobación de** propiedad de correo electrónico, se envía un correo electrónico de verificación al contacto principal. Compruebe en la bandeja de entrada de su contacto principal un correo electrónico de **maccount@microsoft.com** con la línea de asunto Acción **necesaria: Compruebe** su cuenta de correo electrónico con Microsoft y complete el proceso de verificación de correo electrónico. El correo electrónico de verificación se envía a la dirección que aparece en la configuración de la cuenta del Centro de partners.
+Durante el proceso **de comprobación de** propiedad de correo electrónico, se envía un correo electrónico de verificación al contacto principal. Compruebe en su bandeja de entrada de contacto principal un correo electrónico de **maccount@microsoft.com** con la línea de asunto Acción necesaria **: Compruebe** su cuenta de correo electrónico con Microsoft y complete el proceso de verificación de correo electrónico. El correo electrónico de verificación se envía a la dirección que aparece en la configuración de la cuenta del Centro de partners.
 
 Recuerde lo siguiente sobre el proceso de verificación de correo electrónico:
 
 * El vínculo de verificación de correo electrónico solo es válido durante siete días.
-* Para solicitar que se vuelva a enviar el correo electrónico, visite la página de perfil de socio y seleccione el vínculo Volver a enviar correo electrónico **de verificación.**
+* Para solicitar que se vuelva a enviar el correo electrónico, visite la página de perfil de socio y seleccione el vínculo **Volver a enviar correo electrónico de verificación** .
 * Para asegurarse de recibir el correo electrónico, la lista **segura microsoft.com** como un dominio seguro y comprobar las carpetas de correo no deseado.
 
 <br>
@@ -140,10 +140,10 @@ Recuerde lo siguiente sobre el proceso de verificación de correo electrónico:
 Pruebe a hacer lo siguiente:
 
 * Compruebe la carpeta de correo no deseado o correo no deseado.
-* Borra la caché del explorador, ve al panel de la cuenta del Centro de partners y selecciona **Reenviar correo electrónico de verificación.**
-* Intente obtener acceso al vínculo Volver a **enviar correo** electrónico de verificación desde un explorador diferente.
+* Borra la caché del explorador, ve al panel de la cuenta del Centro de partners y selecciona **Reenviar correo electrónico de verificación**.
+* Intente obtener acceso al **vínculo Volver a enviar correo** electrónico de verificación desde un explorador diferente.
 * Trabaje con su departamento de TI para asegurarse de que el servidor de correo electrónico no bloquee los correos electrónicos de verificación.
-* Ajuste el filtro de correo no deseado del servidor para permitir o lista segura todos los correos electrónicos de **maccount@microsoft.com**.
+* Ajuste el filtro de correo no deseado del servidor para permitir o enumerar de forma segura todos los correos electrónicos de **maccount@microsoft.com**.
 
 <br>
 
@@ -183,13 +183,13 @@ Los vales de soporte técnico se resuelven en una semana. Compruebe si hay actua
 
 <summary><b>He creado un vale de soporte técnico, pero no he recibido una actualización en siete días laborables. ¿Dónde puedo obtener ayuda?</b></summary>
 
-Envíe un correo electrónico <a href="mailto:teamsubm@microsoft.com">a teamsubm@microsoft.com</a> con los siguientes detalles:
+Envíe un correo <a href="mailto:teamsubm@microsoft.com">electrónico a teamsubm@microsoft.com</a> con los siguientes detalles:
 
-* **Línea de asunto:** Problema de cuenta del Centro de partners *para el nombre de la aplicación*.
-* **Cuerpo del correo** electrónico :
-    * Número de vale de soporte técnico.
-    * Su identificador de vendedor.
-    * Captura de pantalla del problema (si es posible).
+* **Línea de asunto**: Problema de cuenta del Centro de partners *para el nombre de la aplicación*.
+* **Cuerpo del correo** electrónico:
+  * Número de vale de soporte técnico.
+  * Su identificador de vendedor.
+  * Captura de pantalla del problema (si es posible).
 
 <br>
 
@@ -201,7 +201,7 @@ Envíe un correo electrónico <a href="mailto:teamsubm@microsoft.com">a teamsubm
 
 Los siguientes recursos también pueden ayudar:
 
-* [Microsoft 365 preguntas más frecuentes sobre el envío de aplicaciones.](/office/dev/store/appsource-submission-faq)
+* [Microsoft 365 preguntas más frecuentes sobre el envío de aplicaciones](/office/dev/store/appsource-submission-faq).
 * [Documentación del mercado comercial](/azure/marketplace/).
 
 <br>

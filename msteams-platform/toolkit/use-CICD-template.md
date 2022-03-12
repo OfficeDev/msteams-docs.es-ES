@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356178"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453414"
 ---
 # <a name="cicd-guide"></a>Guía de CI/CD
 
@@ -234,6 +234,7 @@ Puede seguir los scripts de bash de ejemplo predefinidos enumerados para crear y
 Los scripts se basan en una herramienta de línea de comandos teamsFx multiplataforma [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). Puede instalarlo con y `npm install -g @microsoft/teamsfx-cli` seguir la [documentación para](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) personalizar los scripts.
 
 > [!NOTE]
+>
 > * Para habilitar la `@microsoft/teamsfx-cli` ejecución en modo CI, activa `CI_ENABLED` `export CI_ENABLED=true`. En el modo CI, `@microsoft/teamsfx-cli` es fácil de usar para CI o CD.
 > * Para habilitar `@microsoft/teamsfx-cli` la ejecución en el modo no interactivo, establezca una configuración global con el comando: `teamsfx config set -g interactive false`. En el modo no interactivo, `@microsoft/teamsfx-cli` no solicita entradas.
 

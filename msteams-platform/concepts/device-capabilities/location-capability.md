@@ -6,35 +6,37 @@ keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: db86b2bf80bcc0f4f56c9998a573f0a7cbd1e9c3
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 40b0f3da9b6811a7172aa5207dd7680c70db7719
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888443"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452826"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación
 
 Puedes integrar las funcionalidades de ubicación del dispositivo nativo con la Teams aplicación.  
 
-Puedes usar Microsoft Teams [SDK de cliente de JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)que proporciona las herramientas necesarias para que la aplicación pueda tener acceso a las capacidades del dispositivo nativo del [usuario.](native-device-permissions.md) Usa las API de ubicación, como [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) y [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) para integrar las funcionalidades dentro de la aplicación. 
+Puedes usar Microsoft Teams [SDK de cliente de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), que proporciona las herramientas necesarias para que la aplicación obtenga acceso a las capacidades del dispositivo [nativo del usuario](native-device-permissions.md). Usa las API de ubicación, como [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) y [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) para integrar las funcionalidades dentro de la aplicación.
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Ventajas de integrar las capacidades de ubicación
 
-La principal ventaja de integrar las funcionalidades de ubicación en las aplicaciones de Teams es que permite Teams los desarrolladores de aplicaciones web en la plataforma aprovechar la funcionalidad de ubicación con Microsoft Teams SDK de cliente de JavaScript. 
+La principal ventaja de integrar las funcionalidades de ubicación en las aplicaciones de Teams es que permite Teams los desarrolladores de aplicaciones web en la plataforma aprovechar la funcionalidad de ubicación con Microsoft Teams SDK de cliente de JavaScript.
 
 Los ejemplos siguientes muestran cómo se usa la integración de las capacidades de ubicación en diferentes escenarios:
+
 * En una fábrica, el supervisor puede realizar un seguimiento de la asistencia de los trabajadores pidiéndoles que se tomen un selfi en las proximidades de la fábrica y la compartan a través de la aplicación especificada. Los datos de ubicación también se capturan y envían junto con la imagen.
 * Las capacidades de ubicación permiten al personal de mantenimiento de un proveedor de servicios compartir los datos de estado auténticos de las torres de telefonía móvil con la administración. La administración puede comparar cualquier discrepancia entre la información de ubicación capturada y los datos enviados por el personal de mantenimiento.
 
-Para integrar las funcionalidades de ubicación, debes actualizar el archivo de manifiesto de la aplicación y llamar a las API. Para una integración eficaz, debe tener una buena comprensión de los [fragmentos](#code-snippets) de código para llamar a las API de ubicación. Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la Teams aplicación.
+Para integrar las funcionalidades de ubicación, debes actualizar el archivo de manifiesto de la aplicación y llamar a las API. Para una integración eficaz, debe tener una buena comprensión de los [fragmentos](#code-snippets) de código para llamar a las API de ubicación.
+Es importante familiarizarse con los errores de respuesta [de la API](#error-handling) para controlar los errores de la Teams aplicación.
 
-> [!NOTE] 
+> [!NOTE]
 > Actualmente, Microsoft Teams compatibilidad con las funcionalidades de ubicación solo está disponible para clientes móviles.
 
 ## <a name="update-manifest"></a>Manifiesto de actualización
 
-Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-schema.md#devicepermissions) la aplicación agregando la propiedad y `devicePermissions` especificando `geolocation` . Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación. La actualización del manifiesto de la aplicación es la siguiente:
+Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-schema.md#devicepermissions) la aplicación agregando la `devicePermissions` propiedad y especificando `geolocation`. Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación. La actualización del manifiesto de la aplicación es la siguiente:
 
 ``` json
 "devicePermissions": [
@@ -43,8 +45,9 @@ Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-sc
 ```
 
 > [!NOTE]
-> * El **símbolo del sistema Solicitar permisos** se muestra automáticamente cuando se inicia una API de Teams relevante. Para obtener más información, consulta [solicitar permisos de dispositivo](native-device-permissions.md).    
-> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, vea [permisos de dispositivo del explorador](browser-device-permissions.md).   
+>
+> * El **símbolo del sistema Solicitar permisos** se muestra automáticamente cuando se inicia una API de Teams relevante. Para obtener más información, consulta [Solicitar permisos de dispositivo.](native-device-permissions.md)
+> * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, consulta [Permisos del dispositivo del explorador](browser-device-permissions.md).
 
 ## <a name="location-apis"></a>API de ubicación
 
@@ -56,7 +59,7 @@ Debes usar el siguiente conjunto de API para habilitar las capacidades de ubicac
 |[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Muestra la ubicación en el mapa. |
 
 > [!NOTE]
-> La `getLocation()` API incluye las siguientes [configuraciones de entrada](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)y `allowChooseLocation` `showMap` . <br/> Si el valor de `allowChooseLocation` es *true*, los usuarios pueden elegir cualquier ubicación de su elección.<br/>  Si el valor es *false*, los usuarios no pueden cambiar su ubicación actual.<br/> Si el valor de `showMap` es *false*, se captura la ubicación actual sin mostrar el mapa. `showMap` se omite si `allowChooseLocation` se establece en *true*.
+> La `getLocation()` API incluye las siguientes [configuraciones de entrada](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true) y `allowChooseLocation` `showMap`. <br/> Si el valor de es `allowChooseLocation` *true*, los usuarios pueden elegir cualquier ubicación de su elección.<br/>  Si el valor es *false*, los usuarios no pueden cambiar su ubicación actual.<br/> Si el valor de `showMap` es *false*, se captura la ubicación actual sin mostrar el mapa. `showMap` se omite si `allowChooseLocation` se establece en *true*.
 
 En la siguiente imagen se muestra la experiencia de la aplicación web de las funcionalidades de ubicación:
 
@@ -92,7 +95,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="error-handling"></a>Control de errores
 
-Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores: 
+Debes asegurarte de controlar estos errores correctamente en tu Teams aplicación. En la tabla siguiente se enumeran los códigos de error y las condiciones en las que se generan los errores:
 
 |Código de error |  Nombre del error     | Condición|
 | --------- | --------------- | -------- |
@@ -105,7 +108,7 @@ Debes asegurarte de controlar estos errores correctamente en tu Teams aplicació
 
 ### <a name="code-sample"></a>Ejemplo de código
 
-|Ejemplo de nombre | Descripción | C# | Node.js | 
+|Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Ubicación actual de la aplicación de check-in | Los usuarios pueden comprobar la ubicación actual y ver todas las check-ins de ubicación anteriores.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
@@ -113,4 +116,4 @@ Debes asegurarte de controlar estos errores correctamente en tu Teams aplicació
 
 * [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)
-* [Integrar el selector de personas en Teams](people-picker-capability.md)
+* [Integrar selector de personas en Teams](people-picker-capability.md)

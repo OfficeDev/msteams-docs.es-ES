@@ -1,17 +1,17 @@
 ---
 title: Atributo de cookies SameSite
 author: laujan
-description: Obtenga información sobre tipos de cookies, incluidas las cookies samesite, sus atributos, sus implicaciones en Teams pestañas, módulos de tareas y extensiones de mensajería, y su autenticación en Teams
+description: Obtenga información sobre tipos de cookies, incluidas las cookies samesite, sus atributos, sus implicaciones en las pestañas Teams, módulos de tareas y extensiones de mensajería, y su autenticación en Teams
 keywords: atributos cookie samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 3c587056821eff3c24358a1dfbf6ecc63351a3c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518481"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452588"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite
 
@@ -40,10 +40,10 @@ Puede optar por no agregar el atributo cookie `SetCookie` SameSite al encabezado
 ## <a name="samesite-cookie-attribute-2020-release"></a>Atributo cookie SameSite: versión 2020
 
 Chrome 80, publicado en febrero de 2020, introduce nuevos valores de cookies e impone directivas de cookies de forma predeterminada. Se pasan tres valores al atributo SameSite actualizado: **Strict**, **Lax** o **None**. Si no se especifica, el atributo cookies SameSite toma el valor de `SameSite=Lax` forma predeterminada.
- 
+
 Los atributos de cookie SameSite son los siguientes:
 
-|Configuración | Aplicación | Valor |Especificación de atributos |
+|Setting | Aplicación | Valor |Especificación de atributos |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Las cookies se envían automáticamente solo en un **contexto de primera** parte y con solicitudes HTTP GET. Las cookies de SameSite se retienen en solicitudes de subsitio entre sitios, como llamadas para cargar imágenes o iframes. Se envían cuando un usuario navega a la dirección URL desde un sitio externo, por ejemplo, siguiendo un vínculo.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estricto** |El explorador solo envía cookies para solicitudes de contexto de primera parte. Se trata de solicitudes procedentes del sitio que establecen la cookie. Si la solicitud se originó desde una dirección URL diferente a la de la ubicación actual, no se enviará ninguna de las cookies etiquetadas con `Strict` el atributo.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
@@ -51,7 +51,7 @@ Los atributos de cookie SameSite son los siguientes:
 
 ## <a name="teams-implications-and-adjustments"></a>Teams implicaciones y ajustes
 
-1. Habilita la configuración de SameSite relevante para las cookies y valida que tus aplicaciones y extensiones siguen funcionando en Teams.
+1. Habilite la configuración de SameSite relevante para las cookies y valide que sus aplicaciones y extensiones siguen funcionando en Teams.
 1. Si las aplicaciones o las extensiones fallan, realiza las correcciones necesarias antes de la versión de Chrome 80.
 1. Los partners internos de Microsoft pueden unirse al siguiente equipo para obtener más información o ayuda con este problema: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
@@ -60,7 +60,7 @@ Los atributos de cookie SameSite son los siguientes:
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Pestañas, módulos de tareas y extensiones de mensajería
 
-* Teams pestañas `<iframes>` para insertar contenido que se ve en un contexto de nivel superior o de primera parte.
+* Teams pestañas para `<iframes>` insertar contenido que se ve en un contexto de nivel superior o de primera parte.
 * Los módulos de tareas le permiten crear experiencias emergentes modales en su aplicación de Teams. De forma similar a una pestaña, se abre una ventana modal dentro de la página actual.
 * Las extensiones de mensajería permiten insertar contenido enriquecido en un mensaje de chat desde recursos externos.
 
@@ -81,6 +81,7 @@ Según las restricciones de SameSite actualizadas, un explorador no agrega una c
 Android WebView es un componente del sistema Chrome que permite a las aplicaciones Android mostrar el contenido web. Aunque las nuevas restricciones son predeterminadas, a partir de Chrome 80, no se aplican inmediatamente en WebViews. Se aplicarán en el futuro. Para prepararse, Android permite que las aplicaciones nativas establezcan cookies directamente a través de la [API cookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
+>
 > * Debe declarar las cookies de primera persona como `SameSite=Lax` o `SameSite=Strict`, según corresponda.
 > * Debe declarar cookies de terceros como `SameSite=None; Secure`.
 

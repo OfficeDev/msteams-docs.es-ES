@@ -6,12 +6,12 @@ ms.author: yanjiang
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d232ac1d0ac96d46aa5f265f3fedd7b65afb3a86
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c705e9fe724a21d5159092f813157cee78d6dbe9
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435764"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453596"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publicar aplicaciones de Teams con el kit de herramientas de Teams
 
@@ -22,7 +22,7 @@ Después de crear la aplicación, puedes distribuir la aplicación a diferentes 
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
 
 > [!TIP]
-> Asegúrate de tener Teams proyecto de aplicación en el código VS.
+> Asegúrate de tener Teams proyecto de aplicación en código VS.
 
 ## <a name="publish-to-individual-scope-or-sideload-permission"></a>Publicar en un ámbito individual o permiso de instalación local
 
@@ -32,9 +32,9 @@ Los usuarios pueden agregar una aplicación personalizada a Teams cargando un pa
 * Crea una aplicación para ti, como automatizar un flujo de trabajo.
 * Crea una aplicación para un pequeño conjunto de usuarios, como el grupo de trabajo.
 
-Puedes crear una aplicación solo para uso interno y compartirla con tu equipo sin enviarla al catálogo de aplicaciones Teams en la Teams de aplicaciones.
+Puedes crear una aplicación solo para uso interno y compartirla con tu equipo sin enviarla al catálogo de aplicaciones de Teams en la Teams de aplicaciones.
 
-**Para crear la aplicación para crear *.zip de paquete de la aplicación**
+**Para crear la aplicación para crear *.zip archivo de paquete de la aplicación**
 
 Puedes crear el paquete de la aplicación seleccionando `Zip Teams metadata package` **DEPLOYMENT** en Treeview de Teams Toolkit. Debe ejecutar primero `Provision in the cloud` . El paquete de aplicación generado se ubicará en `{your project folder}/build/appPackage/appPackage.{env}.zip`.
 
@@ -50,9 +50,9 @@ Realice los siguientes pasos para cargar el paquete de la aplicación:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="cargar":::
 
-## <a name="publish-to-your-organization"></a>Publicar en la organización 
+## <a name="publish-to-your-organization"></a>Publicar en la organización
 
-Cuando la aplicación esté lista para su uso en producción, puedes enviar la aplicación mediante la API de envío de aplicaciones de Teams, llamada Graph desde una API, un entorno de desarrollo integrado (IDE) como Microsoft Visual Studio Code instalado con el kit de herramientas Teams. Puede seleccionar Publicar a **Teams** **desde DEPLOYMENT** en TreeView de Teams Toolkit o desencadenar Teams **: Publicar** en Teams desde la paleta de comandos. A **continuación, seleccione Instalar para su organización**:
+Cuando la aplicación esté lista para su uso en producción, puedes enviar la aplicación mediante la API de envío de aplicaciones de Teams, llamada desde la API de Graph, un entorno de desarrollo integrado (IDE), como Microsoft Visual Studio Code instalado con el kit de herramientas Teams. Puede seleccionar Publicar en **Teams** **desde DEPLOYMENT** en TreeView de Teams Toolkit o desencadenar Teams **: Publicar** en Teams desde la paleta de comandos. A **continuación, seleccione Instalar para su organización**:
 
 ![Instalar para su organización](./images/installforyourorganization.png)
 
@@ -60,7 +60,7 @@ La aplicación está disponible en el  Centro de administración Microsoft Teams
 
 Como administrador, manage **apps** in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all Teams apps for your organization. Puedes ver el estado del nivel de organización y las propiedades de las aplicaciones, aprobar o cargar nuevas aplicaciones personalizadas en la tienda de aplicaciones de tu organización, bloquear o permitir aplicaciones en el nivel de la organización, agregar aplicaciones a equipos, comprar servicios para aplicaciones de terceros, ver los permisos solicitados por las aplicaciones, conceder el consentimiento de administrador a las aplicaciones y administrar la configuración de aplicaciones de toda la [organización.](https://admin.teams.microsoft.com/policies/manage-apps)
 
-Teams kit de herramientas para Visual Studio Code integrado en la API de envío de aplicaciones de Teams y permite automatizar el proceso de envío a aprobación para aplicaciones personalizadas en Teams.
+Teams kit de herramientas para Visual Studio Code integrado en la API de envío de aplicaciones de Teams y permite automatizar el proceso de envío a aprobación de aplicaciones personalizadas en Teams.
 
 > [!NOTE]
 > La aplicación aún no se publica en la tienda de aplicaciones de la organización. El paso envía la aplicación al Centro de administración de Microsoft Teams donde puedes aprobarla para su publicación en la tienda de aplicaciones de tu organización.
@@ -84,7 +84,7 @@ Después de publicar la aplicación, el estado de publicación cambia a publicad
 
 ## <a name="publish-to-microsoft-store"></a>Publicar en Microsoft Store
 
-Puedes distribuir la aplicación directamente a la tienda dentro de Microsoft Teams y llegar a millones de usuarios de todo el mundo. Si la aplicación también se incluye en la tienda, puedes llegar al instante a los clientes potenciales. Las aplicaciones publicadas en la tienda Teams también listan automáticamente en Microsoft AppSource, que es el mercado oficial para Microsoft 365 aplicaciones y soluciones.
+Puede distribuir la aplicación directamente en la tienda dentro de Microsoft Teams y llegar a millones de usuarios en todo el mundo. Si la aplicación también aparece en la tienda, podría llegar instantáneamente a sus clientes potenciales. Las aplicaciones publicadas en la tienda Teams también listan automáticamente en Microsoft AppSource, que es el mercado oficial para Microsoft 365 aplicaciones y soluciones.
 
 Para obtener más información, [vea publish to microsoft Teams store]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
 

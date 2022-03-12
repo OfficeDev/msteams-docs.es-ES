@@ -4,12 +4,12 @@ description: Obtenga información sobre las vistas específicas del usuario medi
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 472620da2bcd15f34b111afe170eb74e31e64492
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356367"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453113"
 ---
 # <a name="user-specific-views"></a>Vistas específicas de usuario
 
@@ -64,7 +64,7 @@ El siguiente código proporciona un ejemplo de tarjetas adaptables:
 }
 ```
 
-**Para enviar tarjetas adaptables, actualizar vistas específicas del usuario e invocar solicitudes al bot**
+Para enviar tarjetas adaptables, actualice las vistas específicas del usuario e invoque solicitudes al bot:
 
 1. Cuando Megan crea un nuevo incidente, el bot envía la tarjeta adaptable o la tarjeta común con detalles de incidentes en la Teams conversación.
 2. Ahora, esta tarjeta se actualiza automáticamente a la vista específica del usuario para Megan y Alex. Los MRIs `userIds` `refresh` de usuario de Alex y Megan se agregan en propiedad de la propiedad del JSON de tarjeta adaptable. La tarjeta sigue siendo la misma para otros usuarios de la conversación.
@@ -216,7 +216,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 Directrices de diseño de tarjetas a tener en cuenta al diseñar vistas específicas del usuario:
 

@@ -5,12 +5,12 @@ keywords: creación de menús de bots de teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 14100c9032f0adf964975abbe436c84194475a99
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f339f23298c14607eb1d9ca12daa50bcc98775b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157686"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452903"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>Agregar un menú bot en Microsoft Teams
 
@@ -23,12 +23,13 @@ Para ayudar a la detección y ayudar a educar a los usuarios sobre la funcionali
 Cuando un usuario selecciona un elemento de menú, la cadena de comandos se inserta en el cuadro de texto para ayudar al usuario a completar el mensaje del bot.
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>Compatibilidad con menú bot en Teams móvil
-> [!NOTE] 
+
+> [!NOTE]
 > Los menús bot no se muestran en dispositivos móviles.
 
 ## <a name="app-manifest"></a>Manifiesto de la aplicación
 
-Para crear un menú bot, agrega un nuevo objeto al manifiesto [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) de la aplicación en la sección bot. Puede declarar menús individuales con comandos independientes para cada ámbito que el bot admite ( , o ) Cada menú admite hasta `personal` `groupChat` `team` 10 comandos.
+Para crear un menú bot, agrega un nuevo objeto [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) al manifiesto de la aplicación en la sección bot. Puede declarar menús individuales con comandos independientes para cada ámbito que el bot admite (`personal`, `groupChat`o `team`) Cada menú admite hasta 10 comandos.
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Extracto de manifiesto: menú único para ambos ámbitos
 

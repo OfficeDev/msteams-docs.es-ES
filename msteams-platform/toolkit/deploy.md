@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0eeda4842ad3f0443d46b5075b1520b0042130ec
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768381"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452553"
 ---
 # <a name="deploy-to-the-cloud"></a>Implementar en la nube
 
@@ -26,21 +26,23 @@ Teams Toolkit ayuda a implementar o cargar el código front-end y back-end de la
 * [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
 
 > [!NOTE]
-> * Asegúrate de que tienes Teams proyecto de aplicación abierto en código VS.
+>
+> * Asegúrate de que tienes Teams proyecto de aplicación abierto en el código VS.
 > * Antes de implementar código de proyecto en la nube, [aprovisione los recursos en la nube](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Implementar Teams aplicaciones con Teams Toolkit
 
 Las guías de introducción le ayudan a implementar con Teams Toolkit. Puedes usar lo siguiente para implementar la Teams aplicación:
+
 * [Implementar la aplicación en Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Implementar la aplicación en SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
 ## <a name="details-on-teams-app-workload"></a>Detalles sobre la carga Teams de aplicaciones
 
-| Teams de la aplicación | Código fuente | Artefacto de compilación| Recurso de destino |
+| Teams de aplicaciones | Código fuente | Artefacto de compilación| Recurso de destino |
 |-------------|----------|---------------|---------------|
 |Pestañas con React </br> La carga de trabajo de front-end| `yourProjectFolder/tabs`| `tabs/build` |Almacenamiento de Azure |
-|Pestañas con SharePoint </br> La carga de trabajo de front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint de aplicaciones |
+|Pestañas con SharePoint </br> La carga de trabajo de front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint catálogo de aplicaciones |
 |API en funciones de Azure </br> La carga de trabajo back-end | `yourProjectFolder/api`| No aplicable |Funciones de Azure |
 |Bots y extensiones de mensajería </br> La carga de trabajo back-end | `yourProjectFolder/bot` | No aplicable | Servicio de aplicaciones de Azure |
 
