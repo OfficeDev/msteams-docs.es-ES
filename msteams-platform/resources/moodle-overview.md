@@ -1,62 +1,58 @@
 ---
-title: Sistema de administración de aprendizaje de Moodle
-description: Información general sobre la integración de LMS de Moodle con Teams
+title: Sistema de administración del aprendizaje Moodle
+description: Visión general de la integración de Moodle LMS con Teams
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-author: KirtiPereira
-keywords: vínculos profundos de mConnect de lms de moodle
-ms.openlocfilehash: beaac8d139b164b26f791b46a089a44cd8a4681d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
-ms.translationtype: MT
+keywords: Vínculos profundos de moodle LMS mConnect
+ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888457"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453127"
 ---
-# <a name="moodle-learning-management-system"></a>Sistema de administración de aprendizaje de Moodle
+# <a name="moodle-learning-management-system"></a>Sistema de administración del aprendizaje Moodle
 
-Moodle es el sistema de administración de aprendizaje de código abierto más grande del mundo. 
+ Moodle es uno de los mayores sistemas de administración del aprendizaje de código abierto (LMS), que proporciona una experiencia única de aprendizaje a distancia con servicios de privacidad seguros. Moodle LMS se integra con Microsoft Teams para proporcionar los siguientes servicios:
 
-Esta aplicación ayuda a los formadores a crear y organizar sus cursos a través de características valiosas, que incluyen:
-* Herramienta de cuestionarios sólida 
-* Discusiones con calificaciones
-* Varios tipos de asignación para que los alumnos interactúen con el contenido  
- 
-Moodle se integra con Microsoft Teams. Teams es el centro de colaboración en tiempo real, trabajo en equipo y productividad. Con una integración perfecta con Office 365, cientos de aplicaciones, chat y capacidades de reunión en directo de hasta 300 participantes. Teams ofrece a los profesores y alumnos la capacidad de trabajar juntos de forma más eficaz, independientemente de dónde estén. 
- 
-Microsoft 365 Los complementos de Moodle complementan a Moodle proporcionando una experiencia completa para profesores y alumnos. Con los Microsoft 365 de Moodle, los administradores del sitio pueden sincronizar usuarios con:
+* Llamadas de audio o vídeo
+* Chatear con alumnos
+* Administración de cursos y actividades
+* Distintivos y recompensas
+* Información analítica
 
-* Office 365 y Moodle
-* Automatizar la coincidencia de usuarios
-* Sincronizar cursos con repositorios Microsoft Teams archivos
-* Conectar OneNote tareas
-* Insertar Office documentos
- 
-Microsoft Teams aplicaciones como mConnect de Skooler y Microsoft 365 Complementos de Moodle integran Moodle en Teams.
+<!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
+This content is modified as per the requirement.-->
 
-Los profesores y los alumnos pueden aprovechar las características únicas de Moodle en la comunicación y colaboración en tiempo real.
+ <!--The following image demonstrates Moodle LMS:
+  Query on this image about what is meant by section
 
-## <a name="mconnect-app-by-skooler"></a>aplicación mConnect de Skooler
+:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::-->
 
-La aplicación mConnect de Skooler te permite ofrecer aprendizajes virtuales a través Teams con facilidad.
+## <a name="moodle-lms-accessibility"></a>Accesibilidad de LmS de Moodle
 
-### <a name="why-mconnect-and-teams"></a>Por qué mConnect y Teams
+Moodle LMS ayuda a los usuarios a acceder a las siguientes aplicaciones:
 
-Vea el siguiente vídeo para comprender cómo mConnect y Teams funcionan mejor juntos:
+* **Complementos de Microsoft 365**: Los complementos de Microsoft 365 están diseñados para garantizar la integración entre los sitios de Moodle y Microsoft Teams. Estos complementos se pueden utilizar de forma independiente o en asociación para lograr distintos requisitos del usuario. Para obtener más información, consulte [Complementos Microsoft 365](m365-plugins/m365-plugins-overview.md).
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
+* **Aplicaciones de socios para Moodle**: todo el conjunto de aplicaciones de socios para Moodle y Teams está disponible en Microsoft Store. Para obtener más información, consulte [Aplicaciones de socios para Moodle](partner-apps-for-moodle.md).
 
-Desde dentro de mConnect, los participantes del curso acceden a la experiencia completa del curso de Moodle dentro de la colaboración y comunicación en tiempo real proporcionada por Microsoft Teams.
+## <a name="user-requirement-scenarios"></a>Escenarios de necesidades de los usuarios
 
-### <a name="get-started-with-mconnect-and-teams"></a>Introducción a mConnect y Teams
+Los siguientes escenarios describen el potencial de aprendizaje acelerado combinando los servicios en la nube de Microsoft con los cursos de Moodle:
 
-Vea el siguiente vídeo para comprender cómo empezar a usar mConnect y Teams:
+* **Facilitar las reuniones remotas híbridas**: Las reuniones de Teams y los servicios de extensibilidad permiten a los profesores hacer presentaciones en persona y a distancia con los estudiantes. Para los estudiantes es obligatorio tener acceso a vistas compartidas, aplicaciones y encuestas para reuniones remotas. Las tareas de seguimiento prevén la transcripción en varios idiomas y la grabación de cursos en audio o vídeo. Teams y Moodle trabajan juntos para compartir deberes, actividades y tareas.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
+* **Personalice los paneles de reuniones**: Cree experiencias únicas de aprendizaje colaborativo utilizando los puntos de conexión de la API de Teams Graph. Para otros planes o proyectos adicionales, los usuarios pueden entrevistar a todos los nuevos reclutas y clasificar los resultados mediante encuestas personalizadas. Existe la posibilidad de compartir los cuestionarios directamente en Teams mientras se envían las actualizaciones al sitio Moodle de forma asíncrona.
 
-Para obtener más información, [vea mConnect by Skooler](https://skooler.com/mconnect/how-to/).
+* **Facilidad de automatización**: para establecer facilidades automatizadas para las instituciones cuando un nuevo estudiante se une, el usuario puede agregar un curso de Moodle, enviar una tarjeta de adaptación al estudiante con vínculos relevantes y sugerir materiales de lectura clave del curso. El conector personalizado de Teams para Moodle ayuda a crear un evento del calendario de Moodle cada vez que se programa una reunión del curso.
 
-## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Complementos de Moodle
+* **Compilar aplicaciones para desarrolladores ciudadanos**: desarrollar nuevas aplicaciones personalizadas para la escuela, que sean fáciles de crear y ayuden a optimizar el aprendizaje. La aplicación también ofrece actividades transaccionales fáciles de usar para estudiantes y profesores.
 
-Los complementos de Moodle para Teams facilita la programación, entrega y colaboración en el contenido del curso. Instale los complementos que integren perfectamente el sistema de administración de aprendizaje de Moodle en Teams. Para obtener más información, vea [Install Moodle LMS](moodleInstructions.md).
+<!-- For more information, see [Microsoft education](https://www.microsoft.com/education).-->
+## <a name="see-also"></a>Vea también
 
+* [Complementos de Microsoft 365](m365-plugins/m365-plugins-overview.md)
+* [Aplicaciones de socios para Moodle](partner-apps-for-moodle.md)
+* [Preguntas más frecuentes sobre Moodle](faqs.md)
