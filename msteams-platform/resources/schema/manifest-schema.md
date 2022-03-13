@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399103"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453771"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -825,13 +825,17 @@ Especifique y consolide la información relacionada con la autorización de la a
 |Nombre| Tipo|Tamaño máximo|Necesario |Descripción|
 |---|---|---|---|---|
 |`type`|string||✔| Tipo del permiso específico del recurso. Opciones: `Application` y `Delegated`.|
-|`name`|string|128 caracteres|✔|Nombre del permiso específico del recurso. <br> Para obtener más información, vea [Aplicación de permisos](../../graph-api/rsc/resource-specific-consent.md) y [permisos delegados](#delegated-permissions).|
+|`name`|string|128 caracteres|✔|Nombre del permiso específico del recurso. Para obtener más información, consulte [permisos de aplicación específicos de recursos](#resource-specific-application-permissions) y [permisos delegados específicos de recursos](#resource-specific-delegated-permissions)|
 
-### <a name="delegated-permissions"></a>Permisos delegados
+#### <a name="resource-specific-application-permissions"></a>Permisos de aplicación específicos del recurso
+
+Los permisos de aplicación permiten a la aplicación acceder a los datos sin que un usuario haya iniciado sesión. Para obtener información sobre los permisos de aplicación, consulte [consentimiento específico de recursos para MS Graph y MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+
+#### <a name="resource-specific-delegated-permissions"></a>Permisos delegados específicos de recursos
 
 Los permisos delegados permiten a la aplicación acceder a los datos en nombre del usuario que ha iniciado sesión.
 
-* **Permisos específicos de recursos para equipos**
+* **Permisos delegados específicos de recursos para equipos**
 
     |**Nombre**|**Descripción**|
     |---|---|
@@ -839,7 +843,7 @@ Los permisos delegados permiten a la aplicación acceder a los datos en nombre d
     |`InAppPurchase.Allow.Group`| Permite que la aplicación muestre ofertas de Marketplace a los usuarios de este equipo y complete sus compras dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
     |`ChannelMeetingStage.Write.Group`| Permite que la aplicación muestre contenido en la escena de reunión en reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
 
-* **Permisos específicos del recurso para chats o reuniones**
+* **Permisos delegados específicos de recursos para chats o reuniones**
 
     |**Nombre**|**Descripción**|
     |---|---|
@@ -848,7 +852,7 @@ Los permisos delegados permiten a la aplicación acceder a los datos en nombre d
     |`OnlineMeetingParticipant.Read.Chat`|Permite que la aplicación lea la información de los participantes, incluidos el nombre, rol, identificador, horas de unión y salida de las reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permite que la aplicación alterne el audio entrante para los participantes en las reuniones asociadas a este chat, en nombre del usuario que ha iniciado sesión.|
 
-* **Permisos específicos del recurso para los usuarios**
+* **Permisos delegados específicos de recursos para usuarios**
 
     |**Nombre**|**Descripción**|
     |---|---|
