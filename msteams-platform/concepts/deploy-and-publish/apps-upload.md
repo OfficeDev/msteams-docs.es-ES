@@ -5,19 +5,19 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: e3a22378819d8fb1e865e2122b7977bcbabbbb74
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356283"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453334"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Cargar la aplicación en Microsoft Teams
 
-Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publicarlas en su organización o en la tienda de Teams. Esto tiene sentido en los siguientes escenarios:
+Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publicarlas en su organización o en la tienda de Teams en los siguientes casos:
 
 * Quiere probar y depurar una aplicación de manera local usted mismo o con otros desarrolladores.
-* Ha creado una aplicación solo para usted. Por ejemplo, para automatizar un flujo de trabajo.
+* Ha creado una aplicación para automatizar un flujo de trabajo.
 * Ha creado una aplicación para un pequeño conjunto de usuarios, como el grupo de trabajo.
 
 > [!IMPORTANT]
@@ -25,29 +25,32 @@ Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publ
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Cree el [paquete de la aplicación](~/concepts/build-and-test/apps-package.md) y [valídelo](https://dev.teams.microsoft.com/appvalidation.html) para encontrar errores.
+* Asegúrese de crear el [paquete de la aplicación](~/concepts/build-and-test/apps-package.md) y [validarlo](https://dev.teams.microsoft.com/appvalidation.html) para encontrar errores.
 * [Habilite la carga de aplicaciones personalizadas](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) en Teams.
-* Asegúrese de que la aplicación se está ejecutando y que sea accesible a través de HTTPs.
+* Asegúrese de que la aplicación se está ejecutando y es accesible mediante HTTPs.
 
 ## <a name="upload-your-app"></a>Cargar la aplicación
 
 Puede transferir localmente la aplicación a un equipo, chat, reunión o para su uso personal en función de cómo haya configurado el ámbito de la aplicación.
 
 1. Inicie sesión en el cliente de Teams con su [cuenta de desarrollo de Microsoft 365](~/build-your-first-app/build-and-run.md#prerequisites).
-1. Seleccione **Aplicaciones** y elija **Cargar una aplicación personalizada**.
-1. Seleccione el archivo .zip del paquete de la aplicación. Se muestra un cuadro de diálogo de instalación.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Recorte de pantalla que muestra un ejemplo de un cuadro de diálogo de instalación de aplicación de Teams.":::
-1. Agregue la aplicación a Teams.
+1. Seleccione **Aplicaciones** y **Administrar sus aplicaciones**.
+1. Seleccione **Cargar una aplicación personalizada**.
+1. Seleccione el archivo .zip de su paquete de aplicaciones y aparecerá la siguiente pantalla:
 
-> [!NOTE]
-> El método `onInstallationUpdateActivityAsync()` se usa para obtener la configuración regional de Microsoft Teams al agregar el bot a Microsoft Teams.
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Recorte de pantalla que muestra un ejemplo de un cuadro de diálogo de instalación de aplicación de Teams.":::
 
-## <a name="troubleshoot-upload-issues"></a>Solucionar problemas de carga
+1. Seleccione **Agregar** para agregar la aplicación a Microsoft Teams.
 
-Si la aplicación no se puede transferir localmente, haga lo siguiente hasta que se resuelva el problema:
+    > [!NOTE]
+    > El método `onInstallationUpdateActivityAsync()` se usa para obtener la configuración regional de Microsoft Teams al agregar el bot a Microsoft Teams.
 
-1. Vuelva a las instrucciones para [crear el paquete de la aplicación](../../concepts/build-and-test/apps-package.md).
-1. Vuelva a [validar el paquete de la aplicación](https://dev.teams.microsoft.com/appvalidation.html).
+## <a name="troubleshooting"></a>Solución de problemas
+
+Si la aplicación no se puede transferir localmente o hay problemas para cargarla, compruebe las siguientes opciones:
+
+1. Asegúrese de haber seguido todas las instrucciones para [crear el paquete de la aplicación](../../concepts/build-and-test/apps-package.md).
+1. [Validar el paquete de la aplicación](https://dev.teams.microsoft.com/appvalidation.html).
 1. Asegúrese de que el manifiesto de la aplicación coincide con el último [esquema](../../resources/schema/manifest-schema.md).
 
 ## <a name="access-your-app"></a>Acceder a la aplicación
