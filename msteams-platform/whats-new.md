@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398816"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453442"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
+|10/03/2022| Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
 |24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar extensión de mensajería basada en acciones](sbs-meetingextension-action.yml) |
@@ -51,6 +52,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|10/03/2022 | Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|  
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
 | 24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar extensión de mensajería basada en acciones](sbs-meetingextension-action.yml) |
