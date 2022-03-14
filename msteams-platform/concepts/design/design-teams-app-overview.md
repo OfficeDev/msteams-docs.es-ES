@@ -5,12 +5,12 @@ description: Obtén información sobre cómo diseñar Microsoft Teams aplicacion
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 7a7a6d380341c94f4ed2eef92bf4407ac1a7681f
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948568"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466531"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la Microsoft Teams aplicación
 
@@ -57,7 +57,7 @@ Las personas de todos los orígenes, conjuntos de aptitudes y disciplinas pueden
 
 ### <a name="light"></a>Leve
 
-La aplicación se centra en escenarios principales que se combinan con Teams flujos de trabajo.
+La aplicación se centra en escenarios principales que se combinan Teams flujos de trabajo.
 
    :::column-end:::
 :::row-end:::
@@ -115,7 +115,7 @@ El texto, los iconos y las imágenes hacen que se aclare para qué está la apli
 
 ## <a name="teams-design-system"></a>Teams de diseño
 
-Obtén información [sobre los aspectos Teams diseño de la aplicación,](design-teams-app-fundamentals.md)incluido el diseño, las esquemas de color y mucho más.
+Obtén información [sobre los aspectos Teams diseño de aplicaciones](design-teams-app-fundamentals.md), incluido el diseño, las esquemas de color y mucho más.
 
 ## <a name="app-capabilities"></a>Capacidades de la aplicación
 
@@ -129,17 +129,17 @@ Comprender cómo las personas agregan, usan y administran Teams aplicaciones par
 
 ## <a name="ui-templates"></a>Plantillas de la interfaz de usuario
 
-Cree rápidamente diseños complejos y de alta fidelidad con plantillas para Teams [casos de uso y flujos de trabajo](design-teams-app-ui-templates.md)comunes.
+Cree rápidamente diseños complejos y de alta fidelidad con plantillas para Teams [casos de uso y flujos de trabajo](design-teams-app-ui-templates.md) comunes.
 
 ## <a name="basic-ui-components"></a>Componentes básicos de la interfaz de usuario
 
-En función Fluent interfaz de usuario, estos son los elementos principales que puedes usar para crear experiencias Teams desde cero. [](design-teams-app-basic-ui-components.md)
+En función Fluent interfaz de usuario, estos son los elementos [](design-teams-app-basic-ui-components.md) principales que puedes usar para crear experiencias Teams desde cero.
 
 ## <a name="tools-and-samples"></a>Herramientas y ejemplos
 
 Las siguientes herramientas pueden ayudar a los diseñadores y desarrolladores a empezar:
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 Diseña una aplicación Teams con componentes de interfaz de usuario, plantillas y ejemplos que puedas arrastrar, colocar y modificar según sea necesario. El kit de interfaz de usuario también incluye información completa sobre cómo deben verse y comportarse las aplicaciones en diferentes Teams escenarios.
 
@@ -183,9 +183,9 @@ Diseñar tarjetas adaptables en nuestra herramienta basada en web.
 > [!div class="nextstepaction"]
 > [Pruebe el diseñador de Tarjetas adaptables](https://adaptivecards.io/designer/)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-* [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Habilitar y configurar las aplicaciones para Teams reuniones](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Diseño de un bot para Microsoft Teams](~/bots/design/bots.md)
 * [Crear un asistente virtual](~/samples/virtual-assistant.md)
 * [Diseño de módulos de tareas para la aplicación de Microsoft Teams](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

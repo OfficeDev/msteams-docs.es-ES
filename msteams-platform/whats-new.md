@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5ac1def2d45938d8bc162b4d6ed4fddb9f547e86
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453442"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466538"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -38,8 +38,6 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 |02/08/2022| Introducción a una guía paso a paso para crear un bot de llamadas y reuniones| Crear bots > Bots de llamadas y reuniones > Bot de registro de llamadas y reuniones > [Guía paso a paso para crear bots de llamadas y reuniones](sbs-calling-and-meeting.yml) |
 |07/02/2022| Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
 |03/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
-|03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas (versión preliminar para desarrolladores)| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Flujo de compra desde la aplicación para la monetización de aplicaciones (versión preliminar para desarrolladores) | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
 ## <a name="ga-features"></a>Características de GA
 
@@ -156,7 +154,7 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 |10/11/2020|Pautas de diseño de los bots de Teams |[Directrices de diseño de bots](bots/design/bots.md)|
 |30/09/2020|Ahora se puede enviar y recibir archivos a los bots en los dispositivos móviles |[Enviar y recibir archivos a través del bot](resources/bot-v3/bots-files.md)|
 |22/09/2020|Nueva información para iniciarse en el desarrollo de Teams |[Información general para crear la primera aplicación de Teams](build-your-first-app/build-first-app-overview.md)|
-|18/09/2020|Compatibilidad con las aplicaciones de Teams en las reuniones (versión preliminar) |[Crear aplicaciones para reuniones de Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md) y [Aplicaciones en reuniones de Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|18/09/2020|Compatibilidad con las aplicaciones de Teams en las reuniones (versión preliminar) |[Aplicaciones en reuniones de Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |19/08/2020|Importar mensajes de Teams con Microsoft Graph |[Importar mensajes de plataformas de terceros a Teams con Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 |12/08/2020 |La compatibilidad con las tarjetas adaptables en el webhook entrante se ha trasladado a GA |[Enviar tarjetas adaptables con un webhook entrante](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |10/08/2020|Comience a compilar aplicaciones para Teams con el kit de herramientas de Visual Studio |[Crear aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-overview.md) |

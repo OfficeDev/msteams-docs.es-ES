@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398851"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466514"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -46,7 +46,7 @@ Para agregar pestañas a una reunión existente:
 1. En el calendario, seleccione una reunión a la que desee agregar una pestaña.
 1. Seleccione la **pestaña Detalles** y seleccione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. Aparece la galería de pestañas.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Experiencia de la aplicación previa a la reunión":::
 
 1. En la galería de pestañas, selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
 
@@ -57,7 +57,7 @@ Para agregar pestañas a una reunión existente:
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-![Vista de tabulación previa a la reunión](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="Pestañas durante una reunión":::
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
@@ -69,7 +69,7 @@ Después de agregar las pestañas a una reunión existente en dispositivos móvi
 
 #### <a name="in-meeting-app-experience"></a>Experiencia de la aplicación durante la reunión
 
-Con la experiencia de la aplicación durante la reunión, puedes interactuar con los participantes durante la reunión mediante las aplicaciones y el cuadro de diálogo durante la reunión. Las aplicaciones de reunión se hospedan en la barra de herramientas de la ventana de reunión como una pestaña durante la reunión. Usa el cuadro de diálogo durante la reunión para mostrar el contenido que pueden usar los participantes de la reunión. Para obtener más información, consulta [Crear aplicaciones para Teams reuniones](create-apps-for-teams-meetings.md).
+Con la experiencia de la aplicación durante la reunión, puedes interactuar con los participantes durante la reunión mediante las aplicaciones y el cuadro de diálogo durante la reunión. Las aplicaciones de reunión se hospedan en la barra de herramientas de la ventana de reunión como una pestaña durante la reunión. Usa el cuadro de diálogo durante la reunión para mostrar el contenido que pueden usar los participantes de la reunión. Para obtener más información, consulta [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md).
 
 Para dispositivos móviles, las aplicaciones de reunión están disponibles en **Aplicaciones** > puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Selecciona **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
 
@@ -82,8 +82,6 @@ Para usar pestañas durante una reunión:
 1. En el cuadro de diálogo en la reunión, escriba la respuesta como comentarios.
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
-
-![Vista cuadro de diálogo](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
@@ -132,11 +130,11 @@ En la siguiente imagen se muestra la **pestaña Contoso** con los resultados del
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-![Vista posterior a la reunión](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Pestaña Contoso con resultados":::
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Experiencia de la aplicación posterior a la reunión":::
 
 ---
 
@@ -155,7 +153,7 @@ Las Teams de reuniones unificadas te permiten diseñar la aplicación en funció
 
 ## <a name="participant-roles-in-a-meeting"></a>Roles de participante en una reunión
 
-![Participantes en una reunión](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Roles de participante en una reunión":::
 
 La configuración predeterminada del participante la determina el administrador de TI de una organización. Los siguientes son los roles de participante en una reunión:
 
@@ -207,7 +205,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Requisitos previos y referencias de API para las aplicaciones en las reuniones de Teams](create-apps-for-teams-meetings.md)
+> [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Vea también
 

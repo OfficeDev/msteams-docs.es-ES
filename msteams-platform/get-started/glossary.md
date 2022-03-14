@@ -4,12 +4,12 @@ description: Glosario para la documentación para desarrolladores de Microsoft T
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definición de desarrollador de Microsoft Teams
-ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452749"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466565"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -124,8 +124,8 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Fase de reunión](../sbs-meetings-stage-view.yml) | Una característica de la aplicación de extensión de reunión. Es un espacio compartido accesible para todos los participantes durante la reunión. Ayuda a los participantes a interactuar y colaborar con el contenido de la aplicación en tiempo real. <br>**Vea también**: [Vista fase](#s) |
 | [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) | Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o realizar una acción en un mensaje. Puede usar una extensión de mensajería sin salir de la conversación.<br>**Vea también**: [Comandos de búsqueda](#s); [Comandos de acción](#a) |
 | [Extensión de reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Una aplicación diseñada para usarse durante el ciclo de vida de la reunión para que sea más productiva, como pizarra, panel y mucho más. |
-| [Cuenta de Microsoft 365](../toolkit/accounts.md#microsoft-365-account) | La cuenta de Microsoft 365 incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo. |
-| [Programa de desarrolladores de Microsoft 365](../toolkit/accounts.md#join-microsoft-365-developer-program) | El programa para desarrolladores de Microsoft 365 le ayuda a crear aplicaciones que amplían Microsoft 365. |
+| [Cuenta de Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | La cuenta de Microsoft 365 incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo. |
+| [Programa de desarrolladores de Microsoft 365](../toolkit/accounts.md)| El programa para desarrolladores de Microsoft 365 le ayuda a crear aplicaciones que amplían Microsoft 365. |
 | [Explorador de Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | La puerta de enlace a los datos y la inteligencia a Microsoft 365.Proporciona un modelo de programación unificado que puede usar para aprovechar la gran cantidad de datos en Microsoft 365, Enterprise Mobility + Security y Windows 10. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams es un software de colaboración en grupo que se puede usar para ayudar a los equipos a trabajar juntos de forma remota. |
 | [Plataforma de Microsoft Teams](../concepts/app-fundamentals-overview.md) | La plataforma para desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios con Teams. |
