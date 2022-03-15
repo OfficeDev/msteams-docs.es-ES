@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifiesto del bot del emulador de Azure de registro de grupo de recursos
-ms.openlocfilehash: 0151cc8fd756ee7ed7dbaecaef5739690f7f9302
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399376"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63493030"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
@@ -141,15 +141,16 @@ Para agregar el Microsoft Teams:
     ![Página principal del bot](~/assets/images/adaptive-cards/bot-home-page.png)
 
 1. Abra el bot, que aparece en la **sección Recursos** recientes.
-1. Seleccione **Canales** en el panel izquierdo y **seleccione Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    ![Canal Teams](~/assets/images/adaptive-cards/channel-teams.png)
+1. Seleccione **Canales** en el panel izquierdo y **seleccione Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Canal Teams":::
 
 1. Active la casilla para aceptar los términos del servicio y seleccione **Aceptar**.</br>
 
     ![Seleccionar términos de servicio](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
     ![Seleccione Teams](~/assets/images/adaptive-cards/select-teams.png)
 
@@ -218,7 +219,7 @@ La siguiente imagen muestra la selección correspondiente en la página de recur
 
     ![vista de cadena de conexión de la aplicación de bots de teams adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
@@ -242,7 +243,7 @@ La siguiente imagen muestra la selección correspondiente en la página de recur
 
     1. Para **ámbitos**, escriba una lista delimitada por espacios de permisos de gráfico que esta aplicación requiere, por ejemplo: User.Read User.ReadBasic.All Mail.Read
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 ### <a name="test-the-connection"></a>Probar la conexión
 
@@ -629,7 +630,7 @@ En el siguiente paso de diálogo, compruebe la presencia de un token en el resul
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 [Agregar autenticación a través del servicio bot de Azure](https://aka.ms/azure-bot-add-authentication)
 
