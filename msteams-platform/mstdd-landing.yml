@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea2f1761fc846e08fde5a8321ab35e06a64f70ac
-  ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+  ms.openlocfilehash: 78174c98666bd8cfc30d04eb669258ae116dcb4d
+  ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/14/2022
-  ms.locfileid: "63492949"
+  ms.lasthandoff: 03/15/2022
+  ms.locfileid: "63501973"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
@@ -43,18 +43,6 @@ landingContent:
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
     - text: Autenticación con proveedores de OAuth externos
       url: ~/tabs/how-to/authentication/auth-oauth-provider.md
-- title: Favoritos de todos los tiempos
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Directrices para aplicaciones vinculadas a ofertas saas
-      url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-    - text: Directrices de validación de la tienda de Microsoft Teams
-      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-    - text: Monetice la aplicación Teams con una oferta SaaS que se pueda usar como transacción.
-      url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - text: Explorar aplicaciones de código bajo para Teams
-      url: ~/samples/teams-low-code-solutions.md
 - title: Introducción
   linkLists:
   - linkListType: get-started
@@ -73,6 +61,20 @@ landingContent:
       url: sbs-gs-csharp.yml
     - text: Crear aplicación con Node.js
       url: sbs-gs-nodejs.yml
+- title: Rentabilizar la aplicación
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Directrices para aplicaciones vinculadas a ofertas saas
+      url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+    - text: Directrices de validación de la tienda de Microsoft Teams
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: Monetice la aplicación Teams con una oferta SaaS que se pueda usar como transacción.
+      url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - text: Compras desde la aplicación
+      url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - text: Versión preliminar de prueba para aplicaciones monetizadas
+      url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
 - title: Crear aplicaciones para Teams
   linkLists:
   - linkListType: overview
@@ -155,6 +157,8 @@ landingContent:
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Procedimientos recomendados para Teams escenarios de aplicaciones
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+    - text: Explorar aplicaciones de código bajo para Teams
+      url: ~/samples/teams-low-code-solutions.md
 - title: Publicar y distribuir
   linkLists:
   - linkListType: concept
