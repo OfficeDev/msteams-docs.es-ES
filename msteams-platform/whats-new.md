@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 5ac1def2d45938d8bc162b4d6ed4fddb9f547e86
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466538"
+ms.locfileid: "63492991"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
+|14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams. | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
@@ -50,6 +51,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams. | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|  
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
