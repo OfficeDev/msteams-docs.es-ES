@@ -1,47 +1,51 @@
 ---
-title: Crear un nuevo Teams con Teams Toolkit
+title: Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 author: zyxiaoyuer
-description: Crear un nuevo Teams con Teams Toolkit
-ms.author: zhany
-ms.localizationpriority: medium
+description: Crear nueva aplicación de Teams con el Kit de herramientas de Teams
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: bac67621e14d12b61b04eac3ec24c90cb3057a79
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.date: 03/14/2022
+ms.openlocfilehash: 1c4b219ed4f664e92d144b18c7aa3734c79c0c61
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452560"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464272"
 ---
-# <a name="create-new-teams-project-using-teams-toolkit"></a>Crear nuevo Teams proyecto mediante Teams Toolkit
+# <a name="create-a-new-teams-app-using-teams-toolkit"></a>Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 
-Para crear un nuevo Teams con Teams Toolkit, seleccione Crear un nuevo proyecto Teams **aplicación** o **Iniciar desde un ejemplo**.
+Para crear una nueva aplicación de Teams con el Kit de herramientas de Teams, puede seleccionar una de las siguientes opciones:
 
-## <a name="create-new-project"></a>Crear un proyecto
+* [Crear una nueva aplicación de Teams](create-new-project.md#create-a-new-teams-app)
+* [Ver ejemplos](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-Las siguientes guías te ayudan a crear un nuevo proyecto Teams aplicación mediante Teams Toolkit:
+### <a name="create-a-new-teams-app"></a>Crear una nueva aplicación de Teams
 
-* [Crear una nueva Teams tab (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-* [Crear una nueva Teams bot](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
-* [Crear una nueva aplicación de extensión de mensaje](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
-* [Crear una nueva Teams tab (SharePoint Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+1. Abrir Visual Studio Code.
+1. Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: en la barra lateral de Visual Studio Code.
+1. Seleccione **Crear una nueva aplicación de Teams**.
+1. Seleccione en la pestaña de funcionalidades disponibles, bot, extensión de mensajería o la pestaña con SharePoint Framework (SPFx). 
+1. Seleccione al menos una opción para empezar a crear la aplicación de Teams.
 
-## <a name="create-from-samples"></a>Crear a partir de ejemplos
+### <a name="create-a-new-teams-app-using-view-samples"></a>Crear una nueva aplicación de Teams con ver ejemplos
 
- Puede crear un nuevo proyecto desde la **galería de ejemplos**. Selecciona el ejemplo necesario para crear aplicaciones. Los siguientes pasos te guían para crear aplicaciones a partir de ejemplos:
+Puede crear una nueva aplicación explorando **Ver ejemplos** y seleccionando un ejemplo. Es posible que el ejemplo seleccionado ya tenga alguna funcionalidad, por ejemplo, una lista de tareas con un back-end de Azure o una integración con el Kit de herramientas de Microsoft Graph.
 
- 1. Abra **Teams Toolkit** desde Microsoft Visual Studio código.
- 1. Seleccione **la sección DESARROLLO** en vista árbol.
+ 1. Abra el **Kit de herramientas de Teams** desde Visual Studio Code de Microsoft.
+ 1. Seleccione la sección **DESARROLLO** en Vista de árbol.
  1. Seleccione **Ver ejemplos**. La galería de ejemplos aparece como se muestra en la siguiente imagen:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="samples":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Ver ejemplos":::
 
-Puedes explorar y descargar ejemplos y ejecutar aplicaciones de forma local o remota para obtener una vista previa en Teams cliente web. Siga las instrucciones de cada muestra o examine el código fuente de los ejemplos seleccionando  Ver en GitHub para obtener acceso al repositorio de código abierto para los ejemplos.
+Puede explorar y descargar ejemplos y ejecutar la aplicación de forma local o remota para obtener una vista previa en el cliente web de Teams. Siga las instrucciones de cada ejemplo o seleccione **Ver en GitHub** para abrir el ejemplo en `TeamsFx Samples repository` y examinar el código fuente.
+
+Para obtener más información, vea [Crear una nueva aplicación de pestaña de Teams (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
 
 ## <a name="see-also"></a>Vea también
 
 * [Aprovisionar recursos en la nube](provision.md)
 * [Implementar la aplicación de Teams en la nube](deploy.md)
-* [Publicar la aplicación Teams web](TeamsFx-collaboration.md)
+* [Publicar la aplicación de Teams](TeamsFx-collaboration.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)
-* [Colaborar con otros desarrolladores en Teams proyecto](TeamsFx-collaboration.md)
+* [Colaborar con otros desarrolladores en proyectos de Teams](TeamsFx-collaboration.md)
