@@ -1,17 +1,17 @@
 ---
 title: Implementar en la nube
 author: MuyangAmigo
-description: Implementar en la nube
+description: Implementar la aplicación en la nube, Azure o SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452553"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558820"
 ---
 # <a name="deploy-to-the-cloud"></a>Implementar en la nube
 
@@ -49,10 +49,10 @@ Las guías de introducción le ayudan a implementar con Teams Toolkit. Puedes us
 > [!NOTE]
 > Al incluir el recurso de administración de API de Azure en el proyecto y desencadenar la implementación. Puede publicar sus API en funciones de Azure en el servicio de administración de API de Azure.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Agregar más recursos en la nube](add-resource.md)
 * [Agregar más Teams funcionalidades de la aplicación](add-capability.md)
 * [Implementar código de proyecto con canalizaciones de CI/CD](use-CICD-template.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)
-* [Colaborar con otros desarrolladores en Teams proyecto](TeamsFx-collaboration.md)
+* [Colaborar con otros desarrolladores en proyectos de Teams](TeamsFx-collaboration.md)

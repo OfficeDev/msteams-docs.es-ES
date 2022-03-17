@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466514"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558848"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -24,6 +24,9 @@ En este artículo se describe la información sobre el ciclo de vida de la reuni
 ## <a name="meeting-lifecycle"></a>Ciclo de vida de la reunión
 
 El ciclo de vida de una reunión consiste en la experiencia de la aplicación previa a la reunión, durante la reunión y posterior a la reunión. Se pueden integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión.
+
+> [!NOTE]
+> En el cliente web se admiten extensiones de reunión como bots, tarjetas, extensiones de mensaje y acciones de mensaje. Sin embargo, actualmente no se admiten completamente las experiencias hospedadas, como pestañas, burbujas de contenido y compartir en fase.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar pestañas en el ciclo de vida de la reunión
 
@@ -143,7 +146,7 @@ En la siguiente imagen se muestra la **pestaña Contoso** con los resultados del
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Integrar bots en el ciclo de vida de la reunión
 
-Los bots que están habilitados en el ámbito groupchat empiezan a funcionar en las reuniones. Para implementar bots, comience con [la compilación de un bot](../build-your-first-app/build-bot.md) y, a continuación, continúe con [crear aplicaciones para Teams reuniones](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Los bots que están habilitados en el ámbito de chat de grupo comienzan a funcionar en las reuniones. Para implementar bots, comience con [la compilación de un bot](../build-your-first-app/build-bot.md) y, a continuación, continúe con [crear aplicaciones para Teams reuniones](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integrar extensiones de mensajería en el ciclo de vida de la reunión
 
@@ -158,8 +161,14 @@ Las Teams de reuniones unificadas te permiten diseñar la aplicación en funció
 La configuración predeterminada del participante la determina el administrador de TI de una organización. Los siguientes son los roles de participante en una reunión:
 
 * **Organizador**: el organizador programa una reunión, establece las opciones de reunión, asigna roles de reunión e inicia la reunión. Los usuarios con Microsoft 365 cuenta y Teams licencia solo pueden ser los organizadores y controlar los permisos de los asistentes. Un organizador de la reunión puede cambiar la configuración de una reunión específica. Los organizadores pueden realizar estos cambios en la **página web Opciones de** reunión.
+
 * **Moderador**: los moderadores tienen las mismas capacidades de los organizadores con exclusiones. Un moderador no puede quitar un organizador de la sesión ni modificar las opciones de reunión para la sesión. De forma predeterminada, los participantes que se unen a una reunión tienen el rol de moderador.
-* **Asistente**: un asistente es un usuario al que se ha invitado a asistir a una reunión. Pero los asistentes no están autorizados a actuar como moderadores. Los asistentes pueden interactuar con otros miembros de la reunión, pero no pueden administrar la configuración de la reunión ni compartir el contenido.
+
+* **Asistente**: un asistente es un usuario al que se invita a asistir a la reunión. Los asistentes tienen capacidades limitadas durante la reunión, como:
+  * Pueden interactuar con otros miembros de la reunión, pero no pueden administrar ninguna de las opciones de la reunión ni compartir el contenido.  
+  * Pueden ver o interactuar con la aplicación de pestaña en la fase de reunión sin instalar la aplicación o sin derechos de aplicación.
+  * No pueden ver ni interactuar con la aplicación en el panel lateral sin derechos de aplicación.
+  * No están autorizados a actuar como moderador.
 
 > [!NOTE]
 > Solo un organizador o moderador puede agregar, quitar o desinstalar aplicaciones.
@@ -200,14 +209,14 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede ver e interactuar con la aplicación en la fase de reunión | No disponible |
 | Invitado, parte del espacio empresarial Azure AD | Se permite la interacción. No se permite crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión | Disponible |
-| Para obtener más información, vea [Usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión | No disponible |
+| Los usuarios federados, para obtener más información, consulte [usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permite crear, actualizar y eliminar. | Se permite la interacción. No se permite adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión | No disponible |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
