@@ -1,24 +1,24 @@
 ---
 title: Ofrecer mantenimiento y soporte técnico de su aplicación publicada
-description: Qué pensar una vez que la tienda aparece en la Teams store y AppSource.
+description: Qué hay que tener en cuenta una vez que su tienda aparece en la tienda de Teams y en AppSource
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453582"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501945"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
-Con la aplicación incluida en la Microsoft Teams, empieza a pensar en cómo mantendrás la aplicación en el futuro y aumentarás las descargas y el uso.
+Una vez que su aplicación aparezca en la tienda de Microsoft Teams, empiece a pensar en cómo va a mantener la aplicación en el futuro y a aumentar las descargas y el uso.
 
 ## <a name="analyze-app-usage"></a>Analizar el uso de la aplicación
 
-Puedes realizar un seguimiento del uso de la aplicación [en el informe Teams uso de la aplicación en](/office/dev/store/teams-apps-usage) el Centro de partners. Las métricas incluyen usuarios activos mensuales, diarios y semanales, y gráficos de retención e intensidad que permiten realizar un seguimiento del abandono y la frecuencia de uso.
+Puede realizar un seguimiento del uso de la aplicación en el [ Informe de uso de la aplicación Teams](/office/dev/store/teams-apps-usage) en Centro de partners. Las métricas incluyen usuarios activos mensuales, diarios y semanales, y gráficos de retención e intensidad que permiten realizar un seguimiento del abandono y la frecuencia de uso.
 
 Los datos de las aplicaciones recién publicadas tardan alrededor de una semana en aparecer en el informe.
 
@@ -27,44 +27,44 @@ Los datos de las aplicaciones recién publicadas tardan alrededor de una semana 
 > [!NOTE]
 > La tienda de Teams ha evolucionado:
 >
-> Anteriormente, los vínculos se copiaban seleccionando puntos suspensivos en el icono de la aplicación. Con la experiencia Teams de la tienda, accederá a la misma desde la pestaña detalles de las aplicaciones. Esta actualización estará disponible generalmente (GA) antes del 01 de marzo de 2022.
+> Anteriormente, los vínculos se copiaban seleccionando puntos suspensivos en el icono de la aplicación. Con la experiencia actualizada de la tienda de Teams, tendrá acceso a la misma desde la pestaña de detalles de las aplicaciones. Esta actualización estará disponible con carácter general (GA) antes del 1 de marzo de 2022.
 
-Puedes enviar cambios a la aplicación (como nuevas características o incluso metadatos) en el Centro de partners. Estos cambios requieren un nuevo proceso de revisión.
+Puede enviar cambios a la aplicación (como nuevas características o incluso metadatos) en Centro de partners. Estos cambios requieren un nuevo proceso de revisión.
 
 Asegúrese de lo siguiente al publicar actualizaciones:
 
-* No cambies el identificador de la aplicación.
+* No cambie el identificador de la aplicación.
 * Incremente el número de versión de la aplicación.
-* En el Centro de partners, no seleccione **Agregar una nueva aplicación** para realizar la actualización. En su lugar, ve a la página de la aplicación.
+* En Centro de partners, no seleccione **Agregar una nueva aplicación** para realizar la actualización. Vaya a la página de la aplicación en su lugar.
 
 ### <a name="app-updates-requiring-user-consent"></a>Actualizaciones de aplicaciones que requieren el consentimiento del usuario
 
-Cuando un usuario instala la aplicación, debe conceder a la aplicación permiso para tener acceso a los servicios e información que la aplicación necesita para funcionar. En la mayoría de los casos, los usuarios deben hacerlo una vez y las nuevas versiones de la aplicación se instalan automáticamente.
-Sin embargo, si realizas alguno de los siguientes cambios en la aplicación, los usuarios existentes deben aceptar otra solicitud de permiso para instalar la actualización:
+Cuando un usuario instala la aplicación, debe conceder permiso a la aplicación para acceder a los servicios y la información que requiere la aplicación para funcionar. En la mayoría de los casos, los usuarios deben hacerlo una vez y las nuevas versiones de la aplicación se instalan automáticamente.
+Sin embargo, si realiza cualquiera de los siguientes cambios en la aplicación, los usuarios existentes deben aceptar otra solicitud de permiso para instalar la actualización:
 
 * Agregar o quitar un bot.
-* Cambie el identificador del bot.
-* Modifique la configuración de notificaciones uni-way de un bot.
+* Cambiar el identificador del bot.
+* Modificar la configuración de notificaciones unidireccionales de un bot.
 * Modificar la compatibilidad de un bot para cargar y descargar archivos.
 * Agregar o quitar una extensión de mensajería.
-* Agregue una pestaña personal.
-* Agregue una pestaña de canal y grupo.
-* Agregue un conector.
-* Modifique las configuraciones relacionadas con el registro Microsoft Azure Active Directory aplicación (Azure AD). Para obtener más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Agregar una pestaña personal
+* Agregar un canal y una pestaña de grupo.
+* Agregar un conector.
+* Modificar las configuraciones relacionadas con el registro de aplicaciones de Microsoft Azure Active Directory (Azure AD). Para obtener más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-## <a name="fix-issues-with-your-published-app"></a>Corregir problemas con la aplicación publicada
+## <a name="fix-issues-with-your-published-app"></a>Corrección de problemas con la aplicación publicada
 
-Microsoft ejecuta pruebas de automatización diarias en las aplicaciones que aparecen en la Teams tienda. Si se identifican problemas con la aplicación, nos comunicaremos contigo con un informe detallado sobre cómo reproducir los problemas y recomendaciones para resolverlos. Si no puedes solucionar los problemas en una escala de tiempo indicada, es posible que la descripción de la aplicación se quite de la tienda.
+Microsoft ejecuta pruebas de automatización diarias en las aplicaciones que aparecen en la tienda de Teams. Si se identifican problemas con la aplicación, nos pondremos en contacto con usted con un informe detallado sobre cómo reproducir los problemas y recomendaciones para resolverlos. Si no puede solucionar los problemas dentro de la escala de tiempo indicada, es posible que la descripción de la aplicación se quite de la tienda.
 
-## <a name="promote-your-app-on-another-site"></a>Promocionar la aplicación en otro sitio
+## <a name="promote-your-app-on-another-site"></a>Promover la aplicación en otro sitio
 
-Cuando la aplicación aparezca en la Teams, puedes crear un vínculo que inicie Teams y muestre un cuadro de diálogo para instalar la aplicación. Puede incluir este vínculo, por ejemplo, con un botón de descarga en la página de marketing del producto.
+Cuando la aplicación aparezca en la tienda de Teams, puede crear un vínculo que inicie Teams y muestre un cuadro de diálogo para instalar la aplicación. Puede incluir este vínculo, por ejemplo, con un botón de descarga en la página de marketing del producto.
 
-Crea el vínculo con la siguiente dirección URL anexada con el identificador de la aplicación: `https://teams.microsoft.com/l/app/<your-app-id>`.
+Cree el vínculo con la siguiente dirección URL anexada con el identificador de la aplicación: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
-## <a name="complete-microsoft-365-certification"></a>Certificación Microsoft 365 completa
+## <a name="complete-microsoft-365-certification"></a>Completar la certificación de Microsoft 365
 
-[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) ofrece garantías de que los datos y la privacidad están protegidos y protegidos adecuadamente cuando se instala un Aplicación de Office o un complemento de terceros en su ecosistema Microsoft 365 usuario. La certificación confirma que la aplicación es compatible con las tecnologías de Microsoft, cumple con los procedimientos recomendados de seguridad de aplicaciones en la nube y es compatible con Microsoft.
+[Certificación Microsoft 365](/microsoft-365-app-certification/docs/certification) ofrece garantías de que los datos y la privacidad se protegen adecuadamente cuando se instala una aplicación o complemento de Office de terceros en el ecosistema de Microsoft 365. La certificación confirma que la aplicación es compatible con las tecnologías de Microsoft, cumple con los procedimientos recomendados de seguridad de aplicaciones en la nube y es compatible con Microsoft.
 
 ## <a name="see-also"></a>Vea también
 

@@ -4,13 +4,13 @@ description: Describe las directrices que debe seguir toda aplicación enviada a
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: medium
-ms.openlocfilehash: 6326c8ff28857ab75436e61de5b8783842642acb
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399138"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501931"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -20,8 +20,8 @@ Seguir estas directrices aumenta las posibilidades de que la aplicación pase el
 >
 > * Algunas directrices pueden no ser aplicables a su aplicación. Por ejemplo, si la aplicación no incluye un bot, puede omitir las directrices relacionadas con los bots.
 > * Hemos cruzado estas directrices con las directivas de certificación comercial de Microsoft y hemos agregado Do’s y Don’ts con ejemplos de escenarios de superación o error encontrados en nuestro proceso de validación.
-> * Algunas directrices se marcan como *Corrección obligatoria*. Si el envío de la aplicación no cumple estas directrices obligatorias, recibirás un informe de errores de nosotros con los pasos necesarios para remediarlos. El envío de la aplicación pasará Microsoft Teams validación de la tienda solo después de solucionar los problemas.
-> * Otras directrices se marcan como *Corrección sugerida.* Para obtener una experiencia ideal de usuario, te sugerimos que corrijas los problemas; sin embargo, el envío de la aplicación no se bloqueará para que no se publique en la tienda de Teams si decides no corregir los problemas.
+> * Algunas directrices se marcan como *Corrección obligatoria*. Si el envío de la aplicación no cumple estas directrices obligatorias, recibirás un informe de errores de nosotros con los pasos necesarios para remediarlos. El envío de la aplicación pasará la validación de la tienda de Microsoft Teams solo después de que haya corregido los problemas.
+> * Otras directrices se marcan como *Solución sugerida*. Para obtener una experiencia de usuario ideal, le sugerimos que corrija los problemas; sin embargo, el envío de la aplicación no se bloqueará para que no se publique en la tienda de Teams, si decide no corregir los problemas.
 
 ## <a name="value-proposition"></a>Propuesta de valor
 
@@ -52,7 +52,7 @@ El nombre de una aplicación desempeña un papel fundamental a la hora de que lo
 * Si tu aplicación forma parte de una asociación oficial con Microsoft, el nombre de su aplicación debe ir en primer lugar (por ejemplo, **Contoso Connector para Microsoft Teams**).
 * No debe copiar el nombre de una aplicación que aparece en la tienda u otra oferta en el mercado comercial.
 * No debe contener términos profanos o despectivos. El nombre tampoco debe incluir un lenguaje racial o culturalmente insensible.
-* Debe ser único. Si su aplicación (Contoso) aparece en la tienda Microsoft Teams y Microsoft AppSource y quiere enumerar otra aplicación específica de un ámbito geográfico, como Contoso México, el envío debe cumplir los siguientes criterios:
+* Debe ser único. Si su aplicación (Contoso) aparece en la tienda de Microsoft Teams y Microsoft AppSource y desea enumerar otra aplicación específica de una geografía, como Contoso México, el envío debe cumplir los siguientes criterios:
   * Evoca la funcionalidad específica de la región de la aplicación en el título, los metadatos, la experiencia de la primera aplicación de respuesta y las secciones de ayuda. Por ejemplo, el título debe ser Contoso México. El título de la aplicación debe diferenciar claramente una aplicación ya existente del mismo desarrollador para evitar confusiones por parte del usuario final.
   * Al cargar el paquete de la aplicación en Centro de partners, seleccione el **mercado** adecuado en que la aplicación estará disponible en la sección **Disponibilidad**.
 
@@ -104,7 +104,7 @@ Para obtener más información sobre cómo implementar la autenticación de apli
   * Las aplicaciones que requieren que el administrador de inquilinos complete una instalación única deben llamar a la dependencia del administrador de inquilinos para configurar la aplicación (antes de que cualquier otro usuario del inquilino pueda instalar y usar la aplicación).  
   Se debe destacar la dependencia en el manifiesto de la aplicación, la descripción larga de AppSource, todos los puntos de contacto de la experiencia de primera ejecución (mensaje de bienvenida del bot, configuración de pestañas o página de configuración), texto de ayuda según se considere necesario como parte de la respuesta del bot, la extensión de redacción o el contenido de pestañas estáticas.
   
-* **Experiencias de uso compartido de contenidos**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o en recursos similares) cómo desconectar o dejar de compartir contenidos si esa característica se admite en el servicio externo. Esto no significa que la capacidad de desa compartir contenido debe estar presente en la Teams aplicación.
+* **Contenido de experiencias de uso compartido**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o recursos similares) cómo desconectar o dejar de compartir contenido si esa característica es compatible con el servicio externo. Esto no significa que la capacidad de no compartir contenido deba estar presente en la aplicación de Teams.
 
 ## <a name="security"></a>Seguridad
 
@@ -159,7 +159,7 @@ Las aplicaciones que se ejecutan en la versión de iOS o Android de Teams deben 
 :::row-end:::
 
 * Si la aplicación requiere una cuenta, los usuarios pueden registrarse para obtener una cuenta sin cargo alguno. Se prohíbe el uso del término **gratuito** o **cuenta gratuita**.
-* Puede determinar si una cuenta estará activa indefinidamente o durante un tiempo limitado. Cuando la cuenta expire, la aplicación no debe mostrar la interfaz de usuario, el texto ni los vínculos que indiquen la necesidad de pagos.
+* Puede determinar si una cuenta está activa indefinidamente o durante un tiempo limitado. Cuando la cuenta expira, la aplicación no debe mostrar la interfaz de usuario, el texto ni los vínculos que indiquen la necesidad de pago.
 * La directiva de privacidad y las condiciones de uso de la aplicación deben estar libres de cualquier interfaz de usuario o vínculo relacionado con comercio.
 
 ### <a name="bots"></a>Bots
@@ -190,7 +190,7 @@ Los bots siempre deben pedir permiso para cargar un archivo y mostrar un mensaje
 > [!NOTE]
 > Esta sección está en línea con [ la directiva del marketplace comercial de Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) y proporciona instrucciones para desarrolladores sobre el uso de dominios restringidos en la propiedad de manifiesto `validDomains` .
 
-No incluya dominios fuera del control de la organización (incluidos caracteres comodín) ni servicios de túnel en las configuraciones de dominio de la aplicación. Las excepciones son las siguientes:
+No incluya dominios fuera del control de la organización (incluidos los caracteres comodín) ni servicios de tunelización en las configuraciones de dominio de la aplicación. Entre las siguientes excepciones se incluyen:
 
 * Si su aplicación utiliza la tarjeta OAuthCard de Azure Bot Service, debe incluirla `token.botframework.com` como dominio válido o el botón de **inicio de sesión** no funcionará.
 * Si su aplicación depende de SharePoint, puede incluir el sitio raíz de SharePoint asociado como un dominio válido utilizando la `{teamSiteDomain}` propiedad de contexto.
@@ -230,7 +230,7 @@ Las aplicaciones deben ser totalmente funcionales en las versiones más reciente
 
 * Microsoft Windows
 * macOS
-* MicrosoftEdge&nbsp;
+* Microsoft&nbsp;Edge
 * Google Chrome
 * iOS
 * Android
@@ -271,7 +271,7 @@ El manifiesto de la aplicación de Teams define la configuración de la aplicaci
 
 * El manifiesto debe cumplir con un esquema de manifiesto publicado de forma pública. Para obtener más información, vea [referencia de manifiesto](~/resources/schema/manifest-schema.md). No deberá enviarse la aplicación con una versión preliminar del manifiesto.
 * Si la aplicación incluye un bot o una extensión de mensajería, los detalles del manifiesto de la aplicación deben ser coherentes con los metadatos de Bot Framework, incluidos el nombre del bot, el logotipo, el vínculo a la directiva de privacidad y el vínculo a las condiciones de servicio.
-* Si la aplicación usa Azure Active Directory para la autenticación, incluya el Microsoft Azure Active Directory de aplicación (Azure AD) (cliente) en el manifiesto. Para obtener más información, consulte la [referencia del manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Si la aplicación usa Azure Active Directory para la autenticación, incluya el identificador de aplicación (cliente) Microsoft Azure Active Directory (Azure AD) en el manifiesto. Para obtener más información, consulte la [referencia del manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Iconos de la aplicación
 
@@ -279,7 +279,7 @@ El manifiesto de la aplicación de Teams define la configuración de la aplicaci
 
 Los iconos son uno de los principales elementos que la gente ve cuando navega por la tienda de Teams. Los iconos deben comunicar la marca y el propósito de la aplicación a la vez que cumplen los siguientes requisitos:
 
-* El paquete de la aplicación debe incluir dos .png del icono de la aplicación: un icono de color y un icono de esquema.
+* El paquete de la aplicación debe incluir dos versiones .png del icono de la aplicación: un icono de color y un icono de contorno.
 * La versión de color del icono debe ser de 192 x 192 píxeles. El símbolo de icono puede ser cualquier color o colores, pero debe situarse sobre un fondo cuadrado sólido o totalmente transparente.
 * La versión de esquema del icono se muestra en los escenarios siguientes:
   * Cuando la aplicación está en uso y **hospedada** en la barra de aplicaciones del lado izquierdo de Teams.
@@ -357,7 +357,7 @@ La descripción larga puede proporcionar una narración atractiva que destaque l
 
 ### <a name="screenshots"></a>Capturas de pantalla
 
-Las capturas de pantalla proporcionan una destacada vista previa de su aplicación para complementar el nombre, el icono y las descripciones de la misma. Recuerde lo siguiente:
+Las capturas de pantalla proporcionan una vista previa visual destacada de la aplicación que complementa al nombre, el icono y las descripciones de la misma. Recuerde lo siguiente:
 
 * Puede tener hasta cinco capturas de pantalla por anuncio.
 * Los tipos de archivo admitidos son PNG, JPEG y GIF.
@@ -519,7 +519,7 @@ Si la aplicación incluye una pestaña, cerciórese de que cumple estas directri
    :::column-end:::
 :::row-end:::
 
-* La pantalla de configuración de pestañas no debe incrustar un sitio web completo. Mantenga su experiencia de configuración centrada. Por ejemplo, si va a crear una aplicación de administración de proyectos que permita a los usuarios configurar un proyecto en un canal, mantenga la pantalla de configuración de pestañas centrada en permitir que el usuario seleccione un proyecto de la aplicación para configurarlo en el canal. [*corrección obligatoria*]
+* La pantalla de configuración de pestañas no debe insertar un sitio web completo. Mantenga su experiencia de configuración centrada. Por ejemplo, si va a crear una aplicación de administración de proyectos que permita a los usuarios configurar un proyecto en un canal, mantenga la pantalla de configuración de pestañas centrada en permitir que el usuario seleccione un proyecto de la aplicación para configurarlo en el canal. [*Corrección obligatoria*]
 
 :::row:::
    :::column span="":::
@@ -577,7 +577,7 @@ Si la aplicación incluye una pestaña, cerciórese de que cumple estas directri
    :::column-end:::
 :::row-end:::
 
-* El contenido se puede simplificar desglosándolo en varias pestañas. [*Corrección sugerida*]
+* El contenido se puede simplificar desglosando en varias pestañas. [*Corrección sugerida*]
 
 :::row:::
    :::column span="":::
@@ -659,7 +659,7 @@ Diseñe su aplicación con componentes de UI Fluent [básicos](~/concepts/design
    :::column-end:::
 :::row-end:::
 
-* Las pestañas con barra de herramientas en el raíl izquierdo deben dejar espaciado de 20 px desde el panel de navegación izquierdo de Teams. [*corrección obligatoria*]
+* Las pestañas con barra de herramientas en el raíl izquierdo deben dejar espaciado de 20 px desde el panel de navegación izquierdo de Teams. [*Corrección obligatoria*]
 
 :::row:::
     :::column span="":::
@@ -671,13 +671,13 @@ Diseñe su aplicación con componentes de UI Fluent [básicos](~/concepts/design
    :::column-end:::
 :::row-end:::  
 
-* Las páginas secundaria y tercera de una pestaña deben abrirse en una vista de nivel dos (L2) y nivel tres (L3) en el área de pestaña principal, en la que se navega a través de rutas de navegación o navegación izquierda. También puede incluir los siguientes componentes para facilitar la navegación por pestañas: [*Corrección obligatoria*]
+* Las páginas secundarias y terciarias de una pestaña deben abrirse en una vista de nivel dos (L2) y nivel tres (L3) en el área de pestaña principal, que se navega a través de rutas de navegación o navegación izquierda. También puede incluir los siguientes componentes para facilitar la navegación por pestañas: [*Corrección obligatoria*]
   * Botones Atrás
   * Encabezados de página
   * Menús de hamburguesa
 * La pestaña no debe tener un desplazamiento horizontal. Las aplicaciones de pizarra y otras aplicaciones que requieren un lienzo más grande para permitir a los usuarios colaborar sin una experiencia de aplicación interrumpida percibida, pueden usar el desplazamiento horizontal en función de sus necesidades empresariales. [*Corrección sugerida*]
 
-* Los vínculos profundos de las pestañas no deben vincularse a una página web externa, sino dentro de Teams. Por ejemplo, módulos de tareas u otras pestañas. [*corrección obligatoria*]
+* Los vínculos profundos de las pestañas no deben vincularse a una página web externa, sino dentro de Teams. Por ejemplo, módulos de tareas u otras pestañas. [*Corrección obligatoria*]
 
 :::row:::
     :::column span="":::
@@ -783,7 +783,7 @@ Diseñe su aplicación con componentes de UI Fluent [básicos](~/concepts/design
    :::column-end:::
 :::row-end:::
 
-* Las pestañas deben usar componentes de estilo Teams, como son fuentes de Teams, rampas de tipos, paletas de colores, sistema de cuadrícula, movimiento, tono de voz, etc. siempre que sea posible. Para obtener más información, vea [directrices de diseño de pestañas](/microsoftteams/platform/tabs/design/tabs). [*Corrección sugerida*]
+* Las pestañas deben usar componentes de estilo Teams, como fuentes de Teams, rampas de tipos, paletas de colores, sistema de cuadrícula, movimiento, tono de voz, etc., siempre que sea posible. Para obtener más información, vea [Instrucciones para el diseño de pestañas](/microsoftteams/platform/tabs/design/tabs). [*Corrección sugerida*]
 
 :::row:::
     :::column span="":::
@@ -796,7 +796,7 @@ Diseñe su aplicación con componentes de UI Fluent [básicos](~/concepts/design
 :::row-end:::
 
 * Si la funcionalidad de la aplicación requiere cambios en la configuración, incluya una pestaña de **Configuración**. [*Corrección sugerida*]
-* Las pestañas deben seguir el diseño de interacción de Teams, como es la navegación en la página, la posición y el uso de diálogos, jerarquías de información, etc. Para obtener más información, consulte [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
+* Las pestañas deben seguir el diseño de interacción de Teams, como la navegación en la página, la posición y el uso de diálogos, jerarquías de información, etc. Para obtener más información, vea [ Kit de interfaz de usuario Fluent de Microsoft Teams](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * El contenido de las pestañas en el iframe no debe incluir características que imiten las funciones principales de Teams. Por ejemplo, bots, extensiones de mensajería, llamadas, reuniones, etc.
 
@@ -847,7 +847,7 @@ Si la aplicación incluye un bot, cerciórese de que cumple estas directrices.
 
 ### <a name="bot-commands"></a>Comandos bot
 
-Analizar las entradas de los usuarios y predecir su intención es difícil. Los comandos de bot proporcionan a los usuarios un conjunto de palabras o frases para que el bot las entienda.
+Analizar la entrada del usuario y predecir la intención del usuario es difícil. Los comandos de bot proporcionan a los usuarios un conjunto de palabras o frases para que el bot las entienda.
 
 * Se recomienda encarecidamente incluir los comandos de bots compatibles en las configuraciones de la aplicación. Estos comandos aparecen en el cuadro de redacción cuando un usuario intenta enviar un mensaje a su bot.
 
@@ -1107,7 +1107,7 @@ Las extensiones de mensajería basadas en acciones deben hacer lo siguiente:
    :::column-end:::
 :::row-end:::
 
-* Pasar el contexto del mensaje al siguiente estado de trabajo. [*corrección obligatoria*]
+* Pasar el contexto del mensaje al siguiente estado de trabajo. [*Corrección obligatoria*]
 
 :::row:::
     :::column span="":::
@@ -1342,7 +1342,7 @@ Use las siguientes directrices para las extensiones de reuniones:
 * Debe descartarse después de que un usuario seleccione un botón o realice una acción.
 
 * **Modo conferencia**: cerciórese de tener en cuenta los siguientes procedimientos recomendados para una experiencia de creación de escenas:
-  * Todas las imágenes están en .png formato.
+  * Todas las imágenes están en formato .png.
   * El paquete final con todas las imágenes juntas no debe superar la resolución de 1920 x 1080. La resolución es un número par. Esta resolución es un requisito para que las escenas se muestren correctamente.
   * El tamaño máximo de la escena es de 10 MB.
   * El tamaño máximo de cada imagen es de 5 MB. Una escena es una colección de varias imágenes. El límite es para cada imagen individual.
@@ -1384,7 +1384,7 @@ Si la aplicación usa las [API de fuente de actividades proporcionadas por Micro
 
 El Programa de cumplimiento de aplicaciones de Microsoft 365 está destinado a ayudar a las organizaciones a evaluar y administrar el riesgo mediante la evaluación de la información de seguridad y cumplimiento de su aplicación. Si publica una aplicación en la tienda de Teams, debe completar los siguientes niveles del programa:
 
-* **Verificación de editores**: Ayuda a los administradores y usuarios finales a comprender la autenticidad de los desarrolladores de aplicaciones que se integran en la plataforma de identidad de Microsoft. Cuando se completa, se muestra **un distintivo azul** comprobado en el Azure Active Directory de consentimiento y otras pantallas. Para obtener más información, consulte [Marcar la aplicación como verificada por el publicador](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+* **Verificación de editores**: Ayuda a los administradores y usuarios finales a comprender la autenticidad de los desarrolladores de aplicaciones que se integran en la plataforma de identidad de Microsoft. Cuando haya finalizado, se mostrará un distintivo de **verificado** en el cuadro de diálogo de consentimiento de Azure Active Directory y en otras pantallas. Para obtener más información, consulte [Marcar la aplicación como verificada por el publicador](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row:::
     :::column span="":::

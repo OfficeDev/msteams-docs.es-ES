@@ -1,41 +1,41 @@
 ---
-title: Flujo de compra desde la aplicación para la monetización de aplicaciones
-description: Obtén información sobre las tareas y conceptos básicos necesarios para implementar las compras desde la aplicación y la funcionalidad de prueba en las aplicaciones de teams.
+title: Flujo de compra desde la aplicación para monetización de aplicaciones
+description: Obtenga información sobre las tareas y los conceptos básicos necesarios para implementar las compras desde la aplicación y la funcionalidad de prueba en las aplicaciones de Teams.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356474"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501987"
 ---
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
-Microsoft Teams las API que puedes usar para implementar las compras desde la aplicación para actualizar de aplicaciones gratuitas a Teams de pago. La compra desde la aplicación te permite convertir usuarios de planes gratuitos a de pago directamente desde tu aplicación.
+Microsoft Teams proporciona API que puede usar para implementar las compras desde la aplicación para actualizar desde aplicaciones gratuitas a de pago de Teams. La compra desde la aplicación permite convertir a los usuarios de planes gratuitos en usuarios de pago directamente desde dentro de la aplicación.
 
 > [!NOTE]
-> Las compras desde la aplicación para Teams aplicaciones están disponibles actualmente solo en la [**versión preliminar del desarrollador**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
+> Actualmente, las compras desde la aplicación para aplicaciones de Teams solo están disponibles en la [**versión preliminar para desarrolladores**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 ## <a name="implement-in-app-purchases"></a>Implementar compras desde la aplicación
 
-Para ofrecer una experiencia de compra desde la aplicación a los usuarios de la aplicación, asegúrate de lo siguiente:
+Para ofrecer una experiencia de compra desde la aplicación a los usuarios de la aplicación, asegúrese de lo siguiente:
 
-* La aplicación se basa en [Teams de SDK de cliente](https://github.com/OfficeDev/microsoft-teams-library-js).
+* La aplicación se basa en la [biblioteca del SDK de cliente de Teams](https://github.com/OfficeDev/microsoft-teams-library-js).
 
-* La aplicación está habilitada con una oferta [SaaS transaccionable](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
+* La aplicación está habilitada con una[ oferta de SaaS](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) transaccionable.
 
-* La aplicación está habilitada con [permisos RSC](#update-manifest).
+* La aplicación está habilitada con [permisos de RSC](#update-manifest).
 
-* La aplicación se invoca con [`openPurchaseExperience` la API](#purchase-experience-api).
+* La aplicación se invoca con [`openPurchaseExperience` API](#purchase-experience-api).
 
-La experiencia de compra desde la aplicación se puede habilitar actualizando el archivo **manifest.json** o habilitando **Mostrar** ofertas de compra desde  la aplicación desde la sección Permisos del **Portal de desarrolladores**.
+La experiencia de compra desde la aplicación se puede habilitar actualizando el archivo **manifest.json** o habilitando **Mostrar ofertas de compra desde la aplicación** desde la sección **Permisos** de la **Portal para desarrolladores**.
 
-### <a name="update-manifest"></a>Manifiesto de actualización
+### <a name="update-manifest"></a>Actualizar manifiesto
 
-Para habilitar la experiencia de compra desde la aplicación, actualice el archivo **manifest.json** Teams aplicación agregando los permisos de RSC. Permite a los usuarios de la aplicación actualizar a una versión de pago de la aplicación y empezar a usar nuevas funcionalidades. La actualización del manifiesto de la aplicación es la siguiente:
+Para habilitar la experiencia de compra desde la aplicación, actualice el archivo **manifest.json** de la aplicación de Teams agregando los permisos de RSC. Permite a los usuarios de la aplicación actualizar a una versión de pago de la aplicación y empezar a usar nuevas funcionalidades. La actualización del manifiesto de la aplicación es la siguiente:
 
 ```json
 
@@ -53,9 +53,9 @@ Para habilitar la experiencia de compra desde la aplicación, actualice el archi
 
 ### <a name="purchase-experience-api"></a>API de experiencia de compra
 
-Para desencadenar la compra desde la aplicación para la aplicación, invoque la `openPurchaseExperience` API desde la aplicación web.
+Para desencadenar la compra desde la aplicación para la aplicación, invoque la API `openPurchaseExperience` desde la aplicación web.
 
-A continuación se muestra un ejemplo de cómo llamar a la API desde la aplicación:
+A continuación se muestra un ejemplo de llamada a la API desde la aplicación:
 
 ```json
 <body> 
@@ -84,23 +84,23 @@ A continuación se muestra un ejemplo de cómo llamar a la API desde la aplicaci
 
 ## <a name="end-user-in-app-purchasing-experience"></a>Experiencia de compra desde la aplicación del usuario final
 
-En el ejemplo siguiente se muestra a los usuarios comprar planes de suscripción para una aplicación ficticia Teams llamada *Tareas de Contoso para Teams*:
+En el ejemplo siguiente se muestra a los usuarios la opción de comprar planes de suscripción para una aplicación ficticia de Teams denominada *Tareas de Contoso para Teams*:
 
-1. En la Teams **,** busca y selecciona la aplicación.
+1. En la **tienda** de Teams, busque y seleccione la aplicación
 
-1. En el cuadro de diálogo detalles de la aplicación, selecciona **Comprar una suscripción** o **Agregar para mí**.
+1. En el cuadro de diálogo de detalles de la aplicación, seleccione **Comprar una suscripción** o **Agregar para mí**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Comprar la suscripción para la aplicación seleccionada." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Compra de la suscripción para la aplicación seleccionada." border="true":::
 
-1. **Agregar para mí ofrece** una versión de prueba gratuita de la aplicación y, posteriormente **, actualizarla** a una versión de pago.
+1. **Agregar para mí** ofrece una versión de evaluación gratuita de la aplicación y, posteriormente, **Actualizar** a una versión de pago.
 
     :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Actualizar a la suscripción de la aplicación seleccionada." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
-1. En el **cuadro de diálogo Elegir un plan de** suscripción, elija el plan y seleccione **Desprotección**.
+1. En el cuadro de diálogo **Elegir un plan de suscripción**, elija el plan y seleccione **Finalizar la compra**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Seleccionar el plan de suscripción adecuado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selección del plan de suscripción adecuado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
-1. Complete la transacción y **seleccione Configurar ahora** para configurar la suscripción.
+1. Complete la transacción y seleccione **Configurar ahora** para configurar la suscripción.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurar la suscripción." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
@@ -113,5 +113,5 @@ En el ejemplo siguiente se muestra a los usuarios comprar planes de suscripción
 
 ## <a name="see-also"></a>Vea también
 
-* [Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Incluir una oferta de SaaS con la aplicación de Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [Crear una oferta de software como servicio (SaaS)](include-saas-offer.md#create-your-saas-offer)
