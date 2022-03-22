@@ -4,12 +4,12 @@ keywords: Teams apps capabilities permissions device native scan qr barcode imag
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieren el consentimiento del usuario, como las capacidades de escáner qr, código de barras, imagen, audio y vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9d06cebaac7c3e0ff5938cd3c21dda306c8b1e45
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3cb15e82101be7df9f90c94928fa91ae570c14d5
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398718"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674967"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivo para tu Microsoft Teams aplicación
 
@@ -33,7 +33,6 @@ Al acceder a las capacidades del dispositivo, puedes crear experiencias más com
 * Use la información de ubicación del usuario para mostrar información relevante.
 
 > [!NOTE]
->
 > * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel del lado de la reunión.
 > * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, consulta [Permisos del dispositivo del explorador](browser-device-permissions.md).
 

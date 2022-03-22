@@ -4,12 +4,12 @@ description: Obtenga información sobre la invocación y el descarte de módulos
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d25847b0be86822f15c9443c28907031b98fea
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 84cca74d6e81dce9bbcd7637b5d0b6537524d831
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399334"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674729"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar y descartar módulos de tareas
 
@@ -208,7 +208,7 @@ En la siguiente sección se proporcionan detalles sobre cómo usar un teclado co
 
 Con módulos de tareas basados en HTML o JavaScript, debes asegurarte de que el módulo de tareas de la aplicación se pueda usar con un teclado. Los programas de lector de pantalla también dependen de la capacidad de navegar con el teclado. Esto incluye las dos cosas siguientes:
 
-* Usar el [atributo tabindex en](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) las etiquetas HTML para controlar qué elementos se pueden centrar. Además, usa el atributo tabindex para identificar dónde participa en la navegación secuencial del teclado normalmente con las teclas <kbd>Tab</kbd> y <kbd>Mayús-Tab</kbd> .
+* Usar el [atributo tabindex en](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) las etiquetas HTML para controlar qué elementos se pueden centrar. Además, usa el atributo tabindex para identificar dónde participa en la navegación secuencial del teclado normalmente con las teclas <kbd>Tab</kbd> y <kbd>Mayús-Tab</kbd> .
 * Control de <kbd>la clave Esc</kbd> en JavaScript para el módulo de tareas. El código siguiente proporciona un ejemplo de cómo controlar la <kbd>clave Esc</kbd> :
 
     ```javascript
@@ -226,7 +226,7 @@ Microsoft Teams garantiza que la navegación por teclado funciona correctamente 
 
 |Ejemplo de nombre | Descripción | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Bots de ejemplo de módulo de tareas-V4 | Ejemplos para crear módulos de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Bots de ejemplo de módulo de tareas-V4 | Ejemplos para crear módulos de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 |Fichas de ejemplo del módulo de tareas y bots-V3 | Ejemplos para crear módulos de tareas. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## <a name="next-step"></a>Paso siguiente

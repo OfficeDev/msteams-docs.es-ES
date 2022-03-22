@@ -6,12 +6,12 @@ keywords: capacidades de mapa de ubicación permisos de dispositivo nativos
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 40b0f3da9b6811a7172aa5207dd7680c70db7719
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: a375d8f7c2692c9da8e220474c2c0ece97b623c2
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452826"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675016"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación
 
@@ -34,7 +34,7 @@ Es importante familiarizarse con los errores de respuesta [de la API](#error-han
 > [!NOTE]
 > Actualmente, Microsoft Teams compatibilidad con las funcionalidades de ubicación solo está disponible para clientes móviles.
 
-## <a name="update-manifest"></a>Manifiesto de actualización
+## <a name="update-manifest"></a>Actualizar manifiesto
 
 Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-schema.md#devicepermissions) la aplicación agregando la `devicePermissions` propiedad y especificando `geolocation`. Permite a la aplicación solicitar los permisos necesarios a los usuarios antes de empezar a usar las funcionalidades de ubicación. La actualización del manifiesto de la aplicación es la siguiente:
 
@@ -45,7 +45,6 @@ Actualice el Teams [archivo manifest.json de](../../resources/schema/manifest-sc
 ```
 
 > [!NOTE]
->
 > * El **símbolo del sistema Solicitar permisos** se muestra automáticamente cuando se inicia una API de Teams relevante. Para obtener más información, consulta [Solicitar permisos de dispositivo.](native-device-permissions.md)
 > * Los permisos de dispositivo son diferentes en el explorador. Para obtener más información, consulta [Permisos del dispositivo del explorador](browser-device-permissions.md).
 

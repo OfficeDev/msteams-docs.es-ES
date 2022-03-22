@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: high
 keywords: referencia de tarjetas de los bot
 ms.topic: reference
-ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399383"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558834"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -130,7 +130,7 @@ En la tabla siguiente se proporcionan las características que admiten las tarje
 
 ### <a name="example-of-adaptive-card"></a>Ejemplo de tarjeta adaptable
 
-![Ejemplo de una tarjeta adaptable](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Ejemplo de una tarjeta adaptable" border="true":::
 
 El siguiente código muestra un ejemplo de una tarjeta adaptable:
 
@@ -273,6 +273,8 @@ Referencia de Bot Framework:
 
 * [Nodo de tarjetas adaptables](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Tarjeta adaptable C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+Para más información sobre Tarjetas adaptables, vea [Tarjetas adaptables](/adaptive-cards/).
 
 Ahora puede trabajar con una tarjeta de Elemento principal, que es una tarjeta multipropósito que se usa para resaltar visualmente una selección de usuario potencial.
 

@@ -6,12 +6,12 @@ keywords: conector de Office365 de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: 42288d757a12c6e31de612f19a5556a283cf3e98
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492984"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674939"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -131,7 +131,7 @@ Para autenticar al usuario como parte de la carga de la página, vea flujo de au
 
 En la tabla siguiente se proporcionan los parámetros y los detalles de las propiedades de `GetSetting` respuesta:
 
-| Parámetros   | Detalles |
+| Parameters   | Detalles |
 |-------------|---------|
 | `entityId`       | El identificador de entidad, establecido por el código al llamar a `setSettings()`. |
 | `configName`  | El nombre de configuración, establecido por el código al llamar a `setSettings()`. |
@@ -223,7 +223,7 @@ Ejecute los comandos siguientes en Exchange Online PowerShell:
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-Para obtener más información sobre el intercambio de módulos de PowerShell, [vea Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar o deshabilitar los Outlook, [conecta aplicaciones a tus grupos en Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us).
+Para obtener más información sobre el intercambio de módulos de PowerShell, [vea Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar o deshabilitar los Outlook, [conecta aplicaciones a tus grupos en Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab).
 
 ## <a name="test-your-connector"></a>Probar el conector
 
@@ -262,8 +262,8 @@ El conector está disponible en la sección &#9679;&#9679;&#9679; > **Más** **o
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuir webhook y conector
 
-1. [Configure un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) directamente para su equipo.
-1. Agregue una [página de configuración](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) [y publique el webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) entrante en un Office 365 Connector.
+1. [Configure un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directamente para su equipo.
+1. Agregue una [página de configuración](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) [y publique el webhook](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) entrante en un Office 365 Connector.
 1. Empaquetar y publicar el conector como parte del envío [de AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) .
 
 ## <a name="code-sample"></a>Ejemplo de código
@@ -279,7 +279,7 @@ En la tabla siguiente se proporciona el nombre de ejemplo y su descripción:
 
 Siga la [guía paso a paso para](../../sbs-teams-connectors.yml) crear y probar el conector en Teams.
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Vea también
 
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Creación de un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
