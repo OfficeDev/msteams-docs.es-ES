@@ -10,7 +10,7 @@ La implementación consta de dos pasos.  En primer lugar, se crean los recursos 
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-Selecciona el Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: en la barra lateral Visual Studio Code barra lateral.
+Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: en la barra lateral de Visual Studio Code.
 
 1. Seleccione **Aprovisionar en la nube**.
 
@@ -81,6 +81,7 @@ Una vez completados los pasos de aprovisionamiento e implementación:
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de pantalla que muestra la aplicación de inicio de forma remota." border="false":::
 
 1. Seleccione **Agregar**.
+
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
 
    La aplicación se carga en el sitio de Azure.

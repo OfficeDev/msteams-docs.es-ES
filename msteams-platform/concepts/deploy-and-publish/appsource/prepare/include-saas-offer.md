@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6828350ab09dede3022bb9cad61756eccc9988f0
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63502001"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727342"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluya una oferta de SaaS con la aplicación Microsoft Teams
 
@@ -52,6 +52,7 @@ Al preparar la monetización de su aplicación de Teams, estas son algunas cosas
 * Descubra cómo el [inicio de sesión único (SSO) de Azure Active Directory](/azure/marketplace/azure-ad-saas) ayuda a sus clientes a comprar y administrar suscripciones. El SSO de Microsoft Azure Active Directory (Azure AD) es obligatorio para las aplicaciones de Teams con ofertas SaaS.
 * Tenga en cuenta que es responsable de administrar y pagar la infraestructura necesaria para respaldar el uso que los clientes hagan de su oferta de SaaS.
 * Tenga en cuenta la situación con los dispositivos móviles. Para evitar infringir las directivas de la tienda de aplicaciones de terceros, su aplicación no podrá incluir vínculos que permitan a los usuarios comprar planes de suscripción en el móvil. Lo que sí puede hacer es indicar si la aplicación tiene características que requieran un plan de suscripción. Para más información, consulte las [directivas de certificación del mercado comercial relacionadas](/legal/marketplace/certification-policies#114048-mobile-experience).
+* Actualmente, Teams no admite modelos de precios de tarifa plana. Sin embargo, puede crear una oferta de tarifa plana comercializable en el Centro de partners. Para obtener más información, consulte [procedimientos recomendados para vender una oferta de tarifa plana comercializable](#best-practices-for-selling-a-flat-rate-transactable-offer).
 
 ## <a name="integrate-with-the-saas-fulfillment-apis"></a>Integrar con las API de suministro SaaS
 
@@ -69,7 +70,7 @@ Para obtener instrucciones completas y referencias de API, consulte la documenta
 
 * Con las ofertas SaaS comercializables para Teams aplicaciones, los planes de suscripción (licencias) deben asignarse a usuarios individuales en lugar de a grupos o a toda una organización.
 * Cuando se asigne un plan de suscripción a los usuarios, infórmeles de ello a través de un bot o correo electrónico de Teams. En su comunicación, incluya información sobre cómo agregar la aplicación a Teams y empezar.
-* Apoye la opción de varios administradores. En otras palabras, que varios usuarios de la misma organización puedan comprar y administrar sus propias suscripciones.
+* Admitir la idea de varios administradores. En otras palabras, varios usuarios de la misma organización pueden comprar y administrar sus propias suscripciones.
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>Crear una página de aterrizaje para la administración de suscripciones
 
@@ -82,7 +83,7 @@ Para obtener instrucciones completas, consulte [Crear la página de aterrizaje d
 Tenga en cuenta las siguientes estrategias al crear una página de aterrizaje para la aplicación de Teams que monetiza. Vea una página de aterrizaje de ejemplo en la [experiencia de compra del usuario final](#end-user-purchasing-experience).
 
 * Los usuarios deben poder iniciar sesión en la página de aterrizaje con las mismas credenciales de Azure AD que usaron para comprar la suscripción. Para obtener más información, consulte [Azure AD y las ofertas de SaaS comercializables en el marketplace comercial](/azure/marketplace/azure-ad-saas).
-* Permita que los usuarios realicen las acciones abajo listadas en la página de aterrizaje. Tenga siempre en cuenta qué es apropiado para el rol y los permisos de un usuario (por ejemplo, quizá desee permitir que solo los administradores de suscripciones busquen usuarios):
+* Permita que los usuarios realicen las siguientes acciones en la página de aterrizaje. No olvide tener en cuenta lo que es adecuado para el rol y los permisos de un usuario (por ejemplo, puede permitir que solo los administradores de suscripciones busquen usuarios):
   * Buscar usuarios de su organización por correo electrónico o mediante otro tipo de identidad.
   * Ver los usuarios a los que pueden asignar licencias en una lista.
   * Asignar licencias a uno o varios usuarios al mismo tiempo.
@@ -112,7 +113,7 @@ Consulte [Crear una oferta SaaS](/azure/marketplace/create-new-saas-offer) para 
 
     * En **Integración con Microsoft 365**, agregue el vínculo AppSource a la descripción de la aplicación. Este paso garantiza que los usuarios puedan comprar sus planes de suscripción en AppSource además de en Teams.
 
-1. Almacene su editor y ofrezca los id. (los necesitará más adelante para vincular la oferta a su aplicación en el Portal de desarrolladores).
+1. Almacene el publicador y los identificadores de la oferta. (Los necesitará más adelante para vincular la oferta a la aplicación en el Portal para desarrolladores).
 
 1. Publique su oferta en el marketplace.
 
@@ -202,6 +203,24 @@ Si desvincula una oferta de SaaS incluida en la descripción de la tienda de Tea
 1. Una vez desvinculada la oferta, haga lo siguiente para actualizar la descripción de la tienda:
    1. Seleccione **Distribuir > Publicar en la tienda de Teams**.
    1. Seleccione **Abrir Centro de partners** para iniciar el proceso de volver a publicar la aplicación sin la oferta.
+
+## <a name="best-practices-for-selling-a-flat-rate-transactable-offer"></a>Procedimientos recomendados para vender una oferta de tarifa plana comercializable
+
+1. Cree su [oferta de SaaS de tarifa plana](/azure/marketplace/plan-saas-offer) y [publíquela en AppSource](/azure/marketplace/test-publish-saas-offer).
+
+1. Vincule su [oferta de SaaS a la aplicación Teams](/azure/marketplace/create-new-saas-offer) en el Centro de partners.
+
+    > [!CAUTION]
+    > No agregue el identificador de oferta y el identificador de publicador al manifiesto de la aplicación. La aplicación no pasará el proceso de envío de la tienda Teams.
+
+1. Cree un mensaje dentro de la aplicación en la aplicación de Teams que indique que se necesita tener una suscripción y proporcionar un hipervínculo  a su oferta de SaaS en AppSource para promover su oferta de tarifa plana.
+
+   > [!NOTE]
+   > Asegúrese de que los vínculos de Marketplace no aparezcan en dispositivos móviles y tabletas para cumplir con [directivas de la tienda de aplicaciones de terceros](/legal/marketplace/certification-policies).
+
+1. Envíe la aplicación para su validación.
+
+1. Después de que Marketplace de Teams admita precios de tarifa plana, actualice el manifiesto de la aplicación con el identificador de oferta y el identificador del publicador y vuelva a enviar la aplicación para su validación.
 
 ## <a name="see-also"></a>Vea también
 

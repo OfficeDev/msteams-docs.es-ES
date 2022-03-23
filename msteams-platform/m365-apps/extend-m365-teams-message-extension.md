@@ -4,12 +4,12 @@ description: Este es el modo de actualizar la extensión de mensajería de Teams
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453519"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727532"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Extender una extensión Teams de mensajería a través de Microsoft 365
 
@@ -152,8 +152,10 @@ Al probar la extensión de mensajería, puede identificar el origen (que se orig
 Para obtener una vista previa de la aplicación que se ejecuta Outlook en la Web:
 
 1. Inicie [sesión en outlook.com](https://www.outlook.com) con credenciales para el inquilino de prueba.
-1. Haga clic en **Nuevo mensaje**.
-1. Abre el **menú desplegable Más aplicaciones** en la parte inferior de la ventana de composición.
+1. Seleccione **Nuevo mensaje**.
+1. Abre **el menú desplegable** Más aplicaciones en la parte inferior de la ventana de composición.
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Haga clic en el menú &quot;Más aplicaciones&quot; en la parte inferior de la ventana de composición de correo para usar la extensión de mensaje":::
 
 Aparecerá la extensión de mensajería. Puede invocarlo desde allí y usarlo del mismo modo que lo haría al redactar un mensaje en Teams.
 
@@ -169,7 +171,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Outlook en Window
 
 Aparecerá la extensión de mensajería. Puede invocarlo desde allí y usarlo del mismo modo que lo haría al redactar un mensaje en Teams.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 Outlook habilitadas para Teams de mensajería están en versión preliminar y no son compatibles con el uso de producción. Este es el modo de distribuir la extensión de Outlook de mensajería habilitada para obtener una vista previa de las audiencias con fines de prueba.
 

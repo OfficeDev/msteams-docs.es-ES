@@ -20,6 +20,8 @@
   items:
     - name: Información general sobre la introducción
       href: get-started/get-started-overview.md
+    - name: Cree la primera aplicación con Blazor
+      href: sbs-gs-blazorapp.yml
     - name: Compile su primera aplicación con JavaScript
       href: sbs-gs-javascript.yml
     - name: Cree la primera aplicación con SPFx
@@ -90,6 +92,10 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Crear una nueva aplicación de Teams
           href: toolkit/create-new-project.md
+        - name: Depurar la aplicación de Teams localmente
+          href: toolkit/debug-local.md
+        - name: Depurar procesos en segundo plano
+          href: toolkit/debug-background-process.md
         - name: Preparar cuentas para compilar la aplicación de Teams
           href: toolkit/accounts.md
         - name: Aprovisionar recursos en la nube

@@ -5,12 +5,12 @@ description: Información general sobre pestañas personalizadas en la plataform
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 72c1ae8b22ff4d3ac96ad7c6c07a98dd37266a99
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492977"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727919"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Pestañas de compilación para Microsoft Teams
 
@@ -90,6 +90,7 @@ Puede tener varios canales o pestañas de grupo y hasta 16 pestañas personales 
 
 ## <a name="see-also"></a>Vea también
 
+* [Pestañas personalizadas en Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrar un escáner qr o de código de barras](../concepts/device-capabilities/qr-barcode-scanner-capability.md)

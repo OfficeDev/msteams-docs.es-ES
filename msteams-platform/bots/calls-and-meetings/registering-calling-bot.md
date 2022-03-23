@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: c05f0e84dd0b56f9bdb503a73886cfa0cd5024fa
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398669"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727568"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -91,6 +91,12 @@ Puedes confiar en un administrador para conceder los permisos que la aplicación
 
 > [!IMPORTANT]
 > Cada vez que realice un cambio en los permisos de la aplicación, también debe repetir el proceso de consentimiento de administrador. Los cambios realizados en el portal de registro de aplicaciones no se reflejan hasta que el administrador del espacio empresarial haya proporcionado el consentimiento.
+
+## <a name="code-sample"></a>Ejemplo de código
+
+| **Ejemplo de nombre** | **Descripción** | **Graph** |
+|---------------|----------|--------|
+| Bot de llamadas y reuniones | La aplicación de ejemplo muestra cómo Bot puede crear llamadas, unirse a reuniones y transferir llamadas. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 

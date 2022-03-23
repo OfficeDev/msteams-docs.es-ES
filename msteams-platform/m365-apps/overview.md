@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 895660e49e468583d7443799dd0c55d7950619e0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1936e6a660d77855e53257f40925cf54b05de0de
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355516"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727297"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -39,6 +39,8 @@ Después de realizar la Teams, la pestaña personal aparece como una de las apli
 Con esta vista previa, puede extender las extensiones de mensajería de Teams basadas en búsquedas al escritorio de Outlook en la Web y Windows, lo que permite a los clientes buscar y compartir resultados a través del área de mensajes de redacción de Outlook, además de Microsoft Teams clientes.
 
 Después de realizar la Teams, la extensión de mensajería aparece como una de las aplicaciones instaladas dentro del área Outlook redacción de mensajes.
+
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Extensión de mensajería que se Outlook y Teams":::
 
 ## <a name="next-steps"></a>Pasos siguientes
 
