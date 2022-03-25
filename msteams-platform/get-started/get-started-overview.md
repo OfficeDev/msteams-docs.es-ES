@@ -4,12 +4,12 @@ description: Información general de la introducción a la documentación para d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Ejemplos para desarrolladores de Microsoft Teams
-ms.openlocfilehash: 6a5b8b2ca2a8685db5cd78ece283ea2a2938e8ab
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 4dc9c77cacea5af84164bbb6e7c56a50461a0b0d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727649"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765879"
 ---
 # <a name="get-started"></a>Introducción
 
@@ -26,7 +26,6 @@ Aquí tiene una idea de lo que aprenderá:
 Echemos un rápido vistazo a las opciones de entorno de compilación que puede elegir, y a la hoja de ruta para construir e implementar una aplicación de Teams.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración en la que se muestran los pasos básicos para compilar e implementar una aplicación de Teams":::
-
 
 ## <a name="app-capabilities-and-development-tools"></a>Funcionalidades de aplicaciones y herramientas de desarrollo
 
@@ -49,6 +48,8 @@ Si ya está familiarizado con el flujo de trabajo de Yeoman, puede que prefiera 
 
 Ahora, vamos a crear su primera aplicación de Teams. Pero primero, elija su idioma (o marco de trabajo) y prepare su entorno de desarrollo.
 
+> [!div class="nextstepaction"]
+> [Crear una aplicación de Teams con Blazor](../sbs-gs-blazorapp.yml)
 > [!div class="nextstepaction"]
 > [Crear una aplicación Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]

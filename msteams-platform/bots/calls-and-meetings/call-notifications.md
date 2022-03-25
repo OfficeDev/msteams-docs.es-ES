@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: afinidad de región de devolución de llamada de llamadas de llamadas
 ms.date: 04/02/2019
-ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453057"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63783998"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
@@ -95,3 +95,8 @@ Para obtener más información, vea [Validar solicitudes entrantes](https://gith
 
 > [!div class="nextstepaction"]
 > [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+
+## <a name="see-also"></a>Vea también
+
+* [Configurar un operador automático](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Configurar la respuesta automática para Salas de Microsoft Teams dispositivos android y Teams de vídeo](/microsoftteams/set-up-auto-answer-on-teams-android)

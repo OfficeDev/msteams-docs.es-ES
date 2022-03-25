@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: cccd5865c93a41c858d12b8e4e268f4169e672e7
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 4c48e2e5ca7ac9dcaaf73189cc724f5c86385ee0
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727284"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765956"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,9 +22,10 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
-|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams |  • Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
+|23/03/2022| Guía paso a paso introducida para deshacer vínculos en Teams mediante bot | Crear extensiones de mensajería > Agregar vínculo de desenlace > [Vínculos de desenlace en Teams mediante bot](sbs-botbuilder-linkunfurling.yml)|
+|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams |  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Se agregó información sobre el proceso de depuración| • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Depurar la aplicación Teams localmente](toolkit/debug-local.md) </br> • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Proceso de depuración en segundo plano](toolkit/debug-background-process.md)|
-|14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams. | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
+|14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
@@ -42,6 +43,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 |07/02/2022| Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
 |03/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 
+
 ## <a name="ga-features"></a>Características de GA
 
 Características de la plataforma Microsoft Teams que están disponibles para todos los desarrolladores de aplicaciones.
@@ -53,9 +55,10 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams|  • Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
+|23/03/2022| Guía paso a paso introducida para deshacer vínculos en Teams mediante bot | Crear extensiones de mensajería > Agregar vínculo de desenlace > [Vínculos de desenlace en Teams mediante bot](sbs-botbuilder-linkunfurling.yml)|
+|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Se agregó información sobre el proceso de depuración| • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Depurar la aplicación Teams localmente](toolkit/debug-local.md) </br> • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Proceso de depuración en segundo plano](toolkit/debug-background-process.md)|
-|14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams. | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
+|14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|  
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|

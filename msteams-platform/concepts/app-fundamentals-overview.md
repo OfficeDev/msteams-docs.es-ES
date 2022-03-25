@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: puntos de entrada extensibilidad casos de uso capacidad del dispositivo
-ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399173"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766040"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -21,9 +21,9 @@ En esencia, Teams es una plataforma de colaboración. También es una plataforma
 
 En esta sección, aprenderá a:
 
-* Identificar y asignar los casos de uso a las características de los equipos.
-* Usar la lista de comprobación de la planificación.
-* Planificar más allá de la implementación de la aplicación.
+* Identificar y asignar los casos de uso a las características de los equipos
+* Usar la lista de comprobación de la planificación
+* Planificar más allá de la implementación de la aplicación
 
 ## <a name="plan-with-teams"></a>Planificar con Teams
 
@@ -52,7 +52,7 @@ Entender a los usuarios y sus preocupaciones son los primeros indicadores de có
 
 * **Diseñar la interfaz de usuario de la aplicación**: use el kit de herramientas de interfaz de usuario de Teams y la biblioteca de interfaz de usuario para diseñar el formato de su aplicación.
 
-* **Use Teams como plataforma**: la plataforma Teams le ayuda a crear una aplicación de una o varias funcionalidades. La aplicación de Teams está respaldada por los productos y servicios integrados que refuerzan la experiencia de la aplicación.
+* **Use Teams como plataforma**: la plataforma Teams le ayuda a crear una aplicación de una o varias funcionalidades. La aplicación de Teams es compatible con los productos y servicios integrados que refuerzan la experiencia de la aplicación.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representación conceptual de la solución de Teams." border="true":::
 
@@ -76,9 +76,9 @@ En la tabla siguiente se incluyen las características y la disponibilidad de Te
 
 | Características   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Aplicaciones propiedad de Teams como en aplicaciones desarrolladas internamente | ✔️ La aplicación está habilitada si tiene GCC. | ✔️ La aplicación está habilitada si tiene GCC-High. | ✔️ La aplicación está habilitada si tiene DOD. |
+| Aplicaciones propiedad de Teams como en aplicaciones desarrolladas internamente | ✔️ La aplicación está habilitada si tiene GCC | ✔️ La aplicación está habilitada si tiene GCC-High | ✔️ La aplicación está habilitada si tiene DOD |
 | Aplicaciones de Microsoft | ✔️ Aplicaciones de Microsoft compatibles con GCC | ✔️ Aplicaciones de Microsoft compatibles con GCC-High | ✔️ Aplicaciones de Microsoft compatibles con DOD |
-| Aplicaciones de 3p o de terceros | ✔️ Hay aplicaciones de terceros disponibles. Deshabilitado de forma predeterminada y el administrador de inquilinos usa su discreción para habilitarlo. | ❌ | ❌ |
+| Aplicaciones de 3P o de terceros | ✔️ Hay aplicaciones de terceros disponibles. Deshabilitado de forma predeterminada y el administrador de inquilinos usa su discreción para habilitarlo. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Aplicaciones de pestaña Personalizadas o Lob |  ✔️ | ✔️ | ✔️ |
 | Aplicaciones de instalación de prueba:  | ✔️ | ❌ | ❌ |

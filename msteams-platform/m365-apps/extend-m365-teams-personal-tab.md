@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5370c9b5f273936c8afdd6c95e4e524dda3857ce
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453722"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765949"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -140,7 +140,6 @@ En la **sección Aplicaciones cliente autorizadas** , asegúrese de que se agreg
 |--|--|
 |Teams escritorio, móvil |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4345a7b9-9a63-4910-a426-35363201d503|
 |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
 |Office escritorio  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
 |Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
@@ -206,7 +205,7 @@ Para ver la aplicación que se ejecuta en Office en Windows escritorio:
 
 :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de Office cliente de escritorio para ver las pestañas personales instaladas":::
 
-### <a name="office-on-the-web"></a>Office en la Web
+### <a name="office-on-the-web"></a>Office en la web
 
 Para obtener una vista previa de la aplicación que se ejecuta Office en la Web:
 
@@ -216,7 +215,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Office en la Web:
 
 :::image type="content" source="images/office-web-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de office.com para ver las pestañas personales instaladas":::
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 Outlook y Office las pestañas personales habilitadas para aplicaciones están en versión preliminar y no se admiten para el uso de producción. Aquí te explicamos cómo distribuir tu aplicación de pestaña personal para obtener una vista previa de audiencias con fines de prueba.
 

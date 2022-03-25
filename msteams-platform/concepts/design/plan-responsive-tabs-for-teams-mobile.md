@@ -5,16 +5,16 @@ description: Guía para planear la creación de una aplicación en Teams móvil
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4a32f5e0045def6571f347ebd1bbf8b56f4e082b
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453526"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766131"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
 
- Teams ofrece la oportunidad de crear aplicaciones en dispositivos móviles y de escritorio. Los usuarios de la aplicación pueden preferir el escritorio o el móvil, o ambos. Los usuarios pueden preparar datos en el escritorio, pero consumir y compartir más datos con el móvil. La clave para crear cualquier aplicación es comprender y satisfacer las necesidades de los usuarios. Hay capacidades como bots, extensiones de mensajería y conectores que funcionan sin problemas en escritorio y móvil. Sin embargo, la creación de pestañas y módulos de tareas requiere planear el hospedaje de la experiencia web en Teams móvil. El documento guía para planear las páginas web con capacidad de respuesta Teams móvil.
+ Teams ofrece la oportunidad de crear aplicaciones en dispositivos móviles y de escritorio. Los usuarios de la aplicación pueden preferir el escritorio o el móvil, o ambos. Los usuarios pueden preparar datos en el escritorio, pero consumir y compartir más datos con el móvil. La clave para crear cualquier aplicación es comprender y satisfacer las necesidades de los usuarios. Hay capacidades como bots, extensiones de mensajería y conectores que funcionan sin problemas en escritorio y móvil. Sin embargo, la creación de pestañas y módulos de tareas requiere planear el hospedaje de la experiencia web en Teams móvil. El artículo guía para planear las páginas web con capacidad de respuesta en Teams móvil.
 
 ## <a name="identify-apps-scope"></a>Identificar el ámbito de aplicaciones
 

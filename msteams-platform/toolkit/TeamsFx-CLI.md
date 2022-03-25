@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4751bcdee0addc21c7aaa165cf29d78a895d723d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453666"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766152"
 ---
 # <a name="teamsfx-library"></a>Biblioteca de TeamsFx
 
@@ -472,3 +472,4 @@ Como colaborador Project:
 * [SDK de TeamsFx para TypeScript o JavaScript](TeamsFx-SDK.md)
 * [Administrar varios entornos en Teams Toolkit](TeamsFx-multi-env.md)
 * [Colaborar en Teams proyecto mediante Teams Toolkit](TeamsFx-collaboration.md)
+* [Introducción al kit de herramientas de Teams](teams-toolkit-fundamentals.md)

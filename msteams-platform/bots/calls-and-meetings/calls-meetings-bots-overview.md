@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo las aplicaciones de Microsoft Team
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a llamadas de audio video IVR voice online meetings real-time media streams bot
-ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727635"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784005"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots de llamadas y reuniones en línea
 
@@ -92,7 +92,7 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 
 | **Ejemplo de nombre** | **Descripción** | **Graph** |
 |---------------|----------|--------|
-| Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph comunicación | Graph comunicaciones para interactuar con la plataforma de comunicaciones de Microsoft. | [Ver](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -108,3 +108,5 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 * [Cómo desarrollar bots de llamadas y reuniones en línea en el equipo](./debugging-local-testing-calling-meeting-bots.md)
 * [Requisitos y consideraciones para bots multimedia hospedados en aplicaciones](./requirements-considerations-application-hosted-media-bots.md)
 * [Información técnica sobre cómo controlar las notificaciones de llamadas entrantes](./call-notifications.md)
+* [Configurar un operador automático](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Configurar la respuesta automática para Salas de Microsoft Teams dispositivos android y Teams de vídeo](/microsoftteams/set-up-auto-answer-on-teams-android)
