@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 5370c9b5f273936c8afdd6c95e4e524dda3857ce
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765949"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464820"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -121,7 +121,7 @@ Si la aplicación usa encabezados de directiva de seguridad de [contenido (CSP](
 |--|--|
 | Teams | `teams.microsoft.com` |
 | Oficina | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com` |
+| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
 
@@ -136,14 +136,14 @@ Azure Active Directory Inicio de sesión único (SSO) para pestañas personales 
 
 En la **sección Aplicaciones cliente autorizadas** , asegúrese de que se agregan todos los valores `Client Id` siguientes:
 
-|Microsoft 365 cliente | Id. de cliente |
+|Microsoft 365 aplicación cliente | Id. de cliente |
 |--|--|
-|Teams escritorio, móvil |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+|Escritorio de Teams, móvil |1fec8e78-bli4-4aaf-ab1b-5451cc387264 |
+|Web de Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
 |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office escritorio  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+|Escritorio de Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
 |Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Teams
@@ -215,7 +215,7 @@ Para obtener una vista previa de la aplicación que se ejecuta Office en la Web:
 
 :::image type="content" source="images/office-web-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de office.com para ver las pestañas personales instaladas":::
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Siguientes pasos
 
 Outlook y Office las pestañas personales habilitadas para aplicaciones están en versión preliminar y no se admiten para el uso de producción. Aquí te explicamos cómo distribuir tu aplicación de pestaña personal para obtener una vista previa de audiencias con fines de prueba.
 
@@ -223,7 +223,7 @@ Outlook y Office las pestañas personales habilitadas para aplicaciones están e
 
 Outlook y Office pestañas personales habilitadas para la vista previa se pueden distribuir a una audiencia de vista previa en un inquilino de prueba (o producción) de tres maneras:
 
-#### <a name="teams-client"></a>Teams cliente
+#### <a name="teams-client"></a>Cliente de Teams
 
 En el *menú* Aplicaciones, selecciona *Administrar las aplicacionesSubmit* >  **una aplicación a tu organización**. Esto requiere la aprobación del administrador de TI.
 

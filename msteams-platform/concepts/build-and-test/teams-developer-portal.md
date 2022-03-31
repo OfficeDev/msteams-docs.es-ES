@@ -5,12 +5,12 @@ keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399327"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511237"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams
 
@@ -19,7 +19,9 @@ Portal <a href="https://dev.teams.microsoft.com" target="_blank">para desarrolla
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del Portal de desarrolladores para Teams.":::
 
 > [!NOTE]
-> Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
+>
+> * Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
+> * Sin embargo, puedes usar un inquilino normal para crear una aplicación en el Portal de desarrolladores, descargar la aplicación y cargarla con [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) a una nube nacional. Para obtener más información, consulte [National cloud deployments](/graph/deployments).
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 
@@ -71,17 +73,6 @@ En el Portal de desarrolladores,  usa el botón Distribuir para descargar un paq
 
 Para obtener más información, [consulta distribuir la Teams aplicación](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
-## <a name="analyze-your-apps-usage"></a>Analizar el uso de la aplicación
-
-En la **página Información** general, puedes ver el número total de usuarios activos de la aplicación. Estas métricas están disponibles para las aplicaciones publicadas en la tienda Teams o en el catálogo de aplicaciones de una organización a través del Portal de desarrolladores y están en el ámbito del identificador de la aplicación.
-
-| Métrica | Definición |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *R30 mensual* | Métrica de uso predeterminada. Muestra el recuento de usuarios activos únicos que usaron la aplicación dentro de esa ventana móvil de 30 días en UTC. |
-| *A diario* | Muestra el recuento de usuarios activos únicos que usaron la aplicación en un día determinado en UTC. |
-
-El uso mensual y diario se muestra durante los últimos siete, 30 días y 60 días. Debería ver el uso reflejado durante un día determinado en un plazo de 24-48 horas. El uso de nuevas aplicaciones puede tardar entre 3 y 5 días en mostrarse.
-
 ## <a name="use-tools-to-create-app-features"></a>Usar herramientas para crear características de la aplicación
 
 El Portal de desarrolladores también incluye herramientas que le ayudarán a crear algunas características clave de Teams aplicaciones. Algunas de estas herramientas incluyen:
@@ -92,4 +83,4 @@ El Portal de desarrolladores también incluye herramientas que le ayudarán a cr
 
 ## <a name="see-also"></a>Vea también
 
-[Incluir una oferta SaaS con tu Microsoft Teams aplicación](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Incluir una oferta de SaaS con la aplicación de Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

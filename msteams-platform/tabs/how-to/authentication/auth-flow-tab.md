@@ -4,14 +4,14 @@ description: Describe el flujo de autenticación en pestañas, OAuth por Azure A
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: pestañas de flujo de autenticación de teams
-ms.openlocfilehash: c0a3617332d3392c36f21645d4fb0074008ced40
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 28a6089eebe5ebc70f6be57f8eae451ce7a0be7e
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821377"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464806"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams de autenticación para pestañas
+# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flujo de autenticación de Microsoft Teams para pestañas
 
 > [!NOTE]
 > Para que la autenticación funcione para su pestaña en clientes móviles, debe asegurarse de que está usando al menos la versión 1.4.1 del SDK Microsoft Teams JavaScript.  
@@ -30,7 +30,7 @@ Por ejemplo, el flujo de autenticación para pestañas y bots que usan Node y el
 2. La pestaña construye la dirección URL de su página de inicio de autenticación. Opcionalmente, usa información de marcadores `microsoftTeams.getContext()` de posición de dirección URL o llamadas Teams método SDK de cliente para simplificar la experiencia de autenticación del usuario. Por ejemplo, al autenticar con A Azure AD, `login_hint` si el parámetro está establecido en la dirección de correo electrónico del usuario, el usuario no tiene que iniciar sesión si lo ha hecho recientemente. Esto se debe a Azure AD las credenciales almacenadas en caché del usuario. La ventana emergente se muestra brevemente y, a continuación, desaparece.
 3. A continuación, la pestaña llama al método `microsoftTeams.authentication.authenticate()` y registra las funciones `successCallback` y `failureCallback`.
 4. Teams abre la página de inicio en un iframe en una ventana emergente. La página de inicio genera datos aleatorios `state` `/authorize`, los guarda para la validación futura y redirige al extremo del proveedor de identidades, `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` por ejemplo, para Azure AD. Reemplace `<tenant id>` por su propio identificador de inquilino que sea context.tid.
-De forma similar a `validDomains` otros flujos de autenticación de aplicación en Teams, la página de inicio debe estar en un dominio que esté en su lista y en el mismo dominio que la página de redireccionamiento de inicio de sesión.
+De forma similar a `validDomains` otros flujos de autenticación de aplicaciones en Teams, la página de inicio debe estar en un dominio que esté en su lista y en el mismo dominio que la página de redireccionamiento de inicio de sesión.
 
     > [!NOTE]
     > El flujo de concesión implícito de OAuth 2.0 llama a `state` un parámetro de la solicitud de autenticación, que contiene datos de sesión únicos para evitar un ataque de falsificación de solicitudes entre [sitios](https://en.wikipedia.org/wiki/Cross-site_request_forgery). Los ejemplos usan un GUID generado aleatoriamente para los `state` datos.
@@ -40,6 +40,9 @@ De forma similar a `validDomains` otros flujos de autenticación de aplicación 
 7. La pestaña comprueba que el valor `state` devuelto coincide con lo que se guardó anteriormente y `microsoftTeams.authentication.notifySuccess()`llama a , que a su vez llama a la `successCallback` función registrada en el paso 3.
 8. Teams cierra la ventana emergente.
 9. La pestaña muestra la interfaz de usuario de configuración, actualiza o vuelve a cargar el contenido de las pestañas, en función del lugar desde el que se inició el usuario.
+
+> [!NOTE]
+> Si la aplicación admite SSO de SAML, no se puede usar el token JWT generado por SSO, ya que no se admite.
 
 ## <a name="treat-tab-context-as-hints"></a>Tratar el contexto de tabulación como sugerencias
 
@@ -55,7 +58,7 @@ Código de ejemplo que muestra el proceso de autenticación de tabulación:
 
 ## <a name="see-also"></a>Consulte también
 
-Para obtener una implementación detallada para la autenticación de pestañas Azure AD, vea:
+Para obtener una implementación detallada para la autenticación de tabulación Azure AD, vea:
 
 * [Autenticar a un usuario en una Teams pestaña](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Autenticación silenciosa](~/tabs/how-to/authentication/auth-silent-AAD.md)

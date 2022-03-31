@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1c4b219ed4f664e92d144b18c7aa3734c79c0c61
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464272"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498220"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 
@@ -34,13 +34,20 @@ Puede crear una nueva aplicación explorando **Ver ejemplos** y seleccionando un
 
  1. Abra el **Kit de herramientas de Teams** desde Visual Studio Code de Microsoft.
  1. Seleccione la sección **DESARROLLO** en Vista de árbol.
- 1. Seleccione **Ver ejemplos**. La galería de ejemplos aparece como se muestra en la siguiente imagen:
+ 1. Seleccione **Ver ejemplos**. La galería de ejemplos aparecerá como se muestra en la siguiente imagen:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Ver ejemplos":::
 
 Puede explorar y descargar ejemplos y ejecutar la aplicación de forma local o remota para obtener una vista previa en el cliente web de Teams. Siga las instrucciones de cada ejemplo o seleccione **Ver en GitHub** para abrir el ejemplo en `TeamsFx Samples repository` y examinar el código fuente.
 
 Para obtener más información, vea [Crear una nueva aplicación de pestaña de Teams (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
+
+## <a name="step-by-step-guides-using-teams-toolkit"></a>Guías paso a paso con Teams Toolkit
+
+* [Crear una aplicación de Teams con Blazor](../sbs-gs-blazorapp.yml)
+* [Crear una aplicación Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
+* [Crear una aplicación Teams con SPFx](../sbs-gs-spfx.yml)
+* [Crear una aplicación Teams con C# o .NET](../sbs-gs-csharp.yml)
 
 ## <a name="see-also"></a>Vea también
 

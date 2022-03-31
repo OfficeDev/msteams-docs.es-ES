@@ -5,13 +5,13 @@ description: Cómo agregar la autenticación de OAuth a un bot en Microsoft Team
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: manifiesto del bot del emulador de Azure de registro de grupo de recursos
-ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+keywords: Implementación del manifiesto del bot del emulador de Azure de registro de grupo de recursos
+ms.openlocfilehash: f0dafb52774c43a511076134d2b39b91de0743a7
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63493030"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464827"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
@@ -358,7 +358,7 @@ Si un bot requiere autenticación, debe configurar el Emulator. Para configurar:
 1. Active la casilla Usar **tokens de autenticación de la versión 1.0**.
 1. Escriba la ruta de acceso local a la **herramienta ngrok** . *Consulta* el wiki Bot Framework Emulator integración de túneles [de Bot Framework Emulator/ngrok](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). Para obtener más información sobre la herramienta, [vea ngrok](https://ngrok.com/).
 1. Active la casilla **Ejecutar ngrok cuando Emulator se inicie**.
-1. Seleccione el **botón** Guardar.
+1. Seleccione el botón **Guardar**.
 
 Cuando el bot muestra una tarjeta de inicio de sesión y el usuario selecciona el botón de inicio de sesión, el Emulator abre una página que el usuario puede usar para iniciar sesión con el proveedor de autenticación.
 Una vez que el usuario lo hace, el proveedor genera un token de usuario y lo envía al bot. Después, el bot puede actuar en nombre del usuario.
@@ -630,7 +630,7 @@ En el siguiente paso de diálogo, compruebe la presencia de un token en el resul
 
 ---
 
-## <a name="see-also"></a>Recursos adicionales
+## <a name="see-also"></a>Vea también
 
 [Agregar autenticación a través del servicio bot de Azure](https://aka.ms/azure-bot-add-authentication)
 

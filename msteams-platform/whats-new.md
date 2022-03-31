@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 4c48e2e5ca7ac9dcaaf73189cc724f5c86385ee0
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: fe6eb9a35173ee01ef5df8857bfe92892abc3630
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765956"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511244"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -28,21 +28,6 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 |14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
-|25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
-|24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar extensión de mensajería basada en acciones](sbs-meetingextension-action.yml) |
-|24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la búsqueda | Generar extensiones de mensajería > Comandos de búsqueda > Definir comandos de búsqueda > [Generar extensión de mensajería basada en la búsqueda](sbs-messagingextension-searchcommand.yml)|
-|24/02/2022| Presentación de guía paso a paso para crear Webhooks de salida | Compilar webhooks y conectores > Crear webhooks salientes > [Crear webhooks de salida](sbs-outgoing-webhooks.yml)|
-| 23/02/2022 |Parámetros de clasificación de la tienda de Microsoft Teams| Distribuir la aplicación > Publique en la tienda de Teams > [Parámetros de clasificación de la tienda de Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
-| 18/02/2022 | Se ha introducido un amplio glosario en la documentación para desarrolladores de Microsoft Teams para ayudarle a encontrar rápidamente la definición de un término. | [Glosario](~/get-started/glossary.md) |
-| 18/02/2022 | Se ha actualizado el módulo de visión general para asignar la aplicación Teams a los objetivos de la organización, la historia del usuario y la exploración de las características de la aplicación Teams. | [Visión general > Aplicación para Teams que se adapta](overview.md) |
-| 18/02/2022 | Se ha actualizado el módulo de fundamentos de la aplicación para Planificar su aplicación a fin de incluir la asignación de casos de uso a las características de Teams y la lista de comprobación de la planificación de la aplicación. | [Planifique su aplicación > Visión general](~/concepts/app-fundamentals-overview.md) |
-|17/02/2022| ¿Qué puede esperar después de presentar su solicitud?| Distribuye tu aplicación > Publica en la tienda de Teams > [ visión general](concepts/deploy-and-publish/appsource/publish.md)|
-|15/02/2022| Guía paso a paso sobre cómo cargar archivos a Teams desde un bot | Crear bots > Enviar y recibir archivos > [Guía paso a paso de cómo subir archivos a Teams desde un bot](sbs-file-handling-in-bot.yml) |
-|11/02/2022| Escena de reunión compartida| • Crear aplicaciones para reuniones de Teams > [Fase de reunión compartida](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Crear aplicaciones para reuniones de Teams > [Referencias de API de aplicaciones de reuniones](apps-in-teams-meetings/API-references.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de la versión preliminar para desarrolladores](resources/schema/manifest-schema-dev-preview.md)|
-|02/08/2022| Introducción a una guía paso a paso para crear un bot de llamadas y reuniones| Crear bots > Bots de llamadas y reuniones > Bot de registro de llamadas y reuniones > [Guía paso a paso para crear bots de llamadas y reuniones](sbs-calling-and-meeting.yml) |
-|07/02/2022| Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
-|03/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
-
 
 ## <a name="ga-features"></a>Características de GA
 

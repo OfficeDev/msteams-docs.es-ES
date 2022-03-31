@@ -4,12 +4,12 @@ description: Describe cómo llegar a DevTools al usar el Microsoft Teams de escr
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: pestaña herramientas para desarrolladores de cliente de escritorio chrome para depuración de devtools
-ms.openlocfilehash: b9bc3f5afa43684b260f8618b5450e94c91e95f1
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: bec7b94b1db2492de9eaaa38ff62c0783c972f6e
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216209"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511221"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 
@@ -20,18 +20,22 @@ Cuando Teams se ejecuta en un explorador, es fácil acceder a DevTools del explo
 1. Agregue puntos de interrupción al código JavaScript y realice la depuración interactiva.
 
 > [!NOTE]
-> La característica solo está disponible para clientes de escritorio y Android después de habilitar **la vista previa** de desarrollador. Para obtener más información, [vea How do I enable developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> La característica solo está disponible para clientes de escritorio y Android después de habilitar **la vista previa** de desarrollador. Para obtener más información, [vea Cómo habilitar la vista previa del desarrollador](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="access-devtools-on-the-desktop"></a>Access DevTools en el escritorio
 
 Aunque la versión web y la versión de escritorio de Teams son casi iguales, existen algunas diferencias con respecto a la autenticación. A veces, la única forma de averiguar lo que está sucediendo es usar DevTools. Para usar DevTools en el cliente de escritorio, debe:
 
-1. Asegúrese de que ha habilitado [la vista previa del desarrollador](~/resources/dev-preview/developer-preview-intro.md).
+1. Asegúrese de que ha habilitado la [vista previa del desarrollador](~/resources/dev-preview/developer-preview-intro.md).
 1. Abra una pestaña para que tenga algo que inspeccionar con DevTools.
 1. Abra DevTools de una de las siguientes maneras:
-    * Al Windows, abra DevTools a través del Microsoft Teams en la bandeja de escritorio:<br>
-  ![Haga clic con el botón secundario para abrir DevTools](~/assets/images/dev-preview/devtools-right-click.png)
-    * En MacOS, haga clic en el Microsoft Teams en dock.
+    * Al Windows, abra DevTools a través del Microsoft Teams en la bandeja de escritorio.
+
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="developer-tool-windows":::
+
+    * En MacOS, seleccione el Microsoft Teams en dock.
+
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="mac-os-dev-tools":::
 
 En el ejemplo siguiente se muestra DevTools abierto e inspeccionando un cuadro de diálogo de configuración de tabulación:
 
@@ -41,9 +45,9 @@ En el ejemplo siguiente se muestra DevTools abierto e inspeccionando un cuadro d
 
 También puedes habilitar DevTools desde el Teams Android. Para habilitar DevTools, debe:
 
-1. Habilitar la [vista previa del desarrollador](~/resources/dev-preview/developer-preview-intro.md).
-1. Conectar el dispositivo al equipo de escritorio y configura el dispositivo Android para [la depuración remota.](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
-1. En el explorador Chrome, abra `chrome://inspect/#devices` .
+1. Habilita la [vista previa del desarrollador](~/resources/dev-preview/developer-preview-intro.md).
+1. Conectar el dispositivo al equipo de escritorio y configura el dispositivo Android para [la depuración remota](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
+1. En el explorador Chrome, abra `chrome://inspect/#devices`.
 1. Seleccione **inspeccionar** debajo de la pestaña que desea depurar, como en la siguiente imagen:
 
    ![Android DevTools](~/assets/images/android-devtools.png)

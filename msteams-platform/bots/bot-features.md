@@ -5,12 +5,12 @@ description: Información general sobre las herramientas y SDK para crear Micros
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 1818ebfa102ce55d8243c16f460fa688fc67fdc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453890"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464771"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -50,7 +50,7 @@ El Teams bot consta de lo siguiente:
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots con webhooks y conectores
 
-Los webhooks y conectores conectan el bot a los servicios web. Con webhooks y conectores, puede crear un bot simple para la interacción básica, como crear un flujo de trabajo u otros comandos simples. Solo están disponibles en el equipo donde los cree y están diseñados para procesos sencillos específicos del flujo de trabajo de su empresa. Para obtener más información, [vea what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Los webhooks y conectores conectan el bot a los servicios web. Con webhooks y conectores, puede crear un bot para la interacción básica, como crear un flujo de trabajo u otros comandos simples. Solo están disponibles en el equipo donde los cree y están diseñados para procesos sencillos específicos del flujo de trabajo de su empresa. Para obtener más información, [vea what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="advantages-of-bots"></a>Ventajas de los bots
 
@@ -193,7 +193,8 @@ this.onMessage(async (context, next) => {
 
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[Ver](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Ejemplos de bot | Conjunto de ejemplos de bots | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
 
 ## <a name="next-step"></a>Paso siguiente
 

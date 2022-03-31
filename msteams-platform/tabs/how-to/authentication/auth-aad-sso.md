@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API de inicio de sesión único de Microsoft Azure Active Directory (Azure AD), autenticación SSO de teams
-ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398893"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464813"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -22,7 +22,7 @@ Los usuarios inician sesión en Microsoft Teams a través de su cuenta profesion
 >
 > ✔Teams para iOS (_Versión_: 2.0.18 y versiones posteriores)  
 >
-> ✔Teams SDK de JavaScript (_Versión_: 1.10 y versiones posteriores) para que SSO funcione en el panel lateral de la reunión.
+> ✔SDK de JavaScript de Teams (_Versión_: 1.11 y posteriores) para que SSO funcione en el panel lateral de la reunión.
 >
 > Para la mejor experiencia con Teams, use la última versión de iOS y Android.[!NOTE]
 > **Inicio rápido**  
