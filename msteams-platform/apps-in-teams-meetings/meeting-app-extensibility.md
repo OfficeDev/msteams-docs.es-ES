@@ -1,15 +1,15 @@
 ---
 title: Aplicaciones de reuniones unificadas
 author: surbhigupta
-description: Obtenga información sobre el ciclo de vida de la reunión, la creación de la experiencia de reunión del usuario durante todo el ciclo de vida de la reunión en entornos móviles y de escritorio, roles de participantes y tipos de usuario. Además, obtenga información sobre la integración de bots y la extensión de mensajería en el ciclo de vida de la reunión.
+description: Obtenga información Teams ciclo de vida de la reunión y la experiencia de reunión del usuario en entornos móviles y de escritorio, roles y tipos de participantes y usuarios, integra bots y extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558848"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571134"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 

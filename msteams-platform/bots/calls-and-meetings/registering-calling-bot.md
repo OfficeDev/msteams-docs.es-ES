@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo registrar un nuevo bot de llamadas
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamar a los medios de audio y vídeo de audio y vídeo del bot
-ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1a90e430ba0c5bc4ae1ab246baa85a5d33507a43
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727568"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590769"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -84,7 +84,7 @@ Debe configurar los permisos de aplicación para el bot por adelantado mediante 
 
 Para las aplicaciones que usan el punto de conexión Azure AD V1, un administrador de inquilinos puede dar su consentimiento a los permisos de la aplicación mediante el [portal de Microsoft Azure](https://portal.azure.com) cuando la aplicación está instalada en su organización. Como alternativa, puedes proporcionar una experiencia de registro en la aplicación a través de la cual los administradores pueden dar su consentimiento a los permisos configurados. Una vez que el consentimiento del administrador Azure AD, la aplicación puede solicitar tokens sin tener que volver a solicitar el consentimiento.
 
-Puedes confiar en un administrador para conceder los permisos que la aplicación necesita en [el portal Microsoft Azure web](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el Azure AD de V2`/adminconsent`. Para obtener más información, consulta [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/uth-v2-service#3-get-administrator-consent).
+Puedes confiar en un administrador para conceder los permisos que la aplicación necesita en [el portal Microsoft Azure web](https://portal.azure.com). Una mejor opción es proporcionar una experiencia de registro para los administradores mediante el Azure AD de V2`/adminconsent`. Para obtener más información, consulta [instrucciones sobre cómo crear una dirección URL de consentimiento de administrador](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Para crear la dirección URL de consentimiento de administrador del espacio empresarial, se requiere un URI de redireccionamiento configurado o una dirección URL de respuesta en el [portal de registro de](https://apps.dev.microsoft.com/) aplicaciones. Para agregar direcciones URL de respuesta para el bot, acceda al registro del bot y elija **Opciones** >  **avanzadasEdit Application Manifest**. Agregue la dirección URL de redireccionamiento a la `replyUrls` colección.
@@ -107,7 +107,8 @@ Siga la [guía paso a paso para](../../sbs-calling-and-meeting.yml) configurar l
 > [!div class="nextstepaction"]
 > [Notificaciones de llamadas entrantes](~/bots/calls-and-meetings/call-notifications.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Notificaciones de llamadas entrantes](~/bots/calls-and-meetings/call-notifications.md)
 * [Desarrollar bots de llamadas y reuniones en línea en el equipo local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [Ver el permiso de la aplicación y conceder el consentimiento de administrador](/MicrosoftTeams/app-permissions-admin-center)

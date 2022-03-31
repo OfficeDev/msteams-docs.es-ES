@@ -5,12 +5,12 @@ keywords: introducción a los equipos del portal de desarrolladores
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511237"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464785"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams
 
@@ -19,9 +19,7 @@ Portal <a href="https://dev.teams.microsoft.com" target="_blank">para desarrolla
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del Portal de desarrolladores para Teams.":::
 
 > [!NOTE]
->
-> * Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
-> * Sin embargo, puedes usar un inquilino normal para crear una aplicación en el Portal de desarrolladores, descargar la aplicación y cargarla con [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) a una nube nacional. Para obtener más información, consulte [National cloud deployments](/graph/deployments).
+> Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 

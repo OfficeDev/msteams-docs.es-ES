@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 376d12b1fce2352ebfd92312c3154806b9bda5e2
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464820"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590762"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Extender una Teams personal a través de Microsoft 365
 
@@ -54,7 +54,7 @@ Para completar este tutorial, necesitará:
 
 Si tienes una aplicación de pestaña personal existente, haz una copia o una rama del proyecto de producción para probar y actualizar tu id. de aplicación en el manifiesto de la aplicación para usar un nuevo identificador (distinto del id. de aplicación de producción).
 
-Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos de configuración de Introducción a [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para crear una aplicación de pestaña personal con la extensión Teams Toolkit para Visual Studio Code. O bien, puede empezar con el mismo ejemplo de lista [de todo actualizado para TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) y continuar con la vista previa de la pestaña personal en otras [Microsoft 365 experiencias.](#preview-your-personal-tab-in-other-microsoft-365-experiences) El ejemplo actualizado también está disponible en Teams Toolkit extensión: *DevelopmentView* >  *samplesTodo* >  **List (Funciona en Teams, Outlook y Office).**.
+Si quieres usar código de ejemplo para completar este tutorial, sigue los pasos de configuración de [Introducción con Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) para crear una aplicación de pestaña personal con la extensión Teams Toolkit para Visual Studio Code. O bien, puede empezar con el mismo ejemplo de lista [de todo actualizado para TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) y continuar con la vista previa de la pestaña personal en otras [Microsoft 365 experiencias.](#preview-your-personal-tab-in-other-microsoft-365-experiences) El ejemplo actualizado también está disponible en Teams Toolkit extensión: *DevelopmentView* >  *samplesTodo* >  **List (Funciona en Teams, Outlook y Office).**.
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Ejemplo de lista todo (funciona en Teams, Outlook y Office) en Teams Toolkit":::
 
@@ -120,15 +120,15 @@ Si la aplicación usa encabezados de directiva de seguridad de [contenido (CSP](
 |Microsoft 365 host| permiso frame-ancestor|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Oficina | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Actualizar Azure AD de aplicaciones para SSO
 
-Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), sin embargo, deberá agregar varios identificadores de aplicación cliente al registro de aplicación de Azure AD de la aplicación de pestaña en el portal de registros de *aplicaciones del* inquilino.
+Azure Active Directory Inicio de sesión único (SSO) para pestañas personales funciona de la misma manera en Office y Outlook que en [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), sin embargo, deberá agregar varios identificadores de aplicación cliente al *registro de la aplicación Azure AD de la aplicación de pestaña en la aplicación de pestaña del inquilino Registros de aplicaciones* portal.
 
 1. Inicie sesión en [Microsoft Azure portal con](https://portal.azure.com) su cuenta de espacio aislado.
-1. Abra la **hoja Registros de aplicaciones** .
+1. Abra la **Registros de aplicaciones** hoja.
 1. Selecciona el nombre de la aplicación de pestaña personal para abrir el registro de la aplicación.
 1. Seleccione  **Exponer una API** (en *Administrar*).
 
@@ -173,9 +173,9 @@ Puedes anclar la aplicación para obtener acceso rápido o puedes encontrar la a
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Obtener una vista previa de la pestaña personal en otras Microsoft 365 experiencias
 
-Al actualizar la pestaña personal de Teams y cargarla localmente en Teams, también se ejecutará en Outlook clientes de escritorio y web y Office en la Web (office.com). Este es el modo de obtener una vista previa de estas Microsoft 365 experiencias.
+Cuando actualiza la pestaña personal de Teams y la descarga local en Teams, se ejecuta en Outlook en Windows, en la web, Office en Windows y en la web (office.com). Este es el modo de obtener una vista previa de estas Microsoft 365 experiencias.
 
-### <a name="outlook"></a>Outlook
+### <a name="outlook-on-windows"></a>Outlook en Windows
 
 Para ver la aplicación que se ejecuta en Outlook en Windows escritorio:
 
@@ -195,7 +195,7 @@ Para ver la aplicación en Outlook en la Web:
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de outlook.com para ver las pestañas personales instaladas":::
 
-### <a name="office"></a>Oficina
+### <a name="office-on-windows"></a>Office en Windows
 
 Para ver la aplicación que se ejecuta en Office en Windows escritorio:
 
@@ -205,7 +205,7 @@ Para ver la aplicación que se ejecuta en Office en Windows escritorio:
 
 :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Haz clic en la opción puntos suspensivos ('Más aplicaciones') en la barra lateral de Office cliente de escritorio para ver las pestañas personales instaladas":::
 
-### <a name="office-on-the-web"></a>Office en la web
+### <a name="office-on-the-web"></a>Office en la Web
 
 Para obtener una vista previa de la aplicación que se ejecuta Office en la Web:
 

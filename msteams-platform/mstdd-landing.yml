@@ -12,19 +12,23 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 8516686e6027c41462a22415754c827ff258a589
-  ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+  ms.openlocfilehash: 2162a3ca1e5cd82612217deba2df163e1fb175f6
+  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/23/2022
-  ms.locfileid: "63766033"
+  ms.lasthandoff: 03/31/2022
+  ms.locfileid: "64571099"
 landingContent:
 - title: Explorar lo más reciente
   linkLists:
   - linkListType: concept
     links:
-    - text: Depurar la aplicación Teams de depuración
-      url: ~/toolkit/debug-local.md
+    - text: Cree la primera aplicación con Blazor
+      url: sbs-gs-blazorupdate.yml
+    - text: Permisos de dispositivo para el explorador
+      url: ~/concepts/device-capabilities/browser-device-permissions.md
+    - text: Integrar Selector de personas
+      url: ~/concepts/device-capabilities/people-picker-capability.md
     - text: Menú desbordamiento de tarjetas adaptables
       url: ~/task-modules-and-cards/cards/cards-format.md
     - text: Glosario
@@ -39,22 +43,18 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     - text: Flujo de compra desde la aplicación para monetización de aplicaciones
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-    - text: Comentarios sobre la finalización de formularios de Tarjetas adaptables
-      url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: Autenticación con proveedores de OAuth externos
-      url: ~/tabs/how-to/authentication/auth-oauth-provider.md
 - title: Introducción
   linkLists:
   - linkListType: get-started
     links:
-    - text: Introducción a la creación de aplicaciones
+    - text: Comenzar con la creación de aplicaciones
       url: ../msteams-platform/get-started/get-started-overview.md
-    - text: Introducción a GitHub
+    - text: Comenzar con GitHub
       url: /contribute/additional-resources
   - linkListType: tutorial
     links:
     - text: Cree la primera aplicación con Blazor
-      url: sbs-gs-blazorapp.yml
+      url: sbs-gs-blazorupdate.yml
     - text: Crear aplicación con JavaScript
       url: sbs-gs-javascript.yml
     - text: Crear aplicación con SPFx

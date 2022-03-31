@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo probar y depurar el bot localmente
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0085d38ef2dafc4708772222fb9b173a12afedd7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453372"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590706"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Probar y depurar el bot localmente
 
@@ -27,7 +27,7 @@ Hay dos métodos para cargar la aplicación:
 
 > [!NOTE]
 > Para modificar el manifiesto y volver a cargar la aplicación, [elimina el bot](#delete-a-bot-from-teams) antes de cargar el paquete de la aplicación modificado.
-> Para probar el bot, habilite la instalación local en Teams. Consulte [Habilitar la instalación local](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Para probar el bot, habilite la instalación local en Teams. Consulte [Habilitar la instalación local](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## <a name="debug-your-bot-locally"></a>Depurar el bot localmente
 
@@ -98,7 +98,7 @@ Para impedir que el bot reciba mensajes, vaya al **Panel de bots** y edite el Mi
 
 Para quitar el bot completamente de Teams, vaya al **Panel del bot** y edite el canal Microsoft Teams bot. Elija el **botón** Eliminar en la parte inferior. Esto evita que los usuarios detecten, agreguen e interactúen con el bot. Sin embargo, esto no quita el bot de las instancias de Teams de otro usuario, pero también deja de funcionar para ellas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Depurar el bot con el middleware de inspección](/azure/bot-service/bot-service-debug-inspection-middleware)
 * [Depurar el bot de llamadas y reuniones de forma local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

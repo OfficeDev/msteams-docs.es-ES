@@ -1,16 +1,16 @@
 ---
 title: Enviar y recibir archivos desde un bot
-description: Describe cómo enviar y recibir archivos de un bot
+description: Obtenga información sobre cómo enviar y recibir archivos a través del bot Graph API para ámbitos personales, de canal y de chat de grupo. Use Teams API de bot con ejemplos de código basados en el SDK de Bot Framework de v3.
 keywords: bots teams bots files send receive
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 7bf1d63ae5a77b8240719f7a123a34a8556a2391
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c95ddbc4bfe0d491f48101b12d8658f7714c0075
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157385"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590755"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Enviar y recibir archivos a través del bot
 
@@ -27,22 +27,22 @@ Hay dos maneras de enviar archivos a y desde un bot:
 
 ## <a name="using-the-microsoft-graph-apis"></a>Uso de las API Graph Microsoft
 
-Puede publicar mensajes con datos adjuntos de tarjeta que hagan referencia a archivos SharePoint existentes mediante las API de Microsoft Graph para OneDrive [y SharePoint](/onedrive/developer/rest-api/). El uso de las API de Graph requiere obtener acceso a la carpeta OneDrive de un usuario (para y archivos) o a los archivos de los canales de un equipo (para archivos) mediante el flujo de autorización estándar de `personal` `groupchat` `channel` OAuth 2.0. Este método funciona en todos Teams ámbitos.
+Puede publicar mensajes con datos adjuntos de tarjeta que hagan referencia a archivos SharePoint existentes mediante las API de Microsoft Graph para OneDrive [y SharePoint](/onedrive/developer/rest-api/). El uso de las API de Graph requiere obtener acceso a la carpeta OneDrive de un usuario (`personal` `groupchat` para y archivos) o a los archivos de los canales de un equipo (`channel`para archivos) mediante el flujo de autorización estándar de OAuth 2.0. Este método funciona en todos Teams ámbitos.
 
 ## <a name="using-the-teams-bot-apis"></a>Uso de las API Teams Bot
 
 > [!NOTE]
-> Este método solo funciona en el `personal` contexto. No funciona en el `channel` contexto `groupchat` o.
+> Este método solo funciona en el `personal` contexto. No funciona en el contexto `channel` o `groupchat` .
 
-El bot puede enviar y recibir directamente archivos con usuarios en el contexto, también conocido como chats personales, mediante Teams `personal` API. Esto le permite implementar informes de gastos, reconocimiento de imágenes, archivo de archivo, firmas electrónicas y otros escenarios que implican la manipulación directa del contenido del archivo. Los archivos compartidos Teams suelen aparecer como tarjetas y permiten la visualización enriquecte desde la aplicación.
+El bot puede enviar y recibir `personal` directamente archivos con usuarios en el contexto, también conocido como chats personales, mediante Teams API. Esto le permite implementar informes de gastos, reconocimiento de imágenes, archivo de archivo, firmas electrónicas y otros escenarios que implican la manipulación directa del contenido del archivo. Los archivos compartidos Teams suelen aparecer como tarjetas y permiten la visualización enriquecte desde la aplicación.
 
 En las secciones siguientes se describe cómo hacerlo para enviar contenido de archivo como resultado de la interacción directa del usuario, como enviar un mensaje. Esta API se proporciona como parte de la plataforma Microsoft Teams bot.
 
 ### <a name="configure-your-bot-to-support-files"></a>Configurar el bot para admitir archivos
 
-Para enviar y recibir archivos en el bot, debe establecer la propiedad `supportsFiles` en el manifiesto en `true` . Esta propiedad se describe en la [sección bots](~/resources/schema/manifest-schema.md#bots) de la referencia manifest.
+Para enviar y recibir archivos en el bot, debe establecer la `supportsFiles` propiedad en el manifiesto en `true`. Esta propiedad se describe en la [sección bots](~/resources/schema/manifest-schema.md#bots) de la referencia manifest.
 
-La definición tendrá este aspecto: `"supportsFiles": true` . Si el bot no lo `supportsFiles` habilita, las siguientes características no funcionarán.
+La definición tendrá este aspecto: `"supportsFiles": true`. Si el bot no lo habilita `supportsFiles`, las siguientes características no funcionarán.
 
 ### <a name="receiving-files-in-personal-chat"></a>Recepción de archivos en chat personal
 
@@ -70,7 +70,7 @@ En la tabla siguiente se describen las propiedades de contenido de los datos adj
 
 | Propiedad | Objetivo |
 | --- | --- |
-| `downloadUrl` | OneDrive Dirección URL para capturar el contenido del archivo. Puede emitir una `HTTP GET` directamente desde esta dirección URL. |
+| `downloadUrl` | OneDrive url para capturar el contenido del archivo. Puede emitir una directamente `HTTP GET` desde esta dirección URL. |
 | `uniqueId` | Identificador de archivo único. Este será el identificador OneDrive elemento de unidad, en el caso de que el usuario envíe un archivo al bot. |
 | `fileType` | Tipo de extensión de archivo, como pdf o docx. |
 
@@ -80,7 +80,7 @@ Como práctica recomendada, debes confirmar la carga del archivo enviando un men
 
 Cargar un archivo a un usuario implica los siguientes pasos:
 
-1. Enviar un mensaje al usuario que solicita permiso para escribir el archivo. Este mensaje debe contener `FileConsentCard` datos adjuntos con el nombre del archivo que se va a cargar.
+1. Enviar un mensaje al usuario que solicita permiso para escribir el archivo. Este mensaje debe contener datos `FileConsentCard` adjuntos con el nombre del archivo que se va a cargar.
 2. Si el usuario acepta la descarga de archivos, el bot recibirá una *actividad Invoke* con una dirección URL de ubicación.
 3. Para transferir el archivo, el bot realiza una `HTTP POST` operación directamente en la dirección URL de ubicación proporcionada.
 4. Opcionalmente, puedes quitar la tarjeta de consentimiento original si no quieres permitir que el usuario acepte más cargas del mismo archivo.
@@ -117,13 +117,13 @@ En la tabla siguiente se describen las propiedades de contenido de los datos adj
 | Propiedad | Objetivo |
 | --- | --- |
 | `description` | Descripción del archivo. Puede mostrarse al usuario para describir su propósito o para resumir su contenido. |
-| `sizeInBytes` | Proporciona al usuario una estimación del tamaño del archivo y la cantidad de espacio que ocupará en OneDrive. |
+| `sizeInBytes` | Proporciona al usuario una estimación del tamaño del archivo y la cantidad de espacio que ocupará OneDrive. |
 | `acceptContext` | Contexto adicional que se transmitirá silenciosamente al bot cuando el usuario acepte el archivo. |
 | `declineContext` | Contexto adicional que se transmitirá silenciosamente al bot cuando el usuario rechace el archivo. |
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Invocar actividad cuando el usuario acepta el archivo
 
-Se envía una actividad de invocación al bot si el usuario acepta el archivo y cuándo. Contiene la dirección URL OneDrive para la Empresa marcador de posición que el bot puede emitir para `PUT` transferir el contenido del archivo. para obtener información sobre la carga en la dirección URL OneDrive este artículo: Upload [bytes a la sesión de carga](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Se envía una actividad de invocación al bot si el usuario acepta el archivo y cuándo. Contiene la dirección URL OneDrive para la Empresa marcador de posición que el bot puede emitir para `PUT` transferir el contenido del archivo. para obtener información sobre la carga en la dirección URL OneDrive este artículo: [Upload bytes a la sesión de carga](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 En el ejemplo siguiente se muestra una versión abreviada de la actividad de invocación que recibirá el bot:
 
@@ -165,7 +165,7 @@ Del mismo modo, si el usuario rechaza el archivo, el bot recibirá el siguiente 
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Notificar al usuario acerca de un archivo cargado
 
-Después de cargar un archivo en el OneDrive del usuario, tanto si usa el mecanismo descrito anteriormente como si OneDrive API delegadas por el usuario, debe enviar un mensaje de confirmación al usuario. Este mensaje debe contener datos adjuntos en los que el usuario pueda hacer clic, ya sea para obtener una vista previa, abrirlo en `FileCard` OneDrive o descargar localmente.
+Después de cargar un archivo en el OneDrive del usuario, tanto si usa el mecanismo descrito anteriormente como si OneDrive API delegadas por el usuario, debe enviar un mensaje de confirmación al usuario. Este mensaje debe contener datos `FileCard` adjuntos en los que el usuario pueda hacer clic, ya sea para obtener una vista previa, abrirlo en OneDrive o descargar localmente.
 
 ```json
 {
@@ -185,7 +185,7 @@ En la tabla siguiente se describen las propiedades de contenido de los datos adj
 
 | Propiedad | Objetivo |
 | --- | --- |
-| `uniqueId` | OneDrive/SharePoint de elemento de unidad. |
+| `uniqueId` | OneDrive/SharePoint id. de elemento de unidad. |
 | `fileType` | Tipo de archivo, como pdf o docx. |
 
 ### <a name="basic-example-in-c"></a>Ejemplo básico en C #

@@ -1,16 +1,16 @@
 ---
 title: Enviar y recibir archivos a través del bot
-description: Obtenga información sobre cómo enviar y recibir archivos a través del bot, usar las API de Graph para todos los ámbitos de Teams, usar las API de bots Teams mediante ejemplos de código y ejemplos.
+description: Obtenga información sobre cómo enviar y recibir archivos a través del bot Graph API para ámbitos personales, de canal y de chat de grupo. Use Teams API de bot con ejemplos de código basados en el SDK de Bot Framework de v4.
 keywords: bots teams bots files send receive
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 787de4c774ae1b4cde71f74ed578668ca99a8f95
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452847"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590727"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Enviar y recibir archivos a través del bot
 

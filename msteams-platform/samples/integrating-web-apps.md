@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Consideraciones para la integración de Teams
-ms.openlocfilehash: a21bb050008af935ee370d3e65d95a63a7090fb0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: f545acf25cc6b54a92dc8c7556b348394379abc5
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356255"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590741"
 ---
 # <a name="considerations-for-teams-integration"></a>Consideraciones para la integración de Teams
 
@@ -58,7 +58,7 @@ Los siguientes son los requisitos previos para integrar la aplicación con Teams
 
 ***Escenarios de integración**: SharePoint*
 
-Para integrar una página [de SharePoint existente](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) como una Teams, debe tener en cuenta lo siguiente:
+Para integrar una página [de SharePoint existente](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model) como una Teams, debe tener en cuenta lo siguiente:
 
 * Debe ser una página *moderna* SharePoint en línea.
 * Solo se admiten pestañas personales. No puede integrar la página como una pestaña de canal.

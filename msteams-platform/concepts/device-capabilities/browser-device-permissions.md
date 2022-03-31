@@ -4,18 +4,14 @@ keywords: permisos de capacidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con permisos de dispositivo para aplicaciones en nuestro cliente web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 2b1d00a6bd0059df042dacedb043d89c73a972f9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 02a3602f17923506cba6aa6e83548595aac60852
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453008"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571477"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
-
-> [!NOTE]
-> La actualización más reciente sobre cómo se administran los permisos de dispositivo en el explorador está disponible solo en [la versión preliminar del desarrollador](../../resources/dev-preview/developer-preview-intro.md) público.
-> Esta actualización estará disponible generalmente (GA) a partir del 01 de febrero de 2022 y finalizará a finales de febrero.
 
 Teams que requieren permisos de dispositivo, como acceso a cámara o micrófono, ahora requieren que los usuarios concedan permisos manualmente en un nivel de aplicación en el explorador web. Anteriormente, el explorador controló cómo conceder permisos de acceso, pero ahora estos permisos se controlan en Microsoft Teams. Esto tiene implicaciones en el diseño de la aplicación y si requieren estos permisos en el explorador.
 
@@ -52,7 +48,7 @@ Teams que requieren permisos de dispositivo en el explorador deben mostrar instr
 
 Siga la [guía paso a paso para](../../sbs-tab-device-permissions.yml) conceder permiso de dispositivo de pestaña en Microsoft Teams.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción a las funcionalidades de dispositivos](device-capabilities-overview.md)
 * [Solicitar permisos de dispositivo](native-device-permissions.md)

@@ -1,21 +1,21 @@
 ---
-title: Usar Teams Toolkit para aprovisionar recursos en la nube
+title: usar el kit de herramientas de Teams para aprovisionar recursos en la nube
 author: MuyangAmigo
 description: Aprovisionar recursos en la nube
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 0528654b2867552af802fb95e3a6e47ca3228414
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674995"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590650"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Usar Teams Toolkit para aprovisionar recursos en la nube
+# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>usar el kit de herramientas de Teams para aprovisionar recursos en la nube
 
-TeamsFx se integra con Azure y Microsoft 365 nube, lo que le permite colocar la aplicación en Azure con un solo comando. TeamsFx se integra con Azure Resource Manager que permite aprovisionar recursos de Azure, que la aplicación necesita para el enfoque de código.  
+TeamsFx se integra con Azure y Microsoft 365 nube, lo que le permite colocar la aplicación en Azure con un solo comando. TeamsFx se integra con Azure Resource Manager que le permite aprovisionar recursos de Azure, que la aplicación necesita para el enfoque de código.  
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -50,7 +50,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Creación de recursos para Teams tab
 
-|Recurso|Objetivo|Descripción |
+|Resource|Objetivo|Descripción |
 |----------|--------------------------------|-----|
 | Almacenamiento de Azure | Hospedar la aplicación de pestaña | Habilita la característica de aplicación web estática para hospedar la aplicación de pestañas |
 | Plan de app service para autenticación sencilla | Hospedar la aplicación web de Simple Auth |No aplicable |
@@ -59,7 +59,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Creación de recursos para Teams bot o aplicación de extensión de mensajería
 
-|Recurso|Objetivo| Descripción |
+|Resource|Objetivo| Descripción |
 |----------|--------------------------------|-----|
 | Servicio de bots de Azure | Registra la aplicación como un bot con el marco del bot | Conecta bot a Teams |
 | Plan de servicio de aplicaciones para bot | Hospedar la aplicación web del bot |No aplicable |
@@ -68,7 +68,7 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>Creación de recursos para Azure Functions en el proyecto
 
-|Recurso|Objetivo| Descripción|
+|Resource|Objetivo| Descripción|
 |----------|--------------------------------|-----|
 | Plan de servicio de aplicaciones para la aplicación de función | Hospedar la aplicación de función |No aplicable |
 | Aplicación function | Hospedar las API de funciones de Azure | Agrega la identidad asignada por el usuario para obtener acceso a otros recursos de Azure. <br /> Agrega una regla de uso compartido de recursos entre orígenes (CORS) para permitir solicitudes desde la aplicación de pestañas <br /> Agrega la configuración de autenticación que solo permite las solicitudes de la Teams aplicación. <br /> Agrega la configuración de la aplicación requerida [por el SDK de TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -77,15 +77,15 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>Creación de recursos para Azure SQL en el proyecto
 
-|Recurso|Objetivo | Descripción |
+|Resource|Objetivo | Descripción |
 |----------|--------------------------------|-----|
-| Servidor SQL Azure | Hospedar la instancia de base de datos SQL Azure | Permite que todos los servicios de Azure accedan al servidor |
+| Azure SQL servidor | Hospedar la instancia Azure SQL base de datos | Permite que todos los servicios de Azure accedan al servidor |
 | Base de datos SQL Azure | Almacenar datos para la aplicación | Concede al usuario permiso de identidad asignada, lectura o escritura en la base de datos |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure | Compartido entre diferentes capacidades y recursos |
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Creación de recursos para Azure API Management en el proyecto
 
-|Recurso|Objetivo|
+|Resource|Objetivo|
 |----------|--------------------------------|
 | Azure AD aplicación para el servicio de administración de API | Permite a las API de acceso de Microsoft Power Platform administradas por el servicio de administración de API |
 | Servicio de administración de API | Administrar las API hospedadas en la aplicación de función |
@@ -97,12 +97,12 @@ Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La ARM defin
 
 |Recursos|Finalidad de este recurso|
 |----------|--------------------------------|
-| Servicio de Azure Key Vault | Administrar secretos (por ejemplo, Azure AD de cliente de aplicaciones) usados por otros servicios de Azure |
+| Servicio Key Vault Azure | Administrar secretos (por ejemplo, Azure AD de cliente de aplicaciones) usados por otros servicios de Azure |
 | Identidad asignada por el usuario | Autenticar solicitudes de servicio a servicio de Azure |
 
 ## <a name="customize-resource-provision"></a>Personalizar la provisión de recursos
 
-Teams Toolkit permite usar una infraestructura como método de código para definir qué recursos de Azure desea aprovisionar y cómo desea configurar. La herramienta usa ARM plantilla para definir recursos de Azure. La ARM es un conjunto de archivos bíceps que define la infraestructura y la configuración del proyecto. Puede personalizar los recursos de Azure modificando la ARM plantilla. Para obtener más información, vea [documento bícep](/azure/azure-resource-manager/bicep.md).
+Teams Toolkit permite usar una infraestructura como método de código para definir qué recursos de Azure desea aprovisionar y cómo desea configurar. La herramienta usa ARM plantilla para definir recursos de Azure. La ARM es un conjunto de archivos bíceps que define la infraestructura y la configuración del proyecto. Puede personalizar los recursos de Azure modificando la ARM plantilla. Para obtener más información, vea [documento bícep](/azure/azure-resource-manager/bicep).
 
 Aprovisionar con ARM implica cambiar los siguientes conjuntos de archivos, parámetros y plantillas:
 
@@ -150,14 +150,14 @@ En la tabla siguiente se proporciona una lista de parámetros predefinidos dispo
 | botWebAppName | Bot ${resourceBaseName} | Nombre de la aplicación web del bot | 2-60 alfanuméricos y guiones <br /> No se puede iniciar ni terminar con guion |
 | botWebAppSKU | F1 | SKU de Bot App Service Plan | No aplicable |
 | userAssignedIdentityName | ${resourceBaseName} | Nombre de la identidad asignada por el usuario | 3-128 alfanuméricos, guiones y guiones bajos <br /> Empezar con letra o número |
-| sqlServerName | ${resourceBaseName} | Nombre del servidor SQL Azure | 1-63 minúsculas, números y guiones <br /> No se puede iniciar ni terminar con guión |
-| sqlDatabaseName | ${resourceBaseName} | Nombre de la base de datos SQL Azure | De 1 a 128 caracteres, no se puede usar <>*%&:\/? o caracteres de control <br /> No se puede terminar con punto o espacio |
-| sqlDatabaseSku | Básico | SKU de azure SQL base de datos | No aplicable  |
+| sqlServerName | ${resourceBaseName} | Nombre de Azure SQL servidor | 1-63 minúsculas, números y guiones <br /> No se puede iniciar ni terminar con guión |
+| sqlDatabaseName | ${resourceBaseName} | Nombre de la Azure SQL base de datos | De 1 a 128 caracteres, no se puede usar <>*%&:\/? o caracteres de control <br /> No se puede terminar con punto o espacio |
+| sqlDatabaseSku | Básico | SKU de la Azure SQL base de datos | No aplicable  |
 | apimServiceName | ${resourceBaseName} | Nombre del servicio APIM | 1-50 alfanuméricos y guiones <br /> Comience por letra y termine con alfanumérico |
 | apimServiceSku | Consumo | SKU del servicio APIM | [SKU disponibles](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | Nombre del producto APIM | 1-80 alfanuméricos y guiones <br /> Comience por letra y termine con alfanumérico |
 | apimOauthServerName | ${resourceBaseName} | Nombre del servidor OAuth de APIM | 1-80 alfanuméricos y guiones <br /> Comience por letra y termine con alfanumérico |
-| keyVaultSkuName | estándar | Nombre sku del servicio de Almacén de claves de Azure| |
+| keyVaultSkuName | estándar | Nombre de SKU del servicio Key Vault Azure| |
 
 Mientras tanto, los siguientes parámetros están disponibles con valores rellenados durante la provisión. El propósito de estos marcadores de posición es garantizar que podamos crear nuevos recursos en un entorno nuevo. Los valores reales se resuelven desde `.fx/states/state.{env}.json`.
 
@@ -178,8 +178,8 @@ Mientras tanto, los siguientes parámetros están disponibles con valores rellen
 
 | Nombre del parámetro | Soporte de posición de valor predeterminado | Significado del soporte de la posición | Cómo personalizar |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Cuenta SQL Server administrador de Azure que proporcionó durante la aprovisionamiento | Eliminar el marcador de posición y rellenar el valor real |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server contraseña de administrador que proporcionó durante la provisión | Eliminar el marcador de posición y rellenar el valor real |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL de administración del servidor que proporcionó durante la aprovisionamiento | Eliminar el marcador de posición y rellenar el valor real |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL de administrador del servidor que proporcionó durante la aprovisionamiento | Eliminar el marcador de posición y rellenar el valor real |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | Correo electrónico del editor de APIM, el valor predeterminado es su cuenta de Azure | Eliminar el marcador de posición y rellenar el valor real |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | Nombre del editor de APIM, el valor predeterminado es su cuenta de Azure | Eliminar el marcador de posición y rellenar el valor real |
 
@@ -362,7 +362,7 @@ Puedes seguir la [aprovisionamiento SharePoint aplicación basada en aplicacione
 
 </details>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Implementar la aplicación de Teams en la nube](deploy.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)
