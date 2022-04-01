@@ -1,16 +1,16 @@
 ---
 title: Enviar mensajes proactivos
-description: Más información sobre cómo enviar mensajes proactivos con el bot Microsoft Teams, instalar proactivamente la aplicación con Microsoft Graph.
+description: Obtenga información sobre cómo enviar mensajes proactivos con el bot de Microsoft Teams, instalar de forma proactiva la aplicación mediante Microsoft Graph y comprobar los ejemplos de código basados en el bot Framework SDK v4.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: enviar un mensaje obtener el id. de usuario id. de canal id. de conversación
-ms.openlocfilehash: c9e90f018e67f60213de570f391cd8a87049aa60
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: ec41ec08af9c7e3b7280995f8abc66b3a5a7baa0
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571484"
+ms.locfileid: "64590720"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
