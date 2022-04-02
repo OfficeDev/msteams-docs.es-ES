@@ -1,17 +1,17 @@
 ---
-title: Compatibilidad de CI o CD Teams desarrolladores de aplicaciones
+title: Obtenga información sobre cómo usar plantillas de canalización de CI o CD en GitHub, Azure Devops y Jenkins para desarrolladores Teams aplicaciones
 author: MuyangAmigo
 description: Plantillas CICD
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453414"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614540"
 ---
 # <a name="cicd-guide"></a>Guía de CI/CD
 
@@ -47,7 +47,7 @@ Realice los siguientes pasos para adaptar el flujo de trabajo del proyecto:
 Siga estos pasos para personalizar el flujo de trabajo de CD:
 
 1. De forma predeterminada, el flujo de trabajo de CD se desencadena cuando se realizan nuevas confirmaciones en la `main` rama.
-1. Cree GitHub [secretos de repositorio por](https://docs.github.com/en/actions/reference/encrypted-secrets) entorno para contener la entidad de seguridad de servicio de Azure y Microsoft 365 credenciales de inicio de sesión de la cuenta. Para obtener más información, [vea GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Cree GitHub [secretos de repositorio por](https://docs.github.com/en/actions/reference/encrypted-secrets) entorno para contener la entidad de seguridad de servicio de Azure y Microsoft 365 credenciales de inicio de sesión de la cuenta. Para obtener más información, [vea Acciones de GitHub](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Cambie los scripts de compilación si es necesario.
 1. Quite los scripts de prueba según sea necesario.
 
@@ -224,7 +224,7 @@ Siga [using-credentials para](https://www.jenkins.io/doc/book/using/using-creden
 |`M365_ACCOUNT_PASSWORD`|La contraseña de la Microsoft 365 cuenta.|
 |`M365_TENANT_ID`|Para identificar el espacio empresarial en el que se crea Teams o se publica la aplicación. El valor es opcional a menos que tenga una cuenta multiinquilino y desee usar otro inquilino. Obtenga más información [sobre cómo encontrar el identificador Microsoft 365 inquilino](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
-## <a name="get-started-guide-for-other-platforms"></a>Guía de introducción para otras plataformas
+## <a name="get-started-guide-for-other-platforms"></a>Comenzar para otras plataformas
 
 Puede seguir los scripts de bash de ejemplo predefinidos enumerados para crear y personalizar canalizaciones de CI o CD en otras plataformas:
 
@@ -274,7 +274,7 @@ Realice los siguientes pasos para publicar la aplicación:
 
 ### <a name="see-also"></a>Vea también
 
-* [Inicio rápido para GitHub acciones](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [Inicio rápido para Acciones de GitHub](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Crear la primera canalización de Azure DevOps de datos](/azure/devops/pipelines/create-first-pipeline)
 * [Crear la primera canalización de Jenkins](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams](/concepts/build-and-test/teams-developer-portal)

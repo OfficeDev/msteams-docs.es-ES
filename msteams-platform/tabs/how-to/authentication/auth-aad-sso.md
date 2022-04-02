@@ -4,12 +4,12 @@ description: Describe el inicio de sesión único (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API de inicio de sesión único de Microsoft Azure Active Directory (Azure AD), autenticación SSO de teams
-ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464813"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571323"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Compatibilidad con inicio de sesión único (SSO) para pestañas
 
@@ -83,7 +83,10 @@ Para registrar la aplicación a través del portal de Azure AD, siga estos pasos
 1. En **Administrar**, seleccione **Exponer una API**
 
     > [!NOTE]
-    > Si va a compilar una aplicación con un bot y una pestaña, escriba el URI del identificador de aplicación como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Si va a compilar una aplicación con un bot y una pestaña, escriba el URI del identificador de aplicación como `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Use letras minúsculas para el nombre de dominio, no use mayúsculas. Por ejemplo, para crear un servicio de aplicaciones o una aplicación web, escriba el nombre del recurso base como `demoapplication` y, a continuación, la dirección URL será `https://demoapplication.azurewebsites.net`. Pero si usa el nombre del recurso base como `DemoApplication`, la dirección URL será `https://DemoApplication.azurewebsites.net` y esto es compatible con escritorio, web e iOS, pero no Android.
 
 1. Seleccione el vínculo **Establecer** para generar el URI de identificador de aplicación en el formulario `api://{AppID}`. Inserte el nombre de dominio completo con una barra inclinada "/" anexada al final, entre las barras inclinadas dobles y el GUID. El identificador completo debe tener el formato de `api://fully-qualified-domain-name.com/{AppID}`. ² Por ejemplo, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. El nombre de dominio completo es el nombre de dominio legible desde el que se sirve la aplicación. Si usa un servicio de tunelización como ngrok, debe actualizar este valor cada vez que cambie el subdominio de ngrok.
 1. Seleccione **Agregar un ámbito**. En el panel que se abre, escriba **access_as_user** como **nombre de ámbito**.

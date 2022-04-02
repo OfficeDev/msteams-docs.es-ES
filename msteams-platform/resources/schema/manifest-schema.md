@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 3117195b697061b4199ac629f73d8ffd2d93cd6a
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453771"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590748"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -807,6 +807,9 @@ Especifique la definición de la extensión de reunión. Para obtener más infor
 ## <a name="authorization"></a>Autorización
 
 **Opcional** — Objeto
+
+> [!NOTE]
+> Si establece la propiedad `manifestVersion` en **1.12**, la propiedad de autorización no es compatible con las versiones anteriores del manifiesto. La autorización es compatible con la versión 1.12 del manifiesto.
 
 Especifique y consolide la información relacionada con la autorización de la aplicación.
 

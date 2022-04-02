@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558820"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614533"
 ---
 # <a name="deploy-to-the-cloud"></a>Implementar en la nube
 
@@ -49,9 +49,10 @@ Las guías de introducción le ayudan a implementar con Teams Toolkit. Puedes us
 > [!NOTE]
 > Al incluir el recurso de administración de API de Azure en el proyecto y desencadenar la implementación. Puede publicar sus API en funciones de Azure en el servicio de administración de API de Azure.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Agregar más recursos en la nube](add-resource.md)
+* [Crear e implementar un servicio en la nube de Azure](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Agregar más Teams funcionalidades de la aplicación](add-capability.md)
 * [Implementar código de proyecto con canalizaciones de CI/CD](use-CICD-template.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)

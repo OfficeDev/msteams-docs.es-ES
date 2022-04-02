@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación de aplicación de paquete MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 43302047a3c5712a17e2bc506eca2eeb350db825
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571405"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614547"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -23,8 +23,6 @@ Asegúrese de que tiene todos los [prerequisitos para](~/tabs/how-to/tab-require
 ::: zone pivot="node-java-script"
 
 ## <a name="create-a-personal-tab-with-nodejs"></a>Crear una pestaña personal con Node.js
-
-Para crear una pestaña personal con Node.js
 
 1. En el símbolo del sistema, instale los paquetes [Yeoman](https://yeoman.io/) y [gulp-cli](https://www.npmjs.com/package/gulp-cli) especificando el siguiente comando después de instalar el Node.js:
 
@@ -178,8 +176,8 @@ Cree una página de contenido y actualice los archivos existentes de la aplicaci
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -279,8 +277,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core"></a>Crear una pestaña personal con ASP.NET Core
-
-Puedes crear una pestaña personal personalizada con C# páginas ASP.NET Core Desa herramientas. Para crear una pestaña personal con ASP.NET Core
 
 1. En el símbolo del sistema, cree un nuevo directorio para el proyecto de pestaña.
 
@@ -417,7 +413,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Características de la** aplicación, selecciona Aplicación personal y escribe el nombre y actualiza la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco.
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io`.
 
@@ -444,8 +440,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core-mvc"></a>Crear una pestaña personal con ASP.NET Core MVC
-
-Puede crear una pestaña personal personalizada con C# y ASP.NET Core MVC. Para crear una pestaña personal con ASP.NET Core MVC
 
 1. En el símbolo del sistema, cree un nuevo directorio para el proyecto de pestaña.
 
@@ -594,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Características de la** aplicación, selecciona Aplicación personal y escribe el nombre y actualiza la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco.
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io`.
 
@@ -716,7 +710,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 > [!div class="nextstepaction"]
 > [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
