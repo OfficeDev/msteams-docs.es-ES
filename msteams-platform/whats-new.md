@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 66d09bc650c7e20b1dd8c4edf7060bf71c52fff1
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571491"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612660"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,7 +22,8 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
-|30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots.|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
+|01/04/2022| Presentada la guía paso a paso para crear un bot conversacional en Teams| Crear bots > Conversaciones de bots > Canal y conversaciones de grupo > [Guía paso a paso para crear un bot conversacional en Teams](sbs-teams-conversation-bot.yml) |
+|30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permisos de dispositivo para el explorador | Integrar las funcionalidades del dispositivo > [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
 |29/03/2022 | Integrar Selector de personas | Integrar con Teams > [Integrar Selector de personas](concepts/device-capabilities/people-picker-capability.md)|
 |23/03/2022| Guía paso a paso introducida para deshacer vínculos en Teams mediante bot | Crear extensiones de mensajería > Agregar vínculo de desenlace > [Vínculos de desenlace en Teams mediante bot](sbs-botbuilder-linkunfurling.yml)|
@@ -44,7 +45,8 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-|30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots.|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
+|01/04/2022| Presentada la guía paso a paso para crear un bot conversacional en Teams| Crear bots > Conversaciones de bots > Canal y conversaciones de grupo > [Guía paso a paso para crear un bot conversacional en Teams](sbs-teams-conversation-bot.yml) |
+|30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permisos de dispositivo para el explorador | Integrar las funcionalidades del dispositivo > [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
 |29/03/2022 |Integrar Selector de personas | Integrar con Teams > [Integrar Selector de personas](concepts/device-capabilities/people-picker-capability.md)
 |23/03/2022| Guía paso a paso introducida para deshacer vínculos en Teams mediante bot | Crear extensiones de mensajería > Agregar vínculo de desenlace > [Vínculos de desenlace en Teams mediante bot](sbs-botbuilder-linkunfurling.yml)|  
