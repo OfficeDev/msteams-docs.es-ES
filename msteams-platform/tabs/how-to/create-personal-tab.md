@@ -1,19 +1,14 @@
 ---
 title: Crear una pestaña personal
 author: laujan
-description: Una guía de inicio rápido para crear una pestaña personal con el Generador de Yeoman, ASP.NET Core o ASP.NET Core MVC para Microsoft Teams usar Node.js y actualizar el manifiesto de la aplicación.
+description: 'Una guía de inicio rápido para crear una pestaña personal con el Generador de Yeoman, ASP.NET Core o ASP.NET Core MVC para Microsoft Teams usar Node.js y actualizar el manifiesto de la aplicación.'
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación de aplicación de paquete MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614547"
 ---
+
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
 Pestañas personales, junto con los bots de ámbito personal, forman parte de las aplicaciones personales y se limitan a un solo usuario. Se pueden anclar al panel izquierdo para facilitar el acceso. También puede [reordenar](#reorder-static-personal-tabs) y agregar [`registerOnFocused` api para](#add-registeronfocused-api-for-tabs-or-personal-apps) pestañas personales.
@@ -262,7 +257,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Agregar la pestaña personal" border="true":::
 
-1. Seleccione **Agregar** en la ventana emergente. La pestaña se carga en Teams.
+1. Seleccione **Agregar** en el cuadro de diálogo. La pestaña se carga en Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Pestaña personal cargada" border="true":::
 
@@ -370,14 +365,14 @@ En Visual Studio Explorador de soluciones, haga clic con el botón secundario en
 
 ### <a name="update-and-run-your-application"></a>Actualizar y ejecutar la aplicación
 
-1. Vaya a la **carpeta** **PagesShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
+1. Abra Visual Studio Explorador de soluciones y vaya a La carpeta **PagesShared** > , abra **_Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Abra **PersonalTab.cshtml** desde **la carpeta Pages** y agregue `microsoftTeams.initialize()` las etiquetas `<script>` y guarde.
+1. En Visual Studio Explorador de soluciones **abra PersonalTab.cshtml** desde la carpeta **Pages** y agregue `microsoftTeams.initialize()` las etiquetas `<script>` y guarde.
 
 1. En Visual Studio, seleccione **F5** o **elija Iniciar depuración** en el menú **Depurar de la** aplicación.
 
@@ -391,7 +386,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualizar el paquete de la aplicación con el Portal de desarrolladores
 
-1. Vaya a **Portal para desarrolladores** en Teams.
+1. Vaya a [**Portal de desarrolladores**](https://dev.teams.microsoft.com/home).
 
 1. Abre **Aplicaciones y** selecciona **Importar aplicación**.
 
@@ -411,7 +406,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **las direcciones URL de la** aplicación, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` guardar y guardar.
 
-1. En **Características de la** aplicación, selecciona Aplicación personal y escribe el nombre y actualiza la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco.
+1. En **Características de la** aplicación, **selecciona Aplicación personalCrear** >  la **primera pestaña de la aplicación personal** y escribe el nombre y actualiza la **dirección URL de** contenido con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco y seleccione **Contexto** como personalTab de la lista desplegable y **Agregar**.
 
 1. Seleccione **Guardar**.
 
@@ -419,13 +414,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Vista previa de la aplicación en Teams
 
-1. Seleccione **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores. El Portal de desarrolladores te informa de que la aplicación se ha descargado correctamente.
-
-1. Selecciona **Administrar aplicaciones**. La aplicación aparece en las aplicaciones de instalación local.
-
-1. Busca la aplicación mediante la búsqueda, selecciona los tres puntos de su fila.
-
-1. Seleccione la **opción** Ver. Aparecerá **la página** Agregar para la aplicación.
+1. Selecciona **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores, Portal para desarrolladores te informa de que la aplicación se ha descargado correctamente. La **página** Agregar aparece para la aplicación en Teams.
 
 1. Seleccione **Agregar** para cargar la pestaña en Teams. La pestaña ya está disponible en Teams.
 
@@ -545,14 +534,14 @@ Los controladores usan la propiedad `ViewBag` para transferir valores dinámicam
 
 ### <a name="update-and-run-your-application"></a>Actualizar y ejecutar la aplicación
 
-1. Vaya a **la carpeta** **ViewsShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
+1. Abra Visual Studio Explorador de soluciones vaya a **la carpeta** **ViewsShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la sección `<head>` etiquetas:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Abra **PersonalTab.cshtml** desde **la carpeta** **ViewsPersonalTab** >  y agregue `microsoftTeams.initialize()` dentro de las etiquetas `<script>` y guarde.
+1. En Visual Studio Explorador de soluciones **abra PersonalTab.cshtml** desde **la carpeta** **ViewsPersonalTab** >  y agregue `microsoftTeams.initialize()` dentro de las etiquetas `<script>` y guarde.
 
 1. En Visual Studio, seleccione **F5** o **elija Iniciar depuración** en el menú **Depurar de la** aplicación.
 
@@ -566,7 +555,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualizar el paquete de la aplicación con el Portal de desarrolladores
 
-1. Vaya a **Portal para desarrolladores** en Teams.
+1. Vaya a [**Portal de desarrolladores**](https://dev.teams.microsoft.com/home).
 
 1. Abre **Aplicaciones y** selecciona **Importar aplicación**.
 
@@ -586,7 +575,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **las direcciones URL de la** aplicación, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` guardar y guardar.
 
-1. En **Características de la** aplicación, selecciona Aplicación personal y escribe el nombre y actualiza la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco.
+1. En **Características de la** aplicación, **selecciona Aplicación personalCrear** >  la **primera pestaña de la aplicación personal** y escribe el nombre y actualiza la **dirección URL de** contenido con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco y seleccione **Contexto** como personalTab de la lista desplegable y **Agregar**.
 
 1. Seleccione **Guardar**.
 
@@ -594,13 +583,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Vista previa de la aplicación en Teams
 
-1. Seleccione **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores. El Portal de desarrolladores te informa de que la aplicación se ha descargado correctamente.
-
-1. Selecciona **Administrar aplicaciones**. La aplicación aparece en las aplicaciones de instalación local.
-
-1. Busca la aplicación con la búsqueda, selecciona los tres puntos de su fila.
-
-1. Seleccione **la opción** Ver. Aparecerá **la página** Agregar para la aplicación.
+1. Selecciona **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores, Portal para desarrolladores te informa de que la aplicación se ha descargado correctamente. La **página** Agregar aparece para la aplicación en Teams.
 
 1. Seleccione **Agregar** para cargar la pestaña en Teams. La pestaña ya está disponible en Teams.
 

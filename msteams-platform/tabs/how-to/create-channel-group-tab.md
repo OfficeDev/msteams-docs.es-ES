@@ -1,18 +1,13 @@
 ---
 title: Crear una pestaña de canal o grupo
 author: laujan
-description: Guía de inicio rápido para crear una pestaña de canal y grupo con el Generador de Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.
+description: 'Guía de inicio rápido para crear una pestaña de canal y grupo con el Generador de Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.'
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590677"
 ---
+
 # <a name="channel-or-group-tab"></a>Pestaña Canal o grupo
 
 Pestañas de canal o grupo entregar contenido a canales y chats grupales, y son una excelente manera de crear espacios de colaboración en torno a contenido dedicado basado en web.
@@ -171,7 +166,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Ficha predeterminada" border="true":::
 
-1. Para ver la página de configuración de pestañas, vaya a `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. Se muestra lo siguiente:
+1. Para ver la página de configuración de pestañas, vaya a `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Se muestra lo siguiente:
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuración de tabulación" border="true":::
 
@@ -198,7 +193,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Pestaña Canal cargado" border="true":::
 
-1. Seleccione **Agregar** en la ventana emergente. La pestaña se carga en Teams.
+1. Seleccione **Agregar** en el cuadro de diálogo. La pestaña se carga en Teams.
     
     > [!NOTE]
     > Si  **Add** no se muestra en el cuadro de diálogo, quite el siguiente código del manifiesto de la carpeta zip del paquete de la aplicación cargada. Vuelva a comprimir la carpeta y cargarla en Teams.
@@ -210,11 +205,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Vuelva a su equipo, elija el canal donde desea agregar la pestaña, seleccione ➕ en la barra de pestañas y elija la pestaña de la lista.
 1. Siga las instrucciones para agregar una pestaña. Hay un cuadro de diálogo de configuración personalizado para la pestaña canal o grupo.
 1. Selecciona **Guardar** y la pestaña se agrega a la barra de pestañas del canal.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Pestaña Canal cargada" border="true":::
+    
+    Ahora ha creado y agregado correctamente la pestaña canal o grupo en Teams.
 
 ::: zone-end
 
@@ -245,7 +241,7 @@ A continuación se indican los pasos para crear una pestaña de canal o grupo:
 
 1. Vaya a **la carpeta Microsoft-Teams-Samplessamplestab-channel-grouprazor-csharp** >  >  >  y **abra channelGroupTab.sln**.
 
-1. En Visual Studio, presione **F5** o elija Iniciar depuración en el menú Depurar **de** la aplicación para  comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
+1. En Visual Studio, seleccione **F5** o elija Iniciar depuración en el menú Depurar **de** la aplicación para  comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -328,7 +324,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 ### <a name="update-your-application"></a>Actualizar la aplicación
 
-1. Vaya a la **carpeta** **PagesShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la <head> sección de etiquetas:
+1. Abra Visual Studio Explorador de soluciones vaya a la **carpeta** **PagesShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la <head> sección de etiquetas:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -338,9 +334,9 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
     > [!IMPORTANT]
     > No copie ni pegue las direcciones `<script src="...">` URL de esta página, ya que no representan la versión más reciente. Para obtener la versión más reciente del SDK, siempre vaya a Microsoft Teams [API de JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. En la parte superior de la etiqueta `script` , inserte una llamada a `microsoftTeams.initialize();`.
+1. Inserte una llamada a `microsoftTeams.initialize();` en la `script` etiqueta.
 
-1. Vaya a la **carpeta Pages** y abra **Tab.cshtml**
+1. En Visual Studio Explorador de soluciones vaya a la **carpeta Pages** y abra **Tab.cshtml**
 
     En **Tab.cshtml** , la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir los **desencadenadores de los**  `saveGray()` `saveRed()`botones Seleccionar gris o Seleccionar rojo o , respectivamente, `settings.setValidityState(true)`se establece y se habilita el **botón** Guardar en la página de configuración. Este código permite Teams que ha completado los requisitos de configuración y la instalación puede continuar. Los parámetros de `settings.setSettings` se establecen. Por último, `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
@@ -379,7 +375,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 ### <a name="build-and-run-your-application"></a>Compilar y ejecutar la aplicación
 
-1. En Visual Studio, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
+1. En Visual Studio, seleccione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
 
 1. Compruebe que **ngrok** se está ejecutando y funcionando correctamente abriendo el explorador y yendo a la página de contenido a través de la dirección URL HTTPS de ngrok que se proporcionó en la ventana del símbolo del sistema.
 
@@ -390,7 +386,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 1. Vaya a Microsoft Teams. Si usa la versión [basada en web](https://teams.microsoft.com), puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador](~/tabs/how-to/developer-tools.md).
 
-1. Vaya a su **portal de desarrolladores** en Teams.
+1. Vaya a [**Portal de desarrolladores**](https://dev.teams.microsoft.com/home).
 
 1. Abre **Aplicaciones y** selecciona **Importar aplicación**.
 
@@ -410,25 +406,21 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 1. En **las direcciones URL de la** aplicación, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` guardar y guardar.
 
-1. En **Características de la** aplicación, selecciona Aplicación personal y escribe el nombre y actualiza la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco. 
+1. En **Características de la** aplicación, selecciona Agrupar y canalizar aplicación. Actualice la **dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io`.
 
 ### <a name="preview-your-app-in-teams"></a>Vista previa de la aplicación en Teams
 
-1. Seleccione **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores. El Portal de desarrolladores te informa de que la aplicación se ha descargado correctamente.
+1. Selecciona **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores, Portal para desarrolladores te informa de que la aplicación se ha descargado correctamente. La **página** Agregar aparece para la aplicación en Teams.
 
-1. Selecciona **Administrar aplicaciones**. La aplicación aparece en las aplicaciones de instalación local.
-
-1. Busca la aplicación mediante la búsqueda, selecciona &#x25CF;&#x25CF;&#x25CF;.
-
-1. Seleccione la **opción Ver detalles** . Aparecerá la ventana de detalles de la aplicación para la aplicación.
-
-1. Selecciona &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Desplegable Detalles de la" border="true"::: **aplicaciónAgregue**&nbsp; >  al equipo para cargar la pestaña en un equipo. La pestaña ya está disponible en Teams.
+1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña canal ASPNET cargada" border="true":::
+    
+    Ahora ha creado y agregado correctamente la pestaña canal o grupo en Teams.
 
 ::: zone-end
 
@@ -459,7 +451,7 @@ A continuación se indican los pasos para crear una pestaña de canal o grupo:
 
 1. Vaya a **la carpeta Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp** >  >  >  y abra **ChannelGroupTabMVC.sln**.
 
-1. En Visual Studio, presione **F5** o elija Iniciar depuración en el menú Depurar **de** la aplicación para  comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
+1. En Visual Studio, seleccione **F5** o elija Iniciar depuración en el menú Depurar **de** la aplicación para  comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -550,7 +542,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 ### <a name="update-your-application"></a>Actualizar la aplicación
 
-1. Vaya a la **carpeta** **ViewsShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la <head> sección de etiquetas:
+1. Abra Visual Studio Explorador de soluciones vaya a la **carpeta** **ViewsShared** >  y **abra _Layout.cshtml** y agregue lo siguiente a la <head> sección de etiquetas:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -560,9 +552,9 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
     > [!IMPORTANT]
     > No copie ni pegue las direcciones `<script src="...">` URL de esta página, ya que no representan la versión más reciente. Para obtener la versión más reciente del SDK, siempre vaya a Microsoft Teams [API de JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. En la parte superior de la etiqueta `script` , inserte una llamada a `microsoftTeams.initialize();`.
+1. Inserte una llamada a `microsoftTeams.initialize();` en la `script` etiqueta.
 
-1. Vaya a la **carpeta Tab** y abra **Tab.cshtml**
+1. En Visual Studio Explorador de soluciones vaya a la **carpeta Tab** y abra **Tab.cshtml**
 
     En **Tab.cshtml** , la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir los **desencadenadores de los**  `saveGray()` `saveRed()`botones Seleccionar gris o Seleccionar rojo o , respectivamente, `settings.setValidityState(true)`se establece y se habilita el **botón** Guardar en la página de configuración. Este código permite Teams que ha completado los requisitos de configuración y la instalación puede continuar. Los parámetros de `settings.setSettings` se establecen. Por último, `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente. 
 
@@ -601,7 +593,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 ### <a name="build-and-run-your-application"></a>Compilar y ejecutar la aplicación
 
-1. En Visual Studio, presione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
+1. En Visual Studio, seleccione **F5** o **elija Iniciar depuración** en el **menú** Depurar.
 
 1. Compruebe que **ngrok** se está ejecutando y funcionando correctamente abriendo el explorador y yendo a la página de contenido a través de la dirección URL HTTPS de ngrok que se proporcionó en la ventana del símbolo del sistema.
 
@@ -612,7 +604,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 1. Vaya a Microsoft Teams. Si usa la versión [basada en web](https://teams.microsoft.com), puede inspeccionar el código front-end con las herramientas para [desarrolladores del explorador](~/tabs/how-to/developer-tools.md).
 
-1. Vaya a **Portal para desarrolladores** en Teams.
+1. Vaya a [**Portal de desarrolladores**](https://dev.teams.microsoft.com/home).
 
 1. Abre **Aplicaciones y** selecciona **Importar aplicación**.
 
@@ -632,25 +624,21 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 
 1. En **las direcciones URL de la** aplicación, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` guardar y guardar.
 
-1. En **Características de la** aplicación, selecciona Aplicación personal y escribe el nombre y actualiza la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Dirección URL del sitio web en blanco.
+1. En **Características de la** aplicación, selecciona Agrupar y canalizar aplicación. Actualice la **dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo HTTPS `<yourngrokurl>.ngrok.io`.
 
 ### <a name="preview-your-app-in-teams"></a>Vista previa de la aplicación en Teams
 
-1. Seleccione **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores. El Portal de desarrolladores te informa de que la aplicación se ha descargado correctamente.
+1. Selecciona **Vista previa en Teams** de la barra de herramientas del Portal de desarrolladores, Portal para desarrolladores te informa de que la aplicación se ha descargado correctamente. La **página** Agregar aparece para la aplicación en Teams.
 
-1. Selecciona **Administrar aplicaciones**. La aplicación aparece en las aplicaciones de instalación local.
-
-1. Busca la aplicación mediante la búsqueda, selecciona &#x25CF;&#x25CF;&#x25CF;.
-
-1. Seleccione la **opción Ver detalles** . Aparecerá la ventana de detalles de la aplicación para la aplicación.
-
-1. Seleccione &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="La pestaña Canal ASPNET" border="true"::: **cargadaAgregue**&nbsp; >  al equipo para cargar la pestaña en Teams. La pestaña ya está disponible en Teams.
+1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña canal ASPNET MVC cargada" border="true":::
+    
+    Ahora ha creado y agregado correctamente la pestaña canal o grupo en Teams.
 
 ::: zone-end
 
@@ -659,7 +647,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y de toma
 > [!div class="nextstepaction"]
 > [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Teams pestañas](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

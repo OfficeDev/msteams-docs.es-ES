@@ -1,16 +1,11 @@
 ---
 title: Aplicaciones de reuniones unificadas
 author: surbhigupta
-description: Obtenga información Teams ciclo de vida de la reunión y la experiencia de reunión del usuario en entornos móviles y de escritorio, roles y tipos de participantes y usuarios, integra bots y extensión de mensajería en el ciclo de vida de la reunión.
+description: 'Obtenga información Teams ciclo de vida de la reunión y la experiencia de reunión del usuario en entornos móviles y de escritorio, roles y tipos de participantes y usuarios, integra bots y extensión de mensajería en el ciclo de vida de la reunión.'
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571134"
 ---
+
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
 Teams de reuniones unificadas se basan en los siguientes conceptos:
@@ -85,6 +80,9 @@ Para usar pestañas durante una reunión:
 1. En el cuadro de diálogo en la reunión, escriba la respuesta como comentarios.
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Vista escritorio":::
+
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
@@ -216,7 +214,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
