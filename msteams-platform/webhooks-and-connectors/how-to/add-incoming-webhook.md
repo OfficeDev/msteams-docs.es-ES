@@ -6,12 +6,12 @@ keywords: webhook saliente de pestañas de teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399117"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685628"
 ---
 # <a name="create-an-incoming-webhook"></a>Crear un webhook entrante
 
@@ -95,5 +95,5 @@ Para eliminar un Webhook entrante de un canal de Teams, siga estos pasos:
 * [Crear un Webhook saliente](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Crear un botón Compartir en Teams](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Uso compartido en Teams desde aplicaciones web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)

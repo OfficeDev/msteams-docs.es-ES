@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Microsoft Teams documentación para desarrolladores
-summary: Le damos la bienvenida a información general Microsoft Teams documentación para desarrolladores. Las aplicaciones de Microsoft Teams aportan información importante, herramientas comunes y procesos de confianza con los que las personas se reúnen, aprenden y trabajan cada vez más.
+title: Documentación del desarrollador de Microsoft Teams
+summary: Le damos la bienvenida a la introducción a Microsoft Teams documentación para desarrolladores. Las aplicaciones de Microsoft Teams aportan información importante, herramientas comunes y procesos de confianza con los que las personas se reúnen, aprenden y trabajan cada vez más.
 metadata:
-  title: Microsoft Teams documentación para desarrolladores
+  title: Documentación del desarrollador de Microsoft Teams
   description: Introducción a la creación de aplicaciones para Teams
   ms.service: service
   ms.subservice: subservice
@@ -12,18 +12,20 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: a5a2f2c99f85333c4ebc5909499040b6b533b8b1
-  ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
+  ms.openlocfilehash: 894fa42dcb340bd9f96fb1edd0fc8af8425ecab8
+  ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/01/2022
-  ms.locfileid: "64612653"
+  ms.lasthandoff: 04/06/2022
+  ms.locfileid: "64685607"
 landingContent:
-- title: Explorar lo más reciente
+- title: Explore lo más reciente
   linkLists:
   - linkListType: concept
     links:
-    - text: Crear Teams bot de conversación
+    - text: Compartir en Teams desde una aplicación o pestaña personal
+      url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
+    - text: Creación de Teams bot de conversación
       url: ~/sbs-teams-conversation-bot.yml
     - text: Cree la primera aplicación con Blazor
       url: sbs-gs-blazorupdate.yml
@@ -31,7 +33,7 @@ landingContent:
       url: ~/concepts/device-capabilities/browser-device-permissions.md
     - text: Integrar Selector de personas
       url: ~/concepts/device-capabilities/people-picker-capability.md
-    - text: Menú desbordamiento de tarjetas adaptables
+    - text: Menú de desbordamiento de tarjetas adaptables
       url: ~/task-modules-and-cards/cards/cards-format.md
     - text: Glosario
       url: ~/get-started/glossary.md
@@ -39,11 +41,9 @@ landingContent:
       url: ~/overview.md
     - text: Planear la aplicación
       url: ~/concepts/app-fundamentals-overview.md
-    - text: Esquema de manifiesto de aplicación versión 1.12
+    - text: Versión 1.12 del esquema de manifiesto de aplicación
       url: ~/resources/schema/manifest-schema.md
-    - text: Versión preliminar de prueba para aplicaciones monetizadas
-      url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-- title: Introducción
+- title: Comenzar
   linkLists:
   - linkListType: get-started
     links:
@@ -55,19 +55,19 @@ landingContent:
     links:
     - text: Cree la primera aplicación con Blazor
       url: sbs-gs-blazorupdate.yml
-    - text: Crear aplicación con JavaScript
+    - text: Compilación de una aplicación con JavaScript
       url: sbs-gs-javascript.yml
-    - text: Crear aplicación con SPFx
+    - text: Compilación de una aplicación con SPFx
       url: sbs-gs-spfx.yml
-    - text: Crear aplicación con C# o .NET
+    - text: Compilación de una aplicación con C# o .NET
       url: sbs-gs-csharp.yml
-    - text: Crear aplicación con Node.js
+    - text: Compilación de una aplicación con Node.js
       url: sbs-gs-nodejs.yml
 - title: Rentabilizar la aplicación
   linkLists:
   - linkListType: concept
     links:
-    - text: Directrices para aplicaciones vinculadas a ofertas saas
+    - text: Directrices para aplicaciones vinculadas a ofertas de SaaS
       url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
     - text: Directrices de validación de la tienda de Microsoft Teams
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -93,7 +93,7 @@ landingContent:
     links:
     - text: Novedades
       url: ../msteams-platform/whats-new.md
-- title: Capacidades de la aplicación de compilación
+- title: Capacidades de compilación de aplicaciones
   linkLists:
   - linkListType: concept
     links:
@@ -101,7 +101,7 @@ landingContent:
       url: ~/tabs/what-are-tabs.md
     - text: Crear bots
       url: ~/bots/what-are-bots.md
-    - text: Crear extensiones de mensaje
+    - text: Compilación de extensiones de mensaje
       url: ~/messaging-extensions/what-are-messaging-extensions.md
     - text: Compilar aplicaciones para reuniones de Teams
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
@@ -111,57 +111,57 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: Manifiesto de la aplicación
       url: ../msteams-platform/resources/schema/manifest-schema.md
-    - text: Esquema de manifiesto de vista previa del desarrollador público
+    - text: Esquema de manifiesto de versión preliminar del desarrollador público
       url: ~/resources/schema/manifest-schema-dev-preview.md
 - title: Guías paso a paso
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Crear Teams bot de conversación
+    - text: Creación de Teams bot de conversación
       url: ~/sbs-teams-conversation-bot.yml
-    - text: Crear bot de llamadas y reuniones
+    - text: Creación de un bot de llamadas y reuniones
       url: ~/sbs-calling-and-meeting.yml
-    - text: Configurar permisos de dispositivo tab
+    - text: Configuración de permisos de dispositivo de tabulación
       url: ~/sbs-tab-device-permissions.yml
-    - text: Configurar SSO para pestañas y extensiones de mensajería
+    - text: Configuración del inicio de sesión único para pestañas y extensiones de mensajería
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
     - text: Crear pestañas con tarjetas adaptables
       url: ~/sbs-tab-with-adaptive-cards.yml
-    - text: Crear un bot para enviar mensajes proactivos
+    - text: Creación de un bot para enviar mensajes proactivos
       url: ~/sbs-send-proactive.yml
-    - text: Crear un bot con autenticación de SSO
+    - text: Compilación de un bot con autenticación sso
       url: ~/sbs-bots-with-sso.yml
-    - text: Generar un token de reunión para extender una reunión
+    - text: Generación de un token de reunión para ampliar una reunión
       url: ~/sbs-meeting-token-generator.yml
-    - text: Crear un panel lateral de reunión
+    - text: Creación de un panel lateral de reunión
       url: ~/sbs-meetings-sidepanel.yml
   - linkListType: tutorial
     links:
-    - text: Upload archivos a Teams desde un bot
+    - text: Upload archivos para Teams desde un bot
       url: ~/sbs-file-handling-in-bot.yml
-    - text: Invocar módulos de tareas desde Microsoft Teams
+    - text: Invocación de módulos de tareas desde Microsoft Teams
       url: ~/sbs-botbuilder-taskmodule.yml
-    - text: Crear extensión de mensajería basada en búsquedas
+    - text: Compilación de la extensión de mensajería basada en búsqueda
       url: ~/sbs-messagingextension-searchcommand.yml
     - text: Extensión de mensajería basada en acciones de compilación
       url: ~/sbs-meetingextension-action.yml
-    - text: Crear webhooks salientes
+    - text: Compilación de webhooks salientes
       url: ~/sbs-outgoing-webhooks.yml
-    - text: Deshacer vínculos en Teams con bot
+    - text: Desenlazclar vínculos en Teams mediante bot
       url: ~/sbs-botbuilder-linkunfurling.yml
-    - text: Conectores Teams compilación
+    - text: Compilación de conectores de Teams
       url: ~/sbs-teams-connectors.yml
-- title: Teams escenarios de aplicaciones
+- title: escenarios de aplicación de Teams
   linkLists:
   - linkListType: reference
     links:
     - text: Escenarios de compilación para Teams aplicación
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-    - text: Procedimientos recomendados para Teams escenarios de aplicaciones
+    - text: Procedimientos recomendados para escenarios de Teams aplicación
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources
     - text: Explorar aplicaciones de código bajo para Teams
       url: ~/samples/teams-low-code-solutions.md
-- title: Publicar y distribuir
+- title: Publicación y distribución
   linkLists:
   - linkListType: concept
     links:
