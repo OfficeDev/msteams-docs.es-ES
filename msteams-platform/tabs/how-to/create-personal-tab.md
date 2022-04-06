@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación appmanifest del paquete MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b0da768a74ab6925f95ce89e38cecdaa96e084e6
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
+ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685649"
+ms.locfileid: "64686686"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -252,12 +252,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Upload la aplicación a Teams
 
-1. Ve a Microsoft Teams y selecciona **Tienda**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Tienda":::.
-1. Seleccione **Administrar las aplicaciones.**
-1. Seleccione **Publicar una aplicación** y **Upload una aplicación personalizada**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload aplicación personalizada" border="true":::
-
+1. Vaya a Microsoft Teams y seleccione **Aplicaciones**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Tienda":::.
+1. Seleccione **Administrar las aplicaciones** y **Upload una aplicación personalizada**.
 1. Vaya al directorio del proyecto, vaya a la carpeta **./package** , seleccione la carpeta zip y elija **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adición de la pestaña personal" border="true":::

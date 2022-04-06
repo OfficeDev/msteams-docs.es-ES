@@ -529,8 +529,14 @@
           href: resources/partner-apps-for-moodle.md
         - name: Preguntas más frecuentes sobre Moodle
           href: resources/faqs.md
-    - name: Crear un botón Compartir en Teams
-      href: concepts/build-and-test/share-to-teams.md
+    - name: Compartir en Teams
+      items:
+        - name: Información general
+          href: concepts/build-and-test/share-to-teams-overview.md
+        - name: Compartir en Teams desde aplicaciones web
+          href: concepts/build-and-test/share-to-teams-from-web-apps.md
+        - name: Compartir en Teams desde una aplicación personal o una pestaña
+          href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - name: Añadir una pestaña de Teams a SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: Crear vínculos profundos
