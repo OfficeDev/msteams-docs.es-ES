@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501987"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736877"
 ---
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
@@ -31,11 +31,11 @@ Para ofrecer una experiencia de compra desde la aplicación a los usuarios de la
 
 * La aplicación se invoca con [`openPurchaseExperience` API](#purchase-experience-api).
 
-La experiencia de compra desde la aplicación se puede habilitar actualizando el archivo **manifest.json** o habilitando **Mostrar ofertas de compra desde la aplicación** desde la sección **Permisos** de la **Portal para desarrolladores**.
+La experiencia de compra desde la aplicación se puede habilitar actualizando el archivo `manifest.json` o habilitando **Mostrar ofertas de compra desde la aplicación** desde la sección **Permisos** de la **Portal para desarrolladores**.
 
 ### <a name="update-manifest"></a>Actualizar manifiesto
 
-Para habilitar la experiencia de compra desde la aplicación, actualice el archivo **manifest.json** de la aplicación de Teams agregando los permisos de RSC. Permite a los usuarios de la aplicación actualizar a una versión de pago de la aplicación y empezar a usar nuevas funcionalidades. La actualización del manifiesto de la aplicación es la siguiente:
+Para habilitar la experiencia de compra desde la aplicación, actualice el archivo `manifest.json` de la aplicación de Teams agregando los permisos de RSC. Permite a los usuarios de la aplicación actualizar a una versión de pago de la aplicación y empezar a usar nuevas funcionalidades. La actualización del manifiesto de la aplicación es la siguiente:
 
 ```json
 

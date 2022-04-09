@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación appmanifest del paquete MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686686"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737215"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -55,7 +55,7 @@ Estos son los pasos para crear una pestaña personal:
     yo teams
     ```
 
-1. Proporcione los valores a una serie de preguntas que le pide Microsoft Teams generador de aplicaciones para actualizar el archivo **manifest.json**.
+1. Proporcione los valores a una serie de preguntas que le pide Microsoft Teams generador de aplicaciones para actualizar el `manifest.json` archivo.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="generador de Teams" border="true":::
 
@@ -164,7 +164,7 @@ Cree una página de contenido y actualice los archivos existentes de la aplicaci
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Abra **manifest.json** desde la siguiente ubicación en el Visual Studio Code:
+1. Abra `manifest.json` desde la siguiente ubicación en el Visual Studio Code:
 
     ```
      ./src/manifest/manifest.json
@@ -189,7 +189,7 @@ Cree una página de contenido y actualice los archivos existentes de la aplicaci
 
 1. Actualice el componente de ruta de acceso **contentURL** **yourDefaultTabNameTab** con el nombre de la pestaña real.
 
-1. Guarde el archivo **manifest.json** actualizado.
+1. Guarde el archivo actualizado `manifest.json` .
 
 1. Abra **Tab.ts en el** Visual Studio Code desde la siguiente ruta de acceso para proporcionar la página de contenido en un IFrame:
 
@@ -207,11 +207,7 @@ Cree una página de contenido y actualice los archivos existentes de la aplicaci
 
 ### <a name="create-your-app-package"></a>Crear el paquete de aplicación
 
-Debe tener un paquete de aplicación para compilar y ejecutar la aplicación en Teams. El paquete de la aplicación se crea a través de una tarea gulp que valida el archivo **manifest.json** y genera la carpeta zip en el directorio **./package** . En el símbolo del sistema, escriba el comando siguiente:
-
-```cmd
-gulp manifest
-```
+Debe tener un paquete de aplicación para compilar y ejecutar la aplicación en Teams. El paquete de la aplicación se crea a través de una tarea gulp que valida el `manifest.json` archivo y genera la carpeta zip en el `./package` directorio. En el símbolo del sistema, use el comando `gulp manifest`.
 
 ### <a name="build-and-run-your-application"></a>Compilación y ejecución de la aplicación
 
@@ -334,9 +330,9 @@ ASP.NET Core trata los archivos denominados **Index** como la página principal 
 
 Esta carpeta contiene los siguientes archivos de paquete de aplicación necesarios:
 
-* Un **icono de color completo** que mide 192 x 192 píxeles.
-* Icono **de contorno transparente** que mide 32 x 32 píxeles.
-* Un archivo **manifest.json** que especifica los atributos de la aplicación.
+* Un icono de color completo que mide 192 x 192 píxeles.
+* Icono de contorno transparente que mide 32 x 32 píxeles.
+* Archivo `manifest.json` que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Microsoft Teams carga el especificado en el `contentUrl` manifiesto, lo inserta en un iframe\> <y lo representa en la pestaña.
 
@@ -391,13 +387,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Abra **Aplicaciones** y seleccione **Importar aplicación**.
 
-1. El nombre del paquete de la aplicación es **tab.zip**. Está disponible en la ruta de acceso siguiente:
+1. El nombre del archivo del paquete de la aplicación es `tab.zip` y está disponible en la `/bin/Debug/netcoreapp3.1/tab.zip` ruta de acceso.
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Seleccione **tab.zip** y ábralo en el Portal para desarrolladores.
+1. Selecciónelo `tab.zip` y ábralo en el Portal para desarrolladores.
 
 1. Se crea y rellena un **identificador de aplicación** predeterminado en la sección **Información básica** .
 
@@ -409,7 +401,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Características de la aplicación**, seleccione **Aplicación** >  **personalCrear su primera pestaña de aplicación personal** y escriba el nombre y actualice la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco y seleccione **Contexto** como personalTab en la lista desplegable y **Agregar**.
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo `<yourngrokurl>.ngrok.io`HTTPS .
 
@@ -489,7 +481,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 * Un **icono de color completo** que mide 192 x 192 píxeles.
 * Icono **de contorno transparente** que mide 32 x 32 píxeles.
-* Un archivo **manifest.json** que especifica los atributos de la aplicación.
+* Archivo `manifest.json` que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Microsoft Teams carga el especificado en el `contentUrl` manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
 
@@ -578,7 +570,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Características de la aplicación**, seleccione **Aplicación** >  **personalCrear su primera pestaña de aplicación personal** y escriba el nombre y actualice la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco y seleccione **Contexto** como personalTab en la lista desplegable y **Agregar**.
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo `<yourngrokurl>.ngrok.io`HTTPS .
 
@@ -694,10 +686,10 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 > [!div class="nextstepaction"]
 > [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 * [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
-* [Compartir en Teams desde una aplicación o pestaña personal](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Compartir en Teams desde una aplicación personal o una pestaña](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)

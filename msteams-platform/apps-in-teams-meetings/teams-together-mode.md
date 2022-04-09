@@ -3,12 +3,12 @@ title: Escenas personalizadas del Modo conferencia
 description: Trabajar con escenas personalizadas del Modo conferencia
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356087"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736870"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -125,7 +125,7 @@ Opcionalmente, puede seleccionar **Compartir** en el menú desplegable **Guardar
 
 Después de la vista previa, la escena se enviará como una aplicación a Teams mediante los pasos para el envío de la aplicación. Este paso requiere el paquete de la aplicación. El paquete de la aplicación es diferente del paquete de escena para la escena que se diseñó. El paquete de la aplicación creado automáticamente se encuentra en la sección **Aplicaciones** del Centro para desarrolladores de Teams.
 
-Opcionalmente, el paquete de escena se recupera al seleccionar **Exportar** en el menú desplegable **Guardar**. Se descarga un archivo **.zip** que es el paquete de escena. El paquete de escena incluye un archivo scene.json y los activos PNG usados para crear una escena. Se revisa el paquete de escena para incorporar otros cambios:
+Opcionalmente, el paquete de escena se recupera al seleccionar **Exportar** en el menú desplegable **Guardar**. Se descarga un archivo .zip que es el paquete de escena. El paquete de escena incluye un archivo scene.json y los activos PNG usados para crear una escena. Se revisa el paquete de escena para incorporar otros cambios:
 
 ![Exportar una escena](../assets/images/apps-in-meetings/build-a-scene.png)
 

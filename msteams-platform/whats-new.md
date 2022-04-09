@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 809aae76471b4b21821151f03d293b9c519a0f58
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
+ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685537"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64706161"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,14 +22,12 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
-|04/06/2022| Compartir en Teams desde una aplicación o pestaña personal (versión preliminar para desarrolladores) | Integración con Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|06/04/2022.| Compartir en Teams desde una pestaña o aplicación personal (versión preliminar para desarrolladores) | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |01/04/2022| Presentada la guía paso a paso para crear un bot conversacional en Teams| Crear bots > Conversaciones de bots > Canal y conversaciones de grupo > [Guía paso a paso para crear un bot conversacional en Teams](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permisos de dispositivo para el explorador | Integrar las funcionalidades del dispositivo > [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
 |29/03/2022 | Integrar Selector de personas | Integrar con Teams > [Integrar Selector de personas](concepts/device-capabilities/people-picker-capability.md)|
 |23/03/2022| Guía paso a paso introducida para deshacer vínculos en Teams mediante bot | Crear extensiones de mensajería > Agregar vínculo de desenlace > [Vínculos de desenlace en Teams mediante bot](sbs-botbuilder-linkunfurling.yml)|
-|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams |  • Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
-|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams |  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Se agregó información sobre el proceso de depuración| • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Depurar la aplicación Teams localmente](toolkit/debug-local.md) </br> • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Proceso de depuración en segundo plano](toolkit/debug-background-process.md)|
 |14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
@@ -67,8 +65,6 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 |30/03/2022|Permisos de dispositivo para el explorador | Integrar las funcionalidades del dispositivo > [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
 |29/03/2022 |Integrar Selector de personas | Integrar con Teams > [Integrar Selector de personas](concepts/device-capabilities/people-picker-capability.md)
 |23/03/2022| Guía paso a paso introducida para deshacer vínculos en Teams mediante bot | Crear extensiones de mensajería > Agregar vínculo de desenlace > [Vínculos de desenlace en Teams mediante bot](sbs-botbuilder-linkunfurling.yml)|  
-|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams|  • Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
-|03/22/2022| Se actualizó la aplicación Introducción a Blazor para Teams|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Se agregó información sobre el proceso de depuración| • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Depurar la aplicación Teams localmente](toolkit/debug-local.md) </br> • Herramientas y SDK> Teams Toolkit para Visual Studio Code > [Proceso de depuración en segundo plano](toolkit/debug-background-process.md)|
 |14/03/2022| Se ha presentado una guía paso a paso para crear y probar un conector en Microsoft Teams | Compilar webhooks y conectores > Crear conectores de Office 365 > [Compilación de conectores de Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|  
@@ -269,7 +265,7 @@ La versión preliminar para desarrolladores es un programa público que proporci
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
-|04/06/2022| Compartir en Teams desde una aplicación o pestaña personal | Integración con Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|06/04/2022.| Compartir en Teams desde una aplicación personal o una pestaña | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |07/02/2022| Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
 |02/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |03/02/2022| Versión preliminar de prueba para aplicaciones monetizadas| Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|

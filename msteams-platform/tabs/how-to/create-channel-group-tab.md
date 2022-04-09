@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 736b8821a7d0f9e1eda35377bc4937e68c035c75
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: bc7cb1fceef586959be44ba680874914c4f07cc1
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686679"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737045"
 ---
 # <a name="channel-or-group-tab"></a>Pestaña Canal o grupo
 
@@ -51,7 +51,7 @@ A continuación se indican los pasos para crear una pestaña de canal o grupo:
     yo teams
     ```
 
-1. Proporcione los valores a una serie de preguntas que le pide Microsoft Teams generador de aplicaciones para actualizar el archivo **manifest.json**:
+1. Proporcione los valores a una serie de preguntas que le pide Microsoft Teams generador de aplicaciones para actualizar el `manifest.json` archivo:
 
     ![Captura de pantalla de apertura del generador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -137,13 +137,17 @@ A continuación se indican los pasos para crear una pestaña de canal o grupo:
     </details>
 
 > [!IMPORTANT]
-> El componente de ruta **de acceso yourDefaultTabNameTab** es el valor que especificó en el generador para **Nombre de tabulación predeterminado** más la palabra **Tab**.
->
-> Por ejemplo: DefaultTabName es **MyTab** y, a continuación, **/MyTabTab/**
+> El componente de ruta **de acceso yourDefaultTabNameTab** es el valor que especificó en el generador para **Nombre de tabulación predeterminado** más la palabra **Tab**. Por ejemplo, `DefaultTabName` es **MyTab** y **luego /MyTabTab/**.
+
+<!--- TBD: this info seems removed from the main branch.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
+--->
 
 ### <a name="create-your-app-package"></a>Crear el paquete de aplicación
 
-Debe tener un paquete de aplicación para compilar y ejecutar la aplicación en Teams. El paquete de la aplicación se crea a través de una tarea gulp que valida el archivo **manifest.json** y genera la carpeta zip en el directorio **./package** . En el símbolo del sistema, escriba el comando siguiente:
+Debe tener un paquete de aplicación para compilar y ejecutar la aplicación en Teams. El paquete de la aplicación se crea a través de una tarea gulp que valida el `manifest.json` archivo y genera la carpeta zip en el `./package` directorio. En el símbolo del sistema, escriba el comando siguiente:
 
 ```cmd
 gulp manifest
@@ -153,7 +157,7 @@ gulp manifest
 
 #### <a name="build-your-application"></a>Compilación de la aplicación
 
-Escriba el siguiente comando en el símbolo del sistema para transpilar la solución en la carpeta **./dist** :
+Escriba el siguiente comando en el símbolo del sistema para transpilar la solución en la `./dist` carpeta :
 
 ```cmd
 gulp build
@@ -191,11 +195,11 @@ gulp ngrok-serve
 1. Vaya a Microsoft Teams y seleccione **Aplicaciones**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Tienda":::.
 1. Seleccione **Administrar las aplicaciones** y **Upload una aplicación personalizada**.
 1. Vaya al directorio del proyecto, vaya a la carpeta **./package** , seleccione la carpeta zip del paquete de aplicación y elija **Abrir**.
-    
+
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Pestaña Canal cargado" border="true":::
 
 1. Seleccione **Agregar** en el cuadro de diálogo. La pestaña se carga en Teams.
-    
+
     > [!NOTE]
     > Si  **Agregar** no se muestra en el cuadro de diálogo, quite el código siguiente del manifiesto de la carpeta zip del paquete de la aplicación cargada. Vuelva a comprimir la carpeta y cárguela en Teams.
     >
@@ -210,7 +214,7 @@ gulp ngrok-serve
 1. Seleccione **Guardar** y la pestaña se agregará a la barra de pestañas del canal.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Pestaña de canal cargada" border="true":::
-    
+
     Ahora ha creado y agregado correctamente el canal o la pestaña de grupo en Teams.
 
 ::: zone-end
@@ -285,7 +289,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 * Un **icono de color completo** que mide 192 x 192 píxeles.
 * Icono **de contorno transparente** que mide 32 x 32 píxeles.
-* Un archivo **manifest.json** que especifica los atributos de la aplicación.
+* Archivo `manifest.json` que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Cuando un usuario elige agregar o actualizar la pestaña, Microsoft Teams carga el especificado en el `configurationUrl` manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
 
@@ -383,6 +387,11 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
     > [!TIP]
     > Debe tener la aplicación en Visual Studio y ngrok en ejecución para completar los pasos proporcionados en este artículo. Si necesita dejar de ejecutar la aplicación en Visual Studio para trabajar en ella, **mantenga ngrok en ejecución**. Escucha y reanuda el enrutamiento de la solicitud de la aplicación cuando se reinicia en Visual Studio. Si tiene que reiniciar el servicio ngrok, devuelve una nueva dirección URL y tiene que actualizar la aplicación con la nueva dirección URL.
 
+<!--- TBD: This note seems to be removed from main. Commenting it for now.
+> [!NOTE]
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
+--->
+
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualización del paquete de la aplicación con el Portal para desarrolladores
 
 1. Ve a Microsoft Teams. Si usa la [versión basada en web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante [las herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
@@ -391,13 +400,18 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Abra **Aplicaciones** y seleccione **Importar aplicación**.
 
-1. El nombre del paquete de la aplicación es **tab.zip**. Está disponible en la ruta de acceso siguiente:
+<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+--->
+
+1. El nombre del paquete de la aplicación es `tab.zip`. Está disponible en la ruta de acceso siguiente:
 
     ```bash
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Seleccione **tab.zip** y ábralo en el Portal para desarrolladores.
+1. Selecciónelo `tab.zip` y ábralo en el Portal para desarrolladores.
 
 1. Se crea y rellena un **identificador de aplicación** predeterminado en la sección **Información básica** .
 
@@ -409,7 +423,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. En **Características de la aplicación**, seleccione Grupo y aplicación de canal. Actualice la **dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo `<yourngrokurl>.ngrok.io`HTTPS .
 
@@ -487,7 +501,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 
 * Un **icono de color completo** que mide 192 x 192 píxeles.
 * Icono **de contorno transparente** que mide 32 x 32 píxeles.
-* Un archivo **manifest.json** que especifica los atributos de la aplicación.
+* Archivo `manifest.json` que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams.
 
@@ -627,7 +641,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. En **Características de la aplicación**, seleccione Grupo y aplicación de canal. Actualice la **dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo `<yourngrokurl>.ngrok.io`HTTPS .
 
@@ -648,7 +662,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 > [!div class="nextstepaction"]
 > [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
