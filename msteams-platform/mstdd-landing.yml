@@ -12,18 +12,18 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 894fa42dcb340bd9f96fb1edd0fc8af8425ecab8
-  ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+  ms.openlocfilehash: 22694650180a70aa594b4741b8575881284857db
+  ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/06/2022
-  ms.locfileid: "64685607"
+  ms.lasthandoff: 04/12/2022
+  ms.locfileid: "64793786"
 landingContent:
 - title: Explore lo más reciente
   linkLists:
   - linkListType: concept
     links:
-    - text: Compartir en Teams desde una aplicación o pestaña personal
+    - text: Compartir en Teams desde una aplicación personal o una pestaña
       url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - text: Creación de Teams bot de conversación
       url: ~/sbs-teams-conversation-bot.yml
@@ -131,14 +131,16 @@ landingContent:
       url: ~/sbs-send-proactive.yml
     - text: Compilación de un bot con autenticación sso
       url: ~/sbs-bots-with-sso.yml
-    - text: Generación de un token de reunión para ampliar una reunión
+    - text: Generación de un token de reunión
       url: ~/sbs-meeting-token-generator.yml
-    - text: Creación de un panel lateral de reunión
+    - text: Generar panel lateral de reunión
       url: ~/sbs-meetings-sidepanel.yml
   - linkListType: tutorial
     links:
     - text: Upload archivos para Teams desde un bot
       url: ~/sbs-file-handling-in-bot.yml
+    - text: Generación de una burbuja de contenido de reunión
+      url: ~/sbs-meeting-content-bubble.yml
     - text: Invocación de módulos de tareas desde Microsoft Teams
       url: ~/sbs-botbuilder-taskmodule.yml
     - text: Compilación de la extensión de mensajería basada en búsqueda
