@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
+ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398935"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64793801"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publique su aplicación en la tienda de Microsoft Teams
 
@@ -51,7 +51,7 @@ Cuando sienta que su aplicación está lista para producirse, podrá comenzar el
 
 * **Pruebas funcionales profundas y de experiencia**
 
-  Un validador revisará exhaustivamente la aplicación para garantizar el cumplimiento de las [Directivas de certificación del marketplace comercial de Microsoft](/legal/marketplace/certification-policies) enfocándose en las pruebas profundas de experiencia funcional y del usuario, las comprobaciones de facilidad de uso y las comprobaciones de metadatos. La validación de aplicaciones se realiza en clientes de escritorio, web y móviles.
+  Un validador revisará exhaustivamente la aplicación para garantizar el cumplimiento de las [Directivas de certificación del marketplace comercial de Microsoft](/legal/marketplace/certification-policies) enfocándose en las pruebas profundas de experiencia funcional y del usuario, las comprobaciones de facilidad de uso y las comprobaciones de metadatos. La validación de aplicaciones se realiza en clientes de escritorio, web y móviles. Trabajamos duro para proporcionarle un informe de pruebas detallado en 24 horas laborables después del envío.
 
 * **Publicación de aplicaciones guiadas a través del servicio de soporte técnico**
 
