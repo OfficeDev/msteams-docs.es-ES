@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511255"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826995"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -1029,7 +1029,7 @@ La experiencia del bot debe ser totalmente dinámica en dispositivos móviles. L
 
 ### <a name="notification-only-bots"></a>Bots de solo notificación
 
-Las aplicaciones que constan de bots de solo notificación proporcionan valor añadido al usuario mediante el desencadenamiento de notificaciones de usuario basadas en determinados desencadenadores o eventos en la aplicación principal o el back-end. Por ejemplo, se agrega un nuevo cliente potencial para que el equipo de ventas realice un seguimiento.
+Las aplicaciones que constan de bots de solo notificación proporcionan valor añadido al usuario mediante el desencadenamiento de notificaciones de usuario basadas en determinados desencadenadores o eventos en la aplicación principal o el back-end. Por ejemplo, se agrega un nuevo cliente potencial para que el equipo de ventas realice un seguimiento. Un bot de solo notificación de alta calidad notifica a los usuarios periódicamente determinadas finalizaciones de eventos, como las finalizaciones de flujo de trabajo o las alertas.
 
 Una notificación proporciona valor añadido en Teams si:
 
