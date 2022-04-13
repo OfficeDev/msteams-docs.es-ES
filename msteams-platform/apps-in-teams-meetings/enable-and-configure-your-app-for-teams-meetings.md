@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilite y configure las aplicaciones para Teams reuniones y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1f77d0924eec9c52dc2f3d10566010c2953bd66b
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820198"
+ms.locfileid: "64826981"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitación y configuración de las aplicaciones para reuniones de Teams
 
@@ -25,7 +25,7 @@ Con las aplicaciones para Teams reuniones, puede expandir las funcionalidades de
 
 * Siga [las directrices generales de diseño de Teams pestaña](../tabs/design/tabs.md) para escenarios previos y posteriores a la reunión. Para obtener experiencias durante las reuniones, consulte las [directrices de diseño de la pestaña en la reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) y [las directrices de diseño del cuadro de diálogo en la reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras fases a lo largo del ciclo de vida de la reunión. Para el cuadro de diálogo en la reunión, vea `completionBotId` el parámetro en [la carga de notificación en la reunión](API-references.md#send-an-in-meeting-notification).
+* Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras fases a lo largo del ciclo de vida de la reunión. Para ver el cuadro de diálogo en la reunión, consulte `completionBotId` el parámetro en [la carga de notificación en la reunión](API-references.md#send-an-in-meeting-notification).
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Habilitación de la aplicación para reuniones Teams
 
@@ -72,7 +72,7 @@ Admite el ámbito para habilitar la `groupchat` aplicación en chats previos y p
 
  A continuación se muestran los valores de la propiedad desde la `context` que puede usar todos o algunos de los valores:
 
-|Valor|Descripción|
+|Valor|Description|
 |---|---|
 | **channelTab** | Pestaña en el encabezado de un canal de equipo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios, no en el contexto de un equipo o reunión. |
@@ -114,8 +114,7 @@ Para agregar un bot a una reunión:
 En un chat de reunión, escriba la **@** clave y seleccione **Obtener bots**.
 
 > [!NOTE]
->
-> * La burbuja de contenido publica una tarjeta adaptable o una tarjeta simultáneamente en el chat de reunión al que los usuarios pueden acceder. Esto ayuda a los usuarios cuando se minimiza la reunión o la aplicación de Teams.
+> * El cuadro de diálogo en la reunión muestra un cuadro de diálogo en una reunión y publica simultáneamente una tarjeta adaptable en el chat de reunión al que los usuarios pueden acceder. La tarjeta adaptable del chat de reunión ayuda a los usuarios a asistir a la reunión o si la aplicación Teams está minimizada.
 > * La identidad del usuario debe confirmarse mediante [el inicio de sesión único de Tabs](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la `GetParticipant` API.
 > * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y moderadores crear un nuevo sondeo.
 > * Las asignaciones de roles se pueden cambiar mientras una reunión está en curso. Para obtener más información, vea [Roles en una reunión de Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
