@@ -1,44 +1,44 @@
 ---
-title: Habilitar y configurar las aplicaciones para Teams reuniones
+title: Habilitación y configuración de las aplicaciones para reuniones de Teams
 author: surbhigupta
-description: Habilitar y configurar las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualizar el manifiesto de la aplicación, configurar características, como, cuadro de diálogo en la reunión, fase de reunión compartida, panel lateral de reunión, etc.
+description: Habilite y configure las aplicaciones para Teams reuniones y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 576ee5dc7d34ae49b6b166a43bd59e8251d519a2
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1f77d0924eec9c52dc2f3d10566010c2953bd66b
+ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727305"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64820198"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para Teams reuniones
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitación y configuración de las aplicaciones para reuniones de Teams
 
-Cada equipo tiene una forma diferente de comunicar y colaborar tareas. Para lograr estas diferentes tareas, personalice Teams con aplicaciones para reuniones. Habilita las aplicaciones para Teams reuniones y configura las aplicaciones para que estén disponibles en el ámbito de la reunión dentro del manifiesto de la aplicación.
+Cada equipo tiene una manera diferente de comunicarse y colaborar con las tareas. Para lograr estas tareas diferentes, personalice Teams con aplicaciones para reuniones. Habilite las aplicaciones para Teams reuniones y configure las aplicaciones para que estén disponibles en el ámbito de la reunión dentro de su manifiesto de aplicación.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Con aplicaciones para Teams reuniones, puedes expandir las capacidades de tus aplicaciones en todo el ciclo de vida de la reunión. Antes de trabajar con aplicaciones para Teams reuniones, debes cumplir los siguientes requisitos previos:
+Con las aplicaciones para Teams reuniones, puede expandir las funcionalidades de las aplicaciones a lo largo del ciclo de vida de la reunión. Antes de trabajar con aplicaciones para Teams reuniones, debe cumplir los siguientes requisitos previos:
 
-* Sepa cómo desarrollar Teams aplicaciones. Para obtener más información sobre cómo desarrollar Teams aplicación, consulta [Teams desarrollo de aplicaciones.](../overview.md)
+* Saber cómo desarrollar aplicaciones Teams. Para obtener más información sobre cómo desarrollar Teams aplicación, consulte [Teams desarrollo de aplicaciones](../overview.md).
 
-* Usa la aplicación que admite pestañas configurables en el ámbito groupchat. Para obtener más información, vea [ámbito de chat de grupo](../resources/schema/manifest-schema.md#configurabletabs) [y cree una pestaña de grupo](../build-your-first-app/build-channel-tab.md).
+* Usa la aplicación que admite pestañas configurables en el ámbito de groupchat. Para obtener más información, consulte [ámbito de chat de grupo](../resources/schema/manifest-schema.md#configurabletabs) y [compilación de una pestaña de grupo](../build-your-first-app/build-channel-tab.md).
 
-* Siga las directrices [generales Teams de diseño de pestañas](../tabs/design/tabs.md) para escenarios previos y posteriores a la reunión. Para obtener experiencias durante las reuniones, consulte las directrices de diseño de [pestañas](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) en la reunión y las directrices de diseño de [cuadros de diálogo en la reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
+* Siga [las directrices generales de diseño de Teams pestaña](../tabs/design/tabs.md) para escenarios previos y posteriores a la reunión. Para obtener experiencias durante las reuniones, consulte las [directrices de diseño de la pestaña en la reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) y [las directrices de diseño del cuadro de diálogo en la reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras etapas a lo largo del ciclo de vida de la reunión. Para el cuadro de diálogo en la reunión, vea `completionBotId` el parámetro en [la carga de notificación en la reunión](API-references.md#send-an-in-meeting-notification).
+* Para que la aplicación se actualice en tiempo real, debe estar actualizada en función de las actividades de eventos de la reunión. Estos eventos pueden estar dentro del cuadro de diálogo en la reunión y otras fases a lo largo del ciclo de vida de la reunión. Para el cuadro de diálogo en la reunión, vea `completionBotId` el parámetro en [la carga de notificación en la reunión](API-references.md#send-an-in-meeting-notification).
 
-## <a name="enable-your-app-for-teams-meetings"></a>Habilitar la aplicación para Teams reuniones
+## <a name="enable-your-app-for-teams-meetings"></a>Habilitación de la aplicación para reuniones Teams
 
-Para habilitar la aplicación para Teams reuniones, actualiza el manifiesto de la aplicación y usa las propiedades de contexto para determinar dónde debe aparecer la aplicación.
+Para habilitar la aplicación para Teams reuniones, actualice el manifiesto de la aplicación y use las propiedades de contexto para determinar dónde debe aparecer la aplicación.
 
-### <a name="update-your-app-manifest"></a>Actualizar el manifiesto de la aplicación
+### <a name="update-your-app-manifest"></a>Actualización del manifiesto de la aplicación
 
-Las funcionalidades de la aplicación reuniones se declaran en el manifiesto de la aplicación mediante `configurableTabs`las matrices , `scopes`y `context` . El ámbito define quién puede tener acceso y el contexto define dónde está disponible la aplicación.
+Las funcionalidades de la aplicación de reuniones se declaran en el manifiesto de la aplicación mediante las `configurableTabs`matrices , `scopes`y `context` . El ámbito define quién puede acceder y el contexto define dónde está disponible la aplicación.
 
 > [!NOTE]
 >
-> * Debes actualizar el manifiesto de la aplicación con el [esquema de manifiesto](../resources/schema/manifest-schema-dev-preview.md).
-> * Las aplicaciones de las reuniones requieren ámbito `groupchat` . El `team` ámbito solo funciona para pestañas en canales.
+> * Debe actualizar el manifiesto de la aplicación con el [esquema de manifiesto](../resources/schema/manifest-schema-dev-preview.md).
+> * Las aplicaciones de las reuniones requieren `groupchat` ámbito. El `team` ámbito solo funciona para pestañas en canales.
 
 El manifiesto de la aplicación debe incluir el siguiente fragmento de código:
 
@@ -66,26 +66,26 @@ El manifiesto de la aplicación debe incluir el siguiente fragmento de código:
 
 ### <a name="context-property"></a>Context (propiedad)
 
-La `context` propiedad determina lo que debe mostrarse cuando un usuario invoca una aplicación en una reunión en función del lugar en el que el usuario invoca la aplicación. La pestaña `context` y las `scopes` propiedades te permiten determinar dónde debe aparecer la aplicación. Las pestañas del `team` ámbito or `groupchat` pueden tener más de un contexto.
+La `context` propiedad determina lo que se debe mostrar cuando un usuario invoca una aplicación en una reunión en función de dónde invoque la aplicación. La pestaña `context` y `scopes` las propiedades permiten determinar dónde debe aparecer la aplicación. Las pestañas del `team` ámbito o `groupchat` pueden tener más de un contexto.
 
-Admite el `groupchat` ámbito para habilitar la aplicación en chats previos y posteriores a la reunión. Con la experiencia de la aplicación antes de la reunión, puedes encontrar y agregar aplicaciones de reunión y realizar las tareas previas a la reunión. Con la experiencia de la aplicación posterior a la reunión, puedes ver los resultados de la reunión, como los resultados de la encuesta o la tarifa.
+Admite el ámbito para habilitar la `groupchat` aplicación en chats previos y posteriores a la reunión. Con la experiencia de la aplicación previa a la reunión, puede buscar y agregar aplicaciones de reunión y realizar las tareas previas a la reunión. Con la experiencia de la aplicación posterior a la reunión, puede ver los resultados de la reunión, como los resultados de la encuesta de sondeo o la cuota.
 
- Estos son los valores de la `context` propiedad desde la que puede usar todos o algunos de los valores:
+ A continuación se muestran los valores de la propiedad desde la `context` que puede usar todos o algunos de los valores:
 
 |Valor|Descripción|
 |---|---|
-| **channelTab** | Pestaña en el encabezado de un canal de grupo. |
+| **channelTab** | Pestaña en el encabezado de un canal de equipo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios, no en el contexto de un equipo o reunión. |
 | **meetingChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios para una reunión programada. Puede especificar **meetingChatTab** o **meetingDetailsTab** para asegurarse de que las aplicaciones funcionan en dispositivos móviles. |
 | **meetingDetailsTab** | Pestaña en el encabezado de la vista de detalles de la reunión del calendario. Puede especificar **meetingChatTab** o **meetingDetailsTab** para asegurarse de que las aplicaciones funcionan en dispositivos móviles. |
 | **meetingSidePanel** | Un panel en la reunión abierto a través de la barra unificada (barra U). |
-| **meetingStage** | Una aplicación de la puede `meetingSidePanel` compartirse en la fase de reunión. No puedes usar esta aplicación en dispositivos móviles ni en clientes de sala de Teams. |
+| **meetingStage** | Una aplicación de `meetingSidePanel` puede compartirse en la fase de reunión. No puedes usar esta aplicación en dispositivos móviles ni en clientes de sala de Teams. |
 
-Después de habilitar la aplicación para Teams reuniones, debes configurar la aplicación antes de una reunión, durante una reunión y después de una reunión.
+Después de habilitar la aplicación para Teams reuniones, debe configurarla antes de una reunión, durante una reunión y después de una reunión.
 
-## <a name="configure-your-app-for-meeting-scenarios"></a>Configurar la aplicación para escenarios de reunión
+## <a name="configure-your-app-for-meeting-scenarios"></a>Configuración de la aplicación para escenarios de reunión
 
-Teams reuniones proporcionan una experiencia de colaboración para su organización. Configura la aplicación para diferentes escenarios de reunión y para mejorar la experiencia de la reunión. Ahora puede identificar qué acciones se pueden realizar en los siguientes escenarios de reunión:
+Teams reuniones proporcionan una experiencia de colaboración para su organización. Configure la aplicación para diferentes escenarios de reunión y mejore la experiencia de la reunión. Ahora puede identificar qué acciones se pueden realizar en los siguientes escenarios de reunión:
 
 * [Antes de una reunión](#before-a-meeting)
 * [Durante una reunión](#during-a-meeting)
@@ -97,38 +97,38 @@ Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones
 
 Para agregar una pestaña a una reunión:
 
-1. En el calendario, seleccione una reunión a la que desee agregar una pestaña.
-1. Seleccione la **pestaña Detalles** y seleccione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
+1. En el calendario, seleccione una reunión a la que quiera agregar una pestaña.
+1. Seleccione la pestaña **Detalles** y seleccione <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
     <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
-1. En la galería de pestañas que aparece, selecciona la aplicación que quieres agregar y sigue los pasos según sea necesario. La aplicación se instala como una pestaña.
+1. En la galería de pestañas que aparece, seleccione la aplicación que desea agregar y siga los pasos necesarios. La aplicación se instala como una pestaña.
 
 Para agregar una extensión de mensajería a una reunión:
 
-1. Seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; ubicados en el área del mensaje de redacción en el chat.
-1. Selecciona la aplicación que quieras agregar y sigue los pasos según sea necesario. La aplicación se instala como una extensión de mensajería.
+1. Seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; ubicados en el área de redacción del mensaje en el chat.
+1. Seleccione la aplicación que desea agregar y siga los pasos necesarios. La aplicación se instala como una extensión de mensajería.
 
 Para agregar un bot a una reunión:
 
-En un chat de reunión, escriba la clave **@** y seleccione **Obtener bots**.
+En un chat de reunión, escriba la **@** clave y seleccione **Obtener bots**.
 
 > [!NOTE]
 >
-> * La burbuja de contenido publica una tarjeta adaptable o una tarjeta simultáneamente en el chat de reunión al que pueden acceder los usuarios. Esto ayuda a los usuarios cuando se minimiza la reunión o Teams aplicación.
-> * La identidad del usuario debe confirmarse con [SSO de pestañas](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la `GetParticipant` API.
-> * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y presentadores crear un nuevo sondeo.
-> * Las asignaciones de roles se pueden cambiar mientras se está en curso una reunión. Para obtener más información, vea [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+> * La burbuja de contenido publica una tarjeta adaptable o una tarjeta simultáneamente en el chat de reunión al que los usuarios pueden acceder. Esto ayuda a los usuarios cuando se minimiza la reunión o la aplicación de Teams.
+> * La identidad del usuario debe confirmarse mediante [el inicio de sesión único de Tabs](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la `GetParticipant` API.
+> * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas del rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y moderadores crear un nuevo sondeo.
+> * Las asignaciones de roles se pueden cambiar mientras una reunión está en curso. Para obtener más información, vea [Roles en una reunión de Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 ### <a name="during-a-meeting"></a>Durante una reunión
 
-Durante una reunión, puedes usar la `meetingSidePanel` notificación o en la reunión para crear experiencias únicas para tus aplicaciones.
+Durante una reunión, puede usar la `meetingSidePanel` notificación o en la reunión para crear experiencias únicas para las aplicaciones.
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
-Permite `meetingSidePanel` personalizar experiencias en una reunión que permiten a los organizadores y presentadores tener un conjunto diferente de vistas y acciones. En el manifiesto de la aplicación, debes agregar a `meetingSidePanel` la matriz de contexto. En la reunión y en todos los escenarios, la aplicación se representa en una pestaña en la reunión que tiene 320 píxeles de ancho. Para obtener más información, vea [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+`meetingSidePanel` permite personalizar experiencias en una reunión que permiten a los organizadores y moderadores tener diferentes conjuntos de vistas y acciones. En el manifiesto de la aplicación, debe agregar `meetingSidePanel` a la matriz de contexto. En la reunión y en todos los escenarios, la aplicación se representa en una pestaña en la reunión que tiene un ancho de 320 píxeles. Para obtener más información, vea [Interfaz FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
-Para usar la `userContext` API para enrutar solicitudes, [consulte Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obtener más información, [vea Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación de las pestañas es similar al flujo de autenticación de los sitios web. Por lo tanto, las pestañas pueden usar OAuth 2.0 directamente. Para obtener más información, [vea Plataforma de identidad de Microsoft y flujo de código de autorización de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Para usar la `userContext` API para enrutar solicitudes, consulte [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obtener más información, consulte [Teams flujo de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación de las pestañas es similar al flujo de autenticación de los sitios web. Por lo tanto, las pestañas pueden usar OAuth 2.0 directamente. Para obtener más información, vea [Plataforma de identidad de Microsoft y flujo de código de autorización de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 La extensión de mensajería funciona según lo esperado cuando un usuario está en una vista en la reunión. El usuario puede publicar tarjetas de extensión de mensaje de redacción. AppName en la reunión es una información sobre herramientas que indica el nombre de la aplicación en la barra U de la reunión.
 
@@ -137,26 +137,26 @@ La extensión de mensajería funciona según lo esperado cuando un usuario está
 
 #### <a name="in-meeting-notification"></a>Notificación en la reunión
 
-La notificación en la reunión se usa para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use una [carga de notificación en la](API-references.md#send-an-in-meeting-notification) reunión para desencadenar una notificación en la reunión. Como parte de la carga de solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
+La notificación en la reunión se usa para interactuar con los participantes durante la reunión y recopilar información o comentarios durante la reunión. Use una [carga de notificación en la reunión](API-references.md#send-an-in-meeting-notification) para desencadenar una notificación en la reunión. Como parte de la carga de la solicitud de notificación, incluya la dirección URL donde se hospeda el contenido que se va a mostrar.
 
-La notificación en reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar la notificación en la reunión. Puede usar el método para `submitTask` enviar datos en un chat de reunión.
+La notificación en la reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar la notificación en la reunión. Puede usar el `submitTask` método para enviar datos en un chat de reunión.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="En el ejemplo se muestra cómo se puede usar un cuadro de diálogo en la reunión." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="En el ejemplo se muestra cómo puede usar un cuadro de diálogo en la reunión." border="true":::
 
 #### <a name="shared-meeting-stage"></a>Escena de reunión compartida
 
-La fase de reunión compartida permite a los participantes de la reunión interactuar y colaborar en el contenido de la aplicación en tiempo real. Puedes compartir tus aplicaciones en la fase de reunión de colaboración de las siguientes maneras:
+La fase de reunión compartida permite a los participantes de la reunión interactuar con el contenido de la aplicación y colaborar en él en tiempo real. Puede compartir sus aplicaciones en la fase de reunión colaborativa de las siguientes maneras:
 
-* [Compartir toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir a fase en Teams cliente.
-* [Compartir partes específicas de la aplicación para faser](#share-specific-parts-of-the-app-to-stage) el uso de API en el SDK Teams cliente.
+* [Comparta toda la aplicación para realizar la fase](#share-entire-app-to-stage) mediante el botón Compartir en fase en Teams cliente.
+* [Comparta partes específicas de la aplicación para almacenar provisionalmente](#share-specific-parts-of-the-app-to-stage) mediante api en el SDK de cliente de Teams.
 
-##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en fase
+##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en la fase
 
-Los participantes pueden compartir toda la aplicación en la fase de reunión de colaboración con el botón compartir a fase desde el panel lateral de la aplicación.
+Los participantes pueden compartir toda la aplicación en la fase de reunión de colaboración mediante el botón compartir para realizar la fase desde el panel lateral de la aplicación.
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-Para compartir toda la aplicación en fase, en el manifiesto de la aplicación debes configurar `meetingStage` `meetingSidePanel` y como contextos de marco. Por ejemplo:
+Para compartir toda la aplicación para la fase, en el manifiesto de la aplicación debe configurar `meetingStage` y `meetingSidePanel` como contextos de marco. Por ejemplo:
 
 ```json
 "configurableTabs": [
@@ -174,38 +174,38 @@ Para compartir toda la aplicación en fase, en el manifiesto de la aplicación d
   ]
 ```
 
-Para obtener más información, consulta [manifiesto de la aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+Para obtener más información, consulte [manifiesto de aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
-##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartir partes específicas de la aplicación en fase
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>Compartir partes específicas de la aplicación para la fase
 
-Los participantes pueden compartir partes específicas de la aplicación a la fase de reunión de colaboración mediante el uso del recurso compartido para configurar las API. Las API están disponibles en el SDK Teams cliente y se invocan desde el panel del lado de la aplicación.
+Los participantes pueden compartir partes específicas de la aplicación en la fase de reunión de colaboración mediante el uso del recurso compartido para preconfigurar las API. Las API están disponibles en el SDK de cliente Teams y se invocan desde el panel lateral de la aplicación.
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-Para compartir partes específicas de la aplicación en fase, debes invocar las API relacionadas en la Teams SDK de cliente. Para obtener más información, vea [Referencia de API](API-references.md).
+Para compartir partes específicas de la aplicación para la fase, debe invocar las API relacionadas en la biblioteca del SDK de cliente de Teams. Para obtener más información, consulte [Referencia de API](API-references.md).
 
 > [!NOTE]
-> * Para compartir partes específicas de la aplicación en fase, usa Teams de manifiesto 1.12 o posterior.
-> * Compartir partes específicas de la aplicación en fase es compatible Teams clientes de escritorio.
+> * Para compartir partes específicas de la aplicación que se van a almacenar provisionalmente, use Teams versión de manifiesto 1.12 o posterior.
+> * Compartir partes específicas de la aplicación para la fase solo se admite para Teams clientes de escritorio.
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 
-Las configuraciones de las reuniones después [y antes](#before-a-meeting) son las mismas.
+Las configuraciones de después y [antes de las reuniones](#before-a-meeting) son las mismas.
 
 ## <a name="code-sample"></a>Ejemplo de código
 
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Aplicación de reunión | Muestra cómo usar la aplicación Generador de tokens de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad equitativa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y preguntas&sesiones A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Aplicación de reunión | Muestra cómo usar la aplicación Generador de token de reunión para solicitar un token. El token se genera secuencialmente para que cada participante tenga una oportunidad justa de contribuir en una reunión. El token es útil en situaciones como reuniones de scrum y sesiones de Q&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-|Panel lateral de la reunión | Aplicación de ejemplo para mostrar cómo agregar agenda en un panel del lado de la reunión | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+|Panel lateral de la reunión | Aplicación de ejemplo para mostrar cómo agregar agenda en un panel lateral de la reunión | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>Guías paso a paso
 
-* Siga la [guía paso a paso para](../sbs-meeting-token-generator.yml) generar token de reunión en su Teams reunión.
-* Siga la [guía paso a paso para](../sbs-meetings-sidepanel.yml) generar un panel lateral de reunión en su Teams reunión.
-* Siga la [guía paso a paso para](../sbs-meetings-stage-view.yml) generar una vista de fase de reunión en su Teams reunión.
-* Siga la [guía paso a paso para](../sbs-meeting-content-bubble.yml) generar una burbuja de contenido de reunión en su Teams reunión.
+* Siga la [guía paso a paso](../sbs-meeting-token-generator.yml) para generar el token de reunión en la reunión de Teams.
+* Siga la [guía paso a paso](../sbs-meetings-sidepanel.yml) para generar el panel lateral de la reunión en la reunión de Teams.
+* Siga la [guía paso a paso](../sbs-meetings-stage-view.yml) para compartir la vista de la fase de reunión en la reunión de Teams.
+* Siga la [guía paso a paso](../sbs-meeting-content-bubble.yml) para generar la burbuja de contenido de la reunión en la reunión de Teams.
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -214,7 +214,7 @@ Las configuraciones de las reuniones después [y antes](#before-a-meeting) son l
 
 ## <a name="see-also"></a>Vea también
 
-* [Directrices de diseño de cuadros de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-* [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Directrices de diseño de la experiencia de fase de reunión compartida](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Directrices de diseño del cuadro de diálogo en la reunión](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* [Teams flujo de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Directrices de diseño de la experiencia de la fase de reunión compartida](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Agregar aplicaciones a reuniones a través de Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
