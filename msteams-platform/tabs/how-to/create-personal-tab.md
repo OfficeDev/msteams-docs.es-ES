@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET almacén de permisos de dominio de conversación appmanifest del paquete MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: fda21b5bf9908529a9a20820867551202b761362
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737215"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838483"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
-Pestañas personales, junto con los bots de ámbito personal, forman parte de las aplicaciones personales y se limitan a un solo usuario. Se pueden anclar al panel izquierdo para facilitar el acceso. También puede [reordenar](#reorder-static-personal-tabs) y agregar [`registerOnFocused` api](#add-registeronfocused-api-for-tabs-or-personal-apps) para pestañas personales.
+Pestañas personales, junto con los bots de ámbito personal, forman parte de las aplicaciones personales y se limitan a un solo usuario. Se pueden anclar al panel izquierdo para facilitar el acceso. También puede [reordenar](#reorder-static-personal-tabs) sus pestañas personales.
 
 Asegúrese de que tiene todos los [sitios previos](~/tabs/how-to/tab-requirements.md) para crear la pestaña personal.
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
    Ahora ha creado y agregado correctamente su pestaña personal en Teams.
   
-   Como tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) y agregar [`registerOnFocused` la API](#add-registeronfocused-api-for-tabs-or-personal-apps) para su pestaña personal.
+   Como tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) su pestaña personal.
 
 ::: zone-end
 
@@ -401,7 +401,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Características de la aplicación**, seleccione **Aplicación** >  **personalCrear su primera pestaña de aplicación personal** y escriba el nombre y actualice la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco y seleccione **Contexto** como personalTab en la lista desplegable y **Agregar**.
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo `<yourngrokurl>.ngrok.io`HTTPS .
 
@@ -415,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
    Ahora ha creado y agregado correctamente su pestaña personal en Teams.
   
-   Como tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) y agregar [`registerOnFocused` la API](#add-registeronfocused-api-for-tabs-or-personal-apps) para su pestaña personal.
+   Como tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) su pestaña personal.
 
 ::: zone-end
 
@@ -570,7 +570,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Características de la aplicación**, seleccione **Aplicación** >  **personalCrear su primera pestaña de aplicación personal** y escriba el nombre y actualice la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco y seleccione **Contexto** como personalTab en la lista desplegable y **Agregar**.
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. En la sección Dominios, los dominios de las pestañas deben contener la dirección URL de ngrok sin el prefijo `<yourngrokurl>.ngrok.io`HTTPS .
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    Ahora ha creado y agregado correctamente su pestaña personal en Teams.
 
-   Como tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) y agregar [`registerOnFocused` la API](#add-registeronfocused-api-for-tabs-or-personal-apps) para su pestaña personal.
+   Como tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) su pestaña personal.
 
 ::: zone-end
 
@@ -611,75 +611,6 @@ Si crea un bot con un ámbito **personal** , aparece en la primera posición de 
 }
 
 ```
-
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Agregar `registerOnFocused` API para pestañas o aplicaciones personales
-
-La `registerOnFocused` API del SDK le permite usar un teclado en Teams. Puedes volver a una aplicación personal y mantener el foco en una pestaña o aplicación personal con la ayuda de las teclas Ctrl, Mayús y F6. Por ejemplo, puede alejarse de la aplicación personal para buscar algo y, a continuación, volver a la aplicación personal o usar Ctrl+F6 para recorrer los lugares necesarios.
-
-El código siguiente proporciona un ejemplo de definición de controlador en el `registerFocusEnterHandler` SDK cuando el foco debe devolverse a la pestaña o a la aplicación personal:
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-Una vez desencadenado el controlador con la palabra clave `focusEnter`, se invoca al controlador `registerFocusEnterHandler` con una función `focusEnterHandler` de devolución de llamada que toma un parámetro denominado `navigateForward`. El valor de `navigateForward` determina el tipo de eventos. `focusEnterHandler` Solo se invoca mediante Ctrl+F6 y no mediante la tecla de tabulación.
-Las claves útiles para mover eventos dentro de Teams son las siguientes:
-
-* Evento Forward: Teclas Ctrl+F6
-* Evento Hacia atrás: Teclas Ctrl+Mayús+F6
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### <a name="personal-app"></a>Aplicación personal
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Ejemplo que muestra las opciones para agregar registerOnFocussed API" border="true":::
-
-#### <a name="personal-app-forward-event"></a>Aplicación personal: evento Forward
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Ejemplo que muestra las opciones para agregar el movimiento hacia delante de la API registerOnFocussed" border="true":::
-
-#### <a name="personal-app-backward-event"></a>Aplicación personal: evento Backward
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="En el ejemplo se muestran las opciones para agregar el movimiento hacia atrás de la API registerOnFocussed" border="true":::
-
-### <a name="tab"></a>Pestaña
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="En el ejemplo se muestran las opciones para agregar registerOnFocussed API for tab" border="true":::
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706161"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838476"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -116,7 +116,6 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 |13/11/2021| Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico del recurso (RSC) | • Crear bots > Conversaciones de bots > Mensajes en conversaciones de bots > [Recibir todos los mensajes del canal con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots > Conversaciones de bots > [Información general sobre las conversaciones de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots > Conversaciones de bots > [Conversaciones de canal y de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |28/10/2021| Monetice la aplicación Teams con una oferta SaaS que se pueda usar como transacción. | Distribuir la aplicación > Publicar en el almacén de Teams > [Incluir una oferta de SaaS con la aplicación de Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |25/10/2021| Se ha actualizado el módulo de introducción para la documentación destinada a desarrolladores de Microsoft Teams con una nueva estructura y procedimientos en una guía paso a paso | Introducción > [Introducción a su primera aplicación de Teams](get-started/get-started-overview.md) |
-|21/10/2021| Añadir una API `registerOnFocused` para pestañas o aplicaciones personales | Crear pestañas > Crear pestañas personales > [Añadir la API `registerOnFocused`para pestañas o aplicaciones personales](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |20/10/2021| El escenario de las reuniones ya está disponible en GA | Crear aplicaciones para reuniones de Teams > [Habilitar y configurar las aplicaciones para reuniones de Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 |20/10/2021| API de Detalles de reuniones y eventos de reuniones de Teams en tiempo real | Crear aplicaciones para reuniones de Teams > [Obtener la API de detalles de la reunión](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Despliegue del vínculo de las pestañas y vista del escenario | Crear pestañas > [Expansión de vínculos de pestañas y vista de fases](tabs/tabs-link-unfurling.md) |

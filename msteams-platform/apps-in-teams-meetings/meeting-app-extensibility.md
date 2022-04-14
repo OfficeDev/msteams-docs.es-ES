@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre Teams ciclo de vida de las reuniones y la experiencia de reunión del usuario en el entorno de escritorio y móvil, los roles y los tipos de participantes y usuarios, integración de bots y extensión de mensajería en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a99759d5d165f79cff374622abbfe805bb3b208
-ms.sourcegitcommit: 1d9531cf751b72ed1784da6409cfc89d5f53950e
+ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64827193"
+ms.locfileid: "64838463"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -221,7 +221,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Habilitación y configuración de las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
