@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
+ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498220"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64910553"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 
@@ -44,7 +44,7 @@ Para obtener más información, vea [Crear una nueva aplicación de pestaña de 
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Guías paso a paso con Teams Toolkit
 
-* [Crear una aplicación de Teams con Blazor](../sbs-gs-blazorapp.yml)
+* [Crear una aplicación de Teams con Blazor](../sbs-gs-blazorupdate.yml)
 * [Crear una aplicación Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
 * [Crear una aplicación Teams con SPFx](../sbs-gs-spfx.yml)
 * [Crear una aplicación Teams con C# o .NET](../sbs-gs-csharp.yml)

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571113"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952356"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -34,17 +34,22 @@ Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publ
 Puede transferir localmente la aplicación a un equipo, chat, reunión o para su uso personal en función de cómo haya configurado el ámbito de la aplicación.
 
 1. Inicie sesión en el cliente de Teams con su [cuenta de desarrollo de Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-1. Seleccione **Aplicaciones** y **Administrar sus aplicaciones**.
+1. Seleccione **Aplicaciones** > **Administrar las aplicaciones** y **Publicar una aplicación**.
+
+    :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Publicar una aplicación" border="true":::
+
 1. Seleccione **Cargar una aplicación personalizada**.
+
+   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="Cargar una aplicación personalizada" border="true":::.
+
 1. Seleccione el archivo .zip del paquete de la aplicación.
-2. Agregue la aplicación a Teams según sus necesidades:</br>
+1. Agregue la aplicación a Teams según sus necesidades:</br>
 
-   a. Seleccione **Agregar** para agregar su aplicación personal.</br>
-   b. Use el menú desplegable para agregar la aplicación a un equipo o chat.
+   a. Seleccione **Agregar** para agregar su aplicación personal.</br> B. Use el menú desplegable para agregar la aplicación a un equipo o chat.
 
-![Crear una aplicación de Teams](~/assets/videos/app-teams.gif)
+    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Crear una aplicación de Teams" border="true":::
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshoot"></a>Solucionar problemas
 
 Si la aplicación no se puede transferir localmente o hay problemas para cargarla, compruebe las siguientes opciones:
 
@@ -52,17 +57,55 @@ Si la aplicación no se puede transferir localmente o hay problemas para cargarl
 1. [Validar el paquete de la aplicación](https://dev.teams.microsoft.com/appvalidation.html).
 1. Asegúrese de que el manifiesto de la aplicación coincide con el último [esquema](../../resources/schema/manifest-schema.md).
 
-## <a name="access-your-app"></a>Acceder a la aplicación
+## <a name="manage-your-apps"></a>Administrar las aplicaciones
 
+Administrar las aplicaciones permite a los usuarios tener un lugar dedicado para administrar, actualizar y quitar sus aplicaciones, permisos y suscripciones en el cliente de Teams. Los usuarios pueden instalar las aplicaciones desde **Administrar las aplicaciones**.
+
+### <a name="access-your-app"></a>Acceder a la aplicación
+
+Para acceder a las aplicaciones a través de **Administrar las aplicaciones** siga estos pasos:
+
+1. Vaya a **Aplicaciones** y seleccione **Administrar las aplicaciones** en Teams para ver las aplicaciones instaladas en todos los canales o para su uso personal en un formato de lista.
+
+    :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Acceso a la lista de aplicaciones de Teams" border="true":::
+    
+1. Seleccione la lista desplegable de aplicaciones para ver todos los ámbitos en los que está instalada la aplicación.
+    
+    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Acceso al ámbito de la aplicación de Teams" border="true":::
+    
+1. Seleccione el ámbito de la aplicación para ir a la aplicación en el canal o en la vista personal. La lista de ámbitos consta solo de ámbito personal y ámbito de equipos. Las aplicaciones instaladas en el ámbito de chat de grupo no se muestran actualmente en esta vista.
+    
 Teams proporciona varias maneras de abrir aplicaciones. Para obtener más información, consulte [acceso a las aplicaciones en Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
-## <a name="update-your-app"></a>Actualizar la aplicación
+### <a name="update-your-app"></a>Actualizar la aplicación
 
 No tiene que transferir localmente la aplicación de nuevo si realiza cambios de código (estos se reflejan en Teams en tiempo real). Sin embargo, debe reinstalar si cambia alguna configuración de aplicación.
 
-## <a name="remove-your-app"></a>Quitar la aplicación
+Si hay una actualización disponible para la aplicación, la opción **Actualización disponible** está habilitada. Para actualizar, siga estos pasos:
 
-Para quitar la aplicación, haga clic con el botón derecho en el icono de la aplicación en Teams y seleccione **Desinstalar**.
+1. Seleccione **Actualización disponible** para ver la actualización.
+
+     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Actualizar la aplicación Teams" border="true":::.
+
+1. Seleccione **Ver actualización**, aparecerá una ventana con la opción de actualización.
+1. Seleccione el botón **Actualizar** para actualizar la aplicación.
+    
+     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Actualizar la aplicación Teams en administrar aplicaciones" border="true":::
+
+     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Aplicación actualizada" border="true":::
+
+### <a name="remove-your-app"></a>Quitar la aplicación
+
+Para quitar la aplicación de Teams, siga estos pasos:
+
+1. Busque la aplicación en **Administrar la aplicación**.
+1. Seleccione &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Quitar aplicación en Teams" border="false":::&nbsp; en el ámbito de la aplicación instalada.
+        
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Quitar aplicación en un canal" border="true":::
+
+1. Seleccione **Quitar** para quitar la aplicación.
+    
+    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Quitar una aplicación de Teams" border="true":::
 
 > [!NOTE]
 >

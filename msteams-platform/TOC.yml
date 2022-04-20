@@ -20,10 +20,10 @@
   items:
     - name: Información general sobre la introducción
       href: get-started/get-started-overview.md
-    - name: Cree la primera aplicación con Blazor
-      href: sbs-gs-blazorupdate.yml
     - name: Compile su primera aplicación con JavaScript
       href: sbs-gs-javascript.yml
+    - name: Cree la primera aplicación con Blazor
+      href: sbs-gs-blazorupdate.yml
     - name: Cree la primera aplicación con SPFx
       href: sbs-gs-spfx.yml
     - name: Compilación de la primera aplicación con C# o .NET
