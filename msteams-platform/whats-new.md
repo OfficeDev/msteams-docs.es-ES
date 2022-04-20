@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838476"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952390"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
+|19/04/2022 | Cargar la aplicación en Microsoft Teams | Distribuir la aplicación > [Cargar la aplicación](concepts/deploy-and-publish/apps-upload.md)|
 |06/04/2022.| Compartir en Teams desde una pestaña o aplicación personal (versión preliminar para desarrolladores) | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |01/04/2022| Presentada la guía paso a paso para crear un bot conversacional en Teams| Crear bots > Conversaciones de bots > Canal y conversaciones de grupo > [Guía paso a paso para crear un bot conversacional en Teams](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
@@ -60,6 +61,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|19/04/2022 | Cargar la aplicación en Microsoft Teams | Distribuir la aplicación > [Cargar la aplicación](concepts/deploy-and-publish/apps-upload.md)|
 |01/04/2022| Presentada la guía paso a paso para crear un bot conversacional en Teams| Crear bots > Conversaciones de bots > Canal y conversaciones de grupo > [Guía paso a paso para crear un bot conversacional en Teams](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Se ha actualizado el módulo Introducción a la aplicación Blazor mediante pestañas y bots|  Introducción > [Crear su primera aplicación con Blazor](sbs-gs-blazorupdate.yml)|
 |30/03/2022|Permisos de dispositivo para el explorador | Integrar las funcionalidades del dispositivo > [Permisos de dispositivo para el explorador](concepts/device-capabilities/browser-device-permissions.md) |
