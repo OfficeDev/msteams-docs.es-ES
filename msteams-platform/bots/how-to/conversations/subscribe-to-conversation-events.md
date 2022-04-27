@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversación de reacción del mensaje del canal de canal de eventos
-ms.openlocfilehash: 2c3a41c84eec620aa0cc87fbd473a913d14f6ef4
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 26180e39bd26768b2e09311a370e5bd78c44c673
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826974"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073732"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -44,7 +44,7 @@ El evento `conversationUpdate` se envía al bot cuando recibe información sobre
 
 En la tabla siguiente se muestra una lista de Teams eventos de actualización de conversación con más detalles:
 
-| Acción realizada        | EventType         | Método llamado              | Description                | Ámbito |
+| Acción realizada        | EventType         | Método llamado              | Descripción                | Ámbito |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Canal creado     | channelCreated    | OnTeamsChannelCreatedAsync | [Se crea un canal](#channel-created). | Equipo |
 | Se cambió el nombre del canal     | channelRenamed    | OnTeamsChannelRenamedAsync | [Se cambia el nombre de un canal](#channel-renamed). | Equipo |
@@ -1060,7 +1060,7 @@ Ahora que ha trabajado con los eventos de actualización de conversación, puede
 
 El `messageReaction` evento se envía cuando un usuario agrega o quita las reacciones a un mensaje enviado por el bot. `replyToId` contiene el identificador del mensaje y `Type` es el tipo de reacción en formato de texto. Los tipos de reacciones incluyen enojo, corazón, risa, como, triste y sorprendido. Este evento no contiene el contenido del mensaje original. Si el procesamiento de reacciones a los mensajes es importante para el bot, debe almacenarlos cuando los envíe. En la tabla siguiente se proporciona más información sobre el tipo de evento y los objetos de carga:
 
-| EventType       | Payload (objeto)   | Description                                                             | Ámbito |
+| EventType       | Payload (objeto)   | Descripción                                                             | Ámbito |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reaccionesAgregar   | [Reacciones agregadas al mensaje del bot](#reactions-added-to-bot-message).           | Todo   |
 | messageReaction | reactionsRemoved | [Reacciones eliminadas del mensaje del bot](#reactions-removed-from-bot-message). | Todo |
@@ -1403,10 +1403,8 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>Comportamiento de desinstalación de la aplicación personal con bot
 
-> [!NOTE]
-> El comportamiento de desinstalación de una aplicación personal con bot solo está disponible actualmente en la [versión preliminar del desarrollador público](../../../resources/dev-preview/developer-preview-intro.md).
-
 Al desinstalar una aplicación, también se desinstala el bot. Cuando un usuario envía un mensaje a la aplicación, recibe un código de respuesta 403. El bot recibe un código de respuesta 403 para los nuevos mensajes publicados por el bot. El comportamiento posterior a la desinstalación de los bots en el ámbito personal con los ámbitos Teams y groupChat ahora está alineado. No puede enviar ni recibir mensajes después de desinstalar una aplicación.
+
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 

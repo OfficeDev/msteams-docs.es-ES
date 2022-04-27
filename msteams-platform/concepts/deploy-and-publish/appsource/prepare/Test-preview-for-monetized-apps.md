@@ -6,17 +6,14 @@ ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
 keywords: aplicaciones de teams SaaS oferta versión preliminar prueba saas monetizada
-ms.openlocfilehash: a9427ba61d1432485e1630eb42f72106c0e842ca
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501959"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073819"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Versión preliminar de prueba para aplicaciones monetizadas
-
-> [!NOTE]
-> La versión preliminar de prueba para aplicaciones monetizadas solo está disponible actualmente en la [**versión preliminar para desarrolladores**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 Puede crear una oferta de software como servicio (SaaS) y probar la experiencia de compra de un extremo a otro para sus aplicaciones monetizadas en Teams. Los usuarios que se agregan como público preliminar de la aplicación de Teams pueden revisar la oferta de SaaS antes de publicarla.
 

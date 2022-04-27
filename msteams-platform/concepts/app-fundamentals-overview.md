@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: puntos de entrada extensibilidad casos de uso capacidad del dispositivo
-ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766040"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073114"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -67,10 +67,9 @@ Entender a los usuarios y sus preocupaciones son los primeros indicadores de có
 * Integre su aplicación con Teams y otras aplicaciones, como Microsoft 365, Microsoft Graph y mucho más.
 * Use Portal para desarrolladores para configurar, administrar e implementar la aplicación.
 
-<details>
-<summary><b>Más información sobre Government Community Cloud (GCC)</b></summary>
+#### <a name="government-community-cloud"></a>Government Community Cloud
 
-Government Community Cloud es una copia centrada en el gobierno del entorno comercial. El Departamento de Defensa (DOD) y los contratistas federales deben cumplir con los estrictos requisitos de ciberseguridad y cumplimiento. Para ello, se creó el GCC-High para satisfacer las necesidades del DOD y de los contratistas federales. GCC-High es una copia de la nube del DOD pero existe en su propio entorno soberano. La nube del DOD se crea solo para el Departamento de Defensa.
+Government Community Cloud (GCC) es una copia centrada en el gobierno del entorno comercial. El Departamento de Defensa (DOD) y los contratistas federales deben cumplir con los estrictos requisitos de ciberseguridad y cumplimiento. Para ello, se creó el GCC-High para satisfacer las necesidades del DOD y de los contratistas federales. GCC-High es una copia de la nube del DOD pero existe en su propio entorno soberano. La nube del DOD se crea solo para el Departamento de Defensa.
 
 En la tabla siguiente se incluyen las características y la disponibilidad de Teams para GCC, GCC-High y DOD:
 

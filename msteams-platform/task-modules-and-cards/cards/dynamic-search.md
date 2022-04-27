@@ -1,101 +1,101 @@
 ---
 title: Búsqueda de escritura anticipada en Tarjetas adaptables
 author: Rajeshwari-v
-description: Describe la búsqueda de punta de tipo con el control Input.ChoiceSet en tarjetas adaptables
+description: Describe la búsqueda de typeahead con el control Input.ChoiceSet en tarjetas adaptables
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453834"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073800"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de escritura anticipada en Tarjetas adaptables
 
-La funcionalidad de búsqueda typeahead en tarjetas adaptables proporciona una experiencia de búsqueda mejorada en el `input.choiceset` componente. Proporciona una lista de opciones para escribir texto en el campo de búsqueda. Puede incorporar la búsqueda de punta de tipo con tarjetas adaptables para buscar y seleccionar datos.
+La funcionalidad de búsqueda de typeahead en tarjetas adaptables proporciona una experiencia de búsqueda mejorada en el `input.choiceset` componente. Proporciona una lista de opciones para escribir texto en el campo de búsqueda. Puede incorporar la búsqueda de typeahead con tarjetas adaptables para buscar y seleccionar datos.
 
-Puede usar la búsqueda de punta de tipo para las siguientes búsquedas:
+Puede usar la búsqueda de typeahead para las siguientes búsquedas:
 
 * [Búsqueda estática](#static-typeahead-search)
 * [Búsqueda dinámica](#dynamic-typeahead-search)
 
-## <a name="static-typeahead-search"></a>Búsqueda de punta de tipo estática
+## <a name="static-typeahead-search"></a>Búsqueda de encabezado de tipo estático
 
-La búsqueda de punta de tipo estática permite a los usuarios buscar desde los valores especificados en `input.choiceset` la carga de la tarjeta adaptable. La búsqueda de punta de tipo estática se puede usar para mostrar varias opciones al usuario. El tamaño de carga en la búsqueda estática aumenta con el número de opciones especificadas en la carga.
-Cuando el usuario empieza a escribir los textos, las opciones se filtran, que coinciden parcialmente con la entrada. La lista desplegable resalta los caracteres de entrada que coinciden con la búsqueda.
+La búsqueda de encabezado de tipo estático permite a los usuarios buscar desde los valores especificados en `input.choiceset` la carga de la tarjeta adaptable. La búsqueda de encabezado de tipo estática se puede usar para mostrar varias opciones al usuario. El tamaño de carga en la búsqueda estática aumenta con el número de opciones especificadas en la carga.
+A medida que el usuario comienza a escribir los textos, se filtran las opciones, que coinciden parcialmente con la entrada. La lista desplegable resalta los caracteres de entrada que coinciden con la búsqueda.
 
-En la siguiente imagen se muestra la búsqueda de punta de tipo estática:
+En la imagen siguiente se muestra la búsqueda de encabezado de tipo estática:
 
-![Búsqueda de punta de tipo estática](~/assets/images/Cards/static-typeahead-search.gif)
+![Búsqueda de encabezado de tipo estático](~/assets/images/Cards/static-typeahead-search.gif)
 
-## <a name="dynamic-typeahead-search"></a>Búsqueda de punta de tipo dinámica
+## <a name="dynamic-typeahead-search"></a>Búsqueda dinámica de encabezados de tipo
 
-La búsqueda de punta de tipo dinámica es útil para buscar y seleccionar datos de grandes conjuntos de datos. Los conjuntos de datos se cargan dinámicamente desde el conjunto de datos especificado en la carga de la tarjeta. La funcionalidad de tipo delante ayuda a filtrar las opciones a medida que el usuario escribe.
+La búsqueda dinámica de encabezados de tipo es útil para buscar y seleccionar datos de grandes conjuntos de datos. Los conjuntos de datos se cargan dinámicamente desde el conjunto de datos especificado en la carga de la tarjeta. La funcionalidad de tipo delante ayuda a filtrar las opciones como tipos de usuario.
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-![Búsqueda de punta de tipo dinámica](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="Búsqueda dinámica de encabezados de tipo":::
 
-![Imagen de búsqueda de tipo dinámico 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="Búsqueda dinámica de tipoahead 2":::
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
-Los clientes móviles de Android e iOS admiten la búsqueda de punta de tipo en tarjetas adaptables.
+Los clientes móviles de Android e iOS admiten la búsqueda de tipoahead en tarjetas adaptables.
 
 **Escenario**
 
-John es un empleado de la tienda que trabaja en una tienda comercial de Xbox. La tienda usa un bot para tomar nuevas solicitudes de compra de los clientes. Un cliente puede buscar en los miles de juegos disponibles. La búsqueda de punta de punta en tarjetas adaptables se usa para buscar y seleccionar las opciones de los clientes.
+John es un empleado de la tienda que trabaja en una tienda minorista de Xbox. La tienda usa un bot para realizar nuevas solicitudes de compra de los clientes. Un cliente puede buscar en los miles de juegos disponibles. La búsqueda de typeahead en tarjetas adaptables se usa para buscar y seleccionar las opciones de los clientes.
 
-**Para usar la búsqueda de punta de tipo en tarjetas adaptables**
+**Para usar la búsqueda de typeahead en tarjetas adaptables**
 
 1. El usuario A abre el bot de la tienda.
-1. El usuario A envía un comando al bot para una **nueva solicitud de cliente**. El bot responde con la tarjeta adaptable que tiene componente `Input.ChoiceSet` .
-1. El usuario A usa la búsqueda de punta de tipo para buscar y seleccionar la información según la elección del cliente.
+1. El usuario A envía un comando al bot para una **nueva solicitud de cliente**. El bot responde con la tarjeta adaptable que tiene `Input.ChoiceSet` el componente .
+1. El usuario A usa la búsqueda de encabezados de tipo para buscar y seleccionar la información en función de la elección del cliente.
 
-En la siguiente imagen se muestra la experiencia móvil de la búsqueda de punta de tipo:
+En la imagen siguiente se muestra la experiencia móvil de la búsqueda de typeahead:
 
-![Búsqueda de punta de tipo estática](~/assets/images/Cards/static-typeahead-search.gif)
+![Búsqueda de encabezado de tipo estático](~/assets/images/Cards/static-typeahead-search.gif)
 
 ---
 
 > [!NOTE]
-> No puede obtener experiencias de tarjeta enriquecciones con búsqueda dinámica, como extensiones de mensajería basadas en consultas.
+> No puede obtener experiencias de tarjeta enriquecidas con la búsqueda dinámica, como extensiones de mensajería basadas en consultas.
 
-## <a name="implement-typeahead-search"></a>Implementar la búsqueda de punta de tipo
+## <a name="implement-typeahead-search"></a>Implementación de la búsqueda de typeahead
 
-`Input.ChoiceSet` es uno de los componentes de entrada importantes de las tarjetas adaptables. Puede agregar un control de búsqueda de punta de tipo al `Input.ChoiceSet` componente para implementar la búsqueda de punta de tipo. Puede buscar y seleccionar la información necesaria con las siguientes selecciones:
+`Input.ChoiceSet` es uno de los componentes de entrada importantes en tarjetas adaptables. Puede agregar un control de búsqueda typeahead al `Input.ChoiceSet` componente para implementar la búsqueda de typeahead. Puede buscar y seleccionar la información necesaria con las siguientes selecciones:
 
-* Desplegable, como selección expandida.
-* Botón de radio, como una selección única.
+* Lista desplegable, como la selección expandida.
+* Botón de radio, como selección única.
 * Casillas, como varias selecciones.
 
 > [!NOTE]
-> El `Input.ChoiceSet` control se basa en el estilo y las `isMultiSelect` propiedades.
+> El `Input.ChoiceSet` control se basa en el estilo y `isMultiSelect` las propiedades.
 
 ### <a name="schema-properties"></a>Propiedades de esquema
 
-Las propiedades siguientes son las nuevas adiciones al [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) esquema para habilitar la búsqueda de punta de tipo:
+Las propiedades siguientes son las nuevas adiciones al esquema para habilitar la [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) búsqueda de typeahead:
 
 | Propiedad| Tipo | Obligatorio | Descripción |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | No | Agrega estilo filtrado a la lista de validaciones admitidas para el tipo estático por delante.|
-| choices.data | Data.Query | No | Habilita el tipo dinámico a medida que el usuario escribe, mediante la captura de un conjunto remoto de opciones de un back-end. |
+| style | Compact <br/> Expanded <br/> Filtered | No | Agrega estilo filtrado a la lista de validaciones admitidas para el tipo estático de avance.|
+| choices.data | Data.Query | No | Habilita el tipo de avance dinámico como tipos de usuario, capturando un conjunto remoto de opciones de un back-end. |
 
-### <a name="dataquery-definition"></a>Definición Data.Query
+### <a name="dataquery-definition"></a>Definición de Data.Query
 
 | Propiedad| Tipo | Obligatorio | Descripción |
 |-----------|------|----------|-------------|
 | tipo | Data.Query | Sí | Especifica que es un objeto Data.Query.|
-| conjunto de datos | Cadena | Sí | Especifica el tipo de datos que se captura dinámicamente. |
-| value | Cadena | No | Se rellena para la solicitud de invocación al bot con la entrada que el usuario proporcionó al `ChoiceSet`. |
-| count | Número | No | Se rellena para la solicitud de invocación al bot para especificar el número de elementos que se deben devolver. El bot lo omite, si los usuarios desean enviar una cantidad diferente. |
-| skip | Número | No | Se rellena para la solicitud de invocación al bot para indicar que los usuarios desean paginar y avanzar en la lista. |
+| Dataset | Cadena | Sí | Especifica el tipo de datos que se capturan dinámicamente. |
+| value | Cadena | No | Rellena la solicitud de invocación al bot con la entrada que el usuario proporcionó a `ChoiceSet`. |
+| count | Número | No | Rellena la solicitud de invocación al bot para especificar el número de elementos que se deben devolver. El bot lo omite si los usuarios quieren enviar una cantidad diferente. |
+| skip | Número | No | Rellena la solicitud de invocación al bot para indicar que los usuarios quieren paginar y avanzar en la lista. |
 
 ### <a name="example"></a>Ejemplo
 
-La carga de ejemplo que contiene la búsqueda de punta de tipo estática y dinámica con una sola & opciones de selección múltiple de la siguiente manera:
+La carga útil de ejemplo que contiene la búsqueda de encabezados de tipo estática y dinámica con una sola & opciones de selección múltiple como se indica a continuación:
 
 ```json
 {
@@ -413,7 +413,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 |**Ejemplo de nombre** | **Descripción** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Control de búsqueda typeahead en tarjetas adaptables | En el ejemplo se muestran las características del control de búsqueda de cabezal de tipo estático y dinámico en tarjetas adaptables. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Control de búsqueda de typeahead en tarjetas adaptables | En el ejemplo se muestran las características del control de búsqueda de typeahead estático y dinámico en tarjetas adaptables. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 
