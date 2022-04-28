@@ -4,13 +4,13 @@ author: surbhigupta
 description: Obtenga información sobre cómo responder al comando de búsqueda desde una extensión de mensaje en una aplicación de Microsoft Teams mediante ejemplos de código y ejemplos
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104507"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111937"
 ---
 # <a name="respond-to-search-command"></a>Responder al comando de búsqueda
 
@@ -424,6 +424,6 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 > [!div class="nextstepaction"]
 > [Adición de autenticación a una extensión de mensaje](~/messaging-extensions/how-to/add-authentication.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Agregar configuración a una extensión de mensaje](~/get-started/first-message-extension.md)

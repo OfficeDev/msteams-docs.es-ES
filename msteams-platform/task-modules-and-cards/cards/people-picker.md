@@ -1,17 +1,17 @@
 ---
 title: Selector de usuarios en Tarjetas adaptables
 description: Describe cómo usar el control Selector de personas en tarjetas adaptables
-localization_priority: Normal
+localization_priority: Medium
 keywords: Selector de personas de tarjetas adaptables
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 8a78be74d8142600ccc08093744491a19900e60b
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073431"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111636"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Selector de usuarios en Tarjetas adaptables
 
