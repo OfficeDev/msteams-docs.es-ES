@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475828"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104388"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
@@ -159,8 +159,8 @@ Puede usar bots en los siguientes contextos:
 |3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
 |4|**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
 |5|**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
-|6|**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
-|7|**Menú de comandos**: muestra los comandos estándar de su bot (definidos por usted).|
+|6 |**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
+|7 |**Menú de comandos**: muestra los comandos estándar de su bot (definidos por usted).|
 
 ### <a name="command-menu"></a>Menú de comandos
 
@@ -279,7 +279,7 @@ En las aplicaciones personales, una pestaña puede complementar lo que el bot pu
 
 ## <a name="manage-a-bot"></a>Administrar un bot
 
-Los usuarios deberían poder cambiar la configuración de un bot. Puede proporcionar esta funcionalidad con comandos de bot, pero normalmente es más eficaz incluir toda la configuración en un [módulo de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (como se muestra en el siguiente ejemplo).
+Los usuarios pueden cambiar la configuración del bot. Puede proporcionar esta funcionalidad con comandos de bot, pero normalmente es más eficaz incluir toda la configuración en un [módulo de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (como se muestra en el siguiente ejemplo).
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Un ejemplo muestra un módulo de tareas para configurar las opciones de un bot." border="false":::
 

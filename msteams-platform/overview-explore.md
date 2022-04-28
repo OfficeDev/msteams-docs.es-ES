@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: df8a19d907c2b9ca420ed49d143ff7b145e3f7ca
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398970"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104430"
 ---
 # <a name="explore-teams-platform-features"></a>Explorar las características de la plataforma Teams
 
@@ -25,7 +25,7 @@ Con Teams, puede compilar la aplicación en un entorno con muchas característic
 | --- | --- | --- |
 |Pestañas | Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Teams. Puede agregarlas como parte de un canal dentro de un equipo, un chat de grupo o una aplicación personal para un usuario individual. | Pestaña personal, pestaña de canal o grupo, vista de fase y apertura de vínculos. |
 | Bots | Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas automatizadas simples y repetitivas realizadas por los usuarios. Una interacción de bot puede ser una pregunta y una respuesta rápidas, o puede ser una conversación compleja que proporcione acceso a los servicios. | Servicio de atención al cliente, información sobre el tiempo, reservar cenas o facilitar información sobre viajes. |
-| Extensiones de mensajería | Las extensiones de mensajería permiten a los usuarios interactuar con el cliente de Teams del servicio web. Buscan o inician acciones en un sistema externo. Puede enviar el resultado de la interacción al cliente de Teams como una tarjeta con formato enriquecido. | Reserve un recurso y permita que el canal esté al corriente de la franja horaria reservada. Busque un elemento de trabajo y compártalo con el grupo como tarjeta adaptable. Cree un error en su sistema de seguimiento basado en un mensaje de Teams, asigne ese error a un usuario y envíe una tarjeta al hilo de conversación con los detalles del error. |
+| Extensión de mensajería | Las extensiones de mensajería permiten a los usuarios interactuar con el cliente de Teams del servicio web. Buscan o inician acciones en un sistema externo. Puede enviar el resultado de la interacción al cliente de Teams como una tarjeta con formato enriquecido. | Reserve un recurso y permita que el canal esté al corriente de la franja horaria reservada. Busque un elemento de trabajo y compártalo con el grupo como tarjeta adaptable. Cree un error en su sistema de seguimiento basado en un mensaje de Teams, asigne ese error a un usuario y envíe una tarjeta al hilo de conversación con los detalles del error. |
 |Extensiones de reunión | Puede crear aplicaciones para que las reuniones sean más productivas. | Pida a los usuarios que completen una encuesta durante una llamada o envíe un aviso rápido que no interrumpa el flujo de la reunión. |
 | Aplicación personal | Una aplicación personal es un espacio dedicado (pestaña) o bot para ayudar a los usuarios a centrarse en sus propias tareas o ver las actividades importantes para ellos. | OneNote es una aplicación personal que le proporciona un área de trabajo privada dentro de Teams. Planner ofrece una vista general de todas las tareas, entre paneles que usted o su equipo han agregado como pestañas del canal. |
 | Webhooks y conectores | Comuníquese con aplicaciones externas y envíe o reciba notificaciones y mensajes de otras aplicaciones. | Suscríbase para recibir notificaciones y mensajes de sus servicios web. |

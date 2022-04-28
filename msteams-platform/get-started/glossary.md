@@ -4,12 +4,12 @@ description: Glosario para la documentación para desarrolladores de Microsoft T
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definición de desarrollador de Microsoft Teams
-ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
-ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
+ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2022
-ms.locfileid: "63626001"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103996"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -122,7 +122,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Bot de reunión](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots que interactúan con llamadas y reuniones de Teams mediante el uso compartido de pantalla, vídeo y voz en tiempo real. <br>**Vea también**: [Bot de llamada](#c); [Bot de chat](#c) |
 | [Ciclo de vida de la reunión](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Abarca desde la experiencia de aplicación previa a la reunión, en la reunión y posterior a la reunión. Se pueden integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión. <br>**Vea también**: [Experiencia en la reunión](#i) |
 | [Fase de reunión](../sbs-meetings-stage-view.yml) | Una característica de la aplicación de extensión de reunión. Es un espacio compartido accesible para todos los participantes durante la reunión. Ayuda a los participantes a interactuar y colaborar con el contenido de la aplicación en tiempo real. <br>**Vea también**: [Vista fase](#s) |
-| [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) | Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o realizar una acción en un mensaje. Puede usar una extensión de mensajería sin salir de la conversación.<br>**Vea también**: [Comandos de búsqueda](#s); [Comandos de acción](#a) |
+| [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) | Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o realizar una acción en un mensaje. Puede usar una extensión de mensajería sin salir de la conversación. <br>**Vea también**: [Comandos de búsqueda](#s); [Comandos de acción](#a) |
 | [Extensión de reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Una aplicación diseñada para usarse durante el ciclo de vida de la reunión para que sea más productiva, como pizarra, panel y mucho más. |
 | [Cuenta de Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | La cuenta de Microsoft 365 incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo. |
 | [Programa de desarrolladores de Microsoft 365](../toolkit/accounts.md)| El programa para desarrolladores de Microsoft 365 le ayuda a crear aplicaciones que amplían Microsoft 365. |
@@ -138,7 +138,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | --- | --- |
 | [Conector de Office 365](../webhooks-and-connectors/how-to/connectors-creating.md) | Le permite crear una página de configuración personalizada para el webhook entrante y empaquetarla como parte de una aplicación de Teams. Puede enviar mensajes principalmente mediante tarjetas del Conector de Office 365 y tener la capacidad de agregarles un conjunto limitado de acciones de tarjeta. |
 | [Webhook saliente](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | Actúa como un bot y busca mensajes en canales mediante @mention. Envía notificaciones a servicios web externos y responde con mensajes enriquecidos, que incluyen tarjetas e imágenes. <br>**Vea también**: [Webhook](#w); [Webhook entrante](#i) |
-| [Canal de Outlook](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Una característica de la aplicación de extensión de mensajería de Teams que permite a los usuarios interactuar con ella desde Microsoft Outlook. |
+| [Canal de Outlook](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Una característica de la aplicación de extensión de mensajería de Teams que permite a los usuarios interactuar con esta desde Microsoft Outlook. |
 | [Chat uno a uno](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | Un tipo de chat entre una aplicación de bot personal de Teams y un solo usuario. <br>**Vea también**: [Chat en grupo](#g); [Bot de chat](#c) |
 
 ## <a name="p"></a>P
@@ -163,7 +163,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
-| [Comandos de búsqueda](../messaging-extensions/how-to/search-commands/define-search-command.md) | Tipo de aplicación de extensión de mensajería que permite a los usuarios buscar sistemas externos e incluir el resultado de la búsqueda en un mensaje mediante una tarjeta. <br>**Vea también**: [Extensiones de mensajería](#m); [Comandos action](#a) |
+| [Comandos de búsqueda](../messaging-extensions/how-to/search-commands/define-search-command.md) | Tipo de aplicación de extensión de mensajería que permite a los usuarios buscar sistemas externos e incluir el resultado de la búsqueda en un mensaje mediante una tarjeta. <br>**Vea también**: [Extensiones de mensajería](#m); [Comandos de acción](#a) |
 | [Flujo de trabajo secuencial](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | Flujo de trabajo que permite a un bot llevar a cabo una conversación con un usuario en función de la respuesta del usuario. |
 | [Aplicación compartida](../concepts/extensibility-points.md#shared-app-experiences) | Una aplicación que existe en un equipo, canal o chat donde los usuarios pueden colaborar e interactuar. <br>**Vea también:** Aplicación personal |
 | [Colección de sitios de SharePoint](../sbs-gs-spfx.yml) | Un sitio de colecciones para las aplicaciones de SharePoint. Debe tener una cuenta de administrador para este sitio para poder implementar la aplicación basada en SPFx en el sitio de SharePoint.<br>**Vea también**: SPFx |

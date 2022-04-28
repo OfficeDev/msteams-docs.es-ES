@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073093"
+ms.locfileid: "65104052"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -35,7 +35,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 |10/03/2022| Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
-|24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar extensión de mensajería basada en acciones](sbs-meetingextension-action.yml) |
+|24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar una extensión de mensajería basada en la acción](sbs-meetingextension-action.yml)|
 |24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la búsqueda | Generar extensiones de mensajería > Comandos de búsqueda > Definir comandos de búsqueda > [Generar extensión de mensajería basada en la búsqueda](sbs-messagingextension-searchcommand.yml)|
 |24/02/2022| Presentación de guía paso a paso para crear Webhooks de salida | Compilar webhooks y conectores > Crear webhooks salientes > [Crear webhooks de salida](sbs-outgoing-webhooks.yml)|
 | 23/02/2022 |Parámetros de clasificación de la tienda de Microsoft Teams| Distribuir la aplicación > Publique en la tienda de Teams > [Parámetros de clasificación de la tienda de Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
@@ -62,9 +62,9 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-|04/26/2022|Comportamiento de desinstalación de la aplicación personal con bot | Crear bots > Conversaciones de bots > [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|04/22/2022| Versión preliminar de prueba para aplicaciones monetizadas | Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
-|04/22/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|26/04/2022|Comportamiento de desinstalación de la aplicación personal con bot | Crear bots > Conversaciones de bots > [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|22/04/2022| Versión preliminar de prueba para aplicaciones monetizadas | Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+|22/04/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |04/20/2022 |  Configuración de canalizaciones CI/CD | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code >  [Configurar canalizaciones CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Cargar la aplicación en Microsoft Teams | Distribuir la aplicación > [Cargar la aplicación](concepts/deploy-and-publish/apps-upload.md)|
 |01/04/2022| Presentada la guía paso a paso para crear un bot conversacional en Teams| Crear bots > Conversaciones de bots > Canal y conversaciones de grupo > [Guía paso a paso para crear un bot conversacional en Teams](sbs-teams-conversation-bot.yml) |
@@ -77,7 +77,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 |10/03/2022 | Se ha agregado información sobre los complementos Moodle LMS y Microsoft 365 | Integrar con Teams > Moodle LMS > [Sistema de administración de aprendizaje de Moodle](resources/moodle-overview.md)|  
 |03/03/2022 | Cómo agregar la autenticación mediante un proveedor OAuth externo| Agregar autenticación > Pestañas >[Utilizar proveedores OAuth externos](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Se ha introducido una guía paso a paso para invocar módulos de tareas en Teams| Generar tarjetas y módulos de tareas > Generar módulos de tareas > Utilizar módulos de tareas desde los bots > [Invocar el módulo de tareas desde Teams](sbs-botbuilder-taskmodule.yml)|
-| 24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar extensión de mensajería basada en acciones](sbs-meetingextension-action.yml) |
+| 24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la acción | Generar Extensiones de mensajería > Comandos de acción > Definir comandos de acción > [Generar una extensión de mensajería basada en la acción](sbs-meetingextension-action.yml)|
 | 24/02/2022| Presentamos una guía paso a paso para crear una extensión de mensajería basada en la búsqueda | Generar extensiones de mensajería > Comandos de búsqueda > Definir comandos de búsqueda > [Generar extensión de mensajería basada en la búsqueda](sbs-messagingextension-searchcommand.yml)|
 | 24/02/2022| Presentación de guía paso a paso para crear Webhooks de salida | Compilar webhooks y conectores > Crear webhooks salientes > [Crear webhooks de salida](sbs-outgoing-webhooks.yml)|
 | 23/02/2022 |Parámetros de clasificación de la tienda de Microsoft Teams| Distribuir la aplicación > Publique en la tienda de Teams > [Parámetros de clasificación de la tienda de Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
@@ -111,7 +111,7 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 |24/12/2021| Se ha introducido la guía paso a paso para conceder permisos para pestañas en dispositivos | Fundamentos de la aplicación > Capacidades del dispositivo > [Guía paso a paso para conceder permisos a las pestañas en dispositivos](sbs-tab-device-permissions.yml) |
 |23/12/2021| Se ha introducido una guía paso a paso para crear Fichas con pestañas adaptables| Añadir autenticación > Pestañas > Uso de la autenticación SSO > [Guía paso a paso para crear pestañas con Tarjetas adaptables](sbs-tab-with-adaptive-cards.yml) |
 |21/12/2021 | Se han actualizado los módulos Introducción a JavaScript, C# y Node.js para el kit de herramientas de Teams 3.0.0 | • Introducción > [Crear la primera aplicación con JavaScript](sbs-gs-javascript.yml) <br> • Introducción > [Crear la primera aplicación con C# o .NET](sbs-gs-csharp.yml) <br> • Introducción > [Crear la primera aplicación con Node.js](sbs-gs-nodejs.yml) |
-|20/12/2021| Se ha introducido una guía paso a paso para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Añadir autenticación > Pestañas > Uso de la autenticación SSO > [Guía paso a paso con SSO para pestañas y extensiones de mensajería](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+|20/12/2021| Se ha introducido una guía paso a paso para pestañas y extensiones de mensajería con inicio de sesión único (SSO). | Añadir autenticación > Pestañas > Uso de la autenticación SSO > [Guía paso a paso de SSO para pestañas y extensiones de mensajería](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 |20/12/2021| Se ha introducido una guía paso a paso para crear burbujas de contenido de reuniones. | Crear aplicaciones para reuniones de Teams > Habilitar y configurar aplicaciones para reuniones > [Guía paso a paso para crear burbujas de contenido de reuniones](sbs-meeting-content-bubble.yml) |
 |09/12/2021| Se ha introducido la guía paso a paso de la vista de la etapa de la reunión | Crear aplicaciones para reuniones de Teams > Habilitar y configurar aplicaciones para reuniones > [Guía paso a paso para crear la vista de la escenas de reuniones](sbs-meetings-stage-view.yml)|
 |13/12/2021 | Se han introducido directrices para la aplicación vinculada a la oferta de SaaS. | Distribuir la aplicación > Publicar en la tienda de Teams > Revisar las directrices de validación de la tienda > [Directrices para las aplicaciones vinculadas a la oferta de SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
@@ -276,6 +276,7 @@ La versión preliminar para desarrolladores es un programa público que proporci
 |02/02/2022| Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
 |17/01/2022| Selector de personas en tarjetas adaptables para móviles  | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
+|24/12/2021| Se ha introducido la guía paso a paso para conceder permisos para pestañas en dispositivos | Aspectos básicos de la aplicación > Funcionalidades del dispositivo > [Guía paso a paso para conceder permisos para pestañas en dispositivos](sbs-tab-device-permissions.yml) |
 |15/11/2021| Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Ampliar las aplicaciones de Teams en Microsoft 365](~/m365-apps/overview.md) |
 |28/10/2021|Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico del recurso (RSC) | • Crear bots > Conversaciones de bots > Mensajes en conversaciones de bots > [Recibir todos los mensajes con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots > Conversaciones de bots > [Información general sobre las conversaciones de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots > Conversaciones de bots > [Conversaciones de canal y de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de vista preliminar para desarrolladores](~/resources/schema/manifest-schema-dev-preview.md) |
 |16/06/2021| Consentimiento específico de recursos para chats. | •Uso de datos de Teams con Microsoft Graph > [Consentimiento específico del recurso](graph-api/rsc/resource-specific-consent.md) </br> • Probar la aplicación > Microsoft Graph > [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
