@@ -6,12 +6,12 @@ author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: implementar gcc de carga de aplicaciones de publicación
-ms.openlocfilehash: f691edee8f4e3aab34aa616f9bbf0ed451874070
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 5db182f9276865fc98d277f642f7e58fd4a52df5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073072"
+ms.locfileid: "65104437"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribución de la aplicación Microsoft Teams
 
@@ -45,7 +45,7 @@ Para obtener más información, consulte [Administrar las aplicaciones en el cen
 En GCC Teams entornos, las aplicaciones de Microsoft compatibles están habilitadas de forma predeterminada. Sin embargo, antes de publicar una aplicación, asegúrese de que todos los puntos de conexión de la aplicación cumplen los requisitos de la organización de GCC. Para obtener más información, consulte [Government Community Cloud](../app-fundamentals-overview.md#government-community-cloud).
 
 > [!IMPORTANT]
->Si la aplicación incluye un bot o una extensión de mensajería, debe seleccionar la opción **Microsoft Teams for Government** al configurar un canal entre el bot y Teams en Azure. Para obtener más información, consulte [Conexión de un bot a canales](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+>Si la aplicación incluye un bot o una extensión de mensaje, debe seleccionar la opción **Microsoft Teams for Government** al configurar un canal entre el bot y Teams en Azure. Para obtener más información, consulte [Conexión de un bot a canales](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
 ## <a name="publish-your-app-to-the-teams-store"></a>Publicación de la aplicación en el almacén de Teams
 
@@ -58,6 +58,6 @@ Para obtener más información, vea [Publicar en el almacén de Teams](~/concept
 > [!div class="nextstepaction"]
 > [Configuración de las opciones de instalación predeterminadas de la aplicación](~/concepts/deploy-and-publish/add-default-install-scope.md)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 [Programa de cumplimiento de aplicaciones de Microsoft 365](/microsoft-365-app-certification/overview)

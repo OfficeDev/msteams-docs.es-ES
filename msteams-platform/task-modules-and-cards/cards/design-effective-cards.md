@@ -4,18 +4,18 @@ description: Obtenga información sobre cómo diseñar Tarjetas adaptables para 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398627"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103905"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de Tarjetas adaptables para la aplicación de Microsoft Teams
 
-Una tarjeta adaptable contiene un cuerpo de forma libre de elementos de tarjeta y un conjunto opcional de acciones. Tarjetas adaptables son fragmentos de contenido accionables que puede agregar a una conversación a través de un bot o una extensión de mensajería. Con texto, gráficos y botones, estas tarjetas proporcionan una comunicación enriquecida a la audiencia.
+Una tarjeta adaptable contiene un cuerpo de forma libre de elementos de tarjeta y un conjunto opcional de acciones. Las Tarjetas adaptables son fragmentos de contenido accionables que puede agregar a una conversación a través de un bot o de una extensión de mensajería. Con texto, gráficos y botones, estas tarjetas proporcionan una comunicación enriquecida a la audiencia.
 
-El marco de tarjeta adaptable se usa en muchos productos de Microsoft, incluido Teams. Puede enviar tarjetas dentro de mensajes a los usuarios a través de bots o extensiones de mensajería. Los usuarios también pueden realizar acciones en las tarjetas cuando estén presentes.
+El marco de tarjeta adaptable se usa en muchos productos de Microsoft, incluido Teams. Puede enviar tarjetas dentro de mensajes a los usuarios a través de bots o de extensiones de mensajería. Los usuarios también pueden realizar acciones en las tarjetas cuando estén presentes.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Ejemplo de información general de una tarjeta adaptable." border="false":::
 

@@ -1,79 +1,79 @@
 ---
-title: Extensiones de mensajería
+title: Extensiones de mensaje
 author: surbhigupta
-description: Información general sobre las extensiones de mensajería en la Microsoft Teams de mensajería
+description: Introducción a las extensiones de mensaje en la plataforma de Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 696bd7e97cd2588dc62d934c79a9cd2e9310d07d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c81f8ec4b1158275ab796883b268d2c7fa6ecfe8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355996"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104115"
 ---
-# <a name="messaging-extensions"></a>Extensiones de mensajería
+# <a name="message-extensions"></a>Extensiones de mensaje
 
-Las extensiones de mensajería permiten a los usuarios interactuar con el servicio web a través de botones y formularios en el Microsoft Teams cliente. Pueden buscar o iniciar acciones en un sistema externo desde el área del mensaje de redacción, el cuadro de comandos o directamente desde un mensaje. Puede devolver los resultados de esa interacción al Microsoft Teams en forma de tarjeta con un formato enriquecido. En este documento se proporciona información general sobre la extensión de mensajería, las tareas realizadas en diferentes escenarios, el trabajo de la extensión de mensajería, la acción y los comandos de búsqueda y la desamuesación de vínculos.
+Las extensiones de mensaje permiten a los usuarios interactuar con el servicio web a través de botones y formularios en el cliente Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo desde el área del mensaje de redacción, el cuadro de comandos o directamente desde un mensaje. Puede devolver los resultados de esa interacción al cliente de Microsoft Teams en forma de tarjeta con formato enriquecido. En este documento se proporciona información general sobre la extensión del mensaje, las tareas realizadas en diferentes escenarios, el trabajo de la extensión de mensaje, los comandos de acción y búsqueda y la desplegamiento de vínculos.
 
-La siguiente imagen muestra las ubicaciones desde las que se invocan las extensiones de mensajería:
+En la imagen siguiente se muestran las ubicaciones desde las que se invocan las extensiones de mensaje:
 
-![ubicaciones de invocación de extensión de mensajería](~/assets/images/messaging-extension-invoke-locations.png)
+![Ubicaciones de invocación de extensión de mensaje](~/assets/images/messaging-extension-invoke-locations.png)
 
 > [!NOTE]
-> @mentioning extensiones de mensaje ya no se admiten en el cuadro de redacción.
+> @mentioning extensiones de mensaje ya no se admite en el cuadro de redacción.
 
-## <a name="scenarios-where-messaging-extensions-are-used"></a>Escenarios en los que se usan extensiones de mensajería
+## <a name="scenarios-where-message-extensions-are-used"></a>Escenarios en los que se usan extensiones de mensaje
 
 | Escenario | Ejemplo |
 |:-----------------|:-----------------|
-|Desea que algún sistema externo realice una acción y que el resultado de la acción se envíe de vuelta a la conversación.|Reserve un recurso y permita que el canal esté al corriente de la franja horaria reservada.|
-|Desea encontrar algo en un sistema externo y compartir los resultados con la conversación.|Busque un elemento de trabajo en Azure DevOps y compártelo con el grupo como una tarjeta adaptable.|
-|Desea completar una tarea compleja que incluya varios pasos o mucha información en un sistema externo y compartir los resultados con una conversación.|Crea un error en el sistema de seguimiento basado en un mensaje de Teams, asigna ese error a Bob y envía una tarjeta al hilo de conversación con los detalles del error.|
+|Quiere que algún sistema externo realice una acción y que el resultado de la acción se devuelva a la conversación.|Reserve un recurso y permita que el canal esté al corriente de la franja horaria reservada.|
+|Quiere encontrar algo en un sistema externo y compartir los resultados con la conversación.|Busque un elemento de trabajo en Azure DevOps y compárelo con el grupo como una tarjeta adaptable.|
+|Quiere completar una tarea compleja que implique varios pasos o una gran cantidad de información en un sistema externo y compartir los resultados con una conversación.|Cree un error en el sistema de seguimiento en función de un mensaje de Teams, asigne ese error a Bob y envíe una tarjeta al subproceso de conversación con los detalles del error.|
 
-## <a name="understand-how-messaging-extensions-work"></a>Comprender cómo funcionan las extensiones de mensajería
+## <a name="understand-how-message-extensions-work"></a>Descripción del funcionamiento de las extensiones de mensaje
 
-Una extensión de mensajería consta de un servicio web que hospeda y un manifiesto de aplicación, que define desde dónde se invoca el servicio web en el Microsoft Teams cliente. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación seguro, por lo que debe registrar el servicio web como bot en Bot Framework.
+Una extensión de mensaje consta de un servicio web que se hospeda y un manifiesto de aplicación, que define desde dónde se invoca el servicio web en el cliente Microsoft Teams. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación seguro, por lo que debe registrar el servicio web como bot en Bot Framework.
 
 > [!NOTE]
-> Aunque puede crear el servicio web manualmente, use [bot Framework SDK](https://github.com/microsoft/botframework-sdk) para trabajar con el protocolo.
+> Aunque puede crear el servicio web manualmente, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) para trabajar con el protocolo.
 
-En el manifiesto de la aplicación Microsoft Teams aplicación, se define una sola extensión de mensajería con hasta diez comandos diferentes. Cada comando define un tipo, como acción o búsqueda, y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son área de mensaje de redacción, barra de comandos y mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información relevante. Responda con una carga JSON, lo que permite al Teams cliente conocer la siguiente interacción que se habilitará.
+En el manifiesto de la aplicación para Microsoft Teams aplicación, se define una única extensión de mensaje con hasta diez comandos diferentes. Cada comando define un tipo, como acción o búsqueda y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son área de mensaje de redacción, barra de comandos y mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información pertinente. Responda con una carga JSON, lo que permite al cliente de Teams conocer la siguiente interacción que se va a habilitar.
 
-## <a name="types-of-messaging-extension-commands"></a>Tipos de comandos de extensión de mensajería
+## <a name="types-of-message-extension-commands"></a>Tipos de comandos de extensión de mensaje
 
-Hay dos tipos de comandos de extensión de mensajería, comando de acción y comando de búsqueda. El tipo de comando de extensión de mensajería define los elementos de la interfaz de usuario y los flujos de interacción disponibles para el servicio web. Algunas interacciones, como la autenticación y la configuración, están disponibles para ambos tipos de comandos.
+Hay dos tipos de comandos de extensión de mensaje, comando de acción y comando de búsqueda. El tipo de comando de extensión de mensaje define los elementos de la interfaz de usuario y los flujos de interacción disponibles para el servicio web. Algunas interacciones, como la autenticación y la configuración, están disponibles para ambos tipos de comandos.
 
 ### <a name="action-commands"></a>Comandos de acción
 
-Los comandos action se usan para presentar a los usuarios un elemento emergente modal para recopilar o mostrar información. Cuando el usuario envía el formulario, el servicio web responde insertando un mensaje en la conversación directamente o insertando un mensaje en el área del mensaje de redacción. Después, el usuario puede enviar el mensaje. Puede encadenar varios formularios para flujos de trabajo más complejos.
+Los comandos de acción se usan para presentar a los usuarios un elemento emergente modal para recopilar o mostrar información. Cuando el usuario envía el formulario, el servicio web responde insertando un mensaje en la conversación directamente o insertando un mensaje en el área de redacción del mensaje. Después, el usuario puede enviar el mensaje. Puede encadenar varios formularios para flujos de trabajo más complejos.
 
-Los comandos de acción se desencadenan desde el área del mensaje de redacción, el cuadro de comandos o desde un mensaje. Cuando se invoca el comando desde un mensaje, la carga JSON inicial enviada al bot incluye todo el mensaje desde el que se invocó. En la siguiente imagen se muestra el módulo de tareas de comando de acción de extensión de mensajería: módulo ![de tareas de comando de acción de extensión de mensajería](~/assets/images/task-module.png)
+Los comandos de acción se desencadenan desde el área del mensaje de redacción, el cuadro de comandos o desde un mensaje. Cuando se invoca el comando desde un mensaje, la carga JSON inicial enviada al bot incluye todo el mensaje desde el que se invocó. En la imagen siguiente se muestra el módulo de tareas de comandos de acción de extensión de mensaje: ![módulo de tareas de comando de acción de extensión de mensaje](~/assets/images/task-module.png)
 
 ### <a name="search-commands"></a>Comandos de búsqueda
 
-Los comandos de búsqueda permiten a los usuarios buscar información en un sistema externo manualmente a través de un cuadro de búsqueda o pegando un vínculo a un dominio supervisado en el área del mensaje de redacción e insertar los resultados de la búsqueda en un mensaje. En el flujo de comandos de búsqueda más básico, el mensaje de invocación inicial incluye la cadena de búsqueda que el usuario envió. Responderá con una lista de tarjetas y vistas previas de tarjetas. El Teams representa una lista de vistas previas de tarjeta para el usuario. Cuando el usuario selecciona una tarjeta de la lista, la tarjeta de tamaño completo se inserta en el área del mensaje de redacción.
+Los comandos de búsqueda permiten a los usuarios buscar información en un sistema externo manualmente a través de un cuadro de búsqueda o pegando un vínculo a un dominio supervisado en el área de redacción del mensaje e insertan los resultados de la búsqueda en un mensaje. En el flujo de comandos de búsqueda más básico, el mensaje de invocación inicial incluye la cadena de búsqueda que envió el usuario. Responde con una lista de tarjetas y vistas previas de tarjetas. El cliente Teams representa una lista de vistas previas de tarjetas para el usuario. Cuando el usuario selecciona una tarjeta de la lista, la tarjeta de tamaño completo se inserta en el área del mensaje de redacción.
 
-Las tarjetas se desencadenan desde el área del mensaje de redacción o el cuadro de comando y no se desencadenan desde un mensaje. No se pueden desencadenar desde un mensaje.
-En la siguiente imagen se muestra el módulo de tareas de comando de búsqueda de extensión de mensajería:
+Las tarjetas se desencadenan desde el área del mensaje de redacción o el cuadro de comandos y no se desencadenan desde un mensaje. No se pueden desencadenar a partir de un mensaje.
+En la imagen siguiente se muestra el módulo de tareas de comandos de búsqueda de extensión de mensaje:
 
-![comando de búsqueda de extensión de mensajería](~/assets/images/search-extension.png)
+![comando de búsqueda de extensión de mensaje](~/assets/images/search-extension.png)
 
 > [!NOTE]
-> Para obtener más información sobre las tarjetas, [consulta qué son las tarjetas](../task-modules-and-cards/what-are-cards.md).
+> Para obtener más información sobre las tarjetas, consulte [qué son las tarjetas](../task-modules-and-cards/what-are-cards.md).
 
 ## <a name="link-unfurling"></a>Apertura de vínculos
 
-Se invoca un servicio web cuando se pega una dirección URL en el área del mensaje de redacción. Esta funcionalidad se conoce como desenlaznado de vínculos. Puede suscribirse para recibir una invocación cuando las direcciones URL que contienen un dominio determinado se pegan en el área del mensaje de redacción. El servicio web puede "desplegar" la dirección URL en una tarjeta detallada, lo que proporciona más información que la tarjeta de vista previa del sitio web estándar. Puede agregar botones para permitir que los usuarios tomen medidas inmediatamente sin salir del Microsoft Teams cliente.
-Las siguientes imágenes muestran la característica de desamuestración de vínculos cuando se pega un vínculo en la extensión de mensajería:
+Se invoca un servicio web cuando se pega una dirección URL en el área del mensaje de redacción. Esta funcionalidad se conoce como desplegamiento de vínculos. Puede suscribirse para recibir una invocación cuando las direcciones URL que contienen un dominio determinado se pegan en el área del mensaje de redacción. El servicio web puede "desplegar" la dirección URL en una tarjeta detallada, lo que proporciona más información que la tarjeta de vista previa del sitio web estándar. Puede agregar botones para permitir que los usuarios realicen acciones inmediatamente sin salir del cliente Microsoft Teams.
+Las siguientes imágenes muestran la característica de desplegamiento de vínculos cuando se pega un vínculo en la extensión de mensaje:
 
-![vínculo unfurl](../assets/images/messaging-extension/unfurl-link.png)
+![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
 
-![desafusado de vínculos](../assets/images/messaging-extension/link-unfurl.gif)
+![desplegamiento de vínculos](../assets/images/messaging-extension/link-unfurl.gif)
 
 ## <a name="code-snippets"></a>Fragmentos de código
 
-El siguiente código proporciona un ejemplo de acción basada en extensiones de mensajería:
+El código siguiente proporciona un ejemplo de acción basada en extensiones de mensaje:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -148,7 +148,7 @@ El siguiente código proporciona un ejemplo de acción basada en extensiones de 
 
 ---
 
-El código siguiente proporciona un ejemplo de búsqueda basada en extensiones de mensajería:
+El código siguiente proporciona un ejemplo de búsqueda basada en extensiones de mensaje:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -229,16 +229,16 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 | **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|------------|
-| Extensión de mensajería con comandos basados en acciones | En este ejemplo se muestra cómo crear una extensión de mensajería basada en acciones. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Extensión de mensajería con comandos basados en búsqueda | En este ejemplo se muestra cómo crear una extensión de mensajería basada en búsquedas. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Acción de extensión de mensajería para la programación de tareas|En este ejemplo se muestra cómo programar una tarea desde el comando de acción de extensión de mensajería y obtener una tarjeta de aviso en una fecha y hora programadas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+| Extensión de mensaje con comandos basados en acciones | En este ejemplo se muestra cómo crear una extensión de mensaje basada en acciones. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Extensión de mensaje con comandos basados en búsqueda | En este ejemplo se muestra cómo crear una extensión de mensaje basada en búsqueda. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+|Acción de extensión de mensaje para la programación de tareas|En este ejemplo se muestra cómo programar una tarea a partir del comando de acción de extensión de mensaje y obtener una tarjeta de recordatorio en una fecha y hora programadas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Definir comando de extensión de mensajería de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+> [Definición del comando de extensión de mensaje de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 ## <a name="see-also"></a>Vea también
 
-* [Definir comando de extensión de mensajería de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [Crear una extensión de mensajería](../build-your-first-app/build-messaging-extension.md)
+* [Definición del comando de extensión de mensaje de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Creación de una extensión de mensaje](../build-your-first-app/build-messaging-extension.md)

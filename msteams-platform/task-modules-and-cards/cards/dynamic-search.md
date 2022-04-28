@@ -5,12 +5,12 @@ description: Describe la búsqueda de typeahead con el control Input.ChoiceSet e
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073800"
+ms.locfileid: "65103442"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de escritura anticipada en Tarjetas adaptables
 
@@ -61,7 +61,7 @@ En la imagen siguiente se muestra la experiencia móvil de la búsqueda de typea
 ---
 
 > [!NOTE]
-> No puede obtener experiencias de tarjeta enriquecidas con la búsqueda dinámica, como extensiones de mensajería basadas en consultas.
+> No puede obtener experiencias de tarjeta enriquecidas con búsqueda dinámica, como extensiones de mensajes basadas en consultas.
 
 ## <a name="implement-typeahead-search"></a>Implementación de la búsqueda de typeahead
 

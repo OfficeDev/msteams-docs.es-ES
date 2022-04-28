@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: puntos de entrada extensibilidad casos de uso capacidad del dispositivo
-ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073114"
+ms.locfileid: "65104031"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -56,7 +56,7 @@ Entender a los usuarios y sus preocupaciones son los primeros indicadores de có
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representación conceptual de la solución de Teams." border="true":::
 
-    Las aplicaciones aparecen en Teams como pestañas, bots, extensiones de mensajería, conectores y webhooks, o como una aplicación de varias capacidades. Estas funcionalidades se basan en el back-end de Azure, Microsoft Graph, SharePoint y Power Apps que ayudan a automatizar tareas y procesos.
+    Las aplicaciones aparecen en Teams como pestañas, bots, extensiones de mensajería, conectores y webhooks, o bien como una aplicación de varias funcionalidades. Estas funcionalidades se basan en el back-end de Azure, Microsoft Graph, SharePoint y Power Apps que ayudan a automatizar tareas y procesos.
 
     Juntas, estas funcionalidades dan vida a la solución de la aplicación.
 
@@ -82,7 +82,7 @@ En la tabla siguiente se incluyen las características y la disponibilidad de Te
 | Aplicaciones de pestaña Personalizadas o Lob |  ✔️ | ✔️ | ✔️ |
 | Aplicaciones de instalación de prueba:  | ✔️ | ❌ | ❌ |
 | Bots personalizados o Lob | ✔️ | ❌ | ❌ |
-| Extensiones de mensajería personalizadas | ❌ | ❌ | ❌ |
+| Extensiones de mensaje personalizadas | ❌ | ❌ | ❌ |
 | Conectores personalizados | ❌ | ❌ | ❌ |
 
 La lista siguiente ayuda a identificar la disponibilidad de GCC, GCC-High y DOD para las características:

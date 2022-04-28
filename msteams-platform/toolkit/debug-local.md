@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 25a851f0dcc956139551a46b713dc2e7df3f626d
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63731861"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073676"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar la aplicación de Teams localmente
 
@@ -68,15 +68,15 @@ Complete los pasos siguientes para depurar la aplicación después de crear una 
 <details>
 <summary><b>Windows</b></summary>
 
-1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecución y depuración** desde la barra de actividades.
+1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecución y depuración** desde la barra de actividades
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Opciones del explorador" border="false":::
 
-1. Seleccione **Iniciar depuración (F5)** o  **Ejecutar** para ejecutar la aplicación de Teams en modo de depuración.
+1. Seleccione **Iniciar depuración (F5)** o  **Ejecutar** para ejecutar la aplicación de Teams en modo de depuración
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Iniciar depuración" border="false":::
 
-3. Seleccione **iniciar sesión** con su cuenta de Microsoft 365.
+3. Seleccione **iniciar sesión** con su cuenta de Microsoft 365
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Iniciar sesión" border="true":::
 
@@ -84,7 +84,7 @@ Complete los pasos siguientes para depurar la aplicación después de crear una 
    > [!TIP]
    > Puede seleccionar **Más información** para obtener información sobre el Programa de Desarrolladores de Microsoft 365. Se abrirá el explorador web predeterminado para que pueda iniciar sesión en su cuenta de Microsoft 365 con sus credenciales.
 
-4. Seleccione **Instalar** para instalar el certificado de desarrollo para localhost.
+4. Seleccione **Instalar** para instalar el certificado de desarrollo para localhost
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado" border="true":::
 
@@ -102,22 +102,22 @@ El kit de herramientas inicia una nueva instancia del explorador Edge o Chrome e
 <details>
 <summary><b>macOS</b></summary>
 
-1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecución y depuración** desde la barra de actividades.
+1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecución y depuración** desde la barra de actividades
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Listas del explorador" border="false":::
 
-1. Seleccione **Iniciar depuración (F5)** o  **Ejecutar** para ejecutar la aplicación de Teams en modo de depuración.
+1. Seleccione **Iniciar depuración (F5)** o  **Ejecutar** para ejecutar la aplicación de Teams en modo de depuración
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Depuración de la aplicación" border="false":::
 
-3. Seleccione **iniciar sesión** con su cuenta de Microsoft 365.
+3. Seleccione **iniciar sesión** con su cuenta de Microsoft 365
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="iniciar sesión en la cuenta de M365" border="true":::
 
    > [!TIP]
    > Puede seleccionar **Más información** para obtener información sobre el Programa de Desarrolladores de Microsoft 365. Se abrirá el explorador web predeterminado para que pueda iniciar sesión en su cuenta de Microsoft 365 con sus credenciales.
 
-4. Seleccione **Instalar** para instalar el certificado de desarrollo para localhost.
+4. Seleccione **Instalar** para instalar el certificado de desarrollo para localhost
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado" border="true":::
 
@@ -133,13 +133,13 @@ El kit de herramientas inicia una nueva instancia del explorador Edge o Chrome e
 </details>
 
 
-#### <a name="2-debug-your-app"></a>2. Depurar la aplicación 
+#### <a name="2-debug-your-app"></a>2. Depurar la aplicación
 
 Después del proceso de configuración inicial, el kit de herramientas de Teams inicia los siguientes procesos:
 
-  a. [Inicia los servicios de aplicaciones](#starts-app-services) </br>
-  b. [inicia los depuradores](#launches-debuggers)   </br>
-  c. [Instala localmente la aplicación de Teams](#sideloads-the-teams-app)
+a. [Inicia los servicios de aplicaciones](#starts-app-services) </br>
+b. [inicia los depuradores](#launches-debuggers)   </br>
+      c. [Instala localmente la aplicación de Teams](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>Inicia los servicios de aplicaciones
 
@@ -149,7 +149,7 @@ Ejecuta las tareas definidas en `.vscode/tasks.json` como se indica a continuaci
 | --- | --- | --- |
 |  Tab |  **Iniciar front-end** |  pestañas |
 |  Extensiones de bot o mensajería |  **Iniciar bot** |  Bot |
-|  Azure Functions |  **Iniciar back-end** |  api |
+|  Azure Functions |  **Iniciar back-end** |  API |
 
 En la imagen siguiente se muestran los nombres de las tareas en la pestaña **Terminal** **de salida** de Visual Studio Code mientras se ejecuta la pestaña, bot o extensión de mensajería y Azure Functions.
 
@@ -194,9 +194,18 @@ El kit de herramientas de Teams le permite personalizar la configuración de dep
 <details>
 <summary><b>Use el punto de conexión del bot</b></summary>
 
-1. En la configuración de Visual Studio Code desactive **Asegúrese de que Ngrok está instalado e iniciado (ngrok)**.
+1. En la configuración de Visual Studio Code desactive **Asegúrese de que Ngrok está instalado e iniciado (ngrok)**
 
-1. Establezca la configuración de botDomain y botEndpoint en `.fx/configs/localSettings.json` el dominio y en el punto de conexión.
+1. Establecer la configuración de siteEndpoint en `.fx/configs/config.local.json` en el punto de conexión
+
+```json
+{
+    "bot": {
+        "siteEndpoint": "https://your-bot-tunneling-url"
+    }
+}
+
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Personaiize bot endpoint":::
 
@@ -205,9 +214,18 @@ El kit de herramientas de Teams le permite personalizar la configuración de dep
 <details>
 <summary><b>Use el certificado de desarrollo</b></summary>
 
-1. En la configuración de Visual Studio Code, desactive **Asegurarse de que el certificado de desarrollo es de confianza (devCert)**.
+1. En la configuración de Visual Studio Code, desactive **Asegurarse de que el certificado de desarrollo es de confianza (devCert)**
 
-1. Establezca la configuración de sslCertFile y sslKeyFile en `.fx/configs/localSettings.json` a la ruta de acceso del archivo de certificado y la ruta de acceso del archivo de clave.
+1. Establezca la configuración de `sslCertFile` y `sslKeyFile` en `.fx/configs/config.local.json` a la ruta de acceso del archivo de certificado y la ruta de acceso del archivo de clave
+
+```json
+{
+    "frontend": {
+        "sslCertFile": "",
+        "sslKeyFile": ""
+    }
+}
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Personalizar el certificado":::
 
@@ -216,11 +234,11 @@ El kit de herramientas de Teams le permite personalizar la configuración de dep
 <details>
 <summary><b>Use los scripts de inicio para iniciar los servicios de aplicaciones</b></summary>
 
-1. Para la pestaña, actualice el `dev:teamsfx`script en `tabs/package.json`.
+1. Para la pestaña, actualice el `dev:teamsfx`script en `tabs/package.json`
 
-1. Para la extensión de bot o mensajería, actualice el `dev:teamsfx` script en `bot/package.json`.
+1. Para la extensión de bot o mensajería, actualice el `dev:teamsfx` script en `bot/package.json`
 
-1. Para Azure Functions, actualice el `dev:teamsfx` script en `api/package.json` y para TypeScript actualice el `watch:teamsfx` script.
+1. Para Azure Functions, actualice el `dev:teamsfx` script en `api/package.json` y para TypeScript actualice el `watch:teamsfx` script
 
    > [!NOTE]
    > Actualmente, la pestaña, el bot, las aplicaciones de extensión de mensajería y los puertos de Azure Functions no admiten la personalización.

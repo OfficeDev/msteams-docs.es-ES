@@ -3,12 +3,12 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams para probar, cargar y publicar en la tienda.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356073"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104094"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Crear un paquete de aplicación de Microsoft Teams
 
@@ -34,7 +34,7 @@ Al publicar en la tienda de Teams, asegúrese de que el manifiesto hace referenc
 El paquete de la aplicación debe incluir dos versiones .png del icono de la aplicación: una versión de color y contorno.
 
 > [!Note]
-> Si la aplicación tiene un bot o una extensión de mensajería, los iconos también se incluirán en el registro de Microsoft Azure Bot Service.
+> Si la aplicación tiene un bot o una extensión de mensaje, los iconos también se incluirán en el registro de Microsoft Azure Bot Service.
 
 Para que la aplicación pase la revisión de la tienda de Teams, estos iconos deben cumplir los siguientes requisitos de tamaño.
 
@@ -51,7 +51,7 @@ Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas re
 Un icono de esquema se muestra en dos escenarios:
 
 * Cuando la aplicación está en uso y “hospedada” en la barra de aplicaciones del lado izquierdo de Teams.
-* Cuando un usuario ancla la extensión de mensajería de la aplicación.
+* Cuando un usuario ancla la extensión de mensaje de la aplicación.
 
 El icono debe ser de 32 x 32 píxeles. Puede ser blanco con un fondo transparente o transparente con un fondo blanco (no se permiten otros colores). El icono de esquema no debe tener relleno adicional alrededor del símbolo.
 
@@ -94,7 +94,7 @@ Así es como aparecen los iconos de aplicación en diferentes contextos y funcio
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Ejemplo que muestra el aspecto de un icono de aplicación en un bot dentro del canal." border="false":::
 
-#### <a name="messaging-extension"></a>Extensión de mensajería
+#### <a name="message-extension"></a>Extensión de mensaje
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texto alternativo>" border="false":::
 

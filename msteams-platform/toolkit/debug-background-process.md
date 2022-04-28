@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 33e1e00165119af1e1b63d024097bd3a1a1b13c2
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a3259c46927547b98700f76f704c6c5cb222a74d
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073833"
+ms.locfileid: "65104017"
 ---
 # <a name="debug-background-process"></a>Depurar procesos en segundo plano
 
@@ -36,18 +36,18 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
   |Tabulación sin Azure Functions | 10, 12, **14 (recomendado)**, 16 |
   |Pestaña con Azure Functions | 10, 12, **14 (recomendado)**|
   |Bot |  10, 12, **14 (recomendado)**, 16|
-  |Extensión de mensajería | 10, 12, **14 (recomendado)**, 16 |
+  |Extensión de mensaje | 10, 12, **14 (recomendado)**, 16 |
 
    
 * Microsoft 365 cuenta con credenciales válidas, el kit de herramientas de Teams le pedirá que inicie sesión en Microsoft 365 cuenta, si no ha iniciado sesión
 
 * Habilite la carga o instalación de prueba de aplicaciones personalizadas para el espacio empresarial del desarrollador, si no es así, la depuración local finalizará.
 
-* La versión binaria Ngrok 2.3 se aplica a la extensión de bot y mensajería. Si Ngrok no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete Ngrok NPM `ngrok@4.2.2` en `~/.fx/bin/ngrok`. El paquete Ngrok NPM administra el binario Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin`
+* La versión binaria 2.3 de Ngrok se aplica a la extensión de bot y mensaje. Si Ngrok no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete Ngrok NPM `ngrok@4.2.2` en `~/.fx/bin/ngrok`. El paquete Ngrok NPM administra al binario de Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin`
 
 * Azure Functions Core Tools versión 3, si Azure Functions Core Tools no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala Azure Functions Core Tools paquete NPM, azure-functions-core-tools@3 para **Windows** y para **macOs** en `~/.fx/bin/func`. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local
 
-* SDK de .NET Core versión aplicable a Azure Functions, si SDK de .NET Core no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala SDK de .NET Core para Windows y MacOS en `~/.fx/bin/dotnet`. Para Linux, finaliza la depuración local
+* SDK de .NET Core versión que se aplica a Azure Functions. Si SDK de .NET Core no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala SDK de .NET Core para Windows y MacOS en `~/.fx/bin/dotnet`. Para Linux, la depuración local finaliza
 
   En la tabla siguiente se enumeran las versiones de .NET Core:
 
@@ -60,21 +60,21 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 
 * Azure Functions extensiones de enlace definidas en `api/extensions.csproj`, si Azure Functions extensiones de enlace no está instalada, el kit de herramientas de Teams instala Azure Functions extensiones de enlace
 
-* Paquetes NPM, aplicables a aplicaciones de pestañas, aplicaciones de bot, aplicaciones de extensión de mensajería y Azure Functions. Si NPM no está instalado, el kit de herramientas de Teams instala todos los paquetes NPM
+* Paquetes NPM, que se aplican a aplicaciones de pestañas, aplicaciones de bot, aplicaciones de extensión de mensaje y Azure Functions. Si NPM no está instalado, el kit de herramientas de Teams instala todos los paquetes NPM
 
-* Extensión de bot y mensajería, el kit de herramientas de Teams inicia Ngrok para crear un túnel HTTP para el bot y la extensión de mensajería
+* Extensión de bot y mensaje. El kit de herramientas de Teams inicia Ngrok para crear un túnel HTTP para el bot y la extensión de mensaje
 
-* Los puertos disponibles, si los puertos de pestaña, bot, extensión de mensajería y Azure Functions no están disponibles, la depuración local finaliza
+* Puertos disponibles. Si los puertos de pestaña, bot, extensión de mensaje y Azure Functions no están disponibles, la depuración local finaliza
 
   En la tabla siguiente se enumeran los puertos disponibles para los componentes:
 
   | Componente  | Puerto |
   | --- | --- |
   | Tab | 53000 |
-  | Bot, extensión de mensajería | 3978. |
-  | Inspector de nodo para bot o extensión de mensajería | 9239. |
-  | Azure Functions | 7071. |
-  | Inspector de nodo para Azure Functions | 9229. |
+  | Bot o extensión de mensaje | 3978 |
+  | Inspector de nodo para bot o extensión de mensaje | 9239 |
+  | Azure Functions | 7071 |
+  | Inspector de nodo para Azure Functions | 9229 |
 
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
@@ -84,17 +84,17 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 |Tab without Azure functions | Node.js LTS versions 10, 12, **14 (recommended)**, 16 | The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
-|Messaging extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
+|Message extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Sign in to Microsoft 365 account | Microsoft 365 credentials |Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in. |
-|Bot, messaging extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Bot, message extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
 |Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
 |Azure functions |.NET Core SDK version|• If .NET Core SDK isn't installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
 |Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If Azure functions binding extensions isn't installed, the toolkit installs Azure functions binding extensions.|
-|NPM packages| NPM packages for tab app, bot app, messaging extension app, and Azure functions|If NPM isn't installed, the toolkit installs all NPM packages.|
-|Bot and messaging extension | Ngrok |Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension. |
+|NPM packages| NPM packages for tab app, bot app, message extension app, and Azure functions|If NPM isn't installed, the toolkit installs all NPM packages.|
+|Bot and message extension | Ngrok |Toolkit starts Ngrok to create a HTTP tunnel for bot and message extension. |
 
 > [!NOTE]
-> If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
+> If tab, bot, message extension, and Azure functions ports are unavailable, the local debug terminates.
 
 Use the following .NET Core versions:
 
@@ -118,7 +118,7 @@ En el proceso de configuración, el kit de herramientas de Teams prepara los sig
 
 1. [ Registra y configura Azure AD aplicación](#registers-and-configures-azure-ad-application): El kit de herramientas de Teams registra y configura la aplicación Azure AD
 
-1. [ Registra y configura el bot](#registers-and-configures-bot): El kit de herramientas de Teams registra y configura el bot para la aplicación de extensión de mensajería o pestaña
+1. [ Registra y configura el bot](#registers-and-configures-bot): El kit de herramientas de Teams registra y configura el bot para la aplicación de extensión de mensajes o las pestañas
 
 1. [ Registra y configura la aplicación teams](#registers-and-configures-teams-app): El kit de herramientas de Teams registra y configura la aplicación de Teams
 
@@ -130,7 +130,7 @@ En el proceso de configuración, el kit de herramientas de Teams prepara los sig
 
 1. Expone una API
 
-    a. Configura el URI de id. de aplicación. Para la pestaña, `api://localhost/{appId}`. Para la extensión de bot o mensajería, `api://botid-{botid}`
+    a. Configura el URI de id. de aplicación. Para la pestaña, `api://localhost/{appId}`. Para el bot o extensión de mensajes,  `api://botid-{botid}`
 
     b. Agrega un ámbito denominado `access_as_user`. Lo habilita para **Admin y usuarios**
 
@@ -142,8 +142,7 @@ En el proceso de configuración, el kit de herramientas de Teams prepara los sig
       | Tipo de proyecto | URI de redirección para web | URI de redirección para una aplicación de página única |
       | --- | --- | --- |
       | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
-      | Bot, extensión de mensajería | `https://ngrok.io/auth-end.html` | ND |
-  
+      | Bot o extensión de mensaje | `https://ngrok.io/auth-end.html` | ND |
 
     En la tabla siguiente se enumeran las configuraciones de Microsoft 365 aplicación cliente con los identificadores de cliente:
     
@@ -160,7 +159,7 @@ En el proceso de configuración, el kit de herramientas de Teams prepara los sig
     
 ### <a name="registers-and-configures-bot"></a>Registra y configura el bot 
 
-Para la aplicación de pestaña o la aplicación de extensión de mensajería:
+Para la aplicación de pestaña o la aplicación de extensión de mensajes:
 
 1. Registrar una aplicación de Azure AD
 
@@ -187,9 +186,8 @@ Puede ver las carpetas y los archivos del proyecto en el área explorador de VS 
 |  `.fx/configs/config.local.json` | Archivo de configuración de depuración local | Los valores de cada configuración se generan y guardan durante la depuración local. |
 |  `templates/appPackage/manifest.template.json` | Archivo de plantilla de manifiesto de aplicación de Teams para depuración local | Los marcadores de posición del archivo se resuelven durante la depuración local. |
 |  `tabs/.env.teams.local`  | Archivo de variables de entorno para la pestaña  | Los valores de cada variable de entorno se generan y guardan durante la depuración local. |
-|  `bot/.env.teamsfx.local` | Archivo de variables de entorno para el bot y la extensión de mensajería| Los valores de cada variable de entorno se generan y guardan durante la depuración local. |
+|  `bot/.env.teamsfx.local` | Archivo de variables de entorno para el bot y la extensión de mensaje| Los valores de cada variable de entorno se generan y guardan durante la depuración local. |
 | `api/.env.teamsfx.local`  | Archivo de variables de entorno para Azure Functions | Los valores de cada variable de entorno se generan y guardan durante la depuración local. |
-
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,50 +1,50 @@
 ---
 title: Apertura de vínculos
 author: surbhigupta
-description: Obtén información sobre cómo agregar la actualización de vínculos con la extensión de mensajería en una aplicación Microsoft Teams con el manifiesto de la aplicación o manualmente con ejemplos y ejemplos de código.
+description: Obtenga información sobre cómo agregar la desurling de vínculos con la extensión de mensaje en una aplicación de Microsoft Teams con el manifiesto de aplicación o manualmente mediante ejemplos y ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 006f1194fc15d633f442802891a1f5f28151f81e
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 2dee02545a522b202e9cc695f7099848269e8944
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766159"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104409"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento te guía sobre cómo agregar la actualización de vínculos al manifiesto de la aplicación con App studio y manualmente. Con la actualización de vínculos, la `invoke` aplicación puede registrarse para recibir una actividad cuando las direcciones URL con un dominio determinado se pegan en el área del mensaje de redacción. Contiene `invoke` la dirección URL completa pegada en el área del mensaje de redacción y puede responder con una tarjeta que el usuario pueda deshacer, proporcionando información o acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
+Este documento le guía sobre cómo agregar un vínculo desplegándose al manifiesto de la aplicación mediante App Studio y manualmente. Con la desplegada de vínculos, la aplicación puede registrarse para recibir una `invoke` actividad cuando las direcciones URL con un dominio determinado se pegan en el área del mensaje de redacción. `invoke` contiene la dirección URL completa que se pegó en el área del mensaje de redacción y puede responder con una tarjeta que el usuario puede desenvolur, proporcionando información o acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
 
 > [!NOTE]
 >
-> * Actualmente, la desafución de vínculos no se admite en clientes móviles.
-> * El resultado de la descarga de vínculos se almacena en caché durante 30 minutos.
+> * Actualmente, no se admite la desplegamiento de vínculos en clientes móviles.
+> * El resultado de desplegamiento del vínculo se almacena en caché durante 30 minutos.
 
-La Azure DevOps de mensajería usa la desamuestra de vínculos para buscar direcciones URL pegadas en el área de mensaje de redacción que apunten a un elemento de trabajo. En la imagen siguiente, un usuario ha pegado una dirección URL de un elemento de trabajo en Azure DevOps, que la extensión de mensajería ha resuelto en una tarjeta:
+La extensión de mensaje Azure DevOps usa la desplegamiento de vínculos para buscar direcciones URL pegadas en el área del mensaje de redacción que apunta a un elemento de trabajo. En la imagen siguiente, un usuario ha pegado una dirección URL para un elemento de trabajo en Azure DevOps, que la extensión de mensaje ha resuelto en una tarjeta:
 
-![Ejemplo de desafusado de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Ejemplo de desplegamiento de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregar la implementación de vínculos al manifiesto de la aplicación
+## <a name="add-link-unfurling-to-your-app-manifest"></a>Adición de un vínculo que se desplegó al manifiesto de la aplicación
 
-Para agregar la implementación de vínculos al manifiesto de la aplicación, agrega una nueva matriz a `messageHandlers` la `composeExtensions` sección json del manifiesto de la aplicación. Puedes agregar la matriz con la ayuda de App Studio o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. Esto coincide exactamente con un segmento del dominio; si necesita hacer coincidir, `a.b.example.com` use `*.*.example.com`.
+Para agregar un vínculo que se desplegue al manifiesto de la aplicación, agregue una nueva `messageHandlers` matriz a la `composeExtensions` sección json del manifiesto de la aplicación. Puede agregar la matriz con la ayuda de App Studio o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. Esto coincide exactamente con un segmento del dominio; si necesita hacer coincidir `a.b.example.com` , use `*.*.example.com`.
 
 > [!NOTE]
-> No agregue dominios que no estén en su control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Además, los dominios de nivel superior están prohibidos. Por ejemplo, `*.com`, `*.org`.
+> No agregue dominios que no estén en el control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Además, los dominios de nivel superior están prohibidos. Por ejemplo, `*.com`, `*.org`.
 
-### <a name="add-link-unfurling-using-app-studio"></a>Agregar un despliegue de vínculos con App Studio
+### <a name="add-link-unfurling-using-app-studio"></a>Agregar desplegamiento de vínculos mediante App Studio
 
-1. Abre **App Studio** desde el Microsoft Teams y selecciona la **pestaña Editor de** manifiestos.
+1. Abra **App Studio** en el cliente Microsoft Teams y seleccione la pestaña **Editor de manifiestos**.
 1. Cargue el manifiesto de la aplicación.
-1. En la **página Extensión de** mensajería, agregue el dominio que desea buscar en la sección **Controladores de** mensajes. En la siguiente imagen se explica el proceso:
+1. En la página **Extensión de mensaje** , agregue el dominio que desea buscar en la sección **Controladores de mensajes** . En la imagen siguiente se explica el proceso:
 
-    ![sección controladores de mensajes en App Studio](~/assets/images/link-unfurling.png)
+    ![sección de controladores de mensajes en App Studio](~/assets/images/link-unfurling.png)
 
-### <a name="add-link-unfurling-manually"></a>Agregar la actualización manual de vínculos
+### <a name="add-link-unfurling-manually"></a>Agregar vínculo desplegándose manualmente
 
-Para habilitar la extensión de mensajería para que interactúe con vínculos, primero debes agregar la `messageHandlers` matriz al manifiesto de la aplicación. En el siguiente ejemplo se explica cómo agregar manualmente la actualización de vínculos:
+Para permitir que la extensión de mensaje interactúe con vínculos, primero debe agregar la `messageHandlers` matriz al manifiesto de la aplicación. En el ejemplo siguiente se explica cómo agregar un vínculo desplegándose manualmente:
 
 ```json
 ...
@@ -66,11 +66,11 @@ Para habilitar la extensión de mensajería para que interactúe con vínculos, 
 ...
 ```
 
-Para obtener un ejemplo de manifiesto completo, vea [referencia de manifiesto](~/resources/schema/manifest-schema.md).
+Para obtener un ejemplo de manifiesto completo, consulte [referencia de manifiesto](~/resources/schema/manifest-schema.md).
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>Controlar la invocación `composeExtension/queryLink`
+## <a name="handle-the-composeextensionquerylink-invoke"></a>Controlar la `composeExtension/queryLink` invocación
 
-Después de agregar el dominio al manifiesto de la aplicación, debes actualizar el código del servicio web para controlar la solicitud de invocación. Use la dirección URL recibida para buscar en el servicio y crear una respuesta de tarjeta. Si responde con más de una tarjeta, solo se usará la primera respuesta de tarjeta.
+Después de agregar el dominio al manifiesto de la aplicación, debe actualizar el código del servicio web para controlar la solicitud de invocación. Use la dirección URL recibida para buscar en el servicio y crear una respuesta de tarjeta. Si responde con más de una tarjeta, solo se usa la primera respuesta de la tarjeta.
 
 Se admiten los siguientes tipos de tarjeta:
 
@@ -79,7 +79,7 @@ Se admiten los siguientes tipos de tarjeta:
 * [Tarjeta conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Tarjeta adaptable](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Para obtener más información, vea [Invocar tipo de acción](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
+Para obtener más información, vea [Invocación de tipo de acción](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### <a name="example"></a>Ejemplo
 
@@ -128,7 +128,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-A continuación se muestra un ejemplo del `invoke` bot enviado:
+A continuación se muestra un ejemplo del `invoke` objeto enviado al bot:
 
 ```json
 {
@@ -181,7 +181,7 @@ A continuación se muestra un ejemplo de la respuesta:
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
-Siga la [guía paso a paso para](../../sbs-botbuilder-linkunfurling.yml) deshacer los vínculos de Teams usar bot.
+Siga la [guía paso a paso](../../sbs-botbuilder-linkunfurling.yml) para desenlazar vínculos en Teams mediante bot.
 
 ## <a name="see-also"></a>Vea también
 

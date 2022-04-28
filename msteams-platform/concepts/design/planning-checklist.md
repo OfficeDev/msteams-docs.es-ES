@@ -5,12 +5,12 @@ description: Preguntas a tener en cuenta mientras planifica su aplicación, ente
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765935"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104311"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de comprobación de planeamiento de la aplicación de Teams
 
@@ -78,7 +78,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | # | Considere: |
 | --- | --- |
 | 1 | ¿Qué ocurre cuando un usuario configura por primera vez la pestaña en un canal? |
-| 2 | Si está compartiendo tarjetas con una extensión de mensajería, ¿tiene sentido agregar un pequeño vínculo a una página de información para ayudar a presentar a los usuarios qué otras cosas puede hacer la aplicación? |
+| 2 | Si comparte tarjetas con una extensión de mensaje, ¿tiene sentido agregar un pequeño vínculo que lleve a una página de más información para ayudar a los usuarios y que sepan qué más puede hacer la aplicación? |
 | 3 | ¿Espera que la mayoría de la gente tenga ya algún contexto de para qué sirve la aplicación, o que ya haya usado sus servicios en otro contexto? |
 | 4 | ¿Llegan a la aplicación sin conocimientos previos? |
 

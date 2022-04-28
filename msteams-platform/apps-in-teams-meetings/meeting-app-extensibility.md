@@ -1,15 +1,15 @@
 ---
 title: Aplicaciones de reuniones unificadas
 author: surbhigupta
-description: Obtenga información sobre Teams ciclo de vida de las reuniones y la experiencia de reunión del usuario en el entorno de escritorio y móvil, los roles y los tipos de participantes y usuarios, integración de bots y extensión de mensajería en el ciclo de vida de la reunión.
+description: Obtenga información sobre Teams ciclo de vida de las reuniones y la experiencia de reunión del usuario en el entorno de escritorio y móvil, los roles y los tipos de participantes y usuarios, integración de bots y extensión de mensajes en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838463"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103337"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -19,11 +19,11 @@ Teams aplicaciones unificadas de reuniones se basan en los siguientes conceptos:
 * Hay tres roles de participante distintos en una reunión: organizador, moderador y asistente. Para obtener más información, vea [Roles en una reunión de Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * Hay varios [tipos de usuario](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) en una reunión: usuarios en el inquilino, [invitados](/microsoftteams/guest-access), [federados](/microsoftteams/manage-external-access) y anónimos.
 
-En este artículo se describe la información sobre el ciclo de vida de las reuniones y cómo integrar pestañas, bots y extensiones de mensajería. Identifica diferentes roles de participante y tipos de usuario.
+En este artículo se describe la información sobre el ciclo de vida de las reuniones y cómo integrar pestañas, bots y extensiones de mensajes. Identifica diferentes roles de participante y tipos de usuario.
 
 ## <a name="meeting-lifecycle"></a>Ciclo de vida de la reunión
 
-El ciclo de vida de una reunión consiste en la experiencia de la aplicación previa a la reunión, durante la reunión y posterior a la reunión. Se pueden integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión.
+El ciclo de vida de una reunión consiste en la experiencia de la aplicación previa a la reunión, durante la reunión y posterior a la reunión. Puede integrar pestañas, bots y extensiones de mensaje en cada fase del ciclo de vida de la reunión.
 
 > [!NOTE]
 > Las extensiones de reunión, como bots, tarjetas, extensiones de mensaje y acciones de mensaje, se admiten en el cliente web. Sin embargo, actualmente no se admiten por completo experiencias hospedadas como pestañas, burbujas de contenido y uso compartido en fase.
@@ -152,9 +152,9 @@ En la imagen siguiente se muestra la pestaña **Contoso** con los resultados del
 
 Los bots habilitados en el ámbito de chat en grupo comienzan a funcionar en las reuniones. Para implementar bots, comience con [la compilación de un bot](../build-your-first-app/build-bot.md) y, a continuación, continúe con [la creación de aplicaciones para Teams reuniones](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Integración de extensiones de mensajería en el ciclo de vida de la reunión
+### <a name="integrate-message-extensions-into-the-meeting-lifecycle"></a>Integración de extensiones de mensaje en el ciclo de vida de la reunión
 
-Para implementar la extensión de mensajería, comience con [la compilación de una extensión de mensajería](../messaging-extensions/how-to/create-messaging-extension.md) y, a continuación, continúe con [la creación de aplicaciones para Teams reuniones](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Para implementar la extensión de mensaje, comience con [la compilación de una extensión de mensaje](../messaging-extensions/how-to/create-messaging-extension.md) y, a continuación, continúe con [la creación de aplicaciones para Teams reuniones](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 El Teams las aplicaciones de reuniones unificadas le permiten diseñar la aplicación en función de los roles de los participantes en una reunión.
 
@@ -210,7 +210,7 @@ Un usuario anónimo o invitado no puede agregar, quitar ni desinstalar aplicacio
 
 En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las características a las que puede acceder cada usuario:
 
-| Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión |
+| Tipo de usuario | Pestañas | Bots | Extensiones de mensaje | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | No disponible |
 | Invitado, parte del inquilino Azure AD | Se permite la interacción. No se permiten crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en Teams cliente de escritorio |
@@ -221,9 +221,9 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Habilitación y configuración de las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
-* [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md)
+* [Extensión de mensaje](../messaging-extensions/what-are-messaging-extensions.md)
 * [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

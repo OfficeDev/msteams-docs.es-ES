@@ -6,22 +6,22 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 14f74a89122d3622f6abfecaff80bdab6f63a71a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 47d9f7af804f8d060dbb03b5d20eb672582899f1
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398753"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104500"
 ---
 # <a name="teams-app-that-fits"></a>Aplicación de Teams adaptable
 
 Microsoft Teams ofrece una colección de aplicaciones proporcionadas por Microsoft o por servicios externos. Las aplicaciones de Teams pueden ser pestañas, bots, extensiones de mensajería o cualquier combinación de las tres. Estas aplicaciones hacen que la experiencia de colaboración en Teams sea aún mejor.
 
-Las aplicaciones pueden ser personales o compartidas. Una aplicación personal permite la comunicación individual y una aplicación compartida permite a varios usuarios compartir espacio de la aplicación para colaborar.
+Una aplicación puede ser personal o compartida. Una aplicación personal permite la comunicación individual y una aplicación compartida permite a varios usuarios compartir espacio de la aplicación para colaborar.
 
 ## <a name="driving-organizational-goals"></a>Impulsar objetivos de la organización
 
-La colaboración y la comunicación son clave para una organización. La comunicación concisa, la integración con los servicios necesarios y el poder acceder sobre la marcha es la razón por la que las organizaciones eligen cada vez más confiar en las aplicaciones.
+La colaboración y la comunicación son clave para una organización. La comunicación concisa, la integración con los servicios necesarios y la accesibilidad sobre la marcha es el motivo por el que las organizaciones eligen con cada vez mayor frecuencia confiar en las aplicaciones.
 
 Las organizaciones las usan para conectarse con sus clientes, proporcionar servicios y compartir información. Pero hay más. Las aplicaciones son un lugar de reunión para que las personas trabajen en conjunto. Una buena aplicación ayuda a crear un entorno que cohesiona tanto las necesidades externas como internas de la empresa.
 

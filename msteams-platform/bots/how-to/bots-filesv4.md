@@ -5,12 +5,12 @@ keywords: Los archivos de bots de teams envían recepción
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ebfa6bf24899d8bc88a15018b0d74d395bb56c79
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 22c88a435628c34942eb8f5652b9170f861a0446
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820303"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102537"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envío y recepción de archivos a través del bot
 
@@ -99,7 +99,7 @@ Para cargar un archivo en un usuario:
 
 El siguiente mensaje de escritorio contiene un objeto de datos adjuntos sencillo que solicita permiso al usuario para cargar el archivo:
 
-![Tarjeta de consentimiento que solicita permiso de usuario para cargar el archivo](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Tarjeta de consentimiento que solicita permiso de usuario para cargar el archivo"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 El siguiente mensaje móvil contiene un objeto de datos adjuntos que solicita permiso al usuario para cargar el archivo:
 
@@ -200,7 +200,7 @@ En la tabla siguiente se describen las propiedades de contenido de los datos adj
 
 Captura de imágenes insertadas que forman parte del mensaje mediante el token de acceso del bot.
 
-![Imagen insertada](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Imagen insertada"border="true":::
 
 En el código siguiente se muestra un ejemplo de captura de imágenes insertadas del mensaje:
 

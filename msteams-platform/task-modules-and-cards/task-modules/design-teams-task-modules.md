@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo diseñar módulos de tareas para a
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1514ed8e3101065efd482ced45de98b8b0f58ab8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355971"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104136"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la aplicación de Microsoft Teams
 
@@ -31,9 +31,9 @@ Los módulos de tareas se pueden iniciar desde casi cualquier lugar de la aplica
 
 * **Pestaña**: Se puede iniciar un módulo de tareas desde cualquier vínculo dentro de una pestaña. Se usa en escenarios en los que desea que el usuario se centre en una interacción.
 * **Bot**: Se puede iniciar un módulo de tareas desde un vínculo dentro de un mensaje de bot.
-* **Tarjeta adaptable**: Se puede iniciar un módulo de tareas desde una tarjeta adaptable (enviada con una extensión de mensajería o por un bot) cuando un usuario selecciona un botón.
-* **Extensión de mensajería (comandos de acción)**: Las extensiones de mensajería permiten realizar una acción determinada en el contenido del mensaje. Al seleccionar una acción, se abre un módulo de tareas.
-* **Extensión de mensajería (contexto del cuadro de redacción)**: En el cuadro de redacción, puede diseñar una extensión de mensajería para abrir un módulo de tareas en lugar del control flotante típico. Reserve módulos de tareas para interacciones complejas, como completar un formulario.
+* **Tarjeta adaptable**: Se puede iniciar un módulo de tareas desde una tarjeta adaptable (enviada con una extensión de mensaje o por un bot) cuando un usuario selecciona un botón.
+* **Extensión de mensaje (comandos de acción)**: Las extensiones de mensaje permiten realizar una acción determinada en el contenido del mensaje. Al seleccionar una acción, se abre un módulo de tareas.
+* **Extensión de mensaje (contexto del cuadro de redacción)**: En el cuadro de redacción, puede diseñar una extensión de mensaje para abrir un módulo de tareas en lugar del control flotante característico. Reserve módulos de tareas para interacciones complejas, como completar un formulario.
 
 ## <a name="anatomy"></a>Anatomía
 

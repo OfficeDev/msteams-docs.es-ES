@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073534"
+ms.locfileid: "65103274"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Agregar funcionalidades a las aplicaciones de Teams
 
@@ -21,7 +21,7 @@ Durante el desarrollo de aplicaciones, puede crear una nueva aplicación de Team
 |--------|-------------|
 | Pestañas |  Las pestañas son etiquetas HTML sencillas que apuntan a dominios declarados en el manifiesto de la aplicación. Puede agregar pestañas como parte del canal dentro de un equipo, chat en grupo o aplicación personal para un usuario individual.|
 | Bots |  Los bots ayudan a interactuar con el servicio web a través de texto, tarjetas interactivas y módulos de tareas|
-| Extensiones de mensajería | Las extensiones de mensajería ayudan a interactuar con el servicio web a través de botones y formularios en el cliente Microsoft Teams|
+| Extensiones de mensaje | Las extensiones de mensaje ayudan a interactuar con el servicio web a través de botones y formularios en el cliente Microsoft Teams|
 
 ## <a name="prerequisite"></a>Requisito previo
 
@@ -35,7 +35,8 @@ Durante el desarrollo de aplicaciones, puede crear una nueva aplicación de Team
 Las limitaciones de TeamsFx al agregar más funcionalidades son las siguientes:
 
 * Puede agregar pestañas hasta 16 instancias
-* Puede agregar bot y extensión de mensajería para una instancia cada una.
+* Puede agregar bot y extensión de mensaje para una instancia cada una.
+
 ## <a name="add-capabilities"></a>Agregar funcionalidades
 
 > [!Note]
@@ -69,7 +70,7 @@ Las funcionalidades seleccionadas se agregan correctamente al proyecto. El Teams
    |-----------------------|----------|
    |Para agregar pestaña|`teamsfx capability add tab`|
    |Para agregar bot|`teamsfx capability add bot`|
-   |Para agregar la extensión de mensajería|`teamsfx capability add messaging-extension`|
+   |Para agregar la extensión de mensaje|`teamsfx capability add messaging-extension`|
 
 ## <a name="supported-capabilities"></a>Funciones admitidas
 
@@ -78,17 +79,17 @@ Además de las funcionalidades que ya tiene la aplicación Teams, puede elegir a
 |Funcionalidades existentes|Otras funcionalidades admitidas|
 |--------------------|--------------------|
 |Pestañas con SPFx|Ninguno|
-|Pestañas con Azure|Bot y extensión de mensajería|
+|Pestañas con Azure|Bot y extensión de mensaje|
 |Bot|Pestañas|
-|Extensión de mensajería|Pestañas y bots|
+|Extensión de mensaje|Pestañas y bots|
 |Pestañas y bots|Pestañas y extensión de mensaje|
-|Pestañas y extensión de mensajería|Pestañas y bots|
-|Pestañas, bot y extensión de mensajería|Pestañas|
+|Pestañas y extensión de mensaje|Pestañas y bots|
+|Pestañas, bot y extensión de mensaje|Pestañas|
 |Pestañas |Bot y extensión de mensaje|
 
-## <a name="add-bot-tab-and-messaging-extension"></a>Adición de bot, pestaña y extensión de mensajería
+## <a name="add-bot-tab-and-message-extension"></a>Agregar bot, pestaña y extensión de mensaje
 
-Después de agregar un bot y una extensión de mensajería, los cambios en el proyecto son los siguientes:
+Después de agregar un bot y una extensión de mensaje, los cambios en el proyecto son los siguientes:
 
 * Se agrega un código de plantilla de bot a una subcarpeta con la ruta de acceso `yourProjectFolder/bot`. Esto incluye una plantilla de aplicación de bot **hello world** en el proyecto.
 * `launch.json`y `task.json` en `.vscode` la carpeta se actualizan, lo que incluye los scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la aplicación localmente.
@@ -108,7 +109,6 @@ Después de agregar la pestaña , los cambios en el proyecto son los siguientes:
   * Ámbitos de las pestañas
 * Los archivos de `templates/azure/teamsfx` se actualizarán y `templates/azure/provision/xxx`se volverá a generar el archivo .bicep.
 * El archivo en `.fx/config` se regenera, lo que garantiza que el proyecto esté configurado con las configuraciones adecuadas para la funcionalidad recién agregada.
-
 
 
 ## <a name="see-also"></a>Vea también

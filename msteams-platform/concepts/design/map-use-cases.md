@@ -5,12 +5,12 @@ description: Identifique cómo pueden funcionar los casos de uso de la aplicaci�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 9fdf2c56bab0a822d0c3769d6d7e9fdb6aa3a929
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765942"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103330"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Asignar los casos de uso a las funcionalidades de la aplicación de Teams
 
@@ -51,7 +51,7 @@ Una forma rápida de iniciar un proceso o flujo de trabajo en un sistema externo
 
 | **Si quiere...** | **Pruebe…** |
 | --- | --- |
-| Desencadene mensajes, lo que permite a los usuarios enviar rápidamente el contenido de un mensaje a los servicios web. | Extensiones de mensajería: comando de acción |
+| Desencadene mensajes, lo que permite a los usuarios enviar rápidamente el contenido de un mensaje a los servicios web. | Extensiones de mensajería: comandos de acción |
 | Abra mensajes desde una pestaña, un bot o una extensión de mensajería para recopilar información antes de iniciar un flujo de trabajo. | Módulos de tareas |
 | Interactúe con los usuarios a través de texto y tarjetas enriquecidas. | Bots de conversación |
 | Una buena opción para una interacción simple cuando no es necesario crear un bot de conversación completo. |  Webhooks salientes |
@@ -93,7 +93,7 @@ Echemos un vistazo a cómo las funcionalidades de Teams habilitan diferentes car
 Por ejemplo:
 
 * Use la capacidad de la **pestaña** para mostrar módulos de tareas, solicitar permisos de dispositivo, mostrar <`iframe`> contenido o usar vínculos profundos.
-* Use la capacidad de **extensión de mensajería** para enviar tarjetas, desatar vínculos o realizar acciones en los mensajes.
+* Use la funcionalidad de **extensión de mensajería** para enviar tarjetas, desatar vínculos o realizar acciones en los mensajes.
 
 ## <a name="see-also"></a>Consulte también
 

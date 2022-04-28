@@ -5,12 +5,12 @@ description: Información general sobre las herramientas y los SDK para crear bo
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a50f93e718dcff35d810f0f8748c97095b49b138
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 52f933aaddd5a02319ae1c0a35e9a4a26b617b57
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073749"
+ms.locfileid: "65104325"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -36,7 +36,7 @@ El bot de Teams consta de lo siguiente:
 
 * Use tipos de tarjeta especializados, como la tarjeta del conector Office 365.
 * Establezca datos de canal específicos de Teams en las actividades.
-* Procesar solicitudes de extensión de mensajería.
+* Procesar solicitudes de extensión de mensaje.
 
 > [!IMPORTANT]
 > Puede desarrollar aplicaciones Teams en cualquier tecnología de programación web y llamar directamente a las [API REST de Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview). Pero debe realizar el control de tokens en todos los casos.
@@ -201,7 +201,7 @@ this.onMessage(async (context, next) => {
 > [!div class="nextstepaction"]
 > [Controladores de actividad de bots](~/bots/bot-basics.md)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversaciones de bot](~/bots/how-to/conversations/conversation-basics.md)

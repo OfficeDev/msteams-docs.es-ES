@@ -64,7 +64,7 @@
           href: tabs/design/tabs.md
         - name: Bots
           href: bots/design/bots.md
-        - name: Extensiones de mensajería
+        - name: Extensiones de mensajes
           href: messaging-extensions/design/messaging-extension-design.md
         - name: Extensiones de reunión
           href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
@@ -134,9 +134,9 @@
       href: tabs/how-to/using-teams-client-sdk.md
     - name: Versión preliminar del SDK v2 de cliente de JavaScript en Teams
       href: m365-apps/using-teams-client-sdk-preview.md
-    - name: Bot Framework de Node.js para bots y extensiones de mensajería (GitHub)
+    - name: Bot Framework de Node.js para bots y extensiones de mensaje (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
-    - name: Bot Framework de .NET para bots y extensiones de mensajería (GitHub)
+    - name: Bot Framework de .NET para bots y extensiones de mensaje (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: SDK de Microsoft Graph
       href: /graph/sdks/sdks-overview
@@ -176,9 +176,9 @@
               href: resources/bot-v3/bots-text-formats.md
             - name: Probar un bot
               href: resources/bot-v3/bots-test.md
-        - name: SDK de extensiones de mensajería (v3)
+        - name: SDK de extensiones de mensaje (v3)
           items:
-            - name: SDK de extensiones de mensajería (v3)
+            - name: SDK de extensiones de mensaje (v3)
               href: resources/messaging-extension-v3/messaging-extensions-overview.md
             - name: Extensiones de búsqueda
               href: resources/messaging-extension-v3/search-extensions.md
@@ -265,7 +265,7 @@
           href: resources/media-formats.md
     - name: Cambios en la API de bot para los miembros del equipo o chat
       href: resources/team-chat-member-api-changes.md
-- name: Crear extensiones de mensajería
+- name: Generar extensiones de mensaje
   items:
     - name: Información general
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -375,11 +375,11 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Usar autenticación SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: Extensiones de mensajería
+    - name: Extensiones de mensajes
       items:
-        - name: Agregar autenticación a la extensión de mensajería
+        - name: Agregar autenticación a la extensión de mensaje
           href: messaging-extensions/how-to/add-authentication.md
-        - name: Habilitar SSO para extensiones de mensajería
+        - name: Habilitar SSO para extensiones de mensaje
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: Integrar las funcionalidades del dispositivo
   items:
@@ -419,7 +419,7 @@
       href: m365-apps/prerequisites.md
     - name: Habilitar una pestaña personal de Teams para Office y Outlook
       href: m365-apps/extend-m365-teams-personal-tab.md
-    - name: Habilitar una extensión de mensajería de Teams para Outlook
+    - name: Habilitar una extensión de mensaje de Teams para Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
 - name: Probar la aplicación
   items:

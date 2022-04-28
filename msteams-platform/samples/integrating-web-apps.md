@@ -5,15 +5,15 @@ ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Consideraciones para la integración de Teams
-ms.openlocfilehash: eb278d078c7b195ff5d2d2a2f980ffc9db74f748
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+title: Consideraciones para la integración Teams
+ms.openlocfilehash: bbd5b046d7b1afca5cc3fa5c8afb21a3698f43eb
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685600"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104353"
 ---
-# <a name="considerations-for-teams-integration"></a>Consideraciones para la integración de Teams
+# <a name="considerations-for-teams-integration"></a>Consideraciones para la integración Teams
 
 Puede hacer que las aplicaciones web sean adecuadas con las características sociales y colaborativas de Teams, integrándolas correctamente con Teams.
   
@@ -35,8 +35,8 @@ La aplicación Teams debe incluir las características de colaboración necesari
 |Características comunes de la aplicación   |Funcionalidades de la plataforma de Teams   |
 |----------|-----------|
 |Página web incrustada, página principal o vista web  |[Pestañas](../tabs/what-are-tabs.md)  |
-|Uso compartido de accesos directos y extensiones  |[Extensiones de mensajería](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Accesos directos y extensiones de acción  |[Extensiones de mensajería](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Uso compartido de accesos directos y extensiones  |[Extensiones de mensaje](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Accesos directos y extensiones de acción  |[Extensiones de mensaje](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Notificaciones de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks entrantes](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Conectores de Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Servicios externos de mensajes  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks salientes](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
@@ -129,6 +129,6 @@ Cuando se crea un equipo, también se aprovisiona una [colección de sitios Shar
 
 * [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 * [Soluciones de código bajo y sin código para Microsoft Teams](~/samples/teams-low-code-solutions.md)
-* [Uso compartido en Teams desde aplicaciones web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Compartir en Teams desde aplicaciones web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Atributos de cookies de SameSite](~/resources/samesite-cookie-update.md)
 * [Integrar Power Virtual Agents bot de chat](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

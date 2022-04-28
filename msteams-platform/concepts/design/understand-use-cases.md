@@ -5,12 +5,12 @@ description: En este artículo, obtendrá información sobre las funcionalidades
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498234"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104381"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -97,15 +97,15 @@ Las conversaciones suelen dar lugar a la necesidad de hacer algo (generar un ped
 
    :::column span="":::
 
-#### <a name="messaging-extensions"></a>Extensiones de mensajería
+#### <a name="message-extensions"></a>Extensiones de mensajes
 
-Con [extensiones de mensajería](../../messaging-extensions/what-are-messaging-extensions.md), puede buscar y compartir información externa. También puede actuar sobre un mensaje, como crear una incidencia de ayuda basada en el contenido de una publicación del canal.
+Con [extensiones de mensajes](../../messaging-extensions/what-are-messaging-extensions.md) puede buscar y compartir información externa. También puede actuar sobre un mensaje, como crear una incidencia de ayuda basada en el contenido de una publicación del canal.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de mensajería en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Representación conceptual del aspecto de las extensiones de mensaje en el cliente de Teams." border="false":::
 
    :::column-end:::
 :::row-end:::

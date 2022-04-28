@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo las aplicaciones de Microsoft Team
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: llamadas a llamadas de vídeo de audio IVR voice online meetings real-time media streams bot
-ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073826"
+ms.locfileid: "65102510"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Llamadas y bots de reuniones en línea
 
@@ -45,7 +45,7 @@ Las llamadas en Teams pueden ser puramente audio o audio y vídeo. En lugar de a
 
 Las llamadas son punto a punto entre una persona y el bot o varias partes entre el bot y dos o más personas en una llamada de grupo.
 
-![Tipos de llamada](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Tipos de llamada"border="true":::
 
 A continuación se muestran los distintos tipos de llamada y permisos necesarios para la llamada:
 
@@ -63,7 +63,7 @@ Hay dos tipos de señales, llamada entrante y en llamada. A continuación se mue
 
 * Para recibir una llamada entrante, escriba un punto de conexión en la configuración del bot. Este punto de conexión recibe una notificación cuando se inicia una llamada entrante. Puede responder a la llamada, rechazarla o redirigirla a otra persona.
 
-    ![Control de llamadas](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Control de llamadas"border="true":::
 
 * Cuando un bot está en una llamada, hay API para silenciar y anular la conmutación por el bot y para iniciar o dejar de compartir contenido de vídeo o escritorio con otros participantes.
 * El bot también puede acceder a la lista de participantes, invitar a nuevos participantes y silenciarlos.
@@ -99,7 +99,7 @@ Los medios en tiempo real se refieren a escenarios en los que los medios deben p
 > [!div class="nextstepaction"]
 > [Llamadas y reuniones multimedia en tiempo real](~/bots/calls-and-meetings/real-time-media-concepts.md)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [referencia de Graph API](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
 * [Aplicaciones de ejemplo](https://github.com/microsoftgraph/microsoft-graph-comms-samples)

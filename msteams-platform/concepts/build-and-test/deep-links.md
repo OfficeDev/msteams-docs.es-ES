@@ -4,12 +4,12 @@ description: Describe vínculos profundos y cómo usarlos en las aplicaciones
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: vínculo profundo de teams
-ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399313"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103926"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -192,7 +192,7 @@ Los parámetros de consulta son:
 > [!NOTE]
 > Puede ver `threadId` y `groupId` en la dirección URL del canal.  
 
-El siguiente formato de vínculo profundo se usa en un bot, conector o tarjeta de extensión de mensajería: 
+El siguiente formato de vínculo profundo se usa en un bot, conector o tarjeta de extensión de mensajería:
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -286,7 +286,7 @@ En el caso de una videollamada, el cliente pedirá confirmación y activará el 
   
 Estos son los parámetros de consulta:
 
-* `users`: lista separada por comas de identificadores de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Azure AD, normalmente una dirección de correo electrónico, o en el caso de una llamada RTC, admite un mri 4:&lt;número de teléfono&gt; de rtc.
+* `users`: lista separada por comas de identificadores de usuario que representan a los participantes de la llamada. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Azure AD, que normalmente corresponde con una dirección de correo electrónico o, en el caso de una llamada RTC, admite un mri 4 de RTC:&lt;phonenumber&gt;.
 * `withVideo`: este es un parámetro opcional que puede usar para realizar una videollamada. Al establecer este parámetro, solo se activará la cámara del autor de la llamada. El receptor de la llamada tiene la opción de responder a través de llamada de audio o de audio y vídeo a través de la ventana de notificación de llamadas de Teams.
 * `Source`: este es un parámetro opcional, que informa sobre el origen del vínculo profundo.
 

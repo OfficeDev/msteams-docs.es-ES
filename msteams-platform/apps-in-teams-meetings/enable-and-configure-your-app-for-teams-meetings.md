@@ -4,12 +4,12 @@ author: surbhigupta
 description: Habilite y configure las aplicaciones para Teams reuniones y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 4c3f571797df2810e76fc7145e9e9441adbd1e9b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826981"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103351"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitación y configuración de las aplicaciones para reuniones de Teams
 
@@ -72,7 +72,7 @@ Admite el ámbito para habilitar la `groupchat` aplicación en chats previos y p
 
  A continuación se muestran los valores de la propiedad desde la `context` que puede usar todos o algunos de los valores:
 
-|Valor|Description|
+|Valor|Descripción|
 |---|---|
 | **channelTab** | Pestaña en el encabezado de un canal de equipo. |
 | **privateChatTab** | Pestaña en el encabezado de un chat de grupo entre un conjunto de usuarios, no en el contexto de un equipo o reunión. |
@@ -93,7 +93,7 @@ Teams reuniones proporcionan una experiencia de colaboración para su organizaci
 
 ### <a name="before-a-meeting"></a>Antes de una reunión
 
-Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones de mensajería. Los usuarios con roles de organizador y moderador pueden agregar pestañas a una reunión.
+Antes de una reunión, los usuarios pueden agregar pestañas, bots y extensiones de mensaje. Los usuarios con roles de organizador y moderador pueden agregar pestañas a una reunión.
 
 Para agregar una pestaña a una reunión:
 
@@ -104,10 +104,10 @@ Para agregar una pestaña a una reunión:
 
 1. En la galería de pestañas que aparece, seleccione la aplicación que desea agregar y siga los pasos necesarios. La aplicación se instala como una pestaña.
 
-Para agregar una extensión de mensajería a una reunión:
+Para agregar una extensión de mensaje a una reunión:
 
 1. Seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; ubicados en el área de redacción del mensaje en el chat.
-1. Seleccione la aplicación que desea agregar y siga los pasos necesarios. La aplicación se instala como una extensión de mensajería.
+1. Seleccione la aplicación que desea agregar y siga los pasos necesarios. La aplicación se instala como una extensión de mensaje.
 
 Para agregar un bot a una reunión:
 
@@ -129,7 +129,7 @@ Durante una reunión, puede usar la `meetingSidePanel` notificación o en la reu
 
 Para usar la `userContext` API para enrutar solicitudes, consulte [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Para obtener más información, consulte [Teams flujo de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación de las pestañas es similar al flujo de autenticación de los sitios web. Por lo tanto, las pestañas pueden usar OAuth 2.0 directamente. Para obtener más información, vea [Plataforma de identidad de Microsoft y flujo de código de autorización de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-La extensión de mensajería funciona según lo esperado cuando un usuario está en una vista en la reunión. El usuario puede publicar tarjetas de extensión de mensaje de redacción. AppName en la reunión es una información sobre herramientas que indica el nombre de la aplicación en la barra U de la reunión.
+La extensión de mensaje funciona según lo esperado cuando un usuario está en una vista en la reunión. El usuario puede publicar tarjetas de extensión de mensaje de redacción. AppName en la reunión es una información sobre herramientas que indica el nombre de la aplicación en la barra U de la reunión.
 
 > [!NOTE]
 > Use la versión 1.7.0 o posterior de [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), ya que las versiones anteriores no admiten el panel lateral.

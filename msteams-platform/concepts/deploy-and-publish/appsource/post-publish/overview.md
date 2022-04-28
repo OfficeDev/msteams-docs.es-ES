@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501945"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104535"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
@@ -46,11 +46,11 @@ Sin embargo, si realiza cualquiera de los siguientes cambios en la aplicación, 
 * Cambiar el identificador del bot.
 * Modificar la configuración de notificaciones unidireccionales de un bot.
 * Modificar la compatibilidad de un bot para cargar y descargar archivos.
-* Agregar o quitar una extensión de mensajería.
+* Agregar o quitar una extensión de mensaje.
 * Agregar una pestaña personal
 * Agregar un canal y una pestaña de grupo.
 * Agregar un conector.
-* Modificar las configuraciones relacionadas con el registro de aplicaciones de Microsoft Azure Active Directory (Azure AD). Para obtener más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modificar la configuración relacionada con el registro de aplicaciones de Microsoft Azure Active Directory (Azure AD). Para más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrección de problemas con la aplicación publicada
 

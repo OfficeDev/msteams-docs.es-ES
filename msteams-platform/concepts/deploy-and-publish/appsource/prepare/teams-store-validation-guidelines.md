@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826995"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103975"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -162,7 +162,7 @@ Las aplicaciones que se ejecutan en la versión de iOS o Android de Teams deben 
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 
-En el caso de las aplicaciones que utilizan el Azure Bot Service de Microsoft (como los bots y las extensiones de mensajería), debe seguir todos los requisitos definidos en los términos de [Microsoft Online Services](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
+En el caso de las aplicaciones que utilizan el Azure Bot Service de Microsoft (como los bots y las extensiones de mensaje), debe seguir todos los requisitos definidos en los términos de [Microsoft Online Services](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Los bots siempre deben pedir permiso para cargar un archivo y mostrar un mensaje de confirmación.
 
@@ -236,7 +236,7 @@ Las aplicaciones de Teams deben responder en un período de tiempo razonable o m
 
 * Las pestañas deben responder en dos segundos o mostrar un mensaje de carga o una advertencia.
 * Los bots deben responder a las órdenes del usuario en dos segundos o mostrar un indicador de escritura.
-* Las extensiones de mensajería deben responder a los comandos de usuario en dos segundos.
+* Las extensiones de mensaje deben responder a los comandos de usuario en dos segundos.
 * Las notificaciones deben mostrarse en los dos segundos siguientes a la acción del usuario.
 
 ## <a name="app-package-and-store-listing"></a>Paquete de aplicaciones y listado de tiendas
@@ -261,7 +261,7 @@ Los paquetes de aplicaciones deben tener un formato correcto e incluir toda la i
 El manifiesto de la aplicación de Teams define la configuración de la aplicación.
 
 * El manifiesto debe cumplir con un esquema de manifiesto publicado de forma pública. Para obtener más información, vea [referencia de manifiesto](~/resources/schema/manifest-schema.md). No deberá enviarse la aplicación con una versión preliminar del manifiesto.
-* Si la aplicación incluye un bot o una extensión de mensajería, los detalles del manifiesto de la aplicación deben ser coherentes con los metadatos de Bot Framework, incluidos el nombre del bot, el logotipo, el vínculo a la directiva de privacidad y el vínculo a las condiciones de servicio.
+* Si la aplicación incluye un bot o una extensión de mensaje, los detalles del manifiesto de la aplicación deben ser coherentes con los metadatos de Bot Framework, incluidos el nombre del bot, el logotipo, el vínculo a la directiva de privacidad y el vínculo a las condiciones de servicio.
 * Si la aplicación usa Azure Active Directory para la autenticación, incluya el identificador de aplicación (cliente) Microsoft Azure Active Directory (Azure AD) en el manifiesto. Para obtener más información, consulte la [referencia del manifiesto](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Iconos de la aplicación
@@ -274,7 +274,7 @@ Los iconos son uno de los principales elementos que la gente ve cuando navega po
 * La versión de color del icono debe ser de 192 x 192 píxeles. El símbolo de icono puede ser cualquier color o colores, pero debe situarse sobre un fondo cuadrado sólido o totalmente transparente.
 * La versión de esquema del icono se muestra en los escenarios siguientes:
   * Cuando la aplicación está en uso y **hospedada** en la barra de aplicaciones del lado izquierdo de Teams.
-  * Cuando un usuario ancla la extensión de mensajería de la aplicación.
+  * Cuando un usuario ancla la extensión de mensaje de la aplicación.
 
 * El contorno debe ser de 32 x 32 píxeles y puede ser blanco con un fondo transparente o transparente con un fondo blanco. El icono no debe tener ningún relleno adicional alrededor del símbolo.
 
@@ -789,7 +789,7 @@ Diseñe su aplicación con componentes de UI Fluent [básicos](~/concepts/design
 * Si la funcionalidad de la aplicación requiere cambios en la configuración, incluya una pestaña de **Configuración**. [*Corrección sugerida*]
 * Las pestañas deben seguir el diseño de interacción de Teams, como la navegación en la página, la posición y el uso de diálogos, jerarquías de información, etc. Para obtener más información, vea [ Kit de interfaz de usuario Fluent de Microsoft Teams](~/concepts/design/design-teams-app-basic-ui-components.md)
 
-* El contenido de las pestañas en el iframe no debe incluir características que imiten las funciones principales de Teams. Por ejemplo, bots, extensiones de mensajería, llamadas, reuniones, etc.
+* El contenido de las pestañas en el iframe no debe incluir características que imiten las funciones principales de Teams. Por ejemplo, bots, extensiones de mensaje, llamadas, reuniones, etc.
 
 * El contenido de la página de aterrizaje de las pestañas configurables debe ser contextualmente el mismo para todos los miembros del canal.
 
@@ -1061,18 +1061,18 @@ Las aplicaciones que proporcionan solo notificaciones con contenido como **Tiene
 > [!TIP]
 > Obtenga una vista previa de la información y proporcione acciones básicas de usuario insertadas en la tarjeta publicada para que el usuario no tenga que salir de Teams para realizar todas las acciones (independientemente de su complejidad).
 
-## <a name="messaging-extensions"></a>Extensiones de mensajería
+## <a name="message-extensions"></a>Extensiones de mensajes
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
-Si la aplicación incluye una extensión de mensajería, cerciórese de que cumple estas directrices.
+Si la aplicación incluye una extensión de mensaje, cerciórese de que cumple estas directrices.
 
 > [!TIP]
-> Para obtener más información sobre cómo crear una experiencia de aplicación de alta calidad, vea las [directrices de diseño de extensiones de mensajería de Teams](~/messaging-extensions/design/messaging-extension-design.md).
+> Para obtener más información sobre cómo crear una experiencia de aplicación de alta calidad, vea las [directrices de diseño de extensiones de mensaje de Teams](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### <a name="action-commands"></a>Comandos de acción
 
-Las extensiones de mensajería basadas en acciones deben hacer lo siguiente:
+Las extensiones de mensaje basadas en acciones deben hacer lo siguiente:
 
 * Permitir que los usuarios desencadenen acciones en un mensaje sin completar pasos intermedios, como es el inicio de sesión.
 
@@ -1142,11 +1142,11 @@ Las extensiones de mensajería basadas en acciones deben hacer lo siguiente:
 
 ### <a name="preview-links-link-unfurling"></a>Vista previa de los vínculos (despliegue de vínculos)
 
-Las extensiones de mensajería deben obtener una vista previa de los vínculos reconocidos en el cuadro de redacción de Teams. No agregue dominios que estén fuera de su control (direcciones URL absolutas o caracteres comodín). Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Los dominios de nivel superior también están prohibidos. Por ejemplo, `*.com` o `*.org`. [*corrección obligatoria*]
+Las extensiones de mensaje deben obtener una vista previa de los vínculos reconocidos en el cuadro de redacción de Teams. No agregue dominios que estén fuera de su control (direcciones URL absolutas o caracteres comodín). Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Los dominios de nivel superior también están prohibidos. Por ejemplo, `*.com` o `*.org`. [*corrección obligatoria*]
 
 ### <a name="search-commands"></a>Comandos de búsqueda
 
-* Las extensiones de mensajería basadas en búsqueda deben proporcionar texto que ayude a los usuarios a buscar de forma eficaz. [*corrección obligatoria*]
+* Las extensiones de mensaje basadas en búsqueda deben proporcionar texto que ayude a los usuarios a buscar de forma eficaz. [*corrección obligatoria*]
 
 :::row:::
     :::column span="":::
@@ -1170,13 +1170,13 @@ Las extensiones de mensajería deben obtener una vista previa de los vínculos r
    :::column-end:::
 :::row-end:::
 
-### <a name="search-based-messaging-extension-only-apps"></a>Solo aplicaciones de extensión de mensajería basadas en búsquedas
+### <a name="search-based-message-extension-only-apps"></a>Solo aplicaciones de extensión de mensaje basadas en búsquedas
 
 [*corrección obligatoria*]
 
-Las aplicaciones que constan de la extensión de mensajería basada en búsqueda proporcionan valor añadido al usuario mediante el uso compartido de tarjetas que permiten conversaciones contextuales sin cambiar de contexto.
+Las aplicaciones que constan de la extensión de mensaje basada en búsqueda proporcionan valor añadido al usuario mediante el uso compartido de tarjetas que permiten conversaciones contextuales sin cambiar de contexto.
 
-Para pasar la validación de una aplicación solo de extensión de mensajes basada en búsqueda, se requiere lo siguiente como línea de base para garantizar que la experiencia del usuario no se interrumpa. Una tarjeta compartida a través de una extensión de mensajería proporciona valor añadido en Teams si:
+Para pasar la validación de una aplicación solo de extensión de mensajes basada en búsqueda, se requiere lo siguiente como línea de base para garantizar que la experiencia del usuario no se interrumpa. Una tarjeta compartida a través de una extensión de mensaje proporciona valor añadido en Teams si:
 
 1. La tarjeta publicada proporciona los detalles adecuados que no requieren ninguna otra acción por parte del usuario.
 1. La tarjeta publicada proporciona información de vista previa adecuada para que un usuario tome medidas o decida ver más detalles en un vínculo que se abre fuera de Teams.
@@ -1279,7 +1279,7 @@ Use las siguientes directrices para las extensiones de reuniones:
    :::column-end:::
 :::row-end:::
 
-* Las extensiones de mensajería deben funcionar igual durante las reuniones que fuera de ellas.
+* Las extensiones de mensaje deben funcionar igual durante las reuniones que fuera de ellas.
 
 ### <a name="in-meeting-tabs"></a>Pestañas en la reunión
 
