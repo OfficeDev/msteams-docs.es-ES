@@ -1,29 +1,29 @@
 ---
-title: Obtener Teams contexto específico para el bot
+title: Obtención del contexto específico de Teams para un bot
 author: surbhigupta
-description: Cómo obtener el contexto específico de Microsoft Team para el bot, incluida la lista de conversaciones, los detalles de un solo miembro o equipo, la lista de canales, los ejemplos de código.
+description: Cómo obtener el contexto específico del equipo de Microsoft para el bot, incluida la lista de conversaciones, los detalles de un miembro o equipo, la lista de canales y los ejemplos de código.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: Lista de canales de perfiles de usuario de lista de contexto bot
-ms.openlocfilehash: ee931be0d84dadf518ee35625c6339c7880eb4d2
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+keywords: lista de canales de perfil de usuario de lista de contexto de bot
+ms.openlocfilehash: acbf33a235fdaa4e4e8929eaec3801bbccb7ccd3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398599"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111831"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>Obtener Teams contexto específico para el bot
+# <a name="get-teams-specific-context-for-your-bot"></a>Obtención del contexto específico de Teams para un bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Un bot puede tener acceso a datos de contexto adicionales sobre un equipo o chat donde está instalado. Esta información se puede usar para enriquecer la funcionalidad del bot y proporcionar una experiencia más personalizada.
+Un bot puede acceder a datos de contexto adicionales sobre un equipo o el chat donde está instalado. Esta información se puede usar para enriquecer la funcionalidad del bot y proporcionar una experiencia más personalizada.
 
-## <a name="fetch-the-roster-or-user-profile"></a>Capturar la lista o el perfil de usuario
+## <a name="fetch-the-roster-or-user-profile"></a>Captura de la lista o el perfil del usuario
 
-El bot puede consultar la lista de miembros y sus perfiles de usuario básicos, incluidos los id. de usuario Teams la información Microsoft Azure Active Directory (Azure AD), como name y objectId. Puede usar esta información para correlacionar identidades de usuario. Por ejemplo, para comprobar si un usuario ha iniciado sesión en una pestaña a través de Azure AD credenciales, es miembro del equipo. Para obtener miembros de conversación, el tamaño mínimo o máximo de la página depende de la implementación. El tamaño de página inferior a 50, se trata como 50 y mayor que 500, se recorta en 500. Incluso si usa la versión no paginada, no es confiable en equipos grandes y no debe usarse. Para obtener más información, vea [cambios en las API Teams Bot para capturar miembros de equipo o chat](~/resources/team-chat-member-api-changes.md).
+El bot puede consultar la lista de miembros y sus perfiles de usuario básicos, incluidos los identificadores de usuario de Teams e información de Microsoft Azure Active Directory (Azure AD), como name y objectId. Puede usar esta información para correlacionar las identidades de usuario. Por ejemplo, para comprobar si un usuario ha iniciado sesión en una pestaña a través de las credenciales de Azure AD, es miembro del equipo. Para obtener miembros de la conversación, el tamaño mínimo o máximo de la página depende de la implementación. El tamaño de página menor que 50, se trata como 50 y mayor que 500, se limita a 500. Incluso si usa la versión no paginada, no es confiable en equipos grandes y no se debe usar. Para obtener más información, consulte [cambios en las API del bot de Teams para capturar miembros del equipo o del chat](~/resources/team-chat-member-api-changes.md).
 
-El siguiente código de ejemplo usa el extremo paginado para capturar la lista:
+El código de ejemplo siguiente usa el punto de conexión paginado para capturar la lista:
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -83,7 +83,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Puede emitir directamente una solicitud GET en `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, usando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl`. La carga de respuesta también indica si el usuario es un usuario normal o anónimo.
+Puede emitir directamente una solicitud GET en `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, utilizando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl`. La carga de respuesta también indica si el usuario es un usuario normal o anónimo.
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -124,11 +124,11 @@ Response body
 
 * * *
 
-Después de capturar la lista o el perfil de usuario, puede obtener los detalles de un solo miembro. Actualmente, para recuperar información de uno o varios miembros de un chat o equipo, use las API `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` de bots de Microsoft Teams para C# o para las API de TypeScript.
+Después de capturar la lista o el perfil de usuario, puede obtener detalles de un único miembro. Actualmente, para recuperar información de uno o varios miembros de un chat o equipo, use las API `TeamsInfo.GetMembersAsync` del bot de Microsoft Teams para C# o `TeamsInfo.getMembers` para las API de TypeScript.
 
-## <a name="get-single-member-details"></a>Obtener detalles de un solo miembro
+## <a name="get-single-member-details"></a>Obtener detalles de un miembro
 
-También puede recuperar los detalles de un usuario determinado mediante su Teams de usuario, UPN o Azure AD de objeto.
+También puede recuperar los detalles de un usuario determinado mediante su id. de usuario de Teams, UPN o el id. de objeto de Azure AD.
 
 El siguiente código de ejemplo se usa para obtener detalles de un solo miembro:
 
@@ -173,7 +173,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Puede emitir directamente una solicitud GET en `/v3/conversations/{conversationId}/members/{userId}`, usando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl`. Esto se puede usar para usuarios normales y usuarios anónimos.
+Puede emitir directamente una solicitud GET en `/v3/conversations/{conversationId}/members/{userId}`, utilizando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl`. Esto se puede usar para usuarios normales y usuarios anónimos.
 
 A continuación se muestra el ejemplo de respuesta para el usuario normal:
 
@@ -209,11 +209,11 @@ Response body
 
 * * *
 
-Después de obtener los detalles de un solo miembro, puede obtener detalles del equipo. Actualmente, para recuperar información de un equipo, use las API `TeamsInfo.GetMemberDetailsAsync` de bots Microsoft Teams para C# o `TeamsInfo.getTeamDetails` para TypeScript.
+Después de obtener los detalles de un solo miembro, puede obtener los detalles del equipo. Actualmente, para recuperar información de un equipo, use las API `TeamsInfo.GetMemberDetailsAsync` de bot de Microsoft Teams para C# o `TeamsInfo.getTeamDetails` para TypeScript.
 
 ## <a name="get-teams-details"></a>Obtener los detalles del equipo
 
-Cuando se instala en un equipo, el bot puede consultar metadatos sobre ese equipo, incluido el Azure AD de grupo.
+Cuando se instala en un equipo, el bot puede consultar metadatos sobre ese equipo, incluido el identificador de grupo de Azure AD.
 
 El siguiente código de ejemplo se usa para obtener los detalles del equipo:
 
@@ -269,7 +269,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Puede emitir directamente una solicitud GET en `/v3/teams/{teamId}`, usando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl`.
+Puede emitir directamente una solicitud GET en `/v3/teams/{teamId}`, utilizando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl`.
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -284,16 +284,16 @@ Response body
 
 * * *
 
-Después de obtener los detalles del equipo, puede obtener la lista de canales de un equipo. Actualmente, para recuperar información de una lista de canales en un equipo, use las API `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` de bots de Microsoft Teams para C# o para las API de TypeScript.
+Después de obtener los detalles del equipo, puede obtener la lista de canales de un equipo. Actualmente, para recuperar información de una lista de canales de un equipo, use las API de bot de Microsoft Teams `TeamsInfo.GetTeamChannelsAsync` para C# o `TeamsInfo.getTeamChannels` para las API de TypeScript.
 
-## <a name="get-the-list-of-channels-in-a-team"></a>Obtener la lista de canales de un equipo
+## <a name="get-the-list-of-channels-in-a-team"></a>Obtiene la lista de canales en un equipo
 
 El bot puede consultar la lista de canales de un equipo.
 
 > [!NOTE]
 >
-> * El nombre del canal general predeterminado se devuelve como `null` para permitir la localización.
-> * El identificador de canal del canal general siempre coincide con el id. de equipo.
+> * El nombre del canal predeterminado General se devuelve como `null` para permitir la localización.
+> * El identificador de canal General siempre coincide con el identificador de equipo.
 
 El siguiente código de ejemplo se usa para obtener la lista de canales de un equipo:
 
@@ -344,7 +344,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Puede emitir directamente una solicitud GET en `/v3/teams/{teamId}/conversations`, usando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un mensaje nuevo, el bot debe comprobar su valor almacenado para `serviceUrl`.
+Puede emitir directamente una solicitud GET en `/v3/teams/{teamId}/conversations`, utilizando el valor de `serviceUrl` como punto de conexión. El valor de `serviceUrl` es estable, pero puede cambiar. Cuando llega un nuevo mensaje, el bot debe comprobar su valor almacenado para `serviceUrl`.
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
