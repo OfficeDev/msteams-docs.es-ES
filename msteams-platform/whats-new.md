@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
+ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104052"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65132712"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
+|28/04/2022| Razones comunes del error de validación de la aplicación | Distribuir la aplicación > Publicar en la tienda de Teams > [Razones comunes del error de validación de la aplicación](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Configuración de canalizaciones CI/CD | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Configurar canalizaciones CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Cargar la aplicación en Microsoft Teams | Distribuir la aplicación > [Cargar la aplicación](concepts/deploy-and-publish/apps-upload.md)|
 |06/04/2022.| Compartir en Teams desde una pestaña o aplicación personal (versión preliminar para desarrolladores) | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
