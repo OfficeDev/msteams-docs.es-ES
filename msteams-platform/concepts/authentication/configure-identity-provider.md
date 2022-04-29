@@ -1,42 +1,42 @@
 ---
-title: Configurar proveedores de identidades de OAuth 2.0
+title: Configuración de proveedores de identidades de OAuth 2.0
 description: Describe cómo configurar proveedores de identidades con un enfoque en Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: autenticación de Azure AD proveedor de identidades de oauth
-ms.openlocfilehash: ee99bf10f517eb928be0231a1188d2d5db74709d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: autenticación de teams Azure AD proveedor de identidades de oauth
+ms.openlocfilehash: c21be68ef76568ea4c5bb534f329f725d599b1ac
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452721"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111804"
 ---
 # <a name="configure-identity-providers"></a>Configurar proveedores de identidades
 
 ## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>Configuración de una aplicación para usar Azure AD como proveedor de identidades
 
-Los proveedores de identidades que admiten OAuth 2.0 no autenticarán solicitudes de aplicaciones desconocidas; las aplicaciones deben registrarse con antelación. Para hacerlo con Azure AD, siga estos pasos:
+Los proveedores de identidades que admiten OAuth 2.0 no autenticarán las solicitudes de aplicaciones desconocidas; las aplicaciones deben registrarse con antelación. Para ello con Azure AD, siga estos pasos:
 
 1. Abra el [Portal de registro de aplicaciones](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
-2. Selecciona la aplicación para ver sus propiedades o selecciona el botón "Nuevo registro". Busca la **sección Uri** de redireccionamiento de la aplicación.
+2. Seleccione la aplicación para ver sus propiedades o seleccione el botón "Nuevo registro". Busque la sección **URI de redirección** de la aplicación.
 
 3. Seleccione **Web** en el menú desplegable. Actualice la dirección URL al punto de conexión de autenticación. Para las aplicaciones de ejemplo TypeScript/Node.js y C# en GitHub, las direcciones URL de redireccionamiento serán similares a las siguientes:
 
-    Direcciones URL de redireccionamiento: `https://<hostname>/bot-auth/simple-start`
+    URL de redireccionamiento`https://<hostname>/bot-auth/simple-start`
 
-Reemplace `<hostname>` por el host real, que puede ser un sitio de hospedaje dedicado como Azure, Glitch o un túnel ngrok para localhost en el equipo de desarrollo, como `abcd1234.ngrok.io`. Es posible que no tenga esta información si no ha completado o hospedado la aplicación (o la aplicación de ejemplo mencionada anteriormente), pero siempre puede volver a esta página cuando se conozca esa información.
+Reemplace `<hostname>` por el host real, que podría ser un sitio de hospedaje dedicado como Azure, Glitch o un túnel ngrok a localhost en la máquina de desarrollo, como `abcd1234.ngrok.io`. Es posible que no tenga esta información si no ha completado ni hospedado la aplicación (o la aplicación de ejemplo que se mencionó anteriormente), pero siempre puede volver a esta página cuando conozca esa información.
 
 ## <a name="other-authentication-providers"></a>Otros proveedores de autenticación
 
-* **LinkedIn:** Siga las instrucciones de [Configuración de la aplicación LinkedIn](/linkedin/talent/apply-with-linkedin)
+* **Linkedin:** Siga las instrucciones de [Configuración de la aplicación LinkedIn](/linkedin/talent/apply-with-linkedin).
 
-* **Google:** Obtener credenciales de cliente de OAuth 2.0 desde la consola [de la API de Google](https://console.developers.google.com/)
+* **Google:** Obtención de las credenciales de cliente de OAuth 2.0 desde la [consola de API de Google](https://console.developers.google.com/)
 
-* **Proveedores externos de OAuth de pestañas:** Para obtener más información, vea [Usar proveedores de OAuth externos](../../tabs/how-to/authentication/auth-oauth-provider.md)
+* **Proveedores de OAuth externos desde pestañas:** Para obtener más información, consulte [Uso de proveedores de OAuth externos](../../tabs/how-to/authentication/auth-oauth-provider.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Autenticar un usuario en un bot Microsoft Teams de autenticación](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Autenticación de un usuario en un bot de Microsoft Teams](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [Compatibilidad con inicio de sesión único (SSO) para pestañas](../../tabs/how-to/authentication/auth-aad-sso.md)
-* [Autenticar un usuario en una Microsoft Teams pestaña](../../tabs/how-to/authentication/auth-tab-aad.md)
+* [Autenticación de un usuario en una pestaña de Microsoft Teams](../../tabs/how-to/authentication/auth-tab-aad.md)

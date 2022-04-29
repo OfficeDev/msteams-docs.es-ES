@@ -1,21 +1,21 @@
 ---
-title: Use Microsoft Graph para importar mensajes de plataforma externa a Teams
-description: Describe cómo usar Microsoft Graph para importar mensajes desde una plataforma externa a Teams
-ms.localizationpriority: medium
+title: Usar Microsoft Graph para importar mensajes de plataforma externa a Teams
+description: Describe cómo usar Microsoft Graph para importar mensajes de una plataforma externa a Teams
+ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 5a33334367d0f5c229874decd5e45c5bb89ceafc
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+keywords: teams import messages api graph microsoft migrar migración post
+ms.openlocfilehash: 72e33ae6c8792016394c7a464f132260a5231112
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685635"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111748"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
-Con Microsoft Graph, puede migrar el historial de mensajes y los datos existentes de los usuarios de un sistema externo a un canal de Teams. Al habilitar la recreación de una jerarquía de mensajería de plataforma de terceros dentro de Teams, los usuarios pueden continuar sus comunicaciones de forma fluida y continuar sin interrupciones.
+Con Microsoft Graph, puede migrar el historial de mensajes y los datos ya existentes de los usuarios de un sistema externo a un canal de Teams. Al habilitar la recreación de una jerarquía de mensajería de plataforma de terceros dentro de Teams, los usuarios pueden continuar sus comunicaciones sin problemas y continuar sin interrupciones.
 
 > [!NOTE]
 > En el futuro, Microsoft puede solicitarle a usted o a sus clientes que paguen tarifas adicionales en función de la cantidad de datos que se importen.
@@ -24,10 +24,10 @@ Con Microsoft Graph, puede migrar el historial de mensajes y los datos existente
 
 En un nivel alto, el proceso de importación consta de lo siguiente:
 
-1. [Cree un equipo con una marca de tiempo atrás en el tiempo](#step-1-create-a-team).
-1. [Cree un canal con una marca de tiempo back-in-time](#step-2-create-a-channel).
-1. [Importación de mensajes externos con fecha de back-in-time](#step-3-import-messages).
-1. [Complete el proceso de migración del equipo y del canal](#step-4-complete-migration-mode).
+1. [Crear un equipo con una marca de tiempo back-in-time](#step-1-create-a-team).
+1. [Crear un canal con una marca de tiempo back-in-time](#step-2-create-a-channel).
+1. [Importar mensajes externos con fecha de back-in-time](#step-3-import-messages).
+1. [Completar el proceso de migración de equipos y canales](#step-4-complete-migration-mode).
 1. [Agregar miembros del equipo](#step-five-add-team-members).
 
 ## <a name="prerequisites"></a>Requisitos previos
@@ -41,17 +41,17 @@ En un nivel alto, el proceso de importación consta de lo siguiente:
 
 ### <a name="set-up-your-office-365-tenant"></a>Configurar el espacio empresarial de Office 365
 
-* Asegúrese de que existe un inquilino de Office 365 para los datos de importación. Para obtener más información sobre cómo configurar un inquilino de Office 365 para Teams, consulte [Preparación del inquilino de Office 365](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Asegúrese de que los miembros del equipo están en Azure Active Directory. Para obtener más información, vea [Agregar un nuevo usuario](/azure/active-directory/fundamentals/add-users-azure-active-directory) a Azure AD.
+* Cerciórese de que existe un espacio empresarial de Office 365 para los datos de importación. Para obtener más información sobre cómo configurar un espacio empresarial de Office 365 para Teams, vea [preparar el espacio empresarial de Office 365](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Cerciórese de que los miembros del equipo están en Azure Active Directory. Para obtener más información, consulte [agregar un nuevo usuario ](/azure/active-directory/fundamentals/add-users-azure-active-directory) a Azure AD.
 
 ## <a name="step-1-create-a-team"></a>Paso 1: Crear un equipo
 
-Dado que va a migrar datos existentes, mantener las marcas de tiempo del mensaje original y evitar la actividad de mensajería durante el proceso de migración son clave para volver a crear el flujo de mensajes existente del usuario en Teams. Esto se logra de la siguiente manera:
+Puesto que está migrando datos ya existentes, mantener las marcas de tiempo de los mensajes originales y evitar la actividad de mensajería durante el proceso de migración es clave para volver a crear el flujo de mensajes ya existente del usuario en Teams. Esto se consigue de la siguiente manera:
 
-> [Cree un nuevo equipo](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) con una marca de tiempo back-in-time mediante la propiedad de recurso `createdDateTime` de equipo. Coloque el nuevo equipo en `migration mode`, un estado especial que restrinja a los usuarios de la mayoría de las actividades del equipo hasta que se complete el proceso de migración. Incluya el atributo de `teamCreationMode` instancia con el `migration` valor en la solicitud POST para identificar explícitamente el nuevo equipo que se va a crear para la migración.  
+> [Cree un nuevo equipo](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) con una marca de tiempo back-in-time mediante la propiedad `createdDateTime` de recursos de equipo. Coloque el nuevo equipo en `migration mode`, un estado especial que restringe a los usuarios de la mayoría de las actividades dentro del equipo hasta que se complete el proceso de migración. Incluya el atributo de instancia `teamCreationMode` con el valor `migration` en la solicitud POST para identificar explícitamente el nuevo equipo como creado para la migración.  
 
 > [!NOTE]
-> El `createdDateTime` campo solo se rellenará para las instancias de un equipo o canal que se han migrado.
+> El campo `createdDateTime` solo se rellenará para las instancias de un equipo o canal que se han migrado.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -59,7 +59,7 @@ Dado que va a migrar datos existentes, mantener las marcas de tiempo del mensaje
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Creación y administración de recursos para la migración a Microsoft Teams.|**Solo aplicación**|**Sí**|`POST /teams`|
+|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Crear y administrar recursos para la migración a Microsoft Teams.|**Aplicación solamente**|**Sí**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>Solicitud (crear un equipo en estado de migración)
 
@@ -90,22 +90,22 @@ Content-Location: /teams/{team-id}
 400 Bad Request
 ```
 
-Puede recibir el mensaje de error en los siguientes escenarios:
+Puede recibir el mensaje de error en los escenarios siguientes:
 
-* Si `createdDateTime` está establecido para el futuro.
-* Si `createdDateTime` se especifica correctamente, pero `teamCreationMode` falta el atributo de instancia o se establece en un valor no válido.
+* Si `createdDateTime` se establece para el futuro.
+* Si `createdDateTime` se especifica correctamente, pero `teamCreationMode` atributo de instancia falta o se establece en un valor no válido.
 
 ## <a name="step-2-create-a-channel"></a>Paso 2: Crear un canal
 
 La creación de un canal para los mensajes importados es similar al escenario de creación de equipo:
 
-> [Cree un nuevo canal](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) con una marca de tiempo de back-in-time mediante la propiedad de recurso `createdDateTime` channel. Coloque el nuevo canal en `migration mode`, un estado especial que restrinja a los usuarios de la mayoría de las actividades de chat dentro del canal hasta que se complete el proceso de migración. Incluya el atributo de `channelCreationMode` instancia con el `migration` valor en la solicitud POST para identificar explícitamente el nuevo equipo que se va a crear para la migración.  
+> [Cree un nuevo canal ](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) con una marca de tiempo de back-in-time mediante la propiedad `createdDateTime` de recursos del canal. Coloque el nuevo canal en `migration mode`, un estado especial que restringe a los usuarios de la mayoría de las actividades de chat dentro del canal hasta que se complete el proceso de migración. Incluya el atributo de instancia `channelCreationMode` con el valor `migration` en la solicitud POST para identificar explícitamente el nuevo equipo como creado para la migración.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permission"></a>Permiso
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Creación y administración de recursos para la migración a Microsoft Teams.|**Solo aplicación**|**Sí**|`POST /teams`|
+|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Crear y administrar recursos para la migración a Microsoft Teams.|**Aplicación solamente**|**Sí**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>Solicitud (crear un canal en estado de migración)
 
@@ -147,20 +147,20 @@ HTTP/1.1 202 Accepted
 400 Bad Request
 ```
 
-Puede recibir el mensaje de error en los siguientes escenarios:
+Puede recibir el mensaje de error en los escenarios siguientes:
 
-* Si `createdDateTime` está establecido para el futuro.
-* Si `createdDateTime` se especifica correctamente, pero `channelCreationMode` falta el atributo de instancia o se establece en un valor no válido.
+* Si `createdDateTime` se establece para el futuro.
+* Si `createdDateTime` se especifica correctamente pero  atributo de instancia `channelCreationMode` falta o se establece en un valor no válido.
 
 ## <a name="step-3-import-messages"></a>Paso 3: Importar mensajes
 
-Una vez creado el equipo y el canal, puede empezar a enviar mensajes en tiempo atrás mediante las `createdDateTime`  claves y `from` en el cuerpo de la solicitud.
+Una vez creados el equipo y el canal, puede empezar a enviar mensajes back-in-time mediante las claves `createdDateTime`  y `from` en el cuerpo de la solicitud.
 
 > [!NOTE]
 >
-> * No se admiten los mensajes importados con `createdDateTime` versiones anteriores al subproceso `createdDateTime` del mensaje.
+> * No se admiten los mensajes importados con `createdDateTime` anteriores al subproceso de mensaje `createdDateTime`.
 > * `createdDateTime` debe ser único en todos los mensajes del mismo subproceso.
-> * `createdDateTime` admite marcas de tiempo con precisión de milisegundos. Por ejemplo, si el mensaje de solicitud entrante tiene el valor establecido `createdDateTime` como *2020-09-16T05:50:31.0025302Z*, se convertiría en *2020-09-16T05:50:31.002Z* cuando se ingiere el mensaje.
+> * `createdDateTime` admite marcas de tiempo con precisión de milisegundos. Por ejemplo, si el mensaje de solicitud entrante tiene el valor de `createdDateTime` establecido como *2020-09-16T05:50:31.0025302Z*, se convertiría a *2020-09-16T05:50:31.002Z* cuando se ingiera el mensaje.
 
 #### <a name="request-post-message-that-is-text-only"></a>Solicitud (mensaje POST que es de solo texto)
 
@@ -231,12 +231,12 @@ HTTP/1.1 200 OK
 400 Bad Request
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>Solicitud (POST un mensaje con imagen insertada)
+#### <a name="request-post-a-message-with-inline-image"></a>Solicitud (PUBLICAR un mensaje con imagen alineada)
 
 > [!NOTE]
 >
-> * No hay ámbitos de permisos especiales en este escenario, ya que la solicitud forma parte de `chatMessage`.
-> * Los ámbitos para `chatMessage` aplicar aquí.
+> * No hay ningún ámbito de permiso especial en este escenario, ya que la solicitud forma parte de `chatMessage`.
+> * Los ámbitos de `chatMessage` se aplican aquí.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -297,9 +297,9 @@ HTTP/1.1 200 OK
 
 ## <a name="step-4-complete-migration-mode"></a>Paso 4: Completar el modo de migración
 
-Una vez completado el proceso de migración de mensajes, tanto el equipo como el canal se quitan del modo de migración mediante el  `completeMigration` método . Este paso abre el equipo y canalizar los recursos para su uso general por parte de los miembros del equipo. La acción está enlazada a la `team` instancia. Antes de que se complete el equipo, todos los canales deben completarse fuera del modo de migración.
+Una vez completado el proceso de migración de mensajes, el equipo y el canal se sacan del modo de migración mediante el método  `completeMigration`. Este paso abre los recursos del equipo y del canal para que los usen los miembros del equipo con carácter general. La acción se enlaza a la instancia `team`. Antes de que el equipo finalice, todos los canales deben completarse fuera del modo de migración.
 
-#### <a name="request-end-channel-migration-mode"></a>Solicitud (modo de migración del canal final)
+#### <a name="request-end-channel-migration-mode"></a>Solicitud (modo de migración de canal final)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
@@ -312,7 +312,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/complete
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="request-end-team-migration-mode"></a>Solicitud (modo de migración del equipo final)
+#### <a name="request-end-team-migration-mode"></a>Solicitud (finalizar el modo de migración del equipo)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
@@ -324,11 +324,11 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Acción a la que se llama en o `team` `channel` que no está en `migrationMode`.
+Acción llamada en un `team` o `channel` que no está en `migrationMode`.
 
-## <a name="step-five-add-team-members"></a>Paso cinco: Agregar miembros del equipo
+## <a name="step-five-add-team-members"></a>Paso 5: Agregar miembros del equipo
 
-Puede agregar un miembro a un equipo [mediante la interfaz de usuario de Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) o Microsoft Graph [agregar la API de miembro](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true):
+Puede agregar un miembro a un equipo [mediante la interfaz de usuario de Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)  o la API de Microsoft Graph [agregar miembros](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true):
 
 #### <a name="request-add-member"></a>Solicitud (agregar miembro)
 
@@ -354,36 +354,36 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Una vez realizada la `completeMigration` solicitud, no se pueden importar más mensajes en el equipo.
+* Una vez realizada la solicitud de `completeMigration`, no podrá importar más mensajes al equipo.
 
-* Solo puede agregar miembros del equipo al nuevo equipo después de que la `completeMigration` solicitud haya devuelto una respuesta correcta.
+* Solo puede agregar miembros del equipo al nuevo equipo después de que la solicitud de `completeMigration` haya devuelto una respuesta correcta.
 
 * Limitación: los mensajes se importan a cinco RPS por canal.
 
-* Si necesita realizar una corrección en los resultados de la migración, debe eliminar el equipo y repetir los pasos para crear el equipo y canalizar y volver a migrar los mensajes.
+* Si necesita realizar una corrección en los resultados de la migración, debe eliminar el equipo y repetir los pasos para crear el equipo y el canal, y volver a migrar los mensajes.
 
 > [!NOTE]
-> Actualmente, las imágenes insertadas son el único tipo de medio compatible con el esquema de la API de mensaje de importación.
+> Actualmente, las imágenes alineadas son el único tipo de medios admitidos por el esquema de la API de mensajes de importación.
 
-##### <a name="import-content-scope"></a>Importación del ámbito de contenido
+##### <a name="import-content-scope"></a>Importar ámbito de contenido
 
 En la tabla siguiente se proporciona el ámbito de contenido:
 
-|En el ámbito | Actualmente fuera del ámbito|
+|Dentro del ámbito | Actualmente fuera del ámbito|
 |----------|--------------------------|
-|Mensajes de equipo y canal|1:1 y mensajes de chat de grupo|
+|Mensajes de equipo y canal|Mensajes de chat de grupo y 1:1|
 |Hora de creación del mensaje original|Canales privados|
-|Imágenes insertadas como parte del mensaje|En menciones|
-|Vínculos a archivos existentes en SPO o OneDrive|Reacciones|
+|Imágenes alineadas como parte del mensaje|En menciones|
+|Vínculos a archivos ya existentes en SPO o OneDrive|Reacciones|
 |Mensajes con texto enriquecido|Vídeos|
 |Cadena de respuesta de mensajes|Anuncios|
 |Procesamiento de alto rendimiento|Fragmentos de código|
-||Pegatinas|
+||Adhesivos|
 ||Emojis|
 ||Ofertas|
 ||Publicaciones cruzadas entre canales|
 ||Canales compartidos|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Integración Graph y Teams de Microsoft](/graph/teams-concept-overview)
+[Integración de Microsoft Graph y Teams integration](/graph/teams-concept-overview)

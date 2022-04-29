@@ -1,19 +1,19 @@
 ---
 title: Agregar acciones de tarjeta en un bot
 description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en sus bots.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de equipos
-ms.openlocfilehash: 12100ca05d8e4ff4f68c934bc82e1f078dd0210e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103912"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111580"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
-Las tarjetas usadas por los bots y las extensiones de mensaje en Teams admiten los siguientes tipos de actividad[`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards):
+Las tarjetas que usan los bots y las extensiones de mensajería en Teams admiten los siguientes tipos de actividad [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards):
 
 > [!NOTE]
 > Las acciones de `CardAction` difieren de `potentialActions` para las tarjetas del conector de Office 365 cuando se usan desde conectores.
@@ -31,7 +31,7 @@ Las tarjetas usadas por los bots y las extensiones de mensaje en Teams admiten l
 >* Teams no admite `CardAction` tipos no enumerados en la tabla anterior.
 >* Teams no admite la `potentialActions` propiedad.
 >* Las acciones de tarjeta son diferentes a [las acciones sugeridas](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) en Bot Framework o Azure Bot Service. Las acciones sugeridas no se admiten en Microsoft Teams. Si desea que los botones aparezcan en un mensaje de bot de Teams, use una tarjeta.
->* Si usa una acción de tarjeta como parte de una extensión de mensaje, las acciones no funcionarán hasta que la tarjeta se envíe al canal. Las acciones no funcionan mientras la tarjeta está en el cuadro de redacción del mensaje.
+>* Si usa una acción de tarjeta como parte de una extensión de mensajería, las acciones no funcionarán hasta que la tarjeta se envíe al canal. Las acciones no funcionan mientras la tarjeta está en el cuadro de redacción del mensaje.
 
 ## <a name="action-type-openurl"></a>Tipo de acción, openURL
 
