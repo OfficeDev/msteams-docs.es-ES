@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: localizar directrices de paquete de aplicación de validación del almacén de envíos
-ms.openlocfilehash: 4d3116a305ee1b5d353310bdc047c282822af173
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501994"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135755"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -24,14 +24,14 @@ Antes de enviar la aplicación al [Centro de partners](/office/dev/store/use-par
 Aunque la aplicación puede estar funcionando en un entorno de prueba, debes comprobar el paquete de la aplicación para evitar que se presenten problemas durante el proceso de envío.
 
 > [!NOTE]
-> App Studio pronto estará en desuso. Configurar, distribuir y administrar las aplicaciones de Teams con el nuevo [Portal de desarrolladores](https://dev.teams.microsoft.com/)
+ > Si ha estado usando App Studio, le recomendamos que pruebe el portal para desarrolladores [Portal para desarrolladores](https://dev.teams.microsoft.com/) para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022.
 
 La herramienta de validación de aplicaciones de Microsoft Teams ayuda a identificar y solucionar problemas antes de enviarlos al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
 
 1. Vaya a la [herramienta de validación de aplicaciones de Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Nota: La herramienta también está disponible en [App Studio](../../../build-and-test/app-studio-overview.md)).
 1. Carga el paquete de la aplicación para ejecutar las pruebas automatizadas.
 1. Vaya a la **lista de comprobación preliminar** y revise los casos de prueba que son difíciles de automatizar.
-1. [Soluciona problemas con las configuraciones](~/resources/schema/manifest-schema.md) o la aplicación en general. Estos problemas se producen si las pruebas automatizadas dan errores o si no has cumplido todos los criterios de la lista de comprobación.
+1. [Arreglar problemas con la configuración](~/resources/schema/manifest-schema.md) o la aplicación general. Estos problemas se producirán si las pruebas automatizadas dan errores o si no ha cumplido con todos los criterios de la lista de comprobación.
 
 ## <a name="compile-testing-instructions"></a>Compilar instrucciones de prueba
 
@@ -95,7 +95,7 @@ Debe tener una descripción corta y larga de su aplicación.
 
 #### <a name="short-description"></a>Descripción breve
 
-Un resumen conciso de la aplicación que debe ser original, atractivo y dirigido a la audiencia de destino. Limite la descripción a una sola frase.
+Un resumen conciso de la aplicación que deberá ser original, atractivo y dirigido a la audiencia de destino. Mantenga la descripción corta como una sola frase.
 
 :::row:::
 
@@ -165,7 +165,7 @@ Para conocer los procedimientos recomendados, consulte los siguientes recursos:
 
 ### <a name="create-a-video"></a>Crear un vídeo
 
-Un vídeo en la descripción puede ser la forma más eficaz de comunicar por qué la gente debería usar su aplicación. Aborde las siguientes preguntas en un vídeo:
+Un vídeo en la descripción podría ser la forma más eficaz de transmitir por qué la gente debería usar su aplicación. Aborde las siguientes cuestiones en un vídeo:
 
 * ¿Para quién es la aplicación?
 * ¿Qué problemas puede resolver la aplicación?
@@ -177,7 +177,7 @@ Puede agregar una dirección URL para el vídeo de YouTube o Vimeo.
 #### <a name="best-practices-for-videos"></a>Procedimientos recomendados para vídeos
 
 * Mantenga el vídeo entre 60 y 90 segundos.
-* Céntrese en la calidad. En una descripción, los usuarios verán el vídeo antes que las capturas de pantalla.
+* Busque la calidad. En una descripción, los usuarios verán el vídeo antes que las capturas de pantalla.
 * Comunique el valor del producto de forma narrativa.
 * Muestre cómo funciona el producto.
 

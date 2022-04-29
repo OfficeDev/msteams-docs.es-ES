@@ -1,19 +1,19 @@
 ---
 title: Formatos multimedia admitidos para bots
-description: Los bots Microsoft Teams solo admiten los siguientes formatos multimedia para el contenido de audio y vídeo.
+description: Los bots de Microsoft Teams solo admiten los siguientes formatos multimedia para contenido de audio y vídeo.
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: formatos multimedia de bots de teams
-ms.openlocfilehash: da134568cb714580ad4f67b993d5ee467db39710
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: a6de2ab9ef6c27716276ab530516599d6df05331
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157457"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111930"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formatos multimedia admitidos para bots
 
-Los bots de Microsoft Teams admiten solo los siguientes formatos multimedia para el contenido de audio y vídeo:
+Los bots de Microsoft Teams solo admiten los siguientes formatos multimedia para contenido de audio y vídeo:
 
 | Formato | Más información |
 | --- | --- |
@@ -31,4 +31,4 @@ Los bots de Microsoft Teams admiten solo los siguientes formatos multimedia para
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Cambios en Teams API de bot para capturar miembros de equipo o chat](~/resources/team-chat-member-api-changes.md)
+> [Cambios en las API de bot de Teams para capturar miembros del equipo o chat](~/resources/team-chat-member-api-changes.md).

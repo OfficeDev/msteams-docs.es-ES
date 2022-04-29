@@ -1,51 +1,51 @@
 ---
 title: Expansión del vínculo de la pestaña y vista de fases
 author: Rajeshwari-v
-description: Obtenga información sobre cómo desenrollar un vínculo, abrir la vista fase y anclar una pestaña con Microsoft Teams aplicación. Obtenga información sobre la vista de fase y cómo invocarla mediante tarjeta adaptable mediante ejemplo de código y ejemplo.
+description: Obtenga información sobre cómo desanclar un vínculo, abrir la Vista extendida y anclar una pestaña con la aplicación Microsoft Teams. Obtenga información sobre la Vista extendida y cómo invocarla utilizando tarjeta adaptable mediante ejemplos de código.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: 043129d6a81543ac00acf8b64da49f75282823a2
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104087"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110298"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
-Vista de fase es un nuevo componente de interfaz de usuario (UI), que permite representar el contenido que se abre en pantalla completa en Teams y se ancla como una pestaña.
+Vista extendida es un nuevo componente de interfaz de usuario (UI), que le permite representar el contenido que se abre en pantalla completa en Teams y se ancla como una pestaña.
 
-## <a name="stage-view"></a>Vista de fase
+## <a name="stage-view"></a>Vista de extendida
 
-Vista de fase es un componente de interfaz de usuario de pantalla completa que puede invocar para exponer el contenido web. El servicio de desplegamiento de vínculos existente se actualiza para que se use para convertir direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Cuando un usuario envía una dirección URL en un chat o canal, la dirección URL se desplegó en una tarjeta adaptable. El usuario puede seleccionar **Ver** en la tarjeta y anclar el contenido como una pestaña directamente desde vista de fase.
+Vista extendida es un componente de interfaz de usuario de pantalla completa que puede invocar para mostrar el contenido web. El servicio de desurling de vínculos ya existentes se actualiza para que se use para convertir las direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Cuando un usuario envía una dirección URL en un chat o canal, la dirección URL se desplega en una tarjeta adaptable. El usuario puede seleccionar **Ver** en la tarjeta y anclar el contenido como una pestaña directamente desde la Vista extendida.
 
-## <a name="advantage-of-stage-view"></a>Ventaja de la vista de fase
+## <a name="advantage-of-stage-view"></a>Ventaja de vista extendida
 
-Vista de fase ayuda a proporcionar una experiencia más fluida de visualización de contenido en Teams. Los usuarios pueden abrir y ver el contenido proporcionado por la aplicación sin salir del contexto, y pueden anclar el contenido al chat o canal para un acceso rápido futuro que conduce a una mayor interacción del usuario con la aplicación.
+Vista extendida ayuda a proporcionar una experiencia más fluida de visualización de contenido en Teams. Los usuarios pueden abrir y ver el contenido proporcionado por la aplicación sin salir del contexto y pueden anclar el contenido al chat o canal para un acceso rápido futuro, lo que conduce a una mayor interacción del usuario con la aplicación.
 
-## <a name="stage-view-vs-task-module"></a>Vista de fase frente al módulo de tareas
+## <a name="stage-view-vs-task-module"></a>Vista extendida frente a módulo de tareas
 
-|Vista de fase|Módulo de tareas|
+|Vista de extendida|Módulo de tareas|
 |:-----------|:-----------|
-|La vista de fase es útil cuando tiene contenido enriquecido para mostrar a los usuarios, como una página, un panel, un archivo, etc. Proporciona características enriquecidas que ayudan a representar el contenido en el lienzo de pantalla completa.|[El módulo de tareas](../task-modules-and-cards/task-modules/task-modules-tabs.md) es especialmente útil para mostrar mensajes que requieren atención del usuario o recopilar información necesaria para pasar al paso siguiente.|
+|La vista extendida es útil cuando usted tiene contenido enriquecido para mostrar a los usuarios, como es una página, un panel, un archivo, etc. Proporciona características enriquecidas que ayudan a representar el contenido en el lienzo de pantalla completa.|[Módulo de tareas](../task-modules-and-cards/task-modules/task-modules-tabs.md) es especialmente útil para mostrar mensajes que requieren la atención del usuario o recopilar la información necesaria para pasar al paso siguiente.|
   
-## <a name="invoke-stage-view"></a>Invocación de la vista de fase
+## <a name="invoke-stage-view"></a>Invocar Vista extendida
 
-Puede invocar la vista de fase de las siguientes maneras:
+Puede invocar la vista extendida de las maneras siguientes:
 
-* [Invocación de la vista de fase desde la tarjeta adaptable](#invoke-stage-view-from-adaptive-card)
-* [Invocación de la vista de fase a través de un vínculo profundo](#invoke-stage-view-through-deep-link)
+* [Invocar Vista extendida desde tarjeta adaptable](#invoke-stage-view-from-adaptive-card)
+* [invocar Vista extendida a través de vínculo profundo](#invoke-stage-view-through-deep-link)
 
-## <a name="invoke-stage-view-from-adaptive-card"></a>Invocación de la vista de fase desde la tarjeta adaptable
+## <a name="invoke-stage-view-from-adaptive-card"></a>Invocar Vista extendida desde tarjeta adaptable
 
-Cuando el usuario escribe una dirección URL en el Teams cliente de escritorio, se invoca el bot y devuelve una [tarjeta adaptable](../task-modules-and-cards/cards/cards-actions.md) con la opción de abrir la dirección URL en una fase. Una vez que se inicia una fase y `tabInfo` se proporciona , puede agregar la capacidad de anclar la fase como una pestaña.  
+Cuando el usuario escribe una dirección URL en el cliente de escritorio de Teams, el bot se invoca y devuelve una [Tarjeta adaptable](../task-modules-and-cards/cards/cards-actions.md) con la opción de abrir la dirección URL en una fase. Una vez que se inicia una fase y se proporciona el `tabInfo`, usted puede agregar la capacidad de anclar la fase como una pestaña.  
 
-Las imágenes siguientes muestran una fase abierta desde una tarjeta adaptable:
+Las siguientes imágenes muestran una fase abierta desde una tarjeta adaptable:
 
-[![Abrir una fase desde la tarjeta adaptable](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+[![abrir una fase desde tarjeta adaptable](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-[![Abrir una fase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+[![abrir una fase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
 ### <a name="example"></a>Ejemplo
 
@@ -72,44 +72,44 @@ A continuación se muestra el código para abrir una fase desde una tarjeta adap
 } 
 ```
 
-El `invoke` tipo de solicitud debe ser `composeExtension/queryLink`.
+El tipo de solicitud `invoke` debe ser `composeExtension/queryLink`.
 
 > [!NOTE]
 >
-> * `invoke` el flujo de trabajo es similar al flujo de trabajo actual `appLinking` .
-> * Para mantener la coherencia, se recomienda asignar un nombre `Action.Submit` a .`View`
-> * `websiteUrl` es una propiedad necesaria que se va a pasar en el `TabInfo` objeto .
+> * `invoke` El flujo de trabajo es similar al flujo de trabajo actual `appLinking`.
+> * Para mantener la coherencia, se recomienda asignar un nombre a `Action.Submit` como `View`.
+> * `websiteUrl` es una propiedad necesaria que se debe pasar en el objeto `TabInfo`.
 
-A continuación se muestra el proceso para invocar la vista de fase:
+A continuación se muestra el proceso para invocar la vista extendida:
 
-* Cuando el usuario selecciona **Ver**, el bot recibe una `invoke` solicitud. El tipo de solicitud es `composeExtension/queryLink`.
-* `invoke` la respuesta del bot contiene una tarjeta adaptable con el tipo `tab/tabInfoAction` en él.
-* El bot responde con un `200` código.
+* Cuando el usuario selecciona **Ver**, el bot recibe una solicitud de `invoke`. El tipo de solicitud es `composeExtension/queryLink`.
+* `invoke` respuesta del bot contiene una tarjeta adaptable con el tipo `tab/tabInfoAction` en ella.
+* El bot responde con un código de `200`.
 
 > [!NOTE]
-> En Teams clientes móviles, la invocación de stage view para las aplicaciones distribuidas a través de la [tienda Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. El explorador abre la dirección URL especificada en el `websiteUrl` parámetro del `TabInfo` objeto .
+> En los clientes móviles de Teams, invocar Vista extendida para aplicaciones distribuidas a través de la [tienda de Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. `websiteUrl` El explorador abre la dirección URL especificada en el parámetro del objeto`TabInfo`.
 
-## <a name="invoke-stage-view-through-deep-link"></a>Invocación de la vista de fase a través de un vínculo profundo
+## <a name="invoke-stage-view-through-deep-link"></a>Invocación de la Vista extendida a través de un vínculo profundo
 
-Para invocar la vista de fase a través del vínculo profundo desde la pestaña, debe encapsular la dirección URL del vínculo profundo en la `microsoftTeams.executeDeeplink(url)` API. El vínculo profundo también se puede pasar a través de una `OpenURL` acción en la tarjeta.
+Para invocar la Vista extendida a través de un vínculo profundo desde la pestaña, debe encapsular la dirección URL del vínculo profundo en la API de `microsoftTeams.executeDeeplink(url)`. El vínculo profundo también se puede pasar a través de una acción `OpenURL` en la tarjeta.
 
 ### <a name="syntax"></a>Sintaxis
 
-A continuación se muestra la sintaxis de deeplink:
+A continuación se muestra la sintaxis de vínculo profundo:
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### <a name="examples"></a>Ejemplos
 
-Cuando un usuario escribe una dirección URL, se desplegó en una tarjeta adaptable.
+Cuando un usuario escribe una dirección URL, se despliega en una tarjeta adaptable.
 
-A continuación se muestran los ejemplos de vínculos profundos para invocar la vista de fase:
+Estos son los ejemplos de vínculos profundos para invocar la Vista extendida:
 
-**Ejemplo 1: Dirección URL con threadId**
+**Ejemplo 1: dirección URL con threadId**
 
-Dirección URL no codificada:
+Dirección URL sin codificar:
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 Dirección URL codificada:
 
@@ -117,45 +117,45 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 **Ejemplo 2: Dirección URL sin threadId**
 
-Dirección URL no codificada:
+Dirección URL sin codificar:
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
 
 Codificado
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
 > [!NOTE]
-> Todos los vínculos profundos deben codificarse antes de pegar la dirección URL. No se admiten direcciones URL no codificadas.
+> Todos los vínculos profundos deben codificarse antes de pegar la dirección URL. No se admiten direcciones URL sin codificar.
 >
-> * `name` es opcional en vínculo profundo. Si no se incluye, el nombre de la aplicación lo reemplaza.
-> * El vínculo profundo también se puede pasar a través de una `OpenURL` acción.
-> * Al iniciar una fase desde un contexto determinado, asegúrese de que la aplicación funciona en ese contexto. Por ejemplo, si la vista de fase se inicia desde una aplicación personal, debes asegurarte de que la aplicación tiene un ámbito personal.
+> * El `name` es opcional en el vínculo profundo. Si no se incluye, el nombre de la aplicación lo reemplaza.
+> * El vínculo profundo también se puede pasar a través de una acción `OpenURL`.
+> * Al iniciar una fase desde un contexto determinado, cerciórese de que la aplicación funciona en ese contexto. Por ejemplo, si la Vista extendida se inicia desde una aplicación personal, debe cerciorarse de que la aplicación tiene un ámbito personal.
 
-## <a name="tab-information-property"></a>Propiedad de información de tabulación
+## <a name="tab-information-property"></a>Propiedad de información de pestaña
 
 | Nombre de propiedad | Tipo | Número de caracteres | Descripción |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
 | `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz del canal. Este campo es opcional.|
-| `contentUrl` | String | 2048 | Esta propiedad es la dirección URL de https:// que apunta a la interfaz de usuario de la entidad que se mostrará en el lienzo de Teams. Este campo es obligatorio.|
-| `websiteUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL https:// a la que apuntar, si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
-| `removeUrl?` | String | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario que se mostrará cuando el usuario elimine la pestaña. Este es un campo opcional.|
+| `contentUrl` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se mostrará en el lienzo de Teams. Este campo es obligatorio.|
+| `websiteUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL de https:// a la que apuntar si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
+| `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL de https:// que apunta a la interfaz de usuario que se mostrará cuando el usuario elimine la pestaña. Se trata de un campo opcional.|
 
 ## <a name="code-sample"></a>Ejemplo de código
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Pestaña en la vista de fase |Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña en la vista de fase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Pestaña en la vista extendida |Aplicación de ejemplo de pestaña de Microsoft Teams para mostrar la pestaña en la vista extendida.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Se desplegó el vínculo de extensiones de mensaje](~/messaging-extensions/how-to/link-unfurling.md)
-* [pestañas de Teams](~/tabs/what-are-tabs.md)
+* [Vínculo extensiones de mensaje desenlazándose](~/messaging-extensions/how-to/link-unfurling.md)
+* [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Crear una pestaña de grupo o canal personalizado](~/tabs/how-to/create-channel-group-tab.md)

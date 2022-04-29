@@ -1,70 +1,70 @@
 ---
 title: Referencias API de aplicaciones de reuniones
 author: surbhigupta
-description: Identificar las referencias de api de aplicaciones de reunión con ejemplos y ejemplos de código
+description: Identificación de las referencias de API de aplicaciones de reuniones con ejemplos y muestras de código
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: medium
-keywords: consulta de señal de notificación de contexto de usuario de las reuniones de aplicaciones de teams
-ms.openlocfilehash: 150a0bec1d8566392914ffeaf4990de21e3ec7de
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: teams aplicaciones reuniones usuario participante rol api usuario contexto notificación señal consulta
+ms.openlocfilehash: 4f04d94d5fd9d1b38f7569db658fac10ccaa2650
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464255"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111356"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
-La extensibilidad de la reunión proporciona API para mejorar la experiencia de la reunión. Puede realizar lo siguiente con la ayuda de las API enumeradas:
+La extensibilidad de la reunión proporciona API para mejorar la experiencia de reunión. Puede realizar lo siguiente con la ayuda de las API enumeradas:
 
-* Cree aplicaciones o integre aplicaciones existentes en el ciclo de vida de la reunión.
-* Usa las API para que tu aplicación tenga en cuenta la reunión.
-* Seleccione las API necesarias para mejorar la experiencia de la reunión.
+* Cree aplicaciones o integre aplicaciones existentes dentro del ciclo de vida de las reuniones.
+* Use las API para que la aplicación sea consciente de la reunión.
+* Seleccione las API necesarias para mejorar la experiencia de reunión.
 
 > [!NOTE]
-> Use Teams [SDK de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) *(versión* 1.10 y posteriores) para que SSO funcione en el panel del lado de la reunión.
+> Use Teams [SDK de JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*versión*: 1.10 y posteriores) para que SSO funcione en el panel lateral de la reunión.
 
-En la tabla siguiente se proporciona una lista de API disponibles en los SDK de cliente de Microsoft Teams (MSTC) y Microsoft Bot Framework (MSBF):
+En la tabla siguiente se proporciona una lista de las API disponibles en los SDK de cliente de Microsoft Teams (MSTC) y Microsoft Bot Framework (MSBF):
 
 |Método| Descripción| Origen|
 |---|---|----|
-|[**Obtener contexto de usuario**](#get-user-context-api)| Obtenga información contextual para mostrar contenido relevante en una Teams pestaña.| MSTC SDK|
-|[**Obtener participante**](#get-participant-api)| Obtenga información del participante por identificador de reunión e identificador de participante. |MSBF SDK|
-|[**Enviar notificación en la reunión**](#send-an-in-meeting-notification)| Proporcione señales de reunión mediante la API de notificación de conversación existente para el chat de bots de usuario y permite notificar la acción del usuario que muestra una notificación en la reunión. |MSBF SDK|
+|[**Obtener el contexto de usuario**](#get-user-context-api)| Obtenga información contextual para mostrar contenido relevante en una pestaña de Teams.| MSTC SDK|
+|[**Obtener participante**](#get-participant-api)| Capture la información de los participantes por id. de reunión e id. de participante. |MSBF SDK|
+|[**Enviar notificación en la reunión**](#send-an-in-meeting-notification)| Proporciona señales de reunión utilizando la API de notificación de conversación existente para el chat de usuario-bot y permite notificar la acción del usuario que muestra una notificación en la reunión. |MSBF SDK|
 |[**Obtener detalles de la reunión**](#get-meeting-details-api)| Obtener los metadatos estáticos de una reunión. |MSBF SDK |
-|[**Enviar títulos en tiempo real**](#send-real-time-captions-api)| Enviar títulos en tiempo real a una reunión en curso. |MSTC SDK|
-|[**Compartir contenido de la aplicación en fase**](#share-app-content-to-stage-api)| Compartir partes específicas de la aplicación a la fase de reunión desde el panel lateral de la aplicación en una reunión. |MSTC SDK|
-|[**Obtener el estado de uso compartido de la fase de contenido de la aplicación**](#get-app-content-stage-sharing-state-api)| Obtenga información sobre el estado de uso compartido de la aplicación en la fase de reunión. |MSTC SDK|
-|[**Obtener capacidades de uso compartido de fases de contenido de la aplicación**](#get-app-content-stage-sharing-capabilities-api)| Recupera las capacidades de la aplicación para compartir en la fase de reunión. |MSTC SDK|
-|[**Obtener eventos de reunión Teams en tiempo real**](#get-real-time-teams-meeting-events-api)|Capturar eventos de reunión en tiempo real, como la hora de inicio y finalización reales.| MSBF SDK|
+|[**Enviar subtítulos en tiempo real**](#send-real-time-captions-api)| Enviar subtítulos en tiempo real a una reunión en curso. |MSTC SDK|
+|[**Compartir contenido de la aplicación en la fase**](#share-app-content-to-stage-api)| Comparta partes específicas de la aplicación en la fase de reunión desde el panel lateral de la aplicación en una reunión. |MSTC SDK|
+|[**Obtener el estado de uso compartido del contenido de la aplicación**](#get-app-content-stage-sharing-state-api)| Obtenga información sobre el estado de uso compartido de la aplicación en la fase de reunión. |MSTC SDK|
+|[**Obtener funcionalidades de uso compartido de la fase de contenido de la aplicación**](#get-app-content-stage-sharing-capabilities-api)| Capture las capacidades de la aplicación para compartir en la fase de reunión. |MSTC SDK|
+|[**Obtener eventos de reunión de Teams en tiempo real**](#get-real-time-teams-meeting-events-api)|Capturar eventos de reunión en tiempo real, como la hora de inicio y finalización real.| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>Obtener API de contexto de usuario
 
-Para identificar y recuperar información contextual para el contenido de la pestaña, vea Obtener contexto para la pestaña [Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` Se usa en una pestaña que se ejecuta en el contexto de la reunión y se agrega para la carga de respuesta.
+Para identificar y recuperar información contextual del contenido de la pestaña, vea [obtener contexto para la pestaña de Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` se usa en una pestaña que se ejecuta en el contexto de la reunión y se agrega para la carga de respuesta.
 
-## <a name="get-participant-api"></a>Obtener API de participantes
+## <a name="get-participant-api"></a>Obtener API de participante
 
-La `GetParticipant` API debe tener un registro de bot y un identificador para generar tokens de autenticación. Para obtener más información, vea [registro e identificador del bot](../build-your-first-app/build-bot.md).
+La API de `GetParticipant` debe tener un identificador y un registro de bot para generar tokens de autenticación. Para obtener más información, consulte [el registro del bot y el identificador](../build-your-first-app/build-bot.md).
 
 > [!NOTE]
 >
-> * No almacenar en caché los roles de los participantes, ya que el organizador de la reunión puede cambiar los roles en cualquier momento.
-> * Actualmente, la `GetParticipant` API solo es compatible con listas de distribuciones o listas con menos de 350 participantes.
+> * No almacene en caché los roles de participante, ya que el organizador de la reunión puede cambiar los roles en cualquier momento.
+> * Actualmente, la `GetParticipant` API solo se admite para listas de distribuciones o listas con menos de 350 participantes.
 
 ### <a name="query-parameters"></a>Parámetros de consulta
 
 > [!TIP]
-> Obtenga identificadores de participantes e identificadores de inquilino de la [pestaña Autenticación de SSO](../tabs/how-to/authentication/auth-aad-sso.md).
+> Obtenga los identificadores de participante y los identificadores de inquilino de la [pestaña autenticación SSO](../tabs/how-to/authentication/auth-aad-sso.md).
 
-La `Meeting` API debe tener `meetingId`, `participantId`y como `tenantId` parámetros de dirección URL. Los parámetros están disponibles como parte de la actividad Teams SDK de cliente y bot.
+La `Meeting` API debe tener `meetingId`, `participantId`y `tenantId` como parámetros de dirección URL. Los parámetros están disponibles como parte del SDK de cliente de Teams y la actividad del bot.
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK.|
-|**participantId**| Cadena | Sí | El identificador de participante es el identificador de usuario. Está disponible en TAB SSO, Bot Invoke y Teams CLIENT SDK. Se recomienda obtener un identificador de participante del SSO de la pestaña. |
-|**tenantId**| String | Sí | El identificador de inquilino es necesario para los usuarios del espacio empresarial. Está disponible en TAB SSO, Bot Invoke y Teams CLIENT SDK. Se recomienda obtener un identificador de inquilino del SSO de la pestaña. |
+|**Id. de la reunión**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y el SDK de cliente de Teams.|
+|**Id. del participante**| Cadena | Sí | El id. de participante es el identificador de usuario. Está disponible en la pestaña SSO, Bot Invoke y Cliente SDK de Teams. Se recomienda obtener un ID de participante en la pestaña SSO. |
+|**tenantId**| Cadena | Sí | El identificador de inquilino es necesario para los usuarios del inquilino. Está disponible en la pestaña SSO, Bot Invoke y Cliente SDK de Teams. Se recomienda obtener un identificador de inquilino desde la pestaña SSO. |
 
 ### <a name="example"></a>Ejemplo
 
@@ -139,21 +139,21 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 
 |Código de respuesta|Descripción|
 |---|---|
-| **403** | Obtener información de participante no se comparte con la aplicación. Si la aplicación no está instalada en la reunión, desencadena la respuesta de error 403. Si el administrador del espacio empresarial deshabilita o bloquea la aplicación durante la migración del sitio en directo, desencadena la respuesta de error 403. |
+| **403** | La obtención de información de participantes no se comparte con la aplicación. Si la aplicación no está instalada en la reunión, desencadena la respuesta de error 403. Si el administrador de inquilinos deshabilita o bloquea la aplicación durante la migración del sitio activo, desencadena la respuesta de error 403. |
 | **200** | La información del participante se recupera correctamente.|
 | **401** | La aplicación responde con un token no válido.|
 | **404** | La reunión ha expirado o los participantes no están disponibles.|
 
 ## <a name="send-an-in-meeting-notification"></a>Enviar una notificación en la reunión
 
-Todos los usuarios de una reunión reciben las notificaciones enviadas a través de la carga de notificación en la reunión. La carga de notificación en la reunión desencadena una notificación en la reunión y le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bots de usuario. Puede enviar una notificación en la reunión en función de la acción del usuario. La carga está disponible a través de Bot Services.
+Todos los usuarios de una reunión reciben las notificaciones enviadas a través de la carga de notificación en la reunión. La carga de notificación en la reunión desencadena una notificación en la reunión y le permite proporcionar señales de reunión que se entregan mediante la API de notificación de conversación existente para el chat de bot de usuario. Puede enviar una notificación en la reunión en función de la acción del usuario. La carga está disponible a través de Bot Services.
 
 > [!NOTE]
 >
 > * Cuando se invoca una notificación en la reunión, el contenido se presenta como un mensaje de chat.
-> * Actualmente, no se admite el envío de notificaciones dirigidas ni compatibilidad con webapp.
-> * Debe invocar la [función submitTask() para](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) descartarla automáticamente después de que un usuario realiza una acción en la vista web. Este es un requisito para el envío de la aplicación. Para obtener más información, [vea Teams de tareas del SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * Si quieres que la aplicación admita usuarios anónimos, `from.id` `from` la carga inicial de la solicitud de invocación debe basarse en los metadatos de la solicitud en el objeto, no en los metadatos `from.aadObjectId` de la solicitud. `from.id`es el identificador de usuario y `from.aadObjectId` es el Microsoft Azure Active Directory (Azure AD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) [y crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * Actualmente, no se admite el envío de notificaciones dirigidas ni la compatibilidad con la aplicación web.
+> * Debe invocar la función [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) para descartarla automáticamente después de que un usuario realice una acción en la vista web. Este es un requisito para el envío de aplicaciones. Para obtener más información, vea [módulo de tareas del SDK de Teams](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * Si desea que la aplicación admita usuarios anónimos, la carga de solicitud de invocación inicial debe basarse en `from.id` metadatos de solicitud en `from` objeto, no `from.aadObjectId` metadatos de solicitud. `from.id` es el identificador de usuario y `from.aadObjectId` es el identificador de Microsoft Azure Active Directory (Azure AD) del usuario. Para obtener más información, vea [usar módulos de tareas en pestañas](../task-modules-and-cards/task-modules/task-modules-tabs.md) y [crear y enviar el módulo de tareas](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -161,17 +161,17 @@ En la tabla siguiente se incluyen los parámetros de consulta:
 
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**conversationId**| String | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
+|**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
 ### <a name="examples"></a>Ejemplos
 
-Se `Bot ID` declara en el manifiesto y el bot recibe un objeto result.
+El `Bot ID` se declara en el manifiesto y el bot recibe un objeto de resultado.
 
 > [!NOTE]
 >
-> * El `completionBotId` parámetro de la es `externalResourceUrl` opcional en el ejemplo de carga solicitada.
-> * Los `externalResourceUrl` parámetros de ancho y alto deben estar en píxeles. Para obtener más información, consulte [Directrices de diseño](design/designing-apps-in-meetings.md).
-> * La dirección URL es la página, que se carga como `<iframe>` en la notificación en la reunión. El dominio debe estar en la matriz de aplicaciones `validDomains` en el manifiesto de la aplicación.
+> * El `completionBotId` parámetro de `externalResourceUrl` es opcional en el ejemplo de carga solicitada.
+> * Los `externalResourceUrl` parámetros de ancho y alto deben estar en píxeles. Para obtener más información, vea [instrucciones de diseño](design/designing-apps-in-meetings.md).
+> * La dirección URL es la página, que se carga como `<iframe>` en la notificación en la reunión. El dominio debe estar en la matriz `validDomains` de las aplicaciones en el manifiesto de la aplicación.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -224,28 +224,28 @@ En la tabla siguiente se incluyen los códigos de respuesta:
 
 |Código de respuesta|Descripción|
 |---|---|
-| **201** | La actividad con señal se envía correctamente. |
+| **201** | La actividad con señal se ha enviado correctamente. |
 | **401** | La aplicación responde con un token no válido. |
-| **403** | La aplicación no puede enviar la señal. El código de respuesta 403 puede producirse debido a diversos motivos, como que el administrador de inquilinos deshabilita y bloquea la aplicación durante la migración de sitios en directo. En este caso, la carga contiene un mensaje de error detallado. |
-| **404** | El chat de reunión no existe. |
+| **403** | La aplicación no puede enviar la señal. El código de respuesta 403 puede producirse debido a varias razones, como que el administrador de inquilinos deshabilite y bloquee la aplicación durante la migración del sitio en vivo. En este caso, la carga contiene un mensaje de error detallado. |
+| **404** | El chat de la reunión no existe. |
 
-## <a name="get-meeting-details-api"></a>Obtener la API de detalles de la reunión
+## <a name="get-meeting-details-api"></a>Api de obtención de detalles de la reunión
 
-La API de detalles de la reunión permite a la aplicación obtener los metadatos estáticos de una reunión. Los metadatos proporcionan puntos de datos que no cambian dinámicamente. La API está disponible a través de Bot Services. Actualmente, las reuniones privadas programadas o periódicas y las reuniones programadas o periódicas de canal admiten API con diferentes permisos RSC respectivamente.
+La API de detalles de la reunión permite a la aplicación obtener los metadatos estáticos de una reunión. Los metadatos proporcionan puntos de datos que no cambian dinámicamente. La API está disponible a través de Bot Services. Actualmente, las reuniones privadas programadas o periódicas y las reuniones programadas o periódicas de canal admiten la API con diferentes permisos de RSC, respectivamente.
 
-La `Meeting Details` API debe tener un registro de bot e id. de bot. Requiere bot SDK para obtener `TurnContext`. Para usar la API de detalles de reunión, debe obtener distintos permisos de RSC en función del ámbito de cualquier reunión, como reunión privada o reunión de canal.
+La `Meeting Details` API debe tener un registro de bot y un identificador de bot. Requiere bot SDK para obtener `TurnContext`. Para usar la API Detalles de la reunión, debe obtener distintos permisos RSC en función del ámbito de cualquier reunión, como una reunión privada o una reunión de canal.
 
 ### <a name="prerequisite"></a>Requisito previo
 
-Para usar la API de detalles de reunión, debe obtener distintos permisos de RSC en función del ámbito de cualquier reunión, como reunión privada o reunión de canal.
+Para usar la API Detalles de la reunión, debe obtener distintos permisos RSC en función del ámbito de cualquier reunión, como una reunión privada o una reunión de canal.
 
 <br>
 
 <details>
 
-<summary><b>Para el manifiesto de la aplicación versión 1.12</b></summary>
+<summary><b>Para el manifiesto de aplicación versión 1.12</b></summary>
 
-Use el siguiente ejemplo para configurar las propiedades y el manifiesto de la aplicación `webApplicationInfo` `authorization` para cualquier reunión privada:
+Utilice el siguiente ejemplo para configurar los manifiestos `webApplicationInfo` y `authorization`  propiedades de su aplicación para cualquier reunión privada:
 
 ```json
 "webApplicationInfo": {
@@ -264,7 +264,7 @@ Use el siguiente ejemplo para configurar las propiedades y el manifiesto de la a
 }
  ```
 
-Use el siguiente ejemplo para configurar las propiedades y el manifiesto de la aplicación `webApplicationInfo` `authorization` para cualquier reunión de canal:
+Utilice el siguiente ejemplo para configurar los manifiestos `webApplicationInfo` y `authorization` propiedades de su aplicación para cualquier reunión de canal:
 
 ```json
 "webApplicationInfo": {
@@ -291,9 +291,9 @@ Use el siguiente ejemplo para configurar las propiedades y el manifiesto de la a
 
 <details>
 
-<summary><b>Para el manifiesto de la aplicación versión 1.11 o anterior</b></summary>
+<summary><b>Para el manifiesto de aplicación versión 1.11 o anterior</b></summary>
 
-Use el siguiente ejemplo para configurar la propiedad del manifiesto de la aplicación `webApplicationInfo` para cualquier reunión privada:
+Use el ejemplo siguiente para configurar la propiedad `webApplicationInfo` del manifiesto de la aplicación para cualquier reunión privada:
 
 ```json
 "webApplicationInfo": {
@@ -305,7 +305,7 @@ Use el siguiente ejemplo para configurar la propiedad del manifiesto de la aplic
 }
  ```
 
-Use el siguiente ejemplo para configurar la propiedad del manifiesto de la aplicación `webApplicationInfo` para cualquier reunión de canal:
+Use el ejemplo siguiente para configurar la propiedad `webApplicationInfo` del manifiesto de la aplicación para cualquier reunión de canal:
 
 ```json
 "webApplicationInfo": {
@@ -322,7 +322,7 @@ Use el siguiente ejemplo para configurar la propiedad del manifiesto de la aplic
 </details>
 
 > [!NOTE]
-> El bot puede recibir eventos de inicio o finalización de reunión automáticamente de todas las reuniones creadas en todos los canales `ChannelMeeting.ReadBasic.Group` agregando un manifiesto para el permiso RSC.
+> El bot puede recibir automáticamente eventos de inicio o finalización de reuniones de todas las reuniones creadas en todos los canales agregando `ChannelMeeting.ReadBasic.Group` al manifiesto para el permiso RSC.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -330,7 +330,7 @@ En la tabla siguiente se muestra el parámetro de consulta:
 
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**meetingId**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. |
+|**Id. de la reunión**| Cadena | Sí | El identificador de reunión está disponible a través de Bot Invoke y el SDK de cliente de Teams. |
 
 ### <a name="example"></a>Ejemplo
 
@@ -351,7 +351,7 @@ No disponible
 GET /v1/meetings/{meetingId}
 ```
 
-El cuerpo de la respuesta JSON para la API de detalles de reunión es el siguiente:
+El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el siguiente:
 
 ```json
 { 
@@ -381,19 +381,19 @@ El cuerpo de la respuesta JSON para la API de detalles de reunión es el siguien
 
 ## <a name="send-real-time-captions-api"></a>Enviar API de subtítulos en tiempo real
 
-La API de envío de títulos en tiempo real expone un punto de conexión POST para títulos de traducción en tiempo real (CART) de acceso Microsoft Teams comunicación, títulos cerrados con tipo humano. El contenido de texto enviado a este punto de conexión aparece para los usuarios finales en una reunión Microsoft Teams cuando tienen títulos habilitados.
+La API de envío de subtítulos en tiempo real expone un punto final POST para que la comunicación de Microsoft Teams acceda a subtítulos de traducción en tiempo real (CART), subtítulos cerrados escritos por humanos. El contenido de texto enviado a este punto de conexión aparece para los usuarios finales en una reunión de Microsoft Teams cuando tienen los subtítulos habilitados.
 
-### <a name="cart-url"></a>DIRECCIÓN URL DEL CARRO
+### <a name="cart-url"></a>DIRECCIÓN URL CART
 
-Puede obtener la dirección URL de CART para el extremo POST desde la **página Opciones de** reunión en una Microsoft Teams reunión. Para obtener más información, vea [Títulos cart en una Microsoft Teams reunión](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). No es necesario modificar la dirección URL del CARRO para usar los títulos CART.
+Puede obtener la dirección URL CART para el punto de conexión POST desde la página **Opciones de reunión** en una reunión de Microsoft Teams. Para obtener más información, vea [subtítulos CART en una reunión de Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). No es necesario modificar la dirección URL de CART para usar subtítulos CART.
 
-#### <a name="query-parameter"></a>Parámetro Query
+#### <a name="query-parameter"></a>Parámetro de consulta
 
 La dirección URL de CART incluye los siguientes parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|----|
-|**meetingId**| Cadena | Sí |El identificador de reunión está disponible a través de Bot Invoke y Teams CLIENT SDK. <br/>Por ejemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42441-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**Id. de la reunión**| Cadena | Sí |El identificador de reunión está disponible a través de Bot Invoke y el SDK de cliente de Teams. <br/>Por ejemplo, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| Cadena | Sí |Token de autorización.<br/> Por ejemplo, token=04751eac |
 
 #### <a name="example"></a>Ejemplo
@@ -404,12 +404,12 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>Método
 
-|Recurso|Método|Descripción|
+|Resource|Método|Descripción|
 |----|----|----|
-|/cartcaption|POST|Controlar los títulos de la reunión, que se inició|
+|/cartcaption|POST|Controlar los subtítulos de la reunión, que se inició|
 
 > [!NOTE]
-> Asegúrese de que el tipo de contenido de todas las solicitudes es texto sin formato con codificación UTF-8. El cuerpo de la solicitud solo contiene títulos.
+> Asegúrese de que el tipo de contenido de todas las solicitudes es texto sin formato con codificación UTF-8. El cuerpo de la solicitud solo contiene subtítulos.
 
 #### <a name="example"></a>Ejemplo
 
@@ -422,7 +422,7 @@ Hello I’m Cortana, welcome to my meeting.
 ```
 
 > [!Note]  
-> Cada solicitud POST genera una nueva línea de títulos. Para asegurarse de que el usuario final tiene suficiente tiempo para leer el contenido, limite cada cuerpo de solicitud POST a 80-120 caracteres.
+> Cada solicitud POST genera una nueva línea de títulos. Para asegurarse de que el usuario final tiene tiempo suficiente para leer el contenido, limite cada cuerpo de la solicitud POST a 80-120 caracteres.
 
 ### <a name="error-codes"></a>Códigos de error
 
@@ -430,18 +430,18 @@ En la tabla siguiente se proporcionan los códigos de error:
 
 |Código de error|Descripción|
 |---|---|
-| **400** | Solicitud mala. El cuerpo de la respuesta tiene más información. Por ejemplo, no se presentan todos los parámetros necesarios.|
-| **401** | No autorizado. Token mal o expirado. Si recibe este error, genere una nueva dirección URL de CART en Teams. |
-| **404** | Reunión no encontrada o no iniciada. Si recibe este error, asegúrese de iniciar la reunión y seleccionar los títulos de inicio. Después de habilitar los títulos en la reunión, puede empezar a crear títulos de posting en la reunión.|
+| **400** | Solicitud incorrecta. El cuerpo de la respuesta tiene más información. Por ejemplo, no de todos los parámetros necesarios presentados.|
+| **401** | No autorizado. Token incorrecto o expirado. Si recibe este error, genere una nueva dirección URL de CART en Teams. |
+| **404** | Reunión no encontrada o no iniciada. Si recibe este error, asegúrese de iniciar la reunión y seleccione Iniciar subtítulos. Después de habilitar los subtítulos en la reunión, puede empezar a colocar subtítulos en la reunión.|
 | **500** |Error interno del servidor. Para obtener más información, [póngase en contacto con el soporte técnico o proporcione comentarios](../feedback.md).|
 
-## <a name="share-app-content-to-stage-api"></a>Compartir contenido de la aplicación para la API de fase
+## <a name="share-app-content-to-stage-api"></a>Compartir contenido de la aplicación para API de fase
 
-La `shareAppContentToStage` API te permite compartir partes específicas de la aplicación en la fase de reunión. La API está disponible a través del SDK Teams cliente.
+La `shareAppContentToStage` API le permite compartir partes específicas de la aplicación en la fase de reunión. La API está disponible a través del SDK de cliente de Teams.
 
 ### <a name="prerequisite"></a>Requisito previo
 
-*  Para usar la `shareAppContentToStage` API, debe obtener los permisos de RSC. En el manifiesto de la aplicación, configure la `authorization` propiedad y y `type` `name` en el `resourceSpecific` campo. Por ejemplo:
+*  Para usar la `shareAppContentToStage` API, debe obtener los permisos de RSC. En el manifiesto de la aplicación, configure la propiedad `authorization` y la `name` y `type` en el campo`resourceSpecific`. Por ejemplo:
 
     ```json
     "authorization": {
@@ -455,7 +455,7 @@ La `shareAppContentToStage` API te permite compartir partes específicas de la a
     }
     }
     ```
-*  `appContentUrl` debe permitirse mediante la `validDomains` matriz dentro de manifest.json, de lo contrario, la API devolvería 501.
+*  `appContentUrl` debe estar permitido por la `validDomains` matriz dentro de manifest.json, de lo contrario la API devolvería 501.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -463,7 +463,7 @@ En la tabla siguiente se incluyen los parámetros de consulta:
 
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o null cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un valor true, en caso de un recurso compartido correcto, o null cuando se produce un error en el recurso compartido.|
+|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o NULL cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un valor verdadero, en caso de un recurso compartido correcto, o NULL cuando se produce un error en el recurso compartido.|
 |**appContentURL**| Cadena | Sí | Dirección URL que se compartirá en la fase.|
 
 ### <a name="example"></a>Ejemplo
@@ -489,11 +489,11 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 |---|---|
 | **500** | Error interno. |
 | **501** | La API no se admite en el contexto actual.|
-| **1000** | La aplicación no tiene permisos adecuados para permitir el uso compartido en fase.|
+| **1000** | La aplicación no tiene los permisos adecuados para permitir que el recurso compartido se almacene provisionalmente.|
 
-## <a name="get-app-content-stage-sharing-state-api"></a>Obtener api de estado de uso compartido de fase de contenido de la aplicación
+## <a name="get-app-content-stage-sharing-state-api"></a>Obtención de la API de estado de uso compartido de la fase de contenido de la aplicación
 
-La `getAppContentStageSharingState` API te permite obtener información sobre el uso compartido de aplicaciones en la fase de reunión.
+La `getAppContentStageSharingState` API le permite capturar información sobre el uso compartido de aplicaciones en la fase de reunión.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -501,7 +501,7 @@ En la tabla siguiente se incluyen los parámetros de consulta:
 
 |Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError*, en caso de error, o null cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un objeto `AppContentStageSharingState` , que indica una recuperación correcta, o null, que indica un error de recuperación.|
+|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError*, en caso de error, o NULL cuando el recurso compartido se realiza correctamente. El *resultado* puede contener un objeto `AppContentStageSharingState`, lo que indica una recuperación correcta, o nulo, que indica un error de recuperación.|
 
 ### <a name="example"></a>Ejemplo
 
@@ -513,7 +513,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
 });
 ```
 
-El cuerpo de la respuesta JSON para la `getAppContentStageSharingState` API es:
+El cuerpo de la respuesta JSON para la API de `getAppContentStageSharingState` es:
 
 ```json
 {
@@ -529,19 +529,19 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 |---|---|
 | **500** | Error interno. |
 | **501** | La API no se admite en el contexto actual.|
-| **1000** | La aplicación no tiene permisos adecuados para permitir el uso compartido en fase.|
+| **1000** | La aplicación no tiene los permisos adecuados para permitir que el recurso compartido se almacene provisionalmente.|
 
-## <a name="get-app-content-stage-sharing-capabilities-api"></a>Obtener API de funcionalidades de uso compartido de fase de contenido de la aplicación
+## <a name="get-app-content-stage-sharing-capabilities-api"></a>API de obtención de funcionalidades de uso compartido de la fase de contenido de la aplicación
 
-La `getAppContentStageSharingCapabilities` API te permite capturar las capacidades de la aplicación para compartir en la fase de reunión.
+La `getAppContentStageSharingCapabilities` API le permite capturar las funcionalidades de la aplicación para compartir en la fase de reunión.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
-|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o null cuando el recurso compartido se realiza correctamente. El resultado puede contener un objeto `AppContentStageSharingState` , que indica una recuperación correcta, o null, que indica un error de recuperación.|
+|**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o NULL cuando el recurso compartido se realiza correctamente. El resultado puede contener un `AppContentStageSharingState` objeto, que indica una recuperación correcta, o nulo, que indica que se ha producido un error en la recuperación.|
 
 ### <a name="example"></a>Ejemplo
 
@@ -553,7 +553,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 });
 ```
 
-El cuerpo de la respuesta JSON para `getAppContentStageSharingCapabilities` la API es:
+El cuerpo de respuesta JSON para `getAppContentStageSharingCapabilities` API es:
 
 ```json
 {
@@ -568,23 +568,23 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 |Código de respuesta|Descripción|
 |---|---|
 | **500** | Error interno. |
-| **1000** | La aplicación no tiene permisos para permitir el uso compartido en fase.|
+| **1000** | La aplicación no tiene permisos para permitir que el recurso compartido se almacene provisionalmente.|
 
-## <a name="get-real-time-teams-meeting-events-api"></a>Obtener API de eventos de Teams en tiempo real
+## <a name="get-real-time-teams-meeting-events-api"></a>Obtener API de eventos de reunión de Teams en tiempo real
 
-El usuario puede recibir eventos de reunión en tiempo real. Tan pronto como cualquier aplicación está asociada a una reunión, la hora real de inicio y finalización de la reunión se comparten con el bot. La hora real de inicio y finalización de una reunión es diferente de la hora de inicio y finalización programadas. La API de detalles de la reunión proporciona la hora de inicio y finalización programadas. El evento proporciona la hora de inicio y finalización reales.
+El usuario puede recibir eventos de reunión en tiempo real. En cuanto una aplicación se asocia a una reunión, la hora real de inicio y fin de la misma se comparte con el bot. La hora de inicio y finalización real de una reunión es diferente de la hora de inicio y finalización programada. La API de detalles de la reunión proporciona la hora de inicio y finalización programada. El evento proporciona la hora de inicio y finalización real.
 
-Debe estar familiarizado con el objeto `TurnContext` disponible a través del SDK de Bot. El `Activity` objeto en `TurnContext` contiene la carga con la hora de inicio y finalización real. Los eventos de reunión en tiempo real requieren un identificador de bot registrado de la Teams plataforma. El bot puede recibir automáticamente el evento de inicio o finalización de la reunión agregando `ChannelMeeting.ReadBasic.Group` en el manifiesto.
+Debe estar familiarizado con el objeto `TurnContext` disponible a través de Bot SDK. El `Activity` objeto de `TurnContext` contiene la carga útil con la hora de inicio y finalización reales. Los eventos de reunión en tiempo real requieren un identificador de bot registrado de la plataforma Teams. El bot puede recibir automáticamente el evento de inicio o finalización de la reunión agregando `ChannelMeeting.ReadBasic.Group` en el manifiesto.
 
 ### <a name="prerequisite"></a>Requisito previo
 
-El manifiesto de la aplicación debe tener la `webApplicationInfo` propiedad para recibir los eventos de inicio y finalización de la reunión. Use los siguientes ejemplos para configurar el manifiesto:
+El manifiesto de la aplicación debe tener la propiedad `webApplicationInfo` para recibir los eventos de inicio y finalización de la reunión. Use los ejemplos siguientes para configurar el manifiesto:
 
 <br>
 
 <details>
 
-<summary><b>Para el manifiesto de la aplicación versión 1.12</b></summary>
+<summary><b>Para el manifiesto de aplicación versión 1.12</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -611,7 +611,7 @@ El manifiesto de la aplicación debe tener la `webApplicationInfo` propiedad par
 
 <details>
 
-<summary><b>Para el manifiesto de la aplicación versión 1.11 o anterior</b></summary>
+<summary><b>Para el manifiesto de aplicación versión 1.11 o anterior</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -629,17 +629,17 @@ El manifiesto de la aplicación debe tener la `webApplicationInfo` propiedad par
 
 ### <a name="example-of-getting-meetingstartendeventvalue"></a>Ejemplo de obtención `MeetingStartEndEventvalue`
 
-El bot recibe un evento a través del `OnEventActivityAsync` controlador. Para deserializar la carga JSON, se introduce un objeto de modelo para obtener los metadatos de una reunión. Los metadatos de una reunión se encuentra en la `value` propiedad de la carga del evento. Se `MeetingStartEndEventvalue` crea el objeto model, cuyas variables de miembro corresponden a las claves de la `value` propiedad en la carga del evento.
+El bot recibe el evento a través del controlador de `OnEventActivityAsync`. Para deserializar la carga JSON, se introduce un objeto de modelo para obtener los metadatos de una reunión. Los metadatos de una reunión están en la propiedad `value` de la carga del evento. Se crea el objeto de modelo `MeetingStartEndEventvalue`, cuyas variables miembro corresponden a las claves de la propiedad `value` en la carga del evento.
 
 > [!NOTE]
 >
-> * Obtener el identificador de reunión de `turnContext.ChannelData`.
-> * No use el identificador de conversación como identificador de reunión.
-> * No use el identificador de reunión de la carga de eventos de reunión `turncontext.activity.value`.
+> * Obtener id. de reunión de `turnContext.ChannelData`.
+> * No use el identificador de conversación como id. de reunión.
+> * No use el id. de reunión de la carga de eventos de reunión `turncontext.activity.value`.
 
-El código siguiente muestra cómo capturar los `MeetingType`metadatos de una reunión que es , `Title`, `Id`, `JoinUrl`, y `StartTime``EndTime` desde un evento de inicio y finalización de la reunión:
+En el código siguiente se muestra cómo capturar los metadatos de una reunión `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, y `EndTime` de un evento de inicio y finalización de la reunión:
 
-Evento Inicio de reunión
+Evento de inicio de reunión
 
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
@@ -709,9 +709,9 @@ El código siguiente proporciona un ejemplo de carga del evento de inicio de reu
 }
 ```
 
-### <a name="example-of-meeting-end-event-payload"></a>Ejemplo de carga del evento de fin de reunión
+### <a name="example-of-meeting-end-event-payload"></a>Ejemplo de carga del evento de finalización de la reunión
 
-El código siguiente proporciona un ejemplo de carga del evento de fin de reunión:
+El código siguiente proporciona un ejemplo de carga del evento de finalización de la reunión:
 
 ```json
 { 
@@ -765,20 +765,20 @@ El código siguiente proporciona un ejemplo de carga del evento de fin de reuni�
 
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilidad de reuniones | Microsoft Teams extensibilidad de reunión para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de burbuja de contenido de reunión | Microsoft Teams de extensibilidad de reuniones para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| MeetingSidePanel | Microsoft Teams de extensibilidad de reuniones para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Ficha Detalles en reunión | Microsoft Teams extensibilidad de reuniones para interactuar con la pestaña Detalles en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|Ejemplo de eventos de reunión|Aplicación de ejemplo para mostrar eventos de Teams en tiempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
-|Ejemplo de contratación de reuniones|Aplicación de ejemplo para mostrar la experiencia de reunión para el escenario de contratación.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
-|Instalación de aplicaciones con código QR|Aplicación de ejemplo que genera el código QR e instala la aplicación con el código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
+| Extensibilidad de reuniones | Ejemplo de extensibilidad de reuniones de Microsoft Teams para pasar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bot de burbuja de contenido de reunión | Ejemplo de extensibilidad de reuniones de Microsoft Teams para interactuar con el bot de burbujas de contenido en una reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| MeetingSidePanel de la reunión | Ejemplo de extensibilidad de reuniones de Microsoft Teams para interactuar con el panel lateral en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Pestaña Detalles de la reunión | Ejemplo de extensibilidad de reuniones de Microsoft Teams para interactuar con la pestaña Detalles en la reunión. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|Ejemplo de eventos de reunión|Aplicación de ejemplo para mostrar eventos de reunión de Teams en tiempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+|Muestra de contratación de reuniones|Ejemplo de aplicación para mostrar la experiencia de la reunión para el escenario de la contratación.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
+|Instalación de la aplicación con código QR|Aplicación de ejemplo que genera el código QR e instala la aplicación con el código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
 ## <a name="see-also"></a>Consulte también
 
-* [Teams de autenticación para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para reuniones de Teams](teams-apps-in-meetings.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
-> [Habilitar y configurar las aplicaciones para Teams reuniones](enable-and-configure-your-app-for-teams-meetings.md)
+> [Habilitar y configurar las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
