@@ -1,27 +1,27 @@
 ---
 title: Localizar la referencia de esquema JSON
-description: Describe el esquema de localización admitido por el archivo de localización para Microsoft Teams mediante un esquema de ejemplo
+description: Describe el esquema de localización compatible con el archivo de localización para Microsoft Teams mediante un esquema de ejemplo.
 ms.topic: reference
-ms.localizationpriority: medium
-keywords: localización del esquema de manifiesto de teams
+ms.localizationpriority: high
+keywords: localización del esquema de manifiesto de Teams
 ms.date: 05/20/2019
-ms.openlocfilehash: cbe408deb8788c9b047eb6bd954f79c73dbd057f
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
+ms.openlocfilehash: cf55754b5f9b30508bc01184d75f489dc2a5b7b7
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768395"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111916"
 ---
 # <a name="localize-json-schema-reference"></a>Localizar la referencia de esquema JSON
 
-El Microsoft Teams de localización describe las traducciones de idioma que se sirven en función de la configuración del idioma del cliente. El archivo debe cumplir con el esquema hospedado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) .
+El archivo de localización de Microsoft Teams describe las traducciones de idioma que se proporcionan en función de la configuración del idioma del cliente. El manifiesto debe ajustarse al esquema alojado en [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json).
 
 > [!TIP]
-> Especifique el esquema al principio del manifiesto para habilitar o `IntelliSense` compatibilidad similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> Especifique el esquema al principio del manifiesto para habilitar `IntelliSense` o una compatibilidad similar desde el editor de código: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="example"></a>Ejemplo
 
-Ejemplo de esquema JSON de localización es el siguiente:
+El ejemplo de localización de esquema JSON es el siguiente:
 
 ```json
 {
@@ -42,24 +42,24 @@ El esquema define las siguientes propiedades:
 
 |Propiedad|Tipo|Longitud máxima|Descripción|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|N/D|La https:// url que hace referencia al esquema JSON para el manifiesto.|
-|`name.short`|String|30|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`name.full`|Cadena|100|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`description.short`|String|80|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`description.full`|Cadena|4000|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|String|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|String|32|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title`|String|32|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title`|String|32|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|String|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|Cadena|512|Reemplaza la cadena correspondiente del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Reemplaza las cadenas correspondientes del manifiesto de la aplicación por el valor proporcionado aquí.|
-|`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|Cadena|128|Una breve descripción de la notificación|
-|`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
+|`$schema`|URI|ND|Dirección URL https:// que hace referencia al esquema JSON para el manifiesto.|
+|`name.short`|Cadena|30|Reemplaza la cadena correspondiente del manifiesto de aplicación por el valor proporcionado aquí.|
+|`name.full`|Cadena|100|Reemplaza la cadena correspondiente del manifiesto de aplicación por el valor proporcionado aquí.|
+|`description.short`|Cadena|80|Reemplaza la cadena correspondiente del manifiesto de aplicación por el valor proporcionado aquí.|
+|`description.full`|Cadena|4000|Reemplaza la cadena correspondiente del manifiesto de aplicación por el valor proporcionado aquí.|
+|`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|Cadena|32|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title`|Cadena|32|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title`|Cadena|32|Reemplaza la cadena correspondiente del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|Cadena|512|Reemplaza la cadena correspondiente del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|Cadena|128|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|Cadena|64|Reemplaza las cadenas correspondientes del manifiesto de aplicación por el valor proporcionado aquí.|
+|`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|Cadena|128|Una breve descripción de la notificación.|
+|`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|Cadena|128|P. ej.: " {actor} creó la tarea {taskId} para usted"|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Localizar la aplicación](~/concepts/build-and-test/apps-localization.md)

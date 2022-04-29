@@ -1,21 +1,21 @@
 ---
 title: Tarjetas y módulos de tareas
-description: Obtenga información sobre los tipos de tarjetas admitidas en bots para Teams, como, tarjetas adaptables, tarjeta de héroe, tarjeta miniatura, etc. Obtenga información sobre acciones de tarjetas e invocar módulos de tareas en canales, bots o vínculos profundos.
+description: Obtenga información sobre los tipos de tarjetas compatibles con bots para Teams, como tarjetas adaptables, tarjeta de héroe, tarjeta de miniatura y mucho más. Obtenga información sobre las acciones de tarjeta y la invocación de módulos de tareas en canales, bots o vínculos profundos.
 author: surbhigupta12
 ms.topic: conceptual
-ms.localizationpriority: medium
-ms.openlocfilehash: 516ca3a0fbfc1e1fb386632eb06c1c3a60918485
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 42e8ecc32d873a951aac15d79185384481a4dfb8
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399047"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111888"
 ---
 # <a name="cards-and-task-modules"></a>Tarjetas y módulos de tareas
 
-Las tarjetas proporcionan a los usuarios diversos mensajes visuales, de audio y seleccionables y ayuda en el flujo de conversación.
+Las tarjetas proporcionan a los usuarios varios mensajes visuales, de audio y seleccionables y además ayudan con el flujo a de la conversación.
 
-Con los módulos de tareas, puede crear experiencias emergentes modales en Microsoft Teams. Son útiles para iniciar y completar las tareas, o para mostrar información enriquecte como vídeos o paneles de Power Business Intelligence (BI).
+Con los módulos de tareas, puede crear experiencias emergentes modales en Microsoft Teams. Son especialmente útiles para iniciar y completar tareas o mostrar información completa, como vídeos o paneles de Power BI (inteligencia empresarial).
 
 Los siguientes tipos de tarjetas se admiten en bots para Teams:
 
@@ -28,17 +28,17 @@ Los siguientes tipos de tarjetas se admiten en bots para Teams:
 * Tarjeta miniatura
 * Colecciones de tarjetas
 
-Puede dar formato al texto de la tarjeta con un subconjunto de formato XML o HTML o Markdown según el tipo de tarjeta.
+Puede dar formato a una tarjeta mediante un subconjunto de formato XML, HTML o Markdown, según el tipo de tarjeta.
 
-[El Selector de personas en tarjetas](cards/people-picker.md) adaptables en tarjeta adaptable ayuda a buscar, seleccionar, reasignar y preseleccionar usuarios dentro del chat o canal.
+[Selector de personas en tarjetas adaptables](cards/people-picker.md) en tarjeta adaptable ayuda a buscar, seleccionar, reasignar y preseleccionar usuarios en el chat o canal.
 
 Puede agregar y responder a acciones de tarjeta que:
 
-* Abrir una dirección URL
-* Enviar mensajes y carga al bot
-* Iniciar flujo de OAuth
+* Abran una dirección URL
+* Envíen mensajes y carga útil al bot
+* Inicien un flujo de OAuth
 
-Puede proporcionar experiencia [de búsqueda](~/task-modules-and-cards/cards/dynamic-search.md) dinámica en un conjunto de datos de gran tamaño mediante el control de tipo delante en tarjetas adaptables y realizar búsquedas estáticas de tipo por delante dentro de un número limitado de opciones. Puede invocar los módulos de tareas en pestañas de canal o personales, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos puede mejorarse agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde Teams bots usando botones en tarjetas adaptables y tarjetas de Bot Framework.
+Puede proporcionar experiencia de [búsqueda dinámica](~/task-modules-and-cards/cards/dynamic-search.md) dentro de un conjunto de datos grande mediante el control de tipo por adelantado en tarjetas adaptables y realizar una búsqueda estática de tipo adelantado dentro de un número limitado de opciones. Puede invocar los módulos de tareas en pestañas personales o de canal, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos se puede mejorar agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde bots de Teams mediante botones en tarjetas adaptables y tarjetas de Bot Framework.
 
 ## <a name="see-also"></a>Vea también
 

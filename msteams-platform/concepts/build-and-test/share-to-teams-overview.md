@@ -2,14 +2,14 @@
 title: Información general sobre el uso compartido en Teams
 description: Describe cómo crear el botón compartir a equipos
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: Información general sobre el uso compartido en Teams
-ms.openlocfilehash: 24bc48c348efb4d2cbb7b3a88353824b56c6aaf0
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: fb32399139f67bfef52bca085d21df52194a93f8
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685715"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111720"
 ---
 # <a name="share-to-teams"></a>Compartir en Teams
 
@@ -24,18 +24,18 @@ Puede habilitar esta característica en lo siguiente:
 * Aplicaciones web
 * Aplicación o pestaña personal
 
-## <a name="share-to-teams-from-web-apps"></a>Uso compartido en Teams desde aplicaciones web
+## <a name="share-to-teams-from-web-apps"></a>Compartir en Teams desde aplicaciones web
 
-Puede insertar el botón Compartir en Teams en las aplicaciones web que permite a los usuarios compartir el contenido de las aplicaciones web con cualquier chat, chat de grupo o canal en Teams, sin cambiar el contexto.
+Puede insertar el botón Compartir en Teams en las aplicaciones web que permiten a los usuarios compartir el contenido de las aplicaciones web con cualquier chat, chat de grupo o canal en Teams, sin cambiar el contexto.
 
-Para obtener más información, consulte [Uso compartido para Teams desde aplicaciones web](share-to-teams-from-web-apps.md).
+Para obtener más información, consulte [Uso compartido en Teams desde aplicaciones web](share-to-teams-from-web-apps.md).
 
-## <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación o pestaña personal
+## <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación personal o una pestaña
 
-Puede insertar el botón Compartir en Teams en la aplicación personal o pestaña hospedada dentro de Teams que permite a los usuarios compartir el contenido desde la aplicación o pestaña personal a cualquier chat, chat de grupo o canal en Teams sin cambiar el contexto.
+Puede insertar el botón Compartir en Teams en la aplicación o pestaña personal hospedada dentro de Teams que permite a los usuarios compartir el contenido desde la aplicación o pestaña personal a cualquier chat, chat de grupo o canal de Teams sin cambiar el contexto.
 
-Para obtener más información, vea [Compartir con Teams desde la pestaña o aplicación personal](share-to-teams-from-personal-app-or-tab.md).
+Para obtener más información, consulte [Compartir con Teams desde la pestaña o aplicación personal](share-to-teams-from-personal-app-or-tab.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Compartir en Teams página para desarrolladores](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)
+[Página para desarrolladores de Compartir en Teams ](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)

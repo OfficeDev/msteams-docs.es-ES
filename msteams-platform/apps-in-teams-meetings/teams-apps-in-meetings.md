@@ -1,49 +1,49 @@
 ---
 title: Aplicaciones para reuniones de Teams
 author: surbhigupta
-description: introducción a las aplicaciones de Teams reuniones basadas en el rol de participante y usuario
+description: información general de las aplicaciones en las reuniones de Teams basadas en el rol de participante y usuario
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: medium
-keywords: teams apps meetings user participant role api
-ms.openlocfilehash: cdccc6eafdfad25b813ca08419981aec1a9ce18a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: API de rol de participante de usuario de reuniones de aplicaciones de teams
+ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103302"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111307"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para reuniones de Teams
 
 Las reuniones permiten la colaboración, la asociación, la comunicación informada y los comentarios compartidos. La aplicación de reunión puede ofrecer una experiencia de usuario para cada fase del ciclo de vida de la reunión. El ciclo de vida de la reunión incluye experiencias de la aplicación previas a la reunión, en la reunión y posteriores a la reunión, según el estado del asistente.
 
-Los usuarios pueden acceder a las aplicaciones durante las reuniones mediante la galería de pestañas desde su calendario, como:
+Los usuarios pueden acceder a las aplicaciones durante las reuniones mediante la galería de pestañas desde su calendario, tales como:
 
-* Preconfigurar un panel Kanban.
-* Inicie un cuadro de diálogo accionable en la reunión.
+* Preconfigurar un panel kanban.
+* Iniciar un cuadro de diálogo de acción en la reunión.
 * Cree una encuesta posterior a la reunión.
 
-En la ilustración siguiente se ofrece una idea de las características de extensibilidad de la aplicación de reunión:
+En la siguiente ilustración se ofrece una idea de las características de extensibilidad de la aplicación de reunión:
 
 ![Extensibilidad de la aplicación para reuniones](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-En este artículo se proporciona información general sobre la extensibilidad de aplicaciones de reunión, las referencias de API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del modo junto en Teams.
+En este artículo se proporciona información general sobre la extensibilidad de aplicaciones de reunión, las referencias de API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del Modo conferencia en Teams.
 
-Mejore su experiencia de reunión mediante la característica de extensibilidad de la reunión. Esta característica te permite integrar tus aplicaciones en reuniones. También incluye diferentes fases de un ciclo de vida de la reunión, donde puede integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
+Mejore su experiencia de reunión mediante la característica de extensibilidad de la reunión. Esta característica permite integrar las aplicaciones en reuniones. También incluye diferentes fases del ciclo de vida de una reunión donde poder integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
 
-Para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para Teams reuniones actualizando el manifiesto de la aplicación y también configurando las aplicaciones para escenarios de reunión.
+Para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para reuniones de Teams actualizando el manifiesto de la aplicación y configure las aplicaciones para escenarios de reuniones.
 
-La nueva característica de escenas del modo juntos personalizada permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
+La nueva característica de escenas personalizadas en Modo conferencia permite a los usuarios colaborar en una reunión con el equipo desde un solo lugar.
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Extensibilidad de la aplicación para reuniones](meeting-app-extensibility.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Diseño de la extensión de reunión Microsoft Teams](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Diseñar la extensión de reunión de Microsoft Teams](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Referencias de API de aplicaciones de reunión: Teams](~/apps-in-teams-meetings/api-references.md)
-* [Escenas del modo juntos personalizado](~/apps-in-teams-meetings/teams-together-mode.md)
-* [Habilitación y configuración de las aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Escenas personalizadas del Modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Habilitar y configurar las aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Ciclo de vida de la reunión](meeting-app-extensibility.md#meeting-lifecycle)
