@@ -5,12 +5,12 @@ description: Describe cómo usar los Conectores de Office 365 en Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: conector de Office365 de teams
-ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398879"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104080"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -52,7 +52,7 @@ Para más información sobre las acciones de tarjeta de conector, vea [Acciones]
 
 Para enviar un mensaje a través del conector de Office 365 o el webhook entrante, debe publicar una carga JSON en la dirección URL del webhook. Esta carga debe tener el formato de una [tarjeta de conector de Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-También puede usar este JSON para crear tarjetas que contengan entradas enriquecidas, como entrada de texto, selección múltiple o selección de una fecha y hora. El código que genera la tarjeta y publica en la dirección URL de webhook se puede ejecutar en cualquier servicio hospedado. Estas tarjetas se definen como parte de mensajes que requieren acción, y también se admiten en las[ tarjetas](~/task-modules-and-cards/what-are-cards.md) que se usan en los bots de Teams y las extensiones de mensajería.
+También puede usar este JSON para crear tarjetas que contengan entradas enriquecidas, como entrada de texto, selección múltiple o selección de una fecha y hora. El código que genera la tarjeta y publica en la dirección URL de webhook se puede ejecutar en cualquier servicio hospedado. Estas tarjetas se definen como parte de mensajes que requieren acción y también se admiten en las[tarjetas](~/task-modules-and-cards/what-are-cards.md) que se usan en los bots de Teams y las extensiones de mensajería.
 
 ### <a name="example-of-connector-message"></a>Ejemplo de mensaje de conector
 

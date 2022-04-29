@@ -4,12 +4,12 @@ description: Describe las tarjetas y cómo se usan en bots, conectores y extensi
 ms.localizationpriority: high
 keywords: conectores bots tarjetas mensajería
 ms.topic: overview
-ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398655"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104458"
 ---
 # <a name="cards"></a>Tarjetas
 
@@ -44,9 +44,9 @@ El Microsoft Bot Framework amplía la especificación de tarjetas agregando un c
 
 Los bots de Teams pueden usar tarjetas sencillas, tarjetas de conector o tarjetas adaptables. [Tipos de tarjetas](~/task-modules-and-cards/cards/cards-reference.md) proporciona información sobre las tarjetas compatibles con bots en Teams.
 
-## <a name="cards-in-messaging-extensions"></a>Tarjetas en extensiones de mensajería
+## <a name="cards-in-message-extensions"></a>Tarjetas en extensiones de mensajería
 
-Las [extensiones de mensajería](~/messaging-extensions/what-are-messaging-extensions.md) también pueden devolver una tarjeta. Las extensiones de mensajería pueden usar tarjetas sencillas, tarjetas de conector o tarjetas adaptables. Estas tarjetas se encuentran en [tipos de tarjetas](~/task-modules-and-cards/cards/cards-reference.md).
+Las [extensiones de mensajería](~/messaging-extensions/what-are-messaging-extensions.md) también pueden entregar una tarjeta. Las extensiones de mensajería pueden usar tarjetas simples, tarjetas de conector o Tarjetas adaptables. Estas tarjetas se encuentran en [tipos de tarjetas](~/task-modules-and-cards/cards/cards-reference.md).
 
 ## <a name="types-of-cards"></a>Tipos de tarjetas
 

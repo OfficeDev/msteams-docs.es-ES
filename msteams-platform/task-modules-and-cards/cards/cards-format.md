@@ -5,12 +5,12 @@ keywords: formato de tarjetas de bots de teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727270"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103954"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -66,15 +66,15 @@ Puede usar las secuencias de escape `\r` o `\n` para las nuevas líneas de las l
 
 En el escritorio, el formato de Markdown de Tarjeta adaptable, aparece como se muestra en la siguiente imagen tanto en los exploradores web como en la aplicación cliente de Teams:
 
-![Formato de Markdown de Tarjeta adaptable en el cliente de escritorio](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="cliente de escritorio de Markdown adaptable":::
 
 En iOS, el formato de Markdown de Tarjeta adaptable aparece como se muestra en la siguiente imagen:
 
-![Formato de Markdown de Tarjeta adaptable en iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Formato de Markdown de Tarjeta adaptable en iOS":::
 
 En Android, el formato de Markdown de Tarjeta adaptable aparece como se muestra en la siguiente imagen:
 
-![Formato de Markdown de Tarjeta adaptable en Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Formato de Markdown de Tarjeta adaptable en Android":::
 
 Para obtener más información, vea [características de texto en Tarjetas adaptables](/adaptive-cards/create/textfeatures).
 
@@ -123,7 +123,7 @@ Las Tarjetas adaptables admiten emoji. El siguiente código muestra un ejemplo d
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Tarjeta adaptable con un emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Tarjeta adaptable con un emoji":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>Compatibilidad de las menciones con las Tarjetas adaptables
 
@@ -188,7 +188,7 @@ En la tabla siguiente se describen los id. de mención de usuario que se han adm
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mención de usuario en bots con Tarjetas adaptables
 
-Los bots admiten la mención de usuario con el Id. de objeto de Azure AD y el UPN, además de los identificadores existentes. La compatibilidad con dos nuevos identificadores está disponible en bots para mensajes de texto, cuerpo de Tarjetas adaptables y respuesta de extensión de mensajería. Los bots admiten los id. de mención en escenarios de conversaciones y `invoke`. El usuario recibe una notificación de fuente de actividades cuando se le @menciona con los identificadores.
+Los bots admiten la mención de usuario con el Id. de objeto de Azure AD y el UPN, además de los identificadores existentes. La compatibilidad con dos nuevos id. está disponible en bots para mensajes de texto, cuerpo de Tarjetas adaptables y respuesta de extensión de mensajería. Los bots admiten los id. de mención en escenarios de conversaciones y `invoke`. El usuario recibe una notificación de fuente de actividades cuando se le @menciona con los identificadores.
 
 > [!NOTE]
 > La actualización del esquema y los cambios en la interfaz de usuario y la experiencia de usuario, no son necesarios para las menciones de usuario con Tarjetas adaptables en bot.
@@ -233,7 +233,7 @@ Ejemplo de mención de usuario en bots con Tarjetas adaptables:
 
 La siguiente imagen ilustra la mención de usuario con la Tarjeta adaptable en bot:
 
-![Mención de usuario en bot con Tarjeta adaptable](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Mención de usuario en bot con Tarjeta adaptable":::
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mención de usuario en Webhook entrante con Tarjetas adaptables
 
@@ -297,7 +297,7 @@ Ejemplo de mención de usuario en Webhook entrante:
 
 La siguiente imagen ilustra la mención de usuario en Webhook entrante:
 
-![Mención de usuario en Webhook entrante](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Mención de usuario en Webhook entrante":::
 
 ### <a name="information-masking-in-adaptive-cards"></a>Enmascaramiento de información en Tarjetas adaptables
 
@@ -322,7 +322,7 @@ El código siguiente muestra un ejemplo de Tarjeta adaptable con propiedad de en
 
 La siguiente imagen es un ejemplo de enmascaramiento de la información en Tarjetas adaptables:
 
-![Imagen de enmascaramiento de la información](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Vista de información de enmascaramiento":::
 
 ### <a name="full-width-adaptive-card"></a>Tarjeta adaptable de ancho completo
 
@@ -359,11 +359,11 @@ Para crear una Tarjeta adaptable de ancho completo, la aplicación debe incluir 
 
 La siguiente imagen muestra una Tarjeta adaptable de ancho completo:
 
-![Vista de Tarjeta adaptable de ancho completo](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Vista de Tarjeta adaptable de ancho completo":::
 
 La siguiente imagen muestra la vista predeterminada de la Tarjeta adaptable cuando no se ha establecido la propiedad `width` en **ancho completo**:
 
-![Vista de Tarjeta adaptable de ancho pequeño](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Vista de Tarjeta adaptable de ancho pequeño":::
 
 ### <a name="typeahead-support"></a>Compatibilidad con TypeAhead
 
@@ -411,11 +411,11 @@ En una Tarjeta adaptable, puede usar la propiedad `msteams` para agregar la capa
 
 Cuando los usuarios mantienen el puntero sobre la imagen, aparece un icono de expandir en la esquina superior derecha, como se muestra en la siguiente imagen:
 
-![Tarjeta adaptable con imagen expandible](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Tarjeta adaptable con imagen expandible":::
 
 La imagen aparece en la vista extendida cuando el usuario selecciona el icono expandir como se muestra en la siguiente imagen:
 
-![Imagen expandida a vista extendida](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Imagen expandida a vista extendida":::
 
 En la vista extendida, los usuarios pueden acercar y alejar la imagen. Puede seleccionar las imágenes de la Tarjeta adaptable que han de llevar esta funcionalidad.
 
@@ -447,11 +447,11 @@ En las tarjetas de conector, las líneas nuevas se representan para `\n\n`, pero
 
 En el escritorio, el formato Markdown para tarjetas de conector aparece como se muestra en la siguiente imagen:
 
-![Formato Markdown para tarjetas de conector en el cliente de escritorio](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Formato Markdown para tarjetas de conector":::
 
 En iOS, el formato Markdown para tarjetas de conector aparece como se muestra en la siguiente imagen:
 
-![Formato Markdown para tarjetas de conector en el cliente de iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Formato Markdown para tarjetas de conector en el cliente de iOS":::
 
 Las tarjetas de conector que usan Markdown para iOS muestran los siguientes problemas:
 
@@ -460,7 +460,7 @@ Las tarjetas de conector que usan Markdown para iOS muestran los siguientes prob
 
 En Android, el formato Markdown para tarjetas de conector aparece como se muestra en la siguiente imagen:
 
-![Formato Markdown para tarjetas de conector en el cliente Android](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Formato Markdown para tarjetas de conector en el cliente Android":::
 
 ### <a name="format-example-for-markdown-connector-cards"></a>Ejemplo de formato para tarjetas de conector de Markdown
 
@@ -545,11 +545,11 @@ En las tarjetas de conector, las líneas nuevas se representan en HTML mediante 
 
 En el escritorio, el formato HTML para tarjetas de conector aparece como se muestra en la siguiente imagen:
 
-![Formato HTML para tarjetas de conector en el cliente de escritorio](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Formato HTML para tarjetas de conector en el cliente de escritorio":::
 
 En iOS, el formato HTML aparece como se muestra en la siguiente imagen:
 
-![Formato HTML para tarjetas de conector en el cliente de iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Formato HTML para tarjetas de conector en el cliente de iOS":::
 
 Las tarjetas de conector que usan HTML para iOS muestran los siguientes problemas:
 
@@ -558,7 +558,7 @@ Las tarjetas de conector que usan HTML para iOS muestran los siguientes problema
 
 En Android, el formato HTML aparece como se muestra en la siguiente imagen:
 
-![Formato HTML para tarjetas de conector en el cliente Android](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Formato HTML para tarjetas de conector en el cliente Android":::
 
 ### <a name="format-sample-for-html-connector-cards"></a>Ejemplo de formato para tarjetas de conector HTML
 
@@ -635,17 +635,17 @@ Dado que existen diferencias de resolución entre la plataforma móvil y de escr
 
 En el escritorio, el formato HTML aparece como se muestra en la siguiente imagen:
 
-![Formato HTML en el cliente de escritorio](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Formato HTML en el cliente de escritorio":::
 
 En iOS, el formato HTML aparece como se muestra en la siguiente imagen:
 
-![Formato HTML en el cliente de iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Formato HTML en el cliente de iOS":::
 
 El formato de caracteres, como negrita y cursiva, no se representa en iOS.
 
 En Android, el formato HTML aparece como se muestra en la siguiente imagen:
 
-![Formato HTML en el cliente Android](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Formato HTML en el cliente Android":::
 
 El formato de caracteres, como negrita y cursiva, se muestra correctamente en Android.
 

@@ -1,69 +1,69 @@
 ---
-title: Llamadas multimedia en tiempo real y reuniones en línea con Microsoft Teams
-description: Comprender conceptos clave en la creación de bots que pueden realizar llamadas de audio y vídeo en tiempo real y reuniones en línea. Obtenga información sobre las sesiones multimedia, la velocidad de fotogramas, el formato de audio y vídeo y la referencia a recursos de desarrolladores
+title: Reuniones en línea y llamadas multimedia en tiempo real con Microsoft Teams
+description: Comprenda los conceptos clave en la creación de bots que puedan realizar llamadas de audio y vídeo en tiempo real y reuniones en línea. Más información sobre las sesiones multimedia, la velocidad de fotogramas, el formato de audio y vídeo y las referencias a los recursos de desarrolladores
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media hosted media service-hosted media
-ms.openlocfilehash: e35ce08bc0efed328687f7aacf311cf94c3e8830
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: secuencia de audio secuencia de vídeo audio y vídeo llamadas reuniones en tiempo real hospedado multimedia hospedado multimedia hospedado servicio multimedia medios multimedia
+ms.openlocfilehash: 0e5343567be3843c457885fcf506446b20b6dcf7
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948554"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111993"
 ---
-# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Llamadas multimedia en tiempo real y reuniones con Microsoft Teams
+# <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Reuniones y llamadas multimedia en tiempo real con Microsoft Teams
 
-La Plataforma multimedia en tiempo real permite a los bots interactuar con Microsoft Teams llamadas y reuniones mediante el uso compartido de voz, vídeo y pantalla en tiempo real. La Plataforma multimedia en tiempo real es una funcionalidad avanzada que permite al bot enviar y recibir contenido de voz y vídeo fotograma por fotograma. El bot tiene acceso sin procesar a las secuencias multimedia de voz, vídeo y pantalla compartida. Hay bots multimedia hospedados en servicios más sencillos que dependen de la Plataforma multimedia en tiempo real para todo el procesamiento de medios. Los bots que procesan los medios por sí mismos se denominan bots multimedia hospedados en aplicaciones.
+La plataforma multimedia en tiempo real permite que los bot interactúen con las llamadas y reuniones de Microsoft Teams mediante voces en tiempo real, vídeo y la pantalla compartida. La plataforma multimedia en tiempo real es una funcionalidad avanzada que permite a los bot enviar y recibir contenido de voz y vídeo fotograma a fotograma. El bot tiene acceso sin formato a las secuencias multimedia de voz, vídeo y pantalla compartida. Hay bots multimedia hospedados por servicio más sencillos que se basan en la plataforma de medios en tiempo real para todo el procesamiento multimedia. Los bot que procesan multimedia ellos mismos se denominan bots multimedia hospedados en la aplicación.
 
-Por ejemplo, en una llamada 1:1 con un bot, mientras el usuario habla, el bot recibe 50 fotogramas de audio por segundo. El bot recibe fotogramas de audio con cada fotograma de 20 milisegundos (ms) de audio. Un bot multimedia hospedado por la aplicación puede realizar el reconocimiento de voz en tiempo real a medida que se reciben los fotogramas de audio. No es necesario esperar una grabación después de que el usuario haya dejado de hablar. El bot también puede enviar y recibir vídeo de resolución de alta definición, incluido el contenido de uso compartido de pantalla basado en vídeo.
+Por ejemplo, en una llamada 1:1 con un bot, a medida que el usuario hable el bot recibirá 50 fotogramas de audio por segundo. El bot recibirá fotogramas de audio y cada fotograma contendrá de 20 milisegundos (ms) de audio. Un bot multimedia hospedado en aplicaciones podrá realizar el reconocimiento de voz en tiempo real a medida que se reciban los fotogramas de audio. No es necesario esperar una grabación después de que el usuario haya dejado de hablar. El bot también podrá enviar y recibir vídeo de alta definición, incluyendo contenidos de uso compartido de pantalla basados en vídeo.
 
-La plataforma proporciona una API sencilla como socket para que el bot envíe y reciba medios. Controla la codificación y decodificación en tiempo real de paquetes de audio o vídeo. Usa códecs como SILK y G.722 para audio y H.264 para vídeo. La plataforma también controla todo el cifrado o descifrado de paquetes multimedia y la transmisión de red de paquetes. El bot solo se preocupa por el contenido real de audio o vídeo. Un bot multimedia en tiempo real participa en llamadas y reuniones 1:1 con varios participantes.
+La plataforma proporciona una API sencilla y similar a un socket para que el bot envíe y reciba medios. Controla la codificación y descodificación en tiempo real de paquetes de audio o vídeo. Usa códecs, como SILK y G.722 para audio, y H.264 para vídeo. La plataforma también controla todo el cifrado o descifrado de paquetes multimedia y la transmisión de red de paquetes. El bot solo hace referencia al contenido real de audio o vídeo. Un bot multimedia en tiempo real participa en llamadas y reuniones 1:1 con varios participantes.
 
 ## <a name="media-session"></a>Sesión multimedia
 
-Un bot multimedia en tiempo real debe declarar qué modalidades debe admitir. El bot multimedia en tiempo real debe declarar compatibilidad cuando responde a una llamada entrante o se une a una Teams reunión. Para cada modalidad admitida, el bot declara si puede enviar y recibir medios, recibir solo o enviar solo. Por ejemplo, un bot diseñado para controlar las llamadas Teams 1:1, requiere enviar y recibir audio. Pero el bot solo debe enviar vídeo, ya que no necesita recibir el vídeo del autor de la llamada. El conjunto de modalidades de audio y vídeo establecidas entre el bot y el Teams o reunión se denomina sesión multimedia.
+Un bot multimedia en tiempo real deberá declarar qué modalidades debe admitir. El bot multimedia en tiempo real deberá declarar compatibilidad cuando responda a una llamada entrante o se una a una reunión de Teams. Para cada modalidad admitida, el bot declarará si puede enviar y recibir medios, solamente recibir o solo enviar. Por ejemplo, un bot diseñado para controlar llamadas 1:1 de Teams, requerirá enviar y recibir audio. Pero el bot solo deberá enviar vídeo, ya que no necesita recibir el vídeo del autor de la llamada. El conjunto de modalidades de audio y vídeo establecido entre el bot y el autor de la llamada o de la reunión de Teams se denomina sesión multimedia.
 
-Se admiten dos tipos de modalidades de vídeo, el vídeo principal y el uso compartido de pantalla basado en vídeo. El vídeo principal se usa para transportar el vídeo desde la cámara web de un usuario. El uso compartido de pantalla basado en vídeo permite que un usuario comparta la pantalla. La plataforma permite que un bot envíe y reciba ambos tipos de vídeo.
+Se admiten dos tipos de modalidades de vídeo: vídeo principal y uso compartido de pantalla basado en vídeo. El vídeo principal se usa para transportar el vídeo desde la cámara web de un usuario. El uso compartido de pantalla basado en vídeo permitirá a un usuario compartir la pantalla. La plataforma permite que un bot envíe y reciba ambos tipos de vídeo.
 
-Cuando se une a una reunión Teams, un bot puede recibir varias secuencias de vídeos principales simultáneamente hasta 10 por sesión multimedia. El bot puede ver a más de un participante en la reunión.
+Cuando se una a una reunión de Teams, un bot podrá recibir varias secuencias de vídeo principales simultáneamente, hasta 10 por cada sesión multimedia. El bot puede ver a más de un participante en la reunión.
 
-La siguiente sección proporciona detalles sobre el bot que envía y recibe medios como una secuencia de fotogramas.
+En la sección siguiente, se proporcionan detalles sobre el bot que envía y recibe medios como una secuencia de fotogramas.
 
 ## <a name="frames-and-frame-rate"></a>Fotogramas y velocidad de fotogramas
 
-Un bot multimedia en tiempo real interactúa directamente con las modalidades de audio y vídeo de una sesión multimedia. El bot envía y recibe medios como una secuencia de fotogramas y cada fotograma es una unidad de contenido. Un segundo de audio se transmite como una secuencia de 50 fotogramas. Cada fotograma contiene 20 ms que es el 1/50 de un segundo de contenido de voz. Un segundo de vídeo se transmite como una secuencia de 30 imágenes fijas. Cada imagen está diseñada para ser vista durante solo 33,3 ms, es decir, 1/30 de segundo antes del siguiente fotograma de vídeo. El número de fotogramas transmitidos o representados por segundo se denomina velocidad de fotogramas.
+Un bot multimedia en tiempo real interactúa directamente con las modalidades de audio y vídeo de una sesión multimedia. El bot envía y recibe multimedia como una secuencia de fotogramas, y cada fotograma es una unidad de contenido. Un segundo de audio se transmite como una secuencia de 50 fotogramas. Cada fotograma contiene 20 ms, que es 1/50 de un segundo de contenido de voz. Un segundo de vídeo se transmitirá como una secuencia de 30 imágenes fijas. Cada imagen está pensada para ser vista durante solo 33,3 ms, que es 1/30 de segundo, antes del siguiente fotograma de vídeo. El número de fotogramas transmitidos o representados por segundo se denomina velocidad de fotogramas.
 
-En la siguiente sección se proporcionan detalles sobre el formato de audio y vídeo que se usa en las reuniones y llamadas multimedia en tiempo real.
+En la sección siguiente, se proporcionan detalles sobre el formato de audio y vídeo que se usa en las reuniones y llamadas multimedia en tiempo real.
 
-## <a name="audio-and-video-format"></a>Formato de audio y vídeo
+## <a name="audio-and-video-format"></a>Formatos de audio y vídeo
 
-En formato de audio, cada segundo de audio se representa como 16 000 muestras, con cada muestra que contiene 16 bits de datos. Un marco de audio de 20 ms contiene 320 muestras que tienen 640 bytes de datos.
+En formato de audio, cada segundo de audio se representa como 16 000 muestras, conteniendo cada una 16 bits de datos. Un fotograma de audio de 20 ms contiene 320 muestras, que son 640 bytes de datos.
 
-En formato de vídeo, se admiten varios formatos. Dos propiedades clave de un formato de vídeo son el tamaño del marco y el formato de color. Los tamaños de fotograma admitidos incluyen 640 x 360 píxeles, 1280 x 720 píxeles y 1920 x 1080 píxeles. Los formatos de color admitidos incluyen NV12 que es de 12 bits por píxel y RGB24 que es de 24 bits por píxel.
+En formato de vídeo, se admiten varios formatos. Dos propiedades clave de un formato de vídeo son su tamaño de fotograma y su formato de color. Los tamaños de fotograma admitidos incluyen 640 x 360, que son 360 píxeles, 1280 x 720, que son 720 píxeles, y 1920 x 1080, que son 1080 píxeles. Los formatos de color admitidos incluyen NV12, que es de 12 bits por píxel, y RGB24, que es de 24 bits por píxel.
 
-Un marco de vídeo de 720 p contiene 921.600 píxeles que es 1280 por 720. En el formato de color RGB24, cada píxel se representa como 3 bytes de 24 bits, incluidos 1 byte cada uno de los componentes de color rojo, verde y azul. Un único fotograma de vídeo RGB24 de 720p requiere 2.764.800 bytes de datos que son 921.600 píxeles por 3 bytes por píxel. A una velocidad de fotogramas variable, enviar fotogramas de vídeo RGB24 de 720p significa procesar aproximadamente 80 megabytes por segundo de contenido. El códec de vídeo H.264 comprime considerablemente 80 megabytes antes de la transmisión de red.
+Un fotograma de vídeo de 720-p contiene 921 600 píxeles, que son 1280 veces 720. En el formato de color RGB24, cada píxel se representa como 3 bytes, que son 24 bits, incluyendo 1 byte cada uno de los componentes de color rojo, verde y azul. Un único fotograma de vídeo RGB24 de 720p requiere de 2 764 800 bytes de datos, que son 921 600 veces píxeles 3 bytes por píxel. A una velocidad de fotogramas variable, el envío de fotogramas de vídeo RGB24 de 720p significará procesar, aproximadamente, 80 megabytes por segundo de contenido. El códec de vídeo H.264 comprime sustancialmente 80 megabytes antes de la transmisión de red.
 
-Una funcionalidad avanzada de la plataforma permite que un bot envíe o reciba vídeo como fotogramas H.264 codificados. Se admiten bots que proporcionan su propio codificador o descodificador H.264, o la secuencia de vídeo descodificada en mapas de bits RGB24 o NV12 sin procesar.
+Una funcionalidad avanzada de la plataforma permite que un bot envíe o reciba vídeo como fotogramas H.264 codificados. Se admiten los bot que proporcionen su propio codificador o descodificador H.264, o bien la secuencia de vídeo descodificada en mapas de bits RGB24 o NV12 sin procesar no es necesaria.
 
-En la siguiente sección se proporcionan detalles acerca de qué participantes de la reunión hablan los que son oradores activos y dominantes.
+En la sección siguiente, se proporcionan detalles sobre qué participantes de la reunión hablan, que son los hablantes activos y dominantes.
 
-## <a name="active-and-dominant-speakers"></a>Altavoces activos y dominantes
+## <a name="active-and-dominant-speakers"></a>Hablantes activos y dominantes
 
-Cuando se une a una Teams que consta de varios participantes, un bot puede identificar qué participantes de la reunión están hablando actualmente. Los altavoces activos identifican qué participantes se escuchan en cada fotograma de audio recibido. Los altavoces dominantes identifican qué participantes son actualmente más activos o dominantes en la conversación de grupo, aunque su voz no se escucha en todos los fotogramas de audio. El conjunto de altavoces dominantes puede cambiar a medida que los diferentes participantes toman turnos de palabra.
+Cuando se une a una reunión de Teams que conste de varios participantes, un bot podrá identificar qué participantes de la reunión están hablando en ese momento. Los hablantes activos identificarán qué participantes son escuchados en cada fotograma de audio recibido. Los hablantes dominantes identificarán qué participantes son en ese momento más activos o dominantes en la conversación de grupo, aunque su voz no se escuche en cada fotograma de audio. El conjunto de hablantes dominantes podrá cambiar a medida que diferentes participantes se turnen para hablar.
 
-En la siguiente sección se proporcionan detalles sobre las solicitudes de suscripción de vídeo realizadas por un bot.
+En la sección siguiente, se proporcionarán detalles sobre las solicitudes de suscripción de vídeo realizadas por un bot.
 
 ## <a name="video-subscription"></a>Suscripción de vídeo
 
-En una llamada 1:1, el bot recibe automáticamente el vídeo del autor de la llamada si el bot está habilitado para recibir el vídeo. En una Teams, el bot debe indicar a la plataforma qué participantes quiere ver. Una suscripción de vídeo es una solicitud del bot para recibir el vídeo principal o el contenido para compartir pantalla de un participante. A medida que los participantes en la reunión llevan a cabo su conversación, el bot modifica sus suscripciones de vídeo necesarias. El bot modifica las suscripciones de vídeo en función de las actualizaciones del conjunto de altavoces dominantes o las notificaciones que indican qué participante está compartiendo pantalla actualmente.
+En una llamada 1:1, el bot recibirá automáticamente el vídeo del autor de la llamada si el bot está habilitado para recibir el vídeo. En una reunión de Teams, el bot deberá indicar a la plataforma qué participantes quiere ver. Una suscripción de vídeo es una solicitud del bot para recibir el contenido principal de vídeo o de pantalla compartida de un participante. A medida que los participantes en la reunión conversen, el bot modificará las suscripciones de vídeo necesarias. El bot modificará las suscripciones de vídeo en función de las notificaciones o actualizaciones del conjunto de altavoces dominante que indiquen qué participante está compartiendo la pantalla en ese momento.
 
-En la siguiente sección se proporcionan detalles sobre lo que debe instalar y los requisitos para desarrollar un bot multimedia hospedado en la aplicación.
+En la sección siguiente, se proporcionan detalles sobre lo que deberá instalar, así como los requisitos para desarrollar un bot multimedia hospedado en aplicaciones.
 
-## <a name="developer-resources"></a>Recursos para desarrolladores
+## <a name="developer-resources"></a>Recursos para programadores
 
-Para desarrollar un bot multimedia hospedado por la aplicación, debe instalar [microsoft.Graph. La biblioteca .NET Calls.Media](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet paquete dentro del Visual Studio proyecto.
+Para desarrollar un bot multimedia hospedado en aplicaciones, deberá instalar el paquete NuGet de la [biblioteca de .NET Microsoft.Graph.Calls.Media](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) que se ubica en el proyecto de Visual Studio.
 
-Los bots multimedia hospedados en aplicaciones requieren .NET o C# y Windows Server. Para obtener más información, vea [requisitos y consideraciones para bots multimedia hospedados en aplicaciones.](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)
+Los bot multimedia hospedados en aplicaciones requieren .NET o C#, además de Windows Server. Para obtener más información, consulte [requisitos y consideraciones sobre los bot multimedia hospedados en aplicaciones](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
 
 ## <a name="next-step"></a>Paso siguiente
 

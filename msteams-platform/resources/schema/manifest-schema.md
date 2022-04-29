@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706154"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104010"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -544,16 +544,16 @@ El elemento es una matriz (máximo de un elemento) con todos los elementos de ti
 
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
-|`botId`|string|64|✔|El identificador único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. El id. puede ser el mismo que el id. de aplicación general.|
+|`botId`|string|64|✔|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. El id. puede ser el mismo que el id. de aplicación general.|
 |`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería.|
-|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **false**.|
+|`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **falso**.|
 |`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|string|||Tipo de controlador de mensajes. Debe estar `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-La extensión de mensajería debe declarar uno o varios comandos con un máximo de 10 comandos. Cada comando aparece en Microsoft Teams como una posible interacción desde el punto de entrada basado en la interfaz de usuario.
+Su extensión de mensajería debe declarar uno o más comandos con un máximo de 10 comandos. Cada comando aparece en Microsoft Teams como una posible interacción desde el punto de entrada basado en la interfaz de usuario.
 
 Cada elemento de comando es un objeto con la estructura siguiente:
 
@@ -809,7 +809,7 @@ Especifique la definición de la extensión de reunión. Para obtener más infor
 **Opcional** — Objeto
 
 > [!NOTE]
-> Si establece la propiedad `manifestVersion` en 1.12, la propiedad de autorización no es compatible con las versiones anteriores (versión 1.11 o anterior) del manifiesto. La autorización es compatible con la versión 1.12 del manifiesto.
+> Si establece la propiedad `manifestVersion` en 1.12, la propiedad de autorización es incompatible con las versiones anteriores (versión 1.11 o anterior) del manifiesto. La autorización admite la versión 1.12 del manifiesto.
 
 Especifique y consolide la información relacionada con la autorización de la aplicación.
 

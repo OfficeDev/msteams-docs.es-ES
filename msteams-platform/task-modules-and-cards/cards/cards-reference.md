@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: high
 keywords: referencia de tarjetas de los bot
 ms.topic: reference
-ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571498"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104143"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -26,7 +26,7 @@ Para crear una tarjeta de elemento principal, una tarjeta en miniatura o una tar
 1. Seleccione **Crear una nueva tarjeta**.
 1. Seleccione **Crear** para una de las tarjetas de **Elemento principal**, **tarjeta en miniatura** o **tarjeta adaptable**. Los detalles de metadatos, los botones y los ejemplos de código json, csharp y node se muestran para esa tarjeta.
 
-    ![Detalles de la tarjeta de Elemento principal](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Detalles de la tarjeta de Elemento principal":::
 
 1. Seleccione **Enviarme esta tarjeta**. La tarjeta se le envía como un mensaje de chat.
 
@@ -123,8 +123,8 @@ En la tabla siguiente se proporcionan las características que admiten las tarje
 
 > [!NOTE]
 >
-> * La plataforma Teams admite la versión 1.4 o anteriores de características de tarjeta adaptable para tarjetas enviadas por bot y extensiones de mensajería basadas en acciones.
-> * La plataforma Teams admite la versión 1.3 o las anteriores de características de tarjeta adaptable para otras funcionalidades, como tarjetas enviadas por el usuario (extensiones de mensajería basadas en búsquedas y despliegue de vínculos), pestañas y módulos de tareas.
+> * La plataforma Teams admite la versión 1.4 o las anteriores de características de tarjeta adaptable para tarjetas enviadas por bot y extensiones de mensajería basadas en acciones.
+> * La plataforma Teams admite la versión 1.3 o las anteriores de características de tarjeta adaptable para otras funcionalidades, como tarjetas enviadas por el usuario (extensiones de mensajería basadas en búsquedas y apertura de vínculos), pestañas y módulos de tareas.
 > * El estilo de acción positiva o destructiva no se admite en tarjetas adaptables en la plataforma Teams.
 > * Actualmente, los elementos multimedia no se admiten en tarjetas adaptables en la plataforma Teams.
 
@@ -269,7 +269,7 @@ El siguiente código muestra un ejemplo de una tarjeta adaptable:
 
 #### <a name="additional-information-on-adaptive-cards"></a>Información adicional sobre tarjetas adaptables
 
-Puede pasar valores dinámicos en una tarjeta adaptable con el símbolo de dólar ($) y llaves. Para más información, vea [Plantillas de tarjetas adaptables](/adaptive-cards/templating/).
+Puede pasar valores dinámicos en una tarjeta adaptable con el símbolo de dólar ($) y llaves. Para más información consulte [ Plantillas de tarjetas adaptables](/adaptive-cards/templating/).
 
 Ejemplo:
 
@@ -319,7 +319,7 @@ En la tabla siguiente se proporcionan las propiedades de una tarjeta de Elemento
 
 ### <a name="example-of-a-hero-card"></a>Ejemplo de una tarjeta de Elemento principal
 
-![Ejemplo de una tarjeta de Elemento principal](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Tarjeta de héroe":::
 
 El siguiente código muestra un ejemplo de una tarjeta de Elemento principal:
 
@@ -573,7 +573,7 @@ En la tabla siguiente, se proporcionan las características que admiten tarjetas
 
 ### <a name="example-of-a-receipt-card"></a>Ejemplo de una tarjeta de recibo
 
-![Ejemplo de una tarjeta de recibo](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="tarjeta de recibo":::
 
 El siguiente código muestra un ejemplo de una tarjeta de recibo:
 
@@ -664,7 +664,7 @@ En la tabla siguiente, se proporcionan las características que admiten las tarj
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![Ejemplo de una tarjeta en miniatura](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="tarjeta en miniatura":::
 
 ### <a name="properties-of-a-thumbnail-card"></a>Propiedades de una tarjeta en miniatura
 
@@ -756,7 +756,7 @@ Las propiedades de una tarjeta de carrusel son las mismas que las de tarjetas de
 
 #### <a name="example-of-a-carousel-collection"></a>Ejemplo de una colección de carrusel
 
-![Ejemplo de un carrusel de tarjetas](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Colección carrusel":::
 
 El código siguiente muestra un ejemplo de una colección de carrusel:
 
@@ -943,7 +943,7 @@ En la tabla siguiente se proporcionan las características que admiten las colec
 
 #### <a name="example-of-a-list-collection"></a>Ejemplo de una colección de lista
 
-![Ejemplo de una lista de tarjetas](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="colección de lista":::
 
 Las propiedades de las colecciones de lista son las mismas que las de tarjetas de miniatura o de Elemento principal.
 

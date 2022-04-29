@@ -1,48 +1,48 @@
 ---
-title: Diseño de la extensión de mensajería
+title: Diseñe su extensión de mensajería
 description: Obtenga información sobre cómo diseñar una extensión de mensajería de Teams y obtener el kit de interfaz de usuario de Microsoft Teams.
 keywords: teams diseño instrucciones referencia extensiones de mensajería sugerencias procedimientos recomendados
 author: heath-hamilton
 ms.localizationpriority: high
-ms.author: qinch
+ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 3cc9ac28bd07d3d79894a59cb2ff436fa43dda0d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4021f52359d2c97382fa988679bbfe2f9bd0ecab
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157099"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104101"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Diseño de la extensión de mensajería de Microsoft Teams
+# <a name="designing-your-microsoft-teams-message-extension"></a>Diseñe su extensión de mensajería de Microsoft Teams
 
-Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o realizar una acción en un mensaje sin salir de la conversación.
-A modo de guía en el diseño de su aplicación, a continuación, se describe e ilustra cómo pueden los usuarios agregar, usar y administrar las extensiones de mensajería en Teams.
+Las extensiones de mensajería son métodos accesos directos para insertar contenido de la aplicación o realizar una acción en un mensaje sin salir de la conversación.
+A modo de guía en el diseño de su aplicación, a continuación, se describe e ilustra cómo los usuarios pueden agregar, usar y administrar las extensiones de mensajería en Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 En el kit de interfaz de usuario de Microsoft Teams, encontrará instrucciones completas de diseño para la extensión de mensajería, que incluyen elementos que puede usar y modificar como quiera.
 
 > [!div class="nextstepaction"]
-> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="add-a-messaging-extension"></a>Agregar una extensión de mensajería
+## <a name="add-a-message-extension"></a>Agregue una extensión de mensajería
 
 Puede agregar una extensión de mensajería en los siguientes contextos de Teams:
 
 * Desde la tienda de Teams.
-* En un canal, chat o reunión (antes, durante y después) cerca del cuadro de redacción. Vale la pena recalcar que, si agrega una extensión de mensajería en uno de estos lugares, solo usted podrá usarla en ese contexto.
+* En un canal, chat o reunión (antes, durante y después) cerca del cuadro de redacción. Vale la pena recalcar que, si agrega una extensión de mensajería en uno de estos lugares, solo podrá usarla en ese contexto.
 
-Los ejemplos siguientes muestran cómo agregar una extensión de mensajería en un canal:
+Los siguientes ejemplos muestran cómo agregar una extensión de mensajería en un canal:
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="El ejemplo muestra cómo agregar en un canal una extensión de mensajería cerca del cuadro de redacción en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="El ejemplo muestra cómo agregar una extensión de mensajería en un canal cerca del cuadro de redacción en un dispositivo móvil." border="false":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="El ejemplo muestra cómo agregar en un canal una extensión de mensajería cerca del cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="El ejemplo muestra cómo agregar una extensión de mensajería en un canal cerca del cuadro de redacción." border="false":::
 
-## <a name="set-up-a-messaging-extension"></a>Configurar una extensión de mensajería
+## <a name="set-up-a-message-extension"></a>Configurar una extensión de mensajería
 
 La autenticación no es obligatoria, pero si la aplicación es algo parecida a una herramienta de seguimiento de vales, es posible que necesite que los usuarios inicien sesión para usar la extensión de mensajería.
 
@@ -56,7 +56,7 @@ Con el fin de mantener la coherencia entre las aplicaciones de Teams, no es posi
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión." border="false":::
 
-## <a name="types-of-messaging-extensions"></a>Tipos de extensiones de mensajería
+## <a name="types-of-message-extensions"></a>Tipos de extensiones de mensajería
 
 Las extensiones de mensajería pueden tener comandos de búsqueda, comandos de acción o ambos. Los comandos dependen de las características de su aplicación y de cómo encajan en los casos de uso de Teams.
 
@@ -84,7 +84,7 @@ Los comandos de acción permiten que los usuarios desencadenen acciones y proces
 
 Las extensiones de mensajería basadas en acciones suelen requerir que los usuarios completen un formulario o algún otro tipo de configuración dentro de una ventana modal. Puede crear estas experiencias con los [módulos de tareas](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
-## <a name="open-a-messaging-extension"></a>Abrir una extensión de mensajería
+## <a name="open-a-message-extension"></a>Abra una extensión de mensajería
 
 El cuadro de redacción y los mensajes o publicaciones son los contextos principales en los que los usuarios usan extensiones de mensajería.
 
@@ -112,13 +112,13 @@ Una vez agregado, los usuarios pueden seleccionar el icono **Más** :::image typ
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde una publicación del canal en un dispositivo móvil." border="false":::
 
-## <a name="use-a-messaging-extension"></a>Usar una extensión de mensajería
+## <a name="use-a-message-extension"></a>Use una extensión de mensajería
 
-En los escenarios siguientes, se muestran las principales formas en que los usuarios usan las extensiones de mensajería.
+En los siguientes escenarios se muestran las principales formas en las que los usuarios usan las extensiones de mensajería.
 
 ### <a name="insert-content-into-a-message"></a>Insertar contenido en un mensaje
 
-**1. Seleccione una extensión de mensajería**. Los usuarios pueden buscar el contenido que quieran compartir desde el cuadro de redacción.
+**1. Seleccionar una extensión de mensajería**. Los usuarios pueden buscar el contenido que quieran compartir desde el cuadro de redacción.
 
 #### <a name="mobile"></a>Móvil
 
@@ -128,7 +128,7 @@ En los escenarios siguientes, se muestran las principales formas en que los usua
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción." border="false":::
 
-**2. Inserte el contenido**. Una vez publicado, otros usuarios pueden responder o seleccionar el contenido para ver más información en la aplicación.
+**2. Insertar contenido**. Una vez publicado, otros usuarios pueden responder o seleccionar el contenido para ver más información en su aplicación.
 
 #### <a name="mobile"></a>Móvil
 
@@ -140,7 +140,7 @@ En los escenarios siguientes, se muestran las principales formas en que los usua
 
 ### <a name="take-action-on-a-message"></a>Realizar una acción en un mensaje
 
-**1. Seleccione una extensión de mensajería**. La aplicación puede incluir uno o varios comandos de acción.
+**1. Seleccionar una extensión de mensajería**. La aplicación puede incluir uno o varios comandos de acción.
 
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="El ejemplo muestra a un usuario que selecciona un comando de acción de la extensión de mensajería." border="false":::
 
@@ -150,7 +150,7 @@ En los escenarios siguientes, se muestran las principales formas en que los usua
 
 ### <a name="preview-links"></a>Vínculos de vista previa
 
-Las extensiones de mensajería también permiten insertar "rich links" desde una dirección URL reconocida en un mensaje (esta funcionalidad se denomina ["link unfurling"](../../messaging-extensions/how-to/link-unfurling.md)).
+Las extensiones de mensajería también permiten insertar enlaces enriquecidos desde una dirección URL reconocida en un mensaje (esta funcionalidad se denomina [«apertura de vínculos»](../../messaging-extensions/how-to/link-unfurling.md)).
 
 **1. Pegue un vínculo reconocido** en el cuadro de redacción.
 
@@ -162,7 +162,7 @@ Las extensiones de mensajería también permiten insertar "rich links" desde una
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de diálogo." border="false":::
 
-**2. Inserte el contenido**. Si la aplicación reconoce la dirección URL en el cuadro de redacción, esta representará el vínculo como una tarjeta que proporciona una vista previa completa del contenido web. (Consulte [Instrucciones de diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md) para obtener más información).
+**2. Insertar contenido**. Si la aplicación reconoce la dirección URL en el cuadro de redacción, esta representará el vínculo como una tarjeta que proporciona una vista previa completa del contenido web. (Consulte [Directrices de diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md) para más información).
 
 #### <a name="mobile"></a>Móvil
 
@@ -172,13 +172,13 @@ Las extensiones de mensajería también permiten insertar "rich links" desde una
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción." border="false":::
 
-## <a name="manage-a-messaging-extension"></a>Administrar una extensión de mensajería
+## <a name="manage-a-message-extension"></a>Administre una extensión de mensajería
 
-Al hacer clic con el botón derecho en su icono, los usuarios pueden anclar, quitar o configurar la extensión de mensajería.
+Al hacer clic con el botón derecho en su icono, los usuarios pueden anclar, quitar o configurar su extensión de mensajería.
 
 ## <a name="anatomy"></a>Anatomía
 
-### <a name="messaging-extension-in-the-compose-box"></a>Extensión de mensajería en el cuadro de redacción
+### <a name="message-extension-in-the-compose-box"></a>Extensión de mensajería en el cuadro de redacción
 
 Los siguientes ejemplos muestran una extensión de mensajería abierta desde el cuadro de redacción.
 
@@ -193,7 +193,7 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |3|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
 |4|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
 |5|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
-|6|**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
+|6 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -206,11 +206,11 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |3|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
 |4|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
 |5|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
-|6|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
-|7|**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda. El ejemplo siguiente usa el diseño de lista (el diseño de cuadrícula es otra opción).|
-|8|**Logotipo de la aplicación**: icono de esquema del logotipo de la aplicación.|
+|6 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
+|7 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda. El ejemplo siguiente usa el diseño de lista (el diseño de cuadrícula es otra opción).|
+|8 |**Logotipo de la aplicación**: icono de esquema del logotipo de la aplicación.|
 
-### <a name="messaging-extension-management-menu"></a>Menú de administración de extensiones de mensajería
+### <a name="message-extension-management-menu"></a>Menú de administración de extensiones de mensajería
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de administración de extensiones de mensajería." border="false":::
 
@@ -244,7 +244,7 @@ Las extensiones de mensajería son accesos directos que suponen una reducción d
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>Qué hacer: Hacer notar la extensión de mensajería
+#### <a name="do-highlight-your-message-extension"></a>Qué hacer: Resaltar la extensión de mensajería
 
 Las extensiones de mensajería no siempre son fáciles de encontrar. Incluya capturas de pantalla de cómo usarla en la página de detalles de la aplicación. Si la aplicación también incluye un bot, puede incluir la documentación de ayuda de la extensión de mensajería en un paseo de bienvenida del bot.
 
@@ -264,7 +264,7 @@ Si es útil para sus casos de uso, considere la posibilidad de crear una extensi
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Qué no hacer: Insertar toda la aplicación en un módulo de tareas
 
-Si la extensión de mensajería requiere comandos de acción, no dificulte la comprensión de su módulo de tareas permanezca y muestre solo los componentes necesarios para completar la acción.
+Si su extensión de mensajería requiere comandos de acción, mantenga el módulo de tareas simple y muestre solo los componentes necesarios para completar la acción.
 
    :::column-end:::
 :::row-end:::
