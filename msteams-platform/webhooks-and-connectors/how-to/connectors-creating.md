@@ -6,16 +6,16 @@ keywords: conector de Office365 de teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9381fb9a55b6a48126e8c157040745d56708e9f8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
+ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111615"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65136971"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
-Con las aplicaciones de Microsoft Teams, puede agregar su conector de Office 365 existente o crear uno nuevo en Teams. Para obtener más información, vea [compilación de su propio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+Con las aplicaciones de Microsoft Teams, puede agregar su conector de Office 365 existente o compilar uno nuevo en Teams. Para obtener más información, vea [cómo compilar su propio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 ## <a name="add-a-connector-to-teams-app"></a>Agregar un conector a la aplicación de Teams
 
@@ -206,28 +206,9 @@ El archivo manifest.json siguiente contiene los elementos básicos necesarios pa
 }
 ```
 
-## <a name="enable-or-disable-connectors-in-teams"></a>Habilitar o deshabilitar conectores en Teams
-
-El módulo Exchange Online PowerShell V2 usa la autenticación moderna y funciona con la autenticación multifactor, denominada MFA para conectarse a todos los entornos de PowerShell relacionados con Exchange en Microsoft 365. Los administradores pueden usar Exchange Online PowerShell para deshabilitar conectores para todo un inquilino o un buzón de grupo específico, lo que afecta a todos los usuarios de ese inquilino o buzón. No es posible deshabilitar para algunos y no para otros. Además, los conectores están deshabilitados de forma predeterminada para Government Community Cloud, denominados inquilinos de GCC.
-
-La configuración de nivel de inquilino invalida la configuración de nivel de grupo. Por ejemplo, si un administrador habilita los conectores para el grupo y los deshabilita en el inquilino, los conectores del grupo se deshabilitan. Para habilitar un conector en Teams, [conectar a Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) mediante la autenticación moderna con o sin MFA.
-
-### <a name="commands-to-enable-or-disable-connectors"></a>Comandos para habilitar o deshabilitar conectores
-
-Ejecute los comandos siguientes en Exchange Online PowerShell:
-
-* Para deshabilitar los conectores para el inquilino: `Set-OrganizationConfig -ConnectorsEnabled:$false`.
-* Para deshabilitar los mensajes accionables para el inquilino: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
-* Para habilitar conectores para Teams, ejecute los siguientes comandos:
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
-  * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
-  * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
-
-Para obtener más información sobre el intercambio de módulos de PowerShell, vea [Configuración de-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Para habilitar o deshabilitar los conectores de Outlook, [conectar aplicaciones a los grupos en Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab).
-
 ## <a name="test-your-connector"></a>Pruebe su conector
 
-Para probar el conector, cárguelo en un equipo con cualquier otra aplicación. Puedes crear un paquete .zip utilizando el archivo de manifiesto de los dos archivos de iconos y conectores Developer Dashboard, modificado como se indica en [Incluir el conector en tu manifiesto](#include-the-connector-in-your-manifest).
+Para probar el conector, cárguelo a un equipo con cualquier otra aplicación. Puede crear un paquete .zip mediante el archivo de manifiesto de los dos archivos de icono y del Panel de desarrollador de conectores, modificados como se indica en [Incluir el conector en el manifiesto](#include-the-connector-in-your-manifest).
 
 Después de cargar la aplicación, abra la lista Conectores desde cualquier canal. Desplácese hasta la parte inferior para ver la aplicación en la sección **Cargada**:
 
@@ -239,26 +220,6 @@ Después de cargar la aplicación, abra la lista Conectores desde cualquier cana
 Para comprobar que `HttpPOST` acción funciona correctamente, [envíe mensajes al conector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 Siga la guía [paso a paso](../../sbs-teams-connectors.yml) para crear y probar los conectores en Microsoft Teams.
-
-## <a name="publish-connectors-for-the-organization"></a>Publicar conectores para la organización
-
-Si quiere que el conector esté disponible solo para los usuarios de su organización, puede cargar la aplicación del conector personalizado en el [ catálogo de aplicaciones de la organización](~/concepts/deploy-and-publish/apps-publish.md).
-
-Después de cargar el paquete de la aplicación para configurar y usar el conector en un equipo, instale el conector desde el catálogo de aplicaciones de la organización.
-
-Para configurar un conector:
-
-1. Seleccione **Apps** en la barra de navegación izquierda.
-1. En la sección **Apps**, selecciona **Connectors**.
-1. Seleccione el conector que desea agregar. Aparece una ventana de cuadro de diálogo emergente.
-1. En el menú desplegable, seleccione **Agregar a un equipo**.
-1. En el cuadro de búsqueda, escriba un nombre de equipo o canal.
-1. Seleccione **Configurar un conector** en el menú desplegable de la esquina inferior derecha de la ventana de diálogo.
-
-> [!IMPORTANT]
-> Actualmente, las pestañas personalizadas están disponibles en Government Community Cloud (GCC), GCC-High y Department of Defense (DOD).
-
-El conector está disponible en la sección &#9679;&#9679;&#9679; > **Más opciones** > **Conectores** > **Todos** > **Conectores para el equipo** para ese equipo. Para navegar, desplácese a esta sección o busque la aplicación del conector. Para configurar o modificar el conector, seleccione **Configurar**.
 
 ## <a name="distribute-webhook-and-connector"></a>Distribución de webhook y conector
 
@@ -284,3 +245,5 @@ Siga la [guía paso a paso](../../sbs-teams-connectors.yml) para crear y probar 
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Creación de un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Cómo pueden los administradores habilitar o deshabilitar conectores](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
+* [Cómo pueden los administradores publicar conectores personalizados en su organización](/MicrosoftTeams/office-365-custom-connectors)
