@@ -1,35 +1,35 @@
 ---
-title: Elección de una configuración para probar y depurar la aplicación
-description: Describe las opciones para probar y depurar las aplicaciones de Microsoft Teams en el entorno local y hospedado en la nube.
-keywords: los equipos ejecutan el host hospedado en la nube local de las aplicaciones de depuración
+title: Elegir una configuración para probar y depurar la aplicación
+description: Describe las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y alojadas en la nube.
+keywords: teams ejecutar depurar aplicaciones local hospedado en la nube hospedar
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 957d673bfd3f7bbfaab05fd035e8de809fd66983
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111538"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135762"
 ---
-# <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elija una configuración para probar y depurar la aplicación de Microsoft Teams
+# <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elegir una configuración para probar y depurar la aplicación de Microsoft Teams
 
-Las aplicaciones de Microsoft Teams contienen una o varias funcionalidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, hágalo de una de las siguientes maneras:
+Las aplicaciones de Microsoft Teams contienen una o varias funcionalidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, use una de las siguientes formas:
 
-* **Puramente local**: en el caso de los bots, puede probar su experiencia en Bot Emulator. Para otro contenido, puede ejecutarlo localmente en el explorador y dirigir el contenido a través de `http://localhost`.
+* **Puramente local**: en el caso de los bots, puede probar la experiencia con Bot Emulator. Para otro contenido, puede ejecutarlo localmente en el explorador y direccionar el contenido a través de `http://localhost`.
 * **Hospedado localmente en Teams**: esto implica ejecutar la aplicación localmente en el software de tunelización y [crear un paquete](~/concepts/build-and-test/apps-package.md) para [cargarlo](~/concepts/deploy-and-publish/apps-upload.md) en Teams. Esto le permite ejecutar y depurar fácilmente la aplicación dentro del cliente de Teams.
-* **Hospedado en la nube en Teams**: esto simula realmente la compatibilidad de nivel de producción para una aplicación de Teams. Implica cargar la solución en el servidor accesible externamente o en el proveedor en la nube que prefiera y [crear un paquete](~/concepts/build-and-test/apps-package.md) para [cargarlo](~/concepts/deploy-and-publish/apps-upload.md) en Teams.
+* **Hospedado en la nube en Teams**: esto simula realmente la compatibilidad a nivel de producción para una aplicación Teams. Implica cargar la solución en el servidor accesible externamente o en el proveedor de nube que prefiera y [crear un paquete](~/concepts/build-and-test/apps-package.md) para [cargarlo](~/concepts/deploy-and-publish/apps-upload.md) en Teams.
 
-Ejecute la experiencia desde su propio equipo para realizar pruebas de Teams puramente locales o locales. Al hacerlo, puede compilar y ejecutar en el entorno de desarrollo integrado y aprovechar al máximo las técnicas, como los puntos de interrupción y la depuración por pasos.
+Ejecute la experiencia desde su propio equipo para realizar pruebas de Teams puramente locales o locales. Al hacerlo, puede compilar y ejecutar en el entorno de desarrollo integrado y aprovechar al máximo las técnicas, como depuración con puntos de interrupción y paso a paso.
 
 > [!NOTE]
-> Para la depuración y las pruebas a escala de producción, le recomendamos que siga las directrices propias de su empresa para asegurarse de que puede admitir pruebas, almacenamiento provisional e implementación a través de sus propios procesos.
+> Para la depuración y las pruebas a escala de producción, le recomendamos que siga sus propias directrices de empresa para asegurarse de que puede admitir pruebas, ensayos e implementación a través de sus propios procesos.
 
 Use varios manifiestos y paquetes para mantener la separación entre los servicios de producción y desarrollo. Por ejemplo, puede optar por registrar bots de desarrollo y producción independientes y crear los paquetes adecuados para cargarlos en el entorno de pruebas. También se recomienda cargar y probar el paquete de producción antes de enviar la aplicación para publicarla en nuestra tienda de aplicaciones o distribuirla a los clientes.
 
 ## <a name="purely-local"></a>Puramente local
 
 > [!NOTE]
-> La ejecución del bot localmente no le proporciona acceso a la funcionalidad de la aplicación de Teams ni a funciones del bot específicas de Teams, como llamadas de lista y otras funciones específicas del canal. Además, Bot Framework permite algunas funcionalidades en Bot Emulator que podrían no funcionar al ejecutarse en Microsoft Teams.
+> La ejecución del bot localmente no le proporciona acceso a la funcionalidad de la aplicación de Teams ni a funciones del bot específicas de Teams, como llamadas a lista de participantes y otras funcionalidades específicas del canal. Además, Bot Framework permite algunas funcionalidades en Bot Emulator que podrían no funcionar al ejecutarse en Microsoft Teams.
 
 El bot puede ejecutarse en Bot Emulator. Esto le permite probar parte de la lógica principal del bot, ver un diseño aproximado de los mensajes y realizar pruebas sencillas. Estos son los pasos:
 
@@ -56,24 +56,25 @@ Para configurar ngrok como preparación para ejecutar la aplicación de Microsof
 
 Para usar ngrok en el proyecto según las funcionalidades que esté usando, debe reemplazar todas las referencias URL del código, la configuración y el archivo manifest.json para usar este punto de conexión de dirección URL.
 
-Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Para validar que ngrok funciona, pruebe la respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a la funcionalidad específica de Teams.
+Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a la funcionalidad específica de Teams.
 
 > [!NOTE]
-> Para actualizar el punto de conexión de mensajería de un bot, debe usar Bot Framework. Seleccione el bot en [la lista de bots de Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puede actualizar el punto de conexión de mensajería a través de [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> * Para actualizar el punto de conexión de mensajería de un bot, debe usar Bot Framework. Seleccione el bot en [la lista de bots de Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puede actualizar el punto de conexión de mensajería a través de [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
 
 ## <a name="cloud-hosted"></a>Hospedado en la nube
 
-Puede usar cualquier servicio direccionable externamente para hospedar el código de desarrollo y producción y sus puntos de conexión HTTPS. No hay ninguna expectativa de que las funcionalidades residan en el mismo servicio. Se requiere que se acceda a todos los dominios desde las aplicaciones de Microsoft Teams que aparecen en el objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) del archivo `manifest.json`.
+Puede usar cualquier servicio direccionable externamente para hospedar el código de desarrollo y producción y sus puntos de conexión HTTPS. No hay expectativas de que las funcionalidades residan en el mismo servicio. Se requiere que se acceda a todos los dominios desde las aplicaciones de Microsoft Teams que aparecen en el objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) del archivo `manifest.json`.
 
 > [!NOTE]
 > Para garantizar un entorno seguro, sea explícito sobre el dominio y subdominios exactos a los que hace referencia y debe tener el control de esos dominios. Por ejemplo, no se recomienda `*.azurewebsites.net`, pero se recomienda `contoso.azurewebsites.net`.
 
 ## <a name="load-and-run-your-experience"></a>Cargar y ejecutar la experiencia
 
-Para cargar y ejecutar la experiencia dentro de Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para obtener más información, vea:
+Para cargar y ejecutar la experiencia dentro de Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para más información, vea:
 
-* [Cree un paquete de aplicación para su aplicación de Microsoft Teams](~/concepts/build-and-test/apps-package.md)
-* [Cargue la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
+* [Crear un paquete de aplicación para la aplicación de Microsoft Teams](~/concepts/build-and-test/apps-package.md).
+* [Cargar la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -82,4 +83,4 @@ Para cargar y ejecutar la experiencia dentro de Microsoft Teams, debe crear un p
 
 ## <a name="see-also"></a>Consulte también
 
-[Pruebe y depure el bot localmente](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+[Probar y depurar el bot localmente](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)

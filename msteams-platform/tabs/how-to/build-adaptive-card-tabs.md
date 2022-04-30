@@ -1,54 +1,54 @@
 ---
-title: Crear pestañas de tarjeta adaptables
+title: Crear pestañas de tarjeta adaptable
 author: KirtiPereira
-description: Obtenga información sobre la creación de pestañas mediante tarjetas adaptables con ejemplos de código, como la invocación de actividades, la comprensión del flujo de trabajo del módulo de tareas y la autenticación.
+description: Obtenga información sobre cómo crear pestañas mediante Tarjetas adaptables con ejemplos de código, como es invocación de actividades, comprensión del flujo de trabajo del módulo de tareas y autenticación.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: flujo de datos de autenticación de aplicaciones personales de tarjeta adaptable
-ms.openlocfilehash: 95507373671f9044bec788e981f66931b4588705
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 3c919cb6185481306985adfe9402ba0c31aac584
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104528"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110291"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
 > [!IMPORTANT]
 >
-> * Actualmente, las pestañas con tarjetas adaptables solo se admiten como aplicaciones personales.
+> * Actualmente, las pestañas con Tarjetas adaptables solo se admiten como aplicaciones personales.
 
-Al desarrollar una pestaña con el método tradicional, puede encontrarse con estos problemas:
+Al desarrollar una pestaña con el método tradicional, podría encontrarse con estas incidencias:
 
 * Consideraciones sobre HTML y CSS
 * Tiempos de carga lentos
 * Restricciones de iFrame
-* Mantenimiento y costos del servidor
+* Mantenimiento y costes del servidor
 
-Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un IFrame, puede representar tarjetas adaptables en una pestaña. Mientras el front-end se representa con tarjetas adaptables, el back-end funciona con un bot. El bot es responsable de aceptar solicitudes y responder correctamente con la tarjeta adaptable que se representa.
+Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de incrustar contenido web en un IFrame, puede representar Tarjetas adaptables en una pestaña. Aunque el front-end se representa con Tarjetas adaptables, el back-end se basa en un bot. El bot es responsable de aceptar las solicitudes y responder adecuadamente con la tarjeta adaptable que se representa.
 
-Puede crear las pestañas con bloques de creación de interfaz de usuario (UI) listos para crear bloques nativos en escritorio, web y dispositivos móviles. Este artículo le ayuda a comprender los cambios necesarios para realizar en el manifiesto de la aplicación. En el artículo también se identifica cómo la actividad de invocación solicita y envía información en la pestaña con tarjetas adaptables y su efecto en el flujo de trabajo del módulo de tareas.
+Puede crear sus pestañas con bloques de creación de interfaz de usuario (UI) listos para usar nativos en equipos de escritorio, web y móviles. Este artículo le ayuda a comprender los cambios necesarios para realizar en el manifiesto de la aplicación. El artículo también identifica cómo la actividad de invocación solicita y envía información en la pestaña con Tarjetas adaptables y su efecto en el flujo de trabajo del módulo de tareas.
 
-En la imagen siguiente se muestran pestañas de compilación con tarjetas adaptables en dispositivos móviles y de escritorio:
+En la imagen siguiente se muestran las pestañas de compilación con Tarjetas adaptables en equipos de escritorio y móviles:
 
 :::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Ejemplo de tarjeta adaptable representada en pestañas." border="false":::
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Antes de empezar a usar tarjetas adaptables para crear pestañas, debe:
+Antes de empezar a usar Tarjetas adaptables para crear pestañas, debe:
 
-* Familiarícese con el [desarrollo de bots](../../bots/what-are-bots.md), [tarjetas adaptables](https://adaptivecards.io/) y [módulos de tareas](../../task-modules-and-cards/task-modules/task-modules-bots.md) en Teams.
-* Tener un bot en ejecución en Teams para el desarrollo.
+* Familiarizarse con el [desarrollo de bots](../../bots/what-are-bots.md), [Tarjetas adaptables](https://adaptivecards.io/) y [Módulos de tareas](../../task-modules-and-cards/task-modules/task-modules-bots.md) en Teams.
+* Haga que un bot se ejecute en Teams para su desarrollo.
 
 ## <a name="changes-to-app-manifest"></a>Cambios en el manifiesto de la aplicación
 
-Las aplicaciones personales que representan pestañas deben incluir una `staticTabs` matriz en el manifiesto de la aplicación. Las pestañas de tarjeta adaptable se representan cuando se proporciona la `contentBotId` propiedad en la `staticTab` definición. Las definiciones de pestañas estáticas deben contener , `contentBotId`especificando una pestaña tarjeta adaptable o , `contentUrl`especificando una experiencia típica de pestaña de contenido web hospedada.
+Las aplicaciones personales que representan pestañas deben incluir una matriz de `staticTabs` en su manifiesto de aplicación. Las pestañas de tarjeta adaptable se representan cuando se proporciona la propiedad `contentBotId` en la definición de `staticTab`. Las definiciones de pestañas estáticas deben contener un `contentBotId`especificando una pestaña tarjeta adaptable o un `contentUrl`especificando una experiencia típica de pestaña de contenido web hospedada.
 
 > [!NOTE]
-> La `contentBotId` propiedad está disponible actualmente en la versión de manifiesto 1.9 o posterior.
+> La propiedad `contentBotId` está disponible actualmente en la versión 1.9 ó posterior del manifiesto.
 
-Proporcione la `contentBotId` propiedad con la `botId` que la pestaña Tarjeta adaptable debe comunicarse. La `entityId` pestaña configurada para la tarjeta adaptable se envía en el `tabContext` parámetro de cada solicitud de invocación y se puede usar para diferenciar las pestañas de tarjeta adaptable que funcionan con el mismo bot. Para obtener más información sobre otros campos de definición de tabulación estática, vea [esquema de manifiesto](../../resources/schema/manifest-schema.md#statictabs).
+Proporcione la propiedad `contentBotId` con el `botId` con el que debe comunicarse la pestaña Tarjeta adaptable. El `entityId` configurado para la pestaña Tarjeta adaptable se envía en el parámetro `tabContext` de cada solicitud de invocación y se puede usar para diferenciar las pestañas de tarjeta adaptables con tecnología del mismo bot. Para obtener más información sobre otros campos de definición de pestañas estáticas, vea [esquema de manifiesto](../../resources/schema/manifest-schema.md#statictabs).
 
 A continuación se muestra un manifiesto de pestaña de tarjeta adaptable de ejemplo:
 
@@ -103,26 +103,26 @@ A continuación se muestra un manifiesto de pestaña de tarjeta adaptable de eje
 }
 ```
 
-## <a name="invoke-activities"></a>Invocación de actividades
+## <a name="invoke-activities"></a>Invocar actividades
 
-La comunicación entre la pestaña Tarjeta adaptable y el bot se realiza a través de `invoke` actividades. Cada `invoke` actividad tiene un **nombre** correspondiente. Use el nombre de cada actividad para diferenciar cada solicitud. `tab/fetch` y `tab/submit` son las actividades que se tratan en esta sección.
+La comunicación entre la pestaña tarjeta adaptable y el bot se realiza a través de `invoke` actividades. Cada actividad de `invoke` tiene un nombre de **correspondiente**. Use el nombre de cada actividad para diferenciar cada solicitud. `tab/fetch` y `tab/submit` son las actividades que se tratan en esta sección.
 
 > [!NOTE]
 >
-> * Los bots deben enviar todas las respuestas a la [dirección URL del servicio](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). La dirección URL del servicio se recibe como parte de la carga entrante `activity` .
-> * El tamaño de carga de invocación ha aumentado a 80 kb.
+> * Los bots deben enviar todas las respuestas a [dirección URL del servicio](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). La dirección URL del servicio se recibe como parte de la carga de `activity` entrante.
+> * El tamaño de la carga de invocación ha aumentado a 80 KB.
 
-### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Capturar tarjeta adaptable para representarla en una pestaña
+### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Capturar tarjeta adaptable para representar en una pestaña
 
-`tab/fetch` es la primera solicitud de invocación que recibe el bot cuando un usuario abre una pestaña tarjeta adaptable. Cuando el bot recibe la solicitud, envía una respuesta de **continuación** de pestaña o una respuesta de **autenticación** de pestaña.
-La respuesta **continue** incluye una matriz para **las tarjetas**, que se representa verticalmente en la pestaña en el orden de la matriz.
+`tab/fetch` es la primera solicitud de invocación que recibe el bot cuando un usuario abre una pestaña de tarjeta adaptable. Cuando el bot recibe la solicitud, envía una pestaña **continuar** de respuesta o una pestaña **autenticación** de respuesta.
+El **continuar** de respuesta incluye una matriz para **tarjetas**, que se representa verticalmente en la pestaña en el orden de la matriz.
 
 > [!NOTE]
-> Para obtener más información sobre la respuesta **de autenticación** , consulte [autenticación](#authentication).
+> Para obtener más información sobre **respuesta de autenticación**, consulte [autenticación](#authentication).
 
-El código siguiente proporciona ejemplos de `tab/fetch` solicitud y respuesta:
+En el código siguiente se proporcionan ejemplos de `tab/fetch` solicitud y respuesta:
 
-**`tab/fetch` Petición**
+**`tab/fetch` solicitud**
 
 ```json
 // tab/fetch POST request: agents/{botId}/invoke
@@ -143,7 +143,7 @@ El código siguiente proporciona ejemplos de `tab/fetch` solicitud y respuesta:
 }
 ```
 
-**`tab/fetch` Respuesta**
+**`tab/fetch` respuesta**
 
 ```json
 // tab/fetch **continue** POST response:
@@ -170,16 +170,16 @@ El código siguiente proporciona ejemplos de `tab/fetch` solicitud y respuesta:
 
 ### <a name="handle-submits-from-adaptive-card"></a>Control de envíos desde la tarjeta adaptable
 
-Después de representar una tarjeta adaptable en la pestaña, puede responder a las interacciones del usuario. Esta respuesta se controla mediante la solicitud de `tab/submit` invocación.
+Después de representar una tarjeta adaptable en la pestaña, puede responder a las interacciones del usuario. La solicitud de invocación de `tab/submit` controla esta respuesta.
 
-Cuando un usuario selecciona un botón en la pestaña Tarjeta adaptable, la solicitud se desencadena en el `tab/submit` bot con los datos correspondientes a través de la `Action.Submit` función de tarjeta adaptable. Los datos de la tarjeta adaptable están disponibles a través de la propiedad data de la `tab/submit` solicitud. Recibe cualquiera de las siguientes respuestas a la solicitud:
+Cuando un usuario selecciona un botón en la pestaña Tarjeta adaptable, la solicitud de `tab/submit` se desencadena en el bot con los datos correspondientes a través de la función `Action.Submit` de tarjeta adaptable. Los datos de la tarjeta adaptable están disponibles a través de la propiedad de datos de la solicitud de `tab/submit`. Recibirá cualquiera de las siguientes respuestas a su solicitud:
 
-* Respuesta de código `200` de estado HTTP sin cuerpo. Una respuesta vacía de 200 da como resultado que el cliente no realice ninguna acción.
-* La respuesta de **continuación** de la pestaña estándar`200`, como se explica en [Captura de tarjeta adaptable](#fetch-adaptive-card-to-render-to-a-tab). Una respuesta **de continuar** de pestaña desencadena que el cliente actualice la pestaña tarjeta adaptable representada con las tarjetas adaptables proporcionadas en la matriz de tarjetas de la respuesta **de continuar** .
+* Un código de estado HTTP `200` respuesta sin cuerpo. Una respuesta 200 vacía no da como resultado ninguna acción realizada por el cliente.
+* La respuesta de **continuar** de la pestaña estándar`200`, como se explica en [Captura de tarjeta adaptable](#fetch-adaptive-card-to-render-to-a-tab). Una pestaña **continuar** de respuesta desencadena que el cliente actualice la pestaña tarjeta adaptable representada con las Tarjetas adaptables proporcionado en la matriz de tarjetas del **continuar** de respuesta.
 
-El código siguiente proporciona ejemplos de `tab/submit` solicitud y respuesta:
+En el código siguiente se proporcionan ejemplos de `tab/submit` solicitud y respuesta:
 
-**`tab/submit` Petición**
+**`tab/submit` solicitud**
 
 ```json
 // tab/submit POST request: agents/{botId}/invoke:
@@ -204,7 +204,7 @@ El código siguiente proporciona ejemplos de `tab/submit` solicitud y respuesta:
 }
 ```
 
-**`tab/submit` Respuesta**
+**`tab/submit` respuesta**
 
 ```json
 //tab/fetch **continue** POST response:
@@ -228,15 +228,15 @@ El código siguiente proporciona ejemplos de `tab/submit` solicitud y respuesta:
 
 ## <a name="understand-task-module-workflow"></a>Descripción del flujo de trabajo del módulo de tareas
 
-El módulo de tareas también usa la tarjeta adaptable para invocar `task/fetch` y `task/submit` solicitudes y respuestas. Para obtener más información, consulte [Uso de módulos de tareas en bots de Microsoft Teams](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+El módulo de tareas también usa la tarjeta adaptable para invocar solicitudes y respuestas `task/fetch` y `task/submit`. Para obtener más información, vea [usar módulos de tareas en bots de Microsoft Teams](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
-Con la introducción de la pestaña Tarjeta adaptable, hay un cambio en la forma en que el bot responde a una `task/submit` solicitud. Si usa una pestaña Tarjeta adaptable, el bot responde a la solicitud de `task/submit` invocación con la respuesta **de continuación** de la pestaña estándar y cierra el módulo de tareas. La pestaña Tarjeta adaptable se actualiza representando la nueva lista de tarjetas proporcionada en el cuerpo de la respuesta **de continuación** de la pestaña.
+Con la introducción de la pestaña Tarjeta adaptable, hay un cambio en la forma en que el bot responde a una solicitud de `task/submit`. Si usa una pestaña tarjeta adaptable, el bot responde a la solicitud de invocación `task/submit` con la pestaña estándar **continuar** de respuesta y cierra el módulo de tareas. La pestaña Tarjeta adaptable se actualiza mediante la representación de la nueva lista de tarjetas proporcionada en la pestaña **continuar** como cuerpo de respuesta.
 
 ### <a name="invoke-taskfetch"></a>Invocar `task/fetch`
 
-El código siguiente proporciona ejemplos de `task/fetch` solicitud y respuesta:
+En el código siguiente se proporcionan ejemplos de `task/fetch` solicitud y respuesta:
 
-**`task/fetch` Petición**
+**`task/fetch` solicitud**
 
 ```json
 // task/fetch POST request: agents/{botId}/invoke
@@ -260,7 +260,7 @@ El código siguiente proporciona ejemplos de `task/fetch` solicitud y respuesta:
 }
 ```
 
-**`task/fetch` Respuesta**
+**`task/fetch` respuesta**
 
 ```json
 // task/fetch POST response: agents/{botId}/invoke
@@ -283,9 +283,9 @@ El código siguiente proporciona ejemplos de `task/fetch` solicitud y respuesta:
 
 ### <a name="invoke-tasksubmit"></a>Invocar `task/submit`
 
-El código siguiente proporciona ejemplos de `task/submit` solicitud y respuesta:
+En el código siguiente se proporcionan ejemplos de `task/submit` solicitud y respuesta:
 
-**`task/submit` Petición**
+**`task/submit` solicitud**
 
 ```json
 // task/submit POST request: agent/{botId}/invoke:
@@ -307,7 +307,7 @@ El código siguiente proporciona ejemplos de `task/submit` solicitud y respuesta
 }
 ```
 
-**`task/submit` tipo de respuesta tab**
+**`task/submit` tipo de respuesta de pestaña**
 
 ```json
 // tab/fetch **continue** POST response: 
@@ -336,31 +336,31 @@ El código siguiente proporciona ejemplos de `task/submit` solicitud y respuesta
 
 ## <a name="authentication"></a>Autenticación
 
-En las secciones anteriores, ha visto que la mayoría de los paradigmas de desarrollo se pueden ampliar desde las solicitudes y respuestas del módulo de tareas hasta las solicitudes y respuestas de tabulación. A la hora de controlar la autenticación, el flujo de trabajo de la pestaña Tarjeta adaptable sigue el patrón de autenticación de las extensiones de mensaje. Para obtener más información, vea [Agregar autenticación](../../messaging-extensions/how-to/add-authentication.md).
+En las secciones anteriores, ha visto que la mayor parte de los paradigmas de desarrollo se pueden extender desde las solicitudes y respuestas del módulo de tareas a las solicitudes de tabulación y las respuestas. Cuando se trata de controlar la autenticación, el flujo de trabajo de la pestaña Tarjeta adaptable sigue el patrón de autenticación para las extensiones de mensaje. Para obtener más información, vea [agregar autenticación](../../messaging-extensions/how-to/add-authentication.md).
 
-`tab/fetch` las solicitudes pueden tener una respuesta **continue** o **auth** . Cuando se desencadena una `tab/fetch` solicitud y recibe una respuesta de **autenticación** de pestaña, la página de inicio de sesión se muestra al usuario.
+`tab/fetch` solicitudes pueden tener una respuesta **continuar** o una respuesta **autenticación**. Cuando se desencadena una solicitud de `tab/fetch` y recibe una pestaña **autenticación** de respuesta, la página de inicio de sesión se muestra al usuario.
 
-**Para obtener un código de autenticación a través de `tab/fetch` la invocación**
+**Para obtener un código de autenticación a través de `tab/fetch` invocar**
 
 1. Abra la aplicación. Aparece la página de inicio de sesión.
 
     > [!NOTE]
-    > El logotipo de la aplicación se proporciona a través de la `icon` propiedad definida en el manifiesto de la aplicación. El título que aparece después de definir el logotipo en la `title` propiedad devuelta en el cuerpo de la respuesta **de autenticación** de tabulación.
+    > El logotipo de la aplicación se proporciona a través de la propiedad `icon` definida en el manifiesto de la aplicación. Título que aparece después de definir el logotipo en la propiedad `title` devuelta en la pestaña **autenticación** de cuerpo de respuesta.
 
-1. Seleccione **Iniciar sesión**. Se le redirigirá a la dirección URL de autenticación proporcionada en la `value` propiedad del cuerpo de la respuesta de **autenticación** .
+1. Seleccione **Iniciar sesión**. Se le redirigirá a la dirección URL de autenticación proporcionada en la propiedad `value` del cuerpo de respuesta **autenticación**.
 1. Aparecerá una ventana emergente. Esta ventana emergente hospeda la página web mediante la dirección URL de autenticación.
-1. Después de iniciar sesión, cierre la ventana. Se envía **un código de autenticación** al cliente de Teams.
-1. A continuación, el cliente Teams vuelve a emitir la `tab/fetch` solicitud al servicio, que incluye el código de autenticación proporcionado por la página web hospedada.
+1. Después de iniciar sesión, cierre la ventana. Se envía un **código de autenticación** al cliente de Teams.
+1. A continuación, el cliente de Teams vuelve a emitir la solicitud de `tab/fetch` al servicio, que incluye el código de autenticación proporcionado por la página web hospedada.
 
-### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` flujo de datos de autenticación
+### <a name="tabfetch-authentication-data-flow"></a>flujo de datos de autenticación `tab/fetch`
 
-En la imagen siguiente se proporciona información general sobre cómo funciona el flujo de datos de autenticación para una `tab/fetch` invocación.
+En la imagen siguiente se proporciona información general sobre cómo funciona el flujo de datos de autenticación para una invocación de `tab/fetch`.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Ejemplo de flujo de autenticación de la pestaña de tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Ejemplo de flujo de autenticación de pestaña de tarjeta adaptable." border="false":::
 
 **`tab/fetch` respuesta de autenticación**
 
-El código siguiente proporciona un ejemplo de respuesta de `tab/fetch` autenticación:
+El código siguiente proporciona un ejemplo de `tab/fetch` como respuesta de autenticación:
 
 ```json
 // tab/auth POST response (openURL)
@@ -382,7 +382,7 @@ El código siguiente proporciona un ejemplo de respuesta de `tab/fetch` autentic
 
 ### <a name="example"></a>Ejemplo
 
-En el código siguiente se muestra un ejemplo de solicitud reemitida:
+En el código siguiente se muestra un ejemplo de solicitud reemitido:
 
 ```json
 {
@@ -430,18 +430,18 @@ En el código siguiente se muestra un ejemplo de solicitud reemitida:
 
 |**Ejemplo de nombre** | **Descripción** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| Mostrar tarjetas adaptables en Teams pestaña | Microsoft Teams código de ejemplo de pestaña, que muestra cómo mostrar tarjetas adaptables en Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| Mostrar Tarjetas adaptables en la pestaña Teams | Código de ejemplo de pestaña de Microsoft Teams, que muestra cómo mostrar Tarjetas adaptables en Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Expansión del vínculo de la pestaña y vista de fases](~/tabs/tabs-link-unfurling.md)
+> [Expansión del vínculo de pestañas y la Vista de fases](~/tabs/tabs-link-unfurling.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tarjeta adaptable](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [pestañas de Teams](~/tabs/what-are-tabs.md)
+* [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 * [Comentarios de finalización de formularios](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

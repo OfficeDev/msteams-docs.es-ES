@@ -5,12 +5,12 @@ description: Información general sobre los comandos de acción de extensión de
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ef9f1c45ec3b2d1df4bf5449885263034f19fde7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111685"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135748"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -48,13 +48,13 @@ En primer lugar, debe decidir la ubicación desde la que se debe invocar el coma
 
 En la imagen siguiente se muestran las ubicaciones desde las que se invoca el comando de acción:
 
-![ubicaciones de invocación de comando de acción](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Ubicaciones de invocación de comandos de acción":::
 
 ## <a name="select-how-to-create-your-task-module"></a>Seleccione cómo crear el módulo de tareas
 
 Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representará dentro del módulo de tareas:
 
-* **Lista estática de parámetros**: este es el método más sencillo. Puede definir una lista de parámetros en el manifiesto de la aplicación que representa el cliente de Teams, pero no podrá controlar el formato en este caso.
+* **Lista estática de parámetros**: este es el método más sencillo. Puede definir una lista de parámetros en el manifiesto de la aplicación que proporciona el cliente de Teams pero, en este caso, no puede controlar el formato.
 * **Tarjeta adaptable**: puede seleccionar usar una tarjeta adaptable, que proporciona un mayor control sobre la interfaz de usuario, pero le sigue limitando en cuanto a los controles disponibles y las opciones de formato.
 * **Vista web incrustada**: puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles.
 
@@ -68,7 +68,7 @@ Si la extensión de mensaje se invoca desde el cuadro de redacción o directamen
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Agregar el comando de acción al manifiesto de la aplicación
 
-Para agregar el comando de acción al manifiesto de la aplicación, debe agregar un nuevo objeto `composeExtension` al nivel superior del JSON del manifiesto de aplicación. Puede usar una de las siguientes formas para hacerlo:
+Para agregar el comando de acción al manifiesto de la aplicación, debe agregar un nuevo objeto `composeExtension` al nivel superior del JSON del manifiesto de aplicación. Puede hacerlo de una de las siguientes formas:
 
 * [Crear un comando de acción con App Studio](#create-an-action-command-using-app-studio)
 * [Crear un comando de acción manualmente](#create-an-action-command-manually)
@@ -78,7 +78,7 @@ Para agregar el comando de acción al manifiesto de la aplicación, debe agregar
 Puede crear un comando de acción mediante **App Studio** o **Portal para desarrolladores**.
 
 > [!NOTE]
-> App Studio pronto estará en desuso. Configurar, distribuir y administrar las aplicaciones de Teams con el nuevo [Portal para desarrolladores](https://dev.teams.microsoft.com/).
+ > Si ha estado usando App Studio, le recomendamos que pruebe el portal para desarrolladores [Portal para desarrolladores](https://dev.teams.microsoft.com/) para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso a partir del 30 de junio de 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
@@ -92,43 +92,46 @@ Puede crear un comando de acción mediante **App Studio** o **Portal para desarr
 1. Después de importar un paquete de aplicación, seleccione **Extensiones de mensaje** en **Funcionalidades**. Se mostrará una ventana emergente para configurar la extensión de mensaje.
 1. Seleccione **Configurar** en la ventana para incluir la extensión de mensaje en la experiencia de la aplicación. En la imagen siguiente se muestra la ventana de configuración de la extensión de mensaje:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Configuración de la extensión de mensajería":::
 
 1. Para crear una extensión de mensaje, necesita un bot registrado de Microsoft. Puede usar un bot existente o crear uno nuevo. Seleccione la opción **Crear nuevo bot**, asigne un nombre al nuevo bot y seleccione **Crear**. En la imagen siguiente se muestra la creación de bots para la extensión de mensaje:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Creación de un bot para la extensión de mensajería":::
 
-1. Seleccione **Agregar** en la **Sección de comandos** de la página de extensiones de mensaje para incluir los comandos que deciden el comportamiento de la extensión de mensaje.
-En la imagen siguiente se muestra la adición de comandos para la extensión de mensaje:
+1. Para usar un bot existente, seleccione **Usar bot existente** y seleccione **Seleccionar de uno de mis bots existentes** para elegir los bots existentes de la lista desplegable, proporcione un **Nombre de bot** y seleccione **Guardar**, o seleccione **Conectar a un identificador de bot diferente** si ya tiene un identificador de bot creado, asigne un **Nombre de bot** y seleccione **Guardar**.
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Uso del bot existente para la extensión de mensajería":::
+
+1. Seleccione **Agregar** en la **Sección de comandos** de la página de extensión de mensajería para incluir los comandos que deciden el comportamiento de la extensión de mensajería. La siguiente imagen muestra la adicción de comandos para la extensión de mensajería:
+
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Incluir comandos":::
 
 1. Seleccione **Permitir que los usuarios desencadenen acciones en servicios externos dentro de Teams**. En la imagen siguiente se muestra la selección del comando de acción:
 
-    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Selección de comandos de acción":::
 
 1. Para usar un conjunto estático de parámetros para crear el módulo de tareas, seleccione **Definir un conjunto de parámetros estáticos para el comando**.
 
     En la imagen siguiente se muestra la selección de parámetros estáticos del comando de acción:
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Selección de parámetros estáticos del comando de acción":::
 
     En la imagen siguiente se muestra un ejemplo de configuración de parámetros estáticos:
 
-   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Configuración de parámetros estáticos del comando de acción":::
 
     En la imagen siguiente se muestra un ejemplo de pruebas de parámetros estáticos:
 
-   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Pruebas de parámetros estáticos del comando de acción":::
 
 1. Para usar parámetros dinámicos, seleccione **Capturar un conjunto dinámico de parámetros del bot**. En la imagen siguiente se muestra la selección del parámetro de comando de acción:
 
-    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Selección de parámetros dinámicos de comandos de acción":::
 
 1. Agregue un **Id. de comando** y un **Título**.
 1. Seleccione la ubicación desde la que desea invocar el comando de acción. En la imagen siguiente se muestra la ubicación de invocación del comando de acción:
 
-    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Ubicación de invocación de comandos de acción":::
 
 1. Seleccione **Guardar**.
 1. Para agregar más parámetros, seleccione el botón **Agregar** en la sección **Parámetros**.
@@ -149,7 +152,7 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 
 | Nombre de propiedad | Objetivo | ¿Es obligatoria? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Solo se usa cuando `fetchTask` es `false`. | No | 1.0 |
+| `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Usar solo cuando `fetchTask` es `false`. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
 | `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
 | `parameter.title` | Esta propiedad es un título o etiqueta de parámetro descriptivo corto. | Sí | 1.0 |
@@ -219,7 +222,7 @@ La siguiente sección es un ejemplo de un objeto `composeExtensions` que define 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |
+| Ejemplo de nombre           | Descripción | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Acción de extensión de mensaje de Teams| Describe cómo definir comandos de acción, crear un módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
