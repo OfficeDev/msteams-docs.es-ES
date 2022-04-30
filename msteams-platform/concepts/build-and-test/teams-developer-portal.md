@@ -1,83 +1,85 @@
 ---
-title: Administrar las aplicaciones con el Portal de desarrolladores
-description: Aprende a configurar, distribuir y administrar tus aplicaciones mediante el Portal de desarrolladores para Microsoft Teams.
-keywords: introducción a los equipos del portal de desarrolladores
-ms.localizationpriority: medium
+title: Administre sus aplicaciones con el portal para desarrolladores de Microsoft Teams
+description: Obtenga información sobre cómo configurar, distribuir y administrar las aplicaciones mediante el portal para desarrolladores para Microsoft Teams.
+keywords: introducción a los equipos del portal para desarrolladores
+ms.localizationpriority: high
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
-ms.translationtype: MT
+ms.openlocfilehash: f55ecd7e44760a353a6058e004ea3cf6cdb769b2
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464785"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111797"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams
 
-Portal <a href="https://dev.teams.microsoft.com" target="_blank">para desarrolladores para Teams</a> es la herramienta principal para configurar, distribuir y administrar las aplicaciones Microsoft Teams aplicaciones. Con el Portal de desarrolladores, puedes colaborar con compañeros de la aplicación, configurar entornos en tiempo de ejecución y mucho más.
+El <a href="https://dev.teams.microsoft.com" target="_blank">portal para desarrolladores para Teams</a> es la herramienta principal para configurar, distribuir y administrar las aplicaciones de Microsoft Teams. Con el portal para desarrolladores, puede colaborar con compañeros en la aplicación, configurar entornos en tiempo de ejecución y mucho más.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del Portal de desarrolladores para Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del portal para desarrolladores para Teams.":::
 
 > [!NOTE]
-> Actualmente, el Portal de desarrolladores no está disponible para Government Community Cloud (GCC), GCC-High o inquilinos del Departamento de Defensa (DOD).
+>
+> * Actualmente, el portal para desarrolladores no está disponible para inquilinos de Government Community Cloud (GCC), GCC-High o el Departamento de Defensa (DOD).
+> * Sin embargo, puede usar un inquilino normal para compilar una aplicación en el portal para desarrolladores, descargar la aplicación y cargar la aplicación mediante [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) en una nube nacional. Para obtener más información, consulte [Implementaciones nacionales de nube](/graph/deployments).
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 
-El Portal de desarrolladores proporciona un par de formas de registrar una Teams aplicación:
+El portal para desarrolladores proporciona un par de maneras de registrar una aplicación Teams:
 
-* Registrar una aplicación nueva
-* Importar un paquete de aplicación existente
+* Registro de una nueva aplicación
+* Importación de un paquete de aplicación existente
 
 > [!NOTE]
-> Si creas una aplicación con el [Microsoft Teams Toolkit para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), puedes administrar esa aplicación en el Portal de desarrolladores.
+> Si crea una aplicación con el [Kit de herramientas de Microsoft Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), puede administrarla en el portal para desarrolladores.
 
-## <a name="set-up-an-environment"></a>Configurar un entorno
+## <a name="set-up-an-environment"></a>Configurar el entorno de desarrollo
 
-Puedes configurar entornos y variables globales para ayudar a la transición de la aplicación de tu tiempo de ejecución local a la producción. Las variables globales se usan en todos los entornos.
+Puede configurar entornos y variables globales para ayudar a realizar la transición de la aplicación del entorno de ejecución local a producción. Las variables globales se usan en todos los entornos.
 
 Para configurar un entorno:
 
-1. En el Portal de desarrolladores, selecciona la aplicación en la que estás trabajando.
-2. Vaya a la **página Entornos** y seleccione **+ Agregar un entorno**.
-3. Seleccione **+ Agregar una variable** para crear variables de configuración para su entorno.
+1. En el portal para desarrolladores, seleccione la aplicación en la que está trabajando.
+2. Vaya a la página **Entornos** y seleccione **+ Agregar un entorno**.
+3. Seleccione **+ Agregar una variable** para crear variables de configuración para el entorno.
 
 Para usar variables:
 
-Usa los nombres de las variables en lugar de los valores codificados de forma automática para establecer las configuraciones de la aplicación.
+Use los nombres de variable en lugar de los valores codificados de forma rígida para establecer las configuraciones de la aplicación.
 
-1. Escriba `{{` en cualquier campo del Portal de desarrolladores. Aparece un desplegable con todas las variables creadas para el entorno elegido junto con las variables globales.  
-1. Antes de descargar el paquete de la aplicación (por ejemplo, al prepararse para publicar en la tienda Teams), selecciona el entorno que quieras usar. Las configuraciones de la aplicación se actualizan automáticamente en función del entorno.
+1. Escriba `{{` en cualquier campo en el portal para desarrolladores. Aparece una lista desplegable con todas las variables que ha creado para el entorno elegido junto con las variables globales.  
+1. Antes de descargar el paquete de la aplicación (por ejemplo, al prepararse para publicar en la tienda de Teams), seleccione el entorno que desea usar. Las configuraciones de la aplicación se actualizan automáticamente en función del entorno.
 
-## <a name="identify-app-owners"></a>Identificar propietarios de aplicaciones
+## <a name="identify-app-owners"></a>Identificación de propietarios de aplicaciones
 
-Cada aplicación incluye una **página Propietarios** , donde puedes compartir el registro de la aplicación con compañeros de la organización. El **rol Colaborador** tiene los mismos permisos que el rol **Propietario** , excepto la capacidad de eliminar una aplicación.
+Cada aplicación incluye una página **Propietarios**, donde puede compartir el registro de la aplicación con compañeros de su organización. El rol **Colaborador** tiene los mismos permisos que el rol **Propietario**, excepto la capacidad de eliminar una aplicación.
 
-## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Configurar las capacidades de la aplicación y otros metadatos importantes
+## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Configuración de las funcionalidades de la aplicación y otros metadatos importantes
 
-Una Teams es una aplicación web. Al igual que todas las aplicaciones web, su código fuente normalmente se desarrolla en un IDE o editor de código y se hospeda en algún lugar de la nube (como Azure).
+Una aplicación Teams es una aplicación web. Al igual que todas las aplicaciones web, su código fuente se desarrolla normalmente en un IDE o editor de código y se hospeda en algún lugar de la nube (como Azure).
 
-Para instalar y representar la aplicación en Teams, debes incluir un conjunto de configuraciones que Teams reconoce. Esto se ha hecho tradicionalmente mediante la creación de un manifiesto de aplicación, un archivo JSON que contiene todos los metadatos Teams debe mostrar el contenido de la aplicación. El Portal de desarrolladores abstrae este proceso e incluye nuevas características y herramientas para ayudarle a tener más éxito.
+Para instalar y representar la aplicación en Teams, debe incluir un conjunto de configuraciones que Teams reconozca. Esto se ha hecho tradicionalmente creando un manifiesto de aplicación, un archivo JSON que contiene todos los metadatos que Teams necesita para mostrar el contenido de la aplicación. El portal para desarrolladores abstrae este proceso e incluye nuevas características y herramientas que le ayudarán a tener más éxito.
 
-## <a name="test-your-app-directly-in-teams"></a>Prueba la aplicación directamente en Teams
+## <a name="test-your-app-directly-in-teams"></a>Pruebe la aplicación directamente en Teams
 
-El Portal de desarrolladores proporciona opciones para probar y depurar la aplicación:
+El portal para desarrolladores proporciona opciones para probar y depurar la aplicación:
 
-* En la **página Información** general, puedes ver una instantánea de si las configuraciones de la aplicación se validan Teams casos de prueba de la tienda.
-* El **botón Vista previa Teams** permite iniciar la aplicación rápidamente en el Teams de depuración.
+* En la página **Información general**, puede ver en una instantánea si las configuraciones de la aplicación se validan en los casos de prueba de Teams tienda.
+* El botón **Vista previa en Teams** permite iniciar la aplicación rápidamente en el cliente de Teams para la depuración.
 
 ## <a name="distribute-your-app"></a>Distribuir la aplicación
 
-En el Portal de desarrolladores,  usa el botón Distribuir para descargar un paquete de aplicación, publicarlo en tu organización o publicarlo en la Teams aplicación.
+En el portal para desarrolladores, use el botón **Distribuir** para descargar un paquete de aplicación, publicar en su organización o publicar en el almacén de Teams.
 
-Para obtener más información, [consulta distribuir la Teams aplicación](~/concepts/deploy-and-publish/apps-publish-overview.md).
+Para más información, consulte [Cargar la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
-## <a name="use-tools-to-create-app-features"></a>Usar herramientas para crear características de la aplicación
+## <a name="use-tools-to-create-app-features"></a>Uso de herramientas para crear características de la aplicación
 
-El Portal de desarrolladores también incluye herramientas que le ayudarán a crear algunas características clave de Teams aplicaciones. Algunas de estas herramientas incluyen:
+El portal para desarrolladores también incluye herramientas que le ayudarán a crear algunas características clave de las aplicaciones de Teams. Entre estas herramientas se incluyen las siguientes:
 
-* **Scene studio**: [diseñe escenas personalizadas del Modo conjunto](~/apps-in-teams-meetings/teams-together-mode.md) para Teams reuniones.
-* **Editor de tarjetas adaptables**: crea y previsualiza tarjetas adaptables para incluir con tus aplicaciones.
-* **Plataforma de identidad de Microsoft:** registre sus aplicaciones con Azure Active Directory para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
+* **Estudio de escenas**: diseñe [escenas personalizadas del modo junto](~/apps-in-teams-meetings/teams-together-mode.md) para reuniones de Teams.
+* **Editor de tarjetas adaptables**: cree y obtenga una vista previa de tarjetas adaptables para incluirlas con las aplicaciones.
+* **Administración de la plataforma de identidad de Microsoft**: registre las aplicaciones con Azure Active Directory para ayudar a los usuarios a iniciar sesión y proporcionar acceso a las API.
 
 ## <a name="see-also"></a>Vea también
 
