@@ -1,49 +1,49 @@
 ---
-title: Compatibilidad con SSO para las extensiones de mensaje
+title: Compatibilidad del SSO con las extensiones de mensajes
 author: KirtiPereira
-description: Obtenga información sobre cómo habilitar la compatibilidad con SSO para las extensiones de mensaje con ejemplos de código.
-ms.localizationpriority: medium
+description: Aprenda a habilitar la compatibilidad con el SSO para las extensiones de mensajería con ejemplos de código.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4ee49b349d287325bb029aa155a61219a8656e22
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104395"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111258"
 ---
-# <a name="single-sign-on-support-for-message-extensions"></a>Compatibilidad con el inicio de sesión único para extensiones de mensaje
+# <a name="single-sign-on-support-for-message-extensions"></a>Compatibilidad con el inicio de sesión único para las extensiones de mensajes
 
-La compatibilidad con el inicio de sesión único (SSO) ya está disponible para las extensiones de mensaje y la desplegamiento de vínculos. Al habilitar el inicio de sesión único para las extensiones de mensaje de forma predeterminada, se actualiza el token de autenticación, lo que minimiza el número de veces que necesita especificar las credenciales de inicio de sesión para Microsoft Teams.
+La compatibilidad con el inicio de sesión único (SSO) ya está disponible para las extensiones de mensajes y la apertura de vínculos. Al habilitar el inicio de sesión único para las extensiones de mensajes de forma predeterminada, se actualiza el token de autenticación, lo que minimiza el número de veces que necesita escribir las credenciales de inicio de sesión para Microsoft Teams.
 
-Este documento le guía sobre cómo habilitar el inicio de sesión único y almacenar el token de autenticación, si es necesario.
+En este documento se explica cómo habilitar el inicio de sesión único y almacenar el token de autenticación, si es necesario.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El requisito previo para habilitar el inicio de sesión único para las extensiones de mensaje y la desurling de vínculos es el siguiente:
+Los requisitos previos para habilitar el SSO para las extensiones de mensajes y la apertura de vínculos son los siguientes:
 
-* Debe tener una cuenta de [Azure](https://azure.microsoft.com/free/) .
-* Debe configurar la aplicación a través del portal de Azure AD y actualizar Teams manifiesto de aplicación el bot tal y como se define en [registrar la aplicación a través del portal de Azure AD](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
+* Debe tener una cuenta de [Azure](https://azure.microsoft.com/free/).
+* Debe configurar la aplicación a través del portal Azure AD y actualizar el manifiesto de la aplicación Teams tal como se define en [Registrar la aplicación a través del portal Azure AD](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
 
 > [!NOTE]
-> Para obtener más información sobre cómo crear una cuenta de Azure y actualizar el manifiesto de la aplicación, consulte [Compatibilidad con el inicio de sesión único (SSO) para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+> Para más información sobre cómo crear una cuenta Azure y actualizar el manifiesto de su aplicación, consulte [Compatibilidad con el inicio de sesión único (SSO) para los bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 
-## <a name="enable-sso-for-message-extensions-and-link-unfurling"></a>Habilitación del inicio de sesión único para extensiones de mensaje y desplegamiento de vínculos
+## <a name="enable-sso-for-message-extensions-and-link-unfurling"></a>Habilitar el inicio de sesión único para las extensiones de mensajes y la apertura de vínculos
 
-Una vez completados los requisitos previos, puede habilitar el inicio de sesión único para las extensiones de mensaje y la desplegamiento de vínculos.
+Una vez completados los requisitos previos, puede habilitar el SSO para las extensiones de mensajes y la apertura de vínculos.
 
-Para habilitar el inicio de sesión único:
+Para habilitar el SSO:
 
-1. Actualice los detalles de [conexión de OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de los bots en el portal de Microsoft Azure.
-2. Descargue el [ejemplo de extensiones de mensaje](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) y siga las instrucciones de configuración proporcionadas por el asistente.
+1. Actualice los detalles de [conexión OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de sus bots en el portal Microsoft Azure.
+2. Descargue el [ejemplo de extensiones de mensajes](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) y siga las instrucciones de configuración proporcionadas por el asistente.
    > [!NOTE]
-   > Use la conexión de OAuth de los bots al configurar las extensiones de mensaje.
-3. En el archivo [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) , actualice el valor de *auth* a *silentAuth* en `OnTeamsMessagingExtensionQueryAsync` y/o `OnTeamsAppBasedLinkQueryAsync`.  
+   > Use la conexión OAuth de bots al configurar las extensiones de mensajes.
+3. En el archivo [TeamsMessagingExtensionsSearchAuthConfigBot.cs,](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) actualice el valor de *auth* a *silentAuth* en el `OnTeamsMessagingExtensionQueryAsync` y/o `OnTeamsAppBasedLinkQueryAsync`.  
 
     > [!NOTE]
-    > No se admite el inicio de sesión único de otros controladores, excepto `OnTeamsMessagingExtensionQueryAsync` y `OnTeamsAppBasedLinkQueryAsync` desde el archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs.
+    > No se admite el SSO de otros controladores, excepto de `OnTeamsMessagingExtensionQueryAsync` y `OnTeamsAppBasedLinkQueryAsync` del archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs.
 
-4. Recibirá el token en `OnTeamsMessagingExtensionQueryAsync` el controlador en la `turnContext.Activity.Value` carga o en `OnTeamsAppBasedLinkQueryAsync`, en función del escenario para el que habilite el inicio de sesión único:
+4. Recibirá el token en el controlador `OnTeamsMessagingExtensionQueryAsync` en la carga `turnContext.Activity.Value` o en el `OnTeamsAppBasedLinkQueryAsync`, en función del escenario para el que esté habilitando el inicio de sesión único:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
@@ -55,7 +55,7 @@ Para habilitar el inicio de sesión único:
     
      ```
   
-    Si usa la conexión de OAuth, agregue el código siguiente al archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs para actualizar o agregar el token en el almacén:
+    Si usa la conexión OAuth, agregue el código siguiente al archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs para actualizar o agregar el token en el almacén:
 
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -117,8 +117,8 @@ Para habilitar el inicio de sesión único:
     
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Adición de autenticación a las extensiones de mensaje](add-authentication.md)
-* [Uso del inicio de sesión único para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Agregar autenticación a las extensiones de mensajes](add-authentication.md)
+* [Usar el SSO para los bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Apertura de vínculos](link-unfurling.md)
