@@ -2,15 +2,15 @@
 title: Apertura de vínculos
 author: surbhigupta
 description: Aprenda a agregar la apertura de enlaces con la extensión de mensajería en una aplicación de Microsoft Teams con el manifiesto de la aplicación o manualmente usando ejemplos y ejemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111251"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297187"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -25,7 +25,7 @@ En este documento se explica cómo agregar vínculos abriéndose al manifiesto d
 
 La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la siguiente imagen, un usuario ha pegado una URL para un elemento de trabajo en Azure DevOps, que la extensión del mensaje ha resuelto en una tarjeta:
 
-![Ejemplo de apertura de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Ejemplo de apertura de vínculos":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregue el enlace que se abre al manifiesto de su aplicación
 
@@ -40,7 +40,7 @@ Para agregar una apertura de enlace al manifiesto de la aplicación, agregue una
 1. Cargue el manifiesto de la aplicación.
 1. En la página **Extensión de mensaje**, agregue el dominio que desea buscar en la sección **Controladores de mensajes**. En la imagen siguiente se explica el proceso:
 
-    ![sección controladores de mensajes en App Studio](~/assets/images/link-unfurling.png)
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Sección Controladores de mensajes en App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Agregar la apertura de vínculos manualmente
 
