@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102125"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191183"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
-Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Teams publica el mensaje en el bot. Teams envía un objeto JSON al punto de conexión de mensajería del bot. El bot examina el mensaje para determinar su tipo y responde en consecuencia.
+Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Teams publica el mensaje en el bot. Teams envía un objeto JSON al punto de conexión de mensajería del bot. El bot examina el mensaje para determinar su tipo y responder correctamente.
 
 Las conversaciones básicas se controlan a través del conector de Bot Framework, una única API REST. Esta API permite que el bot se comunique con Teams y otros canales. El SDK de Bot Builder proporciona las siguientes características:
 
@@ -195,7 +195,7 @@ async def on_members_added_activity(
 
 Los mensajes enviados entre usuarios y bots incluyen datos de canal internos dentro del mensaje. Estos datos permiten que el bot se comunique correctamente en ese canal. El SDK de Bot Builder permite modificar la estructura del mensaje.
 
-## <a name="teams-channel-data"></a>datos del canal de Teams
+## <a name="teams-channel-data"></a>Datos del canal de Teams
 
 El `channelData` objeto contiene Teams información específica y es un origen definitivo para los identificadores de equipo y canal. Opcionalmente, puede almacenar en caché y usar estos identificadores como claves para el almacenamiento local. en `TeamsActivityHandler` el SDK extrae información importante del `channelData` objeto para que sea de fácil acceso. Sin embargo, siempre puede acceder a los datos originales desde el `turnContext` objeto .
 
@@ -204,17 +204,17 @@ El `channelData` objeto no se incluye en los mensajes de las conversaciones pers
 Un objeto típico `channelData` de una actividad enviada al bot contiene la siguiente información:
 
 * `eventType`: Teams tipo de evento pasado solo en los casos de [eventos de modificación del canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory (Azure AD) identificador de inquilino pasado en todos los contextos.
+* `tenant.id`: Microsoft Azure Active Directory identificador de inquilino (Azure AD) pasado en todos los contextos.
 * `team`: solo se pasa en contextos de canal, no en chat personal.
   * `id`: GUID para el canal.
-  * `name`: nombre del equipo pasado solo en los casos de [eventos de cambio de nombre del equipo](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  * `name`: nombre del equipo pasado solo en los casos de [eventos de cambio de nombre del equipo](subscribe-to-conversation-events.md#team-renamed).
 * `channel`: solo se pasa en contextos de canal, cuando se menciona el bot o para eventos en canales de teams, donde se ha agregado el bot.
   * `id`: GUID para el canal.
   * `name`: el nombre del canal solo se pasa en los casos de [eventos de modificación del canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId`: en desuso. Esta propiedad solo se incluye por compatibilidad con versiones anteriores.
 * `channelData.teamsChannelId`: en desuso. Esta propiedad solo se incluye por compatibilidad con versiones anteriores.
 
-### <a name="example-channeldata-object-channelcreated-event"></a>Objeto channelData de ejemplo (evento channelCreated)
+### <a name="example-channeldata-object-channelcreated-event"></a>Ejemplo de objeto channelData (evento channelCreated)
 
 En el código siguiente se muestra un ejemplo del objeto channelData:
 
@@ -241,13 +241,13 @@ Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de cont
 | Formato    | De usuario a bot | De bot a usuario | Notas                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texto enriquecido  | ✔                | ✔                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
-| Imágenes  | ✔                | ✔                | Máximo 1024×1024 y 1 MB en formato PNG, JPEG o GIF. Los GIF animados no son compatibles.  |
+| Imágenes  | ✔                | ✔                | Máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. Gif animado no se admite.  |
 | Tarjetas     | ✖                | ✔                | Consulte la [referencia de tarjeta de Teams](~/task-modules-and-cards/cards/cards-reference.md) para obtener las tarjetas admitidas. |
 | Emojis    | ✔                | ✔                | Teams actualmente admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
 
 ## <a name="notifications-to-your-message"></a>Notificaciones al mensaje
 
-También puede agregar notificaciones al mensaje mediante la `Notification.Alert` propiedad . Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o con lo que deben examinar insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadenen desde el mensaje del bot, establezca la `TeamsChannelData` propiedad objects `Notification.Alert` en *true*. Si se genera o no una notificación depende de la configuración de Teams del usuario individual y no se puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
+También puede agregar notificaciones al mensaje mediante la `Notification.Alert` propiedad . Las notificaciones alertan a los usuarios sobre nuevas tareas, menciones y comentarios. Estas alertas están relacionadas con lo que los usuarios están trabajando o con lo que deben examinar insertando un aviso en su fuente de actividad. Para que las notificaciones se desencadenen desde el mensaje del bot, establezca la `TeamsChannelData` propiedad objects `Notification.Alert` en *true*. Si se genera o no una notificación depende de la configuración de Teams del usuario individual y no puede invalidar esta configuración. El tipo de notificación es un banner o un banner y un correo electrónico.
 
 > [!NOTE]
 > El campo **Resumen** muestra cualquier texto del usuario como mensaje de notificación en la fuente.
@@ -329,9 +329,9 @@ Para mejorar el mensaje, puede incluir imágenes como datos adjuntos a ese mensa
 
 ## <a name="picture-messages"></a>Mensajes de imagen
 
-Las imágenes se envían agregando datos adjuntos a un mensaje. Para obtener más información sobre los datos adjuntos, consulte [la documentación de Bot Framework](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+Las imágenes se envían agregando datos adjuntos a un mensaje. Para obtener más información sobre los datos adjuntos, vea [Agregar datos adjuntos multimedia a los mensajes](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Las imágenes pueden tener como máximo 1024×1024 y 1 MB en formato PNG, JPEG o GIF. Los GIF animados no son compatibles.
+Las imágenes pueden tener como máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. Gif animado no se admite.
 
 Especifique el alto y el ancho de cada imagen mediante XML. En Markdown, el tamaño predeterminado de la imagen es 256×256. Por ejemplo:
 
@@ -420,5 +420,5 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 
 * [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* [Envío y recepción de archivos a través del bot](~/bots/how-to/bots-filesv4.md)
-* [Enviar el identificador de inquilino y el identificador de conversación a los encabezados de solicitud del bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md)
+* [Envío del identificador de inquilino y el identificador de conversación a los encabezados de solicitud del bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)

@@ -2,14 +2,14 @@
 title: Bots para llamadas y reuniones en línea
 description: Obtenga información sobre cómo las aplicaciones de Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo con las API de Microsoft Graph para llamadas y reuniones en línea, y sobre las transmisiones multimedia en tiempo real.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: bot de transmisión multimedia en tiempo real para llamadas de audio y vídeo IVR de reuniones en línea.
-ms.openlocfilehash: 1e719a60c1b14b6651c852ad0eae791e96fa8cc6
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135685"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297173"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots para llamadas y reuniones en línea
 

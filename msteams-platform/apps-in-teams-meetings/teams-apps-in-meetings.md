@@ -4,14 +4,14 @@ author: surbhigupta
 description: información general de las aplicaciones en las reuniones de Teams basadas en el rol de participante y usuario
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: API de rol de participante de usuario de reuniones de aplicaciones de teams
-ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111307"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296955"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para reuniones de Teams
 
@@ -38,7 +38,7 @@ La nueva característica de escenas personalizadas en Modo conferencia permite a
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Extensibilidad de la aplicación para reuniones](meeting-app-extensibility.md)
+> [Aplicaciones de reuniones unificadas](meeting-app-extensibility.md)
 
 ## <a name="see-also"></a>Consulte también
 

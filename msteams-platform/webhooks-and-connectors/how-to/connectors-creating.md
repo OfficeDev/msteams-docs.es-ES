@@ -3,15 +3,15 @@ title: Crear Conectores de Office 365
 author: laujan
 description: Describe cómo empezar a trabajar con conectores de Office 365 en Microsoft Teams
 keywords: conector de Office365 de teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
-ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
+ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65136971"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297152"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -26,7 +26,7 @@ Para distribuir el conector, regístrelo en el [Conectores Panel de control para
 Para que un conector funcione solo en Microsoft Teams, siga las instrucciones para enviar el conector en el artículo [publicar la aplicación en la tienda de Microsoft Teams](~/concepts/deploy-and-publish/appsource/publish.md). De lo contrario, un conector registrado funciona en todos los productos de Office 365 que admiten aplicaciones, incluidos Outlook y Teams.
 
 > [!IMPORTANT]
-> El conector se registra después de seleccionar **Guardar** en el Panel del desarrollador de conectores. Si desea publicar el conector en AppSource, siga las instrucciones de [publicar la aplicación de Microsoft Teams en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no desea publicar la aplicación en AppSource, distribúyala directamente a la organización. Después de [publicar conectores para su organización](#publish-connectors-for-the-organization), no es necesario realizar ninguna otra acción en el panel del conector.
+> El conector se registra después de seleccionar **Guardar** en el Panel del desarrollador de conectores. Si desea publicar el conector en AppSource, siga las instrucciones de [publicar la aplicación de Microsoft Teams en AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si no desea publicar la aplicación en AppSource, distribúyala directamente a la organización. Después de publicar conectores para su organización, no es necesario realizar ninguna otra acción en el panel del conector.
 
 ### <a name="integrate-the-configuration-experience"></a>Cree la base de datos de configuración:
 
@@ -224,7 +224,7 @@ Siga la guía [paso a paso](../../sbs-teams-connectors.yml) para crear y probar 
 ## <a name="distribute-webhook-and-connector"></a>Distribución de webhook y conector
 
 1. [Configurar un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directamente para su equipo.
-1. Agregue una [configuración](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) y [Publicar tu Webhook próximo](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) en un conector de Office 365.
+1. Agregue una [configuración](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) y Publicar tu Webhook próximo en un conector de Office 365.
 1. Empaqueta y publica el conector como parte del envío de [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md).
 
 ## <a name="code-sample"></a>Ejemplo de código
