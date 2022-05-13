@@ -2,15 +2,15 @@
 title: Responder a la acción de envío del módulo de tareas
 author: surbhigupta
 description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensajería con mensaje proactivo, otro módulo de tareas, bot de tarjeta adaptable y mucho más mediante ejemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dfd8b04c07c60231ed5dfdae4cc5acac2346fe2c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111496"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297201"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -548,7 +548,7 @@ En escenarios en los que un bot envía mensajes en nombre de un usuario, atribui
 
 En la imagen siguiente, a la izquierda hay un mensaje de tarjeta enviado por un bot sin atribución de usuario y a la derecha una tarjeta enviada por un bot con atribución de usuario.
 
-![bots de atribución de usuarios](../../../assets/images/messaging-extension/user-attribution-bots.png)
+:::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="Bots de atribución de usuarios":::
 
 Para usar la atribución de usuario en Teams, debe agregar la `OnBehalfOf` entidad de mención a `ChannelData` en `Activity` la carga que se envía a Teams.
 
@@ -595,7 +595,7 @@ La sección siguiente es una descripción de las entidades de la matriz `OnBehal
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0`.|
 |`mentionType`|Cadena|Describe la mención de una “persona”.|
 |`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como”"\<user\> a \<bot name\>“.|
-|`displayName`|Cadena|Nombre de la persona que publicó el flujo de trabajo. Se usa como reserva en la resolución de nombres de caso no está disponible.|
+|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
   
 ## <a name="code-sample"></a>Ejemplo de código
 

@@ -3,15 +3,15 @@ title: Aprenda a usar plantillas de canalización de CI/CD en GitHub, Azure DevO
 author: MuyangAmigo
 description: Plantillas de CI/CD
 ms.author: ruhe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 2242f5820495cc3004b7fcbf9c65bce94e7220d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 7f2e3c10fe7658ba7138aef8ddbc1028d5dcaca4
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111566"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297138"
 ---
 # <a name="set-up-cicd-pipelines"></a>Configuración de canalizaciones CI/CD
 
@@ -21,8 +21,8 @@ TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al compilar la apl
 |Herramientas y plantillas | Descripción |
 |---|---|
 |[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|Acción de GitHub que se integra con la CLI de TeamsFx.|
-|[Kit de herramientas de Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| La extensión Visual Studio Code que le ayuda a desarrollar la aplicación de Teams, así como la automatización de los flujos de trabajo para GitHub, Azure DevOps y Jenkins. |
-|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Herramienta de línea de comandos que le ayuda a desarrollar la aplicación de Teams, así como la automatización de los flujos de trabajo para GitHub, Azure DevOps y Jenkins.|
+|[Kit de herramientas de Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| La extensión de Visual Studio Code que le ayuda a desarrollar los flujos de trabajo de automatización y las aplicaciones de Teams para GitHub, Azure DevOps y Jenkins. |
+|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Herramienta de línea de comandos que le ayuda a desarrollar los flujos de trabajo de automatización y las aplicaciones de Teams para GitHub, Azure DevOps y Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) y [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Crear plantillas de scripts para la automatización fuera de GitHub, Azure DevOps o Jenkins. |
 
 
@@ -125,14 +125,14 @@ Para configurar canalizaciones con Azure DevOps para CI/CD:
 A continuación se muestran los cambios que puede realizar para la definición del script o flujo de trabajo:
 
 1. Use el script de compilación npm o personalice la forma de compilar en el código de automatización.
-1. Use el script de prueba npm que devuelve cero para que se realice correctamente y cambie los comandos de prueba.
+1. Use el script de prueba npm, que vuelve a ser cero para que se realice correctamente y cambie los comandos de prueba.
 
 ### <a name="customize-cd-workflow"></a>Personalización del flujo de trabajo de CD
 
 A continuación se muestran los cambios que puede realizar para la definición del script o flujo de trabajo:
 
 1. Asegúrese de que tiene un script de compilación npm o personalice la forma de compilar en el código de automatización.
-1. Asegúrese de que tiene un script de prueba npm que devuelve cero para que se realice correctamente o cambie los comandos de prueba.
+1. Asegúrese de que tiene un script de prueba npm que vuelve a ser cero para que se realice correctamente o cambie los comandos de prueba.
 
 ### <a name="set-up-pipelines-with-jenkins"></a>Configuración de canalizaciones con Jenkins
 
@@ -177,7 +177,7 @@ Estos son algunos de los cambios que puede realizar en el proyecto:
 
 1. Cambie cómo se desencadena el flujo de CI. El valor predeterminado es usar los desencadenadores de **pollSCM** cuando se inserta un nuevo cambio en la rama de **desarrollo**.
 1. Asegúrese de que tiene un script de compilación npm o personalice la forma de compilar en el código de automatización.
-1. Asegúrese de que tiene un script de prueba npm que devuelve cero para que se realice correctamente o cambie los comandos de prueba.
+1. Asegúrese de que tiene un script de prueba npm que vuelve a ser cero para que se realice correctamente o cambie los comandos de prueba.
 
 
 ### <a name="customize-cd-workflow"></a>Personalización del flujo de trabajo de CD
@@ -203,7 +203,7 @@ Los scripts se basan en una herramienta de línea de comandos TeamsFx multiplata
 > * Para habilitar la ejecución de `@microsoft/teamsfx-cli` en modo CI, active `CI_ENABLED` mediante `export CI_ENABLED=true`. En el modo CI, `@microsoft/teamsfx-cli` es fácil de usar para CI/CD.
 > * Para habilitar la ejecución en modo no interactivo de `@microsoft/teamsfx-cli`, establezca una configuración global con el comando: `teamsfx config set -g interactive false`. En el modo no interactivo, `@microsoft/teamsfx-cli` no solicita entradas.
 
-Asegúrese de configurar las credenciales de Azure y Microsoft 365 en las variables de entorno de forma segura. Por ejemplo, si usa GitHub como repositorio de código fuente, consulte [Secretos de Github](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Asegúrese de configurar las credenciales de Azure y Microsoft 365 en las variables de entorno de forma segura. Por ejemplo, si usa GitHub como su repositorio de código fuente, consulte [Secretos de Github](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 
 ## <a name="provision-and-deploy-resources"></a>Aprovisionamiento e implementación de recursos
@@ -213,7 +213,7 @@ Para aprovisionar e implementar recursos destinados a Azure dentro de CI/CD, deb
 Siga estos pasos para crear entidades de servicio de Azure:
 
 1. Registre una aplicación de Microsoft Azure Active Directory (Azure AD) en un solo inquilino.
-2. Asigne un rol a la aplicación de Azure AD para acceder a la suscripción de Azure. Se recomienda el rol `Contributor`.
+2. Asigne un rol a la aplicación de Azure AD para acceder a su suscripción de Azure. Se recomienda el rol `Contributor`.
 3. Crear una nueva aplicación de Azure AD para el complemento
 
 > [!TIP]
@@ -243,4 +243,4 @@ Realice los pasos siguientes para publicar la aplicación:
 * [Inicio rápido para Acciones de GitHub](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Creación de la primera canalización de Azure DevOps](/azure/devops/pipelines/create-first-pipeline)
 * [Creación de la primera canalización de Jenkins](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
+* [Administre sus aplicaciones con el Portal para desarrolladores de Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md)

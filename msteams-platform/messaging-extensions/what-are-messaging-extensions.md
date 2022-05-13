@@ -2,23 +2,25 @@
 title: Extensiones de mensajes
 author: surbhigupta
 description: Introducción a las extensiones de mensajería en la plataforma de Microsoft Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c8814d7bd3b67ad88859eb381f1d7116fe1a5c43
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110389"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297145"
 ---
 # <a name="message-extensions"></a>Extensiones de mensajes
 
-Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede enviar los resultados de la interacción de vuelta al cliente de Microsoft Teams en forma de una tarjeta con formato enriquecido. En este documento se proporciona información general sobre la extensión del mensaje, las tareas realizadas en diferentes escenarios, el trabajo de la extensión de mensaje, los comandos de acción y búsqueda, y la apertura de vínculos.
+Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede enviar los resultados de la interacción de vuelta al cliente de Microsoft Teams en forma de una tarjeta con formato enriquecido.
+
+En este documento se proporciona información general sobre la extensión del mensaje, las tareas realizadas en diferentes escenarios, el trabajo de la extensión de mensaje, los comandos de acción y búsqueda, y la apertura de vínculos.
 
 La siguiente imagen muestra las ubicaciones desde las que se invocan las extensiones de mensaje:
 
-![Ubicaciones de invocación de extensión de mensaje](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Ubicaciones de invocación de extensión de mensaje":::
 
 > [!NOTE]
 > las @menciones en extensiones de mensajería ya no se admiten en el cuadro de redacción.
@@ -48,16 +50,18 @@ Hay dos tipos de comandos de extensión de mensajería: comando de acción y com
 
 Los comandos de acción le permiten presentar a los usuarios un elemento emergente modal para recopilar o mostrar información. Cuando un usuario envía el formulario, su servicio web puede responder insertando un mensaje directamente en la conversación o insertando un mensaje en el área de redacción de mensajes. Después, el usuario puede enviar el mensaje. Puede encadenar varios formularios para flujos de trabajo más complejos.
 
-Los comandos de acción se pueden desencadenar desde el área de redacción de mensajes, el cuadro de comandos o desde un mensaje. Cuando el comando se invoca desde un mensaje, la carga inicial de JSON enviada a su servicio web incluirá el mensaje completo desde el cual se invocó. En la siguiente imagen se muestra el módulo de tareas de comandos de acción de extensión de mensajería: ![módulo de tareas de comando de acción de extensión de mensajería](~/assets/images/task-module.png)
+Los comandos de acción se pueden desencadenar desde el área de redacción de mensajes, el cuadro de comandos o desde un mensaje. Cuando el comando se invoca desde un mensaje, la carga inicial de JSON enviada a su servicio web incluirá el mensaje completo desde el cual se invocó. La siguiente imagen muestra el módulo de tareas de comandos de acción de extensión de mensajería:
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="Módulo de tarea de comandos de acción de extensión de mensaje":::
 
 ### <a name="search-commands"></a>Comandos de búsqueda
 
-Los comandos de búsqueda permiten a los usuarios buscar información en un sistema externo (manualmente a través de un cuadro de búsqueda o pegando un vínculo a un dominio supervisado en el área de redacción de mensajes) y, después, insertar los resultados de la búsqueda en un mensaje. En el flujo de comandos de búsqueda más básico, el mensaje de invocación inicial incluirá la cadena de búsqueda que envió el usuario. Responderá con una lista de tarjetas y vistas previas de tarjetas. El cliente Teams provee una lista de vistas previas de tarjetas para el usuario. Cuando el usuario seleccione una tarjeta, la tarjeta a tamaño completo se insertará en el área de redacción del mensajes.
+Los comandos de búsqueda permiten a los usuarios buscar información en un sistema externo manualmente a través de un cuadro de búsqueda o pegando un vínculo a un dominio supervisado en el área de redacción de mensajes y, después, insertar los resultados de la búsqueda en un mensaje. En el flujo de comandos de búsqueda más básico, el mensaje de invocación inicial incluirá la cadena de búsqueda que envió el usuario. Responderá con una lista de tarjetas y vistas previas de tarjetas. El cliente Teams provee una lista de vistas previas de tarjetas para el usuario. Cuando el usuario seleccione una tarjeta, la tarjeta a tamaño completo se insertará en el área de redacción del mensajes.
 
-Las tarjetas se desencadenan desde el área de redacción de mensajes o del cuadro de comandos y no se desencadenan desde un mensaje. No se pueden desencadenar a partir de un mensaje.
+Las tarjetas se desencadenan desde el área de redacción de mensajes o del cuadro de comandos y no se desencadenan desde un mensaje. No se pueden desencadenar desde un mensaje.
 La siguiente imagen muestra el módulo de tareas de comandos de búsqueda de extensión de mensajería:
 
-![comando de búsqueda de extensión de mensajería](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="comando de búsqueda de extensión de mensajería":::
 
 > [!NOTE]
 > Para obtener más información sobre las tarjetas, consulte [qué son las tarjetas](../task-modules-and-cards/what-are-cards.md).
@@ -67,7 +71,7 @@ La siguiente imagen muestra el módulo de tareas de comandos de búsqueda de ext
 Se invoca un servicio web cuando se pega una dirección URL en el área de redacción de mensajes. Esta funcionalidad se conoce como apertura de vínculos. Con la apertura de vínculos su aplicación puede registrarse para recibir una invocación cuando se pegan direcciones URL con un dominio en particular en el área de redacción de mensajes. El servicio web puede "abrir" la dirección URL en una tarjeta detallada, lo que proporciona más información que la tarjeta de vista previa del sitio web estándar. Puede agregar botones para permitir que los usuarios realicen acciones inmediatamente sin salir del cliente Microsoft Teams.
 Las siguientes imágenes muestran la característica de apertura de vínculos cuando se pega un vínculo en la extensión de mensaje:
 
-![abrir vínculo](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="abrir vínculo":::
 
 ![apertura de vínculos](../assets/images/messaging-extension/link-unfurl.gif)
 
