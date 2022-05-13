@@ -1,21 +1,21 @@
 ---
 title: Diseño de su aplicación personal
-description: Obtenga información sobre cómo diseñar una aplicación personal de Teams y obtener el kit de interfaz de usuario de Microsoft Teams, y crear componentes como el panel, el formulario o el panel de tareas para la experiencia móvil y de escritorio. Conozca los procedimientos recomendados para desarrollar aplicaciones personales.
+description: Obtenga información sobre cómo diseñar una aplicación personal de Teams y obtenga el Kit de interfaz de usuario de Microsoft Teams para crear componentes como el panel, un formulario o el panel de tareas para la experiencia móvil y de escritorio. Conozca los procedimientos recomendados para desarrollar aplicaciones personales.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: interfaz de usuario kit personal aplicación navegación vista web bot pestaña iframe panel plantilla de formulario
-ms.openlocfilehash: 51087d0f055130e822d837d9e78eda5b1b28966a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111818"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297236"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñe la aplicación personal para Microsoft Teams
 
-Una aplicación personal puede ser un bot, un área de trabajo privada o ambas. A veces funciona como un lugar donde crear o ver contenido, otras veces ofrece al usuario una visión general de su contenido cuando la aplicación se ha configurado como una pestaña en varios canales.
+Una aplicación personal puede ser un bot, un área de trabajo privada o ambas. A veces funciona como un sitio para crear o ver contenido, otras veces ofrece al usuario una vista general de todo lo que tienen si la aplicación se ha configurado como una pestaña en varios canales.
 
 A modo de guía en el diseño de su aplicación, a continuación se describe e ilustra cómo pueden los usuarios agregar, usar y administrar bots en Teams.
 
@@ -36,7 +36,7 @@ Los usuarios pueden agregar una aplicación personal desde el control flotante d
 
 Con un área de trabajo privada, los usuarios pueden ver el contenido de la aplicación que es importante para ellos en una ubicación central sin salir de Teams.
 
-(Nota de implementación: el área de trabajo privada se basa en la funcionalidad de [*pestaña personal*](../../build-your-first-app/build-personal-tab.md)).
+(Nota de implementación: el área de trabajo privada se basa en la funcionalidad de [*pestaña personal*](../../tabs/how-to/create-personal-tab.md)).
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomía: Aplicación personal (área de trabajo privada)
 
@@ -89,7 +89,7 @@ Use una de las siguientes plantillas y componentes de Teams para ayudar a diseñ
 
 ## <a name="use-a-personal-app-bot"></a>Uso de una aplicación personal (bot)
 
-Las aplicaciones personales pueden incluir un bot para conversaciones individuales y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). Los usuarios interactúan con el bot en la pestaña que especifique.
+Las aplicaciones personales pueden incluir un bot para conversaciones individuales y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). Los usuarios interactúan con el bot en la pestaña que se especifique.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomía: Aplicación personal (bot)
 
