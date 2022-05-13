@@ -2,15 +2,15 @@
 title: Crear y enviar el módulo de tareas
 author: surbhigupta
 description: Obtenga información sobre cómo controlar la acción de invocación inicial y responder con un módulo de tareas desde un comando de extensión de mensajería de acción mediante ejemplos de código y muestras.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5daf262bfad3c88477ec0a1104e45b7cb9848aac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 207355a797b6a52caad634981208c9314ea38401
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110354"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297004"
 ---
 # <a name="create-and-send-the-task-module"></a>Crear y enviar el módulo de tareas
 
@@ -238,7 +238,7 @@ Las propiedades de la actividad de carga cuando se invoca un módulo de tareas d
 |`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje para el que este mensaje es una respuesta. |
 |`value.commandId` | Contiene el identificador del comando que se invocó. |
 |`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose`. |
-|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast`o `dark`. |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast` o `dark`. |
 
 ### <a name="example"></a>Ejemplo
 
@@ -410,7 +410,7 @@ Las propiedades de la actividad de carga cuando se invoca un módulo de tareas d
 |`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
 |`value.commandId` | Contiene el identificador del comando que se invocó. |
 |`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose`. |
-|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast`o `dark`. |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast` o `dark`. |
 
 ### <a name="example"></a>Ejemplo
 
