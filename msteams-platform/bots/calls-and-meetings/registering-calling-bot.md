@@ -2,14 +2,14 @@
 title: Registro de llamadas y bots de reuniones para Microsoft teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams, crear un nuevo bot o agregar funcionalidad de llamada y agregar permisos de grafo.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: medios de vídeo de audio y vídeo de bot de llamada
-ms.openlocfilehash: 53c12b3d65ad909088e18081ed4b38a77919844b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111419"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297166"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -40,7 +40,7 @@ Para obtener información sobre cómo crear bots, consulte [cree un bot para Tea
 
 Para crear un nuevo bot para Teams:
 
-1. Use este vínculo para crear un nuevo bot, `https://dev.botframework.com/bots/new`. Como alternativa, si selecciona el botón **Crear un bot** en el portal de Bot Framework, creará el bot en Microsoft Azure, para el que debe tener una cuenta de Azure.
+1. Use este vínculo para crear un nuevo bot, `https://dev.botframework.com/bots/new`. Como alternativa, si selecciona el botón **Crear un bot** en el portal de Bot Framework, cree el bot en Microsoft Azure, para lo que debe tener una cuenta de Azure.
 1. En el canal de Teams:
 1. Seleccione la pestaña **Llamada** en la página del canal de Teams. Seleccione **Permitir llamada**, y, a continuación, actualice **Webhook (para llamar)** con la dirección URL HTTPS donde recibirá las notificaciones entrantes, por ejemplo, `https://contoso.com/teamsapp/api/calling`. Para obtener más información, vea [configurar canales](/bot-framework/portal-configure-channels).
 
@@ -78,7 +78,7 @@ En la tabla siguiente se proporciona una lista de permisos de aplicación para r
 
 ### <a name="assign-permissions"></a>Asignar permisos
 
-Debe configurar los permisos de aplicación para el bot de antemano mediante el [Microsoft Azure Portal](https://aka.ms/aadapplist) si prefiere usar el punto de conexión [Microsoft Azure Active Directory (Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Debe configurar los permisos de aplicación para el bot de antemano mediante el [Microsoft Azure Portal](https://portal.azure.com) si prefiere usar el punto de conexión [Microsoft Azure Active Directory (Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obtención del consentimiento del administrador de inquilinos
 
@@ -96,7 +96,7 @@ Puede confiar en un administrador para conceder los permisos que necesita la apl
 
 | **Ejemplo de nombre** | **Descripción** | **Graph** |
 |---------------|----------|--------|
-| Bots de llamadas y reuniones | La aplicación de ejemplo muestra cómo bot puede crear llamadas, unirse a reuniones y transferir llamadas. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Bots de llamadas y reuniones | La aplicación de ejemplo muestra cómo el bot puede crear una llamada, unirse a una reunión y transferirla. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 

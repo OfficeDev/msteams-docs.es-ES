@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464332"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191197"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar cuentas para crear aplicaciones de Teams
 
@@ -28,7 +28,7 @@ Si tiene una suscripción de Visual Studio Enterprise o Professional, ambos prog
 
 ### <a name="microsoft-365-developer-program"></a>Programa de desarrolladores de Microsoft 365
 
-Para obtener una cuenta de desarrollador de Teams gratuita, únase al programa de desarrolladores de Microsoft 365 y realice los pasos siguientes:
+Para obtener una cuenta de desarrollador gratuita de Teams, únase al programa de desarrolladores de Microsoft 365 y realice los pasos siguientes:
 
 1. Vaya al [programa para desarrolladores de Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Seleccione **Unirse ahora**.
@@ -53,7 +53,7 @@ Puede registrarse en el programa de desarrolladores con uno de los siguientes ti
 
 - **Id. de usuario de Visual Studio**
 
-    El id. de usuario creado para usar una suscripción de Visual Studio Professional o Enterprise se puede usar para unirse al programa de desarrolladores dentro de la Galería de Visual Studio para aprovechar todas las ventajas como suscriptor de Visual Studio.
+    El identificador de usuario creado para usar Visual Studio Professional o una suscripción Enterprise se puede usar para unirse al programa de desarrolladores en la Galería de Visual Studio para aprovechar todas las ventajas como suscriptor de Visual Studio.
 
 ## <a name="azure-account-to-host-backend-resources"></a>Cuenta de Azure para hospedar recursos back-end
 
@@ -61,7 +61,7 @@ La cuenta de Azure es opcional si la aplicación existente está hospedada en ot
 
 **Id. de Visual Studio**
 
-Si desea hospedar los recursos relacionados con la aplicación o acceder a recursos en Azure, puede [crear una cuenta gratuita](https://azure.microsoft.com/free/) antes de comenzar. Como alternativa, puede seleccionar hospedar los recursos back-end con otro proveedor de nube o en sus propios servidores si están disponibles desde el dominio público.
+Si desea hospedar los recursos relacionados con la aplicación o acceder a recursos en Azure, puede [crear una cuenta gratuita](https://azure.microsoft.com/free/) antes de comenzar. Como alternativa, puede seleccionar hospedar los recursos de back-end mediante otro proveedor de nube o en sus propios servidores si están disponibles en el dominio público.
 
 ## <a name="teams-custom-app-upload-or-sideload-permission"></a>Permiso para cargar la aplicación personalizada de Teams o para la instalación de prueba
 
@@ -73,7 +73,7 @@ Si desea hospedar los recursos relacionados con la aplicación o acceder a recur
 * **Comprobar el permiso de instalación de prueba mediante Visual Studio Code**
 
     1. Abra **Visual Studio Code**.
-    1. Seleccione el **Kit de herramientas de Teams** en el panel izquierdo. Si no puede ver la opción, asegúrese de que ha instalado la extensión del Kit de herramientas de Teams.
+    1. Seleccione el **Kit de herramientas de Teams** en el panel izquierdo. Si no puede ver la opción, cerciórese de que ha instalado la extensión kit de herramientas de Teams.
     1. Seleccione **Cuentas** e inicie sesión en su cuenta de Microsoft 365.
     1. Compruebe si puede ver la opción **Instalación de prueba habilitada** como se muestra en la siguiente imagen:
 
@@ -91,7 +91,7 @@ Si desea hospedar los recursos relacionados con la aplicación o acceder a recur
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Cargar una aplicación personalizada" border="true":::.
 
-        Si no puede ver la opción **Cargar una aplicación personalizada**, esto indica que no tiene permiso para llevar a cabo la instalación de prueba.
+        Si no puede ver la opción Cargar una aplicación personalizada,** indica que no tiene el permiso necesario para la instalación de prueba.
         * Para un administrador de inquilinos, habilite la configuración de instalación de prueba para su inquilino u organización en el Centro de administración de Teams.
         * Si no es administrador de inquilinos, deberá ponerse en contacto con el administrador de inquilinos para habilitar la instalación de prueba.
 
@@ -131,5 +131,5 @@ Para obtener más información, consulte [Administrar configuración y directiva
 * [Crear una nueva aplicación de Teams con el Kit de herramientas de Teams](create-new-project.md)
 * [Aprovisionar recursos en la nube](provision.md)
 * [Implementar la aplicación de Teams en la nube](deploy.md)
-* [Publicar la aplicación de Teams](TeamsFx-collaboration.md)
+* [Publicar la aplicación de Teams](../concepts/deploy-and-publish/appsource/publish.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)

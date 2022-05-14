@@ -2,18 +2,18 @@
 title: Elegir una configuración para probar y depurar la aplicación
 description: Describe las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y alojadas en la nube.
 keywords: teams ejecutar depurar aplicaciones local hospedado en la nube hospedar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135762"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296997"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elegir una configuración para probar y depurar la aplicación de Microsoft Teams
 
-Las aplicaciones de Microsoft Teams contienen una o varias funcionalidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, use una de las siguientes formas:
+Las aplicaciones de Microsoft Teams contienen una o varias funcionalidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, use una de las siguientes maneras:
 
 * **Puramente local**: en el caso de los bots, puede probar la experiencia con Bot Emulator. Para otro contenido, puede ejecutarlo localmente en el explorador y direccionar el contenido a través de `http://localhost`.
 * **Hospedado localmente en Teams**: esto implica ejecutar la aplicación localmente en el software de tunelización y [crear un paquete](~/concepts/build-and-test/apps-package.md) para [cargarlo](~/concepts/deploy-and-publish/apps-upload.md) en Teams. Esto le permite ejecutar y depurar fácilmente la aplicación dentro del cliente de Teams.
@@ -67,11 +67,11 @@ Para los bots registrados en Microsoft Bot Framework, actualice el punto de cone
 Puede usar cualquier servicio direccionable externamente para hospedar el código de desarrollo y producción y sus puntos de conexión HTTPS. No hay expectativas de que las funcionalidades residan en el mismo servicio. Se requiere que se acceda a todos los dominios desde las aplicaciones de Microsoft Teams que aparecen en el objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) del archivo `manifest.json`.
 
 > [!NOTE]
-> Para garantizar un entorno seguro, sea explícito sobre el dominio y subdominios exactos a los que hace referencia y debe tener el control de esos dominios. Por ejemplo, no se recomienda `*.azurewebsites.net`, pero se recomienda `contoso.azurewebsites.net`.
+> Para garantizar un entorno seguro, sea explícito sobre el dominio y los subdominios exactos a los que hace referencia y esos dominios deben estar en su control. Por ejemplo, no se recomienda `*.azurewebsites.net`, pero se recomienda `contoso.azurewebsites.net`.
 
 ## <a name="load-and-run-your-experience"></a>Cargar y ejecutar la experiencia
 
-Para cargar y ejecutar la experiencia dentro de Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para más información, vea:
+Para cargar y ejecutar su experiencia en Microsoft Teams, debe crear un paquete y cargarlo en Teams. Para obtener más información, vea:
 
 * [Crear un paquete de aplicación para la aplicación de Microsoft Teams](~/concepts/build-and-test/apps-package.md).
 * [Cargar la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).

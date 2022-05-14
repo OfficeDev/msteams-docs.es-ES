@@ -3,19 +3,19 @@ title: Agregar recursos a las aplicaciones de Teams
 author: MuyangAmigo
 description: Describe Agregar recursos del kit de herramientas de Teams
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d2377dae24c26679125d9d50b354b7e9f549be31
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 50cd3de693f70fd0c8414408bd6f4e6d3332d544
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111860"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297208"
 ---
 # <a name="add-cloud-resources-to-your-teams-app"></a>Agregar recursos en la nube a la aplicación de Teams
 
-TeamsFx ayuda a aprovisionar recursos en la nube para el hospedaje de aplicaciones. También puede agregar opcionalmente recursos en la nube que se adapten a sus necesidades de desarrollo.
+TeamsFx ayuda a aprovisionar recursos en la nube para el hospedaje de aplicaciones. Opcionalmente, también puede agregar recursos en la nube que se ajusten a sus necesidades de desarrollo.
 
 ## <a name="prerequisite"></a>Requisito previo
 
@@ -65,7 +65,7 @@ TeamsFx se integra con los servicios de Azure para los siguientes escenarios:
 
 - [Funciones de Azure](/azure/azure-functions/functions-overview): una solución sin servidor para satisfacer los requisitos a petición, como la creación de API web para el back-end de aplicaciones de Teams.
 - [Base de datos de Azure SQL](/azure/azure-sql/database/sql-database-paas-overview): motor de la base de datos de la plataforma como servicio (PaaS) que sirve como almacén de datos de las aplicaciones Teams.
-- [Administración de Azure API](/azure/azure-sql/database/sql-database-paas-overview): una puerta de enlace de API que se puede usar para administrar las API creadas para las aplicaciones de Teams y publicarlas para usarlas en otras aplicaciones, como Power Apps.
+- [Administración de Azure API](deploy.md): una puerta de enlace de API que se puede usar para administrar las API creadas para las aplicaciones de Teams y publicarlas para usarlas en otras aplicaciones, como Power Apps.
 - [Azure Key Vault](/azure/key-vault/general/overview): proteja las claves criptográficas y otros secretos que usan los servicios y las aplicaciones en la nube.
 
 ## <a name="add-cloud-resources"></a>Agregar recursos en la nube
@@ -73,7 +73,7 @@ TeamsFx se integra con los servicios de Azure para los siguientes escenarios:
 Después de agregar cualquier recurso, los cambios en el proyecto son los siguientes:
 
 - Se pueden agregar nuevos parámetros a azure.parameter.{env}.json para proporcionar la información necesaria para el aprovisionamiento.
-- El nuevo contenido se anexa a la plantilla de ARM en la carpeta `templates/azure` excepto los archivos de la carpeta `templates/azure/teamsfx` para crear los recursos de Azure agregados.
+- El nuevo contenido se anexa a la plantilla de ARM en `templates/azure` carpeta, excepto los archivos en `templates/azure/teamsfx` carpeta para crear los recursos de Azure agregados.
 - Los archivos de la carpeta `templates/azure/teamsfx` se vuelven a generar para asegurarse de que la configuración necesaria de TeamsFx está actualizada para los recursos de Azure agregados.
 - `.fx/projectSettings.json` se actualiza para realizar un seguimiento de los recursos presentes en el proyecto.
 
@@ -82,7 +82,7 @@ Después de agregar recursos, los cambios adicionales en el proyecto son los sig
 |Recursos|Cambios|Descripción|
 |---------------|---------------|-----------------------------|
 |Funciones de Azure|Se agrega un código de plantilla de las funciones de Azure a una subcarpeta con ruta de acceso `yourProjectFolder/api`</br></br>`launch.json` y `task.json` se actualizan en la carpeta `.visual studio code`.| Incluye una plantilla de desencadenador HTTP hello world en el proyecto.</br></br> Incluye los scripts necesarios para que Visual Studio Code se ejecute cuando quiera depurar la aplicación localmente.|
-|Administración de Azure API|Un archivo de especificación de API abierto agregado a una subcarpeta con ruta de acceso `yourProjectFolder/openapi`.|Define la API después de la publicación, es el archivo de especificación de API.|
+|Administración de Azure API|Un archivo de especificación de API abierto agregado a una subcarpeta con ruta de acceso `yourProjectFolder/openapi`.|Define la API después de la publicación, es el archivo de especificación de la API.|
 
 ## <a name="limitation"></a>Limitación
 

@@ -3,19 +3,19 @@ title: TeamsFx SDK
 author: MuyangAmigo
 description: Acerca del SDK de TeamsFx
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d54c3d962ecc9d1fd703bd4126d71564f8358794
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: aad897e7b4028363bcfa0f21a75b6da01fc57ec6
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111223"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297180"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
-TeamsFx ayuda a reducir las tareas del desarrollador aprovechando el inicio de sesión único de Teams y accediendo a los recursos en la nube hasta las instrucciones de una sola línea con cero configuración. El SDK de TeamsFx está creado para usarse en el explorador y en el entorno Node.js, entre cuyos escenarios comunes se incluyen:
+TeamsFx ayuda a reducir las tareas de desarrollador mediante el inicio de sesión único en Teams y el acceso a los recursos en la nube hasta instrucciones de una sola línea con cero configuración. El SDK de TeamsFx está creado para usarse en el explorador y en el entorno Node.js, entre cuyos escenarios comunes se incluyen:
 
 * Aplicación de pestaña de Teams
 * Función de Azure
@@ -55,7 +55,7 @@ npm install @microsoft/teamsfx
 
 ### <a name="create-microsoftgraphclient-service"></a>Cree un servicio `MicrosoftGraphClient`
 
-Para crear un objeto de cliente de Graph y acceder a la API de Microsoft Graph, necesita las credenciales para autenticarse. El SDK proporciona las API para configurar para desarrolladores.
+Para crear un objeto de cliente de grafos y acceder a la API de Microsoft Graph, necesita las credenciales para autenticarse. El SDK proporciona API para configurar para desarrolladores.
 
 <br>
 
@@ -105,7 +105,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>Clase TeamsFx
 
-La instancia de la clase TeamsFx accede a todas las configuraciones de TeamsFx desde las variables de entorno de forma predeterminada. También puede establecer valores de configuración personalizados para invalidar los valores predeterminados. Compruebe [la configuración de invalidación](#override-configuration) para obtener más información. Al crear una instancia de TeamsFx, también debe especificar el tipo de identidad. Hay dos tipos de identidad:
+La instancia de la clase TeamsFx accede a todas las configuraciones de TeamsFx desde las variables de entorno de forma predeterminada. También puede establecer valores de configuración personalizados para invalidar los valores predeterminados. Compruebe la [configuración de invalidación](#override-configuration) para obtener más detalles. Al crear una instancia de TeamsFx, también debe especificar el tipo de identidad. Hay dos tipos de identidad:
 
 * Identidad del usuario
 * Identidad de la aplicación
@@ -117,7 +117,7 @@ La instancia de la clase TeamsFx accede a todas las configuraciones de TeamsFx d
 | `new TeamsFx(IdentityType.User)`| La aplicación se autentica como usuario actual de Teams. |
 | `TeamsFx:setSsoToken()`| Identidad del usuario en el entorno Node.js (sin explorador). |
 | `TeamsFx:getUserInfo()` | Para obtener la información de base del usuario. |
-| `TeamsFx:login()` | Se usa para permitir que el usuario realice el proceso de consentimiento, si desea usar el inicio de sesión único para obtener el token de acceso para determinados ámbitos de OAuth. |
+| `TeamsFx:login()` | Se usa para permitir que el usuario realice el proceso de consentimiento, si desea usar SSO para obtener el token de acceso para determinados ámbitos de OAuth. |
 
 > [!NOTE]
 > Puede acceder a los recursos en nombre del usuario actual de Teams.
@@ -126,7 +126,7 @@ La instancia de la clase TeamsFx accede a todas las configuraciones de TeamsFx d
 
 | Comando | Descripción |
 |----------------|-------------|
-| `new TeamsFx(IdentityType.App)`| La aplicación se autentica como una aplicación. El permiso normalmente necesita la aprobación del administrador.|
+| `new TeamsFx(IdentityType.App)`| La aplicación se autentica como una aplicación. Normalmente, el permiso necesita la aprobación del administrador.|
 | `TeamsFx:getCredential()`| Proporciona instancias de credenciales que corresponden automáticamente al tipo de identidad. |
 
 > [!NOTE]
@@ -136,22 +136,22 @@ La instancia de la clase TeamsFx accede a todas las configuraciones de TeamsFx d
 
 Debe elegir el tipo de identidad al inicializar TeamsFx. Después de especificar el tipo de identidad al inicializar TeamsFx, el SDK usa diferentes tipos de clase de credenciales para representar la identidad y obtener el token de acceso mediante el flujo de autenticación correspondiente.
 
-Hay tres clases de credenciales para simplificar la autenticación. [carpeta de credenciales](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Las clases de credenciales implementan la interfaz `TokenCredential`, que se usa ampliamente en las API de biblioteca de Azure, diseñada para proporcionar tokens de acceso para ámbitos específicos. Otras API se basan en la llamada a credenciales `TeamsFx:getCredential()` para obtener una instancia de `TokenCredential`.
+Hay tres clases de credenciales para simplificar la autenticación. [carpeta de credenciales](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Las clases de credenciales implementan la interfaz `TokenCredential`, que se usa ampliamente en las API de biblioteca de Azure, diseñada para proporcionar tokens de acceso para ámbitos específicos. Otras API se basan en la llamada de credencial `TeamsFx:getCredential()` para obtener una instancia de `TokenCredential`.
 
 Estos son los escenarios correspondientes para cada destino de clase de credencial.
 
 #### <a name="user-identity-in-browser-environment"></a>Identidad de usuario en el entorno del explorador
-`TeamsUserCredential` representa la identidad del usuario actual de Teams. El uso de esta credencial solicitará el consentimiento del usuario por primera vez. Aprovecha el inicio de sesión único de Teams y el flujo en nombre de para realizar el intercambio de tokens. El SDK usa esta credencial cuando el desarrollador elige la identidad de usuario en el entorno del explorador.
+`TeamsUserCredential` representa la identidad del usuario actual de Teams. El uso de esta credencial solicitará el consentimiento del usuario por primera vez. Aprovecha el inicio de sesión único de Teams y el flujo en nombre de para realizar el intercambio de tokens. El SDK usa esta credencial cuando los desarrolladores eligen la identidad de usuario en el entorno del explorador.
 
 Configuración necesaria: `initiateLoginEndpoint`, `clientId`.
 
 #### <a name="user-identity-in-nodejs-environment"></a>Identidad del usuario en el entorno Node.js
-`OnBehalfOfUserCredential` usa el flujo en nombre de y necesita token de inicio de sesión único de Teams. Está diseñado para usarse en escenarios de Azure Function o bots. El SDK usa esta credencial cuando el desarrollador elige la identidad de usuario en el entorno Node.js.
+`OnBehalfOfUserCredential` usa el flujo en nombre de y necesita token de inicio de sesión único de Teams. Está diseñado para usarse en escenarios de Azure Function o bots. El SDK usa esta credencial cuando los desarrolladores eligen la identidad de usuario en el entorno de Node.js.
 
 Configuración necesaria: `authorityHost`, `tenantId`, `clientId``clientSecret` o `certificateContent`.
 
 #### <a name="application-identity-in-nodejs-environment"></a>Identidad de la aplicación en el entorno Node.js
-`AppCredential` representa la identidad de la aplicación. Normalmente se usa cuando el usuario no está implicado, como el trabajo de automatización desencadenada por tiempo. El SDK usa esta credencial cuando el desarrollador elige la identidad de aplicación en el entorno de Node.js.
+`AppCredential` representa la identidad de la aplicación. Se usa cuando el usuario no está implicado como un trabajo de automatización desencadenado por tiempo. El SDK usa esta credencial cuando los desarrolladores eligen identidad de aplicación en el entorno de Node.js.
 
 Configuración necesaria: `tenantId`, `clientId`, `clientSecret` o `certificateContent`.
 

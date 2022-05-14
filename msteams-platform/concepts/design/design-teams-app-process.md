@@ -2,15 +2,15 @@
 title: Proceso de diseño de aplicaciones
 author: heath-hamilton
 description: Obtenga una idea general de cómo y cuándo puede usar las herramientas y los recursos de Microsoft para diseñar una aplicación eficaz de Microsoft Teams.
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111272"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297222"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Proceso de diseño para aplicaciones de Microsoft Teams
 
@@ -20,7 +20,7 @@ Hay varias herramientas y recursos para diseñar la aplicación de Microsoft Tea
 
 ## <a name="plan-your-app"></a>Planear la aplicación
 
-Diseñar una aplicación de Teams de alta calidad requiere comprender lo que quiere que haga la aplicación y cómo cree que la utilizarán los usuarios. Sin embargo, antes de empezar a diseñar, debe responder a las siguientes preguntas:
+Diseñar una aplicación de Teams de alta calidad requiere comprender lo que quiere que haga la aplicación y cómo cree que la usarán los usuarios. Sin embargo, antes de empezar a diseñar, responda a las siguientes preguntas:
 
 * ¿Quiénes son sus usuarios?
 * ¿Cuál es su problema?
@@ -113,7 +113,7 @@ De forma no diferente a la fase de diseño, puede usar estos componentes de la i
 
 Tanto si está empezando en la aplicación como si está cerca de una aplicación lista para producción, le recomendamos que revise periódicamente los siguientes recursos:
 
-* **Directrices de validación de la Tienda Microsoft Teams**: proporciona estándares que todas las aplicaciones de Teams deben buscar y no solo las aplicaciones que aparecen en la tienda. [Para obtener más información, vea las instrucciones](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Directrices de validación de la tienda de Microsoft Teams**: proporciona estándares que todas las aplicaciones de Teams deben buscar y no solo las aplicaciones que aparecen en la tienda. Para obtener más información, consulte las [directrices](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Procedimientos recomendados de diseño**: estos documentos y el kit de interfaz de usuario proporcionan procedimientos recomendados para diseñar aplicaciones de alta calidad. Por ejemplo, puede consultar los [ procedimientos recomendados para diseñar bots](~/bots/design/bots.md#best-practices).
 
 ## <a name="see-also"></a>Consulte también
