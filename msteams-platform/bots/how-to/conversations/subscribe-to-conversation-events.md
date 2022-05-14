@@ -3,15 +3,15 @@ title: Eventos de conversación
 author: WashingtonKayaker
 description: Cómo trabajar con eventos de conversación del bot de Microsoft Teams, actualizaciones de eventos de canal, eventos de miembros del equipo y eventos de reacción de mensajes con ejemplos de código.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversación de reacción del mensaje del canal de eventos
-ms.openlocfilehash: 6d086ef2896a6fd19a128bcf4f1c8b363a21c5b3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111545"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297159"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -1409,7 +1409,7 @@ Al desinstalar una aplicación, también se desinstala el bot. Cuando un usuario
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>Control de eventos para eventos de instalación y desinstalación
 
-Cuando se usan estos eventos de instalación y desinstalación, hay algunas instancias en las que los bots dan excepciones al recibir eventos inesperados de Teams. Esto ocurre en los siguientes casos:
+Al usar estos eventos de instalación y desinstalación, hay algunos casos en los que los bots proporcionan excepciones al recibir eventos inesperados de Teams. Esto ocurre en los casos siguientes:
 
 * El bot se compila sin el SDK de Microsoft Bot Framework y, como resultado, el bot proporciona una excepción al recibir un evento inesperado.
 * Compile el bot con el SDK de Microsoft Bot Framework y seleccione modificar el comportamiento del evento predeterminado reemplazando el identificador de eventos base.
