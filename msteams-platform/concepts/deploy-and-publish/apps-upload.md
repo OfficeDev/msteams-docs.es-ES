@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952356"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191204"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -81,7 +81,7 @@ Teams proporciona varias maneras de abrir aplicaciones. Para obtener más inform
 
 No tiene que transferir localmente la aplicación de nuevo si realiza cambios de código (estos se reflejan en Teams en tiempo real). Sin embargo, debe reinstalar si cambia alguna configuración de aplicación.
 
-Si hay una actualización disponible para la aplicación, la opción **Actualización disponible** está habilitada. Para actualizar, siga estos pasos:
+Si hay una actualización disponible para la aplicación, se habilita la opción **Actualizar disponible**. Para actualizar, siga estos pasos:
 
 1. Seleccione **Actualización disponible** para ver la actualización.
 
@@ -115,7 +115,7 @@ Para quitar la aplicación de Teams, siga estos pasos:
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
-> [Usar la aplicación Teams](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
+>[Crear aplicaciones para reuniones de Teams](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## <a name="see-also"></a>Vea también
 
