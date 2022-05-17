@@ -1,17 +1,17 @@
 ---
-title: Compartir en Teams desde una aplicación o pestaña personal
+title: Compartir en Teams desde una aplicación personal o una pestaña
 description: Aprenda a agregar el recurso compartido en Teams insertado en la pestaña o aplicación personal.
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Compartir Teams Compartir en Teams
-ms.openlocfilehash: 7ece44c3b0a48ad2ce0ad72aed5ba9efc9cf57c2
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+keywords: Compartir Teams con Teams
+ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685728"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439366"
 ---
-# <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación o pestaña personal
+# <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación personal o una pestaña
 
 > [!NOTE]
 > El uso compartido en Teams solo está disponible actualmente en la [versión preliminar para desarrolladores públicos](../../resources/dev-preview/developer-preview-intro.md).
@@ -43,6 +43,7 @@ microsoftTeams.sharing.shareWebContent({
           {
             type: 'URL',
             url: '<URL to be shared>',
+            message: 'Default message to be loaded in the compose box',
             preview: true
           }
         ]
@@ -51,10 +52,11 @@ microsoftTeams.sharing.shareWebContent({
 
 La carga contiene los parámetros siguientes:
 
-| Nombre de propiedad | Finalidad |
+| Nombre de propiedad | Objetivo |
 |---|---|
 | `type` | El tipo debe ser `URL` |
 | `url` | `URL` que se va a compartir |
+|`message`| Mensaje predeterminado que se va a cargar en el cuadro de redacción |
 | `preview` | Establézcalo `true` en para habilitar la versión preliminar de la dirección URL. |
 
 En la imagen siguiente se muestra la opción Compartir en Teams:
@@ -71,7 +73,7 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 | **404** | El archivo especificado no se encontró en la ubicación especificada. |
 | **500** | Error interno al realizar la operación necesaria. |
 | **501** | La API no se admite en el contexto actual. |
-| **1000** | Permisos denegados por el usuario. |
+| **1 000** | Permisos denegados por el usuario. |
 | **2000** | Problema de red. |
 | **3000** | El hardware subyacente no admite la funcionalidad. |
 | **4000** | Uno o más argumentos no son válidos. |
@@ -112,7 +114,7 @@ Después de habilitar el botón Compartir en teams en la pestaña o aplicación 
 
    :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="share-to-teams-link-shared":::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Uso compartido en Teams desde aplicaciones web](share-to-teams-from-web-apps.md)
+* [Compartir en Teams desde aplicaciones web](share-to-teams-from-web-apps.md)
 * [Crear una pestaña personal](../../tabs/how-to/create-personal-tab.md)

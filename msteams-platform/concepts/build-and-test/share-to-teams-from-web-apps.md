@@ -2,14 +2,14 @@
 title: Compartir en Teams desde aplicaciones web
 description: Obtenga información sobre cómo agregar el botón Compartir a Teams insertado en su sitio web, con una vista previa del sitio web, mediante ejemplos de código
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Compartir Teams con Teams
-ms.openlocfilehash: 1f6a32c150fce323df19f452895184a4233c57fc
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111734"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439303"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartir en Teams desde aplicaciones web
 
@@ -64,6 +64,17 @@ En la imagen siguiente se muestra la experiencia emergente Compartir en Teams:
       data-preview="false">
     </div>
     ```
+
+1. Para mostrar un mensaje de su elección en el cuadro de redacción, puede definir el texto en `data-msg-text` el atributo .
+
+     ```html
+     <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-msg-text="<default-message-to-be-populated-in-compose-box>"
+      data-preview="false">
+      </div>
+     ```
 
 1. Si la página representa dinámicamente el contenido, puede usar el método `shareToMicrosoftTeams.renderButtons()` para forzar que **Share** se represente en el lugar adecuado de la canalización.
 
