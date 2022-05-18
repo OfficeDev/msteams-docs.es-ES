@@ -127,7 +127,7 @@ La siguiente imagen muestra el mensaje de error que se recibe cuando el usuario 
 
 La siguiente imagen muestra el error en el portal de Azure:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="<mrk mtype=&quot;seg" mid="167">Portal de Azure</mrk>" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Portal de Azure" border="true":::
 
 Si el **Secreto del cliente** ha caducado, el usuario debe generar un nuevo **Secreto de cliente** y actualizar la configuración que se encuentra en la página. Los usuarios pueden volver a iniciar sesión después de que se haya actualizado el **Secreto del cliente**, lo que puede tardar hasta 24 horas en volver a aprovisionarse.
 
