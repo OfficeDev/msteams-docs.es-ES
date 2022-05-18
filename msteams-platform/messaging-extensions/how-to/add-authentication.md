@@ -2,15 +2,15 @@
 title: Agregar autenticación a la extensión de mensaje
 author: surbhigupta
 description: Aprenda a agregar autenticación a una extensión de mensajería mediante ejemplos de código y muestras
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135713"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297011"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Agregar autenticación a la extensión de mensaje
 
@@ -68,7 +68,7 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 
 > [!NOTE]
 >
-> * Para que la experiencia de inicio de sesión se hospede en una ventana emergente de Teams, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
+> * Para que la experiencia de inicio de sesión se hospede en una ventana emergente de Teams, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema del manifiesto.
 > * El tamaño del elemento emergente de autenticación se puede definir mediante la inclusión de parámetros de la cadena de consulta de ancho y alto, `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"`.
 
 ### <a name="start-the-sign-in-flow"></a>Iniciar el flujo de inicio de sesión
@@ -81,7 +81,7 @@ Al igual que con otras experiencias incrustadas que se ejecutan dentro de Micros
 
 Cuando la solicitud de inicio de sesión se complete y lo redirija de vuelta a la página, debe realizar los siguientes pasos:
 
-1. Genere un código de seguridad, un número aleatorio. Debe almacenar en caché este código en el servicio, junto con las credenciales obtenidas a través del flujo de inicio de sesión, como los tokens de OAuth 2.0.
+1. Generar un código de seguridad, un número aleatorio. Debe almacenar en caché este código en el servicio, junto con las credenciales obtenidas a través del flujo de inicio de sesión, como los tokens de OAuth 2.0.
 1. Llame a `microsoftTeams.authentication.notifySuccess` y pase el código de seguridad.
 
 En este momento, la ventana se cierra y el control se pasa al cliente de Teams. El cliente ahora vuelve a emitir la consulta de usuario original, junto con el código de seguridad de la propiedad `state`. El código puede usar un código de seguridad para buscar las credenciales almacenadas anteriormente y completar la secuencia de autenticación, y así completar la solicitud del usuario.

@@ -3,15 +3,15 @@ title: Crear un menú de comandos para el bot
 author: surbhigupta
 description: Obtenga información sobre cómo crear un menú de comandos para el bot de Microsoft Teams con ejemplos de código.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: comando menú redactar mensaje conversación@mención
-ms.openlocfilehash: 37d4c5f451efe9fe2caf137a89d12cdbbdb178d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111846"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296969"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos de bot
 
@@ -43,13 +43,15 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
    > [!NOTE]
    > Si no tiene **App Studio**, puede descargarlo. Para obtener más información, consulte [Instalación de App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
-    :::image type="content" source="/media/AppStudio.png" alt-text="Instalación de App Studio"lightbox="media/AppStudio.png"border="true":::
+  > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
 
-2. En **App Studio**, seleccione la pestaña **Editor de manifiestos**. Si no tiene un paquete de aplicación, puede crear o importar una aplicación existente. Para obtener más información, consulte [Actualización de un paquete de aplicación](~/get-started/deploy-csharp-app-studio.md).
+  :::image type="content" source="/media/AppStudio.png" alt-text="Instalación de App Studio"lightbox="media/AppStudio.png"border="true":::
+
+2. En **App Studio**, seleccione la pestaña **Editor de manifiestos**. Si no tiene un paquete de aplicación, puede crear o importar una aplicación existente. Para obtener más información, consulte [Actualizar un paquete de aplicación](~/get-started/deploy-csharp-app-studio.md).
 
 3. En el panel izquierdo del **Editor de manifiestos**, en la sección **Funcionalidades**, seleccione **Bots**.
 
-4. En el panel derecho del **Editor de manifiestos**, en la sección **Comandos**, seleccione **Agregar**. Aparece la pantalla **Nuevo comando**.
+4. En el panel derecho del **Editor de manifiestos**, en la sección **Comandos**, seleccione **Agregar**. Aparecerá la pantalla **Nuevo comando**.
 
     :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="Seleccione el paquete de la aplicación"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
 
@@ -190,7 +192,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Puede analizar la parte **@Mención** del texto del mensaje mediante un método estático proporcionado con Bot Framework. Es un método de la clase `TurnContext` denominada `remove_recipient_mention`.
+Puede analizar la parte **@Mención** del texto del mensaje mediante un método estático proporcionado con Bot Framework. Es un método de la clase `TurnContext` que se denomina `remove_recipient_mention`.
 
 El código de Python para analizar la parte **\@Mención** del texto del mensaje es el siguiente:
 
@@ -207,7 +209,7 @@ Para habilitar el funcionamiento sin problemas del código del bot, hay algunos 
 A continuación, se describen los procedimientos recomendados para el menú de comandos:
 
 * Mantenga la simplicidad: el menú del bot está diseñado para presentar las funcionalidades clave del bot.
-* Sea breve: las opciones de menú no deben ser largas y no deben ser instrucciones de lenguaje natural complejas. Deben ser comandos simples.
+* Sea breve: las opciones de menú no deben ser largas ni ser instrucciones de lenguaje natural complejas. Deben ser comandos simples.
 * Mantenga la invocabilidad: las acciones o comandos del menú del bot siempre deben estar disponibles, independientemente del estado de la conversación o del cuadro de diálogo en el que se encuentra el bot.
 
 > [!NOTE]

@@ -2,19 +2,19 @@
 title: Compatibilidad del SSO con las extensiones de mensajes
 author: KirtiPereira
 description: Aprenda a habilitar la compatibilidad con el SSO para las extensiones de mensajería con ejemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111258"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296948"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Compatibilidad con el inicio de sesión único para las extensiones de mensajes
 
-La compatibilidad con el inicio de sesión único (SSO) ya está disponible para las extensiones de mensajes y la apertura de vínculos. Al habilitar el inicio de sesión único para las extensiones de mensajes de forma predeterminada, se actualiza el token de autenticación, lo que minimiza el número de veces que necesita escribir las credenciales de inicio de sesión para Microsoft Teams.
+Las extensiones de mensajes y el despliegue de vínculos ya admiten el inicio de sesión único (SSO). Al habilitar el inicio de sesión único para las extensiones de mensajes de forma predeterminada, se actualiza el token de autenticación, lo que minimiza el número de veces que necesita escribir las credenciales de inicio de sesión en Microsoft Teams.
 
 En este documento se explica cómo habilitar el inicio de sesión único y almacenar el token de autenticación, si es necesario.
 
