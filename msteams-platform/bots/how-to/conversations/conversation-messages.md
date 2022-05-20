@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191183"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611459"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -23,6 +23,8 @@ Las conversaciones básicas se controlan a través del conector de Bot Framework
 * Formas sencillas de incorporar servicios cognitivos, como el procesamiento de lenguaje natural (NLP).
 
 El bot recibe mensajes de Teams mediante la `Text` propiedad y envía una o varias respuestas de mensaje a los usuarios.
+
+Para obtener más información, consulte [Atribución de usuarios para mensajes de bot](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
 
 ## <a name="receive-a-message"></a>Recibir un mensaje
 
@@ -416,7 +418,7 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 > [!div class="nextstepaction"]
 > [Menús de comandos del bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
