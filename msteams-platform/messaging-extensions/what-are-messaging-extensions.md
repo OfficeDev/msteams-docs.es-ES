@@ -5,16 +5,19 @@ description: Introducción a las extensiones de mensajería en la plataforma de 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297145"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602260"
 ---
 # <a name="message-extensions"></a>Extensiones de mensajes
 
 Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede enviar los resultados de la interacción de vuelta al cliente de Microsoft Teams en forma de una tarjeta con formato enriquecido.
+
+> [!IMPORTANT]
+> Las extensiones de mensaje están disponibles en entornos de Government Community Cloud (GCC) y GCC-High, pero no en el entorno del Departamento de Defensa (DoD).
 
 En este documento se proporciona información general sobre la extensión del mensaje, las tareas realizadas en diferentes escenarios, el trabajo de la extensión de mensaje, los comandos de acción y búsqueda, y la apertura de vínculos.
 
