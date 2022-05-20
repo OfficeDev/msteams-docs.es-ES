@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104388"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602302"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
 Los bots son aplicaciones de conversación que realizan un conjunto específico de tareas. Basándose en <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, los bots se comunican con los usuarios, responden a sus preguntas y les notifican de forma proactiva sobre cambios y otros eventos. Son una herramienta excelente de comunicación.
 
 > [!IMPORTANT]
-> Los bots están disponibles en Government Community Cloud (GCC) pero no en los entornos del GCC alto y del Departamento de Defensa (DoD).
+> Los bots están disponibles en entornos de Government Community Cloud (GCC) y GCC alto, pero no en entornos del Departamento de Defensa (DoD).
 
 A modo de guía en el diseño de su aplicación, a continuación se describe e ilustra cómo pueden los usuarios agregar, usar y administrar bots en Teams.
 
@@ -145,8 +145,8 @@ Puede usar bots en los siguientes contextos:
 |1|**Icono y nombre de la aplicación**|
 |2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
 |3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
-|4|**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
-|5|**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
+|4 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
+|5 |**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -157,8 +157,8 @@ Puede usar bots en los siguientes contextos:
 |1|**Icono y nombre de la aplicación**|
 |2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
 |3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
-|4|**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
-|5|**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
+|4 |**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
+|5 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
 |6 |**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
 |7 |**Menú de comandos**: muestra los comandos estándar de su bot (definidos por usted).|
 

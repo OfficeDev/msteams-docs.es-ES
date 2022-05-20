@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
+ms.openlocfilehash: a65a63ef7fafe8ab63e5c865349ff2da6c8869fa
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132712"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602288"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,6 +22,7 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 | Fecha | Actualizar | Buscar aquí |
 | --- | --- | --- |
+|05/19/2022|Bots y extensiones de mensaje para GCC y GCCH| • Crear bots > [Información general](bots/what-are-bots.md) </br> • Generar extensiones de mensaje > [Información general](messaging-extensions/what-are-messaging-extensions.md) |
 |28/04/2022| Razones comunes del error de validación de la aplicación | Distribuir la aplicación > Publicar en la tienda de Teams > [Razones comunes del error de validación de la aplicación](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Configuración de canalizaciones CI/CD | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Configurar canalizaciones CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Cargar la aplicación en Microsoft Teams | Distribuir la aplicación > [Cargar la aplicación](concepts/deploy-and-publish/apps-upload.md)|
@@ -63,6 +64,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|05/19/2022|Bots y extensiones de mensaje para GCC y GCCH| • Crear bots > [Información general](bots/what-are-bots.md) </br> • Generar extensiones de mensaje > [Información general](messaging-extensions/what-are-messaging-extensions.md) |
 |26/04/2022|Comportamiento de desinstalación de la aplicación personal con bot | Crear bots > Conversaciones de bots > [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |22/04/2022| Versión preliminar de prueba para aplicaciones monetizadas | Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |22/04/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)

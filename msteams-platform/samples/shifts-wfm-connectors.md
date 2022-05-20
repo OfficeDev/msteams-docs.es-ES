@@ -4,15 +4,15 @@ description: Obtenga información sobre las ventajas de usar los conectores Shif
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Conectores Kronos de Microsoft Teams
 ms.author: lajanuar
-ms.openlocfilehash: 3a294d20bc2032df7ef5dfa225922e9dccabf1df
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111769"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604267"
 ---
 # <a name="production-ready-shifts-connectors"></a>Conectores de turnos listos para producción  
 
@@ -41,34 +41,6 @@ Abra la vista de turnos en Teams:
 La vista de turnos de Teams se muestra en la siguiente imagen:
 
 ![Abrir turnos en Teams](../assets/images/teams-open-shifts-view.png)
-
-## <a name="kronos-to-teams-shifts-connector"></a>Conector Kronos-to-Teams Shifts
-
-Con código abierto, puede integrar Kronos Workforce Central versión 8.1 y versiones posteriores, con Teams Shifts, como la aplicación de Teams de escritorio o móvil para los siguientes escenarios de administrador y trabajo de primera línea:
-
-* Ver programación.
-
-* Publicar y solicitar turnos abiertos.
-
-* Intercambio de turnos.
-
-* Solicitar tiempo libre.
-
-* Ofrecer turnos.
-
-Para obtener más información sobre la implementación del conector Kronos-to-Teams Shifts, consulte [Conseguirlo en GitHub](https://aka.ms/KronosShiftsConnector).
-
-## <a name="jda-to-teams-shifts-connector"></a>Conector de desplazamientos de JDA a Teams Shifts.
-
-Con código de código abierto, puede integrar JDA, como BlueYonder versión 17.2 y posteriores, con Teams Shifts, como, la aplicación de escritorio o móvil de Teams para los siguientes escenarios de trabajador de primera línea y administrador:
-
-* Publique turnos y organizar grupos en JDA y verlos en Teams.
-
-* Habilite escenarios de programación enriquecidos, incluidos la solicitud de intercambios de turnos y tiempo de expiración.
-
-* Establezca la disponibilidad del usuario mediante [Microsoft Graph API para Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
-
-Para obtener más información sobre la contribución y la sugerencia, consulte [Conseguirlo en GitHub](https://aka.ms/JDAShiftsConnector).
 
 ## <a name="see-also"></a>Consulte también
 

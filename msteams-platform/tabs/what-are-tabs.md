@@ -5,12 +5,12 @@ description: Información general sobre pestañas personalizadas en la plataform
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103295"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602281"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Pestañas de compilación para Microsoft Teams
 
@@ -18,6 +18,8 @@ Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Tea
 
 > [!IMPORTANT]
 > Actualmente, las pestañas personalizadas están disponibles en Government Community Cloud (GCC), GCC-High y Department of Defense (DOD).
+>
+> Le recomendamos que utilice el SDK del cliente de Teams a través de un [paquete npm](https://www.npmjs.com/package/@microsoft/teams-js) y que lo incluya en su aplicación, ya que actualmente el SDK del cliente de Teams no está disponible en la CDN de nube de administración pública.
 
 En la imagen siguiente se muestran las pestañas personales:
 
