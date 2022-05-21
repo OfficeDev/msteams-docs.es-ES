@@ -5,12 +5,12 @@ description: Información general sobre pestañas personalizadas en la plataform
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602281"
+ms.locfileid: "65611445"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Pestañas de compilación para Microsoft Teams
 
@@ -75,6 +75,9 @@ Puede usar uno de los métodos siguientes para crear pestañas:
 Se declara una pestaña personalizada en el manifiesto de la aplicación del paquete de la aplicación. Para cada página web que quiera incluir como pestaña en la aplicación, define una dirección URL y un ámbito. Además, puede agregar el SDK de cliente de JavaScript de [Teams](/javascript/api/overview/msteams-client) a la página y llamar a `microsoftTeams.initialize()` después de cargar la página. Teams muestra su página y proporciona acceso a información específica de Teams, por ejemplo, el cliente de Teams está ejecutando el tema oscuro.
 
 Tanto si elige exponer la pestaña dentro del ámbito del canal o del grupo, como del ámbito personal, debe presentar una página de contenido \> HTML [<iframe>](~/tabs/how-to/create-tab-pages/content-page.md) en la pestaña. En el caso de las pestañas personales, la URL del contenido se establece directamente en el manifiesto de la aplicación Teams mediante la `contentUrl`propiedad `staticTabs` del array. El contenido de la pestaña es el mismo para todos los usuarios.
+
+> [!Note]
+> La aplicación de Teams no reconoce sub iframes. Por lo tanto, no se cargará si hay un iframe dentro de la aplicación de pestañas.
 
 Para las pestañas de canal o grupo, también puede crear una página de configuración adicional. Esta página le permite configurar la dirección URL de la página de contenido, normalmente mediante el uso de parámetros de cadena de consulta de dirección URL para cargar el contenido adecuado para ese contexto. Ello se debe a que su pestaña de canal o grupo se puede agregar a varios equipos o chats de grupo. En cada instalación posterior, los usuarios pueden configurar la pestaña, lo que le permite adaptar la experiencia según sea necesario. Cuando los usuarios agregan o configuran una pestaña, se asocia una dirección URL a la pestaña que se presenta en la interfaz de usuario (UI) de Teams. La configuración de una pestaña simplemente agrega parámetros adicionales a esa dirección URL. Por ejemplo, al agregar la pestaña Azure Boards, la página de configuración le permite elegir qué panel carga la pestaña. La dirección URL de la página de configuración se especifica mediante la  `configurationUrl` propiedad en la `configurableTabs` matriz del manifiesto de la aplicación.
 
