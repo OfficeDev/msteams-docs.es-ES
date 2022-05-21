@@ -1,15 +1,14 @@
 ---
 title: Crear vínculos profundos
-description: Describe vínculos profundos y cómo usarlos en las aplicaciones
+description: Obtenga más información sobre cómo describir vínculos profundos de Teams y cómo usarlos en sus aplicaciones.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: vínculo profundo de teams
-ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103926"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611454"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -79,14 +78,14 @@ Use el formato siguiente para un vínculo profundo que puede usar en un bot, con
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 Los parámetros de consulta son:
 
 | Nombre del parámetro | Descripción | Ejemplo |
 |:------------|:--------------|:---------------------|
-| `appId`&emsp; | Identificador del manifiesto. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `appId`&emsp; | Identificador del Centro de administración de Teams. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | Identificador del elemento de la pestaña, que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md).|Lista de tareas123|
 | `entityWebUrl` o `subEntityWebUrl`&emsp; | Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` |
 | `entityLabel` o `subEntityLabel`&emsp; | Etiqueta del elemento de la pestaña que se va a usar al mostrar el vínculo profundo. | Lista de tareas 123 o "Tarea 456 |
@@ -171,6 +170,26 @@ Los parámetros de consulta son:
 * `message`: un campo opcional para el texto del mensaje que quiere insertar en el cuadro de redacción del usuario actual mientras el chat está en un estado de borrador.
 
 Para usar este vínculo profundo con el bot, puede especificarlo como destino de la dirección URL en el botón de la tarjeta o pulsar la acción a través del tipo de acción `openUrl`.
+
+## <a name="generate-deep-links-to-channel-conversation"></a>Generar vínculos profundos a la conversación del canal
+
+Use este formato de vínculo profundo para navegar a una conversación determinada dentro de la conversación del canal:
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Ejemplo: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+Los parámetros de consulta son:
+
+* `channelId`: id. de canal de la conversación. Por ejemplo, `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId`: identificador de inquilino como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId`: id. de grupo del archivo. Por ejemplo, `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId`: id. de mensaje primario de la conversación.
+* `teamName`: nombre del equipo.
+* `channelName`: nombre del canal del equipo.
+
+> [!NOTE]
+> Puede ver `channelId` y `groupId` en la dirección URL del canal.
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Generar vínculos profundos al archivo en el canal
 
