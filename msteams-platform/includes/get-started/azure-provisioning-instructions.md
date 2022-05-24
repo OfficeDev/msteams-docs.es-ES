@@ -1,12 +1,14 @@
 ## <a name="deploy-your-app-to-azure"></a>Implementar la aplicación en Azure
 
 La implementación consta de dos pasos.  En primer lugar, se crean los recursos en la nube necesarios (también conocidos como aprovisionamiento). A continuación, el código de la aplicación se copia en los recursos en la nube creados. En este tutorial, implementará la aplicación de pestaña.
-
-> <details>
-> <summary>¿Cuál es la diferencia entre Aprovisionar e Implementar?</summary>
->
-> El paso **Aprovisionar** crea recursos en Azure y Microsoft 365 para la aplicación, pero no se copia ningún código (HTML, CSS, JavaScript, etc.) en los recursos. El paso **Implementar** copia el código de la aplicación en los recursos que creó durante el paso de aprovisionamiento. Es habitual implementar varias veces sin aprovisionar nuevos recursos. Dado que el paso de aprovisionamiento puede tardar algún tiempo en completarse, es independiente del paso de implementación.
+<br> 
+<br>
+<details>
+<summary>¿Cuál es la diferencia entre Aprovisionar e Implementar?</summary>
+<br>
+El paso <b>Aprovisionar</b> crea recursos en Azure y Microsoft 365 para la aplicación, pero no se copia ningún código (HTML, CSS, JavaScript, etc.) en los recursos. El paso <b>Implementar</b> copia el código de la aplicación en los recursos que creó durante el paso de aprovisionamiento. Es habitual implementar varias veces sin aprovisionar nuevos recursos. Dado que el paso de aprovisionamiento puede tardar algún tiempo en completarse, es independiente del paso de implementación.
 </details>
+<br>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -31,7 +33,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
    El proceso de aprovisionamiento crea recursos en la nube de Azure. Puede tardar algún tiempo. Puede supervisar el progreso observando los diálogos en la esquina inferior derecha. Después de unos minutos, verá el siguiente aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
 
     Si quiere, puede ver los recursos aprovisionados. En este tutorial, no es necesario ver los recursos.
 
@@ -45,6 +47,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
    Al igual que con el aprovisionamiento, la implementación tarda algún tiempo. Para supervisar el proceso, vea los diálogos en la esquina inferior derecha. Después de unos minutos, verá un aviso de finalización.
 
+Ahora, puede usar el mismo proceso para implementar las aplicaciones Bot y Message Extension en Azure.
 
 # <a name="command-line"></a>[Línea de comandos](#tab/cli)
 
@@ -81,10 +84,21 @@ Una vez completados los pasos de aprovisionamiento e implementación:
 
 1. Seleccione **Agregar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
+
+   El kit de herramientas muestra un mensaje para indicar que la aplicación se agrega a Teams.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Captura de pantalla que muestra el mensaje para probar la aplicación ahora o posterior" border="true":::
+ 
+    - Si **seleccionaSi lo tienes**, puedes probar la aplicación más adelante en la lista de aplicaciones de prueba.
+    - Si selecciona **Probar,** Teams carga la aplicación.
 
    La aplicación se carga en el sitio de Azure.
+   
+1. Seleccione **Probar.**
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
+   La aplicación Extensión de mensaje se carga en una aplicación de bot de chat.
 
-    ¡Enhorabuena! La aplicación de pestaña se ejecuta ahora de forma remota desde Azure.
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Captura de pantalla que muestra la aplicación transferida localmente en Teams" border="false":::
+
+
