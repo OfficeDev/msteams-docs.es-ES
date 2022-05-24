@@ -3,15 +3,15 @@ title: Entorno múltiple de TeamsFX en el kit de herramientas de Teams
 author: MuyangAmigo
 description: Acerca del entorno múltiple de TeamsFX
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: b9719add5036ae533ce6d7c395ab95a5905bcbb8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111867"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653283"
 ---
 # <a name="manage-multiple-environments"></a>Administrar varios entornos
 
@@ -82,7 +82,7 @@ En la siguiente tabla se enumeran los escenarios comunes para el aprovisionamien
 | Reutilización de la aplicación de Azure AD existente para la aplicación de Teams | <ul> <li>`auth` sección en`.fx/config.<envName>.json`</li> </ul> |  [Uso de una aplicación de Azure AD existente para la aplicación de Teams](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reutilización de la aplicación de Azure AD existente para el bot | <ul> <li>`bot` sección en`.fx/config.<envName>.json`</li> </ul> | [Uso de una aplicación existente de Azure AD para el bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Omitir la adición de usuario al aprovisionar SQL | <ul> <li>`skipAddingSqlUser` propiedad en`.fx/config.<envName>.json`</li> </ul> | [Omitir la adición de usuario para la base de datos de SQL](provision.md#skip-adding-user-for-sql-database) |
-| Personalizar el manifiesto de la aplicación | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` sección en `.fx/config.<envName>.json`</li>  </ul> | [Personalizar el manifiesto de aplicación de Teams en el kit de herramientas de Teams](TeamsFx-manifest-customization.md) |
+| Personalizar el manifiesto de la aplicación | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` sección en `.fx/config.<envName>.json`</li>  </ul> | [Vista previa del manifiesto de aplicación en el kit de herramientas](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## <a name="scenarios"></a>Escenarios
 

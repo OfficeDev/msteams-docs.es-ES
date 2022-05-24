@@ -11,15 +11,15 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 6d1f1d89882fe0e2d19113aacd604d5e3cbc1c99
-  ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+  ms.openlocfilehash: f9f08d5a9fd8d2175c8934166ca11f5f8d2c6f4f
+  ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65104003"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65653297"
 highlightedContent:
   items:
-  - title: Novedades
+  - title: Microsoft Build 2022
     itemType: whats-new
     url: /microsoftteams/platform/whats-new
   - title: "¿Es nuevo en Teams desarrollo? \U0001F680¡Empieza aquí!"
@@ -37,7 +37,7 @@ highlightedContent:
   - title: Mejora de la aplicación con Microsoft Graph
     itemType: how-to-guide
     url: /graph/teams-concept-overview
-  - title: Publicación de la aplicación en el almacén de Teams
+  - title: Publicar la aplicación en la tienda de Teams
     itemType: deploy
     url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
   - title: Ejemplos de código
@@ -79,7 +79,7 @@ conceptualContent:
       text: Bots
     - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
       itemType: overview
-      text: Extensiones de mensaje
+      text: Extensiones de mensajería
     - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
       itemType: overview
       text: Aplicaciones para reuniones de Teams
