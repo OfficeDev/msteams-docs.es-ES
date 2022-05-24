@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: db676795e394856f6e787086cae654efad79172a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655498"
+ms.locfileid: "65656848"
 ---
-# <a name="add-single-sign-on-experience"></a>Incorporación de una experiencia de inicio de sesión único
+# <a name="add-single-sign-on-to-teams-app"></a>Agregar inicio de sesión único a Teams aplicación
 
 Microsoft Teams proporciona una función de inicio de sesión único para que la aplicación obtenga el token de usuario Teams que ha iniciado sesión para acceder a Microsoft Graph y a otras API. Teams Toolkit facilita la interacción mediante la abstracción de algunos de los flujos e integraciones de Azure AD detrás de algunas API sencillas. Esto le permite agregar fácilmente características de inicio de sesión único (SSO) a la aplicación de Teams.
 
@@ -282,22 +282,22 @@ export async function showUserImage(context, ssoToken, param) {
 
    * Agregue la siguiente línea para el nuevo registro de comandos mediante `addCommand` en `teamsSsoBot`:
 
-   ```bash
+     ```bash
 
-   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-   ```
+     ```
 
    * Agregue las líneas siguientes después de la línea anterior para registrar un nuevo comando `photo` y enlazar con el método `showUserImage` agregado anteriormente:
 
-   ```bash
+     ```bash
 
-   // As shown here, you can add your own parameter into the `showUserImage` method
-   // You can also use regular expression for the command here
-   const scope = ["User.Read"];
-   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+     // As shown here, you can add your own parameter into the `showUserImage` method
+     // You can also use regular expression for the command here
+     const scope = ["User.Read"];
+     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-   ```
+     ```
 
 3. Registre el comando en el manifiesto de la aplicación Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
 
@@ -336,12 +336,12 @@ Teams pestañas y bots tienen un flujo similar para la compatibilidad con SSO. P
 
 ### <a name="simplified-sso-with-teamsfx"></a>Inicio de sesión único simplificado con TeamsFx
 
-TeamsFx ayuda a reducir las tareas de desarrollador mediante el inicio de sesión único en Teams y el acceso a los recursos en la nube hasta instrucciones de una sola línea con cero configuración.
+TeamsFx ayuda a reducir las tareas de desarrollador mediante el inicio de sesión único y el acceso a los recursos en la nube hasta instrucciones de una sola línea con cero configuración.
 
 Con el SDK de TeamsFx, puede escribir código de autenticación de usuario de forma simplificada mediante Credenciales:
 
 1. Identidad de usuario en el entorno del explorador: `TeamsUserCredential` representa Teams identidad del usuario actual.
-2. Identidad de usuario en Node.js entorno: `OnBehalfOfUserCredentail` usa el flujo en nombre de y Teams token de SSO.
+2. Identidad de usuario en Node.js entorno: `OnBehalfOfUserCredentail` usa el flujo en nombre de y el token de SSO.
 3. Identidad de aplicación en Node.js entorno: `AppCredential` representa la identidad de la aplicación.
 
 Para obtener más información sobre el SDK de TeamsFx, consulte:
@@ -349,6 +349,6 @@ Para obtener más información sobre el SDK de TeamsFx, consulte:
 * [Referencia de API o SDK de TeamsFx](TeamsFx-SDK.md) [](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Galería de ejemplo de Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Preparar cuentas para crear aplicaciones de Teams](accounts.md)

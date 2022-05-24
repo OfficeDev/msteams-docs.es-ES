@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 4067b86bc3a8de0ed891e84ceef68f5f95741479
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655651"
+ms.locfileid: "65656778"
 ---
 # <a name="azure-ad-manifest"></a>Manifiesto de Azure AD
 
@@ -29,9 +29,9 @@ Puede personalizar la plantilla de manifiesto de Azure AD para actualizar la apl
 
 2. Actualice la plantilla directamente o [haga referencia a los valores de otro archivo](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Puede ver varios escenarios de personalización aquí:
   
-* [Agregar un permiso de aplicación](#customize-requiredresourceaccess)
-* [Autenticación previa de una aplicación cliente](#customize-preauthorizedapplications)
-* [Actualización de la dirección URL de redireccionamiento para la respuesta de autenticación](#customize-redirect-urls)
+   * [Agregar un permiso de aplicación](#customize-requiredresourceaccess)
+   * [Autenticación previa de una aplicación cliente](#customize-preauthorizedapplications)
+   * [Actualización de la dirección URL de redireccionamiento para la respuesta de autenticación](#customize-redirect-urls)
 
 3. [Implemente los cambios de la aplicación de Azure AD para el entorno local](#deploy-azure-ad-application-changes-for-local-environment).
   
@@ -223,8 +223,8 @@ La lente de código muestra el nombre de la aplicación para el identificador de
 
 2. Vaya a [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) e inicie sesión en Microsoft 365 cuenta.
   
-> [!NOTE]
-> Asegúrese de que las credenciales de inicio de sesión de Teams aplicación y cuenta de M365 sean las mismas.
+   > [!NOTE]
+   > Asegúrese de que las credenciales de inicio de sesión de Teams aplicación y cuenta de M365 sean las mismas.
 
 3. Abra [la página Registros](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) de aplicaciones y busque la aplicación de Azure AD mediante el identificador de cliente que copió antes.
   
@@ -311,7 +311,6 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
     * Seleccione `add a permission` esta opción para agregar el permiso que desee.
     * Seleccione `Manifest`, en la `requiredResourceAccess` propiedad , puede encontrar los identificadores de api y permisos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Personalizar el manifiesto de la aplicación en el kit de herramientas](TeamsFx-manifest-customization.md)
-* [Vista previa del manifiesto de aplicación en el kit de herramientas](TeamsFx-manifest-preview.md)
+* [Vista previa y personalización del manifiesto de la aplicación en Toolkit](TeamsFx-preview-and-customize-app-manifest.md)

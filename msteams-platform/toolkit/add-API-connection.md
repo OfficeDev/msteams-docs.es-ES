@@ -6,14 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 133ec7fa80950fde59529a2e1abe0415d6620171
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655612"
+ms.locfileid: "65656771"
 ---
-# <a name="connect-to-existing-apis"></a>Conectar a las API existentes
+# <a name="add-api-connection-to-teams-app"></a>Adición de conexión de API a Teams aplicación
 
 Teams Toolkit le ayuda a acceder a las API existentes para compilar aplicaciones Teams. Su organización o terceros desarrollan estas API.
 
@@ -206,6 +206,6 @@ Puede seguir los pasos para acceder a estas API mientras usa:
         > Para el permiso de aplicación, use el identificador de cliente.
 </details>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Publicar aplicaciones de Teams con el kit de herramientas de Teams](publish.md)

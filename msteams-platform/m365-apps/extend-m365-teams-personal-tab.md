@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654574"
+ms.locfileid: "65656176"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
@@ -91,7 +91,7 @@ Si ha usado el Kit de herramientas de Teams para crear su aplicación personal, 
 
 ## <a name="update-sdk-references"></a>Actualizar referencias del SDK
 
-Para ejecutarse en Outlook y Office, la aplicación deberá hacer referencia al paquete `@microsoft/teams-js@2.0.0` de npm (o superior). Aunque el código con versiones de nivel inferior se admite en Outlook y Office, las advertencias de desuso se registrarán y la compatibilidad con versiones de nivel inferior de TeamsJS en Outlook y Office terminará finalmente.
+Para ejecutarse en Outlook y Office, la aplicación deberá hacer referencia al paquete `@microsoft/teams-js@2.0.0` de npm (o superior). Aunque el código con versiones de nivel inferior se admite en Outlook y Office, las advertencias de desuso se registran y la compatibilidad con versiones de nivel inferior de TeamsJS en Outlook y Office terminará finalmente.
 
 Puede usar Teams Toolkit para ayudar a identificar y automatizar los cambios de código necesarios para actualizar de las versiones 1.x TeamsJS a TeamsJS versión 2.0.0. Como alternativa, puede realizar los mismos pasos manualmente; Consulte [Microsoft Teams SDK de cliente de JavaScript](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para obtener más información.
 
@@ -107,8 +107,7 @@ Al finalizar, el archivo *package.json* hará referencia `@microsoft/teams-js@2.
 > * `TODO` recordatorios de comentarios para [convertir funciones de devolución de llamada en promesas](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Las herramientas de actualización no admiten el código dentro de archivos *HTML* y requerirán cambios manuales.
-
+> El código dentro *de.html* archivos no es compatible con las herramientas de actualización y requiere cambios manuales.
 
 ## <a name="configure-content-security-policy-headers"></a>Configurar encabezados de directiva de seguridad de contenido
 
@@ -135,15 +134,15 @@ Si la aplicación usa encabezados de [directiva de seguridad de contenido](https
 
 1. En la sección **Aplicaciones cliente autorizadas** asegúrese de que aparecen todos los siguientes valores `Client Id`:
 
-|Microsoft 365 aplicación cliente | Id. de cliente |
-|--|--|
-|Escritorio de Teams, móvil |1fec8e78-bli4-4aaf-ab1b-5451cc387264 |
-|Web de Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Escritorio de Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-|Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Microsoft 365 aplicación cliente | Id. de cliente |
+    |--|--|
+    |Escritorio de Teams, móvil |1fec8e78-bli4-4aaf-ab1b-5451cc387264 |
+    |Web de Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Escritorio de Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
+    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Teams
 
@@ -165,23 +164,23 @@ El último paso para ejecutar la aplicación en Office y Outlook es transferir l
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Opción &quot;Upload una aplicación personalizada&quot; en Teams":::
 
-Después de transferirla de forma local a Teams, la pestaña personal estará disponible en Outlook y Office. Asegúrese de iniciar sesión con las mismas credenciales que usó para iniciar sesión en Teams para transferir localmente la aplicación.
+Una vez que se haya cargado de forma local en Teams, la pestaña personal estará disponible en Outlook y Office. Asegúrese de iniciar sesión con las mismas credenciales que usó para iniciar sesión en Teams para transferir localmente la aplicación.
 
-Puedes anclar la aplicación para obtener acceso rápido o encontrarla en los puntos suspensivos (**...**) entre las aplicaciones recientes en la barra lateral de la izquierda. Al anclar una aplicación en Teams no se anclará como una aplicación en Office o Outlook.
+Puedes anclar la aplicación para obtener acceso rápido o encontrarla en los puntos suspensivos (**...**) entre las aplicaciones recientes en la barra lateral de la izquierda. Anclar una aplicación en Teams no la ancle como una aplicación en Office o Outlook.
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Obtener una vista previa de su pestaña personal en otras experiencias de Microsoft 365
 
 Aquí se muestra cómo obtener una vista previa de la aplicación que se ejecuta en clientes de escritorio de Office y Outlook, web y Windows.
 
 > [!NOTE]
-> La desinstalación de la aplicación de Teams también la quitará de los catálogos **Más aplicaciones** de Outlook y Office. Si usa la Teams Toolkit aplicación de ejemplo proporcionada anteriormente
+> Al desinstalar la aplicación de Teams también se quita de los catálogos **Más aplicaciones** de Outlook y Office. Si usa la Teams Toolkit aplicación de ejemplo proporcionada anteriormente.
 
 ### <a name="outlook-on-windows"></a>Outlook en Windows
 
 Para obtener una vista previa de la aplicación ejecutándose en Outlook en el escritorio de Windows:
 
 1. Inicie Outlook e inicie sesión con su cuenta de inquilino de desarrollo.
-1. En la barra lateral, seleccione  **Más aplicaciones**. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
+1. En la barra lateral, seleccione  **Más aplicaciones**. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Outlook.
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Outlook para ver las pestañas personales instaladas":::
@@ -191,7 +190,7 @@ Para obtener una vista previa de la aplicación ejecutándose en Outlook en el e
 Para ver la aplicación en Outlook en la Web:
 
 1. Vaya a [Outlook en la Web](https://outlook.office.com) e inicie sesión con su cuenta de inquilino de desarrollo.
-1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
+1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral de outlook.com para ver las pestañas personales instaladas":::
@@ -201,7 +200,7 @@ Para ver la aplicación en Outlook en la Web:
 Para ver la aplicación que se ejecuta en Office en el escritorio de Windows:
 
 1. Inicie Office e inicie sesión con su cuenta de inquilino de desarrollo.
-1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
+1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Office para ver las pestañas personales instaladas":::
@@ -210,15 +209,15 @@ Para ver la aplicación que se ejecuta en Office en el escritorio de Windows:
 
 Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web:
 
-1. Inicie sesión en office.com con credenciales de espacio empresarial de prueba.
-1. Seleccione el icono **Aplicaciones** en la barra lateral. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
+1. Inicie sesión en **office.com** con credenciales de inquilino de prueba.
+1. Seleccione el icono **Aplicaciones** en la barra lateral. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Office en la Web.
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Haga clic en la opción &quot;Más aplicaciones&quot; en la barra lateral de office.com para ver las pestañas personales instaladas.":::
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Actualmente, se admite un subconjunto de tipos y funcionalidades de aplicación de Teams en clientes de Outlook y Office. Esta compatibilidad se expandirá con el tiempo. 
+Actualmente, se admite un subconjunto de tipos y funcionalidades de aplicación de Teams en clientes de Outlook y Office. Esta compatibilidad se expande con el tiempo.
 
 Consulte [Microsoft 365 soporte técnico](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) para comprobar la compatibilidad del host con varias funcionalidades de TeamsJS.
 
@@ -240,7 +239,7 @@ Tras la primera ejecución de depuración local para Office o Outlook, se le ped
 
 Proporcione comentarios e informe de cualquier problema con la experiencia de depuración de Teams Toolkit en [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-step"></a>Paso siguiente
 
 Publique la aplicación para que se pueda detectar en Teams, Outlook y Office:
 
@@ -251,6 +250,6 @@ Publique la aplicación para que se pueda detectar en Teams, Outlook y Office:
 
 | **Nombre de ejemplo** | **Descripción** | **Node.js** |
 |---------------|--------------|--------|
-| Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |

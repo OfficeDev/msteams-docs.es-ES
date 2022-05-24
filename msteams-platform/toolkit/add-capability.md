@@ -6,87 +6,95 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0ebea1fb05e3583c90c41596da98a25d89f9b4c
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654539"
+ms.locfileid: "65656764"
 ---
-# <a name="add-capabilities-to-your-teams-apps"></a>Agregar funcionalidades a las aplicaciones de Teams
+# <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones Teams
 
-Durante el desarrollo de aplicaciones, puede crear una nueva aplicación de Teams con Teams funcionalidad de aplicación. En la tabla siguiente se enumeran las funcionalidades de la aplicación Teams:
+Agregar funcionalidad en Teams Toolkit le ayuda a agregar funcionalidad adicional a la aplicación de Teams existente. En la tabla siguiente se enumeran las funcionalidades de la aplicación Teams:
 
 |**Capacidad**|**Descripción**|
 |--------|-------------|
-| Pestañas |  Las pestañas son etiquetas HTML sencillas que apuntan a dominios declarados en el manifiesto de la aplicación. Puede agregar pestañas como parte del canal dentro de un equipo, chat en grupo o aplicación personal para un usuario individual.|
-| Bots |  Los bots ayudan a interactuar con el servicio web a través de texto, tarjetas interactivas y módulos de tareas|
-| Extensiones de mensajería | Las extensiones de mensaje ayudan a interactuar con el servicio web a través de botones y formularios en el cliente Microsoft Teams|
+| Pestañas |  Las pestañas son etiquetas HTML sencillas que hacen referencia a los dominios declarados en el manifiesto de la aplicación. Puede agregar pestañas como parte del canal dentro de un equipo, chat en grupo o aplicación personal para un usuario individual.|
+| Bots |  Los bots ayudan a interactuar con el servicio web a través de texto, tarjetas interactivas y módulos de tareas.|
+| Extensiones de mensajes | Las extensiones de mensaje ayudan a interactuar con el servicio web a través de botones y formularios en el cliente de Microsoft Teams.|
 
-## <a name="prerequisite"></a>Requisito previo
+## <a name="advantages"></a>Ventajas
 
-* Instale la versión [más reciente del kit de herramientas de Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+En la lista siguiente se proporcionan ventajas para agregar más funcionalidades en TeamsFx:
 
-> [!TIP]
-> Asegúrese de que ha abierto un proyecto de aplicación de Teams en VS Code.
+* Proporciona comodidad
+* Agrega más funciones a la aplicación agregando automáticamente códigos fuente mediante Teams Toolkit
 
 ## <a name="limitations"></a>Limitaciones
 
-Las limitaciones de TeamsFx al agregar más funcionalidades son las siguientes:
+En la lista siguiente se proporcionan limitaciones para agregar más funcionalidades en TeamsFx:
 
 * Puede agregar pestañas hasta 16 instancias
-* Puede agregar bot y extensión de mensaje para una instancia cada una.
+* Puede agregar un bot y una extensión de mensaje para una instancia cada una.
 
 ## <a name="add-capabilities"></a>Agregar funcionalidades
 
-> [!Note]
-> Debe realizar el aprovisionamiento para cada entorno, después de agregar correctamente funcionalidades a la aplicación de Teams.
-* Puede agregar funcionalidades mediante Teams Toolkit en Visual Studio Code
+**Puede agregar funcionalidades mediante los métodos siguientes:**
 
-    1. Abrir **código Microsoft Visual Studio**
-    1. Seleccione **Teams Toolkit** en el panel izquierdo.
-    1. Seleccione **Agregar funcionalidades.**
+* Para agregar funcionalidades mediante Teams Toolkit en Visual Studio Code
+* Para agregar funcionalidades mediante la paleta de comandos
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
+  > [!Note]
+  > Debe aprovisionar para cada entorno, después de haber agregado correctamente las funcionalidades en la aplicación de Teams.
 
-*   También puede abrir la paleta de comandos y escribir Teams: Agregar funcionalidades:
+* **Para agregar funcionalidades mediante Teams Toolkit en Visual Studio Code:**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Funcionalidades alternativas":::
+   1. Abra **Visual Studio Code**.
+   1. Seleccione **Teams Toolkit** en el panel izquierdo.
+   1. Seleccione **Agregar características** en **DESARROLLO**.
 
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="actualizado uno" border="true":::
 
-    1. En el elemento emergente, seleccione las funcionalidades que se van a incluir en el proyecto:
+* **Para agregar funcionalidades mediante la paleta de comandos:**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
+   1. Abra **la paleta de comandos**.
+   1. Escriba **Teams:Agregar características**.
+   1. Presione **Entrar**.
 
-    2. Seleccione **Aceptar.**
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="característica de equipo" border="true":::
 
-Las funcionalidades seleccionadas se agregan correctamente al proyecto. El Teams Toolkit generar código fuente para las funcionalidades recién agregadas
+   1. En el elemento emergente, seleccione la funcionalidad que se va a agregar en el proyecto.
 
-## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>Agregar funcionalidades mediante la CLI de TeamsFx en la ventana de comandos
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Notificación" border="true":::
 
-1. Cambiar el directorio al **directorio del proyecto**
-1. Ejecute el siguiente comando para agregar diferentes funcionalidades al proyecto:
+## <a name="add-capabilities-using-teamsfx-cli"></a>Adición de funcionalidades mediante la CLI de TeamsFx
 
-   |Funcionalidad y escenario| Comando|
-   |-----------------------|----------|
-   |Para agregar pestaña|`teamsfx capability add tab`|
-   |Para agregar bot|`teamsfx capability add bot`|
-   |Para agregar la extensión de mensaje|`teamsfx capability add messaging-extension`|
+* Cambiar el directorio al **directorio del proyecto**
+* En la tabla siguiente se enumeran las funcionalidades y los comandos necesarios:
 
-## <a name="supported-capabilities"></a>Funciones admitidas
+  |Funcionalidad y escenario| Comando|
+  |-----------------------|----------|
+  |Para agregar un bot de notificación |`teamsfx add notification `|
+  |Para agregar un bot de comandos |`teamsfx add command-and-response `|
+  |Para agregar la pestaña habilitada para sso |`teamsfx add sso-tab`|
+  |Para agregar pestaña |`teamsfx add tab`|
+  |Para agregar bot |`teamsfx add bot`|
+  |Para agregar la extensión de mensaje |`teamsfx add message extension`|
 
-Además de las funcionalidades que ya tiene la aplicación Teams, puede elegir agregar diferentes funcionalidades a la aplicación de Teams. En la tabla siguiente se proporcionan las diferentes funcionalidades de Teams aplicación:
+## <a name="available-capabilities-to-add-for-different-teams-project"></a>Funcionalidades disponibles para agregar para diferentes proyectos de Teams
+
+Puede elegir agregar diferentes funcionalidades en función del proyecto que haya creado en Teams aplicación.
+En la tabla siguiente se enumeran las funcionalidades disponibles para agregar en el proyecto:
 
 |Funcionalidades existentes|Otras funcionalidades admitidas|
 |--------------------|--------------------|
-|Pestañas con SPFx|Ninguno|
-|Pestañas con Azure|Bot y extensión de mensaje|
-|Bot|Pestañas|
-|Extensión de mensajería|Pestañas y bots|
-|Pestañas y bots|Pestañas y extensión de mensaje|
-|Pestañas y extensión de mensaje|Pestañas y bots|
-|Pestañas, bot y extensión de mensaje|Pestañas|
-|Pestañas |Bot y extensión de mensaje|
+|pestaña SPFx |Ninguno|
+|Pestaña habilitada para SSO |Pestaña habilitada para SSO, bot de notificación, bot de comandos, bot, extensión de mensaje|
+|Bot de notificación |Pestaña habilitada para SSO, pestaña|
+|Bot de comandos |Pestaña habilitada para SSO, pestaña|
+|Tab |Pestaña, bot de notificación, bot de comandos, bot, extensión de mensaje|
+|Bot |Extensión de mensaje, pestaña habilitada para SSO, pestaña|
+|Extensión de mensajería |Bot, pestaña habilitada para SSO, pestaña |
 
 ## <a name="add-bot-tab-and-message-extension"></a>Agregar bot, pestaña y extensión de mensaje
 
@@ -115,7 +123,7 @@ Después de agregar la pestaña , los cambios en el proyecto son los siguientes:
 
 * Siga la guía [paso a paso](../sbs-gs-commandbot.yml) para compilar el bot de comandos en Microsoft Teams
 
-* Siga la [guía paso a paso](../sbs-gs-notificationbot.yml) para compilar el bot de notificación en Microsoft Teams.
+* Siga la guía [paso a paso](../sbs-gs-notificationbot.yml) para compilar el bot de notificación en Microsoft Teams.
 
 ## <a name="see-also"></a>Vea también
 

@@ -87,4 +87,4 @@ Una vez completados los pasos de aprovisionamiento e implementación:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
 
-    ¡Enhorabuena! La aplicación de bot se ejecuta ahora de forma remota desde Azure.
+    ¡Enhorabuena! La aplicación de pestaña se ejecuta ahora de forma remota desde Azure.

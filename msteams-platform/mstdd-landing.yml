@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 1404ad66f8ce221f2f94186636cba7d7722d8f6e
-  ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+  ms.openlocfilehash: bc3bbdcb9afe75311f126a686a397eada38c573c
+  ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
   ms.translationtype: MT
   ms.contentlocale: es-ES
   ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65656106"
+  ms.locfileid: "65656841"
 landingContent:
 - title: Microsoft Build 2022
   linkLists:
@@ -56,9 +56,9 @@ landingContent:
     - text: Compilación de una aplicación con Node.js
       url: sbs-gs-nodejs.yml
     - text: Crear un bot de comandos con JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-commandbot.yml
     - text: Crear un bot de notificaciones con JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-notificationbot.yml
 - title: Rentabilizar la aplicación
   linkLists:
   - linkListType: concept
@@ -119,8 +119,6 @@ landingContent:
       url: ~/sbs-teams-conversation-bot.yml
     - text: Creación de un bot de llamadas y reuniones
       url: ~/sbs-calling-and-meeting.yml
-    - text: Concesión de permisos de dispositivo de pestaña
-      url: ~/sbs-tab-device-permissions.yml
     - text: Configuración del inicio de sesión único para pestañas y extensiones de mensaje
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
     - text: Crear pestañas con tarjetas adaptables
@@ -136,9 +134,9 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Crear un bot de comandos con JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-commandbot.yml
     - text: Crear un bot de notificaciones con JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-notificationbot.yml
     - text: Upload archivos para Teams desde un bot
       url: ~/sbs-file-handling-in-bot.yml
     - text: Generación de una burbuja de contenido de reunión
@@ -162,7 +160,7 @@ landingContent:
     - text: Escenarios de compilación para Teams aplicación
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Procedimientos recomendados para escenarios de Teams aplicación
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explorar aplicaciones de código bajo para Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publicación y distribución

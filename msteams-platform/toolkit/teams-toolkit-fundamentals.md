@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654621"
+ms.locfileid: "65656862"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
 
@@ -127,35 +127,35 @@ Ayuda a reducir las tareas de implementación de identidad y acceso a los recurs
 ## <a name="help-and-feedback"></a>Ayuda y comentarios
 
 En esta sección, encontrará la documentación y los recursos que necesita. Puede seleccionar **Notificar problemas en GitHub** en el kit de herramientas de Teams para obtener **Soporte técnico rápido** de un experto en productos. Examine los problemas antes de crear uno nuevo o visite la [etiqueta StackOverflow](https://stackoverflow.com/questions/tagged/teams-toolkit)`teams-toolkit` para enviar comentarios.
+<!--  
+Let's explore Teams Toolkit features.
 
-Vamos a explorar las características del kit de herramientas de Teams.
-
-| Características del kit de herramientas de Teams | Se incluye... | Qué puede hacer |
+| Teams Toolkit Features | Includes | What you can do |
 | --- | --- | --- |
-| **Cuentas** | &nbsp; | &nbsp; |
-| &nbsp; | Cuenta de Microsoft 365 | Use su cuenta de Microsoft 365 con una suscripción E5 válida para compilar la aplicación. |
-| &nbsp; | Cuenta de Azure | Use su cuenta de Azure para implementar la aplicación en Azure. |
-| **Entorno** | &nbsp; | &nbsp; |
-| &nbsp; | local | Implemente la aplicación en el entorno local predeterminado con configuraciones de entorno de máquina local. |
-| &nbsp; | desarrollador | Implemente la aplicación en el entorno de desarrollo predeterminado con configuraciones de entorno remoto o en la nube. Podrá crear más entornos, según sea necesario. |
-| **Desarrollo** | &nbsp; | &nbsp; |
-| &nbsp; | Crear una nueva aplicación de Teams | Use el asistente del kit de herramientas para preparar el scaffolding del proyecto para el desarrollo de aplicaciones. |
-| &nbsp; | Ver ejemplos | Seleccione cualquiera de las 12 aplicaciones de ejemplo del kit de herramientas de Teams. El kit de herramientas descarga el código de la aplicación de GitHub para que pueda compilar la aplicación de ejemplo. |
-| &nbsp; | Agregar características | - Agregue otras funcionalidades de Teams necesarias a Teams aplicación durante el proceso de desarrollo. </br> - Agregar recursos en la nube opcionales adecuados para la aplicación. |
-| &nbsp; | Editar archivo de manifiesto | Edite la integración de la aplicación de Teams con el cliente de Teams. |
-| **Implementación** | &nbsp; | &nbsp; |
-| &nbsp; | Aprovisionamiento en la nube | Asigne recursos de Azure para la aplicación. El kit de herramientas de Teams se integra con Azure Resource Manager. |
-| &nbsp; | Paquete de metadatos zip de Teams | Cree el paquete de la aplicación que se puede cargar en Teams o en Portal para desarrolladores. Contiene el manifiesto de la aplicación y los iconos de la aplicación.  |
-| &nbsp; | Implementar en la nube | Implemente el código fuente en Azure. |
-| &nbsp; | Publicar en Teams | Publique la aplicación que ha desarrollado y distribúyala al ámbito personal, de equipo, de canal o de organización. |
-| &nbsp; | Portal para desarrolladores de Teams | Use Portal para desarrolladores para configurar y administrar la aplicación de Teams. |
-| **Ayuda y comentarios** | &nbsp; | &nbsp; |
-| &nbsp; | Inicio rápido | Vea la ayuda de inicio rápido de Teams Toolkit en Visual Studio Code.  |
-| &nbsp; | Tutorial | Seleccione esta opción para acceder a diferentes tutoriales. |
-| &nbsp; | Documentación | Seleccione esta opción para acceder a la documentación de desarrolladores de Microsoft Teams. |
-| &nbsp; | Notificar problemas en GitHub | Seleccione esta opción para acceder a la página de GitHub y notificar problemas. |
+| **Accounts** | &nbsp; | &nbsp; |
+| &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
+| &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
+| **Environment** | &nbsp; | &nbsp; |
+| &nbsp; | local | Deploy your app in the default local environment with local machine environment configurations. |
+| &nbsp; | dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
+| **Development** | &nbsp; | &nbsp; |
+| &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
+| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
+| &nbsp; | Add Features | - Add other required Teams capabilities to Teams app during development process. </br> - Add optional cloud resources suitable for your app. |
+| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
+| **Deployment** | &nbsp; | &nbsp; |
+| &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
+| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
+| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
+| &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
+| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
+| **Help and Feedback** | &nbsp; | &nbsp; |
+| &nbsp; | Quick start | View the Teams Toolkit Quick start help within Visual Studio Code.  |
+| &nbsp; | Tutorial | Select to access different tutorials. |
+| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
+| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 
-
+-->
 > [!TIP]
 > Examine los problemas ya notificados antes de crear uno nuevo o visite la [etiqueta StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) para enviar comentarios.
 

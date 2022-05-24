@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: a3259c46927547b98700f76f704c6c5cb222a74d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104017"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65656162"
 ---
 # <a name="debug-background-process"></a>Depurar procesos en segundo plano
 
@@ -33,10 +33,10 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 
   |Tipo de proyecto|Versión LTS de Node.js|
   |----------|--------------------------------|
-  |Tabulación sin Azure Functions | 10, 12, **14 (recomendado)**, 16 |
-  |Pestaña con Azure Functions | 10, 12, **14 (recomendado)**|
-  |Bot |  10, 12, **14 (recomendado)**, 16|
-  |Extensión de mensaje | 10, 12, **14 (recomendado)**, 16 |
+  |Tab | 14, 16 (recomendado) |
+  |Pestaña SPFx | 12, 14 (recomendado)|
+  |Bot |  14, 16 (recomendado)|
+  |Extensión de mensajería | 14, 16 (recomendado) |
 
    
 * Microsoft 365 cuenta con credenciales válidas, el kit de herramientas de Teams le pedirá que inicie sesión en Microsoft 365 cuenta, si no ha iniciado sesión
@@ -45,7 +45,7 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 
 * La versión binaria 2.3 de Ngrok se aplica a la extensión de bot y mensaje. Si Ngrok no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete Ngrok NPM `ngrok@4.2.2` en `~/.fx/bin/ngrok`. El paquete Ngrok NPM administra al binario de Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin`
 
-* Azure Functions Core Tools versión 3, si Azure Functions Core Tools no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala Azure Functions Core Tools paquete NPM, azure-functions-core-tools@3 para **Windows** y para **macOs** en `~/.fx/bin/func`. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local
+* Azure Functions Core Tools versión 4, si Azure Functions Core Tools no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete NPM de Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** y para **macOs** en `~/.fx/bin/func`. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local
 
 * SDK de .NET Core versión que se aplica a Azure Functions. Si SDK de .NET Core no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala SDK de .NET Core para Windows y MacOS en `~/.fx/bin/dotnet`. Para Linux, la depuración local finaliza
 
