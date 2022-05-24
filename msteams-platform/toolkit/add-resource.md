@@ -1,93 +1,103 @@
 ---
-title: Agregar recursos a las aplicaciones de Teams
+title: Agregar recursos a aplicaciones Teams
 author: MuyangAmigo
 description: Describe Agregar recursos del kit de herramientas de Teams
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 50cd3de693f70fd0c8414408bd6f4e6d3332d544
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 27e46454658bdc95e5baf5e7453fd50b1b92f03f
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297208"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654788"
 ---
-# <a name="add-cloud-resources-to-your-teams-app"></a>Agregar recursos en la nube a la aplicación de Teams
+# <a name="add-cloud-resources-to-teams-app"></a>Agregar recursos en la nube a la aplicación de Teams
 
-TeamsFx ayuda a aprovisionar recursos en la nube para el hospedaje de aplicaciones. Opcionalmente, también puede agregar recursos en la nube que se ajusten a sus necesidades de desarrollo.
+TeamsFx ayuda a aprovisionar los recursos en la nube para el hospedaje de aplicaciones. Opcionalmente, puede agregar los recursos en la nube que se ajusten a sus necesidades de desarrollo.
 
-## <a name="prerequisite"></a>Requisito previo
+## <a name="advantages"></a>Ventajas
 
-[Instale el Kit de herramientas de Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión v3.0.0+.
+En la lista siguiente se proporcionan ventajas para agregar más recursos en la nube en TeamsFx:
 
-> [!TIP]
-> Asegúrese de que tiene el proyecto de aplicación de Teams en Visual Studio Code.
+* Proporciona comodidad
+* Genera automáticamente todos los archivos de configuración y se conecta a Teams aplicación mediante Teams Toolkit
 
-## <a name="add-cloud-resources-using-teams-toolkit"></a>Agregar de recursos en la nube mediante el kit de herramientas de Teams
+## <a name="limitation"></a>Limitación
 
-> [!IMPORTANT]
-> Debe aprovisionar cada entorno después de agregar un recurso.
+Si ha creado SPFx proyecto de pestaña basado en , no puede agregar recursos en la nube de Azure.
 
-1. Abrir **Microsoft Visual Studio Code**.
-1. Seleccione **Kit de herramientas de Teams** en el panel izquierdo.
-1. En el panel de la barra lateral del kit de herramientas de Teams, seleccione **Agregar recursos en la nube**:
+## <a name="add-cloud-resources"></a>Agregar recursos en la nube
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add cloudresources.png" alt-text="Agregar recursos":::
+**Puede agregar recursos en la nube mediante los métodos siguientes:**
 
-   También puede abrir la paleta de comandos y escribir **Teams: Agregar recursos en la nube**:
+* Para agregar recursos en la nube mediante Teams Toolkit en Visual Studio Code
+* Para agregar recursos en la nube mediante la paleta de comandos
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addcloud.png" alt-text="agregar recursos en la nube":::
+  > [!NOTE]
+  > Debe aprovisionar para cada entorno, después de haber agregado correctamente el recurso en la aplicación de Teams.
+  
+* **Para agregar recursos en la nube mediante Teams Toolkit en Visual Studio Code:**
 
-1. En el elemento emergente, seleccione los recursos en la nube que desea agregar al proyecto de aplicación de Teams:
+   1. Abra **Visual Studio Code**.
+   1. Seleccione **Teams Toolkit** en el panel izquierdo.
+   1. Seleccione **Agregar características** en **DESARROLLO**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="agregar":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="agregar característica" border="true":::
 
-1. Seleccione **Aceptar**.
+* **Para agregar recursos en la nube mediante la paleta de comandos:**
 
-Los recursos seleccionados se agregan correctamente al proyecto.
+   1. Abra **la paleta de comandos**.
+   1. Escriba **Teams:Agregar características**.
+   1. Presione **Entrar**.
 
-## <a name="add-cloud-resources-using-teamsfx-cli-in-command-window"></a>Agregar recursos en la nube mediante la CLI de TeamsFx en la ventana de comandos
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Nube" border="true":::
 
-1. Cambie el directorio de trabajo al **directorio del proyecto**.
-1. Ejecute el siguiente comando para agregar diferentes recursos en el proyecto:
+   1. En el elemento emergente, seleccione los recursos en la nube que se van a agregar en el proyecto.
 
-|Recurso en la nube|Comando|
-|---------------|----------|
-| Proteger la función de Azure|`teamsfx resource add azure-function --function-name your-func-name`|
-| Base de datos SQL Azure|`teamsfx resource add --function-name your-func-name`|
-| Administración de Azure API|`teamsfx resource add azure-apim`|
-| Azure Key Vault|`teamsfx resource add azure-keyvault`|
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
+
+## <a name="add-cloud-resources-using-teamsfx-cli"></a>Adición de recursos en la nube mediante la CLI de TeamsFx
+
+* Cambie el directorio de trabajo al **directorio del proyecto**.
+* En la tabla siguiente se enumeran las funcionalidades y los comandos necesarios:
+
+  |Recurso en la nube|Comando|
+  |---------------|----------|
+  | Proteger la función de Azure|`teamsfx add azure-function`|
+  | Base de datos SQL Azure|`teamsfx add azure-sql`|
+  | Administración de Azure API|`teamsfx resource add azure-apim`|
+  | Azure Key Vault|`teamsfx resource add azure-keyvault`|
 
 ## <a name="types-of-cloud-resources"></a>Tipos de recursos en la nube
 
-TeamsFx se integra con los servicios de Azure para los siguientes escenarios:
+En los escenarios siguientes, TeamsFx se integra con los servicios de Azure:
 
 - [Funciones de Azure](/azure/azure-functions/functions-overview): una solución sin servidor para satisfacer los requisitos a petición, como la creación de API web para el back-end de aplicaciones de Teams.
 - [Base de datos de Azure SQL](/azure/azure-sql/database/sql-database-paas-overview): motor de la base de datos de la plataforma como servicio (PaaS) que sirve como almacén de datos de las aplicaciones Teams.
-- [Administración de Azure API](deploy.md): una puerta de enlace de API que se puede usar para administrar las API creadas para las aplicaciones de Teams y publicarlas para usarlas en otras aplicaciones, como Power Apps.
+- [Azure API Management](deploy.md): se puede usar una puerta de enlace de API para administrar las API creadas para Teams aplicaciones y publicarlas para usarlas en otras aplicaciones, como Power Apps.
 - [Azure Key Vault](/azure/key-vault/general/overview): proteja las claves criptográficas y otros secretos que usan los servicios y las aplicaciones en la nube.
 
 ## <a name="add-cloud-resources"></a>Agregar recursos en la nube
 
-Después de agregar cualquier recurso, los cambios en el proyecto son los siguientes:
+Los siguientes cambios aparecen después de agregar recursos en el proyecto:
 
-- Se pueden agregar nuevos parámetros a azure.parameter.{env}.json para proporcionar la información necesaria para el aprovisionamiento.
-- El nuevo contenido se anexa a la plantilla de ARM en `templates/azure` carpeta, excepto los archivos en `templates/azure/teamsfx` carpeta para crear los recursos de Azure agregados.
+- Nuevos parámetros agregados a azure.parameter. {env}.json para proporcionar la información necesaria para el aprovisionamiento.
+- El nuevo contenido se incluye en la plantilla de ARM en `templates/azure`, excepto que los archivos están en `templates/azure/teamsfx` la carpeta para agregar los recursos de Azure.
 - Los archivos de la carpeta `templates/azure/teamsfx` se vuelven a generar para asegurarse de que la configuración necesaria de TeamsFx está actualizada para los recursos de Azure agregados.
-- `.fx/projectSettings.json` se actualiza para realizar un seguimiento de los recursos presentes en el proyecto.
+- `.fx/projectSettings.json` se actualiza para realizar un seguimiento de los recursos disponibles en el proyecto.
 
-Después de agregar recursos, los cambios adicionales en el proyecto son los siguientes:
+Después de agregar recursos en el proyecto, aparecen los siguientes cambios adicionales:
 
 |Recursos|Cambios|Descripción|
 |---------------|---------------|-----------------------------|
 |Funciones de Azure|Se agrega un código de plantilla de las funciones de Azure a una subcarpeta con ruta de acceso `yourProjectFolder/api`</br></br>`launch.json` y `task.json` se actualizan en la carpeta `.visual studio code`.| Incluye una plantilla de desencadenador HTTP hello world en el proyecto.</br></br> Incluye los scripts necesarios para que Visual Studio Code se ejecute cuando quiera depurar la aplicación localmente.|
 |Administración de Azure API|Un archivo de especificación de API abierto agregado a una subcarpeta con ruta de acceso `yourProjectFolder/openapi`.|Define la API después de la publicación, es el archivo de especificación de la API.|
 
-## <a name="limitation"></a>Limitación
-
-No puede agregar recursos si ha creado un proyecto de pestaña basado en SPFx.
-
 ## <a name="see-also"></a>Vea también
 
-[Aprovisionar recursos en la nube](provision.md)
+* [Aprovisionar recursos en la nube](provision.md)
+* [Crear una nueva aplicación de Teams](create-new-project.md)
+* [Adición de funcionalidades a aplicaciones Teams](add-capability.md)
+* [Implementar en la nube](deploy.md)

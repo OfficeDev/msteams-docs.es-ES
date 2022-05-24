@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653778"
+ms.locfileid: "65654574"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
@@ -131,9 +131,9 @@ Si la aplicación usa encabezados de [directiva de seguridad de contenido](https
 1. Seleccione el nombre de la aplicación para abrir el registro de la aplicación.
 1. Seleccione **Exponer una API** (en *Administrar*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar los Ids de los clientes desde la hoja *Registros de aplicaciones* en el portal de Azure":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autorizar los Ids de los clientes desde la hoja *Registros de aplicaciones* en el portal de Azure":::
 
-En la sección **Aplicaciones cliente autorizadas** asegúrese de que aparecen todos los siguientes valores `Client Id`:
+1. En la sección **Aplicaciones cliente autorizadas** asegúrese de que aparecen todos los siguientes valores `Client Id`:
 
 |Microsoft 365 aplicación cliente | Id. de cliente |
 |--|--|
@@ -184,7 +184,7 @@ Para obtener una vista previa de la aplicación ejecutándose en Outlook en el e
 1. En la barra lateral, seleccione  **Más aplicaciones**. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Outlook.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Outlook para ver las pestañas personales instaladas":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Outlook para ver las pestañas personales instaladas":::
 
 ### <a name="outlook-on-the-web"></a>Outlook en la Web
 
@@ -194,7 +194,7 @@ Para ver la aplicación en Outlook en la Web:
 1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral de outlook.com para ver las pestañas personales instaladas":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral de outlook.com para ver las pestañas personales instaladas":::
 
 ### <a name="office-on-windows"></a>Office en Windows
 
@@ -204,7 +204,7 @@ Para ver la aplicación que se ejecuta en Office en el escritorio de Windows:
 1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Office.
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Office para ver las pestañas personales instaladas":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Office para ver las pestañas personales instaladas":::
 
 ### <a name="office-on-the-web"></a>Office en la Web
 
@@ -214,7 +214,7 @@ Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la 
 1. Seleccione el icono **Aplicaciones** en la barra lateral. El título de la aplicación transferida localmente aparecerá entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Office en la Web.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Haga clic en la opción &quot;Más aplicaciones&quot; en la barra lateral de office.com para ver las pestañas personales instaladas.":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Haga clic en la opción &quot;Más aplicaciones&quot; en la barra lateral de office.com para ver las pestañas personales instaladas.":::
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
@@ -236,7 +236,7 @@ Desde Teams Toolkit, puede depurar (`F5`) la aplicación de pestaña que se ejec
 
 Tras la primera ejecución de depuración local para Office o Outlook, se le pedirá que inicie sesión en la cuenta de inquilino de Microsoft 365 e instale un certificado de prueba autofirmado. También se le pedirá que instale manualmente Teams. Seleccione **Instalar en Teams** para abrir una ventana del explorador e instalar manualmente la aplicación. A continuación, haga clic en **Continuar** para continuar con la depuración de la aplicación en Office/Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit cuadro de diálogo Teams instalar":::
 
 Proporcione comentarios e informe de cualquier problema con la experiencia de depuración de Teams Toolkit en [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
@@ -252,5 +252,5 @@ Publique la aplicación para que se pueda detectar en Teams, Outlook y Office:
 | **Nombre de ejemplo** | **Descripción** | **Node.js** |
 |---------------|--------------|--------|
 | Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5adb6162222da155318aeb818fd681a664816
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653712"
+ms.locfileid: "65656085"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publicación de aplicaciones Teams para Microsoft 365
 
@@ -26,7 +26,7 @@ las extensiones de mensaje habilitadas para Outlook se pueden distribuir para lo
 
 ### <a name="teams-client"></a>Cliente de Teams
 
-En el menú *Aplicaciones*, seleccione *Administrar las aplicacionesPublish* >  an **appSubmit an app to your org (Publicar una aplicaciónEnviar** >  una aplicación a su organización). Esto requiere la aprobación del administrador de TI.
+En el menú *Aplicaciones* , seleccione *Administrar las aplicaciones* > *Publicar una aplicación* > **Enviar una aplicación a su organización**. Esto requiere la aprobación del administrador de TI.
 
 ### <a name="teams-developer-portal"></a>Portal para desarrolladores de Teams
 
@@ -42,7 +42,7 @@ Como administrador global, puede cargar y preinstalar el paquete de la aplicaci�
 
 ## <a name="multitenant-distribution"></a>Distribución de varias cuentas empresariales
 
-El proceso de envío de [Microsoft AppSource](https://appsource.microsoft.com/) (Marketplace comercial de Microsoft) para Teams aplicaciones habilitadas para Outlook y Office es el mismo que para las aplicaciones de Teams tradicionales; la única diferencia es que tendrá que usar Teams versión de manifiesto de aplicación [1.13](../tabs/how-to/using-teams-client-sdk.md) en el paquete de la aplicación, lo que introduce compatibilidad con Teams  aplicaciones que se ejecutan en Microsoft 365.
+El proceso de envío [de Microsoft AppSource](https://appsource.microsoft.com/) (Marketplace comercial de Microsoft) para Teams aplicaciones habilitadas para Outlook y Office es el mismo que las aplicaciones Teams tradicionales. La única diferencia es que tendrá que usar Teams [versión 1.13](../tabs/how-to/using-teams-client-sdk.md) del manifiesto de aplicación en el paquete de la aplicación, lo que introduce compatibilidad con Teams aplicaciones que se ejecutan en Microsoft 365.
 
 > [!TIP]
 > Use Teams Portal para desarrolladores para [validar el paquete de la aplicación](https://dev.teams.microsoft.com/validation) para resolver los errores o advertencias antes de enviarlo a la tienda de Teams (a través de [Microsoft Partner Network](https://partner.microsoft.com/)).

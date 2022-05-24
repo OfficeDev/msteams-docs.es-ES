@@ -3,15 +3,15 @@ title: Requisitos previos
 author: surbhigupta
 description: Cada pestaña de Microsoft Teams debe cumplir estos requisitos.
 keywords: canal de grupo de pestañas de teams configurable
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110284"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654894"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -44,7 +44,7 @@ Asegúrese de cumplir los siguientes requisitos previos al crear la pestaña per
 | &nbsp; | Instalar | Para usar... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Entorno de tiempo de ejecución de JavaScript de back-end. Use la versión v14 LTS más reciente.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Entorno de tiempo de ejecución de JavaScript de back-end. Use la versión v16 LTS más reciente.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) o [Google Chrome](https://www.google.com/chrome/) | Un explorador con herramientas de desarrollo. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Entornos de compilación de JavaScript, TypeScript o SharePoint Framework (SPFx). |
 | &nbsp; | Carga de trabajo de [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET y desarrollo web** o **Desarrollo multiplataforma de .NET Core** | .NET. Puede instalar la edición de la comunidad gratuita de Visual Studio 2019. |
