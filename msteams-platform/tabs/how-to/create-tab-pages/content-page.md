@@ -3,15 +3,15 @@ title: Creación de una página de contenido
 author: surbhigupta
 description: cómo crear una página de contenido
 keywords: pestañas de equipos, canal de grupo configurable estático
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 68ce03e9b1ef303bd66043baed39baf954fb1d0f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111433"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673030"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Creación de una página de contenido para una pestaña
 
@@ -23,6 +23,8 @@ Una página de contenido es una página web que se representa en el cliente de T
 
 Este artículo se centra en el uso de páginas de contenido como pestañas. Sin embargo, la mayoría de las instrucciones aquí expuestas se aplican independientemente de cómo se presente la página de contenido al usuario.
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## <a name="tab-content-and-design-guidelines"></a>Instrucciones de diseño y contenido de pestañas
 
 El objetivo general de la pestaña es proporcionar acceso a contenido significativo y atractivo que tenga un valor práctico y un propósito que sea evidente. Debe centrarse en hacer que el diseño de la pestaña sea claro, intuitivo a la hora de navegar y con contenido envolvente.
@@ -31,9 +33,31 @@ Para obtener más información, vea [instrucciones de diseño de pestañas](~/ta
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar el código con Teams
 
-Para que la página se muestre en Teams, debe incluir el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e incluir una llamada a `microsoftTeams.initialize()` después de que se cargue la página.
+Para que la página se muestre en Teams, debe incluir el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e incluir una llamada a `app.initialize()` después de que se cargue la página.
 
 El código siguiente proporciona un ejemplo de cómo se comunican la página y el cliente de Teams:
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+...
+</head>
+
+<body>
+...
+    <script>
+    app.initialize();
+    </script>
+...
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
@@ -52,6 +76,8 @@ El código siguiente proporciona un ejemplo de cómo se comunican la página y e
 ...
 </body>
 ```
+
+***
 
 ## <a name="access-additional-content"></a>Acceso a contenido adicional
 
@@ -89,10 +115,10 @@ Si indica `showLoadingIndicator : true`  en el manifiesto de la aplicación, tod
 Para mostrar el indicador de carga:
 
 1. Agregar `"showLoadingIndicator": true` al manifiesto.
-1. Llamar a `microsoftTeams.initialize();`.
-1. Como paso **obligatorio**, llame a `microsoftTeams.appInitialization.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams ocultará el indicador de carga, si procede. Si no se llama a `notifySuccess`  en 30 segundos, se entiende que la aplicación ha agotado el tiempo de espera y aparecerá una pantalla de error con una opción para reintentar.
-1. De forma **opcional**, si está listo para imprimir en pantalla y desea cargar de forma diferida el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga llamando a `microsoftTeams.appInitialization.notifyAppLoaded();`.
-1. Si la aplicación no se carga, puede llamar a `microsoftTeams.appInitialization.notifyFailure(reason);` para que Teams sepa que se ha producido un error. Se muestra al usuario una pantalla de error. El código siguiente proporciona un ejemplo con motivos de error de la aplicación:
+1. Llamar a `app.initialize();`.
+1. Como paso **obligatorio**, llame a `app.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams oculta el indicador de carga, si procede. Si `notifySuccess` no se llama a en 30 segundos, Teams supone que la aplicación agotó el tiempo de espera y muestra una pantalla de error con una opción de reintento.
+1. **Opcionalmente**, si está listo para imprimir en la pantalla y desea cargar de forma diferida el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga llamando a `app.notifyAppLoaded();`.
+1. Si la aplicación no se carga, puede llamar `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` a para que Teams sepa sobre el error y, opcionalmente, proporcione un mensaje de error. Se muestra al usuario una pantalla de error. En el código siguiente se muestra la enumeración que define las posibles razones que puede indicar para que la aplicación no se cargue:
 
     ```typescript
     /* List of failure reasons */

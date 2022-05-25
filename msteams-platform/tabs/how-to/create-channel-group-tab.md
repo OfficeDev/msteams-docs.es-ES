@@ -2,16 +2,16 @@
 title: Crear una pestaña de canal o grupo
 author: laujan
 description: Guía de inicio rápido para crear una pestaña de canal y grupo con el generador Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 1e2092e06fa79691a7cd633d5ff56572a7fe73ad
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111342"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672953"
 ---
 # <a name="channel-or-group-tab"></a>Pestañas de canal o grupo
 
@@ -60,17 +60,17 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
     * **¿Cómo se llama su solución?**
 
-        El nombre de la solución es el nombre del proyecto. Para aceptar el nombre sugerido, seleccione **Introducir**.
+        El nombre de la solución es el nombre del proyecto. Puede aceptar el nombre sugerido seleccionando **Introducir**.
 
     * **¿Dónde desea ubicar los archivos?**
 
         Actualmente está en el directorio del proyecto. Seleccione **Introducir**.
 
-    * **¿Título del proyecto de la aplicación de Microsoft Teams?**
+    * **¿Título del proyecto de su aplicación de Microsoft Teams?**
 
-        El título es el nombre del paquete de la aplicación y se usa en el manifiesto y la descripción de la aplicación. Escriba un título o seleccione **Introducir** para aceptar el nombre predeterminado.
+        El título es el nombre del paquete de la aplicación y se usa en el manifiesto y en la descripción de la aplicación. Escriba un título o seleccione **Introducir** para aceptar el nombre predeterminado.
 
-    * **¿Nombre de su (empresa)? (máximo 32 caracteres)**
+    * **¿Nombre (de su empresa)? (Máximo 32 caracteres)**
 
         El nombre de la empresa se usará en el manifiesto de la aplicación. Escriba un nombre de empresa o seleccione **Introducir** para aceptar el nombre predeterminado.
 
@@ -80,43 +80,43 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
     * **¿Scaffolding rápido? (S/n)**
 
-        El valor predeterminado es Sí; introduzca **n** para escribir el Id. de partner de Microsoft.
+        El valor predeterminado es sí; escriba **n** para introducir su Id. de partner de Microsoft.
 
-    * **Introduzca su Id. de partner de Microsoft (si lo tiene): (deje el espacio en blanco para omitir esta respuesta)**
+    * **Introduzca su Id. de partner de Microsoft, si lo tiene (deje el espacio en blanco para omitir esta respuesta)**
 
         Este campo no es obligatorio y solo debe usarse si ya forma parte de la [Microsoft Partner Network](https://partner.microsoft.com).
 
     * **¿Qué desea agregar al proyecto?**
 
-        Seleccione **(&ast;) Una pestaña**.
+        Seleccione **( &ast; ) Una pestaña**.
 
     * **¿Cuál es la dirección URL en donde hospedará esta solución?**
 
-        De forma predeterminada, el generador sugiere una dirección URL de sitios web de Azure. Solo está probando la aplicación localmente, por lo que no es necesaria una dirección URL válida.
+        De forma predeterminada, el generador sugiere una dirección URL de sitios web de Azure. Solo está probando la aplicación localmente, por lo que no es necesaria ninguna dirección URL válida.
 
     * **¿Quiere mostrar un indicador de carga cuando se cargue la aplicación o la pestaña?**
 
-        Elija **no** incluir un indicador de carga cuando se cargue la aplicación o la pestaña. El valor predeterminado es no, introduzca **n**.
+        Elija **no** incluir ningún indicador de carga cuando se cargue la aplicación o la pestaña. El valor predeterminado es no, escriba **n**.
 
     * **¿Desea que las aplicaciones personales se representen sin una barra de encabezado de pestaña?**
 
-        Elija **no** incluir aplicaciones personales que se van a representar sin una barra de encabezado de pestaña. El valor predeterminado es no, introduzca **n**.
+        Elija **no** incluir aplicaciones personales que se van a representar sin una barra de encabezado de pestaña. El valor predeterminado es no, escriba **n**.
 
     * **¿Desea incluir un marco de prueba y pruebas iniciales? (s/N)**
 
-        Elija **no** incluir un marco de prueba para este proyecto. El valor predeterminado es no, introduzca **n**.
+        Elija **no** incluir ningún marco de prueba para este proyecto. El valor predeterminado es no, escriba **n**.
 
-    * **¿Desea incluir compatibilidad con ESLint? (s/N)**
+    * **¿Desea incluir la compatibilidad con ESLint? (s/N)**
 
-        Elija no incluir compatibilidad con ESLint. El valor predeterminado es no, introduzca **n**.
+        Elija no incluir compatibilidad con ESLint. El valor predeterminado es no, escriba **n**.
 
     * **¿Desea usar Azure Applications Insights para la telemetría? (s/N)**
 
-        Elija **no** incluir [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). El valor predeterminado es no; introduzca **n**.
+        Elija **no** incluir [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). El valor predeterminado es no; escriba **n**.
 
-    * **¿Nombre de pestaña predeterminado? (máximo 16 caracteres)**
+    * **¿Nombre de pestaña predeterminado? (Máximo 16 caracteres)**
 
-        Asigne un nombre a la pestaña. Este nombre de pestaña se usa en todo el proyecto como un componente de ruta de acceso de archivo o dirección URL.
+        Asigne un nombre a la pestaña. Este nombre de pestaña se usará en todo el proyecto como un componente de ruta de acceso del archivo o la dirección URL.
 
     * **¿Qué tipo de pestaña quiere crear?**
 
@@ -165,7 +165,7 @@ gulp build
 
 #### <a name="run-your-application"></a>Ejecutar la aplicación
 
-1. En el símbolo del sistema, introduzca el siguiente comando para iniciar un servidor web local:
+1. En el símbolo del sistema, escriba el siguiente comando para iniciar un servidor web local:
 
     ```bash
     gulp serve
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Cargar el paquete en Microsoft Teams
 
-1. Vaya a Microsoft Teams y seleccione **Aplicaciones**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
+1. Vaya a Microsoft Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
 1. Seleccione **Administrar las aplicaciones** y **Cargar una aplicación personalizada**.
 1. Vaya al directorio del proyecto, desplácese hasta la carpeta **./package**, seleccione la carpeta ZIP del paquete de la aplicación y elija **Abrir**.
 
@@ -273,11 +273,11 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="wwwroot-folder"></a>carpeta wwwroot
 
-En ASP.NET Core, la carpeta raíz web es dónde la aplicación busca archivos estáticos.
+En ASP.NET Core, la carpeta raíz web es en donde la aplicación busca los archivos estáticos.
 
 #### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET Core trata los archivos denominados **Index** como la página principal o predeterminada del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se muestra como la página principal de la aplicación.
+ASP.NET Core trata los archivos llamados **Index** como la página principal o predeterminada del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se muestra como la página principal de la aplicación.
 
 #### <a name="tabcs"></a>Tab.cs
 
@@ -287,8 +287,8 @@ Este archivo de C# contiene un método al que se llama desde **Tab.cshtml** dura
 
 Esta carpeta contiene los siguientes archivos de paquete de aplicación necesarios:
 
-* Un **icono de color completo** que mide 192 x 192 píxeles.
-* Un **icono de contorno transparente** que mide 32 x 32 píxeles.
+* Un **icono a todo color** de 192 x 192 píxeles.
+* Un **icono de contorno transparente** de 32 x 32 píxeles.
 * Un archivo `manifest.json` que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Cuando un usuario decide agregar o actualizar la pestaña, Microsoft Teams carga el `configurationUrl` especificado en el manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
@@ -429,7 +429,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ### <a name="preview-your-app-in-teams"></a>Vista previa de la aplicación en Teams
 
-1. Seleccione **Vista previa en Teams** en la barra de herramientas del portal para desarrolladores; el portal para desarrolladores le informa de que la aplicación se ha cargado de forma local correctamente. La página **Agregar** aparece para la aplicación en Teams.
+1. Seleccione **Vista previa en Teams** desde la barra de herramientas del Portal para desarrolladores. El Portal para desarrolladores le informará que la aplicación fue transferida localmente de forma correcta. La página **Agregar** aparece para la aplicación en Teams.
 
 1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
@@ -477,7 +477,7 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía de aplicación web ASP.NET Core 3.1 con la casilla de verificación **Avanzado - Configurar para HTTPS** seleccionada en la configuración. Los servicios MVC se registran mediante el método `ConfigureServices()` del marco de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método mediante el código siguiente:
+Este proyecto fue creado a partir de una plantilla de aplicación web vacía de ASP.NET Core 3.1 con la casilla **Avanzado - Configurar para HTTPS** seleccionada durante la configuración. Los servicios MVC se registran mediante el método `ConfigureServices()` del marco de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método mediante el código siguiente:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -493,14 +493,14 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="wwwroot-folder"></a>carpeta wwwroot
 
-En ASP.NET Core, la carpeta raíz web es dónde la aplicación busca archivos estáticos.
+En ASP.NET Core, la carpeta raíz web es en donde la aplicación busca los archivos estáticos.
 
 #### <a name="appmanifest-folder"></a>Carpeta AppManifest
 
 Esta carpeta contiene los siguientes archivos de paquete de aplicación necesarios:
 
-* Un **icono de color completo** que mide 192 x 192 píxeles.
-* Un **icono de contorno transparente** que mide 32 x 32 píxeles.
+* Un **icono a todo color** de 192 x 192 píxeles.
+* Un **icono de contorno transparente** de 32 x 32 píxeles.
 * Un archivo `manifest.json` que especifica los atributos de la aplicación.
 
 Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams.
@@ -629,13 +629,13 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Seleccione **tab.zip** y ábralo en el portal para desarrolladores.
+1. Seleccione **tab.zip** y ábralo en el Portal para desarrolladores.
 
-1. Se crea y rellena un **identificador de aplicación** predeterminado en la sección **Información básica**.
+1. Se creará y se rellenará un **Id. de aplicación** predeterminado en la sección **Información básica**.
 
-1. Agregue la descripción corta y larga de la aplicación en **Descripciones**.
+1. Agregue una Descripción corta y una Descripción larga para la aplicación en **Descripciones**.
 
-1. En **Información del desarrollador**, agregue los detalles necesarios y, en **Sitio web (debe ser una dirección URL HTTPS válida)** proporcione la dirección URL HTTPS de ngrok.
+1. En **Información del desarrollador**, agregue los detalles necesarios y en **Sitio web (debe ser una dirección URL HTTPS válida)**, proporcione la dirección URL HTTPS de ngrok.
 
 1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso en `https://<yourngrokurl>/tou` y guarde.
 
@@ -647,7 +647,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ### <a name="preview-your-app-in-teams"></a>Vista previa de la aplicación en Teams
 
-1. Seleccione **Vista previa en Teams** en la barra de herramientas del portal para desarrolladores; el portal para desarrolladores le informa de que la aplicación se ha cargado de forma local correctamente. La página **Agregar** aparece para la aplicación en Teams.
+1. Seleccione **Vista previa en Teams** desde la barra de herramientas del Portal para desarrolladores. El Portal para desarrolladores le informará que la aplicación fue transferida localmente de forma correcta. La página **Agregar** aparece para la aplicación en Teams.
 
 1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 

@@ -3,19 +3,21 @@ title: Creación de una etiqueta de eliminación
 author: surbhigupta
 description: Creación de una etiqueta de eliminación
 keywords: eliminar eliminaciones configurables de canal de grupo de pestañas de teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 17268b8afc010eedf1d8916cbcdc38a66d1f6e85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111587"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672939"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
 Puedes ampliar y mejorar la experiencia del usuario admitiendo opciones de eliminación y modificación en la aplicación. Teams permite a los usuarios cambiar el nombre o quitar una pestaña de canal o grupo y puede permitir que los usuarios vuelvan a configurar la pestaña después de la instalación. Además, la experiencia de eliminación de pestañas proporciona a los usuarios opciones posteriores a la eliminación para eliminar o archivar contenido.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar la pestaña para que se vuelva a configurar después de la instalación
 
@@ -35,11 +37,11 @@ Cuando la pestaña se carga en un canal o chat de grupo, Teams agrega un menú d
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Crear una página de eliminación de pestañas para la aplicación
 
-La página de eliminación opcional es una página HTML que hospeda y se muestra cuando se quita la pestaña. La dirección URL de la página de eliminación se designa mediante el método `setSettings()` dentro de la página de configuración. Al igual que con todas las páginas de la aplicación, la página de eliminación debe cumplir los [requisitos previos de la pestaña Equipos](../../../tabs/how-to/tab-requirements.md).
+La página de eliminación opcional es una página HTML que hospeda y se muestra cuando se quita la pestaña. La dirección URL de la página de eliminación se designa mediante el `setConfig()` método (anteriormente `setSettings()`) dentro de la página de configuración. Al igual que con todas las páginas de la aplicación, la página de eliminación debe cumplir los [requisitos previos de la pestaña Equipos](../../../tabs/how-to/tab-requirements.md).
 
 ### <a name="register-a-remove-handler"></a>Registrar un controlador de eliminación
 
-Opcionalmente, dentro de la lógica de la página de eliminación, puede invocar el controlador de eventos `registerOnRemoveHandler((RemoveEvent) => {}` cuando el usuario quita una configuración de pestaña existente. El método toma la interfaz [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. El método se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que alimenta el contenido de la pestaña. A la vez, solo se puede registrar un controlador de eliminación.
+Opcionalmente, dentro de la lógica de la página de eliminación, puede invocar el `registerOnRemoveHandler((RemoveEvent) => {}` controlador de eventos cuando el usuario quita una configuración de pestaña existente. El método toma la interfaz [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. El método se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que alimenta el contenido de la pestaña. A la vez, solo se puede registrar un controlador de eliminación.
 
 La interfaz `RemoveEvent` describe un objeto con dos métodos:
 
@@ -47,19 +49,45 @@ La interfaz `RemoveEvent` describe un objeto con dos métodos:
 
 * La función `notifyFailure(string)` es opcional. Indica que se produjo un error en la eliminación del recurso subyacente y no se puede quitar su contenido. El parámetro de cadena opcional especifica un motivo del error. Si se proporciona, esta cadena se muestra al usuario; de lo contrario, se muestra un error genérico.
 
-#### <a name="use-the-getsettings-function"></a>Use la función `getSettings()`
+#### <a name="use-the-getconfig-function"></a>Use la función `getConfig()`
 
-Puede usar `getSettings()` para asignar el contenido de la pestaña que se va a quitar. La `getSettings((Settings) =>{})` función toma la [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) y proporciona los valores de propiedad de configuración válidos que se pueden recuperar.
+Puede usar `getConfig()` (anteriormente `getSettings()`) para asignar el contenido de la pestaña que se va a quitar. La `getConfig()` función devuelve una promesa que se resuelve con el objeto Config y proporciona los valores de propiedad de configuración válidos que se pueden recuperar.
 
 #### <a name="use-the-getcontext-function"></a>Use la función `getContext()`
 
-Puede usar `getContext()` para obtener el contexto actual en el que se ejecuta el marco. La `getContext((Context) =>{})`función toma la [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). La función proporciona valores de propiedad `Context` válidos que puede usar en la lógica de la página de eliminación para determinar el contenido que se va a mostrar en la página de eliminación.
+Puede usar `getContext()` para obtener el contexto actual en el que se ejecuta el marco. La `getContext()` función devuelve una promesa que se resolverá con el objeto Context. El objeto Context proporciona valores de propiedad válidos `Context` que puede usar en la lógica de página de eliminación para determinar el contenido que se va a mostrar en la página de eliminación.
 
 #### <a name="include-authentication"></a>Incluir autenticación
 
 Se requiere autenticación antes de permitir que un usuario elimine el contenido de la pestaña. La información de contexto se puede usar para ayudar a construir solicitudes de autenticación y direcciones URL de página de autorización. Consultar [Flujo de autenticación de Microsoft Teams para pestañas](~/tabs/how-to/authentication/auth-flow-tab.md) Asegúrese de que todos los dominios usados en las páginas de pestañas aparecen en la matriz `manifest.json` y `validDomains`.
 
 A continuación se muestra un bloque de código de eliminación de pestañas de ejemplo:
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<body>
+  <button onclick="onClick()">Delete this tab and all underlying data?</button>
+  <script>
+    app.initialize();
+    pages.config.registerOnRemoveHandler((removeEvent) => {
+      // Here you can designate the tab content to be removed and/or archived.
+        const configPromise = pages.getConfig();
+        configPromise.
+            then((configuration) => {
+                configuration.contentUrl = "...";
+                removeEvent.notifySuccess()}).
+            catch((error) => {removeEvent.notifyFailure("failure message")});
+    });
+
+    const onClick() => {
+        pages.config.setValidityState(true);
+    }
+  </script>
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <body>
@@ -81,7 +109,9 @@ A continuación se muestra un bloque de código de eliminación de pestañas de 
 </body>
 ```
 
-Cuando un usuario selecciona **Quitar** en el menú desplegable de la pestaña, Teams carga la página opcional `removeUrl` asignada en la **configuración**, en un IFrame. Se muestra al usuario un botón cargado con la función `onClick()` que llama a `microsoftTeams.settings.setValidityState(true)` y habilita el botón **Quitar** que se muestra en la parte inferior del IFrame de la página de eliminación.
+***
+
+Cuando un usuario selecciona **Quitar** en el menú desplegable de la pestaña, Teams carga la página opcional `removeUrl` asignada en la **configuración**, en un IFrame. Se muestra al usuario un botón cargado con la función `onClick()` que llama a `pages.config.setValidityState(true)` y habilita el botón **Quitar** que se muestra en la parte inferior del IFrame de la página de eliminación.
 
 Después de ejecutar el controlador de eliminación, `removeEvent.notifySuccess()` o `removeEvent.notifyFailure()` notifica a Teams el resultado de la eliminación de contenido.
 

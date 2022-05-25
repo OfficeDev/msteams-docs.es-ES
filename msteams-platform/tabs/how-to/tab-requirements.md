@@ -6,12 +6,12 @@ keywords: canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654894"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672932"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -31,13 +31,15 @@ Asegúrese de cumplir los siguientes requisitos previos al crear la pestaña per
 
 * Aplique estilo a las pestañas en función del tema, el diseño y la intención del cliente de Teams. Las pestañas funcionan mejor cuando se crean para satisfacer una necesidad específica y centrarse en un pequeño conjunto de tareas o en un subconjunto de datos que es relevante para la ubicación del canal de la pestaña.
 
-* En la página de contenido, agregue una referencia al [SDK de cliente JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client) mediante etiquetas de script. Cuando se cargue la página, realice una llamada a `microsoftTeams.initialize()`; de lo contrario, no se mostrará la página.
+* En la página de contenido, agregue una referencia al [SDK de cliente JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client) mediante etiquetas de script. Una vez que se cargue la página, realice una llamada a `app.initialize()`, de lo contrario, no se mostrará la página.
 
 * Para que la autenticación funcione en clientes móviles, debe actualizar al SDK de JavaScript de Teams 1.4.1 y versiones posteriores.
 
-* Si decide que la pestaña de canal o grupo aparezca en el cliente móvil de Teams, la configuración de `setSettings()` debe tener un valor para la propiedad `websiteUrl`.
+* Si decide que la pestaña de canal o grupo aparezca en el cliente móvil de Teams, la configuración de `setConfig()` debe tener un valor para la propiedad `websiteUrl`.
 
-* La pestaña Microsoft Teams no admite la capacidad de cargar sitios web de intranet que usan certificados autofirmados.
+* Microsoft Teams pestaña no admite la capacidad de cargar sitios web de intranet que usan certificados autofirmados.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tools-to-build-tabs"></a>Herramientas para crear pestañas
 
