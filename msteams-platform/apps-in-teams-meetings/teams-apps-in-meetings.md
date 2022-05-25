@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: API de rol de participante de usuario de reuniones de aplicaciones de teams
-ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296955"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668049"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para reuniones de Teams
 
@@ -47,3 +47,4 @@ La nueva característica de escenas personalizadas en Modo conferencia permite a
 * [Escenas personalizadas del Modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Habilitar y configurar las aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Ciclo de vida de la reunión](meeting-app-extensibility.md#meeting-lifecycle)
+* [Colaboración mejorada con Live Share SDK](teams-live-share-overview.md)

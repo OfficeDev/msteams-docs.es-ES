@@ -20,8 +20,12 @@
   items:
     - name: Información general sobre la introducción
       href: get-started/get-started-overview.md
-    - name: Compile su primera aplicación con JavaScript
+    - name: Cree su primera aplicación de pestaña con JavaScript
       href: sbs-gs-javascript.yml
+    - name: Cree su primera aplicación de bot con JavaScript
+      href: sbs-gs-bot.yml
+    - name: Cree su primera aplicación de extensión de mensajería con JavaScript
+      href: sbs-gs-msgext.yml
     - name: Cree la primera aplicación con Blazor
       href: sbs-gs-blazorupdate.yml
     - name: Cree la primera aplicación con SPFx
@@ -92,32 +96,36 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Crear una nueva aplicación de Teams
           href: toolkit/create-new-project.md
+        - name: Preparar cuentas para compilar la aplicación de Teams
+          href: toolkit/accounts.md
         - name: Depurar la aplicación de Teams localmente
           href: toolkit/debug-local.md
         - name: Depurar procesos en segundo plano
           href: toolkit/debug-background-process.md
-        - name: Preparar cuentas para compilar la aplicación de Teams
-          href: toolkit/accounts.md
         - name: Aprovisionar recursos en la nube
           href: toolkit/provision.md
         - name: Implementar la aplicación de Teams en la nube
           href: toolkit/deploy.md
-        - name: Publicar aplicaciones de Teams con el kit de herramientas de Teams
-          href: toolkit/publish.md
+        - name: Vista previa y personalización del manifiesto de la aplicación de Teams
+          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+        - name: Personalizar el manifiesto de Azure AD
+          href: toolkit/AAD-manifest-customization.md
         - name: Agregar funcionalidades a la aplicación de Teams
           href: toolkit/add-capability.md
         - name: Agregar recursos en la nube a la aplicación de Teams
           href: toolkit/add-resource.md
-        - name: Personalizar manifiesto de aplicación de Teams
-          href: toolkit/TeamsFx-manifest-customization.md
-        - name: Vista previa del manifiesto de la aplicación de Teams
-          href: toolkit/TeamsFx-manifest-preview.md
+        - name: Agregar inicio de sesión único a la aplicación de Teams
+          href: toolkit/add-single-sign-on.md
+        - name: Agregar conexión de API a la aplicación de Teams
+          href: toolkit/add-API-connection.md
+        - name: Configuración de canalizaciones CI/CD
+          href: toolkit/use-CICD-template.md
+        - name: Publicar aplicaciones de Teams con el kit de herramientas de Teams
+          href: toolkit/publish.md
         - name: Administrar varios entornos
           href: toolkit/TeamsFx-multi-env.md
         - name: Colaborar con otros desarrolladores en el kit de herramientas de Teams
           href: toolkit/TeamsFx-collaboration.md
-        - name: Configuración de canalizaciones CI/CD
-          href: toolkit/use-CICD-template.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
     - name: CLI del kit de herramientas de Teams
@@ -132,8 +140,6 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: SDK para cliente de JavaScript en Teams
       href: tabs/how-to/using-teams-client-sdk.md
-    - name: Versión preliminar del SDK v2 de cliente de JavaScript en Teams
-      href: m365-apps/using-teams-client-sdk-preview.md
     - name: Bot Framework de Node.js para bots y extensiones de mensaje (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: Bot Framework de .NET para bots y extensiones de mensaje (GitHub)
@@ -421,6 +427,8 @@
       href: m365-apps/extend-m365-teams-personal-tab.md
     - name: Habilitar una extensión de mensaje de Teams para Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
+    - name: Publicar aplicaciones de Teams para Microsoft 365
+      href: m365-apps/publish.md
 - name: Probar la aplicación
   items:
     - name: Información general

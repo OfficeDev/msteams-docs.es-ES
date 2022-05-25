@@ -3,14 +3,14 @@ title: Referencia del esquema de manifiesto de versión preliminar del desarroll
 description: Archivo de manifiesto de ejemplo y descripción de todos sus componentes compatibles con Microsoft Teams
 ms.topic: reference
 keywords: Versión preliminar del desarrollador del esquema de manifiesto de Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110333"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668133"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Versión preliminar del esquema de manifiesto para desarrolladores públicos de Microsoft Teams
 
@@ -284,7 +284,7 @@ La dirección URL `https://`, que hace referencia al esquema JSON para el manifi
 
 **Necesario** &ndash; String
 
-Versión del esquema de manifiesto que usa este manifiesto. Use `m365DevPreview` solo si va a obtener una vista previa de las [aplicaciones de Teams que se ejecutan en Office y Outlook](../../m365-apps/overview.md). De lo contrario, use `devPreview` para todas las demás características de la versión preliminar de Teams.
+Versión del esquema de manifiesto que usa este manifiesto.
 
 ## <a name="version"></a>version
 
@@ -396,10 +396,10 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
 |`canUpdateConfiguration`|Boolean|||El valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. Predeterminado: `true`.|
-|`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
+|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.|
-|`sharePointPreviewImage`|Cadena|2 048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
+|`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
+|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -418,7 +418,7 @@ El objeto es una matriz (con un máximo de 16 elementos) y todos los elementos d
 |`contentUrl`|Cadena|2048 caracteres|✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`contentBotId`|   | | | El identificador de la aplicación Microsoft Teams especificado para el bot en el portal de Bot Framework. |
 |`websiteUrl`|Cadena|2048 caracteres||La dirección URL https:// a la que apuntar si un usuario opta por la vista en un explorador.|
-|`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 
 ## <a name="bots"></a>bots
 
@@ -457,7 +457,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
-|`scopes`|Matriz de enumeración|1|✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
+|`scopes`|Matriz de enumeración|1 |✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -496,10 +496,10 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.height`|Cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.url`|Cadena|||Dirección URL de la vista web inicial.|
-|`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones. Los dominios también deben aparecer en `validDomains`.|
+|`messageHandlers`|Matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones. Los dominios también deben aparecer en `validDomains`.|
 |`messageHandlers.type`|Cadena|||Tipo de controlador de mensajes. Debe estar `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
-|`parameters`|Matriz de objeto|5|✔|Lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
+|`parameters`|Matriz de objeto|5 |✔|Lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
 |`parameter.name`|String|64 caracteres|✔|El nombre del parámetro tal como aparece en el cliente de Teams y se incluye en la solicitud del usuario|
 |`parameter.title`|Cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
 |`parameter.description`|Cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
@@ -555,6 +555,97 @@ Proporcione su identificador de aplicación de Azure Active Directory (AAD) e in
 |`id`|Cadena|36 caracteres|✔|Id. de aplicación de la aplicación de Microsoft Azure Active Directory (Azure AD). Este identificador debe ser un GUID.|
 |`resource`|Cadena|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO.|
 |`applicationPermissions`|Matriz|100 elementos como máximo|✔|Permisos de recursos para la aplicación.|
+
+## <a name="graphconnector"></a>graphConnector
+
+Objeto **opcional**
+
+Especifique la configuración del conector de Graph de la aplicación. Si está presente, también debe especificarse [webApplicationInfo.id](#webapplicationinfo) .
+
+|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 caracteres|✔|Dirección URL a la que se deben enviar las notificaciones de Graph-connector para la aplicación.|
+
+## <a name="showloadingindicator"></a>showLoadingIndicator
+
+Booleano **opcional**
+
+Indica si se va a mostrar o no el indicador de carga cuando se está cargando una aplicación o una pestaña. El valor predeterminado es **false**.
+> [!NOTE]
+> Si selecciona `showLoadingIndicator` como true en el manifiesto de la aplicación, para cargar la página correctamente, modifique las páginas de contenido de las pestañas y los módulos de tareas tal como se describe en el documento [Mostrar un indicador de carga nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+
+## <a name="isfullscreen"></a>IsFullScreen
+
+ Booleano **opcional**
+
+Indica dónde se representa una aplicación personal con o sin una barra de encabezado de pestaña. El valor predeterminado es **false**.
+
+> [!NOTE]
+> `isFullScreen` funciona solo para las aplicaciones publicadas en su organización.
+
+## <a name="activities"></a>activities
+
+Objeto **opcional**
+
+Defina las propiedades que usa la aplicación para publicar una fuente de actividades del usuario.
+
+|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
+|---|---|---|---|---|
+|`activityTypes`|Matriz de objetos|128 elementos| | Proporciona los tipos de actividades que la aplicación puede publicar en una fuente de actividades de los usuarios.|
+
+### <a name="activitiesactivitytypes"></a>activities.activityTypes
+
+|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
+|---|---|---|---|---|
+|`type`|string|32 caracteres|✔|El tipo de notificación. *Véalo a continuación*.|
+|`description`|string|128 caracteres|✔|Breve descripción de la notificación. *Vea a continuación*.|
+|`templateText`|string|128 caracteres|✔|P. ej.: " {actor} creó la tarea {taskId} para usted"|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -688,6 +779,15 @@ Los permisos delegados permiten a la aplicación acceder a los datos en nombre d
     |**Nombre**|**Descripción**|
     |---|---|
     |`InAppPurchase.Allow.User`|Permite que la aplicación muestre las ofertas de Marketplace del usuario y complete las compras del usuario dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
+
+* **Permisos específicos de recursos para Teams recurso compartido en vivo**
+
+   |Nombre| Descripción |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,18 +1,18 @@
 ---
-title: Publicación de aplicaciones Teams para Microsoft 365
+title: Publicar aplicaciones de Teams para Microsoft 365
 description: Haga que las aplicaciones de Teams habilitadas para Microsoft 365 sean reconocibles para los usuarios en Teams, Outlook y Office
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656085"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668063"
 ---
-# <a name="publish-teams-apps-for-microsoft-365"></a>Publicación de aplicaciones Teams para Microsoft 365
+# <a name="publish-teams-apps-for-microsoft-365"></a>Publicar aplicaciones de Teams para Microsoft 365
 
 Las aplicaciones de Teams habilitadas para Microsoft 365 se admiten para su uso en producción en Microsoft Teams. Puede distribuir estas aplicaciones a audiencias en versión preliminar que *usen las versiones* de versión dirigida de outlook.com y office.com, y la compilación *del canal beta* de Outlook para Windows escritorio. Las opciones de distribución y los procesos de las aplicaciones de Teams habilitadas para Microsoft 365 son las mismas que para las aplicaciones Teams tradicionales.
 
@@ -26,7 +26,7 @@ las extensiones de mensaje habilitadas para Outlook se pueden distribuir para lo
 
 ### <a name="teams-client"></a>Cliente de Teams
 
-En el menú *Aplicaciones* , seleccione *Administrar las aplicaciones* > *Publicar una aplicación* > **Enviar una aplicación a su organización**. Esto requiere la aprobación del administrador de TI.
+En el menú **Aplicaciones** , seleccione **Administrar las aplicaciones** > **Publicar una aplicación** > **Enviar una aplicación a su organización**. Esto requiere la aprobación del administrador de TI.
 
 ### <a name="teams-developer-portal"></a>Portal para desarrolladores de Teams
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656176"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668140"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
@@ -148,15 +148,15 @@ Si la aplicación usa encabezados de [directiva de seguridad de contenido](https
 
 El último paso para ejecutar la aplicación en Office y Outlook es transferir localmente el [paquete de aplicación](..//concepts/build-and-test/apps-package.md) de pestaña personal actualizado en Microsoft Teams.
 
-1. Empaquete la aplicación Teams ([manifiesto](../resources/schema/manifest-schema.md) e iconos de [aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo ZIP. Si usó el Kit de herramientas de Teams para crear la aplicación, puede hacerlo fácilmente con la opción **Comprimir paquete de metadatos de Teams** en el menú de *Implementación* del Kit de herramientas de Teams:
+1. Empaquete la aplicación Teams ([manifiesto](../resources/schema/manifest-schema.md) e iconos de [aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo ZIP. Si usó Teams Toolkit para crear la aplicación, puede hacerlo fácilmente con la opción **Zip Teams metadata package** del menú **Implementación** de Teams Toolkit.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Opción &quot;Comprimir paquete de metadatos de Teams&quot; en la extensión Kit de herramientas de Teams para Visual Studio Code":::
 
-1. Inicie sesión en Teams con la cuenta de inquilino del espacio aislado y cambie al modo *de versión preliminar para desarrolladores*. Seleccione el menú de puntos suspensivos (**...**) por su perfil de usuario y, a continuación, seleccione: Acerca de > **versión preliminar para desarrolladores**.
+1. Inicie sesión en Teams con la cuenta de inquilino del espacio aislado y cambie al modo *de versión preliminar para desarrolladores*. Seleccione el menú de puntos suspensivos (**...**) por su perfil de usuario y, a continuación, seleccione: **Acerca de** > **la versión preliminar del desarrollador**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="En Teams menú de puntos suspensivos, abra &quot;Acerca de&quot; y seleccione la opción &quot;Versión preliminar para desarrolladores&quot;.":::
 
-1. Seleccione *Aplicaciones* para abrir el panel **Administrar aplicaciones** . A continuación, seleccione **Publicar una aplicación**.
+1. Seleccione **Aplicaciones** para abrir el panel **Administrar aplicaciones** . A continuación, seleccione **Publicar una aplicación**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra el panel &quot;Administrar sus aplicaciones&quot; y seleccione &quot;Publicar una aplicación&quot;.":::
 

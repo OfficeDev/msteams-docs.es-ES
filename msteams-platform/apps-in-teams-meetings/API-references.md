@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identificación de las referencias de API de aplicaciones de reuniones con ejemplos y muestras de código
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams aplicaciones reuniones usuario participante rol api usuario contexto notificación señal consulta
-ms.openlocfilehash: 4f04d94d5fd9d1b38f7569db658fac10ccaa2650
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111356"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65667986"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -777,6 +777,7 @@ El código siguiente proporciona un ejemplo de carga del evento de finalización
 
 * [Flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para reuniones de Teams](teams-apps-in-meetings.md)
+* [SDK de Live Share](teams-live-share-overview.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
