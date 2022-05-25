@@ -4,12 +4,12 @@ description: Glosario para la documentación para desarrolladores de Microsoft T
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Definición de desarrollador de Microsoft Teams
-ms.openlocfilehash: f5b5461949367adc8ce101866556abf657259312
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 54068043d174a79de8a59e0d14b2310e0ae70f32
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135727"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653276"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -188,7 +188,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Kit de herramientas de Teams](../toolkit/teams-toolkit-fundamentals.md) | El kit de herramientas de Microsoft Teams le permite crear aplicaciones personalizadas de Teams directamente desde el entorno de Visual Studio Code.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx es una interfaz de línea de comandos basada en texto que acelera el desarrollo de aplicaciones de Teams. También se denomina CLI de TeamsFx.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | El SDK de TeamsFx está preconfigurado en un proyecto con scaffolding mediante el kit de herramientas de TeamsFx o la CLI. |
-| [SDK de TeamsJS](../tabs/how-to/using-teams-client-sdk.md) | El SDK de TeamsJS le permite crear experiencias hospedadas en Teams. Las funcionalidades de la [última versión](~/m365-apps/using-teams-client-sdk-preview.md) amplían la aplicación Teams para que se ejecute en Outlook y Office. |
+| [SDK de TeamsJS](../tabs/how-to/using-teams-client-sdk.md) | El SDK de TeamsJS le permite crear experiencias hospedadas en Teams. A partir de TeamsJS v.2.0.0, puede ampliar las aplicaciones de Teams para que se ejecuten en Outlook y Office. |
 | [Teams para dispositivos móviles](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams está disponible como una aplicación móvil. |
 | [Tienda de Teams](../concepts/deploy-and-publish/appsource/publish.md) | Página de aterrizaje de la tienda que lleva las aplicaciones a los usuarios en un solo lugar. Las aplicaciones se clasifican por uso, sector y mucho más. Una aplicación debe seguir las directrices de validación de la Tienda y obtener una aprobación antes de que esté disponible para los usuarios a través de la tienda de Teams.  <br>**Vea también**: [Directrices de validación de la tienda](#s) |
 | [Mesa de trabajo de Teams](../sbs-gs-spfx.yml) | Un área de trabajo en Visual Studio Code usa en la compilación de aplicaciones de Teams creadas con SPFx y el kit de herramientas de Teams. <br>**Vea también**: [Mesa de trabajo](#w); [Mesa de trabajo local](#l) |

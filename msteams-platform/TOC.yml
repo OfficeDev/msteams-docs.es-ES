@@ -24,7 +24,7 @@
       href: sbs-gs-javascript.yml
     - name: Cree su primera aplicación de bot con JavaScript
       href: sbs-gs-bot.yml
-    - name: Cree su primera aplicación de extensión de mensajería con JavaScript
+    - name: Cree su primera aplicación de extensión de mensajes con JavaScript
       href: sbs-gs-msgext.yml
     - name: Cree la primera aplicación con Blazor
       href: sbs-gs-blazorupdate.yml
@@ -34,6 +34,10 @@
       href: sbs-gs-csharp.yml
     - name: Compilación de la primera aplicación con Node.js
       href: sbs-gs-nodejs.yml
+    - name: Crear un bot de notificaciones con JavaScript
+      href: sbs-gs-notificationbot.yml
+    - name: Crear un bot de comandos con JavaScript
+      href: sbs-gs-commandbot.yml
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Planear la aplicación
@@ -301,6 +305,24 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Referencias API de aplicaciones de reuniones
       href: apps-in-teams-meetings/API-references.md
+    - name: Colaboración mejorada con Live Share
+      items:
+        - name: Información general
+          href: apps-in-teams-meetings/teams-live-share-overview.md
+        - name: Introducción
+          items:
+            - name: Inicio rápido
+              href: apps-in-teams-meetings/teams-live-share-quick-start.md
+            - name: Tutorial de Dice Roller
+              href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        - name: Funcionalidades principales
+          href: apps-in-teams-meetings/teams-live-share-capabilities.md
+        - name: Capacidades multimedia
+          href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+        - name: Tutorial de Agile Poker
+          href: sbs-teams-live-share.yml
+        - name: Preguntas más frecuentes sobre el SDK de Live Share
+          href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Escenas personalizadas en modo conjunto en Teams
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Crear webhooks y conectores
