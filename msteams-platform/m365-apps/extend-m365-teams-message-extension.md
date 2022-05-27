@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656148"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668077"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Ampliar una extensión de mensajería de Teams en Microsoft 365
 
@@ -24,7 +24,7 @@ El proceso para actualizar la extensión de mensajería de Teams basada en búsq
 > * Agregar un canal de Outlook para el bot
 > * Transferir localmente la aplicación actualizada en Teams
 
-El resto de esta guía le ayudará a través de estos pasos y le mostrará cómo obtener una vista previa de la extensión de mensajería tanto en Outlook para escritorio de Windows como en outlook.com.
+El resto de esta guía le ayudará con estos pasos y le mostrará cómo obtener una vista previa de la extensión de mensajería tanto en Outlook para escritorio de Windows como en outlook.com.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -90,7 +90,7 @@ Abra el manifiesto de la aplicación de Teams y actualice `$schema` y `manifestV
 
 ---
 
-Si usó el Kit de herramientas de Teams para crear la aplicación de la extensión de mensajería, puede usarlo para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la paleta de comandos `Ctrl+Shift+P` y busque **Teams: Validar archivo del manifiesto**.
+Si ha usado el Kit de herramientas de Teams para crear su aplicación de extensión de mensajería, puede usarlo para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la paleta de comandos `Ctrl+Shift+P` y busque **Teams: Validar archivo de manifiesto**.
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Agregar un canal de Outlook para el bot
 
@@ -106,16 +106,16 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Agregar un canal &quot;Extensiones de mensaje&quot; de Outlook para el bot desde el panel Canales de bot de Azure":::
 
-1. Confirme que el canal de Outlook aparece junto con Microsoft Teams en el panel **Canales del bot**:
+1. Confirme que el canal de Outlook aparece junto con Microsoft Teams en el panel **Canales** del bot.
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Panel Canales de bots de Azure que enumera los canales de Microsoft Teams y Outlook":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Actualización del registro de aplicaciones de Microsoft Azure Active Directory (Azure AD) para SSO
 
 > [!NOTE]
-> Puede omitir el paso si usa la [aplicación de muestra](#quickstart) que se ofrece en este tutorial, ya que el escenario no implica la autenticación de inicio de sesión único de Azure Active Directory (AAD).
+> Puede omitir el paso si usa la [aplicación de muestra](#quickstart) que se proporciona en este tutorial, ya que el escenario no implica la autenticación de inicio de sesión único de Azure Active Directory (AAD).
 
-El inicio de sesión único (SSO) de Azure Active Directory para extensiones de mensajería funciona de la misma manera tanto en Outlook [como en Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de la aplicación cliente al registro de la aplicación de Azure AD del bot en el portal *Registros de aplicaciones* de la cuenta empresarial.
+El inicio de sesión único (SSO) de Azure Active Directory (AD) para extensiones de mensajes funciona de la misma manera tanto en Outlook [como en Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Sin embargo, debe agregar varios identificadores de aplicación cliente al registro de aplicación de Azure AD del bot en el portal *Registros de aplicaciones* de la cuenta empresarial.
 
 1. Inicie sesión en [Azure Portal](https://portal.azure.com) con su cuenta empresarial de espacio aislado.
 1. Abra **Registros de aplicaciones**.
@@ -123,27 +123,27 @@ El inicio de sesión único (SSO) de Azure Active Directory para extensiones de 
 1. Seleccione **Exponer una API** (en *Administrar*).
 1. En la sección **Aplicaciones cliente autorizadas** asegúrese de que aparecen todos los siguientes valores `Client Id`:
 
-|Microsoft 365 aplicación cliente | Id. de cliente |
-|--|--|
-|Escritorio y móvil de Teams |1fec8e78-bli4-4aaf-ab1b-5451cc387264 |
-|Web de Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+   |Microsoft 365 aplicación cliente | Id. de cliente |
+   |--|--|
+   |Escritorio y móvil de Teams |1fec8e78-bli4-4aaf-ab1b-5451cc387264 |
+   |Web de Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Versión de escritorio de Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+   |Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
+   |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Transferir localmente la extensión de mensajería actualizada en Teams
 
 El último paso consiste en transferir localmente la extensión de mensajería actualizada ([paquete de la aplicación](/microsoftteams/platform/concepts/build-and-test/apps-package)) en Microsoft Teams. Una vez completada, la extensión de mensajería aparecerá en *Aplicaciones* instaladas desde el área de redacción del mensaje.
 
-1. Empaquete la aplicación de Teams ([iconos](/microsoftteams/platform/resources/schema/manifest-schema#icons) del manifiesto y de la aplicación) en un archivo ZIP. Si usó el Kit de herramientas de Teams para crear la aplicación, puede hacerlo fácilmente con la opción **Paquete ZIP de metadatos de Teams** en el menú *Implementación* del Kit de herramientas de Teams:
+1. Empaquete la aplicación de Teams (iconos de [manifiesto y aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo ZIP. Si usó el Kit de herramientas de Teams para crear la aplicación, puede hacerlo fácilmente con la opción **Comprimir paquete de metadatos de Teams** en el menú de *Implementación* del Kit de herramientas de Teams.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Opción &quot;Comprimir paquete de metadatos de Teams&quot; en la extensión Kit de herramientas de Teams para Visual Studio Code":::
 
-1. Inicie sesión en Teams con su espacio empresarial de espacio aislado y alterne al modo *Vista previa para desarrolladores*. Seleccione los puntos suspensivos (**...**) cerca del perfil de usuario y, a continuación, seleccione: Acerca de > **Vista previa para desarrolladores**.
+1. Inicie sesión en Teams con su espacio empresarial aislado y alterne al modo *Vista previa para desarrolladores*. Seleccione el menú de los puntos suspensivos (**...**) junto al perfil de usuario y, luego, seleccione **Acerca de** > **Vista previa para desarrolladores**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Desde el menú de puntos suspensivos de Teams, abra &quot;Acerca de&quot; y seleccione la opción &quot;Vista previa para desarrolladores&quot;":::
 
-1. Seleccione *Aplicaciones* para abrir el panel **Administrar aplicaciones**. A continuación, seleccione **Publicar una aplicación**.
+1. Seleccione **Aplicaciones** para abrir el panel **Administrar aplicaciones**. A continuación, seleccione **Publicar una aplicación**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra el panel &quot;Administrar aplicaciones&quot; y seleccione &quot;Publicar una aplicación&quot;":::
 
@@ -155,19 +155,19 @@ Después de transferirla localmente a través de Teams, la extensión de mensaje
 
 ## <a name="preview-your-message-extension-in-outlook"></a>Obtener una vista previa de la extensión de mensajería en Outlook
 
-Ahora está listo para probar la extensión de mensajería que se ejecuta en Outlook para escritorio de Windows y en la web.
+A continuación le mostramos cómo probar la extensión de mensajería que se ejecuta en Outlook en el escritorio de Windows y en la Web.
 
 ### <a name="outlook-on-the-web"></a>Outlook en la Web
 
 Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web:
 
-1. Inicie sesión en [outlook.com](https://www.outlook.com) con credenciales para el espacio empresarial de prueba.
+1. Inicie sesión en [outlook.com](https://www.outlook.com) con las credenciales para el espacio empresarial de prueba.
 1. Seleccione **Nuevo mensaje**.
 1. Abra el menú flotante **Más aplicaciones** en la parte inferior de la ventana de redacción.
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Haga clic en el menú &quot;Más aplicaciones&quot; en la parte inferior de la ventana de redacción de correo para usar la extensión de mensaje":::
 
-Se muestra la extensión de mensajería. Puede invocarla desde allí y usarla al igual que lo haría al redactar un mensaje en Teams.
+Se mostrará la extensión de mensajería. Puede invocarla desde allí y usarla como lo haría al redactar un mensaje en Teams.
 
 ### <a name="outlook"></a>Outlook
 
@@ -177,9 +177,9 @@ Para obtener una vista previa de la aplicación ejecutándose en Outlook en el e
 1. Seleccione **Nuevo correo electrónico**.
 1. Abra el menú flotante **Más aplicaciones** en la cinta de opciones superior.
 
-    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Haga clic en el menú &quot;Más aplicaciones&quot; en la parte inferior de la ventana de redacción de correo para usar la extensión de mensaje":::
+    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Haga clic en &quot;Más aplicaciones&quot; en la cinta de opciones de la ventana de composición para usar la extensión de mensajería":::
 
-Aparece la extensión de mensaje y se abre un panel adyacente para mostrar los resultados de la búsqueda.
+Aparece la extensión de mensajería y se abre un panel adyacente para mostrar los resultados de la búsqueda.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
@@ -194,7 +194,7 @@ Use los [canales de la comunidad de desarrolladores de Microsoft Teams](/micros
 
 ### <a name="debugging"></a>Depuración
 
-Al probar la extensión de mensaje, puede identificar el origen (que se origina en Teams frente a Outlook) de las solicitudes de bot por el [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) del objeto [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md). Cuando un usuario realiza una consulta, el servicio recibe un objeto Bot Framework `Activity` estándar. Una de las propiedades del objeto Activity es `channelId`, que tendrá el valor de `msteams` o `outlook`, dependiendo de dónde se origine la solicitud del bot. Para obtener más información, consulte el [SDK de extensiones de mensajes basados en la búsqueda](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
+Al probar la extensión de mensaje, puede identificar el origen (que se origina en Teams frente a Outlook) de las solicitudes de bot por el [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) del objeto [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md). Cuando un usuario realiza una consulta, el servicio recibe un objeto Bot Framework `Activity` estándar. Una de las propiedades del objeto Activity es `channelId`, que tendrá el valor de `msteams` o `outlook`, dependiendo de dónde se origine la solicitud del bot. Para obtener más información, consulte el [SDK de extensiones de mensajería basados en la búsqueda](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
 ## <a name="code-sample"></a>Ejemplo de código
 

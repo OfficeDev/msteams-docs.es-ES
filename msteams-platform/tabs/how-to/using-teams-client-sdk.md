@@ -6,12 +6,12 @@ description: Información general sobre el SDK de cliente de JavaScript de Micro
 ms.localizationpriority: high
 keywords: pestañas de Teams, canal de grupo, SDK estático configurable, JavaScript, M365 personal
 ms.topic: conceptual
-ms.openlocfilehash: 2a1c827913759d49ba721251d4a6f5382d8eb3a4
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653290"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757622"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
 
@@ -20,7 +20,7 @@ El SDK de cliente de JavaScript de Microsoft Teams puede ayudarle a crear experi
 * [Pestañas](../../tabs/what-are-tabs.md)
 * [Diálogos (módulos de tareas)](../../task-modules-and-cards/what-are-task-modules.md)
 
-A partir de la versión `2.0.0`, el SDK de cliente de Teams existente (`@microsoft/teams-js` o simplemente `TeamsJS`) fue refactorizado para permitir que las [aplicaciones de Teams se ejecuten en Outlook y Office](/m365-apps/overview.md), además de Microsoft Teams. Desde una perspectiva funcional, la versión más reciente de TeamsJS admite toda la funcionalidad de la aplicación de Teams existente (v.1.x.x) al tiempo que agrega la capacidad opcional de hospedar aplicaciones de Teams en Outlook y Office.
+A partir de la versión `2.0.0`, el SDK de cliente de Teams existente (`@microsoft/teams-js` o simplemente `TeamsJS`) fue refactorizado para permitir que las [aplicaciones de Teams se ejecuten en Outlook y Office](/microsoftteams/platform/m365-apps/overview), además de Microsoft Teams. Desde una perspectiva funcional, la versión más reciente de TeamsJS admite toda la funcionalidad de la aplicación de Teams existente (v.1.x.x) al tiempo que agrega la capacidad opcional de hospedar aplicaciones de Teams en Outlook y Office.
 
 Esta es la guía de control de versiones actual para varios escenarios de aplicaciones:
 

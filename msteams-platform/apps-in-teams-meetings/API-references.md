@@ -5,12 +5,12 @@ description: Identifique las referencias de API de aplicaciones de reunión con 
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755835"
+ms.locfileid: "65756586"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -535,7 +535,7 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 |---|---|
 | **500** | Error interno. |
 | **501** | La API no se admite en el contexto actual.|
-| **1000** | La aplicación no tiene los permisos adecuados para permitir que el recurso compartido se almacene provisionalmente.|
+| **1 000** | La aplicación no tiene los permisos adecuados para permitir que el recurso compartido se almacene en fase.|
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obtención de la API de estado de uso compartido de la fase de contenido de la aplicación
 
@@ -575,7 +575,7 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 |---|---|
 | **500** | Error interno. |
 | **501** | La API no se admite en el contexto actual.|
-| **1000** | La aplicación no tiene los permisos adecuados para permitir que el recurso compartido se almacene provisionalmente.|
+| **1 000** | La aplicación no tiene los permisos adecuados para permitir que el recurso compartido se almacene en fase.|
 
 ## <a name="get-app-content-stage-sharing-capabilities-api"></a>API de obtención de funcionalidades de uso compartido de la fase de contenido de la aplicación
 

@@ -4,12 +4,12 @@ description: Estos son los requisitos previos para ampliar las aplicaciones de T
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656183"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668028"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configure el entorno de desarrollo para ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -31,9 +31,9 @@ Necesita un inquilino de espacio aislado de suscripción de desarrollador de Mic
 
 También deberá habilitar la instalación de prueba para el inquilino:
 
-1. Inicie sesión en el centro de administración de Microsoft 365 (https://admin.microsoft.com) con las credenciales del inquilino de prueba y seleccione **Teams** desde el panel lateral para abrir el *centro de administración de Microsoft Teams*
-1. Seleccione: Aplicaciones de Teams > Administrar aplicaciones > **Configuración de la aplicación para toda la organización**
-1. En **Aplicaciones personalizadas**, active la opción *Interacción con aplicaciones personalizadas*
+1. Inicie sesión en el centro de administración de Microsoft 365 (https://admin.microsoft.com) con las credenciales del inquilino de prueba y seleccione **Teams** desde el panel lateral para abrir el *centro de administración de Microsoft Teams*.
+1. Seleccione: Aplicaciones de Teams > Administrar aplicaciones > **Configuración de la aplicación para toda la organización**.
+1. En **Aplicaciones personalizadas**, active la opción *Interacción con aplicaciones personalizadas*.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Habilitar la instalación de prueba para aplicaciones personalizadas desde el centro de administración de Teams":::
 
@@ -73,7 +73,7 @@ Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 
     :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Vaya a &quot;Acerca de Outlook&quot; desde la cuenta de Office para comprobar que está ejecutando una compilación del Canal beta.":::
 
-1. Compruebe que *Microsoft Edge WebView2 Runtime* esté instalado. En Windows, abra **Inicio** > **Aplicaciones y características** y busque **vista web**:
+1. Compruebe que *Microsoft Edge WebView2 Runtime* esté instalado. En Windows, vaya a **Inicio** > **Aplicaciones y características** y busque **webview**:
 
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Buscar &quot;vista web&quot; en &quot;Aplicaciones y características&quot; en la configuración de Windows":::
 
@@ -99,5 +99,7 @@ La extensión [Kit de herramientas de Teams para Visual Studio Code](https://aka
 
 Crear o actualizar una aplicación de Teams para que se ejecute en Microsoft 365:
 
-* [Habilitar una pestaña personal de Teams para Office y Outlook](extend-m365-teams-personal-tab.md)
-* [Habilitar una extensión de mensaje de Teams para Outlook](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Habilitar una pestaña personal de Teams para Office y Outlook](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Habilitar una extensión de mensaje de Teams para Outlook](extend-m365-teams-message-extension.md)

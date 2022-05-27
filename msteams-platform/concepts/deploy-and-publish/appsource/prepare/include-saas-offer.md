@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: aa2aacb781909720bdb6a0bc27d593f9c73d11b0
+ms.sourcegitcommit: a4b3b2fb265142155508f9b396609da1280df35d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727342"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65696462"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Incluya una oferta de SaaS con la aplicación Microsoft Teams
 
@@ -122,7 +122,7 @@ Consulte [Crear una oferta SaaS](/azure/marketplace/create-new-saas-offer) para 
 Le recomendamos encarecidamente comprobar la experiencia de compra de un extremo a otro antes de publicar la oferta de SaaS. Para ello puede crear una oferta separada solo para pruebas. Para obtener información completa, consulte [Información general de la oferta de prueba](/azure/marketplace/plan-saas-offer#test-offer), [Crear una oferta de prueba](/azure/marketplace/create-saas-dev-test-offer) y [Versión preliminar de la oferta](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Puede probar una transacción de un extremo a otro en Teams hasta que la aplicación complete la validación de la tienda. Para obtener más información, consulte [Probar vistas previas de aplicaciones monetizadas](Test-preview-for-monetized-apps.md).
+> Puede probar una transacción de un extremo a otro en Teams mediante la característica [Probar vista previa para aplicaciones monetizadas](Test-preview-for-monetized-apps.md). Para las ofertas en directo, debe completar el proceso de validación de la tienda de aplicaciones.
 
 En lo que respecta a Teams, estas pruebas deben comprobar que el número de licencias y asignaciones coincida con lo que se ve en el Centro de administración de Teams cuando los usuarios:
 

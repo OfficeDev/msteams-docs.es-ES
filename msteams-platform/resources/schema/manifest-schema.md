@@ -4,12 +4,12 @@ description: Describe el esquema del manifiesto para Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672911"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755884"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -17,7 +17,7 @@ El manifiesto de la aplicación de Microsoft Teams describe cómo se integra la 
 Para obtener más información sobre los cambios realizados en cada versión, consulte [registro de cambios del manifiesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 > [!Important]
-> La versión `1.13` del esquema del manifiesto de la aplicación de Microsoft Teams permite [extender las aplicaciones de Teams a Outlook y Office](../../m365-apps/overview.md). Para las aplicaciones de solo Teams, use la versión `1.12` (o anterior). De lo contrario, los esquemas 1.12 y 1.13 son los mismos. Consulte la información general del [SDK del cliente de JavaScript de Teams](../../m365-apps/overview.md) para más información.
+> La versión `1.13` del esquema del manifiesto de la aplicación de Microsoft Teams permite [extender las aplicaciones de Teams a Outlook y Office](../../m365-apps/overview.md). Para las aplicaciones de solo Teams, use la versión `1.12` (o anterior). De lo contrario, los esquemas 1.12 y 1.13 son los mismos. Consulte la información general del [SDK del cliente de JavaScript de Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) para más información.
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad:
 

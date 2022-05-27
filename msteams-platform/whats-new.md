@@ -4,12 +4,12 @@ description: Describe todas las características de desarrollador nuevas o más 
 ms.topic: reference
 ms.localizationpriority: high
 keywords: novedades, últimas actualizaciones o características y versión preliminar para desarrolladores de teams
-ms.openlocfilehash: 0ce0de2efd6c38e610226db48a6a463942a7ccc6
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: e116cb5bbe9344d4782e4d75b65e0baea5c0339b
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656169"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65667972"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -17,18 +17,20 @@ Descubra las características de la plataforma Microsoft Teams que están dispon
 
 ## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false":::
 
-| Fecha | Característica | Búscalo aquí |
+| Fecha | Característica | Búsquelo aquí |
 | --- | --- | --- |
+| 24/5/2022| [*Versión preliminar para desarrolladores*] <br> Colaboración mejorada con el SDK de Live Share |  Creación de aplicaciones para reuniones de Teams > Colaboración mejorada con Live Share > [Información general](apps-in-teams-meetings/teams-live-share-overview.md) |
 |24/5/2022| Enviar las aplicaciones habilitadas para Outlook y Office a la tienda de Teams | Ampliar la aplicación en Microsoft 365 > [Información general](m365-apps/overview.md) |
 |24/5/2022| Guía de la aplicación y novedades de TeamsJS, versión 2.0.0| Herramientas y SDK > [SDK cliente de JavaScript de Teams](tabs/how-to/using-teams-client-sdk.md)  |
-| 24/5/2022 | El kit de herramientas de Teams versión 4.0.0 para Visual Studio Code ahora está en disponibilidad general | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > <br> • [Información general del kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Crear un bot de comandos con JavaScript](toolkit/add-capability.md) <br> • [Crear un bot de notificaciones con JavaScript](toolkit/add-capability.md) <br> • [Previsualizar y personalizar el manifiesto de aplicación de Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar a las API existentes](toolkit/add-API-connection.md) <br> • [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) <br> • [Agregar experiencia de inicio de sesión único](toolkit/add-single-sign-on.md) <br> • [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
-| 24/5/2022 | Bots y extensiones de mensaje para GCC y GCCH | Planificar su aplicación > [Información general](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Crear bots > [Información general](bots/what-are-bots.md) </br> • Generar extensiones de mensaje > [Información general](messaging-extensions/what-are-messaging-extensions.md) |
+| 24/5/2022 | El kit de herramientas de Teams versión 4.0.0 para Visual Studio Code ahora está disponible de manera general | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > <br> • [Información general del kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Crear un bot de comandos con JavaScript](toolkit/add-capability.md) <br> • [Crear un bot de notificaciones con JavaScript](toolkit/add-capability.md) <br> • [Previsualizar y personalizar el manifiesto de aplicaciones de Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar a las API existentes](toolkit/add-API-connection.md) <br> • [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) <br> • [Agregar experiencia de inicio de sesión único](toolkit/add-single-sign-on.md) <br> • [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
+| 24/5/2022 | Bots y extensiones de mensaje para GCC y GCCH | • Planifique su aplicación > [Información general](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Crear bots > [Información general](bots/what-are-bots.md) </br> • Generar extensiones de mensaje > [Información general](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
@@ -73,10 +75,11 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+|24/5/2022| Sugerencias adicionales para la aprobación rápida para publicar la aplicación vinculada a una oferta de SaaS | Publicación en la tienda de Teams > Información general > [Sugerencias adicionales para la aprobación rápida para publicar la aplicación vinculada a una oferta de SaaS](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 |24/5/2022| Enviar las aplicaciones habilitadas para Outlook y Office a la tienda de Teams | Ampliar la aplicación en Microsoft 365 > [Información general](m365-apps/overview.md) |
 |24/5/2022| Guía de la aplicación y novedades de TeamsJS, versión 2.0.0| Herramientas y SDK > [SDK cliente de JavaScript de Teams](tabs/how-to/using-teams-client-sdk.md)  |
-| 24/5/2022 | El kit de herramientas de Teams versión 4.0.0 para Visual Studio Code ahora está en disponibilidad general | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > <br> • [Información general del Kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Crear un bot de comandos con JavaScript](toolkit/add-capability.md) <br> • [Crear un bot de notificaciones con JavaScript](toolkit/add-capability.md) <br> • [Previsualizar y personalizar el manifiesto de aplicación de Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar a las API existentes](toolkit/add-API-connection.md) <br> • [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) <br> • [Agregar experiencia de inicio de sesión único](toolkit/add-single-sign-on.md) <br> • [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
-|24/5/2022|Bots y extensiones de mensaje para GCC y GCCH| Planificar su aplicación > [Información general](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Crear bots > [Información general](bots/what-are-bots.md) </br> • Generar extensiones de mensaje > [Información general](messaging-extensions/what-are-messaging-extensions.md) |
+| 24/5/2022 | El kit de herramientas de Teams versión 4.0.0 para Visual Studio Code ahora está disponible de manera general | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > <br> • [Información general del Kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Crear un bot de comandos con JavaScript](toolkit/add-capability.md) <br> • [Crear un bot de notificaciones con JavaScript](toolkit/add-capability.md) <br> • [Previsualizar y personalizar el manifiesto de aplicaciones de Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Conectar a las API existentes](toolkit/add-API-connection.md) <br> • [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) <br> • [Agregar experiencia de inicio de sesión único](toolkit/add-single-sign-on.md) <br> • [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
+|24/5/2022|Bots y extensiones de mensaje para GCC y GCCH| • Planifique su aplicación > [Información general](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Crear bots > [Información general](bots/what-are-bots.md) </br> • Generar extensiones de mensaje > [Información general](messaging-extensions/what-are-messaging-extensions.md) |
 |26/04/2022|Comportamiento de desinstalación de la aplicación personal con bot | Crear bots > Conversaciones de bots > [Desinstalar actualizaciones de comportamiento en aplicaciones personales con bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |22/04/2022| Versión preliminar de prueba para aplicaciones monetizadas | Monetizar la aplicación > [Versión preliminar de prueba para aplicaciones monetizadas](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |22/04/2022| Flujo de compra desde la aplicación para monetización de aplicaciones | Monetizar la aplicación > [ Compras desde la aplicación](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
@@ -287,6 +290,7 @@ La versión preliminar para desarrolladores es un programa público que proporci
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+|24/5/2022| Colaboración mejorada con el SDK de Live Share |  Creación de aplicaciones para reuniones de Teams > Colaboración mejorada con Live Share > [Información general](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022. | Compartir en Teams desde una aplicación personal o una pestaña | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07/02/2022 | Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
 | 03/02/2022 | Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |

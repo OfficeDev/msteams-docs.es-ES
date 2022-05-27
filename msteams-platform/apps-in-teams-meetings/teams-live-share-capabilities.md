@@ -4,12 +4,12 @@ description: En este módulo, obtendrá más información sobre las funcionalida
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5b0d805dc84c49784aaaf04e2a6a7e1f3348661c
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668358"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756607"
 ---
 ---
 
@@ -128,7 +128,7 @@ El SDK de Live Share admite cualquier estructura de [datos distribuida](https://
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | Estructura de datos de tipo lista para almacenar un conjunto de elementos (denominados segmentos) en posiciones de conjunto.                                                    |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Secuencia de cadena distribuida optimizada para editar la edición de texto del documento.                                                                     |
 
-Veamos cómo funciona `SharedMap`. En este ejemplo, hemos usado `SharedMap` para crear una característica de lista de reproducción simple.
+Veamos cómo funciona `SharedMap`. En este ejemplo, hemos usado `SharedMap` para crear una característica de lista de reproducción.
 
 ```javascript
 import { SharedMap } from "fluid-framework";
@@ -276,7 +276,7 @@ Escuche a los clientes para comprender sus escenarios antes de implementar la co
 
 | Ejemplo de nombre | Descripción  | JavaScript  |
 | ----------- | ---------------------------------------------- | -------------- |
-| Dice Roller | Permitir que todos los clientes conectados revierta un dado y vean el resultado. | [Ver](https://aka.ms/liveshare-diceroller) |
+| Dice Roller | Habilite a todos los clientes conectados para que lancen el dado y vean el resultado. | [Ver](https://aka.ms/liveshare-diceroller) |
 | Agile Poker | Permitir que todos los clientes conectados jueguen a Agile Poker.| [View](https://aka.ms/liveshare-agilepoker) |
 
 ## <a name="next-step"></a>Paso siguiente
@@ -288,6 +288,6 @@ Escuche a los clientes para comprender sus escenarios antes de implementar la co
 
 * [Repositorio de GitHub](https://github.com/microsoft/live-share-sdk)
 * [Documentos de referencia del SDK de Live Share](/javascript/api/@microsoft/live-share/)
-* [Documentos de referencia del SDK multimedia de Live Share](/javascript/api/@microsoft/live-share-media/)
+* [Documentos de referencia del SDK de Live Share Media](/javascript/api/@microsoft/live-share-media/)
 * [Preguntas más frecuentes sobre Live Share](teams-live-share-faq.md)
 * [Aplicaciones de Teams en las reuniones](teams-apps-in-meetings.md)

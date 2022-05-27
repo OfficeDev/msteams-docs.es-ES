@@ -6,12 +6,12 @@ keywords: conector de Office365 de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
+ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297152"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759665"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -224,7 +224,9 @@ Siga la guía [paso a paso](../../sbs-teams-connectors.yml) para crear y probar 
 ## <a name="distribute-webhook-and-connector"></a>Distribución de webhook y conector
 
 1. [Configurar un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directamente para su equipo.
+
 1. Agregue una [configuración](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) y Publicar tu Webhook próximo en un conector de Office 365.
+
 1. Empaqueta y publica el conector como parte del envío de [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md).
 
 ## <a name="code-sample"></a>Ejemplo de código
