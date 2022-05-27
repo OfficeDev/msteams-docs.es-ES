@@ -1,15 +1,15 @@
 ---
 title: Usar módulos de tareas en pestañas de Microsoft Teams
 description: Explica cómo invocar módulos de tareas desde pestañas de Teams y enviar su resultado mediante el SDK de cliente de Microsoft Teams. Incluye ejemplos de código.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: SDK de cliente de pestañas de teams de módulos de tareas
-ms.openlocfilehash: eb199842a60832e6eb77575a7438cc9f52db6e09
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111230"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756699"
 ---
 # <a name="use-task-modules-in-tabs"></a>Uso de módulos de tareas en pestañas
 
@@ -35,8 +35,8 @@ Puede ver cómo funciona la invocación de un módulo de tareas desde una pesta�
 
 Para invocar un módulo de tareas desde una pestaña, use `microsoftTeams.tasks.startTask()` pasar un[ objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) y una función de devolución de llamada `submitHandler` opcional. Hay dos casos que se deben tener en consideración:
 
-* El valor de `TaskInfo.url` se establece en una dirección URL. Aparece la ventana del módulo de tareas y `TaskModule.url` se carga como un `<iframe>` dentro de ella. JavaScript en esa página llama a `microsoftTeams.initialize()`. Si hay una función `submitHandler` en la página y se produce un error al invocar `microsoftTeams.tasks.startTask()`, se invoca `submitHandler` con `err` establecido en la cadena de error que indica lo mismo. Para obtener más información, vea [errores de invocación del módulo de tareas](#task-module-invocation-errors).
-* El valor de `taskInfo.card` es el [JSON de una tarjeta adaptable](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). No hay ninguna función de `submitHandler` JavaScript a la que llamar cuando el usuario cierra o presiona un botón en la tarjeta adaptable. La única manera de recibir lo que el usuario especificó es pasando el resultado a un bot. Para usar un módulo de tareas de tarjeta adaptable desde una pestaña, la aplicación debe incluir un bot para obtener cualquier respuesta del usuario.
+* El valor de `TaskInfo.url` se establece en una dirección URL. Aparece la ventana del módulo de tareas y `TaskModule.url` se carga como un `<iframe>` dentro de ella. JavaScript en esa página llama a `microsoftTeams.initialize()`. Si hay una `submitHandler` función en la página y hay un error al invocar `microsoftTeams.tasks.startTask()`, `submitHandler` se invoca con `err` establecido en la cadena de error que indica lo mismo. Para obtener más información, vea [errores de invocación del módulo de tareas](#task-module-invocation-errors).
+* El valor de `taskInfo.card` es el [JSON de una tarjeta adaptable](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). No hay ninguna función de JavaScript `submitHandler` a la que llamar cuando el usuario cierre o presione un botón en la tarjeta adaptable. La única manera de recibir lo que el usuario especificó es pasando el resultado a un bot. Para usar un módulo de tareas de tarjeta adaptable desde una pestaña, la aplicación debe incluir un bot para obtener cualquier respuesta del usuario.
 
 En la sección siguiente se proporciona un ejemplo de invocación de un módulo de tareas.
 
@@ -70,13 +70,13 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-El `submitHandler` es muy sencillo y devuelve el valor de `err` o `result` a la consola.
+`submitHandler` Es simple y se hace eco del valor de `err` o `result` de la consola.
 
 ## <a name="submit-the-result-of-a-task-module"></a>Enviar el resultado de un módulo de tareas
 
-La función `submitHandler` reside en la página web de `TaskInfo.url` y se usa con `TaskInfo.url`. Si se produce un error al invocar el módulo de tareas, la función `submitHandler` se invoca inmediatamente con una cadena `err` que indica qué [error se produjo](#task-module-invocation-errors). También se llama a la función `submitHandler` con una cadena `err` cuando el usuario selecciona X en la esquina superior derecha del módulo de tareas para cerrarla.
+La función `submitHandler` reside en la página web de `TaskInfo.url` y se usa con `TaskInfo.url`. Si se produce un error al invocar el módulo de tareas, `submitHandler` la función se invoca inmediatamente con una `err` cadena que indica qué [error se produjo](#task-module-invocation-errors). También se llama a la función `submitHandler` con una cadena `err` cuando el usuario selecciona X en la esquina superior derecha del módulo de tareas para cerrarla.
 
-Si no hay ningún error de invocación y el usuario no selecciona X para descartarlo, el usuario elige un botón cuando termina. En función de si se trata de una dirección URL o una tarjeta adaptable en el módulo de tareas, en las secciones siguientes se proporcionan detalles sobre lo que ocurre.
+Si no hay ningún error de invocación y el usuario no selecciona X para descartarlo, el usuario elige un botón cuando termine. En función de si se trata de una dirección URL o una tarjeta adaptable en el módulo de tareas, las secciones siguientes proporcionan detalles sobre lo que ocurre.
 
 ### <a name="html-or-javascript-taskinfourl"></a>`TaskInfo.url` HTML o JavaScript
 
@@ -86,7 +86,7 @@ Pase el resultado como primer parámetro. Teams invoca `submitHandler` donde `er
 
 ### <a name="adaptive-card-taskinfocard"></a>`TaskInfo.card` Tarjeta adaptable
 
-Cuando se invoca el módulo de tareas con un `submitHandler` y el usuario selecciona un botón `Action.Submit`, los valores de la tarjeta se devuelven como el valor de `result`. Si el usuario selecciona la tecla Esc o X en la parte superior derecha, se devuelve `err` en su lugar. Si la aplicación contiene un bot además de una pestaña, simplemente puede incluir el `appId` del bot como el valor de `completionBotId` en el objeto `TaskInfo`. El cuerpo de la tarjeta adaptable rellenado por el usuario se envía al bot mediante un mensaje de `task/submit invoke` cuando el usuario selecciona un botón de `Action.Submit`. El esquema del objeto que recibe es muy similar a [el esquema que recibe para los mensajes de tarea, captura, tarea o envío](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). La única diferencia es que el esquema del objeto JSON es un objeto de tarjeta adaptable en lugar de un objeto que contiene un objeto de tarjeta adaptable como [cuando se usan tarjetas adaptables con bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+Cuando se invoca el módulo de tareas con un `submitHandler` y el usuario selecciona un botón `Action.Submit`, los valores de la tarjeta se devuelven como el valor de `result`. Si el usuario selecciona la tecla Esc o X en la parte superior derecha, se devuelve `err` en su lugar. Si la aplicación contiene un bot además de una pestaña, puede incluir el `appId` del bot como el valor de `completionBotId` en el `TaskInfo` objeto . El cuerpo de la tarjeta adaptable rellenado por el usuario se envía al bot mediante un mensaje de `task/submit invoke` cuando el usuario selecciona un botón de `Action.Submit`. El esquema del objeto que recibe es similar al [esquema que recibe para los mensajes task/fetch y task/submit](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). La única diferencia es que el esquema del objeto JSON es un objeto de tarjeta adaptable en lugar de un objeto que contiene un objeto de tarjeta adaptable como [cuando se usan tarjetas adaptables con bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
 En la sección siguiente se proporciona un ejemplo de envío del resultado de un módulo de tareas.
 

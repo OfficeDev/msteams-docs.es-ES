@@ -1,17 +1,17 @@
 ---
 title: Usar Microsoft Graph para autorizar la instalación y mensajería proactiva de bots en Teams
 description: Describe la mensajería proactiva en Teams y cómo implementarla. Obtenga información sobre cómo habilitar la instalación proactiva de aplicaciones y la mensajería mediante un código de ejemplo.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Graph de instalación del chat de mensajería proactiva de Teams
-ms.openlocfilehash: 7915d958cf73b916921a6346b4eca1f8ce0280e7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7a133b91aabe920b109b644331bc6526cd950858
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111517"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757706"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Instalación proactiva de aplicaciones con Graph API para enviar mensajes
 
@@ -26,7 +26,7 @@ Los bots inician mensajes proactivos para iniciar conversaciones con un usuario.
 
 ## <a name="proactive-app-installation-in-teams"></a>Instalación proactiva de aplicaciones en Teams
 
-Antes de que el bot pueda enviar mensajes de forma proactiva a un usuario, debe estar instalado como una aplicación personal o en un equipo del que el usuario sea miembro. En ocasiones, debe enviar mensajes de forma proactiva a los usuarios que no hayan instalado la aplicación o que no hayan interactuado previamente con ella. Por ejemplo, la necesidad de enviar información importante a todos los miembros de la organización. En estos escenarios, puede usar la API de Microsoft Graph para instalar de forma proactiva el bot para los usuarios.
+Antes de que el bot pueda enviar mensajes de forma proactiva a un usuario, debe estar instalado como una aplicación personal o en un equipo del que el usuario sea miembro. En ocasiones, debe enviar mensajes de forma proactiva a los usuarios que no han instalado o han interactuado previamente con la aplicación. Por ejemplo, si necesita enviar información importante a todos los usuarios de su organización, puede usar microsoft Graph API para instalar el bot de forma proactiva para los usuarios.
 
 ## <a name="permissions"></a>Permisos
 
@@ -127,7 +127,7 @@ GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$exp
 
 La solicitud devuelve:
 
-* Una matriz vacía si la aplicación no está instalada.
+* Matriz vacía si la aplicación no está instalada.
 * Una matriz con un objeto [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) único si la aplicación está instalada.
 
 ### <a name="install-your-app"></a>Instalar la aplicación
@@ -167,7 +167,7 @@ Cuando se instala la aplicación para el usuario, el bot recibe una [notificaci�
 
 1. Realice la siguiente solicitud para capturar el `chatId`:
 
-    Solicitud **HTTP GET** (permiso — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
+    Solicitud **HTTP GET** (permiso):`TeamsAppInstallation.ReadWriteSelfForUser.All`  
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
@@ -177,7 +177,7 @@ Cuando se instala la aplicación para el usuario, el bot recibe una [notificaci�
 
     También puede recuperar el `chatId` con la siguiente solicitud, aunque requiere un permiso `Chat.Read.All` más amplio:
 
-    Solicitud **HTTP GET** (permiso — `Chat.Read.All`):
+    Solicitud **HTTP GET** (permiso):`Chat.Read.All`
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')

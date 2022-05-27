@@ -2,18 +2,18 @@
 title: Optimizar un bot con la limitación de volumen en Teams
 description: Obtenga información sobre cómo controlar el límite de velocidad de los bots con el límite por bot por subproceso y por límite para todos los bots mediante ejemplos de código. Además, obtenga información sobre los procedimientos recomendados de limitación de velocidad en Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Limitación de volumen de los bots de teams
-ms.openlocfilehash: 09b3f0b79737e3da09b34ebe1931a7209632cca1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111811"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757153"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
-La limitación de volumen es un método para limitar los mensajes a una determinada frecuencia máxima. Como principio general, la aplicación debe limitar el número de mensajes que envía a una conversación de chat o canal individual. Esto garantiza una experiencia óptima y los mensajes no aparecen como correo no deseado a los usuarios.
+La limitación de volumen es un método para limitar los mensajes a una determinada frecuencia máxima. Como principio general, la aplicación debe limitar el número de mensajes que envía a una conversación de chat o canal individual. Esto garantiza una experiencia óptima y que los mensajes no aparezcan como correo no deseado para los usuarios.
 
 Para proteger Microsoft Teams y a sus usuarios, las API del bot proporcionan un límite de velocidad para las solicitudes entrantes. Las aplicaciones que superan este límite reciben un estado de error `HTTP 429 Too Many Requests`. Todas las solicitudes están sujetas a la misma directiva de limitación de velocidad, incluido el envío de mensajes, enumeraciones de canales y capturas de lista de participantes.
 
@@ -132,19 +132,19 @@ En la tabla siguiente se proporcionan los límites por bot por subproceso:
 
 | Escenario | Tiempo en segundos | Máximo de operaciones permitidas |
 | --- | --- | --- |
-| Enviar a la conversación | 1 | 7  |
+| Enviar a la conversación | 1  | 7  |
 | Enviar a la conversación | 2 | 8  |
 | Enviar a la conversación | 30 | 60 |
 | Enviar a la conversación | 3600 | 1800 |
-| Crear conversación | 1 | 7  |
+| Crear conversación | 1  | 7  |
 | Crear conversación | 2 | 8  |
 | Crear conversación | 30 | 60 |
 | Crear conversación | 3600 | 1800 |
-| Obtener miembros de la conversación| 1 | 14  |
+| Obtener miembros de la conversación| 1  | 14 |
 | Obtener miembros de la conversación| 2 | 16 |
 | Obtener miembros de la conversación| 30 | 120 |
 | Obtener miembros de la conversación| 3600 | 3600 |
-| Obtener conversaciones | 1 | 14  |
+| Obtener conversaciones | 1  | 14 |
 | Obtener conversaciones | 2 | 16 |
 | Obtener conversaciones | 30 | 120 |
 | Obtener conversaciones | 3600 | 3600 |
@@ -156,21 +156,21 @@ También puede controlar el límite de velocidad mediante el límite por subproc
 
 ## <a name="per-thread-limit-for-all-bots"></a>Límite por subproceso para todos los bots
 
-El límite por subproceso para todos los bots controla el tráfico que todos los bots pueden generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat grupal o un canal en un equipo.
+El límite por subproceso para todos los bots controla el tráfico que todos los bots pueden generar en una sola conversación. Una conversación aquí es 1:1 entre bot y usuario, un chat de grupo o un canal en un equipo.
 
 En la tabla siguiente se proporciona el límite por subproceso para todos los bots:
 
 | Escenario | Tiempo en segundos | Máximo de operaciones permitidas |
 | --- | --- | --- |
-| Enviar a la conversación | 1 | 14  |
+| Enviar a la conversación | 1  | 14 |
 | Enviar a la conversación | 2 | 16 |
-| Crear conversación | 1 | 14  |
+| Crear conversación | 1  | 14 |
 | Crear conversación | 2 | 16 |
-| Crear conversación| 1 | 14  |
+| Crear conversación| 1  | 14 |
 | Crear conversación| 2 | 16 |
-| Obtener miembros de la conversación| 1 | 28 |
+| Obtener miembros de la conversación| 1  | 28 |
 | Obtener miembros de la conversación| 2 | 32 |
-| Obtener conversaciones | 1 | 28 |
+| Obtener conversaciones | 1  | 28 |
 | Obtener conversaciones | 2 | 32 |
 
 ## <a name="next-step"></a>Paso siguiente

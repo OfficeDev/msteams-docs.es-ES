@@ -5,12 +5,12 @@ description: Información general sobre los comandos de acción de extensión de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297215"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756901"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -54,7 +54,7 @@ En la imagen siguiente se muestran las ubicaciones desde las que se invoca el co
 
 Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representará dentro del módulo de tareas:
 
-* **Lista estática de parámetros**: este es el método más sencillo. Puede definir una lista de parámetros en el manifiesto de la aplicación que proporciona el cliente de Teams pero, en este caso, no puede controlar el formato.
+* **Lista estática de parámetros**: este es el método más sencillo. Puede definir una lista de parámetros en el manifiesto de la aplicación que representa el cliente Teams, pero no puede controlar el formato en este caso.
 * **Tarjeta adaptable**: puede seleccionar usar una tarjeta adaptable, que proporciona un mayor control sobre la interfaz de usuario, pero le sigue limitando en cuanto a los controles disponibles y las opciones de formato.
 * **Vista web incrustada**: puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles.
 
@@ -77,7 +77,7 @@ Para agregar el comando de acción al manifiesto de la aplicación, debe agregar
 
 Puede crear un comando de acción mediante **App Studio** o **Portal para desarrolladores**.
 
-> [!NOTE]
+> [!WARNING]
  > Si ha estado usando App Studio, le recomendamos que pruebe el portal para desarrolladores [Portal para desarrolladores](https://dev.teams.microsoft.com/) para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
@@ -148,7 +148,7 @@ Para agregar manualmente el comando de extensión de mensaje basado en acciones 
 | `fetchTask` | Esta propiedad se establece en `true` para una tarjeta adaptable o una vista web insertada para el módulo de tareas, y`false` para una lista estática de parámetros o al cargar la vista web mediante un `taskInfo`. | No | 1.4 |
 | `context` | Esta propiedad es una matriz opcional de valores que define desde dónde se invoca la extensión de mensaje. Los valores posibles son`message`, `compose` o `commandBox`. El valor predeterminado es `["compose", "commandBox"]`. | No | 1,5 |
 
-Si usa una lista estática de parámetros, también debe agregar los siguientes parámetros:
+Si usa una lista estática de parámetros, también debe agregar los parámetros siguientes:
 
 | Nombre de propiedad | Objetivo | ¿Es obligatoria? | Versión mínima del manifiesto |
 |---|---|---|---|
@@ -158,7 +158,7 @@ Si usa una lista estática de parámetros, también debe agregar los siguientes 
 | `parameter.title` | Esta propiedad es un título o etiqueta de parámetro descriptivo corto. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada requerido. Los valores posibles incluyen `text`, `textarea`, `number`, `date`, `time`, `toggle`. El valor predeterminado se establece en `text`. | No | 1.4 |
 
-Si usa una vista web incrustada, puede agregar opcionalmente el objeto `taskInfo` para capturar la vista web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al del uso de una lista estática de parámetros. En que la primera interacción con el bot es [responder a la acción de envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un objeto `taskInfo`, debe establecer el parámetro `fetchTask` en `false`.
+Si usa una vista web incrustada, opcionalmente puede agregar el objeto para capturar la `taskInfo` vista web sin llamar directamente al bot. Si selecciona esta opción, el comportamiento es similar al del uso de una lista estática de parámetros. En que la primera interacción con el bot es [responder a la acción de envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si usa un `taskInfo` objeto , debe establecer el `fetchTask` parámetro en `false`.
 
 | Nombre de propiedad | Objetivo | ¿Es obligatoria? | Versión mínima del manifiesto |
 |---|---|---|---|
@@ -232,12 +232,12 @@ Siga la [ guía paso a paso](../../../sbs-meetingextension-action.yml) para crea
 
 ## <a name="next-step"></a>Paso siguiente
 
-Si usa una tarjeta adaptable o una vista web incrustada sin un objeto `taskInfo`, el siguiente paso es:
+Si usa una tarjeta adaptable o una vista web incrustada sin un `taskInfo` objeto, el siguiente paso es:
 
 > [!div class="nextstepaction"]
 > [Crear y responder con un módulo de tareas](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Si usa los parámetros o una vista web incrustada con un objeto `taskInfo`, el siguiente paso es:
+Si usa los parámetros o una vista web incrustada con un `taskInfo` objeto , el siguiente paso es:
 
 > [!div class="nextstepaction"]
 > [Responde al envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

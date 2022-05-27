@@ -2,14 +2,14 @@
 title: Flujo de autenticación de Teams para pestañas
 description: Describe el flujo de autenticación en pestañas, OAuth por Azure AD, y proporciona código de ejemplo
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: bots de flujo de autenticación de Teams
-ms.openlocfilehash: 2589489598f51393f2a429f8701e9101cf80b273
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111454"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756495"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flujo de autenticación de Microsoft Teams para pestañas
 
@@ -27,7 +27,7 @@ Por ejemplo, el flujo de autenticación para pestañas y bots que usan Node y el
 ![Diagrama de secuencia de autenticación de bots](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. El usuario interactúa con el contenido de la configuración de pestaña o la página de contenido, normalmente un **Sign in** o **Log in** botón.
-2. La pestaña construye la dirección URL para su página de inicio de autenticación. Opcionalmente, usa información de marcadores de posición de dirección URL o llamadas `microsoftTeams.getContext()` método del SDK de cliente de Teams para simplificar la experiencia de autenticación del usuario. Por ejemplo, al autenticarse con Azure AD, si el parámetro `login_hint` está establecido en la dirección de correo electrónico del usuario, puede que el usuario no tenga que iniciar sesión si ya lo ha hecho recientemente. Esto se debe a que Azure AD usa las credenciales almacenadas en caché del usuario. La ventana emergente se muestra brevemente y, a continuación, desaparece.
+2. La pestaña construye la dirección URL para su página de inicio de autenticación. Opcionalmente, usa información de marcadores de posición de dirección URL o llamadas `microsoftTeams.getContext()` método del SDK de cliente de Teams para simplificar la experiencia de autenticación del usuario. Por ejemplo, al autenticarse con Azure AD, si el `login_hint` parámetro está establecido en la dirección de correo electrónico del usuario, el usuario no tiene que iniciar sesión si lo ha hecho recientemente. Esto se debe a que Azure AD usa las credenciales almacenadas en caché del usuario. La ventana emergente se muestra brevemente y, a continuación, desaparece.
 3. A continuación, la pestaña llama al método `microsoftTeams.authentication.authenticate()` y registra las funciones `successCallback` y `failureCallback`.
 4. Microsoft Teams abre la página de inicio en un  en una ventana emergente. La página de inicio genera datos aleatorios `state`, lo guarda para la validación futura y redirige al punto de conexión `/authorize` del proveedor de identidades, como `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` para Azure AD. Reemplace `<tenant id>` por su propio identificador de inquilino que es context.tid.
 Al igual que sucede con otros flujos de autenticación de aplicación en Teams, la página de inicio debe estar en un dominio que esté en su lista `validDomains`, y en el mismo dominio que la página de redireccionamiento tras el inicio de sesión.

@@ -3,15 +3,15 @@ title: usar el kit de herramientas de Teams para aprovisionar recursos en la nub
 author: MuyangAmigo
 description: Aprovisionar recursos en la nube
 ms.author: shenwe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3e95f4d544c0cddc98afbb4aa5f3f36de3afb12c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6ab903ab731e3fe90161d2873f0ca8be5ed284fa
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111622"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757461"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>usar el kit de herramientas de Teams para aprovisionar recursos en la nube
 
@@ -21,10 +21,11 @@ TeamsFx se integra con Azure y la nube de Microsoft 365, lo que le permite coloc
 
 * Requisitos previos. Para aprovisionar recursos en la nube, debe tener las siguientes cuentas:
 
-  * Cuenta de Microsoft 365 con una suscripción válida
-  * Azure con una suscripción válida. Para más información, vea [cómo preparar cuentas para crear aplicaciones de Teams](accounts.md).
+  * Microsoft 365 cuenta con una suscripción válida.
+  * Azure con una suscripción válida.
+  Para obtener más información, consulte [cómo preparar cuentas para compilar Teams aplicación](accounts.md).
 
-* [Instale el kit de herramientas de Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión v3.0.0+.
+* [Instale el Kit de herramientas de Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión v3.0.0+.
 
 > [!TIP]
 > Asegúrese de que ha abierto un proyecto de aplicación de Teams en VS Code.
@@ -39,9 +40,9 @@ El aprovisionamiento se realiza con un solo comando en el kit de herramientas de
 
 Al desencadenar el comando de aprovisionamiento en el kit de herramientas de Teams o la CLI de TeamsFx, puede obtener los siguientes recursos:
 
-* Aplicación de Microsoft Azure Active Directory (Azure AD) en su inquilino de Microsoft 365
-* Registro de la aplicación de Teams en la plataforma Teams de su inquilino de Microsoft 365
-* Recursos de Azure de la suscripción de Azure seleccionada
+* Microsoft Azure Active Directory aplicación (Azure AD) en el inquilino de Microsoft 365.
+* Teams registro de aplicaciones en la plataforma de Teams del inquilino de Microsoft 365.
+* Recursos de Azure en la suscripción de Azure seleccionada.
 
 Al crear un nuevo proyecto, puede usar todos los recursos de Azure. La plantilla de ARM define todos los recursos de Azure y ayuda a crear los recursos de Azure necesarios durante el aprovisionamiento. Al [añadir nuevos recursos de funcionalidad](./add-resource.md) a un proyecto existente, la plantilla de ARM actualizada refleja el cambio más reciente.
 
@@ -262,7 +263,7 @@ Los pasos siguientes son:
 
 1. Abra `.fx/configs/azure.parameters.{env}.json` para el entorno actual.
 2. Añada una nueva propiedad `functionAppName` al valor del parámetro `provisionParameters`.
-3. Escriba `contosoteamsappapi` como valor de `functionAppName`
+3. Escriba `contosoteamsappapi` como valor de `functionAppName`.
 4. El archivo de parámetros definitivo se muestra en el siguiente fragmento de código:
 
     ```json
@@ -343,7 +344,7 @@ Si recibe errores con el kit de herramientas de Teams en Visual Studio Code, pue
 
 <summary><b>¿Cómo puedo cambiar el grupo de recursos durante el aprovisionamiento?</b></summary>
 
-Antes de aprovisionar, la herramienta le preguntará si desea crear un nuevo grupo de recursos o usar uno existente. Puede proporcionar un nuevo nombre de grupo de recursos o elegir uno existente en este paso.
+Antes del aprovisionamiento, la herramienta le pregunta si desea crear un nuevo grupo de recursos o usar uno existente. Puede proporcionar un nuevo nombre de grupo de recursos o elegir uno existente en este paso.
 
 <br>
 

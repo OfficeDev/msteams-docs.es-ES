@@ -5,12 +5,12 @@ description: Aprenda a habilitar la compatibilidad con el SSO para las extension
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296948"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757426"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Compatibilidad con el inicio de sesión único para las extensiones de mensajes
 
@@ -43,7 +43,7 @@ Para habilitar el SSO:
     > [!NOTE]
     > No se admite el SSO de otros controladores, excepto de `OnTeamsMessagingExtensionQueryAsync` y `OnTeamsAppBasedLinkQueryAsync` del archivo TeamsMessagingExtensionsSearchAuthConfigBot.cs.
 
-4. Recibirá el token en el controlador `OnTeamsMessagingExtensionQueryAsync` en la carga `turnContext.Activity.Value` o en el `OnTeamsAppBasedLinkQueryAsync`, en función del escenario para el que esté habilitando el inicio de sesión único:
+4. Recibirá el token en `OnTeamsMessagingExtensionQueryAsync` el controlador en la `turnContext.Activity.Value` carga o en `OnTeamsAppBasedLinkQueryAsync`, en función del escenario para el que habilite el inicio de sesión único:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

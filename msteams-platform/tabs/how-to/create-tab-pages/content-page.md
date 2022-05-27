@@ -6,30 +6,30 @@ keywords: pestañas de equipos, canal de grupo configurable estático
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673030"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757475"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Creación de una página de contenido para una pestaña
 
-Una página de contenido es una página web que se representa en el cliente de Teams. Forman parte de:
+Una página de contenido es una página web que se representa dentro del cliente Teams, que forma parte de:
 
 * Una pestaña personalizada de ámbito personal: en este caso, la página de contenido es la primera página que se encuentra el usuario.
 * Una pestaña personalizada de canal o grupo: la página de contenido se muestra después de que el usuario ancle y configure la pestaña en el contexto adecuado.
 * Un [módulo de tareas](~/task-modules-and-cards/what-are-task-modules.md): puede crear una página de contenido e insertarla como una vista web dentro de un módulo de tareas. La página se representa dentro del elemento emergente modal.
 
-Este artículo se centra en el uso de páginas de contenido como pestañas. Sin embargo, la mayoría de las instrucciones aquí expuestas se aplican independientemente de cómo se presente la página de contenido al usuario.
+Este artículo es específico del uso de páginas de contenido como pestañas; sin embargo, la mayoría de las instrucciones aquí se aplican independientemente de cómo se presente la página de contenido al usuario.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tab-content-and-design-guidelines"></a>Instrucciones de diseño y contenido de pestañas
 
-El objetivo general de la pestaña es proporcionar acceso a contenido significativo y atractivo que tenga un valor práctico y un propósito que sea evidente. Debe centrarse en hacer que el diseño de la pestaña sea claro, intuitivo a la hora de navegar y con contenido envolvente.
+El objetivo general de la pestaña es proporcionar acceso al contenido significativo y atractivo que tiene un valor práctico y un propósito evidente. 
 
-Para obtener más información, vea [instrucciones de diseño de pestañas](~/tabs/design/tabs.md) y [directrices de validación de Microsoft Teams store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Debe centrarse en hacer que el diseño de la pestaña sea limpio, intuitivo de navegación y envolvente de contenido. Para obtener más información, vea [Instrucciones de diseño de pestañas](~/tabs/design/tabs.md) y [Microsoft Teams directrices de validación de almacén](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar el código con Teams
 
@@ -89,11 +89,11 @@ El [SDK de JavaScript del cliente de Teams](~/tabs/how-to/using-teams-client-sdk
 
 ### <a name="deep-links"></a>Vínculos profundos
 
-Puede crear vínculos profundos a entidades en Teams. Se usan para crear vínculos que navegan hasta el contenido y la información dentro de la pestaña. Para obtener más información, consulte [Crear vínculos profundos al contenido y las características en Teams](~/concepts/build-and-test/deep-links.md).
+Puede crear vínculos profundos a entidades en Teams. Se usan para crear vínculos que naveguen hasta el contenido y la información de la pestaña. Para obtener más información, consulte [Creación de vínculos profundos al contenido y las características en Teams](~/concepts/build-and-test/deep-links.md).
 
 ### <a name="task-modules"></a>Módulos de tareas
 
-Un módulo de tareas es una experiencia emergente modal que puede desencadenarse desde la pestaña. En una página de contenido, se pueden usar módulos de tareas para presentar formularios y, así, recopilar información adicional, mostrar los detalles de un elemento en una lista o presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o pueden crearse por completo mediante Tarjetas adaptables. Para obtener más información, consulte [Usar módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Un módulo de tareas es una experiencia emergente modal que puede desencadenar desde la pestaña. En una página de contenido, use módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento de una lista o presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o pueden crearse por completo mediante Tarjetas adaptables. Para obtener más información, consulte [Usar módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Dominios válidos
 
@@ -108,7 +108,7 @@ A partir del [esquema de manifiesto v1.7](../../../resources/schema/manifest-sch
 
 > [!NOTE]
 >
-> * El comportamiento en los clientes móviles no se puede configurar a través de la propiedad del indicador de carga nativa. Los clientes móviles muestran este indicador de forma predeterminada en las páginas de contenido y en los módulos de tareas basados en iframe. Este indicador en dispositivos móviles aparece cuando se realiza una solicitud para capturar contenido y se descarta en cuanto se completa la solicitud.
+> * El comportamiento en los clientes móviles no se puede configurar a través de la propiedad de indicador de carga nativa. Los clientes móviles muestran este indicador de forma predeterminada en las páginas de contenido y en los módulos de tareas basados en iframe. Este indicador en dispositivos móviles aparece cuando se realiza una solicitud para capturar contenido y se descarta en cuanto se completa la solicitud.
 
 Si indica `showLoadingIndicator : true`  en el manifiesto de la aplicación, toda la configuración de pestañas, el contenido, las páginas de eliminación y los módulos de tareas basados en iframe deben seguir los siguientes pasos:
 

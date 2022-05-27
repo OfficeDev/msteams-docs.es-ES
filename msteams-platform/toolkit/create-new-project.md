@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 5da4a0ada6e116a22957a6f1f1b1f2f281501e2a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654486"
+ms.locfileid: "65656155"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 
@@ -57,7 +57,7 @@ Puede crear una nueva aplicación explorando **Ver ejemplos** y seleccionando un
 
   1. Seleccione un ejemplo para examinar información detallada.
   1. Seleccione **crear** en la página de información de cada ejemplo para descargarlo. 
-  1. Ejecute la aplicación de forma local o remota para obtener una vista previa en el cliente web de Teams. Para ello solo tiene que seguir las instrucciones que se abren automáticamente después de descargar el ejemplo.
+  1. Ejecute la aplicación de forma local o remota para previsualizar en el cliente web de Teams. Para ello solo tiene que seguir las instrucciones que se abren automáticamente después de descargar el ejemplo.
   1. Si no desea descargar los ejemplos, puede seleccionar **Ver en GitHub** para abrir el ejemplo en el repositorio de ejemplos de GitHub y examinar el código fuente.
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Guías paso a paso con Teams Toolkit
@@ -66,8 +66,8 @@ Puede crear una nueva aplicación explorando **Ver ejemplos** y seleccionando un
 * [Crear una aplicación Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
 * [Crear una aplicación Teams con SPFx](../sbs-gs-spfx.yml)
 * [Crear una aplicación Teams con C# o .NET](../sbs-gs-csharp.yml)
-* Enviar notificación a Teams 
-* Compilación del bot de comandos
+* [Enviar notificación a Teams](../sbs-gs-notificationbot.yml)
+* [Crear un bot de comandos](../sbs-gs-commandbot.yml)
 
 ## <a name="see-also"></a>Vea también
 

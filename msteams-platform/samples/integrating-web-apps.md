@@ -3,21 +3,21 @@ author: heath-hamilton
 description: Procedimientos recomendados o consideraciones para integrar aplicaciones web existentes con Microsoft Teams
 ms.author: surbhigupta
 ms.date: 08/26/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Consideraciones para la integración de Teams
-ms.openlocfilehash: 2e1d749a34d0dec2a38e84e57aa6147c791264c1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111664"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757643"
 ---
 # <a name="considerations-for-teams-integration"></a>Consideraciones para la integración de Teams
 
 Puede hacer que las aplicaciones web se adecúen a las características sociales y colaborativas de Teams integrándolas correctamente con Teams.
   
-Los distintos tipos de aplicaciones que puede integrar con Teams son los siguientes:
+Los diferentes tipos de aplicaciones que puede integrar con Teams son los siguientes:
 
 * **Aplicaciones independientes**: una aplicación independiente es una aplicación de una sola página o de gran tamaño y compleja. El usuario puede usar algunos aspectos de él en Teams.
 * **Aplicaciones de colaboración**: una aplicación ya creada para las características sociales y colaborativas inherentes a Teams.
@@ -30,7 +30,7 @@ En este documento se proporciona información general sobre las funcionalidades 
 
 ***Escenarios de integración**: aplicaciones independientes, aplicaciones de colaboración, SharePoint*
 
-La aplicación de Teams debe incluir características de colaboración necesarias y que son de esperar. Para trabajar con la integración de aplicaciones, es importante familiarizarse con la terminología de desarrollo de Teams.
+La aplicación de Teams debe incluir características de colaboración necesarias y que son de esperar. Para trabajar con la integración de aplicaciones, es importante familiarizarse con Teams terminología de desarrollo.
 
 |Características comunes de la aplicación   |Funcionalidades de la plataforma de Teams   |
 |----------|-----------|
@@ -90,7 +90,7 @@ Teams tiene mecanismos de inicio de sesión único (SSO) con Azure AD para aplic
 > [!IMPORTANT]
 > En este momento, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC), pero no están disponibles para GCC-High y el Departamento de Defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros en GCC, consulte [administrar directivas de permisos de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones](/microsoftteams/manage-apps).
 
-Para las páginas de SharePoint, solo se puede usar SSO y no se puede agregar otro id. de Azure AD si quiere que SSO funcione para otra aplicación, ya que el id. es la aplicación de SharePoint.
+En SharePoint páginas, solo puede usar sso y no puede agregar otro identificador de Azure AD si desea que el inicio de sesión único funcione para otra aplicación, ya que el identificador es la aplicación SharePoint.
 
 Obtenga más información sobre la [autenticación en Teams](../concepts/authentication/authentication.md).
 
@@ -98,7 +98,7 @@ Obtenga más información sobre la [autenticación en Teams](../concepts/authent
 
 ***Escenarios de integración**: aplicaciones independientes, aplicaciones de colaboración*
 
-Asegúrese de seguir las [directrices de diseño de Teams](../concepts/design/understand-use-cases.md) para que la aplicación sea nativa para Teams. No puede migrar el contenido de una aplicación existente a una pestaña de Teams. Para obtener más información sobre el diseño de aplicaciones, consulte [Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
+Asegúrese de seguir las [directrices de diseño de Teams](../concepts/design/understand-use-cases.md) para que la aplicación sea nativa para Teams. No se puede migrar el contenido de una aplicación existente a una pestaña de Teams. Para obtener más información sobre el diseño de aplicaciones, consulte [Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximizar la vinculación en profundidad
 
@@ -112,11 +112,11 @@ Puede crear vínculos a información y características en Teams. Use [vínculos
 
 Use un [bot](../bots/what-are-bots.md) en la aplicación de Teams para múltiples conversaciones encadenadas, ya que ofrece más flexibilidad que un [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Los bots también permiten enviar **mensajes proactivos** a usuarios o canales. Los mensajes proactivos son mensajes no solicitados que se desencadenan por un evento externo y no por un mensaje enviado a un bot. Por ejemplo, el bot envía un mensaje de bienvenida cuando se instala o un nuevo usuario se une a un canal.
+Los bots también permiten enviar **mensajes proactivos** a usuarios o canales. Los mensajes proactivos son mensajes no solicitados que se desencadenan por un evento externo y no por un mensaje enviado a un bot. Por ejemplo, el bot envía un mensaje de bienvenida cuando está instalado o un nuevo usuario se une a un canal.
 
 El envío de mensajes proactivos requiere identificadores específicos de Teams. Puede capturar información mediante la [captura de datos de perfil de usuario o de lista de participantes](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), la [suscripción a eventos de conversación](../bots/how-to/conversations/subscribe-to-conversation-events.md) o el uso de [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
-No envíe correo no deseado a los usuarios de forma excesiva. Si la funcionalidad de Teams lo admite, los usuarios pueden configurar las opciones de notificación de la aplicación.
+No envíe spam a los usuarios con mensajes excesivos. Si la funcionalidad de Teams lo admite, los usuarios pueden configurar las opciones de notificación de la aplicación.
 A continuación se muestra un ejemplo de un mensaje de notificación: **No enviarme mensajes no solicitados**.
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Uso de SharePoint para el almacenamiento de archivos y datos

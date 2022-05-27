@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: f0dc772043eca4fc624fbd04261ddbc921c91fc4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668140"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755954"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
@@ -52,14 +52,14 @@ Como alternativa, puede usar una aplicación básica de single Sign-On *hello wo
 
 Para empezar con una [pestaña personal](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) que ya está habilitada para ejecutarse en Outlook y Office, use Teams Toolkit extensión para Visual Studio Code.
 
-1. En Visual Studio Code, abra la paleta de comandos (`Ctrl+Shift+P`), escriba `Teams: Create a new Teams app`.
+1. En Visual Studio Code, abra la paleta de comandos (`Ctrl+Shift+P`), escriba `Teams: Create a new Teams app`.
 1. Seleccione la **pestaña Personal habilitada para SSO**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Se muestra lista completa (funciona en Teams, Outlook y Office) en el kit de herramientas de Teams":::
 
-1. Seleccione una ubicación en la máquina local para la carpeta del área de trabajo.
+1. Seleccione una ubicación en el equipo local para la carpeta del área de trabajo.
 1. Abra la paleta de comandos (`Ctrl+Shift+P`) y escriba `Teams: Provision in the cloud` para crear los recursos de aplicación necesarios (plan de App Service, cuenta de Storage, aplicación de funciones e identidad administrada) en la cuenta de Azure.
-1. Abra la paleta de comandos (`Ctrl+Shift+P`) y escriba `Teams: Deploy to the cloud` para implementar el código de ejemplo en los recursos aprovisionados en Azure e iniciar la aplicación.
+1. Abra la paleta de comandos (`Ctrl+Shift+P`) y escriba `Teams: Deploy to the cloud` para implementar el código de muestra en los recursos aprovisionados en Azure e iniciar la aplicación.
 
 Desde aquí, puede ir directamente a [Transferir localmente la aplicación en Teams](#sideload-your-app-in-teams) y obtener una vista previa de la aplicación en Outlook y Office. (El manifiesto de la aplicación y las llamadas a la API de TeamsJS ya se han actualizado para Microsoft 365).
 
@@ -104,7 +104,7 @@ Al finalizar, el archivo *package.json* hará referencia `@microsoft/teams-js@2.
 > * Instrucciones de importación para teams-js@2.0.0
 > * [Llamadas de función, enumeración e interfaz](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para teams-js@2.0.0
 > * `TODO`recordatorios de comentarios que marcan las áreas que podrían verse afectadas por los cambios en la interfaz [de contexto](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface)
-> * `TODO` recordatorios de comentarios para [convertir funciones de devolución de llamada en promesas](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
+> * `TODO` recordatorios de comentario para [convertir las funciones de devolución de llamada a promesas](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
 > El código dentro *de.html* archivos no es compatible con las herramientas de actualización y requiere cambios manuales.
@@ -148,21 +148,21 @@ Si la aplicación usa encabezados de [directiva de seguridad de contenido](https
 
 El último paso para ejecutar la aplicación en Office y Outlook es transferir localmente el [paquete de aplicación](..//concepts/build-and-test/apps-package.md) de pestaña personal actualizado en Microsoft Teams.
 
-1. Empaquete la aplicación Teams ([manifiesto](../resources/schema/manifest-schema.md) e iconos de [aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo ZIP. Si usó Teams Toolkit para crear la aplicación, puede hacerlo fácilmente con la opción **Zip Teams metadata package** del menú **Implementación** de Teams Toolkit.
+1. Empaquete la aplicación Teams ([manifiesto](../resources/schema/manifest-schema.md) e iconos de [aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo ZIP. Si usó el Kit de herramientas de Teams para crear la aplicación, puede hacerlo fácilmente con la opción **Comprimir paquete de metadatos de Teams** en el menú de **Implementación** del Kit de herramientas de Teams.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Opción &quot;Comprimir paquete de metadatos de Teams&quot; en la extensión Kit de herramientas de Teams para Visual Studio Code":::
 
-1. Inicie sesión en Teams con la cuenta de inquilino del espacio aislado y cambie al modo *de versión preliminar para desarrolladores*. Seleccione el menú de puntos suspensivos (**...**) por su perfil de usuario y, a continuación, seleccione: **Acerca de** > **la versión preliminar del desarrollador**.
+1. Inicie sesión en Teams con su espacio empresarial aislado y alterne al modo *Vista previa para desarrolladores*. Seleccione el menú de los puntos suspensivos (**...**) junto al perfil de usuario y, luego, seleccione **Acerca de** > **Vista previa para desarrolladores**.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="En Teams menú de puntos suspensivos, abra &quot;Acerca de&quot; y seleccione la opción &quot;Versión preliminar para desarrolladores&quot;.":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Desde el menú de puntos suspensivos de Teams, abra &quot;Acerca de&quot; y seleccione la opción &quot;Vista previa para desarrolladores&quot;":::
 
-1. Seleccione **Aplicaciones** para abrir el panel **Administrar aplicaciones** . A continuación, seleccione **Publicar una aplicación**.
+1. Seleccione **Aplicaciones** para abrir el panel **Administrar aplicaciones**. A continuación, seleccione **Publicar una aplicación**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra el panel &quot;Administrar sus aplicaciones&quot; y seleccione &quot;Publicar una aplicación&quot;.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Abra el panel &quot;Administrar aplicaciones&quot; y seleccione &quot;Publicar una aplicación&quot;":::
 
 1. Elija **Upload una opción de aplicación personalizada** y seleccione el paquete de la aplicación.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Opción &quot;Upload una aplicación personalizada&quot; en Teams":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Opción &quot;Cargar una aplicación personalizada&quot; en Teams":::
 
 Una vez que se haya cargado de forma local en Teams, la pestaña personal estará disponible en Outlook y Office. Asegúrese de iniciar sesión con las mismas credenciales que usó para iniciar sesión en Teams para transferir localmente la aplicación.
 
@@ -225,7 +225,7 @@ Para obtener un resumen general de Microsoft 365 compatibilidad de host y plataf
 
 Puede comprobar la compatibilidad del host de una funcionalidad determinada en tiempo de ejecución llamando a la `isSupported()` función en esa funcionalidad (espacio de nombres) y ajustando el comportamiento de la aplicación según corresponda. Esto permite a la aplicación iluminar la interfaz de usuario y la funcionalidad en los hosts que la admiten, y proporcionar una experiencia de reserva correcta en los hosts que no lo hacen. Para obtener más información, consulta [Diferenciar la experiencia de la aplicación](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
-Use los [canales de la comunidad de desarrolladores Microsoft Teams](/microsoftteams/platform/feedback) para informar de problemas y proporcionar comentarios.
+Use los [canales de la comunidad de desarrolladores de Microsoft Teams](/microsoftteams/platform/feedback) para notificar problemas y enviar comentarios.
 
 ### <a name="debugging"></a>Depuración
 
@@ -239,17 +239,17 @@ Tras la primera ejecución de depuración local para Office o Outlook, se le ped
 
 Proporcione comentarios e informe de cualquier problema con la experiencia de depuración de Teams Toolkit en [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
-## <a name="next-step"></a>Paso siguiente
-
-Publique la aplicación para que se pueda detectar en Teams, Outlook y Office:
-
-> [!div class="nextstepaction"]
-> [Publicar aplicaciones Teams para Outlook y Office](publish.md)
-
 ## <a name="code-sample"></a>Ejemplo de código
 
 | **Nombre de ejemplo** | **Descripción** | **Node.js** |
 |---------------|--------------|--------|
 | Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## <a name="next-step"></a>Paso siguiente
+
+Publique la aplicación para que sea detectable en Teams, Outlook y Office:
+
+> [!div class="nextstepaction"]
+> [Publicar aplicaciones de Teams para Outlook y Office](publish.md)

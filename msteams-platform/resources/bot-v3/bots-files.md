@@ -3,14 +3,14 @@ title: Envío y recepción de archivos desde un bot
 description: Aprenda a enviar y recibir archivos a través del bot mediante Graph API para ámbitos personales, de canal y de chat grupal. Use las API de bot de Teams mediante ejemplos de código basados en el SDK de Bot Framework v3.
 keywords: equipos bots archivos enviar recibir
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: b12e8e79e7d8d5180803004b4e0f238446a8fc98
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110361"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755905"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Enviar y recibir archivos a través del bot
 
@@ -89,7 +89,7 @@ La carga de un archivo en un usuario implica los pasos siguientes:
 
 Este mensaje de escritorio contiene un objeto de datos adjuntos sencillo que solicita permiso de usuario para cargar el archivo:
 
-![Captura de pantalla de la tarjeta de consentimiento que solicita permiso de usuario para cargar el archivo](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Captura de pantalla de la tarjeta de consentimiento que solicita permiso de usuario para cargar el archivo" border="true":::
 
 Este mensaje móvil contiene un objeto de datos adjuntos que solicita permiso de usuario para cargar el archivo:
 

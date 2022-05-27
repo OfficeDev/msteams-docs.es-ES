@@ -4,12 +4,12 @@ description: Aprenda a agregar el recurso compartido en Teams insertado en la pe
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartir Teams con Teams
-ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439366"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757265"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación personal o una pestaña
 
@@ -82,7 +82,7 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 | **7000** | La plataforma limitó la solicitud debido a que la API se invocó con demasiada frecuencia. |
 | **8000** | El usuario anuló la operación. |
 | **9000** | El código de la plataforma es antiguo y no implementa esta API. |
-| **10000** | El valor devuelto es demasiado grande y ha superado nuestros límites de tamaño. |
+| **10000** | El valor devuelto es demasiado grande y ha superado los límites de tamaño. |
 
 ## <a name="limitations"></a>Limitaciones
 
@@ -114,7 +114,7 @@ Después de habilitar el botón Compartir en teams en la pestaña o aplicación 
 
    :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="share-to-teams-link-shared":::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Compartir en Teams desde aplicaciones web](share-to-teams-from-web-apps.md)
 * [Crear una pestaña personal](../../tabs/how-to/create-personal-tab.md)

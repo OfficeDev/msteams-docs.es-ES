@@ -4,12 +4,12 @@ description: Introducción a las aplicaciones de asociados
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 7ff5d15b0fcc3ef10b89470e98e3fd1d15af03d9
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910538"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757006"
 ---
 # <a name="partner-apps-for-moodle"></a>Aplicaciones de asociados para Moodle
 
@@ -26,7 +26,11 @@ En la tabla siguiente se muestran las ventajas de usar aplicaciones de asociados
 
 ## <a name="mconnect"></a>mConnect
 
-La aplicación mConnect integra cursos y actividades de Moodle en Teams para optimizar la experiencia de aprendizaje de los usuarios. Skooler, un asociado de confianza de Microsoft Gold en el ámbito educativo, ha desarrollado la aplicación mConnect y proporciona el soporte técnico necesario. mConnect permite a los administradores de Moodle configurar automáticamente Teams para el curso de Moodle y hacer que todas las características estén disponibles para cada curso en Moodle.
+La aplicación mConnect integra cursos y actividades de Moodle en Teams para optimizar la experiencia de aprendizaje de los usuarios. 
+
+Skooler, un asociado de confianza de Microsoft Gold en el ámbito educativo, ha desarrollado la aplicación mConnect y proporciona el soporte técnico necesario. 
+
+mConnect permite a los administradores de Moodle configurar automáticamente Teams para el curso de Moodle y hacer que todas las características estén disponibles para cada curso en Moodle.
 
 >[!NOTE]
 >Esta aplicación está disponible en Microsoft Store para los usuarios que tienen una cuenta existente previamente con Skooler y requiere derechos de acceso de administrador para configurarla directamente desde el sitio de Moodle.

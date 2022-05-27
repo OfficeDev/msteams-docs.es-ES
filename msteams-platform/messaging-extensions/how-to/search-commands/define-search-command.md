@@ -5,12 +5,12 @@ description: Obtenga información sobre los comandos de búsqueda de extensión 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 9615b1ab599f567815df5f68155a8ab2abb292ca
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 987d690beca81574244ae6fbf9e6614ee097ebcb
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111629"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756621"
 ---
 # <a name="define-message-extension-search-commands"></a>Definición de comandos de búsqueda de extensión de mensaje
 
@@ -32,7 +32,7 @@ El comando de búsqueda se invoca desde cualquiera de las siguientes ubicaciones
 
 En la imagen siguiente se muestran las ubicaciones de invocación del comando de búsqueda:
 
-![Ubicaciones de invocación de comandos de búsqueda](~/assets/images/messaging-extension/search-command-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Ubicaciones de invocación de comandos de búsqueda":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Agregar el comando de búsqueda al manifiesto de la aplicación
 
@@ -40,33 +40,38 @@ Para agregar el comando de búsqueda al manifiesto de la aplicación, debe agreg
 
 ### <a name="create-a-search-command-using-app-studio"></a>Creación de un comando de búsqueda mediante App Studio
 
-El requisito previo para crear un comando de búsqueda es que ya debe haber creado una extensión de mensaje. Para obtener información sobre cómo crear una extensión de mensaje, consulte [Creación de una extensión de mensaje](~/messaging-extensions/how-to/create-messaging-extension.md).
+El requisito previo para crear un comando de búsqueda es que ya debe haber creado una extensión de mensaje. Para obtener información sobre cómo crear una extensión de mensaje, vea [crear una extensión de mensaje](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 Para crear un comando de búsqueda:
 
 1. Abra **App Studio** en el cliente Microsoft Teams y seleccione la pestaña **Editor de manifiestos**.
 1. Si ya ha creado el paquete de la aplicación en **App Studio**, seleccione en la lista. Si no ha creado un paquete de aplicación, importe uno existente.
-1. Después de importar el paquete de la aplicación, seleccione **Extensiones de mensaje** en **Funcionalidades**. Obtiene una ventana emergente para configurar la extensión de mensaje.
+1. Después de importar el paquete de la aplicación, seleccione **Extensiones de mensaje** en **Funcionalidades**. Se mostrará una ventana emergente para configurar la extensión de mensaje.
 1. Seleccione **Configurar** en la ventana para incluir la extensión de mensaje en la experiencia de la aplicación. En la imagen siguiente se muestra la página de configuración de la extensión de mensaje:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Configuración de la extensión de mensajería":::
 
-1. Para crear la extensión de mensaje, necesita un bot registrado por Microsoft. Puede usar un bot existente o crear un bot nuevo. Seleccione **la opción Crear nuevo bot** , asigne un nombre al nuevo bot y seleccione **Crear**. En la imagen siguiente se muestra la creación de bots para la extensión de mensaje:
+1. Para crear la extensión de mensaje, necesita un bot registrado por Microsoft. Puede usar un bot existente o crear uno nuevo. Seleccione la opción **Crear nuevo bot**, asigne un nombre al nuevo bot y seleccione **Crear**. En la imagen siguiente se muestra la creación de bots para la extensión de mensaje:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Creación de un bot para la extensión de mensajería":::
 
-1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensaje para incluir los comandos que deciden el comportamiento de la extensión de mensaje.
+1. Para usar un bot existente, seleccione **Usar bot existente** y seleccione **Seleccionar de uno de mis bots existentes** para elegir los bots existentes de la lista desplegable, proporcione un **Nombre de bot** y seleccione **Guardar**, o seleccione **Conectar a un identificador de bot diferente** si ya tiene un identificador de bot creado, asigne un **Nombre de bot** y seleccione **Guardar**.
+
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Uso del bot existente para la extensión de mensajería":::
+
+1. Seleccione **Agregar** en la **sección Comando** de la página extensiones de mensaje para incluir los comandos, que deciden el comportamiento de la extensión de mensaje.
 En la imagen siguiente se muestra la adición de comandos para la extensión de mensaje:
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Incluir comandos":::
+
 1. Seleccione **Permitir que los usuarios consulten el servicio para obtener información e insertarla en un mensaje**. En la imagen siguiente se muestra la selección del parámetro de comando de búsqueda:
 
-    <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Selección de parámetros de comando de búsqueda":::
 
-1. Agregue un **identificador de comando** y un **título**.
+1. Agregue un **Id. de comando** y un **Título**.
 1. Seleccione la ubicación desde la que se debe invocar el comando de búsqueda. En la imagen siguiente se muestra la ubicación de invocación del comando de búsqueda:
 
-    <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="Selección de ubicación de invocación de comandos de búsqueda":::
 
 1. Agregue el parámetro de búsqueda y seleccione **Guardar**.
 
@@ -76,7 +81,7 @@ Para agregar manualmente el comando de búsqueda de extensión de mensaje al man
 
 | Nombre de propiedad | Objetivo | ¿Necesario? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este identificador. | Sí | 1.0 |
+| `id` | Esta propiedad es un identificador único que se asigna al comando de búsqueda. La solicitud de usuario incluye este id. | Sí | 1.0 |
 | `title` | Esta propiedad es un nombre de comando. Este valor aparece en la interfaz de usuario (UI). | Sí | 1.0 |
 | `description` | Esta propiedad es un texto de ayuda que indica lo que hace este comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
 | `type` | Esta propiedad debe ser .`query` | No | 1.4 |
@@ -85,12 +90,12 @@ Para agregar manualmente el comando de búsqueda de extensión de mensaje al man
 
 Debe agregar los detalles del parámetro de búsqueda, que define el texto visible para el usuario en el cliente de Teams.
 
-| Nombre de propiedad | Objetivo | ¿Es necesario? | Versión mínima del manifiesto |
+| Nombre de propiedad | Objetivo | ¿Es obligatoria? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
 | `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
-| `parameter.title` | Esta propiedad es un título o etiqueta de parámetro corto fácil de usar. | Sí | 1.0 |
+| `parameter.title` | Esta propiedad es un título o etiqueta de parámetro descriptivo corto. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada necesaria. Entre los valores posibles se incluyen , , , , , `toggle``time`. `date``number``textarea``text` El valor predeterminado está establecido en `text`. | No | 1.4 |
 
 #### <a name="example"></a>Ejemplo
@@ -126,9 +131,9 @@ Para ver el manifiesto de aplicación completo, consulte [Esquema de manifiesto 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |
+| Ejemplo de nombre           | Descripción | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams búsqueda de extensión de mensaje   |  Describe cómo definir comandos de búsqueda y responder a búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Búsqueda de extensión de mensaje de Teams   |  Describe cómo definir comandos de búsqueda y responder a búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 

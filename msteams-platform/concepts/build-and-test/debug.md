@@ -4,12 +4,12 @@ description: Describe las opciones para probar y depurar aplicaciones de Microso
 keywords: teams ejecutar depurar aplicaciones local hospedado en la nube hospedar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296997"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757013"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elegir una configuración para probar y depurar la aplicación de Microsoft Teams
 
@@ -54,17 +54,19 @@ Para configurar ngrok como preparación para ejecutar la aplicación de Microsof
 > [!NOTE]
 > Si detiene y reinicia ngrok, la dirección URL cambia.
 
-Para usar ngrok en el proyecto según las funcionalidades que esté usando, debe reemplazar todas las referencias URL del código, la configuración y el archivo manifest.json para usar este punto de conexión de dirección URL.
+Para usar ngrok en el proyecto en función de las funcionalidades que esté usando, debe reemplazar todas las referencias url del código, la configuración y el archivo manifest.json para usar este punto de conexión de dirección URL.
 
-Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a la funcionalidad específica de Teams.
+Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a Teams funcionalidad específica.
 
 > [!NOTE]
 > * Para actualizar el punto de conexión de mensajería de un bot, debe usar Bot Framework. Seleccione el bot en [la lista de bots de Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puede actualizar el punto de conexión de mensajería a través de [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+> [!WARNING]
 > * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
 
 ## <a name="cloud-hosted"></a>Hospedado en la nube
 
-Puede usar cualquier servicio direccionable externamente para hospedar el código de desarrollo y producción y sus puntos de conexión HTTPS. No hay expectativas de que las funcionalidades residan en el mismo servicio. Se requiere que se acceda a todos los dominios desde las aplicaciones de Microsoft Teams que aparecen en el objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) del archivo `manifest.json`.
+Puede usar cualquier servicio direccionable externamente para hospedar el código de desarrollo y producción y sus puntos de conexión HTTPS. No hay ninguna expectativa de que las funcionalidades residan en el mismo servicio. Se requiere que se acceda a todos los dominios desde las aplicaciones de Microsoft Teams que aparecen en el objeto [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) del archivo `manifest.json`.
 
 > [!NOTE]
 > Para garantizar un entorno seguro, sea explícito sobre el dominio y los subdominios exactos a los que hace referencia y esos dominios deben estar en su control. Por ejemplo, no se recomienda `*.azurewebsites.net`, pero se recomienda `contoso.azurewebsites.net`.

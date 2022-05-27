@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: comando menú redactar mensaje conversación@mención
-ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296969"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757699"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos de bot
 
@@ -42,8 +42,9 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
 1. Abra Teams y seleccione **Aplicaciones** en el panel izquierdo. En la página **Aplicaciones**, busque **App Studio** y seleccione **Abrir**.
    > [!NOTE]
    > Si no tiene **App Studio**, puede descargarlo. Para obtener más información, consulte [Instalación de App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
-
-  > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
+  
+   > [!WARNING]
+   > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
 
   :::image type="content" source="/media/AppStudio.png" alt-text="Instalación de App Studio"lightbox="media/AppStudio.png"border="true":::
 

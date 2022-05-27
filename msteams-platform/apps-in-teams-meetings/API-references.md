@@ -1,17 +1,16 @@
 ---
 title: Referencias API de aplicaciones de reuniones
 author: surbhigupta
-description: Identificación de las referencias de API de aplicaciones de reuniones con ejemplos y muestras de código
+description: Identifique las referencias de API de aplicaciones de reunión con ejemplos y ejemplos de código, Teams aplicaciones que cumplen la consulta de señal de notificación de contexto de usuario de la API de rol de participante de usuario de las aplicaciones.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams aplicaciones reuniones usuario participante rol api usuario contexto notificación señal consulta
-ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65667986"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755835"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -28,15 +27,15 @@ En la tabla siguiente se proporciona una lista de las API disponibles en los SDK
 
 |Método| Descripción| Origen|
 |---|---|----|
-|[**Obtener el contexto de usuario**](#get-user-context-api)| Obtenga información contextual para mostrar contenido relevante en una pestaña de Teams.| MSTC SDK|
-|[**Obtener participante**](#get-participant-api)| Capture la información de los participantes por id. de reunión e id. de participante. |MSBF SDK|
-|[**Enviar notificación en la reunión**](#send-an-in-meeting-notification)| Proporciona señales de reunión utilizando la API de notificación de conversación existente para el chat de usuario-bot y permite notificar la acción del usuario que muestra una notificación en la reunión. |MSBF SDK|
-|[**Obtener detalles de la reunión**](#get-meeting-details-api)| Obtener los metadatos estáticos de una reunión. |MSBF SDK |
-|[**Enviar subtítulos en tiempo real**](#send-real-time-captions-api)| Enviar subtítulos en tiempo real a una reunión en curso. |MSTC SDK|
-|[**Compartir contenido de la aplicación en la fase**](#share-app-content-to-stage-api)| Comparta partes específicas de la aplicación en la fase de reunión desde el panel lateral de la aplicación en una reunión. |MSTC SDK|
-|[**Obtener el estado de uso compartido del contenido de la aplicación**](#get-app-content-stage-sharing-state-api)| Obtenga información sobre el estado de uso compartido de la aplicación en la fase de reunión. |MSTC SDK|
-|[**Obtener funcionalidades de uso compartido de la fase de contenido de la aplicación**](#get-app-content-stage-sharing-capabilities-api)| Capture las capacidades de la aplicación para compartir en la fase de reunión. |MSTC SDK|
-|[**Obtener eventos de reunión de Teams en tiempo real**](#get-real-time-teams-meeting-events-api)|Capturar eventos de reunión en tiempo real, como la hora de inicio y finalización real.| MSBF SDK|
+|[**Obtener el contexto de usuario**](#get-user-context-api)| Obtenga información contextual para mostrar contenido relevante en una pestaña de Teams.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Obtener participante**](#get-participant-api)| Capture la información de los participantes por id. de reunión e id. de participante. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
+|[**Enviar notificación en la reunión**](#send-an-in-meeting-notification)| Proporciona señales de reunión utilizando la API de notificación de conversación existente para el chat de usuario-bot y permite notificar la acción del usuario que muestra una notificación en la reunión. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Obtener detalles de la reunión**](#get-meeting-details-api)| Obtener los metadatos estáticos de una reunión. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Enviar subtítulos en tiempo real**](#send-real-time-captions-api)| Enviar subtítulos en tiempo real a una reunión en curso. | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Compartir contenido de la aplicación en la fase**](#share-app-content-to-stage-api)| Comparta partes específicas de la aplicación en la fase de reunión desde el panel lateral de la aplicación en una reunión. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[**Obtener el estado de uso compartido del contenido de la aplicación**](#get-app-content-stage-sharing-state-api)| Obtenga información sobre el estado de uso compartido de la aplicación en la fase de reunión. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
+|[**Obtener funcionalidades de uso compartido de la fase de contenido de la aplicación**](#get-app-content-stage-sharing-capabilities-api)| Capture las capacidades de la aplicación para compartir en la fase de reunión. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**Obtener eventos de reunión de Teams en tiempo real**](#get-real-time-teams-meeting-events-api)|Capturar eventos de reunión en tiempo real, como la hora de inicio y finalización real.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obtener API de contexto de usuario
 
@@ -133,6 +132,22 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
+| Nombre de propiedad | Objetivo |
+|---|---|
+| **user.id** | Identificador del usuario. |
+| **user.aadObjectId** | Azure Active Directory identificador de objeto del usuario. |
+| **user.name** | Nombre del usuario. |
+| **user.givenName** | Nombre del usuario.|
+| **user.surname** | Apellidos del usuario. |
+| **user.email** | Id. de correo del usuario. |
+| **user.userPrincipalName** | UPN del usuario. |
+| **user.tenantId** | Identificador del inquilino de Azure Active Directory |
+| **user.userRole** | Rol del usuario, por ejemplo, "admin" o "user". |
+| **meeting.role** | El rol del participante en la reunión. Por ejemplo, "Organizador", "Moderador" o "Asistente". |
+| **meeting.inMeeting** | Valor que indica si el participante está en la reunión. |
+| **conversation.id** | Identificador de chat de reunión. |
+| **conversation.isGroup** | Boolean que indica si la conversación tiene más de dos participantes. |
+
 ### <a name="response-codes"></a>Códigos de respuesta
 
 En la tabla siguiente se proporcionan los códigos de respuesta:
@@ -217,6 +232,15 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ---
+
+| Nombre de propiedad | Objetivo |
+|---|---|
+| **tipo** | Tipo de actividad. |
+| **text** | Contenido de texto del mensaje. |
+| **summary** | Texto de resumen del mensaje. |
+| **channelData.notification.alertInMeeting** | Boolean que indica si se va a mostrar una notificación al usuario durante una reunión. |
+| **channelData.notification.externalResourceUrl** | Valor de la dirección URL del recurso externo de la notificación.|
+| **replyToId** | Identificador del mensaje primario o raíz del subproceso. |
 
 ### <a name="response-codes"></a>Códigos de respuesta
 
@@ -378,6 +402,28 @@ El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el sigu
 ```
 
 ---
+
+| Nombre de propiedad | Objetivo |
+|---|---|
+| **details.id** | Identificador de la reunión, codificado como una cadena BASE64. |
+| **details.msGraphResourceId** | MsGraphResourceId, que se usa específicamente para llamadas de Graph API de MS. |
+| **details.scheduledStartTime** | Hora de inicio programada de la reunión, en UTC. |
+| **details.scheduledEndTime** | Hora de finalización programada de la reunión, en UTC. |
+| **details.joinUrl** | Dirección URL usada para unirse a la reunión. |
+| **details.title** | El título de la reunión. |
+| **details.type** | Tipo de reunión: por ejemplo, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **conversation.isGroup** | Boolean que indica si la conversación tiene más de dos participantes. |
+| **conversation.conversationType** | Tipo de conversación. |
+| **conversation.id** | Identificador de chat de reunión. |
+| **organizer.id** | Identificador de usuario del organizador. |
+| **organizer.aadObjectId** | Identificador de objeto Azure Active Directory del organizador. |
+| **organizer.tenantId** | Identificador de inquilino Azure Active Directory del organizador. |
+
+En el caso del tipo de reunión Periódica,
+
+**startDate**: especifica la fecha para empezar a aplicar el patrón. El valor de startDate debe corresponder al valor de fecha de la propiedad start en el recurso de evento. Tenga en cuenta que no puede producirse la primera aparición de la reunión en esta fecha si no encaja en el patrón.
+
+**endDate**: especifica la fecha para dejar de aplicar el patrón. Tenga en cuenta que no puede producirse la última aparición de la reunión en esta fecha si no encaja en el patrón.
 
 ## <a name="send-real-time-captions-api"></a>Enviar API de subtítulos en tiempo real
 
@@ -760,6 +806,35 @@ El código siguiente proporciona un ejemplo de carga del evento de finalización
     "locale": "en-US" 
 }
 ```
+
+| Nombre de propiedad | Objetivo |
+|---|---|
+| **name** | Nombre del usuario.|
+| **tipo** | Tipo de actividad. |
+| **timestamp** | Fecha y hora locales del mensaje, expresados en formato ISO-8601. |
+| **id** | Identificador de la actividad. |
+| **channelId** | Canalizar con el que está asociada esta actividad. |
+| **serviceUrl** | Dirección URL del servicio donde se deben enviar respuestas a esta actividad. |
+| **from.id** | Id. del usuario que envió la solicitud. |
+| **from.aadObjectId** | Id de objeto Azure Active Directory identificador del usuario que envió la solicitud. |
+| **conversation.isGroup** | Boolean que indica si la conversación tiene más de dos participantes. |
+| **conversation.tenantId** | Azure Active Directory identificador de inquilino de la conversación o reunión. |
+| **conversation.id** | Identificador de chat de reunión. |
+| **recipient.id** | Identificador del usuario que recibe la solicitud. |
+| **recipient.name** | Nombre del usuario que recibe la solicitud. |
+| **entities.locale** | entidad que contiene metadatos sobre la configuración regional. |
+| **entities.country** | entidad que contiene metadatos sobre el país. |
+| **entities.type** | entidad que contiene metadatos sobre el cliente. |
+| **channelData.tenant.id** | Identificador del inquilino de Azure Active Directory |
+| **channelData.source** | Nombre de origen desde el que se desencadena o se invoca el evento. |
+| **channelData.meeting.id** | Identificador predeterminado asociado a la reunión. |
+| **Valor. MeetingType** | Tipo de reunión. |
+| **Valor. Título** | El tema de la reunión. |
+| **Valor. Id** | Identificador predeterminado asociado a la reunión. |
+| **Valor. JoinUrl** | Dirección URL de unión de la reunión. |
+| **Valor. Starttime** | Hora de inicio de la reunión en UTC. |
+| **Valor. Endtime** | Hora de finalización de la reunión en UTC. |
+| **locale**| Configuración regional del mensaje establecido por el cliente. |
 
 ## <a name="code-sample"></a>Ejemplo de código
 

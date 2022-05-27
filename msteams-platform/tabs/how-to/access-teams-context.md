@@ -4,12 +4,12 @@ description: Describe cómo obtener el contexto del usuario para las pestañas
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 319aea79c38466969f84e1e00d44b127a77ef92f
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672925"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755947"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -110,6 +110,9 @@ Además de estos cambios de campo, hay dos nuevos campos disponibles para los ca
 
 Si la página usa cualquiera de estos valores, el valor del `channelType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
 
+> [!NOTE]
+> Cada vez que un usuario reinicia o vuelve a cargar el Teams cliente de escritorio o web, se crea un nuevo sessionID, al que realiza un seguimiento Teams sesión, mientras que, cuando un usuario sale de las aplicaciones de Teams y lo vuelve a cargar en Teams plataforma, se crea un nuevo id. de sesión de aplicación, al que realiza un seguimiento la sesión de la aplicación.
+
 ## <a name="handle-theme-change"></a>Controlar el cambio de tema
 
 Puede registrar la aplicación para que se le informe si el tema cambia llamando a `app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
@@ -121,10 +124,10 @@ El `theme` argumento de la función es una cadena con un valor de `default`, `da
 > [!div class="nextstepaction"]
 > [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de pestañas](../../tabs/design/tabs.md)
 * [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o canal personalizado](~/tabs/how-to/create-channel-group-tab.md)
+* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
 * [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

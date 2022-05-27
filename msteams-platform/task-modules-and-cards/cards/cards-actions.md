@@ -1,15 +1,15 @@
 ---
 title: Agregar acciones de tarjeta en un bot
 description: Describe las acciones de tarjeta en Microsoft Teams y cómo usarlas en sus bots.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: acciones de tarjetas de bots de equipos
-ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111580"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756488"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -98,7 +98,7 @@ Con `messageBack`, puede crear una acción totalmente personalizada con las sigu
 | `value` | Se envía al bot cuando se realiza la acción. Puede codificar el contexto para la acción, tales como identificadores únicos o un objeto JSON. |
 | `text` | Se envía al bot cuando se realiza la acción. Use esta propiedad para simplificar el desarrollo de los bots. Su código puede comprobar una sola propiedad de nivel superior para distribuir la lógica del bot. |
 
-La flexibilidad de `messageBack` significa que su código no puede dejar un mensaje de usuario visible en el historial simplemente sin usar `displayText`.
+La flexibilidad de `messageBack` significa que el código no puede dejar un mensaje de usuario visible en el historial simplemente sin usar `displayText`.
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -427,7 +427,7 @@ Las arjetas adaptables admiten cuatro tipos de acción:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-También puede modificar la carga `Action.Submit` de la tarjeta adaptable para admitir acciones de Bot Framework existentes mediante una`msteams`propiedad en el`data` objeto de `Action.Submit`. En la siguiente sección se proporcionan detalles sobre cómo usar las acciones de Bot Framework existentes con tarjetas adaptables.
+También puede modificar la carga `Action.Submit` de la tarjeta adaptable para admitir acciones de Bot Framework existentes mediante una`msteams`propiedad en el`data` objeto de `Action.Submit`. En la sección siguiente se proporcionan detalles sobre cómo usar las acciones existentes de Bot Framework con tarjetas adaptables.
 
 > [!NOTE]
 > Agregar `msteams` a los datos con una acción Bot Framework no funciona con un módulo de tareas de una tarjeta adaptable.

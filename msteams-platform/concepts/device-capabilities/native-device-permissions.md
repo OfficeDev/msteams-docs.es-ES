@@ -1,15 +1,14 @@
 ---
 title: Solicitar permisos de dispositivos para la aplicación de Microsoft Teams
-keywords: funcionalidades aplicaciones teams permisos dispositivo digitalización nativo QR código de barras imagen de vídeo audio
-description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieran el consentimiento del usuario, como las funcionalidades de digitalización QR, código de barras, imagen, audio y vídeo
-ms.localizationpriority: high
+description: Obtenga información sobre cómo actualizar el manifiesto de la aplicación y solicitar acceso a características nativas que implican el consentimiento del usuario, la ubicación, el código QR y el código de barras, la imagen, el audio y las funcionalidades de vídeo
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cccf527c3abf3a1674b2d1350dd15633ba35c7a8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 624a079d7c72f77fac4109d11cde13974359884f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111965"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757608"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Solicitar permisos de dispositivos para la aplicación de Microsoft Teams
 
@@ -126,13 +125,13 @@ Aproveche HTML5 o la API de Teams para mostrar un mensaje y obtener el consentim
 
 Por ejemplo:
 
-* Para pedir al usuario que acceda a su ubicación, deberá llamar a `getCurrentPosition()`:
+* Para pedir al usuario que acceda a su ubicación, debe llamar a `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* Para pedir al usuario que acceda a su cámara en el escritorio o la web, deberá llamar a `getUserMedia()`:
+* Para pedir al usuario que acceda a su cámara en escritorio o web, debe llamar a `getUserMedia()`:
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -234,7 +233,7 @@ Por ejemplo:
 
 ## <a name="permission-behavior-across-login-sessions"></a>Comportamiento de permisos entre inicios de sesión
 
-Los permisos del dispositivo se almacenan para cada inicio de sesión. Esto significa que si inicia sesión en otra instancia de Teams, por ejemplo, en otro equipo, los permisos del dispositivo de las sesiones anteriores no estarán disponibles. Por lo tanto, deberá volver a dar su consentimiento a los permisos del dispositivo para la nueva sesión. También significa que, si cierra la sesión de Teams o cambia de inquilino en Teams, los permisos del dispositivo se eliminarán del inicio de sesión anterior.  
+Los permisos del dispositivo se almacenan para cada inicio de sesión. Esto significa que si inicia sesión en otra instancia de Teams, por ejemplo, en otro equipo, los permisos de dispositivo de las sesiones anteriores no están disponibles. Por lo tanto, deberá volver a dar su consentimiento a los permisos del dispositivo para la nueva sesión. También significa que, si cierra la sesión de Teams o cambia de inquilino en Teams, los permisos del dispositivo se eliminarán del inicio de sesión anterior.  
 
 > [!NOTE]
 > Cuando de su consentimiento a los permisos del dispositivo nativo, solo será válido para el inicio de sesión _en curso_.

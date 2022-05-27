@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo agregar el botón Compartir a Team
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Compartir Teams con Teams
-ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439303"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757062"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartir en Teams desde aplicaciones web
 
@@ -55,7 +55,7 @@ En la imagen siguiente se muestra la experiencia emergente Compartir en Teams:
     </div>
     ```
 
-1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de la dirección URL del vínculo que se va a compartir no se representa correctamente en Teams, puede deshabilitar la vista previa de la dirección URL agregando el atributo `data-preview` establecido en `false`.
+1. Si el vínculo compartido requiere autenticación de usuario y la vista previa de la dirección URL del vínculo que se va a compartir no se representa bien en Teams, puede deshabilitar la vista previa de la dirección URL agregando el `data-preview` atributo establecido en `false`.
 
     ```html
     <div
@@ -99,7 +99,7 @@ Puede usar las versiones predeterminadas de HTML o la versión de Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Compartir con Teams para el ámbito educativo
 
-Para los profesores que usan el botón Compartir en Teams, hay una opción adicional para `Create an Assignment`. Esto le permite crear rápidamente una tarea en el equipo elegido, basándose en el vínculo compartido. En la imagen siguiente se muestra Compartir en Teams para el ámbito educativo:
+Para los profesores que usan el botón Compartir para Teams, hay una opción adicional que `Create an Assignment` le permite crear rápidamente una asignación en el equipo elegido, en función del vínculo compartido. En la imagen siguiente se muestra Compartir en Teams para el ámbito educativo:
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Compartir en la ventana emergente de educación de Teams":::
 

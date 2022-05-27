@@ -1,19 +1,19 @@
 ---
 title: DevTools para pestañas de Microsoft Teams
 description: Describe cómo llegar a DevTools cuando se usa el cliente de escritorio de Microsoft Teams y la depuración
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: devtools depurar móvil chrome escritorio cliente desarrollador herramientas pestaña
-ms.openlocfilehash: 4e7ea8ee51d5dd77345c0c7392775aa29050a9a5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111447"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757482"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 
-Cuando Teams se ejecuta en un explorador, es fácil acceder a DevTools: del explorador con F12 en Windows o Command-Option-I en MacOS. DevTools le ofrece acceso a:
+Cuando Teams se ejecuta en un explorador, es fácil acceder a DevTools: F12 en Windows o Command-Option-I en MacOS. DevTools le ofrece acceso a:
 
 1. Ver registros de consola.
 1. Vea o modifique las solicitudes HTML, CSS y de red durante el tiempo de ejecución.

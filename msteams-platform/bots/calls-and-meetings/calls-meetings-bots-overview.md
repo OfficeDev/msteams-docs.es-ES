@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo las aplicaciones de Microsoft Team
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: bot de transmisión multimedia en tiempo real para llamadas de audio y vídeo IVR de reuniones en línea.
-ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 48c5283a1552c2f04651fe67254def0e6d60a8e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297173"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756733"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots para llamadas y reuniones en línea
 
@@ -23,7 +23,7 @@ Para usar estas API de Graph en una aplicación de Teams, cree un bot y especifi
 
 Además, la plataforma multimedia en tiempo real permitirá a los bots interactuar con las llamadas y reuniones de Teams mediante el uso compartido de voz, vídeo y pantalla en tiempo real. Un bot que participe en llamadas de audio o vídeo y reuniones en línea se trata de un bot normal de Microsoft Teams con algunas características adicionales que se usan para registrar el bot.
 
-El manifiesto de aplicaciones de Teams con dos configuraciones adicionales, `supportsCalling` y `supportsVideo`, los permisos de Graph para el identificador de aplicaciones de Microsoft del bot, además del consentimiento del administrador de inquilinos le permitirán registrar el bot. Al registrar un bot de llamadas y reuniones para Teams, se mencionará la dirección URL del webhook, que es el punto de conexión de webhook para todas las llamadas entrantes al bot. Un bot multimedia hospedado en la aplicación requerirá que la biblioteca Microsoft.Graph.Communications.Calls.Media de .NET acceda a los stream multimedia de audio y vídeo, y el bot deberá implementarse en un sistema operativo (OS) invitado de Windows Server o en un equipo con Windows Server en Azure. Los bot en Teams solo admiten un conjunto específico de formatos multimedia para el contenido de audio y vídeo.
+El manifiesto de aplicaciones de Teams con dos configuraciones adicionales, `supportsCalling` y `supportsVideo`, los permisos de Graph para el identificador de aplicaciones de Microsoft del bot, además del consentimiento del administrador de inquilinos le permitirán registrar el bot. Al registrar un bot de llamadas y reuniones para Teams, se mencionará la dirección URL del webhook, que es el punto de conexión de webhook para todas las llamadas entrantes al bot. Un bot multimedia hospedado en la aplicación requerirá que la biblioteca Microsoft.Graph.Communications.Calls.Media de .NET acceda a los stream multimedia de audio y vídeo, y el bot deberá implementarse en un sistema operativo (OS) invitado de Windows Server o en un equipo con Windows Server en Azure. Los bots en Teams solo admiten un conjunto específico de formatos multimedia para el contenido de audio y vídeo.
 
 Ahora deberá comprender algunos conceptos básicos, terminología y convenciones.
 
@@ -49,13 +49,13 @@ Las llamadas son de punto a punto entre una persona y el bot, o bien entre varia
 
 A continuación, se muestran los distintos tipos de llamada y permisos necesarios para las llamadas:
 
-* Un usuario podrá iniciar una llamada de punto a punto con el bot o invitar al bot a una llamada existente entre varias entidades. Las llamadas multiparte aún no están habilitadas en la interfaz de usuario de Teams.
+* Un usuario podrá iniciar una llamada de punto a punto con el bot o invitar al bot a una llamada existente entre varias entidades. La llamada multiparte aún no está habilitada en la interfaz de usuario Teams.
 
     > [!NOTE]
     > Actualmente, las llamadas iniciadas por usuarios a un bot no se admiten en la plataforma para móviles de Microsoft Teams.
 
-* Los permisos de Graph no son necesarios para que un usuario inicie una llamada punto a punto con los bot. Se necesitarán permisos adicionales para que los bot participen en llamadas multiparte o para que inicien llamadas punto a punto con un usuario.
-* Una llamada puede iniciarse como punto a punto y, finalmente, convertirse en una llamada multiparte. El bot podrá iniciar llamadas grupales invitando a otros usuarios, siempre que tenga permiso para iniciar llamadas de grupo. Si el bot no tiene permisos para participar en llamadas grupales y si un participante agrega otro participante a la llamada, el bot saldrá de la llamada.
+* Graph permisos no son necesarios para que un usuario inicie una llamada punto a punto con el bot. Se necesitarán permisos adicionales para que los bot participen en llamadas multiparte o para que inicien llamadas punto a punto con un usuario.
+* Una llamada puede iniciarse como punto a punto y, finalmente, convertirse en una llamada multiparte. El bot podrá iniciar llamadas grupales invitando a otros usuarios, siempre que tenga permiso para iniciar llamadas de grupo. Si el bot no tiene permisos para participar en llamadas grupales y si un participante agrega otro participante a la llamada, el bot se quita de la llamada.
 
 ### <a name="signals"></a>Señales
 
@@ -74,11 +74,11 @@ Desde la perspectiva de un usuario de Teams, hay dos tipos de reuniones en líne
 
 ### <a name="real-time-media"></a>Multimedia en tiempo real
 
-Cuando un bot participe en una llamada o reunión en línea, deberá tratar con las secuencias de audio y vídeo. Cuando los usuarios hablen en una llamada, o bien se mostrarán en una cámara web o bien mostrarán sus pantallas en una reunión a un bot, como secuencias de audio y vídeo. Si un bot quiere decir algo tan sencillo como, **presione 0 para llegar al operador** en un escenario de respuesta interactiva de voz (IVR), necesitará reproducir un archivo .WAV. Colectivamente, esto se conoce como multimedia o multimedia en tiempo real.
+Cuando un bot participe en una llamada o reunión en línea, deberá tratar con las secuencias de audio y vídeo. Cuando los usuarios hablan en una llamada, se muestran en una cámara web o presentan sus pantallas en una reunión a un bot, se muestran como secuencias de audio y vídeo. Si un bot quiere decir algo tan sencillo como, **presione 0 para llegar al operador** en un escenario de respuesta interactiva de voz (IVR), necesitará reproducir un archivo .WAV. Colectivamente, esto se conoce como multimedia o multimedia en tiempo real.
 
-Multimedia en tiempo real se refiere a escenarios en los que los medios deberán procesarse en tiempo real, en oposición a la reproducción de audio o vídeo, que son grabados previamente. El trabajo con los flujos multimedia, especialmente los flujos multimedia en tiempo real, es extremadamente complejo. Microsoft ha creado la plataforma multimedia en tiempo real para controlar estos escenarios y liberar la mayor parte del trabajo pesado tradicional del procesamiento multimedia en tiempo real como sea posible. Cuando el bot responda a una llamada entrante o se una a una llamada nueva o existente, tendrá que indicarle a la plataforma multimedia en tiempo real cómo se tratarán los elementos multimedia. Si usted crea una aplicación IVR, podrá liberar el costoso procesamiento de audio en Microsoft. Como alternativa, si el bot requiriera acceso directo a flujos multimedia, también se admite ese escenario. Hay dos tipos de procesamiento multimedia:
+Multimedia en tiempo real se refiere a escenarios en los que los medios deberán procesarse en tiempo real, en oposición a la reproducción de audio o vídeo, que son grabados previamente. El trabajo con secuencias multimedia, especialmente los flujos de medios en tiempo real, es complejo. Microsoft ha creado la plataforma multimedia en tiempo real para controlar estos escenarios y liberar la mayor parte del trabajo pesado tradicional del procesamiento multimedia en tiempo real como sea posible. Cuando el bot responda a una llamada entrante o se una a una llamada nueva o existente, tendrá que indicarle a la plataforma multimedia en tiempo real cómo se tratarán los elementos multimedia. Si va a compilar una aplicación IVR, puede descargar el costoso procesamiento de audio a Microsoft. Como alternativa, si el bot requiriera acceso directo a flujos multimedia, también se admite ese escenario. Hay dos tipos de procesamiento multimedia:
 
-* **Medios hospedados por el servicio**: los bot se centran en la administración del flujo de trabajo de aplicaciones, como el enrutamiento de llamadas y la descarga del procesamiento de audio a la plataforma multimedia en tiempo real de Microsoft. Con los elementos multimedia hospedados en el servicio, tiene varias opciones de implementación y organización del bot. Puede implementar un bot de elementos multimedia hospedados en el servicio como servicio sin estado puesto que no procesa los elementos multimedia localmente. Los bot multimedia hospedados por el servicio podrán usar las siguientes API:
+* **Medios hospedados por el servicio**: los bot se centran en la administración del flujo de trabajo de aplicaciones, como el enrutamiento de llamadas y la descarga del procesamiento de audio a la plataforma multimedia en tiempo real de Microsoft. Con los elementos multimedia hospedados en el servicio, tiene varias opciones de implementación y organización del bot. Un bot multimedia hospedado por el servicio se puede implementar como un servicio sin estado, ya que no procesa los medios localmente. Los bot multimedia hospedados por el servicio podrán usar las siguientes API:
 
   * `PlayPrompt` para reproducir un clip de audio.
   * `Record` para grabar clips de audio.

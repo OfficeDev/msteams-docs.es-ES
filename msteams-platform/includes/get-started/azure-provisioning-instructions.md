@@ -33,7 +33,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
    El proceso de aprovisionamiento crea recursos en la nube de Azure. Puede tardar algún tiempo. Puede supervisar el progreso observando los diálogos en la esquina inferior derecha. Después de unos minutos, verá el siguiente aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
 
     Si quiere, puede ver los recursos aprovisionados. En este tutorial, no es necesario ver los recursos.
 
@@ -82,13 +82,26 @@ Una vez completados los pasos de aprovisionamiento e implementación:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de pantalla que muestra la aplicación de inicio remoto." border="false":::
 
-1. Seleccione **Agregar** cuando se le pida que transfiera localmente la aplicación a Teams en el equipo local.
+1. Seleccione **Agregar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="Captura de pantalla que muestra que el bot se agrega en Teams cliente.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
 
-   Puede escribir `welcome` para mostrar una tarjeta de introducción y escribir `learn` para ir a la documentación de comandos de bot y tarjeta adaptable.
+   El kit de herramientas muestra un mensaje para indicar que la aplicación se agrega a Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Captura de pantalla que muestra la tarjeta de aprendizaje en el bot en Teams cliente.":::       
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Captura de pantalla que muestra el mensaje para probar la aplicación ahora o posterior" border="true":::
+ 
+    - Si **seleccionaSi lo tienes**, puedes probar la aplicación más adelante en la lista de aplicaciones de prueba.
+    - Si selecciona **Probar,** Teams carga la aplicación.
+
+   La aplicación se carga en el sitio de Azure.
+   
+1. Seleccione **Probar.**
+
+   La aplicación Extensión de mensaje se carga en una aplicación de bot de chat.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Captura de pantalla que muestra la aplicación transferida localmente en Teams" border="false":::
+
+
 
 
 

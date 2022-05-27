@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: cb9985aa1f7b9f3f5eff3308f385afbefffba3b6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191197"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756957"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar cuentas para crear aplicaciones de Teams
 
@@ -91,7 +91,7 @@ Si desea hospedar los recursos relacionados con la aplicación o acceder a recur
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Cargar una aplicación personalizada" border="true":::.
 
-        Si no puede ver la opción Cargar una aplicación personalizada,** indica que no tiene el permiso necesario para la instalación de prueba.
+        Si no puede ver la opción **Cargar una aplicación personalizada,** indica que no tiene el permiso necesario para la instalación de prueba.
         * Para un administrador de inquilinos, habilite la configuración de instalación de prueba para su inquilino u organización en el Centro de administración de Teams.
         * Si no es administrador de inquilinos, deberá ponerse en contacto con el administrador de inquilinos para habilitar la instalación de prueba.
 

@@ -2,20 +2,22 @@
 title: Referencia del esquema de manifiesto
 description: Describe el esquema del manifiesto para Microsoft Teams
 ms.topic: reference
-ms.author: lajanuar
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104010"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672911"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
-El manifiesto de Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe ajustarse al esquema alojado en [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json). También se admiten las versiones anteriores 1.0, 1.1,..., y 1.12 (con "v1.x" en la dirección URL).
+El manifiesto de la aplicación de Microsoft Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto de la aplicación debe ajustarse al esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Se admiten las versiones anteriores 1.0, 1.1,...,1.12 y la versión 1.13 actual (vea la nota siguiente) (con "v1.x" en la dirección URL).
 Para obtener más información sobre los cambios realizados en cada versión, consulte [registro de cambios del manifiesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+
+> [!Important]
+> La versión `1.13` del esquema del manifiesto de la aplicación de Microsoft Teams permite [extender las aplicaciones de Teams a Outlook y Office](../../m365-apps/overview.md). Para las aplicaciones de solo Teams, use la versión `1.12` (o anterior). De lo contrario, los esquemas 1.12 y 1.13 son los mismos. Consulte la información general del [SDK del cliente de JavaScript de Teams](../../m365-apps/overview.md) para más información.
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad:
 
@@ -23,8 +25,8 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -344,7 +346,7 @@ Dirección URL https:// que hace referencia al esquema JSON para el manifiesto.
 
 Cadena **necesaria**
 
-Versión del esquema de manifiesto que usa este manifiesto.
+Versión del esquema de manifiesto que usa este manifiesto. Use `1.13` para habilitar la compatibilidad con aplicaciones de Teams en Outlook y Office; use `1.12` (o versiones anteriores) para aplicaciones de solo Teams.
 
 ## <a name="version"></a>version
 
@@ -456,11 +458,11 @@ Se usa cuando la experiencia de la aplicación tiene una experiencia de pestaña
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
-|`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
+|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. Valor predeterminado: **true**.|
 |`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -477,7 +479,7 @@ Este elemento es una matriz (con un máximo de 16 elementos) y todos los element
 |`contentUrl`|string||✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`websiteUrl`|string|||La dirección URL de https:// a la que apuntar si un usuario opta por la vista en un explorador.|
 |`searchUrl`|string|||La dirección URL de https:// a la que apuntar para las consultas de búsqueda de un usuario.|
-|`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 |`context` | Matriz de enumeración| 2|| El conjunto de ámbitos `contextItem` donde se admite una pestaña.|
 
 > [!NOTE]
@@ -528,7 +530,7 @@ El objeto es una matriz (con un máximo de un elemento) y todos los elementos de
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
-|`scopes`|Matriz de enumeración|1|✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
+|`scopes`|Matriz de enumeración|1 |✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
 |`connectorId`|string|64 caracteres|✔|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -547,7 +549,7 @@ El elemento es una matriz (máximo de un elemento) con todos los elementos de ti
 |`botId`|string|64|✔|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. El id. puede ser el mismo que el id. de aplicación general.|
 |`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería.|
 |`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **falso**.|
-|`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
+|`messageHandlers`|Matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|string|||Tipo de controlador de mensajes. Debe estar `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 
@@ -630,6 +632,16 @@ Proporcione su identificador de aplicación de Azure Active Directory e informac
 |`id`|string|36 caracteres|✔|Azure AD identificador de aplicación de la aplicación. Este identificador debe ser un GUID.|
 |`resource`|string|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** si no usa SSO, asegúrese de introducir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, https://notapplicable para evitar una respuesta de error. |
 
+## <a name="graphconnector"></a>graphConnector
+
+Objeto **opcional**
+
+Especifique la configuración del conector de Graph de la aplicación. Si está presente, también se debe especificar [webApplicationInfo.id](#webapplicationinfo).
+
+|Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 caracteres|✔|Dirección URL a la que se deben enviar las notificaciones del conector de Graph para la aplicación.|
+
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 Booleano **opcional**
@@ -642,7 +654,7 @@ Indica si se va a mostrar o no el indicador de carga cuando se carga una aplicac
 
  Booleano **opcional**
 
-Indica dónde se representa una aplicación personal con o sin una barra de encabezado de pestaña. El valor predeterminado es **false**.
+Indica si una aplicación personal se representa sin una barra de encabezado de pestaña (lo que significa el modo de pantalla completa). El valor predeterminado es **false**.
 
 > [!NOTE]
 > `isFullScreen` funciona solo para las aplicaciones publicadas en su organización.

@@ -2,18 +2,18 @@
 title: Permisos de dispositivo para el explorador
 keywords: permisos de funcionalidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con los permisos de los dispositivo para las aplicaciones en nuestro cliente web
-localization_priority: high
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: beb9007593bd1c9a660429d9e92a08e39c1f4710
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111370"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756747"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
-La aplicación de Teams que requiere permisos de dispositivo, como el acceso a la cámara o al micrófono, ahora requiere que los usuarios concedan permisos manualmente a nivel de la aplicación en el explorador web. Anteriormente, el explorador se encargaba de conceder los permisos de acceso, pero ahora estos permisos se gestionan en Microsoft Teams. Esto tiene implicaciones en la forma de diseñar su aplicación y si requieren estos permisos en el explorador.
+Teams aplicación que requiere permisos de dispositivo, como el acceso a cámara o micrófono, ahora requieren que los usuarios concedan permiso manualmente en un nivel de aplicación en el explorador web. Anteriormente, el explorador se encargaba de conceder los permisos de acceso, pero ahora estos permisos se gestionan en Microsoft Teams. Esto tiene implicaciones en la forma de diseñar su aplicación y si requieren estos permisos en el explorador.
 
 ## <a name="enable-apps-device-permissions"></a>Habilitar los permisos del dispositivo de la aplicación
 
@@ -33,7 +33,7 @@ Un usuario tendrá que habilitar estos permisos en el explorador para que estos 
 
 ## <a name="recommendation"></a>Recomendación
 
-La aplicación de Teams que requiere permisos de dispositivo en el explorador debe mostrar instrucciones a los usuarios sobre dónde buscar y habilitar estos permisos en la interfaz de usuario de Teams. En función del contexto en el que se ejecute la aplicación, debe asegurarse de que las instrucciones indican al usuario que corrija la ubicación para acceder a estos permisos, ya que difieren en aplicaciones personales, cuadros de diálogo de módulos de tareas, pestañas en chats y canales o reuniones.
+Teams aplicación que requiere permisos de dispositivo en el explorador debe mostrar instrucciones a los usuarios sobre dónde buscar y habilitar estos permisos en la interfaz de usuario de Teams. En función del contexto en el que se ejecute la aplicación, debe asegurarse de que las instrucciones apunten al usuario a la ubicación correcta para acceder a estos permisos. Los permisos difieren para aplicaciones personales, cuadros de diálogo de módulos de tareas, pestañas en chats y canales o reuniones.
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>

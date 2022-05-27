@@ -3,18 +3,18 @@ title: Introducción a las acciones universales para tarjetas adaptables
 description: Información general rápida sobre acciones universales para tarjetas adaptables, como vistas específicas del usuario, compatibilidad secuencial con flujos de trabajo y mucho más para entornos de escritorio y móviles
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103414"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756474"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
 Las acciones universales para tarjetas adaptables evolucionaron a partir de los comentarios de los desarrolladores que, aunque el diseño y la representación de tarjetas adaptables eran universales, el control de acciones no lo era. Incluso si un desarrollador quisiera enviar la misma tarjeta a diferentes lugares, tiene que controlar las acciones de forma diferente.
 
-Acciones universales para tarjetas adaptables incorpora el bot como back-end común para controlar acciones e introduce un nuevo tipo de acción, `Action.Execute`, que funciona entre aplicaciones, como Teams y Outlook.
+Las acciones universales para tarjetas adaptables incluyen el bot como back-end común para controlar acciones e introduce un nuevo tipo de acción, `Action.Execute`, que funciona entre aplicaciones, como Teams y Outlook.
 
 Este documento le ayuda a comprender cómo puede usar el modelo de Acciones universales para mejorar la experiencia del usuario al interactuar con tarjetas adaptables entre plataformas y aplicaciones.
 
@@ -23,7 +23,7 @@ Este documento le ayuda a comprender cómo puede usar el modelo de Acciones univ
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Mejora de las experiencias del usuario con Acciones universales para tarjetas adaptables
 
-Acciones universales para tarjetas adaptables mejora la experiencia del usuario al habilitar los siguientes escenarios:
+Las acciones universales para tarjetas adaptables mejoran la experiencia del usuario al habilitar los siguientes escenarios:
 
 * [Acciones universales](#universal-actions)
 * [Vistas específicas de usuario](#user-specific-views)

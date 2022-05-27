@@ -1,17 +1,16 @@
 ---
 title: 'Funcionalidades del dispositivo: información general'
 author: Rajeshwari-v
-description: Información general sobre las funcionalidades nativas del dispositivo, como la cámara, la imagen, los elementos multimedia, el micrófono, el micro, el código QR, etc.
+description: Obtenga información sobre cómo integrar funcionalidades nativas de dispositivos, como cámara, imagen, medio, micrófono, código QR y mucho más con Microsoft Teams aplicación.
 ms.author: surbhigupta
-keywords: cámara imagen multimedia micrófono micro código qr códigoqr código de barras código de barras escáner ubicación mapa funcionalidades nativo dispositivo permisos
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111755"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757034"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 

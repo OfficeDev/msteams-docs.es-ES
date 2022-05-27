@@ -3,14 +3,14 @@ title: Contribuir a este contenido
 description: pasos para crear y publicar documentación de Teams
 author: surbhigupta
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 480b8bc1692672023171f3b6e67e0ee526cbe509
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 047a3c84b99fd832cde0531a9a9197c880f294e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111902"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757685"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 
@@ -22,9 +22,8 @@ La documentación de Teams forma parte de la biblioteca de documentación técni
 >
 > * Instale [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Instale [Microsoft Visual Studio](https://code.visualstudio.com/) (VS Code).
-> * Instale [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directamente desde VS Code Marketplace.
-<br>&emsp;&emsp; o
-> [!div class="checklist"]
+> * Instale [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directamente desde VS Code Marketplace.<br>&emsp;&emsp; o
+[!div class="checklist"]
 >
 > * Instale dentro de VS Code:
 
@@ -40,7 +39,7 @@ La guía de colaboradores proporciona instrucciones para crear, publicar y actua
 
 * **[Guía de estilo de escritura de Microsoft](/style-guide/welcome)**: La guía de estilo de escritura de Microsoft es un recurso completo para la escritura técnica y refleja el enfoque moderno de Microsoft para la voz y el estilo. Para facilitar la referencia, agregue esta guía en línea al menú **Favoritos** de su navegador.
 
-* **[Escritura de contenido para desarrolladores](/style-guide/developer-content/)**: el contenido específico de Teams está dirigido a un público desarrollador con una comprensión fundamental de los conceptos y procesos de programación. Es importante que proporcione información clara y precisa técnicamente de una manera atractiva mientras mantiene el tono y el estilo de Microsoft.
+* **[Escritura de contenido para desarrolladores](/style-guide/developer-content/)**: el contenido específico de Teams está dirigido a un público desarrollador con una comprensión fundamental de los conceptos y procesos de programación. Es importante que proporcione información clara y técnicamente precisa de una manera atractiva mientras mantiene el tono y el estilo de Microsoft.
 
 * **[Escribir instrucciones paso a paso](/style-guide/procedures-instructions/writing-step-by-step-instructions)**: las experiencias aplicadas e interactivas son una excelente manera de que los desarrolladores obtengan información sobre los productos y las tecnologías de Microsoft. Presentar procedimientos complejos o simples en un formato progresivo es natural y fácil de usar.
 
@@ -60,8 +59,7 @@ Para obtener más información sobre los hipervínculos y las rutas de acceso de
 > &emsp;&#x2714; Incluir la extensión de archivo Markdown.<br>
 >Por ejemplo: **parent directory/directory/path-to-article.md** —> [Creación de una aplicación para Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > Para hacer referencia a un artículo de biblioteca de Microsoft Docs que **no forma parte del** conjunto de documentos de la plataforma Teams:<br>
-> &emsp;&#x2714; Use una ruta de acceso relativa que comience con una barra diagonal.<br>
-> &emsp;&#x2714; No incluya la extensión de archivo. <br>
+> &emsp;&#x2714; Use una ruta de acceso relativa que comience con una barra diagonal.<br>&emsp;&#x2714; No incluya la extensión de archivo.<br>
 > Ejemplo:  **/docset/address-to-file-location** —> [Usar la API de Microsoft Graph para trabajar con Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Para hacer referencia a una página fuera de la biblioteca de Microsoft Docs, como GitHub, use la ruta de acceso completa `https` del archivo.<br>
 

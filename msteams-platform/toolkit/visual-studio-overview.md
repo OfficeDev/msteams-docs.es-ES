@@ -2,16 +2,16 @@
 title: Compilar aplicaciones con el kit de herramientas de Teams y Visual Studio
 description: Empiece a compilar grandes aplicaciones personalizadas directamente en Visual Studio con el Microsoft Teams Toolkit. Aprenda a configurar su aplicación en Visual Studio, a validarla y a publicarla desde Visual Studio y el portal para desarrolladores.
 keywords: kit de herramientas de Visual Studio para Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 751ea9b8a0f4592c5884c4d49450972cef7e6623
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111314"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756460"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Kit de herramientas de Teams para Visual Studio
 
@@ -31,7 +31,7 @@ La extensión del kit de herramientas de Teams para Visual Studio facilita la cr
 5. A la derecha, expanda la sección A **SP.NET y desarrollo web** y seleccione las **herramientas de desarrollo de Microsoft Teams** en la lista opcional de componentes.
 6. Seleccione **Instalar** o **Modificar** en el Instalador de Visual Studio para completar el proceso de instalación.
 
-![Seleccionando las herramientas de desarrollo de Microsoft Teams en el instalador de Visual Studio.) instalado.](images/teams-development-tools-vs-installer.png)
+   ![Seleccionando las herramientas de desarrollo de Microsoft Teams en el instalador de Visual Studio.) instalado.](images/teams-development-tools-vs-installer.png)
 
 ## <a name="get-started-quickly-with-a-new-project"></a>Inicie rápidamente un nuevo proyecto
 
@@ -49,7 +49,7 @@ La plantilla de proyecto de la aplicación de Microsoft Teams le permite especif
 1. En la ventana **Configurar su nuevo proyecto**, escriba o introduzca _HelloTeams_ en la casilla **Nombre del proyecto**. Después, seleccione **Crear**.
 1. En la ventana **Crear una nueva aplicación de Teams**, elija o inicie sesión en una cuenta de Microsoft 365 mediante el selector **Elegir una cuenta**. Después, seleccione **Crear**.
 
-![Creando un nuevo proyecto de la aplicación Microsoft Teams en Visual Studio.](images/teams-toolkit-vs-new-project.png)
+   ![Creando un nuevo proyecto de la aplicación Microsoft Teams en Visual Studio.](images/teams-toolkit-vs-new-project.png)
 
 Visual Studio abrirá su nuevo proyecto y el kit de herramientas de Teams configurará su nuevo proyecto en el portal para desarrolladores de Teams. El proyecto se agregará para la organización de Teams vinculada a la cuenta de Microsoft 365 que eligió en los pasos anteriores y creará un nuevo registro de Azure Active Directory. Esto es necesario para que la aplicación funcione en Teams.
 

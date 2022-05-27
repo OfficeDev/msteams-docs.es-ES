@@ -1,0 +1,85 @@
+---
+title: Inicio rápido de Live Share
+description: En este módulo, aprenderá a probar de forma rápida el ejemplo de Lanzamiento de dados
+ms.topic: concept
+ms.localizationpriority: high
+ms.author: stevenic
+ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668334"
+---
+---
+
+# <a name="quick-start-guide"></a>Guía de inicio rápido
+
+Comenzar con el SDK de Live Share mediante el ejemplo de Lanzamiento de dados. Esta introducción es una evolución del [inicio rápido del marco de Fluid](https://fluidframework.com/docs/start/quick-start/) y está diseñada para ejecutar de forma rápida un [ejemplo de Lanzamiento de dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) basado en el SDK de Live Share en el localhost del equipo.
+
+:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Ejemplo de Lanzamiento de dados":::
+
+> [!NOTE]
+> En esta guía se explica cómo usar Live Share localmente en un explorador. Para más información sobre el uso del SDK en una reunión de Teams, pruebe nuestro [tutorial de Agile Poker](../sbs-teams-live-share.yml).
+
+## <a name="set-up-your-development-environment"></a>Configurar el entorno de desarrollo
+
+Para empezar, instale lo siguiente:
+
+* [Node.js](https://nodejs.org/en/download): el SDK de Live Share admite Node.js LTS versiones 12.17 y posteriores.
+* [Versión más reciente de Visual Studio Code](https://code.visualstudio.com/).
+* [Git](https://git-scm.com/downloads)
+
+## <a name="build-and-run-the-dice-roller-app"></a>Compilar y ejecutar la aplicación Lanzamiento de dados
+
+1. Vaya a la aplicación de ejemplo [Lanzamiento de dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller).
+
+1. Clone el repositorio del [SDK de Live Share](https://github.com/microsoft/live-share-sdk) para probar la aplicación de ejemplo:
+
+    ```bash
+    $ git clone https://github.com/microsoft/live-share-sdk.git
+    ```
+
+1. Ejecute el siguiente comando para ir a la carpeta de la aplicación de ejemplo Lanzamiento de dados:
+
+   ```bash
+    $ cd live-share-sdk\samples\01.dice-roller
+   ```
+
+1. Ejecute el siguiente comando para instalar el paquete de dependencias:
+
+    ```bash
+    $ npm install
+    ```
+
+1. Ejecute el comando siguiente para iniciar el cliente y el servidor local:
+
+   ```bash
+   $ npm start
+   ```
+  
+     Una nueva pestaña del explorador abrirá una dirección URL `http://localhost:8080` y aparecerá el juego Lanzamiento de dados.
+
+1. Copie la dirección URL completa en el explorador, incluyendo el identificador, y pegue la dirección URL en una nueva ventana o en otro explorador.
+
+   Se abrirá un segundo cliente para la aplicación Lanzamiento de dados.
+
+1. Abra ambas ventanas y seleccione el botón **Revertir** en una ventana. El estado de los dados cambiará en ambos clientes.
+
+    :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Múltiples pestañas de Lanzamiento de dados":::
+  
+   **Enhorabuena**, ha aprendido a compilar y ejecutar una aplicación mediante el SDK de Live Share.
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Tutorial de Lanzamiento de dados](teams-live-share-tutorial.md)
+
+## <a name="see-also"></a>Vea también
+
+* [Repositorio de GitHub](https://github.com/microsoft/live-share-sdk)
+* [Documentos de referencia del SDK de Live Share](/javascript/api/@microsoft/live-share/)
+* [Documentos de referencia del SDK multimedia de Live Share](/javascript/api/@microsoft/live-share-media/)
+* [Capacidades de Live Share](teams-live-share-capabilities.md)
+* [Preguntas más frecuentes sobre Live Share](teams-live-share-faq.md)
+* [Aplicaciones de Teams en las reuniones](teams-apps-in-meetings.md)

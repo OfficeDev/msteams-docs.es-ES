@@ -3,14 +3,14 @@ title: Prueba y depuración de la aplicación
 description: Describe cómo probar bots en Microsoft Teams
 keywords: pruebas de bots de teams
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 7eae460614f33456748b2546e36c10924f49b25d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111475"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755927"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Probar y depurar la el bot de Microsoft Teams
 
@@ -55,11 +55,11 @@ También puede iniciar una conversación con el bot mediante su identificador. A
 2. Haga referencia directamente al identificador de la aplicación del bot desde Microsoft Teams:
    * En la página [ Panel de control del bot](https://dev.botframework.com/bots), en **Details**, copie el **Id. de aplicación de Microsoft** del bot.
   
-     ![Obtención del AppID para el bot](~/assets/images/bots_appid_botframework.png)
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="Panel del bot":::
   
    * Desde Microsoft Teams, en el panel **Chat**, seleccione el icono **Agregar chat**. Para **Para:**, pegue el identificador de aplicación de Microsoft del bot.
   
-     ![Carga del AppID para el bot](~/assets/images/bots_uploading.png)
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="Carga del AppID para el bot"border="true":::
 
      El identificador de la aplicación debe resolverse en el nombre del bot.
 
@@ -72,7 +72,7 @@ El bot recibirá el evento `conversationUpdate` igual que los bots agregados a u
 
 Tenga en cuenta que los usuarios pueden optar por impedir que el bot envíe mensajes de chat personales. Puede alternar esto haciendo clic con el botón derecho en el bot en el canal de chat y eligiendo **Bloquear conversación de bot**. Esto significa que los bots seguirán enviando mensajes, pero el usuario no los recibirá.
 
-![Bloqueo de un bot](~/assets/images/bots/botdisable.png)
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Bloqueo de un bot"border="true":::
 
 ## <a name="removing-a-bot-from-a-team"></a>Eliminación de un bot de un equipo
 

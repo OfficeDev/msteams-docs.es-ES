@@ -4,12 +4,12 @@ description: Estos son los requisitos previos para ampliar las aplicaciones de T
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6e4376d01a398400a7aaefbe1fee14f5547ff372
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654729"
+ms.locfileid: "65656183"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configure el entorno de desarrollo para ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -73,7 +73,7 @@ Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 
     :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Vaya a &quot;Acerca de Outlook&quot; desde la cuenta de Office para comprobar que está ejecutando una compilación del Canal beta.":::
 
-1. Compruebe que *Microsoft Edge WebView2 Runtime* esté instalado. En Windows, abra **Inicio** > **Aplicaciones y características** y busque "vista web":
+1. Compruebe que *Microsoft Edge WebView2 Runtime* esté instalado. En Windows, abra **Inicio** > **Aplicaciones y características** y busque **vista web**:
 
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Buscar &quot;vista web&quot; en &quot;Aplicaciones y características&quot; en la configuración de Windows":::
 
@@ -95,7 +95,7 @@ Opcionalmente, puede usar [Visual Studio Code](https://code.visualstudio.com/) p
 
 La extensión [Kit de herramientas de Teams para Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` o posterior) proporciona comandos que pueden ayudar a modificar el código de Teams existente para que sea compatible con Outlook y Office. Para obtener más información, vea [habilitar la pestaña Personal de Teams para Office y Outlook](extend-m365-teams-personal-tab.md).
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-step"></a>Paso siguiente
 
 Crear o actualizar una aplicación de Teams para que se ejecute en Microsoft 365:
 

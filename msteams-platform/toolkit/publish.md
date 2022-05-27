@@ -2,16 +2,15 @@
 title: Publicar aplicaciones de Teams con el kit de herramientas de Teams
 author: zyxiaoyuer
 description: publicar aplicaciones de Teams
-ms.author: yanjiang
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4b997f9bf9dd7c27b497691b34b2e1978ebe1857
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2c3fdd78d833baba6bbd5f21640765577f29430b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111328"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757454"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publicar aplicaciones de Teams con el kit de herramientas de Teams
 
@@ -86,7 +85,7 @@ Después de publicar la aplicación, el estado de publicación cambia a publicad
 
 Puede distribuir la aplicación directamente en la tienda dentro de Microsoft Teams y llegar a millones de usuarios en todo el mundo. Si la aplicación también aparece en la tienda, podría llegar instantáneamente a sus clientes potenciales. Las aplicaciones publicadas en la tienda de Teams también se enumeran automáticamente en Microsoft AppSource, que es el marketplace oficial para aplicaciones y soluciones de Microsoft 365.
 
-Para obtener más información, vea [publicar en la tienda de Microsoft Teams]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
+Para obtener más información, vea ([Publicar la aplicación en la tienda de Microsoft Teams](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)).
 
 ## <a name="see-also"></a>Consulte también
 

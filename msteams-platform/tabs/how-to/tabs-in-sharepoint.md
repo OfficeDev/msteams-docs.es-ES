@@ -3,15 +3,15 @@ title: Añadir una pestaña de Teams a SharePoint
 author: surbhigupta
 description: Obtenga información sobre cómo implementar la pestaña de Teams existente en SharePoint como un elemento web de SharePoint Framework mediante ejemplos de código.
 keywords: pestañas de teams de desarrollo de SharePoint Framework
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111692"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757314"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Añadir una pestaña de Teams a SharePoint
 
@@ -95,7 +95,7 @@ Descargue el [manifiesto de aplicación de ejemplo](https://github.com/Microsoft
 
     ![cargar una aplicación personalizada](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. El archivo que se va a cargar se encuentra en la carpeta **Descargas** Se denomina TalentMgmt-Azure.zip. En la imagen siguiente se muestra la pantalla correspondiente:
+1. El archivo que se va a cargar se encuentra en la carpeta **Descargas** Se llama TalentMgmt-Azure.zip. En la imagen siguiente se muestra la pantalla correspondiente:
 
     ![TalentMgmt en Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
@@ -118,7 +118,7 @@ En la imagen siguiente se muestra la pantalla correspondiente:
 
 1. Puede ver la experiencia de creación de páginas de SharePoint. Asigne un nombre a la página como **Pestaña Mis equipos**.
 
-1. Abra el cuadro de herramientas del elemento web seleccionando el botón `+` y seleccione la pestaña Teams, denominada **RR. HH. DE Contoso**. Los elementos web se ordenan alfabéticamente. Si es una lista larga, puede usar la barra de búsqueda para encontrarla. Esto crea un elemento web en el lienzo que contiene la pestaña Teams. En la imagen siguiente se muestra la vista de pestaña:
+1. Abra el cuadro de herramientas del elemento web seleccionando el botón `+` y seleccione la pestaña Teams, denominada **RR. HH. DE Contoso**. Los elementos web se ordenan alfabéticamente. Si es una lista larga, puede usar la barra de búsqueda para buscarla. Esto crea un elemento web en el lienzo que contiene la pestaña Teams. En la imagen siguiente se muestra la vista de pestaña:
 
    ![Vista de pestaña](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

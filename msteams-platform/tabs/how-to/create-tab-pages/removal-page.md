@@ -6,12 +6,12 @@ keywords: eliminar eliminaciones configurables de canal de grupo de pestañas de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672939"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757468"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -21,7 +21,7 @@ Puedes ampliar y mejorar la experiencia del usuario admitiendo opciones de elimi
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Habilitar la pestaña para que se vuelva a configurar después de la instalación
 
-El `manifest.json` define las características y funcionalidades de la pestaña. La instancia de pestaña `canUpdateConfiguration` propiedad toma un valor booleano que indica si un usuario puede modificar o volver a configurar la pestaña después de crearla. En la tabla siguiente se proporcionan los detalles de la propiedad:
+El `manifest.json` define las características y funcionalidades de la pestaña. La propiedad de instancia `canUpdateConfiguration` de pestaña toma un valor booleano que indica si un usuario puede modificar o volver a configurar la pestaña después de crearla. En la tabla siguiente se proporcionan los detalles de la propiedad:
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -47,7 +47,7 @@ La interfaz `RemoveEvent` describe un objeto con dos métodos:
 
 * Se requiere la función `notifySuccess()`. Indica que la eliminación del recurso subyacente se realizó correctamente y que se puede quitar su contenido.
 
-* La función `notifyFailure(string)` es opcional. Indica que se produjo un error en la eliminación del recurso subyacente y no se puede quitar su contenido. El parámetro de cadena opcional especifica un motivo del error. Si se proporciona, esta cadena se muestra al usuario; de lo contrario, se muestra un error genérico.
+* La función `notifyFailure(string)` es opcional. Indica que se produjo un error en la eliminación del recurso subyacente y que no se puede quitar su contenido. El parámetro de cadena opcional especifica un motivo del error. Si se proporciona, esta cadena se muestra al usuario; de lo contrario, se muestra un error genérico.
 
 #### <a name="use-the-getconfig-function"></a>Use la función `getConfig()`
 

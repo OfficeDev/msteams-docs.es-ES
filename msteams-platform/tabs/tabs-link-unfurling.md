@@ -5,20 +5,20 @@ description: Obtenga información sobre cómo desanclar un vínculo, abrir la Vi
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296962"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756740"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
-Vista extendida es un nuevo componente de interfaz de usuario (UI), que le permite representar el contenido que se abre en pantalla completa en Teams y se ancla como una pestaña.
+La vista de fase es un nuevo componente de interfaz de usuario. Permite representar el contenido que se abre en pantalla completa en Teams y se ancla como una pestaña.
 
 ## <a name="stage-view"></a>Vista de extendida
 
-Vista extendida es un componente de interfaz de usuario de pantalla completa que puede invocar para mostrar el contenido web. El servicio de desurling de vínculos ya existentes se actualiza para que se use para convertir las direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Cuando un usuario envía una dirección URL en un chat o canal, la dirección URL se desplega en una tarjeta adaptable. El usuario puede seleccionar **Ver** en la tarjeta y anclar el contenido como una pestaña directamente desde la Vista extendida.
+Vista extendida es un componente de interfaz de usuario de pantalla completa que puede invocar para mostrar el contenido web. El servicio de desplegamiento de vínculos existente se actualiza para que se use para convertir direcciones URL en una pestaña mediante una tarjeta adaptable y servicios de chat. Cuando un usuario envía una dirección URL en un chat o canal, la dirección URL se desplega en una tarjeta adaptable. El usuario puede seleccionar **Ver** en la tarjeta y anclar el contenido como una pestaña directamente desde la Vista extendida.
 
 ## <a name="advantage-of-stage-view"></a>Ventaja de vista extendida
 
@@ -101,7 +101,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
  
 ### <a name="examples"></a>Ejemplos
 
-Cuando un usuario escribe una dirección URL, se despliega en una tarjeta adaptable.
+Cuando un usuario escribe una dirección URL, se desplegó en una tarjeta adaptable.
 
 Estos son los ejemplos de vínculos profundos para invocar la Vista extendida:
 
@@ -109,7 +109,7 @@ Estos son los ejemplos de vínculos profundos para invocar la Vista extendida:
 
 Dirección URL sin codificar:
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 Dirección URL codificada:
 
@@ -119,7 +119,7 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 Dirección URL sin codificar:
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}
 
 Codificado
 

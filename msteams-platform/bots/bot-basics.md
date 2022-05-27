@@ -3,15 +3,15 @@ title: Controladores de actividad de bots
 author: surbhigupta
 description: Comprenda los controladores de actividad del bot en Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: actividad controlador marco bot tarjeta consentimiento canal evento
-ms.openlocfilehash: e975279276e8b8d4f3b934144b6cb1c3a7850424
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65112007"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757433"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
@@ -23,7 +23,7 @@ Para organizar la lógica conversacional del bot, se usa un controlador de activ
 
 El controlador de actividad de Teams se deriva del controlador de actividad de Microsoft Bot Framework. Enruta todas las actividades Teams antes de permitir que se controlen las actividades específicas que no sean de Teams.
 
-Cuando un bot de Microsoft Teams recibe una actividad, se la pasa a los controladores de actividad. Todas las actividades se enrutan a través de un controlador base denominado controlador de turnos. El controlador de turnos llama al controlador de actividad necesario para controlar el tipo de actividad que se recibió. El bot de Teams se deriva de la clase `TeamsActivityHandler`, que se deriva de la clase `ActivityHandler` de Bot Framework.
+Cuando un bot para Teams recibe una actividad, se enruta a los controladores de actividad. Todas las actividades se enrutan a través de un controlador base denominado controlador de turnos. El controlador de turnos llama al controlador de actividad necesario para controlar el tipo de actividad que se recibió. El bot de Teams se deriva de la clase `TeamsActivityHandler`, que se deriva de la clase `ActivityHandler` de Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -31,7 +31,7 @@ Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaj
 
 En la clase del controlador de actividad de Teams, hay dos controladores de actividad de Teams principales, `OnConversationUpdateActivityAsync` y `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`enruta todas las actividades de actualización de conversación y `OnInvokeActivityAsync` enruta todas las actividades de invocación de Teams.
 
-Para implementar la lógica para los controlares de actividades específicas de Teams, debe invalidar los métodos en el bot, como se muestra en la sección [Lógica del bot](#bot-logic). No hay ninguna implementación de base para estos controladores, por lo que debe agregar la lógica que desee en la invalidación.
+Para implementar la lógica para los controlares de actividades específicas de Teams, debe invalidar los métodos en el bot, como se muestra en la sección [Lógica del bot](#bot-logic). No hay ninguna implementación base para estos controladores, por lo que debe agregar la lógica que desee en la invalidación.
 
 Fragmentos de código para controladores de actividad de Teams:
 
@@ -101,7 +101,7 @@ Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaj
 
 En la clase del controlador de actividad de Teams, hay dos controladores de actividad de Teams principales, `dispatchConversationUpdateActivity` y `onInvokeActivity`. `dispatchConversationUpdateActivity`enruta todas las actividades de actualización de conversación y `onInvokeActivity` enruta todas las actividades de invocación de Teams.
 
-Para implementar la lógica para los controlares de actividades específicas de Teams, debe invalidar los métodos en el bot, como se muestra en la sección [Lógica del bot](#bot-logic). Defina la lógica del bot para estos controladores y asegúrese de llamar a `next()` al final. Al llamar a `next()`, asegúrese de que se ejecute el siguiente controlador.
+Para implementar la lógica para los controlares de actividades específicas de Teams, debe invalidar los métodos en el bot, como se muestra en la sección [Lógica del bot](#bot-logic). Defina la lógica del bot para estos controladores y asegúrese de llamar a `next()` al final. Al llamar a `next()`, se asegura de que se ejecuta el siguiente controlador.
 
 Fragmentos de código para controladores de actividad de Teams:
 
@@ -171,13 +171,13 @@ Los bots se crean con Bot Framework. Si los bots reciben una actividad de mensaj
 
 En la clase del controlador de actividad de Teams, hay dos controladores de actividad de Teams principales, `on_conversation_update_activity` y `on_invoke_activity`. `on_conversation_update_activity`enruta todas las actividades de actualización de conversación y `on_invoke_activity` enruta todas las actividades de invocación de Teams.
 
-Para implementar la lógica para los controlares de actividades específicas de Teams, debe invalidar los métodos en el bot, como se muestra en la sección [Lógica del bot](#bot-logic). No hay ninguna implementación de base para estos controladores, por lo que debe agregar la lógica que desee en la invalidación.
+Para implementar la lógica para los controlares de actividades específicas de Teams, debe invalidar los métodos en el bot, como se muestra en la sección [Lógica del bot](#bot-logic). No hay ninguna implementación base para estos controladores, por lo que debe agregar la lógica que desee en la invalidación.
 
 ---
 
 ## <a name="bot-logic"></a>Lógica del bot
 
-La lógica del bot procesa las actividades entrantes desde uno o varios de los canales del bot y, en respuesta, genera actividades salientes. Esto sigue siendo cierto en el caso de los bots derivados de la clase del controlador de actividad de Teams, que primero comprueba si hay actividades de Teams. Después de comprobar si hay actividades de Teams, pasa todas las demás actividades al controlador de actividad de Bot Framework.
+La lógica del bot procesa las actividades entrantes desde uno o varios de los canales del bot y, en respuesta, genera actividades salientes. Sigue siendo cierto en el caso de los bots derivados de la clase de controlador de actividad Teams, que comprueba primero las actividades de Teams. Después de comprobar si hay actividades de Teams, pasa todas las demás actividades al controlador de actividad de Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -219,7 +219,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-invoke-activities"></a>Actividades de invocación de Teams
 
-La lista de controladores de actividad de Teams a los que se llama desde el controlador de actividad `OnInvokeActivityAsync` de Teams incluye lo siguiente:
+La lista de controladores de actividad de Teams a los que se llama desde el `OnInvokeActivityAsync` controlador de actividad Teams incluye lo siguiente:
 
 | Tipos de invocación                    | Controlador                              | Descripción                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -227,12 +227,12 @@ La lista de controladores de actividad de Teams a los que se llama desde el cont
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | Este método se invoca cuando el usuario acepta una tarjeta de consentimiento de archivo. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | Este método se invoca cuando se recibe una actividad de tarjeta de consentimiento de archivo desde el conector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | Este método se invoca cuando el usuario rechaza una tarjeta de consentimiento de archivo. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Este método se invoca cuando se recibe una actividad de acción de tarjeta del conector de Office 365 desde el conector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Este método se invoca cuando se recibe una actividad de acción de la tarjeta del conector de Office 365 desde el conector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | Este método se invoca cuando se recibe una actividad de estado de comprobación de signIn desde el conector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se captura un módulo de tareas. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se envía un módulo de tareas. |
 
-Las actividades de invocación enumeradas en esta sección son para bots conversacionales en Teams. El SDK de Bot Framework también admite la invocación de actividades específicas de las extensiones de mensaje. Para obtener más información, consulte [¿Qué son las extensiones de mensaje](https://aka.ms/azure-bot-what-are-messaging-extensions)?
+Las actividades invoke enumeradas en esta sección son para bots conversacionales en Teams. El SDK de Bot Framework también admite la invocación de actividades específicas de las extensiones de mensaje. Para obtener más información, consulte [¿Qué son las extensiones de mensaje](https://aka.ms/azure-bot-what-are-messaging-extensions)?
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -271,7 +271,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-invoke-activities"></a>Actividades de invocación de Teams
 
-La lista de controladores de actividad de Teams a los que se llama desde el controlador de actividad `onInvokeActivity` de Teams incluye lo siguiente:
+La lista de controladores de actividad de Teams a los que se llama desde el `onInvokeActivity` controlador de actividad Teams incluye lo siguiente:
 
 | Tipos de invocación                    | Controlador                              | Descripción                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -279,7 +279,7 @@ La lista de controladores de actividad de Teams a los que se llama desde el cont
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | Este método se invoca cuando el usuario acepta una tarjeta de consentimiento de archivo. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | Este método se invoca cuando se recibe una actividad de tarjeta de consentimiento de archivo desde el conector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | Este método se invoca cuando el usuario rechaza una tarjeta de consentimiento de archivo. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Este método se invoca cuando se recibe una actividad de acción de tarjeta del conector de Office 365 desde el conector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Este método se invoca cuando se recibe una actividad de acción de la tarjeta del conector de Office 365 desde el conector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | Este método se invoca cuando se recibe una actividad de estado de comprobación de signIn desde el conector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se captura un módulo de tareas. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se envía un módulo de tareas. |
@@ -307,7 +307,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 | Actividad de evento recibida | `on_event_activity` | Este método llama a un controlador específico del tipo de evento. |
 | Actividad de evento de respuesta de token recibida | `on_token_response_event` | Este método se puede invalidar para controlar los eventos de respuesta de token. |
 | Actividad de evento que no es de respuesta de token recibida | `on_event` | Este método se puede invalidar para controlar otros tipos de eventos. |
-| Otros tipos de actividad recibidos | `on_unrecognized_activity_type` | Este método se puede invalidar para controlar cualquier tipo de actividad que no esté controlada. |
+| Otros tipos de actividad recibidos | `on_unrecognized_activity_type` | Este método se puede invalidar para controlar cualquier tipo de actividad que no se controle. |
 
 #### <a name="teams-specific-activity-handlers"></a>Controladores de actividades específicas de Teams
 
@@ -324,7 +324,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-invoke-activities"></a>Actividades de invocación de Teams
 
-La lista de controladores de actividad de Teams a los que se llama desde el controlador de actividad `on_invoke_activity` de Teams incluye lo siguiente:
+La lista de controladores de actividad de Teams a los que se llama desde el `on_invoke_activity` controlador de actividad Teams incluye lo siguiente:
 
 | Tipos de invocación                    | Controlador                              | Descripción                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -332,7 +332,7 @@ La lista de controladores de actividad de Teams a los que se llama desde el cont
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | Este método se invoca cuando el usuario acepta una tarjeta de consentimiento de archivo. |
 | fileConsent/invoke              | `on_teams_file_consent`            | Este método se invoca cuando se recibe una actividad de tarjeta de consentimiento de archivo desde el conector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | Este método se invoca cuando el usuario rechaza una tarjeta de consentimiento de archivo. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Este método se invoca cuando se recibe una actividad de acción de tarjeta del conector de Office 365 desde el conector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Este método se invoca cuando se recibe una actividad de acción de la tarjeta del conector de Office 365 desde el conector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | Este método se invoca cuando se recibe una actividad de estado de comprobación de signIn desde el conector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se captura un módulo de tareas. |
 | task/submit                     | `on_teams_task_module_submit`       | Este método se puede invalidar en una clase derivada para proporcionar lógica cuando se envía un módulo de tareas. |
@@ -343,7 +343,7 @@ Las actividades de invocación enumeradas en esta sección son para bots convers
 
 ---
 
-Ahora que se ha familiarizado con los controladores de actividad del bot, veamos cómo los bots se comportan de forma diferente en función de la conversación y de los mensajes que recibe o envía.
+Ahora que se ha familiarizado con los controladores de actividad del bot, veamos cómo se comportan los bots de forma diferente en función de la conversación y de los mensajes que recibe o envía.
 
 ## <a name="next-step"></a>Paso siguiente
 

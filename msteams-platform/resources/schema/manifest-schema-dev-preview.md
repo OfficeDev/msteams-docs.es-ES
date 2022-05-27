@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Versión preliminar del desarrollador del esquema de manifiesto de Teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668133"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757496"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Versión preliminar del esquema de manifiesto para desarrolladores públicos de Microsoft Teams
 
@@ -290,7 +290,7 @@ Versión del esquema de manifiesto que usa este manifiesto.
 
 **Necesario** &ndash; String
 
-Esta es la versión del complemento específico. Si un desarrollador actualiza algo en el manifiesto, la versión también debe incrementarse. De esta manera, cuando el nuevo manifiesto esté instalado, sobrescribirá el existente y el usuario obtendrá las nuevas características. Si este complemento se ha enviado a la tienda, el nuevo manifiesto tendrá que volver a enviarse y validarse. Después, los usuarios de este complemento obtendrán el nuevo manifiesto actualizado automáticamente en unas horas, después de su aprobación.
+Versión de la aplicación específica. Si actualiza algo en el manifiesto, la versión también debe incrementarse. De este modo, cuando se instale el nuevo manifiesto, se sobrescribirá el anterior y el usuario podrá disfrutar de las funciones nuevas. Si esta aplicación se envió a la tienda, el nuevo manifiesto tendrá que volver a enviarse y volver a validarse. A continuación, los usuarios de esta aplicación obtendrán el nuevo manifiesto actualizado automáticamente en unas horas, una vez aprobado.
 
 Si cambian los permisos solicitados del complemento, los usuarios deberán actualizar y volver a autorizar el complemento.
 
@@ -300,7 +300,7 @@ La versión de esta cadena debe seguir el estándar de [SemVer](http://semver.or
 
 **Necesario** &ndash; Identificador de aplicación de Microsoft
 
-El id. es un identificador único generado por Microsoft para la aplicación. Si ha registrado un bot a través de la Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft, ya debe tener un identificador y escribirlo aquí. De lo contrario, debe generar un nuevo identificador en el Portal de registro de aplicaciones de Microsoft ([Mis aplicaciones](https://apps.dev.microsoft.com)), escribirlo aquí y reutilizarlo cuando [agregue un bot](~/bots/how-to/create-a-bot-for-teams.md).
+El id. es un identificador único generado por Microsoft para la aplicación. Si ha registrado un bot a través de la Microsoft Bot Framework o la aplicación web de la pestaña ya inicia sesión con Microsoft, ya debería tener un identificador y debe escribirlo aquí. De lo contrario, debe generar un nuevo identificador en el Portal de registro de aplicaciones de Microsoft ([Mis aplicaciones](https://apps.dev.microsoft.com)), escribirlo aquí y reutilizarlo cuando [agregue un bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -326,7 +326,7 @@ Especifica información sobre su empresa. Para las aplicaciones enviadas a AppSo
 
 Opcional:
 
-Permite la especificación de un idioma predeterminado y proporciona punteros a más archivos de idioma. Consulte [localización](~/concepts/build-and-test/apps-localization.md).
+Permite la especificación de un idioma predeterminado y punteros a archivos de idioma adicionales. Consulte [localización](~/concepts/build-and-test/apps-localization.md).
 
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
@@ -339,7 +339,7 @@ Una matriz de objetos que especifican más traducciones de idiomas.
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
 |`languageTag`|4 caracteres|✔|Etiqueta de idioma de las cadenas del archivo proporcionado.|
-|`file`|4 caracteres|✔|La ruta de acceso al archivo relativa al archivo .json que contiene las cadenas traducidas.|
+|`file`|4 caracteres|✔|Ruta de acceso al archivo relativa al archivo .json que contiene las cadenas traducidas.|
 
 ## <a name="name"></a>name
 
@@ -380,7 +380,7 @@ Iconos usados en la aplicación Teams. Los archivos de icono deben incluirse com
 
 **Necesario** &ndash; String
 
-Es el color que se usará y que servirá como fondo para los iconos de esquema.
+Color que se usará con y como fondo para los iconos de esquema.
 
 El valor debe ser un código de color HTML válido que empiece por "#", como por ejemplo `#4464ee`.
 
@@ -512,7 +512,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 
 Opcional:
 
-Matriz de `string`, que especifica qué permisos solicita la aplicación, lo que permite a los usuarios finales saber cómo funciona la extensión. Las siguientes opciones no son exclusivas:
+Matriz de `string`, que especifica qué permisos solicita la aplicación, lo que permite a los usuarios finales saber cómo funcionará la extensión. Las siguientes opciones no son exclusivas:
 
 * `identity`&emsp;Requiere la información de identidad del usuario.
 * `messageTeamMembers`&emsp;Requiere permiso para enviar mensajes directos a los miembros del equipo.
@@ -537,7 +537,7 @@ Proporciona las características nativas en el dispositivo de un usuario al que 
 
 Lista de dominios válidos desde los que la aplicación espera cargar cualquier contenido. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. El dominio válido coincide exactamente con un segmento del dominio; si necesita que coincida con `a.b.example.com`, use `*.*.example.com`. Si la interfaz de usuario de contenido o configuración de pestaña necesita navegar a cualquier otro dominio además del que se usa para la configuración de pestañas, ese dominio debe especificarse aquí.
 
-**No** es necesario que incluya los dominios de proveedores de identidades que desea admitir en la aplicación. Por ejemplo, para autenticar con un id. de Google, es necesario redirigirse a accounts.google.com; sin embargo, no debe incluir accounts.google.com en `validDomains[]`.
+**No** es necesario que incluya los dominios de proveedores de identidades que desea admitir en la aplicación. Por ejemplo, para autenticarse con un identificador de Google, es necesario redirigir a accounts.google.com, pero no debe incluir accounts.google.com en `validDomains[]`.
 
 > [!IMPORTANT]
 > No agregue dominios que estén fuera de su control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido pero `*.onmicrosoft.com` no es válido.
@@ -548,7 +548,7 @@ El objeto es una matriz con todos los elementos del tipo `string`.
 
 Opcional:
 
-Proporcione su identificador de aplicación de Azure Active Directory (AAD) e información Microsoft Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación.
+Especifique el identificador de aplicación de Microsoft Azure Active Directory (Azure AD) y Graph información para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de Azure AD.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -560,11 +560,11 @@ Proporcione su identificador de aplicación de Azure Active Directory (AAD) e in
 
 Objeto **opcional**
 
-Especifique la configuración del conector de Graph de la aplicación. Si está presente, también debe especificarse [webApplicationInfo.id](#webapplicationinfo) .
+Especifique la configuración del conector de Graph de la aplicación. Si está presente, también se debe especificar [webApplicationInfo.id](#webapplicationinfo).
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 caracteres|✔|Dirección URL a la que se deben enviar las notificaciones de Graph-connector para la aplicación.|
+|`notificationUrl`|string|2048 caracteres|✔|Dirección URL a la que se deben enviar las notificaciones del conector de Graph para la aplicación.|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -663,7 +663,7 @@ Puede definir cualquiera de las siguientes propiedades:
 * `longDescription`: descripción detallada de la aplicación.
 * `smallImageUrl`: icono de esquema de la aplicación.
 * `largeImageUrl`: icono de color de la aplicación.
-* `accentColor`: color que se usará y que servirá como fondo para los iconos de esquema.
+* `accentColor`: color que se va a usar con y como fondo para los iconos de esquema.
 * `developerUrl`: la dirección URL HTTPS del sitio web del desarrollador.
 * `privacyUrl`: la dirección URL HTTPS de la directiva de privacidad del desarrollador.
 * `termsOfUseUrl`: la dirección URL HTTPS de los términos de uso del desarrollador.
@@ -728,7 +728,7 @@ Especifique la definición de la extensión de reunión. Para obtener más infor
 
 ## <a name="authorization"></a>Autorización
 
-**Opcional** — Objeto
+Objeto **opcional**
 
 Especifique y consolide la información relacionada con la autorización de la aplicación.
 

@@ -2,15 +2,15 @@
 title: Notificaciones de llamadas entrantes
 description: Obtenga información técnica detallada sobre cómo controlar las notificaciones de las llamadas entrantes, y cómo redirigir y autenticar llamadas mediante ejemplos de código
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: llamando, llamadas, notificaciones, devolución de llamadas, región, afinidad
 ms.date: 04/02/2019
-ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111552"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757146"
 ---
 # <a name="incoming-call-notifications"></a>Notificaciones de llamadas entrantes
 
@@ -18,7 +18,7 @@ Al [registrar un bot de llamadas y reuniones para Microsoft Teams](./registerin
 
 ## <a name="protocol-determination"></a>Determinación del protocolo
 
-La notificación entrante se proporciona en un formato heredado por compatibilidad con el [protocolo de Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) anterior. Para convertir la llamada al protocolo Microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporcionar la siguiente respuesta:
+La notificación entrante se proporciona en un formato heredado por compatibilidad con el [protocolo de Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) anterior. Para convertir la llamada al protocolo microsoft Graph, el bot debe determinar si la notificación está en un formato heredado y proporciona la siguiente respuesta:
 
 ```http
 HTTP/1.1 204 No Content
@@ -87,7 +87,7 @@ La configuración de OpenID publicada en <https://api.aps.skype.com/v1/.well-kno
 * `tid` es el identificador de inquilino de Contoso.com.
 * `iss` es el emisor del token, `https://api.botframework.com`.
 
-Para el control de código, el webhook debe validar el token, asegurarse de que no ha expirado y comprobar si lo ha firmado la configuración de OpenID publicada. También debe comprobar si "aud" coincide con el identificador de la aplicación antes de aceptar la solicitud de devolución de llamada.
+Para el control de código, el webhook debe validar el token, asegurarse de que no ha expirado y comprobar si la configuración de OpenID publicada lo ha firmado. También debe comprobar si "aud" coincide con el identificador de la aplicación antes de aceptar la solicitud de devolución de llamada.
 
 Para obtener más información, vea [Validar las solicitudes entrantes](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 

@@ -3,14 +3,14 @@ title: Canal y conversaciones de chat de grupo con un bot
 author: surbhigupta
 description: Cómo enviar, recibir y controlar mensajes de un bot en un chat de canal o de grupo. Obtenga información sobre las directrices de diseño, la creación de subprocesos de conversación, el uso de @mentions mediante ejemplos de código
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2262e52e15bbd5598a0e0dad89bb38a6f0078eac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111559"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757181"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canal y conversaciones de chat de grupo con un bot
 
@@ -18,7 +18,7 @@ ms.locfileid: "65111559"
 
 Para instalar el bot de Microsoft Teams en un chat de grupo o equipo, agregue el ámbito `teams` o `groupchat` al bot. Esto permite que todos los miembros de la conversación interactúen con el bot. Una vez instalado el bot, tiene acceso a metadatos sobre la conversación, como la lista de miembros de la conversación. Además, cuando se instala en un equipo, el bot tiene acceso a los detalles sobre ese equipo y a la lista completa de canales.
 
-Los bots de un grupo o canal solo reciben mensajes cuando se menciona @botname. No reciben ningún otro mensaje enviado a la conversación. El bot debe ser @mencionado directamente. El bot no recibirá un mensaje cuando se menciona el equipo o el canal, o cuando alguien responde a un mensaje de su bot sin @mencionarlo.
+Los bots de un grupo o canal solo reciben mensajes cuando se mencionan @botname. No reciben ningún otro mensaje enviado a la conversación. El bot debe ser @mencionado directamente. El bot no recibe un mensaje cuando se menciona el equipo o el canal, o cuando alguien responde a un mensaje del bot sin @mentioning.
 
 > [!NOTE]
 > Esta característica solo está disponible actualmente en la [versión preliminar para desarrolladores públicos](../../../resources/dev-preview/developer-preview-intro.md).
@@ -35,7 +35,7 @@ Ahora, puede crear nuevos subprocesos de conversación y administrar fácilmente
 
 ## <a name="create-new-conversation-threads"></a>Creación de nuevos subprocesos de conversación
 
-Cuando el bot está instalado en un equipo, debe crear un nuevo subproceso de conversación en lugar de responder a uno existente. A veces resulta difícil diferenciar entre dos conversaciones. Si la conversación está encadenada, es más fácil organizar y administrar diferentes conversaciones en canales. Se trata de una forma de [mensajería proactiva](~/bots/how-to/conversations/send-proactive-messages.md).
+Cuando el bot está instalado en un equipo, debe crear un nuevo subproceso de conversación en lugar de responder a uno existente. A veces es difícil diferenciar entre dos conversaciones. Si la conversación está encadenada, es más fácil organizar y administrar diferentes conversaciones en canales. Se trata de una forma de [mensajería proactiva](~/bots/how-to/conversations/send-proactive-messages.md).
 
 A continuación, puede recuperar las menciones mediante el objeto `entities` y agregar menciones a los mensajes mediante el objeto `Mention`.
 
@@ -47,7 +47,7 @@ Puede que encuentre necesario quitar las @menciones del texto del mensaje que re
 
 ### <a name="retrieve-mentions"></a>Recuperar menciones
 
-Las menciones se devuelven en el objeto `entities` de entidades en carga y contienen tanto el id. único del usuario como, en la mayoría de los casos, el nombre del usuario mencionado. El texto del mensaje también incluye la mención, como `<at>@John Smith<at>`. Sin embargo, no necesita basarse en el texto del mensaje para recuperar información sobre el usuario. Es posible que la persona que envía el mensaje lo altere. Por lo tanto, use el objeto `entities`.
+Las menciones se devuelven en el objeto `entities` de entidades en carga y contienen tanto el id. único del usuario como, en la mayoría de los casos, el nombre del usuario mencionado. El texto del mensaje también incluye la mención, como `<at>@John Smith<at>`. Sin embargo, no confíe en el texto del mensaje para recuperar información sobre el usuario. Es posible que la persona que envía el mensaje lo altere. Por lo tanto, use el objeto `entities`.
 
 Puede recuperar todas las menciones del mensaje llamando a la función `GetMentions` en el SDK de Bot Builder, que devuelve una matriz de objetos `Mention`.
 

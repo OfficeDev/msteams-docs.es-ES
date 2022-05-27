@@ -5,12 +5,12 @@ description: Incorporación de experiencias emergentes modales para recopilar o 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073557"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756600"
 ---
 # <a name="task-modules"></a>Módulos de tareas
 
@@ -27,7 +27,7 @@ Los módulos de tareas se basan en Microsoft Teams pestañas. Básicamente son u
 Los módulos de tarea pueden invocarse de tres maneras:
 
 * Pestañas personales o de canal: con el SDK de Microsoft Teams Pestañas, puede invocar módulos de tareas desde botones, vínculos o menús de la pestaña. Para obtener más información, consulte [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
-* Bots: usar botones en [las tarjetas enviadas](~/task-modules-and-cards/cards/cards-reference.md) desde el bot. Esto resulta útil cuando no se requiere que todos los usuarios de un canal vean lo que está haciendo con un bot. Por ejemplo, al hacer que los usuarios respondan a un sondeo en un canal, no resulta útil ver un registro de ese sondeo que se está creando. Para obtener más información, consulte [Uso de módulos de tareas de Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+* Bots: usar botones en [las tarjetas enviadas](~/task-modules-and-cards/cards/cards-reference.md) desde el bot. Esto resulta útil cuando no se requiere que todos los usuarios de un canal vean lo que está haciendo con un bot. Por ejemplo, al hacer que los usuarios respondan a un sondeo en un canal, no resulta útil ver un registro de ese sondeo que se va a crear. Para obtener más información, consulte [Uso de módulos de tareas de Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 * Fuera de Teams desde un vínculo profundo: también puede crear direcciones URL para invocar un módulo de tareas desde cualquier lugar. Para obtener más información, vea [Sintaxis de vínculo profundo del módulo de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
 ## <a name="components-of-a-task-module"></a>Componentes de un módulo de tareas
@@ -46,8 +46,8 @@ Un módulo de tareas incluye lo siguiente, como se muestra en la imagen anterior
     > [!NOTE]
     > Actualmente no es posible detectar el `err` evento cuando se invoca un módulo de tareas desde un bot.
 
-5. El rectángulo azul es donde aparece la página web si está cargando su propia página web mediante la `url` propiedad del [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Para obtener más información, vea [Dimensionamiento del módulo de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
-6. Si muestra una tarjeta adaptable con la `card` propiedad del [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) , el relleno se agrega automáticamente. Para obtener más información, consulte [módulo de tareas CSS para módulos de tareas HTML o JavaScript](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
+5. El rectángulo azul es donde aparece la página web si carga su propia página web mediante la `url` propiedad del [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Para obtener más información, consulte el [ajuste de tamaño del módulo de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
+6. Si va a mostrar una tarjeta adaptable mediante la `card` propiedad del [objeto TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) , el relleno se agrega automáticamente. Para obtener más información, consulte [módulo de tareas CSS para módulos de tareas HTML o JavaScript](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
 7. Los botones de tarjeta adaptable se representan después de seleccionar **Registrarse**. Al usar su propia página, cree sus propios botones.
 
 ## <a name="next-step"></a>Paso siguiente
@@ -55,6 +55,6 @@ Un módulo de tareas incluye lo siguiente, como se muestra en la imagen anterior
 > [!div class="nextstepaction"]
 > [Invocar y descartar módulos de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 [Tarjetas](~/task-modules-and-cards/what-are-cards.md)

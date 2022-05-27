@@ -5,12 +5,12 @@ description: Describe cómo responder a la acción de envío del módulo de tare
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297201"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757566"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -21,14 +21,14 @@ Una vez que un usuario envía el módulo de tareas, el servicio web recibe un me
 
 Tiene las siguientes opciones:
 
-* Sin respuesta: use la acción enviar para desencadenar un proceso en un sistema externo y no proporcionar comentarios al usuario. Resulta útil para los procesos de larga duración y para proporcionar comentarios de forma alternativa. Por ejemplo, puede enviar comentarios con un [mensaje proactivo](~/bots/how-to/conversations/send-proactive-messages.md).
+* Sin respuesta: use la acción enviar para desencadenar un proceso en un sistema externo y no proporcionar comentarios al usuario. Es útil para procesos de larga duración y para proporcionar comentarios de forma alternativa. Por ejemplo, puede enviar comentarios con un [mensaje proactivo](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Otro módulo de tarea](#respond-with-another-task-module): puede responder con otro módulo de tarea como parte de una interacción de varios pasos.
 * [Responder con tarjetas](#respond-with-a-card-inserted-into-the-compose-message-area): responder con una tarjeta con la que el usuario pueda interactuar o que el usuario pueda insertar en un mensaje.
 * [Tarjeta adaptable del bot](#bot-response-with-adaptive-card): inserte una tarjeta adaptable directamente en la conversación.
 * [Solicite al usuario que se autentique](~/messaging-extensions/how-to/add-authentication.md).
 * [Solicite al usuario que proporcione una configuración adicional](~/get-started/first-message-extension.md).
 
-Para la autenticación o configuración, una vez que el usuario completa el proceso, la invocación original se resiente para el servicio web. En la tabla siguiente se muestra qué tipos de respuestas están disponibles en función de la ubicación `commandContext` de invocación de la extensión de mensaje:
+Para la autenticación o configuración, una vez que el usuario completa el proceso, la invocación original se resiente para el servicio web. En la tabla siguiente se muestra qué tipos de respuestas están disponibles, en función de la ubicación `commandContext` de invocación de la extensión de mensaje:
 
 |Tipo de respuesta | Redacción | Barra de comandos | Message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -215,7 +215,7 @@ Para configurar el sondeo:
 1. El usuario selecciona la extensión de mensaje para invocar el módulo de tareas.
 1. El usuario configura el sondeo con el módulo de tareas.
 1. Después de enviar el módulo de tareas, la aplicación usa la información proporcionada para compilar el sondeo como una tarjeta adaptable y la envía como respuesta `botMessagePreview` al cliente.
-1. A continuación, el usuario puede obtener una vista previa del mensaje de tarjeta adaptable antes de que el bot lo inserte en el canal. Si la aplicación no es miembro del canal, seleccione `Send` para agregarla.
+1. A continuación, el usuario puede obtener una vista previa del mensaje de tarjeta adaptable antes de que el bot lo inserte en el canal. Si la aplicación no es miembro del canal, seleccione `Send` esta opción para agregarla.
 
     > [!NOTE]
     >
@@ -226,7 +226,7 @@ Para configurar el sondeo:
 
 ## <a name="respond-to-initial-submit-action"></a>Respuesta a la acción de envío inicial
 
-El módulo de tareas debe responder al mensaje inicial `composeExtension/submitAction` con una vista previa de la tarjeta que el bot envía al canal. El usuario puede comprobar la tarjeta antes del envío e intentar instalar el bot en la conversación si el bot aún no está instalado.
+El módulo de tareas debe responder al mensaje inicial `composeExtension/submitAction` con una vista previa de la tarjeta que el bot envía al canal. El usuario puede comprobar la tarjeta antes de enviar e intentar instalar el bot en la conversación si el bot ya está instalado.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

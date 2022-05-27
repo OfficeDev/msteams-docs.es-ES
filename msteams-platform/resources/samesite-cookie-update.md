@@ -4,18 +4,18 @@ author: laujan
 description: Obtenga información sobre los tipos de cookies, incluidas las cookies samesite, sus atributos, sus implicaciones en las pestañas de Teams, los módulos de tareas y las extensiones de mensaje, y su autenticación en Teams.
 keywords: cookie attributos samesite
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 7bf6d5a986a2111ba624534aa13b0aaa2866120c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110340"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756992"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite
 
-Las cookies son cadenas de texto enviadas desde sitios web y almacenadas en un equipo por el explorador web. Se usan para la autenticación y personalización. Por ejemplo, las cookies se usan para recuperar información con estado, conservar la configuración del usuario, registrar la actividad de exploración y mostrar anuncios relevantes. Las cookies siempre están vinculadas a un dominio determinado y las instalan varias partes.
+Las cookies son cadenas de texto enviadas desde sitios web y almacenadas en un equipo por el explorador web. Se usan para la autenticación y la personalización. Por ejemplo, las cookies se usan para recuperar información con estado, conservar la configuración del usuario, registrar la actividad de exploración y mostrar anuncios relevantes. Las cookies siempre están vinculadas a un dominio determinado y las instalan varias partes.
 
 ## <a name="types-of-cookies"></a>Tipos de cookies
 
@@ -23,9 +23,9 @@ Los tipos de cookie y sus ámbitos correspondientes son los siguientes:
 
 |Cookie|Ámbito|
 | ------ | ------ |
-|Cookie propia|Los sitios web que visita un usuario crean una cookie de origen. Se usa para guardar datos, como son artículos del carro de la compra, credenciales de inicio de sesión. Por ejemplo, cookies de autenticación y otros análisis.|
+|Cookie propia|Los sitios web que visita un usuario crean una cookie de origen. Se usa para guardar datos, como artículos de carro de la compra, credenciales de inicio de sesión. Por ejemplo, cookies de autenticación y otros análisis.|
 |Cookie de segundas partes|Técnicamente, una cookie de terceros es la misma que una cookie de origen. La diferencia es que los datos se comparten con un tercero a través de un acuerdo de asociación de datos. Por ejemplo, [análisis e informes de Microsoft Teams](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
-|Cookie de terceros|Una cookie de terceros la instala un dominio distinto del que el usuario visitó explícitamente y se usa principalmente para realizar el seguimiento. Por ejemplo, botones **Me gusta**, servicios de anuncios y chats en directo.|
+|Cookie de terceros|Una cookie de terceros la instala un dominio distinto del que el usuario visitó explícitamente y se usa para realizar el seguimiento. Por ejemplo, botones **Me gusta**, servicios de anuncios y chats en directo.|
 
 ## <a name="cookies-and-http-requests"></a>Cookies y solicitudes HTTP
 
@@ -47,7 +47,7 @@ Los atributos de cookie SameSite son los siguientes:
 | -------- | ----------- | --------|--------|
 | **Laxo**  | Las cookies solo se envían automáticamente en un contexto de **tercera parte** y con solicitudes HTTP GET. Las cookies samesite se retienen en las subconsultas entre sitios, como son las llamadas para cargar imágenes o iframes. Se envían cuando un usuario navega a la dirección URL desde un sitio externo, por ejemplo, siguiendo un vínculo.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Estricto** |El explorador solo envía cookies para solicitudes de contexto propias. Se trata de solicitudes procedentes del sitio que establecen la cookie. Si la solicitud se originó desde una dirección URL diferente a la de la ubicación actual, no se envía ninguna de las cookies etiquetadas con el atributo `Strict`.| Opcional |`Set-Cookie: key=value; SameSite=Strict`|
-| **Ninguna** | Las cookies se envían tanto en el contexto de origen como en las solicitudes entre orígenes; sin embargo, el valor debe establecerse explícitamente en **`None`** y todas las solicitudes del explorador **deben seguir el protocolo HTTPS** e incluir el atributo **`Secure`** que requiere una conexión cifrada. Las cookies que no cumplen ese requisito **se rechazan**. <br/>**Se requieren ambos atributos juntos**. Si **`None`** se especifica sin **`Secure`** o si no se usa el protocolo HTTPS, se rechazan las cookies de terceros.| Opcional, pero, si se establece, se requiere el protocolo HTTPS. |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **Ninguna** | Las cookies se envían tanto en el contexto de origen como en las solicitudes entre orígenes; sin embargo, el valor debe establecerse explícitamente en **`None`** y todas las solicitudes del explorador **deben seguir el protocolo HTTPS** e incluir el **`Secure`** atributo , que requiere una conexión cifrada. Se **rechazan** las cookies que no cumplen ese requisito. <br/>**Se requieren ambos atributos juntos**. Si  **`None`** se especifica sin **`Secure`**  o si no se usa el protocolo HTTPS, se rechazan las cookies de terceros.| Opcional, pero, si se establece, se requiere el protocolo HTTPS. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Implicaciones y ajustes de Teams
 
@@ -74,11 +74,11 @@ Debe usar el flujo de autenticación basado en web para lo siguiente:
 * Página de configuración, módulo de tareas y extensión de mensaje.
 * Bot conversacional con un módulo de tareas.
 
-Según las restricciones de SameSite actualizadas, un explorador no agrega una cookie a un sitio web ya autenticado si el vínculo deriva de un sitio externo. Debe cerciorarse de que las cookies de autenticación están marcadas para el uso entre sitios `SameSite=None; Secure` o cerciorarse de que hay una reserva en su lugar.
+Según las restricciones actualizadas de SameSite, un explorador no agrega una cookie a un sitio web ya autenticado si el vínculo deriva de un sitio externo. Debe cerciorarse de que las cookies de autenticación están marcadas para el uso entre sitios `SameSite=None; Secure` o cerciorarse de que hay una reserva en su lugar.
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView es un componente del sistema Chrome que permite que las aplicaciones Android muestren el contenido web. Aunque las nuevas restricciones son predeterminadas, a partir de Chrome 80, no se aplican inmediatamente en webViews. Se aplicarán en el futuro. Para prepararse, Android permite que las aplicaciones nativas establezcan cookies directamente a través de la API [CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
+Android WebView es un componente del sistema Chrome que permite que las aplicaciones Android muestren el contenido web. Aunque las nuevas restricciones son predeterminadas, a partir de Chrome 80, no se aplican inmediatamente en WebViews. Se aplicarán en el futuro. Para prepararse, Android permite que las aplicaciones nativas establezcan cookies directamente a través de la API [CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
 >

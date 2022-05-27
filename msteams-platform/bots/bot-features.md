@@ -5,12 +5,12 @@ description: Información general sobre las herramientas y los SDK para crear bo
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 05cb93fef74d22931591b3bb077afbb785d168ad
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 6e4384bc4594dd3751afca781bd2121ad8aeb210
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602243"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756866"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -51,14 +51,14 @@ El [Bot Framework](https://dev.botframework.com/) es un SDK enriquecido que se u
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots con webhooks y conectores
 
-Los webhooks y los conectores conectan el bot a los servicios web. Con webhooks y conectores, puede crear un bot para la interacción básica, como la creación de un flujo de trabajo u otros comandos simples. Solo están disponibles en el equipo donde los crea y están diseñados para procesos simples específicos del flujo de trabajo de su empresa. Para obtener más información, consulte [qué son los webhooks y los conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Los webhooks y los conectores conectan el bot a los servicios web. Con webhooks y conectores, puede crear un bot para la interacción básica, como la creación de un flujo de trabajo u otros comandos simples. Solo están disponibles en el equipo donde los crea y están diseñados para procesos sencillos específicos del flujo de trabajo de su empresa. Para obtener más información, consulte [qué son los webhooks y los conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="azure-bot-service"></a>Servicio de bot de Azure
 
 El servicio bot de Azure, junto con Bot Framework, proporciona herramientas para compilar, probar, implementar y administrar bots inteligentes, todo en un solo lugar. También puede crear el bot en Azure Bot Service.
 
 > [!IMPORTANT]
-> Las aplicaciones de bot dentro de Microsoft Teams están disponibles en GCC-High a través de [Azure Bot Service](/azure/bot-service/channel-connect-teams).
+> Las aplicaciones de bots en Microsoft Teams están disponibles en GCC-High a través de [Azure Bot Service](/azure/bot-service/channel-connect-teams).
 
 > [!NOTE]
 > * Los bots de GCCH solo admiten hasta la versión de manifiesto v1.10.
@@ -164,7 +164,7 @@ Los bots en Microsoft Teams pueden formar parte de una conversación uno a uno, 
 
 ### <a name="in-a-channel"></a>En un canal
 
-Los canales contienen conversaciones encadenadas entre varias personas, incluso hasta dos mil. Esto proporciona un alcance potencialmente masivo al bot, pero las interacciones individuales deben ser concretas. Las interacciones multiturno tradicionales no funcionan. En su lugar, intente usar tarjetas interactivas o módulos de tareas, o mover la conversación a una conversación individual si necesita recopilar una gran cantidad de información. El bot solo tiene acceso a los mensajes en los que se `@mentioned`. Puede recuperar mensajes adicionales de la conversación con Microsoft Graph y los permisos a nivel de organización.
+Los canales contienen conversaciones encadenadas entre varias personas, incluso hasta dos mil. Esto proporciona un alcance potencialmente masivo al bot, pero las interacciones individuales deben ser concretas. Las interacciones tradicionales de varios turnos no funcionan. En su lugar, intente usar tarjetas interactivas o módulos de tareas, o mover la conversación a una conversación individual si necesita recopilar una gran cantidad de información. El bot solo tiene acceso a los mensajes en los que es `@mentioned`. Puede recuperar mensajes adicionales de la conversación con Microsoft Graph y los permisos a nivel de organización.
 
 Los bots funcionan mejor en un canal en los siguientes casos:
 
@@ -175,7 +175,7 @@ Los bots funcionan mejor en un canal en los siguientes casos:
 
 ### <a name="in-a-group-chat"></a>En un chat de grupo
 
-Los chats de grupo son conversaciones entre tres o más personas que no se desarrollan en hilos. Tienden a tener menos miembros que un canal y son más transitorios. De forma similar a un canal, el bot solo tendrá acceso a los mensajes en los que se `@mentioned` directamente.
+Los chats de grupo son conversaciones entre tres o más personas que no se desarrollan en hilos. Tienden a tener menos miembros que un canal y son más transitorios. De forma similar a un canal, el bot solo tiene acceso a los mensajes donde está `@mentioned` directamente.
 
 En los casos en los que los bots funcionan mejor en un canal también funcionan mejor en un chat de grupo.
 
@@ -190,7 +190,7 @@ Esta es la manera tradicional en la que un bot de conversación interactúa con 
 
 ## <a name="disadvantages-of-bots"></a>Desventajas de los bots
 
-Un amplio diálogo entre el bot y el usuario es una manera lenta y compleja de completar una tarea. Un bot que admite comandos excesivos, especialmente una amplia gama de comandos, no es correcto ni los usuarios los ven como algo positivo.
+Un amplio diálogo entre el bot y el usuario es una manera lenta y compleja de completar una tarea. Un bot que admite comandos excesivos, especialmente una amplia gama de comandos, no es correcto o los usuarios no los ven de forma positiva.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Tener experiencias de varios turnos en el chat
 
@@ -214,7 +214,7 @@ Dado que solo hay seis comandos visibles en el menú del bot actual, es poco pro
 
 ### <a name="maintain-a-large-knowledge-base"></a>Mantener una amplia knowledge base
 
-Una de las desventajas de los bots es que es difícil mantener una amplia knowledge base de recuperación con respuestas no clasificadas. Los bots son más adecuados para interacciones breves y rápidas y no para examinar listas largas en busca de una respuesta.
+Una de las desventajas de los bots es que es difícil mantener una gran knowledge base de recuperación con respuestas no clasificadas. Los bots son más adecuados para interacciones breves y rápidas y no para examinar listas largas en busca de una respuesta.
 
 ## <a name="code-snippets"></a>Fragmentos de código
 

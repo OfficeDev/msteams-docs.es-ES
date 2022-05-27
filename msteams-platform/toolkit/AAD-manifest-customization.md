@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656778"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755940"
 ---
 # <a name="azure-ad-manifest"></a>Manifiesto de Azure AD
 
@@ -260,31 +260,31 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
     Teams Toolkit realiza las siguientes funciones durante el desarrollo local (conocido como F5):
 
-    * Lea el `state.local.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
+    * Lea el `state.local.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo.
 
     * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls que requiere un punto de conexión de depuración local) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
 
     * Una vez que el entorno de desarrollo local se inicia correctamente, el identificador de la aplicación de Azure ADUris, replyUrls y otras propiedades que no están disponibles durante la fase de creación se actualizan en consecuencia.
 
-    * Los cambios realizados en la aplicación de Azure AD se cargan durante la siguiente sesión de depuración local. Puede ver [los cambios de la aplicación de Azure AD](https://github.com/OfficeDev/TeamsFx/wiki/) para aplicar los cambios manualmente a la aplicación de Azure AD.
+    * Los cambios realizados en la aplicación de Azure AD se cargan durante la siguiente sesión de depuración local. Puede ver [los cambios de la aplicación de Azure AD](https://github.com/OfficeDev/TeamsFx/wiki/) para aplicar los cambios manualmente a los cambios de la aplicación de Azure AD.
 
 4. **Para aprovisionar recursos en la nube**
 
       Debe aprovisionar recursos en la nube e implementar la aplicación mientras mueve la aplicación a la nube. En las fases, como el desarrollo local, Teams Toolkit:
 
-      * Lea el `state.{env}.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
+      * Lea el `state.{env}.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo.
 
-      * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls requiere el punto de conexión de front-end o bot) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
+      * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls requiere un punto de conexión de bot o front-end) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
 
       * Una vez completado el aprovisionamiento de otros recursos, los identificadores y replyUrls de la aplicación de Azure AD se actualizan según los puntos de conexión correctos.
 
 5. **Para compilar la aplicación**
 
-    * La implementación en el comando en la nube implementa la aplicación en los recursos aprovisionados. No incluye la implementación de los cambios de aplicación de Azure AD que realizó.
+    * La implementación en el comando en la nube implementa la aplicación en los recursos aprovisionados. No incluye la implementación de los cambios de aplicación de Azure AD realizados.
 
-    * Puede ver [Implementación de cambios de aplicación de Azure AD para el entorno remoto](#deploy-azure-ad-application-changes-for-remote-environment) para implementar cambios de aplicación de Azure AD para el entorno remoto
+    * Puede ver Implementación de [cambios de aplicación de Azure AD para un entorno remoto](#deploy-azure-ad-application-changes-for-remote-environment) con el fin de implementar los cambios de aplicación de Azure AD para el entorno remoto.
 
-    * Teams Toolkit actualiza la aplicación de Azure AD según el archivo de plantilla de manifiesto de Azure AD
+    * Teams Toolkit actualiza la aplicación de Azure AD según el archivo de plantilla de manifiesto de Azure AD.
 
 ## <a name="limitations"></a>Limitaciones
 
@@ -306,10 +306,10 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
 2. Actualmente `requiredResourceAccess` , la propiedad puede usar cadenas de nombre de aplicación de recursos legibles por el usuario o cadenas de nombre de permiso solo para `Microsoft Graph` las API y `Office 365 SharePoint Online` . Para otras API, debe usar UUID en su lugar. Puede seguir estos pasos para recuperar identificadores de Azure Portal:
 
-    * Registro de una nueva aplicación de Azure AD en [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-    * Selección `API permissions` en la página de la aplicación de Azure AD
+    * Registre una nueva aplicación de Azure AD en [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    * Seleccione `API permissions` en la página de la aplicación de Azure AD.
     * Seleccione `add a permission` esta opción para agregar el permiso que desee.
-    * Seleccione `Manifest`, en la `requiredResourceAccess` propiedad , puede encontrar los identificadores de api y permisos.
+    * Seleccione `Manifest`, en la `requiredResourceAccess` propiedad , puede encontrar los identificadores de API y permisos.
 
 ## <a name="see-also"></a>Consulte también
 

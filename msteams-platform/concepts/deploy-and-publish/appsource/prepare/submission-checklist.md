@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: localizar directrices de paquete de aplicación de validación del almacén de envíos
-ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135755"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756782"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -23,8 +23,8 @@ Antes de enviar la aplicación al [Centro de partners](/office/dev/store/use-par
 
 Aunque la aplicación puede estar funcionando en un entorno de prueba, debes comprobar el paquete de la aplicación para evitar que se presenten problemas durante el proceso de envío.
 
-> [!NOTE]
- > Si ha estado usando App Studio, le recomendamos que pruebe el portal para desarrolladores [Portal para desarrolladores](https://dev.teams.microsoft.com/) para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022.
+> [!WARNING]
+> Si ha estado usando App Studio, le recomendamos que pruebe el portal para desarrolladores [Portal para desarrolladores](https://dev.teams.microsoft.com/) para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022.
 
 La herramienta de validación de aplicaciones de Microsoft Teams ayuda a identificar y solucionar problemas antes de enviarlos al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
 
@@ -75,15 +75,15 @@ Una descripción de la tienda puede ser la primera impresión de alguien de la a
 
 ### <a name="specify-a-short-name"></a>Especificar un nombre corto
 
-El nombre de la aplicación (específicamente, su [*nombre corto*](~/resources/schema/manifest-schema.md#name)) desempeña un papel fundamental en la forma en que los usuarios lo descubren en la tienda.
+El nombre de la aplicación (específicamente, su *[nombre corto](~/resources/schema/manifest-schema.md#name)*) desempeña un papel fundamental en la forma en que los usuarios lo descubren en la tienda.
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra el nombre corto de una aplicación en una descripción de la tienda.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra el nombre corto de una aplicación en una descripción de la tienda.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -99,11 +99,11 @@ Un resumen conciso de la aplicación que deberá ser original, atractivo y dirig
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="La captura de pantalla de ejemplo resalta dónde se muestra la descripción corta de una aplicación en una descripción de la tienda.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="La captura de pantalla de ejemplo resalta dónde se muestra la descripción corta de una aplicación en una descripción de la tienda.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -121,11 +121,11 @@ Aunque esta descripción puede tener hasta 4 000 caracteres, la mayoría de los 
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra la descripción larga de una aplicación en una descripción de la tienda.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra la descripción larga de una aplicación en una descripción de la tienda.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -143,11 +143,11 @@ Las capturas de pantalla proporcionan una destacada vista previa de su aplicaci�
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestran las capturas de pantalla de la aplicación en una descripción de la tienda.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestran las capturas de pantalla de la aplicación en una descripción de la tienda.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -212,7 +212,6 @@ La [atestación de Publisher](/microsoft-365-app-certification/docs/attestation)
 > Si presenta una nueva aplicación, no puede completar oficialmente la atestación de Publisher hasta que la aplicación aparezca en la tienda de Teams. Si está actualizando una aplicación de la lista, complete la atestación de Publisher antes de enviar la última versión de la aplicación para su validación.
 
 ## <a name="next-step"></a>Paso siguiente
-
 > [!div class="nextstepaction"]
 > [Enviar la aplicación](/office/dev/store/add-in-submission-guide)
 

@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Obtenga información sobre cómo usar el SDK de cliente de JavaScript de Teams para habilitar funcionalidades multimedia mediante ejemplos de código
 keywords: API multimedia de permisos de dispositivos nativos de las capacidades del micrófono de imagen de cámara
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a65f39d3796bc0dacaa80f6badba7a011716edbf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111265"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756761"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia
 
@@ -24,11 +24,11 @@ Para integrar las funcionalidades multimedia, debe actualizar el archivo de mani
 
 Para una integración eficaz, debe tener un buen conocimiento de [code snippets](#code-snippets) para llamar a las API respectivas, lo que le permite usar funcionalidades multimedia nativas.
 
-Es importante familiarizarse con los [errores de respuesta de la API](#error-handling) para controlar los errores de la aplicación de Teams.
+Es importante familiarizarse con los [errores de respuesta](#error-handling) de la API para controlar los errores en la aplicación de Teams.
 
 > [!NOTE]
 >
-> * Actualmente, Microsoft Teams el uso de las funcionalidades de ubicación solo está disponible para clientes móviles.
+> * Actualmente, Microsoft Teams admite funcionalidades multimedia solo está disponible para clientes móviles.
 > * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel lateral de las reuniones.
 > * Los permisos del dispositivo son diferentes en el explorador. Para obtener más información, vea [Permisos del dispositivo en el navegador](browser-device-permissions.md).
 
@@ -59,7 +59,7 @@ La [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?
   
 > [!IMPORTANT]
 >
-> * Las API `selectMedia`, `getMedia` y `viewImages` se pueden invocar desde varias superficies de Teams, como módulos de tareas, pestañas y aplicaciones personales. Para obtener más información, vea [Entrada de puntos para aplicaciones de Teams](../extensibility-points.md).
+> * Las API `selectMedia`, `getMedia` y `viewImages` se pueden invocar desde varias superficies de Teams, como módulos de tareas, pestañas y aplicaciones personales. Para obtener más información, consulte [Puntos de entrada para aplicaciones de Teams](../extensibility-points.md).
 > * `selectMedia` API se ha ampliado para admitir las propiedades de micrófono y audio.
 
 Debe usar el siguiente conjunto de API para habilitar las funcionalidades de ubicación del dispositivo:

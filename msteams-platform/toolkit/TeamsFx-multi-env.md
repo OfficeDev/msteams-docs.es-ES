@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653283"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756936"
 ---
 # <a name="manage-multiple-environments"></a>Administrar varios entornos
 
@@ -45,9 +45,9 @@ Después de crear un nuevo proyecto, el kit de herramientas de Teams crea de for
 1. Seleccione el icono de **Teams** en la barra lateral.
 2. Seleccione **+Teams: Crear nuevo entorno** en la sección Entorno, como se muestra en la siguiente imagen:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="crear":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="crear":::
 
-Si tiene más de un entorno, debe seleccionar un entorno existente para crear el mismo. El comando copia el contenido del archivo de `config.<newEnv>.json` y `azure.parameters.<newEnv>.json` del entorno existente seleccionado en el nuevo entorno creado.
+   Si tiene más de un entorno, debe seleccionar un entorno existente para crear el mismo. El comando copia el contenido del archivo de `config.<newEnv>.json` y `azure.parameters.<newEnv>.json` del entorno existente seleccionado en el nuevo entorno creado.
 
 ## <a name="select-target-environment"></a>Seleccionar entorno de destino
 
@@ -204,18 +204,21 @@ A medida que se comparte la plantilla de manifiesto de la aplicación de Teams e
     },
     ...
   }
- ```
-3. Ejecute el comando de aprovisionamiento en **todo** el entorno para actualizar el nombre de la aplicación en entornos remotos. Para ejecutar el comando de aprovisionamiento con el kit de herramientas de Teams, consulte [aprovisionamiento](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. Ejecute el comando de aprovisionamiento en **todo** el entorno para actualizar el nombre de la aplicación en entornos remotos. Para ejecutar el comando de aprovisionamiento con Teams Toolkit, consulte [aprovisionamiento](provision.md#provision-using-teams-toolkit).
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>Escenario 4: personalización de recursos de Azure para diferentes entornos</b></summary>
 Puede personalizar los recursos de Azure para cada entorno, por ejemplo, especificar el nombre de la función de Azure; para ello, edite el entorno correspondiente a fx/configs/azure.parameters. {env}.json. archivo.
 
-Para obtener más información sobre los archivos de plantilla y parámetros de Bicep, consulte [aprovisionamiento de recursos](provision.md)
-</details> en la nube <br.
-
-
+Para obtener más información sobre los archivos de plantilla y parámetros de Bicep, consulte [aprovisionamiento de recursos en la nube](provision.md).
+</details>
+</br>
 
 ## <a name="see-also"></a>Vea también
 

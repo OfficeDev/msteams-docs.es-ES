@@ -7,18 +7,20 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET paquete MVC appmanifest conversación dominio almacén de permisos
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6acb5e0adf24dca7538b6ceaca470b9b6c3126f2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111244"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673023"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
 Pestañas personales, junto con los bots de ámbito personal, forman parte de las aplicaciones personales y se limitan a un solo usuario. Se pueden anclar al panel izquierdo para facilitar su acceso. También puede [reordenar](#reorder-static-personal-tabs) sus pestañas personales.
 
-Asegúrese de cumplir con todos los [requisitos previos](~/tabs/how-to/tab-requirements.md) para crear su pestaña personal.
+Asegúrese de cumplir con todos los [requisitos previos](~/tabs/how-to/tab-requirements.md) para crear una pestaña personal.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -366,10 +368,10 @@ En el Explorador de soluciones de Visual Studio, haga clic con el botón derecho
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. En el Explorador de soluciones de Visual Studio abra **PersonalTab.cshtml** desde la carpeta **Páginas**, agregue `microsoftTeams.initialize()` en las etiquetas `<script>` y guárdelas.
+1. En el Explorador de soluciones de Visual Studio abra **PersonalTab.cshtml** desde la carpeta **Páginas**, agregue `app.initialize()` en las etiquetas `<script>` y guárdelas.
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación.
 
@@ -531,10 +533,10 @@ Los controladores usan la propiedad `ViewBag` para transferir valores dinámicam
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. En el Explorador de soluciones de Visual Studio abra **PersonalTab.cshtml** desde la carpeta **Vistas** > **PersonalTab** y agregue `microsoftTeams.initialize()` dentro de las etiquetas `<script>` y guárdelas.
+1. En el Explorador de soluciones de Visual Studio abra **PersonalTab.cshtml** desde la carpeta **Vistas** > **PersonalTab** y agregue `app.initialize()` dentro de las etiquetas `<script>` y guárdelas.
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación.
 
