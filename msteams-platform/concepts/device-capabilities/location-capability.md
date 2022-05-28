@@ -6,12 +6,12 @@ keywords: permisos de dispositivos nativos de las funcionalidades de mapa de ubi
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 369e9307a8007d45cc42ae4059b16cdcf9a3cc4c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111188"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757174"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación
 
@@ -26,13 +26,13 @@ La principal ventaja de integrar las funcionalidades de ubicación en las aplica
 En los ejemplos siguientes se muestra cómo se usa la integración de las funcionalidades de ubicación en diferentes escenarios:
 
 * En una fábrica, el supervisor puede realizar un seguimiento de la asistencia de los trabajadores pidiéndoles que se hagan una Selfie en las proximidades de la fábrica y la compartan a través de la aplicación especificada. Los datos de ubicación también se capturan y envían junto con la imagen.
-* Las funcionalidades de ubicación permiten al personal de mantenimiento de un proveedor de servicios compartir datos de estado auténticos de las torres de telefonía móvil con la administración. La administración puede comparar cualquier discrepancia entre la información de ubicación capturada y los datos enviados por el personal de mantenimiento.
+* Las capacidades de ubicación permiten al personal de mantenimiento de un proveedor de servicios compartir datos médicos auténticos de las torres de telefonía móvil con la administración. La administración puede comparar cualquier discrepancia entre la información de ubicación capturada y los datos enviados por el personal de mantenimiento.
 
 Para integrar las funcionalidades de ubicación, debe actualizar el archivo de manifiesto de la aplicación y llamar a las API. Para una integración eficaz, debe comprender bien [los fragmentos de código](#code-snippets) para llamar a las API de ubicación.
-Es importante familiarizarse con los [errores de respuesta de la API](#error-handling) para controlar los errores de la aplicación de Teams.
+Es importante familiarizarse con los [errores de respuesta de la API](#error-handling) para controlar los errores en la aplicación de Teams.
 
 > [!NOTE]
-> Actualmente, Microsoft Teams el uso de las funcionalidades de ubicación solo está disponible para clientes móviles.
+> Actualmente, Microsoft Teams admite capacidades de ubicación solo para clientes móviles.
 
 ## <a name="update-manifest"></a>Actualizar manifiesto
 
@@ -100,7 +100,7 @@ Debe asegurarse de controlar estos errores correctamente en la aplicación de Te
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | La API no se admite en la plataforma actual.|
 | **500** | INTERNAL_ERROR | Se produce un error interno al realizar la operación necesaria.|
-| **1 000** | PERMISSION_DENIED |El usuario denegó los permisos de ubicación a la aplicación Teams o a la aplicación web .|
+| **1 000** | PERMISSION_DENIED |El usuario denegó los permisos de ubicación para la aplicación de Teams o la aplicación web.|
 | **4000** | InvalidArguments | La API se invoca con argumentos obligatorios incorrectos o insuficientes.|
 | **8000** | USER_ABORT |El usuario canceló la operación.|
 | **9000** | OLD_PLATFORM | El usuario se encuentra en una versión de plataforma antigua donde la implementación de la API no está disponible. La actualización de la versión debería resolver el problema.|
