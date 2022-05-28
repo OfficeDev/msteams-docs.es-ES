@@ -5,12 +5,12 @@ description: Preguntas a tener en cuenta mientras planifica su aplicación, ente
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104311"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756754"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de comprobación de planeamiento de la aplicación de Teams
 
@@ -29,11 +29,11 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere: |
 | --- | --- |
-| 1 | ¿Son los usuarios principalmente trabajadores directos con clientes móviles? |
+| 1  | ¿Son los usuarios principalmente trabajadores directos con clientes móviles? |
 | 2 | ¿Espera que muchos usuarios invitados necesiten acceso a la aplicación? |
 | 3 | ¿Usan equipos y canales o, principalmente, chats grupales? |
 | 4 | ¿Qué grado de sofisticación técnica tienen sus usuarios principales? |
-| 5 | ¿Necesita una experiencia de incorporación completa o le bastan unos cuantos consejos? |
+| 5  | ¿Necesita una experiencia de incorporación completa o le bastan unos cuantos consejos? |
 
 </details>
 <br>
@@ -42,7 +42,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere: |
 |--- | --- |
-| 1 | ¿Cuáles son las ventajas y desventajas del estado actual del sistema que usan sus usuarios? |
+| 1  | ¿Cuáles son las ventajas y desventajas del estado actual del sistema que usan sus usuarios? |
 | 2 | ¿Cuáles son los problemas a los que se enfrentan los usuarios que desea solucionar? |
 | 3 | ¿Qué características o funcionalidades les gustan y les encantan a sus usuarios en la forma actual de realizar el proceso? |
 
@@ -53,7 +53,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere: |
 | --- | --- |
-| 1 | ¿Cuáles son los retos que plantea la integración del back-end de la aplicación actual? |
+| 1  | ¿Cuáles son los retos que plantea la integración del back-end de la aplicación actual? |
 | 2 | ¿Quién es el propietario de los datos del back-end: la empresa o terceros? |
 | 3 | ¿Hay firewalls que afecten al funcionamiento de la aplicación? |
 | 4 | ¿Existen API para acceder a los datos que necesita para el funcionamiento de su aplicación? |
@@ -65,7 +65,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere:|
 |--- | --- |
-| 1 | ¿Accederán los usuarios a diferentes vistas de los datos en función de sus funciones? |
+| 1  | ¿Accederán los usuarios a diferentes vistas de los datos en función de sus funciones? |
 | 2 | ¿Hay datos personales involucrados? |
 | 3 | ¿Las interacciones también se basarán en los roles de usuario? |
 | 4 | ¿Podrán los usuarios externos acceder a la aplicación? |
@@ -77,7 +77,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere: |
 | --- | --- |
-| 1 | ¿Qué ocurre cuando un usuario configura por primera vez la pestaña en un canal? |
+| 1  | ¿Qué ocurre cuando un usuario configura por primera vez la pestaña en un canal? |
 | 2 | Si comparte tarjetas con una extensión de mensaje, ¿tiene sentido agregar un pequeño vínculo que lleve a una página de más información para ayudar a los usuarios y que sepan qué más puede hacer la aplicación? |
 | 3 | ¿Espera que la mayoría de la gente tenga ya algún contexto de para qué sirve la aplicación, o que ya haya usado sus servicios en otro contexto? |
 | 4 | ¿Llegan a la aplicación sin conocimientos previos? |
@@ -89,7 +89,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere: |
 | --- | --- |
-| 1 | ¿Se requiere una interacción individual con la aplicación por razones de privacidad u otros motivos? Por ejemplo, la comprobación del saldo de las vacaciones u otra información privada. |
+| 1  | ¿Se requiere una interacción individual con la aplicación por razones de privacidad u otros motivos? Por ejemplo, la comprobación del saldo de las vacaciones u otra información privada. |
 | 2 | ¿Va a haber colaboración entre usuarios que pueden no tener ningún Teams en común? Por ejemplo, encontrar los próximos eventos de toda la organización en una empresa. |
 | 3 | ¿Hay notificaciones o mensajes personalizados que deban enviarse al usuario a lo largo de la experiencia de la aplicación Teams? |
 
@@ -100,7 +100,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 
 | # | Considere: |
 | --- | --- |
-| 1 | ¿La información que presenta la aplicación, ya sea en ficha o a través de un bot, es relevante y útil para la mayoría de los miembros de un equipo? Por ejemplo, la aplicación Scrum. |
+| 1  | ¿La información que presenta la aplicación, ya sea en ficha o a través de un bot, es relevante y útil para la mayoría de los miembros de un equipo? Por ejemplo, la aplicación Scrum. |
 | 2 | ¿Podría cambiar el contexto de la aplicación en función del equipo al que se agregue? Por ejemplo, las tareas de Planner son diferentes para distintos equipos. |
 | 3 | ¿Es posible que todos los miembros de un rol que necesiten colaborar formen parte de un único equipo? Por ejemplo, agentes que trabajan en la solución de un vale. |
 

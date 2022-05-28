@@ -4,12 +4,12 @@ description: Información general de la introducción a la documentación para d
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Ejemplos para desarrolladores de Microsoft Teams
-ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654774"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757713"
 ---
 # <a name="get-started"></a>Introducción
 
@@ -41,7 +41,7 @@ En función de las capacidades que quiera para la aplicación, elija un conjunto
 
 Si ya está familiarizado con el flujo de trabajo de Yeoman, puede que prefiera usar [Generador Yeoman YoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) para crear las aplicaciones.
 
-> [!NOTE]
+> [!WARNING]
 > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams.<br> App Studio quedará obsoleto desde el 30 de junio de 2022.
 
 ## <a name="build-your-first-teams-app"></a>Crear la primera aplicación de Teams
@@ -49,7 +49,11 @@ Si ya está familiarizado con el flujo de trabajo de Yeoman, puede que prefiera 
 Ahora, vamos a crear su primera aplicación de Teams. Pero primero, elija su idioma (o marco de trabajo) y prepare su entorno de desarrollo.
 
 > [!div class="nextstepaction"]
-> [Crear una aplicación Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
+> [Crear una aplicación de pestaña de Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
+> [!div class="nextstepaction"]
+> [Crear una aplicación de bot de Teams con JavaScript mediante React](../sbs-gs-bot.yml)
+> [!div class="nextstepaction"]
+> [Crear una aplicación de extensión de mensajería de Teams con JavaScript mediante React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
 > [Crear una aplicación de Teams con Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]

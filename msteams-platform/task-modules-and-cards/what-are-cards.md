@@ -1,15 +1,15 @@
 ---
 title: Tarjetas
-description: Describe las tarjetas y cómo se usan en bots, conectores y extensiones de mensajería
+description: Describe las tarjetas y cómo se usan en bots, conectores y extensiones de mensaje.
 ms.localizationpriority: high
 keywords: conectores bots tarjetas mensajería
 ms.topic: overview
-ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191260"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756481"
 ---
 # <a name="cards"></a>Tarjetas
 

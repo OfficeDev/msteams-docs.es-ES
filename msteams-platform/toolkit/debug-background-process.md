@@ -6,24 +6,24 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 48c3716258477bf7b8dc1086a75aa7a495ff5026
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656162"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756887"
 ---
 # <a name="debug-background-process"></a>Depurar procesos en segundo plano
 
 El flujo de trabajo de depuración local implica los archivos `.vscode/launch.json` y `.vscode/tasks.json` para configurar el depurador en VS Code, el VS Code inicia los depuradores y el depurador de Microsoft Edge o Chrome inicia una nueva instancia del explorador de la siguiente manera:
 
-1. El archivo `launch.json` configura el depurador en VS Code
+1. El archivo `launch.json` configura el depurador en VS Code.
 
-2. VS Code ejecuta el archivo **preLaunchTask** compuesto, **Comprobación previa a la depuración y Iniciar todo** en el `.vscode/tasks.json` archivo
+2. VS Code ejecuta el archivo **preLaunchTask** compuesto, **Comprobación previa a la depuración e Iniciar todo** en el archivo `.vscode/tasks.json`.
 
 3. VS Code inicia los depuradores especificados en las configuraciones compuestas, como **Attach to Bot**, **Attach to Backend**, **Attach to Frontend** y **Launch Bot**
 
-4.  Microsoft Edge o el depurador de Chrome inicia una nueva instancia del explorador y abre una página web para cargar el cliente de Teams
+4. Microsoft Edge o el depurador de Chrome inicia una nueva instancia del explorador y abre una página web para cargar el cliente de Teams.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -38,16 +38,15 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
   |Bot |  14, 16 (recomendado)|
   |Extensión de mensajería | 14, 16 (recomendado) |
 
-   
-* Microsoft 365 cuenta con credenciales válidas, el kit de herramientas de Teams le pedirá que inicie sesión en Microsoft 365 cuenta, si no ha iniciado sesión
+* Microsoft 365 cuenta con credenciales válidas, el kit de herramientas de Teams le pedirá que inicie sesión en Microsoft 365 cuenta, si no ha iniciado sesión.
 
 * Habilite la carga o instalación de prueba de aplicaciones personalizadas para el espacio empresarial del desarrollador, si no es así, la depuración local finalizará.
 
-* La versión binaria 2.3 de Ngrok se aplica a la extensión de bot y mensaje. Si Ngrok no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete Ngrok NPM `ngrok@4.2.2` en `~/.fx/bin/ngrok`. El paquete Ngrok NPM administra al binario de Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin`
+* La versión binaria Ngrok 2.3 se aplica a la extensión de bot y mensajería. Si Ngrok no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete Ngrok NPM `ngrok@4.2.2` en `~/.fx/bin/ngrok`. El paquete Ngrok NPM administra el binario Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-* Azure Functions Core Tools versión 4, si Azure Functions Core Tools no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete NPM de Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** y para **macOs** en `~/.fx/bin/func`. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local
+* Azure Functions Core Tools versión 4, si Azure Functions Core Tools no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala el paquete NPM de Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** y para **macOs** en `~/.fx/bin/func`. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local.
 
-* SDK de .NET Core versión que se aplica a Azure Functions. Si SDK de .NET Core no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala SDK de .NET Core para Windows y MacOS en `~/.fx/bin/dotnet`. Para Linux, la depuración local finaliza
+* SDK de .NET Core versión aplicable a Azure Functions, si SDK de .NET Core no está instalado o la versión no coincide con el requisito, el kit de herramientas de Teams instala SDK de .NET Core para Windows y MacOS en `~/.fx/bin/dotnet`. Para Linux, finaliza la depuración local.
 
   En la tabla siguiente se enumeran las versiones de .NET Core:
 
@@ -58,9 +57,9 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 
 * Certificado de desarrollo, si el certificado de desarrollo para localhost no está instalado para la pestaña en Windows o macOS, el kit de herramientas de Teams le pedirá que lo instale
 
-* Azure Functions extensiones de enlace definidas en `api/extensions.csproj`, si Azure Functions extensiones de enlace no está instalada, el kit de herramientas de Teams instala Azure Functions extensiones de enlace
+* Las extensiones de enlace de Azure Functions definidas en `api/extensions.csproj`. Si las extensiones de enlace de Azure Functions no están instaladas, el kit de herramientas de Teams instalará las extensiones de enlace de Azure Functions
 
-* Paquetes NPM, que se aplican a aplicaciones de pestañas, aplicaciones de bot, aplicaciones de extensión de mensaje y Azure Functions. Si NPM no está instalado, el kit de herramientas de Teams instala todos los paquetes NPM
+* Paquetes NPM, que se aplican a aplicaciones de pestañas, aplicaciones de bot, aplicaciones de extensión de mensaje y Azure Functions. Si NPM no está instalado, el kit de herramientas de Teams instalará todos los paquetes NPM.
 
 * Extensión de bot y mensaje. El kit de herramientas de Teams inicia Ngrok para crear un túnel HTTP para el bot y la extensión de mensaje
 
@@ -75,7 +74,6 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
   | Inspector de nodo para bot o extensión de mensaje | 9239 |
   | Azure Functions | 7071 |
   | Inspector de nodo para Azure Functions | 9229 |
-
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
 
@@ -103,10 +101,8 @@ Use the following .NET Core versions:
 |Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |6.0 |
 
-
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
-
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams toolkit prompts you to install it.</br> -->
 
 Al seleccionar **Start Debugging (F5)**, el canal de salida del kit de herramientas de Teams muestra el progreso y el resultado después de comprobar los requisitos previos.
 
@@ -116,24 +112,23 @@ Al seleccionar **Start Debugging (F5)**, el canal de salida del kit de herramien
 
 En el proceso de configuración, el kit de herramientas de Teams prepara los siguientes registros y configuraciones para la aplicación de Teams:
 
-1. [ Registra y configura Azure AD aplicación](#registers-and-configures-azure-ad-application): El kit de herramientas de Teams registra y configura la aplicación Azure AD
+1. [ Registra y configura Azure AD aplicación](#registers-and-configures-azure-ad-application): El kit de herramientas de Teams registra y configura la aplicación Azure AD.
 
-1. [ Registra y configura el bot](#registers-and-configures-bot): El kit de herramientas de Teams registra y configura el bot para la aplicación de extensión de mensajes o las pestañas
+1. [ Registra y configura el bot](#registers-and-configures-bot): El kit de herramientas de Teams registra y configura el bot para la aplicación de extensión de mensajes o las pestañas.
 
-1. [ Registra y configura la aplicación teams](#registers-and-configures-teams-app): El kit de herramientas de Teams registra y configura la aplicación de Teams
+1. [ Registra y configura la aplicación teams](#registers-and-configures-teams-app): El kit de herramientas de Teams registra y configura la aplicación de Teams.
 
 ### <a name="registers-and-configures-azure-ad-application"></a>Registra y configura Azure AD aplicación
 
 1. Registrar una aplicación de Azure AD
 
-1. Crea un secreto de cliente
+1. Crea un secreto de cliente.
 
-1. Expone una API
+1. Expone una API.
 
     a. Configura el URI de id. de aplicación. Para la pestaña, `api://localhost/{appId}`. Para el bot o extensión de mensajes,  `api://botid-{botid}`
 
-    b. Agrega un ámbito denominado `access_as_user`. Lo habilita para **Admin y usuarios**
-
+    b. Agrega un ámbito denominado `access_as_user`. Lo habilita para **Admin y usuarios**.
 
 4. Configura los permisos de API. Agrega Microsoft Graph permiso a **User.Read**.
 
@@ -157,19 +152,19 @@ En el proceso de configuración, el kit de herramientas de Teams prepara los sig
       | Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
     
-### <a name="registers-and-configures-bot"></a>Registra y configura el bot 
+### <a name="registers-and-configures-bot"></a>Registra y configura el bot
 
 Para la aplicación de pestaña o la aplicación de extensión de mensajes:
 
 1. Registrar una aplicación de Azure AD
 
-1. Crea un secreto de cliente para la aplicación Azure AD
+1. Crea un secreto de cliente para la aplicación Azure AD.
 
-1. Registra un bot en [Microsoft Bot Framework](https://dev.botframework.com/) mediante la aplicación Azure AD
+1. Registra un bot en [Microsoft Bot Framework](https://dev.botframework.com/) mediante la aplicación Azure AD.
 
 1. Selector de canal de Microsoft Teams
 
-1. Configura el punto de conexión de mensajería como `https://{ngrokTunnelId}.ngrok.io/api/messages`
+1. Configura el punto de conexión de mensajería como `https://{ngrokTunnelId}.ngrok.io/api/messages`.
 
 ### <a name="registers-and-configures-teams-app"></a>Registra y configura la aplicación teams
 

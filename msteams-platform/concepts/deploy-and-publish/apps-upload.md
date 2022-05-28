@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191204"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756793"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -47,7 +47,7 @@ Puede transferir localmente la aplicación a un equipo, chat, reunión o para su
 
    a. Seleccione **Agregar** para agregar su aplicación personal.</br> B. Use el menú desplegable para agregar la aplicación a un equipo o chat.
 
-    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Crear una aplicación de Teams" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Descripción de la aplicación" border="true":::
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
@@ -81,7 +81,7 @@ Teams proporciona varias maneras de abrir aplicaciones. Para obtener más inform
 
 No tiene que transferir localmente la aplicación de nuevo si realiza cambios de código (estos se reflejan en Teams en tiempo real). Sin embargo, debe reinstalar si cambia alguna configuración de aplicación.
 
-Si hay una actualización disponible para la aplicación, se habilita la opción **Actualizar disponible**. Para actualizar, siga estos pasos:
+Si hay una actualización disponible para la aplicación, la opción **Actualización disponible** está habilitada. Para actualizar, siga estos pasos:
 
 1. Seleccione **Actualización disponible** para ver la actualización.
 

@@ -5,12 +5,12 @@ keywords: Control Selector de personas
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: a2e2a21f0485e0df87f8963defbe54ed540e455a
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755898"
+ms.locfileid: "65757594"
 ---
 # <a name="integrate-people-picker"></a>Integrar Selector de personas
 
@@ -34,14 +34,14 @@ La API `selectPeople` le permite agregar el control de entrada de Selector de pe
 * Permite al usuario buscar y seleccionar una o más personas de la lista.
 * Devuelve el identificador, el nombre y la dirección de correo electrónico de los usuarios seleccionados a la aplicación web.
 
-En caso de una aplicación personal, el control busca el nombre o el identificador de correo electrónico en toda la organización dentro de Teams. Si la aplicación se agrega a un chat o canal, el contexto de búsqueda se configura en función del escenario. La búsqueda está restringida a los miembros de ese chat o canal.
+En una aplicación personal, el control busca el nombre o el identificador de correo electrónico en toda la organización dentro de Teams. Si la aplicación se agrega a un chat o canal, el contexto de búsqueda se configura en función del escenario. La búsqueda está restringida a los miembros de ese chat o canal.
 
 La API `selectPeople` incluye las siguientes configuraciones de entrada:
 
 |Parámetro de configuración|Tipo|Descripción| Valor predeterminado|
 |-----|------|--------------|------|
 |`title`|Cadena| Es un parámetro opcional y establece el título del control Selector de personas.|`selectPeople`|
-|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar los identificadores de Microsoft Azure Active Directory (Azure AD) de las personas que se van a preseleccionar. Este parámetro preselecciona a las personas al iniciar el control de entrada Selector de personas. En caso de una sola selección, solo el primer usuario válido se rellena previamente ignorando el resto.|**Null**|
+|`setSelected`|Cadena| Es un parámetro opcional. Debe pasar los identificadores de Microsoft Azure Active Directory (Azure AD) de las personas que se van a preseleccionar. Este parámetro preselecciona a las personas al iniciar el control de entrada Selector de personas. En una sola selección, solo el primer usuario válido se rellena previamente ignorando el resto.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| Es un parámetro opcional y cuando se establece en True, inicia el Selector de personas en el ámbito de toda la organización incluso si la aplicación se agrega a un chat o canal.|**False**|
 |`singleSelect`|Boolean|Es un parámetro opcional y cuando se establece en True, inicia el Selector de personas y restringe la selección a un solo usuario.|**False**|
 

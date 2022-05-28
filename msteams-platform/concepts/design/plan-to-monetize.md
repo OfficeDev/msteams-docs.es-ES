@@ -4,12 +4,12 @@ description: obtenga información sobre cómo planear la monetización de la apl
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 2a799f7a796405327c075d6729fba7901d73cdaa
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 9a21304666866da5c08af5ba3df1f0a48297398c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63502017"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756852"
 ---
 # <a name="plan-to-monetize-your-app"></a>Planear la monetización de la aplicación
 

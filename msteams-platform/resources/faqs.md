@@ -4,12 +4,12 @@ description: Respuestas a algunas preguntas comunes
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 587451e3a0e89206a4ea49aaca3c682ab290ac5b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63454034"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757552"
 ---
 # <a name="moodle-faq"></a>Preguntas más frecuentes sobre Moodle
 
@@ -35,7 +35,7 @@ Cada instancia de curso de equipo debe tener un propietario, y la sincronizació
 
 Los usuarios tienen múltiples opciones de inicio de sesión desde la página de inicio de sesión de Moodle.
 
-* Para iniciar sesión exclusivamente con las credenciales de Microsoft 365, active los ajustes de configuración de la **redirección forzada** para el **complemento auth_oidc**. Si el servicio está activado, el usuario puede ver la página de inicio de sesión de Microsoft.
+* Para iniciar sesión exclusivamente con las credenciales de Microsoft 365, active los ajustes de configuración de la **redirección forzada** para el **complemento auth_oidc**. Si el servicio está activado, el usuario puede ver la página de inicio de sesión de Microsoft.
 * Para iniciar la sesión manualmente en el portal de Moodle consulte [Moodle](https://moodle.org/login/index.php).
 
 <br>
@@ -127,7 +127,7 @@ La siguiente imagen muestra el mensaje de error que se recibe cuando el usuario 
 
 La siguiente imagen muestra el error en el portal de Azure:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Portal de Azure" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="<mrk mtype=&quot;seg" mid="167">Portal de Azure</mrk>" border="true":::
 
 Si el **Secreto del cliente** ha caducado, el usuario debe generar un nuevo **Secreto de cliente** y actualizar la configuración que se encuentra en la página. Los usuarios pueden volver a iniciar sesión después de que se haya actualizado el **Secreto del cliente**, lo que puede tardar hasta 24 horas en volver a aprovisionarse.
 

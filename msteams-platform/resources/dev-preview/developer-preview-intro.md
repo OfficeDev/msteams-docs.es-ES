@@ -4,12 +4,12 @@ description: Describe las características en la versión preliminar para desarr
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: Características para desarrolladores en versión preliminar de Teams
-ms.openlocfilehash: b84a13936e023c743829876f9d1c039d6744b063
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: a671a8ed6a1e4a49c731bcad78dd0d454a6bb600
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492956"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756880"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar para desarrolladores públicos para Microsoft Teams
 
@@ -20,9 +20,9 @@ La versión preliminar para desarrolladores es un programa público para desarro
 
 ## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de la versión preliminar para desarrolladores
 
-Muchas características habilitadas en la versión preliminar para desarrolladores requerirán modificaciones en el archivo JSON del manifiesto de la aplicación. Para hacerlo, deberá usar el [esquema de manifiesto de la versión preliminar para desarrolladores](~/resources/schema/manifest-schema-dev-preview.md). Si usa este esquema, no podrá usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para hacer estos cambios ni podrá usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrá que hacer clic en el icono `More apps` de la barra de aplicaciones y, a continuación, seleccionar `Upload a custom app link`. Con este método solo puede cargar una versión comprimida del paquete de la aplicación.
+Muchas características habilitadas en la versión preliminar para desarrolladores requerirán modificaciones en el archivo JSON del manifiesto de la aplicación. Para hacerlo, deberá usar el [esquema de manifiesto de la versión preliminar para desarrolladores](~/resources/schema/manifest-schema-dev-preview.md). Si usa este esquema, no podrá usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para hacer estos cambios ni podrá usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrá que seleccionar el icono `More apps` de la barra de aplicaciones y, después, seleccionar `Upload a custom app link`. Con este método solo puede cargar una versión comprimida del paquete de la aplicación.
 
-Es posible que le resulte útil usar App Studio para crear las partes de la versión preliminar que no sean para desarrolladores del paquete de la aplicación, exportar ese paquete y editar manualmente el archivo `manifest.json` para agregar las características de versión preliminar para desarrolladores que desea usar. Una vez que haya agregado las características de la versión preliminar para desarrolladores al archivo `manifest.json` no podrá volver a importar el paquete en App Studio.
+Es posible que le resulte útil usar App Studio para crear las partes de la versión preliminar que no sean para desarrolladores del paquete de la aplicación, exportar ese paquete y editar manualmente el archivo `manifest.json` para agregar las características de versión preliminar para desarrolladores que desea usar. Una vez que haya agregado las características de vist previa para desarrolladores al archivo `manifest.json`, no podrá volver a importar el paquete en App Studio.
 
 ## <a name="enable-developer-preview"></a>Habilitar la versión preliminar para desarrolladores
 
@@ -50,7 +50,7 @@ Para habilitar la versión preliminar pública para desarrolladores en un client
 
 ## <a name="disable-developer-preview"></a>Deshabilite la versión preliminar para desarrolladores
 
-Use el mismo elemento de menú en Acerca de → versión preliminar para desarrolladores y haga clic en él para desactivarlo.
+Use el mismo elemento de menú en Acerca de → Versión preliminar para desarrolladores y selecciónelo para desactivarlo.
 
 ## <a name="see-also"></a>Vea también
 

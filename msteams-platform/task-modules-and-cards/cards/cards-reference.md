@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: high
 keywords: referencia de tarjetas de los bot
 ms.topic: reference
-ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104143"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757202"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -85,7 +85,7 @@ La tarjeta puede contener una imagen en línea al incluir un vínculo a la image
 
 Las imágenes se escalan hacia arriba o hacia abajo en tamaño para mantener la relación de aspecto para cubrir el área de imagen. Las imágenes se recortan desde el centro para lograr la relación de aspecto adecuada para la tarjeta.
 
-Las imágenes deben tener como máximo 1024×1024 y estar en formato PNG, JPEG o GIF. No se admite el GIF animado.
+Las imágenes deben tener como máximo 1024×1024 y deben estar en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.
 
 En la tabla siguiente, se proporcionan las propiedades de las imágenes de tarjetas insertadas:
 
@@ -561,7 +561,7 @@ El código siguiente muestra un ejemplo de una tarjeta del conector de Office 36
 
 ## <a name="receipt-card"></a>Tarjeta de recibo
 
-Teams admite tarjeta de recibo. Es una tarjeta que permite a un bot proporcionar un recibo al usuario. Normalmente, contiene la lista de elementos que se deben incluir en el recibo, como impuestos y la información total.
+Teams admite la tarjeta de recibo, que permite a un bot proporcionar un recibo al usuario. Normalmente, contiene la lista de elementos que se deben incluir en el recibo, como impuestos y la información total.
 
 ### <a name="support-for-receipt-cards"></a>Compatibilidad con tarjetas de recibo
 

@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrar migración post
-ms.openlocfilehash: 72e33ae6c8792016394c7a464f132260a5231112
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3fb593bf72c1f8b495a45bad8eef6e2177684c7b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111748"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756923"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
@@ -324,7 +324,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Acción llamada en un `team` o `channel` que no está en `migrationMode`.
+Acción llamada en `team` o `channel` que no esté en `migrationMode`.
 
 ## <a name="step-five-add-team-members"></a>Paso 5: Agregar miembros del equipo
 

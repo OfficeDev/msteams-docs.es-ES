@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: enviar un mensaje obtener el id. de usuario id. de canal id. de conversación
-ms.openlocfilehash: fd3ed48022239aaa84e00c8b3b59701970d9a0af
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7b1227dd69e8245b6ad318eb5e7425893075d878
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602274"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757580"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -30,13 +30,13 @@ Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a u
 >    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Para que el bot envíe un mensaje proactivo a un usuario, chat grupal o equipo, debe tener acceso para enviar el mensaje. La aplicación que contiene el bot debe instalarse en primer lugar en un chat de grupo o de equipo.
-Puede instalar [proactivamente la aplicación con Microsoft Graph](#proactively-install-your-app-using-graph) en un equipo, si es necesario, o usar una [directiva de aplicación](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicaciones a equipos y usuarios en su inquilino. Si es usuario, debe tener la aplicación instalada o ser miembro del equipo en el que está instalada la aplicación.
+Puede instalar [proactivamente la aplicación con Microsoft Graph](#proactively-install-your-app-using-graph) en un equipo, si es necesario, o usar una [directiva de aplicación](/microsoftteams/teams-custom-app-policies-and-settings) para enviar aplicaciones a equipos y usuarios en su espacio empresarial. Si es usuario, debe tener la aplicación instalada o ser miembro del equipo en el que está instalada la aplicación.
 
 Enviar un mensaje proactivo es diferente a enviar un mensaje normal. No hay ningún activo `turnContext` que usar como respuesta. Debe crear la conversación antes de enviar el mensaje. Por ejemplo, un nuevo chat individual o un nuevo hilo de conversación en un canal. No puede crear un nuevo chat grupal ni un canal nuevo en un equipo con mensajería proactiva.
 
 Para enviar un mensaje proactivo, siga estos pasos:
 
-1. [Obtenga el id. de usuario, id. de equipo o id. de canal,](#get-the-user-id-team-id-or-channel-id)si es necesario.
+1. [Obtenga el id. de usuario, id. de equipo o id. de canal](#get-the-user-id-team-id-or-channel-id), si es necesario.
 1. [Cree la conversación](#create-the-conversation), si es necesario.
 1. [Obtenga el identificador de conversación](#get-the-conversation-id).
 1. [Envíe el mensaje](#send-the-message).
@@ -87,20 +87,26 @@ El envío de mensajes proactivos a los usuarios es una manera eficaz de comunica
 
 Cuando se utiliza la mensajería proactiva para enviar un mensaje de bienvenida a un usuario, no hay contexto para que los usuarios reciban el mensaje. Es también la primera vez que los usuarios interactúan con la aplicación. Es una oportunidad para crear una buena primera impresión. Los mejores mensajes de bienvenida deben incluir:
 
-* Por qué un usuario está recibiendo el mensaje: debe quedar muy claro para el usuario por qué está recibiendo el mensaje. Si su bot se instaló en un canal y envió un mensaje de bienvenida a todos los usuarios, hágales saber en qué canal se instaló y quién lo instaló.
-* Qué ofrece: los usuarios deben ser capaces de identificar qué pueden hacer con la aplicación y qué valor puede aportarles.
-* Qué deben hacer a continuación: Invitar a los usuarios a probar un comando o interactuar con la aplicación.
+* ¿Por qué un usuario recibe el mensaje? Por qué un usuario está recibiendo el mensaje: debe quedar muy claro para el usuario por qué está recibiendo el mensaje. Si su bot se instaló en un canal y envió un mensaje de bienvenida a todos los usuarios, hágales saber en qué canal se instaló y quién lo instaló.
+
+* ¿Qué ofrecen? Los usuarios deben ser capaces de identificar qué pueden hacer con la aplicación y qué valor puede aportarles.
+
+* ¿Qué deben hacer a continuación? Invite a los usuarios a probar un comando o interactuar con la aplicación.
 Los mensajes de bienvenida deficientes pueden llevar a los usuarios a bloquear el bot. Escriba mensajes de bienvenida claros y concisos. Itere los mensajes de bienvenida si no tienen el efecto deseado.
 
 ### <a name="notification-messages"></a>Mensajes de notificación
 
 Para enviar notificaciones mediante mensajería proactiva, asegúrese de que los usuarios tienen una ruta clara para realizar acciones comunes basadas en la notificación. Asegúrese de que los usuarios comprendan claramente por qué han recibido una notificación. Los buenos mensajes de notificación suelen incluir lo siguiente:
 
-* Qué ha ocurrido: una indicación clara de lo que ha ocurrido para recibir la notificación.
-* Cuál fue el resultado: debe quedar claro, qué elemento se actualiza para obtener la notificación.
-* Quién o qué la activó: quién o qué realizó la acción que provocó el envío de la notificación.
-* Qué pueden hacer los usuarios en respuesta: facilite a los usuarios la realización de acciones basadas en sus notificaciones.
-* Cómo pueden los usuarios no participar: debe proporcionar una vía para que los usuarios se excluyan de las notificaciones adicionales.
+* ¿Qué ha ocurrido? Una indicación clara de lo que ha ocurrido para recibir la notificación.
+
+* ¿Cuál fue el resultado? Debe quedar claro, qué elemento se actualiza para obtener la notificación.
+
+* ¿Quién o qué lo desencadenó? Quién o qué realizó la acción que provocó el envío de la notificación.
+
+* ¿Qué pueden hacer los usuarios en respuesta? Facilite a los usuarios la realización de acciones basadas en sus notificaciones.
+
+* ¿Cómo pueden optar los usuarios por no participar? Debe proporcionar una vía para que los usuarios se excluyan de las notificaciones adicionales.
 
 Para enviar mensajes a un gran grupo de usuarios, por ejemplo a su organización, instale proactivamente su aplicación utilizando Graph.
 
@@ -108,8 +114,9 @@ Para enviar mensajes a un gran grupo de usuarios, por ejemplo a su organización
 
 Cuando utilice la mensajería proactiva para enviar mensajes programados a los usuarios, verifique que su zona horaria esté actualizada a su zona horaria. Esto garantiza que los mensajes se entreguen a los usuarios en el momento pertinente. Por lo general, los mensajes de programación incluyen:
 
-* Por qué el usuario recibe el mensaje: facilite a sus usuarios la comprensión de la razón por la que están recibiendo el mensaje.
-* Qué puede hacer el usuario a continuación: los usuarios pueden realizar la acción requerida en base al contenido del mensaje.
+* ¿Por qué el usuario recibe el mensaje? Facilite a sus usuarios la razón por la que están recibiendo el mensaje.
+
+* ¿Qué puede hacer el usuario ahora? Los usuarios pueden realizar la acción requerida en base al contenido del mensaje.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Instale proactivamente su aplicación con Graph
 
@@ -117,7 +124,7 @@ Envíe mensajes proactivos a los usuarios que no hayan instalado o interactuado 
 
 Solo puede instalar aplicaciones que se encuentran en el catálogo de aplicaciones de la organización o en la App Store de Teams.
 
-Consulte [instalar aplicaciones para usuarios](/graph/api/userteamwork-post-installedapps) en la documentación de Graph e [instalación proactiva de bots y mensajería en Teams con Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). También hay un [ejemplo de Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
+Consulte [instalar aplicaciones para usuarios](/graph/api/userteamwork-post-installedapps) en la documentación de Graph e [instalación proactiva de bots y mensajería en Teams con Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). También hay un [ejemplo de Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) en la plataforma GitHub.
 
 ## <a name="samples"></a>Muestras
 
