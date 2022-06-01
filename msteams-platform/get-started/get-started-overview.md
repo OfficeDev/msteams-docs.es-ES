@@ -1,15 +1,14 @@
 ---
 title: 'Introducción: Información general'
-description: Información general de la introducción a la documentación para desarrolladores de Microsoft Teams
+description: Con esta ruta de aprendizaje, comience a obtener la documentación para desarrolladores de Microsoft Teams, que le presenta herramientas comunes, conceptos fundamentales y características avanzadas.
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Ejemplos para desarrolladores de Microsoft Teams
-ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a2dc779e24828ce73f9a93498bdcceecbdfe582b
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757713"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795157"
 ---
 # <a name="get-started"></a>Introducción
 

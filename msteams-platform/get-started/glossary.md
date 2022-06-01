@@ -1,15 +1,14 @@
 ---
 title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
-description: Glosario para la documentación para desarrolladores de Microsoft Teams
+description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Definición de desarrollador de Microsoft Teams
-ms.openlocfilehash: 54068043d174a79de8a59e0d14b2310e0ae70f32
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653276"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795143"
 ---
 # <a name="glossary"></a>Glosario
 

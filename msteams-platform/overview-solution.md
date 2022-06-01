@@ -1,17 +1,17 @@
 ---
 title: Solución de Teams para crear aplicaciones
 author: heath-hamilton
-description: Información general sobre la solución de Teams para crear aplicaciones
+description: Obtenga información general sobre Teams solución para crear aplicaciones y proporcione soporte técnico desde planear la aplicación hasta distribuirla.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: d93e27c7180938a7329eec94ff54a9988b851430
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2df7bf928109c1616bebf99d895c953c4a420e9a
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501966"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795136"
 ---
 # <a name="the-teams-solution"></a>La solución de Teams
 
