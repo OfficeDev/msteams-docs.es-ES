@@ -4,12 +4,12 @@ description: Describe cómo configurar proveedores de identidades con un enfoque
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: autenticación de teams Azure AD proveedor de identidades de oauth
-ms.openlocfilehash: 6ab95958c66fcf680cdab54d3307eab5dc66fa57
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6fb17041e9169b4d5e74295cbb62ea97c8befd0f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757055"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887572"
 ---
 # <a name="configure-identity-providers"></a>Configurar proveedores de identidades
 
@@ -38,5 +38,5 @@ Reemplace `<hostname>` por el host real, que podría ser un sitio de hospedaje d
 ## <a name="see-also"></a>Consulte también
 
 * [Autenticación de un usuario en un bot de Microsoft Teams](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
-* [Compatibilidad con inicio de sesión único (SSO) para pestañas](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [Compatibilidad con inicio de sesión único (SSO) para pestañas](../../tabs/how-to/authentication/tab-sso-overview.md)
 * [Autenticación de un usuario en una pestaña de Microsoft Teams](../../tabs/how-to/authentication/auth-tab-aad.md)

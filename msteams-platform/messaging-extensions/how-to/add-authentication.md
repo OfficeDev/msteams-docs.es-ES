@@ -5,12 +5,12 @@ description: Aprenda a agregar autenticación a una extensión de mensajería me
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297011"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887614"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Agregar autenticación a la extensión de mensaje
 
@@ -81,7 +81,7 @@ Al igual que con otras experiencias incrustadas que se ejecutan dentro de Micros
 
 Cuando la solicitud de inicio de sesión se complete y lo redirija de vuelta a la página, debe realizar los siguientes pasos:
 
-1. Generar un código de seguridad, un número aleatorio. Debe almacenar en caché este código en el servicio, junto con las credenciales obtenidas a través del flujo de inicio de sesión, como los tokens de OAuth 2.0.
+1. Genere un código de seguridad, un número aleatorio. Debe almacenar en caché este código en el servicio, con las credenciales obtenidas a través del flujo de inicio de sesión, como tokens de OAuth 2.0.
 1. Llame a `microsoftTeams.authentication.notifySuccess` y pase el código de seguridad.
 
 En este momento, la ventana se cierra y el control se pasa al cliente de Teams. El cliente ahora vuelve a emitir la consulta de usuario original, junto con el código de seguridad de la propiedad `state`. El código puede usar un código de seguridad para buscar las credenciales almacenadas anteriormente y completar la secuencia de autenticación, y así completar la solicitud del usuario.

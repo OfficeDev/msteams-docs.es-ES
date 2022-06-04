@@ -1,34 +1,48 @@
 ---
-title: Autenticación para pestañas mediante Azure Active Directory
+title: Configuración de la autenticación de OAuth de terceros
 description: Describe la autenticación en Teams y cómo usarla en pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: aa60f3908a13b55add525a561fe3f60afaad6c87
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1cbd871a3066c5f8dd1cbba0837fdf8e4ab9be8f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757321"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887782"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Autenticación de un usuario en una pestaña de Microsoft Teams
+# <a name="configure-third-party-oauth-authentication"></a>Configuración de la autenticación de OAuth de terceros
 
 > [!Note]
-> Para que la autenticación funcione para la pestaña en clientes móviles, debe asegurarse de que usa la versión 1.4.1 o posterior del SDK de JavaScript de Teams.
+> Para que la autenticación funcione para la pestaña en clientes móviles, asegúrese de que usa la versión 1.4.1 o posterior del SDK de JavaScript de Teams.
 
-Es posible que desee consumir muchos servicios dentro de la aplicación de Teams, y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams. La información de perfil de usuario de Teams se almacena en Azure AD mediante Microsoft Graph y este artículo se centrará en la autenticación mediante Azure AD para obtener acceso a esta información.
+Es posible que desee consumir muchos servicios dentro de la aplicación de Teams, y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams.
+La información de perfil de usuario de Teams se almacena en Azure AD mediante Microsoft Graph y este artículo se centrará en la autenticación mediante Azure AD para obtener acceso a esta información.
 
-OAuth 2.0 es un estándar abierto para la autenticación usado por Azure Active Directory (Azure AD) y muchos otros proveedores de identidad. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. En los ejemplos siguientes se usa el flujo de concesión implícita de OAuth 2.0 con el objetivo de leer finalmente la información del perfil del usuario de Azure AD y Microsoft Graph.
+OAuth 2.0 es un estándar abierto para la autenticación usado por Azure Active Directory (Azure AD) y muchos otros proveedores de identidad. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. En los ejemplos siguientes se usa el flujo de concesión implícita de OAuth 2.0. Lee la información del perfil del usuario de Azure AD y Microsoft Graph.
 
-El código del artículo procede de la aplicación de ejemplo Teams [Microsoft Teams ejemplo de autenticación de tabulación (Nodo).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual de Azure AD.
+El código de este artículo procede de la aplicación de ejemplo de Teams [Ejemplo de autenticación de tabulación de Microsoft Teams (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual de Azure AD.
 
 Para obtener información general sobre el flujo de autenticación de las pestañas, consulte [Flujo de autenticación en pestañas](~/tabs/how-to/authentication/auth-flow-tab.md).
 
-El flujo de autenticación en las pestañas difiere ligeramente del flujo de autenticación en los bots.
+El flujo de autenticación en pestañas difiere del flujo de autenticación en los bots.
 
-## <a name="configuring-identity-providers"></a>Configuración de proveedores de identidades
+## <a name="configure-your-app-to-use-azure-ad-as-an-identity-provider"></a>Configuración de la aplicación para usar Azure AD como proveedor de identidades
 
-Consulte el tema [Configuración de proveedores de identidades](~/concepts/authentication/configure-identity-provider.md) para obtener pasos detallados sobre cómo configurar las direcciones URL de redireccionamiento de devolución de llamada de OAuth 2.0 al usar Azure AD como proveedor de identidades.
+Los proveedores de identidades que admiten OAuth 2.0 no autentican solicitudes de aplicaciones desconocidas. Debe registrar las aplicaciones con antelación. Para ello con Azure AD, siga estos pasos:
+
+1. Abra el [Portal de registro de aplicaciones](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
+
+2. Seleccione la aplicación para ver sus propiedades o seleccione el botón "Nuevo registro". Busque la sección **URI de redirección** de la aplicación.
+
+3. Seleccione **Web** en el menú desplegable. Actualice la dirección URL al punto de conexión de autenticación. Para las aplicaciones de ejemplo TypeScript/Node.js y C# en GitHub, las direcciones URL de redireccionamiento serán similares a las siguientes:
+
+    URL de redireccionamiento`https://<hostname>/bot-auth/simple-start`
+
+Reemplace por `<hostname>` el host real. Este host puede ser un sitio de hospedaje dedicado, como Azure, Glitch o un túnel ngrok a localhost en la máquina de desarrollo, como `abcd1234.ngrok.io`. Si no tiene esta información, asegúrese de que ha completado o hospedado la aplicación (o la aplicación de ejemplo). Reanude este proceso cuando tenga esta información.
+
+> [!NOTE]
+> Puede elegir cualquier proveedor de OAuth de terceros, como LinkedIn, Google y otros. El proceso para habilitar la autenticación para estos proveedores es similar al uso de Azure AD como proveedor de OAuth de terceros. Para obtener más información sobre el uso de cualquier proveedor de OAuth de terceros, visite el sitio web del proveedor en particular.
 
 ## <a name="initiate-authentication-flow"></a>Iniciar el flujo de autenticación
 
@@ -36,7 +50,7 @@ El flujo de autenticación debe desencadenarse mediante una acción del usuario.
 
 Agregue un botón a la página de configuración o contenido para permitir que el usuario inicie sesión cuando sea necesario. Esto se puede hacer en la página de [configuración](~/tabs/how-to/create-tab-pages/configuration-page.md) de la pestaña o en cualquier página de [contenido](~/tabs/how-to/create-tab-pages/content-page.md).
 
-Azure AD, al igual que la mayoría de los proveedores de identidades, no permite que su contenido se coloque en un iframe. Esto significa que tendrá que agregar una página emergente para hospedar el proveedor de identidades. En el ejemplo siguiente, esta página es `/tab-auth/simple-start`. Use la función `microsoftTeams.authenticate()` del SDK de cliente de Microsoft Teams para iniciar esta página cuando se seleccione el botón.
+Azure AD, al igual que la mayoría de los proveedores de identidades, no permite que su contenido se coloque en .`iframe` Esto significa que tendrá que agregar una página emergente para hospedar el proveedor de identidades. En el ejemplo siguiente, esta página es `/tab-auth/simple-start`. Use la `microsoftTeams.authenticate()` función del SDK de cliente de Microsoft Teams para iniciar esta página cuando se seleccione el botón.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -58,11 +72,11 @@ microsoftTeams.authentication.authenticate({
 
 * El flujo de autenticación debe iniciarse en una página que esté en el dominio. Este dominio también debe aparecer en la sección [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) del manifiesto. Si no lo hace, se producirá un elemento emergente vacío.
 
-* Si no se puede usar `microsoftTeams.authentication.authenticate()`, el elemento emergente no se cerrará al final del proceso de inicio de sesión.
+* Si no se usa `microsoftTeams.authentication.authenticate()` , el elemento emergente no se cerrará al final del proceso de inicio de sesión.
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>Vaya a la página de autorización desde la página emergente.
 
-Cuando se muestra la página emergente (`/tab-auth/simple-start`), se ejecuta el código siguiente. El objetivo principal de esta página es redirigir al proveedor de identidades para que el usuario pueda iniciar sesión. Esta redirección podría realizarse en el lado servidor mediante HTTP 302, pero en este caso se hace en el lado cliente mediante con una llamada a `window.location.assign()`. Esto también permite usar `microsoftTeams.getContext()` para recuperar información de sugerencias, que se puede pasar a Azure AD.
+Cuando se muestra la página emergente (`/tab-auth/simple-start`) se ejecuta el código siguiente. El objetivo principal de esta página es redirigir al proveedor de identidades para que el usuario pueda iniciar sesión. Esta redirección podría realizarse en el lado servidor mediante HTTP 302, pero en este caso se hace en el lado cliente mediante con una llamada a `window.location.assign()`. Esto también permite usar `microsoftTeams.getContext()` para recuperar información de sugerencias, que se puede pasar a Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {

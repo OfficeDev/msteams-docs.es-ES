@@ -6,12 +6,12 @@ keywords: canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672946"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887635"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -245,7 +245,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Usar la función `getContext()` para recuperar el contexto
 
-La `app.getContext()` función devuelve una promesa que se resuelve con el objeto de [interfaz de contexto](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) .
+La `app.getContext()` función devuelve una promesa que se resuelve con el objeto de [interfaz de contexto](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) .
 
 El código siguiente proporciona un ejemplo de cómo agregar esta función a la página de configuración para recuperar valores de contexto:
 
@@ -294,7 +294,7 @@ Autentíquese antes de permitir que un usuario configure la aplicación. De lo c
 
 Establezca la propiedad del `canUpdateConfiguration` manifiesto en `true`. Permite a los usuarios modificar, volver a configurar o cambiar el nombre de una pestaña de canal o grupo. Informe al usuario sobre el impacto en el contenido cuando se quita una pestaña. Para ello, incluya una página de opciones de eliminación en la aplicación y establezca un valor para la `removeUrl` propiedad en la `setConfig()` configuración (anteriormente `setSettings()`). El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, vea [crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (anteriormente `setSettings()`) configuración para la página de eliminación:
+Configuración de Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para la página de eliminación:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

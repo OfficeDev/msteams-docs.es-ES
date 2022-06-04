@@ -2,14 +2,14 @@
 title: Compatibilidad con inicio de sesión único para bots
 description: Describe cómo obtener un token de usuario. Actualmente, un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio de bot de Azure con la compatibilidad con la tarjeta OAuth.
 keywords: token, token de usuario, compatibilidad con SSO para bots, permiso, Microsoft Graph, Azure AD
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 49fac724cea263dac8e1540b0b40f5e3b8d267d8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111762"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887600"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -56,7 +56,7 @@ Los pasos siguientes le guían para desarrollar el bot de inicio de sesión úni
 
 ### <a name="register-your-app-through-the-azure-ad-portal"></a>Registre su aplicación a través del portal de Azure AD
 
-Los pasos para registrar la aplicación a través del portal de Azure AD son similares al [flujo de inicio de sesión único de pestaña](../../../tabs/how-to/authentication/auth-aad-sso.md). Los pasos siguientes le guían para registrar la aplicación:
+Los pasos para registrar la aplicación a través del portal de Azure AD son similares al [flujo de inicio de sesión único de pestaña](../../../tabs/how-to/authentication/tab-sso-overview.md). Los pasos siguientes le guían para registrar la aplicación:
 
 1. Registrar una nueva aplicación en el portal [Registros de aplicaciones de Microsoft Azure Active Directory (Azure AD)](https://go.microsoft.com/fwlink/?linkid=2083908).
 
@@ -96,7 +96,7 @@ Los pasos para registrar la aplicación a través del portal de Azure AD son sim
    >
    > Debe tener en cuenta las siguientes restricciones importantes:
    >
-   > * Solo se admiten los permisos de Microsoft Graph API de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita acceder a otros ámbitos de Microsoft Graph, como `User.Read` o `Mail.Read`, consulte [Obtener un token de acceso con permisos de Graph](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
+   > * Solo se admiten los permisos de Microsoft Graph API de nivel de usuario, como correo electrónico, perfil, offline_access y OpenId. Si necesita acceso a otros ámbitos de Microsoft Graph, como `User.Read` o `Mail.Read`, consulte [Extensión de la aplicación de pestaña con permisos y ámbito de Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Es importante que el nombre de dominio de su aplicación sea el mismo que el nombre de dominio que ha registrado para su aplicación de Azure AD.
    > * Actualmente, no se admiten varios dominios por aplicación.
    > * Las aplicaciones que usan el dominio `azurewebsites.net` no se admiten porque es común y puede ser un riesgo para la seguridad.

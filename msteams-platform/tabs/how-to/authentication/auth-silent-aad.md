@@ -2,14 +2,14 @@
 title: Autenticación silenciosa
 description: Describe la autenticación silenciosa, el inicio de sesión único Azure AD para las pestañas.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: pestaña de Azure AD silenciosa de inicio de sesión único de autenticación de Teams
-ms.openlocfilehash: 699582414a4699a69519e41232e4354d8125337b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111650"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887796"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111650"
 > [!NOTE]
 > Para que la autenticación funcione para la pestaña en clientes móviles, asegúrese de que usa Teams SDK de JavaScript versión 1.4.1 o posterior.
 
-La autenticación silenciosa en Azure AD minimiza el número de veces que un usuario escribe sus credenciales actualizando silenciosamente el token de autenticación. Para obtener una verdadera compatibilidad con el inicio de sesión único, consulte la [documentación de inicio de sesión único](~/tabs/how-to/authentication/auth-aad-sso.md).
+La autenticación silenciosa en Azure AD minimiza el número de veces que un usuario escribe sus credenciales actualizando silenciosamente el token de autenticación. Para obtener una verdadera compatibilidad con el inicio de sesión único, consulte la [documentación de inicio de sesión único](~/tabs/how-to/authentication/tab-sso-overview.md).
 
 Para mantener el cliente de código, use la [biblioteca de autenticación de Azure AD](/azure/active-directory/develop/active-directory-authentication-libraries) para JavaScript para obtener un token de acceso Microsoft Azure Active Directory (Azure AD) de forma silenciosa. Si el usuario ha iniciado sesión recientemente, no verá un cuadro de diálogo emergente.
 

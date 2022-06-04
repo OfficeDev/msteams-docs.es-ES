@@ -1,27 +1,27 @@
 ---
-title: Agregar inicio de sesión único a las aplicaciones de Teams
+title: Incorporación del inicio de sesión único a las aplicaciones de Teams
 author: zyxiaoyuer
 description: Describe Agregar inicio de sesión único de Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 3b83104dd07d34989f85fa0b96182c5c43408d98
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656848"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887593"
 ---
-# <a name="add-single-sign-on-to-teams-app"></a>Agregar inicio de sesión único a Teams aplicación
+# <a name="add-single-sign-on-to-teams-app"></a>Agregar inicio de sesión único a la aplicación de Teams
 
-Microsoft Teams proporciona una función de inicio de sesión único para que la aplicación obtenga el token de usuario Teams que ha iniciado sesión para acceder a Microsoft Graph y a otras API. Teams Toolkit facilita la interacción mediante la abstracción de algunos de los flujos e integraciones de Azure AD detrás de algunas API sencillas. Esto le permite agregar fácilmente características de inicio de sesión único (SSO) a la aplicación de Teams.
+Microsoft Teams proporciona una función de inicio de sesión único para que la aplicación obtenga el token de usuario de Teams que ha iniciado sesión para acceder a Microsoft Graph y a otras API. Teams Toolkit facilita la interacción mediante la abstracción de algunos de los flujos e integraciones de Azure AD detrás de algunas API sencillas. Esto le permite agregar fácilmente características de inicio de sesión único (SSO) a la aplicación teams.
 
 En el caso de las aplicaciones que interactúan con el usuario en un chat, un equipo o un canal, el inicio de sesión único se manifiesta como una tarjeta adaptable con la que el usuario puede interactuar para invocar el flujo de consentimiento de Azure AD.
 
 ## <a name="enable-sso-support"></a>Habilitación de la compatibilidad con SSO
 
-Teams Toolkit le ayuda a agregar sso a las siguientes funcionalidades de Teams:
+Teams Toolkit le ayuda a agregar el inicio de sesión único a las siguientes funcionalidades de Teams:
 
 * Tab
 * Bot
@@ -30,10 +30,10 @@ Teams Toolkit le ayuda a agregar sso a las siguientes funcionalidades de Teams:
 
 ### <a name="add-sso-using-visual-studio-code"></a>Incorporación del inicio de sesión único mediante Visual Studio Code
 
-Los pasos siguientes le ayudan a agregar el inicio de sesión único mediante Teams Toolkit en Visual Studio Code
+Los pasos siguientes le ayudan a agregar el inicio de sesión único mediante el kit de herramientas de Teams en Visual Studio Code
 
 1. Abrir **Microsoft Visual Studio Code**.
-2. Seleccione Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar (Agregar barra lateral de inicio de sesión único)"::: en la barra de navegación izquierda.
+2. Seleccione La :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="barra lateral agregar sso"::: del kit de herramientas de Teams en la barra de navegación izquierda.
 3. Seleccione **Agregar características** en **DESARROLLO**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
@@ -51,11 +51,11 @@ Puede ejecutar el `teamsfx add sso` comando en el **directorio raíz del proyect
 > [!Note]
 > La característica habilita el inicio de sesión único para todas las funcionalidades aplicables existentes. Siga los mismos pasos para habilitar el inicio de sesión único si agrega funcionalidad más adelante al proyecto.
 
-## <a name="customize-your-project-using-teams-toolkit"></a>Personalización del proyecto mediante Teams Toolkit
+## <a name="customize-your-project-using-teams-toolkit"></a>Personalización del proyecto mediante el kit de herramientas de Teams
 
-En la tabla siguiente se enumeran los cambios Teams Toolkit realizados en el proyecto:
+En la tabla siguiente se enumeran los cambios realizados por Teams Toolkit en el proyecto:
 
-   |**Tipo**|**File**|**Finalidad**|
+   |**Tipo**|**Archivo**|**Finalidad**|
    |--------|--------|-----------|
    |Crear|`aad.template.json` Bajo `template/appPackage`|El manifiesto de aplicación de Azure AD representa la aplicación de Azure AD. `template/appPackage` ayuda a registrar una aplicación de Azure AD durante la fase de depuración o aprovisionamiento local.|
    |Modify|`manifest.template.json` Bajo `template/appPackage`|Se agrega un `webApplicationInfo` objeto a la plantilla de manifiesto de aplicación de Teams. Teams requiere este campo para habilitar el inicio de sesión único. El cambio está en vigor cuando se desencadena la depuración o el aprovisionamiento locales.|
@@ -63,7 +63,7 @@ En la tabla siguiente se enumeran los cambios Teams Toolkit realizados en el pro
    |Crear|`auth/bot`|El código de referencia, las páginas de redirección de autenticación y un `README.md` archivo se generan en esta ruta de acceso para un proyecto de bot.|
 
 > [!Note]
-> Al agregar sso, Teams Toolkit no cambia nada en la nube hasta que se desencadena la depuración local. Actualice el código para asegurarse de que el inicio de sesión único funciona en el proyecto.
+> Al agregar el inicio de sesión único, Teams Toolkit no cambia nada en la nube hasta que se desencadena la depuración local. Actualice el código para asegurarse de que el inicio de sesión único funciona en el proyecto.
 
 ## <a name="update-your-application-to-use-sso"></a>Actualización de la aplicación para usar el inicio de sesión único
 
@@ -123,7 +123,7 @@ Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la apl
 
     ```
 
-    con 
+   Con
 
    ```JSON
 
@@ -144,7 +144,7 @@ Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la apl
 
    ```
 
-    con 
+   Con
 
    ```Bash
 
@@ -185,7 +185,7 @@ Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la apl
 
    ```
 
-9. Registre el comando en el manifiesto de la aplicación Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
+9. Registre el comando en el manifiesto de aplicación de Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
 
    ```JSON
 
@@ -195,6 +195,7 @@ Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la apl
    }
 
    ```
+
 </details>
 <details>
 <summary><b>Adición de un nuevo comando al bot </b></summary>
@@ -299,7 +300,7 @@ export async function showUserImage(context, ssoToken, param) {
 
      ```
 
-3. Registre el comando en el manifiesto de la aplicación Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
+3. Registre el comando en el manifiesto de aplicación de Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
 
    ```JSON
 
@@ -309,17 +310,18 @@ export async function showUserImage(context, ssoToken, param) {
    }
 
    ```
+
 </details>
 <br>
 
 ## <a name="debug-your-application"></a>Depure su aplicación
 
-Presione F5 para depurar la aplicación. Teams Toolkit usa el archivo de manifiesto de Azure AD para registrar una aplicación de Azure AD para el inicio de sesión único. Para obtener Teams Toolkit funcionalidades de depuración local, consulte [Depuración local de la aplicación de Teams](debug-local.md).
+Presione F5 para depurar la aplicación. Teams Toolkit usa el archivo de manifiesto de Azure AD para registrar una aplicación de Azure AD para el inicio de sesión único. Para conocer las funcionalidades de depuración local del kit de herramientas de Teams, consulte [Depuración local de la aplicación de Teams](debug-local.md).
 
 ## <a name="customize-azure-ad-application-registration"></a>Personalización del registro de aplicaciones de Azure AD
 
 El [manifiesto de aplicación de Azure AD](/azure/active-directory/develop/reference-app-manifest) permite personalizar varios aspectos del registro de aplicaciones. Puede actualizar el manifiesto según sea necesario. Si necesita incluir permisos de API adicionales para acceder a las API deseadas, consulte [Permisos de API para acceder a las API deseadas](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-Para ver la aplicación de Azure AD en Azure Portal, consulte [Visualización de la aplicación de Azure AD en Azure Portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal). 
+Para ver la aplicación de Azure AD en Azure Portal, consulte [Visualización de la aplicación de Azure AD en Azure Portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## <a name="sso-authentication-concepts"></a>Conceptos de autenticación de SSO
 
@@ -329,9 +331,9 @@ Los siguientes conceptos le ayudan a realizar la autenticación de SSO:
 
 La autenticación de inicio de sesión único (SSO) en Microsoft Azure Active Directory (Azure AD) actualiza de forma silenciosa el token de autenticación para minimizar el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión. Si un usuario otorga su consentimiento para usar la aplicación, no tiene que volver a otorgarlo en otro dispositivo, ya que inicia sesión automáticamente.
 
-Teams pestañas y bots tienen un flujo similar para la compatibilidad con SSO. Para obtener más información, consulte:
+Las pestañas y los bots de Teams tienen un flujo similar para la compatibilidad con SSO. Para obtener más información, consulte:
 
-1. [Autenticación de inicio de sesión único (SSO) en pestañas](../tabs/how-to/authentication/auth-aad-sso.md)
+1. [Autenticación de inicio de sesión único (SSO) en pestañas](../tabs/how-to/authentication/tab-sso-overview.md)
 2. [Autenticación de inicio de sesión único (SSO) en Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
 
 ### <a name="simplified-sso-with-teamsfx"></a>Inicio de sesión único simplificado con TeamsFx
@@ -340,15 +342,15 @@ TeamsFx ayuda a reducir las tareas de desarrollador mediante el inicio de sesió
 
 Con el SDK de TeamsFx, puede escribir código de autenticación de usuario de forma simplificada mediante Credenciales:
 
-1. Identidad de usuario en el entorno del explorador: `TeamsUserCredential` representa Teams identidad del usuario actual.
+1. Identidad de usuario en el entorno del explorador: `TeamsUserCredential` representa la identidad del usuario actual de Teams.
 2. Identidad de usuario en Node.js entorno: `OnBehalfOfUserCredentail` usa el flujo en nombre de y el token de SSO.
 3. Identidad de aplicación en Node.js entorno: `AppCredential` representa la identidad de la aplicación.
 
 Para obtener más información sobre el SDK de TeamsFx, consulte:
 
 * [Referencia de API o SDK de TeamsFx](TeamsFx-SDK.md) [](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
-* [Galería de ejemplo de Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
+* [Galería de ejemplos de Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Preparar cuentas para crear aplicaciones de Teams](accounts.md)

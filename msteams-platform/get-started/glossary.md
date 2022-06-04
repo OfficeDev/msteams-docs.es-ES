@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795143"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887628"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -31,7 +31,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Recurso de Azure](../toolkit/provision.md) | Un servicio que está disponible a través de Azure y que la aplicación de Teams puede usar para la implementación de Azure. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Servicio de administración de identidades y acceso basado en la nube de Microsoft. Ayuda a los usuarios autenticados a acceder a los recursos internos y externos de Azure. |
 | [Autenticación](../concepts/authentication/authentication.md) | Proceso para validar el acceso de usuario para el uso de la aplicación. Se puede realizar mediante la API de Microsoft Graph o la autenticación basada en web. <br> **Vea también**: [Proveedores de identidades](#i); [SSO](#s) |
-| [Flujo de autenticación](../concepts/authentication/authentication.md#web-based-authentication-flow) | En Teams, hay dos flujos de autenticación para autenticar a un usuario para usar una aplicación: la autenticación basada en web y el flujo de OAuthPrompt. |
+| [Flujo de autenticación](../concepts/authentication/authentication.md) | En Teams, hay dos flujos de autenticación para autenticar a un usuario para usar una aplicación: la autenticación basada en web y el flujo de OAuthPrompt. |
 
 ## <a name="b"></a>N
 

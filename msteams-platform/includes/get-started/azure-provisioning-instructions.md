@@ -35,7 +35,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
 
-    Si quiere, puede ver los recursos aprovisionados. En este tutorial, no es necesario ver los recursos.
+    Si lo desea, puede ver los recursos aprovisionados. En este tutorial, no es necesario ver los recursos.
 
     El recurso aprovisionado aparece en la sección **Entorno** .
 
