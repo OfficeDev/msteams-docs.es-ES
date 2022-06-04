@@ -1,25 +1,31 @@
 ---
-title: Flujo de autenticación de Teams para pestañas
+title: Habilitación de la autenticación mediante un proveedor de OAuth de terceros
 description: Describe el flujo de autenticación en pestañas, OAuth por Azure AD, y proporciona código de ejemplo
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: bots de flujo de autenticación de Teams
-ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: pestañas de flujo de autenticación de teams con proveedor de OAuth de terceros
+ms.openlocfilehash: 4ad7a765632a451880d8d8bb5342240478e6f6da
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756495"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887803"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flujo de autenticación de Microsoft Teams para pestañas
+# <a name="enable-authentication-using-third-party-oauth-provider"></a>Habilitación de la autenticación mediante un proveedor de OAuth de terceros
+
+Puede habilitar la autenticación en la aplicación de pestañas mediante proveedores de identidades de OAuth (IdP) de terceros. En este método, un IdP de OAuth valida y concede acceso a la identidad de usuario de la aplicación, como Azure AD, Google, Facebook, GitHub o cualquier otro proveedor. Tendrá que configurar una relación de confianza con el IdP y los usuarios de la aplicación también deben estar registrados con él.
 
 > [!NOTE]
 > Para que la autenticación funcione para su pestaña en clientes móviles, debe asegurarse de que usa al menos la versión 1.4.1 del SDK de JavaScript de Microsoft Teams.  
 > El SDK de Teams inicia una ventana independiente para el flujo de autenticación. Establezca el `SameSite`atributo en **Laxo** El cliente de escritorio de Teams o las versiones anteriores de Chrome o Safari no admiten `SameSite`=None.
 
+## <a name="use-oauth-idp-to-enable-authentication"></a>Uso de OAuth IdP para habilitar la autenticación
+
 OAuth 2.0 es un estándar abierto para la autenticación y autorización que usan Microsoft Azure Active Directory (Azure AD) y muchos otros proveedores de identidades. Tener conocimientos básicos del flujo de concesión implícito de OAuth 2.0 es un requisito previo para trabajar con la autenticación en pestañas de Microsoft Teams. Para obtener más información, vea [OAuth 2 simplificado](https://aaronparecki.com/oauth-2-simplified/) que es más fácil de seguir que la [especificación formal](https://oauth.net/2/). El flujo de autenticación para pestañas y bots es diferente porque las pestañas son similares a los sitios web, por lo que pueden usar OAuth 2.0 directamente. Los bots hacen algunas cosas de forma diferente, pero los conceptos básicos son idénticos.
 
 Por ejemplo, el flujo de autenticación para pestañas y bots que usan Node y el [Tipo de concesión implícita de OAuth 2.0](https://oauth.net/2/grant-types/implicit/), consulte [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
+
+En esta sección se usa Azure AD como ejemplo de un proveedor de OAuth de terceros para habilitar la autenticación en una aplicación de pestañas.
 
 > [!NOTE]
 > Antes de mostrar un botón **Login** al usuario y llamar a la API `microsoftTeams.authentication.authenticate` en respuesta a la selección del botón, debe esperar a que se complete la inicialización del SDK. Puede pasar una devolución de llamada a la API `microsoftTeams.initialize` a la que se llama cuando se completa la inicialización.
@@ -27,7 +33,7 @@ Por ejemplo, el flujo de autenticación para pestañas y bots que usan Node y el
 ![Diagrama de secuencia de autenticación de bots](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. El usuario interactúa con el contenido de la configuración de pestaña o la página de contenido, normalmente un **Sign in** o **Log in** botón.
-2. La pestaña construye la dirección URL para su página de inicio de autenticación. Opcionalmente, usa información de marcadores de posición de dirección URL o llamadas `microsoftTeams.getContext()` método del SDK de cliente de Teams para simplificar la experiencia de autenticación del usuario. Por ejemplo, al autenticarse con Azure AD, si el `login_hint` parámetro está establecido en la dirección de correo electrónico del usuario, el usuario no tiene que iniciar sesión si lo ha hecho recientemente. Esto se debe a que Azure AD usa las credenciales almacenadas en caché del usuario. La ventana emergente se muestra brevemente y, a continuación, desaparece.
+2. La pestaña construye la dirección URL para su página de inicio de autenticación. Opcionalmente, usa información de marcadores de posición de dirección URL o llamadas `microsoftTeams.getContext()` método del SDK de cliente de Teams para simplificar la experiencia de autenticación del usuario. Por ejemplo, al autenticarse con Azure AD, si el parámetro `login_hint` está establecido en la dirección de correo electrónico del usuario, puede que el usuario no tenga que iniciar sesión si ya lo ha hecho recientemente. Esto se debe a que Azure AD usa las credenciales almacenadas en caché del usuario. La ventana emergente se muestra brevemente y, a continuación, desaparece.
 3. A continuación, la pestaña llama al método `microsoftTeams.authentication.authenticate()` y registra las funciones `successCallback` y `failureCallback`.
 4. Microsoft Teams abre la página de inicio en un  en una ventana emergente. La página de inicio genera datos aleatorios `state`, lo guarda para la validación futura y redirige al punto de conexión `/authorize` del proveedor de identidades, como `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` para Azure AD. Reemplace `<tenant id>` por su propio identificador de inquilino que es context.tid.
 Al igual que sucede con otros flujos de autenticación de aplicación en Teams, la página de inicio debe estar en un dominio que esté en su lista `validDomains`, y en el mismo dominio que la página de redireccionamiento tras el inicio de sesión.

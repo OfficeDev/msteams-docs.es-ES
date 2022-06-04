@@ -381,20 +381,30 @@
   items:
     - name: Información general
       href: concepts/authentication/authentication.md
-    - name: Configurar proveedores de identidades
-      href: concepts/authentication/configure-identity-provider.md
     - name: Pestañas
       items:
-        - name: Flujo de autenticación en pestañas
-          href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: Usar autenticación de Azure AD
-          href: tabs/how-to/authentication/auth-tab-aad.md
-        - name: Usar autenticación silenciosa
-          href: tabs/how-to/authentication/auth-silent-aad.md
-        - name: Usar autenticación SSO
-          href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Utilizar proveedores OAuth externos
-          href: tabs/how-to/authentication/auth-oauth-provider.md
+        - name: Habilitación del inicio de sesión único para la aplicación de pestañas
+          items:
+            - name: Información general
+              href: tabs/how-to/authentication/tab-sso-overview.md
+            - name: "Registrar aplicación de pestaña en Azure\_AD"
+              href: tabs/how-to/authentication/tab-sso-register-aad.md
+            - name: Agregar código para habilitar el inicio de sesión único
+              href: tabs/how-to/authentication/tab-sso-code.md
+            - name: Actualizar el manifiesto de la aplicación para el SSO y versión preliminar
+              href: tabs/how-to/authentication/tab-sso-manifest.md
+            - name: "Conceder permisos y ámbitos a Microsoft\_Graph"
+              href: tabs/how-to/authentication/tab-sso-graph-api.md
+            - name: Solución de problemas
+              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        - name: Uso de la autenticación de IdP de OAuth de terceros
+          items:
+            - name: Información general
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: Configuración de la autenticación de IdP de OAuth de terceros
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Utilizar proveedores OAuth externos
+              href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flujo de autenticación en bots
@@ -583,6 +593,8 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localizar la referencia de esquema JSON
           href: resources/schema/localization-schema.md
+    - name: Usar autenticación silenciosa
+      href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
     - name: Contribuir a este contenido

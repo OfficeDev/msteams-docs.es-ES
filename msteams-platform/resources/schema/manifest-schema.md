@@ -4,12 +4,12 @@ description: Describe el esquema del manifiesto para Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755884"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887838"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -480,7 +480,7 @@ Este elemento es una matriz (con un máximo de 16 elementos) y todos los element
 |`websiteUrl`|string|||La dirección URL de https:// a la que apuntar si un usuario opta por la vista en un explorador.|
 |`searchUrl`|string|||La dirección URL de https:// a la que apuntar para las consultas de búsqueda de un usuario.|
 |`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
-|`context` | Matriz de enumeración| 2|| El conjunto de ámbitos `contextItem` donde se admite una pestaña.|
+|`context` | Matriz de enumeración| 2 || El conjunto de ámbitos `contextItem` donde se admite una pestaña.|
 
 > [!NOTE]
 > La característica searchUrl no está disponible para los desarrolladores de terceros. Si las pestañas requieren información dependiente del contexto para mostrar contenido relevante o para iniciar un flujo de autenticación, consulte [Obtener contexto para la pestaña de Microsoft Teams](../../tabs/how-to/access-teams-context.md).
@@ -496,7 +496,7 @@ El elemento es una matriz (un elemento como máximo&mdash;actualmente solo se pe
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. El id. puede ser el mismo que el [id. general de la aplicación](#id).|
-|`scopes`|Matriz de enumeración|3|✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
+|`scopes`|Matriz de enumeración|3 |✔|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
 |`needsChannelSelector`|Booleano|||Describe si el bot usa o no una sugerencia de usuario para agregar al bot a un canal específico. Valor predeterminado: **`false`**|
 |`isNotificationOnly`|Booleano|||Indica si un bot es un bot unidireccional de solo notificación, en lugar de un bot conversacional. Valor predeterminado: **`false`**|
 |`supportsFiles`|Booleano|||Indica si el bot admite la capacidad de cargar o descargar archivos en el chat personal. Valor predeterminado: **`false`**|
@@ -509,8 +509,8 @@ Lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`items.scopes`|Matriz de enumeración|3|✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
-|`items.commands`|matriz de objetos|10|✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.scopes`|Matriz de enumeración|3 |✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
+|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -547,7 +547,7 @@ El elemento es una matriz (máximo de un elemento) con todos los elementos de ti
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. El id. puede ser el mismo que el id. de aplicación general.|
-|`commands`|matriz de objetos|10|✔|Matriz de comandos que admite la extensión de mensajería.|
+|`commands`|matriz de objetos|10 |✔|Matriz de comandos que admite la extensión de mensajería.|
 |`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **falso**.|
 |`messageHandlers`|Matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|string|||Tipo de controlador de mensajes. Debe estar `"link"`.|
@@ -566,7 +566,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`type`|string|64 caracteres||Tipo de comando. Uno de `query` o `action`. Valor predeterminado: **consulta**.|
 |`description`|string|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|Booleano|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
-|`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose","commandBox"]`.|
+|`context`|matriz de cadenas|3 ||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose","commandBox"]`.|
 |`fetchTask`|Booleano|||Valor booleano que indica si debe capturar dinámicamente el módulo de tareas. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se va a cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
@@ -630,7 +630,7 @@ Proporcione su identificador de aplicación de Azure Active Directory e informac
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔|Azure AD identificador de aplicación de la aplicación. Este identificador debe ser un GUID.|
-|`resource`|string|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** si no usa SSO, asegúrese de introducir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, https://notapplicable para evitar una respuesta de error. |
+|`resource`|string|2048 caracteres|✔|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** si no usa SSO, asegúrese de introducir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, <https://notapplicable> para evitar una respuesta de error. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -872,6 +872,85 @@ Los permisos delegados permiten a la aplicación acceder a los datos en nombre d
     |**Nombre**|**Descripción**|
     |---|---|
     |`InAppPurchase.Allow.User`|Permite que la aplicación muestre las ofertas de Marketplace del usuario y complete las compras del usuario dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
+
+## <a name="create-a-manifest-file"></a>Crear un archivo de manifiesto
+
+Si la aplicación no tiene un archivo de manifiesto de aplicación de Teams, deberá crearlo.
+
+Para crear un archivo de manifiesto de aplicación de Teams:
+
+1. Use el [esquema de manifiesto de ejemplo](#sample-full-manifest) para crear un archivo .json.
+1. Guárdelo en la raíz de la carpeta del proyecto como `manifest.json`.
+
+<br>
+<details>
+<summary>Este es un ejemplo de esquema de manifiesto para una aplicación de pestañas con SSO habilitado:</summary>
+<br>
+
+> [!NOTE]
+> El contenido de ejemplo del manifiesto que se muestra aquí es solo para una aplicación de pestañas. Usa valores de ejemplo para el URI de subdominio y el nombre del paquete. Para obtener más información, consulte [esquema de manifiesto de ejemplo](#sample-full-manifest).
+
+  ```json
+{ 
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
+ "manifestVersion": "1.12", 
+ "version": "1.0.0", 
+ "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "packageName": "com.contoso.teamsauthsso", 
+ "developer": { 
+ "name": "Microsoft", 
+ "websiteUrl": "https://www.microsoft.com", 
+ "privacyUrl": "https://www.microsoft.com/privacy", 
+ "termsOfUseUrl": "https://www.microsoft.com/termsofuse" 
+  }, 
+
+  "name": { 
+    "short": "Teams Auth SSO", 
+    "full": "Teams Auth SSO" 
+  }, 
+
+
+  "description": { 
+    "short": "Teams Auth SSO app", 
+    "full": "The Teams Auth SSO app" 
+  }, 
+
+  "icons": { 
+    "outline": "outline.png", 
+    "color": "color.png" 
+  }, 
+
+  "accentColor": "#60A18E", 
+  "staticTabs": [ 
+    { 
+     "entityId": "auth", 
+     "name": "Auth", 
+     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
+     "scopes": [ "personal" ] 
+    } 
+  ], 
+
+  "configurableTabs": [ 
+    { 
+     "configurationUrl": "https://subdomain.example.com/Home/Configure", 
+     "canUpdateConfiguration": true, 
+     "scopes": [ 
+     "team" 
+      ] 
+    } 
+  ], 
+  "permissions": [ "identity", "messageTeamMembers" ], 
+  "validDomains": [ 
+   "{subdomain or ngrok url}" 
+  ], 
+  "webApplicationInfo": { 
+    "id": "{Azure AD AppId}", 
+    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
+  }
+} 
+```
+
+</details>
 
 ## <a name="see-also"></a>Vea también
 
