@@ -1,18 +1,18 @@
 ## <a name="add-a-message-extension-to-your-app"></a>Agregar una extensión de mensaje a la aplicación
 
-Una extensión de mensaje es un servicio hospedado en la nube que escucha las solicitudes del usuario y responde con datos estructurados, como una [tarjeta](~/task-modules-and-cards/what-are-cards.md). Integre el servicio con Microsoft Teams a través de objetos de Bot Framework`Activity`. Nuestras extensiones .NET y Node.js del SDK de Bot Builder pueden ayudarle a agregar la funcionalidad de extensión de mensaje a la aplicación.
+Una extensión de mensaje es un servicio hospedado en la nube que escucha las solicitudes del usuario y responde con datos estructurados, como una [tarjeta](~/task-modules-and-cards/what-are-cards.md). Integre el servicio con Microsoft Teams a través de objetos de Bot Framework `Activity` . Nuestras extensiones .NET y Node.js del SDK de Bot Builder pueden ayudarle a agregar la funcionalidad de extensión de mensaje a la aplicación.
 
 ![Diagrama del flujo de mensajes para extensiones de mensaje](~/assets/images/compose-extensions/ceflow.png)
 
 ### <a name="register-in-the-bot-framework"></a>Registro en Bot Framework
 
-Si aún no lo ha hecho, primero debe registrar un bot con el Microsoft Bot Framework. Los puntos de conexión de devolución de llamada y el identificador de la aplicación de Microsoft para el bot, tal como se define allí, se usarán en la extensión de mensaje para recibir y responder a las solicitudes del usuario. No olvide habilitar el canal de Microsoft Teams para el bot.
+Si aún no lo ha hecho, primero debe registrar un bot con Microsoft Bot Framework. Los puntos de conexión de devolución de llamada y el identificador de la aplicación de Microsoft para el bot, tal como se define allí, se usarán en la extensión de mensaje para recibir y responder a las solicitudes del usuario. No olvide habilitar el canal de Microsoft Teams para el bot.
 
 Registre el identificador de la aplicación de bot y la contraseña de la aplicación; deberá proporcionar el identificador de la aplicación en el manifiesto de la aplicación.
 
-### <a name="update-your-app-manifest"></a>Actualización del manifiesto de la aplicación
+### <a name="update-your-app-manifest"></a>Actualizar el manifiesto de la aplicación
 
-Al igual que con los bots y las pestañas, se actualiza el [manifiesto](~/resources/schema/manifest-schema.md#composeextensions) de la aplicación para incluir las propiedades de la extensión de mensaje. Estas propiedades rigen cómo aparece y se comporta la extensión de mensaje en el cliente Microsoft Teams. Las extensiones de mensaje se admiten a partir de la versión 1.0 del manifiesto.
+Al igual que con los bots y las pestañas, se actualiza el [manifiesto](~/resources/schema/manifest-schema.md#composeextensions) de la aplicación para incluir las propiedades de la extensión de mensaje. Estas propiedades rigen cómo aparece y se comporta la extensión de mensaje en el cliente de Microsoft Teams. Las extensiones de mensaje se admiten a partir de la versión 1.0 del manifiesto.
 
 #### <a name="declare-your-message-extension"></a>Declaración de la extensión de mensaje
 
@@ -25,9 +25,9 @@ La definición de extensión es un objeto que tiene la estructura siguiente:
 
 | Nombre de propiedad | Objetivo | ¿Necesario? |
 |---|---|---|
-| `botId` | El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Normalmente, debe ser el mismo que el identificador de la aplicación de Teams general. | Sí |
+| `botId` | El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Normalmente, debe ser el mismo que el identificador de la aplicación general de Teams. | Sí |
 | `scopes` | Matriz que declara si esta extensión se puede agregar a `personal` o `team` ámbitos (o ambos). | Sí |
-| `canUpdateConfiguration` | Habilita **Configuración** elemento de menú. | No |
+| `canUpdateConfiguration` | Habilita **el elemento de menú Configuración** . | No |
 | `commands` | Matriz de comandos que admite esta extensión de mensaje. Está limitado a 10 comandos. | Sí |
 
 #### <a name="define-commands"></a>Definición de comandos
@@ -43,9 +43,9 @@ En el manifiesto de la aplicación, el elemento de comando es un objeto con la s
 | `id` | Identificador único que se asigna a este comando. La solicitud de usuario incluirá este identificador. | Sí | 1.0 |
 | `title` | Nombre del comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
 | `description` | Texto de ayuda que indica lo que hace este comando. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
-| `type` | Establezca el tipo de comando. Los valores posibles incluyen `query` y `action`. Si no está presente, el valor predeterminado se establece en `query`. | No | 1.4 |
+| `type` | Establezca el tipo de comando. Los valores posibles incluyen `query` y `action`. Si no es así, presente que el valor predeterminado está establecido en `query`. | No | 1.4 |
 | `initialRun` | Parámetro opcional, que se usa con `query` comandos. Si se establece en **true**, indica que este comando se debe ejecutar en cuanto el usuario elija este comando en la interfaz de usuario. | No | 1.0 |
-| `fetchTask` | Parámetro opcional, que se usa con `action` comandos. Establézcalo en **true** para capturar la tarjeta adaptable o la dirección URL web que se mostrará en el [módulo de tareas](~/task-modules-and-cards/what-are-task-modules.md). Esto se usa cuando las entradas al `action` comando son dinámicas en lugar de un conjunto estático de parámetros. Tenga en cuenta que si se establece en **true** , se omite la lista de parámetros estáticos para el comando. | No | 1.4 |
+| `fetchTask` | Parámetro opcional, que se usa con `action` comandos. Establézcalo en **true** para capturar la tarjeta adaptable o la dirección URL web que se mostrará en el [módulo de tareas](~/task-modules-and-cards/what-are-task-modules.md). Esto se usa cuando la entrada al `action` comando es dinámica en lugar de un conjunto estático de parámetros. Tenga en cuenta que si se establece en **true** , se omite la lista de parámetros estáticos para el comando. | No | 1.4 |
 | `parameters` | Lista estática de parámetros para el comando. | Sí | 1.0 |
 | `parameter.name` | Nombre del parámetro. Esto se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
 | `parameter.description` | Describe los fines o el ejemplo de este parámetro del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
