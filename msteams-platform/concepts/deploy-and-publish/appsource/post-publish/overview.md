@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757020"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887810"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
@@ -39,7 +39,7 @@ Asegúrese de lo siguiente al publicar actualizaciones:
 
 ### <a name="app-updates-requiring-user-consent"></a>Actualizaciones de aplicaciones que requieren el consentimiento del usuario
 
-Cuando un usuario instala la aplicación, debe conceder permiso a la aplicación para acceder a los servicios y la información que requiere la aplicación para funcionar. En la mayoría de los casos, los usuarios deben hacerlo una vez y las nuevas versiones de la aplicación se instalan automáticamente.
+Cuando un usuario instala la aplicación, debe conceder permiso a la aplicación para acceder a los servicios y la información que requiere la aplicación para funcionar. En la mayoría de los casos, los usuarios deben hacerlo una vez y la nueva versión de la aplicación se instala automáticamente.
 Sin embargo, si realiza cualquiera de los siguientes cambios en la aplicación, los usuarios existentes deben aceptar otra solicitud de permiso para instalar la actualización:
 
 * Agregar o quitar un bot.
