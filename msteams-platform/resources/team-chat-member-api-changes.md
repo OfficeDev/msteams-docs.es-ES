@@ -6,18 +6,18 @@ keywords: lista de miembros del equipo de api de bot framework
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 39864b0ebf0f4016bd7dc55b98eb549834acb807
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f41e70352400814ede0d1cf683608b33e7c2ad72
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756467"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906235"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Cambios en la API del bot de Teams para capturar miembros del equipo o chat
 
 >[!NOTE]
 > Se inició el proceso de desuso de las API `TeamsInfo.getMembers` y `TeamsInfo.GetMembersAsync`. Inicialmente, están muy limitadas a cinco solicitudes por minuto y devuelven un máximo de 10 000 miembros por equipo. Como resultado, no se devuelve la lista completa a medida que aumenta el tamaño del equipo.
-> Debe actualizar a la versión 4.10 o posterior del SDK de Bot Framework y cambiar a los puntos de conexión de API paginada o a la API de usuario único `TeamsInfo.GetMemberAsync`. Esto también se aplica al bot incluso si no usa directamente estas API, ya que los SDK más antiguos llaman a estas API durante los eventos de [miembros agregados](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added). Para ver la lista de los próximos cambios, consulte [Cambios de API](team-chat-member-api-changes.md#api-changes).
+> Debe actualizar a la versión 4.10 o posterior del SDK de Bot Framework y cambiar a los puntos de conexión de API paginada o a la API de usuario único `TeamsInfo.GetMemberAsync`. Esto también se aplica al bot incluso si no usa directamente estas API, ya que los SDK más antiguos llaman a estas API durante los eventos de [miembros agregados](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added). Para ver la lista de los próximos cambios, consulte [Cambios de API](team-chat-member-api-changes.md#api-changes).
 
 Actualmente, si desea recuperar información de uno o varios miembros de un chat o equipo, puede usar las [API de bot de Microsoft Teams](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)`TeamsInfo.GetMembersAsync` para C# o `TeamsInfo.getMembers` para las API de TypeScript o Node.js. Para obtener más información, vea [obtener la lista o el perfil de usuario](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -26,7 +26,7 @@ Estas API tienen las siguientes deficiencias:
 * Para equipos grandes, el rendimiento es deficiente y los tiempos de espera son más probables: el tamaño máximo del equipo ha aumentado considerablemente desde que Teams se lanzó a principios de 2017. Como `GetMembersAsync` o `getMembers` devuelve toda la lista de miembros, la llamada API tarda mucho tiempo en devolverse para equipos grandes y es habitual que la llamada agote el tiempo de espera y tenga que intentarlo de nuevo.
 * Obtener los detalles del perfil de un solo usuario es difícil: para obtener la información de perfil de un solo usuario, tiene que recuperar toda la lista de miembros y, a continuación, buscar la que desee. Hay una función auxiliar en el SDK de Bot Framework para simplificarla, pero no es eficaz.
 
-Con la introducción de equipos de toda la organización, hay un requisito para alinear mejor estas API con los controles de privacidad Office 365. Los bots usados en equipos grandes pueden recuperar información de perfil básica similar al permiso `User.ReadBasic.All` de Microsoft Graph. Los administradores de cuentas empresariales tienen un gran control sobre qué aplicaciones y bots se pueden usar en su cuenta empresarial, pero esta configuración es diferente de Microsoft Graph.
+Con la introducción de equipos de toda la organización, hay un requisito para alinear mejor estas API con los controles de privacidad de Office 365. Los bots usados en equipos grandes pueden recuperar información de perfil básica similar al permiso `User.ReadBasic.All` de Microsoft Graph. Los administradores de cuentas empresariales tienen un gran control sobre qué aplicaciones y bots se pueden usar en su cuenta empresarial, pero esta configuración es diferente de Microsoft Graph.
 
 El código siguiente proporciona una representación JSON de ejemplo de lo que devuelven las API de bot de Teams:
 
