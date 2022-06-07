@@ -3,12 +3,12 @@ title: Novedades para desarrolladores de Teams
 description: Obtenga información sobre las nuevas características y mejoras para desarrolladores de esas características en Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6152181ac53685ad056f9a7e4ae8f11cf5dab0a1
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887768"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906291"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -264,6 +264,7 @@ La versión preliminar para desarrolladores es un programa público que proporci
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+| 06/06/2022| Actualizar eventos de conversación e instalación en el bot de Teams |  Compilar bots > Conversaciones de bot > Eventos de conversación en el bot de Teams > [Eventos de conversación en el bot de Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/5/2022| Colaboración mejorada con el SDK de Live Share |  Creación de aplicaciones para reuniones de Teams > Colaboración mejorada con Live Share > [Información general](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022. | Compartir en Teams desde una aplicación personal o una pestaña | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07/02/2022 | Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
