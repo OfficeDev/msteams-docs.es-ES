@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756635"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938964"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar la aplicación de Teams localmente
 
@@ -22,7 +22,6 @@ El kit de herramientas de Teams le ayuda a depurar y obtener una vista previa de
 * [Recarga activa ](#hot-reload)
 * [Detener depuración](#stop-debugging)  
 
-
 Durante el proceso de depuración, el kit de herramientas de Teams inicia automáticamente los servicios de aplicaciones, inicia depuradores y realiza la instalación de prueba de la aplicación Teams. La aplicación de Teams está disponible para la versión preliminar en el cliente web de Teams localmente después de la depuración. También puede personalizar la configuración de depuración para usar los puntos de conexión del bot, el certificado de desarrollo o el componente parcial de depuración para cargar la aplicación configurada.
 
 ## <a name="prerequisite"></a>Requisito previo
@@ -31,27 +30,29 @@ Instale la versión [más reciente del kit de herramientas de Teams](https://mar
 
 ## <a name="key-features-of-teams-toolkit"></a>Características clave del kit de herramientas de Teams
 
-#### <a name="start-debugging"></a>Iniciar depuración
+En la lista siguiente se proporcionan las características clave del kit de herramientas de Teams:
 
-Puede realizar una sola operación, seleccionar **F5** para iniciar la depuración. El kit de herramientas de Teams empieza a comprobar los requisitos previos, registrar la aplicación Azure Active Directory, registrar la aplicación de Teams, registrar el bot, iniciar servicios e iniciar el explorador.
+### <a name="start-debugging"></a>Iniciar depuración
 
-#### <a name="multi-target-debugging"></a>Depuración de varios destinos
+Puede realizar una sola operación, presione **F5** para iniciar la depuración. El kit de herramientas de Teams empieza a comprobar los requisitos previos, registra la aplicación de Azure AD, la aplicación de Teams, registra el bot, inicia los servicios e inicia el explorador.
+
+### <a name="multi-target-debugging"></a>Depuración de varios destinos
 
 El kit de herramientas de Teams usa la característica de depuración de varios destinos para depurar pestañas, bots, extensiones de mensajes y Azure Functions al mismo tiempo.
 
-#### <a name="toggle-breakpoints"></a>Alternar puntos de interrupción
+### <a name="toggle-breakpoints"></a>Alternar puntos de interrupción
 
 Los puntos de interrupción en los códigos fuente de pestañas, bots, extensiones de mensajes y Azure Functions se pueden alternar. Los puntos de interrupción se ejecutan al interactuar con la aplicación Teams en un explorador web. En la imagen siguiente se muestran la alternancia de puntos de interrupción:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="Alternar puntos de interrupción":::
 
-#### <a name="hot-reload"></a>Recarga activa
+### <a name="hot-reload"></a>Recarga activa
 
 Puede actualizar y guardar los códigos fuente de pestañas, bots, extensión de mensajes y Azure Functions al mismo tiempo que depura la aplicación de Teams. La aplicación se vuelve a cargar y el depurador vuelve a asociarse a los lenguajes de programación.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="recarga activa para códigos fuente":::
 
-#### <a name="stop-debugging"></a>Detener depuración
+### <a name="stop-debugging"></a>Detener depuración
 
 Al completar la depuración local, puede seleccionar **Detener** o **Desconectar** de la barra flotante de herramientas de depuración para detener todas las sesiones de depuración y finalizar las tareas. En la imagen siguiente se muestra la acción de detener depuración:
 
@@ -59,32 +60,30 @@ Al completar la depuración local, puede seleccionar **Detener** o **Desconectar
 
 ## <a name="debug-your-teams-app-locally"></a>Depurar la aplicación de Teams localmente
 
-#### <a name="1-set-up-your-teams-toolkit"></a>1. Configurar el kit de herramientas de Teams
+Los pasos siguientes le ayudarán a depurar la aplicación de Teams localmente:
 
-Complete los pasos siguientes para depurar la aplicación después de crear una nueva aplicación con el kit de herramientas de Teams:
+### <a name="set-up-your-teams-toolkit"></a>Configurar el kit de herramientas de Teams
 
-<br>
+Realice los pasos siguientes para depurar la aplicación después de crear una nueva aplicación con el kit de herramientas de Teams:
 
-<details>
-<summary><b>Windows</b></summary>
+# <a name="windows"></a>[Windows](#tab/Windows)
 
-1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecutar y depurar** desde la barra de actividades
+1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecución y depuración** desde la barra de actividades.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Opciones del explorador" border="false":::
 
-1. Seleccione **Iniciar depuración (F5)** o  **Ejecutar** para ejecutar la aplicación de Teams en modo de depuración
+1. Seleccione **Iniciar depuración (F5)** o  **Ejecutar** para ejecutar la aplicación de Teams en modo de depuración.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Iniciar depuración" border="false":::
 
-3. Seleccione **iniciar sesión** con su cuenta de Microsoft 365
+3. Seleccione **iniciar sesión** con su cuenta de Microsoft 365.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Iniciar sesión" border="true":::
-
 
    > [!TIP]
    > Puede seleccionar **Más información** para obtener información sobre el Programa de Desarrolladores de Microsoft 365. Se abrirá el explorador web predeterminado para que pueda iniciar sesión en su cuenta de Microsoft 365 con sus credenciales.
 
-4. Seleccione **Instalar** para instalar el certificado de desarrollo para localhost
+4. Seleccione **Instalar** para instalar el certificado de desarrollo para localhost.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificado" border="true":::
 
@@ -97,10 +96,7 @@ Complete los pasos siguientes para depurar la aplicación después de crear una 
 
 El kit de herramientas inicia una nueva instancia del explorador Edge o Chrome en función de su selección y abre una página web para cargar el cliente de Teams.  
 
-</details>
-
-<details>
-<summary><b>macOS</b></summary>
+# <a name="macos"></a>[macOS](#tab/macOS)
 
 1. Seleccione **Depurar Edge** o **Depurar Chrome** en **Ejecución y depuración** desde la barra de actividades.
 
@@ -130,16 +126,16 @@ El kit de herramientas inicia una nueva instancia del explorador Edge o Chrome e
 
 El kit de herramientas inicia una nueva instancia del explorador Edge o Chrome en función de su selección y abre una página web para cargar el cliente de Teams.
 
-</details>
+---
 
-#### <a name="2-debug-your-app"></a>2. Depurar la aplicación
+### <a name="debug-your-app"></a>Depuración de la aplicación
 
 Después del proceso de configuración inicial, el kit de herramientas de Teams inicia los siguientes procesos:
 
-a. [Inicia los servicios de aplicaciones](#starts-app-services) </br>
-b. [Inicia los depuradores](#launches-debuggers)   </br>c. [Instala localmente la aplicación de Teams](#sideloads-the-teams-app)
-        
-#### <a name="starts-app-services"></a>Inicia los servicios de aplicaciones
+<br>
+
+<details>
+<summary><b>Inicia los servicios de aplicaciones</b></summary>
 
 Ejecuta las tareas definidas en `.vscode/tasks.json` como se indica a continuación:
 
@@ -153,7 +149,9 @@ En la imagen siguiente se muestran los nombres de las tareas en la pestaña **Te
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Inicia los servicios de las aplicaciones":::
 
-#### <a name="launches-debuggers"></a>Inicia los depuradores
+</details>
+<details>
+<summary><b>Inicia los depuradores</b></summary>
 
 Inicia las configuraciones de depuración definidas en `.vscode/launch.json` como se indica a continuación:
 
@@ -175,7 +173,9 @@ En la tabla siguiente se enumeran los tipos y nombres de configuración de depur
 |  Bot o extensión de mensaje  |   **Adjuntar al bot** |  pwa-node  |
 |  Azure Functions |  **Adjuntar al back-end** |  pwa-node |
 
-#### <a name="sideloads-the-teams-app"></a>Instala localmente la aplicación de Teams
+</details>
+<details>
+<summary><b>Instala localmente la aplicación de Teams</b></summary>
 
 La configuración **Adjuntar a front-end** o **Iniciar Bot** inicia una nueva instancia del explorador Edge o Chrome y abre una página web para cargar el cliente de Teams. Una vez cargado el cliente de Teams, Teams transferirá localmente la aplicación de Teams controlada por la dirección URL de instalación de prueba definida en las configuraciones de inicio [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  Cuando el cliente de Teams se cargue en el explorador web, seleccione **Agregar** o seleccione uno de la lista desplegable según sus necesidades.
 
@@ -183,9 +183,11 @@ La configuración **Adjuntar a front-end** o **Iniciar Bot** inicia una nueva in
 
    La aplicación se ha agregado a Teams.
 
+</details>
+
 ## <a name="customize-debug-settings"></a>Personalizar la configuración de depuración
 
-El kit de herramientas de Teams le permite personalizar la configuración de depuración para crear su pestaña o bot desactivando algunos requisitos previos:
+El kit de herramientas de Teams desactiva algunos requisitos previos y le permite personalizar la configuración de depuración para crear su pestaña o bot:
 
 <br>
 
@@ -194,7 +196,7 @@ El kit de herramientas de Teams le permite personalizar la configuración de dep
 
 1. En la configuración de Visual Studio Code desactive **Asegúrese de que Ngrok está instalado e iniciado (ngrok)**.
 
-1. Establezca la configuración de siteEndpoint en `.fx/configs/config.local.json` en su punto de conexión
+1. Establezca la configuración `siteEndpoint` en `.fx/configs/config.local.json` en el punto de conexión.
 
 ```json
 {
@@ -255,7 +257,6 @@ Puede agregar variables de entorno al archivo `.env.teamsfx.local` para pestaña
 
 <details>
 <summary><b>Depurar componente parcial</b></summary>
-
 
 El kit de herramientas de Teams usa la depuración de varios destinos de Visual Studio Code para depurar la pestaña, el bot, la extensión de mensajes y Azure Functions al mismo tiempo. Puede actualizar `.vscode/launch.json` y `.vscode/tasks.json` para depurar componentes parciales. Si desea depurar la pestaña solo en una pestaña más un bot con un proyecto de Azure Functions, siga estos pasos:
 
