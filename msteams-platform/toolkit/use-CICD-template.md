@@ -6,17 +6,16 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 7f2e3c10fe7658ba7138aef8ddbc1028d5dcaca4
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c39ad23fe42fd9cfd97ae2fcf49390cf19fac4a2
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297138"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938937"
 ---
 # <a name="set-up-cicd-pipelines"></a>Configuración de canalizaciones CI/CD
 
 TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al compilar la aplicación de Teams. A continuación se muestran las herramientas y plantillas que puede usar para configurar canalizaciones de CI/CD, crear plantillas de flujo de trabajo y personalizar el flujo de trabajo de CI/CD con GitHub, Azure DevOps, Jenkins y otras plataformas. Para aprovisionar e implementar recursos, puede crear entidades de servicio de Azure y publicar la aplicación de Teams mediante el portal para desarrolladores de Teams. Para publicar la aplicación de Teams manualmente, puede aprovechar el [portal para desarrolladores para Teams](https://dev.teams.microsoft.com/home).
-
 
 |Herramientas y plantillas | Descripción |
 |---|---|
@@ -24,7 +23,6 @@ TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al compilar la apl
 |[Kit de herramientas de Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| La extensión de Visual Studio Code que le ayuda a desarrollar los flujos de trabajo de automatización y las aplicaciones de Teams para GitHub, Azure DevOps y Jenkins. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Herramienta de línea de comandos que le ayuda a desarrollar los flujos de trabajo de automatización y las aplicaciones de Teams para GitHub, Azure DevOps y Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) y [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Crear plantillas de scripts para la automatización fuera de GitHub, Azure DevOps o Jenkins. |
-
 
 ## <a name="set-up-pipelines"></a>Configuración de canalizaciones
 
@@ -35,25 +33,25 @@ Puede configurar canalizaciones con las siguientes plataformas:
 1. [Configuración de canalizaciones con Jenkins](#set-up-pipelines-with-jenkins)
 1. [Configuración de canalizaciones para otras plataformas](#set-up-pipelines-for-other-platforms)
 
-
-### <a name="set-up-pipelines-with-github"></a>Configuración de canalizaciones con GitHub
+## <a name="set-up-pipelines-with-github"></a>Configuración de canalizaciones con GitHub
 
 Para configurar canalizaciones con GitHub para CI/CD:
 
-1. Creación de plantillas de flujo de trabajo.
+* Creación de plantillas de flujo de trabajo.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Personalización del flujo de trabajo de CI/CD.
+* Personalización del flujo de trabajo de CI/CD.
 
+### <a name="create-workflow-templates"></a>Creación de plantillas de flujo de trabajo
 
-## <a name="create-workflow-templates-with-github"></a>Creación de plantillas de flujo de trabajo con GitHub
+Puede crear las siguientes plantillas de flujo de trabajo con GitHub:
 
-**Creación de plantillas de flujo de trabajo mediante el Toolkit de Teams en Visual Studio Code**
+**Kit de herramientas de Teams para Visual Studio Code**
 
 1. Creación de un nuevo proyecto de aplicación de Teams con el Kit de herramientas de Teams.
-1. Seleccione el icono del **Kit de herramientas de Teams** en la barra lateral de Visual Studio Code.
+1. Seleccione :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="el icono de api"::: **del kit de herramientas de Teams** en la barra de navegación izquierda.
 1. Seleccione **Agregar flujos de trabajo de CI/CD**.
 1. Seleccione un entorno en el símbolo del sistema.
 1. Seleccione **GitHub** como proveedor de CI/CD.
@@ -61,7 +59,7 @@ Para configurar canalizaciones con GitHub para CI/CD:
 1. Abra la plantilla y personalice los flujos de trabajo que encajan en los escenarios.
 1. Siga los archivos LÉAME de `.github/workflows` para configurar el flujo de trabajo en GitHub.
 
-**Creación de plantillas de flujo de trabajo mediante la CLI de TeamsFx**
+**TeamsFx CLI**
 
 1. Escriba `cd` en el directorio del proyecto de aplicación de Teams.
 2. Escriba el comando `teamsfx add cicd` para iniciar el proceso de comando interactivo.
@@ -82,24 +80,25 @@ Puede cambiar o quitar los scripts de prueba para personalizar el flujo de traba
 1. Cambie los scripts de compilación si es necesario.
 1. Quite los scripts de prueba según sea necesario.
 
-### <a name="set-up-pipelines-with-azure-devops"></a>Configuración de canalizaciones con Azure DevOps
+## <a name="set-up-pipelines-with-azure-devops"></a>Configuración de canalizaciones con Azure DevOps
 
 Para configurar canalizaciones con Azure DevOps para CI/CD:
 
-1. Creación de plantillas de flujo de trabajo.
+* Creación de plantillas de flujo de trabajo.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Personalización del flujo de trabajo de CI/CD.
+* Personalización del flujo de trabajo de CI/CD.
 
+### <a name="create-workflow-templates"></a>Creación de plantillas de flujo de trabajo
 
-## <a name="create-workflow-templates-with-azure-devops"></a>Creación de plantillas de flujo de trabajo con Azure DevOps
+Puede crear las siguientes plantillas de flujo de trabajo con Azure DevOps:
 
-**Creación de plantillas de flujo de trabajo mediante el Toolkit de Teams en Visual Studio Code**
+**Kit de herramientas de Teams para Visual Studio Code**
 
 1. Creación de un nuevo proyecto de aplicación de Teams con el Kit de herramientas de Teams.
-2. Seleccione el icono del **Kit de herramientas de Teams** en la barra lateral de Visual Studio Code.
+2. Seleccione :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="el icono de api"::: **del kit de herramientas de Teams** en la barra de navegación izquierda.
 3. Seleccione **Agregar flujos de trabajo de CI/CD**.
 4. Seleccione un entorno en el símbolo del sistema.
 5. Seleccione **Azure DevOps** como proveedor de CI/CD.
@@ -107,7 +106,7 @@ Para configurar canalizaciones con Azure DevOps para CI/CD:
 7. Abra la plantilla y personalice los flujos de trabajo que encajan en los escenarios.
 8. Siga los archivos LÉAME de `.azure/pipelines` para configurar el flujo de trabajo en Azure DevOps.
 
-**Creación de plantillas de flujo de trabajo mediante la CLI de TeamsFx**
+**TeamsFx CLI**
 
 1. Escriba `cd` en el directorio del proyecto de aplicación de Teams.
 2. Escriba el comando `teamsfx add cicd` para iniciar el proceso de comando interactivo.
@@ -122,35 +121,37 @@ Para configurar canalizaciones con Azure DevOps para CI/CD:
 
 ### <a name="customize-ci-workflow"></a>Personalización del flujo de trabajo de CI
 
-A continuación se muestran los cambios que puede realizar para la definición del script o flujo de trabajo:
+Puede realizar los siguientes cambios para la definición de script o flujo de trabajo:
 
 1. Use el script de compilación npm o personalice la forma de compilar en el código de automatización.
 1. Use el script de prueba npm, que vuelve a ser cero para que se realice correctamente y cambie los comandos de prueba.
 
 ### <a name="customize-cd-workflow"></a>Personalización del flujo de trabajo de CD
 
-A continuación se muestran los cambios que puede realizar para la definición del script o flujo de trabajo:
+Puede realizar los siguientes cambios para la definición de script o flujo de trabajo:
 
 1. Asegúrese de que tiene un script de compilación npm o personalice la forma de compilar en el código de automatización.
 1. Asegúrese de que tiene un script de prueba npm que vuelve a ser cero para que se realice correctamente o cambie los comandos de prueba.
 
-### <a name="set-up-pipelines-with-jenkins"></a>Configuración de canalizaciones con Jenkins
+## <a name="set-up-pipelines-with-jenkins"></a>Configuración de canalizaciones con Jenkins
 
 Para configurar canalizaciones con Jenkins para CI/CD:
 
-1. Creación de plantillas de flujo de trabajo.
+* Creación de plantillas de flujo de trabajo.
 
-   * Visual Studio Code
-   * TeamsFx CLI
+  * Visual Studio Code
+  * TeamsFx CLI
 
-1. Personalización del flujo de trabajo de CI/CD.
+* Personalización del flujo de trabajo de CI/CD.
 
-## <a name="create-workflow-templates-with-jenkins"></a>Creación de plantillas de flujo de trabajo con Jenkins
+### <a name="create-workflow-templates"></a>Creación de plantillas de flujo de trabajo
 
-**Creación de plantillas de flujo de trabajo mediante el Toolkit de Teams en Visual Studio Code**
+Puede crear las siguientes plantillas de flujo de trabajo con Jenkins:
+
+**Kit de herramientas de Teams para Visual Studio Code**
 
 1. Creación de un nuevo proyecto de aplicación de Teams con el Kit de herramientas de Teams.
-2. Seleccione el icono del **kit de herramientas de Teams** en la barra lateral de Visual Studio Code.
+2. Seleccione :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="el icono de api"::: **del kit de herramientas de Teams** en la barra de navegación izquierda.
 3. Seleccione **Agregar flujos de trabajo de CI/CD**.
 4. Seleccione un entorno en el símbolo del sistema.
 5. Seleccione **Jenkins** como proveedor de CI/CD.
@@ -158,7 +159,7 @@ Para configurar canalizaciones con Jenkins para CI/CD:
 7. Abra la plantilla y personalice los flujos de trabajo que encajan en los escenarios.
 8. Siga los archivos LÉAME de `.jenkins/pipelines` para configurar el flujo de trabajo con Jenkins.
 
-**Creación de plantillas de flujo de trabajo mediante la CLI de TeamsFx**
+**TeamsFx CLI**
 
 1. Escriba `cd` en el directorio del proyecto de aplicación de Teams.
 2. Escriba el comando `teamsfx add cicd` para iniciar el proceso de comando interactivo.
@@ -173,12 +174,11 @@ Para configurar canalizaciones con Jenkins para CI/CD:
 
 ### <a name="customize-ci-workflow"></a>Personalización del flujo de trabajo de CI
 
-Estos son algunos de los cambios que puede realizar en el proyecto:
+Puede realizar los siguientes cambios en el proyecto:
 
 1. Cambie cómo se desencadena el flujo de CI. El valor predeterminado es usar los desencadenadores de **pollSCM** cuando se inserta un nuevo cambio en la rama de **desarrollo**.
 1. Asegúrese de que tiene un script de compilación npm o personalice la forma de compilar en el código de automatización.
 1. Asegúrese de que tiene un script de prueba npm que vuelve a ser cero para que se realice correctamente o cambie los comandos de prueba.
-
 
 ### <a name="customize-cd-workflow"></a>Personalización del flujo de trabajo de CD
 
@@ -188,8 +188,7 @@ Siga estos pasos para personalizar la canalización de CD:
 1. Cambie los scripts de compilación si es necesario.
 1. Quite los scripts de prueba si no tiene pruebas.
 
-
-### <a name="set-up-pipelines-for-other-platforms"></a>Configuración de canalizaciones para otras plataformas
+## <a name="set-up-pipelines-for-other-platforms"></a>Configuración de canalizaciones para otras plataformas
 
 Puede seguir los scripts de bash de ejemplo predefinidos para compilar y personalizar canalizaciones de CI/CD en las otras plataformas:
 
@@ -204,7 +203,6 @@ Los scripts se basan en una herramienta de línea de comandos TeamsFx multiplata
 > * Para habilitar la ejecución en modo no interactivo de `@microsoft/teamsfx-cli`, establezca una configuración global con el comando: `teamsfx config set -g interactive false`. En el modo no interactivo, `@microsoft/teamsfx-cli` no solicita entradas.
 
 Asegúrese de configurar las credenciales de Azure y Microsoft 365 en las variables de entorno de forma segura. Por ejemplo, si usa GitHub como su repositorio de código fuente, consulte [Secretos de Github](https://docs.github.com/en/actions/reference/encrypted-secrets).
-
 
 ## <a name="provision-and-deploy-resources"></a>Aprovisionamiento e implementación de recursos
 
@@ -227,16 +225,14 @@ Para obtener más información, consulte [Directrices de entidades de servicio d
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>Publicación de la aplicación de Teams mediante el portal para desarrolladores de Teams
 
-Si hay cambios relacionados con el archivo de manifiesto de la aplicación de Teams, puede actualizar el manifiesto y volver a publicar la aplicación de Teams.
-
-Para publicar la aplicación de Teams manualmente, puede aprovechar el [portal para desarrolladores para Teams](https://dev.teams.microsoft.com/home).
+Si hay cambios relacionados con el archivo de manifiesto de la aplicación de Teams, puede actualizar el manifiesto y volver a publicar la aplicación de Teams. Para publicar la aplicación de Teams manualmente, puede aprovechar el [portal para desarrolladores para Teams](https://dev.teams.microsoft.com/home).
 
 Realice los pasos siguientes para publicar la aplicación:
 
-1. Inicie sesión en el [portal para desarrolladores para Teams](https://dev.teams.microsoft.com) con la cuenta correspondiente.
-2. Para importar el paquete de la aplicación en zip, seleccione `App -> Import app -> Replace`.
+1. Inicie sesión en el [portal para desarrolladores de Teams](https://dev.teams.microsoft.com) con la cuenta correspondiente.
+2. Importe el paquete de la aplicación en zip y seleccione `App -> Import app -> Replace`.
 3. Seleccione la aplicación de destino en la lista de aplicaciones.
-4. Para publicar la aplicación, seleccione `Publish -> Publish to your org`.
+4. Publique la aplicación y seleccione `Publish -> Publish to your org`.
 
 ### <a name="see-also"></a>Consulte también
 

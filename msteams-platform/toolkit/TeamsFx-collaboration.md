@@ -1,90 +1,91 @@
 ---
-title: Colaborar en TeamsFx Project usar Teams Toolkit
+title: Colaborar en el proyecto TeamsFx mediante el kit de herramientas de Teams
 author: yanjiang
-description: Colaborar en TeamsFx Project usar Teams Toolkit
+description: Colaborar en el proyecto TeamsFx mediante el kit de herramientas de Teams
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 423e03e373edb1980186ea3dc43f2817d2e25636
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: be36cf1af9741d65d66ede498f5ac2fff31df148
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452567"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938873"
 ---
-# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colaborar en Teams proyecto mediante Teams Toolkit
+# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Colaborar en un proyecto de Teams con el kit de herramientas de Teams
 
-Varios desarrolladores pueden trabajar juntos para depurar, aprovisionar e implementar para el mismo proyecto de TeamsFx, pero requiere establecer manualmente los permisos correctos de Teams App y Microsoft Azure Active Directory (Azure AD) App.Teams Toolkit  admite la característica de colaboración para permitir que los desarrolladores y el propietario del proyecto inviten a otros desarrolladores o colaboradores al proyecto de TeamsFx para depurar, aprovisionar e implementar el mismo proyecto de TeamsFx.
+Varios desarrolladores pueden trabajar juntos para depurar, aprovisionar e implementar para el mismo proyecto TeamsFx, pero requiere establecer manualmente los permisos adecuados de la aplicación teams y la aplicación Microsoft Azure Active Directory (Azure AD). Teams Toolkit admite la característica de colaboración para permitir que los desarrolladores y el propietario del proyecto inviten a otros desarrolladores o colaboradores al proyecto TeamsFx para depurar, aprovisionar e implementar el mismo proyecto teamsfx.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Requisitos previos de la cuenta
+* Suscripción a Microsoft 365
+* Azure con una suscripción válida
+  
+  Para obtener más información sobre las distintas cuentas, consulte [Preparación de cuentas para compilar una aplicación de Teams](accounts.md).
 
-    Para aprovisionar recursos en la nube, debe tener las siguientes cuentas. Para obtener más información, consulta [preparar cuentas para crear Teams aplicación](accounts.md).
-
-  * Suscripción a Microsoft 365
-  * Azure con suscripción válida
-
-* [Instale Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión 3.0.0+.
+* [Instalación de la](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión v3.0.0+ del kit de herramientas de Teams
 
 > [!TIP]
-> Asegúrate de que tienes un Teams de aplicación abierto en Microsoft Visual Studio código.
+> Asegúrese de que tiene un proyecto de aplicación de Teams abierto en Visual Studio Code.
 
 ## <a name="collaborate-with-other-developers"></a>Colaborar con otros desarrolladores
 
-La siguiente lista nos guía para comprender el proceso de colaboración y su limitación:
+Las listas siguientes nos guían para comprender el proceso de colaboración y su limitación:
 
-### <a name="as-project-owner"></a>Como propietario del proyecto
+* Como propietario del proyecto
 
-> [!NOTE]
-> Antes de agregar colaboradores para un entorno, el propietario del proyecto debe [aprovisionar](provision.md) primero el proyecto.
+  > [!NOTE]
+  > Antes de agregar colaboradores para un entorno, el propietario del proyecto debe [aprovisionar](provision.md) primero el proyecto.
 
-* En **la sección** ENTORNO de Teams Toolkit, seleccione **colaboradores**. Muestra las opciones Agregar Microsoft 365 Teams propietarios de la aplicación (con la aplicación **Azure AD)** y Propietarios de la aplicación Microsoft 365 Teams **lista (con Azure AD app)** como se muestra en las siguientes imágenes:
+  1. En **la sección ENTORNO** del kit de herramientas de Teams, seleccione **colaboradores**. Muestra las opciones **Agregar propietarios de aplicaciones de Microsoft 365 Teams (con aplicación de Azure AD)** y **Enumerar propietarios de aplicaciones de Microsoft 365 Teams (con aplicación de Azure AD),** como se muestra en las imágenes siguientes:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="colaboradores":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="Colaboradores":::
 
-* Selecciona **Agregar Microsoft 365 Teams app (con Azure AD app) y** agrega otra dirección Microsoft 365 de correo electrónico de la cuenta como colaborador. La cuenta que se va a agregar debe estar en el mismo inquilino que el propietario del proyecto para la depuración remota, como se muestra en la imagen:
+  2. Seleccione **Agregar propietarios de aplicaciones de Microsoft 365 Teams (con aplicación de Azure AD)** y agregue otra dirección de correo electrónico de cuenta de Microsoft 365 como colaborador. La cuenta que se va a agregar debe estar en el mismo inquilino que el propietario del proyecto para la depuración remota como se muestra en la imagen:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="agregar envi":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="agregar entorno":::
 
-* Para ver colaboradores en el entorno actual, seleccione Enumerar los propietarios de la aplicación **Microsoft 365 Teams (con Azure AD App)** y, a continuación, los colaboradores aparecen en el canal de salida como se muestra en la siguiente imagen:
+  3. Para ver los colaboradores en el entorno actual, seleccione **Enumerar propietarios de aplicaciones de Microsoft 365 Teams (con aplicación de Azure AD)** y, a continuación, los colaboradores se muestran en el canal de salida, como se muestra en la siguiente imagen:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="lista":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="lista":::
 
-* Presione el proyecto para GitHub.
+  4. Inserción del proyecto en GitHub
 
-> [!NOTE]
-> El colaborador recién agregado no recibe ninguna notificación. Project propietario debe notificar a los colaboradores.
+     > [!NOTE]
+     > Los colaboradores recién agregados no reciben ninguna notificación. El propietario del proyecto debe notificar al colaborador.
 
-### <a name="as-project-collaborator"></a>Como colaborador del proyecto
+* Como colaborador del proyecto
 
-* Clone el proyecto desde GitHub.
-* Inicie sesión en Microsoft 365 cuenta.
-* Inicie sesión en la cuenta de Azure, que tiene permiso de colaborador para todos los recursos de Azure que se usan en este proyecto.
-* Para obtener una vista previa Teams aplicación, implemente el proyecto en remoto.
-* Inicie el control remoto para tener una vista previa de Teams aplicación.
+  1. Clone el proyecto desde GitHub.
+  2. Inicie sesión en la cuenta de Microsoft 365.
+  3. Inicie sesión en la cuenta de Azure, tiene permiso de colaborador para todos los recursos de Azure que se usan en el proyecto.
+  4. Para obtener una vista previa de la aplicación de Teams, implemente el proyecto en remoto.
+  5. Inicie el control remoto para tener una vista previa de la aplicación de Teams.
 
-Para obtener más información, consulta [compilar y ejecutar la aplicación Teams en un entorno remoto](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
+     > [!NOTE]
+     > Los colaboradores deben iniciar sesión con la cuenta que el propietario del proyecto agrega en el mismo inquilino con el propietario del proyecto. Para obtener más información, consulte [Compilación y ejecución de la aplicación de Teams en un entorno remoto](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
-> [!NOTE]
-> Los colaboradores deben iniciar sesión con la cuenta agregada por el propietario del proyecto, que está bajo el mismo inquilino con el propietario del proyecto.
+### <a name="limitations"></a>Limitaciones
 
-### <a name="limitation"></a>Limitación
+Si desea quitar colaboradores de la extensión Teams Toolkit, debe quitarlos manualmente, ya que no puede quitarlos directamente. Realice los pasos siguientes para quitar colaboradores manualmente:
 
-No puede quitar colaboradores directamente de Teams Toolkit extensión. Realice los siguientes pasos para quitar colaboradores manualmente:
+* Uso del Portal para desarrolladores
 
-  1. Ve a Teams Portal de desarrolladores y selecciona tu Teams por nombre o id. de aplicación.
-  2. Seleccione **Propietarios** en el panel izquierdo.
-  3. Seleccione y quite el colaborador.
-  4. Ve a [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), selecciona **Registro de aplicaciones** en el panel izquierdo y busca la aplicación Azure AD aplicación.
-  5. Selecciona **Propietarios** en el panel izquierdo Azure AD página Administración de aplicaciones.
-  6. Seleccione y quite el colaborador.
+  * Vaya al [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/home) y seleccione la aplicación de Teams por nombre o identificador de aplicación.
+  * Seleccione **Propietarios** en el panel izquierdo.
+  * Selección y eliminación del colaborador
 
-> [!NOTE]
->
-> * El colaborador agregado al proyecto no recibirá ninguna notificación. Project propietario debe notificar a colaborador sin conexión.
-> * El administrador de suscripciones de Azure debe establecer manualmente los permisos relacionados con Azure en Microsoft Azure portal. La cuenta de Azure debe tener un rol de colaborador para la suscripción para que los desarrolladores puedan trabajar juntos para aprovisionar e implementar el proyecto de TeamsFx.
+* Uso de Azure Active Directory
+
+  * Vaya a [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), seleccione **Registro de aplicaciones** en el panel izquierdo y busque la aplicación de Azure AD.
+  * Seleccione **Propietarios** en el panel izquierdo en la página Administración de aplicaciones de Azure AD.
+  * Selección y eliminación del colaborador
+
+   > [!NOTE]
+   >
+   > * El colaborador agregado al proyecto no recibe ninguna notificación. El propietario del proyecto debe notificar al colaborador sin conexión.
+   > * El administrador de suscripciones de Azure en Azure Portal debe establecer manualmente los permisos relacionados con Azure. La cuenta de Azure debe tener el rol de colaborador de la suscripción para que los desarrolladores puedan trabajar juntos para aprovisionar e implementar el proyecto TeamsFx.
 
 ## <a name="see-also"></a>Vea también
 
