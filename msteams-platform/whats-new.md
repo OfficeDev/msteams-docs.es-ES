@@ -3,12 +3,12 @@ title: Novedades para desarrolladores de Teams
 description: Obtenga información sobre las nuevas características y mejoras para desarrolladores de esas características en Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906291"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032983"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -47,6 +47,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+| 08/06/2022 | Comentarios de tarjeta opcionales para el mensaje de operación correcta| Compilar bots > Conversaciones de bot > [Mensajes en conversaciones de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 3/6/2022 | Se ha actualizado Agregar módulo de autenticación para habilitar SSO para la aplicación de pestañas con una nueva estructura y procedimientos. | Agregar autenticación > Pestañas > [Habilitar inicio de sesión único en una aplicación de pestaña](tabs/how-to/authentication/tab-sso-overview.md) |
 | 24/5/2022 | Sugerencias adicionales para que la publicación de su aplicación vinculada a una oferta de SaaS tenga una aprobación rápida | Publicación en la tienda de Teams > Información general > [Sugerencias adicionales para que la publicación de su aplicación vinculada a una oferta de SaaS tenga una aprobación rápida](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 24/5/2022 | Enviar las aplicaciones habilitadas para Outlook y Office a la tienda de Teams | Ampliar la aplicación en Microsoft 365 > [Información general](m365-apps/overview.md) |

@@ -4,12 +4,12 @@ description: Describe todas las tarjetas y acciones de tarjeta disponibles para 
 ms.localizationpriority: high
 keywords: referencia de tarjetas de los bot
 ms.topic: reference
-ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757202"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032994"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -21,13 +21,15 @@ Antes de identificar los distintos tipos de tarjeta, comprenda cómo crear una t
 
 Para crear una tarjeta de elemento principal, una tarjeta en miniatura o una tarjeta adaptable desde App Studio:
 
-1. Vaya a **App Studio** desde Teams.
-1. Seleccione **Editor de tarjetas**.
-1. Seleccione **Crear una nueva tarjeta**.
-1. Seleccione **Crear** para una de las tarjetas de **Elemento principal**, **tarjeta en miniatura** o **tarjeta adaptable**. Los detalles de metadatos, los botones y los ejemplos de código json, csharp y node se muestran para esa tarjeta.
+1. Vaya al [Portal para desarrolladores para Teams](https://dev.teams.microsoft.com/home).
+1. Seleccione **Diseñar y compilar tarjetas adaptables**.
+1. Seleccione **Nueva tarjeta**.
+1. Escriba el nombre de la tarjeta y seleccione **Guardar**.
+1. Seleccione una de las tarjetas entre la **tarjeta de Elemento principal**, la **tarjeta de miniatura** o la **tarjeta adaptable**.
 
-    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Detalles de la tarjeta de Elemento principal":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. Seleccione **Guardar**.
 1. Seleccione **Enviarme esta tarjeta**. La tarjeta se le envía como un mensaje de chat.
 
 ## <a name="card-examples"></a>Ejemplos de tarjetas
