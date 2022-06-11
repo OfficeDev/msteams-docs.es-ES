@@ -6,12 +6,12 @@ description: Información general sobre el SDK de cliente de JavaScript de Micro
 ms.localizationpriority: high
 keywords: pestañas de Teams, canal de grupo, SDK estático configurable, JavaScript, M365 personal
 ms.topic: conceptual
-ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757622"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033046"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
 
@@ -24,13 +24,7 @@ A partir de la versión `2.0.0`, el SDK de cliente de Teams existente (`@microso
 
 Esta es la guía de control de versiones actual para varios escenarios de aplicaciones:
 
-|                  |Versión de [TeamsJS](/javascript/api/overview/msteams-client) | Versión del [manifiesto de la aplicación](../../resources/schema/manifest-schema.md)| Pasos siguientes|
-|------------------|---------|--------|---|
-|**Las aplicaciones de Teams se extienden a Office/Outlook**| TeamsJS v.2.0 o posterior  | **1.13** o posterior | [Extender una aplicación de Teams para que se ejecute en Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) o [Crear una nueva aplicación de Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Aplicaciones existentes solo para Teams**| Actualizar a TeamsJS v.2.0 cuando sea posible (v.1.12 sigue siendo compatible*)  | 1.12 | [Compatibilidad con versiones anteriores de TeamsJS](#backwards-compatibility) y [Actualizar a TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
-|**Nuevas aplicaciones solo para Teams**| TeamsJS v.2.0 o posterior | 1.12 | [Crear una nueva aplicación de Teams con el Kit de herramientas de Teams](../../toolkit/create-new-project.md) |
-
-**La práctica recomendada consiste en usar la versión más reciente de TeamsJS (v.2.0 o posterior) siempre que sea posible para beneficiarse de las mejoras más recientes y la nueva compatibilidad con las características (incluso en aplicaciones solo para Teams). TeamsJS v.1.12 seguirá siendo compatible, aunque no se agregarán nuevas características ni mejoras.*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 El resto de este artículo le guiará a través de la estructura y las actualizaciones más recientes del SDK de cliente de JavaScript de Teams.
 
@@ -66,14 +60,14 @@ En la tabla siguiente se enumeran las funciones de pestañas y cuadros de diálo
 
 #### <a name="app-permissions"></a>Permisos de aplicación
 
-Las funcionalidades de la aplicación que requieren que el usuario conceda [permisos de dispositivo](../../concepts/device-capabilities/device-capabilities-overview.md) (como la *ubicación*) aún no se admiten para las aplicaciones que se ejecutan fuera de Teams. Actualmente no hay ninguna manera de comprobar los permisos de la aplicación en Configuración o en el encabezado de la aplicación cuando se ejecuta en Outlook u Office. Si una aplicación de Teams que se ejecuta en Office o en Outlook llama a una API de TeamsJS (o HTML5) que desencadena permisos de dispositivo, esa API producirá un error y no mostrará el cuadro de diálogo del sistema que solicita el consentimiento del usuario.
+Las funcionalidades de la aplicación que requieren que el usuario conceda [permisos de dispositivo](../../concepts/device-capabilities/device-capabilities-overview.md) (como la *ubicación*) aún no se admiten para las aplicaciones que se ejecutan fuera de Teams. Actualmente no hay ninguna manera de comprobar los permisos de la aplicación en Configuración o en el encabezado de la aplicación cuando se ejecuta en Outlook u Office. Si una aplicación de Teams que se ejecuta en Office o Outlook llama a una API de TeamsJS (o HTML5) que desencadena los permisos del dispositivo, la API generará un error y no mostrará el cuadro de diálogo del sistema que solicita el consentimiento del usuario.
 
 Por ahora, la guía actual consiste en modificar el código para detectar el error:
 
 * Compruebe [isSupported()](#differentiate-your-app-experience) en una funcionalidad antes de usarla. `media`, `meeting` y `files` aún no admiten llamadas *isSupported* y aún no funcionan fuera de Teams.
 * Detecte y controle los errores al llamar a las API de TeamsJS y HTML5.
 
-Cuando una API no se admite o produce un error, agregue lógica para que se produzca el error correctamente o proporcione una solución alternativa. Por ejemplo:
+Cuando una API no se admite o genera un error, agregue lógica para que se produzca un error leve o proporcione una solución alternativa. Por ejemplo:
 
 * Dirija al usuario al sitio web de la aplicación.
 * Indique al usuario que use la aplicación en Teams para completar el flujo.
@@ -231,7 +225,7 @@ async function example() {
 
 Una *funcionalidad* es una agrupación lógica de API (mediante el espacio de nombres) que proporciona una funcionalidad similar. Puede considerar a Microsoft Teams, Outlook y Office como hosts para la pestaña de su aplicación. Un host admite una funcionalidad determinada si admite todas las API definidas dentro de esa funcionalidad. Un host no puede implementar parcialmente una funcionalidad. Las funcionalidades pueden basarse en características o contenido, como *diálogo* o *autenticación*. También hay funcionalidades para los tipos de aplicación, como *pestañas* y otras agrupaciones.
 
-A partir de TeamsJS v.2.0, las API se definen como funciones en un espacio de nombres de JavaScript cuyo nombre coincide con su funcionalidad necesaria. Si una aplicación se ejecuta en un host que admite la funcionalidad de *diálogo*, la aplicación puede llamar de forma segura a las API como `dialog.open` (además de otras API relacionadas con cuadros diálogo definidas en el espacio de nombres). Si una aplicación intenta llamar a una API que no se admite en ese host, la API iniciará una excepción. Para comprobar si el host actual que ejecuta la aplicación admite una funcionalidad determinada, llame a la función [isSupported()](#differentiate-your-app-experience) de su espacio de nombres.
+A partir de TeamsJS v.2.0, las API se definen como funciones en un espacio de nombres de JavaScript cuyo nombre coincide con su funcionalidad necesaria. Si una aplicación se ejecuta en un host que admite la funcionalidad de *diálogo*, la aplicación puede llamar de forma segura a las API como `dialog.open` (además de otras API relacionadas con cuadros diálogo definidas en el espacio de nombres). Si una aplicación intenta llamar a una API que no se admite en ese host, la API genera una excepción. Para comprobar si el host actual que ejecuta la aplicación admite una funcionalidad determinada, llame a la función [isSupported()](#differentiate-your-app-experience) de su espacio de nombres.
 
 #### <a name="differentiate-your-app-experience"></a>Diferenciar la experiencia de la aplicación
 

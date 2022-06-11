@@ -5,12 +5,12 @@ keywords: Búsqueda de extensiones de mensaje de las extensiones de mensaje de t
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 13915bc3e67f6d5789fe9e977f6579a05a010542
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104402"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032945"
 ---
 # <a name="search-with-message-extensions"></a>Búsqueda con extensiones de mensaje
 
@@ -130,11 +130,11 @@ Además de las propiedades de actividad de bot estándar, la carga contiene los 
 |Nombre de propiedad|Objetivo|
 |---|---|
 |`type`| Tipo de solicitud; debe ser `invoke`. |
-|`name`| Tipo de comando que se emite al servicio. Actualmente se admiten los siguientes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
-|`from.id`| Identificador del usuario que envió la solicitud. |
+|`name`| Tipo de comando que se emite para el servicio. Actualmente se admiten los siguientes tipos: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`from.id`| Id. del usuario que envió la solicitud. |
 |`from.name`| Nombre del usuario que envió la solicitud. |
 |`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) id. de objeto del usuario que envió la solicitud. |
-|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) identificador de inquilino. |
+|`channelData.tenant.id`| identificador de inquilino de Microsoft Azure Active Directory (Azure AD). |
 |`channelData.channel.id`| Id. de canal (si la solicitud se realizó en un canal). |
 |`channelData.team.id`| Id. de equipo (si la solicitud se realizó en un canal). |
 |`clientInfo`|Metadatos opcionales sobre el software cliente que se usa para enviar el mensaje de un usuario. La entidad puede contener dos propiedades:<br>El `country` campo contiene la ubicación detectada del usuario.<br>El `platform` campo describe la plataforma de cliente de mensajería. <br>Para obtener más información, *consulte* [Tipos de entidad que no son IRI: clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
@@ -197,7 +197,7 @@ Los propios parámetros de solicitud se encuentran en el objeto value, que inclu
 
 Como alternativa (o además) a la búsqueda en el servicio externo, puede usar una dirección URL insertada en el cuadro de mensaje de redacción para consultar el servicio y devolver una tarjeta. En la captura de pantalla siguiente, un usuario ha pegado una dirección URL para un elemento de trabajo en Azure DevOps que la extensión de mensaje se ha resuelto en una tarjeta.
 
-![Ejemplo de desplegamiento de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Ejemplo de apertura de vínculos](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 Para permitir que la extensión de mensaje interactúe con vínculos de esta manera, primero deberá agregar la `messageHandlers` matriz al manifiesto de la aplicación, como en el ejemplo siguiente:
 
@@ -242,7 +242,7 @@ El servicio debe responder con los resultados que coincidan con la consulta del 
 |Nombre de propiedad|Objetivo|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
-|`composeExtension.type`|Tipo de respuesta. Se admiten los tipos siguientes: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensaje. <br>`message`: muestra un mensaje de texto sin formato |
+|`composeExtension.type`|Tipo de respuesta. Se admiten los tipos siguientes: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: solicita al usuario que se autentique <br>`config`: solicita al usuario que configure la extensión de mensaje. <br>`message`: muestra un mensaje de texto sin formato |
 |`composeExtension.attachmentLayout`|Especifica el diseño de los datos adjuntos. Se usa para respuestas de tipo `result`. <br>Actualmente se admiten los siguientes tipos: <br>`list`: una lista de objetos de tarjeta que contienen campos de miniatura, título y texto <br>`grid`: una cuadrícula de imágenes en miniatura |
 |`composeExtension.attachments`|Matriz de objetos de datos adjuntos válidos. Se usa para respuestas de tipo `result`. <br>Actualmente se admiten los siguientes tipos: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Acciones sugeridas. Se usa para respuestas de tipo `auth` o `config`. |
@@ -445,7 +445,7 @@ Cada solicitud a los servicios incluye el identificador ofuscado del usuario que
 },
 ```
 
-Se `id` garantiza que los valores y `aadObjectId` son los del usuario autenticado Teams. Se pueden usar como claves para buscar credenciales o cualquier estado almacenado en caché en el servicio. Además, cada solicitud contiene el identificador de inquilino Microsoft Azure Active Directory (Azure AD) del usuario, que se puede usar para identificar la organización del usuario. Si procede, la solicitud también contiene los identificadores de equipo y canal desde los que se originó la solicitud.
+Se `id` garantiza que los valores y `aadObjectId` son los del usuario autenticado Teams. Se pueden usar como claves para buscar credenciales o cualquier estado almacenado en caché en el servicio. Además, cada solicitud contiene el identificador de inquilino de Microsoft Azure Active Directory (Azure AD) del usuario, que se puede usar para identificar la organización del usuario. Si procede, la solicitud también contiene los identificadores de equipo y canal desde los que se originó la solicitud.
 
 ## <a name="authentication"></a>Autenticación
 
@@ -460,7 +460,7 @@ La secuencia es la siguiente:
 5. Una vez que el usuario inicia sesión, debe cerrar la ventana y enviar un "código de autenticación" al cliente de Teams.
 6. A continuación, el cliente Teams vuelve a emitir la consulta al servicio, lo que incluye el código de autenticación pasado en el paso 5.
 
-El servicio debe comprobar que el código de autenticación recibido en el paso 6 coincide con el del paso 5. Esto garantiza que un usuario malintencionado no intente suplantar o poner en peligro el flujo de inicio de sesión. Esto "cierra el bucle" de forma eficaz para finalizar la secuencia de autenticación segura.
+El servicio debe comprobar que el código de autenticación recibido en el paso 6 coincida con el del paso 5. Esto garantiza que un usuario malintencionado no intente suplantar o poner en peligro el flujo de inicio de sesión. Así se “cierra el bucle” de forma eficaz para finalizar la secuencia de autenticación segura.
 
 ### <a name="respond-with-a-sign-in-action"></a>Responder con una acción de inicio de sesión
 
@@ -486,13 +486,13 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 ```
 
 > [!NOTE]
-> Para que la experiencia de inicio de sesión se hospede en un Teams elemento emergente, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, vea [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
+> Para que la experiencia de inicio de sesión se hospede en un Teams elemento emergente, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
 
 ### <a name="start-the-sign-in-flow"></a>Inicio del flujo de inicio de sesión
 
 La experiencia de inicio de sesión debe tener capacidad de respuesta y ajustarse a una ventana emergente. Debe integrarse con el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client), que usa el paso de mensajes.
 
-Al igual que con otras experiencias incrustadas que se ejecutan dentro de Microsoft Teams, el código dentro de la ventana debe llamar `microsoftTeams.initialize()`primero a . Si el código realiza un flujo de OAuth, puede pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
+Al igual que con otras experiencias incrustadas que se ejecutan dentro de Microsoft Teams, el código dentro de la ventana debe llamar primero a `microsoftTeams.initialize()`. Si el código realiza un flujo de OAuth, puede pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Completar el flujo de inicio de sesión
 
@@ -501,9 +501,9 @@ Cuando la solicitud de inicio de sesión se complete y vuelva a redirigir a la p
 1. Generar un código de seguridad. (Puede ser un número aleatorio). Debe almacenar en caché este código en el servicio, junto con las credenciales obtenidas a través del flujo de inicio de sesión, como los tokens de OAuth 2.0.
 2. Llame a `microsoftTeams.authentication.notifySuccess` y pase el código de seguridad.
 
-En este momento, la ventana se cierra y el control se pasa al cliente Teams. El cliente ahora puede volver a emitir la consulta de usuario original, junto con el código de seguridad de la `state` propiedad . El código puede usar el código de seguridad para buscar las credenciales almacenadas anteriormente para completar la secuencia de autenticación y, a continuación, completar la solicitud del usuario.
+En este momento, la ventana se cierra y el control se pasa al cliente Teams. El cliente ahora puede volver a emitir la consulta de usuario original, junto con el código de seguridad de la `state` propiedad . El código puede usar un código de seguridad para buscar las credenciales almacenadas anteriormente y completar la secuencia de autenticación, y así completar la solicitud del usuario.
 
-#### <a name="reissued-request-example"></a>Ejemplo de solicitud reemitida
+#### <a name="reissued-request-example"></a>Ejemplo de solicitud reemitido
 
 ```json
 {
@@ -658,6 +658,6 @@ const app = new App();
 app.run();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

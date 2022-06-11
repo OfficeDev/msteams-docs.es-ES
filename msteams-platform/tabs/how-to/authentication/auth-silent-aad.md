@@ -4,17 +4,17 @@ description: Describe la autenticación silenciosa, el inicio de sesión único 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: pestaña de Azure AD silenciosa de inicio de sesión único de autenticación de Teams
-ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887796"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033025"
 ---
 # <a name="silent-authentication"></a>Autenticación silenciosa
 
 > [!IMPORTANT]
-> El soporte técnico y desarrollo de Microsoft para la biblioteca de autenticación de Active Directory (ADAL), incluidas las correcciones de seguridad, finaliza el **30 de junio de 2022**. Actualice las aplicaciones para que usen la Biblioteca de autenticación de Microsoft (MSAL) para seguir recibiendo soporte técnico. Consulte [Migración de aplicaciones a la biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-migration).
+> El soporte técnico y desarrollo de Microsoft para la biblioteca de autenticación de Active Directory (ADAL), incluidas las correcciones de seguridad, finaliza el **30 de junio de 2022**. Para seguir recibiendo soporte técnico, actualice las aplicaciones para que usen la Biblioteca de autenticación de Microsoft (MSAL). Consulte [Migración de aplicaciones a la biblioteca de autenticación de Microsoft (MSAL).](/azure/active-directory/develop/msal-migration)
 
 > [!NOTE]
 > Para que la autenticación funcione para la pestaña en clientes móviles, asegúrese de que usa Teams SDK de JavaScript versión 1.4.1 o posterior.

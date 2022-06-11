@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo crear una extensión de mensajerí
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 78c36a3adc711b4aeedc72fb6131d61b4df0c5fd
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887852"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032784"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería usando App Studio
 
 > [!TIP]
-> ¿Busca una manera más rápida de empezar? Cree una [extensión de mensajería](../build-your-first-app/build-messaging-extension.md) mediante el kit de herramientas de Microsoft Teams.
+> ¿Busca una manera más rápida de empezar? Cree una [extensión de mensajería](../build-your-first-app/build-messaging-extension.md) mediante el Microsoft Teams Toolkit.
 
 En un nivel alto, deberá completar los pasos siguientes para crear una extensión de mensajería.
 
@@ -27,7 +27,7 @@ En un nivel alto, deberá completar los pasos siguientes para crear una extensi�
 
 La creación del servicio web, la creación del paquete de la aplicación y el registro del servicio web con Bot Framework se pueden realizar en cualquier orden. Dado que esas tres piezas están tan entrelazadas, independientemente del orden en el que las hagas, tendrás que volver a actualizar las demás. El registro necesita el punto de conexión de mensajería del servicio web implementado y el servicio web necesita el identificador y la contraseña creados a partir del registro. El manifiesto de la aplicación también necesita ese identificador para conectar Teams al servicio web.
 
-A medida que va a compilar la extensión de mensajería, se moverá periódicamente entre cambiar el manifiesto de la aplicación e implementar código en el servicio web. Al trabajar con el manifiesto de aplicación, tenga en cuenta que puede manipular manualmente el archivo JSON o realizar cambios a través de App Studio. En cualquier caso, tendrá que volver a implementar (cargar) la aplicación en Teams cuando realice un cambio en el manifiesto, pero no es necesario hacerlo al implementar los cambios en el servicio web.
+A medida que va a compilar la extensión de mensajería, se moverá periódicamente entre cambiar el manifiesto de la aplicación e implementar código en el servicio web. Al trabajar con el manifiesto de aplicación, asegúrese de que puede modificar manualmente el archivo JSON o realizar cambios a través de App Studio. En cualquier caso, tendrá que volver a implementar (cargar) la aplicación en Teams al realizar un cambio en el manifiesto, pero no es necesario hacerlo al implementar los cambios en el servicio web.
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
@@ -46,7 +46,7 @@ Las extensiones de mensajería aprovechan el esquema de mensajería de Bot Frame
 
 Si sigue uno de los inicios rápidos o comienza desde uno de los ejemplos disponibles, se le guiará a través del registro del servicio web. Si desea registrar manualmente el servicio, tiene tres opciones para hacerlo. Si decide registrarse sin usar una suscripción de Azure, no podrá aprovechar el flujo de autenticación simplificado de OAuth proporcionado por Bot Framework. Podrá migrar el registro a Azure después de su creación.
 
-* Si tiene una suscripción de Azure (o quiere crear una nueva), puede registrar el servicio web manualmente mediante Microsoft Azure Portal. Cree un recurso "Registro de canales de bot". Puede elegir el plan de tarifa gratuito, ya que los mensajes de Microsoft Teams no cuentan para el total de mensajes permitidos al mes.
+* Si tiene una suscripción de Azure (o quiere crear una nueva), puede registrar el servicio web manualmente mediante el portal de Microsoft Azure. Cree un recurso "Registro de canales de bot". Puede elegir el plan de tarifa gratuito, ya que los mensajes de Microsoft Teams no cuentan para el total de mensajes permitidos al mes.
 * Si no desea usar una suscripción de Azure, puede usar el [portal de registro heredado](https://dev.botframework.com/bots/new).
 * App Studio también puede ayudarle a registrar el servicio web (bot). Los servicios web registrados a través de App Studio no están registrados en Azure. Puede usar el [portal heredado](https://dev.botframework.com/bots) para ver, administrar y migrar los registros.
 
@@ -84,8 +84,8 @@ La definición de extensión es un objeto que tiene la estructura siguiente:
 
 | Nombre de propiedad | Objetivo | ¿Necesario? |
 |---|---|---|
-| `botId` | El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Normalmente, debe ser el mismo que el identificador de la aplicación general de Teams. | Sí |
-| `canUpdateConfiguration` | Habilita **el elemento de menú Configuración** . | No |
+| `botId` | El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. Normalmente, debe ser el mismo que el identificador de la aplicación de Teams general. | Sí |
+| `canUpdateConfiguration` | Habilita **Configuración** elemento de menú. | No |
 | `commands` | Matriz de comandos que admite esta extensión de mensajería. Está limitado a 10 comandos. | Sí |
 
 #### <a name="define-your-commands"></a>Definición de los comandos
@@ -232,7 +232,7 @@ Cuando los usuarios desencadenen la extensión de mensajería, deberá controlar
 > [!NOTE]
 > Si un chat de reunión o grupo tiene usuarios federados en la lista, Teams suprime el acceso a las extensiones de mensajería para todos los usuarios, incluido el organizador.
 
-Una vez que comienza una reunión, los participantes de Teams pueden interactuar directamente con la extensión de mensajería durante una llamada en directo. Tenga en cuenta lo siguiente al compilar la extensión de mensajería en la reunión:
+Una vez que comienza una reunión, Teams participantes pueden interactuar directamente con la extensión de mensajería durante una llamada en directo. Tenga en cuenta lo siguiente al compilar la extensión de mensajería en la reunión:
 
 1. **Location**. La extensión de mensajería se puede invocar desde el área del mensaje de redacción, el cuadro de comandos o @mentioned en el chat de reunión.
 
@@ -259,7 +259,7 @@ Pruébelo en un inicio rápido:
   * [Extensión de mensajería con comandos basados en acciones](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extensión de mensajería con comandos basados en búsqueda](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Obtenga más información sobre los conceptos de desarrollo de Teams:
+Obtenga más información sobre Teams conceptos de desarrollo:
 
-* [Descripción de las funcionalidades de aplicaciones de Teams](../concepts/capabilities-overview.md)
+* [Descripción de las funcionalidades de la aplicación Teams](../concepts/capabilities-overview.md)
 * [¿Qué son las extensiones de mensajería?](../messaging-extensions/what-are-messaging-extensions.md)

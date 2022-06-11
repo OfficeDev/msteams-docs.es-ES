@@ -1,15 +1,15 @@
 ---
-title: Solución de problemas de autenticación para pestañas con SSO en Teams
+title: Solución de problemas de autenticación para pestañas mediante sso en Teams
 description: Solución de problemas de autenticación de SSO en Teams y cómo usarla en pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Las pestañas de autenticación de teams tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions (Preguntas sobre errores de inicio de sesión único de Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 474f1050642124d2fa34e51417dcd14c9937f033
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Preguntas sobre errores de inicio de sesión único en las pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD)
+ms.openlocfilehash: 74246dce24869bb4645045950de01c179ba129d8
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888126"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032812"
 ---
 # <a name="troubleshooting-sso-authentication-in-teams"></a>Solución de problemas de autenticación de SSO en Teams
 
@@ -28,11 +28,11 @@ Para más información, consulte [Usar Postman con la API de Microsoft Graph](/g
 </details>
 <br>
 <details>
-<summary>2. ¿Graph API funciona en el explorador de Microsoft Graph?</summary>
+<summary>2. ¿Funciona Graph API en el Explorador de Microsoft Graph?</summary>
 <br>
 Sí, Graph API funciona en el Explorador de Microsoft Graph.
 
-Para obtener más información, vea [Explorador de Graph](https://developer.microsoft.com/graph/graph-explorer).
+Para obtener más información, consulte [Graph explorador](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
 <br>
@@ -43,11 +43,11 @@ Para obtener más información, vea [Explorador de Graph](https://developer.micr
 <details>
 <summary>1. Error: falta el consentimiento.</summary>
 <br>
-Cuando Azure AD recibe una solicitud para acceder a un recurso de Microsoft Graph, comprueba si el usuario (o el administrador de inquilinos) ha dado su consentimiento para este recurso. Si no hay ningún registro de consentimiento del usuario o administrador, Azure AD envía un mensaje de error al servicio web.
+Cuando Azure AD recibe una solicitud para acceder a un recurso de Microsoft Graph, comprueba si el usuario (o Administrador de inquilinos) ha dado su consentimiento para este recurso. Si no hay ningún registro de consentimiento del usuario o administrador, Azure AD envía un mensaje de error al servicio web.
 
 El código debe indicar al cliente (por ejemplo, en el cuerpo de una respuesta 403 Prohibido) cómo controlar el error:
 
-- Si la aplicación de pestaña necesita ámbitos de Microsoft Graph para los que solo un administrador puede dar su consentimiento, el código debería producir un error.
+- Si la aplicación de pestaña necesita ámbitos de Microsoft Graph para los que solo un administrador puede dar su consentimiento, el código debe generar un error.
 - Si los únicos ámbitos necesarios pueden ser otorgados por el usuario, entonces el código debe recurrir a un sistema alternativo de autenticación de usuario.
 
 </details>
@@ -85,7 +85,7 @@ Para obtener más información, consulte [Proporcionar notificaciones opcionales
 </details>
 <br>
 <details>
-<summary>6. Error: Error del SDK de Teams: resourceDisabled.</summary>
+<summary>6. Error: Teams error del SDK: resourceDisabled.</summary>
 <br>
 Para evitar este error, asegúrese de que el URI del identificador de aplicación esté configurado correctamente en el registro de aplicaciones de Azure AD y en el cliente de Teams.
 
@@ -97,20 +97,20 @@ Para obtener más información sobre el URI del identificador de aplicación, co
 <details>
 <summary>7. Error: Error genérico al ejecutar la aplicación de pestaña.</summary>
 <br>
-Puede aparecer un error genérico cuando una o varias configuraciones de aplicación realizadas en Azure AD son incorrectas. Para resolver este error, compruebe si los detalles de la aplicación configurados en el código y el manifiesto de Teams coinciden con los valores de Azure AD.
+Puede aparecer un error genérico cuando una o varias configuraciones de aplicación realizadas en Azure AD son incorrectas. Para resolver este error, compruebe si los detalles de la aplicación configurados en el código y Teams manifiesto coinciden con los valores de Azure AD.
 
 En la imagen siguiente se muestra un ejemplo de los detalles de la aplicación configurados en Azure AD.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valores de configuración de la aplicación en Azure AD" border="false":::
 
-Compruebe que los siguientes valores coinciden entre Azure AD, el código del lado cliente y el manifiesto de aplicación de Teams:
+Compruebe que los siguientes valores coinciden entre Azure AD, el código del lado cliente y Teams manifiesto de aplicación:
 
-- **Id. de** aplicación: el identificador de aplicación que generó en Azure AD debe ser el mismo en el código y en el archivo de manifiesto de Teams. Compruebe que el identificador de la aplicación en el manifiesto de Teams coincide con el **identificador de aplicación (cliente)** de Azure AD.
+- **Id. de** aplicación: el identificador de aplicación que generó en Azure AD debe ser el mismo en el código y en Teams archivo de manifiesto. Compruebe el identificador de la aplicación en Teams manifiesto coincide con el **identificador de aplicación (cliente)** de Azure AD.
 
 - **Secreto de** aplicación: el secreto de aplicación configurado en el back-end de la aplicación debe coincidir con **las credenciales de cliente** de Azure AD.
     También debe comprobar si el secreto de cliente ha expirado.
 
-- **URI del identificador de** aplicación: el URI del identificador de aplicación en el código y en el archivo de manifiesto de la aplicación de Teams debe coincidir con el **URI del identificador de aplicación** en Azure AD.
+- **URI del identificador de** aplicación: el URI del identificador de aplicación en el código y en Teams archivo de manifiesto de la aplicación debe coincidir con el **URI del identificador de aplicación** en Azure AD.
 
 - **Permisos de** aplicación: compruebe si los permisos que definió en el ámbito son según los requisitos de la aplicación. Si es así, compruebe si se le concedió al usuario en el token de acceso.
 

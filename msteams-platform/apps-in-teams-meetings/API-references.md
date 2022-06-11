@@ -1,16 +1,16 @@
 ---
 title: Referencias API de aplicaciones de reuniones
 author: surbhigupta
-description: Identifique las referencias de API de aplicaciones de reunión con ejemplos y ejemplos de código, consultas de señal de notificación de contexto de usuario de las reuniones de las aplicaciones de Teams.
+description: Identifique las referencias de API de aplicaciones de reunión con ejemplos y ejemplos de código, Teams aplicaciones que cumplen la consulta de señal de notificación de contexto de usuario de la API de rol de participante de usuario de las aplicaciones.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887579"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032791"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nombre de propiedad | Objetivo |
 |---|---|
 | **user.id** | Identificador del usuario. |
-| **user.aadObjectId** | Identificador de objeto de Azure Active Directory del usuario. |
+| **user.aadObjectId** | Azure Active Directory identificador de objeto del usuario. |
 | **user.name** | Nombre del usuario. |
 | **user.givenName** | Nombre del usuario.|
 | **user.surname** | Apellidos del usuario. |
@@ -406,7 +406,7 @@ El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el sigu
 | Nombre de propiedad | Objetivo |
 |---|---|
 | **details.id** | Identificador de la reunión, codificado como una cadena BASE64. |
-| **details.msGraphResourceId** | MsGraphResourceId, que se usa específicamente para llamadas a Graph API de MS. |
+| **details.msGraphResourceId** | MsGraphResourceId, que se usa específicamente para llamadas de Graph API de MS. |
 | **details.scheduledStartTime** | Hora de inicio programada de la reunión, en UTC. |
 | **details.scheduledEndTime** | Hora de finalización programada de la reunión, en UTC. |
 | **details.joinUrl** | Dirección URL usada para unirse a la reunión. |
@@ -416,8 +416,8 @@ El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el sigu
 | **conversation.conversationType** | Tipo de conversación. |
 | **conversation.id** | Identificador de chat de reunión. |
 | **organizer.id** | Identificador de usuario del organizador. |
-| **organizer.aadObjectId** | Identificador de objeto de Azure Active Directory del organizador. |
-| **organizer.tenantId** | Identificador de inquilino de Azure Active Directory del organizador. |
+| **organizer.aadObjectId** | Identificador de objeto Azure Active Directory del organizador. |
+| **organizer.tenantId** | Identificador de inquilino Azure Active Directory del organizador. |
 
 En el caso del tipo de reunión Periódica,
 
@@ -540,7 +540,7 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obtención de la API de estado de uso compartido de la fase de contenido de la aplicación
 
-La `getAppContentStageSharingState` API le permite capturar información sobre el uso compartido de aplicaciones en la fase de reunión.
+La `getAppContentStageSharingState` API le permite capturar información sobre el uso compartido de aplicaciones en la fase de reunión para dispositivos móviles y de escritorio.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -819,7 +819,7 @@ El código siguiente proporciona un ejemplo de carga del evento de finalización
 | **from.id** | Id. del usuario que envió la solicitud. |
 | **from.aadObjectId** | Id de objeto Azure Active Directory identificador del usuario que envió la solicitud. |
 | **conversation.isGroup** | Boolean que indica si la conversación tiene más de dos participantes. |
-| **conversation.tenantId** | Identificador de inquilino de Azure Active Directory de la conversación o reunión. |
+| **conversation.tenantId** | Azure Active Directory identificador de inquilino de la conversación o reunión. |
 | **conversation.id** | Identificador de chat de reunión. |
 | **recipient.id** | Identificador del usuario que recibe la solicitud. |
 | **recipient.name** | Nombre del usuario que recibe la solicitud. |

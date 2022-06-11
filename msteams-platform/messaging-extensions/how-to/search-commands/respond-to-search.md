@@ -1,18 +1,18 @@
 ---
-title: Responder al comando de búsqueda
+title: Responder a consultas de comandos de búsqueda
 author: surbhigupta
 description: Obtenga información sobre cómo responder al comando de búsqueda desde una extensión de mensaje en una aplicación de Microsoft Teams mediante ejemplos de código y ejemplos
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9e7dbfb6eed724fb56e7ae1e03a2132d7450947a
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111937"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032805"
 ---
-# <a name="respond-to-search-command"></a>Responder al comando de búsqueda
+# <a name="respond-to-search-command"></a>Responder a consultas de comandos de búsqueda
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -86,7 +86,7 @@ El servicio debe responder con los resultados que coincidan con la consulta del 
 |Nombre de propiedad|Objetivo|
 |---|---|
 |`composeExtension`|Sobre de respuesta de nivel superior.|
-|`composeExtension.type`|Tipo de respuesta. Se admiten los tipos siguientes: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: pide al usuario que se autentique <br>`config`: pide al usuario que configure la extensión de mensaje. <br>`message`: muestra un mensaje de texto sin formato |
+|`composeExtension.type`|Tipo de respuesta. Se admiten los tipos siguientes: <br>`result`: muestra una lista de resultados de búsqueda <br>`auth`: solicita al usuario que se autentique <br>`config`: solicita al usuario que configure la extensión de mensaje. <br>`message`: muestra un mensaje de texto sin formato |
 |`composeExtension.attachmentLayout`|Especifica el diseño de los datos adjuntos. Se usa para respuestas de tipo `result`. <br>Actualmente, se admiten los siguientes tipos: <br>`list`: lista de objetos de tarjeta que contienen campos de miniatura, título y texto <br>`grid`: una cuadrícula de imágenes en miniatura |
 |`composeExtension.attachments`|Matriz de objetos de datos adjuntos válidos. Se usa para respuestas de tipo `result`. <br>Actualmente, se admiten los siguientes tipos: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Acciones sugeridas. Se usa para respuestas de tipo `auth` o `config`. |
@@ -414,16 +414,16 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| Nombre de ejemplo           | Descripción | .NET    | Node.js   |
+| Ejemplo de nombre           | Descripción | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams acción de extensión de mensaje| Describe cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams búsqueda de extensión de mensaje   |  Describe cómo definir comandos de búsqueda y responder a búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Acción de extensión de mensaje de Teams| Describe cómo definir comandos de acción, crear un módulo de tareas y responder a la acción de envío del módulo de tareas. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Búsqueda de extensión de mensaje de Teams   |  Describe cómo definir comandos de búsqueda y responder a búsquedas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Adición de autenticación a una extensión de mensaje](~/messaging-extensions/how-to/add-authentication.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Agregar configuración a una extensión de mensaje](~/get-started/first-message-extension.md)

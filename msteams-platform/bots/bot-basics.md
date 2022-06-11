@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: actividad controlador marco bot tarjeta consentimiento canal evento
-ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757433"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032924"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
@@ -24,6 +24,9 @@ Para organizar la lógica conversacional del bot, se usa un controlador de activ
 El controlador de actividad de Teams se deriva del controlador de actividad de Microsoft Bot Framework. Enruta todas las actividades Teams antes de permitir que se controlen las actividades específicas que no sean de Teams.
 
 Cuando un bot para Teams recibe una actividad, se enruta a los controladores de actividad. Todas las actividades se enrutan a través de un controlador base denominado controlador de turnos. El controlador de turnos llama al controlador de actividad necesario para controlar el tipo de actividad que se recibió. El bot de Teams se deriva de la clase `TeamsActivityHandler`, que se deriva de la clase `ActivityHandler` de Bot Framework.
+
+> [!NOTE]
+> Si la actividad del bot tarda más de 15 segundos en procesarse, Teams enviar una solicitud de reintento al punto de conexión del bot. Por lo tanto, verá solicitudes duplicadas en el bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 

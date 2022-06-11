@@ -6,12 +6,12 @@ keywords: conector de Office365 de teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: 2d711821d2b76b4cc2fd93a6d28cd5061129222e
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759665"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032955"
 ---
 # <a name="create-office-365-connectors"></a>Crear Conectores de Office 365
 
@@ -127,7 +127,7 @@ Para autenticar al usuario como parte de la carga de la página, consulte [flujo
 #### <a name="getsettings-response-properties"></a>`GetSettings` Propiedades de la respuesta
 
 >[!NOTE]
->Los parámetros devueltos por la llamada `getSettings` son diferentes cuando se invoca este método desde una pestaña y difieren de los documentados en [configuración de js](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>Los parámetros devueltos por la llamada `getSettings` son diferentes cuando se invoca este método desde una pestaña y difieren de los documentados en [configuración de js](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings).
 
 En la tabla siguiente se proporcionan los parámetros y los detalles de las propiedades de respuesta `GetSetting`:
 

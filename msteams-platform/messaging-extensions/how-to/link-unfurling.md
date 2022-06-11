@@ -5,25 +5,25 @@ description: Aprenda a agregar la apertura de enlaces con la extensión de mensa
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297187"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032976"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-En este documento se explica cómo agregar vínculos abriéndose al manifiesto de la aplicación mediante App Studio y manualmente. Con la apertura de vínculos su aplicación puede registrarse para recibir una actividad `invoke` cuando se pegan las direcciones URL con un dominio en particular en el área de redacción de mensajes. El `invoke` contiene la dirección URL completa que se pegó en el área de redacción del mensaje y puede responder con una tarjeta que el usuario puede abrir, proporcionando información o acciones adicionales. Esto funciona de forma similar a un comando de búsqueda con la dirección URL que actúa como término de búsqueda.
+Este documento le guía sobre cómo agregar un vínculo que se desplegue al manifiesto de la aplicación mediante App Studio o manualmente. Con la apertura de vínculos su aplicación puede registrarse para recibir una actividad `invoke` cuando se pegan las direcciones URL con un dominio en particular en el área de redacción de mensajes. `invoke` contiene la dirección URL completa que se pegó en el área del mensaje de redacción. Puede responder con una tarjeta que el usuario puede desplegar para obtener información o acciones adicionales. Esto funciona como un comando de búsqueda con la dirección URL como término de búsqueda.
 
 > [!NOTE]
 >
 > * Actualmente, la apertura de enlaces no es compatible con clientes móviles.
 > * El resultado de la apertura del enlace se almacena en caché durante 30 minutos.
 
-La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la siguiente imagen, un usuario ha pegado una URL para un elemento de trabajo en Azure DevOps, que la extensión del mensaje ha resuelto en una tarjeta:
+La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la imagen siguiente, un usuario pegó una dirección URL para un elemento de Azure DevOps que la extensión de mensaje se ha resuelto en una tarjeta:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Ejemplo de apertura de vínculos":::
 
@@ -32,7 +32,7 @@ La extensión de mensajes de Azure DevOps usa la apertura de vínculos para busc
 Para agregar una apertura de enlace al manifiesto de la aplicación, agregue una nueva matriz de `messageHandlers` a la sección `composeExtensions` del JSON del manifiesto de la aplicación. Puede agregar la matriz con la ayuda de App Studio o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo, `*.example.com`. Coincide exactamente con un segmento del dominio; si necesita coincidir con `a.b.example.com`, use `*.*.example.com`.
 
 > [!NOTE]
-> No agregue dominios que no estén en el control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Además, los dominios de nivel superior están prohibidos. Por ejemplo, `*.com`, `*.org`.
+> No agregue dominios que no estén en el control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Los dominios de nivel superior están prohibidos, por ejemplo, `*.com`, `*.org`.
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Agregar apertura de vínculo mediante App Studio
 
@@ -43,6 +43,9 @@ Para agregar una apertura de enlace al manifiesto de la aplicación, agregue una
     :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Sección Controladores de mensajes en App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Agregar la apertura de vínculos manualmente
+
+> [!NOTE]
+> Si se agrega la autenticación a través de Azure AD, [desenrolle los vínculos en Teams mediante el bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 Para permitir que la extensión de mensaje interactúe con los vínculos, primero debe agregar la matriz de `messageHandlers` al manifiesto de la aplicación. En el ejemplo siguiente se explica cómo agregar manualmente la apertura de vínculos:
 

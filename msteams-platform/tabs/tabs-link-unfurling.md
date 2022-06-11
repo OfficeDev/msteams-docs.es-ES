@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo desanclar un vínculo, abrir la Vi
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756740"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033039"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -87,7 +87,7 @@ A continuación se muestra el proceso para invocar la vista extendida:
 * El bot responde con un código de `200`.
 
 > [!NOTE]
-> En los clientes móviles de Teams, invocar Vista extendida para aplicaciones distribuidas a través de la [tienda de Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. El explorador abre la dirección URL especificada en el parámetro `websiteUrl` del objeto `TabInfo`.
+> En los clientes móviles de Teams, invocar Vista extendida para aplicaciones distribuidas a través de la [tienda de Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. El explorador abre la dirección URL especificada en el parámetro `websiteUrl` del objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocación de la Vista extendida a través de un vínculo profundo
 

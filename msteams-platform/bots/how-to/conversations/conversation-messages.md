@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611459"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033018"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -243,7 +243,7 @@ Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de cont
 | Formato    | De usuario a bot | De bot a usuario | Notas                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texto enriquecido  | ✔                | ✔                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
-| Imágenes  | ✔                | ✔                | Máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. Gif animado no se admite.  |
+| Imágenes  | ✔                | ✔                | Máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.  |
 | Tarjetas     | ✖                | ✔                | Consulte la [referencia de tarjeta de Teams](~/task-modules-and-cards/cards/cards-reference.md) para obtener las tarjetas admitidas. |
 | Emojis    | ✔                | ✔                | Teams actualmente admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
 
@@ -333,7 +333,7 @@ Para mejorar el mensaje, puede incluir imágenes como datos adjuntos a ese mensa
 
 Las imágenes se envían agregando datos adjuntos a un mensaje. Para obtener más información sobre los datos adjuntos, vea [Agregar datos adjuntos multimedia a los mensajes](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Las imágenes pueden tener como máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. Gif animado no se admite.
+Las imágenes pueden tener como máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.
 
 Especifique el alto y el ancho de cada imagen mediante XML. En Markdown, el tamaño predeterminado de la imagen es 256×256. Por ejemplo:
 
@@ -382,13 +382,31 @@ El mensaje de finalización del formulario aparece en Tarjetas adaptables al env
 
 * **Correcto**: cuando una respuesta enviada al bot se realiza correctamente, aparece **la respuesta que se envió al mensaje de la aplicación** .
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Mensaje de correcto"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Mensaje de correcto"border="true":::
 
-Puede seleccionar **Cerrar** o cambiar el chat para descartar el mensaje.
+     Puede seleccionar **Cerrar** o cambiar el chat para descartar el mensaje.
 
-**Respuesta en dispositivos móviles**:
-
-El mensaje de error aparece en la parte inferior de la tarjeta adaptable.
+     Si no desea mostrar el mensaje correcto, establezca el atributo `hide` `true` en en la `msTeams` `feedback` propiedad . A continuación se muestra un ejemplo:
+    
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+    
 
 Para obtener más información sobre tarjetas y tarjetas en bots, consulte [la documentación de las tarjetas](~/task-modules-and-cards/what-are-cards.md).
 
@@ -418,7 +436,7 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 > [!div class="nextstepaction"]
 > [Menús de comandos del bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
