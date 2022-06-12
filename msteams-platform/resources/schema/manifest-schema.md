@@ -4,20 +4,21 @@ description: Describe el esquema del manifiesto para Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887838"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032936"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
 El manifiesto de la aplicación de Microsoft Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto de la aplicación debe ajustarse al esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Se admiten las versiones anteriores 1.0, 1.1,...,1.12 y la versión 1.13 actual (vea la nota siguiente) (con "v1.x" en la dirección URL).
 Para obtener más información sobre los cambios realizados en cada versión, consulte [registro de cambios del manifiesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
-> [!Important]
-> La versión `1.13` del esquema del manifiesto de la aplicación de Microsoft Teams permite [extender las aplicaciones de Teams a Outlook y Office](../../m365-apps/overview.md). Para las aplicaciones de solo Teams, use la versión `1.12` (o anterior). De lo contrario, los esquemas 1.12 y 1.13 son los mismos. Consulte la información general del [SDK del cliente de JavaScript de Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) para más información.
+En la tabla siguiente se enumeran las versiones de manifiesto de aplicación y versión de TeamsJS según diferentes escenarios de aplicación:
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 En el ejemplo de esquema siguiente se muestran todas las opciones de extensibilidad:
 
@@ -593,6 +594,9 @@ Matriz de `string`, que especifica qué permisos solicita la aplicación, lo que
 * `messageTeamMembers`&emsp;Requiere permiso para enviar mensajes directos a los miembros del equipo.
 
 Al cambiar estos permisos durante la actualización de la aplicación, los usuarios repiten el proceso de consentimiento después de ejecutar la aplicación actualizada. Para obtener más información, vea [Actualizar la aplicación](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+
+> [!NOTE]
+> Actualmente, los permisos están en desuso.
 
 ## <a name="devicepermissions"></a>devicePermissions
 
