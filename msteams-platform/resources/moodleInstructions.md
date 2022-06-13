@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: b5e023041ad732c7580b8b01cd62bc7159a52887
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033060"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66049007"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -287,7 +287,7 @@ Para permitir la creación automática de pestañas de Moodle:
 Cuando se sincroniza un curso de Moodle, Microsoft Teams instala automáticamente la aplicación Moodle en el equipo, crea una pestaña Moodle en el canal General de Teams y la configura para que contenga la página del curso de Moodle desde la que se sincroniza. Ahora puede empezar a trabajar con sus cursos de Moodle directamente desde Microsoft Teams.
 
 > [!NOTE]
-> Para compartir con nosotros cualquier solicitud o comentario de características, visite nuestra [página Voz del usuario](https://microsoftteams.uservoice.com/forums/916759-moodle).
+> Para compartir con nosotros cualquier solicitud o comentario de características, visite nuestra [página Voz del usuario](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 ## <a name="see-also"></a>Consulte también
 

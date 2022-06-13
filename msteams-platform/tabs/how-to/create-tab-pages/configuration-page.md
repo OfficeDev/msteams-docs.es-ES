@@ -6,12 +6,12 @@ keywords: canal de grupo de pestañas de teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887635"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048979"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -21,7 +21,7 @@ Una página de configuración es un tipo especial de [página de contenido](cont
 * Una [extensión de mensaje](~/messaging-extensions/what-are-messaging-extensions.md)
 * Un [Conector de Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar una pestaña de chat de canal o grupo
 
@@ -171,7 +171,7 @@ Al elegir los desencadenadores `saveGray()` de botón adecuados o `saveRed()`, s
 * Se desencadena el `pages.config.registerOnSaveHandler()` controlador de eventos.
 * **Guardar** en la página de configuración de la aplicación, está habilitado.
 
-El código de la página de configuración informa a Teams de que se cumplen los requisitos de configuración y que la instalación puede continuar. Cuando el usuario selecciona **Guardar**, se establecen los parámetros de `pages.config.setConfig()`, tal y como se define en la interfaz `Config`. Para obtener más información, consulte [la interfaz de configuración](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente.
+El código de la página de configuración informa a Teams de que se cumplen los requisitos de configuración y que la instalación puede continuar. Cuando el usuario selecciona **Guardar**, se establecen los parámetros de `pages.config.setConfig()`, tal y como se define en la interfaz `Config`. Para obtener más información, consulte [la interfaz de configuración](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` se llama para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ Autentíquese antes de permitir que un usuario configure la aplicación. De lo c
 
 Establezca la propiedad del `canUpdateConfiguration` manifiesto en `true`. Permite a los usuarios modificar, volver a configurar o cambiar el nombre de una pestaña de canal o grupo. Informe al usuario sobre el impacto en el contenido cuando se quita una pestaña. Para ello, incluya una página de opciones de eliminación en la aplicación y establezca un valor para la `removeUrl` propiedad en la `setConfig()` configuración (anteriormente `setSettings()`). El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, vea [crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Configuración de Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para la página de eliminación:
+`setConfig()` Microsoft Teams (anteriormente `setSettings()`) configuración para la página de eliminación:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

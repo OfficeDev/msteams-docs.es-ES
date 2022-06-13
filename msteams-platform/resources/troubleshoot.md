@@ -5,14 +5,14 @@ keywords: Solución de problemas de desarrollo de aplicaciones de teams
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 76a1a4d45757dff36d45c73f1ea5f2791fbe2e02
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032826"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048965"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Solución de problemas de la aplicación de Microsoft Teams
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas de la aplicación de Microsoft Teams
 
 ## <a name="troubleshooting-tabs"></a>Pestañas de solución de problemas
 
@@ -53,7 +53,7 @@ Al agregar una pestaña, si selecciona **Guardar** pero recibe un mensaje de err
 A menos que realice la autenticación silenciosa, debe seguir el proceso de autenticación proporcionado por el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
->Se requiere que todo el flujo de autenticación se inicie y finalice en el dominio, que debe aparecer en el `validDomains` objeto del manifiesto.
+> Se requiere que todo el flujo de autenticación se inicie y finalice en el dominio, que debe aparecer en el `validDomains` objeto del manifiesto.
 
 Para obtener más información sobre la autenticación, consulte [Autenticación de un usuario](~/concepts/authentication/authentication.md).
 
@@ -69,7 +69,7 @@ El administrador de inquilinos de Office 365 debe habilitar las aplicaciones par
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>No se puede agregar un bot como miembro de un equipo
 
-Los bots primero deben cargarse en un equipo antes de que sea accesible dentro de cualquier canal de ese equipo. Para obtener más información sobre este proceso, consulte [Carga de la aplicación en un equipo](~/concepts/deploy-and-publish/apps-upload.md).
+Los bots deben cargarse primero en un equipo antes de que sea accesible dentro de cualquier canal de ese equipo. Para obtener más información sobre este proceso, consulte [Carga de la aplicación en un equipo](~/concepts/deploy-and-publish/apps-upload.md).
 
 ### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>Mi bot no recibe mi mensaje en un canal
 

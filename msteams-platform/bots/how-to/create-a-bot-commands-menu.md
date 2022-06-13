@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: comando menú redactar mensaje conversación@mención
-ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032967"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048993"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos de bot
 
@@ -46,7 +46,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
-2. En **App Studio**, seleccione la pestaña **Editor de manifiestos**. Si no tiene un paquete de aplicación, puede crear o importar una aplicación existente. Para obtener más información, consulte [Actualizar un paquete de aplicación](~/get-started/deploy-csharp-app-studio.md).
+2. En **App Studio**, seleccione la pestaña **Editor de manifiestos**. Si no tiene un paquete de aplicación, puede crear o importar una aplicación existente. Para obtener más información, consulte [Actualización del paquete de aplicaciones de C# en App Studio](../../get-started/deploy-csharp-app-studio.md).
 
 3. En el panel izquierdo del **Editor de manifiestos**, en la sección **Funcionalidades**, seleccione **Bots**.
 
@@ -61,6 +61,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
 7. Active las casillas **Ámbito** para seleccionar dónde debe aparecer este menú de comandos y seleccione **Guardar**.
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="Botón de menú nuevos comandos de App Studio "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Edite Manifest.json para crear un menú de comandos para el bot
 
