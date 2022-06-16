@@ -6,12 +6,12 @@ keywords: capacidades de examen de escáner de código qr de la cámara capacida
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1a8b89754ddf4f04fb2cc6f5890d8ce4c3f25dab
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757720"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130504"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar la función de escáner de código QR o de códigos de barras
 
@@ -27,7 +27,7 @@ A continuación se muestran las ventajas de la integración de las funcionalidad
 * Con esta característica, el usuario solo necesita alinear un QR o un código de barras dentro de un marco en el centro de la interfaz de usuario del escáner y el código se examina automáticamente. Los datos almacenados se comparten con la aplicación web que realiza la llamada. Esto evita los inconvenientes y errores humanos de escribir códigos de producto largos u otra información relevante manualmente.
 
 Para integrar la funcionalidad QR o de escáner de códigos de barras, debe actualizar el archivo de manifiesto de la aplicación y llamar a la API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_). Para una integración eficaz, debe tener una buena comprensión del [fragmento de código](#code-snippet) para llamar a la API [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_), lo que le permite usar la funcionalidad nativa de escáner de QR o códigos de barras. La API proporciona un error para un estándar de código de barras no compatible.
-Es importante familiarizarse con los [errores de respuesta](#error-handling) de la API para controlar los errores en la aplicación de Teams.
+Es importante familiarizarse con los [errores de respuesta de la API](#error-handling) para controlar los errores en la aplicación de Teams.
 
 > [!NOTE]
 > Actualmente, la compatibilidad de Microsoft Teams con la funcionalidad de escáner QR o códigos de barras solo está disponible para clientes móviles.
@@ -109,6 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>Consulte también
 
-* [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
+* [Integrar capacidades multimedia](media-capabilities.md)
 * [Integrar las capacidades de ubicación en Teams](location-capability.md)
 * [Integración del selector de usuarios en Teams](people-picker-capability.md)

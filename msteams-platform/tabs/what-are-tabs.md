@@ -5,12 +5,12 @@ description: Información general sobre pestañas personalizadas en la plataform
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 42d03b988268f9042bd6f6e84d180c8d4b0b2209
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672974"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130420"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Pestañas de compilación para Microsoft Teams
 
@@ -99,7 +99,7 @@ Puede tener varios canales o pestañas de grupo y hasta 16 pestañas personales 
 
 * [Pestañas personalizadas en Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrar capacidades multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrar capacidades multimedia](../concepts/device-capabilities/media-capabilities.md)
 * [Integrar un escáner qr o de código de barras](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrar capacidades de ubicación](../concepts/device-capabilities/location-capability.md)
 * [Pestañas en dispositivos móviles](design/tabs-mobile.md#tabs-on-mobile)

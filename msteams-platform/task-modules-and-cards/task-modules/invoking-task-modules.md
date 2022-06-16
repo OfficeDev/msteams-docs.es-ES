@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo invocar y descartar módulos de ta
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 04e27e780c1d2686be2ee73909c2d28bfc19fd23
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757307"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130413"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Invocar y descartar módulos de tareas
 
@@ -237,6 +237,6 @@ Microsoft Teams garantiza que la navegación por teclado funciona correctamente 
 ## <a name="see-also"></a>Vea también
 
 * [Solicitar permisos de dispositivo](~/concepts/device-capabilities/native-device-permissions.md)
-* [Integrar capacidades multimedia](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrar capacidades multimedia](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrar las capacidades de ubicación en Teams](~/concepts/device-capabilities/location-capability.md)

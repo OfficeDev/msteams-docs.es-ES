@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887628"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130430"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -117,7 +117,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
-| [Funcionalidad multimedia](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Capacidades nativas del dispositivo, como la cámara y el micrófono, que puede integrar con su aplicación de Teams. <br>**Vea también**: [Funcionalidad](#c); [Funcionalidad del dispositivo](#d) |
+| [Funcionalidad multimedia](../concepts/device-capabilities/media-capabilities.md) | Capacidades nativas del dispositivo, como la cámara y el micrófono, que puede integrar con su aplicación de Teams. <br>**Vea también**: [Funcionalidad](#c); [Funcionalidad del dispositivo](#d) |
 | [Bot de reunión](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots que interactúan con llamadas y reuniones de Teams mediante el uso compartido de pantalla, vídeo y voz en tiempo real. <br>**Vea también**: [Bot de llamada](#c); [Bot de chat](#c) |
 | [Ciclo de vida de la reunión](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Abarca desde la experiencia de aplicación previa a la reunión, en la reunión y posterior a la reunión. Se pueden integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión. <br>**Vea también**: [Experiencia en la reunión](#i) |
 | [Fase de reunión](../sbs-meetings-stage-view.yml) | Una característica de la aplicación de extensión de reunión. Es un espacio compartido accesible para todos los participantes durante la reunión. Ayuda a los participantes a interactuar y colaborar con el contenido de la aplicación en tiempo real. <br>**Vea también**: [Vista fase](#s) |

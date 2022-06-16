@@ -6,12 +6,12 @@ keywords: permisos de dispositivos nativos de las funcionalidades de mapa de ubi
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66049000"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130455"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación
 
@@ -114,6 +114,6 @@ Debe asegurarse de controlar estos errores correctamente en la aplicación de Te
 
 ## <a name="see-also"></a>Consulte también
 
-* [Integrar funcionalidades multimedia en Teams](mobile-camera-image-permissions.md)
+* [Integrar capacidades multimedia](media-capabilities.md)
 * [Integrar la funcionalidad de escáner de código QR o código de barras en Teams](qr-barcode-scanner-capability.md)
 * [Integración del selector de usuarios en Teams](people-picker-capability.md)

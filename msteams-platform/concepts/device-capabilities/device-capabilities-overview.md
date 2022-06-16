@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo integrar funcionalidades nativas d
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123839"
+ms.locfileid: "66130434"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 
@@ -37,7 +37,7 @@ Use las herramientas presentes en [SDK de cliente JavaScript de Microsoft Teams]
 
 ## <a name="integrate-device-capabilities"></a>Integrar las funcionalidades del dispositivo
 
-Después de obtener acceso a las funcionalidades del dispositivo, use las API de funcionalidad multimedia de Teams para [integrar funcionalidades multimedia](mobile-camera-image-permissions.md) con la plataforma de Teams para mejorar la experiencia del usuario. Estas funcionalidades integradas permiten a la aplicación:
+Después de obtener acceso a las funcionalidades del dispositivo, use las API de funcionalidad multimedia de Teams para [integrar funcionalidades multimedia](media-capabilities.md) con la plataforma de Teams para mejorar la experiencia del usuario. Estas funcionalidades integradas permiten a la aplicación:
 
 * Capturar y compartir imágenes.
 * Escanear código QR o código de barras usando el [control de escáner](qr-barcode-scanner-capability.md).
