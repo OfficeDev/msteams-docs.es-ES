@@ -1,15 +1,14 @@
 ---
 title: Referencia del esquema de manifiesto
-description: Describe el esquema del manifiesto para Microsoft Teams
+description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-keywords: esquema de manifiesto de Teams
-ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 5c28429a69bad5149d6c7014ce1596dd7ea07b19
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032936"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123727"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 

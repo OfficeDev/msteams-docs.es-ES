@@ -1,22 +1,22 @@
 ---
 title: Prueba y depuración de la aplicación
-description: Describe cómo probar bots en Microsoft Teams
+description: En este artículo se describe cómo probar bots en Microsoft Teams
 keywords: pruebas de bots de teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755927"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123457"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Probar y depurar la el bot de Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Al probar el bot, debe tener en cuenta tanto los contextos en los que quiere que se ejecute el bot como cualquier funcionalidad que haya agregado al bot que requiera datos específicos de Microsoft Teams. Asegúrese de que el método elegido para probar el bot se alinea con su funcionalidad.
+Al probar el bot, debe tener en cuenta tanto los contextos en los que quiere que se ejecute el bot como cualquier funcionalidad que haya agregado al bot que requiera datos específicos de Microsoft Teams. Asegúrese de que el método que eligió para probar el bot se alinea con su funcionalidad.
 
 ## <a name="test-by-uploading-to-teams"></a>Prueba mediante la carga en Teams
 

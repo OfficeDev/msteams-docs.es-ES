@@ -6,12 +6,12 @@ keywords: webhook saliente de pestañas de teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: fab709bc8a6fe35db527b911567dab0b6a20717d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104024"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123783"
 ---
 # <a name="create-an-incoming-webhook"></a>Crear un webhook entrante
 
@@ -90,7 +90,13 @@ Para eliminar un Webhook entrante de un canal de Teams, siga estos pasos:
 
     ![Quitar final](~/assets/images/finalremove.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="code-sample"></a>Ejemplo de código
+
+| Ejemplo de nombre           | Descripción | C#    | Node.js   |
+|:---------------------|:--------------|:---------|:--------|
+|Webhook entrante|Este código de ejemplo muestra cómo enviar una tarjeta mediante el webhook entrante. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+
+## <a name="see-also"></a>Consulte también
 
 * [Crear un Webhook saliente](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)

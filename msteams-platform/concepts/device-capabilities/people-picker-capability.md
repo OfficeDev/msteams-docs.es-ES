@@ -1,16 +1,15 @@
 ---
 title: Integrar Selector de personas
-description: Uso del SDK de cliente de JavaScript de Teams para integrar el control Selector de personas
-keywords: Control Selector de personas
+description: En este artículo, aprenderá a usar el SDK de cliente de JavaScript de Teams para integrar el control Selector de personas y las ventajas del uso de Selector de personas.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757594"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123030"
 ---
 # <a name="integrate-people-picker"></a>Integrar Selector de personas
 
@@ -52,7 +51,7 @@ En la siguiente imagen se muestra la experiencia del Selector de personas en dis
 El control de entrada de Selector de personas permite al usuario buscar y agregar personas mediante los siguientes pasos:
 
 1. Escriba el nombre de la persona que quiere invitar. La lista aparece con sugerencias de nombre.
-1. Seleccione el nombre de la persona necesaria de la lista. 
+1. Seleccione el nombre de la persona necesaria de la lista.
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker Móvil" border="true":::
 
@@ -61,7 +60,7 @@ El control de entrada de Selector de personas permite al usuario buscar y agrega
 El control Selector de personas en la web o el escritorio se inicia en una ventana modal en la parte superior de la aplicación web y para agregar personas, siga estos pasos:
 
 1. Escriba el nombre de la persona que quiere invitar. La lista aparece con sugerencias de nombre.
-1. Seleccione el nombre de la persona necesaria de la lista. 
+1. Seleccione el nombre de la persona necesaria de la lista.
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Selector de personas por nombre Escritorio" border="true":::
 

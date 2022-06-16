@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938964"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123979"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar la aplicación de Teams localmente
 
@@ -177,7 +177,7 @@ En la tabla siguiente se enumeran los tipos y nombres de configuración de depur
 <details>
 <summary><b>Instala localmente la aplicación de Teams</b></summary>
 
-La configuración **Adjuntar a front-end** o **Iniciar Bot** inicia una nueva instancia del explorador Edge o Chrome y abre una página web para cargar el cliente de Teams. Una vez cargado el cliente de Teams, Teams transferirá localmente la aplicación de Teams controlada por la dirección URL de instalación de prueba definida en las configuraciones de inicio [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  Cuando el cliente de Teams se cargue en el explorador web, seleccione **Agregar** o seleccione uno de la lista desplegable según sus necesidades.
+La configuración **Adjuntar a front-end** o **Iniciar Bot** inicia una nueva instancia del explorador Edge o Chrome y abre una página web para cargar el cliente de Teams. Una vez cargado el cliente de Teams, Teams transferirá localmente la aplicación de Teams controlada por la dirección URL de instalación de prueba definida en las configuraciones de inicio [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). Cuando el cliente de Teams se cargue en el explorador web, seleccione **Agregar** o seleccione uno de la lista desplegable según sus necesidades.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="depuración local" border="true":::
 

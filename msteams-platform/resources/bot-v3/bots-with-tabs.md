@@ -1,49 +1,49 @@
 ---
-title: Combinar bots con pestañas
-description: Describe cómo usar pestañas y bots juntos
-keywords: desarrollo de pestañas de bots de teams
+title: Combinación de bots con pestañas
+description: En este artículo se describe cómo usar pestañas y bots juntos.
+keywords: Desarrollo de pestañas de bots de teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 3053dbca3b1e91683564eb902d8b142fd4a30ddb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9ec2c37417d6c16edf4ead521dea91655ba11165
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157462"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123734"
 ---
-# <a name="combine-bots-with-tabs"></a>Combinar bots con pestañas
+# <a name="combine-bots-with-tabs"></a>Combinación de bots con pestañas
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Bots and tabs work well together, and are often combined into a single back-end service. En esta sección se describen los procedimientos recomendados y los patrones comunes para usar juntos pestañas y bots.
+Los bots y las pestañas funcionan juntos y, a menudo, se combinan en un único servicio back-end. En esta sección se describen los procedimientos recomendados y los patrones comunes para usar pestañas y bots juntos.
 
-## <a name="associating-user-identities-across-bot-and-tab"></a>Asociación de identidades de usuario entre bot y pestaña
+## <a name="associating-user-identities-across-bot-and-tab"></a>Asociación de identidades de usuario entre bots y pestañas
 
-Por ejemplo: supongamos que la aplicación de pestaña usa un sistema de id. de propietario para proteger su contenido. Supongamos que también tiene un bot que puede interactuar con el usuario. Normalmente, querrás mostrar contenido en la pestaña que es específico del usuario de visualización. El desafío es que el identificador de usuario en el sistema es probablemente diferente del Microsoft Teams de usuario. Entonces, ¿cómo asocia estas dos identidades?
-En general, el enfoque recomendado es iniciar sesión con el bot con el mismo sistema de identidad usado para proporcionar autenticación para el contenido de la pestaña. Puede implementar esto a través de la acción de inicio de sesión, que normalmente inicia sesión en el usuario a través de un flujo de OAuth.
+Por ejemplo: supongamos que la aplicación de pestaña usa un sistema de identificadores propietario para proteger su contenido. Supongamos que también tiene un bot que puede interactuar con el usuario. Normalmente, querrá mostrar contenido en la pestaña que sea específico del usuario de visualización. El desafío es que es probable que el identificador de usuario del sistema sea diferente del identificador de usuario Microsoft Teams. ¿Cómo asocia estas dos identidades?
+En general, el enfoque recomendado es iniciar sesión con el bot con el mismo sistema de identidad que se usa para proporcionar autenticación para el contenido de la pestaña. Puede implementar a través de la acción de inicio de sesión, que normalmente inicia sesión en el usuario a través de un flujo de OAuth.
 
-Este flujo funciona mejor si el proveedor de identidades implementa el protocolo OAuth 2.0. A continuación, puede asociar el Teams de usuario con las credenciales del usuario desde su propio servicio de identidad.
+Este flujo funciona mejor si el proveedor de identidades implementa el protocolo OAuth 2.0. A continuación, puede asociar el identificador de usuario de Teams a las credenciales del usuario de su propio servicio de identidad.
 
-   ![Asociación de identidades](~/assets/images/bots/associating_contexts.png)
+   ![Asociar identidades](~/assets/images/bots/associating_contexts.png)
 
-## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Crear vínculos profundos a pestañas en mensajes desde el bot
+## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Creación de vínculos profundos a pestañas en mensajes del bot
 
-Es posible que desee usar pestañas para mostrar más contenido del que cabe dentro de una tarjeta, o proporcionar una forma de completar tareas complejas de rellenado de formularios con el lienzo de pestañas. Por ejemplo, considere la posibilidad de navegar al usuario a la pestaña cuando haga clic en la tarjeta desde el bot. Para que esto suceda, tendrás que codificar el mensaje del bot para incluir una dirección [URL](~/concepts/build-and-test/deep-links.md) de vínculo profundo, ya sea a través del marcado o como el destino de la acción openUrl.
+Quiere usar pestañas para mostrar más contenido del que cabe dentro de una tarjeta o proporcionar una manera de completar tareas complejas de relleno de formularios mediante el lienzo de pestañas. Por ejemplo, considere la posibilidad de navegar al usuario a la pestaña cuando hace clic en la tarjeta desde el bot. Para que esto suceda, deberá codificar el mensaje del bot para incluir una dirección URL de [vínculo profundo](~/concepts/build-and-test/deep-links.md) , ya sea a través del marcado o como destino de la acción openUrl.
 
-Los vínculos profundos dependen de un entityId, que es un valor opaco que se asigna a una entidad única en el sistema. Cuando se crea la pestaña, lo ideal es almacenar un estado sencillo, por ejemplo, marcar en el back-end que indica que la pestaña se ha creado en el canal. Cuando el bot crea un mensaje, puede dirigirse a la entidadId asociada a esa pestaña.
+Los vínculos profundos se basan en un entityId, que es un valor opaco que se asigna a una entidad única del sistema. Cuando se crea la pestaña, lo ideal es almacenar un estado simple; por ejemplo, marca en el back-end que indica que la pestaña se ha creado en el canal. Cuando el bot construye un mensaje, puede tener como destino el entityId asociado a esa pestaña.
 
 > [!NOTE]
-> en chats personales, dado que las pestañas son "estáticas" e instaladas con la aplicación, siempre puedes asumir su existencia y, por lo tanto, crear vínculos profundos en consecuencia.
+> en los chats personales, dado que las pestañas son "estáticas" e instaladas con la aplicación, siempre se puede asumir su existencia y, por tanto, construir vínculos profundos en consecuencia.
 
-## <a name="sending-notifications-for-tab-updates"></a>Enviar notificaciones para actualizaciones de pestañas
+## <a name="sending-notifications-for-tab-updates"></a>Envío de notificaciones para actualizaciones de pestañas
 
-A menudo, querrás notificar al usuario final siempre que se produzca una actualización o una acción de usuario en una pestaña. Un escenario de ejemplo es asignar una tarea o vale a un miembro del equipo y, a continuación, notificar a ese miembro del equipo.
+A menudo, querrá notificar al usuario final cada vez que se produzca una actualización o una acción de usuario en una pestaña. Un escenario de ejemplo consiste en asignar una tarea o un vale a un miembro del equipo y, a continuación, notificar a ese miembro del equipo.
 
-Hay dos formas de lograr este escenario:
+Hay dos maneras de lograr este escenario:
 
-1. Si desea notificar a todo un canal, el bot puede publicar un mensaje de forma asincrónica en el canal. No hay forma de que un bot cree proactivamente la conversación de tabulación si no se creó con la pestaña.
+1. Si desea notificar a un canal completo, el bot puede publicar de forma asincrónica un mensaje en el canal. No hay ninguna manera de que un bot cree proactivamente la conversación de pestaña si no se creó con la pestaña.
 
-2. Si solo desea notificar al destinatario o a las partes interesadas implicadas en la acción, el bot puede enviar un mensaje de chat personal al usuario. Primero debe comprobar si existe una conversación personal entre el bot y el usuario. Si no es así, puedes llamar `CreateConversation` para iniciar el chat personal.
+2. Si solo desea notificar al destinatario o a las partes interesadas implicadas en la acción, el bot puede enviar un mensaje de chat personal al usuario. Primero debe comprobar si existe una conversación personal entre el bot y el usuario. Si no es así, puede llamar `CreateConversation` a para iniciar el chat personal.
 
-En ambos casos, usa las notificaciones de eventos con prudencia y nunca envías correo no deseado al usuario con actualizaciones innecesarias.
+En ambos casos, use las notificaciones de eventos con prudencia y nunca envíe correo no deseado al usuario con actualizaciones innecesarias.

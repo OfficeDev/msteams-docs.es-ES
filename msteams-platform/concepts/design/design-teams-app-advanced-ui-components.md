@@ -1,35 +1,35 @@
 ---
-title: Diseñar la aplicación con componentes de interfaz de usuario avanzados
+title: Diseño de la aplicación con componentes avanzados de la interfaz de usuario
 author: heath-hamilton
-description: Obtenga información sobre los Teams de interfaz de usuario, como rutas de navegación, barra de notificaciones, vista Fase junto con casos de uso relevantes.
+description: Obtenga información sobre los componentes de Teams interfaz de usuario, como rutas de navegación, barra de notificaciones, vista de fase junto con casos de uso pertinentes.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: dc3cb279ada3f130aeb6cd2626e6a36fcc8ecdc9
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362917"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123422"
 ---
-# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseñar la aplicación Microsoft Teams con componentes de interfaz de usuario avanzados
+# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes avanzados de la interfaz de usuario
 
-Los siguientes componentes son una combinación de componentes básicos de [la](~/concepts/design/design-teams-app-basic-ui-components.md) interfaz de usuario que puedes usar para situaciones comunes Teams de diseño, como la navegación.
+Los siguientes componentes son una combinación de [componentes básicos de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md) que puede usar para situaciones comunes de diseño Teams, como la navegación.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interfaz de</a> usuario, el kit de interfaz Microsoft Teams incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de usuario</a>, el kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para compilar aplicaciones Teams. En el kit de interfaz de usuario, puede capturar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Ruta de navegación
 
-Las rutas de navegación son una ayuda de navegación que transmite la jerarquía de la aplicación. Ayudan a los usuarios a comprender cómo la página que están viendo se ajusta a la experiencia general y ofrecen acceso con un solo clic a niveles más altos de esa jerarquía.
+Las rutas de navegación son una ayuda de navegación que transmite la jerarquía de la aplicación. Ayudan a los usuarios a comprender cómo encaja la página que están viendo en la experiencia general y ofrecen acceso con un solo clic a niveles más altos de esa jerarquía.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Jerarquía de comunicación
+* Comunicar jerarquía
 * Navegación
 
 ### <a name="mobile"></a>Móvil
@@ -42,12 +42,12 @@ Las rutas de navegación son una ayuda de navegación que transmite la jerarquí
 
 ## <a name="left-nav"></a>Navegación izquierda
 
-Use la navegación izquierda para examinar varias páginas dentro de la Teams pestaña. En el siguiente ejemplo, la navegación izquierda se encuentra entre la lista de canales y el contenido de la pestaña.
+Use el panel de navegación izquierdo para examinar varias páginas dentro de la pestaña Teams. En el ejemplo siguiente, la navegación izquierda se encuentra entre la lista de canales y el contenido de la pestaña.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Examinar varias páginas dentro de una Teams pestaña.
-* Dividir aplicaciones complejas en varias páginas.
+* Examine varias páginas dentro de una pestaña de Teams.
+* Divida las aplicaciones complejas en varias páginas.
 
 ### <a name="mobile"></a>Móvil
 
@@ -59,27 +59,27 @@ Use la navegación izquierda para examinar varias páginas dentro de la Teams pe
 
 ## <a name="notification-bar"></a>Barra de notificaciones
 
-Una barra de notificaciones es un área dedicada para mostrar mensajes breves e importantes que no requieren que el usuario tome medidas inmediatas. Los iconos y los colores de fondo específicos están asociados con tipos específicos de mensajes (vea a continuación).
+Una barra de notificaciones es un área dedicada para mostrar mensajes breves e importantes que no requieren que el usuario realice una acción inmediata. Los iconos y colores de fondo específicos están asociados a tipos específicos de mensajes (consulte a continuación).
 
-Puedes implementar una barra de notificaciones mediante el Fluent de [alerta de interfaz de](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) usuario.
+Puede implementar una barra de notificaciones mediante el componente de [alerta](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) de la interfaz de usuario de Fluent.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
 * Mensajes críticos, errores y advertencias
-* Mensajes de éxito
+* Mensajes correctos
 * Mensajes informativos o promocionales
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="En el ejemplo se muestra la plantilla de interfaz de usuario de la barra de notificaciones en el móvil." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="En el ejemplo se muestra la plantilla de interfaz de usuario de la barra de notificaciones en dispositivos móviles." border="false":::
 
 ### <a name="desktop"></a>Escritorio
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio." border="false":::
 
-## <a name="stage-view"></a>Vista fase
+## <a name="stage-view"></a>Vista de fase
 
-La vista fase permite a los usuarios ver contenido (como una imagen, un archivo o un sitio web) en una superficie grande Teams sin cambiar de contexto. Este componente es principalmente para ver contenido. No lo use para interacciones complejas.
+La vista de fase permite a los usuarios ver contenido (como una imagen, un archivo o un sitio web) en una superficie grande en Teams sin cambiar de contexto. Este componente es principalmente para ver contenido. No lo use para interacciones complejas.
 
 Vea cómo implementar la [vista de fase](~/tabs/tabs-link-unfurling.md).
 

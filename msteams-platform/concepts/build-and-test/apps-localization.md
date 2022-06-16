@@ -1,16 +1,15 @@
 ---
 title: Localizar la aplicación
-description: Describe las consideraciones para localizar la aplicación Microsoft Teams.
+description: Obtenga información sobre las consideraciones para localizar la aplicación Microsoft Teams y localizar cadenas en el manifiesto de la aplicación.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: equipos publicar tienda oficina publicar AppSource localización idioma
 ms.date: 05/15/2018
-ms.openlocfilehash: 2975365f56c573b66fda5e5a51106dc8cecf8c0f
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9c8e073f646bbd99f07725bee734e727103f6eb3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757048"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122897"
 ---
 # <a name="localize-your-app"></a>Localizar la aplicación
 

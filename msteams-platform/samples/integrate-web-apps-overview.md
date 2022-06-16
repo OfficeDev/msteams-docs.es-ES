@@ -1,17 +1,16 @@
 ---
 title: Integrar aplicaciones web
 author: Rajeshwari-v
-description: Información general sobre la integración de aplicaciones web y funcionalidades de dispositivo con la aplicación de Microsoft Teams.
+description: En este artículo, comenzará a integrar aplicaciones web y funcionalidades de dispositivos con la aplicación Microsoft Teams. Power Platform para crear aplicaciones de Power, Power Virtual Agents, Virtual Assistant, plantillas de aplicaciones, conectores de Turnos, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: power platform power apps, selector de vínculos profundos del asistente de agente virtual, compartir con Teams
-ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757671"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123541"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 

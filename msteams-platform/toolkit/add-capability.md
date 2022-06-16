@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: a0ebea1fb05e3583c90c41596da98a25d89f9b4c
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 18c1379a630e637bea95209c35b823306b35a5de
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656764"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124000"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones Teams
 
@@ -27,22 +27,22 @@ Agregar funcionalidad en Teams Toolkit le ayuda a agregar funcionalidad adiciona
 
 En la lista siguiente se proporcionan ventajas para agregar más funcionalidades en TeamsFx:
 
-* Proporciona comodidad
-* Agrega más funciones a la aplicación agregando automáticamente códigos fuente mediante Teams Toolkit
+* Proporciona comodidad.
+* Agrega más funciones a la aplicación agregando automáticamente códigos fuente mediante Teams Toolkit.
 
 ## <a name="limitations"></a>Limitaciones
 
 En la lista siguiente se proporcionan limitaciones para agregar más funcionalidades en TeamsFx:
 
-* Puede agregar pestañas hasta 16 instancias
+* Puede agregar pestañas de hasta 16 instancias.
 * Puede agregar un bot y una extensión de mensaje para una instancia cada una.
 
 ## <a name="add-capabilities"></a>Agregar funcionalidades
 
 **Puede agregar funcionalidades mediante los métodos siguientes:**
 
-* Para agregar funcionalidades mediante Teams Toolkit en Visual Studio Code
-* Para agregar funcionalidades mediante la paleta de comandos
+* Para agregar funcionalidades mediante Teams Toolkit en Visual Studio Code.
+* Para agregar funcionalidades mediante la paleta de comandos.
 
   > [!Note]
   > Debe aprovisionar para cada entorno, después de haber agregado correctamente las funcionalidades en la aplicación de Teams.
@@ -69,13 +69,13 @@ En la lista siguiente se proporcionan limitaciones para agregar más funcionalid
 
 ## <a name="add-capabilities-using-teamsfx-cli"></a>Adición de funcionalidades mediante la CLI de TeamsFx
 
-* Cambiar el directorio al **directorio del proyecto**
+* Cambie el directorio de trabajo al **directorio del proyecto**.
 * En la tabla siguiente se enumeran las funcionalidades y los comandos necesarios:
 
   |Funcionalidad y escenario| Comando|
   |-----------------------|----------|
-  |Para agregar un bot de notificación |`teamsfx add notification `|
-  |Para agregar un bot de comandos |`teamsfx add command-and-response `|
+  |Para agregar un bot de notificación |`teamsfx add notification`|
+  |Para agregar un bot de comandos |`teamsfx add command-and-response`|
   |Para agregar la pestaña habilitada para sso |`teamsfx add sso-tab`|
   |Para agregar pestaña |`teamsfx add tab`|
   |Para agregar bot |`teamsfx add bot`|
@@ -107,7 +107,7 @@ Después de agregar un bot y una extensión de mensaje, los cambios en el proyec
   * Ámbitos del bot
   * Los comandos a los que la aplicación de bot hello world puede responder
 * Los archivos de `templates/azure/teamsfx` se actualizan y `templates/azure/provision/xxx`los archivos .bicep se vuelven a generar.
-* Los archivos de `.fx/config` se vuelven a generar, lo que garantiza que el proyecto esté configurado con las configuraciones adecuadas para la funcionalidad recién agregada.
+* Los archivos de `.fx/config` se vuelven a generar, lo que garantiza que el proyecto se establece con las configuraciones adecuadas para la funcionalidad recién agregada.
 
 Después de agregar la pestaña , los cambios en el proyecto son los siguientes:
 
@@ -117,7 +117,7 @@ Después de agregar la pestaña , los cambios en el proyecto son los siguientes:
   * Pestañas configurables y estáticas
   * Ámbitos de las pestañas
 * Los archivos de `templates/azure/teamsfx` se actualizarán y `templates/azure/provision/xxx`se volverá a generar el archivo .bicep.
-* El archivo en `.fx/config` se regenera, lo que garantiza que el proyecto esté configurado con las configuraciones adecuadas para la funcionalidad recién agregada.
+* El archivo en `.fx/config` se regenera, lo que garantiza que el proyecto se establece con las configuraciones adecuadas para la funcionalidad recién agregada.
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 

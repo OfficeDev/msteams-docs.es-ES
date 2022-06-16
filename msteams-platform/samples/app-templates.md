@@ -2,16 +2,15 @@
 title: Plantillas de aplicación de Microsoft Teams
 description: Obtenga información sobre cómo usar plantillas de aplicación para la plataforma de Microsoft Teams con instrucciones detalladas para implementar e instalar una aplicación.
 ms.topic: reference
-keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 2b5bb6742a0ff55913e87041d6f4e59dd3795bc5
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 62554dbbfff947e8177be12b3a50a5bf623e0427
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757692"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123555"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 

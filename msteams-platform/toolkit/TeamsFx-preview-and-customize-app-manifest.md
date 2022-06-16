@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755863"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123657"
 ---
 # <a name="edit-teams-app-manifest"></a>Edición Teams manifiesto de aplicación
 
@@ -32,7 +32,7 @@ Puede obtener una vista previa del archivo de manifiesto en entornos locales y r
 
 * [Vista previa del archivo de manifiesto en el entorno local](#preview-manifest-file-in-local-environment)
 * [Vista previa del archivo de manifiesto en un entorno remoto](#preview-manifest-file-in-remote-environment)
- 
+
 ### <a name="preview-manifest-file-in-local-environment"></a>Vista previa del archivo de manifiesto en el entorno local
 
 Para obtener una vista previa del archivo de manifiesto en el entorno local, puede presionar **F5** para ejecutar la depuración local. Genera la configuración local predeterminada automáticamente y, a continuación, el paquete de la aplicación y la vista previa del manifiesto se compilan en la carpeta `build/appPackage`.
@@ -53,7 +53,7 @@ La galería de ejemplos aparece como se muestra en la siguiente imagen:
 
 * Seleccione **Aprovisionar en la nube** en **DESARROLLO** en Teams Toolkit extensión o
 * Desencadenar **Teams: aprovisionamiento en la nube desde la** paleta de comandos.
- 
+
 Genera la configuración de la aplicación Teams remota y compila el paquete y el manifiesto de vista previa en la `build/appPackage` carpeta .
 
 También puede obtener una vista previa del archivo de manifiesto en un entorno remoto siguiendo estos pasos:
@@ -127,7 +127,6 @@ El kit de herramientas de Teams consta de los siguientes archivos de plantilla d
 * `manifest.template.json`
 * `templates/appPackage`
 
-
 Durante la depuración o aprovisionamiento local, Teams Toolkit carga el manifiesto desde `manifest.template.json`, con las configuraciones de `state.{env}.json`, `config.{env}.json`y crea Teams aplicación en [el Portal de desarrollo](https://dev.teams.microsoft.com/apps).
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>Marcadores de posición admitidos en manifest.template.json
@@ -191,4 +190,4 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

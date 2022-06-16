@@ -1,17 +1,16 @@
 ---
 title: Preparar el envío de la tienda
-description: Describe los pasos finales antes de enviar la aplicación de Microsoft Teams para que aparezca en la tienda. Aprende a validar el paquete de la aplicación, compilar instrucciones de prueba y crear los detalles de la descripción de la tienda.
+description: Aprender los pasos finales antes de enviar la aplicación de Microsoft Teams para que aparezca en la tienda. Aprender a validar el paquete de la aplicación y mucho más.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: localizar directrices de paquete de aplicación de validación del almacén de envíos
-ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033011"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123170"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -20,7 +19,7 @@ Has diseñado, creado y probado tu aplicación de Microsoft Teams. Ahora estás 
 Vea el siguiente vídeo para obtener más información sobre cómo publicar la aplicación en la tienda de aplicaciones de Microsoft Teams:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Antes de enviar la aplicación al [Centro de partners](/office/dev/store/use-partner-center-to-submit-to-appsource), debe asegurarse de haber hecho lo siguiente.

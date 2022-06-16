@@ -1,15 +1,15 @@
 ---
 title: Aplicaciones de asociados para Moodle
-description: Introducción a las aplicaciones de asociados
+description: Conozca las aplicaciones de asociados para Moodle, las principales ventajas de las aplicaciones de asociados para Moodle, las ofertas de Saas y mConnect. Habilite el inicio de sesión único SSO para los usuarios de Teams.
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ee6840193d0b2ecaf1eab2a7e466bcd61382e06f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757006"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123394"
 ---
 # <a name="partner-apps-for-moodle"></a>Aplicaciones de asociados para Moodle
 
@@ -26,9 +26,9 @@ En la tabla siguiente se muestran las ventajas de usar aplicaciones de asociados
 
 ## <a name="mconnect"></a>mConnect
 
-La aplicación mConnect integra cursos y actividades de Moodle en Teams para optimizar la experiencia de aprendizaje de los usuarios. 
+La aplicación mConnect integra cursos y actividades de Moodle en Teams para optimizar la experiencia de aprendizaje de los usuarios.
 
-Skooler, un asociado de confianza de Microsoft Gold en el ámbito educativo, ha desarrollado la aplicación mConnect y proporciona el soporte técnico necesario. 
+Skooler, un asociado de confianza de Microsoft Gold en el ámbito educativo, ha desarrollado la aplicación mConnect y proporciona el soporte técnico necesario.
 
 mConnect permite a los administradores de Moodle configurar automáticamente Teams para el curso de Moodle y hacer que todas las características estén disponibles para cada curso en Moodle.
 

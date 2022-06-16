@@ -4,12 +4,12 @@ description: Describe cómo obtener un token de usuario. Actualmente, un desarro
 keywords: token, token de usuario, compatibilidad con SSO para bots, permiso, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906260"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123471"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -379,9 +379,9 @@ Abra el [ejemplo de autenticación de Teams](https://github.com/microsoft/BotBui
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|**Ejemplo de nombre** | **Descripción** |**.NET** |
-|----------------|-----------------|--------------|
-|SDK del bot framework | Ejemplo para usar el SDK de bot framework. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**Ejemplo de nombre** | **Descripción** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|SDK del bot framework | En este código de ejemplo se muestra cómo empezar a usar la autenticación en un bot para Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 

@@ -1,16 +1,16 @@
 ---
 title: Resolución de problemas con el envío de la tienda
-description: Comprenda cómo solucionar y corregir problemas con el envío de Microsoft Teams tienda.
+description: En este artículo, aprenderá a solucionar y corregir problemas con el envío de Microsoft Teams tienda.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: f69b3d1bbcdcf0f85151df62bbb032934a871d12
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111391"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123212"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Resolver problemas si se produce un error en el envío de la tienda de Microsoft Teams
 

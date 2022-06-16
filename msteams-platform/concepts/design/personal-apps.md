@@ -1,17 +1,17 @@
 ---
 title: Diseño de su aplicación personal
-description: Obtenga información sobre cómo diseñar una aplicación personal de Teams y obtenga el Kit de interfaz de usuario de Microsoft Teams para crear componentes como el panel, un formulario o el panel de tareas para la experiencia móvil y de escritorio. Conozca los procedimientos recomendados para desarrollar aplicaciones personales.
+description: Obtenga información sobre cómo diseñar una aplicación personal de Teams y obtener el kit de interfaz de usuario de Microsoft Teams, y crear componentes como el panel, el formulario o el panel de tareas para la experiencia móvil y de escritorio.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: interfaz de usuario kit personal aplicación navegación vista web bot pestaña iframe panel plantilla de formulario
-ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fe22f63ec3bf93011f3acebd8f1269496e8444e5
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297236"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123930"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñe la aplicación personal para Microsoft Teams
 

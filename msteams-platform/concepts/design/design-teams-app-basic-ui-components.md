@@ -1,27 +1,26 @@
 ---
-title: Diseñar la aplicación con componentes básicos Fluent interfaz de usuario
+title: Diseño de la aplicación con componentes básicos de la interfaz de usuario Fluent
 author: heath-hamilton
-description: Obtén información sobre los componentes de interfaz de usuario primitivos que se usan habitualmente para crear Microsoft Teams aplicaciones y obtener el kit Microsoft Teams interfaz de usuario. Obtenga información sobre componentes, como rutas de navegación, tarjeta, carrusel, desplegable, marca de entrenador, selector, pivot, alternancia, información sobre herramientas y mucho más.
+description: Obtenga información sobre los componentes de la interfaz de usuario que se usan para compilar aplicaciones Microsoft Teams y obtener el kit de interfaz de usuario de Teams. Más información sobre la información sobre la información sobre herramientas de alternancia del selector de marcador de ruta de navegación del kit fluido
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-keywords: Información sobre herramientas de alternancia dinámica del selector de marcadores desplegables de carrusel de tarjetas de navegación del kit de interfaz de usuario fluent kit
-ms.openlocfilehash: 40a0c789275d98ab5bfbe74a61aa04a0e2daee32
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: ae2dee58bf19b5400fa162c06a0c73e6137626c2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362966"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123671"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación Microsoft Teams con componentes Fluent interfaz de usuario básica
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes básicos de la interfaz de usuario Fluent
 
-Puedes crear la aplicación Teams desde cero con los siguientes componentes básicos Fluent interfaz de usuario. Diseñados de la forma más plana posible, estos componentes pueden funcionar en diferentes casos de uso, temas y tamaños de pantalla.
+Puede compilar la aplicación de Teams desde cero con los siguientes componentes básicos de la interfaz de usuario Fluent. Diseñados lo más plano posible, estos componentes pueden funcionar en diferentes casos de uso, temas y tamaños de pantalla.
 
-Las ilustraciones de esta página muestran cómo se ven los componentes Teams los temas predeterminados (claros) y oscuros.
+En las ilustraciones de esta página se muestra el aspecto de los componentes en Teams temas predeterminados (claros) y oscuros.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
-Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent interfaz de</a> usuario, el kit de interfaz Microsoft Teams incluye componentes y patrones diseñados específicamente para crear Teams aplicaciones. En el kit de interfaz de usuario, puedes agarrar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de usuario</a>, el kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para compilar aplicaciones Teams. En el kit de interfaz de usuario, puede capturar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
 > [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -46,19 +45,19 @@ Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank
 
 :::image type="content" source="../../assets/images/components/carousel.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de carrusel." border="false":::
 
-## <a name="checkbox"></a>Casilla de verificación
+## <a name="checkbox"></a>Casilla
 
 :::image type="content" source="../../assets/images/components/checkbox.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de casilla." border="false":::
 
-## <a name="coachmark"></a>Coachmark
+## <a name="coachmark"></a>Marca de entrenador
 
-:::image type="content" source="../../assets/images/components/coachmark.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de marca de entrenador." border="false":::
+:::image type="content" source="../../assets/images/components/coachmark.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de coachmark." border="false":::
 
 ## <a name="contextual-menu"></a>Menú contextual
 
 :::image type="content" source="../../assets/images/components/contextual-menu.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de menú contextual." border="false":::
 
-## <a name="dialog"></a>Diálogo
+## <a name="dialog"></a>Cuadro de diálogo
 
 :::image type="content" source="../../assets/images/components/dialog.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de cuadro de diálogo." border="false":::
 
@@ -96,13 +95,13 @@ Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank
 
 ## <a name="progress-indicator"></a>Indicador de progreso
 
-:::image type="content" source="../../assets/images/components/progress-indicator.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario del indicador de progreso." border="false":::
+:::image type="content" source="../../assets/images/components/progress-indicator.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de indicador de progreso." border="false":::
 
 ## <a name="radio"></a>Radio
 
 :::image type="content" source="../../assets/images/components/radio.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de radio." border="false":::
 
-## <a name="scrollbar"></a>Barra de desplazamiento
+## <a name="scrollbar"></a>Scrollbar
 
 :::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de barra de desplazamiento." border="false":::
 
@@ -112,7 +111,7 @@ Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank
 
 ## <a name="side-panel"></a>Panel lateral
 
-:::image type="content" source="../../assets/images/components/side-panel.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de panel lateral." border="false":::
+:::image type="content" source="../../assets/images/components/side-panel.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario del panel lateral." border="false":::
 
 ## <a name="status-label"></a>Etiqueta de estado
 
@@ -126,7 +125,7 @@ Basándose <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank
 
 Nota: En Fluent interfaz de usuario, alternar es un tipo de casilla.
 
-:::image type="content" source="../../assets/images/components/toggle.png" alt-text="En el ejemplo se muestra un componente de interfaz de usuario de alternancia." border="false":::
+:::image type="content" source="../../assets/images/components/toggle.png" alt-text="En el ejemplo se muestra un componente de la interfaz de usuario de alternancia." border="false":::
 
 ## <a name="tooltip"></a>Información sobre herramientas
 
@@ -134,7 +133,7 @@ Nota: En Fluent interfaz de usuario, alternar es un tipo de casilla.
 
 ## <a name="other-resources"></a>Otros recursos
 
-Obtenga ejemplos de código y detalles de implementación para algunos de los componentes enumerados aquí y en el kit Microsoft Teams interfaz de usuario.
+Obtenga ejemplos de código y detalles de implementación de algunos de los componentes enumerados aquí y en el kit de interfaz de usuario de Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Probar los componentes (Fluent interfaz de usuario)](https://fluentsite.z22.web.core.windows.net/)
+> [Pruebe los componentes (Fluent interfaz de usuario)](https://fluentsite.z22.web.core.windows.net/)

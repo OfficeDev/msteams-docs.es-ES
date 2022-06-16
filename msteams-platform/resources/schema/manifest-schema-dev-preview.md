@@ -1,16 +1,15 @@
 ---
 title: Referencia del esquema de manifiesto de versión preliminar del desarrollador público
-description: Archivo de manifiesto de ejemplo y descripción de todos sus componentes compatibles con Microsoft Teams
+description: Obtenga información sobre el archivo de manifiesto de ejemplo y la descripción de todos sus componentes que se admiten para Microsoft Teams.
 ms.topic: reference
-keywords: Versión preliminar del desarrollador del esquema de manifiesto de Teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757496"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123044"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Versión preliminar del esquema de manifiesto para desarrolladores públicos de Microsoft Teams
 
@@ -396,10 +395,10 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar la pestaña.|
 |`canUpdateConfiguration`|Boolean|||El valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. Predeterminado: `true`.|
-|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
+|`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.|
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -418,7 +417,7 @@ El objeto es una matriz (con un máximo de 16 elementos) y todos los elementos d
 |`contentUrl`|Cadena|2048 caracteres|✔|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`contentBotId`|   | | | El identificador de la aplicación Microsoft Teams especificado para el bot en el portal de Bot Framework. |
 |`websiteUrl`|Cadena|2048 caracteres||La dirección URL https:// a la que apuntar si un usuario opta por la vista en un explorador.|
-|`scopes`|Matriz de enumeración|1 |✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|Matriz de enumeración|1|✔|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 
 ## <a name="bots"></a>bots
 
@@ -443,7 +442,7 @@ Lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`items.scopes`|matriz de enumeración|3|✔|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
-|`items.commands`|matriz de objetos|10|✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32).<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.commands`|matriz de objetos|10 |✔|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32).<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
 
 ## <a name="connectors"></a>conectores
 
@@ -457,7 +456,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔|Dirección URL de https:// que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
-|`scopes`|Matriz de enumeración|1 |✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
+|`scopes`|Matriz de enumeración|1|✔|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -474,7 +473,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 |---|---|---|---|---|
 |`botId`|Cadena|64|✔|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. Este puede ser el mismo que el [identificador de aplicación general](#id).|
 |`canUpdateConfiguration`|Boolean|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
-|`commands`|Matriz de objeto|10|✔|Matriz de comandos que admite la extensión de mensajería.|
+|`commands`|Matriz de objeto|10 |✔|Matriz de comandos que admite la extensión de mensajería.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -504,7 +503,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`parameter.title`|Cadena|32 caracteres|✔|Título fácil de usar para el parámetro.|
 |`parameter.description`|Cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
 |`parameter.inputType`|Cadena|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true`. Uno de `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
-|`parameter.choices`|Matriz de objetos|10||Las opciones de elección para el `choiceset`. Use solo cuando `parameter.inputType` sea `choiceset`.|
+|`parameter.choices`|Matriz de objetos|10 ||Las opciones de elección para el `choiceset`. Use solo cuando `parameter.inputType` sea `choiceset`.|
 |`parameter.choices.title`|Cadena|128||Título de la elección.|
 |`parameter.choices.value`|Cadena|512||Valor de la elección.|
 
@@ -755,9 +754,9 @@ Los permisos de aplicación permiten a la aplicación acceder a los datos sin qu
 
 #### <a name="resource-specific-delegated-permissions"></a>Permisos delegados específicos de recursos
 
-Los permisos delegados permiten a la aplicación acceder a los datos en nombre del usuario que ha iniciado sesión. 
+Los permisos delegados permiten a la aplicación acceder a los datos en nombre del usuario que ha iniciado sesión.
 
-* **Permisos delegados específicos de recursos para equipos** 
+* **Permisos delegados específicos de recursos para equipos**
 
     |**Nombre**|**Descripción**|
     |---|---|

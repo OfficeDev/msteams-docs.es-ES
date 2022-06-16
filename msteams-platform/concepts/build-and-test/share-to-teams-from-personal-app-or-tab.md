@@ -1,15 +1,14 @@
 ---
 title: Compartir en Teams desde una aplicación personal o una pestaña
-description: Aprenda a agregar el recurso compartido en Teams insertado en la pestaña o aplicación personal.
+description: Obtenga información sobre cómo habilitar el botón Compartir para Teams en la aplicación o pestaña personal, las limitaciones y la experiencia del usuario final.
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Compartir Teams con Teams
-ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757265"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123937"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación personal o una pestaña
 
@@ -114,7 +113,7 @@ Después de habilitar el botón Compartir en teams en la pestaña o aplicación 
 
    :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="share-to-teams-link-shared":::
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Compartir en Teams desde aplicaciones web](share-to-teams-from-web-apps.md)
 * [Crear una pestaña personal](../../tabs/how-to/create-personal-tab.md)
