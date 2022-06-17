@@ -1,14 +1,14 @@
 ---
 title: 'Introducción: Información general'
-description: Con esta ruta de aprendizaje, comience a obtener la documentación para desarrolladores de Microsoft Teams, que le presenta herramientas comunes, conceptos fundamentales y características avanzadas.
+description: En este módulo, aprenderá a empezar a trabajar con la documentación para desarrolladores de Microsoft Teams que le presenta las herramientas comunes, los conceptos fundamentales y las características avanzadas.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: a2dc779e24828ce73f9a93498bdcceecbdfe582b
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795157"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143161"
 ---
 # <a name="get-started"></a>Introducción
 

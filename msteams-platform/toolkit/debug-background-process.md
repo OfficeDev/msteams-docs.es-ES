@@ -1,17 +1,17 @@
 ---
 title: Depurar procesos en segundo plano
 author: zyxiaoyuer
-description: Función de Visual Studio Code y el kit de herramientas de Teams durante la depuración local
+description: En este módulo, aprenderá la función de Visual Studio Code y el kit de herramientas de Teams durante la depuración local, y a registrar y configurar la aplicación de Teams.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: d692f3f6869767e4b9948b36e521a56d799ebe4b
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938929"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143588"
 ---
 # <a name="debug-background-processes"></a>Depurar procesos en segundo plano
 
@@ -51,8 +51,8 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 
   | Plataforma  | Software|
   | --- | --- |
-  |Windows, macOs (x64) y Linux | **3.1 (Recomendado)**, 5.0, 6-0 |
-  |macOs (arm64) |6.0 |
+  |Windows, macOS (x64) y Linux | **3.1 (Recomendado)**, 5.0, 6-0 |
+  |macOS (arm64) |6.0 |
 
 * Certificado de desarrollo. Si el certificado de desarrollo para localhost no estuviera instalado para la pestaña en Windows o macOS, el kit de herramientas de Teams le pedirá que lo instale.
 * Las extensiones de enlace de Azure Functions definidas en `api/extensions.csproj`. Si las extensiones de enlace de Azure Functions no están instaladas, el kit de herramientas de Teams instalará las extensiones de enlace de Azure Functions

@@ -4,12 +4,12 @@ description: En este módulo, obtendrá más información sobre las funcionalida
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756607"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143245"
 ---
 ---
 
@@ -29,13 +29,13 @@ El [SDK de Live Share](https://github.com/microsoft/live-share-sdk) es un paquet
 **npm**
 
 ```bash
-$ npm install @microsoft/live-share --save
+npm install @microsoft/live-share --save
 ```
 
 **Yarn**
 
 ```bash
-$ yarn add @microsoft/live-share
+yarn add @microsoft/live-share
 ```
 
 ## <a name="register-rsc-permissions"></a>Registrar permisos de RSC
@@ -91,10 +91,10 @@ Para habilitar el SDK de Live Share para la extensión de reunión, primero debe
 
 Siga los pasos para unirse a una sesión asociada a la reunión de un usuario:
 
-1. Inicialización del SDK de cliente de Teams
-2. Inicializar [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)
-3. Defina las estructuras de datos que desea sincronizar. Por ejemplo: `SharedMap`
-4. Unirse al contenedor
+1. Inicialice el SDK de cliente de Teams.
+2. Inicialice [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient).
+3. Defina las estructuras de datos que desea sincronizar. Por ejemplo, `SharedMap`.
+4. Únase al contenedor.
 
 Ejemplo:
 
@@ -288,6 +288,6 @@ Escuche a los clientes para comprender sus escenarios antes de implementar la co
 
 * [Repositorio de GitHub](https://github.com/microsoft/live-share-sdk)
 * [Documentos de referencia del SDK de Live Share](/javascript/api/@microsoft/live-share/)
-* [Documentos de referencia del SDK de Live Share Media](/javascript/api/@microsoft/live-share-media/)
+* [Documentos de referencia del SDK multimedia de Live Share](/javascript/api/@microsoft/live-share-media/)
 * [Preguntas más frecuentes sobre Live Share](teams-live-share-faq.md)
 * [Aplicaciones de Teams en las reuniones](teams-apps-in-meetings.md)

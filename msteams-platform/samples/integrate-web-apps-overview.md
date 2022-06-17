@@ -5,12 +5,12 @@ description: En este artículo, comenzará a integrar aplicaciones web y funcion
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123541"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144280"
 ---
 # <a name="integrate-web-apps"></a>Integrar aplicaciones web
 
@@ -33,8 +33,8 @@ Para una integración eficaz, asegúrese de comprender mejor los siguientes requ
 
 Las plataformas de código bajo proporcionan un enfoque intuitivo para el desarrollo de software y requieren poca o ninguna codificación para compilar aplicaciones y procesos. Puede crear aplicaciones personalizadas fácilmente con plataformas de código bajo. Estas plataformas constan de una interfaz visual, conectores a servicios back-end y un sistema integrado de administración del ciclo de vida de aplicaciones para compilar, depurar, implementar y mantener aplicaciones. Microsoft proporciona las siguientes puertas de enlace innovadoras para crear rápidamente aplicaciones compatibles con Teams mediante atributos de código bajo:
 
-* Microsoft Power Platform
-* Plantillas de aplicación de Microsoft Teams
+* Microsoft Power Platform.
+* Plantillas de aplicación de Microsoft Teams.
 
 ## <a name="microsoft-power-platform"></a>Microsoft Power Platform
 
