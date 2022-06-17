@@ -1,17 +1,16 @@
 ---
 title: 'Información general: distribución de la aplicación'
-description: Describe las opciones para publicar y cargar la aplicación de Microsoft Teams, y con respecto a GCC.
+description: En este artículo, aprenderá las opciones para publicar la aplicación Microsoft Teams, cargar e implementar la aplicación y GCC.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: implementar publicar aplicación cargar gcc
-ms.openlocfilehash: e2c0af75b7cfb2e27255c9f6f194b5d9ab959093
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111958"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123534"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribución de la aplicación de Microsoft Teams
 

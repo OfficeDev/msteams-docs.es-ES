@@ -1,16 +1,16 @@
 ---
 title: 'Información general: Publique su aplicación en la tienda de Microsoft Teams'
-description: Describe el proceso para enviar una aplicación al Centro de partners y publicarla en la tienda de Microsoft Teams (y en AppSource).
+description: Obtenga información sobre el proceso para enviar la aplicación a Centro de partners y publicarla en la tienda de Microsoft Teams (y AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757286"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124035"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publique su aplicación en la tienda de Microsoft Teams
 
@@ -20,7 +20,7 @@ Las aplicaciones publicadas en la tienda de Teams también se enumeran automáti
 
 ## <a name="understand-the-publishing-process"></a>Descripción del proceso de publicación
 
-Cuando sienta que su aplicación está lista para producirse, podrá comenzar el proceso para que aparezca en la tienda de Teams.
+Si su aplicación está lista para producción, podrá comenzar el proceso para que aparezca en la tienda de Teams.
 
 > [!TIP]
 > Seguir detenidamente los pasos previos al envío puede aumentar la posibilidad de que Microsoft apruebe la publicación de la aplicación.
@@ -51,7 +51,7 @@ Cuando sienta que su aplicación está lista para producirse, podrá comenzar el
 
 * **Pruebas funcionales profundas y de experiencia**
 
-  Un validador revisa exhaustivamente la aplicación para garantizar el cumplimiento de las [directivas de certificación de Marketplace comercial de Microsoft](/legal/marketplace/certification-policies). 
+  Un validador revisa exhaustivamente la aplicación para garantizar el cumplimiento de las [directivas de certificación de Marketplace comercial de Microsoft](/legal/marketplace/certification-policies).
   Se centrará en las pruebas funcionales profundas y de la experiencia del usuario, las comprobaciones de facilidad de uso y las comprobaciones de metadatos. La validación de aplicaciones se realiza en clientes de escritorio, web y móviles. Trabajamos duro para proporcionarte un informe de pruebas detallado en 24 horas laborables después del envío.
 
 * **Publicación de aplicaciones guiadas a través del servicio de soporte técnico**

@@ -1,17 +1,16 @@
 ---
 title: Diseñe su extensión de mensajería
-description: Obtenga información sobre cómo diseñar una extensión de mensajería de Teams y obtener el kit de interfaz de usuario de Microsoft Teams.
-keywords: teams diseño instrucciones referencia extensiones de mensajería sugerencias procedimientos recomendados
+description: Obtenga información sobre cómo diseñar una extensión de mensajería de Teams y obtener el kit de interfaz de usuario de Microsoft Teams. Describe el procedimiento recomendado de sugerencias para las extensiones de mensaje de referencia de las directrices de diseño de equipos
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 4021f52359d2c97382fa988679bbfe2f9bd0ecab
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104101"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123951"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Diseñe su extensión de mensajería de Microsoft Teams
 
@@ -191,8 +190,8 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |1|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |2|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
 |3|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
-|4|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
-|5|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
+|4 |**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
+|5 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
 |6 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
 
 #### <a name="desktop"></a>Escritorio
@@ -204,8 +203,8 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |1|**Logotipo de la aplicación**: icono de color del logotipo de la aplicación.|
 |2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
-|4|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
-|5|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
+|4 |**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
+|5 |**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
 |6 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
 |7 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda. El ejemplo siguiente usa el diseño de lista (el diseño de cuadrícula es otra opción).|
 |8 |**Logotipo de la aplicación**: icono de esquema del logotipo de la aplicación.|

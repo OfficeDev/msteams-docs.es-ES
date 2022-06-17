@@ -1,16 +1,15 @@
 ---
 title: Sistema de administración del aprendizaje Moodle
-description: Visión general de la integración de Moodle LMS con Teams
+description: Obtenga información sobre la integración del sistema de administración del aprendizaje Moodle con escenarios de Teams, administración del aprendizaje de Moodle, mConnect y vínculos profundos, accesibilidad y requisitos de usuario. Esta integración proporciona audio, videollamadas, chat, cursos y administración de actividades, datos analíticos y mucho más.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: Vínculos profundos de moodle LMS mConnect
-ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757349"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124028"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de administración del aprendizaje Moodle
 
