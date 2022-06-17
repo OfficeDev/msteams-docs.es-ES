@@ -1,16 +1,16 @@
 ---
 title: Preguntas para ayudar a planear el desarrollo de aplicaciones de Teams
 author: heath-hamilton
-description: Preguntas a tener en cuenta mientras planifica su aplicación, entender al usuario y sus necesidades, comprender los problemas del usuario que resolvería su aplicación, planificar la autenticación del usuario y su experiencia de incorporación
+description: 'Cuestiones que debe tener en cuenta cuando planee la aplicación: comprender al usuario y sus necesidades, qué problemas resuelve la aplicación, la autenticación del usuario y su experiencia de incorporación.'
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756754"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123114"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de comprobación de planeamiento de la aplicación de Teams
 
@@ -32,7 +32,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 1  | ¿Son los usuarios principalmente trabajadores directos con clientes móviles? |
 | 2 | ¿Espera que muchos usuarios invitados necesiten acceso a la aplicación? |
 | 3 | ¿Usan equipos y canales o, principalmente, chats grupales? |
-| 4 | ¿Qué grado de sofisticación técnica tienen sus usuarios principales? |
+| 4  | ¿Qué grado de sofisticación técnica tienen sus usuarios principales? |
 | 5  | ¿Necesita una experiencia de incorporación completa o le bastan unos cuantos consejos? |
 
 </details>
@@ -56,7 +56,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 1  | ¿Cuáles son los retos que plantea la integración del back-end de la aplicación actual? |
 | 2 | ¿Quién es el propietario de los datos del back-end: la empresa o terceros? |
 | 3 | ¿Hay firewalls que afecten al funcionamiento de la aplicación? |
-| 4 | ¿Existen API para acceder a los datos que necesita para el funcionamiento de su aplicación? |
+| 4  | ¿Existen API para acceder a los datos que necesita para el funcionamiento de su aplicación? |
 
 </details>
 <br>
@@ -68,7 +68,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 1  | ¿Accederán los usuarios a diferentes vistas de los datos en función de sus funciones? |
 | 2 | ¿Hay datos personales involucrados? |
 | 3 | ¿Las interacciones también se basarán en los roles de usuario? |
-| 4 | ¿Podrán los usuarios externos acceder a la aplicación? |
+| 4  | ¿Podrán los usuarios externos acceder a la aplicación? |
 
 </details>
 <br>
@@ -80,7 +80,7 @@ Esta es una lista de comprobación de preguntas que se deben tener en cuenta al 
 | 1  | ¿Qué ocurre cuando un usuario configura por primera vez la pestaña en un canal? |
 | 2 | Si comparte tarjetas con una extensión de mensaje, ¿tiene sentido agregar un pequeño vínculo que lleve a una página de más información para ayudar a los usuarios y que sepan qué más puede hacer la aplicación? |
 | 3 | ¿Espera que la mayoría de la gente tenga ya algún contexto de para qué sirve la aplicación, o que ya haya usado sus servicios en otro contexto? |
-| 4 | ¿Llegan a la aplicación sin conocimientos previos? |
+| 4  | ¿Llegan a la aplicación sin conocimientos previos? |
 
 </details>
 <br>

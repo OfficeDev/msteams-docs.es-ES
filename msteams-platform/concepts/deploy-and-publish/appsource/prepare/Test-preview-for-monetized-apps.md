@@ -1,17 +1,16 @@
 ---
 title: Versión preliminar de prueba para aplicaciones monetizadas
 author: v-ypalikila
-description: Cree y pruebe las ofertas de la versión preliminar de SaaS para la aplicación Teams antes de publicar la oferta.
+description: Aprenda a crear y probar las ofertas de la versión preliminar de SaaS para la aplicación Teams antes de publicar la oferta. Puede probar la experiencia de compra de un extremo a otro para sus aplicaciones monetizadas en Teams.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: aplicaciones de teams SaaS oferta versión preliminar prueba saas monetizada
-ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073819"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123706"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Versión preliminar de prueba para aplicaciones monetizadas
 
