@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5c28429a69bad5149d6c7014ce1596dd7ea07b19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 49b3b1714d05f50ee6a4b186ff7a1a85d6209083
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123727"
+ms.locfileid: "66130511"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -960,5 +960,5 @@ Para crear un archivo de manifiesto de aplicación de Teams:
 * [Comprender la estructura de la aplicación de Microsoft Teams](~/concepts/design/app-structure.md)
 * [Habilitar la personalización de aplicaciones](~/concepts/design/enable-app-customization.md)
 * [Localizar la aplicación](~/concepts/build-and-test/apps-localization.md)
-* [Integrar capacidades multimedia](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrar capacidades multimedia](~/concepts/device-capabilities/media-capabilities.md)
 * [Versión preliminar de esquema de manifiesto para desarrolladores públicos de Microsoft Teams](manifest-schema-dev-preview.md)
