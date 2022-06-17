@@ -1,16 +1,15 @@
 ---
 title: Mensajes en conversaciones de bot
-description: Describe formas de mantener una conversación con un bot de Microsoft Teams. Obtenga información sobre Teams datos de canal, notificación al mensaje, mensajes de imagen, tarjetas adaptables mediante ejemplos de código.
+description: Obtenga información sobre las formas de tener una conversación con un bot de Teams y Teams datos de canal, notificación al mensaje, mensajes de imagen, tarjetas adaptables mediante ejemplos de código
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033018"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142454"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -242,10 +241,10 @@ Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de cont
 
 | Formato    | De usuario a bot | De bot a usuario | Notas                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Texto enriquecido  | ✔                | ✔                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
-| Imágenes  | ✔                | ✔                | Máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.  |
-| Tarjetas     | ✖                | ✔                | Consulte la [referencia de tarjeta de Teams](~/task-modules-and-cards/cards/cards-reference.md) para obtener las tarjetas admitidas. |
-| Emojis    | ✔                | ✔                | Teams actualmente admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
+| Texto enriquecido  | ✔️                | ✔️                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
+| Imágenes  | ✔️                | ✔️                | Máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.  |
+| Tarjetas     | ❌                | ✔️                | Consulte la [referencia de tarjeta de Teams](~/task-modules-and-cards/cards/cards-reference.md) para obtener las tarjetas admitidas. |
+| Emojis    | ✔️                | ✔️                | Teams actualmente admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
 
 ## <a name="notifications-to-your-message"></a>Notificaciones al mensaje
 
@@ -387,7 +386,7 @@ El mensaje de finalización del formulario aparece en Tarjetas adaptables al env
      Puede seleccionar **Cerrar** o cambiar el chat para descartar el mensaje.
 
      Si no desea mostrar el mensaje correcto, establezca el atributo `hide` `true` en en la `msTeams` `feedback` propiedad . A continuación se muestra un ejemplo:
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -406,7 +405,6 @@ El mensaje de finalización del formulario aparece en Tarjetas adaptables al env
             ]
         } 
      ```
-    
 
 Para obtener más información sobre tarjetas y tarjetas en bots, consulte [la documentación de las tarjetas](~/task-modules-and-cards/what-are-cards.md).
 
@@ -436,7 +434,7 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 > [!div class="nextstepaction"]
 > [Menús de comandos del bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

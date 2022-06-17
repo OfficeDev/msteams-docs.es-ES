@@ -1,16 +1,16 @@
 ---
 title: Contribuir a este contenido
-description: pasos para crear y publicar documentación de Teams
+description: Obtenga información sobre los pasos para crear y publicar Teams documentación
 author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 047a3c84b99fd832cde0531a9a9197c880f294e6
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 165f5df18395d329aa2f383d2f07e6f7ff3afdcf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757685"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143084"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 

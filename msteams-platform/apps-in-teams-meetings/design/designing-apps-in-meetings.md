@@ -5,13 +5,12 @@ description: Obtenga información sobre cómo diseñar aplicaciones en reuniones
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: Fase de reunión compartida de la plantilla del kit de interfaz de usuario en la reunión
-ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123002"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142685"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
@@ -187,11 +186,11 @@ Los diálogos en la reunión pueden variar en tamaño para tener en cuenta difer
 
 Puede permitir que los usuarios compartan e interactúen con parte o todo el contenido de la aplicación en la fase de reunión. Estos son ejemplos de cómo los usuarios pueden usar esta característica durante una reunión:
 
-* Edición de un documento
+* Edición de un documento.
 * Pizarra
-* Revisión de un panel
-* Ver un vídeo
-* Jugar un juego
+* Revisar un panel.
+* Viendo un vídeo.
+* Jugando un juego.
 
 Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase también se orienta a todos los participantes de la reunión de la misma manera.
 

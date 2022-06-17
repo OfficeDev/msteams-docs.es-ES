@@ -1,16 +1,16 @@
 ---
 title: Definición de comandos de búsqueda de extensión de mensaje
 author: surbhigupta
-description: Obtenga información sobre los comandos de búsqueda de extensión de mensaje para aplicaciones Microsoft Teams, para crear un comando de búsqueda a través del manifiesto de la aplicación y manualmente mediante ejemplos de código y ejemplos.
+description: En este módulo, obtenga información sobre los comandos de búsqueda de extensión de mensaje para aplicaciones Teams, para crear un comando de búsqueda a través del manifiesto de la aplicación y manualmente.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 987d690beca81574244ae6fbf9e6614ee097ebcb
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e71e83f8fbd6b0d44257a2d38fd13486b087bc5e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756621"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142811"
 ---
 # <a name="define-message-extension-search-commands"></a>Definición de comandos de búsqueda de extensión de mensaje
 

@@ -1,14 +1,14 @@
 ---
 title: Introducción a las acciones universales para tarjetas adaptables
-description: Información general rápida sobre acciones universales para tarjetas adaptables, como vistas específicas del usuario, compatibilidad secuencial con flujos de trabajo y mucho más para entornos de escritorio y móviles
+description: Obtenga información sobre acciones universales para tarjetas adaptables, como vistas específicas del usuario, compatibilidad con flujos de trabajo secuenciales y mucho más para entornos de escritorio y móviles.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756474"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142090"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
@@ -109,16 +109,16 @@ Ahora, puede comprender cómo se pueden transformar las tarjetas adaptables con 
 
 Las tarjetas adaptables son una combinación de contenido, como texto y gráficos, y acciones que puede realizar un usuario. Para obtener más información, vea [Tarjetas adaptables](http://adaptivecards.io/). Las nuevas acciones universales para tarjetas adaptables permiten un control común de las acciones de tarjeta adaptable entre plataformas y aplicaciones. Para obtener más información, vea [Modelo de acción universal](/adaptive-cards/authoring-cards/universal-action-model).
 
-Para empezar, actualice los escenarios mediante la guía de [inicio rápido](Work-with-universal-actions-for-adaptive-cards.md) y aproveche Las acciones universales.
+Puede empezar actualizando escenarios mediante la [guía de inicio rápido]. (Work-with-universal-actions-for-adaptive-cards.md) y aprovechar acciones universales.
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [¿Qué son los bots?](~/bots/what-are-bots.md)
 * [Información general sobre tarjetas adaptables](~/task-modules-and-cards/what-are-cards.md)
 * [Tarjetas adaptables @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Tarjetas adaptables @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [Tarjetas adaptables @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).

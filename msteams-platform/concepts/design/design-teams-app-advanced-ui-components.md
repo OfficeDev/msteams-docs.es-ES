@@ -5,12 +5,12 @@ description: Obtenga información sobre los componentes de Teams interfaz de usu
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123422"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143427"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes avanzados de la interfaz de usuario
 
@@ -104,9 +104,9 @@ Una barra de herramientas es un contenedor para agrupar un conjunto de controles
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Acciones contextuales en el contenido de la aplicación
-* Filtro contextual y búsqueda
-* Navegación y rutas de navegación
+* Acciones contextuales en el contenido de la aplicación.
+* Filtrar y buscar contextuales.
+* Navegación y rutas de navegación.
 
 ### <a name="mobile"></a>Móvil
 

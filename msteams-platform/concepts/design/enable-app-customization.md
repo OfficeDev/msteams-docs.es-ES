@@ -1,17 +1,16 @@
 ---
 title: Personalizar la aplicación de Teams
 author: heath-hamilton
-description: Comprenda cómo los administradores de Teams pueden personalizar la aplicación para su organización.
-ms.localizationpriority: high
+description: En este módulo, comprenda cómo los administradores de Teams pueden personalizar la aplicación de Teams para su organización y ocultar Teams aplicación hasta que el administrador lo apruebe.
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-keywords: acento color marca ocultar aplicación aprobación
-ms.openlocfilehash: 4728e6f34680d51983558d1ad96c47ffe3650234
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111202"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143203"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar la aplicación de Teams
 

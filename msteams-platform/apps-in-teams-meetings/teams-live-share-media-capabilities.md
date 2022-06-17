@@ -4,12 +4,12 @@ description: En este módulo, obtendrá más información sobre la capacidades m
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 420b312425f8784ad42038c58639bdc31e1a4e93
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668351"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142482"
 ---
 ---
 
@@ -121,8 +121,8 @@ document.getElementById("change-track-button").onclick = () => {
 };
 ```
 
-> [!Note]
-> Aunque pueda usar el objeto `EphemeralMediaSession` para sincronizar los medios directamente, use `MediaPlayerSynchronizer` a menos que desee un control más preciso de la lógica de sincronización. En función del reproductor que use en la aplicación, es posible que desee crear una corrección de compatibilidad delegada para que la interfaz del reproductor web coincida con la interfaz multimedia HTML.
+ > [!Note]
+ > Aunque pueda usar el objeto `EphemeralMediaSession` para sincronizar los medios directamente, use `MediaPlayerSynchronizer` a menos que desee un control más preciso de la lógica de sincronización. En función del reproductor que use en la aplicación, es posible que desee crear una corrección de compatibilidad delegada para que la interfaz del reproductor web coincida con la interfaz multimedia HTML.
 
 ## <a name="suspensions-and-wait-points"></a>Suspensiones y puntos de espera
 

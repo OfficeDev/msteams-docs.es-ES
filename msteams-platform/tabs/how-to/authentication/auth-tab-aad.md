@@ -1,15 +1,14 @@
 ---
 title: Configuración de la autenticación de OAuth de terceros
-description: Describe la autenticación en Teams y cómo usarla en pestañas
+description: En este artículo, aprenderá Teams las pestañas de autenticación Microsoft Azure AD, la autenticación en Teams y cómo usarla en pestañas.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 1cbd871a3066c5f8dd1cbba0837fdf8e4ab9be8f
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 12146d5651fa0e975dcfdd7f60159700e1f8914e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887782"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142272"
 ---
 # <a name="configure-third-party-oauth-authentication"></a>Configuración de la autenticación de OAuth de terceros
 
@@ -19,7 +18,7 @@ ms.locfileid: "65887782"
 Es posible que desee consumir muchos servicios dentro de la aplicación de Teams, y la mayoría de esos servicios requieren autenticación y autorización para obtener acceso al servicio. Los servicios incluyen Facebook, Twitter y Teams.
 La información de perfil de usuario de Teams se almacena en Azure AD mediante Microsoft Graph y este artículo se centrará en la autenticación mediante Azure AD para obtener acceso a esta información.
 
-OAuth 2.0 es un estándar abierto para la autenticación usado por Azure Active Directory (Azure AD) y muchos otros proveedores de identidad. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. En los ejemplos siguientes se usa el flujo de concesión implícita de OAuth 2.0. Lee la información del perfil del usuario de Azure AD y Microsoft Graph.
+OAuth 2.0 es un estándar abierto para la autenticación usado por Azure Active Directory (Azure AD) y muchos otros proveedores de identidad. Comprender OAuth 2.0 es un requisito previo para trabajar con la autenticación en Teams y Azure AD. En los ejemplos siguientes se usa el flujo de concesión implícita de OAuth 2.0. Lee la información de perfil del usuario de Azure AD y Microsoft Graph.
 
 El código de este artículo procede de la aplicación de ejemplo de Teams [Ejemplo de autenticación de tabulación de Microsoft Teams (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Contiene una pestaña estática que solicita un token de acceso para Microsoft Graph y muestra la información básica del perfil del usuario actual de Azure AD.
 

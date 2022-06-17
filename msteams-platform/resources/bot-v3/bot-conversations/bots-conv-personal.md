@@ -1,16 +1,15 @@
 ---
 title: Conversaciones uno a uno con bots
-description: Describe el escenario de un extremo a otro de tener una conversación uno a uno con un bot en Microsoft Teams
-keywords: 'escenarios de teams: bot de conversación 1on1 1to1'
+description: En este módulo, aprenderá el escenario de un extremo a otro de tener una conversación uno a uno con un bot en Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: eb08b542c707d9f520912cd04ca5b1b2b740d81c
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: e973e335558a54187a11d5146b52c5774d3cf758
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297194"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144330"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Tener una conversación personal (uno a uno) con un bot de Microsoft Teams
 

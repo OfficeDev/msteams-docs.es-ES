@@ -1,17 +1,17 @@
 ---
 title: Agregar funcionalidades a las aplicaciones de Teams
 author: MuyangAmigo
-description: Describe Agregar funcionalidades de Teams Toolkit
+description: En este módulo, aprenderá a agregar funcionalidades de Teams Toolkit, ventajas, limitaciones y funcionalidades.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 18c1379a630e637bea95209c35b823306b35a5de
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 413a42ce1f5eaa476faaf1bbfc97a987adcb6f65
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124000"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142965"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones Teams
 

@@ -1,16 +1,15 @@
 ---
 title: Administre sus aplicaciones con el portal para desarrolladores de Microsoft Teams
-description: Obtenga información sobre cómo configurar, distribuir y administrar las aplicaciones mediante el portal para desarrolladores para Microsoft Teams.
-keywords: introducción a los equipos del portal para desarrolladores
+description: En este módulo, aprenderá a configurar, distribuir y administrar las aplicaciones mediante el Portal para desarrolladores para Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c7ca898cd411028dffa6c8a197c78cd796f823e5
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439328"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142370"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Administración de las aplicaciones de Teams mediante el Portal para desarrolladores
 
@@ -27,8 +26,8 @@ El <a href="https://dev.teams.microsoft.com" target="_blank">portal para desarro
 
 El portal para desarrolladores proporciona un par de maneras de registrar una aplicación Teams:
 
-* Registro de una nueva aplicación
-* Importación de un paquete de aplicación existente
+* Registrar una aplicación nueva.
+* Importe un paquete de aplicación existente.
 
 > [!NOTE]
 > Si crea una aplicación con el [Kit de herramientas de Microsoft Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), puede administrarla en el portal para desarrolladores.

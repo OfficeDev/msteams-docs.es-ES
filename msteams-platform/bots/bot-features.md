@@ -1,16 +1,16 @@
 ---
 title: Bots y SDK
 author: surbhigupta
-description: Información general sobre las herramientas y los SDK para crear bots en Microsoft Teams.
+description: En este artículo, aprenderá herramientas y SDK para crear bots y bots Microsoft Teams con el Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6e4384bc4594dd3751afca781bd2121ad8aeb210
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0b344b6a2db0abc4d1769c47aca6f496f69b98d7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756866"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142468"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 

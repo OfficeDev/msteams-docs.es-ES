@@ -1,17 +1,16 @@
 ---
 title: 'Diseño de la aplicación: descripción de la estructura de la aplicación'
-description: Comprenda lo que puede y no puede personalizar en Microsoft Teams al diseñar la aplicación.
+description: En este módulo, obtenga información sobre lo que puede y no puede personalizar en Microsoft Teams al diseñar la estructura de la aplicación.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: wireframe canal chat reunión extensiones móvil escritorio
-ms.openlocfilehash: 5bda408a015c646f993fe2c70efa0b7904b64842
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111384"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144400"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprender la estructura de la aplicación de Microsoft Teams
 

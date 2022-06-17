@@ -1,17 +1,17 @@
 ---
 title: Agregar inicio de sesión único a las aplicaciones de Teams
 author: zyxiaoyuer
-description: Describe Agregar inicio de sesión único de Teams Toolkit
+description: En este módulo, aprenderá a agregar el inicio de sesión único (SSO) de Teams Toolkit, habilitar la compatibilidad con SSO y actualizar la aplicación para que use el inicio de sesión único.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123450"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144134"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Agregar inicio de sesión único a la aplicación de Teams
 
@@ -203,7 +203,7 @@ Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la apl
 > [!NOTE]
 > Actualmente, estas instrucciones se aplican a `command bot`. Si comienza con , `bot`consulte [el ejemplo bot-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso).
 
-Los pasos siguientes le ayudan a agregar un nuevo comando, después de agregar el inicio de sesión único en el proyecto:
+Los pasos siguientes le ayudarán a agregar un nuevo comando, después de agregar sso en el proyecto:
 
 1. Cree un nuevo archivo (`todo.ts` o `todo.js`) en `bot/src/` y agregue su propia lógica de negocios para llamar a Graph API:
 

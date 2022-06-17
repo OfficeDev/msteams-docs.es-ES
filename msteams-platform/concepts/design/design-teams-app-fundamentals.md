@@ -2,16 +2,15 @@
 title: 'Diseño de la aplicación: descripción del sistema de diseño'
 description: Obtenga información sobre los conceptos básicos de diseño de la aplicación de Microsoft Teams, incluidos avatares, diseños, iconos, combinación de colores y mucho más.
 author: heath-hamilton
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-keywords: iconos de avatares de cuadrícula de diseño, tipografía de interfaz de usuario de segoe
-ms.openlocfilehash: d4b8d610de0575024db5d7140c0452b00655ef91
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111300"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142888"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Sistema de diseño de aplicaciones de Microsoft Teams
 

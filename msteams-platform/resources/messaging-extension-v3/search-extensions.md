@@ -1,16 +1,15 @@
 ---
 title: Búsqueda con extensiones de mensaje
-description: Describe cómo desarrollar extensiones de mensajes basadas en búsquedas
-keywords: Búsqueda de extensiones de mensaje de las extensiones de mensaje de teams
+description: En este módulo, aprenderá a desarrollar extensiones de mensajes basadas en búsquedas.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: a555091558d66e070f09ec6df8338ac686657019
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032945"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142755"
 ---
 # <a name="search-with-message-extensions"></a>Búsqueda con extensiones de mensaje
 

@@ -1,15 +1,14 @@
 ---
 title: Mensajería proactiva para bots
-description: Aprenda a usar la mensajería proactiva para bots en Microsoft Teams
+description: En este módulo, aprenderá a usar la mensajería proactiva para bots y procedimientos recomendados para la mensajería proactiva en Microsoft Teams
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: bot de conversación de mensajería proactiva de escenarios de teams
-ms.openlocfilehash: 12c6f9ad79d7e28f31e3985930557339e75ccbbf
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ee193cd7dfcfec20f501483eabc3a485cff0caab
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111489"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143133"
 ---
 # <a name="proactive-messaging-for-bots"></a>Mensajería proactiva para bots
 
@@ -17,11 +16,10 @@ ms.locfileid: "65111489"
 
 Un mensaje proactivo es un mensaje que envía un bot para iniciar una conversación. Puede que quiera que el bot inicie una conversación por varios motivos, entre los que se incluyen:
 
-* Mensajes de bienvenida para conversaciones de bot personales
-* Respuestas de sondeo
-* Notificaciones de eventos externos
-
-Enviar un mensaje para iniciar un nuevo subproceso de conversación es diferente a enviar un mensaje en respuesta a una conversación existente: cuando el bot inicia una nueva conversación, no hay ninguna conversación preexistente en la que publicar el mensaje. Para enviar un mensaje proactivo, debe:
+* Mensajes de bienvenida para conversaciones de bots personales.
+* Sondear las respuestas.
+* Notificaciones de eventos externos.
+Enviar un mensaje para iniciar un nuevo subproceso de conversación es diferente de enviar un mensaje en respuesta a una conversación existente: cuando el bot inicia una nueva conversación, no hay ninguna conversación preexistente en la que publicar el mensaje. Para enviar un mensaje proactivo, debe:
 
 1. [Decidir qué va a decir](#best-practices-for-proactive-messaging)
 1. [Obtener el identificador único del usuario y el identificador de inquilino](#obtain-necessary-user-information)

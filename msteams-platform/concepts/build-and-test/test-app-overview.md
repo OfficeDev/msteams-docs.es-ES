@@ -1,15 +1,14 @@
 ---
 title: Introducción a la prueba de su aplicación
-description: Describe el proceso de probar y depurar su aplicación personalizada de Teams en Microsoft 365
+description: En este módulo, obtenga información sobre el proceso para probar y depurar la aplicación personalizada de Teams en Microsoft 365 y agregar datos de prueba al inquilino de Microsoft 365.
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configurar el inquilino de Microsoft 365 Teams que está cargando la aplicación de prueba
-ms.openlocfilehash: 98c00ece54e1654570556bac122e6760b283b73f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111531"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144386"
 ---
 # <a name="test-your-app"></a>Probar la aplicación
 

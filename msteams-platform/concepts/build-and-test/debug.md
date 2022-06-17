@@ -1,15 +1,14 @@
 ---
 title: Elegir una configuración para probar y depurar la aplicación
-description: Describe las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y alojadas en la nube.
-keywords: teams ejecutar depurar aplicaciones local hospedado en la nube hospedar
+description: En este módulo, aprenderá las opciones para probar y depurar aplicaciones Microsoft Teams en el entorno local y hospedado en la nube.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 38259c31f9c6d29ffae22217a17ccf173b5ced59
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757013"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143420"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elegir una configuración para probar y depurar la aplicación de Microsoft Teams
 
@@ -59,10 +58,12 @@ Para usar ngrok en el proyecto en función de las funcionalidades que esté usan
 Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a Teams funcionalidad específica.
 
 > [!NOTE]
+>
 > * Para actualizar el punto de conexión de mensajería de un bot, debe usar Bot Framework. Seleccione el bot en [la lista de bots de Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puede actualizar el punto de conexión de mensajería a través de [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 > [!WARNING]
-> * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
+>
+> * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso a partir del 30 de junio de 2022.
 
 ## <a name="cloud-hosted"></a>Hospedado en la nube
 

@@ -1,16 +1,16 @@
 ---
 title: Búsqueda de escritura anticipada en Tarjetas adaptables
 author: Rajeshwari-v
-description: Describe la búsqueda de typeahead con el control Input.ChoiceSet en tarjetas adaptables
+description: En este módulo, obtenga información sobre lo que es la búsqueda de typeahead en tarjetas adaptables con el control Input.ChoiceSet e implemente la búsqueda de typeahead.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 205da5ca0171182047ccd06f7f2926f731ceb94d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103442"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143896"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Búsqueda de escritura anticipada en Tarjetas adaptables
 
@@ -42,7 +42,7 @@ La búsqueda dinámica de encabezados de tipo es útil para buscar y seleccionar
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
-Los clientes móviles de Android e iOS admiten la búsqueda de tipoahead en tarjetas adaptables.
+Android y iOS clientes móviles admiten la búsqueda de typeahead en tarjetas adaptables.
 
 **Escenario**
 
@@ -78,14 +78,14 @@ En la imagen siguiente se muestra la experiencia móvil de la búsqueda de typea
 
 Las propiedades siguientes son las nuevas adiciones al esquema para habilitar la [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) búsqueda de typeahead:
 
-| Propiedad| Tipo | Obligatorio | Descripción |
+| Propiedad| Tipo | Necesario | Descripción |
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Agrega estilo filtrado a la lista de validaciones admitidas para el tipo estático de avance.|
 | choices.data | Data.Query | No | Habilita el tipo de avance dinámico como tipos de usuario, capturando un conjunto remoto de opciones de un back-end. |
 
 ### <a name="dataquery-definition"></a>Definición de Data.Query
 
-| Propiedad| Tipo | Obligatorio | Descripción |
+| Propiedad| Tipo | Necesario | Descripción |
 |-----------|------|----------|-------------|
 | tipo | Data.Query | Sí | Especifica que es un objeto Data.Query.|
 | Dataset | Cadena | Sí | Especifica el tipo de datos que se capturan dinámicamente. |

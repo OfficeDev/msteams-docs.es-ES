@@ -1,16 +1,15 @@
 ---
 title: Canal y conversaciones de chat de grupo con un bot
-description: Describe el escenario de un extremo a otro de tener una conversación con un bot en un canal en Microsoft Teams
-keywords: bot de conversación de canales de escenarios de teams
-ms.localizationpriority: high
+description: En este módulo, aprenderá el escenario de un extremo a otro de tener una conversación con un bot en un canal de Microsoft Teams
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: a3b508a5caa70ff2ecea24840c24448f3f8622b6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111671"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142783"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversaciones de chat de canal y grupo con un bot de Microsoft Teams
 
@@ -18,21 +17,21 @@ ms.locfileid: "65111671"
 
 Microsoft Teams permite a los usuarios incluir bots en sus conversaciones de chat de canal o grupo. Al agregar un bot a un equipo o chat, todos los usuarios de la conversación pueden aprovechar la funcionalidad del bot directamente en la conversación. También puede acceder a la funcionalidad específica de Teams en el bot, como consultar información del equipo y @mentioning usuarios.
 
-El chat en canales y chats grupales difiere del chat personal en que el usuario necesita @mentionar el bot. Si un bot se usa en varios ámbitos, como personal, groupchat o canal, debe detectar de qué ámbito proceden los mensajes del bot y procesarlos en consecuencia.
+Chat en canales y chats grupales difiere del chat personal en que el usuario necesita @mention el bot. Si se usa un bot en varios ámbitos, como personal, chat en grupo o canal, debe detectar de qué ámbito proceden los mensajes del bot y procesarlos en consecuencia.
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Diseño de un bot excelente para canales o grupos
 
-Los bots agregados a un equipo se convierten en otro miembro del equipo y se pueden @mentioned como parte de la conversación. De hecho, los bots solo reciben mensajes cuando están @mentioned, por lo que otras conversaciones del canal no se envían al bot.
+Los bots agregados a un equipo se convierten en otro miembro del equipo y se pueden @mentioned como parte de la conversación. De hecho, los bots solo reciben mensajes cuando se @mentioned, por lo que otras conversaciones en el canal no se envían al bot.
 
 Un bot de un grupo o canal debe proporcionar información relevante y adecuada para todos los miembros. Aunque el bot puede proporcionar sin duda cualquier información relevante para la experiencia, tenga en cuenta que las conversaciones con él son visibles para todos los usuarios. Por lo tanto, un bot excelente en un grupo o canal debe agregar valor a todos los usuarios y, sin duda, no compartir accidentalmente información más adecuada para una conversación uno a uno.
 
-El bot, tal como está, puede ser completamente relevante en todos los ámbitos sin necesidad de trabajo adicional. En Microsoft Teams no hay ninguna expectativa de que el bot funcione en todos los ámbitos, pero debe asegurarse de que el bot proporciona valor de usuario en los ámbitos que elija admitir. Para obtener más información sobre los ámbitos, vea [Apps en Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+El bot, tal como es, puede ser totalmente relevante en todos los ámbitos sin necesidad de más trabajo. En Microsoft Teams, no hay ninguna expectativa de que el bot funcione en todos los ámbitos, pero debe asegurarse de que el bot proporciona valor de usuario en los ámbitos que elija admitir. Para obtener más información sobre los ámbitos, vea [Apps en Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 El desarrollo de un bot que funciona en grupos o canales usa gran parte de la misma funcionalidad que las conversaciones personales. Los eventos y datos adicionales de la carga proporcionan información de grupo y canal de Teams. Estas diferencias, así como las diferencias clave en la funcionalidad común, se describen en las secciones siguientes.
 
 ### <a name="creating-messages"></a>Creación de mensajes
 
-Para obtener más información sobre los bots que crean mensajes en canales, consulte [Mensajería proactiva para bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) y específicamente [Crear una conversación de canal](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
+Para obtener más información sobre los bots que crean mensajes en canales, consulte [Mensajería proactiva para bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) y, específicamente, [Creación de una conversación de canal](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
 
 ### <a name="receiving-messages"></a>Recepción de mensajes
 
@@ -54,7 +53,7 @@ En un canal, la respuesta a un mensaje se muestra como una respuesta a la cadena
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>Procedimiento recomendado: Mensajes de bienvenida en Teams
 
-Cuando el bot se agrega por primera vez al grupo o equipo, suele ser útil enviar un mensaje de bienvenida que presente el bot a todos los usuarios. El mensaje de bienvenida debe proporcionar una descripción de la funcionalidad del bot y las ventajas del usuario. Lo ideal es que el mensaje también incluya comandos para que el usuario interactúe con la aplicación. Para ello, asegúrese de que el bot responde al mensaje `conversationUpdate` con `teamsAddMembers` eventType en el objeto `channelData`. Asegúrese de que el identificador de `memberAdded` es el propio identificador de aplicación del bot, ya que el mismo evento se envía cuando se agrega un usuario a un equipo. Consulte [Adición de miembros de equipo o bot](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obtener más detalles.
+Cuando el bot se agrega por primera vez al grupo o equipo, es útil enviar un mensaje de bienvenida que presenta el bot a todos los usuarios. El mensaje de bienvenida debe proporcionar una descripción de la funcionalidad del bot y las ventajas del usuario. Lo ideal es que el mensaje también incluya comandos para que el usuario interactúe con la aplicación. Para ello, asegúrese de que el bot responde al mensaje `conversationUpdate` con `teamsAddMembers` eventType en el objeto `channelData`. Asegúrese de que el identificador de `memberAdded` es el propio identificador de aplicación del bot, ya que el mismo evento se envía cuando se agrega un usuario a un equipo. Para obtener más información, consulte [Incorporación de bots o miembros del equipo](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) para obtener más información.
 
 También puede enviar un mensaje personal a cada miembro del equipo cuando se agregue el bot. Para ello, podría [buscar la lista del equipo](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) y enviar a cada usuario un [mensaje directo](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
@@ -67,7 +66,7 @@ Se recomienda que el bot *no* enviar un mensaje de bienvenida en las situaciones
 
 ## <a name="-mentions"></a>Menciones @
 
-Dado que los bots de un grupo o canal solo responden cuando se mencionan ("@*botname*") en un mensaje, cada mensaje recibido por un bot en un canal de grupo contiene su propio nombre y debe asegurarse de que el análisis de mensajes lo controla. Además, los bots pueden analizar otros usuarios mencionados y mencionar a los usuarios como parte de sus mensajes.
+Dado que los bots de un grupo o canal responden solo cuando se mencionan ("@*botname*") en un mensaje, cada mensaje recibido por un bot en un canal de grupo contiene su propio nombre y debe asegurarse de que el análisis de mensajes lo controla. Además, los bots pueden analizar otros usuarios mencionados y mencionar a los usuarios como parte de sus mensajes.
 
 ### <a name="retrieving-mentions"></a>Recuperación de menciones
 

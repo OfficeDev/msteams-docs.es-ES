@@ -1,16 +1,16 @@
 ---
 title: Compatibilidad del SSO con las extensiones de mensajes
 author: KirtiPereira
-description: Aprenda a habilitar la compatibilidad con el SSO para las extensiones de mensajería con ejemplos de código.
+description: En este módulo, aprenderá a habilitar la compatibilidad con el inicio de sesión único (SSO) para las extensiones de mensajería con ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 900723ca77d4178a6a2ded46617ed53d985d83e3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: a0130f2730289c3e45dfa3aa4585e62bd430a48a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887705"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142853"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Compatibilidad con el inicio de sesión único para las extensiones de mensajes
 

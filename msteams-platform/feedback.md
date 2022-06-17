@@ -1,14 +1,14 @@
 ---
-title: Ayuda y comentarios de la comunidad de desarrolladores de Microsoft Teams
+title: Microsoft Teams soporte técnico y comentarios de la comunidad de desarrolladores
 description: Obtenga información Microsoft Teams equipo de producto responde a la comunidad de desarrolladores a través de diversos canales de comentarios y soporte técnico.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: e12a5bed7310009539abf56d304deb0359df14e6
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1155df225aff3016f0c978dc9c84b4462874ea16
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123408"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144106"
 ---
 # <a name="support-and-feedback"></a>Soporte técnico y comentarios
 

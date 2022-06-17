@@ -1,17 +1,17 @@
 ---
 title: Manifiesto de aplicación de Teams en Teams Toolkit
 author: zyxiaoyuer
-description: Manifiesto de aplicación de Teams
+description: En este módulo, aprenderá a editar, obtener una vista previa y personalizar Teams manifiesto de aplicación en el entorno diferente.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123657"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143875"
 ---
 # <a name="edit-teams-app-manifest"></a>Edición Teams manifiesto de aplicación
 
@@ -33,7 +33,7 @@ Puede obtener una vista previa del archivo de manifiesto en entornos locales y r
 * [Vista previa del archivo de manifiesto en el entorno local](#preview-manifest-file-in-local-environment)
 * [Vista previa del archivo de manifiesto en un entorno remoto](#preview-manifest-file-in-remote-environment)
 
-### <a name="preview-manifest-file-in-local-environment"></a>Vista previa del archivo de manifiesto en el entorno local
+## <a name="preview-manifest-file-in-local-environment"></a>Vista previa del archivo de manifiesto en el entorno local
 
 Para obtener una vista previa del archivo de manifiesto en el entorno local, puede presionar **F5** para ejecutar la depuración local. Genera la configuración local predeterminada automáticamente y, a continuación, el paquete de la aplicación y la vista previa del manifiesto se compilan en la carpeta `build/appPackage`.
 
@@ -47,7 +47,7 @@ La galería de ejemplos aparece como se muestra en la siguiente imagen:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Versión preliminar":::
 
-### <a name="preview-manifest-file-in-remote-environment"></a>Vista previa del archivo de manifiesto en un entorno remoto
+## <a name="preview-manifest-file-in-remote-environment"></a>Vista previa del archivo de manifiesto en un entorno remoto
 
 **Para obtener una vista previa del archivo de manifiesto en un entorno remoto**
 

@@ -1,16 +1,16 @@
 ---
 title: Publicar aplicaciones de Teams con el kit de herramientas de Teams
 author: zyxiaoyuer
-description: publicar aplicaciones de Teams
+description: En este módulo, aprenderá a publicar Teams aplicaciones mediante Teams Toolkit y a publicar en un ámbito individual o en un permiso de transferencia local.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2c3fdd78d833baba6bbd5f21640765577f29430b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757454"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142608"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publicar aplicaciones de Teams con el kit de herramientas de Teams
 

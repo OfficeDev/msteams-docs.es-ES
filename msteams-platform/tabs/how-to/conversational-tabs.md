@@ -1,17 +1,16 @@
 ---
 title: Crear pestañas de conversación
 author: surbhigupta
-description: Aprenda a crear un chat de subentidad conversacional para las pestañas del canal para administrar conversaciones mediante ejemplos de código.
-keywords: Canal de pestañas de teams configurable
+description: En este módulo, aprenderá a crear un chat de subentidad conversacional para las pestañas del canal, para administrar conversaciones mediante ejemplos de código.
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111657"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142083"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -103,8 +102,8 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="see-also"></a>Consulte también
 
-* [pestañas de Teams](~/tabs/what-are-tabs.md)
+* [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de canal o grupo](~/tabs/how-to/create-channel-group-tab.md)
+* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
 * [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)

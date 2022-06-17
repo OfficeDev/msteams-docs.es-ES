@@ -1,16 +1,16 @@
 ---
 title: Responder a la acción de envío del módulo de tareas
 author: surbhigupta
-description: Describe cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensajería con mensaje proactivo, otro módulo de tareas, bot de tarjeta adaptable y mucho más mediante ejemplos de código.
+description: En este módulo, aprenderá a responder al módulo de tareas para enviar la acción desde un comando de acción de extensión de mensajería con un mensaje proactivo y mucho más.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757566"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144029"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -32,10 +32,10 @@ Para la autenticación o configuración, una vez que el usuario completa el proc
 
 |Tipo de respuesta | Redacción | Barra de comandos | Message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Respuesta de tarjeta | ✔ | ✔ | ✔ |
-|Otro módulo de tareas | ✔ | ✔ | ✔ |
-|Bot con tarjeta adaptable | ✔ | x | ✔ |
-| Sin respuesta | ✔ | ✔ | ✔ |
+|Respuesta de tarjeta | ✔️ | ✔️ | ✔️ |
+|Otro módulo de tareas | ✔️ | ✔️ | ✔️ |
+|Bot con tarjeta adaptable | ✔️ | ❌ | ✔️ |
+| Sin respuesta | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

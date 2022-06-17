@@ -4,12 +4,12 @@ description: En este módulo, obtendrá información sobre cómo empezar a traba
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8dad224b74ff8a6d1252c4d1d27900f3bb5c6962
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668387"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143567"
 ---
 ---
 
@@ -101,7 +101,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Unir un contenedor de Fluid
 
-No todas las vistas de aplicación tendrán que ser colaborativas. La vista `stage` _siempre_ necesita características de colaboración, la vista `content` _puede_ necesitar características de colaboración y la vista `config`_nunca_ necesita características de colaboración. Para las vistas que necesitan características de colaboración, deberá unir un contenedor Fluid asociado a la reunión actual.
+No todas las vistas de aplicación tendrán que ser colaborativas. La vista `stage` *siempre* necesita características de colaboración, la vista `content` *puede* necesitar características de colaboración y la vista `config`*nunca* necesita características de colaboración. Para las vistas que necesitan características de colaboración, deberá unir un contenedor Fluid asociado a la reunión actual.
 
 Unir el contenedor para la reunión es tan sencillo como crear un nuevo [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) y, a continuación, llamar al método [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer).  Al ejecutar localmente, tendrá que pasar una configuración de conexión personalizada con un `LOCAL_MODE_TENANT_ID` especial, pero unir un contenedor local es lo mismo que unir un contenedor en Teams.
 
@@ -192,15 +192,15 @@ El siguiente cambio que debe realizarse es cambiar la función `updateDice` para
 
 ### <a name="handle-remote-changes"></a>Control de cambios remotos
 
-Los valores devueltos por `diceMap` son solo una instantánea en el tiempo. Para mantener los datos actualizados a medida que cambian, se debe establecer un controlador de eventos en `diceMap` para llamar a `updateDice` cada vez que se envía el evento `valueChanged`. Para obtener una lista de eventos desencadenados y los valores pasados a esos eventos, consulte [SharedMap](https://fluidframework.com/docs/data-structures/map/). 
+Los valores devueltos por `diceMap` son solo una instantánea en el tiempo. Para mantener los datos actualizados a medida que cambian, se debe establecer un controlador de eventos en `diceMap` para llamar a `updateDice` cada vez que se envía el evento `valueChanged`. Para obtener una lista de eventos desencadenados y los valores pasados a esos eventos, consulte [SharedMap](https://fluidframework.com/docs/data-structures/map/).
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>Escribir la vista del panel lateral
 
-La vista del panel lateral, cargada a través de la pestaña `contentUrl` con el contexto del marco `sidePanel`, se muestra al usuario en un panel lateral cuando abre la aplicación dentro de una reunión. El objetivo de esta vista es permitir que un usuario seleccione contenido para la aplicación antes de compartir la aplicación en la escena de reunión. Para las aplicaciones del SDK de Live Share, la vista del panel lateral también se puede usar como experiencia complementaria para la aplicación. Llamar a [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) desde la vista del panel lateral conecta al mismo contenedor de Fluid al que está conectada la vista extendida. A continuación, este contenedor se puede usar para comunicarse con la vista extendida. Asegúrese de que se está comunicando con la vista extendida _y_ la vista del panel lateral de todos los usuarios.
+La vista del panel lateral, cargada a través de la pestaña `contentUrl` con el contexto del marco `sidePanel`, se muestra al usuario en un panel lateral cuando abre la aplicación dentro de una reunión. El objetivo de esta vista es permitir que un usuario seleccione contenido para la aplicación antes de compartir la aplicación en la escena de reunión. Para las aplicaciones del SDK de Live Share, la vista del panel lateral también se puede usar como experiencia complementaria para la aplicación. Llamar a [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) desde la vista del panel lateral conecta al mismo contenedor de Fluid al que está conectada la vista extendida. A continuación, este contenedor se puede usar para comunicarse con la vista extendida. Asegúrese de que se está comunicando con la vista extendida *y* la vista del panel lateral de todos los usuarios.
 
 La vista del panel lateral del ejemplo solicita al usuario que seleccione el botón Compartir en escena
 
@@ -370,6 +370,6 @@ Una vez que esté listo para implementar el código, puede usar [Teams Toolkit](
 
 * [Repositorio de GitHub](https://github.com/microsoft/live-share-sdk)
 * [Documentos de referencia del SDK de Live Share](/javascript/api/@microsoft/live-share/)
-* [Documentos de referencia del SDK de Live Share Media](/javascript/api/@microsoft/live-share-media/)
+* [Documentos de referencia del SDK multimedia de Live Share](/javascript/api/@microsoft/live-share-media/)
 * [Preguntas más frecuentes sobre Live Share](teams-live-share-faq.md)
 * [Aplicaciones de Teams en las reuniones](teams-apps-in-meetings.md)

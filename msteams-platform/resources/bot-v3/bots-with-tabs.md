@@ -1,16 +1,15 @@
 ---
 title: Combinación de bots con pestañas
-description: En este artículo se describe cómo usar pestañas y bots juntos.
-keywords: Desarrollo de pestañas de bots de teams
+description: En este artículo, aprenderá a usar pestañas y bots juntos, a crear vínculos profundos a pestañas en los mensajes del bot y al desarrollo de pestañas de bots de teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 9ec2c37417d6c16edf4ead521dea91655ba11165
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: f8199b65fded8c43af45cb303a400652e5516db2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123734"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142097"
 ---
 # <a name="combine-bots-with-tabs"></a>Combinación de bots con pestañas
 
@@ -31,7 +30,7 @@ Este flujo funciona mejor si el proveedor de identidades implementa el protocolo
 
 Quiere usar pestañas para mostrar más contenido del que cabe dentro de una tarjeta o proporcionar una manera de completar tareas complejas de relleno de formularios mediante el lienzo de pestañas. Por ejemplo, considere la posibilidad de navegar al usuario a la pestaña cuando hace clic en la tarjeta desde el bot. Para que esto suceda, deberá codificar el mensaje del bot para incluir una dirección URL de [vínculo profundo](~/concepts/build-and-test/deep-links.md) , ya sea a través del marcado o como destino de la acción openUrl.
 
-Los vínculos profundos se basan en un entityId, que es un valor opaco que se asigna a una entidad única del sistema. Cuando se crea la pestaña, lo ideal es almacenar un estado simple; por ejemplo, marca en el back-end que indica que la pestaña se ha creado en el canal. Cuando el bot construye un mensaje, puede tener como destino el entityId asociado a esa pestaña.
+Los vínculos profundos se basan en un entityId, que es un valor opaco que se asigna a una entidad única del sistema. Cuando se crea la pestaña, lo ideal es almacenar un estado simple. Por ejemplo, marca en el back-end que indica que la pestaña se ha creado en el canal. Cuando el bot construye un mensaje, puede tener como destino el entityId asociado a esa pestaña.
 
 > [!NOTE]
 > en los chats personales, dado que las pestañas son "estáticas" e instaladas con la aplicación, siempre se puede asumir su existencia y, por tanto, construir vínculos profundos en consecuencia.
@@ -42,7 +41,7 @@ A menudo, querrá notificar al usuario final cada vez que se produzca una actual
 
 Hay dos maneras de lograr este escenario:
 
-1. Si desea notificar a un canal completo, el bot puede publicar de forma asincrónica un mensaje en el canal. No hay ninguna manera de que un bot cree proactivamente la conversación de pestaña si no se creó con la pestaña.
+1. Si desea notificar a un canal completo, el bot puede publicar de forma asincrónica un mensaje en el canal. No hay manera de que un bot cree proactivamente la conversación de pestaña si no se creó con la pestaña.
 
 2. Si solo desea notificar al destinatario o a las partes interesadas implicadas en la acción, el bot puede enviar un mensaje de chat personal al usuario. Primero debe comprobar si existe una conversación personal entre el bot y el usuario. Si no es así, puede llamar `CreateConversation` a para iniciar el chat personal.
 

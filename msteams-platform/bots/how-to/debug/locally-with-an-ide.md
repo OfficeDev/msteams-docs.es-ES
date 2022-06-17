@@ -1,16 +1,16 @@
 ---
 title: Prueba y depuración del bot de manera local
 author: surbhigupta
-description: Obtenga información sobre cómo probar y depurar el bot localmente con un IDE en el entorno de Teams a través de una instalación de prueba, fuera de Teams mediante un emulador del bot o hablando directamente con el bot.
+description: Obtenga información sobre cómo probar y depurar el bot localmente con un IDE dentro de Teams entorno mediante la instalación local y mucho más.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c0c2124c12e9ab13bf72008e8dda0846f35d768
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757601"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142895"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Prueba y depuración del bot de manera local
 

@@ -1,16 +1,16 @@
 ---
 title: Módulos de tareas
 author: surbhigupta
-description: Incorporación de experiencias emergentes modales para recopilar o mostrar información a los usuarios desde las aplicaciones de Microsoft Teams
+description: En este módulo, aprenderá a agregar experiencias emergentes modales para recopilar o mostrar información a los usuarios de las aplicaciones de Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756600"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143602"
 ---
 # <a name="task-modules"></a>Módulos de tareas
 
@@ -55,6 +55,6 @@ Un módulo de tareas incluye lo siguiente, como se muestra en la imagen anterior
 > [!div class="nextstepaction"]
 > [Invocar y descartar módulos de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tarjetas](~/task-modules-and-cards/what-are-cards.md)

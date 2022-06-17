@@ -2,16 +2,15 @@
 title: Atributo de cookies SameSite
 author: laujan
 description: Obtenga información sobre los tipos de cookies, incluidas las cookies samesite, sus atributos, sus implicaciones en las pestañas de Teams, los módulos de tareas y las extensiones de mensaje, y su autenticación en Teams.
-keywords: cookie attributos samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756992"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142740"
 ---
 # <a name="samesite-cookie-attribute"></a>Atributo de cookies SameSite
 

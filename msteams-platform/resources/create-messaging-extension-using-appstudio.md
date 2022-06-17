@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear una extensión de mensajerí
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032784"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142342"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería usando App Studio
 
@@ -19,11 +19,11 @@ ms.locfileid: "66032784"
 
 En un nivel alto, deberá completar los pasos siguientes para crear una extensión de mensajería.
 
-1. Preparar el entorno de desarrollo
-2. Crear e implementar el servicio web (al desarrollar, use un servicio de tunelización como ngrok para ejecutarlo localmente)
-3. Registrar el servicio web con Bot Framework
-4. Crear el paquete de aplicación
-5. Cargar el paquete en Microsoft Teams
+1. Preparar el entorno de desarrollo.
+2. Cree e implemente el servicio web (mientras desarrolla usa un servicio de tunelización como ngrok para ejecutarlo localmente).
+3. Registre el servicio web con Bot Framework.
+4. Cree el paquete de la aplicación.
+5. Cargar el paquete en Microsoft Teams.
 
 La creación del servicio web, la creación del paquete de la aplicación y el registro del servicio web con Bot Framework se pueden realizar en cualquier orden. Dado que esas tres piezas están tan entrelazadas, independientemente del orden en el que las hagas, tendrás que volver a actualizar las demás. El registro necesita el punto de conexión de mensajería del servicio web implementado y el servicio web necesita el identificador y la contraseña creados a partir del registro. El manifiesto de la aplicación también necesita ese identificador para conectar Teams al servicio web.
 

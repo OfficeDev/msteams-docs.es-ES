@@ -1,15 +1,14 @@
 ---
 title: Reuniones en línea y llamadas multimedia en tiempo real con Microsoft Teams
-description: Comprenda los conceptos clave en la creación de bots que puedan realizar llamadas de audio y vídeo en tiempo real y reuniones en línea. Más información sobre las sesiones multimedia, la velocidad de fotogramas, el formato de audio y vídeo y las referencias a los recursos de desarrolladores
+description: Obtenga información sobre conceptos clave en la creación de bots que pueden realizar llamadas de audio y vídeo en tiempo real y reuniones en línea.
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: secuencia de audio secuencia de vídeo audio y vídeo llamadas reuniones en tiempo real hospedado multimedia hospedado multimedia hospedado servicio multimedia medios multimedia
-ms.openlocfilehash: 0e5343567be3843c457885fcf506446b20b6dcf7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b1ff14a0229483312c0de6fdb33836ee205f1e14
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111993"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143791"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Reuniones y llamadas multimedia en tiempo real con Microsoft Teams
 

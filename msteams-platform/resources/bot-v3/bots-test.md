@@ -1,16 +1,15 @@
 ---
 title: Prueba y depuración de la aplicación
-description: En este artículo se describe cómo probar bots en Microsoft Teams
-keywords: pruebas de bots de teams
+description: En este artículo, sabrá cómo probar y depurar los bots en Microsoft Teams y probar el bot sin cargarlos en Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123457"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143700"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Probar y depurar la el bot de Microsoft Teams
 
@@ -26,7 +25,7 @@ Hay dos métodos para cargar la aplicación. Puede usar [App Studio](~/concepts/
 
 ## <a name="debug-your-bot-locally"></a>Pruebe el bot localmente.
 
-Si hospeda el bot localmente durante el desarrollo, deberá usar un servicio de tunelización como [ngrok](https://ngrok.com/) para probar el bot. Una vez que haya descargado e instalado ngrok, ejecute el siguiente comando para iniciar el servicio de tunelización. Es posible que tenga que agregar ngrok a la ruta de acceso.
+Si va a hospedar el bot localmente durante el desarrollo, deberá usar un servicio de tunelización como [ngrok](https://ngrok.com/) para probar el bot. Una vez que haya descargado e instalado ngrok, ejecute el siguiente comando para iniciar el servicio de tunelización. Es posible que tenga que agregar ngrok a la ruta de acceso.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -40,7 +39,7 @@ En ocasiones, es necesario probar el bot sin instalarlo como una aplicación en 
 
 ### <a name="use-the-bot-emulator"></a>Uso del emulador de bots
 
-La Bot Framework Emulator es una aplicación de escritorio que permite a los desarrolladores de bots probar y depurar sus bots, ya sea de forma local o remota. Con el emulador, puede chatear con el bot e inspeccionar los mensajes que el bot envía y recibe. Esto puede ser útil para comprobar que el bot está disponible y responde, pero el emulador no le permitirá probar ninguna funcionalidad específica de Teams que haya agregado al bot, ni las respuestas del bot serán una representación visual precisa de cómo se representan en Teams. Si necesita probar cualquiera de estas cosas, no es mejor [cargar el bot](#test-by-uploading-to-teams).
+La Bot Framework Emulator es una aplicación de escritorio que permite a los desarrolladores de bots probar y depurar sus bots, ya sea de forma local o remota. Con el emulador, puede chatear con el bot e inspeccionar los mensajes que el bot envía y recibe. Esto puede ser útil para comprobar que el bot está disponible y responder, pero el emulador no le permitirá probar ninguna funcionalidad específica de Teams que haya agregado al bot, ni las respuestas del bot serán una representación visual precisa de cómo se representan en Teams. Si necesita probar cualquiera de estas cosas, no es mejor [cargar el bot](#test-by-uploading-to-teams).
 
 Encontrará instrucciones completas sobre el Bot Framework Emulator [aquí](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
@@ -70,7 +69,7 @@ El bot recibirá el evento `conversationUpdate` igual que los bots agregados a u
 
 ## <a name="blocking-a-bot-in-personal-chat"></a>Bloquear un bot en un chat personal
 
-Tenga en cuenta que los usuarios pueden optar por impedir que el bot envíe mensajes de chat personales. Puede alternar esto haciendo clic con el botón derecho en el bot en el canal de chat y eligiendo **Bloquear conversación de bot**. Esto significa que los bots seguirán enviando mensajes, pero el usuario no los recibirá.
+Los usuarios pueden optar por impedir que el bot envíe mensajes de chat por privado. Luego podrán modificar esto haciendo clic con el botón derecho en el bot en el canal de chat y seleccionando **Bloquear conversación con el bot**. Esto significa que los bots seguirán enviando mensajes, pero el usuario no los recibirá.
 
   :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="Bloqueo de un bot"border="true":::
 
@@ -78,7 +77,7 @@ Tenga en cuenta que los usuarios pueden optar por impedir que el bot envíe mens
 
 Los usuarios pueden eliminar el bot eligiendo el icono de papelera en la lista de bots en la vista de equipos. Tenga en cuenta que esto solo quita el bot del uso de ese equipo; los usuarios individuales pueden interactuar en el contexto personal.
 
-Los bots en el contexto personal no pueden ser deshabilitados ni eliminados por un usuario, a menos que se quite completamente el bot de Teams.
+Los bots en contexto personal no pueden ser deshabilitados o eliminados por un usuario, en lugar de quitar completamente el bot de Teams.
 
 ## <a name="disabling-a-bot-in-teams"></a>Deshabilitar un bot en Teams
 
@@ -86,7 +85,7 @@ Para detener la recepción de mensajes del bot, vaya al Panel de bots y edite el
 
 ## <a name="deleting-a-bot-from-teams"></a>Eliminación de un bot de Teams
 
-Para quitar completamente el bot de Teams, vaya al Panel de bots y edite el canal de Microsoft Teams. Elija el botón **Borrar** en la parte inferior. Esto impide que los usuarios detecten, agreguen o interactúen con el bot. Tenga en cuenta que esto no quita el bot de las instancias de Teams de otros usuarios, aunque también dejará de funcionar para ellos.
+Para quitar completamente el bot de Teams, vaya al Panel de bots y edite el canal de Microsoft Teams. Elija el botón **Borrar** en la parte inferior. Esto impide que los usuarios detecten, agreguen o interactúen con el bot. Esto no quita el bot de las instancias de Teams de otros usuarios, aunque también dejará de funcionar para ellos.
 
 ## <a name="removing-your-bot-from-appsource"></a>Eliminación del bot de AppSource
 

@@ -1,17 +1,16 @@
 ---
 title: Creación de una página de configuración
 author: surbhigupta
-description: Obtenga información sobre cómo crear una página de configuración para configurar un canal o un chat de grupo para la configuración, como la obtención de datos de contexto, la inserción de marcadores de posición y la autenticación mediante ejemplos de código.
-keywords: canal de grupo de pestañas de teams configurable
+description: En este módulo, aprenderá a crear una página de configuración para configurar un chat de canal o grupo para la configuración, como obtener datos de contexto, etc.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048979"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143959"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 

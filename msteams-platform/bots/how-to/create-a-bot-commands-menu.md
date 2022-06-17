@@ -1,17 +1,16 @@
 ---
 title: Crear un menú de comandos para el bot
 author: surbhigupta
-description: Obtenga información sobre cómo crear un menú de comandos para el bot de Microsoft Teams con ejemplos de código.
+description: En este módulo, aprenderá a crear y controlar un menú de comandos para el bot de Microsoft Teams con ejemplos de código.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: comando menú redactar mensaje conversación@mención
-ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 7d8c702dd60c3e98b7f00543ce7ce8de9a76ae41
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048993"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144407"
 ---
 # <a name="bot-command-menus"></a>Menús de comandos de bot
 
@@ -42,7 +41,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
 1. Abra Teams y seleccione **Aplicaciones** en el panel izquierdo. En la página **Aplicaciones**, busque **App Studio** y seleccione **Abrir**.
 
    > [!WARNING]
-   > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
+   > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso a partir del 30 de junio de 2022.
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
@@ -61,7 +60,6 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
 7. Active las casillas **Ámbito** para seleccionar dónde debe aparecer este menú de comandos y seleccione **Guardar**.
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="Botón de menú nuevos comandos de App Studio "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
-
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Edite Manifest.json para crear un menú de comandos para el bot
 

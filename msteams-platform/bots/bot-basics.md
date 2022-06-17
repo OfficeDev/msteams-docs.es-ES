@@ -1,17 +1,16 @@
 ---
 title: Controladores de actividad de bots
 author: surbhigupta
-description: Comprenda los controladores de actividad del bot en Teams.
+description: En este artículo, obtenga información sobre los controladores de actividad de bots, los marcos de trabajo, los controladores de actividad Teams y la lógica del bot en Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: actividad controlador marco bot tarjeta consentimiento canal evento
-ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032924"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143840"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 

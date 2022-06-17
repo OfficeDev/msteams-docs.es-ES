@@ -1,16 +1,16 @@
 ---
 title: Planificar Teams para dispositivos móviles
 author: surbhigupta
-description: Guía para planificar la creación de una aplicación en Teams para dispositivos móviles
+description: Con este módulo de aprendizaje, aprenderá a planear la creación de una aplicación en Teams móvil y comprenderá las distintas fases para compilar la aplicación.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 16eada349d2a6adc5b45e89f075107838594eeeb
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111727"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143189"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
 
@@ -61,9 +61,9 @@ En la primera fase, puede implementar la experiencia de consumo más básica par
 
 Puede mostrar la siguiente información:
 
-* Paneles y resúmenes
-* Objetos visuales, mapas e infografías de datos
-* Gráficos, cuadros y tablas
+* Paneles y resúmenes.
+* Objetos visuales de datos, mapas e infografías.
+* Gráficos, gráficos y tablas.
 
 ![Consumo de aplicaciones de visualización de datos y paneles](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -71,9 +71,9 @@ Acciones rápidas:
 
 En la segunda fase, los usuarios pueden trabajar en los gráficos y objetos visuales ya existentes desde la experiencia de escritorio. Puede introducir las siguientes acciones:
 
-* Buscar contenido
-* Filtrar datos
-* Crear marcadores
+* Buscar contenido.
+* Filtrar datos.
+* Crear marcadores.
 
 ![Acciones rápidas de aplicaciones de visualización de datos y paneles](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
@@ -83,9 +83,9 @@ En la tercera fase, permita a los usuarios crear contenido como son gráficos y 
 
 Puede proporcionar el siguiente acceso a los usuarios:
 
-* Modificar título y descripción
-* Insertar elementos de datos para crear visualizaciones
-* Compartir visualizaciones en un canal o chat grupal
+* Modifique el título y la descripción.
+* Insertar elementos de datos para crear visualizaciones.
+* Comparta visualizaciones en un canal o chat de grupo.
 
 ![Habilitación de aplicaciones de visualización de datos y paneles](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -111,12 +111,12 @@ Acciones rápidas:
 
 En la segunda fase, puede proporcionar a los usuarios el siguiente acceso a la aplicación:
 
-* Crear tareas o elementos con los campos obligatorios para reducir la carga cognitiva de los usuarios
-* Cambiar el tipo de panel o la vista
-* Revisar tareas expandiendo la vista
-* Uso de módulos de tareas para ver una vista detallada
-* Mover las tareas a distintas categorías
-* Compartir tareas relevantes en chats y canales a través de correos electrónicos y fuentes de actividades
+* Cree tareas o elementos con los campos obligatorios para reducir la carga cognitiva de los usuarios.
+* Cambie el tipo de placa o la vista.
+* Revise las tareas expandiendo la vista.
+* Use módulos de tareas para ver la vista detallada.
+* Mueva las tareas a distintas categorías.
+* Comparta las tareas pertinentes en chats y canales a través de correos electrónicos y fuente de actividad.
 
 ![Acciones rápidas de aplicaciones de incorporación de tareas](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -124,9 +124,9 @@ Habilitación:
 
 En la tercera fase, puede habilitar la experiencia de los usuarios con las actividades siguientes:
 
-* Agregar nuevos proyectos y paneles
-* Agregar y modificar categorías diferentes, como son **Propuesto**, **Activo** y **Cerrado**
-* Configurar las tareas para comentarios, datos adjuntos y otras características complejas
+* Agregue nuevos proyectos y paneles.
+* Agregue y modifique diferentes categorías, como **Propuesto**, **Activo** y **Cerrado**.
+* Configure las tareas para comentarios, datos adjuntos y otras características complejas.
 
 ![Habilitación de aplicaciones de incorporación de tareas](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -145,9 +145,9 @@ Consumo:
 
 En la primera fase, puede considerar la experiencia de escritorio para mostrar el contenido y los recursos de la aplicación.  Puede mostrar las siguientes funciones:
 
-* Comentarios o feedback
-* Acercar o alejar
-* Fase actual o progreso de un documento pendiente
+* Comentarios o comentarios.
+* Acercar o alejar.
+* Fase actual o progreso de un documento pendiente.
 
 ![Consumo de aplicaciones de coautoría y pizarra](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -155,9 +155,9 @@ Acciones rápidas:
 
 En la segunda fase, puede introducir las siguientes acciones:
 
-* Crear un nuevo panel para la colaboración o nuevos documentos para firmar
-* Compartir paneles internamente y también con invitados
-* Configurar permisos de administrador
+* Cree un nuevo panel para la colaboración o nuevos documentos para la firma.
+* Comparta los paneles internamente y también con los invitados.
+* Configure los permisos de administrador.
 
 > [!TIP]
 > Las acciones se exponen, que se pueden mostrar fácilmente en las pantallas pequeñas.
@@ -168,10 +168,10 @@ Habilitación:
 
 En la tercera fase, proporcione una experiencia completa a los usuarios. Puede habilitar la experiencia de los usuarios con las actividades siguientes:
 
-* Agregar texto, formas y notas rápidas
-* Navegar por el contenido
-* Agregar capas y filtros
-* Operaciones de eliminación, deshacer y rehacer
+* Agregar texto, formas y notas rápidas.
+* Navegue por el contenido.
+* Agregue capas y filtros.
+* Operaciones de eliminación, deshacer y rehacer.
 * Acceda a la cámara y al micrófono mediante las API del SDK de JS. Para obtener más información sobre las funcionalidades del dispositivo, consulte [introducción a las funcionalidades del dispositivo](../device-capabilities/device-capabilities-overview.md).
 
 ![Habilitación de aplicaciones de coautoría y pizarra](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)

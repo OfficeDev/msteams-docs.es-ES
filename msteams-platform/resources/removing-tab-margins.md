@@ -1,17 +1,16 @@
 ---
 title: Cambios del margen de pestaña
 author: surbhigupta
-description: Describe cómo la eliminación de márgenes de tabulación mejora la experiencia de creación de aplicaciones.
-keywords: tabulación de relleno de márgenes
+description: En este módulo, obtenga información sobre cómo la eliminación de márgenes de tabulación mejora la experiencia de creación de aplicaciones.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 2bfa74e95a84314e261f8865c5581d4e1738e12a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757188"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143322"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -49,7 +48,7 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 > * El cambio de eliminación del margen de tabulación se aplica a todas las pestañas. No hay ninguna manera de participar o no participar en el cambio.
 > * El cambio de los márgenes de tabulación puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes que rodean su interfaz de usuario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

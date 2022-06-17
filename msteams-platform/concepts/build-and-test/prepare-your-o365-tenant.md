@@ -1,15 +1,14 @@
 ---
 title: Preparar el espacio empresarial de Microsoft 365
-description: Cómo empezar a trabajar con Teams en Microsoft 365
+description: En este módulo, aprenderá a empezar a trabajar con Teams en Microsoft 365 y a crear el entorno de desarrollo.
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: Configurar el inquilino de Microsoft 365 Teams que está cargando
-ms.openlocfilehash: 9e9972a41b6b210b99e7a5ac16fc3665132c3757
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111398"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144393"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar el espacio empresarial de Microsoft 365
 

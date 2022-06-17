@@ -1,17 +1,16 @@
 ---
 title: Aplicaciones para reuniones de Teams
 author: surbhigupta
-description: información general de las aplicaciones en las reuniones de Teams basadas en el rol de participante y usuario
+description: En este artículo, aprenderá cómo funcionan las aplicaciones en Microsoft Teams reuniones basadas en el rol de participante y usuario y la extensibilidad de la aplicación.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: API de rol de participante de usuario de reuniones de aplicaciones de teams
-ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668049"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142510"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para reuniones de Teams
 
@@ -47,4 +46,4 @@ La nueva característica de escenas personalizadas en Modo conferencia permite a
 * [Escenas personalizadas del Modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Habilitar y configurar las aplicaciones para reuniones de Teams](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Ciclo de vida de la reunión](meeting-app-extensibility.md#meeting-lifecycle)
-* [Colaboración mejorada con Live Share SDK](teams-live-share-overview.md)
+* [Colaboración mejorada con el SDK de Live Share](teams-live-share-overview.md)

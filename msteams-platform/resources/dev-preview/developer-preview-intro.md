@@ -1,14 +1,14 @@
 ---
-title: Versión preliminar para desarrolladores
+title: Versión preliminar para desarrolladores públicos para Microsoft Teams
 description: En este artículo, conocerá las características disponibles en la versión preliminar pública para desarrolladores de Microsoft Teams y el manifiesto de la aplicación de la versión preliminar para desarrolladores.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 6a0f053020db1f703de5abf7d64accf5816422c9
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 6efc0681ad15add36ddaf94d3ca89ef931e9f30e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123923"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143987"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Versión preliminar para desarrolladores públicos para Microsoft Teams
 

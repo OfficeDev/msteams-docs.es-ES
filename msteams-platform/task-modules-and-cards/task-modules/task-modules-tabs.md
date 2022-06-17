@@ -1,15 +1,14 @@
 ---
 title: Usar módulos de tareas en pestañas de Microsoft Teams
-description: Explica cómo invocar módulos de tareas desde pestañas de Teams y enviar su resultado mediante el SDK de cliente de Microsoft Teams. Incluye ejemplos de código.
+description: Obtenga información sobre cómo invocar módulos de tareas desde Teams pestañas y enviar su resultado mediante el SDK de cliente de Microsoft Teams. Incluye ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: SDK de cliente de pestañas de teams de módulos de tareas
-ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a55ea89e67bf70254d52791d1ed5f0a1c573e89e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756699"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142069"
 ---
 # <a name="use-task-modules-in-tabs"></a>Uso de módulos de tareas en pestañas
 

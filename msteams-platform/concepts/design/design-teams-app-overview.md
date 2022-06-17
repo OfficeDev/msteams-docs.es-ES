@@ -1,16 +1,16 @@
 ---
 title: Diseño de la aplicación personalizada
 author: heath-hamilton
-description: Aprenda a crear aplicaciones de Microsoft Teams Video. Entre los recursos se incluyen el kit de interfaz de usuario de Microsoft Teams, los procedimientos recomendados, ejemplos y mucho más.
-ms.localizationpriority: high
+description: Obtenga información sobre cómo diseñar Microsoft Teams aplicaciones y recursos, como el kit de interfaz de usuario de Microsoft Teams, los procedimientos recomendados, ejemplos y mucho más.
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 8e417a59e03fbb57905e2a84490888b8f98a5435
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111279"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142881"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Diseño de la aplicación de Microsoft Teams
 

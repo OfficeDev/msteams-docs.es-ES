@@ -1,16 +1,16 @@
 ---
 title: Formatear los mensajes del bot
 author: surbhigupta
-description: Agregue formato enriquecido a los mensajes del bot, como tachado, lista ordenada y desordenada, hipervínculo, vínculo de imagen, etc.
+description: En este módulo, aprenderá a agregar formato enriquecido a los mensajes del bot, como tachado, lista ordenada y desordenada, hipervínculo, vínculo de imagen, etc.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d8697cf25b0cc08f880f8849ea152d1c30d4c146
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111832"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143483"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
@@ -44,17 +44,17 @@ Algunos estilos no se admiten actualmente en todas las plataformas. En la tabla 
 
 | Estilo                     | Mensajes de solo texto | Tarjetas enriquecidas: solo XML |
 | ---                       | :---: | :---: |
-| Negrita                      | ✔ | ✖ |
-| Italic                    | ✔ | ✔ |
-| Encabezado (niveles 1&ndash;3) | ✖ | ✔ |
-| Tachado             | ✖ | ✔ |
-| Regla horizontal           | ✖ | ✖ |
-| Lista no ordenada            | ✖ | ✔ |
-| Lista ordenada              | ✖ | ✔ |
-| Texto con formato previo         | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
-| Vínculo de imagen                | ✔ | ✖ |
+| Negrita                      | ✔️️ | ❌ |
+| Italic                    | ✔️ | ✔️ |
+| Encabezado (niveles 1&ndash;3) | ❌ | ✔️ |
+| Tachado             | ❌ | ✔️ |
+| Regla horizontal           | ❌ | ❌ |
+| Lista no ordenada            | ❌ | ✔️ |
+| Lista ordenada              | ❌ | ✔️ |
+| Texto con formato previo         | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ |
+| Vínculo de imagen                | ✔️ | ❌ |
 
 Después de comprobar la compatibilidad multiplataforma, asegúrese de que la compatibilidad con plataformas individuales también está disponible.
 
@@ -68,17 +68,17 @@ En la tabla siguiente se proporciona una lista de estilos, que se admiten en el 
 
 | Estilo                     | Escritorio | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| Negrita                      | ✔ | ✔ | ✔ |
-| Italic                    | ✔ | ✔ | ✔ |
-| Encabezado (niveles 1&ndash;3) | ✖ | ✖ | ✖ |
-| Tachado             | ✔ | ✔ | ✖ |
-| Regla horizontal           | ✖ | ✖ | ✖ |
-| Lista no ordenada            | ✔ | ✖ | ✖ |
-| Lista ordenada              | ✔ | ✖ | ✖ |
-| Texto con formato previo         | ✔ | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
-| Vínculo de imagen                | ✔ | ✔ | ✔ |
+| Negrita                      | ✔️ | ✔️ | ✔️ |
+| Italic                    | ✔️ | ✔️ | ✔️ |
+| Encabezado (niveles 1&ndash;3) | ❌ | ❌ | ❌ |
+| Tachado             | ✔️ | ✔️ | ❌ |
+| Regla horizontal           | ❌ | ❌ | ❌ |
+| Lista no ordenada            | ✔️ | ❌ | ❌ |
+| Lista ordenada              | ✔️ | ❌ | ❌ |
+| Texto con formato previo         | ✔️ | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ | ✔️ |
+| Vínculo de imagen                | ✔️ | ✔️ | ✔️ |
 
 ### <a name="cards"></a>Tarjetas
 

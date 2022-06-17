@@ -5,12 +5,12 @@ description: Obtenga información sobre los componentes de la interfaz de usuari
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ae2dee58bf19b5400fa162c06a0c73e6137626c2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1c83eea2a16234d869ee031f1a1856d26ba48a25
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123671"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142419"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes básicos de la interfaz de usuario Fluent
 
@@ -23,7 +23,7 @@ En las ilustraciones de esta página se muestra el aspecto de los componentes en
 En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de usuario</a>, el kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para compilar aplicaciones Teams. En el kit de interfaz de usuario, puede capturar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenga el kit de interfaz de usuario de Microsoft Teams (Figma).](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerta
 

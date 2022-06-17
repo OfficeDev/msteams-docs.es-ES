@@ -1,15 +1,14 @@
 ---
 title: Utilizar módulos de tareas en los bots de Microsoft Teams
-description: Cómo utilizar los módulos de tareas con los bots de Microsoft Teams, incluidas las tarjetas de Bot Framework, las tarjetas adaptables y los vínculos profundos.
+description: Aprenda a usar módulos de tareas con bots de Microsoft Teams, incluidas tarjetas de Bot Framework, tarjetas adaptables y vínculos profundos.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: módulos de tareas de los bots de Teams, vínculos profundos, tarjetas adaptables
-ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e7bed83d9f13913b9a72997ac3679f844db3034a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756719"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142986"
 ---
 # <a name="use-task-modules-from-bots"></a>Uso de módulos de tareas desde los bots
 

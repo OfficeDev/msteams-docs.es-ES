@@ -1,16 +1,16 @@
 ---
 title: Apertura de vínculos
 author: surbhigupta
-description: Aprenda a agregar la apertura de enlaces con la extensión de mensajería en una aplicación de Microsoft Teams con el manifiesto de la aplicación o manualmente usando ejemplos y ejemplos de código.
+description: En este módulo, aprenderá a agregar la desurling de vínculos con la extensión de mensajería en una aplicación de Teams con el manifiesto de aplicación o manualmente mediante ejemplos y ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032976"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142818"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 

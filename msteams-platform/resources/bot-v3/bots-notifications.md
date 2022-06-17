@@ -1,18 +1,17 @@
 ---
 title: Control de eventos de bot
-description: Describe cómo controlar eventos en bots para Microsoft Teams
-keywords: eventos de bots de teams
+description: En este módulo, aprenderá a controlar eventos en bots para Microsoft Teams, Teams miembro o adición del bot, miembro del equipo o bot eliminado, etc.
 ms.date: 05/20/2019
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 3b077ce433032d98be66eb9113840701c2a74163
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 30ccb4ee8810154e2b36311d15217205de87b413
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111783"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142762"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Control de eventos de bot en Microsoft Teams
 
@@ -28,7 +27,7 @@ Microsoft Teams envía notificaciones al bot para los cambos o eventos que se su
 
 Cada evento de bot se envía como un objeto `Activity` en el que `messageType` define qué información hay en el objeto. Para los mensajes de tipo `message`, vea [Enviar y recibir mensajes](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Los equipos y los eventos de grupo, que normalmente se desencadenan a partir del tipo `conversationUpdate`, tienen información de eventos de Teams adicional que se transmite como parte del objeto `channelData` y, por lo tanto, el controlador de eventos debe consultar la carga `channelData` de Teams `eventType` y metadatos adicionales específicos del evento.
+Teams y los eventos de grupo, desencadenados fuera del `conversationUpdate` tipo, tienen más Teams información de eventos pasada como parte del objeto y, por lo tanto, el `channelData` controlador de eventos debe consultar la `channelData` carga de la Teams `eventType` y metadatos más específicos del evento.
 
 En la tabla siguiente se enumeran los eventos en los que el bot puede recibir y ejecutar acciones.
 
@@ -45,7 +44,7 @@ En la tabla siguiente se enumeran los eventos en los que el bot puede recibir y 
 
 ## <a name="team-member-or-bot-addition"></a>Adición de miembro del equipo o bot
 
-El evento [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) se envía al bot cuando recibe información sobre las actualizaciones de suscripción de los equipos donde se ha agregado. También recibe una actualización cuando se ha agregado por primera vez, específicamente para conversaciones personales. Tenga en cuenta que la información de usuario (`Id`) es única para el bot y se puede almacenar en caché para su uso futuro por el servicio, como enviar un mensaje a un usuario específico.
+El evento [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) se envía al bot cuando recibe información sobre las actualizaciones de suscripción de los equipos donde se ha agregado. También recibe una actualización cuando se ha agregado por primera vez, específicamente para conversaciones personales. La información de usuario (`Id`) es única para el bot y puede almacenarse en caché para su uso futuro por el servicio, como, por ejemplo, enviar un mensaje a un usuario específico.
 
 ### <a name="bot-or-user-added-to-a-team"></a>Bot o usuario agregado a un equipo
 
@@ -323,7 +322,7 @@ El evento `conversationUpdate` con el objeto `membersRemoved` de la carga se env
 > [!NOTE]
 > No hay ninguna funcionalidad para consultar todos los nombres del equipo y no se devuelve el nombre de equipo en las cargas de otros eventos.
 
-El bot recibe una notificación cuando se cambia el nombre del equipo en el que se encuentra. Recibe un evento `conversationUpdate` con `eventType.teamRenamed` en el objeto `channelData`. Tenga en cuenta que no hay notificaciones para la creación o eliminación de equipos, ya que los bots solo existen como parte de los equipos y no tienen visibilidad fuera del ámbito en el que se han agregado.
+El bot recibe una notificación cuando se cambia el nombre del equipo en el que se encuentra. Recibe un evento `conversationUpdate` con `eventType.teamRenamed` en el objeto `channelData`. Tenga en cuenta que no hay ninguna notificación para la creación o eliminación de equipos, ya que los bots solo existen como parte de los equipos y no tienen visibilidad fuera del ámbito en el que se han agregado.
 
 ### <a name="schema-example-team-renamed"></a>Ejemplo de esquema: se ha cambiado el nombre del equipo
 
@@ -450,7 +449,7 @@ Los eventos de canal son los siguientes:
 
 ## <a name="reactions"></a>Reacciones
 
-El evento `messageReaction` se envía cuando un usuario agrega o quita su reacción a un mensaje enviado originalmente por su bot. `replyToId` contiene el identificador del mensaje específico.
+El `messageReaction` evento se envía cuando un usuario agrega o quita su reacción a un mensaje, que fue enviado originalmente por el bot. `replyToId` contiene el identificador del mensaje específico.
 
 ### <a name="schema-example-a-user-likes-a-message"></a>Ejemplo de esquema: a un usuario le gusta un mensaje
 

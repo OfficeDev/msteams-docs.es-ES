@@ -1,17 +1,17 @@
 ---
 title: Información general del kit de herramientas de Teams
 author: zyxiaoyuer
-description: Información general sobre el kit de herramientas de Teams, instalación del kit y paseo por las características del kit
+description: En este módulo, aprenderá Teams Toolkit, Instalación de Teams Toolkit y Recorrido del usuario de Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: f0c09d605e63118755f28804689aa6659ebbb657
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: 529d7b6e18bf9ff0f28bb2230358f25f95b9e3db
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759672"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142202"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
 

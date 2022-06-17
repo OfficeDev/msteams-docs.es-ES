@@ -1,15 +1,14 @@
 ---
 title: Obtener contexto para su pestaña
-description: Describe cómo obtener el contexto del usuario para las pestañas
+description: En este módulo, aprenderá a obtener el contexto del usuario en las pestañas, el contexto de usuario y la información del contexto de acceso.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: contexto de usuario de las pestañas de Teams
-ms.openlocfilehash: 0539f1dc3f31a2b068e80b4ff12b93a26e09b766
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757363"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142314"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -170,7 +169,7 @@ El `theme` argumento de la función es una cadena con un valor de `default`, `da
 > [!div class="nextstepaction"]
 > [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Directrices de diseño de pestañas](../../tabs/design/tabs.md)
 * [Pestañas de Teams](~/tabs/what-are-tabs.md)

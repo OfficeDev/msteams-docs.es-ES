@@ -1,17 +1,16 @@
 ---
 title: Compilar aplicaciones con el kit de herramientas de Teams y Visual Studio
-description: Empiece a compilar grandes aplicaciones personalizadas directamente en Visual Studio con el Microsoft Teams Toolkit. Aprenda a configurar su aplicación en Visual Studio, a validarla y a publicarla desde Visual Studio y el portal para desarrolladores.
-keywords: kit de herramientas de Visual Studio para Teams
+description: Aprenda a crear aplicaciones personalizadas directamente en Visual Studio con Teams Toolkit y aprenda a configurar la aplicación en Visual Studio, validarla y mucho más.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: aa7fdaad1d56966031eb13b6b05f145c8e734988
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756460"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142048"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Kit de herramientas de Teams para Visual Studio
 

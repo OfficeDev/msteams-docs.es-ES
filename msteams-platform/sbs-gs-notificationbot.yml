@@ -2,7 +2,7 @@
 title: Crear un bot de notificaciones con JavaScript
 metadata:
   title: Crear un bot de notificaciones con JavaScript
-  description: En este tutorial, aprenderá a enviar notificaciones con JavaScript.
+  description: En este tutorial, aprenderá a enviar notificaciones con JavaScript mediante la creación de un nuevo bot de notificación con Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 05/04/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Volver a agregar funcionalidad
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: eed4bc57a2147b0bfc2bad602d716ad9c387988f
-  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+  ms.openlocfilehash: a341b5ae5e7eb4e3a1f9c9630b24fe8b8f805bad
+  ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/16/2022
-  ms.locfileid: "66124056"
+  ms.lasthandoff: 06/17/2022
+  ms.locfileid: "66143070"
 items:
 - durationInMinutes: 1
   content: >

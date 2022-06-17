@@ -1,17 +1,17 @@
 ---
 title: Interfaz de línea de comandos de TeamsFx
 author: MuyangAmigo
-description: Describe la interfaz de la línea de comandos de TeamsFx
+description: En este módulo, obtenga información sobre la biblioteca TeamsFx, la interfaz de línea de comandos de TeamsFx, los comandos admitidos y sus escenarios.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f26593c409f0b2f7d64093fa90e65afebd27c0ec
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: d269da398280f51a3225414f279a25fcd5d9d7cf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123797"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142076"
 ---
 # <a name="teamsfx-library"></a>Biblioteca de TeamsFx
 
@@ -130,8 +130,8 @@ En la tabla siguiente se enumeran las cuentas de servicio en la nube, como Azure
 
 | Comando | Descripción |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | Iniciar sesión en el servicio en la nube seleccionado. Las opciones de servicio son M365 o Azure. |
-| `teamsfx account logout <service>`  | Cerrar sesión en el servicio en la nube seleccionado. Las opciones de servicio son M365 o Azure. |
+| `teamsfx account login <service>`  | Iniciar sesión en el servicio en la nube seleccionado. Las opciones de servicio son Microsoft 365 o Azure. |
+| `teamsfx account logout <service>`  | Cerrar sesión en el servicio en la nube seleccionado. Las opciones de servicio son Microsoft 365 o Azure. |
 | `teamsfx account set --subscription` | Actualizar la configuración de la cuenta para establecer un identificador de suscripción. |
 
 ## `teamsfx env`
@@ -378,7 +378,7 @@ En la lista siguiente se proporcionan los permisos necesarios para los `TeamsFx`
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * Para iniciar sesión en la cuenta de Microsoft 365 y de Azure:
+    * Para iniciar sesión en Microsoft 365 cuenta y cuenta de Azure:
 
       ```bash
       teamsfx account login azure
@@ -412,13 +412,13 @@ En la lista siguiente se proporcionan los permisos necesarios para los `TeamsFx`
   * Como colaborador de proyecto:
 
     * Clone el proyecto desde GitHub.
-    * Inicie sesión en la cuenta de Microsoft 365. Asegúrese de que se agrega la misma cuenta de Microsoft 365:
+    * Inicie sesión en Microsoft 365 cuenta. Asegúrese de que se agrega la misma cuenta de Microsoft 365:
 
       ```bash
       teamsfx account login Microsoft 365
       ```
 
-    * Inicie sesión en la cuenta de Azure con permiso de colaborador para todos los recursos de Azure.
+    * Inicie sesión en la cuenta de Azure con el permiso de colaborador para todos los recursos de Azure.
 
       ```bash
       teamsfx account login azure

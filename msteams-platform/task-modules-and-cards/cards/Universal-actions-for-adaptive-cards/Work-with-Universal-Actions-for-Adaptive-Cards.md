@@ -1,14 +1,14 @@
 ---
 title: Trabajar con acciones universales para tarjetas adaptables
-description: Aprenda a trabajar con las acciones universales para Tarjetas adaptables, incluido el esquema de UniversalActions para tarjetas adaptables, el modelo de actualización y la compatibilidad con versiones anteriores mediante ejemplos de código.
+description: Aprenda a trabajar con las acciones universales para tarjetas adaptables, incluido el esquema para UniversalActions para tarjetas adaptables, el modelo de actualización y la compatibilidad con versiones anteriores.
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 768458b1bd7cad77288d1e8e0be5b231fd331891
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 17dd7fd611c593c3f5de0237e0aa61885ac630c0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110277"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143882"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Trabajar con Acciones universales para tarjetas adaptables
 
@@ -25,7 +25,7 @@ Las acciones universales para tarjetas adaptables proporcionan una manera de imp
 2. Agregue una cláusula `refresh` a su tarjeta adaptable si quiere usar el modelo de actualización automática o si su escenario requiere vistas específicas del usuario.
 
     >[!NOTE]
-    > Especifique la propiedad `userIds` que se va a identificar, qué usuarios obtienen actualizaciones automáticas.
+    > Especifique la `userIds` propiedad para identificar qué usuarios obtienen actualizaciones automáticas.
 
 3. Controle `adaptiveCard/action` las solicitudes de invocación en su bot.
 4. Use el contexto de la solicitud de invocación para responder con tarjetas creadas para un usuario.
@@ -68,7 +68,7 @@ Estas son las características de UserIds en la actualización:
 
 * UserIds es una matriz de MRI de usuario, que forma parte de la propiedad `refresh` en Tarjetas adaptables.
 
-* Si la lista de propiedad`userIds` se especifica como `userIds: []` en la sección de actualización de la tarjeta, la tarjeta no se actualiza automáticamente. En su lugar, se muestra al usuario una opción **Actualizar tarjeta** en el menú de puntos triples en la web o el escritorio, y en el menú contextual de larga duración en dispositivos móviles, es decir, Android o iOS para actualizar manualmente la tarjeta.
+* Si la lista de propiedad`userIds` se especifica como `userIds: []` en la sección de actualización de la tarjeta, la tarjeta no se actualiza automáticamente. En su lugar, se muestra al usuario una opción **Actualizar tarjeta** en el menú de punto triple de Teams cliente web o escritorio y en el menú contextual de prensa larga de Teams móvil, es decir, Android o iOS para actualizar manualmente la tarjeta. Como alternativa, puede optar por omitir `userIds` la propiedad de actualización por completo en caso de que el escenario implique <=60 miembros en Teams canales o chats de grupo. El cliente Teams invoca automáticamente llamadas de actualización para todos los usuarios si el grupo o canal tiene <=60 usuarios.
 
 * Se ha agregado la propiedad UserIds porque los canales de Teams pueden incluir un gran número de miembros. Si todos los miembros ven el canal al mismo tiempo, una actualización automática incondicional da como resultado muchas llamadas simultáneas al bot. La propiedad `userIds` siempre debe incluirse para identificar qué usuarios deben obtener una actualización automática con un máximo de *60 (sesenta) MRI de usuario*.
 
@@ -116,7 +116,7 @@ Para obtener más información, consulte [compatibilidad con versiones anteriore
 |Ejemplo de nombre | Descripción | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot de servicio de alimentos de Teams | Cree un bot que acepte pedidos de alimentos mediante el uso de tarjetas adaptables. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Aún no disponible |
-| Tarjetas adaptables de flujos de trabajo secuenciales | Demostrar cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y Tarjetas adaptables actualizadas en bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Tarjetas adaptables de flujos de trabajo secuenciales | Demostrar cómo implementar flujos de trabajo secuenciales, vistas específicas del usuario y Tarjetas adaptables actualizadas en bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) .|
 
 ## <a name="see-also"></a>Consulte también
 

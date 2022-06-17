@@ -5,13 +5,12 @@ description: Presente los elementos de la planificación de una aplicación, com
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: puntos de entrada extensibilidad casos de uso capacidad del dispositivo
-ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602253"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142426"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -21,9 +20,9 @@ En esencia, Teams es una plataforma de colaboración. También es una plataforma
 
 En esta sección, aprenderá a:
 
-* Identificar y asignar los casos de uso a las características de los equipos
-* Usar la lista de comprobación de la planificación
-* Planificar más allá de la implementación de la aplicación
+* Identificar y asignar los casos de uso a las características de los equipos.
+* Usar la lista de comprobación de la planificación.
+* Planificar más allá de la implementación de la aplicación.
 
 ## <a name="plan-with-teams"></a>Planificar con Teams
 

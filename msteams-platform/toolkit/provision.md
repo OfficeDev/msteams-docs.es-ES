@@ -1,17 +1,17 @@
 ---
 title: usar el kit de herramientas de Teams para aprovisionar recursos en la nube
 author: MuyangAmigo
-description: Aprovisionar recursos en la nube
+description: En este módulo, aprenderá a aprovisionar recursos en la nube mediante Teams Toolkit, creación de recursos y personalización del aprovisionamiento de recursos.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6ab903ab731e3fe90161d2873f0ca8be5ed284fa
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1c4232cfe51ae900414f474bcdd05c9a67d5c4c6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757461"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144120"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>usar el kit de herramientas de Teams para aprovisionar recursos en la nube
 

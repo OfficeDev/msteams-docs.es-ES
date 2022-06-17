@@ -1,15 +1,14 @@
 ---
 title: Introducción a App Studio para Microsoft Teams
-description: Comience a crear aplicaciones increíbles en Microsoft Teams a través de App Studio
-keywords: introducción a app studio de teams
+description: En este módulo, aprenderá a compilar y administrar las aplicaciones con App Studio para Microsoft Teams e instalar App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 65c6ad9d5f4eafef80e2ec75d95d9d4a5ff1694b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3cfef6db34c9754ac42b2af3ce153ba9374fdff1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757076"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143455"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administrar las aplicaciones con App Studio para Microsoft Teams
 
@@ -27,7 +26,7 @@ Con App Studio, puede crear o integrar sus propias aplicaciones de Microsoft Tea
 
 ## <a name="installing-app-studio"></a>Instalación de App Studio
 
-App Studio es una aplicación de Teams que puede encontrar en la tienda de Teams. Siga este vínculo para descargar directamente [App Studio](https://aka.ms/InstallTeamsAppStudio). También puede encontrar la aplicación en la tienda de aplicaciones.
+App Studio es una aplicación de Teams que se puede encontrar en la tienda de Teams. Siga este vínculo para descargar directamente [App Studio](https://aka.ms/InstallTeamsAppStudio). También puede encontrar la aplicación en la tienda de aplicaciones.
 
 En la tienda, busque App Studio.
 
@@ -41,7 +40,7 @@ Haga clic en **Instalar**.
 
 ![app studio](~/assets/images/get-started/teamsappstudio.png)
 
-Una vez en App Studio, haga clic en la pestaña **Editor de manifiesto**, donde podrá importar una aplicación existente o crear una nueva.
+Una vez que esté en App Studio, seleccione en la pestaña **Editor de manifiestos** , donde puede importar una aplicación existente o crear una nueva aplicación.
 
 ## <a name="app-studio-features"></a>Características de App Studio
 
@@ -55,11 +54,11 @@ Aquí puede ver el aspecto en Teams de las [tarjetas que puede crear en App Stud
 
 Como se indicó anteriormente, la parte más importante de un paquete de aplicaciones de Microsoft Teams es su archivo manifest.json. Este archivo, que debe cumplir con el [esquema de Teams App](~/resources/schema/manifest-schema.md), contiene metadatos que permiten a Teams presentar correctamente la aplicación a los usuarios.
 
-La pestaña Editor de manifiesto en App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de la aplicación y generar un archivo .zip que puede cargarse fácilmente en Teams para realizar pruebas o distribuirlo para que otros usuarios lo puedan usar. Tenga en cuenta que App Studio no genera código funcional para la aplicación ni hospeda la aplicación. Para que el proceso de carga de la aplicación dé como resultado una aplicación correcta, su aplicación debe estar hospedada y ejecutándose en la dirección URL que aparece en el manifiesto.
+La pestaña Editor de manifiestos de App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de la aplicación y generar un archivo .zip, que se puede cargar fácilmente en Teams para probar o distribuir para que otros usuarios lo usen. Tenga en cuenta que App Studio no genera código funcional para la aplicación ni hospeda la aplicación. Para que el proceso de carga de la aplicación dé como resultado una aplicación correcta, su aplicación debe estar hospedada y ejecutándose en la dirección URL que aparece en el manifiesto.
 
 #### <a name="details"></a>Detalles
 
-La sección de detalles del Editor de manifiesto define la descripción de alto nivel de la aplicación que va a realizar. Esto incluye aspectos como el nombre, la descripción y la marca visual de la aplicación. Puede generar automáticamente un GUID para la aplicación y proporcionar direcciones URL para su declaración de privacidad y condiciones de uso.
+La sección de detalles del Editor de manifiestos define la descripción de alto nivel de la aplicación que está realizando. Esto incluye aspectos como el nombre, la descripción y la marca visual de la aplicación. Puede generar automáticamente un GUID para la aplicación y proporcionar direcciones URL para su declaración de privacidad y condiciones de uso.
 
 #### <a name="capabilities"></a>Capacidades
 
@@ -70,7 +69,7 @@ La sección de funciones del Editor de manifiesto es donde están definidas las 
 
 ##### <a name="tabs"></a>Pestañas
 
-* **Pestañas del equipo.** Una pestaña de equipo forma parte de un canal y proporciona acceso rápido a la información y los recursos del equipo. Por ejemplo, la pestaña Planificador de un canal contiene un único plan; la pestaña Power BI se asigna a un informe específico. Los usuarios pueden explorar en profundidad el contexto correspondiente, pero no deberían poder navegar fuera de la pestaña. La pestaña Power BI, por ejemplo, no habilita la navegación a otros informes de Power BI, aunque habilita el botón *Ir al sitio web*, que inicia el informe en el sitio web principal de Power BI.
+* **Pestañas del equipo.** Una pestaña de equipo forma parte de un canal y proporciona acceso rápido a la información y los recursos del equipo. Por ejemplo, la pestaña Planificador de un canal contiene un único plan; la pestaña Power BI se asigna a un informe específico. Los usuarios pueden explorar en profundidad el contexto pertinente, pero no deben poder navegar fuera de la pestaña. La pestaña Power BI, por ejemplo, no permite la navegación a otros informes de Power BI, pero sí habilita el botón *Ir al sitio web* que inicia el informe en el sitio web principal de Power BI.
 
   Para las pestañas de equipo, debe proporcionar una *Configuración de dirección URL* para presentar opciones y recopilar información para que los usuarios puedan personalizar el contenido y la experiencia de su pestaña. Esta página HTML aumentada se muestra cuando un usuario primero agrega la pestaña a un canal.
 
@@ -82,22 +81,22 @@ La sección de funciones del Editor de manifiesto es donde están definidas las 
 
 Esta sección le permite agregar un [bot de conversación](~/bots/what-are-bots.md) a la aplicación. Si ya tiene un bot registrado con Bot Framework, puede agregarlo haciendo clic en *Configurar* y suministrando el nombre del bot, el id. de Bot Framework y definiendo los ámbitos en los que funcionará el bot.
 
-Si todavía no ha registrado ningún bot con Bot Framework, haga clic en **Registrarse** para crear uno nuevo. Cuando haya terminado de registrar el bot, vuelva a esta sección del Editor de manifiesto para escribir su nombre y el id. de Bot Framework.
+Si aún no ha registrado un bot con Bot Framework, seleccione **Registrar** para crear uno nuevo. Cuando haya terminado de registrar el bot, vuelva a esta sección del Editor de manifiesto para escribir su nombre y el id. de Bot Framework.
 
-Después de proporcionar la información del bot, ahora puede definir opcionalmente una lista de comandos que el bot puede sugerir a los usuarios. Agregue el nombre del comando, una descripción del comando que indique su sintaxis y argumentos, y el ámbito al que debe aplicarse este comando.
+Después de proporcionar la información del bot, ahora puede definir opcionalmente una lista de comandos que el bot puede sugerir a los usuarios. Agregue el nombre del comando, una descripción del comando, que indica su sintaxis y argumentos, y los ámbitos a los que se debe aplicar este comando.
 
 > [!NOTE]
 > Si ha definido el bot para que solo admita un ámbito, se omiten los comandos especificados para el ámbito no admitido. Puede editar el ámbito con el que admite el bot en cualquier momento.
 
 ##### <a name="connectors"></a>Conectores
 
-Esta sección le permite agregar un conector a la aplicación. Si ya registró un Conector de Office 365, elija **Configurar** y escriba el nombre y el id. del conector. Si desea un conector nuevo haga clic en **Registrarse** para ir al Panel del desarrollador de conectores en el explorador.
+Esta sección le permite agregar un conector a la aplicación. Si ya registró un Conector de Office 365, elija **Configurar** y escriba el nombre y el id. del conector. Si desea un nuevo conector, seleccione **Registrar** para ir al panel del desarrollador del conector en el explorador.
 
 ##### <a name="message-extensions"></a>Extensiones de mensaje
 
 [Las extensiones de](~/messaging-extensions/what-are-messaging-extensions.md) mensaje son una manera eficaz de que los usuarios interactúen con la aplicación dentro de Microsoft Teams. Los usuarios pueden consultar la información desde su servicio y publicar esa información en forma de tarjetas, directamente en el canal o en la conversación del chat.
 
-Las extensiones de mensaje tienen tecnología de bots de Bot Framework, por lo que requieren un bot configurado para funcionar. Si tiene el nombre y el identificador de Bot Framework del bot que le gustaría potenciar la extensión del mensaje, escriba esta. De lo contrario, haga clic en **Registrarse** para crear uno e introduzca la información después. Seleccione si el usuario puede actualizar la configuración de una extensión de mensaje.
+Las extensiones de mensaje tienen tecnología de bots de Bot Framework, por lo que requieren un bot configurado para funcionar. Si tiene el nombre y el identificador de Bot Framework del bot que le gustaría potenciar la extensión del mensaje, escriba esta. De lo contrario, seleccione **Registrar** para crear uno y escriba la información posteriormente. Seleccione si el usuario puede actualizar la configuración de una extensión de mensaje.
 
 Una vez configurado el bot subyacente, defina los comandos y parámetros que puede aceptar la extensión de mensaje.
 
@@ -112,7 +111,7 @@ Cada comando necesita un título y un id. De manera opcional, el comando puede c
 
 #### <a name="test-and-distribute"></a>Prueba y distribución
 
-Una vez que haya terminado de definir la aplicación, la sección Prueba y distribución le permite exportar la definición de la aplicación como un archivo zip que puede compartir y cargar en el cliente de Teams para realizar pruebas. Al hacer clic en exportar, se descarga el archivo zip *nombredeapp.zip* en el directorio de descarga predeterminado.
+Una vez que haya terminado de definir la aplicación, la sección Prueba y distribución le permite exportar la definición de la aplicación como un archivo ZIP, que luego se puede compartir y cargar en el cliente de Teams para realizar pruebas. Al hacer clic en exportar, se descarga el archivo zip *nombredeapp.zip* en el directorio de descarga predeterminado.
 
 ##### <a name="publish-your-app-to-teams"></a>Publicar la aplicación en Teams
 
@@ -131,7 +130,7 @@ Si ya tiene una tarjeta que le gustaría comprobar dentro de Teams, puede pegar 
 >[!Note]
 > Esta biblioteca de control de React está en desuso en el futuro. Considere la posibilidad de usar los [controles react de Fluent-UI como alternativa](https://microsoft.github.io/fluent-ui-react/) a la interfaz de usuario de Stardust anteriormente.
 
-Crear una aplicación que siga los procedimientos recomendados de Teams es una forma ideal de proporcionar a la aplicación una apariencia que se ajuste perfectamente a la experiencia del cliente de Teams. Los controles de la interfaz de usuario que use son fundamentales para lograr ese fin. Para facilitar la creación de una interfaz de usuario coherente, App Studio proporciona varias categorías de controles de interfaz de usuario que siguen los principios de diseño de Teams.
+Crear una aplicación que siga los procedimientos recomendados de Teams es una forma ideal de proporcionar a la aplicación una apariencia que se ajuste perfectamente a la experiencia del cliente de Teams. Los controles de la interfaz de usuario que use son fundamentales para lograr ese fin. Para facilitar la creación de una interfaz de usuario coherente, App Studio proporciona varias categorías de controles de interfaz de usuario, que siguen Teams principios de diseño.
 
 Se proporcionan ejemplos de los controles y los componentes correspondientes de React y están listos para usar para crear la aplicación.
 
