@@ -3,12 +3,12 @@ title: Crear vínculos profundos
 description: Obtenga información sobre cómo crear vínculos profundos y cómo usarlos y navegar por ellos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123720"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150683"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -91,7 +91,7 @@ Como alternativa, también puede generar vínculos profundos mediante programaci
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Consumir un vínculo profundo desde una pestaña
 
-Al navegar a un vínculo profundo, Microsoft Teams simplemente navega a la pestaña y proporciona un mecanismo a través de la biblioteca JavaScript de Microsoft Teams para recuperar el identificador de la subentidad si existe.
+Al navegar a un vínculo profundo, Microsoft Teams simplemente navega a la pestaña y proporciona un mecanismo a través de la biblioteca JavaScript de Teams para recuperar el identificador de la subentidad si existe.
 
 La llamada [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) (`microsoftTeams.getContext()`) en TeamsJS v1) devuelve una promesa que se resolverá con el contexto que incluye la propiedad `subPageId` (subEntityId para TeamsJS v1) si la pestaña se navega a través de un vínculo profundo. Para obtener más información, vea [la interfaz PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -109,7 +109,7 @@ Use el formato siguiente para un vínculo profundo que puede usar en un bot, con
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Si el bot envía un mensaje que contiene un `TextBlock` con un vínculo profundo, se abre una nueva pestaña del explorador cuando el usuario selecciona el vínculo. Esto sucede en Chrome y en la aplicación de escritorio de Microsoft Teams, ejecutados en Linux.
+> Si el bot envía un mensaje que contiene un `TextBlock` con un vínculo profundo, se abre una nueva pestaña del explorador cuando el usuario selecciona el vínculo. Esto sucede en Chrome y en la aplicación de escritorio de Teams, ejecutados en Linux.
 > Si el bot envía la misma dirección URL de vínculo profundo a un `Action.OpenUrl`, la pestaña Teams se abre en la pestaña actual del explorador cuando el usuario selecciona el vínculo. No se abre una nueva pestaña del explorador.
 
 <!--- TBD: Edit this article.
@@ -446,7 +446,7 @@ Estos son los parámetros de consulta:
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Vínculo profundo que consume el id. de subentidad  |Aplicación de ejemplo de Microsoft Teams para mostrar el vínculo profundo del chat del bot a la pestaña que consume el identificador de subentidad.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Vínculo profundo que consume el id. de subentidad  | Aplicación de ejemplo de Teams para mostrar el vínculo profundo del chat del bot a la pestaña que consume el identificador de subentidad.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>Consulte también
 

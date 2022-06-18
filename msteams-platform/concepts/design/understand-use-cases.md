@@ -1,16 +1,16 @@
 ---
 title: Descripción de los casos de uso y las características de Teams de la aplicación
 author: heath-hamilton
-description: En este artículo, obtendrá información sobre las funcionalidades de la aplicación Microsoft Teams, planeará la aplicación de Teams, comprenderá al usuario de la aplicación y sus necesidades, entenderá los problemas de usuario que resolvería la aplicación Teams y planeará la autenticación de usuario y su experiencia de incorporación.
+description: En este artículo, aprenderá las funcionalidades de la aplicación Microsoft Teams, planeará y comprenderá las características y la aplicación de Teams, así como los problemas de usuario que resolvería la aplicación de Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: c2fc61024a9f0c2d9bcf21b549e226b0d264305d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104381"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142475"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 

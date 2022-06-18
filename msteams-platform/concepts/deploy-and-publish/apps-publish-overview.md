@@ -5,12 +5,12 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0efbc1e18d7cec6324ecc4cbec762d7b94c32511
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123534"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150802"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribución de la aplicación de Microsoft Teams
 
@@ -22,7 +22,7 @@ Configure las opciones de instalación predeterminadas. Por ejemplo, si la funci
 
 ## <a name="create-your-app-package"></a>Crear el paquete de aplicación
 
-Para distribuir la aplicación de Microsoft Teams, debe tener un paquete de aplicación válido.  Un paquete de aplicación es un archivo ZIP que contiene un **manifiesto** e **iconos de aplicación**.
+Para distribuir la aplicación de Teams, debe tener un paquete de aplicación válido.  Un paquete de aplicación es un archivo ZIP que contiene un **manifiesto** e **iconos de aplicación**.
 
 ## <a name="upload-your-app-in-teams"></a>Cargar la aplicación en Microsoft Teams
 

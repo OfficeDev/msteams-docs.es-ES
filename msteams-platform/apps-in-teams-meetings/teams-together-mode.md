@@ -3,12 +3,12 @@ title: Escenas personalizadas del Modo conferencia
 description: Trabajar con escenas personalizadas del Modo conferencia
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736870"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150648"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -24,7 +24,7 @@ El siguiente proceso proporciona información general para crear una aplicación
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Crear una aplicación solo de escena" border="false":::
 
-Una aplicación solo de escena sigue siendo una aplicación en Microsoft Teams. El Estudio de escenas se ocupa de la creación de paquetes de aplicaciones en segundo plano. Varias escenas de un único paquete de aplicación aparecen como una lista plana para los usuarios.
+Una aplicación solo de escena sigue siendo una aplicación en Teams. El Estudio de escenas se ocupa de la creación de paquetes de aplicaciones en segundo plano. Varias escenas de un único paquete de aplicación aparecen como una lista plana para los usuarios.
 
 > [!NOTE]
 > Los usuarios no pueden iniciar el Modo conferencia desde el móvil. Sin embargo, después de que un usuario se una a la reunión a través de un dispositivo móvil y se active el Modo conferencia desde el escritorio, los usuarios de móviles que hayan activado el vídeo aparecerán en Modo conferencia en el escritorio.
@@ -34,7 +34,7 @@ Una aplicación solo de escena sigue siendo una aplicación en Microsoft Teams.
 Debe tener una comprensión básica de lo siguiente para usar escenas personalizadas del Modo conferencia:
 
 * Definir la escena y los puestos de una escena.
-* Tener una cuenta de Desarrollador de Microsoft y familiarizarse con el [Portal para desarrolladores](../concepts/build-and-test/teams-developer-portal.md) de Microsoft Teams y App Studio.
+* Tener una cuenta de Desarrollador de Microsoft y familiarizarse con el [Portal para desarrolladores](../concepts/build-and-test/teams-developer-portal.md) de Teams y App Studio.
 * Comprender el [concepto de instalación de prueba de aplicaciones](../concepts/deploy-and-publish/apps-upload.md).
 * Asegurarse de que el administrador haya concedido permiso para [**Cargar una aplicación personalizada**](../concepts/deploy-and-publish/apps-upload.md) y seleccionar todos los filtros como parte de las directivas de reunión y configuración de aplicación respectivamente.
 
@@ -50,7 +50,7 @@ Tenga en cuenta las siguientes prácticas al crear escenas:
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Crear una escena con Estudio de escenas
 
-Microsoft tiene un Estudio de escenas que le permite crear escenas. Está disponible en [Editor de escenas - Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/scenes). Este documento hace referencia a Estudio de escenas en el Portal para desarrolladores de Microsoft Teams. La interfaz y las funcionalidades son exactamente las mismas que las del Diseñador de escenas en App Studio.
+Microsoft tiene un Estudio de escenas que le permite crear escenas. Está disponible en [Editor de escenas - Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/scenes). Este documento hace referencia a Estudio de escenas en el Portal para desarrolladores de Teams. La interfaz y las funcionalidades son exactamente las mismas que las del Diseñador de escenas en App Studio.
 
 Una escena en el contexto del Estudio de escenas es un artefacto que contiene los siguientes elementos:
 
@@ -106,9 +106,9 @@ Para crear una escena con Estudio de escenas, siga estos pasos:
 
     ![Asignar lugar](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. Seleccione **Guardar** y **Ver en Teams** para probar rápidamente la escena en Microsoft Teams.
+1. Seleccione **Guardar** y **Ver en Teams** para probar rápidamente la escena en Teams.
 
-    * Al seleccionar **Ver en Teams** creará automáticamente una aplicación de Microsoft Teams que se pueda ver en la página **Aplicaciones** del portal para desarrolladores de Teams.
+    * Al seleccionar **Ver en Teams** creará automáticamente una aplicación de Teams que se pueda ver en la página **Aplicaciones** del portal para desarrolladores de Teams.
     * Al seleccionar **Ver en Teams** creará automáticamente un paquete de aplicaciones que en realidad es appmanifest.json. Puede ir a **Aplicaciones** desde el menú y acceder al paquete de aplicaciones creado automáticamente.
     * Para eliminar una escena que creó, seleccione **Eliminar escena** en la barra superior.
 
@@ -217,7 +217,7 @@ Para seleccionar escenas y activar escenas personalizadas en Modo conferencia, s
 1. Crear una nueva reunión de prueba.
 
     >[!NOTE]
-    > Al seleccionar **Vista previa** en Estudio de escenas, la escena se instalará como una aplicación en Microsoft Teams. Este es el modelo para que un desarrollador pruebe las escenas de Estudio de escenas. Después de que una escena se haya enviado como una aplicación, los usuarios verán estas escenas en la galería de escenas.
+    > Al seleccionar **Vista previa** en Estudio de escenas, la escena se instalará como una aplicación en Teams. Este es el modelo para que un desarrollador pruebe las escenas de Estudio de escenas. Después de que una escena se haya enviado como una aplicación, los usuarios verán estas escenas en la galería de escenas.
 
 1. En la lista desplegable **Galería** de la esquina superior izquierda, seleccione **Modo conferencia**. Aparece el cuadro de diálogo **Selector** y la escena que se agrega está disponible.
 

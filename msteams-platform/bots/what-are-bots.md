@@ -1,16 +1,16 @@
 ---
 title: Bots en Microsoft Teams
 author: surbhigupta
-description: Introducción a los bots en Microsoft Teams.
+description: Con esta ruta de aprendizaje, empiece a trabajar con bots conversacionales en Microsoft Teams y sus ejemplos de código.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602295"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150844"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots en Microsoft Teams
 
@@ -18,7 +18,7 @@ Un bot también se conoce como bot de chat o bot de conversación. Es una aplica
 
 > [!IMPORTANT]
 > Actualmente, los bots están disponibles en Government Community Cloud (GCC) y GCC-High, pero no en el Departamento de defensa (DOD).
-> 
+>
 > Las aplicaciones de bots en Microsoft Teams están disponibles en GCC-High a través de [Azure Bot Service](/azure/bot-service/channel-connect-teams).
 
 Los bots de conversación permiten que los usuarios interactúen con el servicio web mediante texto, tarjetas interactivas y módulos de tareas.
@@ -43,9 +43,9 @@ El bot requiere información contextual, como los detalles del perfil de usuario
 
 Puede enviar y recibir archivos a través del bot mediante Graph API o las API de bot de Teams. Vea [enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md).
 
-La limitación de velocidad se usa para optimizar los bots que se usan para la aplicación de Teams. Para proteger Microsoft Teams y a sus usuarios, las API del bot proporcionan un límite de velocidad para las solicitudes entrantes. Consulte [optimizar el bot con limitación de velocidad en Teams](~/bots/how-to/rate-limit.md).
+La limitación de velocidad se usa para optimizar los bots que se usan para la aplicación de Teams. Para proteger Teams y a sus usuarios, las API del bot proporcionan un límite de velocidad para las solicitudes entrantes. Consulte [optimizar el bot con limitación de velocidad en Teams](~/bots/how-to/rate-limit.md).
 
-Con las API para llamadas y reuniones en línea de Microsoft Graph, las aplicaciones de Microsoft Teams ya pueden interactuar con los usuarios mediante voz y vídeo. Consulte [bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+Con Microsoft Graph API para llamadas y reuniones en línea, las aplicaciones de Teams ya pueden interactuar con los usuarios mediante voz y vídeo. Consulte [llamadas y bots de reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 Puede usar las API de bot de Teams para obtener información de miembros de un chat o equipo. Vea [cambios en las API de bot de Teams para capturar miembros del equipo o chat](~/resources/team-chat-member-api-changes.md).
 
