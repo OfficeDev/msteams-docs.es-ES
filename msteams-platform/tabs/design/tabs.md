@@ -1,17 +1,17 @@
 ---
 title: Pestañas de diseño para escritorio, web y móvil
-description: Obtenga información sobre cómo diseñar una pestaña Teams para escritorio, web y móvil, y obtenga el kit de la interfaz de usuario de Microsoft Teams. Obtenga información sobre la funcionalidad y la apariencia de las pestañas, la creación de la autenticación de usuario, las notificaciones de pestañas y la vinculación en profundidad en pestañas.
+description: Obtenga información sobre cómo diseñar una pestaña para escritorio, web y móvil, y obtenga el kit de la interfaz de usuario de Microsoft Teams. Obtenga información sobre la pestaña, la creación de autenticación de usuario, las notificaciones de pestañas y la vinculación profunda.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Kit de interfaz de usuario administración de la configuración de pestañas de inicio de sesión único vinculación en profundidad de inicio de sesión único discusión de subproceso de vista basada en roles
-ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948589"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123261"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
 
@@ -61,8 +61,8 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 |1|**Logotipo de la aplicación**: logotipo de aplicación a todo color de la aplicación.|
 |2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**iframe**: espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
-|4|**Acerca del vínculo**: abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
-|5|**Botón Cerrar**: cierra el cuadro de diálogo.|
+|4 |**Acerca del vínculo**: abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
+|5 |**Botón Cerrar**: cierra el cuadro de diálogo.|
 |6 |**Opción Notificar a los miembros del equipo**: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.|
 |7 |**Botón Atrás**: va al paso anterior en función de dónde se abrió el cuadro de diálogo.|
 |8 |**Botón Guardar**: completa la configuración de la pestaña.|
@@ -114,7 +114,7 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 |1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
 |2|**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
 |3|**Chat de pestaña**: abre un chat a la derecha que permite a los usuarios tener una conversación junto al contenido.|
-|4|**iframe**: muestra el contenido de la aplicación.|
+|4 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Diseñar una pestaña con plantillas de interfaz de usuario y componentes avanzados
 
@@ -174,8 +174,8 @@ Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.
 |1|**Abrir en el explorador**: abre la aplicación en el explorador predeterminado del dispositivo.|
 |2|**Copiar víncula**: los usuarios pueden copiar y compartir un vínculo a la pestaña.|
 |3|**Configuración**: (opcional) modificar la configuración de una pestaña después de agregarla.|
-|4|**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
-|5|**Eliminar**: quita la pestaña del canal, chat o reunión.|
+|4 |**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
+|5 |**Eliminar**: quita la pestaña del canal, chat o reunión.|
 
 #### <a name="desktop"></a>Escritorio
 
