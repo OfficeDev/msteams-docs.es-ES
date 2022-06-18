@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a agregar formato enriquecido a los men
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143483"
+ms.locfileid: "66150794"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
@@ -36,7 +36,7 @@ Actualmente, se aplican las siguientes limitaciones al formato:
 * Las tarjetas enriquecidas solo admiten el formato en la propiedad de texto, no en las propiedades de título o subtítulo.
 * Las tarjetas enriquecidas no admiten el formato markdown o de tabla.
 
-Después de dar formato al contenido de texto, asegúrese de que el formato funciona en todas las plataformas compatibles con Microsoft Teams.
+Después de dar formato al contenido de texto, asegúrese de que el formato funciona en todas las plataformas compatibles con Teams.
 
 ## <a name="cross-platform-support"></a>Compatibilidad multiplataforma.
 

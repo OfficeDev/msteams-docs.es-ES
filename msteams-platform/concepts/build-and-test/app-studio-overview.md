@@ -1,14 +1,14 @@
 ---
 title: Introducción a App Studio para Microsoft Teams
-description: En este módulo, aprenderá a compilar y administrar las aplicaciones con App Studio para Microsoft Teams e instalar App Studio.
+description: En este artículo, aprenderá a compilar y administrar las aplicaciones con App Studio para Microsoft Teams e instalar App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3cfef6db34c9754ac42b2af3ce153ba9374fdff1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143455"
+ms.locfileid: "66150704"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administrar las aplicaciones con App Studio para Microsoft Teams
 
@@ -52,9 +52,9 @@ Aquí puede ver el aspecto en Teams de las [tarjetas que puede crear en App Stud
 
 ### <a name="manifest-editor"></a>Editor de manifiestos
 
-Como se indicó anteriormente, la parte más importante de un paquete de aplicaciones de Microsoft Teams es su archivo manifest.json. Este archivo, que debe cumplir con el [esquema de Teams App](~/resources/schema/manifest-schema.md), contiene metadatos que permiten a Teams presentar correctamente la aplicación a los usuarios.
+Como se mencionó anteriormente, la parte más importante de un paquete de aplicación de Teams es su archivo manifest.json. Este archivo, que debe ajustarse al [esquema Teams App](~/resources/schema/manifest-schema.md), contiene metadatos, lo que permite a Teams presentar correctamente la aplicación a los usuarios.
 
-La pestaña Editor de manifiestos de App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de la aplicación y generar un archivo .zip, que se puede cargar fácilmente en Teams para probar o distribuir para que otros usuarios lo usen. Tenga en cuenta que App Studio no genera código funcional para la aplicación ni hospeda la aplicación. Para que el proceso de carga de la aplicación dé como resultado una aplicación correcta, su aplicación debe estar hospedada y ejecutándose en la dirección URL que aparece en el manifiesto.
+La pestaña Editor de manifiestos de App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de la aplicación y generar un archivo .zip, que se puede cargar fácilmente en Teams para probar o distribuir para que otros usuarios lo usen. App Studio no genera código funcional para la aplicación ni hospeda la aplicación. Para que el proceso de carga de la aplicación dé como resultado una aplicación correcta, su aplicación debe estar hospedada y ejecutándose en la dirección URL que aparece en el manifiesto.
 
 #### <a name="details"></a>Detalles
 
@@ -75,11 +75,11 @@ La sección de funciones del Editor de manifiesto es donde están definidas las 
 
   También debe proporcionar los dominios adicionales desde los que la pestaña espera cargarse o con los que se vincula.
 
-* **Pestañas personales.** Esta sección te permite definir un conjunto de pestañas que se presentan de forma predeterminada en la experiencia de la aplicación personal (experiencia que un usuario tiene con tu aplicación fuera del contexto de un equipo o canal). En esta sección, proporcione el nombre de pestaña, un identificador único, la dirección URL que apunta a la interfaz de usuario que se mostrará en Teams y, opcionalmente, la dirección URL que se usará si un usuario opta por ver la pestaña en un explorador. Con Teams pestañas, proporcione los dominios adicionales desde los que la pestaña espera cargarse desde o vincularse.
+* **Pestañas personales.** Puedes definir un conjunto de pestañas que se presentan de forma predeterminada en la experiencia de la aplicación personal (experiencia que un usuario tiene con la aplicación fuera del contexto de un equipo o canal). En esta sección, proporcione el nombre de pestaña, un identificador único, la dirección URL que apunta a la interfaz de usuario que se mostrará en Teams y, opcionalmente, la dirección URL que se usará si un usuario opta por ver la pestaña en un explorador. Con Teams pestañas, proporcione los dominios adicionales desde los que la pestaña espera cargarse desde o vincularse.
 
 ##### <a name="bots"></a>Bots
 
-Esta sección le permite agregar un [bot de conversación](~/bots/what-are-bots.md) a la aplicación. Si ya tiene un bot registrado con Bot Framework, puede agregarlo haciendo clic en *Configurar* y suministrando el nombre del bot, el id. de Bot Framework y definiendo los ámbitos en los que funcionará el bot.
+Esta sección le permite agregar un [bot de conversación](~/bots/what-are-bots.md) a la aplicación. Si ya tiene un bot registrado con Bot Framework, puede agregarlo haciendo clic en *Configurar* y proporcionando el nombre del bot, el identificador de Bot Framework y definiendo los ámbitos en los que funciona el bot.
 
 Si aún no ha registrado un bot con Bot Framework, seleccione **Registrar** para crear uno nuevo. Cuando haya terminado de registrar el bot, vuelva a esta sección del Editor de manifiesto para escribir su nombre y el id. de Bot Framework.
 
@@ -94,7 +94,7 @@ Esta sección le permite agregar un conector a la aplicación. Si ya registró u
 
 ##### <a name="message-extensions"></a>Extensiones de mensaje
 
-[Las extensiones de](~/messaging-extensions/what-are-messaging-extensions.md) mensaje son una manera eficaz de que los usuarios interactúen con la aplicación dentro de Microsoft Teams. Los usuarios pueden consultar la información desde su servicio y publicar esa información en forma de tarjetas, directamente en el canal o en la conversación del chat.
+[Las extensiones de mensaje](~/messaging-extensions/what-are-messaging-extensions.md) son una manera eficaz de que los usuarios interactúen con la aplicación dentro de Teams. Los usuarios pueden consultar la información desde su servicio y publicar esa información en forma de tarjetas, directamente en el canal o en la conversación del chat.
 
 Las extensiones de mensaje tienen tecnología de bots de Bot Framework, por lo que requieren un bot configurado para funcionar. Si tiene el nombre y el identificador de Bot Framework del bot que le gustaría potenciar la extensión del mensaje, escriba esta. De lo contrario, seleccione **Registrar** para crear uno y escriba la información posteriormente. Seleccione si el usuario puede actualizar la configuración de una extensión de mensaje.
 
@@ -115,11 +115,11 @@ Una vez que haya terminado de definir la aplicación, la sección Prueba y distr
 
 ##### <a name="publish-your-app-to-teams"></a>Publicar la aplicación en Teams
 
-En la página principal del proyecto, puede cargar la aplicación a un equipo, enviarla a la tienda de aplicaciones personalizada de la organización para los usuarios de su organización o enviarla al origen de la aplicación para todos los usuarios de Teams. El administrador de TI revisará estas entregas. Puede volver a la página *Publicar* para comprobar el estado de entrega y saber si su administrador de TI aprobó o rechazó la aplicación. Aquí también es a donde deberá acudir para enviar las actualizaciones a su aplicación o cancelar cualquier entrega activa en este momento.
+En la página principal del proyecto, puede cargar la aplicación a un equipo, enviarla a la tienda de aplicaciones personalizada de la organización para los usuarios de su organización o enviarla al origen de la aplicación para todos los usuarios de Teams. El administrador de TI revisa estos envíos. Puede volver a la página *Publicar* para comprobar el estado de entrega y saber si su administrador de TI aprobó o rechazó la aplicación. Aquí también es a donde deberá acudir para enviar las actualizaciones a su aplicación o cancelar cualquier entrega activa en este momento.
 
 ### <a name="card-editor"></a>Editor de tarjetas
 
-Una tarjeta es un contenedor para unidades de información breves o relacionadas. Microsoft Teams es compatible con las tarjetas, las cuales pueden tener varias propiedades y datos adjuntos. Las tarjetas son una forma clave de que los bots y los conectores retransmitan información que requiere acción a los usuarios.
+Una tarjeta es un contenedor para unidades de información breves o relacionadas. Teams admite tarjetas, que pueden tener varias propiedades y datos adjuntos. Las tarjetas son una forma clave de que los bots y los conectores retransmitan información que requiere acción a los usuarios.
 
 Para que este proceso sea más fácil y menos propenso a errores, la pestaña Editor de tarjetas le permite crear tarjetas prominentes o tarjetas en miniatura mediante un formulario y comprobar y probar la tarjeta resultante (exactamente como lo vería un usuario) a través de un bot. También proporciona el código JSON, C# o Node.js correspondiente para la tarjeta que puede copiar y pegar en el código fuente de la aplicación.
 

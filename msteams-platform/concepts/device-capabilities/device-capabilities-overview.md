@@ -5,18 +5,18 @@ description: Obtenga información sobre cómo integrar funcionalidades nativas d
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130434"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150676"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 
 La plataforma de Microsoft Teams mejora continuamente las funconalidades de los desarrolladores en consonancia con las experiencias integradas de primera persona. La plataforma mejorada de Teams permite a los asociados integrar funcionalidades de dispositivos, como cámara, escáner de códigos de barras o QR, galería de fotos, micrófono y ubicación con sus aplicaciones web. Esta integración reduce la barrera del desarrollo de aplicaciones, acelera el ciclo de desarrollo y crea nuevos escenarios o casos de uso para la comunidad de desarrolladores.
 
-Los permisos del dispositivo son diferentes en el explorador. Anteriormente, el navegador se encargaba de conceder los permisos de acceso y ahora estos permisos se gestionan en Microsoft Teams. Para obtener más información, vea [Permisos del dispositivo en el navegador](browser-device-permissions.md).
+Los permisos del dispositivo son diferentes en el explorador. Anteriormente, el explorador controló cómo conceder permisos de acceso y ahora estos permisos se controlan en Teams. Para obtener más información, vea [Permisos del dispositivo en el navegador](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Funcionalidades de dispositivos nativos
 
@@ -50,4 +50,4 @@ Además, puede integrar el [control de selector de personas](people-picker-capab
 
 | Ejemplo de nombre           | Descripción | Node.js    |
 |:---------------------|:--------------|:---------|
-|Permisos de dispositivo | Describe cómo mostrar Microsoft Teams aplicación de ejemplo de pestaña para permisos de dispositivo. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Permisos de dispositivo | Describe cómo mostrar Teams aplicación de ejemplo de pestaña para permisos de dispositivo. |[Ver](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

@@ -1,15 +1,15 @@
 ---
 title: Solicitar permisos de dispositivos para la aplicación de Microsoft Teams
 keywords: funcionalidades aplicaciones teams permisos dispositivo digitalización nativo QR código de barras imagen de vídeo audio
-description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que normalmente requieran el consentimiento del usuario, como las funcionalidades de digitalización QR, código de barras, imagen, audio y vídeo
+description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que requieren el consentimiento del usuario, como las funcionalidades de escaneo qr, código de barras, imagen, audio y vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: c346eaf880fd6a0a3847441f674fcfa72f2c5ed7
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130476"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150823"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Solicitar permisos de dispositivo para la aplicación de Teams
 
@@ -19,7 +19,7 @@ Puede enriquecer la aplicación de Teams con funcionalidades nativas del disposi
 >
 > * Para integrar las funcionalidades multimedia dentro de la Microsoft Teams cliente web, escritorio y móvil, consulte [Integración de funcionalidades multimedia](media-capabilities.md).
 > * Para integrar la funcionalidad de digitalización de código de barras o QR dentro de la aplicación móvil de Microsoft Teams, consulte [Integración de la funcionalidad de digitalización de código de barras o QR en Teams](qr-barcode-scanner-capability.md).
-> * Para integrar las funcionalidades de ubicación en el cliente web, el escritorio y el móvil de Microsoft Teams, consulte [Integración de funcionalidades de ubicación](location-capability.md).
+> * Para integrar las funcionalidades de ubicación en el cliente web, el escritorio y el móvil de Teams, consulte [Integración de funcionalidades de ubicación](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Permisos de dispositivos nativos
 
@@ -36,7 +36,7 @@ Al acceder a las funcionalidades del dispositivo, podrá crear mejores experienc
 >
 > * Actualmente, Teams no admite permisos de dispositivo para aplicaciones de varias ventanas, pestañas y el panel lateral de las reuniones.
 > * Los permisos del dispositivo son diferentes en el explorador. Para obtener más información, vea [Permisos de dispositivo en el navegador](browser-device-permissions.md).
-> * Actualmente, Microsoft Teams compatibilidad con la funcionalidad del escáner de códigos de barras QR solo está disponible para clientes móviles.
+> * Actualmente, Teams admite la funcionalidad de escáner de códigos de barras QR solo está disponible para clientes móviles.
 
 ## <a name="access-device-permissions"></a>Acceso a los permisos del dispositivo
 
@@ -129,13 +129,13 @@ Aproveche la API html5 o Teams adecuada para mostrar un mensaje para obtener el 
 
 Por ejemplo:
 
-* Para pedir al usuario que acceda a su ubicación, deberá llamar a `getCurrentPosition()`:
+* Para pedir al usuario que acceda a su ubicación, debe llamar a `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* Para pedir al usuario que acceda a su cámara en el escritorio o la web, deberá llamar a `getUserMedia()`:
+* Para pedir al usuario que acceda a su cámara en escritorio o web, debe llamar a `getUserMedia()`:
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -162,7 +162,7 @@ Por ejemplo:
         } 
     ```
 
-* Las notificaciones le piden al usuario que llame a `requestPermission()`:
+* Las notificaciones solicitan al usuario que llame a `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });

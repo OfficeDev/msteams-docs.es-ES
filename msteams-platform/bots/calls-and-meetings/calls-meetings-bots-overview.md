@@ -3,12 +3,12 @@ title: Bots para llamadas y reuniones en línea
 description: En este módulo, obtenga información sobre cómo las aplicaciones de Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo mediante las API de Microsoft Graph para llamadas y reuniones en línea, y obtenga información sobre los flujos multimedia en tiempo real.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bbeca082a561386d6c64d08e1d303975f9746f0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143854"
+ms.locfileid: "66150830"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots para llamadas y reuniones en línea
 
@@ -51,7 +51,7 @@ A continuación, se muestran los distintos tipos de llamada y permisos necesario
 * Un usuario podrá iniciar una llamada de punto a punto con el bot o invitar al bot a una llamada existente entre varias entidades. Las llamadas multiparte aún no están habilitadas en la interfaz de usuario de Teams.
 
     > [!NOTE]
-    > Actualmente, las llamadas iniciadas por usuarios a un bot no se admiten en la plataforma para móviles de Microsoft Teams.
+    > Actualmente, las llamadas iniciadas por el usuario a un bot no se admiten en Teams plataforma móvil.
 
 * Los permisos de Graph no son necesarios para que un usuario inicie una llamada punto a punto con los bot. Se necesitarán permisos adicionales para que los bot participen en llamadas multiparte o para que inicien llamadas punto a punto con un usuario.
 * Una llamada puede iniciarse como punto a punto y, finalmente, convertirse en una llamada multiparte. El bot podrá iniciar llamadas grupales invitando a otros usuarios, siempre que tenga permiso para iniciar llamadas de grupo. Si el bot no tiene permisos para participar en llamadas grupales y si un participante agrega otro participante a la llamada, el bot saldrá de la llamada.

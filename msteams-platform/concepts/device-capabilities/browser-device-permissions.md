@@ -4,12 +4,12 @@ keywords: permisos de funcionalidades de aplicaciones de teams
 description: Devolver de forma segura la compatibilidad con los permisos de los dispositivo para las aplicaciones en nuestro cliente web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756747"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150816"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
@@ -29,7 +29,7 @@ Después de seleccionar la opción **Permisos de aplicación**, aparece un eleme
 Un usuario tendrá que habilitar estos permisos en el explorador para que estos permisos surtan efecto. Después de que el usuario cambie los permisos del dispositivo de la aplicación en el explorador, se le pedirá que vuelva a cargar la aplicación en Teams.
 
 > [!IMPORTANT]
-> Debe hacer que los usuarios sepan dónde deben acceder para habilitar estos **Permisos de aplicación** en Microsoft Teams.
+> Debe hacer que los usuarios sepan dónde ir para habilitar estos **permisos de aplicación** en Teams.
 
 ## <a name="recommendation"></a>Recomendación
 
@@ -46,7 +46,7 @@ Teams aplicación que requiere permisos de dispositivo en el explorador debe mos
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
-Siga la [guía paso a paso](../../sbs-tab-device-permissions.yml) para conceder permiso de dispositivo de pestaña en Microsoft Teams.
+Siga la [guía paso a paso](../../sbs-tab-device-permissions.yml) para conceder permiso de dispositivo de pestaña en Teams.
 
 ## <a name="see-also"></a>Consulte también
 

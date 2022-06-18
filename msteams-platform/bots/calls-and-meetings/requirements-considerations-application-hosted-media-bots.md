@@ -4,12 +4,12 @@ description: Obtenga información sobre los requisitos y consideraciones importa
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142489"
+ms.locfileid: "66150795"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisiciones y consideraciones para bots multimedia hospedados en la aplicación
 
@@ -39,7 +39,7 @@ En la sección siguiente se proporcionan detalles sobre dónde se encuentran las
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>Las llamadas multimedia en tiempo real permanecen donde se crean
 
-Las llamadas multimedia en tiempo real permanecen en el equipo donde se crearon. Se ancla una llamada multimedia en tiempo real a la instancia de máquina virtual (VM) que aceptó o inició la llamada. Los elementos multimedia de una llamada o reunión de Microsoft Teams fluyen a esa instancia de máquina virtual y los elementos multimedia que el bot devuelve a Microsoft Teams también deben originarse desde esa máquina virtual. Si hay llamadas multimedia en tiempo real en curso cuando se detiene la máquina virtual, esas llamadas finalizan repentinamente. Si el bot tiene conocimiento previo del apagado de la máquina virtual pendiente, puede finalizar las llamadas.
+Las llamadas multimedia en tiempo real permanecen en el equipo donde se crearon. Se ancla una llamada multimedia en tiempo real a la instancia de máquina virtual (VM) que aceptó o inició la llamada. Los medios de una llamada de Teams o de reunión fluyen a esa instancia de máquina virtual, y los medios que el bot envía a Teams también deben originarse desde esa máquina virtual. Si hay llamadas multimedia en tiempo real en curso cuando se detiene la máquina virtual, esas llamadas finalizan repentinamente. Si el bot tiene conocimiento previo del apagado de la máquina virtual pendiente, puede finalizar las llamadas.
 
 En la próxima sección se proporcionan detalles sobre la accesibilidad de los bots multimedia hospedados en la aplicación.
 

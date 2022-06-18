@@ -5,18 +5,18 @@ description: En este artículo, obtenga información sobre los controladores de 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143840"
+ms.locfileid: "66150865"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
 Este documento se basa en el artículo sobre [cómo funcionan los bots](https://aka.ms/how-bots-work) de la [documentación de Bot Framework](https://aka.ms/azure-bot-service-docs) principal. La principal diferencia entre los bots desarrollados para Microsoft Teams y el Bot Framework principal se encuentra en las características proporcionadas en Teams.
 
-Para organizar la lógica conversacional del bot, se usa un controlador de actividad. Las actividades se controlan de dos maneras mediante controladores de actividad de Teams y la lógica de bot. El controlador de actividad de Teams agrega compatibilidad con eventos e interacciones específicos de Microsoft Teams. El objeto del bot contiene el razonamiento conversacional o la lógica de un turno y expone un controlador de turnos, que es el método que puede aceptar actividades entrantes desde el adaptador del bot.
+Para organizar la lógica conversacional del bot, se usa un controlador de actividad. Las actividades se controlan de dos maneras mediante controladores de actividad de Teams y la lógica de bot. El controlador de actividad Teams agrega compatibilidad con eventos e interacciones específicos de Teams. El objeto del bot contiene el razonamiento conversacional o la lógica de un turno y expone un controlador de turnos, que es el método que puede aceptar actividades entrantes desde el adaptador del bot.
 
 ## <a name="teams-activity-handlers"></a>Controladores de actividades de Teams
 

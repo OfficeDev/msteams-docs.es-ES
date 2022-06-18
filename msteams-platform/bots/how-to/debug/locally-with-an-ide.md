@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo probar y depurar el bot localmente
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142895"
+ms.locfileid: "66150809"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Prueba y depuración del bot de manera local
 
@@ -57,11 +57,11 @@ Para obtener más información, consulte [instrucciones completas de Bot Framewo
 > [!Important]
 > Hablar con el bot por identificador está pensado solo para fines de prueba básicos. Cualquier funcionalidad específica de Teams que haya agregado al bot no funcionará.
 
-Inicie una conversación con el bot mediante su identificador. Cuando un bot se agrega a través de estos métodos, no se podrá dirigir a él en las conversaciones del canal, y no podrá aprovechar otras capacidades de la aplicación Microsoft Teams, como las pestañas o la extensión de mensajes. Inicie una conversación de una de las siguientes maneras:
+Inicie una conversación con el bot mediante su identificador. Cuando se agrega un bot a través de uno de estos métodos, no es direccionable en las conversaciones de canal y no puede aprovechar otras funcionalidades de Teams aplicación, como pestañas o extensiones de mensajes. Inicie una conversación de una de las siguientes maneras:
 
-* En la página [Panel del bot](https://dev.botframework.com/bots), en **Canales**, seleccione **Agregar a Microsoft Teams**. Microsoft Teams inicia un chat personal con su bot.
+* En la página [Panel del bot](https://dev.botframework.com/bots), en **Canales**, seleccione **Agregar a Microsoft Teams**. Teams inicia un chat personal con el bot.
 
-* Utilice directamente el identificador de la aplicación del bot en Microsoft Teams:
+* Haga referencia directamente al identificador de aplicación del bot desde dentro de Teams:
    1. En la página [ Panel de control del bot](https://dev.botframework.com/bots), en **Details**, copie el **Id. de aplicación de Microsoft** del bot.
   
       ![Obtener el AppID para el bot](~/assets/images/bots_appid_botframework.png)
@@ -73,10 +73,10 @@ Inicie una conversación con el bot mediante su identificador. Cuando un bot se 
       El identificador de la aplicación debe resolverse en el nombre del bot.
 
    3. Seleccione el bot y envíe un mensaje para iniciar una conversación.
-      Como alternativa, puede pegar el identificador de la aplicación del bot en el cuadro de búsqueda de la parte superior izquierda de Microsoft Teams. En la página de resultados de la búsqueda, vaya a la pestaña **Contactos** para ver el bot e iniciar una conversación con él.
+      Como alternativa, puede pegar el identificador de aplicación del bot en el cuadro de búsqueda de la parte superior izquierda de Teams. En la página de resultados de la búsqueda, vaya a la pestaña **Contactos** para ver el bot e iniciar una conversación con él.
 
 > [!Note]
-> Para que Microsoft Teams haga referencia al identificador de aplicación del bot, habilite la [instalación de prueba de aplicaciones](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Para que Teams consulte el identificador de aplicación del bot, habilite [la instalación local de aplicaciones](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 El bot recibe el evento `conversationUpdate` cuando usted agregue los bots a un equipo, sin la información del equipo en el objeto `channelData`.
 
