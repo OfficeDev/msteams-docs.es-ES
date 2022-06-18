@@ -1,17 +1,17 @@
 ---
 title: Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 author: zyxiaoyuer
-description: Crear nueva aplicación de Teams con el Kit de herramientas de Teams
+description: En este módulo, aprenderá a crear una nueva aplicación de Teams con el kit de herramientas de Teams y a crear una nueva aplicación de Teams con ejemplos de vista.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 4f85798c57c7816bed727e41adc69cf7dbc380d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656155"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142223"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Crear una nueva aplicación de Teams con el Kit de herramientas de Teams
 
@@ -20,7 +20,7 @@ Para crear una nueva aplicación de Teams con el Kit de herramientas de Teams, p
 * [Crear una nueva aplicación de Teams](create-new-project.md#create-a-new-teams-app)
 * [Ver ejemplos](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-### <a name="create-a-new-teams-app"></a>Crear una nueva aplicación de Teams
+## <a name="create-a-new-teams-app"></a>Crear una nueva aplicación de Teams
 
 1. Abrir Visual Studio Code.
 1. Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: en la barra lateral de Visual Studio Code.
@@ -29,17 +29,16 @@ Para crear una nueva aplicación de Teams con el Kit de herramientas de Teams, p
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Barra lateral del kit de herramientas de Teams":::
 
 1. Puede seleccionar **Crear una nueva aplicación Teams** o **Iniciar desde un ejemplo**.
-   
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Crear una aplicación":::
-   
-1. Si selecciona **Crear una nueva aplicación de Teams**, la siguiente imagen se mostrará con plantillas de tres categorías: aplicación de Teams basada en escenarios, aplicación de Teams básica y aplicaciones de Teams extendidas en Microsoft 365: 
+
+1. Si selecciona **Crear una nueva aplicación de Teams**, la siguiente imagen se mostrará con plantillas de tres categorías: aplicación de Teams basada en escenarios, aplicación de Teams básica y aplicaciones de Teams extendidas en Microsoft 365:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capacidades para una aplicación de Teams":::
 
 1. Seleccione al menos una opción para empezar a crear la aplicación de Teams.
 
-
-### <a name="create-a-new-teams-app-using-view-samples"></a>Crear una nueva aplicación de Teams con ver ejemplos
+## <a name="create-a-new-teams-app-using-view-samples"></a>Crear una nueva aplicación de Teams con ver ejemplos
 
 Puede crear una nueva aplicación explorando **Ver ejemplos** y seleccionando un ejemplo. Es posible que el ejemplo seleccionado ya tenga alguna funcionalidad, por ejemplo, una lista de tareas con un back-end de Azure o una integración con el Kit de herramientas de Microsoft Graph.
 
@@ -50,7 +49,7 @@ Puede crear una nueva aplicación explorando **Ver ejemplos** y seleccionando un
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="Ver ejemplos":::
 
     La galería de ejemplos aparece como se muestra en la siguiente imagen:
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Galería de ejemplo":::
 
   Puede explorar la galería de ejemplo de la siguiente manera:

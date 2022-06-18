@@ -1,16 +1,16 @@
 ---
 title: Diseño de módulos de tareas
 author: heath-hamilton
-description: Obtenga información sobre cómo diseñar módulos de tareas para aplicaciones de Teams y obtener el Kit de interfaz de usuario de Microsoft Teams.
+description: En este módulo, aprenderá a diseñar los módulos de tareas para aplicaciones de Teams y a obtener el Kit de interfaz de usuario de Microsoft Teams.
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1514ed8e3101065efd482ced45de98b8b0f58ab8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104136"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143021"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Diseño de módulos de tareas para la aplicación de Microsoft Teams
 
@@ -50,8 +50,8 @@ También se pueden crear con el marco [de tarjetas adaptables](../../task-module
 |1|**Encabezado**: Haga que los encabezados sean claros y concisos. Describa la tarea que desea que los usuarios completen.
 |2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**Botón Cerrar**: Cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
-|4|**Vista Web**: Espacio dinámico que hospeda el contenido de la aplicación.|
-|5|**Acciones (opcional)**: Botones relacionados con el contenido de la aplicación.|
+|4 |**Vista Web**: Espacio dinámico que hospeda el contenido de la aplicación.|
+|5 |**Acciones (opcional)**: Botones relacionados con el contenido de la aplicación.|
 
 ### <a name="desktop"></a>Escritorio
 
@@ -62,8 +62,8 @@ También se pueden crear con el marco [de tarjetas adaptables](../../task-module
 |1|**Icono de aplicación**|
 |2|**Nombre de la aplicación**: nombre completo de la aplicación.|
 |3|**Encabezado**: Haga que los encabezados sean claros y concisos. Describa la tarea que desea que los usuarios completen.
-|4|**Botón Cerrar**: Cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
-|5|**iframe**: Espacio dinámico que hospeda el contenido de la aplicación.|
+|4 |**Botón Cerrar**: Cierra el módulo de tareas. No aplica cambios no guardados en el contenido de la aplicación.|
+|5 |**iframe**: Espacio dinámico que hospeda el contenido de la aplicación.|
 |6 |**Acciones (opcional)**: Botones relacionados con el contenido de la aplicación.|
 
 ## <a name="designing-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario

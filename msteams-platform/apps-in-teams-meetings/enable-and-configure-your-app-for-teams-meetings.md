@@ -1,15 +1,15 @@
 ---
 title: Habilitar y configurar las aplicaciones para reuniones de Teams
 author: surbhigupta
-description: Habilite y configure las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
+description: Aprenderá a habilitar y configurar las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 20253da4688009baabb746f3e71d0af47b2455d6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111321"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142594"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para reuniones de Teams
 
@@ -37,10 +37,10 @@ Las funcionalidades de la aplicación de reuniones se declaran en el manifiesto 
 
 > [!NOTE]
 >
-> * Debe actualizar el manifiesto de la aplicación con el [esquema de manifiesto](../resources/schema/manifest-schema-dev-preview.md).
 > * Las aplicaciones de las reuniones requieren `groupchat` ámbito. El `team` ámbito solo funciona para pestañas en canales.
+> * Las aplicaciones de las reuniones pueden usar los siguientes contextos: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.
 
-El manifiesto de la aplicación debe incluir el siguiente fragmento de código:
+El siguiente fragmento de código es un ejemplo de una pestaña configurable que se usa en una aplicación para reuniones de Teams:
 
 ```json
 
@@ -114,8 +114,9 @@ Para agregar un bot a una reunión:
 En un chat de reunión, escriba la clave **@** y seleccione **Obtener bots**.
 
 > [!NOTE]
+>
 > * El cuadro de diálogo en la reunión muestra un cuadro de diálogo en una reunión y publica simultáneamente una tarjeta adaptable en el chat de reunión al que los usuarios pueden acceder. La tarjeta adaptable del chat de reunión ayuda a los usuarios mientras asisten a la reunión o si la aplicación Teams está minimizada.
-> * La identidad del usuario debe confirmarse mediante [el inicio de sesión único de Tabs](../tabs/how-to/authentication/auth-aad-sso.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la API `GetParticipant`.
+> * La identidad del usuario debe confirmarse mediante [el inicio de sesión único de Tabs](../tabs/how-to/authentication/tab-sso-overview.md). Después de la autenticación, la aplicación puede recuperar el rol de usuario mediante la API `GetParticipant`.
 > * En función del rol de usuario, la aplicación tiene la capacidad de proporcionar experiencias específicas para cada rol. Por ejemplo, una aplicación de sondeo solo permite a los organizadores y moderadores crear un nuevo sondeo.
 > * Las asignaciones de roles se pueden cambiar mientras una reunión está en curso. Para obtener más información, consulte [roles en una reunión de Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -184,6 +185,7 @@ Los participantes pueden compartir partes específicas de la aplicación en la f
 Para compartir partes específicas de la aplicación en fase debe invocar las API relacionadas en la biblioteca del SDK de cliente de Teams. Para obtener más información, vea [referencia de API](API-references.md).
 
 > [!NOTE]
+>
 > * Para compartir partes específicas de la aplicación en fase use la versión de manifiesto 1.12 o posterior de Teams.
 > * Compartir partes específicas de la aplicación en fase solo es compatible con los clientes de escritorio de Teams.
 

@@ -2,16 +2,15 @@
 title: Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
 author: heath-hamilton
 ms.author: surbhigupta
-description: Información general sobre el SDK de cliente de JavaScript de Microsoft Teams que puede ayudarle a crear experiencias de aplicación de Teams hospedadas en <iframe> Teams, Office y Outlook.
+description: En este módulo, aprenderá a usar el SDK de cliente de JavaScript de Microsoft Teams, que puede ayudarle a crear experiencias de aplicación hospedadas en <iframe> Teams, Office y Outlook.
 ms.localizationpriority: high
-keywords: pestañas de Teams, canal de grupo, SDK estático configurable, JavaScript, M365 personal
 ms.topic: conceptual
-ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033046"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144218"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
 

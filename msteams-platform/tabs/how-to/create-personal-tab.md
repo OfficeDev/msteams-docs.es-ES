@@ -1,18 +1,17 @@
 ---
 title: Crear una pestaña personal
 author: laujan
-description: Guía de inicio rápido para crear una pestaña personal con Yeoman Generator, ASP.NET Core o ASP.NET Core MVC para Microsoft Teams mediante Node.js y la actualización del manifiesto de la aplicación.
+description: En este módulo aprenderá a crear una pestaña personal con Yeoman Generator, ASP.NET Core o ASP.NET Core MVC para Microsoft Teams mediante Node.js y la actualización del manifiesto de la aplicación.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET paquete MVC appmanifest conversación dominio almacén de permisos
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673023"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143994"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -296,10 +295,10 @@ Estos son los pasos para crear una pestaña personal:
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación para comprobar si se cargó correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Revisar el código fuente</b></summary>
@@ -449,10 +448,10 @@ Estos son los pasos para crear una pestaña personal:
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación para comprobar si se cargó correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>Revisar el código fuente</b></summary>

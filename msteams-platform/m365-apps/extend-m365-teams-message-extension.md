@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668077"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142104"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Ampliar una extensión de mensajería de Teams en Microsoft 365
 
@@ -30,8 +30,8 @@ El resto de esta guía le ayudará con estos pasos y le mostrará cómo obtener 
 
 Para completar este tutorial, necesitará:
 
-* Una cuenta empresarial de espacio aislado del Programa de desarrolladores de Microsoft 365
-* Inscripción en las *Versiones dirigidas de Office 365* para su cuenta empresarial de espacio aislado
+* Una cuenta empresarial de espacio aislado del Programa de desarrolladores de Microsoft 365
+* Inscripción en las *Versiones dirigidas de Office 365* para su cuenta empresarial de espacio aislado
 * Un entorno de prueba con aplicaciones de Office instaladas desde el *canal beta* de Aplicaciones de Microsoft 365
 * Código de Microsoft Visual Studio con la extensión del Kit de herramientas de Teams (opcional)
 
@@ -90,7 +90,7 @@ Abra el manifiesto de la aplicación de Teams y actualice `$schema` y `manifestV
 
 ---
 
-Si ha usado el Kit de herramientas de Teams para crear su aplicación de extensión de mensajería, puede usarlo para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la paleta de comandos `Ctrl+Shift+P` y busque **Teams: Validar archivo de manifiesto**.
+Si usó el Kit de herramientas de Teams para crear la aplicación de la extensión de mensajería, puede usarlo para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la paleta de comandos `Ctrl+Shift+P` y busque **Teams: Validar archivo del manifiesto**.
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Agregar un canal de Outlook para el bot
 
@@ -113,9 +113,9 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Actualización del registro de aplicaciones de Microsoft Azure Active Directory (Azure AD) para SSO
 
 > [!NOTE]
-> Puede omitir el paso si usa la [aplicación de muestra](#quickstart) que se proporciona en este tutorial, ya que el escenario no implica la autenticación de inicio de sesión único de Azure Active Directory (AAD).
+> Puede omitir el paso si usa la [aplicación de muestra](#quickstart) que se ofrece en este tutorial, ya que el escenario no implica la autenticación de inicio de sesión único de Azure Active Directory (AAD).
 
-El inicio de sesión único (SSO) de Azure Active Directory (AD) para extensiones de mensajes funciona de la misma manera tanto en Outlook [como en Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Sin embargo, debe agregar varios identificadores de aplicación cliente al registro de aplicación de Azure AD del bot en el portal *Registros de aplicaciones* de la cuenta empresarial.
+El inicio de sesión único (SSO) de Azure Active Directory para extensiones de mensajería funciona de la misma manera tanto en Outlook [como en Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de la aplicación cliente al registro de la aplicación de Azure AD del bot en el portal *Registros de aplicaciones* de la cuenta empresarial.
 
 1. Inicie sesión en [Azure Portal](https://portal.azure.com) con su cuenta empresarial de espacio aislado.
 1. Abra **Registros de aplicaciones**.
@@ -167,7 +167,7 @@ Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la 
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Haga clic en el menú &quot;Más aplicaciones&quot; en la parte inferior de la ventana de redacción de correo para usar la extensión de mensaje":::
 
-Se mostrará la extensión de mensajería. Puede invocarla desde allí y usarla como lo haría al redactar un mensaje en Teams.
+Se muestra la extensión de mensajería. Puede invocarla desde allí y usarla al igual que lo haría al redactar un mensaje en Teams.
 
 ### <a name="outlook"></a>Outlook
 

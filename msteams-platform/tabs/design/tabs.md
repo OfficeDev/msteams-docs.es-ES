@@ -1,17 +1,16 @@
 ---
 title: Pestañas de diseño para escritorio, web y móvil
-description: Obtenga información sobre cómo diseñar una pestaña para escritorio, web y móvil, y obtenga el kit de la interfaz de usuario de Microsoft Teams. Obtenga información sobre la pestaña, la creación de autenticación de usuario, las notificaciones de pestañas y la vinculación profunda.
+description: Aprenda a diseñar una pestaña para escritorio, web y móvil, y el kit de la interfaz de usuario de Microsoft Teams. Obtenga información sobre la pestaña, la creación de autenticación de usuario, las notificaciones de pestañas y la vinculación profunda.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: Kit de interfaz de usuario administración de la configuración de pestañas de inicio de sesión único vinculación en profundidad de inicio de sesión único discusión de subproceso de vista basada en roles
-ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123261"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144337"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
 

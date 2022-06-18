@@ -1,15 +1,14 @@
 ---
 title: Tipos de tarjetas
-description: Describe todas las tarjetas y acciones de tarjeta disponibles para los bot en Teams
+description: En este módulo, aprenderá qué son las tarjetas y las acciones de tarjeta disponibles para los bots en Teams y creará un héroe, miniaturas y tarjetas adaptables.
 ms.localizationpriority: high
-keywords: referencia de tarjetas de los bot
 ms.topic: reference
-ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032994"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142629"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -63,13 +62,13 @@ Puede identificar y usar diferentes tipos de tarjetas en función de los requisi
 
 | Tipo de tarjeta | Bots | Vistas previas de extensión de mensaje | Resultados de extensión de mensaje | Módulos de tareas | Webhooks salientes | Webhooks entrantes | Conectores de Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Tarjeta adaptable | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Tarjeta conector de Office 365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Tarjeta de héroe | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Tarjeta miniatura | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| Tarjeta de lista | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| Tarjeta de recibo | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Tarjeta de inicio de sesión | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Tarjeta adaptable | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Tarjeta conector de Office 365 | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Tarjeta de héroe | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Tarjeta miniatura | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| Tarjeta de lista | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| Tarjeta de recibo | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| Tarjeta de inicio de sesión | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > Para las tarjetas adaptables en los webhook entrantes, todos los elementos de esquema nativos de tarjeta adaptable, excepto `Action.Submit`, son totalmente compatibles. Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) y [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -121,7 +120,7 @@ En la tabla siguiente se proporcionan las características que admiten las tarje
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -304,7 +303,7 @@ En la tabla siguiente, se proporcionan las características que admiten tarjetas
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="properties-of-a-hero-card"></a>Propiedades de una tarjeta de Elemento principal
 
@@ -371,7 +370,7 @@ En la tabla siguiente se proporcionan las características que admiten tarjetas 
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### <a name="properties-of-a-list-card"></a>Propiedades de una tarjeta de lista
 
@@ -449,7 +448,7 @@ En la tabla siguiente se proporcionan las características que admiten las tarje
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Propiedades de la tarjeta de conector de Office 365
 
@@ -571,7 +570,7 @@ En la tabla siguiente, se proporcionan las características que admiten tarjetas
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="example-of-a-receipt-card"></a>Ejemplo de una tarjeta de recibo
 
@@ -645,7 +644,7 @@ En la tabla siguiente, se proporcionan las características que admiten las tarj
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### <a name="additional-information-on-signin-cards"></a>Información adicional sobre tarjetas de inicio de sesión
 
@@ -664,7 +663,7 @@ En la tabla siguiente, se proporcionan las características que admiten las tarj
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="tarjeta en miniatura":::
 
@@ -747,7 +746,7 @@ En la tabla siguiente se proporcionan las características que admiten las colec
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > Un carrusel puede mostrar un máximo de diez tarjetas por mensaje.
@@ -941,7 +940,7 @@ En la tabla siguiente se proporcionan las características que admiten las colec
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### <a name="example-of-a-list-collection"></a>Ejemplo de una colección de lista
 
