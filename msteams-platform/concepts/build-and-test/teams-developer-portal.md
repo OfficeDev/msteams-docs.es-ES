@@ -4,12 +4,12 @@ description: En este módulo, aprenderá a configurar, distribuir y administrar 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 391d6c671bf7c34a734eed3202df50ebdc4f9eae
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142370"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164244"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>Administración de las aplicaciones de Teams mediante el Portal para desarrolladores
 
@@ -21,6 +21,31 @@ El <a href="https://dev.teams.microsoft.com" target="_blank">portal para desarro
 >
 > * Actualmente, el portal para desarrolladores no está disponible para inquilinos de Government Community Cloud (GCC), GCC-High o el Departamento de Defensa (DOD).
 > * Sin embargo, puede usar un inquilino normal para compilar una aplicación en el portal para desarrolladores, descargar la aplicación y cargar la aplicación mediante [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) en una nube nacional. Para obtener más información, consulte [Implementaciones nacionales de nube](/graph/deployments).
+
+> [!IMPORTANT]
+> Si va a migrar de App Studio al Portal para desarrolladores, en la tabla siguiente se proporciona la información detallada de las características que se admiten en el Portal para desarrolladores:
+
+| Características | App Studio | Portal para desarrolladores |
+| --- | --- | --- |
+| Análisis de aplicaciones* | ❌ | ✔️ |
+| Funcionalidades de la aplicación: bots | ✔️ | ✔️ |
+| Funcionalidades de la aplicación: conectores | ✔️ | ✔️ |
+| Funcionalidades de la aplicación: extensión de mensajería | ✔️ | ✔️ |
+| Funcionalidades de la aplicación: extensión de reunión | ❌ | ✔️ |
+| Funcionalidades de la aplicación:Aplicaciones personales | ✔️ | ✔️ |
+| Funcionalidades de la aplicación: pestañas | ✔️ | ✔️ |
+| Entornos de aplicación | ❌ | ✔️ |
+| Idiomas de la aplicación | ✔️ | ✔️ |
+| Versión preliminar y descarga del manifiesto de aplicación | ✔️ | ✔️ |
+| Planes de aplicación y precios | ❌ | ✔️ |
+| Publicación de aplicaciones | ✔️ | ✔️ |
+| Permisos de aplicación | ❌ | ✔️ |
+| Uso compartido de aplicaciones con co-desarrolladores | ❌ | ✔️ |
+| Validación de aplicaciones | ✔️ | ✔️ |
+| Creación de una nueva aplicación | ✔️ | ✔️ |
+| Impartir un paquete zip | ✔️ | ✔️ |
+
+\**El análisis de aplicaciones estará disponible para disponibilidad general pronto.*
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 
@@ -161,7 +186,7 @@ En la tabla **del panel Mi aplicación** se muestran los datos R30 (30 días gra
 
 Puede seleccionar cada uno de estos **nombres de métrica** para ver las tendencias a lo largo del tiempo.
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Aplicación":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="aplicación":::
 
 ## <a name="use-tools-to-create-app-features"></a>Uso de herramientas para crear características de la aplicación
 
