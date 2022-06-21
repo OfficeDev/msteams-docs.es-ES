@@ -4,12 +4,12 @@ description: En este módulo, aprenderá a crear bots mediante el Microsoft Bot 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 0b39593917585db73eccd36492bcbb7b9fdd6dfd
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a669b11baef8dc31a662ea2ad178ad3488f2d69e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144015"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189525"
 ---
 # <a name="create-a-bot"></a>Creación de un bot
 
@@ -47,10 +47,11 @@ Para obtener más información, consulte [La documentación de Bot Framework](/a
 > * Al editar las propiedades de un bot existente en la [lista de bots de Bot Framework](https://dev.botframework.com/bots), como su "punto de conexión de mensajería", que es común al desarrollar por primera vez un bot, especialmente si usa [ngrok](https://ngrok.com), verá la columna "Estado de la migración" y un botón azul "Migrar" que le llevará al portal de Microsoft Azure. No haga clic en el botón "Migrar" a menos que eso sea lo que quiere hacer; en su lugar, haga clic en el nombre del bot y puede editar sus propiedades:</br>
    ![Editar propiedades del bot](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * Si registra el bot con Microsoft Azure, no es necesario *hospedar* el código del bot en Microsoft Azure.
-> * Si registra un bot mediante Azure Portal, debe tener una cuenta de Microsoft Azure. Puede [crear una de forma gratuita](https://azure.microsoft.com/free/). Para comprobar su identidad al crear una, debe proporcionar una tarjeta de crédito, pero no se le cobrará; siempre es gratis crear y usar bots con Microsoft Teams.
-> * Ahora puede usar App Studio para registrar o actualizar la información de la aplicación y del bot directamente dentro de Microsoft Teams. Solo tendrá que usar la Azure Portal para agregar o configurar otros canales de Bot Framework, como Direct Line, Chat en web, Skype y Facebook Messenger.
+> * Si registra un bot mediante Azure Portal, debe tener una cuenta de Microsoft Azure. Puede [crear una de forma gratuita](https://azure.microsoft.com/free/). Para comprobar su identidad al crear una, debe proporcionar una tarjeta de crédito, pero no se le cobrará; siempre es gratis crear y usar bots con Teams.
+> * Ahora puede usar App Studio para registrar o actualizar la información de aplicaciones y bots directamente dentro de Teams. Solo tendrá que usar la Azure Portal para agregar o configurar otros canales de Bot Framework, como Direct Line, Chat en web, Skype y Facebook Messenger.
 
 > [!WARNING]
+>
 >* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
 
 ## <a name="see-also"></a>Consulte también

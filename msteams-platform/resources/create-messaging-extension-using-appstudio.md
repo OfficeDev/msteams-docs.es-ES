@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear una extensión de mensajerí
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f222f52a4eea3b59e6caf15e77b006a58a426d2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142342"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190023"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Crear una extensión de mensajería usando App Studio
 
@@ -23,7 +23,7 @@ En un nivel alto, deberá completar los pasos siguientes para crear una extensi�
 2. Cree e implemente el servicio web (mientras desarrolla usa un servicio de tunelización como ngrok para ejecutarlo localmente).
 3. Registre el servicio web con Bot Framework.
 4. Cree el paquete de la aplicación.
-5. Cargar el paquete en Microsoft Teams.
+5. Upload el paquete a Teams.
 
 La creación del servicio web, la creación del paquete de la aplicación y el registro del servicio web con Bot Framework se pueden realizar en cualquier orden. Dado que esas tres piezas están tan entrelazadas, independientemente del orden en el que las hagas, tendrás que volver a actualizar las demás. El registro necesita el punto de conexión de mensajería del servicio web implementado y el servicio web necesita el identificador y la contraseña creados a partir del registro. El manifiesto de la aplicación también necesita ese identificador para conectar Teams al servicio web.
 
@@ -56,7 +56,7 @@ Puede usar App Studio para ayudarle a crear el manifiesto de la aplicación, o b
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>Creación de un manifiesto de aplicación mediante App Studio
 
-Puede usar la aplicación App Studio desde el cliente de Microsoft Teams para ayudar a crear el manifiesto de la aplicación.
+Puede usar la aplicación app de App Studio desde el cliente de Teams para ayudar a crear el manifiesto de la aplicación.
 
 1. En el cliente de Teams, abra App Studio en el menú de desbordamiento **...** del raíl de navegación izquierdo. Si aún no está instalado, puede hacerlo si lo busca.
 2. En la pestaña **Editor de manifiestos** , seleccione **Crear una nueva aplicación** (o si va a agregar una extensión de mensajería a una aplicación existente, puede importar el paquete de la aplicación).
@@ -71,7 +71,7 @@ En la pestaña **Finalizar => Probar y distribuir** , puedes **descargar** el pa
 
 ### <a name="create-your-app-manifest-manually"></a>Creación manual del manifiesto de la aplicación
 
-Al igual que con los bots y las pestañas, actualiza el [manifiesto de aplicación](~/resources/schema/manifest-schema.md#composeextensions) de la aplicación para incluir las propiedades de la extensión de mensajería. Estas propiedades rigen cómo aparece y se comporta la extensión de mensajería en el cliente de Microsoft Teams. Las extensiones de mensajería se admiten a partir de la versión 1.0 del manifiesto.
+Al igual que con los bots y las pestañas, actualiza el [manifiesto de aplicación](~/resources/schema/manifest-schema.md#composeextensions) de la aplicación para incluir las propiedades de la extensión de mensajería. Estas propiedades rigen cómo aparece y se comporta la extensión de mensajería en el cliente de Teams. Las extensiones de mensajería se admiten a partir de la versión 1.0 del manifiesto.
 
 #### <a name="declare-your-messaging-extension"></a>Declaración de la extensión de mensajería
 
@@ -242,7 +242,7 @@ Una vez que comienza una reunión, Teams participantes pueden interactuar direct
 
 1. **Experiencia del usuario**. La extensión de mensajería debe tener un aspecto y comportarse de la misma manera que lo haría fuera de una reunión.
 
-## <a name="next-steps"></a>Siguientes pasos
+## <a name="next-steps"></a>Pasos siguientes
 
 * [Crear comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Crear comandos de búsqueda](~/messaging-extensions/how-to/search-commands/define-search-command.md)

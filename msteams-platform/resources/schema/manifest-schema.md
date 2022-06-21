@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 2c7637f8ec3bd161827a2bd79f73b7374378e55b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a65fa1fdbf854749bf21a4d4ab395af74211fc5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142727"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189352"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Referencia: esquema de manifiesto para Microsoft Teams
 
@@ -197,7 +197,7 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
                     ],
                     "description": "Command Description; e.g., Add a customer",
                     "initialRun": true,
-                    "fetchTask": true,
+                    "fetchTask": false ,
                     "parameters": [
                         {
                             "name": "custinfo",
@@ -578,7 +578,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`parameters.title`|string|32 caracteres|✔️|Título fácil de usar para el parámetro.|
 |`parameters.description`|string|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
 |`parameters.value`|string|512 caracteres||Valor inicial del parámetro. Actualmente no se admite el valor|
-|`parameters.inputType`|string|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para`fetchTask: true` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para`fetchTask: false` . Uno de `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|matriz de objetos|10 elementos||Las opciones de elección para el `choiceset`. Use solo cuando `parameter.inputType` sea `choiceset`.|
 |`parameters.choices.title`|string|128 caracteres|✔️|Título de la elección.|
 |`parameters.choices.value`|string|512 caracteres|✔️|Valor de la elección.|

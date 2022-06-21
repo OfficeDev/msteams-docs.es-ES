@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a definir comandos de acción de extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143434"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189623"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -23,6 +23,12 @@ Antes de crear el comando de acción, debe decidir los siguientes factores:
 1. [¿Desde dónde se puede desencadenar el comando de acción?](#select-action-command-invoke-locations)
 1. [¿Cómo se creará el módulo de tareas?](#select-how-to-create-your-task-module)
 1. [¿Se enviará el mensaje final o la tarjeta al canal desde un bot, o se insertará el mensaje o la tarjeta en el área de redacción del mensaje para que el usuario lo envíe?](#select-how-the-final-message-is-sent)
+
+Vea el siguiente vídeo para obtener información sobre cómo definir comandos de acción de extensión de mensaje:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## <a name="select-action-command-invoke-locations"></a>Seleccionar ubicaciones de invocación de comando de acción
 
@@ -185,7 +191,7 @@ La siguiente sección es un ejemplo de un objeto `composeExtensions` que define 
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -212,7 +218,7 @@ La siguiente sección es un ejemplo de un objeto `composeExtensions` que define 
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

@@ -3,12 +3,12 @@ title: Compatibilidad con inicio de sesión único para bots
 description: Obtenga información sobre cómo obtener un token de usuario y un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio bot de Azure con la compatibilidad con la tarjeta OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 37c7fcd62c6b85c2220e9db57060da03437d79da
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144148"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189722"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Compatibilidad con inicio de sesión único (SSO) para bots
 
@@ -16,6 +16,11 @@ La autenticación de inicio de sesión único en Microsoft Azure Active Director
 
 >[!NOTE]
 > OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Tener conocimientos básicos del flujo de concesión implícito de OAuth 2.0 es un requisito previo para trabajar con la autenticación en pestañas de Microsoft Teams.
+
+Consulte el siguiente vídeo para obtener información sobre la compatibilidad del inicio de sesión único (SSO) con bots:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+<br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot SSO en tiempo de ejecución
 

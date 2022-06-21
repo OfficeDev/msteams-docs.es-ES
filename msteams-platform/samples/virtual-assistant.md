@@ -3,12 +3,12 @@ title: Crear un asistente virtual
 description: Obtenga información sobre cómo crear Virtual Assistant bot para Teams mediante ejemplos de código y fragmentos de código con características como tarjetas adaptables, control de interrupciones y mucho más.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 4b1dc7168cc67cd455182dddd4dd2d14a0cf9c3d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123065"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189518"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual
 
@@ -263,7 +263,11 @@ El fragmento de código del archivo de manifiesto de una aptitud se muestra en l
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 El fragmento de código del archivo de manifiesto del asistente virtual correspondiente se muestra en la sección siguiente:
@@ -277,7 +281,11 @@ El fragmento de código del archivo de manifiesto del asistente virtual correspo
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 Una vez que un usuario invoca los comandos, el asistente virtual puede identificar una aptitud asociada analizando el identificador de comando, actualiza la actividad quitando el sufijo adicional `:<skill_id>` del identificador de comando y reenvíándolo a la aptitud correspondiente. No es necesario que el código de una aptitud controle el sufijo adicional. Por lo tanto, se evitan los conflictos entre los identificadores de comando entre las aptitudes. Con este enfoque, todos los comandos de búsqueda y acción de una aptitud dentro de todos los contextos, como **la composición**, **commandBox** y **mensajes** se basan en un asistente virtual.
@@ -334,7 +342,7 @@ Algunas actividades de extensión de mensaje no incluyen el identificador de com
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo convertir la plantilla de aplicación de reserva de reuniones en una aptitud del asistente virtual: Reserva de reuniones es una aplicación Microsoft Teams que permite a los usuarios buscar y reservar rápidamente una sala de reuniones durante 30, 60 o 90 minutos a partir de la hora actual. El valor predeterminado es 30 minutos. El bot de reserva de reuniones se limita a las conversaciones personales o individuales.
+En el ejemplo siguiente se muestra cómo convertir la plantilla de aplicación Book-a-room en una aptitud Virtual Assistant: Book-a-room es un Teams que permite a los usuarios encontrar y reservar rápidamente una sala de reuniones durante 30, 60 o 90 minutos a partir de la hora actual. El valor predeterminado es 30 minutos. El bot de reserva de reuniones se limita a las conversaciones personales o individuales.
 En la imagen siguiente se muestra un asistente virtual con una aptitud **reservar una sala**:
 
 ![Asistente virtual con una aptitud "reservar una sala"](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -343,7 +351,7 @@ Los siguientes son los cambios diferenciales introducidos para convertirlos en u
 
 ### <a name="skill-manifest"></a>Manifiesto de aptitud
 
-Un manifiesto de aptitud es un archivo JSON que expone el punto de conexión de mensajería, el identificador, el nombre y otros metadatos pertinentes de una aptitud. Este manifiesto es diferente del manifiesto usado para transferir localmente una aplicación en Microsoft Teams. Un asistente virtual requiere una ruta de acceso a este archivo como entrada para adjuntar una aptitud. Hemos agregado el siguiente manifiesto a la carpeta wwwroot del bot.
+Un manifiesto de aptitud es un archivo JSON que expone el punto de conexión de mensajería, el identificador, el nombre y otros metadatos pertinentes de una aptitud. Este manifiesto es diferente del manifiesto usado para transferir localmente una aplicación en Teams. Un asistente virtual requiere una ruta de acceso a este archivo como entrada para adjuntar una aptitud. Hemos agregado el siguiente manifiesto a la carpeta wwwroot del bot.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

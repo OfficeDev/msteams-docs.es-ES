@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo implementar la pestaña de Teams e
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f889a4e1932feb02eeb502ab2f85f051093a5b58
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123650"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189475"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Añadir una pestaña de Teams a SharePoint
 
@@ -67,7 +67,7 @@ Con SharePoint Framework v.1.7, puede hospedar las pestañas de Teams en SharePo
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint Framework en Teams
 
-También puede implementar las pestañas de Microsoft Teams con SharePoint Framework. Los elementos web de SharePoint Framework se hospedan en SharePoint sin necesidad de servicios externos, como Azure. Para los desarrolladores de SharePoint, esto simplifica significativamente el proceso de desarrollo de las pestañas de Teams. Para obtener más información sobre SharePoint Framework en Teams, vea [cómo usar SharePoint Framework en Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+También puede implementar las pestañas de Teams mediante SharePoint Framework. Los elementos web de SharePoint Framework se hospedan en SharePoint sin necesidad de servicios externos, como Azure. Para los desarrolladores de SharePoint, esto simplifica significativamente el proceso de desarrollo de las pestañas de Teams. Para obtener más información sobre SharePoint Framework en Teams, vea [cómo usar SharePoint Framework en Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Introducción
 

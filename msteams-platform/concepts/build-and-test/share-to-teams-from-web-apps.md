@@ -3,12 +3,12 @@ title: Compartir en Teams desde aplicaciones web
 description: Obtenga información sobre cómo agregar el botón Compartir a Teams insertado en su sitio web, con una vista previa del sitio web, mediante ejemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 38e082166c0a2d66c5e2e26280fe1c8d9c3053a2
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150837"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190019"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartir en Teams desde aplicaciones web
 
@@ -33,6 +33,12 @@ En la imagen siguiente se muestra la experiencia de desplegamiento del vínculo 
 > La desplegamiento de vínculos en el recurso compartido a Teams solo está disponible actualmente en la versión preliminar del desarrollador público.
 
 Este artículo le guía sobre cómo crear e insertar un botón Compartir para Teams para su sitio web, crear la versión preliminar del sitio web y ampliar Share a Teams para Educación.
+
+Vea el siguiente vídeo para obtener información sobre cómo insertar el botón Compartir en Teams:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
+<br>
+
 
 ## <a name="embed-a-share-to-teams-button"></a>Crear un botón Compartir en Teams
 

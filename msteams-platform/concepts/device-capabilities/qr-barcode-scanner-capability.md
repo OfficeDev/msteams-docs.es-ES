@@ -1,17 +1,16 @@
 ---
 title: Integrar la función de escáner de código QR o de códigos de barras
 author: Rajeshwari-v
-description: Cómo usar el cliente SDK de Teams JavaScript para aprovechar la funcionalidad de escáner de códigos QR o códigos de barras
-keywords: capacidades de examen de escáner de código qr de la cámara capacidades de dispositivos nativos
+description: Obtenga información sobre cómo usar Teams SDK de cliente de JavaScript para aprovechar la funcionalidad de escáner de códigos QR o códigos de barras y conocer las ventajas de integrar la funcionalidad de escáner de códigos QR o códigos de barras.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d9dc35002398be047f4cd84d7600b3d149677bd3
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130504"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189625"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Integrar la función de escáner de código QR o de códigos de barras
 

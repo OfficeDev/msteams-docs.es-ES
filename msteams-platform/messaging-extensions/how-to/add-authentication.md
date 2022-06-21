@@ -1,16 +1,16 @@
 ---
 title: Agregar autenticación a la extensión de mensaje
 author: surbhigupta
-description: En este módulo, aprenderá a agregar autenticación a una extensión de mensajería mediante ejemplos de código y ejemplos
+description: En este artículo, aprenderá a agregar autenticación a una extensión de mensajería mediante ejemplos de código y ejemplos
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143546"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190269"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Agregar autenticación a la extensión de mensaje
 
@@ -41,7 +41,7 @@ Si el servicio requiere la autenticación del usuario, los usuarios deben inicia
 1. Después de que el usuario inicie sesión, debe cerrar la ventana y enviar un **código de autenticación** al cliente de Teams.
 1. A continuación, el cliente de Teams vuelve a emitir la consulta al servicio, lo que incluye el código de autenticación aprobado en el paso 5.
 
-El servicio debe comprobar que el código de autenticación recibido en el paso 6 coincida con el del paso 5. Esto garantiza que ningún usuario malintencionado intente suplantar o poner en peligro el flujo de inicio de sesión. Así se “cierra el bucle” de forma eficaz para finalizar la secuencia de autenticación segura.
+El servicio debe comprobar que el código de autenticación recibido en el paso 6 coincide con el paso 5. Los pasos garantizan que un usuario malintencionado no intente suplantar o poner en peligro el flujo de inicio de sesión. El flujo "cierra el bucle" de forma eficaz para finalizar la secuencia de autenticación segura.
 
 ### <a name="respond-with-a-sign-in-action"></a>Responder con una acción de inicio de sesión
 

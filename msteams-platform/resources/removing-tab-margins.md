@@ -5,16 +5,16 @@ description: En este módulo, obtenga información sobre cómo la eliminación d
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143322"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190148"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
-En este documento se describe cómo la eliminación de márgenes alrededor de todas las pestañas de Microsoft Teams mejora la experiencia de creación de aplicaciones. Se trata de una mejora introducida en Microsoft Teams en 2021.
+En este documento se describe cómo la eliminación de márgenes alrededor de todas las pestañas de Microsoft Teams mejora la experiencia de creación de aplicaciones. Se trata de una mejora introducida en Teams en 2021.
 Puede crear aplicaciones que parezcan más nativas de Teams quitando los márgenes alrededor de todas las pestañas. Las pestañas con márgenes quitados se alinean con los [diseños de kit de interfaz de usuario](~/tabs/design/tabs.md) de Microsoft Teams. La mayoría de las aplicaciones experimentan un aspecto mejorado sin márgenes.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Ingenio de tabulación y sin márgenes" border="false":::
@@ -48,7 +48,7 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 > * El cambio de eliminación del margen de tabulación se aplica a todas las pestañas. No hay ninguna manera de participar o no participar en el cambio.
 > * El cambio de los márgenes de tabulación puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes que rodean su interfaz de usuario.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142678"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189596"
 ---
 # <a name="channel-or-group-tab"></a>Pestañas de canal o grupo
 
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Cargar el paquete en Microsoft Teams
 
-1. Vaya a Microsoft Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
+1. Vaya a Teams y seleccione **Aplicaciones**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Tienda":::.
 1. Seleccione **Administrar las aplicaciones** y **Cargar una aplicación personalizada**.
 1. Vaya al directorio del proyecto, desplácese hasta la carpeta **./package**, seleccione la carpeta ZIP del paquete de la aplicación y elija **Abrir**.
 
@@ -248,9 +248,9 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación para comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>Revisar el código fuente</b></summary>
@@ -291,7 +291,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 * Un **icono de contorno transparente** de 32 x 32 píxeles.
 * Un archivo `manifest.json` que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Cuando un usuario decide agregar o actualizar la pestaña, Microsoft Teams carga el `configurationUrl` especificado en el manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
+Estos archivos deben comprimirse en un paquete de aplicación para usarlos al cargar la pestaña en Teams. Cuando un usuario elige agregar o actualizar la pestaña, Teams carga el especificado en el `configurationUrl` manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
@@ -335,10 +335,10 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > No copie ni pegue las direcciones URL `<script src="...">` de esta página, ya que no representan la versión más reciente. Para obtener la versión más reciente del SDK, vaya siempre a la [API de JavaScript de Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
-    
+
 1. Inserte una llamada a `microsoftTeams.initialize();` en la etiqueta `script`.
 
 1. En el Explorador de soluciones de Visual Studio vaya a la carpeta **Pages** y abra **Tab.cshtml**.
@@ -394,7 +394,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualizar el paquete de la aplicación con el portal para desarrolladores
 
-1. Vaya a Microsoft Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
+1. Ve a Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
 
 1. Vaya al [**portal para desarrolladores**](https://dev.teams.microsoft.com/home).
 
@@ -434,7 +434,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña de canal ASPNET cargada" border="true":::
-    
+
     Ahora ha creado y agregado correctamente la pestaña de canal o grupo en Teams.
 
 ::: zone-end
@@ -468,9 +468,9 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación para comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>Revisar el código fuente</b></summary>
@@ -563,15 +563,15 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > No copie ni pegue las direcciones URL `<script src="...">` de esta página, ya que no representan la versión más reciente. Para obtener la versión más reciente del SDK, vaya siempre a la [API de JavaScript de Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
-    
+
 1. Inserte una llamada a `microsoftTeams.initialize();` en la etiqueta `script`.
 
 1. En el Explorador de soluciones de Visual Studio vaya a la carpeta **Tab** y abra **Tab.cshtml**.
 
-    En **Tab.cshtml**, la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir los desencadenadores de los botones **Seleccionar gris** o **Seleccionar rojo** `saveGray()`o `saveRed()`, respectivamente, establece `settings.setValidityState(true)`y habilita el botón **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado los requisitos de configuración y que la instalación puede continuar. Se establecen los parámetros de `settings.setSettings`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente. 
+    En **Tab.cshtml**, la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir los desencadenadores de los botones **Seleccionar gris** o **Seleccionar rojo** `saveGray()`o `saveRed()`, respectivamente, establece `settings.setValidityState(true)`y habilita el botón **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado los requisitos de configuración y que la instalación puede continuar. Se establecen los parámetros de `settings.setSettings`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 1. Actualice los valores `websiteUrl` y `contentUrl` en cada función con la dirección URL de ngrok HTTPS en la pestaña.
 
@@ -617,7 +617,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualizar el paquete de la aplicación con el portal para desarrolladores
 
-1. Vaya a Microsoft Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
+1. Ve a Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
 
 1. Vaya al [**portal para desarrolladores**](https://dev.teams.microsoft.com/home).
 
@@ -652,7 +652,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña de canal ASPNET MVC cargada" border="true":::
-    
+
     Ahora ha creado y agregado correctamente la pestaña de canal o grupo en Teams.
 
 ::: zone-end

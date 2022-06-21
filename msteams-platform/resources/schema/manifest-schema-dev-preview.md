@@ -4,12 +4,12 @@ description: Obtenga información sobre el archivo de manifiesto de ejemplo y la
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142741"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189875"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Versión preliminar del esquema de manifiesto para desarrolladores públicos de Microsoft Teams
 
@@ -477,7 +477,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-La extensión de mensaje debe declarar uno o varios comandos. Cada comando aparece en Microsoft Teams como una posible interacción desde el punto de entrada basado en la interfaz de usuario. Hay un máximo de 10 comandos.
+La extensión de mensaje debe declarar uno o varios comandos. Cada comando aparece en Teams como una posible interacción desde el punto de entrada basado en la interfaz de usuario. Hay un máximo de 10 comandos.
 
 Cada elemento de comando es un objeto con la estructura siguiente:
 

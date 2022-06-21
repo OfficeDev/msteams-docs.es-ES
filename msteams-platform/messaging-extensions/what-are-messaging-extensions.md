@@ -5,16 +5,16 @@ description: En este módulo, aprenderá las extensiones de mensajería y los es
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144323"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189798"
 ---
 # <a name="message-extensions"></a>Extensiones de mensajes
 
-Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede enviar los resultados de la interacción de vuelta al cliente de Microsoft Teams en forma de una tarjeta con formato enriquecido.
+Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede devolver los resultados de esa interacción al cliente de Teams en forma de tarjeta con formato enriquecido.
 
 > [!IMPORTANT]
 > Las extensiones de mensaje están disponibles en entornos de Government Community Cloud (GCC) y GCC-High, pero no en el entorno del Departamento de Defensa (DoD).
@@ -38,12 +38,12 @@ La siguiente imagen muestra las ubicaciones desde las que se invocan las extensi
 
 ## <a name="understand-how-message-extensions-work"></a>Descripción del funcionamiento de las extensiones de mensajería
 
-Una extensión de mensajería consiste en un servicio web que usted hospeda y el manifiesto de aplicación de Microsoft Teams que define desde dónde se puede invocar su servicio web en el cliente de Microsoft Teams. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación segura de modo que deberá registrar su servicio web como bot en Bot Framework.
+Una extensión de mensaje consta de un servicio web que se hospeda y un manifiesto de aplicación, que define desde dónde se invoca el servicio web en el cliente Teams. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación segura de modo que deberá registrar su servicio web como bot en Bot Framework.
 
 > [!NOTE]
 > Aunque puede crear el servicio web manualmente, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) para trabajar con el protocolo.
 
-En el manifiesto de la aplicación de Microsoft Teams, se define una única extensión de mensaje con hasta diez comandos diferentes. Cada comando define un tipo, como acción o búsqueda y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son el área de redacción de mensajes, la barra de comandos y el mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información pertinente. Responda con una carga JSON, lo que permite al cliente de Teams conocer la siguiente interacción que se va a habilitar.
+En el manifiesto de la aplicación para Teams aplicación, se define una única extensión de mensaje con hasta diez comandos diferentes. Cada comando define un tipo, como acción o búsqueda y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son el área de redacción de mensajes, la barra de comandos y el mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información pertinente. Responda con una carga JSON, lo que permite al cliente de Teams conocer la siguiente interacción que se va a habilitar.
 
 ## <a name="types-of-message-extension-commands"></a>Tipos de comandos de extensión de mensajería
 
@@ -71,7 +71,7 @@ La siguiente imagen muestra el módulo de tareas de comandos de búsqueda de ext
 
 ## <a name="link-unfurling"></a>Apertura de vínculos
 
-Se invoca un servicio web cuando se pega una dirección URL en el área de redacción de mensajes. Esta funcionalidad se conoce como apertura de vínculos. Con la apertura de vínculos su aplicación puede registrarse para recibir una invocación cuando se pegan direcciones URL con un dominio en particular en el área de redacción de mensajes. El servicio web puede "abrir" la dirección URL en una tarjeta detallada, lo que proporciona más información que la tarjeta de vista previa del sitio web estándar. Puede agregar botones para permitir que los usuarios realicen acciones inmediatamente sin salir del cliente Microsoft Teams.
+Se invoca un servicio web cuando se pega una dirección URL en el área de redacción de mensajes. Esta funcionalidad se conoce como apertura de vínculos. Con la apertura de vínculos su aplicación puede registrarse para recibir una invocación cuando se pegan direcciones URL con un dominio en particular en el área de redacción de mensajes. El servicio web puede "abrir" la dirección URL en una tarjeta detallada, lo que proporciona más información que la tarjeta de vista previa del sitio web estándar. Puede agregar botones para permitir que los usuarios realicen acciones inmediatamente sin salir del cliente de Teams.
 Las siguientes imágenes muestran la característica de apertura de vínculos cuando se pega un vínculo en la extensión de mensaje:
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="abrir vínculo":::

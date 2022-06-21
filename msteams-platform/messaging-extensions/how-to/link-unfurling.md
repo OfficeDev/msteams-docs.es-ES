@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a agregar la desurling de vínculos con
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142818"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189996"
 ---
 # <a name="link-unfurling"></a>Apertura de vínculos
 
@@ -26,6 +26,11 @@ Este documento le guía sobre cómo agregar un vínculo que se desplegue al mani
 La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la imagen siguiente, un usuario pegó una dirección URL para un elemento de Azure DevOps que la extensión de mensaje se ha resuelto en una tarjeta:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Ejemplo de apertura de vínculos":::
+
+Consulte el siguiente vídeo para obtener más información sobre la desplegamiento de vínculos:
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+<br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregue el enlace que se abre al manifiesto de su aplicación
 

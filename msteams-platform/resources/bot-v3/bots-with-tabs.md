@@ -4,12 +4,12 @@ description: En este artículo, aprenderá a usar pestañas y bots juntos, a cre
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: f8199b65fded8c43af45cb303a400652e5516db2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47a8ba3081fa629c650dfdf588e4b0c60600561e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142097"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189738"
 ---
 # <a name="combine-bots-with-tabs"></a>Combinación de bots con pestañas
 
@@ -28,9 +28,9 @@ Este flujo funciona mejor si el proveedor de identidades implementa el protocolo
 
 ## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Creación de vínculos profundos a pestañas en mensajes del bot
 
-Quiere usar pestañas para mostrar más contenido del que cabe dentro de una tarjeta o proporcionar una manera de completar tareas complejas de relleno de formularios mediante el lienzo de pestañas. Por ejemplo, considere la posibilidad de navegar al usuario a la pestaña cuando hace clic en la tarjeta desde el bot. Para que esto suceda, deberá codificar el mensaje del bot para incluir una dirección URL de [vínculo profundo](~/concepts/build-and-test/deep-links.md) , ya sea a través del marcado o como destino de la acción openUrl.
+Quiere usar pestañas para mostrar más contenido que pueda caber dentro de una tarjeta o proporcionar una manera de completar tareas complejas de relleno de formularios mediante el lienzo de pestañas. Por ejemplo, considere la posibilidad de navegar al usuario a la pestaña cuando el usuario selecciona la tarjeta del bot. Para que esto suceda, deberá codificar el mensaje del bot para incluir una dirección URL de [vínculo profundo](~/concepts/build-and-test/deep-links.md) , ya sea a través del marcado o como destino de la acción openUrl.
 
-Los vínculos profundos se basan en un entityId, que es un valor opaco que se asigna a una entidad única del sistema. Cuando se crea la pestaña, lo ideal es almacenar un estado simple. Por ejemplo, marca en el back-end que indica que la pestaña se ha creado en el canal. Cuando el bot construye un mensaje, puede tener como destino el entityId asociado a esa pestaña.
+Los vínculos profundos se basan en un entityId, que es un valor opaco que se asigna a una entidad única del sistema. Cuando se crea la pestaña, se almacena un estado simple. Por ejemplo, marca en el back-end que indica que la pestaña se crea en el canal. Cuando el bot construye un mensaje, puede tener como destino el entityId asociado a esa pestaña.
 
 > [!NOTE]
 > en los chats personales, dado que las pestañas son "estáticas" e instaladas con la aplicación, siempre se puede asumir su existencia y, por tanto, construir vínculos profundos en consecuencia.

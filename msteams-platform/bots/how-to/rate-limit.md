@@ -3,12 +3,12 @@ title: Optimizar un bot con la limitación de volumen en Teams
 description: Obtenga información sobre el control del límite de velocidad de bots con por bot por subproceso y por límite para todos los bots mediante ejemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143735"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190240"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
@@ -176,3 +176,7 @@ En la tabla siguiente se proporciona el límite por subproceso para todos los bo
 
 > [!div class="nextstepaction"]
 > [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
+## <a name="see-also"></a>Vea también
+
+[Administración de una operación de larga duración](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

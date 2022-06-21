@@ -1,17 +1,16 @@
 ---
 title: Integrar capacidades multimedia
 author: Rajeshwari-v
-description: Obtenga información sobre cómo usar el SDK de cliente de JavaScript de Teams para habilitar funcionalidades multimedia mediante ejemplos de código
-keywords: API multimedia de permisos de dispositivos nativos de las capacidades del micrófono de imagen de cámara
+description: Obtenga información sobre cómo usar Teams SDK de cliente de JavaScript para habilitar las funcionalidades multimedia mediante ejemplos de código y también obtenga información sobre la ventaja de integrar las funcionalidades multimedia.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 586db765ff94449a137e131cd788cbc1732d55f2
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130535"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190236"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia
 

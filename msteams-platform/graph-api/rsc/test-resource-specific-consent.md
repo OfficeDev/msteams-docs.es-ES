@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams autorización del inicio de sesión único de OAuth Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757447"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189876"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos del recurso en Teams
 
@@ -28,7 +28,7 @@ Asegúrese de comprobar los siguientes cambios en el manifiesto de la aplicació
 
 <details>
 
-<summary><b>Permisos de RSC para el manifiesto de aplicación versión 1.12</b></summary>
+<summary><b>Permisos de RSC para la versión 1.12 y posteriores del manifiesto de aplicación</b></summary>
 
 Agregue una clave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) al manifiesto de la aplicación con los siguientes valores:
 
@@ -194,7 +194,7 @@ Ejemplo de RSC en un chat
 
 <details>
 
-<summary><b>Permisos de RSC para la versión 1.11 o anterior del manifiesto de aplicación</b></summary>
+<summary><b>Permisos de RSC para el manifiesto de aplicación versión 1.11 y anteriores</b></summary>
 
 Agregue una clave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) al manifiesto de la aplicación con los siguientes valores:
 

@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 30ccb4ee8810154e2b36311d15217205de87b413
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d6439d396a61471c0e7dbe5942d4b88cc00a87
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142762"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189316"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Control de eventos de bot en Microsoft Teams
 
@@ -48,7 +48,7 @@ El evento [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-ac
 
 ### <a name="bot-or-user-added-to-a-team"></a>Bot o usuario agregado a un equipo
 
-El evento `conversationUpdate` con el objeto `membersAdded` en la carga se envía cuando se agrega un bot a un equipo o se agrega un nuevo usuario a un equipo donde se ha agregado un bot. Microsoft Teams también agrega `eventType.teamMemberAdded` en el objeto `channelData`.
+El evento `conversationUpdate` con el objeto `membersAdded` en la carga se envía cuando se agrega un bot a un equipo o se agrega un nuevo usuario a un equipo donde se ha agregado un bot. Teams también agrega `eventType.teamMemberAdded` en el `channelData` objeto .
 
 Dado que este evento se envía en ambos casos, debe analizar el objeto `membersAdded` para determinar si la adición fue un usuario o el propio bot. Para lo último, un procedimiento recomendado es enviar un [mensaje de bienvenida](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) al canal para que los usuarios puedan comprender las características que proporciona el bot.
 
@@ -227,7 +227,7 @@ El bot recibe un `conversationUpdate` con `membersAdded` cuando un usuario lo ag
 
 ## <a name="team-member-or-bot-removed"></a>Miembro del equipo o bot quitado
 
-El evento `conversationUpdate` con el objeto `membersRemoved` en la carga se envía cuando se quita el bot de un equipo o se quita un usuario de un equipo donde se ha agregado un bot. Microsoft Teams también agrega `eventType.teamMemberRemoved` en el objeto `channelData`. Al igual que con el objeto `membersAdded`, debe analizar el objeto `membersRemoved` para el identificador de aplicación del bot para determinar quién se quitó.
+El evento `conversationUpdate` con el objeto `membersRemoved` en la carga se envía cuando se quita el bot de un equipo o se quita un usuario de un equipo donde se ha agregado un bot. Teams también agrega `eventType.teamMemberRemoved` en el `channelData` objeto . Al igual que con el objeto `membersAdded`, debe analizar el objeto `membersRemoved` para el identificador de aplicación del bot para determinar quién se quitó.
 
 ### <a name="schema-example-team-member-removed"></a>Ejemplo de esquema: miembro del equipo quitado
 

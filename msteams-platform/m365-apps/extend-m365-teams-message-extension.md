@@ -1,16 +1,16 @@
 ---
 title: Ampliar una extensión de mensajería de Teams en Microsoft 365
-description: Aquí le mostramos cómo actualizar la extensión de mensajería de Teams basada en búsqueda para que se ejecute en Outlook
+description: Obtenga información sobre cómo actualizar la extensión de mensajes de Teams basada en la búsqueda para que se ejecute en Outlook mediante la actualización del manifiesto de la aplicación, la adición de un canal de Outlook y la instalación de prueba de la aplicación actualizada.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142104"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190200"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Ampliar una extensión de mensajería de Teams en Microsoft 365
 
@@ -106,9 +106,9 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Agregar un canal &quot;Extensiones de mensaje&quot; de Outlook para el bot desde el panel Canales de bot de Azure":::
 
-1. Confirme que el canal de Outlook aparece junto con Microsoft Teams en el panel **Canales** del bot.
+1. Confirme que el canal de Outlook aparece junto con Teams en el panel **Canales** del bot.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Panel Canales de bots de Azure que enumera los canales de Microsoft Teams y Outlook":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Panel Canales de bots de Azure que enumera los canales de Teams y Outlook":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Actualización del registro de aplicaciones de Microsoft Azure Active Directory (Azure AD) para SSO
 
@@ -133,7 +133,7 @@ El inicio de sesión único (SSO) de Azure Active Directory para extensiones de 
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Transferir localmente la extensión de mensajería actualizada en Teams
 
-El último paso consiste en transferir localmente la extensión de mensajería actualizada ([paquete de la aplicación](/microsoftteams/platform/concepts/build-and-test/apps-package)) en Microsoft Teams. Una vez completada, la extensión de mensajería aparecerá en *Aplicaciones* instaladas desde el área de redacción del mensaje.
+El último paso es transferir localmente la extensión de mensaje actualizada ([paquete de la aplicación](/microsoftteams/platform/concepts/build-and-test/apps-package)) en Teams. Una vez completada, la extensión de mensajería aparecerá en *Aplicaciones* instaladas desde el área de redacción del mensaje.
 
 1. Empaquete la aplicación de Teams (iconos de [manifiesto y aplicación](/microsoftteams/platform/resources/schema/manifest-schema#icons)) en un archivo ZIP. Si usó el Kit de herramientas de Teams para crear la aplicación, puede hacerlo fácilmente con la opción **Comprimir paquete de metadatos de Teams** en el menú de *Implementación* del Kit de herramientas de Teams.
 

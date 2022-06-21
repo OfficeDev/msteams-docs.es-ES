@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo enviar, recibir y controlar mensaj
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144414"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190262"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canal y conversaciones de chat de grupo con un bot
 
@@ -26,6 +26,12 @@ Los bots de un grupo o canal solo reciben mensajes cuando se mencionan @botname.
 > Mediante el consentimiento específico de recursos (RSC), los bots pueden recibir todos los mensajes de canal en los equipos en los que está instalado sin @mentioned. Para obtener más información, consulte [Recepción de todos los mensajes del canal con RSC](channel-messages-with-rsc.md).
 >
 > Actualmente no se admite la publicación de un mensaje o una tarjeta adaptable en un canal privado.
+
+Consulte el siguiente vídeo para obtener información sobre las conversaciones de chat de canal y grupo con un bot:
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## <a name="design-guidelines"></a>Directrices de diseño
 

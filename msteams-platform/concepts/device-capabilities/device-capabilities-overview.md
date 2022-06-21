@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo integrar funcionalidades nativas d
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 26ca39aea4d759edbce62f43e9c832632d267cf6
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150676"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189454"
 ---
 # <a name="device-capabilities"></a>Funciones del dispositivo
 
@@ -50,4 +50,4 @@ Además, puede integrar el [control de selector de personas](people-picker-capab
 
 | Ejemplo de nombre           | Descripción | Node.js    |
 |:---------------------|:--------------|:---------|
-|Permisos de dispositivo | Describe cómo mostrar Teams aplicación de ejemplo de pestaña para permisos de dispositivo. |[Ver](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Permisos de dispositivo | Describe cómo mostrar Teams aplicación de ejemplo de pestaña para permisos de dispositivo. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

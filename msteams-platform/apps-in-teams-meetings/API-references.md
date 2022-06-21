@@ -5,12 +5,12 @@ description: Aprenda a identificar las referencias de api de aplicaciones de reu
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 018aa14b72a63575deaefb8ee53f7fe4de7474ef
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150662"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189436"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -174,7 +174,7 @@ Todos los usuarios de una reunión reciben las notificaciones enviadas a través
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**conversationId**| Cadena | Sí | El identificador de conversación está disponible como parte de Bot Invoke. |
 
@@ -267,7 +267,7 @@ Para usar la API Detalles de la reunión, debe obtener distintos permisos RSC en
 
 <details>
 
-<summary><b>Para el manifiesto de aplicación versión 1.12</b></summary>
+<summary><b>Para la versión 1.12 y posteriores del manifiesto de la aplicación</b></summary>
 
 Utilice el siguiente ejemplo para configurar los manifiestos `webApplicationInfo` y `authorization`  propiedades de su aplicación para cualquier reunión privada:
 
@@ -315,7 +315,7 @@ Utilice el siguiente ejemplo para configurar los manifiestos `webApplicationInfo
 
 <details>
 
-<summary><b>Para el manifiesto de aplicación versión 1.11 o anterior</b></summary>
+<summary><b>Para la versión 1.11 del manifiesto de la aplicación y versiones anteriores</b></summary>
 
 Use el ejemplo siguiente para configurar la propiedad `webApplicationInfo` del manifiesto de la aplicación para cualquier reunión privada:
 
@@ -586,7 +586,7 @@ La `getAppContentStageSharingCapabilities` API le permite capturar las funcional
 
 En la tabla siguiente se incluyen los parámetros de consulta:
 
-|Valor|Tipo|Necesario|Descripción|
+|Valor|Tipo|Obligatorio|Descripción|
 |---|---|----|---|
 |**callback**| Cadena | Sí | La devolución de llamada contiene dos parámetros, error y resultado. El *error* puede contener un error de tipo *SdkError* o NULL cuando el recurso compartido se realiza correctamente. El resultado puede contener un `AppContentStageSharingState` objeto, que indica una recuperación correcta, o nulo, que indica que se ha producido un error en la recuperación.|
 
@@ -631,7 +631,7 @@ El manifiesto de la aplicación debe tener la propiedad `webApplicationInfo` par
 
 <details>
 
-<summary><b>Para el manifiesto de aplicación versión 1.12</b></summary>
+<summary><b>Para la versión 1.12 y posteriores del manifiesto de la aplicación</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -658,7 +658,7 @@ El manifiesto de la aplicación debe tener la propiedad `webApplicationInfo` par
 
 <details>
 
-<summary><b>Para el manifiesto de aplicación versión 1.11 o anterior</b></summary>
+<summary><b>Para la versión 1.11 del manifiesto de la aplicación y versiones anteriores</b></summary>
 
 ```json
 "webApplicationInfo": {

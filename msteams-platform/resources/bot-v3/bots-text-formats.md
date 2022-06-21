@@ -4,12 +4,12 @@ description: En este módulo, obtendrá información sobre la compatibilidad con
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: 2bec542b678f371e20317d1ea7d11b4e97f52338
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0aea1472a323c0161567c4661c02956568cb2187
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142335"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189729"
 ---
 # <a name="formatting-bot-messages"></a>Dar formato a los mensajes de bots
 
@@ -27,7 +27,7 @@ Microsoft Teams admite las siguientes opciones de formato:
 
 ## <a name="formatting-text-content"></a>Dar formato al contenido del texto
 
-Microsoft Teams admite un subconjunto de etiquetas de formato Markdown y XML (HTML).
+Teams admite un subconjunto de etiquetas de formato Markdown y XML (HTML).
 
 Actualmente, se aplican las limitaciones siguientes:
 * Los mensajes de solo texto no admiten el formato de tabla.
@@ -36,7 +36,7 @@ Para obtener información sobre el formato de las tarjetas, consulte [Teams Refe
 
 ### <a name="cross-platform-support"></a>Compatibilidad multiplataforma.
 
-Para asegurarse de que el formato funciona en todas las plataformas admitidas por Microsoft Teams, tenga en cuenta que algunos estilos no se admiten actualmente en todas las plataformas.
+Para asegurarse de que el formato funciona en todas las plataformas admitidas por Teams, tenga en cuenta que algunos estilos no se admiten actualmente en todas las plataformas.
 
 | Estilo                     | Mensajes de solo texto | Tarjetas (solo XML) |
 |---------------------------|--------------------|------------------|

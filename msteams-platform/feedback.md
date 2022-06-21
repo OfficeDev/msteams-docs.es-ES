@@ -3,12 +3,12 @@ title: Microsoft Teams soporte técnico y comentarios de la comunidad de desarro
 description: Obtenga información Microsoft Teams equipo de producto responde a la comunidad de desarrolladores a través de diversos canales de comentarios y soporte técnico.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 1155df225aff3016f0c978dc9c84b4462874ea16
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: aa8518c095eed2357e1da80af5eec1b15c71759f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144106"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190258"
 ---
 # <a name="support-and-feedback"></a>Soporte técnico y comentarios
 
@@ -20,15 +20,15 @@ Use **Centro de administración de Azure** o **Centro de administración de Micr
 |:------------|:------------|
 | **Incidencias y errores sobre productos de Microsoft Teams**  | Si tiene un contrato de soporte técnico Premier para :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft 365, visite el Centro de administración de Microsoft 365 y use el menú Soporte técnico para [abrir una solicitud de servicio](https://admin.microsoft.com/). |
 | **Ayuda y soporte técnico de Azure** | Si tiene una suscripción de pago de Azure, visite el Centro de administración de Azure para [abrir un ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **Preguntas generales sobre Microsoft Teams** | Si tiene preguntas generales sobre Microsoft Teams, envíe sus preguntas en :::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::[Comunidad de Microsoft Teams](https://answers.microsoft.com/msteams/forum).|
+| **Preguntas generales sobre Teams** | Si tiene preguntas generales sobre Teams, envíe sus preguntas sobre :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
 
 ## <a name="developer-community-help"></a>Ayuda de la comunidad de desarrolladores
 
-La comunidad de desarrolladores de Microsoft Teams usa Stack Overflow y Microsoft Q&A para conectarse con otros desarrolladores para idear, obtener clarificaciones y enviar consultas. Además, también puede usar otros contactos o sitios, según el tipo de ayuda de la comunidad necesaria para plantear problemas, limitaciones y preguntas generales.
+Teams comunidad de desarrolladores usa Stack Overflow y Microsoft Q&A para conectarse con otros desarrolladores para idear, obtener aclaraciones y enviar consultas. Además, también puede usar otros contactos o sitios, según el tipo de ayuda de la comunidad necesaria para plantear problemas, limitaciones y preguntas generales.
 
 ### <a name="developer-community-forums"></a>Foros de la comunidad de desarrolladores
 
-Publique sus preguntas y ayude a otros miembros de la comunidad compartiendo y respondiendo a preguntas sobre desarrollo de aplicaciones de Microsoft Teams.
+Publique sus preguntas y ayude a otros miembros de la comunidad compartiendo y respondiendo a Teams preguntas de desarrollo de aplicaciones.
 
 | **Canal de la comunidad**|   **Contact**  |
 |:---------------------|:---------------|

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre Teams ciclo de vida de las reuniones y la experiencia de reunión de los usuarios en equipos de escritorio y móviles, tipos de usuario, integración de bots y extensión de mensajes en el ciclo de vida de la reunión.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4bc4609f2fdf6bba8b170088d214846c35d45486
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142580"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189360"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -220,9 +220,10 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md)
 * [Diseño de la aplicación](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Informe de asistencia a reuniones de Microsoft Teams](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)

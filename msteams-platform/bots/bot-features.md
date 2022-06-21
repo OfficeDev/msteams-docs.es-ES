@@ -5,12 +5,12 @@ description: En este artículo, aprenderá herramientas y SDK para crear bots y 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 0b344b6a2db0abc4d1769c47aca6f496f69b98d7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142468"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189334"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -61,6 +61,7 @@ El servicio bot de Azure, junto con Bot Framework, proporciona herramientas para
 > Las aplicaciones de bots en Microsoft Teams están disponibles en GCC-High a través de [Azure Bot Service](/azure/bot-service/channel-connect-teams).
 
 > [!NOTE]
+>
 > * Los bots de GCCH solo admiten hasta la versión de manifiesto v1.10.
 > * Las direcciones URL de imagen de las tarjetas adaptables no se admiten en el entorno de GCCH. Puede reemplazar una dirección URL de imagen con DataUri codificado en Base64.
 > * El registro de canales de bot en Azure Government aprovisionará bot de aplicación web, app service (plan de App Service) y Application Insights también, pero no admite el aprovisionamiento del servicio bot de Azure solo (sin app service).
@@ -70,12 +71,12 @@ El servicio bot de Azure, junto con Bot Framework, proporciona herramientas para
 >   * Vaya al grupo de recursos y elimine manualmente los recursos sin usar. Como app service, el plan de App Service (si creó durante el registro del bot) y application Insights (si decide habilitarlo durante el registro del bot).
 >   * También puede usar az-cli para realizar el registro de bots:
 >
->     1. Inicie sesión en Azure y establezca la suscripción. <br> 
->           &nbsp; az cloud set –name "AzureUSGovernment" <br> 
+>     1. Inicie sesión en Azure y establezca la suscripción. <br>
+>           &nbsp; az cloud set –name "AzureUSGovernment" <br>
 >           &nbsp; az account set –name "`subscriptionname/id`".<br>
 >     1. Creación del registro de aplicaciones  
->           &nbsp; az ad app create --display-name "`name`" <br> 
->           &nbsp; --password "`password`" --available-to-other-tenants.<br> 
+>           &nbsp; az ad app create --display-name "`name`" <br>
+>           &nbsp; --password "`password`" --available-to-other-tenants.<br>
 >           El identificador de la aplicación se crearía aquí.<br>
 >     1. Creación de un recurso de bot <br>
 >           &nbsp; az bot create –resource-group "`resource-group`"<br>
@@ -117,7 +118,7 @@ A medida que el registro del bot se produce en Azure Government portal, asegúre
     * Establezca `ConnectionName` en el nombre de la configuración de conexión de OAuth que agregó al bot.
 
     * Establezca `MicrosoftAppId` y `MicrosoftAppPassword` en el identificador de aplicación y el secreto de aplicación del bot.
-    
+
     En función de los caracteres del secreto del bot, es posible que deba aplicar un escape XML a la contraseña. Por ejemplo, las y comercial (&) deben codificarse como `&amp;`.
 
     ```json
@@ -129,19 +130,20 @@ A medida que el registro del bot se produce en Azure Government portal, asegúre
       "ConnectionName": ""
     }
     ```
+
 2. **Actualizar Startup.cs:**
 
     Para usar OAuth en *nubes de Azure no públicas*, como la nube gubernamental o en bots con residencia de datos, debe agregar el código siguiente en el archivo **Startup.cs** .
-    
+
     ```csharp
     string uri = "<uri-to-use>";
     MicrosoftAppCredentials.TrustServiceUrl(uri);
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
-    
+
     Donde \<uri-to-use\> es uno de los siguientes URI:
 
-    |**URI**|**Descripción**|
+    |**URI**|**Description**|
     |---|---|
     |`https://europe.api.botframework.com`|Para bots de nube pública con residencia de datos en Europa.|
     |`https://unitedstates.api.botframework.com`|Para bots en la nube pública con residencia de datos en el Estados Unidos.|
@@ -308,3 +310,4 @@ this.onMessage(async (context, next) => {
 * [Menús de comandos del bot](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Flujo de autenticación para bots en Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Uso de módulos de tareas desde los bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Publicación del bot en Azure](/azure/bot-service/bot-builder-deploy-az-cli)

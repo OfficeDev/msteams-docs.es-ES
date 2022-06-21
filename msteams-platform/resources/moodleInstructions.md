@@ -1,21 +1,20 @@
 ---
 title: Instalar Moodle LMS
-description: Instalación y configuración de la aplicación de integración de Moodle para Microsoft Teams
-keywords: complementos de integración de aplicaciones de Teams Moodle
+description: En este artículo, aprenderá a instalar y configurar la aplicación de integración de Moodle para Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0c19d8bc4e3919fe49f6594c8ec738bafc1c76d3
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66049007"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189635"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
-En este artículo aprenderá a instalar Moodle LMS.
+En este artículo, aprenderá a instalar Moodle LMS.
 
 > [!NOTE]
 > Para ayudar a los administradores de TI a configurar fácilmente Moodle y Teams integración, se actualiza el código abierto Microsoft 365 Complementos de Moodle para lo siguiente:
@@ -135,8 +134,8 @@ Use la página de configuración de complementos de Moodle generada `AppID` y `K
 
 1. En **Choose connection method (Elegir método de conexión**), active la casilla con la etiqueta **Default (Predeterminado**) y, a continuación, seleccione **Save changes again (Guardar cambios** de nuevo).
 
-1. Después de actualizar la página, puede ver otra nueva sección **Consentimiento del administrador & información adicional**.
-    1. Seleccione **El vínculo Proporcionar consentimiento del administrador**, escriba las credenciales de administrador global de Microsoft 365 y, a continuación, **Acepte** para conceder los permisos.
+1. Una vez actualizada la página, puede ver otra nueva sección **Administración consentimiento & información adicional**.
+    1. Seleccione **Proporcionar Administración vínculo consentimiento**, escriba las credenciales de administrador global de Microsoft 365 y, a continuación, **Acepte** para conceder los permisos.
     1. Junto al campo **Inquilino de Azure AD** , seleccione el botón **Detectar** .
     1. Junto a la **dirección URL de OneDrive para la Empresa**, seleccione el botón **Detectar**.
     1. Después de rellenar los campos, vuelva a seleccionar el botón **Guardar cambios** .
@@ -176,7 +175,7 @@ Use la página de configuración de complementos de Moodle generada `AppID` y `K
 
     1. Para habilitar **OpenID Conectar**, seleccione el vínculo **Administrar autenticación** y seleccione el icono de ojo en la línea **Conectar OpenId** si no está disponible.
     1. Para habilitar la inserción de fotogramas, seleccione el vínculo **Seguridad HTTP** y, a continuación, active la casilla situada junto a **Permitir incrustación de fotogramas**.
-    1. Para habilitar los servicios web, que habilita las características de la API de Moodle, seleccione el vínculo **Características avanzadas** y, a continuación, asegúrese de que la casilla situada junto a **Habilitar servicios web** está seleccionada.
+    1. Para habilitar los servicios web, que habilitan las características de la API de Moodle, seleccione el vínculo **Características avanzadas** y, a continuación, asegúrese de que la casilla situada junto a **Habilitar servicios web** está seleccionada.
     1. Para habilitar los servicios externos para Microsoft 365, seleccione el vínculo **Servicios externos** y, a continuación, haga lo siguiente:  
 
         ✔ Seleccione **Editar** en la fila **Moodle Microsoft 365 Webservices**.
@@ -239,7 +238,7 @@ Una vez que los recursos hayan completado la implementación en Azure, debe conf
 
 1. En Moodle, abra la página **Team Configuración** de los complementos de Moodle de Microsoft 365.
 
-1. En el campo **Punto de conexión de bot** , pegue la dirección URL que acaba de copiar y cambie los *mensajes* de palabra a *webhook*. La dirección URL debe aparecer de la siguiente manera: `https://botname.azurewebsites.net/api/webhook`
+1. En el campo **Punto de conexión del bot** , pegue la dirección URL que copió y cambie los *mensajes* de palabra a *webhook*. La dirección URL debe aparecer de la siguiente manera: `https://botname.azurewebsites.net/api/webhook`
 
 1. Seleccione **Guardar cambios**.
 
@@ -274,7 +273,7 @@ Para permitir la creación automática de pestañas de Moodle:
 
 1. Abra Microsoft Teams.
 
-1. Seleccione el icono Aplicaciones en el área inferior izquierda de la barra de navegación.
+1. Seleccione el icono Aplicaciones en el panel inferior izquierdo.
 
 1. Busque la **aplicación moodle** cargada > seleccione el icono **de opciones** > seleccione **copiar vínculo**.
 
@@ -284,7 +283,7 @@ Para permitir la creación automática de pestañas de Moodle:
 
 1. Pegue el identificador de la aplicación Microsoft Teams en el campo Id. de aplicación de Moodle y guarde los cambios.
 
-Cuando se sincroniza un curso de Moodle, Microsoft Teams instala automáticamente la aplicación Moodle en el equipo, crea una pestaña Moodle en el canal General de Teams y la configura para que contenga la página del curso de Moodle desde la que se sincroniza. Ahora puede empezar a trabajar con sus cursos de Moodle directamente desde Microsoft Teams.
+Cuando se sincroniza un curso de Moodle, Teams instala automáticamente la aplicación Moodle en el equipo, crea una pestaña Moodle en el canal General de Teams y la configura para que contenga la página del curso de Moodle desde la que se sincroniza. Ahora puede empezar a trabajar con sus cursos de Moodle directamente desde Teams.
 
 > [!NOTE]
 > Para compartir con nosotros cualquier solicitud o comentario de características, visite nuestra [página Voz del usuario](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).

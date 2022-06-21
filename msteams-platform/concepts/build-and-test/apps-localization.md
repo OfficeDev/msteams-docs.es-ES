@@ -4,12 +4,12 @@ description: Obtenga información sobre las consideraciones para localizar la ap
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cfb425bef1b09540c1049a3769c87d8def272314
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150669"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189595"
 ---
 # <a name="localize-your-app"></a>Localizar la aplicación
 
@@ -46,6 +46,9 @@ Las imágenes que se cargan con el idioma inglés se usan en AppSource.
 Usa el esquema `v1.5` de la aplicación Microsoft Teams y versiones posteriores para localizar la aplicación. Para ello, establezca el atributo `$schema` del archivo manifest.json en `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` o superior y actualice la `manifestVersion` propiedad a la `$schema` versión (`1.5` en este caso).
 
 Agregue la `localizationInfo` propiedad con el idioma predeterminado que admite la aplicación. El idioma predeterminado se usa como idioma de reserva final si la configuración de cliente del usuario no coincide con ninguno de los idiomas adicionales.
+
+> [!NOTE]
+> La versión del manifiesto debe ser la misma para los archivos manifest.json y localization.json.
 
 ### <a name="example-manifestjson-change"></a>Ejemplo de cambio de manifest.json
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre la integración del sistema de administr
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 62e52835e63f6fd40633ca2c99097746ee7ab2e5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143308"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189447"
 ---
 # <a name="moodle-learning-management-system"></a>Sistema de administración del aprendizaje Moodle
 
@@ -33,7 +33,7 @@ This content is modified as per the requirement.-->
 
 Moodle LMS ayuda a los usuarios a acceder a las siguientes aplicaciones:
 
-* **Complementos de Microsoft 365**: Los complementos de Microsoft 365 están diseñados para garantizar la integración entre los sitios de Moodle y Microsoft Teams. Estos complementos se pueden utilizar de forma independiente o en asociación para lograr distintos requisitos del usuario. Para obtener más información, consulte [Complementos Microsoft 365](m365-plugins/m365-plugins-overview.md).
+* **Complementos de Microsoft 365**: los complementos de Microsoft 365 están diseñados para garantizar la integración entre los sitios de Moodle y Teams. Estos complementos se pueden utilizar de forma independiente o en asociación para lograr distintos requisitos del usuario. Para obtener más información, consulte [Complementos Microsoft 365](m365-plugins/m365-plugins-overview.md).
 
 * **Aplicaciones de socios para Moodle**: todo el conjunto de aplicaciones de socios para Moodle y Teams está disponible en Microsoft Store. Para obtener más información, consulte [Aplicaciones de socios para Moodle](partner-apps-for-moodle.md).
 

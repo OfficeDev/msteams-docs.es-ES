@@ -1,15 +1,14 @@
 ---
 title: Permisos de dispositivo para el explorador
-keywords: permisos de funcionalidades de aplicaciones de teams
-description: Devolver de forma segura la compatibilidad con los permisos de los dispositivo para las aplicaciones en nuestro cliente web
+description: Obtenga información sobre cómo devolver de forma segura los permisos del dispositivo, como el acceso de cámara o micrófono para aplicaciones en el cliente web.
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 72c185257097ec739380bc2cc8390320beb24134
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150816"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190176"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
