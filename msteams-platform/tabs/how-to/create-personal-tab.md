@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143994"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189464"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
-1. Vaya a Microsoft Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
+1. Vaya a Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
 1. A continuación, seleccione **Administrar aplicaciones** y **Cargar una aplicación personalizada**.
 1. Vaya al directorio del proyecto, examine la carpeta **./package**, seleccione la carpeta zip y elija **Abrir**.
 
@@ -335,7 +335,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 * Un icono de contorno transparente de 32 x 32 píxeles.
 * Un archivo `manifest.json` que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos en la carga de la pestaña en Teams. Microsoft Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un <iframe\> y lo representa en la pestaña.
+Estos archivos deben comprimirse en un paquete de aplicación para usarlos en la carga de la pestaña en Teams. Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un <iframe\> y lo representa en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
@@ -484,7 +484,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 * Un **icono de contorno transparente** de 32 x 32 píxeles.
 * Un archivo `manifest.json` que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos en la carga de la pestaña en Teams. Microsoft Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un IFrame y lo representa en la pestaña.
+Estos archivos deben comprimirse en un paquete de aplicación para usarlos en la carga de la pestaña en Teams. Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un lFrame y lo representa en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 
