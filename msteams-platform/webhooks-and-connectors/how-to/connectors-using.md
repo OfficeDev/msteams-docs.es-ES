@@ -4,12 +4,12 @@ author: laujan
 description: En este módulo, aprenderá a usar conectores de Office 365 y a crear y enviar mensajes accionables en Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143266"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190104"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -168,7 +168,7 @@ Para publicar un mensaje en el webhook con cURL, siga estos pasos:
     > [!NOTE]
     > Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `curl`.
 
-1. Compruebe la nueva tarjeta publicada en el cliente de Microsoft Teams.
+1. Compruebe la nueva tarjeta publicada en el cliente de Teams.
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -185,7 +185,7 @@ Para publicar un mensaje en el webhook con PowerShell, siga estos pasos:
     > [!NOTE]
     > Si el envío se realiza correctamente, debería ver un resultado de salida **1** por `Invoke-RestMethod`.
 
-1. Compruebe el canal de Microsoft Teams asociado a la dirección URL del webhook. Puede ver la nueva tarjeta publicada en el canal. Antes de usar el conector para probar o publicar la aplicación, debe hacer lo siguiente:
+1. Compruebe el canal de Teams asociado a la dirección URL del webhook. Puede ver la nueva tarjeta publicada en el canal. Antes de usar el conector para probar o publicar la aplicación, debe hacer lo siguiente:
 
     * [Incluya dos iconos](../../concepts/build-and-test/apps-package.md#app-icons).
     * Modifique la parte `icons` del manifiesto para hacer referencia a los nombres de archivo de los iconos en lugar de a las direcciones URL.
@@ -252,7 +252,7 @@ En la tabla siguiente se proporcionan los detalles de la transacción basada en 
 
 | Tiempo en segundos  | Número máximo de solicitudes permitidas  |
 |---|---|
-| 1   | 4   |  
+| 1   | 4  |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 61be6f8d85b5b98e9c96d4dec7301dea18ea55bc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123853"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190002"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Parámetros de clasificación de la tienda de Microsoft Teams
 

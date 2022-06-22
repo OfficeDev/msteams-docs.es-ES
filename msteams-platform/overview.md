@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795164"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189607"
 ---
 # <a name="teams-app-that-fits"></a>Aplicación de Teams adaptable
 
@@ -39,7 +39,7 @@ Puede crear aplicaciones con la plataforma de desarrolladores de Teams y ampliar
 
 ## <a name="build-apps-with-microsoft-teams-platform"></a>Crear aplicaciones con la plataforma de Microsoft Teams
 
-Las aplicaciones de Microsoft Teams ayudan a que el área de trabajo colaborativa sea más productiva, ya que aportan información clave, herramientas en común y procesos de confianza allí donde las personas se reúnen, aprenden y trabajan cada vez más. Las aplicaciones permiten ampliar las capacidades de la plataforma Teams para adaptarlas a sus requisitos. Cree algo nuevo o integre una aplicación existente y use las ventajas de la plataforma de Microsoft Teams para las necesidades concretas de su empresa.
+Las aplicaciones de Teams ayudan a su área de trabajo colaborativa a ser más productiva, ya que aportan información clave, herramientas comunes y procesos de confianza a los lugares en los que las personas se reúnen, aprenden y trabajan con más frecuencia. Las aplicaciones permiten ampliar las capacidades de la plataforma Teams para adaptarlas a sus requisitos. Cree algo nuevo o integre una aplicación existente y use las ventajas de la plataforma de Teams para las necesidades concretas de su empresa.
 
 Las ventajas de crear aplicaciones abarcan desde cumplir los objetivos de la organización hasta aumentar la productividad interna.
 
@@ -75,7 +75,7 @@ Por ello, Teams es más adecuado para cumplir las necesidades de aplicación:
 
 - **Aplicaciones personales con pestañas y bots**
 
-    Los bots de conversaciones individuales son uno de los puntos de extensibilidad más abiertos en Microsoft Teams. La conversación es lo que está entre el bot y el usuario. Tiene la flexibilidad de incluir módulos de tareas para simplificar conjuntos complejos de información.
+    Los bots de conversaciones individuales son uno de los puntos de extensibilidad más abiertos en Teams. La conversación es lo que está entre el bot y el usuario. Tiene la flexibilidad de incluir módulos de tareas para simplificar conjuntos complejos de información.
 
     Por ejemplo, si la aplicación es una herramienta de diseño con varios colaboradores, un bot compartido que notifique a todos los usuarios ayuda a crear la interacción entre usuarios.
 

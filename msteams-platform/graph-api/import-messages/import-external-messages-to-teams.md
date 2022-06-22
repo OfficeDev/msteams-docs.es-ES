@@ -1,17 +1,16 @@
 ---
 title: Usar Microsoft Graph para importar mensajes de plataforma externa a Teams
-description: Describe cómo usar Microsoft Graph para importar mensajes de una plataforma externa a Teams
+description: Describe cómo usar Microsoft Graph para importar mensajes de una plataforma externa a Teams.
 ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams import messages api graph microsoft migrar migración post
-ms.openlocfilehash: 3fb593bf72c1f8b495a45bad8eef6e2177684c7b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 248e288778ec43f4fd5e25f4b814b73fb89c0fe2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756923"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189717"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
@@ -59,14 +58,14 @@ Puesto que está migrando datos ya existentes, mantener las marcas de tiempo de 
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Crear y administrar recursos para la migración a Microsoft Teams.|**Aplicación solamente**|**Sí**|`POST /teams`|
+|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Crear y administrar recursos para la migración a Teams.|**Aplicación solamente**|**Sí**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>Solicitud (crear un equipo en estado de migración)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
@@ -105,14 +104,14 @@ La creación de un canal para los mensajes importados es similar al escenario de
 
 |ScopeName|DisplayName|Descripción|Tipo|¿Consentimiento del administrador?|Entidades o API cubiertas|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Crear y administrar recursos para la migración a Microsoft Teams.|**Aplicación solamente**|**Sí**|`POST /teams`|
+|`Teamwork.Migrate.All`|Administrar la migración a Microsoft Teams|Crear y administrar recursos para la migración a Teams.|**Aplicación solamente**|**Sí**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>Solicitud (crear un canal en estado de migración)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.channelCreationMode": "migration",
   "displayName": "Architecture Discussion",
@@ -303,7 +302,6 @@ Una vez completado el proceso de migración de mensajes, el equipo y el canal se
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
-
 ```
 
 #### <a name="response"></a>Respuesta
@@ -336,10 +334,11 @@ Puede agregar un miembro a un equipo [mediante la interfaz de usuario de Teams](
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
+
 {
-"@odata.type": "#microsoft.graph.aadUserConversationMember",
-"roles": [],
-"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+   "@odata.type": "#microsoft.graph.aadUserConversationMember",
+   "roles": [],
+   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 

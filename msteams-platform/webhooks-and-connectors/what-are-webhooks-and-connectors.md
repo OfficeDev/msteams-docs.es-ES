@@ -5,16 +5,16 @@ description: En este módulo, comprenderá cómo los webhooks y los conectores p
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 604f4bce563957afb477a58d47ef8235e4b5c30d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fc65046c0bcbecb6ed4c0f15ea81beac77195256
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142181"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190032"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks y conectores
 
-Los webhooks y conectores ayudan a conectar los servicios web a canales y equipos en Microsoft Teams. Los webhooks son devoluciones de llamada HTTP definidas por el usuario que notifican a los usuarios cualquier acción que haya tenido lugar en el canal de Microsoft Teams. Es una forma de que una aplicación obtenga datos en tiempo real. Los conectores permiten a los usuarios suscribirse para recibir notificaciones y mensajes de los servicios web. Exponen un punto de conexión HTTPS para que el servicio publique mensajes en forma de tarjetas.
+Los webhooks y conectores ayudan a conectar los servicios web a canales y equipos en Microsoft Teams. Los webhooks son devoluciones de llamada HTTP definidas por el usuario que notifican a los usuarios cualquier acción que haya tenido lugar en el canal de Teams. Es una forma de que una aplicación obtenga datos en tiempo real. Los conectores permiten a los usuarios suscribirse para recibir notificaciones y mensajes de los servicios web. Exponen un punto de conexión HTTPS para que el servicio publique mensajes en forma de tarjetas.
 
 ## <a name="outgoing-webhooks"></a>Webhooks salientes
 

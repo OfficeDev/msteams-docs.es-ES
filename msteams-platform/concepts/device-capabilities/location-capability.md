@@ -1,17 +1,16 @@
 ---
 title: Integrar capacidades de ubicación
 author: Rajeshwari-v
-description: Aprenda a usar SDK para cliente de JavaScript en Teams para aprovechar las funcionalidades de ubicación mediante fragmentos de código y ejemplos
-keywords: permisos de dispositivos nativos de las funcionalidades de mapa de ubicación
+description: Aprenda a usar SDK para cliente de JavaScript en Teams para aprovechar las funcionalidades de ubicación mediante fragmentos de código y ejemplos.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 00fdfe470dcc5028afb233f9fbe0c6a6f7ff1b2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130455"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189862"
 ---
 # <a name="integrate-location-capabilities"></a>Integrar capacidades de ubicación
 
