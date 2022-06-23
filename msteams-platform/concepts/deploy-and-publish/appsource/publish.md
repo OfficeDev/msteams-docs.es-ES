@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124035"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189930"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publique su aplicación en la tienda de Microsoft Teams
 
 Puede distribuir la aplicación directamente en la tienda dentro de Microsoft Teams y llegar a millones de usuarios en todo el mundo. Si la aplicación también aparece en la tienda, podría llegar instantáneamente a sus clientes potenciales.
 
-Las aplicaciones publicadas en la tienda de Teams también se enumeran automáticamente en [Microsoft AppSource](https://appsource.microsoft.com), que es el marketplace oficial de las aplicaciones y soluciones de Microsoft 365.
+Las aplicaciones publicadas en la tienda de Teams también aparecen automáticamente en [el Marketplace oficial de Microsoft](https://appsource.microsoft.com), que es el Marketplace oficial para aplicaciones y soluciones de Microsoft 365.
 
 ## <a name="understand-the-publishing-process"></a>Descripción del proceso de publicación
 
@@ -96,7 +96,7 @@ Si su aplicación está lista para producción, podrá comenzar el proceso para 
 
   1. [Cree una cuenta del Centro de partners](prepare/create-partner-center-dev-account.md) con antelación. Si tiene algún problema con su cuenta del [Centro de partners](prepare/create-partner-center-dev-account.md), genere un [vale de soporte técnico](/azure/marketplace/partner-center-portal/support).
 
-  1. Revise nuevamente las [directrices de validación de la tienda](prepare/teams-store-validation-guidelines.md) para asegurarse de que la aplicación se ajuste a los requisitos. Esto ayuda a reducir el número de problemas observados en la aplicación y, por tanto, el tiempo necesario para aprobarla.
+  1. Revise nuevamente las [directrices de validación de la tienda](prepare/teams-store-validation-guidelines.md) para asegurarse de que la aplicación se ajuste a los requisitos. La revisión ayuda a reducir el número de problemas observados en la aplicación y, por tanto, el tiempo necesario para aprobarla.
 
   1. Pruebe varias veces la aplicación:
 

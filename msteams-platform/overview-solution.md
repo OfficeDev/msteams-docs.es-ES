@@ -6,16 +6,17 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123548"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190120"
 ---
 # <a name="the-teams-solution"></a>La solución de Teams
 
-La plataforma de Microsoft Teams es una plataforma potente y flexible para crear aplicaciones para Microsoft Teams. Ofrece un amplio conjunto de entornos de desarrollo y herramientas que admiten el desarrollo de aplicaciones.
+
+La plataforma de Microsoft Teams es una plataforma potente y flexible para crear aplicaciones para Teams. Ofrece un amplio conjunto de entornos de desarrollo y herramientas que admiten el desarrollo de aplicaciones.
 
 ## <a name="the-user-story"></a>El caso del usuario
 
@@ -31,19 +32,19 @@ Recopilar y asignar requisitos a las características de Teams:
 | Necesidades de la aplicación de usuario | Comprobar la previsión | Notificación antes de viajar | Usuario registrado |
 | --- |:---:|:---:|:---:|
 | **Funcionalidad** | Bot | &nbsp; | &nbsp; |
-| **Integración** | &nbsp; | &nbsp; | Microsoft Graph, Weather API |
+| **Integración** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, Weather API |
 | **Scope** | &nbsp; | Aplicación personal | &nbsp; |
 | **Punto de Integración** | &nbsp; | Chat | &nbsp; |
 
 **Solución de la aplicación Teams : Una aplicación** de chat bot personal *personal chat bot* de Teams que comprueba y *envía una notificación de previsión* a los *usuarios registrados* antes de su fecha de viaje.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Un desarrollador de una agencia de viajes crea un bot para Microsoft Teams que envía la previsión meteorológica a los clientes para que puedan planear con antelación sus fechas de viaje" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Un desarrollador de una agencia de viajes crea un bot para Teams que envía la previsión meteorológica a los clientes para que puedan planear con antelación sus fechas de viaje" border="false":::
 
 Teams ofrece estas y muchas más funcionalidades para ofrecer a los usuarios una solución de aplicación con muchas características. Para desarrollar esta aplicación:
 
 1. Cree una aplicación de bot de chat personal.
 1. Realice la integración con una API de previsión meteorológica externa para conectarse y solicitar la previsión de una fecha y ubicación específicas.
-1. Realice la integración con Microsoft Graph para los usuarios registrados.
+1. Realice la integración con :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph para los usuarios registrados.
 1. Compruebe y envíe los detalles de la previsión en función de la fecha de viaje y la ubicación del viaje del usuario.
 
 ## <a name="choose-what-suits-you"></a>Elija lo que más le convenga
@@ -71,7 +72,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
 1. Planifique su proyecto y averigüe los requisitos.
 1. Diseñe la aplicación. Use el Kit de interfaz de usuario de Teams y la biblioteca de interfaz de usuario para diseñar la interfaz de usuario de pestañas.
 1. Compile la aplicación con JavaScript mediante el kit de herramientas de Teams.
-1. Amplíe la funcionalidad agregando más funcionalidades de Teams y datos de Microsoft 365 con Microsoft Graph.
+1. Amplíe la funcionalidad agregando más funcionalidades de Teams y datos de M365 con :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph.
 1. Pruebe la aplicación en un inquilino de desarrollador con datos de usuario de ejemplo.
 1. Implemente la aplicación en Azure.
 1. Administre y publique las aplicaciones en Store con el Portal para desarrolladores. Monetice su aplicación con opciones, como ofertas de SaaS, compras desde la aplicación y mucho más.
@@ -109,7 +110,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         **Diseño de la aplicación**
     :::column-end:::
     :::column span="2":::
-        Diseñe la interfaz de usuario de la aplicación con el Kit de interfaz de usuario de Microsoft Teams.
+        Diseñe la interfaz de usuario de la aplicación con el Kit de interfaz de usuario de Teams.
 
         > [!div class="nextstepaction"]
         > [Diseñar la aplicación de Teams](~/concepts/design/design-teams-app-process.md)
@@ -133,7 +134,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         **Ampliar la aplicación en todo Microsoft 365**
     :::column-end:::
     :::column span="2":::
-        Puede obtener una vista previa de las aplicaciones de Teams que se ejecutan en otras experiencias de Microsoft 365 de uso elevado con la versión preliminar del SDK de cliente de JavaScript v2 de Microsoft Teams.
+Puede obtener una vista previa de las aplicaciones de Teams que se ejecutan en otras experiencias de Microsoft 365 de uso elevado con la versión preliminar del SDK de cliente de JavaScript v2 de Teams.
 
         > [!div class="nextstepaction"]
         > [Ampliar la aplicación](m365-apps/overview.md)
@@ -145,7 +146,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         **Probar la aplicación**
     :::column-end:::
     :::column span="2":::
-        Después de integrar la aplicación con Microsoft Teams, debe probarla antes de publicarla.
+        Después de integrar la aplicación con Teams, debe probarla antes de publicarla.
 
         > [!div class="nextstepaction"]
         > [Probar la aplicación](concepts/build-and-test/test-app-overview.md)
@@ -157,7 +158,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         **Distribuir la aplicación**
     :::column-end:::
     :::column span="2":::
-        Puede proporcionar su aplicación de Microsoft Teams a una persona, equipo, organización o cualquier persona que quiera usarla.
+        Puede proporcionar su aplicación de Teams a una persona, equipo, organización o cualquier persona que quiera usarla.
 
         > [!div class="nextstepaction"]
         > [Distribuir la aplicación](~/concepts/deploy-and-publish/apps-publish-overview.md)
