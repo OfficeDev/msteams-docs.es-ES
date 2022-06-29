@@ -3,12 +3,12 @@ title: 'Introducción: Información general'
 description: En este módulo, aprenderá a empezar a trabajar con la documentación para desarrolladores de Microsoft Teams que le presenta las herramientas comunes, los conceptos fundamentales y las características avanzadas.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4a53466aab1a896e99b91210dbc93d8467df52d1
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143161"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503903"
 ---
 # <a name="get-started"></a>Introducción
 
@@ -24,7 +24,7 @@ Aquí tiene una idea de lo que aprenderá:
 
 Echemos un rápido vistazo a las opciones de entorno de compilación que puede elegir, y a la hoja de ruta para construir e implementar una aplicación de Teams.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración en la que se muestran los pasos básicos para compilar e implementar una aplicación de Teams":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración en la que se muestran los pasos básicos para compilar e implementar una aplicación de Teams" border="true":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Funcionalidades de aplicaciones y herramientas de desarrollo
 
@@ -50,7 +50,7 @@ Ahora, vamos a crear su primera aplicación de Teams. Pero primero, elija su idi
 > [!div class="nextstepaction"]
 > [Crear una aplicación de pestaña de Teams con JavaScript mediante React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Crear una aplicación de bot de Teams con JavaScript mediante React](../sbs-gs-bot.yml)
+> [Crear una aplicación de bot de Teams con JavaScript](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [Crear una aplicación de extensión de mensajería de Teams con JavaScript mediante React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
