@@ -1,19 +1,19 @@
 ---
-title: Crear una pestaña de canal o grupo
+title: Crear una pestaña de canal
 author: laujan
-description: En este módulo, aprenderá a crear una pestaña de canal y grupo con el generador de Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.
+description: En este módulo, aprenderá a crear un canal y una pestaña de grupo con el generador de Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189596"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503651"
 ---
-# <a name="channel-or-group-tab"></a>Pestañas de canal o grupo
+# <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
 Pestañas de canal o grupo entregar contenido a canales y chats grupales, y son una excelente manera de crear espacios de colaboración en torno a contenido dedicado basado en web.
 
@@ -190,10 +190,10 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > Una vez que la pestaña se carga en Microsoft Teams a través de **ngrok** y se guarda correctamente, puede verla en Teams hasta que finalice la sesión del túnel. Si reinicia la sesión de ngrok, debe actualizar la aplicación con la nueva dirección URL.
 
-### <a name="upload-your-application-to-teams"></a>Cargar el paquete en Microsoft Teams
+### <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
-1. Vaya a Teams y seleccione **Aplicaciones**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Tienda":::.
-1. Seleccione **Administrar las aplicaciones** y **Cargar una aplicación personalizada**.
+1. Vaya a Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
+1. A continuación, seleccione **Administrar aplicaciones** y **Cargar una aplicación personalizada**.
 1. Vaya al directorio del proyecto, desplácese hasta la carpeta **./package**, seleccione la carpeta ZIP del paquete de la aplicación y elija **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Pestaña del canal cargada" border="true":::
@@ -394,7 +394,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualizar el paquete de la aplicación con el portal para desarrolladores
 
-1. Ve a Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
+1. Vaya a Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
 
 1. Vaya al [**portal para desarrolladores**](https://dev.teams.microsoft.com/home).
 
@@ -617,7 +617,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Actualizar el paquete de la aplicación con el portal para desarrolladores
 
-1. Ve a Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
+1. Vaya a Teams. Si usa la [versión basada en la Web](https://teams.microsoft.com), puede inspeccionar el código front-end mediante las [herramientas para desarrolladores](~/tabs/how-to/developer-tools.md) del explorador.
 
 1. Vaya al [**portal para desarrolladores**](https://dev.teams.microsoft.com/home).
 

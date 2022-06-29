@@ -5,12 +5,12 @@ description: Aprenda a integrar un bot de chat de Power Virtual Agents en la pla
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 0f66a42cecbac25f82980c16e7f979c5d613816d
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 310b7d8a5e04259a205763b45cb2d2315c19c72a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150851"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485205"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Añadir un bot de chat de Power Virtual Agents
 
@@ -112,3 +112,4 @@ Abra la pestaña **Probar y distribuir** y seleccione **Instalar** para agregar 
 * [Portal de Power Virtual Agents](https://powervirtualagents.microsoft.com)
 * [Publicación del bot de Power Virtual Agents](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Seguridad y cumplimiento en Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
+* [Bot de Power Virtual Agents de recursos humanos](/power-virtual-agents/teams/fundamentals-get-started-teams)

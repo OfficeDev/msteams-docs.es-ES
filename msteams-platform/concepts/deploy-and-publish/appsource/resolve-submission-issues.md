@@ -1,26 +1,26 @@
 ---
 title: Resolución de problemas con el envío de la tienda
-description: En este artículo, aprenderá a solucionar y corregir problemas con el envío de Microsoft Teams tienda.
+description: En este artículo, aprenderá a solucionar y corregir problemas con el envío de la tienda de Microsoft Teams.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123212"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503875"
 ---
-# <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Resolver problemas si se produce un error en el envío de la tienda de Microsoft Teams
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Resolución de problemas si se produce un error en el envío de la tienda de Teams
 
-Las aplicaciones publicadas en el almacén de Microsoft Teams deben cumplir las [directrices de validación de Teams tienda](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) y [las directivas de Marketplace comercial](/legal/marketplace/certification-policies).
+Las aplicaciones publicadas en la tienda de Microsoft Teams deben cumplir las [directrices de validación de la tienda Teams y las](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) [directivas de Marketplace comercial](/legal/marketplace/certification-policies).
 
 Si se produce un error en el envío de la tienda, Microsoft proporciona un servicio de validación de concierge para ayudar a que la aplicación sea compatible y se publique.
 
 ## <a name="get-help-directly-from-microsoft"></a>Obtener ayuda directamente de Microsoft
 
-El servicio de validación de concierge proporcionado por Microsoft ayuda a los desarrolladores a publicar sus aplicaciones en la tienda Teams. Como parte de este servicio, Microsoft comprueba si la aplicación funciona como se describe, contiene todos los metadatos adecuados y proporciona valor a los usuarios.
+El servicio de validación de concierge proporcionado por Microsoft ayuda a los desarrolladores a publicar sus aplicaciones en la tienda de Teams. Como parte de este servicio, Microsoft comprueba si la aplicación funciona como se describe, contiene todos los metadatos adecuados y proporciona valor a los usuarios.
 
 Si se produce un error en el envío de la aplicación, Microsoft le envía un informe de revisión con recomendaciones dentro de las 24 horas posteriores al envío.
 
@@ -40,7 +40,7 @@ El proceso para resolver problemas y volver a enviar una aplicación suele ser e
    * Notas de prueba de la aplicación, si no las incluyeste en el envío original:
       * Credenciales para al menos dos cuentas (un administrador y otro no administrador).
       * Instrucciones para configurar la aplicación y probar su funcionalidad.
-      * Vídeo en el que se muestra la aplicación usada en Teams.
+      * Vídeo en el que se muestra la aplicación que se usa en Teams.
 1. El equipo de validación de Concierge de Microsoft prueba completamente la aplicación actualizada.
 1. Realice una de las siguientes acciones:
    * Si la aplicación no tiene problemas, vuelva a enviarla al Centro de partners.
@@ -72,9 +72,9 @@ Si el envío de la tienda no tiene problemas, la aplicación se publicará en un
 Hacer lo siguiente puede dar lugar a un envío correcto:
 
 1. Desarrolle la aplicación en función de las [directrices de diseño de Teams](~/concepts/design/design-teams-app-overview.md).
-1. Asegúrese de que la aplicación cumple las [directrices de validación de Teams tienda y las directivas](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) de [certificación de Marketplace comercial de Microsoft](/legal/marketplace/certification-policies).
-1. Pruebe el paquete de la aplicación con la [herramienta de validación de aplicaciones Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html).
-1. [Prepare el envío Teams tienda](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
+1. Asegúrese de que la aplicación cumple las [directrices de validación de la tienda Teams y las directivas](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) de [certificación de Marketplace comercial de Microsoft](/legal/marketplace/certification-policies).
+1. Pruebe el paquete de la aplicación con la [herramienta de validación de aplicaciones de Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html).
+1. [Prepare el envío de la tienda de Teams](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 <br>
 
@@ -102,7 +102,7 @@ No. Microsoft no comienza a validar la aplicación hasta que la envíe por prime
 
 <details>
 
-<summary><b>He recibido un correo electrónico del Centro de partners que indica que mi aplicación ha sido aprobada para publicarse. ¿Por qué mi aplicación no está en la tienda Teams?</b></summary>
+<summary><b>He recibido un correo electrónico del Centro de partners que indica que mi aplicación ha sido aprobada para publicarse. ¿Por qué mi aplicación no está en la tienda de Teams?</b></summary>
 
 Una vez aprobada la aplicación, la publicación suele tardar entre 1 y 2 días laborables en función de las funcionalidades de la aplicación.Si la aplicación no se ha publicado después de dos días laborables, póngase en contacto con <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 

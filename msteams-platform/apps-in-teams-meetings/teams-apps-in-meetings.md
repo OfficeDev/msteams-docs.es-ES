@@ -1,16 +1,16 @@
 ---
 title: Aplicaciones para reuniones de Teams
 author: surbhigupta
-description: En este artículo, aprenderá cómo funcionan las aplicaciones en Microsoft Teams reuniones basadas en el rol de participante y usuario y la extensibilidad de la aplicación.
+description: En este artículo, aprenderá cómo funcionan las aplicaciones en las reuniones de Microsoft Teams en función del rol de participante y usuario y la extensibilidad de la aplicación.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142510"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484554"
 ---
 # <a name="apps-for-teams-meetings"></a>Aplicaciones para reuniones de Teams
 

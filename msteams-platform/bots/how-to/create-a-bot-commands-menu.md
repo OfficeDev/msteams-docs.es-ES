@@ -5,14 +5,14 @@ description: En este módulo, aprenderá a crear y controlar un menú de comando
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 7d8c702dd60c3e98b7f00543ce7ce8de9a76ae41
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 65cf1506e6851dd6662ea4637cfb53179532798a
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144407"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503511"
 ---
-# <a name="bot-command-menus"></a>Menús de comandos de bot
+# <a name="create-a-commands-menu"></a>Crear un menú de comandos
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

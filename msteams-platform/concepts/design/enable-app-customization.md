@@ -1,16 +1,16 @@
 ---
 title: Personalizar la aplicación de Teams
 author: heath-hamilton
-description: En este módulo, comprenda cómo los administradores de Teams pueden personalizar la aplicación de Teams para su organización y ocultar Teams aplicación hasta que el administrador lo apruebe.
+description: En este módulo, comprenda cómo los administradores de Teams pueden personalizar la aplicación de Teams para su organización y ocultar la aplicación de Teams hasta que el administrador lo apruebe.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143203"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503448"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar la aplicación de Teams
 
@@ -44,7 +44,7 @@ Para optimizar la experiencia de la aplicación de Teams, puede ocultar una apli
 
 Para ocultar la aplicación, en el archivo de manifiesto de la aplicación, establezca la `defaultBlockUntilAdminAction` propiedad en `true`. Cuando la propiedad se establece en `true`, en el Centro de administración de Teams > **Administrar aplicaciones**, **Bloqueado por el editor** aparece en el **estado**  de la aplicación:
 
-![Administrar aplicaciones bloqueadas por el editor](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="Administrar aplicaciones bloqueadas por el publicador.":::
 
 El administrador obtiene una solicitud para tomar medidas antes de que un usuario pueda acceder a la aplicación. En **Administrar aplicaciones**, los administradores pueden seleccionar **Permitir** para permitir que la aplicación con estado **bloqueado por el editor**:
 

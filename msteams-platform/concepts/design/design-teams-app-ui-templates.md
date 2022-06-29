@@ -5,24 +5,24 @@ description: Aprenda a diseñar la aplicación más rápido con componentes, dis
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d6323baf20c733eaddc1e8797a56d63effc45eab
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142902"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484826"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Diseño de la aplicación de Microsoft Teams con plantillas de interfaz de usuario
 
-Diseñe la aplicación de Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de Fluent componentes basados en la interfaz de usuario que funcionan en casos comunes de uso de Teams, lo que proporciona más tiempo para averiguar la mejor experiencia para los usuarios.
+Diseñe la aplicación de Microsoft Teams más rápido con plantillas de interfaz de usuario. Las plantillas son una colección de componentes basados en la interfaz de usuario de Fluent que funcionan en casos de uso comunes de Teams, lo que proporciona más tiempo para averiguar la mejor experiencia para los usuarios.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Introducción a herramientas y ejemplos
 
 Los siguientes recursos pueden ayudarle a diseñar y desarrollar la aplicación mediante plantillas de interfaz de usuario.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
-Obtenga plantillas de interfaz de usuario para el diseño de la aplicación del kit de interfaz de usuario de Microsoft Teams, que también incluye información extensa sobre el uso, la anatomía, la accesibilidad y los procedimientos recomendados.
+Obtenga plantillas de interfaz de usuario para el diseño de la aplicación desde el kit de interfaz de usuario de Microsoft Teams, que también incluye información extensa sobre el uso, la anatomía, la accesibilidad y los procedimientos recomendados.
 
 > [!div class="nextstepaction"]
 > [Obtener el kit de interfaz de usuario (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -41,7 +41,7 @@ Importe estas plantillas y componentes relacionados directamente en el proyecto 
 
 ### <a name="sample-app"></a>Aplicación de ejemplo
 
-Instale una aplicación de ejemplo para ver cómo se ven y se comportan las plantillas de interfaz de usuario dentro de Teams contextos.
+Instale una aplicación de ejemplo para ver cómo se ven y se comportan las plantillas de interfaz de usuario en los contextos de Teams.
 
 > [!div class="nextstepaction"]
 > [Obtener la aplicación de ejemplo (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
@@ -53,7 +53,7 @@ En Teams, un calendario es donde un usuario ve, programa y administra eventos pr
 ### <a name="top-use-cases"></a>Casos de uso principales
 
 * Programar reuniones y eventos
-* Obtener recordatorios de las próximas reuniones y eventos
+* Obtenga recordatorios de las próximas reuniones y eventos.
 * Ver programaciones
 
 ### <a name="desktop"></a>Escritorio
@@ -62,13 +62,13 @@ En Teams, un calendario es donde un usuario ve, programa y administra eventos pr
 
 ## <a name="dashboard"></a>Panel
 
-Un panel muestra diferentes tipos de contenido en una ubicación central (como una Teams aplicación o pestaña personal). Los usuarios deben poder personalizar al menos parte de lo que ven en un panel.
+Un panel muestra diferentes tipos de contenido en una ubicación central (por ejemplo, una pestaña o una aplicación personal de Teams). Los usuarios deben poder personalizar al menos parte de lo que ven en un panel.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
 * Análisis de datos
 * Métricas de informe
-* Organizar información diferente en un solo lugar
+* Organice información diferente en un solo lugar.
 
 ### <a name="mobile"></a>Móvil
 
@@ -84,8 +84,8 @@ Puede usar diferentes tamaños de tarjeta (único, doble y completo) para apilar
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Mostrar información compleja
-* Creación de un panel
+* Mostrar información compleja.
+* Cree un panel.
 
 ### <a name="mobile"></a>Móvil
 
@@ -102,7 +102,7 @@ La plantilla de estado vacío se puede usar para muchos escenarios, incluidos el
 ### <a name="top-use-cases"></a>Casos de uso principales
 
 * Iniciar sesión
-* Mensajes de bienvenida y experiencias de primera ejecución
+* Mensajes de bienvenida y experiencias de primera ejecución.
 * Mensajes correctos
 * Mensajes de error
 
@@ -183,7 +183,7 @@ Puede diseñar flujos de inicio de sesión de aplicaciones para diferentes conte
 
 ## <a name="settings"></a>Configuraciones
 
-Configuración pantallas son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: Configuración es un contenedor para [componentes básicos de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)).
+Las pantallas de configuración son donde los usuarios pueden configurar sus preferencias con la aplicación. (Nota: La configuración es un contenedor para [los componentes básicos de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md)).
 
 ### <a name="top-use-case"></a>Caso de uso superior
 
@@ -227,8 +227,8 @@ Un asistente guía a un usuario a través de varias pantallas para completar una
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="En el ejemplo se muestra una plantilla de interfaz de usuario del asistente en el escritorio." border="false":::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-* [Diseño de la aplicación con componentes básicos de la interfaz de usuario Fluent](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Diseño de la aplicación con componentes básicos de la interfaz de usuario de Fluent](~/concepts/design/design-teams-app-basic-ui-components.md)
 * [Diseño de la aplicación de Microsoft Teams con componentes avanzados de la interfaz de usuario](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [Formatear los mensajes del bot](~/bots/how-to/format-your-bot-messages.md)

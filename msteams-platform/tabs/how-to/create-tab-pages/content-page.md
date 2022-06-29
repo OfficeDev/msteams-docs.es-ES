@@ -5,16 +5,16 @@ description: En este módulo, aprenderá a crear una página de contenido para l
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 646e7f1a1177330fdb4db64b7e6cd1bde0df5db5
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 21cc2559b7a6751981156deac1d2373f7ce0dfbe
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142209"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503357"
 ---
-# <a name="create-a-content-page-for-your-tab"></a>Creación de una página de contenido para una pestaña
+# <a name="create-a-content-page"></a>Creación de una página de contenido
 
-Una página de contenido es una página web que se representa dentro del cliente Teams, que forma parte de:
+Una página de contenido es una página web que se representa dentro del cliente de Teams, que forma parte de:
 
 * Una pestaña personalizada de ámbito personal: en este caso, la página de contenido es la primera página que se encuentra el usuario.
 * Una pestaña personalizada de canal o grupo: la página de contenido se muestra después de que el usuario ancle y configure la pestaña en el contexto adecuado.
@@ -28,7 +28,7 @@ Este artículo es específico del uso de páginas de contenido como pestañas; s
 
 El objetivo general de la pestaña es proporcionar acceso al contenido significativo y atractivo que tiene un valor práctico y un propósito evidente. 
 
-Debe centrarse en hacer que el diseño de la pestaña sea limpio, intuitivo de navegación y envolvente de contenido. Para obtener más información, vea [Instrucciones de diseño de pestañas](~/tabs/design/tabs.md) y [Microsoft Teams directrices de validación de almacén](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Debe centrarse en hacer que el diseño de la pestaña sea limpio, intuitivo de navegación y envolvente de contenido. Para obtener más información, vea [Directrices de diseño de pestañas](~/tabs/design/tabs.md) y Directrices de validación de [almacén de Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Integrar el código con Teams
 
@@ -115,9 +115,9 @@ Para mostrar el indicador de carga:
 
 1. Agregar `"showLoadingIndicator": true` al manifiesto.
 1. Llamar a `app.initialize();`.
-1. Como paso **obligatorio**, llame a `app.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams oculta el indicador de carga, si procede. Si `notifySuccess` no se llama a en 30 segundos, Teams supone que la aplicación agotó el tiempo de espera y muestra una pantalla de error con una opción de reintento.
+1. Como paso **obligatorio**, llame a `app.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams oculta el indicador de carga, si procede. Si `notifySuccess`  no se llama a en un plazo de 30 segundos, Teams supone que la aplicación agotó el tiempo de espera y muestra una pantalla de error con una opción de reintento.
 1. **Opcionalmente**, si está listo para imprimir en la pantalla y desea cargar de forma diferida el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga llamando a `app.notifyAppLoaded();`.
-1. Si la aplicación no se carga, puede llamar `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` a para que Teams sepa sobre el error y, opcionalmente, proporcione un mensaje de error. Se muestra al usuario una pantalla de error. En el código siguiente se muestra la enumeración que define las posibles razones que puede indicar para que la aplicación no se cargue:
+1. Si la aplicación no se carga, puede llamar `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` a para informar a Teams sobre el error y, opcionalmente, proporcionar un mensaje de error. Se muestra al usuario una pantalla de error. En el código siguiente se muestra la enumeración que define las posibles razones que puede indicar para que la aplicación no se cargue:
 
     ```typescript
     /* List of failure reasons */

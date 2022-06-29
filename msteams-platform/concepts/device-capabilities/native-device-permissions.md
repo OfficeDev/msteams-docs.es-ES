@@ -3,33 +3,33 @@ title: Solicitar permisos de dispositivos para la aplicación de Microsoft Teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que requieren el consentimiento del usuario, como las funcionalidades de escaneo qr, código de barras, imagen, audio y vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: c39673bd03d18c0aabb98e218bf13c41ce1eab9f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: a573855b6512cdbfcebb12c305973f8ad23113d6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189456"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484491"
 ---
-# <a name="request-device-permissions-for-your-teams-app"></a>Solicitar permisos de dispositivo para la aplicación de Teams
+# <a name="request-device-permissions-for-your-teams-app"></a>Solicitud de permisos de dispositivo para la aplicación de Teams
 
 Puede enriquecer la aplicación de Teams con funcionalidades nativas del dispositivo, como la cámara, el micrófono y la ubicación. Este documento le guiará sobre cómo solicitar el consentimiento del usuario y acceder a los permisos nativos del dispositivo.
 
 > [!NOTE]
 >
-> * Para integrar las funcionalidades multimedia dentro de la Microsoft Teams cliente web, escritorio y móvil, consulte [Integración de funcionalidades multimedia](media-capabilities.md).
+> * Para integrar las funcionalidades multimedia en el cliente web, el escritorio y el móvil de Microsoft Teams, consulte [Integración de funcionalidades multimedia](media-capabilities.md).
 > * Para integrar la funcionalidad de digitalización de código de barras o QR dentro de la aplicación móvil de Microsoft Teams, consulte [Integración de la funcionalidad de digitalización de código de barras o QR en Teams](qr-barcode-scanner-capability.md).
 > * Para integrar las funcionalidades de ubicación en el cliente web, el escritorio y el móvil de Teams, consulte [Integración de funcionalidades de ubicación](location-capability.md).
 
 ## <a name="native-device-permissions"></a>Permisos de dispositivos nativos
 
-Deberá solicitar los permisos del dispositivo para acceder a las funcionalidades nativas del mismo. Los permisos de dispositivo funcionan de forma similar para todas las construcciones de aplicaciones, como pestañas, módulos de tareas o extensiones de mensajería. El usuario deberá ir a la página de permisos de la configuración de Teams para administrar los permisos del dispositivo. Puede crear experiencias más enriquecidas en la plataforma de Teams con la ayuda de funcionalidades de dispositivo, como: Debe solicitar los permisos del dispositivo para acceder a las funcionalidades nativas del dispositivo. Los permisos del dispositivo funcionan de forma similar para todo lo que compone la aplicación, como pestañas, módulos de tareas o extensiones de mensajes. El usuario deberá ir a la página de permisos de la configuración de Teams para administrar los permisos del dispositivo.
+Deberá solicitar los permisos del dispositivo para acceder a las funcionalidades nativas del mismo. Los permisos de dispositivo funcionan de forma similar para todas las construcciones de aplicaciones, como pestañas, módulos de tareas o extensiones de mensajería. El usuario deberá ir a la página de permisos de la configuración de Teams para administrar los permisos del dispositivo. Puede crear experiencias más enriquecidas en la plataforma Teams con la ayuda de funcionalidades de dispositivo, como: Debe solicitar los permisos del dispositivo para acceder a las funcionalidades nativas del dispositivo. Los permisos del dispositivo funcionan de forma similar para todo lo que compone la aplicación, como pestañas, módulos de tareas o extensiones de mensajes. El usuario deberá ir a la página de permisos de la configuración de Teams para administrar los permisos del dispositivo.
 Al acceder a las funcionalidades del dispositivo, podrá crear mejores experiencias en la plataforma de Teams, como:
 
-* Captura y visualización de imágenes
-* Escanear QR o código de barras
-* Grabación y uso compartido de vídeos cortos
-* Grabar notas de audio y guardarlas para su uso posterior
-* Usar la información de ubicación del usuario para mostrar la información pertinente
+* Capturar y ver imágenes.
+* Escanear QR o códigos de barras.
+* Grabar y compartir vídeos cortos.
+* Grabar notas de audio y conservarlas para uso posterior.
+* Usar la información de ubicación del usuario para mostrar información relevante.
 
 > [!NOTE]
 >
@@ -119,12 +119,12 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="use-teams-apis-to-get-device-permissions"></a>Use la API de Teams para obtener permisos de dispositivo
 
-Aproveche la API html5 o Teams adecuada para mostrar un mensaje para obtener el consentimiento para acceder a los permisos del dispositivo.
+Aproveche la API de Teams o HTML5 adecuada para mostrar un mensaje para obtener el consentimiento para acceder a los permisos del dispositivo.
 
 > [!IMPORTANT]
 >
 > * La compatibilidad con `camera`, `gallery` y `microphone` se habilita a través de la [**API selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use la [**API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) para una única captura de imagen.
-> * La compatibilidad con `location` se habilita a través de la [**API getLocation**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Debe usarlo `getLocation API` para la ubicación, ya que la API de geolocalización HTML5 no es totalmente compatible en Teams escritorio.
+> * La compatibilidad con `location` se habilita a través de la [**API getLocation**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Debe usarlo `getLocation API` para la ubicación, ya que la API de geolocalización HTML5 no es totalmente compatible en el escritorio de Teams.
 
 Por ejemplo:
 
@@ -140,7 +140,7 @@ Por ejemplo:
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
-* Para capturar las imágenes en el móvil, Teams móvil solicita permiso al llamar a `captureImage()`:
+* Para capturar las imágenes en dispositivos móviles, Teams Mobile solicita permiso al llamar a `captureImage()`:
 
     ```JavaScript
             function captureImage() {
@@ -167,7 +167,7 @@ Por ejemplo:
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-* Para usar la cámara o acceder a la galería de fotos, Teams aplicación pide permiso al llamar a `selectMedia()`:
+* Para usar la cámara o acceder a la galería de fotos, la aplicación Teams pide permiso al llamar a `selectMedia()`:
 
     ```JavaScript
      function selectMedia() {
@@ -214,7 +214,7 @@ Por ejemplo:
      }
     ```
 
-* Para pedir al usuario que comparta la ubicación en la interfaz de mapa, Teams aplicación pide permiso al llamar a `getLocation()`:
+* Para pedir al usuario que comparta la ubicación en la interfaz de mapa, la aplicación Teams pide permiso al llamar a `getLocation()`:
 
     ```JavaScript
      function getLocation() {

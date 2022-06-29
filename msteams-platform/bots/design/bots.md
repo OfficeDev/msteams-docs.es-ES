@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cd28dc6be82b37223268d526c9673c0545f0bca9
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143595"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485625"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Diseño de un bot para Microsoft Teams
 
@@ -143,8 +143,8 @@ Puede usar bots en los siguientes contextos:
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono y nombre de la aplicación**|
-|2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
-|3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
+|2 |**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
+|3 |**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
 |4 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
 |5 |**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
 
@@ -155,8 +155,8 @@ Puede usar bots en los siguientes contextos:
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono y nombre de la aplicación**|
-|2|**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
-|3|**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
+|2 |**Pestaña de chat**: abre el espacio para hablar con el bot (aplicable solo a las aplicaciones personales).|
+|3 |**Pestañas personalizadas**: abren otro contenido relacionado con la aplicación.|
 |4 |**Pestañas Acerca de**: muestran información básica sobre la aplicación.|
 |5 |**Burbujas de chat**: las conversaciones de bot usan el marco de mensajería de Teams.|
 |6 |**Tarjeta adaptable**: si las respuestas del bot incluyen tarjetas adaptables, la tarjeta ocupa todo el ancho de la burbuja de chat.|
@@ -190,7 +190,7 @@ Use un diccionario de sinónimos y la ayuda de personas tan diversas como le sea
 
 ### <a name="extract-intent-and-data-from-messages"></a>Extraer la intención y los datos de los mensajes
 
-Diseñe el bot para reconocer la intención del usuario. La idea es capturar lo que alguien quiere de un bot como respuesta a un mensaje o una consulta. La intención clasifica un mensaje o consulta como una acción única con uno o varios objetos de datos afectados por la acción. 
+Diseñe el bot para reconocer la intención del usuario. La idea es capturar lo que alguien quiere de un bot como respuesta a un mensaje o una consulta. La intención clasifica un mensaje o consulta como una acción única con uno o varios objetos de datos afectados por la acción.
 
 En los ejemplos siguientes se describe la intención del usuario y los datos de mensajes enviados a bots:
 

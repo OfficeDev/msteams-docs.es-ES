@@ -1,16 +1,16 @@
 ---
 title: Elegir una configuración para probar y depurar la aplicación
-description: En este módulo, aprenderá las opciones para probar y depurar aplicaciones Microsoft Teams en el entorno local y hospedado en la nube.
+description: En este módulo, aprenderá las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y hospedado en la nube.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 351f1c444c2a6c9467f8f9d697303a2bf1357600
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150655"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503889"
 ---
-# <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Elegir una configuración para probar y depurar la aplicación de Microsoft Teams
+# <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Elección de una configuración de prueba y depuración de la aplicación de Teams
 
 Las aplicaciones de Microsoft Teams contienen una o varias funcionalidades y las formas de ejecutarlas o incluso hospedarlas son diferentes. Para la depuración, use una de las siguientes maneras:
 
@@ -28,7 +28,7 @@ Use varios manifiestos y paquetes para mantener la separación entre los servici
 ## <a name="purely-local"></a>Puramente local
 
 > [!NOTE]
-> La ejecución del bot localmente no le proporciona acceso a la funcionalidad de la aplicación de Teams ni a funciones del bot específicas de Teams, como llamadas a lista de participantes y otras funcionalidades específicas del canal. Además, bot Framework permite algunas funcionalidades en el bot Emulator que podrían no funcionar al ejecutarse en Teams.
+> La ejecución del bot localmente no le proporciona acceso a la funcionalidad de la aplicación de Teams ni a funciones del bot específicas de Teams, como llamadas a lista de participantes y otras funcionalidades específicas del canal. Además, bot Framework permite algunas funcionalidades en Bot Emulator que podrían no funcionar al ejecutarse en Teams.
 
 El bot puede ejecutarse en Bot Emulator. Esto le permite probar parte de la lógica principal del bot, ver un diseño aproximado de los mensajes y realizar pruebas sencillas. Estos son los pasos:
 
@@ -44,7 +44,7 @@ Teams es un producto totalmente basado en la nube, requiere que todos los servic
 
 Aunque puede usar cualquier herramienta que elija, usamos y recomendamos [ngrok](https://ngrok.com/download), que crea una dirección URL direccionable externamente para un puerto que se abre localmente en el equipo.
 
-Para configurar ngrok como preparación para ejecutar la aplicación Teams localmente, siga estos pasos:
+Para configurar ngrok como preparación para ejecutar la aplicación de Teams localmente, siga estos pasos:
 
 1. Vaya al directorio donde tiene ngrok.exe instalado en una aplicación de terminal. Es posible que desee agregarla como una variable de ruta de acceso para evitar este paso.
 2. Ejecute, por ejemplo, `ngrok http 3978 --host-header=localhost:3978` o reemplace el número de puerto según sea necesario.
@@ -55,7 +55,7 @@ Para configurar ngrok como preparación para ejecutar la aplicación Teams local
 
 Para usar ngrok en el proyecto en función de las funcionalidades que esté usando, debe reemplazar todas las referencias url del código, la configuración y el archivo manifest.json para usar este punto de conexión de dirección URL.
 
-Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a Teams funcionalidad específica.
+Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a la funcionalidad específica de Teams.
 
 > [!NOTE]
 >
@@ -74,7 +74,7 @@ Puede usar cualquier servicio direccionable externamente para hospedar el códig
 
 ## <a name="load-and-run-your-experience"></a>Cargar y ejecutar la experiencia
 
-Para cargar y ejecutar la experiencia dentro de Teams, debe crear un paquete y cargarlo en Teams. Para más información, vea:
+Para cargar y ejecutar su experiencia en Teams, debe crear un paquete y cargarlo en Teams. Para más información, vea:
 
 * [Crear un paquete de aplicación para la aplicación de Microsoft Teams](~/concepts/build-and-test/apps-package.md).
 * [Cargar la aplicación en Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
@@ -86,4 +86,4 @@ Para cargar y ejecutar la experiencia dentro de Teams, debe crear un paquete y c
 
 ## <a name="see-also"></a>Consulte también
 
-[Probar y depurar el bot localmente](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+[Prueba y depuración del bot localmente con IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123051"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484848"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
@@ -75,7 +75,7 @@ Para detener la distribución de una aplicación después de publicarla, siga es
 1. En la página **Información general del producto**, seleccione **Dejar de vender**. Quita la aplicación de Microsoft AppSource.
 1. Para iniciar la cancelación de la lista de la aplicación, en el **Centro de partners**, seleccione la página **Información general** y, a continuación, seleccione **Dejar de vender**.
 
-Después de detener la distribución de una aplicación, todavía puede verla en el Centro de partners con el estado **No disponible**. Si decide volver a mostrar la aplicación, siga las instrucciones para [Publicar la aplicación en la tienda de Microsoft Teams](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
+Después de detener la distribución de una aplicación, todavía puede verla en el Centro de partners con el estado **No disponible**. Si decide volver a mostrar la aplicación, siga las instrucciones para [Publicar la aplicación en la tienda de Microsoft Teams](../publish.md).
 
 ## <a name="see-also"></a>Vea también
 

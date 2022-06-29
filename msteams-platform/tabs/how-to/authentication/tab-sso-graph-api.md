@@ -3,13 +3,13 @@ title: Extensión de la aplicación de pestaña con permisos de Microsoft Graph
 description: Describe la configuración de permisos de API con Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API Ámbito de token de acceso delegado de permisos
-ms.openlocfilehash: 76b474f69b31d9c9b9925803ee7c0240f9e5a7c4
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API ámbito de token de acceso de permisos delegados
+ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888174"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485296"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Extensión de la aplicación de pestaña con permisos y ámbito de Microsoft Graph
 
@@ -29,7 +29,7 @@ Puede configurar ámbitos de Graph adicionales en Azure AD para la aplicación. 
 
 ### <a name="to-configure-api-permissions"></a>Para configurar permisos de API
 
-1. Abra la aplicación que registró en [Azure Portal](https://ms.portal.azure.com/).
+1. Abra la aplicación que registró en el [Azure Portal](https://ms.portal.azure.com/).
 
 2. Seleccione **Administrar** > **permiso de API** en el panel izquierdo.
 
@@ -82,7 +82,7 @@ Puede configurar la autenticación para varias plataformas siempre y cuando la d
 
 ### <a name="to-configure-authentication-for-a-platform"></a>Para configurar la autenticación para una plataforma
 
-1. Abra la aplicación que registró en [Azure Portal](https://ms.portal.azure.com/).
+1. Abra la aplicación que registró en el [Azure Portal](https://ms.portal.azure.com/).
 
 1. Seleccione **Administrar** > **autenticación** en el panel izquierdo.
 
@@ -198,7 +198,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 Si necesita acceder a los datos de Microsoft Graph, configure el código del lado servidor para:
 
 1. Valide el token de acceso. Para obtener más información, consulte [Validar el token de acceso](tab-sso-code.md#validate-the-access-token).
-1. Inicie el flujo de OBO de OAuth 2.0 con una llamada a la plataforma de identidad de Microsoft que incluya el token de acceso, algunos metadatos sobre el usuario y las credenciales de la aplicación de pestaña (su identificador de aplicación y su secreto de cliente). La plataforma de identidad de Microsoft devolverá un nuevo token de acceso que se puede usar para obtener acceso a Microsoft Graph.
+1. Inicie el flujo OBO de OAuth 2.0 con una llamada al Plataforma de identidad de Microsoft que incluya el token de acceso, algunos metadatos sobre el usuario y las credenciales de la aplicación de pestaña (su identificador de aplicación y su secreto de cliente). La plataforma de identidad de Microsoft devolverá un nuevo token de acceso que se puede usar para obtener acceso a Microsoft Graph.
 1. Obtener datos de Microsoft Graph mediante el nuevo token.
 1. Use la serialización de caché de tokens en MSAL.NET para almacenar en caché el nuevo token de acceso para varios, si es necesario.
 
@@ -229,3 +229,4 @@ Puede solicitar consentimiento mediante la API de autenticación. Otro enfoque p
 - [Flujo en nombre de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Obtener acceso para MS Graph](/graph/auth-v2-user)
 - [Serialización de caché de tokens en MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
+- [Proveedor MSAL2 de Microsoft Teams](/graph/toolkit/providers/teams-msal2)

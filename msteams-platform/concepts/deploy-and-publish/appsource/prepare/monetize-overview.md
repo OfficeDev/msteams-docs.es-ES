@@ -5,17 +5,17 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6dfa80b40eb53c5d552ab4a3ffc9a6cefd7cda0a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9b684fccb108b733a63ae6b61e002bc24bde32ef
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123058"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485513"
 ---
 # <a name="monetize-your-app"></a>Rentabilizar la aplicación
 
 La Tienda de aplicaciones de Microsoft Teams proporciona características que le permiten monetizar sus aplicaciones y obtener clientes interactuando con sus usuarios. En los temas de esta sección se muestra cómo compilar estas características en la aplicación.
- 
+
 ## <a name="choose-a-pricing-model"></a>Elegir un modelo de precios
 
 :::row:::

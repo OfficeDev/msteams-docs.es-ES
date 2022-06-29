@@ -5,12 +5,12 @@ description: En este módulo, obtendrá información sobre cómo crear pestañas
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c71c8199e1606a7d36f2cdbd553ac5232b9a7926
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c42ea356e3654453d20f59a8be33412b1e608939
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144001"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485248"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -355,7 +355,7 @@ En las secciones anteriores, ha visto que la mayor parte de los paradigmas de de
 
 En la imagen siguiente se proporciona información general sobre cómo funciona el flujo de datos de autenticación para una invocación de `tab/fetch`.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Ejemplo de flujo de autenticación de pestaña de tarjeta adaptable." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="Ejemplo de flujo de autenticación de pestaña de tarjeta adaptable." border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
 
 **`tab/fetch` respuesta de autenticación**
 

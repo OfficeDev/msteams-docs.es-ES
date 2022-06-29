@@ -1,16 +1,16 @@
 ---
 title: Expansión del vínculo de la pestaña y vista de fases
 author: Rajeshwari-v
-description: Obtenga información sobre cómo desenrollar un vínculo, abrir la vista fase y anclar una pestaña con Teams aplicación. Obtenga información sobre cómo invocarla mediante la tarjeta adaptable mediante ejemplo de código y ejemplo.
+description: Obtenga información sobre cómo desanclar un vínculo, abrir la Vista extendida y anclar una pestaña con la aplicación Microsoft Teams. Obtenga información sobre la Vista extendida y cómo invocarla utilizando tarjeta adaptable mediante ejemplos de código.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122911"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484938"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -87,7 +87,7 @@ A continuación se muestra el proceso para invocar la vista extendida:
 * El bot responde con un código de `200`.
 
 > [!NOTE]
-> En Teams clientes móviles, la invocación de stage view para las aplicaciones distribuidas a través de la [aplicación de Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md) y el no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. `websiteUrl` El explorador abre la dirección URL especificada en el parámetro del objeto`TabInfo`.
+> En los clientes móviles de Teams, invocar Vista extendida para aplicaciones distribuidas a través de la [tienda de Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. El explorador abre la dirección URL especificada en el parámetro `websiteUrl` del objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocación de la Vista extendida a través de un vínculo profundo
 

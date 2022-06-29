@@ -1,15 +1,15 @@
 ---
 title: Creación de un bot
-description: En este módulo, aprenderá a crear bots mediante el Microsoft Bot Framework y listos para trabajar en Microsoft Teams
+description: En este módulo, aprenderá a crear bots mediante el Microsoft Bot Framework y listos para trabajar en Microsoft Teams.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: a669b11baef8dc31a662ea2ad178ad3488f2d69e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189525"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485289"
 ---
 # <a name="create-a-bot"></a>Creación de un bot
 
@@ -21,16 +21,16 @@ Para obtener más información, consulte [La documentación de Bot Framework](/a
 
 ## <a name="create-a-bot-for-microsoft-teams"></a>Crear un bot para Microsoft Teams
 
-**Teams App Studio** es una herramienta que puede ayudar a crear el bot y un paquete de aplicación que hace referencia al bot. También contiene una biblioteca de control React y ejemplos configurables para tarjetas. Para obtener más información, consulte [Introducción a Teams App Studio](~/concepts/build-and-test/app-studio-overview.md). En los pasos siguientes se da por hecho que está configurando manualmente el bot y que no usa **Teams App Studio**:
+**Teams App Studio** es una herramienta que puede ayudar a crear el bot y un paquete de aplicación que hace referencia al bot. También contiene una biblioteca de control React y ejemplos configurables para tarjetas. Para obtener más información, consulte [Introducción a Teams App Studio](~/concepts/build-and-test/app-studio-overview.md). En los pasos siguientes se da por supuesto que va a configurar el bot de forma manual y no a usar **Teams App Studio**:
 
 1. Cree el bot mediante [Bot Framework](https://dev.botframework.com/bots/new). **Asegúrese de agregar Microsoft Teams como canal de la lista de canales destacados después de crear el bot.** Puede volver a usar cualquier identificador de aplicación de Microsoft que haya generado si ya ha creado el manifiesto o el paquete de la aplicación.
 
-   ![Página de registro de Bot Framework](~/assets/images/bots/bfregister.png)
+   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Página de registro de Bot Framework":::
 
 > [!NOTE]
-> Si no desea crear el bot en Azure, **debe** usar este vínculo para crear un nuevo bot: [Bot Framework](https://dev.botframework.com/bots/new). Si en su lugar hace clic en **Crear un bot** en el portal de Bot Framework, creará [el bot en Microsoft Azure](#bots-and-microsoft-azure) en su lugar.
+> Si no desea crear el bot en Azure, **debe** usar este vínculo para crear un nuevo bot: [Bot Framework](https://dev.botframework.com/bots/new). Si en su lugar hace clic en **Crear un bot** en el portal de Bot Framework, creará [el bot en Microsoft Azure](#bots-and-microsoft-azure) .
 
-2. Compile el bot mediante el paquete [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet, el [SDK de Bot Framework](https://github.com/microsoft/botframework-sdk) o la [API de Bot Connector](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
+2. Compile el bot con el paquete NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) , el  [SDK de Bot Framework](https://github.com/microsoft/botframework-sdk) o la [API de Bot Connector](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
 
 3. Pruebe el bot con el [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
@@ -42,17 +42,17 @@ Para obtener más información, consulte [La documentación de Bot Framework](/a
 >
 > A partir de diciembre de 2017, el portal de Bot Framework está optimizado para registrar bots en Microsoft Azure. Estos son algunos aspectos que debe tener en cuenta:
 >
-> * El canal de Microsoft Teams para bots registrados en Azure es gratuito. Los mensajes enviados a través del canal Teams no contarán para los mensajes consumidos para el bot.
+> * El canal de Microsoft Teams para bots registrados en Azure es gratuito. Los mensajes enviados a través del canal de Teams no contarán para los mensajes consumidos para el bot.
 > * Aunque es posible [crear un nuevo bot de Bot Framework](https://dev.botframework.com/bots/new) sin usar Azure, debe usar [crear un nuevo bot de Bot Framework](https://dev.botframework.com/bots/new), que ya no se expone en el portal de Bot Framework.
-> * Al editar las propiedades de un bot existente en la [lista de bots de Bot Framework](https://dev.botframework.com/bots), como su "punto de conexión de mensajería", que es común al desarrollar por primera vez un bot, especialmente si usa [ngrok](https://ngrok.com), verá la columna "Estado de la migración" y un botón azul "Migrar" que le llevará al portal de Microsoft Azure. No haga clic en el botón "Migrar" a menos que eso sea lo que quiere hacer; en su lugar, haga clic en el nombre del bot y puede editar sus propiedades:</br>
+> * Al editar las propiedades de un bot existente en la [lista de bots de Bot Framework](https://dev.botframework.com/bots), como su "punto de conexión de mensajería", que es común al desarrollar por primera vez un bot, especialmente si usa [ngrok](https://ngrok.com), verá la columna "Estado de la migración" y un botón azul "Migrar" que le llevará a Microsoft Azure Portal. No haga clic en el botón "Migrar" a menos que eso sea lo que quiere hacer; en su lugar, haga clic en el nombre del bot y puede editar sus propiedades:</br>
    ![Editar propiedades del bot](~/assets/images/bots/bf-migrate-bot-to-azure.png)
-> * Si registra el bot con Microsoft Azure, no es necesario *hospedar* el código del bot en Microsoft Azure.
+> * Si registra el bot mediante Microsoft Azure, no es necesario *hospedar* el código del bot en Microsoft Azure.
 > * Si registra un bot mediante Azure Portal, debe tener una cuenta de Microsoft Azure. Puede [crear una de forma gratuita](https://azure.microsoft.com/free/). Para comprobar su identidad al crear una, debe proporcionar una tarjeta de crédito, pero no se le cobrará; siempre es gratis crear y usar bots con Teams.
-> * Ahora puede usar App Studio para registrar o actualizar la información de aplicaciones y bots directamente dentro de Teams. Solo tendrá que usar la Azure Portal para agregar o configurar otros canales de Bot Framework, como Direct Line, Chat en web, Skype y Facebook Messenger.
+> * Ahora puede usar App Studio para registrar o actualizar la información de la aplicación y del bot directamente en Teams. Solo tendrá que usar la Azure Portal para agregar o configurar otros canales de Bot Framework, como Direct Line, Chat en web, Skype y Facebook Messenger.
 
 > [!WARNING]
 >
->* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará obsoleto a partir del 30 de junio de 2022
+>* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio estará en desuso el 01 de agosto de 2022.
 
 ## <a name="see-also"></a>Consulte también
 

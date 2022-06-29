@@ -3,16 +3,16 @@ title: Actualización y eliminación de mensajes enviados desde su bot
 author: WashingtonKayaker
 description: Obtenga información sobre cómo actualizar y eliminar mensajes enviados desde su bot de Microsoft Teams en diferentes entornos y con las API de REST mediante ejemplos de código.
 ms.topic: overview
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 76befe46bab8d6cc0aa3d5c0c1e2c8c0f15bf579
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: bd52a3cfa27153c4349d50f4263dc29346fdfb45
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111412"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503805"
 ---
-# <a name="update-and-delete-messages-sent-from-your-bot"></a>Actualización y eliminación de mensajes enviados desde su bot
+# <a name="update-and-delete-messages-sent-from-bot"></a>Actualización y eliminación de mensajes enviados desde el bot 
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

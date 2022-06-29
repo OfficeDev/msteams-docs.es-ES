@@ -1,17 +1,17 @@
 ---
 title: Adición de datos de prueba al inquilino de prueba de Microsoft 365
-description: Aprenda a configurar la suscripción del programa para desarrolladores de Office 365 para pruebas correctas de aplicaciones de Microsoft Teams mediante fragmentos de código.
+description: Aprenda a configurar la suscripción del programa para desarrolladores de Office 365 para realizar pruebas correctas de aplicaciones de Microsoft Teams mediante fragmentos de código.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142356"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503462"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Adición de datos de prueba al inquilino de prueba de Microsoft 365
+# <a name="add-test-data-to-your-environment"></a>Añadir datos de prueba al entorno
 
 Puede probar la aplicación de Microsoft Teams con datos de ejemplo con una suscripción de desarrollador Microsoft 365.
 

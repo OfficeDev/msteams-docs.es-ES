@@ -1,18 +1,18 @@
 ---
 title: Apertura de vínculos
 author: surbhigupta
-description: En este módulo, aprenderá a agregar la desurling de vínculos con la extensión de mensajería en una aplicación de Teams con el manifiesto de aplicación o manualmente mediante ejemplos y ejemplos de código.
+description: En este módulo, aprenderá a agregar un vínculo que se desplegue con la extensión de mensajería en una aplicación de Teams con el manifiesto de aplicación o manualmente mediante ejemplos y ejemplos de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189996"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503616"
 ---
-# <a name="link-unfurling"></a>Apertura de vínculos
+# <a name="add-link-unfurling"></a>Añadir una extensión de enlace
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -23,7 +23,7 @@ Este documento le guía sobre cómo agregar un vínculo que se desplegue al mani
 > * Actualmente, la apertura de enlaces no es compatible con clientes móviles.
 > * El resultado de la apertura del enlace se almacena en caché durante 30 minutos.
 
-La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la imagen siguiente, un usuario pegó una dirección URL para un elemento de Azure DevOps que la extensión de mensaje se ha resuelto en una tarjeta:
+La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la imagen siguiente, un usuario pegó una dirección URL para un elemento de Azure DevOps que la extensión de mensaje ha resuelto en una tarjeta:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Ejemplo de apertura de vínculos":::
 

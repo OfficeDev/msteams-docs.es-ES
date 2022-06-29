@@ -1,15 +1,15 @@
 ---
 title: Tarjetas y módulos de tareas
-description: Obtenga información sobre los tipos de tarjetas admitidas en bots para Teams, como la tarjeta Adaptive, Hero y Thumbnail, y sus acciones.
+description: Obtenga información sobre los tipos de tarjetas que se admiten en bots para Teams, como las tarjetas Adaptive, Hero y Thumbnail, y sus acciones.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2f964307c4cc8dbd3033b52af88a9b2c38d474
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 04cdcfedd98bee67babf63231ffdeae6679f7331
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143938"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485450"
 ---
 # <a name="cards-and-task-modules"></a>Tarjetas y módulos de tareas
 
@@ -38,7 +38,7 @@ Puede agregar y responder a acciones de tarjeta que:
 * Enviar mensajes y carga al bot.
 * Inicie el flujo de OAuth.
 
-Puede proporcionar experiencia de [búsqueda dinámica](~/task-modules-and-cards/cards/dynamic-search.md) dentro de un conjunto de datos grande mediante el control de tipo por adelantado en tarjetas adaptables y realizar una búsqueda estática de tipo adelantado dentro de un número limitado de opciones. Invoque los módulos de tareas en pestañas personales o de canal, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos se puede mejorar agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde bots de Teams mediante botones en tarjetas adaptables y tarjetas de Bot Framework.
+Puede proporcionar experiencia de [búsqueda dinámica](~/task-modules-and-cards/cards/dynamic-search.md) dentro de un conjunto de datos grande mediante el control typeahead en tarjetas adaptables y realizar una búsqueda estática de tipoahead en un número limitado de opciones. Invoque los módulos de tareas en pestañas personales o de canal, bots o vínculos profundos. La experiencia del usuario para cualquier flujo de trabajo que requiera entrada de datos se puede mejorar agregando un módulo de tareas a la pestaña del usuario. Puede invocar módulos de tareas desde bots de Teams mediante botones en tarjetas adaptables y tarjetas de Bot Framework.
 
 ## <a name="see-also"></a>Vea también
 

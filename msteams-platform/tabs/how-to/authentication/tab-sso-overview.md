@@ -3,15 +3,15 @@ title: Introducción a la autenticación para pestañas mediante sso en Teams co
 description: Introducción a la autenticación de SSO en Teams y cómo usarla en pestañas
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: las pestañas de autenticación de teams del manifiesto de la aplicación de token de acceso de SSO de Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 3214faec45001dd244115636e0964a56781837a8
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) manifiesto de aplicación de token de acceso sso
+ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888150"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503770"
 ---
-# <a name="enable-single-sign-on-in-a-tab-app"></a>Habilitación del inicio de sesión único en una aplicación de pestaña
+# <a name="enable-sso-for-tab-app"></a>Habilitación del inicio de sesión único para la aplicación de pestañas
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
@@ -137,7 +137,7 @@ Esta es una lista de procedimientos recomendados:
 > [!div class="nextstepaction"]
 > [Registro de la aplicación de pestaña en Azure AD](tab-sso-register-aad.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Configuración del código para habilitar el inicio de sesión único en una aplicación de pestaña](tab-sso-code.md)
 

@@ -3,12 +3,12 @@ title: Agregar acciones de tarjeta en un bot
 description: En este módulo, obtenga información sobre qué son las acciones de tarjeta en Microsoft Teams, los tipos de acción y cómo usarlas en los bots.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189763"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483973"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -429,7 +429,9 @@ Las arjetas adaptables admiten cuatro tipos de acción:
 También puede modificar la carga `Action.Submit` de la tarjeta adaptable para admitir acciones de Bot Framework existentes mediante una`msteams`propiedad en el`data` objeto de `Action.Submit`. En la sección siguiente se proporcionan detalles sobre cómo usar las acciones existentes de Bot Framework con tarjetas adaptables.
 
 > [!NOTE]
-> Agregar `msteams` a los datos con una acción Bot Framework no funciona con un módulo de tareas de una tarjeta adaptable.
+>* Agregar `msteams` a los datos con una acción Bot Framework no funciona con un módulo de tareas de una tarjeta adaptable.
+> 
+>* No se admite principal ni desctuctivo `ActionStyle` en Microsoft Teams. 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Tarjetas adaptables con la acción messageBack
 
@@ -561,8 +563,8 @@ El siguiente código muestra un ejemplo de tarjetas adaptables `invoke`con la ac
 
 |S.no|Tarjeta| description|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
-|1|Uso de tarjetas|Presenta todos los tipos de tarjetas, como miniaturas, audio, medios, etc. Se basa en el bot de bienvenida de usuario y mensajes múltiples mediante la presentación de una tarjeta con botones en el mensaje de bienvenida que enrutan al cuadro de diálogo adecuado.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
-|2|Tarjetas adaptables|Muestra cómo el cuadro de diálogo de varios turnos puede usar una tarjeta para obtener la entrada del usuario por nombre y edad.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+|1 |Uso de tarjetas|Presenta todos los tipos de tarjetas, como miniaturas, audio, medios, etc. Se basa en el bot de bienvenida de usuario y mensajes múltiples mediante la presentación de una tarjeta con botones en el mensaje de bienvenida que enrutan al cuadro de diálogo adecuado.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2 |Tarjetas adaptables|Muestra cómo el cuadro de diálogo de varios turnos puede usar una tarjeta para obtener la entrada del usuario por nombre y edad.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
 > Los elementos multimedia no se admiten para la tarjeta adaptable en Teams

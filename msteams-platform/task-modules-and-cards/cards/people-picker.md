@@ -5,17 +5,17 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9802cbc0f78a84db972640ed8f96321a71a82504
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144169"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503490"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Selector de usuarios en Tarjetas adaptables
 
 >[!NOTE]
-> Actualmente, el selector de personas en tarjetas adaptables está disponible en [versión preliminar para desarrolladores públicos](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) solo para dispositivos móviles y disponible con carácter general (GA) para escritorio.
+> Actualmente, el selector de personas en tarjetas adaptables está disponible en [versión preliminar para desarrolladores públicos para Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) solo para dispositivos móviles y disponible con carácter general (GA) para escritorio.
 
 Selector de personas ayuda a los usuarios a buscar y seleccionar usuarios en tarjeta adaptable. Puede agregar el selector de personas como control de entrada a la tarjeta adaptable, que funciona en chats, canales, módulos de tareas y pestañas. Selector de personas admite las siguientes características:
 
@@ -58,9 +58,9 @@ En la imagen siguiente se muestra el escenario de reasignación:
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 
 > [!NOTE]
-> Actualmente, esta característica solo está disponible en [versión preliminar pública para desarrolladores](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams).
+> Actualmente, esta característica solo está disponible en  [versión preliminar para desarrolladores públicos para Teams](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) .
 
-Android y iOS clientes móviles admiten el selector de personas en tarjetas adaptables. Puede usar el selector de personas en el móvil para buscar y seleccionar usuario para mejorar la experiencia del usuario. La experiencia de búsqueda es similar a cualquier otra experiencia de selección de usuarios en dispositivos móviles.
+Los clientes móviles de Android e iOS admiten el selector de personas en tarjetas adaptables. Puede usar el selector de personas en el móvil para buscar y seleccionar usuario para mejorar la experiencia del usuario. La experiencia de búsqueda es similar a cualquier otra experiencia de selección de usuarios en dispositivos móviles.
 
 ### <a name="reassignment-scenario-example"></a>Ejemplo de escenario de reasignación
 
@@ -98,13 +98,13 @@ Las siguientes propiedades son adiciones al esquema para habilitar la `Input.Cho
 
 #### <a name="inputchoiceset-control"></a>Control Input.ChoiceSet
 
-|Propiedad |Tipo |Necesario |Descripción |
+|Propiedad |Tipo |Obligatorio |Descripción |
 |----|----|----|----|
 |**choices.data** |**Data.Query** |No |Habilita el autocompletar dinámico para distintos tipos de usuario mediante la captura de resultados del conjunto de datos especificado. |
 
 #### <a name="dataquery"></a>Data.Query
 
-|Propiedad |Tipo |Necesario |Descripción|
+|Propiedad |Tipo |Obligatorio |Descripción|
 |--|--|--|--|
 |**Dataset** |Cadena |Sí |Tipo de datos que se deben capturar dinámicamente.|
 

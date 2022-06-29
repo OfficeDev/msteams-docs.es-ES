@@ -1,23 +1,23 @@
 ---
-title: Administración de Azure Active Directory aplicación en Teams Toolkit
+title: Administración de una aplicación de Azure Active Directory en Teams Toolkit
 author: zyxiaoyuer
-description: Describe la administración de Azure Active Directory aplicación en Teams Toolkit
+description: Describe la administración de una aplicación de Azure Active Directory en el kit de herramientas de Teams
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 1f71d57e32bd6fb24cf75cc6027937337f29f972
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755940"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503791"
 ---
-# <a name="azure-ad-manifest"></a>Manifiesto de Azure AD
+# <a name="customize-azure-ad-manifest"></a>Personalizar el manifiesto de Azure AD
 
 El [manifiesto de Azure Active Directory (Azure AD)](/azure/active-directory/develop/reference-app-manifest) contiene definiciones de todos los atributos de un objeto de aplicación de Azure AD en el Plataforma de identidad de Microsoft.
 
-Teams Toolkit ahora administra la aplicación de Azure AD con el archivo de manifiesto como el origen de la verdad durante los ciclos de vida de desarrollo de Teams aplicación.
+Teams Toolkit ahora administra la aplicación de Azure AD con el archivo de manifiesto como el origen de la verdad durante los ciclos de vida de desarrollo de aplicaciones de Teams.
 
 ## <a name="customize-azure-ad-manifest-template"></a>Personalización de la plantilla de manifiesto de Azure AD
 
@@ -39,7 +39,7 @@ Puede personalizar la plantilla de manifiesto de Azure AD para actualizar la apl
 
 ### <a name="customize-requiredresourceaccess"></a>Personalización de requiredResourceAccess
 
-Si la aplicación Teams requiere más permisos para llamar a la API con permisos adicionales, debe actualizar `requiredResourceAccess` la propiedad en la plantilla de manifiesto de Azure AD. Puede ver el ejemplo siguiente para esta propiedad:
+Si la aplicación de Teams requiere más permisos para llamar a la API con permisos adicionales, debe actualizar `requiredResourceAccess` la propiedad en la plantilla de manifiesto de Azure AD. Puede ver el ejemplo siguiente para esta propiedad:
 
 ```JSON
 
@@ -221,10 +221,10 @@ La lente de código muestra el nombre de la aplicación para el identificador de
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
 
-2. Vaya a [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) e inicie sesión en Microsoft 365 cuenta.
+2. Vaya a [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) e inicie sesión en la cuenta de Microsoft 365.
   
    > [!NOTE]
-   > Asegúrese de que las credenciales de inicio de sesión de Teams aplicación y cuenta de M365 sean las mismas.
+   > Asegúrese de que las credenciales de inicio de sesión de la aplicación Teams y la cuenta de M365 son las mismas.
 
 3. Abra [la página Registros](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) de aplicaciones y busque la aplicación de Azure AD mediante el identificador de cliente que copió antes.
   
@@ -232,7 +232,7 @@ La lente de código muestra el nombre de la aplicación para el identificador de
 
 4. Seleccione la aplicación de Azure AD en el resultado de la búsqueda para ver la información detallada.
   
-5. En la página de información de la aplicación de Azure AD, seleccione `Manifest` el menú para ver el manifiesto de esta aplicación. El esquema del manifiesto es el mismo que el del `aad.template.json` archivo. Para obtener más información sobre el manifiesto, consulte [Azure Active Directory manifiesto de aplicación](/azure/active-directory/develop/reference-app-manifest).
+5. En la página de información de la aplicación de Azure AD, seleccione `Manifest` el menú para ver el manifiesto de esta aplicación. El esquema del manifiesto es el mismo que el del `aad.template.json` archivo. Para obtener más información sobre el manifiesto, consulte [Manifiesto de aplicación de Azure Active Directory](/azure/active-directory/develop/reference-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -242,17 +242,17 @@ La lente de código muestra el nombre de la aplicación para el identificador de
 
 Puede usar la aplicación de Azure AD existente para el proyecto de Teams. Para obtener más información, consulte [Uso de una aplicación de Azure AD existente para la aplicación de Teams](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app).
 
-## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Aplicación de Azure AD en Teams ciclo de vida de desarrollo de aplicaciones
+## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Ciclo de vida de desarrollo de aplicaciones de Azure AD en Teams
 
-Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo de vida de desarrollo de Teams aplicación.
+Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo de vida de desarrollo de aplicaciones de Teams.
 
-1. **Para crear Project**
+1. **Para crear un proyecto**
 
-      Puede crear un proyecto con Teams Toolkit que incluye compatibilidad con SSO de forma predeterminada, como `SSO-enabled tab`. Para obtener más información para crear una nueva aplicación, consulte [Creación de una nueva aplicación Teams mediante Teams Toolkit](create-new-project.md). Se crea automáticamente un archivo de manifiesto de Azure AD: `templates\appPackage\aad.template.json`. Teams Toolkit crea o actualiza la aplicación de Azure AD durante el desarrollo local o mientras mueve la aplicación a la nube.
+      Puede crear un proyecto con El kit de herramientas de Teams que incluye compatibilidad con SSO de forma predeterminada, como `SSO-enabled tab`. Para obtener más información para crear una nueva aplicación, consulte [Creación de una nueva aplicación de Teams mediante Teams Toolkit](create-new-project.md). Se crea automáticamente un archivo de manifiesto de Azure AD: `templates\appPackage\aad.template.json`. Teams Toolkit crea o actualiza la aplicación de Azure AD durante el desarrollo local o mientras mueve la aplicación a la nube.
 
 2. **Para agregar el inicio de sesión único al bot o a la pestaña**
 
-      Después de crear una aplicación de Teams sin sso integrado, Teams Toolkit ayuda incrementalmente a agregar el inicio de sesión único para el proyecto. Como resultado, se crea automáticamente un archivo de manifiesto de Azure AD: `templates\appPackage\aad.template.json`.
+      Después de crear una aplicación de Teams sin sso integrado, Teams Toolkit le ayuda incrementalmente a agregar sso para el proyecto. Como resultado, se crea automáticamente un archivo de manifiesto de Azure AD: `templates\appPackage\aad.template.json`.
 
       Teams Toolkit crea o actualiza la aplicación de Azure AD durante la siguiente sesión de depuración local o mientras mueve la aplicación a la nube.
 
@@ -260,7 +260,7 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
     Teams Toolkit realiza las siguientes funciones durante el desarrollo local (conocido como F5):
 
-    * Lea el `state.local.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo.
+    * Lea el `state.local.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
 
     * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls que requiere un punto de conexión de depuración local) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
 
@@ -270,9 +270,9 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
 4. **Para aprovisionar recursos en la nube**
 
-      Debe aprovisionar recursos en la nube e implementar la aplicación mientras mueve la aplicación a la nube. En las fases, como el desarrollo local, Teams Toolkit:
+      Debe aprovisionar recursos en la nube e implementar la aplicación mientras mueve la aplicación a la nube. En las fases, como el desarrollo local, teams Toolkit hará lo siguiente:
 
-      * Lea el `state.{env}.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo.
+      * Lea el `state.{env}.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
 
       * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls requiere un punto de conexión de bot o front-end) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
 
@@ -288,9 +288,9 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
 ## <a name="limitations"></a>Limitaciones
 
-1. Teams Toolkit extensión no admite todas las propiedades enumeradas en el esquema de manifiesto de Azure AD.
+1. La extensión del kit de herramientas de Teams no admite todas las propiedades enumeradas en el esquema de manifiesto de Azure AD.
   
-      En la tabla siguiente se enumeran las propiedades que no se admiten en Teams Toolkit extensión:
+      En la tabla siguiente se enumeran las propiedades que no se admiten en la extensión del kit de herramientas de Teams:
 
       |**Propiedades no admitidas**|**Motivo**|
       |-----------|----------|
@@ -313,4 +313,4 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
 ## <a name="see-also"></a>Consulte también
 
-* [Vista previa y personalización del manifiesto de la aplicación en Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
+* [Vista previa y personalización del manifiesto de la aplicación en el kit de herramientas](TeamsFx-preview-and-customize-app-manifest.md)

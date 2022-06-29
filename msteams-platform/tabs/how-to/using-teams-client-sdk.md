@@ -1,18 +1,18 @@
 ---
-title: Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
+title: SDK para cliente de JavaScript en Teams
 author: heath-hamilton
 ms.author: surbhigupta
 description: En este módulo, aprenderá a usar el SDK de cliente de JavaScript de Microsoft Teams, que puede ayudarle a crear experiencias de aplicación hospedadas en <iframe> Teams, Office y Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189511"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503924"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Creación de pestañas y otras experiencias hospedadas con el SDK de cliente de JavaScript de Microsoft Teams
+# <a name="teams-javascript-client-sdk"></a>SDK para cliente de JavaScript en Teams
 
 El SDK de cliente de JavaScript de Microsoft Teams puede ayudarle a crear experiencias hospedadas en Teams, Office y Outlook, donde el contenido de la aplicación se hospeda en un [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). El SDK es útil para desarrollar aplicaciones con cualquiera de las siguientes funcionalidades de Teams:
 
@@ -42,7 +42,7 @@ En la tabla siguiente se enumeran las funciones de pestañas y cuadros de diálo
 | appInitialization| | Obsoleto. Reemplazado por el espacio de nombres de `app`. |
 | appInstallDialog | Teams||
 | autenticación | Teams, Outlook, Office | |
-| calendar | Teams, Outlook ||
+| calendar | Outlook ||
 | llamada | Teams||
 | chat |Teams||
 | cuadro de diálogo | Teams, Outlook, Office | Espacio de nombres que representa cuadros de diálogo (anteriormente denominados *módulos de tareas*). Vea las notas en [Diálogos](#dialogs). |

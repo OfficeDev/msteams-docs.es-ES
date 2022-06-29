@@ -1,20 +1,20 @@
 ---
 title: Prueba y depuración del bot de manera local
 author: surbhigupta
-description: Obtenga información sobre cómo probar y depurar el bot localmente con un IDE dentro de Teams entorno mediante la instalación local y mucho más.
+description: Obtenga información sobre cómo probar y depurar el bot localmente con un IDE en el entorno de Teams mediante la instalación local y mucho más.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150809"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503721"
 ---
-# <a name="test-and-debug-your-bot-locally"></a>Prueba y depuración del bot de manera local
+# <a name="test-and-debug-your-bot-locally-with-ide"></a>Prueba y depuración del bot localmente con IDE
 
-Al probar el bot, debe tener en cuenta tanto los contextos en los que desea que se ejecute el bot como cualquier funcionalidad que haya agregado al bot que requiera datos específicos de Microsoft Teams. Asegúrese de que el método que elija para probar el bot se ajuste a su funcionalidad.
+Al probar el bot, debe tener en cuenta tanto los contextos en los que quiere que se ejecute el bot como cualquier funcionalidad que haya agregado al bot que requiera datos específicos de Microsoft Teams. Asegúrese de que el método que elija para probar el bot se ajuste a su funcionalidad.
 
 ## <a name="test-by-uploading-to-teams"></a>Prueba mediante la carga en Teams
 
@@ -44,7 +44,7 @@ Use el punto de conexión https proporcionado por ngrok en el manifiesto de la a
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>Probar el bot sin cargarlo en Teams
 
-En ocasiones, es necesario probar el bot sin instalarlo como una aplicación en Teams. Proporcionamos dos métodos para probar el bot. Probar el bot sin instalarlo como una aplicación puede ser útil para asegurarse de que el bot está disponible y responder. Sin embargo, no le permitirá probar toda la amplitud de Microsoft Teams funcionalidad que ha agregado al bot. Si necesita probar el bot al completo, consulte [hacer pruebas cargándolo](#test-by-uploading-to-teams).
+En ocasiones, es necesario probar el bot sin instalarlo como una aplicación en Teams. Proporcionamos dos métodos para probar el bot. Probar el bot sin instalarlo como una aplicación puede ser útil para asegurarse de que el bot está disponible y responder. Sin embargo, no le permitirá probar toda la amplitud de la funcionalidad de Microsoft Teams que ha agregado al bot. Si necesita probar el bot al completo, consulte [hacer pruebas cargándolo](#test-by-uploading-to-teams).
 
 ### <a name="use-the-bot-emulator"></a>Usar Bot Emulator
 
@@ -57,11 +57,11 @@ Para obtener más información, consulte [instrucciones completas de Bot Framewo
 > [!Important]
 > Hablar con el bot por identificador está pensado solo para fines de prueba básicos. Cualquier funcionalidad específica de Teams que haya agregado al bot no funcionará.
 
-Inicie una conversación con el bot mediante su identificador. Cuando se agrega un bot a través de uno de estos métodos, no es direccionable en las conversaciones de canal y no puede aprovechar otras funcionalidades de Teams aplicación, como pestañas o extensiones de mensajes. Inicie una conversación de una de las siguientes maneras:
+Inicie una conversación con el bot mediante su identificador. Cuando se agrega un bot a través de uno de estos métodos, no es direccionable en las conversaciones de canal y no se pueden aprovechar otras funcionalidades de aplicaciones de Teams, como pestañas o extensiones de mensajes. Inicie una conversación de una de las siguientes maneras:
 
 * En la página [Panel del bot](https://dev.botframework.com/bots), en **Canales**, seleccione **Agregar a Microsoft Teams**. Teams inicia un chat personal con el bot.
 
-* Haga referencia directamente al identificador de aplicación del bot desde dentro de Teams:
+* Haga referencia directamente al identificador de aplicación del bot desde Teams:
    1. En la página [ Panel de control del bot](https://dev.botframework.com/bots), en **Details**, copie el **Id. de aplicación de Microsoft** del bot.
   
       ![Obtener el AppID para el bot](~/assets/images/bots_appid_botframework.png)

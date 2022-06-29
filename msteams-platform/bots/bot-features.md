@@ -1,16 +1,16 @@
 ---
 title: Bots y SDK
 author: surbhigupta
-description: En este artículo, aprenderá herramientas y SDK para crear bots y bots Microsoft Teams con el Microsoft Bot Framework.
+description: En este artículo, aprenderá herramientas y SDK para crear bots y bots de Microsoft Teams con el Microsoft Bot Framework.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189334"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485688"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -143,7 +143,7 @@ A medida que el registro del bot se produce en Azure Government portal, asegúre
 
     Donde \<uri-to-use\> es uno de los siguientes URI:
 
-    |**URI**|**Description**|
+    |**URI**|**Descripción**|
     |---|---|
     |`https://europe.api.botframework.com`|Para bots de nube pública con residencia de datos en Europa.|
     |`https://unitedstates.api.botframework.com`|Para bots en la nube pública con residencia de datos en el Estados Unidos.|
@@ -186,9 +186,10 @@ En los casos en los que los bots funcionan mejor en un canal también funcionan 
 Esta es la manera tradicional en la que un bot de conversación interactúa con un usuario. Algunos ejemplos de bots conversacionales individuales son:
 
 * Bots de Q&A
-* Bots que inician flujos de trabajo en otros sistemas
-* Bots que cuentan chistes
-* Bots que toman notas. Antes de crear bots de chat individuales, piense si una interfaz basada en conversaciones es la mejor manera de presentar la funcionalidad.
+* bots que inician flujos de trabajo en otros sistemas.
+* bots que cuentan chistes.
+* bots que toman notas.
+Antes de crear bots de chat uno a uno, considere si una interfaz basada en conversación es la mejor manera de presentar la funcionalidad.
 
 ## <a name="disadvantages-of-bots"></a>Desventajas de los bots
 

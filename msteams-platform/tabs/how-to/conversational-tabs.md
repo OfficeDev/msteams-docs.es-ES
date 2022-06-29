@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear un chat de subentidad conversac
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142083"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485673"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -20,7 +20,7 @@ Las subentidades conversacionales solo se admiten en canales. Se pueden usar des
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para admitir subentidades conversacionales, la aplicación web de pestaña debe tener la capacidad de almacenar una asignación entre conversaciones de subentidades ↔ en una base de datos back-end. `conversationId` Se proporciona , pero debe almacenarlo `conversationId` y devolverlo a Teams para que los usuarios continúen la conversación.
+Para admitir subentidades conversacionales, la aplicación web de pestaña debe tener la capacidad de almacenar una asignación entre conversaciones de subentidades ↔ en una base de datos back-end. Se `conversationId` proporciona , pero debe almacenarlo y devolverlo a Teams para que `conversationId` los usuarios continúen la conversación.
 
 ## <a name="start-a-new-conversation"></a>Iniciar una nueva conversación
 
@@ -47,7 +47,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 En la imagen siguiente se muestra el panel de conversación:
 
-![Subentlaciones conversacionales: iniciar conversación](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="iniciar conversaciones":::
 
 Si el usuario inicia una conversación, es importante escuchar la devolución de llamada de ese evento para recuperar y guardar el **conversationId**:
 
@@ -65,7 +65,7 @@ Una vez iniciada una conversación, las llamadas posteriores a `openConversation
 
 En la imagen siguiente se muestra el panel de conversación con la conversación adecuada:
 
-![Subentlaciones conversacionales: continuar la conversación](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="continuar las conversaciones":::
 
 ## <a name="enhance-a-conversation"></a>Mejora de una conversación
 
@@ -93,14 +93,14 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Ejemplo de nombre | Descripción | C# |Node.js|
 |-------------|-------------|------|----|
-|Pestaña Crear conversación| Microsoft Teams aplicación de ejemplo de pestaña para mostrar la pestaña crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Pestaña Crear conversación| Aplicación de ejemplo de pestaña de Microsoft Teams para mostrar la pestaña Crear conversación. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Cambios del margen de pestaña](~/resources/removing-tab-margins.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Pestañas de Teams](~/tabs/what-are-tabs.md)
 * [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)

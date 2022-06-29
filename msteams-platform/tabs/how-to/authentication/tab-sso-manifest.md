@@ -3,15 +3,15 @@ title: Actualización del manifiesto para habilitar el inicio de sesión único 
 description: Describe la actualización del manifiesto para habilitar el inicio de sesión único para pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Pestañas de autenticación de teams De Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 0bc50b61d5beac45ae11ec1264cd6fc4861e0738
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API
+ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888288"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503483"
 ---
-# <a name="update-app-manifest-for-sso-and-preview-app"></a>Actualización del manifiesto de aplicación para el inicio de sesión único y la aplicación en versión preliminar
+# <a name="update-manifest-for-sso-and-preview-app"></a>Actualización del manifiesto para el inicio de sesión único y la aplicación en versión preliminar
 
 Antes de actualizar el manifiesto de aplicación de Teams, asegúrese de que ha configurado el código para habilitar el inicio de sesión único en la aplicación de pestaña.
 
@@ -154,8 +154,6 @@ Para obtener una vista previa de la aplicación de pestaña en Teams:
 
 1. Seleccione **Cargar una aplicación personalizada** para transferir localmente la aplicación de pestaña a Teams.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Aplicación de pestaña de transferencia local en Teams":::
-
 1. Seleccione el archivo zip del paquete de aplicación y, a continuación, seleccione **Agregar**.
 
     La aplicación de pestaña se carga de forma local y el cuadro de diálogo aparece para informarle de los permisos adicionales que pueden ser necesarios.
@@ -176,7 +174,7 @@ Para obtener una vista previa de la aplicación de pestaña en Teams:
 
     ¡Enhorabuena! Ha habilitado el inicio de sesión único para la aplicación de pestaña.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de manifiesto para Microsoft Teams](../../../resources/schema/manifest-schema.md)
 - [Formato de esquema de manifiesto](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)

@@ -3,12 +3,12 @@ title: Escenas personalizadas del Modo conferencia
 description: Trabajar con escenas personalizadas del Modo conferencia
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150648"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484784"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -22,7 +22,7 @@ En las escenas personalizadas del Modo conferencia, la escena es un artefacto. 
 
 El siguiente proceso proporciona información general para crear una aplicación solo de escena:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Crear una aplicación solo de escena" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Crear una aplicación solo de escena":::
 
 Una aplicación solo de escena sigue siendo una aplicación en Teams. El Estudio de escenas se ocupa de la creación de paquetes de aplicaciones en segundo plano. Varias escenas de un único paquete de aplicación aparecen como una lista plana para los usuarios.
 
@@ -83,7 +83,7 @@ Para crear una escena con Estudio de escenas, siga estos pasos:
 
 1. Seleccione **Agregar imágenes** para agregar la imagen al entorno:
 
-    ![Agregar imágenes al entorno](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Agregar imágenes al entorno":::
 
     >[!NOTE]
     >Puede descargar los archivos [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) y [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) con las imágenes.
@@ -104,7 +104,7 @@ Para crear una escena con Estudio de escenas, siga estos pasos:
 
 1. Seleccione **Organizador de la reunión** o el rol de **Moderador** para el participante. En una reunión, siempre se debe asignar a un participante el rol de organizador de la reunión:
 
-    ![Asignar lugar](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Asignar un lugar al participante.":::
 
 1. Seleccione **Guardar** y **Ver en Teams** para probar rápidamente la escena en Teams.
 

@@ -3,14 +3,14 @@ title: Envío del identificador de inquilino y el identificador de conversación
 description: En este módulo, aprenderá a enviar el identificador de inquilino y el identificador de conversación a los encabezados de solicitud del bot en Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: dab795a65cf1c6d62bd899c9fa5a5948c44fcdfb
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b292db11ced764bbe235bee0f6f8f4829ba7b6c9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144127"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503777"
 ---
-# <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Envío del identificador de inquilino y el identificador de conversación a los encabezados de solicitud del bot
+# <a name="request-headers-of-the-bot"></a>Solicitar encabezados del bot
 
 Las solicitudes salientes actuales al bot no contienen en el encabezado ni en la dirección URL información que ayude a los bots a enrutar el tráfico sin desempaquetar toda la carga. Las actividades se envían al bot a través de una dirección URL similar a https://<your_domain>/api/messages. Se reciben solicitudes para mostrar el identificador de conversación y el identificador de inquilino en los encabezados.
 

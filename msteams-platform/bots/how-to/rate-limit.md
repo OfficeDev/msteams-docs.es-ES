@@ -1,14 +1,14 @@
 ---
-title: Optimizar un bot con la limitación de volumen en Teams
-description: Obtenga información sobre el control del límite de velocidad de bots con por bot por subproceso y por límite para todos los bots mediante ejemplos de código
+title: Limitación de velocidad para bots
+description: Obtenga información sobre el control del límite de velocidad de bots con por bot por límite de subproceso y por límite para todos los bots con ejemplos de código
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 38a8832c9a9a2c1368e36606b4b8c6af80341724
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190240"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503868"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimizar un bot con la limitación de volumen en Teams
 
@@ -131,20 +131,20 @@ En la tabla siguiente se proporcionan los límites por bot por subproceso:
 
 | Escenario | Tiempo en segundos | Máximo de operaciones permitidas |
 | --- | --- | --- |
-| Enviar a la conversación | 1 | 7  |
-| Enviar a la conversación | 2 | 8  |
+| Enviar a la conversación | 1  | 7  |
+| Enviar a la conversación | 2  | 8  |
 | Enviar a la conversación | 30 | 60 |
 | Enviar a la conversación | 3600 | 1800 |
-| Crear conversación | 1 | 7  |
-| Crear conversación | 2 | 8  |
+| Crear conversación | 1  | 7  |
+| Crear conversación | 2  | 8  |
 | Crear conversación | 30 | 60 |
 | Crear conversación | 3600 | 1800 |
-| Obtener miembros de la conversación| 1 | 14  |
-| Obtener miembros de la conversación| 2 | 16  |
+| Obtener miembros de la conversación| 1  | 14  |
+| Obtener miembros de la conversación| 2  | 16  |
 | Obtener miembros de la conversación| 30 | 120 |
 | Obtener miembros de la conversación| 3600 | 3600 |
-| Obtener conversaciones | 1 | 14  |
-| Obtener conversaciones | 2 | 16  |
+| Obtener conversaciones | 1  | 14  |
+| Obtener conversaciones | 2  | 16  |
 | Obtener conversaciones | 30 | 120 |
 | Obtener conversaciones | 3600 | 3600 |
 
@@ -161,22 +161,22 @@ En la tabla siguiente se proporciona el límite por subproceso para todos los bo
 
 | Escenario | Tiempo en segundos | Máximo de operaciones permitidas |
 | --- | --- | --- |
-| Enviar a la conversación | 1 | 14  |
-| Enviar a la conversación | 2 | 16  |
-| Crear conversación | 1 | 14  |
-| Crear conversación | 2 | 16  |
-| Crear conversación| 1 | 14  |
-| Crear conversación| 2 | 16  |
-| Obtener miembros de la conversación| 1 | 28 |
-| Obtener miembros de la conversación| 2 | 32 |
-| Obtener conversaciones | 1 | 28 |
-| Obtener conversaciones | 2 | 32 |
+| Enviar a la conversación | 1  | 14  |
+| Enviar a la conversación | 2  | 16  |
+| Crear conversación | 1  | 14  |
+| Crear conversación | 2  | 16  |
+| Crear conversación| 1  | 14  |
+| Crear conversación| 2  | 16  |
+| Obtener miembros de la conversación| 1  | 28 |
+| Obtener miembros de la conversación| 2  | 32 |
+| Obtener conversaciones | 1  | 28 |
+| Obtener conversaciones | 2  | 32 |
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Administración de una operación de larga duración](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

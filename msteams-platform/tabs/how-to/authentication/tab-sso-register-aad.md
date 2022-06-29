@@ -3,15 +3,15 @@ title: Registro de la aplicación de pestaña con Azure AD
 description: Describe el registro de la aplicación de pestaña con Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Las pestañas de autenticación de teams establecen el ámbito de inicio de sesión único del token de acceso de Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: e508e80f4e2c881e848f628a12392e6ced5e6f4b
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) ámbito del inquilino de sso del token de acceso
+ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888199"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503525"
 ---
-# <a name="register-your-app-in-azure-ad"></a>Registro de la aplicación en Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Registro de la aplicación de pestaña en Azure AD
 
 Azure AD proporciona acceso a la aplicación de pestaña en función de la identidad de Teams del usuario de la aplicación. Tendrá que registrar la aplicación de pestaña en Azure AD para que el usuario de la aplicación que ha iniciado sesión en Teams pueda tener acceso a la aplicación de pestaña.
 
@@ -57,14 +57,14 @@ Registre una nueva aplicación en Azure AD y configure el inquilino y la platafo
 
 ### <a name="to-register-a-new-app-in-azure-ad"></a>Para registrar una nueva aplicación en Azure AD
 
-1. Abra [Azure Portal](https://ms.portal.azure.com/) en el explorador web.
-   Se abre la página Portal de Microsoft Azure AD.
+1. Abra el [Azure Portal](https://ms.portal.azure.com/) en el explorador web.
+   Se abre la página portal de Microsoft Azure AD.
 
-2. Seleccione el icono **Registros de aplicaciones** .
+2. Seleccione el icono **de Registros de aplicaciones**.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Página del Portal de Azure AD." border="true":::
 
-   Aparece **la página Registros de** aplicaciones.
+   Aparece **la página Registros de aplicaciones**.
 
 3. Seleccione **+ Nuevo icono de registro** .
 
@@ -83,8 +83,8 @@ Registre una nueva aplicación en Azure AD y configure el inquilino y la platafo
 
     | Opción | Seleccione esta opción para... |
     | --- | --- |
-    | Solo cuentas en este directorio organizativo (solo Microsoft: inquilino único) | Cree una aplicación para que la usen solo los usuarios (o invitados) del inquilino. <br> A menudo denominada aplicación LOB, esta aplicación es una aplicación de inquilino único en la plataforma de identidad de Microsoft. |
-    | Cuentas en cualquier directorio organizativo (cualquier directorio de Azure AD: multiinquilino) | Permitir que los usuarios de cualquier inquilino de Azure AD usen la aplicación. Esta opción es adecuada si, por ejemplo, está creando una aplicación SaaS y pretende que esté disponible para varias organizaciones. <br> Este tipo de aplicación se conoce como aplicación multiinquilino en la plataforma de identidad de Microsoft.|
+    | Solo cuentas en este directorio organizativo (solo Microsoft: inquilino único) | Cree una aplicación para que la usen solo los usuarios (o invitados) del inquilino. <br> A menudo denominada aplicación LOB, esta aplicación es una aplicación de inquilino único en el Plataforma de identidad de Microsoft. |
+    | Cuentas en cualquier directorio organizativo (cualquier directorio de Azure AD: multiinquilino) | Permitir que los usuarios de cualquier inquilino de Azure AD usen la aplicación. Esta opción es adecuada si, por ejemplo, está creando una aplicación SaaS y pretende que esté disponible para varias organizaciones. <br> Este tipo de aplicación se conoce como aplicación multiinquilino en el Plataforma de identidad de Microsoft.|
     | Cuentas en cualquier directorio organizativo (cualquier directorio de Azure AD: multiinquilino) y cuentas personales de Microsoft | Dirigirse al conjunto más amplio de clientes. <br> Al seleccionar esta opción, va a registrar una aplicación multiinquilino que puede admitir a los usuarios de aplicaciones que también tienen cuentas personales de Microsoft. |
     | Solo cuentas personales de Microsoft | Cree una aplicación solo para los usuarios que tengan cuentas personales de Microsoft. |
 
@@ -185,7 +185,7 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
     1. Escriba el nombre del ámbito. Este campo es obligatorio.
     2. Seleccione el usuario que puede dar su consentimiento para este ámbito. La opción predeterminada es **Solo administradores**.
-    3. Escriba el **nombre para mostrar del consentimiento del administrador**. Este campo es obligatorio.
+    3. Escriba el **nombre para mostrar Administración consentimiento**. Este campo es obligatorio.
     4. Escriba la descripción del consentimiento del administrador. Este campo es obligatorio.
     5. Escriba el **nombre para mostrar consentimiento del usuario**.
     6. Escriba la descripción del consentimiento del usuario.
@@ -268,10 +268,10 @@ Debe definir la versión del token de acceso que es aceptable para la aplicació
 > [!div class="nextstepaction"]
 > [Configuración del código para habilitar el inicio de sesión único](tab-sso-code.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Arrendamiento en Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [Extensión de la aplicación de pestaña con permisos y ámbito de Microsoft Graph](tab-sso-graph-api.md)
-- [Inicio rápido: Registro de una aplicación con la plataforma de identidad de Microsoft](/azure/active-directory/develop/quickstart-register-app)
+- [Inicio rápido: Registro de una aplicación con el Plataforma de identidad de Microsoft](/azure/active-directory/develop/quickstart-register-app)
 - [Inicio rápido: Configuración de una aplicación para exponer una API web](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [Flujo de código de autorización de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

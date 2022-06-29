@@ -1,17 +1,17 @@
 ---
-title: Envío y recepción de archivos a través del bot
+title: Envío y recepción de archivos mediante bot
 description: Aprenda a enviar y recibir archivos a través del bot mediante Graph API para ámbitos personales, de canal y de chat grupal.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189647"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503882"
 ---
-# <a name="send-and-receive-files-through-the-bot"></a>Envío y recepción de archivos a través del bot
+# <a name="send-and-receive-files-using-bot"></a>Envío y recepción de archivos mediante bot
 
 > [!IMPORTANT]
 > Los artículos de este documento se basan en el SDK de Bot Framework v4.
@@ -333,6 +333,6 @@ Siga la [guía paso a paso](../../sbs-file-handling-in-bot.yml) para cargar arch
 > [!div class="nextstepaction"]
 > [Optimizar un bot con la limitación de volumen en Teams](~/bots/how-to/rate-limit.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [API protegidas en Microsoft Teams](/graph/teams-protected-apis)

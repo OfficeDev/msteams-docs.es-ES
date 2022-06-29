@@ -1,17 +1,18 @@
 ---
 title: Envío y recepción de archivos desde un bot
-description: Obtenga información sobre cómo enviar y recibir archivos a través del bot mediante Graph API para ámbitos de chat personales, de canal y de grupo.
+description: Aprenda a enviar y recibir archivos a través del bot mediante Graph API para ámbitos personales, de canal y de chat grupal. Use las API de bot de Teams mediante ejemplos de código basados en el SDK de Bot Framework v3.
+keywords: equipos bots archivos enviar recibir
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143371"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503588"
 ---
-# <a name="send-and-receive-files-through-your-bot"></a>Enviar y recibir archivos a través del bot
+# <a name="send-and-receive-files-using-bots"></a>Envío y recepción de archivos mediante bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -164,7 +165,7 @@ Del mismo modo, si el usuario rechaza el archivo, el bot recibirá el siguiente 
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Notificar al usuario sobre un archivo cargado
 
-Después de cargar un archivo en el OneDrive del usuario, tanto si usa el mecanismo descrito anteriormente como las API delegadas por el usuario de OneDrive, debe enviar un mensaje de confirmación al usuario. Este mensaje debe contener datos `FileCard` adjuntos en los que el usuario puede seleccionar, ya sea para obtener una vista previa, abrirlo en OneDrive o descargarlo localmente.
+Después de cargar un archivo en el OneDrive del usuario, tanto si usa el mecanismo descrito anteriormente como las API delegadas por el usuario de OneDrive, debe enviar un mensaje de confirmación al usuario. Este mensaje debe contener un `FileCard` archivo adjunto en el que el usuario puede seleccionar, ya sea para obtener una vista previa, abrirlo en OneDrive o descargarlo localmente.
 
 ```json
 {
@@ -266,3 +267,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## <a name="see-also"></a>Vea también
+
+[Trabajar con archivos en Microsoft Graph](/graph/api/resources/onedrive)

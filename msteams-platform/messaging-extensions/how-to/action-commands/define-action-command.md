@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a definir comandos de acción de extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189623"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503938"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -27,7 +27,7 @@ Antes de crear el comando de acción, debe decidir los siguientes factores:
 Vea el siguiente vídeo para obtener información sobre cómo definir comandos de acción de extensión de mensaje:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Seleccionar ubicaciones de invocación de comando de acción
@@ -60,7 +60,7 @@ En la imagen siguiente se muestran las ubicaciones desde las que se invoca el co
 
 Además de seleccionar desde dónde se puede invocar el comando, también debe seleccionar cómo rellenar el formulario en el módulo de tareas para los usuarios. Tiene las tres opciones siguientes para crear el formulario que se representará dentro del módulo de tareas:
 
-* **Lista estática de parámetros**: este es el método más sencillo. Puede definir una lista de parámetros en el manifiesto de la aplicación que representa el cliente Teams, pero no puede controlar el formato en este caso.
+* **Lista estática de parámetros**: este es el método más sencillo. Puede definir una lista de parámetros en el manifiesto de la aplicación que representa el cliente de Teams, pero no puede controlar el formato en este caso.
 * **Tarjeta adaptable**: puede seleccionar usar una tarjeta adaptable, que proporciona un mayor control sobre la interfaz de usuario, pero le sigue limitando en cuanto a los controles disponibles y las opciones de formato.
 * **Vista web incrustada**: puede seleccionar insertar una vista web personalizada en el módulo de tareas para tener un control completo sobre la interfaz de usuario y los controles.
 

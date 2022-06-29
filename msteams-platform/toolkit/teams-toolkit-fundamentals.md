@@ -1,17 +1,17 @@
 ---
 title: Información general del kit de herramientas de Teams
 author: zyxiaoyuer
-description: En este módulo, aprenderá Teams Toolkit, Instalación de Teams Toolkit y Recorrido del usuario de Teams Toolkit
+description: En este módulo, obtenga información sobre el kit de herramientas de Teams, la instalación del kit de herramientas de Teams y el recorrido del usuario del kit de herramientas de Teams.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 529d7b6e18bf9ff0f28bb2230358f25f95b9e3db
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142202"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484611"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
 
@@ -21,7 +21,7 @@ El kit de herramientas de Teams le permite crear, depurar e implementar su aplic
 * Identidad integrada
 * Acceso al almacenamiento en la nube
 * Datos de Microsoft Graph
-* Servicios de Azure y Microsoft 365 con enfoque de configuración cero
+* Servicios de Azure y Microsoft 365 con enfoque de configuración cero.
 
 El kit de herramientas de Teams ofrece todas las herramientas necesarias para poder crear una aplicación de Teams en un solo lugar.
 
@@ -29,7 +29,7 @@ El kit de herramientas de Teams ofrece todas las herramientas necesarias para po
 
 El kit de herramientas de Teams automatiza el trabajo manual y proporciona una excelente integración de Teams con los recursos de Azure. En la imagen siguiente se muestra el recorrido del usuario con el kit de herramientas de Teams:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Recorrido del usuario con el kit de herramientas de Teams" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Recorrido del usuario del kit de herramientas de Teams" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Los principales hitos de este recorrido son:
 
@@ -63,7 +63,7 @@ Después de la instalación del kit de herramientas, verá la interfaz de usuari
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini funciones":::
 
-Puede seleccionar **Introducción** para explorar la Teams Toolkit o seleccionar **Crear una nueva aplicación de Teams** para crear un proyecto de Teams. Si tiene un proyecto de Teams creado por Teams Toolkit abierto en Visual Studio Code, verá Teams Toolkit interfaz de usuario con todas las funcionalidades, como se muestra en la siguiente imagen:
+Puede seleccionar **Introducción** para explorar el kit de herramientas de Teams o seleccionar **Crear una nueva aplicación de Teams** para crear un proyecto de Teams. Si tiene un proyecto de Teams creado por Teams Toolkit abierto en Visual Studio Code, verá la interfaz de usuario del kit de herramientas de Teams con todas las funcionalidades, como se muestra en la siguiente imagen:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Captura de pantalla del kit de herramientas de equipos":::
 
@@ -89,11 +89,11 @@ El kit de herramientas de Teams ayuda a crear y personalizar el proyecto de apli
 
 ### <a name="create-a-new-teams-app"></a>Crear una nueva aplicación de Teams
 
-Le ayuda a empezar con Teams desarrollo de aplicaciones mediante la creación de un nuevo proyecto de Teams mediante Teams Toolkit mediante **Crear nuevo proyecto** o **Iniciar a partir de un ejemplo**.
+Le ayuda a empezar con el desarrollo de aplicaciones de Teams mediante la creación de un nuevo proyecto de Teams mediante el kit de herramientas de Teams mediante **Crear nuevo proyecto** o **Iniciar desde un ejemplo**.
 
 ### <a name="add-features"></a>Agregar características
 
-Le ayuda a agregar de forma incremental funcionalidades de Teams adicionales, como **Tab** o **Bot**, u opcionalmente agregar recursos de Azure, como **Azure SQL Database** o **Azure Key Vault**, que se adapten a las necesidades de desarrollo de la aplicación de Teams actual. También puede agregar flujos **de trabajo de inicio de sesión único** o **CI/CD** para la aplicación de Teams. 
+Le ayuda a agregar de forma incremental funcionalidades adicionales de Teams, como **Tab** o **Bot**, u opcionalmente agregar recursos de Azure, como **Azure SQL Database** o **Azure Key Vault**, que se adapten a sus necesidades de desarrollo a la aplicación actual de Teams. También puede agregar flujos **de trabajo de inicio de sesión único** o **CI/CD** para la aplicación de Teams.
 
 ### <a name="edit-manifest-file"></a>Editar archivo de manifiesto
 
@@ -105,7 +105,7 @@ Durante o después del desarrollo, asegúrese de aprovisionar, implementar y pub
 
 ### <a name="provision-in-the-cloud"></a>Aprovisionamiento en la nube
 
-Se integra con Azure Resource Manager, que le permite aprovisionar recursos de Azure que necesita la aplicación para el uso de código.
+Se integra con Azure Resource Manager que le permite aprovisionar recursos de Azure, que la aplicación necesita para el enfoque de código.
 
 ### <a name="deploy-to-the-cloud"></a>Implementar en la nube
 

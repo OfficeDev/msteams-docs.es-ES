@@ -1,17 +1,17 @@
 ---
 title: Referencia del esquema de manifiesto de versión preliminar del desarrollador público
-description: Obtenga información sobre el archivo de manifiesto de ejemplo y la descripción de todos sus componentes que se admiten para Microsoft Teams.
+description: Obtenga información sobre el archivo de manifiesto de ejemplo y la descripción de todos sus componentes compatibles con Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189875"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503476"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Referencia: Versión preliminar del esquema de manifiesto para desarrolladores públicos de Microsoft Teams
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifiesto de versión preliminar del desarrollador público para Teams
 
 Para obtener información sobre cómo habilitar la versión preliminar para desarrolladores, consulte [versión preliminar para desarrolladores públicos para Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -395,10 +395,10 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔️|Dirección URL de https:// que se va a usar al configurar la pestaña.|
 |`canUpdateConfiguration`|Boolean|||El valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. Predeterminado: `true`.|
-|`scopes`|Matriz de enumeración|1|✔️|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
+|`scopes`|Matriz de enumeración|1 |✔️|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.|
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -417,7 +417,7 @@ El objeto es una matriz (con un máximo de 16 elementos) y todos los elementos d
 |`contentUrl`|Cadena|2048 caracteres|✔️|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`contentBotId`|   | | | El identificador de la aplicación Microsoft Teams especificado para el bot en el portal de Bot Framework. |
 |`websiteUrl`|Cadena|2048 caracteres||La dirección URL https:// a la que apuntar si un usuario opta por la vista en un explorador.|
-|`scopes`|Matriz de enumeración|1|✔️|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|Matriz de enumeración|1 |✔️|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 
 ## <a name="bots"></a>bots
 
@@ -433,7 +433,7 @@ El elemento es una matriz (como máximo 1 elemento&mdash;actualmente solo se per
 |`needsChannelSelector`|Boolean|||Describe si el bot usa una sugerencia del usuario para agregar el bot a un canal específico. Predeterminado: `false`|
 |`isNotificationOnly`|Boolean|||Indica si un bot es un bot unidireccional de solo notificación, en lugar de un bot conversacional. Valor predeterminado: `false`|
 |`supportsFiles`|Boolean|||Indica si el bot admite la capacidad de cargar o descargar archivos en el chat personal. Valor predeterminado: `false`|
-|`scopes`|Matriz de enumeración|3|✔️|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
+|`scopes`|Matriz de enumeración|3 |✔️|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -441,7 +441,7 @@ Lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumeración|3|✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
+|`items.scopes`|matriz de enumeración|3 |✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔️|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32).<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
 
 ## <a name="connectors"></a>conectores
@@ -456,7 +456,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔️|Dirección URL de https:// que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔️|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
-|`scopes`|Matriz de enumeración|1|✔️|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
+|`scopes`|Matriz de enumeración|1 |✔️|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -488,7 +488,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`title`|Cadena|32 caracteres|✔️|Nombre del comando fácil de usar.|
 |`description`|Cadena|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|Booleano|||Un valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Predeterminado: `false`|
-|`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose", "commandBox"]`|
+|`context`|Matriz de cadenas|3 ||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Un valor booleano que indica si debe capturar dinámicamente el módulo de tareas.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se va a cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
@@ -547,7 +547,7 @@ El objeto es una matriz con todos los elementos del tipo `string`.
 
 Opcional:
 
-Especifique el identificador de aplicación de Microsoft Azure Active Directory (Azure AD) y Graph información para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de Azure AD.
+Especifique el identificador de aplicación de Microsoft Azure Active Directory (Azure AD) y la información de Graph para ayudar a los usuarios a iniciar sesión sin problemas en la aplicación de Azure AD.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -779,7 +779,7 @@ Los permisos delegados permiten a la aplicación acceder a los datos en nombre d
     |---|---|
     |`InAppPurchase.Allow.User`|Permite que la aplicación muestre las ofertas de Marketplace del usuario y complete las compras del usuario dentro de la aplicación, en nombre del usuario que ha iniciado sesión.|
 
-* **Permisos específicos de recursos para Teams recurso compartido en vivo**
+* **Permisos específicos de recursos para el recurso compartido en directo de Teams**
 
    |Nombre| Descripción |
    | ----- | ----- |

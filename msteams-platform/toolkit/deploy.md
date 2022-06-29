@@ -1,19 +1,19 @@
 ---
 title: Implementar en la nube
 author: MuyangAmigo
-description: En este módulo, aprenderá a implementar aplicaciones en la nube, Azure o SharePoint e implementar aplicaciones Teams mediante Teams Toolkit
+description: En este módulo, aprenderá a implementar la aplicación en la nube, Azure o SharePoint e implementar aplicaciones de Teams mediante el kit de herramientas de Teams.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142055"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503336"
 ---
-# <a name="deploy-to-the-cloud"></a>Implementar en la nube
+# <a name="deploy-teams-app-to-the-cloud"></a>Implementar la aplicación de Teams en la nube
 
 El kit de herramientas de Teams le ayuda a implementar o cargar el código frontend y backend de su aplicación en sus recursos de nube aprovisionados en Azure.
 

@@ -1,27 +1,27 @@
 ---
 title: Diseño de la aplicación con componentes avanzados de la interfaz de usuario
 author: heath-hamilton
-description: Obtenga información sobre los componentes de Teams interfaz de usuario, como rutas de navegación, barra de notificaciones, vista de fase junto con casos de uso pertinentes.
+description: Obtenga información sobre los componentes de la interfaz de usuario de Teams, como rutas de navegación, barra de notificaciones, vista de fase junto con casos de uso pertinentes.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143427"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485728"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes avanzados de la interfaz de usuario
 
-Los siguientes componentes son una combinación de [componentes básicos de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md) que puede usar para situaciones comunes de diseño Teams, como la navegación.
+Los siguientes componentes son una combinación de [componentes básicos de la interfaz de usuario](~/concepts/design/design-teams-app-basic-ui-components.md) que puede usar para situaciones de diseño comunes de Teams, como la navegación.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
-En función <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">de Fluent interfaz de usuario</a>, el kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para compilar aplicaciones Teams. En el kit de interfaz de usuario, puede capturar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
+En función de la <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">interfaz de usuario de Fluent</a>, el kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para compilar aplicaciones de Teams. En el kit de interfaz de usuario, puede capturar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Ruta de navegación
 
@@ -61,11 +61,11 @@ Use el panel de navegación izquierdo para examinar varias páginas dentro de la
 
 Una barra de notificaciones es un área dedicada para mostrar mensajes breves e importantes que no requieren que el usuario realice una acción inmediata. Los iconos y colores de fondo específicos están asociados a tipos específicos de mensajes (consulte a continuación).
 
-Puede implementar una barra de notificaciones mediante el componente de [alerta](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) de la interfaz de usuario de Fluent.
+Puede implementar una barra de notificaciones mediante el componente [de alerta](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) de la interfaz de usuario de Fluent.
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Mensajes críticos, errores y advertencias
+* Mensajes críticos, errores y advertencias.
 * Mensajes correctos
 * Mensajes informativos o promocionales
 
@@ -85,7 +85,7 @@ Vea cómo implementar la [vista de fase](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Mostrar contenido en una superficie grande dentro de Teams en lugar de otra aplicación o explorador
+* Mostrar contenido en una superficie grande dentro de Teams en lugar de en otra aplicación o explorador.
 * Contenido multimedia destacado u otro contenido enriquecido
 
 ### <a name="mobile"></a>Móvil

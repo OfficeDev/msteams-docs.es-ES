@@ -1,27 +1,27 @@
 ---
 title: Diseño de la extensión de reunión
 author: heath-hamilton
-description: Obtenga información sobre cómo diseñar aplicaciones en reuniones Teams y obtener el kit de interfaz de usuario de Microsoft Teams, la pestaña en la reunión, los casos de uso, el comportamiento dinámico, la fase de reunión compartida, el tema y la navegación.
+description: Obtenga información sobre cómo diseñar extensiones de reunión para sus aplicaciones en reuniones de Teams. Use las plantillas de interfaz de usuario del kit de interfaz de usuario de Microsoft Teams para ayudarle a diseñar la pestaña de la reunión.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142685"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484686"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
 Puede crear aplicaciones para que las reuniones sean más productivas. Por ejemplo, pida a los usuarios que completen una encuesta durante una reunión o envíen un recordatorio rápido que no interrumpa el flujo de la reunión.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
 
-Puede encontrar instrucciones de diseño más completas, incluidos los elementos que puede capturar y modificar según sea necesario, en el kit de interfaz de usuario de Microsoft Teams.
+Puede encontrar directrices de diseño más completas, incluidos los elementos que puede capturar y modificar según sea necesario, en el Kit de interfaz de usuario de Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Obtener el Kit de UI de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtener el kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Adición de una extensión de reunión
 
@@ -60,12 +60,12 @@ Antes de una reunión, la aplicación está disponible para los usuarios en una 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
-|2|**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
-|3|**iframe**: muestra el contenido de la aplicación.|
+|2 |**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
+|3 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-with-ui-templates"></a>Diseño con plantillas de interfaz de usuario
 
-Use una de las siguientes plantillas de interfaz de usuario Teams para ayudar a diseñar la pestaña de reunión:
+Use una de las siguientes plantillas de interfaz de usuario de Teams para ayudar a diseñar la pestaña de reunión:
 
 * [Lista](../../concepts/design/design-teams-app-ui-templates.md#list): Las listas pueden mostrar elementos relacionados en un formato digitalizado y permitir a los usuarios realizar acciones en una lista completa o en elementos individuales.
 * [Panel de tareas](../../concepts/design/design-teams-app-ui-templates.md#task-board): un panel de tareas, a veces denominado panel kanban o carril, es una colección de tarjetas que se usan a menudo para realizar un seguimiento del estado de los elementos de trabajo o los vales.
@@ -101,8 +101,8 @@ Los usuarios pueden usar la pestaña en la reunión para:
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de aplicación (seleccionado):** logotipo de aplicación transparente de 16 píxeles.|
-|2|**Nombre de la aplicación**|
-|3|**Encabezado**: incluye el nombre de la aplicación.|
+|2 |**Nombre de la aplicación**|
+|3 |**Encabezado**: incluye el nombre de la aplicación.|
 |4 |**Botón Cerrar**: descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
 |5 |**Barra de notificaciones**: las alertas de error se muestran directamente debajo del encabezado e insertan el resto del contenido del iframe en 20 píxeles.|
 |6 |**iframe**: muestra el contenido de la aplicación.|
@@ -137,10 +137,10 @@ Los diálogos en la reunión se muestran en la fase de reunión de Teams. Requie
 
 Los diálogos en la reunión los desencadena un usuario (por ejemplo, el organizador de la reunión) que podría querer que los participantes:
 
-* Proporcionar comentarios breves
-* Realizar una breve encuesta o sondeo
-* Envío de aprobaciones
-* Recibir recordatorios
+* Proporcione breves comentarios.
+* Realice una breve encuesta o sondeo.
+* Enviar aprobaciones.
+* Obtener recordatorios.
 
 ### <a name="mobile"></a>Móvil
 
@@ -157,7 +157,7 @@ Los diálogos en la reunión los desencadena un usuario (por ejemplo, el organiz
 |Contador|Descripción|
 |----------|-----------|
 |1|**Encabezado**: incluye el icono de aplicación, el nombre, la cadena de acción y el icono de cierre.|
-|2|**iframe**: muestra el contenido de la aplicación.|
+|2 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomía: encabezado del cuadro de diálogo en la reunión
 
@@ -168,8 +168,8 @@ Hay dos variantes de encabezado. Cuando sea posible, use la variante con el avat
 |Contador|Descripción|
 |----------|-----------|
 |1|**Avatar**: persona que inicia el cuadro de diálogo en la reunión.|
-|2|**Icono de aplicación**|
-|3|**Nombre de la aplicación**|
+|2 |**Icono de aplicación**|
+|3 |**Nombre de la aplicación**|
 |4 |**Botón Cerrar**: descarta el cuadro de diálogo.|
 |5 |**Cadena de acción**: normalmente se describe quién inició el cuadro de diálogo.|
 
@@ -249,8 +249,8 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de aplicación**: el icono resaltado indica que la pestaña de la aplicación en la reunión está abierta.|
-|2|**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Muestra si configura la aplicación para que use la fase de reunión compartida.|
-|3|**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
+|2 |**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Muestra si configura la aplicación para que use la fase de reunión compartida.|
+|3 |**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
 |4 |**iframe**: muestra el contenido de la aplicación.|
 |5 |**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
@@ -261,8 +261,8 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Icono de aplicación**: el icono resaltado indica que la pestaña de la aplicación en la reunión está abierta.|
-|2|**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Para una experiencia coherente, use siempre el icono de recurso compartido de Teams estándar. **Compartir con reunión** es el texto predeterminado recomendado, pero también puede personalizarlo para los casos de uso. Por ejemplo, **Reproducir juntos** para una aplicación de juegos o **Ver juntos** para una aplicación de vídeo. En cualquier caso, dejar claro que la acción creará una experiencia interactiva compartida con todos los usuarios de la reunión.|
-|3|**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
+|2 |**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Para una experiencia coherente, use siempre el icono de recurso compartido estándar de Teams. **Compartir con reunión** es el texto predeterminado recomendado, pero también puede personalizarlo para los casos de uso. Por ejemplo, **Reproducir juntos** para una aplicación de juegos o **Ver juntos** para una aplicación de vídeo. En cualquier caso, dejar claro que la acción creará una experiencia interactiva compartida con todos los usuarios de la reunión.|
+|3 |**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
 |4 |**iframe**: muestra el contenido de la aplicación.|
 |5 |**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
@@ -391,7 +391,7 @@ Se recomienda colocar la acción visualmente más pesada en la ubicación más a
 
 #### <a name="dont-left-or-center-align-actions"></a>No lo haga: acciones de alineación izquierda o central
 
-Esto se desvía del patrón de Teams estándar para la colocación del control en un cuadro de diálogo y puede entrar en conflicto con un cuadro de diálogo detrás del primero.
+Esto se desvía del patrón estándar de Teams para la colocación de controles en un cuadro de diálogo y puede entrar en conflicto con un cuadro de diálogo detrás del primero.
 
    :::column-end:::
 :::row-end:::
@@ -407,7 +407,7 @@ Esto se desvía del patrón de Teams estándar para la colocación del control e
 
 #### <a name="do-scroll-vertically"></a>Hacer: desplazarse verticalmente
 
-Los usuarios esperan desplazamiento vertical en Teams (y en otro lugar). Esto puede no aplicarse si tiene un lienzo creativo, como una pizarra, que los usuarios pueden desplazarse por el eje x e y.
+Los usuarios esperan desplazamiento vertical en Teams (y en otros lugares). Esto puede no aplicarse si tiene un lienzo creativo, como una pizarra, que los usuarios pueden desplazarse por el eje x e y.
 
    :::column-end:::
    :::column span="":::
@@ -455,7 +455,7 @@ Los diálogos en la reunión están diseñados para interacciones breves.
 
 #### <a name="do-focus-on-dark-theme"></a>Hacer: Centrarse en el tema oscuro
 
-Teams reuniones están optimizadas para el tema oscuro para ayudar a reducir el ruido visual y cognitivo para que los usuarios puedan centrarse en la discusión y el contenido compartido. Tenga en cuenta que ciertos tipos de aplicaciones (como la pizarra y la edición de documentos) no necesitan un lienzo oscuro.
+Las reuniones de Teams están optimizadas para temas oscuros que ayudan a reducir el ruido visual y cognitivo para que los usuarios puedan centrarse en la discusión y el contenido compartido. Tenga en cuenta que ciertos tipos de aplicaciones (como la pizarra y la edición de documentos) no necesitan un lienzo oscuro.
 
    :::column-end:::
    :::column span="":::
@@ -466,7 +466,7 @@ Teams reuniones están optimizadas para el tema oscuro para ayudar a reducir el 
 
 #### <a name="dont-use-unfamiliar-colors"></a>No: Usar colores desconocidos
 
-Los colores que entren en conflicto con el entorno de reunión pueden distraer y parecer menos nativos para Teams. Obtenga información sobre la [rampa de color](https://developer.microsoft.com/fluentui#/styles/web/colors/products) Teams, incluidos los neutros del tema de llamada.
+Los colores que chocan con el entorno de reunión pueden distraer y parecer menos nativos de Teams. Obtenga información sobre la [rampa de color](https://developer.microsoft.com/fluentui#/styles/web/colors/products) de Teams, incluidos los neutros del tema de llamada.
 
    :::column-end:::
 :::row-end:::

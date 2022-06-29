@@ -1,17 +1,17 @@
 ---
 title: Plantillas de CI/CD
 author: MuyangAmigo
-description: En este módulo, aprenderá a usar plantillas de canalización de CI/CD en GitHub, Azure DevOps y Jenkins para Teams plantillas DECI/CD para desarrolladores de aplicaciones
+description: En este módulo, aprenderá a usar plantillas de canalización de CI/CD en GitHub, Azure DevOps y Jenkins para desarrolladores de aplicaciones de Teams Plantillas de CI/CD
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: db263d3c8cf7eff085e237e884ef5baafc200230
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1b2f7258b661a2b194f2072c9ad8fd920d58983d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142601"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485401"
 ---
 # <a name="set-up-cicd-pipelines"></a>Configuración de canalizaciones CI/CD
 
@@ -19,7 +19,7 @@ TeamsFx ayuda a automatizar el flujo de trabajo de desarrollo al compilar la apl
 
 |Herramientas y plantillas | Descripción |
 |---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub acción que se integra con la CLI de TeamsFx.|
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|Acción de GitHub que se integra con la CLI de TeamsFx.|
 |[Kit de herramientas de Teams para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| La extensión de Visual Studio Code que le ayuda a desarrollar los flujos de trabajo de automatización y las aplicaciones de Teams para GitHub, Azure DevOps y Jenkins. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Herramienta de línea de comandos que le ayuda a desarrollar los flujos de trabajo de automatización y las aplicaciones de Teams para GitHub, Azure DevOps y Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) y [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Crear plantillas de scripts para la automatización fuera de GitHub, Azure DevOps o Jenkins. |
@@ -51,8 +51,17 @@ Puede crear las siguientes plantillas de flujo de trabajo con GitHub:
 **Kit de herramientas de Teams para Visual Studio Code**
 
 1. Creación de un nuevo proyecto de aplicación de Teams con el Kit de herramientas de Teams.
-1. Seleccione **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="icono icono de api"::: en la barra de navegación izquierda.
+
+1. Seleccione el icono :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: **del kit de herramientas de Teams** en el panel izquierdo.
+
+1. Seleccione **Agregar características.**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="Adición de la característica":::
+
 1. Seleccione **Agregar flujos de trabajo de CI/CD**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="Selección del flujo de trabajo de CI/CD":::
+
 1. Seleccione un entorno en el símbolo del sistema.
 1. Seleccione **GitHub** como proveedor de CI/CD.
 1. Seleccione al menos una plantilla de estas opciones: CI, CD, Aprovisionar o Publicar en Teams.
@@ -98,13 +107,13 @@ Puede crear las siguientes plantillas de flujo de trabajo con Azure DevOps:
 **Kit de herramientas de Teams para Visual Studio Code**
 
 1. Creación de un nuevo proyecto de aplicación de Teams con el Kit de herramientas de Teams.
-2. Seleccione **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="icono icono de api"::: en la barra de navegación izquierda.
-3. Seleccione **Agregar flujos de trabajo de CI/CD**.
-4. Seleccione un entorno en el símbolo del sistema.
-5. Seleccione **Azure DevOps** como proveedor de CI/CD.
-6. Seleccione al menos una plantilla de estas opciones: CI, CD, Aprovisionar y Publicar para Teams.
-7. Abra la plantilla y personalice los flujos de trabajo que encajan en los escenarios.
-8. Siga los archivos LÉAME de `.azure/pipelines` para configurar el flujo de trabajo en Azure DevOps.
+2. Seleccione el icono :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: **del kit de herramientas de Teams** en el panel izquierdo.
+1. Seleccione **Agregar flujos de trabajo de CI/CD**.
+1. Seleccione un entorno en el símbolo del sistema.
+1. Seleccione **Azure DevOps** como proveedor de CI/CD.
+1. Seleccione al menos una plantilla de estas opciones: CI, CD, Aprovisionar y Publicar para Teams.
+1. Abra la plantilla y personalice los flujos de trabajo que encajan en los escenarios.
+1. Siga los archivos LÉAME de `.azure/pipelines` para configurar el flujo de trabajo en Azure DevOps.
 
 **TeamsFx CLI**
 
@@ -151,7 +160,7 @@ Puede crear las siguientes plantillas de flujo de trabajo con Jenkins:
 **Kit de herramientas de Teams para Visual Studio Code**
 
 1. Creación de un nuevo proyecto de aplicación de Teams con el Kit de herramientas de Teams.
-2. Seleccione **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="icono icono de api"::: en la barra de navegación izquierda.
+2. Seleccione el icono :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: **del kit de herramientas de Teams** en el panel izquierdo.
 3. Seleccione **Agregar flujos de trabajo de CI/CD**.
 4. Seleccione un entorno en el símbolo del sistema.
 5. Seleccione **Jenkins** como proveedor de CI/CD.
@@ -229,7 +238,7 @@ Si hay cambios relacionados con el archivo de manifiesto de la aplicación de Te
 
 Realice los pasos siguientes para publicar la aplicación:
 
-1. Inicie sesión en el [portal para desarrolladores para Teams](https://dev.teams.microsoft.com) con la cuenta correspondiente.
+1. Inicie sesión en el [portal para desarrolladores de Teams](https://dev.teams.microsoft.com) con la cuenta correspondiente.
 2. Importe el paquete de la aplicación en zip y seleccione `App -> Import app -> Replace`.
 3. Seleccione la aplicación de destino en la lista de aplicaciones.
 4. Publique la aplicación y seleccione `Publish -> Publish to your org`.

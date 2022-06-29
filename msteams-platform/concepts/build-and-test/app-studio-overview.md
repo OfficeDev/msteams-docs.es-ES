@@ -3,22 +3,22 @@ title: Introducción a App Studio para Microsoft Teams
 description: En este artículo, aprenderá a compilar y administrar las aplicaciones con App Studio para Microsoft Teams e instalar App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
-ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
+ms.openlocfilehash: 6ec2e1dfc064302de096cb356641a773e7dceb35
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2022
-ms.locfileid: "66164272"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485709"
 ---
-# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administrar las aplicaciones con App Studio para Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administración de aplicaciones con App Studio para Microsoft Teams
 
 > [!WARNING]
-> **Pruebe el Portal para desarrolladores**: App Studio ha evolucionado. Configurar, distribuir y administrar las aplicaciones de Teams con el nuevo [Portal para desarrolladores](https://dev.teams.microsoft.com/). <br> App Studio quedará en desuso a partir del 30 de junio de 2022.
+> **Pruebe el Portal para desarrolladores**: App Studio ha evolucionado. Configurar, distribuir y administrar las aplicaciones de Teams con el nuevo [Portal para desarrolladores](https://dev.teams.microsoft.com/). <br> App Studio estará en desuso el 01 de agosto de 2022.
 
 Con App Studio, puede crear o integrar sus propias aplicaciones de Microsoft Teams, ya sea que desarrolle aplicaciones personalizadas para su empresa o aplicaciones SaaS para equipos de todo el mundo, mediante la simplificación del proceso de creación del manifiesto y del paquete de su aplicación y mediante herramientas útiles como el Editor de tarjetas y una biblioteca de control de React.
 
 > [!IMPORTANT]
-> Actualmente, App Studio no está disponible en los siguientes tipos de organizaciones de Teams:
+> App Studio no está disponible actualmente en los siguientes tipos de organizaciones de Teams:
 >
 > * Government Community Cloud (GCC)
 > * GCC High
@@ -52,9 +52,9 @@ Aquí puede ver el aspecto en Teams de las [tarjetas que puede crear en App Stud
 
 ### <a name="manifest-editor"></a>Editor de manifiestos
 
-Como se mencionó anteriormente, la parte más importante de un paquete de aplicación de Teams es su archivo manifest.json. Este archivo, que debe ajustarse al [esquema Teams App](~/resources/schema/manifest-schema.md), contiene metadatos, lo que permite a Teams presentar correctamente la aplicación a los usuarios.
+Como se mencionó anteriormente, la parte más importante de un paquete de aplicación de Teams es su archivo manifest.json. Este archivo, que debe cumplir el esquema de la [aplicación de Teams](~/resources/schema/manifest-schema.md), contiene metadatos, lo que permite a Teams presentar correctamente la aplicación a los usuarios.
 
-La pestaña Editor de manifiestos de App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de la aplicación y generar un archivo .zip, que se puede cargar fácilmente en Teams para probar o distribuir para que otros usuarios lo usen. App Studio no genera código funcional para la aplicación ni hospeda la aplicación. Para que el proceso de carga de la aplicación dé como resultado una aplicación correcta, su aplicación debe estar hospedada y ejecutándose en la dirección URL que aparece en el manifiesto.
+La pestaña Editor de manifiestos de App Studio simplifica la creación del manifiesto, lo que le permite describir la aplicación, cargar los iconos, agregar funcionalidades de la aplicación y generar un archivo de .zip, que se puede cargar fácilmente en Teams para probar o distribuir para que otros usuarios lo usen. App Studio no genera código funcional para la aplicación ni hospeda la aplicación. Para que el proceso de carga de la aplicación dé como resultado una aplicación correcta, su aplicación debe estar hospedada y ejecutándose en la dirección URL que aparece en el manifiesto.
 
 #### <a name="details"></a>Detalles
 
@@ -69,13 +69,13 @@ La sección de funciones del Editor de manifiesto es donde están definidas las 
 
 ##### <a name="tabs"></a>Pestañas
 
-* **Pestañas del equipo.** Una pestaña de equipo forma parte de un canal y proporciona acceso rápido a la información y los recursos del equipo. Por ejemplo, la pestaña Planificador de un canal contiene un único plan; la pestaña Power BI se asigna a un informe específico. Los usuarios pueden explorar en profundidad el contexto pertinente, pero no deben poder navegar fuera de la pestaña. La pestaña Power BI, por ejemplo, no permite la navegación a otros informes de Power BI, pero sí habilita el botón *Ir al sitio web* que inicia el informe en el sitio web principal de Power BI.
+* **Pestañas del equipo.** Una pestaña de equipo forma parte de un canal y proporciona acceso rápido a la información y los recursos del equipo. Por ejemplo, la pestaña Planificador de un canal contiene un único plan; la pestaña Power BI se asigna a un informe específico. Los usuarios pueden explorar en profundidad el contexto pertinente, pero no deben poder navegar fuera de la pestaña. Por ejemplo, la pestaña Power BI no permite la navegación a otros informes de Power BI, pero sí el botón *Ir al sitio web* que inicia el informe en el sitio web principal de Power BI.
 
   Para las pestañas de equipo, debe proporcionar una *Configuración de dirección URL* para presentar opciones y recopilar información para que los usuarios puedan personalizar el contenido y la experiencia de su pestaña. Esta página HTML aumentada se muestra cuando un usuario primero agrega la pestaña a un canal.
 
   También debe proporcionar los dominios adicionales desde los que la pestaña espera cargarse o con los que se vincula.
 
-* **Pestañas personales.** Puedes definir un conjunto de pestañas que se presentan de forma predeterminada en la experiencia de la aplicación personal (experiencia que un usuario tiene con la aplicación fuera del contexto de un equipo o canal). En esta sección, proporcione el nombre de pestaña, un identificador único, la dirección URL que apunta a la interfaz de usuario que se mostrará en Teams y, opcionalmente, la dirección URL que se usará si un usuario opta por ver la pestaña en un explorador. Con Teams pestañas, proporcione los dominios adicionales desde los que la pestaña espera cargarse desde o vincularse.
+* **Pestañas personales.** Puedes definir un conjunto de pestañas que se presentan de forma predeterminada en la experiencia de la aplicación personal (experiencia que un usuario tiene con la aplicación fuera del contexto de un equipo o canal). En esta sección, proporcione el nombre de pestaña, un identificador único, la dirección URL que apunta a la interfaz de usuario que se mostrará en Teams y, opcionalmente, la dirección URL que se usará si un usuario opta por ver la pestaña en un explorador. Con las pestañas de Teams, proporcione los dominios adicionales desde los que la pestaña espera cargarse desde o vincularse.
 
 ##### <a name="bots"></a>Bots
 
@@ -94,7 +94,7 @@ Esta sección le permite agregar un conector a la aplicación. Si ya registró u
 
 ##### <a name="message-extensions"></a>Extensiones de mensaje
 
-[Las extensiones de mensaje](~/messaging-extensions/what-are-messaging-extensions.md) son una manera eficaz de que los usuarios interactúen con la aplicación dentro de Teams. Los usuarios pueden consultar la información desde su servicio y publicar esa información en forma de tarjetas, directamente en el canal o en la conversación del chat.
+[Las extensiones de mensaje](~/messaging-extensions/what-are-messaging-extensions.md) son una manera eficaz de que los usuarios interactúen con la aplicación en Teams. Los usuarios pueden consultar la información desde su servicio y publicar esa información en forma de tarjetas, directamente en el canal o en la conversación del chat.
 
 Las extensiones de mensaje tienen tecnología de bots de Bot Framework, por lo que requieren un bot configurado para funcionar. Si tiene el nombre y el identificador de Bot Framework del bot que le gustaría potenciar la extensión del mensaje, escriba esta. De lo contrario, seleccione **Registrar** para crear uno y escriba la información posteriormente. Seleccione si el usuario puede actualizar la configuración de una extensión de mensaje.
 
@@ -102,7 +102,7 @@ Una vez configurado el bot subyacente, defina los comandos y parámetros que pue
 
 Cada comando necesita un título y un id. De manera opcional, el comando puede contener una descripción para el usuario. Cada comando puede admitir hasta cinco parámetros, cada uno de los cuales requiere:
 
-* Nombre del parámetro tal como aparece en el cliente Teams y se incluye en la solicitud de usuario.
+* Nombre del parámetro tal como aparece en el cliente de Teams y se incluye en la solicitud de usuario.
 * Un título fácil de usar.
 * Una descripción opcional.
 
@@ -128,9 +128,9 @@ Si ya tiene una tarjeta que le gustaría comprobar dentro de Teams, puede pegar 
 ### <a name="react-control-library"></a>Biblioteca de controles de React
 
 >[!Note]
-> Esta biblioteca de control de React está en desuso en el futuro. Considere la posibilidad de usar los [controles react de Fluent-UI como alternativa](https://microsoft.github.io/fluent-ui-react/) a la interfaz de usuario de Stardust anteriormente.
+> Esta biblioteca de control de React está en desuso en el futuro. Considere la posibilidad de usar [los controles react de Fluent-UI como alternativa](https://microsoft.github.io/fluent-ui-react/) a la interfaz de usuario de Stardust anteriormente.
 
-Crear una aplicación que siga los procedimientos recomendados de Teams es una forma ideal de proporcionar a la aplicación una apariencia que se ajuste perfectamente a la experiencia del cliente de Teams. Los controles de la interfaz de usuario que use son fundamentales para lograr ese fin. Para facilitar la creación de una interfaz de usuario coherente, App Studio proporciona varias categorías de controles de interfaz de usuario, que siguen Teams principios de diseño.
+Crear una aplicación que siga los procedimientos recomendados de Teams es una forma ideal de proporcionar a la aplicación una apariencia que se ajuste perfectamente a la experiencia del cliente de Teams. Los controles de la interfaz de usuario que use son fundamentales para lograr ese fin. Para facilitar la creación de una interfaz de usuario coherente, App Studio proporciona varias categorías de controles de interfaz de usuario, que siguen los principios de diseño de Teams.
 
 Se proporcionan ejemplos de los controles y los componentes correspondientes de React y están listos para usar para crear la aplicación.
 

@@ -1,17 +1,17 @@
 ---
 title: Configuración de opciones de instalación predeterminadas para la aplicación
-description: Obtenga información sobre cómo especificar las opciones de instalación predeterminadas de la aplicación de Teams y la funcionalidad predeterminada para los ámbitos compartidos.
+description: Obtenga información sobre cómo especificar las opciones de instalación predeterminadas de la aplicación de Teams y la funcionalidad predeterminada para ámbitos compartidos.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 9055b765c30f83c4031ad0e2ba5f18f4e747ac3f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 75ea4dbae2379e6d6e7e2cc707314207cd7186ca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122904"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503455"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configuración de opciones de instalación predeterminadas para la aplicación de Microsoft Teams
+# <a name="configure-default-install-options-for-teams-app"></a>Configuración de opciones de instalación predeterminadas para la aplicación Teams
 
 Es habitual que una aplicación admita varios escenarios en Teams, pero es posible que la haya diseñado teniendo en cuenta un ámbito y una funcionalidad específicos. Por ejemplo, si la aplicación es principalmente para uso en equipo o canal, puedes asegurarte de que la primera opción de instalación que ven los usuarios en la tienda es **Agregar a un equipo**.
 

@@ -4,14 +4,14 @@ author: surbhigupta
 description: Aprenderá a habilitar y configurar las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142594"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503364"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Habilitar y configurar las aplicaciones para reuniones de Teams
+# <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
 Cada equipo tiene una manera diferente de comunicarse y colaborar con las tareas. Para lograr estas tareas diferentes, personalice Teams con aplicaciones para reuniones. Habilite las aplicaciones para reuniones de Teams y configure las aplicaciones para que estén disponibles en el ámbito de la reunión dentro de su manifiesto de aplicación.
 

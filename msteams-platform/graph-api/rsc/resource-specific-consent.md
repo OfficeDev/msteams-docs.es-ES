@@ -1,16 +1,16 @@
 ---
 title: Habilitar el consentimiento específico del recurso en Teams
-description: En este artículo, obtendrá información sobre el consentimiento específico de recursos en Microsoft Teams y cómo aprovecharlo.
+description: En este artículo, aprenderá el consentimiento específico de recursos en Microsoft Teams y cómo aprovecharlo.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: af546bb888cf5a3e35b7c241eba927e2d144bdd0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189911"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484869"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 
@@ -44,7 +44,7 @@ Los permisos de RSC específicos de Teams y granulares definen lo que una aplica
 |TeamMember.Read.Group|Obtener los miembros de este equipo. |
 |TeamsActivity.Send.Group|Crear nuevas notificaciones en las fuentes de actividad de los usuarios de este equipo. |
 
-Para obtener más información, consulte [permisos de consentimiento específicos del recurso de equipo](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+Para obtener más información, consulte [permisos de consentimiento específicos del recurso de equipo](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Permisos específicos de recursos para un chat
 
@@ -66,6 +66,7 @@ En la tabla siguiente se proporcionan permisos específicos de recursos para un 
 | Calls.AccessMedia.Chat         | Accede a secuencias multimedia en llamadas asociadas a este chat o reunión.                                    |
 | Calls.JoinGroupCalls.Chat         | Unirse a llamadas asociadas a este chat o reunión.                                    |
 | TeamsActivity.Send.Chat         | Crear nuevas notificaciones en las fuentes de actividad de los usuarios de este chat. |
+| OnlineMeetingTranscript.Read.Chat | Lea las transcripciones de la reunión asociada a este chat. |
 
 Para obtener más información, consulte [permisos de consentimiento específicos del recurso de chat](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
