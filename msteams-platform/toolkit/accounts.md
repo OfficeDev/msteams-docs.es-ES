@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 32877d96f3867e15c156bf97e727c158b68f9190
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142216"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558019"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Preparar cuentas para crear aplicaciones de Teams
 
@@ -77,7 +77,7 @@ Si desea hospedar los recursos relacionados con la aplicación o acceder a recur
     3. Seleccione **Cuentas** e inicie sesión en su cuenta de Microsoft 365.
     4. Compruebe si puede ver la opción **Instalación de prueba habilitada** como se muestra en la siguiente imagen:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Habilitar la instalación prueba" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Habilitar la instalación prueba":::
 
 * **Comprobar el permiso de instalación de prueba mediante el cliente de Teams**
 
@@ -85,11 +85,11 @@ Si desea hospedar los recursos relacionados con la aplicación o acceder a recur
     2. Seleccione **Aplicaciones** en el panel izquierdo.
     3. Seleccione **Publicar una aplicación**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publicar una aplicación" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Publicar una aplicación":::
 
     4. Compruebe si puede ver la opción **Cargar una aplicación personalizada** como se muestra en la siguiente imagen:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Cargar una aplicación personalizada" border="true":::.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Cargar una aplicación personalizada":::.
 
         Si no puede ver la opción **Cargar una aplicación personalizada,** indica que no tiene el permiso necesario para la instalación de prueba.
 
@@ -107,7 +107,7 @@ Si desea hospedar los recursos relacionados con la aplicación o acceder a recur
 
   2. Seleccione **Mostrar todo** >  **Teams**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="mostrar todo." border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="mostrar todo.":::
 
      > [!Note]
      > La opción **Teams** puede tardar **hasta 24 horas** en aparecer. Puede [cargar la aplicación personalizada en un entorno de Teams](/microsoftteams/upload-custom-apps) para pruebas y validación.

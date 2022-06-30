@@ -4,12 +4,12 @@ description: Describe la actualización del manifiesto para habilitar el inicio 
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503483"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558740"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Actualización del manifiesto para el inicio de sesión único y la aplicación en versión preliminar
 
@@ -24,7 +24,7 @@ Ha registrado la aplicación de pestaña en Azure AD y ha obtenido un identifica
 
 Configure la `webApplicationInfo` propiedad en el archivo de manifiesto de aplicación de Teams. Esta propiedad permite que el inicio de sesión único de la aplicación ayude a los usuarios de la aplicación a acceder a la aplicación de pestaña sin problemas.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuración del manifiesto de aplicación de Teams" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuración del manifiesto de aplicación de Teams":::
 
 `webApplicationInfo` tiene dos elementos, `id` y `resource`.
 
@@ -138,7 +138,7 @@ Para obtener más información, vea [webApplicationInfo](../../../resources/sche
 
 Ha configurado la aplicación de pestaña para habilitar el inicio de sesión único en Azure AD, en el código de la aplicación y en el archivo de manifiesto de Teams. Ahora puede transferir localmente la aplicación de pestaña en Teams y obtener una vista previa de ella en el entorno de Teams.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Aplicación sso" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Aplicación sso":::
 
 Para obtener una vista previa de la aplicación de pestaña en Teams:
 
@@ -160,21 +160,21 @@ Para obtener una vista previa de la aplicación de pestaña en Teams:
 
 1. Seleccione **Continuar**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Cuadro de diálogo de Teams que informa sobre los permisos adicionales necesarios" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Cuadro de diálogo de Teams que informa sobre los permisos adicionales necesarios":::
 
     Aparece el cuadro de diálogo de consentimiento de Azure AD.
 
 1. Seleccione **Aceptar** para dar su consentimiento para los ámbitos de id. abierto.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Cuadro de diálogo de consentimiento de Azure AD" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Cuadro de diálogo de consentimiento de Azure AD":::
 
     Teams abre la aplicación de pestaña y puede usarla.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Ejemplo de aplicación de pestaña de Teams con sso habilitado" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Ejemplo de aplicación de pestaña de Teams con sso habilitado":::
 
     ¡Enhorabuena! Ha habilitado el inicio de sesión único para la aplicación de pestaña.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de manifiesto para Microsoft Teams](../../../resources/schema/manifest-schema.md)
 - [Formato de esquema de manifiesto](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)

@@ -1,22 +1,22 @@
 ---
 title: Proceso de diseño de aplicaciones
 author: heath-hamilton
-description: Obtenga información sobre cómo y cuándo puede usar herramientas y recursos de Microsoft para diseñar una aplicación de Microsoft Teams eficaz.
+description: Obtenga información sobre cómo y cuándo puede usar herramientas y recursos de Microsoft para diseñar una aplicación eficaz de Microsoft Teams.
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b9b23fc2a849df6528af224e7289bced10f9e096
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144379"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557851"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Proceso de diseño para aplicaciones de Microsoft Teams
 
 Hay varias herramientas y recursos para diseñar la aplicación de Microsoft Teams. En los pasos siguientes se describe cuándo y cómo se pueden usar durante el proceso de diseño. (Algunos de los pasos pueden estar técnicamente fuera del proceso de diseño, pero se incluyen para un contexto adicional).
 
-:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagrama que muestra un ejemplo del proceso de diseño de aplicaciones de Teams." border="false":::
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagrama que muestra un ejemplo del proceso de diseño de aplicaciones de Teams.":::
 
 ## <a name="plan-your-app"></a>Planear la aplicación
 

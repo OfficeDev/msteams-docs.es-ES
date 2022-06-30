@@ -4,12 +4,12 @@ description: Introducción a la autenticación de SSO en Teams y cómo usarla en
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) manifiesto de aplicación de token de acceso sso
-ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503770"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557725"
 ---
 # <a name="enable-sso-for-tab-app"></a>Habilitación del inicio de sesión único para la aplicación de pestañas
 
@@ -27,7 +27,7 @@ Esto es lo que aprenderá en esta sección:
 
 Los usuarios de la aplicación inician sesión en Teams con una cuenta microsoft personal o una cuenta de Microsoft 365. Puede aprovechar esto y usar el inicio de sesión único para autenticar y autorizar a los usuarios de la aplicación.
 
-&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Experiencia de usuario de SSO en una aplicación de pestaña de Teams" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Experiencia de usuario de SSO en una aplicación de pestaña de Teams":::
 
 - Teams autentica y almacena la identidad de su usuario de aplicación.
 - La aplicación de pestaña usa la identidad almacenada del usuario de la aplicación que ya está validada por Teams.
@@ -60,7 +60,7 @@ Para lograr el inicio de sesión único en una aplicación de pestaña, obtenga 
 
 En la imagen siguiente se muestra cómo funciona el inicio de sesión único cuando un usuario de la aplicación de Teams intenta acceder a la aplicación de pestaña:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Diagrama de inicio de sesión único de tab single sign-on" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Diagrama de inicio de sesión único de tab single sign-on" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | Interacción | Qué pasa |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ En la imagen siguiente se muestra cómo funciona el inicio de sesión único cua
 | 2  | Cliente de Teams → Azure AD | Teams solicita al punto de conexión de Azure AD el token de acceso para el usuario de la aplicación actual en función de la identidad de Teams. |
 | 3  | Formulario de consentimiento → de Azure AD | Si el usuario actual de la aplicación usa la aplicación de pestaña por primera vez, Teams muestra la solicitud de consentimiento si la aplicación necesita acceder a algunos datos protegidos. El usuario de la aplicación (o el administrador) debe dar su consentimiento a Teams para usar la identidad de Teams del usuario de la aplicación para obtener el token de acceso de Azure AD. <br> Como alternativa, hay un mensaje de solicitud para controlar la autenticación de paso a paso, como la autenticación en dos fases. |
 | 4  | Cliente de Teams de Azure AD → | Azure AD envía el token de acceso al cliente de Teams. El token es un token web JSON (JWT) y su validación funciona igual que la validación de tokens en la mayoría de los flujos estándar de OAuth. Teams almacena en caché el token en su nombre para que las llamadas futuras devuelvan `getAuthToken()` el token almacenado en caché. |
-| 5  | Cliente de Teams → cliente de la aplicación Tab | Teams envía el token de acceso a la aplicación de pestaña como parte del objeto de resultado devuelto por la `getAuthToken()` llamada. |
+| 5 | Cliente de Teams → cliente de la aplicación Tab | Teams envía el token de acceso a la aplicación de pestaña como parte del objeto de resultado devuelto por la `getAuthToken()` llamada. |
 | 6  | Aplicación de tabulación (entre el servidor de & cliente) | La aplicación de pestaña analiza el token de acceso mediante JavaScript para extraer la información necesaria, como la dirección de correo electrónico del usuario de la aplicación. El token devuelto a la aplicación de pestaña es un token de acceso y un token de identidad. |
 
 Para obtener más información, consulte [Actualización de código para habilitar el inicio de sesión único](tab-sso-code.md).
@@ -99,7 +99,7 @@ En esta sección se describen las tareas implicadas en la implementación del in
 
 Para habilitar el inicio de sesión único para una aplicación de pestaña:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Pasos para habilitar el inicio de sesión único para la pestaña" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Pasos para habilitar el inicio de sesión único para la pestaña" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Registro con Azure AD**: cree una aplicación de Azure AD para generar un identificador de aplicación y un URI de identificador de aplicación. Para generar el token de acceso, configure ámbitos y autorice aplicaciones cliente de confianza.
 2. **Actualizar código**: agregue el código para controlar el token de acceso, llamando `getAuthToken()` cuando un usuario de la aplicación acceda a la aplicación de pestaña, enviando este token al código de servidor de la aplicación en el encabezado Autorización y validando el token de acceso cuando se reciba.
@@ -137,7 +137,7 @@ Esta es una lista de procedimientos recomendados:
 > [!div class="nextstepaction"]
 > [Registro de la aplicación de pestaña en Azure AD](tab-sso-register-aad.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Configuración del código para habilitar el inicio de sesión único en una aplicación de pestaña](tab-sso-code.md)
 

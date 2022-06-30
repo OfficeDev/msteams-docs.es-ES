@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo diseñar extensiones de reunión p
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484686"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558089"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
@@ -31,7 +31,7 @@ Los usuarios pueden agregar una extensión de reunión antes y durante las reuni
 
 En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una pestaña +** para abrir el control flotante de la aplicación y buscar aplicaciones optimizadas para reuniones.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión antes de una reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión antes de una reunión.":::
 
 ### <a name="add-during-a-meeting"></a>Agregar durante una reunión
 
@@ -39,23 +39,23 @@ En los detalles de la reunión, los usuarios pueden seleccionar **Agregar una pe
 
 Una vez agregada la aplicación (por ejemplo, en el escritorio), los usuarios pueden acceder a la aplicación en una reunión seleccionando **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión en el móvil." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión en el móvil.":::
 
 #### <a name="desktop"></a>Escritorio
 
 En una reunión, los usuarios pueden seleccionar **Más** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Agregar una aplicación** y seleccionar la aplicación que quieran.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="En el ejemplo se muestra cómo agregar una extensión de reunión durante una reunión.":::
 
 ## <a name="before-a-meeting"></a>Antes de una reunión
 
 Antes de una reunión, la aplicación está disponible para los usuarios en una pestaña. En el ejemplo siguiente se muestra un borrador de pregunta de encuesta que las personas responderán durante la reunión.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="En el ejemplo se muestra cómo aplicar contenido en los detalles de la reunión antes de una llamada." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="En el ejemplo se muestra cómo aplicar contenido en los detalles de la reunión antes de una llamada.":::
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>Anatomía: pestaña Reunión (antes y después de las reuniones)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Ejemplo que muestra la anatomía estructural de una pestaña de reunión antes y después de una reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Ejemplo que muestra la anatomía estructural de una pestaña de reunión antes y después de una reunión.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -88,15 +88,15 @@ Los usuarios pueden usar la pestaña en la reunión para:
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Ejemplo que muestra cómo puede presentar contenido de sondeo en una pestaña en la reunión en el móvil." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Ejemplo que muestra cómo puede presentar contenido de sondeo en una pestaña en la reunión en el móvil.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="En el ejemplo se muestra cómo puede presentar contenido de sondeo en una pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="En el ejemplo se muestra cómo puede presentar contenido de sondeo en una pestaña en la reunión.":::
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomía: pestaña En reunión
 
-:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de una pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de una pestaña en la reunión.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -104,14 +104,14 @@ Los usuarios pueden usar la pestaña en la reunión para:
 |2 |**Nombre de la aplicación**|
 |3 |**Encabezado**: incluye el nombre de la aplicación.|
 |4 |**Botón Cerrar**: descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
-|5 |**Barra de notificaciones**: las alertas de error se muestran directamente debajo del encabezado e insertan el resto del contenido del iframe en 20 píxeles.|
+|5|**Barra de notificaciones**: las alertas de error se muestran directamente debajo del encabezado e insertan el resto del contenido del iframe en 20 píxeles.|
 |6 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="spacing"></a>Spacing
 
 Optimice la pestaña en la reunión para ajustarla de un extremo a otro dentro del área de iframe de 280 píxeles de ancho. Hay 20 píxeles de relleno en los lados izquierdo y derecho del iframe y entre el encabezado de pestaña. El iframe está lleno de sangrado en la parte inferior de la pestaña.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="En el ejemplo se muestran las dimensiones de espaciado de tabulación en reuniones." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="En el ejemplo se muestran las dimensiones de espaciado de tabulación en reuniones.":::
 
 ### <a name="scrolling"></a>Desplazamiento
 
@@ -121,13 +121,13 @@ Recuerde lo siguiente si permite el desplazamiento:
 * Los usuarios solo deben ver el contenido al que se han desplazado (nada por encima o por debajo).
 * La barra de desplazamiento forma parte del contenido del iframe.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="En el ejemplo se muestra cómo se desplaza la pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="En el ejemplo se muestra cómo se desplaza la pestaña en la reunión.":::
 
 ### <a name="navigation"></a>Navegación
 
 En escenarios con capas de navegación o contenido pesado, se recomienda permitir a los usuarios navegar a una capa secundaria. Los usuarios deben poder volver a la capa anterior.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="En el ejemplo se muestra la navegación en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="En el ejemplo se muestra la navegación en la reunión.":::
 
 ## <a name="use-an-in-meeting-dialog"></a>Uso de un cuadro de diálogo en la reunión
 
@@ -144,15 +144,15 @@ Los diálogos en la reunión los desencadena un usuario (por ejemplo, el organiz
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo puede usar un cuadro de diálogo en la reunión en el móvil." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo puede usar un cuadro de diálogo en la reunión en el móvil.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo puede usar un cuadro de diálogo en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="En el ejemplo se muestra cómo puede usar un cuadro de diálogo en la reunión.":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomía: cuadro de diálogo en la reunión
 
-:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Ejemplo que muestra la anatomía estructural de un cuadro de diálogo en la reunión." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Ejemplo que muestra la anatomía estructural de un cuadro de diálogo en la reunión.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -161,7 +161,7 @@ Los diálogos en la reunión los desencadena un usuario (por ejemplo, el organiz
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomía: encabezado del cuadro de diálogo en la reunión
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de un encabezado de diálogo en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de un encabezado de diálogo en la reunión.":::
 
 Hay dos variantes de encabezado. Cuando sea posible, use la variante con el avatar para reforzar que el diálogo procede de una persona.
 
@@ -171,7 +171,7 @@ Hay dos variantes de encabezado. Cuando sea posible, use la variante con el avat
 |2 |**Icono de aplicación**|
 |3 |**Nombre de la aplicación**|
 |4 |**Botón Cerrar**: descarta el cuadro de diálogo.|
-|5 |**Cadena de acción**: normalmente se describe quién inició el cuadro de diálogo.|
+|5|**Cadena de acción**: normalmente se describe quién inició el cuadro de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamiento dinámico: cuadros de diálogo en reunión
 
@@ -180,7 +180,7 @@ Los diálogos en la reunión pueden variar en tamaño para tener en cuenta difer
 * **Ancho**: puede especificar el ancho del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido.
 * **Alto**: puede especificar el alto del iframe del cuadro de diálogo en cualquier lugar dentro del intervalo de tamaño admitido. También puede permitir que los usuarios se desplacen verticalmente si el contenido de la aplicación supera el alto máximo.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="En el ejemplo se muestra el cuadro de diálogo en la reunión. Ancho: mín. 280 píxeles (iframe de 248 píxeles). Máximo: 460 píxeles (iframe de 428 píxeles). Alto: 300 píxeles (iframe)." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="En el ejemplo se muestra el cuadro de diálogo en la reunión. Ancho: mín. 280 píxeles (iframe de 248 píxeles). Máximo: 460 píxeles (iframe de 428 píxeles). Alto: 300 píxeles (iframe).":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Uso de la fase de reunión compartida
 
@@ -209,9 +209,9 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="En el ejemplo se muestra un panel que se está revisando en la fase de reunión compartida." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="En el ejemplo se muestra un panel que se está revisando en la fase de reunión compartida.":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="En el ejemplo se muestra un componente de panel que se está revisando en la fase de reunión compartida." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="En el ejemplo se muestra un componente de panel que se está revisando en la fase de reunión compartida.":::
 
    :::column-end:::
 :::row-end:::
@@ -224,7 +224,7 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="En el ejemplo se muestra una pizarra en la fase de reunión compartida." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="En el ejemplo se muestra una pizarra en la fase de reunión compartida.":::
 
    :::column-end:::
 :::row-end:::
@@ -237,14 +237,14 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="En el ejemplo se muestra una prueba en la fase de reunión compartida." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="En el ejemplo se muestra una prueba en la fase de reunión compartida.":::
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="anatomy-share-all-app-content-to-a-meeting"></a>Anatomía: Compartir todo el contenido de la aplicación en una reunión
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida cuando se comparte todo el contenido de la aplicación." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida cuando se comparte todo el contenido de la aplicación.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -252,11 +252,11 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 |2 |**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Muestra si configura la aplicación para que use la fase de reunión compartida.|
 |3 |**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
 |4 |**iframe**: muestra el contenido de la aplicación.|
-|5 |**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
+|5|**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
 ### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomía: Compartir contenido específico de la aplicación en una reunión
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida cuando solo se comparte contenido específico de la aplicación." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="La imagen muestra la anatomía de diseño de la fase de reunión compartida cuando solo se comparte contenido específico de la aplicación.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -264,7 +264,7 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 |2 |**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Para una experiencia coherente, use siempre el icono de recurso compartido estándar de Teams. **Compartir con reunión** es el texto predeterminado recomendado, pero también puede personalizarlo para los casos de uso. Por ejemplo, **Reproducir juntos** para una aplicación de juegos o **Ver juntos** para una aplicación de vídeo. En cualquier caso, dejar claro que la acción creará una experiencia interactiva compartida con todos los usuarios de la reunión.|
 |3 |**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
 |4 |**iframe**: muestra el contenido de la aplicación.|
-|5 |**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
+|5|**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamiento dinámico: fase de reunión compartida
 
@@ -277,19 +277,19 @@ Las aplicaciones compartidas en la fase de reunión varían en función del esta
 
 Cuando el panel lateral no está abierto, la fase de reunión es de 994 x 678 píxeles de forma predeterminada y puede ser un mínimo de 792 x 382 píxeles.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Imagen que muestra la capacidad de respuesta de la fase de reunión compartida con el panel lateral cerrado." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Imagen que muestra la capacidad de respuesta de la fase de reunión compartida con el panel lateral cerrado.":::
 
 #### <a name="meeting-stage-with-side-panel"></a>Fase de reunión (con panel lateral)
 
 Cuando el panel lateral está abierto, la fase de reunión es de 918 x 540 píxeles de forma predeterminada y puede ser un mínimo de 472 x 382 píxeles.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Imagen que muestra la capacidad de respuesta de la fase de reunión compartida con el panel lateral abierto." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Imagen que muestra la capacidad de respuesta de la fase de reunión compartida con el panel lateral abierto.":::
 
 ## <a name="after-a-meeting"></a>Después de una reunión
 
 Puede volver a una reunión una vez que finalice y ver el contenido de la aplicación. En este ejemplo, el organizador de la reunión puede examinar los resultados de sondeo en la pestaña **Contoso** . (Nota: Desde el punto de vista del diseño, no hay ninguna diferencia entre la experiencia de pestaña anterior y posterior a la reunión).
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Ilustración de ejemplo que muestra una pestaña posterior a la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Ilustración de ejemplo que muestra una pestaña posterior a la reunión.":::
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -299,7 +299,7 @@ Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Ejemplo que muestra cómo limitar el número de interacciones." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Ejemplo que muestra cómo limitar el número de interacciones.":::
 
 #### <a name="do-limit-the-number-of-interactions"></a>Hacer: Limitar el número de interacciones
 
@@ -307,7 +307,7 @@ Para los diálogos en reuniones, quite contenido innecesario que no ayude a los 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Ejemplo que muestra cómo no introducir elementos innecesarios." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Ejemplo que muestra cómo no introducir elementos innecesarios.":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>No: Introducir elementos innecesarios
 
@@ -318,7 +318,7 @@ Un único diálogo en la reunión con varias interacciones puede distraer a la r
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Ejemplo que muestra cómo crear un entorno centrado." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Ejemplo que muestra cómo crear un entorno centrado.":::
 
 #### <a name="do-create-a-focused-environment"></a>Hacer: Crear un entorno centrado
 
@@ -326,7 +326,7 @@ Se recomienda mantener el ámbito de la experiencia de la aplicación solo en la
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Ejemplo que muestra cómo no incluir superficies de la competencia durante las reuniones." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Ejemplo que muestra cómo no incluir superficies de la competencia durante las reuniones.":::
 
 #### <a name="dont-include-competing-surfaces"></a>No: Incluir superficies de la competencia
 
@@ -339,7 +339,7 @@ La aplicación solo debe pedir a los usuarios que se centren en una sola superfi
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Ejemplo que muestra cómo debe usar un diseño de cuadro de diálogo de una sola columna." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Ejemplo que muestra cómo debe usar un diseño de cuadro de diálogo de una sola columna.":::
 
 #### <a name="do-use-a-one-column-dialog"></a>Hacer: Usar un cuadro de diálogo de una columna
 
@@ -347,7 +347,7 @@ Dado que los diálogos están en el centro de la fase de reunión, la finalizaci
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Ejemplo que muestra que no debe saturar el espacio de una extensión de reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Ejemplo que muestra que no debe saturar el espacio de una extensión de reunión.":::
 
 #### <a name="dont-clutter-the-space"></a>No: abarrotar el espacio
 
@@ -358,7 +358,7 @@ El contenido denso o excesivamente estructurado puede ser distraído y abrumador
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Ejemplo en el que se muestra un diseño de tabulación de una sola columna." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Ejemplo en el que se muestra un diseño de tabulación de una sola columna.":::
 
 #### <a name="do-use-a-one-column-tab"></a>Hacer: Usar una pestaña de una columna
 
@@ -366,7 +366,7 @@ Dada la naturaleza estrecha de la pestaña en la reunión, se recomienda mostrar
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Ejemplo que muestra una pestaña con varias columnas." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Ejemplo que muestra una pestaña con varias columnas.":::
 
 #### <a name="dont-use-multiple-columns"></a>No: Usar varias columnas
 
@@ -379,7 +379,7 @@ Debido al espacio limitado de la pestaña en la reunión, no se recomiendan dise
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Ejemplo que muestra cómo alinear a la derecha los controles principales." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Ejemplo que muestra cómo alinear a la derecha los controles principales.":::
 
 #### <a name="do-right-align-the-primary-action"></a>Hacer: alinear a la derecha la acción principal
 
@@ -387,7 +387,7 @@ Se recomienda colocar la acción visualmente más pesada en la ubicación más a
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Ejemplo en el que se muestra cómo no se deben alinear los controles principales a la izquierda." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Ejemplo en el que se muestra cómo no se deben alinear los controles principales a la izquierda.":::
 
 #### <a name="dont-left-or-center-align-actions"></a>No lo haga: acciones de alineación izquierda o central
 
@@ -401,9 +401,9 @@ Esto se desvía del patrón estándar de Teams para la colocación de controles 
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Ejemplo que muestra el desplazamiento vertical en una pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Ejemplo que muestra el desplazamiento vertical en una pestaña en la reunión.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Ejemplo que muestra el desplazamiento vertical en la fase de reunión compartida." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Ejemplo que muestra el desplazamiento vertical en la fase de reunión compartida.":::
 
 #### <a name="do-scroll-vertically"></a>Hacer: desplazarse verticalmente
 
@@ -412,9 +412,9 @@ Los usuarios esperan desplazamiento vertical en Teams (y en otros lugares). Esto
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Ejemplo que muestra el desplazamiento horizontal en una pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Ejemplo que muestra el desplazamiento horizontal en una pestaña en la reunión.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Ejemplo que muestra el desplazamiento horizontal en la fase de reunión compartida." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Ejemplo que muestra el desplazamiento horizontal en la fase de reunión compartida.":::
 
 #### <a name="dont-scroll-horizontally"></a>No: desplazarse horizontalmente
 
@@ -427,7 +427,7 @@ El desplazamiento horizontal no es un comportamiento esperado en Teams (incluido
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Ejemplo que muestra un escenario complejo en una pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Ejemplo que muestra un escenario complejo en una pestaña en la reunión.":::
 
 #### <a name="do-surface-complex-scenarios-in-the-in-meeting-tab"></a>Hacer: Escenarios complejos de Surface en la pestaña en la reunión
 
@@ -435,7 +435,7 @@ Si la aplicación incluye varias tareas, se recomienda encarecidamente usar una 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Ejemplo que muestra escenarios complejos en un cuadro de diálogo en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Ejemplo que muestra escenarios complejos en un cuadro de diálogo en la reunión.":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>No: Hacer que los diálogos en la reunión sean complejos
 
@@ -449,9 +449,9 @@ Los diálogos en la reunión están diseñados para interacciones breves.
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Ejemplo que muestra una extensión de reunión con el tema oscuro." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Ejemplo que muestra una extensión de reunión con el tema oscuro.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Otro ejemplo que muestra la extensión de reunión con el tema oscuro." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Otro ejemplo que muestra la extensión de reunión con el tema oscuro.":::
 
 #### <a name="do-focus-on-dark-theme"></a>Hacer: Centrarse en el tema oscuro
 
@@ -460,9 +460,9 @@ Las reuniones de Teams están optimizadas para temas oscuros que ayudan a reduci
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Ejemplo que muestra una extensión de reunión con colores que no coinciden con el tema de la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Ejemplo que muestra una extensión de reunión con colores que no coinciden con el tema de la reunión.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Otro ejemplo que muestra una extensión de reunión con colores que no coinciden con el tema de la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Otro ejemplo que muestra una extensión de reunión con colores que no coinciden con el tema de la reunión.":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>No: Usar colores desconocidos
 
@@ -475,7 +475,7 @@ Los colores que chocan con el entorno de reunión pueden distraer y parecer meno
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Ejemplo que muestra una extensión de reunión con un botón Atrás." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Ejemplo que muestra una extensión de reunión con un botón Atrás.":::
 
 #### <a name="do-have-a-back-button"></a>Hacer: Tener un botón Atrás
 
@@ -483,7 +483,7 @@ Si tiene más de una capa de navegación en una pestaña en la reunión, los usu
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Ejemplo que muestra una extensión de reunión con dos botones descartar." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Ejemplo que muestra una extensión de reunión con dos botones descartar.":::
 
 #### <a name="dont-include-another-dismiss-button"></a>No: Incluir otro botón descartar
 
@@ -496,7 +496,7 @@ Proporcionar una opción para cerrar el contenido de la pestaña en la reunión 
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Ejemplo que muestra modales (o módulos de tareas) dentro de una pestaña en la reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Ejemplo que muestra modales (o módulos de tareas) dentro de una pestaña en la reunión.":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Precaución: Evite modales dentro de la pestaña en la reunión
 
@@ -509,7 +509,7 @@ Los modales (también conocidos como módulos de tareas) en la pestaña ya estre
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Ejemplo que muestra cómo cambiar correctamente el tamaño de una extensión de reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Ejemplo que muestra cómo cambiar correctamente el tamaño de una extensión de reunión.":::
 
 #### <a name="do-resize-and-scale-your-app-responsively"></a>Hacer: Cambiar el tamaño y escalar la aplicación con capacidad de respuesta
 
@@ -517,7 +517,7 @@ El contenido de la aplicación debe cambiar el tamaño y condensarse dinámicame
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Ejemplo que muestra cómo no cambiar correctamente el tamaño de una extensión de reunión." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Ejemplo que muestra cómo no cambiar correctamente el tamaño de una extensión de reunión.":::
 
 #### <a name="dont-crop-or-clip-primary-ui-components"></a>No: Recortar o recortar componentes principales de la interfaz de usuario
 

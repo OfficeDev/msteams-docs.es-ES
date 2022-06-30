@@ -4,12 +4,12 @@ description: En este artículo, aprenderá a usar el SDK de cliente de JavaScrip
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130448"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557732"
 ---
 # <a name="integrate-people-picker"></a>Integrar Selector de personas
 
@@ -53,7 +53,7 @@ El control de entrada de Selector de personas permite al usuario buscar y agrega
 1. Escriba el nombre de la persona que quiere invitar. La lista aparece con sugerencias de nombre.
 1. Seleccione el nombre de la persona necesaria de la lista.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker Móvil" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker Móvil":::
 
 # <a name="desktop"></a>[Escritorio](#tab/Sampledesktop)
 
@@ -62,7 +62,7 @@ El control Selector de personas en la web o el escritorio se inicia en una venta
 1. Escriba el nombre de la persona que quiere invitar. La lista aparece con sugerencias de nombre.
 1. Seleccione el nombre de la persona necesaria de la lista.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Selector de personas por nombre Escritorio" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Selector de personas por nombre Escritorio":::
 
 ---
 

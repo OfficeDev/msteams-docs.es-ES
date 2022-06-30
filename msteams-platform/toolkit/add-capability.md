@@ -1,21 +1,21 @@
 ---
 title: Agregar funcionalidades a las aplicaciones de Teams
 author: MuyangAmigo
-description: En este módulo, aprenderá a agregar funcionalidades de Teams Toolkit, ventajas, limitaciones y funcionalidades.
+description: En este módulo, aprenderá a agregar funcionalidades del kit de herramientas de Teams, ventajas, limitaciones y funcionalidades.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 413a42ce1f5eaa476faaf1bbfc97a987adcb6f65
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142965"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557991"
 ---
-# <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones Teams
+# <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones de Teams
 
-Agregar funcionalidad en Teams Toolkit le ayuda a agregar funcionalidad adicional a la aplicación de Teams existente. En la tabla siguiente se enumeran las funcionalidades de la aplicación Teams:
+Agregar funcionalidad en el kit de herramientas de Teams le ayuda a agregar funcionalidad adicional a la aplicación de Teams existente. En la tabla siguiente se enumeran las funcionalidades de aplicación de Teams:
 
 |**Capacidad**|**Descripción**|
 |--------|-------------|
@@ -41,19 +41,19 @@ En la lista siguiente se proporcionan limitaciones para agregar más funcionalid
 
 **Puede agregar funcionalidades mediante los métodos siguientes:**
 
-* Para agregar funcionalidades mediante Teams Toolkit en Visual Studio Code.
+* Para agregar funcionalidades mediante el kit de herramientas de Teams en Visual Studio Code.
 * Para agregar funcionalidades mediante la paleta de comandos.
 
   > [!Note]
   > Debe aprovisionar para cada entorno, después de haber agregado correctamente las funcionalidades en la aplicación de Teams.
 
-* **Para agregar funcionalidades mediante Teams Toolkit en Visual Studio Code:**
+* **Para agregar funcionalidades mediante el kit de herramientas de Teams en Visual Studio Code:**
 
    1. Abra **Visual Studio Code**.
-   1. Seleccione **Teams Toolkit** en el panel izquierdo.
+   1. Seleccione **Kit de herramientas de Teams** en el panel izquierdo.
    1. Seleccione **Agregar características** en **DESARROLLO**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="actualizado uno" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="actualizado uno":::
 
 * **Para agregar funcionalidades mediante la paleta de comandos:**
 
@@ -61,11 +61,11 @@ En la lista siguiente se proporcionan limitaciones para agregar más funcionalid
    1. Escriba **Teams:Agregar características**.
    1. Presione **Entrar**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="característica de equipo" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="característica de equipo":::
 
    1. En el elemento emergente, seleccione la funcionalidad que se va a agregar en el proyecto.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Notificación" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Notificación":::
 
 ## <a name="add-capabilities-using-teamsfx-cli"></a>Adición de funcionalidades mediante la CLI de TeamsFx
 
@@ -83,18 +83,18 @@ En la lista siguiente se proporcionan limitaciones para agregar más funcionalid
 
 ## <a name="available-capabilities-to-add-for-different-teams-project"></a>Funcionalidades disponibles para agregar para diferentes proyectos de Teams
 
-Puede elegir agregar diferentes funcionalidades en función del proyecto que haya creado en Teams aplicación.
+Puede elegir agregar diferentes funcionalidades en función del proyecto que haya creado en la aplicación Teams.
 En la tabla siguiente se enumeran las funcionalidades disponibles para agregar en el proyecto:
 
 |Funcionalidades existentes|Otras funcionalidades admitidas|
 |--------------------|--------------------|
-|pestaña SPFx |Ninguno|
+|Pestaña SPFx |Ninguno|
 |Pestaña habilitada para SSO |Pestaña habilitada para SSO, bot de notificación, bot de comandos, bot, extensión de mensaje|
 |Bot de notificación |Pestaña habilitada para SSO, pestaña|
 |Bot de comandos |Pestaña habilitada para SSO, pestaña|
 |Tab |Pestaña, bot de notificación, bot de comandos, bot, extensión de mensaje|
 |Bot |Extensión de mensaje, pestaña habilitada para SSO, pestaña|
-|Extensión de mensajería |Bot, pestaña habilitada para SSO, pestaña |
+|Extensión de mensaje |Bot, pestaña habilitada para SSO, pestaña |
 
 ## <a name="add-bot-tab-and-message-extension"></a>Agregar bot, pestaña y extensión de mensaje
 
@@ -102,7 +102,7 @@ Después de agregar un bot y una extensión de mensaje, los cambios en el proyec
 
 * Se agrega un código de plantilla de bot a una subcarpeta con la ruta de acceso `yourProjectFolder/bot`. Esto incluye una plantilla de aplicación de bot **hello world** en el proyecto.
 * `launch.json`y `task.json` en `.vscode` la carpeta se actualizan, lo que incluye los scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la aplicación localmente.
-* `manifest.template.json`se actualiza el archivo en `templates/appPackage` la carpeta , que incluye la información relacionada con el bot en el archivo de manifiesto que representa la aplicación en Teams Platform. Estos son los cambios:
+* `manifest.template.json` Se actualiza el archivo en `templates/appPackage` la carpeta , que incluye la información relacionada con el bot en el archivo de manifiesto que representa la aplicación en la Plataforma de Teams. Estos son los cambios:
   * El identificador del bot
   * Ámbitos del bot
   * Los comandos a los que la aplicación de bot hello world puede responder
@@ -113,7 +113,7 @@ Después de agregar la pestaña , los cambios en el proyecto son los siguientes:
 
 * Se agrega un código de plantilla de pestaña de front-end a una subcarpeta con ruta de acceso `yourProjectFolder/tab`, que incluye una plantilla de aplicación **de pestaña hello world** en el proyecto.
 * `launch.json`y `task.json` en `.vscode` la carpeta se actualizan, lo que incluye los scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la aplicación localmente.
-* `manifest.template.json`Se actualiza el archivo en `templates/appPackage` la carpeta , que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la plataforma de Teams. Los cambios son:
+* `manifest.template.json` Se actualiza el archivo en `templates/appPackage` la carpeta , que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la Plataforma de Teams. Los cambios son:
   * Pestañas configurables y estáticas
   * Ámbitos de las pestañas
 * Los archivos de `templates/azure/teamsfx` se actualizarán y `templates/azure/provision/xxx`se volverá a generar el archivo .bicep.
@@ -121,7 +121,7 @@ Después de agregar la pestaña , los cambios en el proyecto son los siguientes:
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
-* Siga la guía [paso a paso](../sbs-gs-commandbot.yml) para compilar el bot de comandos en Microsoft Teams
+* Siga la guía [paso a paso](../sbs-gs-commandbot.yml) para compilar un bot de comandos en Microsoft Teams
 
 * Siga la guía [paso a paso](../sbs-gs-notificationbot.yml) para compilar el bot de notificación en Microsoft Teams.
 

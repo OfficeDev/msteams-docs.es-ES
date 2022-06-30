@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8b5aa93548ad08f8e1114b2d4b66b92fcd7195ba
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795129"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557984"
 ---
 # <a name="from-ideas-to-teams-app"></a>De ideas a aplicación de Teams
 
@@ -19,7 +19,7 @@ Obtenga información sobre cómo las aplicaciones le permiten ayudar a los usuar
 
 Eche un vistazo a este escenario:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Un desarrollador de una agencia de viajes crea una aplicación que envía la previsión meteorológica a los clientes para que puedan planear con antelación sus fechas de viaje" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Un desarrollador de una agencia de viajes crea una aplicación que envía la previsión meteorológica a los clientes para que puedan planear con antelación sus fechas de viaje":::
 
 Como desarrollador, lo que quiere es una forma de compartir información importante y relevante para ayudar a sus usuarios. Es un caso de usuario típico. ¿Se puede relacionar? Pero, ¿cómo ajustar Teams en este escenario?
 
@@ -29,7 +29,7 @@ Vamos a profundizar más en esta historia y a averiguarlo.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="Caso de usuario: como desarrollador en una agencia de viajes, creo aplicaciones para viajeros" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="Caso de usuario: como desarrollador en una agencia de viajes, creo aplicaciones para viajeros":::
    :::column-end:::
    :::column span="":::
       #### <a name="understand-your-user"></a>Comprender sus usuario
@@ -50,12 +50,12 @@ Vamos a profundizar más en esta historia y a averiguarlo.
         - ¿Qué problemas desea solucionar?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Quiero desarrollar una aplicación que envíe la previsión meteorológica del destino a los clientes..." border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Quiero desarrollar una aplicación que envíe la previsión meteorológica del destino a los clientes...":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="... para que los clientes puedan conocer las condiciones meteorológicas y planear con antelación" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="... para que los clientes puedan conocer las condiciones meteorológicas y planear con antelación":::
    :::column-end:::
    :::column span="":::
       #### <a name="list-app-requirements-and-benefits"></a>Enumerar los requisitos y las ventajas de la aplicación
@@ -76,7 +76,7 @@ Vamos a profundizar más en esta historia y a averiguarlo.
         - ¿Qué características serían más convenientes para la experiencia del usuario?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="¡Los clientes están bien preparados para viajar!" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="¡Los clientes están bien preparados para viajar!":::
    :::column-end:::
 :::row-end:::
 

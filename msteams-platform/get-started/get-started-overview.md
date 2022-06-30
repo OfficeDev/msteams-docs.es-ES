@@ -3,12 +3,12 @@ title: 'Introducción: Información general'
 description: En este módulo, aprenderá a empezar a trabajar con la documentación para desarrolladores de Microsoft Teams que le presenta las herramientas comunes, los conceptos fundamentales y las características avanzadas.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 4a53466aab1a896e99b91210dbc93d8467df52d1
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 050e4a7bbf078686fa400858c684c6500ca71c1c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503903"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558705"
 ---
 # <a name="get-started"></a>Introducción
 
@@ -24,7 +24,7 @@ Aquí tiene una idea de lo que aprenderá:
 
 Echemos un rápido vistazo a las opciones de entorno de compilación que puede elegir, y a la hoja de ruta para construir e implementar una aplicación de Teams.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración en la que se muestran los pasos básicos para compilar e implementar una aplicación de Teams" border="true":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Ilustración en la que se muestran los pasos básicos para compilar e implementar una aplicación de Teams":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Funcionalidades de aplicaciones y herramientas de desarrollo
 

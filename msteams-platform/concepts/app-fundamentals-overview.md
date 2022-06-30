@@ -5,12 +5,12 @@ description: Presente los elementos de la planificación de una aplicación, com
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150690"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558719"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -28,7 +28,7 @@ En esta sección, aprenderá a:
 
 Teams como plataforma le ofrece kits de herramientas, bibliotecas y aplicaciones en cada fase del desarrollo de aplicaciones. Vamos a desglosarlo en el ciclo de vida de creación de aplicaciones:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text=" La ilustración muestra la planificación de la aplicación " border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text=" La ilustración muestra la planificación de la aplicación ":::
 
 * [Antes de la creación](#before-you-build)
 * [Durante la creación ](#during-build)
@@ -53,7 +53,7 @@ Entender a los usuarios y sus preocupaciones son los primeros indicadores de có
 
 * **Use Teams como plataforma**: la plataforma Teams le ayuda a crear una aplicación de una o varias funcionalidades. La aplicación de Teams es compatible con los productos y servicios integrados que refuerzan la experiencia de la aplicación.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representación conceptual de la solución de Teams." border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representación conceptual de la solución de Teams.":::
 
     Las aplicaciones aparecen en Teams como pestañas, bots, extensiones de mensajería, conectores y webhooks, o bien como una aplicación de varias funcionalidades. Estas funcionalidades se basan en el back-end de Azure, Microsoft Graph, SharePoint y Power Apps que ayudan a automatizar tareas y procesos.
 

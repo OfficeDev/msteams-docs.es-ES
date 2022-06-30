@@ -5,12 +5,12 @@ keywords: equipos bots archivos enviar recibir
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1bc04d2dfde200917c9faeb9fcb1c91b145463de
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503588"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558292"
 ---
 # <a name="send-and-receive-files-using-bots"></a>Envío y recepción de archivos mediante bots
 
@@ -89,7 +89,7 @@ La carga de un archivo en un usuario implica los pasos siguientes:
 
 Este mensaje de escritorio contiene un objeto de datos adjuntos sencillo que solicita permiso de usuario para cargar el archivo:
 
-:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Captura de pantalla de la tarjeta de consentimiento que solicita permiso de usuario para cargar el archivo" border="true":::
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Captura de pantalla de la tarjeta de consentimiento que solicita permiso de usuario para cargar el archivo":::
 
 Este mensaje móvil contiene un objeto de datos adjuntos que solicita permiso de usuario para cargar el archivo:
 

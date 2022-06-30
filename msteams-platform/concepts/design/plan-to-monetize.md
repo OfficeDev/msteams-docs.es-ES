@@ -4,12 +4,12 @@ description: En este módulo de aprendizaje, descubrirá cómo monetizar la apli
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 94ed62968cc2d6fc31086616b1d6e9c05f90e54b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bb6f33d568b16d5f8f2aeb4d900b3d658d2bd6bb
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144372"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558138"
 ---
 # <a name="plan-to-monetize-your-app"></a>Planear la monetización de la aplicación
 
@@ -20,7 +20,7 @@ Considere la posibilidad de publicar su aplicación en la tienda de Teams para o
 :::row:::
     :::column span="":::
 
-        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetizar aplicaciones" border="false":::
+        :::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetizar aplicaciones":::
     :::column-end:::
     :::column span="":::
         Las formas más comunes de monetizar la aplicación son:

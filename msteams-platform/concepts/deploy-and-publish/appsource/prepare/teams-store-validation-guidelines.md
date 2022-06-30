@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 45c19a5d7089fae85326e303641a8c9a281c7eb0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503742"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558124"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -25,67 +25,67 @@ Seguir estas directrices aumenta las posibilidades de que la aplicación pase el
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/function.png" alt-text="functionality" link="#general-functionality-and-performance" border="false":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="functionality" link="#general-functionality-and-performance":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer" border="false":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions" border="false":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules":::
    :::column-end:::
      :::column span="":::
-      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1":::
    :::column-end:::
 :::row-end:::
 
 ## <a name="value-proposition"></a>Propuesta de valor
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de certificación comercial de Microsoft 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) y proporciona instrucciones adicionales a los desarrolladores de aplicaciones de Microsoft Teams sobre la propuesta de valor añadido de su oferta.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de certificación comercial de Microsoft 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) y proporciona instrucciones adicionales a los desarrolladores de aplicaciones de Microsoft Teams sobre la propuesta de valor añadido de su oferta.
 
 ### <a name="app-name"></a>Nombre de la aplicación
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de certificación comercial 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) de Microsoft y proporciona instrucciones adicionales a los desarrolladores sobre cómo asignar nombres a sus aplicaciones.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de certificación comercial 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) de Microsoft y proporciona instrucciones adicionales a los desarrolladores sobre cómo asignar nombres a sus aplicaciones.
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -119,7 +119,7 @@ El nombre de una aplicación desempeña un papel fundamental a la hora de que lo
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está en línea con el número de directiva de certificación comercial de Microsoft [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value) y [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) y proporciona instrucciones adicionales a los desarrolladores sobre la creación de aplicaciones adecuadas para el área de trabajo.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está en línea con el número de directiva de certificación comercial de Microsoft [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value) y [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) y proporciona instrucciones adicionales a los desarrolladores sobre la creación de aplicaciones adecuadas para el área de trabajo.
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -133,7 +133,7 @@ La aplicación debe habilitar la colaboración en grupo, optimizar la productivi
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la[ directiva de certificación de comercial de Microsoft 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la[ directiva de certificación de comercial de Microsoft 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
 
 Las aplicaciones deben centrarse en la experiencia de Teams y no incluir los nombres, iconos o imágenes de otras plataformas o servicios de colaboración basados en chat similares dentro del contenido de la aplicación o en sus metadatos, a menos que la aplicación proporcione interoperabilidad específica.
 
@@ -145,7 +145,7 @@ Los nombres de las características de la aplicación en botones y demás texto 
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de certificación comercial de Microsoft 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) y proporciona instrucciones a los desarrolladores sobre la autenticación de sus aplicaciones con servicios externos.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de certificación comercial de Microsoft 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) y proporciona instrucciones a los desarrolladores sobre la autenticación de sus aplicaciones con servicios externos.
 
 Para obtener más información sobre cómo implementar la autenticación de aplicaciones, vea [autenticación en Teams](~/concepts/authentication/authentication.md).
 <br></br>
@@ -169,13 +169,13 @@ Si la aplicación autentica a los usuarios con un servicio externo, siga estas i
 
 ## <a name="security"></a>Seguridad
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la[ directiva de certificación de comercial de Microsoft 1140.3](/legal/marketplace/certification-policies#11403-security).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la[ directiva de certificación de comercial de Microsoft 1140.3](/legal/marketplace/certification-policies#11403-security).
 
 ### <a name="financial-information"></a>Información financiera
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de certificación comercial de Microsoft 1140.3.1 ](/legal/marketplace/certification-policies#114031-financial-transactions)y proporciona instrucciones sobre la transmisión de información financiera dentro de la interfaz de Teams y notifica a los desarrolladores de escenarios de pagos restringidos en la versión móvil (Android e iOS) de su aplicación de Teams.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de certificación comercial de Microsoft 1140.3.1 ](/legal/marketplace/certification-policies#114031-financial-transactions)y proporciona instrucciones sobre la transmisión de información financiera dentro de la interfaz de Teams y notifica a los desarrolladores de escenarios de pagos restringidos en la versión móvil (Android e iOS) de su aplicación de Teams.
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -205,7 +205,7 @@ Las aplicaciones que se ejecutan en la versión de iOS o Android de Teams deben 
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -221,7 +221,7 @@ Los bots siempre deben pedir permiso para cargar un archivo y mostrar un mensaje
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está en línea con la [directiva del marketplace comercial de Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) y proporciona instrucciones para desarrolladores sobre el uso de dominios restringidos en la propiedad de manifiesto `validDomains`.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está en línea con la [directiva del marketplace comercial de Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) y proporciona instrucciones para desarrolladores sobre el uso de dominios restringidos en la propiedad de manifiesto `validDomains`.
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -246,7 +246,7 @@ La aplicación debe advertir a los usuarios antes de descargar cualquier archivo
 
 ## <a name="general-functionality-and-performance"></a>Funcionalidad y rendimiento general
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4](/legal/marketplace/certification-policies#11404-functionality).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4](/legal/marketplace/certification-policies#11404-functionality).
 
 ### <a name="launching-external-functionality"></a>Lanzamiento de funcionalidades externas
 
@@ -486,7 +486,7 @@ Si su aplicación es compatible con la localización, el paquete de su aplicaci�
 
 ## <a name="apps-linked-to-saas-offer"></a>Aplicaciones vinculadas a la oferta de SaaS
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la[directiva de marketplace comercial de Microsoft 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673). Si va a crear una aplicación de Teams vinculada a una oferta de SaaS, asegúrese de que cumple estas directrices.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la[directiva de marketplace comercial de Microsoft 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673). Si va a crear una aplicación de Teams vinculada a una oferta de SaaS, asegúrese de que cumple estas directrices.
 <br></br>
 <details><summary>General</summary>
 
@@ -545,7 +545,7 @@ Si la configuración de la aplicación con fines de prueba es compleja, proporci
 
 ## <a name="tabs"></a>Pestañas
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
 Si la aplicación incluye una pestaña, cerciórese de que cumple estas directrices.
 > [!TIP]
 > Para obtener más información sobre cómo crear una experiencia de aplicación de alta calidad, consulte [Directrices de diseño de pestañas en Teams](~/tabs/design/tabs.md).
@@ -696,7 +696,7 @@ Diseñe su aplicación con componentes de UI Fluent [básicos](~/concepts/design
 
 ## <a name="bots"></a>Bots
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.3](/legal/marketplace/certification-policies#114043-bots).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.3](/legal/marketplace/certification-policies#114043-bots).
 
 Si la aplicación incluye un bot, cerciórese de que cumple estas directrices.
 
@@ -824,7 +824,7 @@ Las aplicaciones que proporcionan solo notificaciones con contenido como **Tiene
 
 ## <a name="message-extensions"></a>Extensiones de mensajes
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
 Si la aplicación incluye una extensión de mensaje, cerciórese de que cumple estas directrices.
 
@@ -902,7 +902,7 @@ El desenlazamiento de vínculos de solo las aplicaciones no proporciona un valor
 
 [*corrección obligatoria*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -921,7 +921,7 @@ Para obtener más información, vea [las directrices de diseño de módulos de t
 
 ## <a name="meeting-extensions"></a>Extensiones de reunión
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
 > [!TIP]
 > Para obtener más información sobre cómo crear una experiencia de aplicación de alta calidad, vea las [directrices de diseño de la extensión de reuniones de Teams](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
@@ -1008,7 +1008,7 @@ Use las siguientes directrices para las extensiones de reuniones:
 
 ## <a name="notifications"></a>Notificaciones
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
 
 Si la aplicación usa las [API de fuente de actividades proporcionadas por Microsoft Graph](/graph/teams-send-activityfeednotifications), cerciórese de que cumple las siguientes directrices.
 <br></br>
@@ -1044,7 +1044,7 @@ Si la aplicación usa las [API de fuente de actividades proporcionadas por Micro
 
 ## <a name="microsoft-365-app-compliance-program"></a>Programa de cumplimiento de aplicaciones de Microsoft 365
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la[directiva de marketplace comercial de Microsoft 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la[directiva de marketplace comercial de Microsoft 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
 <br></br>
 <details><summary>Expandir para obtener más información</summary>
 
@@ -1056,13 +1056,13 @@ El Programa de cumplimiento de aplicaciones de Microsoft 365 está destinado a a
 
 * **Certificación del editor**: Un proceso en el que usted comparte información general, de manejo de datos y de seguridad y cumplimiento para ayudar a los clientes potenciales a tomar decisiones informadas sobre el uso de su aplicación.
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Si presenta una aplicación que no ha sido incluida en la lista anteriormente, no puede completar oficialmente la certificación de editor hasta que su aplicación esté en la tienda de Teams. Si está actualizando una aplicación de la lista, complete el certificado de editor antes de enviar la última versión de la aplicación.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Si presenta una aplicación que no ha sido incluida en la lista anteriormente, no puede completar oficialmente la certificación de editor hasta que su aplicación esté en la tienda de Teams. Si está actualizando una aplicación de la lista, complete el certificado de editor antes de enviar la última versión de la aplicación.
 
 </details>
 
 ## <a name="advertising"></a>Publicidad
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.7](/legal/marketplace/certification-policies#11407-advertising).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: Esta sección está alineada con la [directiva de Marketplace comercial de Microsoft 1140.7](/legal/marketplace/certification-policies#11407-advertising).
 
 Las aplicaciones no deben mostrar publicidad, incluidos anuncios dinámicos, anuncios de banner y anuncios en el mensaje.
 

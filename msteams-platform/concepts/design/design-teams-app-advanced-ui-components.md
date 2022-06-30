@@ -5,12 +5,12 @@ description: Obtenga información sobre los componentes de la interfaz de usuari
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485728"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558845"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes avanzados de la interfaz de usuario
 
@@ -34,11 +34,11 @@ Las rutas de navegación son una ayuda de navegación que transmite la jerarquí
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el móvil." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el móvil.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el escritorio." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="En el ejemplo se muestra una plantilla de ruta de navegación en el escritorio.":::
 
 ## <a name="left-nav"></a>Navegación izquierda
 
@@ -51,11 +51,11 @@ Use el panel de navegación izquierdo para examinar varias páginas dentro de la
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el móvil." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el móvil.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el escritorio." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="En el ejemplo se muestra una plantilla de navegación izquierda en el escritorio.":::
 
 ## <a name="notification-bar"></a>Barra de notificaciones
 
@@ -65,17 +65,17 @@ Puede implementar una barra de notificaciones mediante el componente [de alerta]
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Mensajes críticos, errores y advertencias.
+* Mensajes críticos, errores y advertencias
 * Mensajes correctos
 * Mensajes informativos o promocionales
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="En el ejemplo se muestra la plantilla de interfaz de usuario de la barra de notificaciones en dispositivos móviles." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="En el ejemplo se muestra la plantilla de interfaz de usuario de la barra de notificaciones en dispositivos móviles.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="En el ejemplo se muestran las plantillas de interfaz de usuario de la barra de notificaciones en el escritorio.":::
 
 ## <a name="stage-view"></a>Vista de fase
 
@@ -85,18 +85,18 @@ Vea cómo implementar la [vista de fase](~/tabs/tabs-link-unfurling.md).
 
 ### <a name="top-use-cases"></a>Casos de uso principales
 
-* Mostrar contenido en una superficie grande dentro de Teams en lugar de en otra aplicación o explorador.
+* Mostrar contenido en una superficie grande dentro de Teams en lugar de otra aplicación o explorador
 * Contenido multimedia destacado u otro contenido enriquecido
 
 ### <a name="mobile"></a>Móvil
 
 La aplicación puede iniciar una fase desde una tarjeta adaptable, un vínculo compartido o componentes visuales (como un gráfico).
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el móvil." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el móvil.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el escritorio." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="En el ejemplo se muestra una plantilla de fase en el escritorio.":::
 
 ## <a name="toolbar"></a>Barra de herramientas
 
@@ -110,8 +110,8 @@ Una barra de herramientas es un contenedor para agrupar un conjunto de controles
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el móvil." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el móvil.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el escritorio." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="En el ejemplo se muestra una plantilla de barra de herramientas en el escritorio.":::

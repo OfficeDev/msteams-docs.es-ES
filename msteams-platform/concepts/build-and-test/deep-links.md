@@ -3,12 +3,12 @@ title: Crear vínculos profundos
 description: Obtenga información sobre cómo crear vínculos profundos y cómo usarlos y navegar por ellos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: afa3ea185247ab4edb5ada3b657c4d1259674bc5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150683"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485681"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -40,8 +40,8 @@ El SDK de cliente de JavaScript de Microsoft Teams (TeamsJS) simplifica el proce
 >
 >El comportamiento de navegación de una aplicación de Teams extendida en Microsoft 365 (Outlook/Office) depende de dos factores:
 >
-> * Destino al que apunta el vínculo profundo
-> * Host en el que se ejecuta la aplicación Teams
+> * Destino al que apunta el vínculo profundo.
+> * Host en el que se ejecuta la aplicación de Teams.
 >
 > Si la aplicación Teams se ejecuta dentro del host donde se dirige el vínculo profundo, la aplicación se abrirá directamente dentro del host. Sin embargo, si la aplicación de Teams se ejecuta en un host diferente del destino del vínculo profundo, la aplicación se abrirá primero en el explorador.
 
@@ -207,29 +207,12 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### <a name="open-a-scheduling-dialog"></a>Abrir un cuadro de diálogo
 
-Puede abrir un cuadro de diálogo de programación desde la aplicación de Teams, como se muestra en el código siguiente. Esto es especialmente útil si la aplicación ayuda al usuario a completar el calendario o programar tareas relacionadas.
-
-# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
-
-```javascript
-// Open a scheduling dialog from your tab
-if(calendar.isSupported()) {
-   const calendarPromise = calendar.composeMeeting({
-      attendees: ["joe@contoso.com", "bob@contoso.com"],
-      content: "test content",
-      endTime: "2018-10-24T10:30:00-07:00"
-      startTime: "2018-10-24T10:00:00-07:00"
-      subject: "test subject"});
-   calendarPromise.
-      then((result) => {/*Successful operation*/}).
-      catch((error) => {/*Unsuccessful operation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
+> [!NOTE]
+> Para abrir el cuadro de diálogo de programación en Teams, los desarrolladores deben seguir usando el método original basado en la dirección URL de vínculo profundo, ya que Teams aún no admite la funcionalidad de calendario.
 
 Para obtener más información sobre cómo trabajar con el calendario, consulte el espacio de nombres del [calendario](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) en la documentación de referencia de la API.
 
-# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+### <a name="tabteams-js-v1"></a>tab/Teams JS v1
 
 ```javascript
 // Open a scheduling dialog from your tab

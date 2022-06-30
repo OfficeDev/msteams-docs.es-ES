@@ -5,12 +5,12 @@ description: En este artículo, aprenderá las funcionalidades de la aplicación
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: c2fc61024a9f0c2d9bcf21b549e226b0d264305d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142475"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558446"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -53,7 +53,7 @@ Una [aplicación personal](../../concepts/design/personal-apps.md) es un espacio
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Representación conceptual de cómo son las aplicaciones personales en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Representación conceptual de cómo son las aplicaciones personales en el cliente de Teams.":::
 
    :::column-end:::
 
@@ -70,7 +70,7 @@ Muestre el contenido basado en la web en una [pestaña](../../tabs/what-are-tabs
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Representación conceptual de cómo son las pestañas en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Representación conceptual de cómo son las pestañas en el cliente de Teams.":::
 
    :::column-end:::
 
@@ -87,7 +87,7 @@ Las conversaciones suelen dar lugar a la necesidad de hacer algo (generar un ped
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Representación conceptual de cómo son los bots en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Representación conceptual de cómo son los bots en el cliente de Teams.":::
 
    :::column-end:::
 
@@ -105,7 +105,7 @@ Con [extensiones de mensajes](../../messaging-extensions/what-are-messaging-exte
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Representación conceptual del aspecto de las extensiones de mensaje en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Representación conceptual del aspecto de las extensiones de mensaje en el cliente de Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -122,7 +122,7 @@ Hay algunas opciones para [incorporar la aplicación a la experiencia de llamada
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de reunión en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Representación conceptual de cómo son las extensiones de reunión en el cliente de Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -139,7 +139,7 @@ Hay algunas opciones para [incorporar la aplicación a la experiencia de llamada
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Representación conceptual de cómo son los conectores en el cliente de Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Representación conceptual de cómo son los conectores en el cliente de Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -156,7 +156,7 @@ La [API de Microsoft Graph para Teams](/graph/teams-concept-overview) proporcion
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Representación conceptual de la API de Microsoft Graph para Teams.":::
 
    :::column-end:::
 :::row-end:::

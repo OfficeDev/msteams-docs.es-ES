@@ -1,15 +1,15 @@
 ---
-title: Preguntas frecuentes
-description: En este artículo de aprendizaje, obtendrá respuestas a algunas de las preguntas más frecuentes al usar Moodle LMS.
+title: Preguntas más frecuentes sobre Moodle
+description: En este artículo, obtendrá respuestas a algunas de las preguntas más frecuentes al usar Moodle LMS.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: c617b3db7982e192db6cde9375be751e2cf2bf26
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123485"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558299"
 ---
 # <a name="moodle-faq"></a>Preguntas más frecuentes sobre Moodle
 
@@ -53,9 +53,9 @@ Utilice la opción de **Restricción de creación de usuarios** para especificar
 
 La siguiente imagen muestra las opciones de restricción de creación de usuarios:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="Sync" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="Sync":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD":::
 
 <br>
 
@@ -71,11 +71,11 @@ Por defecto, sólo los administradores de Moodle pueden configurar la sincroniza
 
 La siguiente imagen muestra la opción **Permitir configurar la sincronización del curso en el curso**:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="administrador" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="administrador":::
 
 La siguiente imagen muestra la sincronización de los cursos:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="sincronización" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="sincronización":::
 
 <br>
 
@@ -123,11 +123,11 @@ Los usuarios que no pudieron iniciar sesión al principio deben informar del pro
 
 La siguiente imagen muestra el mensaje de error que se recibe cuando el usuario firma con sus credenciales de Microsoft 365:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="Notificar problema" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="Notificar problema":::
 
 La siguiente imagen muestra el error en el portal de Azure:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="<mrk mtype=&quot;seg" mid="167">Portal de Azure</mrk>" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="<mrk mtype=&quot;seg" mid="167">Portal de Azure</mrk>":::
 
 Si el **Secreto del cliente** ha caducado, el usuario debe generar un nuevo **Secreto de cliente** y actualizar la configuración que se encuentra en la página. Los usuarios pueden volver a iniciar sesión después de que se haya actualizado el **Secreto del cliente**, lo que puede tardar hasta 24 horas en volver a aprovisionarse.
 
@@ -143,7 +143,7 @@ Los administradores pueden cambiar la instancia de equipos asociada a un curso a
 
 La siguiente imagen muestra la instancia de los equipos:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="instancia de equipos" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="instancia de equipos":::
 
 <br>
 
@@ -160,7 +160,7 @@ El usuario puede enfrentarse al problema de las reuniones de Atto Teams si falta
 
 Las siguientes imágenes muestran el icono de la barra de herramientas después del ajuste de la configuración de la barra de herramientas:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="barra de herramientas" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="barra de herramientas":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="icono de vínculos":::
 

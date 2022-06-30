@@ -5,12 +5,12 @@ description: Identifique cómo pueden funcionar los casos de uso de la aplicaci�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 9fdf2c56bab0a822d0c3769d6d7e9fdb6aa3a929
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 50298ec41a6f5f6a4ca0ecfcf3b0570762d2720c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103330"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557858"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Asignar los casos de uso a las funcionalidades de la aplicación de Teams
 
@@ -88,7 +88,7 @@ La plataforma Microsoft Teams ofrece una gran variedad de características. Cada
 
 Echemos un vistazo a cómo las funcionalidades de Teams habilitan diferentes características para su aplicación.
 
-:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Imagen que muestra las funcionalidades de Teams" border="true":::
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Imagen que muestra las funcionalidades de Teams":::
 
 Por ejemplo:
 

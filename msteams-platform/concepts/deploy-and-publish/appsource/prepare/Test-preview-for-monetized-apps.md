@@ -5,12 +5,12 @@ description: Aprenda a crear y probar las ofertas de la versión preliminar de S
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123706"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558747"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Versión preliminar de prueba para aplicaciones monetizadas
 
@@ -26,11 +26,11 @@ Puede generar el identificador de la oferta de versión preliminar desde el vín
 1. Agregue un [público de versión preliminar](/azure/marketplace/create-new-saas-offer-preview) para la oferta de SaaS.
 1. Seleccione el vínculo **Versión preliminar de AppSource** en **Publicar** para buscar el identificador de la oferta de versión preliminar en la barra de direcciones del explorador con formato *publisherId.offerId-preview*.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="Id. de oferta de versión preliminar" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="Id. de oferta de versión preliminar" :::
 
 1. Copie el identificador de la oferta de versión preliminar de la barra de direcciones del explorador.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Id. de oferta de versión preliminar" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Id. de oferta de versión preliminar" :::
 
     > [!NOTE]
     > A diferencia de un identificador de oferta pública, el identificador de la oferta de versión preliminar se puede reconocer con el sufijo *-preview*. Por ejemplo, **publisherId.offerId-preview**.
@@ -68,7 +68,7 @@ Después de configurar la aplicación con el identificador de la oferta de versi
 
 Si la oferta de versión preliminar se especifica en el manifiesto de la aplicación y el público para la versión preliminar se define en el Centro de partners para la oferta, el usuario puede ver el botón **Comprar una suscripción**.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="comprar una suscripción" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="comprar una suscripción":::
 
 ### <a name="error-scenarios"></a>Escenarios de error
 
@@ -76,13 +76,13 @@ Si la oferta de versión preliminar se especifica en el manifiesto de la aplicac
 
   No se encontraron planes con **-preview**. Asegúrese de que está en el público para la versión preliminar.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no hay público para la versión preliminar" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no hay público para la versión preliminar" :::
 
 * Si el identificador de oferta especificado en el manifiesto de la aplicación no es una oferta de versión preliminar, la aplicación muestra el siguiente mensaje de advertencia al usuario y la instalación de prueba está deshabilitada:
   
   Esta no es una oferta en versión preliminar. Asegúrese de anexar **-preview** al identificador de la oferta.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="sin -preview" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="sin -preview" :::
 
 ## <a name="see-also"></a>Vea también
 

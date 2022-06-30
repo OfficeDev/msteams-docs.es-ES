@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a939217f31feb957cc9f3205a99d8b235de56d8e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7dda8dd7e68e7452da164c8ec45d3352909f45ed
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142405"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558341"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñe la aplicación personal para Microsoft Teams
 
@@ -29,7 +29,7 @@ En el kit de interfaz de usuario de Microsoft Teams, encontrará instrucciones c
 
 Los usuarios pueden agregar una aplicación personal desde el control flotante de la tienda o la aplicación de Teams seleccionando el icono **Más** en el lado izquierdo de Teams (que se muestra en el ejemplo siguiente).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="En el ejemplo se muestra cómo agregar una aplicación personal desde el control flotante de la aplicación." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="En el ejemplo se muestra cómo agregar una aplicación personal desde el control flotante de la aplicación.":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Uso de una aplicación personal (área de trabajo privada)
 
@@ -41,7 +41,7 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de la pestaña personal.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -50,16 +50,16 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 |C|**Menú Más**: incluye información y opciones adicionales de la aplicación.|
 |D|**Navegación principal**: proporciona navegación a otras características principales de la aplicación de Teams.|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Pestañas**: navegación en la aplicación personal.|
-|1|**webview**: muestra el contenido de la aplicación.|
+|1 |**webview**: muestra el contenido de la aplicación.|
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En este ejemplo se muestra la anatomía del componente de la pestaña personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="En este ejemplo se muestra la anatomía del componente de la pestaña personal.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -68,12 +68,12 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 |C|**Vista emergente**: inserta el contenido de la aplicación desde una ventana primaria en una ventana secundaria independiente.|
 |D|**Menú Más**: incluye información y opciones adicionales de la aplicación. (También puede convertir **Configuración** en una pestaña).|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En este ejemplo se muestra la anatomía estructural de la pestaña personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En este ejemplo se muestra la anatomía estructural de la pestaña personal.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |A|**Pestañas**: navegación en la aplicación personal.|
-|1|**iframe**: muestra el contenido de la aplicación.|
+|1 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-with-ui-templates-and-advanced-components"></a>Diseñar una pestaña con plantillas de interfaz de usuario y componentes avanzados
 
@@ -94,7 +94,7 @@ Las aplicaciones personales pueden incluir un bot para conversaciones individual
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -105,7 +105,7 @@ Las aplicaciones personales pueden incluir un bot para conversaciones individual
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="En el ejemplo se muestra la anatomía del componente de bot personal.":::
 
 |Contador|Descripción|
 |----------|-----------|
@@ -117,7 +117,7 @@ Las aplicaciones personales pueden incluir un bot para conversaciones individual
 
 En el lado izquierdo de Teams, los usuarios pueden hacer clic con el botón derecho en la aplicación personal para anclar, quitar y configurar otras opciones de aplicación.
 
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="En el ejemplo se muestran las opciones para administrar una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="En el ejemplo se muestran las opciones para administrar una aplicación personal.":::
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -129,13 +129,13 @@ Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 Con el tamaño dinámico, las pestañas de la derecha pueden truncarse u ocultarse.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="En el ejemplo se muestra una aplicación personal que muestra el contenido más relevante de la primera pestaña." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="En el ejemplo se muestra una aplicación personal que muestra el contenido más relevante de la primera pestaña.":::
 
 #### <a name="dont-lead-with-secondary-content-or-metadata"></a>Qué no hacer: comenzar con contenido o metadatos secundarios
 
 Al igual que una aplicación web estándar, la navegación por pestañas debe progresar en un orden que ayude a dar sentido a las características principales de la aplicación.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="En el ejemplo se muestra una aplicación personal a la izquierda con contenido secundario o metadatos." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="En el ejemplo se muestra una aplicación personal a la izquierda con contenido secundario o metadatos.":::
 
 ### <a name="tab-hierarchy"></a>Jerarquía de pestañas
 
@@ -143,13 +143,13 @@ Al igual que una aplicación web estándar, la navegación por pestañas debe pr
 
 Las pestañas deben clasificar las características principales y el contenido de la aplicación. Con el tamaño dinámico, el contenido de la derecha pueden truncarse u ocultarse.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="En el ejemplo se muestra una aplicación personal con pestañas de la misma jerarquía." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="En el ejemplo se muestra una aplicación personal con pestañas de la misma jerarquía.":::
 
 #### <a name="dont-include-different-levels-of-hierarchy"></a>Qué no hacer: incluir distintos niveles de jerarquía
 
 El contenido debe progresar en un orden lógico que ayude a los usuarios a entenderlo. Si tiene dos pestañas estrechamente relacionadas, considere la posibilidad de combinarlas en una sola pestaña.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="En el ejemplo se muestra una aplicación personal con distintos niveles de jerarquía." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="En el ejemplo se muestra una aplicación personal con distintos niveles de jerarquía.":::
 
 ### <a name="first-run-experience"></a>Experiencia de primera ejecución
 
@@ -157,15 +157,15 @@ El contenido debe progresar en un orden lógico que ayude a los usuarios a enten
 
 Debería haber al menos una pantalla de bienvenida la primera vez que use una aplicación personal. En el caso de los bots, describa lo que el bot puede hacer y proporcione acciones rápidas, como un botón de inicio de sesión.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="En el ejemplo se muestra qué hacer durante una experiencia de primera ejecución de una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="En el ejemplo se muestra qué hacer durante una experiencia de primera ejecución de una aplicación personal.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Otro ejemplo muestra qué hacer durante una experiencia de primera ejecución de una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Otro ejemplo muestra qué hacer durante una experiencia de primera ejecución de una aplicación personal.":::
 
 #### <a name="dont-start-with-a-blank-screen"></a>Qué no hacer: comenzar con la pantalla en blanco
 
 Es posible que los usuarios se confundan si no se muestra nada la primera vez que ejecutan la aplicación.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="En el ejemplo se muestra lo que no se debe hacer durante una experiencia de primera ejecución de una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="En el ejemplo se muestra lo que no se debe hacer durante una experiencia de primera ejecución de una aplicación personal.":::
 
 ### <a name="personalized-content"></a>Contenido personalizado
 
@@ -173,17 +173,17 @@ Es posible que los usuarios se confundan si no se muestra nada la primera vez qu
 
 Tanto si se trata de una pestaña personal como de un bot, muestre contenido relacionado solo con la actividad de un usuario en la aplicación.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Ejemplo que muestra qué hacer con una aplicación personal y contenido personalizado." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Ejemplo que muestra qué hacer con una aplicación personal y contenido personalizado.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Otro ejemplo que muestra qué hacer con una aplicación personal y contenido personalizado." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Otro ejemplo que muestra qué hacer con una aplicación personal y contenido personalizado.":::
 
 #### <a name="dont-show-unrelated-or-overly-broad-content"></a>Qué no hacer: mostrar contenido no relacionado o demasiado amplio
 
 En contextos personales, no muestre contenido para los equipos de los que un usuario no forma parte. El contenido del bot personal debe centrarse en la persona, no en un grupo.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="En el ejemplo se muestra lo que no se debe hacer con una aplicación personal y contenido personalizado." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="En el ejemplo se muestra lo que no se debe hacer con una aplicación personal y contenido personalizado.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Otro ejemplo que muestra qué no hacer con una aplicación personal y contenido personalizado." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Otro ejemplo que muestra qué no hacer con una aplicación personal y contenido personalizado.":::
 
 ### <a name="complex-app-features"></a>Características complejas de la aplicación
 
@@ -191,13 +191,13 @@ En contextos personales, no muestre contenido para los equipos de los que un usu
 
 La aplicación debe centrarse en las tareas principales de Teams, pero puede ver la aplicación completa e independiente en un explorador.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="En el ejemplo se muestra cómo controlar características de aplicaciones complejas con una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="En el ejemplo se muestra cómo controlar características de aplicaciones complejas con una aplicación personal.":::
 
 #### <a name="dont-include-your-entire-app"></a>Qué no hacer: incluir toda la aplicación
 
 A menos que haya creado la aplicación específicamente para Teams, probablemente tenga características que no tienen sentido en una herramienta de colaboración.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="En el ejemplo se muestra cómo no controlar características de aplicaciones complejas con una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="En el ejemplo se muestra cómo no controlar características de aplicaciones complejas con una aplicación personal.":::
 
 ## <a name="see-also"></a>Consulte también
 

@@ -3,15 +3,15 @@ title: Configuración de código para habilitar el inicio de sesión único para
 description: Describe la configuración de código para habilitar el inicio de sesión único para pestañas
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Pestañas de autenticación de teams De Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 3f095f3e2b0737b7afcdfe3bdcc96bd36d2f3847
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API
+ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888132"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558733"
 ---
-# <a name="add-code-to-enable-sso"></a>Adición de código para habilitar el inicio de sesión único
+# <a name="add-code-to-enable-sso"></a>Agregar código para habilitar el inicio de sesión único
 
 Antes de agregar código para habilitar el inicio de sesión único, asegúrese de que ha registrado la aplicación con Azure AD.
 
@@ -20,7 +20,7 @@ Antes de agregar código para habilitar el inicio de sesión único, asegúrese 
 
 Debe configurar el código del lado cliente de la aplicación de pestaña para obtener un token de acceso de Azure AD. El token de acceso se emite en nombre de la aplicación de pestaña. Si la aplicación de pestaña requiere permisos adicionales de Microsoft Graph, deberá pasar el token de acceso al lado servidor e intercambiarlo por el token de Microsoft Graph.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configurar código para controlar el token de acceso" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configurar código para controlar el token de acceso":::
 
 En esta sección se describen estos temas:
 
@@ -212,5 +212,5 @@ La siguiente es una carga ?til decodificada t?pica de un token de acceso.
 - [Notificación opcional de Active Directory](/azure/active-directory/develop/active-directory-optional-claims)
 - [Tokens de acceso](/azure/active-directory/develop/access-tokens)
 - [Información general de la biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview)
-- [Tokens de identificador de la plataforma de identidad de Microsoft](/azure/active-directory/develop/id-tokens)
+- [tokens de identificador de Plataforma de identidad de Microsoft](/azure/active-directory/develop/id-tokens)
 - [ Tokens de acceso de la Plataforma de identidad de Microsoft](/azure/active-directory/develop/access-tokens#validating-tokens)

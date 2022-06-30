@@ -16,11 +16,11 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
 1. Seleccione **Aprovisionar en la nube**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de pantalla que muestra los comandos de aprovisionamiento" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de pantalla que muestra los comandos de aprovisionamiento":::
 
 1. Seleccione una suscripción que se usará para los recursos de Azure.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de pantalla que muestra los recursos para el aprovisionamiento" border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de pantalla que muestra los recursos para el aprovisionamiento":::
 
    > [!NOTE]
    > Siempre hay algunos recursos de Azure que se usan para hospedar la aplicación.
@@ -29,21 +29,21 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
 1. Seleccione **Aprovisionar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Captura de pantalla del cuadro de diálogo de aprovisionamiento." border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Captura de pantalla del cuadro de diálogo de aprovisionamiento.":::
 
    El proceso de aprovisionamiento crea recursos en la nube de Azure. Puede tardar algún tiempo. Puede supervisar el progreso observando los diálogos en la esquina inferior derecha. Después de unos minutos, verá el siguiente aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo.":::
 
     Si lo desea, puede ver los recursos aprovisionados. En este tutorial, no es necesario ver los recursos.
 
     El recurso aprovisionado aparece en la sección **Entorno** .
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo.":::
 
 1. Seleccione **Implementar en la nube** en el panel **Implementación** una vez completado el aprovisionamiento.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Captura de pantalla que muestra dónde hacer clic para implementar en la nube." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Captura de pantalla que muestra dónde hacer clic para implementar en la nube.":::
 
    Al igual que con el aprovisionamiento, la implementación tarda algún tiempo. Para supervisar el proceso, vea los diálogos en la esquina inferior derecha. Después de unos minutos, verá un aviso de finalización.
 
@@ -80,15 +80,15 @@ Una vez completados los pasos de aprovisionamiento e implementación:
 1. Seleccione **Iniciar remoto (Edge)** en la lista desplegable configuración de inicio.
 1. Seleccione **Iniciar depuración (F5)** para iniciar la aplicación desde Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de pantalla que muestra la aplicación de inicio remoto." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de pantalla que muestra la aplicación de inicio remoto.":::
 
 1. Seleccione **Agregar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Captura de pantalla que muestra la aplicación que se está instalando.":::
 
    El kit de herramientas muestra un mensaje para indicar que la aplicación se agrega a Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Captura de pantalla que muestra el mensaje para probar la aplicación ahora o posterior" border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Captura de pantalla que muestra el mensaje para probar la aplicación ahora o posterior":::
  
     - Si **seleccionaSi lo tienes**, puedes probar la aplicación más adelante en la lista de aplicaciones de prueba.
     - Si selecciona **Probar,** Teams carga la aplicación.
@@ -99,7 +99,7 @@ Una vez completados los pasos de aprovisionamiento e implementación:
 
    La aplicación Extensión de mensaje se carga en una aplicación de bot de chat.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Captura de pantalla que muestra la aplicación transferida localmente en Teams" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Captura de pantalla que muestra la aplicación transferida localmente en Teams":::
 
 
 

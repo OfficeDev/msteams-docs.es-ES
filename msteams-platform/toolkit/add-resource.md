@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: a9848ecf16dfb8ff4034dc26dd350ce71c8e656e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 2d1889de8cc5c36cde708f4d4628f6f61768e3f4
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485646"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557879"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Agregar recursos en la nube a la aplicación de Teams
 
@@ -44,7 +44,7 @@ Si ha creado un proyecto de pestaña basado en SPFx, no puede agregar recursos e
    1. Seleccione **Kit de herramientas de Teams** en el panel izquierdo.
    1. Seleccione **Agregar características** en **DESARROLLO**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="agregar característica" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="agregar característica":::
 
 * **Para agregar recursos en la nube mediante la paleta de comandos:**
 
@@ -52,11 +52,11 @@ Si ha creado un proyecto de pestaña basado en SPFx, no puede agregar recursos e
    1. Escriba **Teams:Agregar características**.
    1. Presione **Entrar**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Nube" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Nube":::
 
    1. En el elemento emergente, seleccione los recursos en la nube que se van a agregar en el proyecto.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
 
 ## <a name="add-cloud-resources-using-teamsfx-cli"></a>Adición de recursos en la nube mediante la CLI de TeamsFx
 

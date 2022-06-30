@@ -1,15 +1,15 @@
 ---
 title: Agregar bots a aplicaciones de Microsoft Teams
-description: En este módulo, aprenderá a empezar a desarrollar bots en Microsoft Teams y cuáles son todos los requisitos para agregar un bot en Teams
+description: En este módulo, aprenderá a empezar a desarrollar bots en Microsoft Teams y cuáles son todos los requisitos para agregar un bot en Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189747"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558614"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Agregar bots a aplicaciones de Microsoft Teams
 
@@ -20,7 +20,7 @@ Cree y conecte bots inteligentes para interactuar con los usuarios de Microsoft 
 > [!IMPORTANT]
 > Actualmente, los bots están disponibles en Government Community Cloud (GCC) y GCC-High pero no están disponibles en el Departamento de Defensa (DOD).
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="Ejemplo de un bot ayudando a un usuario" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Ejemplo de un bot ayudando a un usuario":::
 
 ## <a name="what-you-need-to-know-bots"></a>Aspectos que debe saber sobre los bots
 
@@ -34,7 +34,7 @@ Un bot se comporta de forma diferente en función del tipo de conversación en l
 
 Para obtener más información, consulte [Mantener una conversación con un bot de Microsoft Teams](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-Con Teams aplicaciones, puede hacer que el bot sea la estrella de su experiencia o simplemente un asistente. Los bots se distribuyen como parte de un paquete de aplicación más amplio, que puede incluir otras funcionalidades, como [pestañas](~/tabs/what-are-tabs.md) o [extensiones de mensaje](~/messaging-extensions/what-are-messaging-extensions.md).
+Con las aplicaciones de Teams, puede hacer que el bot sea la estrella de su experiencia, o simplemente un asistente. Los bots se distribuyen como parte de un paquete de aplicación más amplio, que puede incluir otras funcionalidades, como [pestañas](~/tabs/what-are-tabs.md) o [extensiones de mensaje](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="bot-apis"></a>Las API del bot
 

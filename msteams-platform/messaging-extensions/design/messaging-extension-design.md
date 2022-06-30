@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123951"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558754"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Diseñe su extensión de mensajería de Microsoft Teams
 
@@ -35,11 +35,11 @@ Los siguientes ejemplos muestran cómo agregar una extensión de mensajería en 
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="El ejemplo muestra cómo agregar una extensión de mensajería en un canal cerca del cuadro de redacción en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="El ejemplo muestra cómo agregar una extensión de mensajería en un canal cerca del cuadro de redacción en un dispositivo móvil.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="El ejemplo muestra cómo agregar una extensión de mensajería en un canal cerca del cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="El ejemplo muestra cómo agregar una extensión de mensajería en un canal cerca del cuadro de redacción.":::
 
 ## <a name="set-up-a-message-extension"></a>Configurar una extensión de mensajería
 
@@ -49,11 +49,11 @@ Con el fin de mantener la coherencia entre las aplicaciones de Teams, no es posi
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión en dispositivos móviles." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión en dispositivos móviles.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="El ejemplo muestra la pantalla de configuración de la extensión de mensajería con un botón de inicio de sesión.":::
 
 ## <a name="types-of-message-extensions"></a>Tipos de extensiones de mensajería
 
@@ -65,17 +65,17 @@ Con los comandos de búsqueda, los usuarios pueden usar la extensión de mensaje
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="El ejemplo muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción en dispositivos móviles." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="El ejemplo muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción en dispositivos móviles.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="El ejemplo muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="El ejemplo muestra una extensión de mensajería basada en la búsqueda que se ha iniciado desde el cuadro de redacción.":::
 
 #### <a name="compose-box-layout-options"></a>Opciones de diseño del cuadro de redacción
 
 Tiene algunas opciones para mostrar los resultados de la búsqueda de la extensión de mensajería, incluidas las[vistas de lista y cuadrícula](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Ilustraciones que muestran las opciones de diseño para los resultados de la búsqueda de la extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Ilustraciones que muestran las opciones de diseño para los resultados de la búsqueda de la extensión de mensajería.":::
 
 ### <a name="action-commands"></a>Comandos de acción
 
@@ -93,11 +93,11 @@ Una vez agregada, los usuarios pueden abrir la extensión de mensajería selecci
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde el cuadro de redacción en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde el cuadro de redacción en un dispositivo móvil.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde el cuadro de redacción.":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>Desde un mensaje de chat o publicación de canal
 
@@ -105,11 +105,11 @@ Una vez agregado, los usuarios pueden seleccionar el icono **Más** :::image typ
 
 #### <a name="chat-message"></a>Mensaje de chat
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde un mensaje de chat." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde un mensaje de chat.":::
 
 #### <a name="channel-post"></a>Publicación del canal
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde una publicación del canal en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="El ejemplo muestra cómo abrir una extensión de mensajería desde una publicación del canal en un dispositivo móvil.":::
 
 ## <a name="use-a-message-extension"></a>Use una extensión de mensajería
 
@@ -121,31 +121,31 @@ En los siguientes escenarios se muestran las principales formas en las que los u
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción en dispositivos móviles." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción en dispositivos móviles.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción.":::
 
 **2. Insertar contenido**. Una vez publicado, otros usuarios pueden responder o seleccionar el contenido para ver más información en su aplicación.
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="El ejemplo muestra a un usuario publicando contenido en una conversación del canal en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="El ejemplo muestra a un usuario publicando contenido en una conversación del canal en un dispositivo móvil.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="El ejemplo muestra a un usuario publicando contenido en una conversación del canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="El ejemplo muestra a un usuario publicando contenido en una conversación del canal.":::
 
 ### <a name="take-action-on-a-message"></a>Realizar una acción en un mensaje
 
 **1. Seleccionar una extensión de mensajería**. La aplicación puede incluir uno o varios comandos de acción.
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="El ejemplo muestra a un usuario que selecciona un comando de acción de la extensión de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="El ejemplo muestra a un usuario que selecciona un comando de acción de la extensión de mensajería.":::
 
 **2. Complete la acción**. Su aplicación puede recibir y procesar cualquier contenido o dato enviado por la acción del mensaje. Los usuarios completan la acción en la aplicación mientras permanecen en su conversación.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Ejemplo sobre cómo realizar acciones en un mensaje." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Ejemplo sobre cómo realizar acciones en un mensaje.":::
 
 ### <a name="preview-links"></a>Vínculos de vista previa
 
@@ -155,21 +155,21 @@ Las extensiones de mensajería también permiten insertar enlaces enriquecidos d
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de texto en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de texto en un dispositivo móvil.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de diálogo." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de diálogo.":::
 
 **2. Insertar contenido**. Si la aplicación reconoce la dirección URL en el cuadro de redacción, esta representará el vínculo como una tarjeta que proporciona una vista previa completa del contenido web. (Consulte [Directrices de diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md) para más información).
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción en un dispositivo móvil.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="El ejemplo muestra cómo la dirección URL que su aplicación reconoce, incluye contenido enriquecido en el cuadro de redacción.":::
 
 ## <a name="manage-a-message-extension"></a>Administre una extensión de mensajería
 
@@ -183,26 +183,26 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Ilustración en la que se muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción en un dispositivo móvil." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Ilustración en la que se muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción en un dispositivo móvil.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la aplicación**: nombre completo de la aplicación.|
-|2|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
-|3|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
+|2 |**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
+|3 |**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
 |4 |**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
 |5 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
 |6 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una extensión de mensajería en el cuadro de redacción.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Logotipo de la aplicación**: icono de color del logotipo de la aplicación.|
-|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
-|3|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
+|2 |**Nombre de la aplicación**: nombre completo de la aplicación.|
+|3 |**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
 |4 |**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
 |5 |**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
 |6 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
@@ -211,12 +211,12 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 
 ### <a name="message-extension-management-menu"></a>Menú de administración de extensiones de mensajería
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de administración de extensiones de mensajería." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de administración de extensiones de mensajería.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Desanclar**: disponible si el usuario ha anclado la aplicación.|
-|2|**Quitar**: quita la extensión de mensajería del canal, chat o reunión.|
+|2 |**Quitar**: quita la extensión de mensajería del canal, chat o reunión.|
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -226,7 +226,7 @@ Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Ejemplo de configuración y uso general." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Ejemplo de configuración y uso general.":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Qué hacer: Integración con el inicio de sesión único
 
@@ -234,7 +234,7 @@ SSO hace que el proceso de inicio de sesión sea más fácil, rápido y seguro. 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Ejemplo de integración con inicio de sesión único." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Ejemplo de integración con inicio de sesión único.":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Qué no hacer: Sacar a los usuarios de la conversación
 
@@ -251,7 +251,7 @@ Las extensiones de mensajería no siempre son fáciles de encontrar. Incluya cap
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Ejemplo de plantillas." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Ejemplo de plantillas.":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Qué hacer: Permitir que Teams controle parte del trabajo de diseño si es posible
 
@@ -259,7 +259,7 @@ Si es útil para sus casos de uso, considere la posibilidad de crear una extensi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Ejemplo sobre cómo controlar el trabajo de diseño." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Ejemplo sobre cómo controlar el trabajo de diseño.":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Qué no hacer: Insertar toda la aplicación en un módulo de tareas
 
@@ -272,7 +272,7 @@ Si su extensión de mensajería requiere comandos de acción, mantenga el módul
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Ejemplo de creación de temas." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Ejemplo de creación de temas.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Qué hacer: Aprovechar los tokens de color de Teams
 
@@ -280,7 +280,7 @@ Cada tema de Teams tiene su propia combinación de colores. Para controlar los c
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Ejemplo de tokens de color." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Ejemplo de tokens de color.":::
 
 #### <a name="dont-hard-code-color-values"></a>Qué no hacer: Valores complicados de código de color
 
@@ -293,7 +293,7 @@ Si no usa los tokens de color de Teams, sus diseños serán menos escalables y a
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Ejemplo de acciones." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Ejemplo de acciones.":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Qué hacer: Incluir comandos de acción que sean útiles en el contexto
 
@@ -301,7 +301,7 @@ Las acciones de mensaje deben relacionarse con lo que un usuario está mirando. 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Ejemplo de comandos de acción." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Ejemplo de comandos de acción.":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>Qué no hacer: Incluir comandos de acciones que no son contextuales
 

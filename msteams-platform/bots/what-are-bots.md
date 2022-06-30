@@ -5,12 +5,12 @@ description: Con esta ruta de aprendizaje, empiece a trabajar con bots conversac
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503763"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558320"
 ---
 # <a name="build-bots-for-teams"></a>Crear bots para Teams
 
@@ -33,7 +33,7 @@ Los bots de conversación están dotados de gran flexibilidad. Los bots pueden c
 
 Use la combinación correcta de tarjetas, texto y módulos de tareas para crear un bot que sea útil. En la siguiente imagen se muestra a un usuario conversando con un bot en un chat individual con texto y tarjetas interactivas.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Bot de preguntas frecuentes de ejemplo" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Bot de preguntas frecuentes de ejemplo":::
 
 Cada interacción entre el usuario y el bot se representa como una actividad. Cuando un bot recibe una actividad, se la pasa a sus controladores de actividad. Vea los [controladores de actividad de bots](~/bots/bot-basics.md).
 

@@ -3,12 +3,12 @@ title: Solicitar permisos de dispositivos para la aplicación de Microsoft Teams
 description: Cómo actualizar el manifiesto de la aplicación para solicitar acceso a características nativas que requieren el consentimiento del usuario, como las funcionalidades de escaneo qr, código de barras, imagen, audio y vídeo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a573855b6512cdbfcebb12c305973f8ad23113d6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484491"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557718"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Solicitud de permisos de dispositivo para la aplicación de Teams
 
@@ -25,11 +25,11 @@ Puede enriquecer la aplicación de Teams con funcionalidades nativas del disposi
 Deberá solicitar los permisos del dispositivo para acceder a las funcionalidades nativas del mismo. Los permisos de dispositivo funcionan de forma similar para todas las construcciones de aplicaciones, como pestañas, módulos de tareas o extensiones de mensajería. El usuario deberá ir a la página de permisos de la configuración de Teams para administrar los permisos del dispositivo. Puede crear experiencias más enriquecidas en la plataforma Teams con la ayuda de funcionalidades de dispositivo, como: Debe solicitar los permisos del dispositivo para acceder a las funcionalidades nativas del dispositivo. Los permisos del dispositivo funcionan de forma similar para todo lo que compone la aplicación, como pestañas, módulos de tareas o extensiones de mensajes. El usuario deberá ir a la página de permisos de la configuración de Teams para administrar los permisos del dispositivo.
 Al acceder a las funcionalidades del dispositivo, podrá crear mejores experiencias en la plataforma de Teams, como:
 
-* Capturar y ver imágenes.
-* Escanear QR o códigos de barras.
-* Grabar y compartir vídeos cortos.
-* Grabar notas de audio y conservarlas para uso posterior.
-* Usar la información de ubicación del usuario para mostrar información relevante.
+* Captura y visualización de imágenes
+* Escanear QR o código de barras
+* Grabación y uso compartido de vídeos cortos
+* Grabar notas de audio y guardarlas para su uso posterior
+* Usar la información de ubicación del usuario para mostrar la información pertinente
 
 > [!NOTE]
 >
@@ -56,7 +56,7 @@ Un usuario podrá administrar la configuración de los permisos del dispositivo 
 
     <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Permisos móviles." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Permisos móviles.":::
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
@@ -67,7 +67,7 @@ Un usuario podrá administrar la configuración de los permisos del dispositivo 
 
    <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Permiso de dispositivo." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Permiso de dispositivo.":::
 
 ---
 
@@ -228,13 +228,13 @@ Por ejemplo:
 
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Permiso de ubicación móvil." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Permiso de ubicación móvil.":::
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Permiso de dispositivo en el escritorio." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Permiso de dispositivo en el escritorio.":::
 
 ---
 

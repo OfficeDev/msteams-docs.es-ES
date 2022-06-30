@@ -5,26 +5,26 @@ description: En este módulo, obtenga información sobre cómo la eliminación d
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190148"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558285"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
-En este documento se describe cómo la eliminación de márgenes alrededor de todas las pestañas de Microsoft Teams mejora la experiencia de creación de aplicaciones. Se trata de una mejora introducida en Teams en 2021.
+En este documento se describe cómo la eliminación de márgenes alrededor de todas las pestañas de Microsoft Teams mejora la experiencia de creación de aplicaciones. Esta es una mejora introducida en Teams en 2021.
 Puede crear aplicaciones que parezcan más nativas de Teams quitando los márgenes alrededor de todas las pestañas. Las pestañas con márgenes quitados se alinean con los [diseños de kit de interfaz de usuario](~/tabs/design/tabs.md) de Microsoft Teams. La mayoría de las aplicaciones experimentan un aspecto mejorado sin márgenes.
 
-:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Ingenio de tabulación y sin márgenes" border="false":::
+:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Ingenio de tabulación y sin márgenes":::
 
 > [!NOTE]
 > Esta característica no es aplicable a los clientes móviles, ya que las pestañas que se ven en los clientes móviles no tienen márgenes.
 
 ## <a name="guidelines"></a>Instrucciones
 
-La eliminación de márgenes de tabulación afecta a las aplicaciones de Teams que usan pestañas. En tales casos, puede agregar márgenes alrededor de los diseños de pestaña donde sea necesario. Los diseños de aplicación en producción tienen un efecto de relleno adicional, es decir, los márgenes proporcionados por Teams y los márgenes proporcionados por la pestaña. Sin embargo, el relleno adicional solo es temporal y desaparece en unas semanas, dejando solo el relleno proporcionado por la aplicación.
+La eliminación de márgenes de tabulación afecta a las aplicaciones de Teams que usan pestañas. En tales casos, puede agregar márgenes alrededor de los diseños de pestaña donde sea necesario. Los diseños de aplicación en producción tienen un efecto de relleno adicional, es decir, márgenes proporcionados por Teams y márgenes proporcionados por la pestaña. Sin embargo, el relleno adicional solo es temporal y desaparece en unas semanas, dejando solo el relleno proporcionado por la aplicación.
 
 ## <a name="faq"></a>Preguntas más frecuentes
 
@@ -36,7 +36,7 @@ Sí, esto está bien y Teams fomenta este diseño. Ayuda a la aplicación a sent
 
 No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derecha de todo el contenido de la aplicación para garantizar que no toque los bordes de la interfaz de usuario. También puede agregar márgenes en la parte superior de la pestaña, si es necesario.
 
-**¿Cuál es el tamaño de los márgenes de tabulación que Teams aplicados anteriormente?**
+**¿Cuál es el tamaño de los márgenes de tabulación que Teams aplicó anteriormente?**
 
 * Izquierda y derecha: 20 px
 * Superior: 16 px
@@ -46,7 +46,7 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 >
 > * Todas las pestañas tienen sus márgenes quitados: pestañas personales, pestañas de chat (grupo), pestañas de reunión y pestañas de canal.
 > * El cambio de eliminación del margen de tabulación se aplica a todas las pestañas. No hay ninguna manera de participar o no participar en el cambio.
-> * El cambio de los márgenes de tabulación puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes que rodean su interfaz de usuario.
+> * El cambio de los márgenes de tabulación puede afectar a las pestañas que dependen de Microsoft Teams para proporcionar márgenes alrededor de su interfaz de usuario.
 
 ## <a name="see-also"></a>Vea también
 

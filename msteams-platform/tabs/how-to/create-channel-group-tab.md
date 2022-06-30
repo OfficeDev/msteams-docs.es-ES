@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503651"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558579"
 ---
 # <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
@@ -173,11 +173,11 @@ gulp build
 
 1. Escriba `http://localhost:3007/<yourDefaultAppNameTab>/` en el explorador para ver la página principal de la aplicación.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Pestaña predeterminada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Pestaña predeterminada":::
 
 1. Para ver la página de configuración de la pestaña, vaya a `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Se muestra lo siguiente:
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuración de la pestaña" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuración de la pestaña":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro en la pestaña
 
@@ -196,7 +196,7 @@ gulp ngrok-serve
 1. A continuación, seleccione **Administrar aplicaciones** y **Cargar una aplicación personalizada**.
 1. Vaya al directorio del proyecto, desplácese hasta la carpeta **./package**, seleccione la carpeta ZIP del paquete de la aplicación y elija **Abrir**.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Pestaña del canal cargada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Pestaña del canal cargada":::
 
 1. Seleccione **Agregar** en el cuadro de diálogo. La pestaña se carga en Teams.
 
@@ -213,7 +213,7 @@ gulp ngrok-serve
 1. Siga las instrucciones para agregar una pestaña. Hay un cuadro de diálogo de configuración personalizado para la pestaña de canal o grupo.
 1. Seleccione **Guardar** y la pestaña se agregará a la barra de pestañas del canal.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Pestaña de canal cargada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Pestaña de canal cargada":::
 
     Ahora ha creado y agregado correctamente la pestaña de canal o grupo en Teams.
 
@@ -433,7 +433,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña de canal ASPNET cargada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña de canal ASPNET cargada":::
 
     Ahora ha creado y agregado correctamente la pestaña de canal o grupo en Teams.
 
@@ -651,7 +651,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Seleccione **Agregar al equipo** para configurar la pestaña en un equipo. Configure la pestaña y seleccione **Guardar**. La pestaña ya está disponible en Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña de canal ASPNET MVC cargada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Pestaña de canal ASPNET MVC cargada":::
 
     Ahora ha creado y agregado correctamente la pestaña de canal o grupo en Teams.
 

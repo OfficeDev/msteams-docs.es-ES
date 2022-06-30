@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 8bbfac3f72fb9ddbfb21d36f4a1ad2516af52b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073303"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558061"
 ---
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
@@ -87,21 +87,21 @@ En el ejemplo siguiente se muestra a los usuarios la opción de comprar planes d
 
 1. En el cuadro de diálogo de detalles de la aplicación, seleccione **Comprar una suscripción** o **Agregar para mí**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Compra de la suscripción para la aplicación seleccionada." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Compra de la suscripción para la aplicación seleccionada.":::
 
 1. **Agregar para mí** ofrece una versión de evaluación gratuita de la aplicación y, posteriormente, **Actualizar** a una versión de pago.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Actualizar a la suscripción de la aplicación seleccionada." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Actualizar a la suscripción de la aplicación seleccionada." lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. En el cuadro de diálogo **Elegir un plan de suscripción**, elija el plan y seleccione **Finalizar la compra**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selección del plan de suscripción adecuado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selección del plan de suscripción adecuado." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. Complete la transacción y seleccione **Configurar ahora** para configurar la suscripción.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurar la suscripción." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configurar la suscripción." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de aterrizaje de la suscripción." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Página de aterrizaje de la suscripción." lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## <a name="next-step"></a>Paso siguiente
 

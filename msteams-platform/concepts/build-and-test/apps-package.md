@@ -3,12 +3,12 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams con iconos para probar, cargar y publicar en la tienda.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: bf0cff985184a0a0d03a9f2a996182b3ea7365bc
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 670243f3b82408592af944fd2c8ae4fc2c739ebc
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503623"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558565"
 ---
 # <a name="create-teams-app-package"></a>Crear un paquete de aplicación de Teams
 
@@ -21,7 +21,7 @@ Necesita un paquete de aplicación, pero planea distribuir la aplicación de Mic
 
 Cuando un usuario instala la aplicación en Teams, instala un paquete de aplicación que contiene un solo archivo de configuración (también conocido como manifiesto de aplicación) y los iconos de la aplicación. La lógica y el almacenamiento de datos de la aplicación se hospedan en otro lugar, como localhost durante el desarrollo y Azure Web Services. Teams accede a estos recursos a través de HTTPS.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustración que muestra el hospedaje de aplicaciones para aplicación de Teams" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustración que muestra el hospedaje de aplicaciones para aplicación de Teams":::
 
 ## <a name="app-manifest"></a>Manifiesto de la aplicación
 
@@ -44,7 +44,7 @@ La versión en color de su icono se muestra en la mayoría de los escenarios de 
 
 Teams recorta automáticamente el icono para mostrar un cuadrado con esquinas redondeadas en varios escenarios y una forma hexagonal en escenarios de bot. Para recortar el símbolo sin perder ningún detalle, incluya 48 píxeles de relleno alrededor del símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Icono de color de Teams y la guía de diseño." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Icono de color de Teams y la guía de diseño.":::
 
 ### <a name="outline-icon"></a>Icono de esquema
 
@@ -55,13 +55,13 @@ Un icono de esquema se muestra en dos escenarios:
 
 El icono debe ser de 32 x 32 píxeles. Puede ser blanco con un fondo transparente o transparente con un fondo blanco (no se permiten otros colores). El icono de esquema no debe tener relleno adicional alrededor del símbolo.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Guía de diseño de iconos de esquema de Teams." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Guía de diseño de iconos de esquema de Teams.":::
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Ilustración que muestra cómo diseñar los iconos de la aplicación." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Ilustración que muestra cómo diseñar los iconos de la aplicación.":::
 
 #### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Hacer: seguir las directrices precisas del icono de esquema
 
@@ -69,7 +69,7 @@ Los valores RGB de blanco usados en el icono deben ser Rojo: 255, Verde: 255, Az
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Ilustración que muestra cómo no diseñar los iconos de la aplicación." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Ilustración que muestra cómo no diseñar los iconos de la aplicación.":::
 
 #### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>No: recortar con una forma cuadrada circular o redondeada
 
@@ -88,15 +88,15 @@ Así es como aparecen los iconos de aplicación en diferentes contextos y funcio
 
 #### <a name="personal-app"></a>Aplicación personal
 
-:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Ejemplo que muestra el aspecto de un icono de aplicación en una aplicación personal." border="false":::
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Ejemplo que muestra el aspecto de un icono de aplicación en una aplicación personal.":::
 
 #### <a name="bot-channel"></a>Bot (canal)
 
-:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Ejemplo que muestra el aspecto de un icono de aplicación en un bot dentro del canal." border="false":::
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Ejemplo que muestra el aspecto de un icono de aplicación en un bot dentro del canal.":::
 
 #### <a name="message-extension"></a>Extensión de mensaje
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texto alternativo>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texto alternativo>":::
 
 ## <a name="next-step"></a>Paso siguiente
 

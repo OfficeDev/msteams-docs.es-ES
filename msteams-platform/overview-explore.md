@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 769f0217d64295768159ccb77ae1726e83648468
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795150"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558831"
 ---
 # <a name="explore-teams-platform-features"></a>Explorar las características de la plataforma Teams
 
 Con Teams, puede compilar la aplicación en un entorno con muchas características. Con Teams como plataforma para crear aplicaciones, puede ampliar las capacidades de Teams para sus soluciones de escritorio y aplicaciones móviles. Elija las mejores características para su aplicación.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="representación conceptual de Teams como plataforma" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="representación conceptual de Teams como plataforma":::
 
 ## <a name="teams-app-features"></a>Características de la aplicación de Teams
 

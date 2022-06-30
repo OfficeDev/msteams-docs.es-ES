@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f06772cc6ba7975d0434e1c7c1c1c510ce760f6c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189464"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558397"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -58,7 +58,7 @@ Estos son los pasos para crear una pestaña personal:
 
 1. Proporcione sus valores a una serie de preguntas del generador de aplicaciones de Microsoft Teams para actualizar el archivo `manifest.json`.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Generador de Teams" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Generador de Teams":::
 
     <details>
     <summary><b>Serie de preguntas para actualizar el archivo manifest.json</b></summary>
@@ -230,11 +230,11 @@ gulp build
 
 1. Escriba `http://localhost:3007/<yourDefaultAppNameTab>/` en el explorador para ver la página principal de la aplicación.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Pestaña predeterminada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Pestaña predeterminada":::
 
 1. Examine `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` para ver su pestaña personal.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Pestaña HTML predeterminada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Pestaña HTML predeterminada":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro a la pestaña
 
@@ -253,11 +253,11 @@ gulp ngrok-serve
 1. A continuación, seleccione **Administrar aplicaciones** y **Cargar una aplicación personalizada**.
 1. Vaya al directorio del proyecto, examine la carpeta **./package**, seleccione la carpeta zip y elija **Abrir**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Agregar la pestaña personal" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Agregar la pestaña personal":::
 
 1. Seleccione **Agregar** en el cuadro de diálogo. La pestaña se cargará en Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Pestaña personal cargada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Pestaña personal cargada":::
 
 1. En el panel izquierdo de Teams, seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; y, a continuación, elija la aplicación cargada para ver su pestaña personal.
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Seleccione **Agregar** para cargar la pestaña en Teams. La pestaña ya está disponible en Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Pestaña predeterminada" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Pestaña predeterminada":::
 
    Ha creado y agregado correctamente su pestaña personal en Teams.
   
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Seleccione **Agregar** para cargar la pestaña en Teams. La pestaña ya está disponible en Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Pestaña personal" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Pestaña personal":::
   
    Ha creado y agregado correctamente su pestaña personal en Teams.
 

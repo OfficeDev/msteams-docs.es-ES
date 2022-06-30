@@ -4,14 +4,14 @@ description: Describe el registro de la aplicación de pestaña con Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) ámbito del inquilino de sso del token de acceso
-ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 01cb6cd54cf150af05b54617aec3159e9483d260
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503525"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558600"
 ---
-# <a name="register-your-tab-app-in-azure-ad"></a>Registro de la aplicación de pestaña en Azure AD
+# <a name="register-your-tab-app-in-azure-ad"></a>Registrar la aplicación de pestaña en Azure AD
 
 Azure AD proporciona acceso a la aplicación de pestaña en función de la identidad de Teams del usuario de la aplicación. Tendrá que registrar la aplicación de pestaña en Azure AD para que el usuario de la aplicación que ha iniciado sesión en Teams pueda tener acceso a la aplicación de pestaña.
 
@@ -19,7 +19,7 @@ Azure AD proporciona acceso a la aplicación de pestaña en función de la ident
 
 Para registrar la aplicación de pestaña en Azure AD y habilitarla para el inicio de sesión único, es necesario realizar configuraciones de aplicación, como generar el identificador de aplicación, definir el ámbito de la API y autorizar previamente los identificadores de cliente para las aplicaciones de confianza.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configuración de Azure AD para enviar un token de acceso a la aplicación cliente de Teams" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configuración de Azure AD para enviar un token de acceso a la aplicación cliente de Teams":::
 
 Cree un registro de aplicación en Azure AD y exponga su API (web) mediante ámbitos (permisos). Configure una relación de confianza entre la API expuesta en Azure AD y la aplicación. Esto permite al cliente de Teams obtener un token de acceso en nombre de la aplicación y del usuario que ha iniciado sesión. Puede agregar identificadores de cliente para las aplicaciones móviles, de escritorio y web de confianza que desea autorizar previamente.
 
@@ -62,19 +62,19 @@ Registre una nueva aplicación en Azure AD y configure el inquilino y la platafo
 
 2. Seleccione el icono **de Registros de aplicaciones**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Página del Portal de Azure AD." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Página del Portal de Azure AD.":::
 
    Aparece **la página Registros de aplicaciones**.
 
 3. Seleccione **+ Nuevo icono de registro** .
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nueva página de registro en el Portal de Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Nueva página de registro en el Portal de Azure AD.":::
 
     Aparece la página **Registrar una aplicación**.
 
 4. Escriba el nombre de la aplicación que desea que se muestre al usuario de la aplicación. Puede cambiar este nombre en una fase posterior, si lo desea.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Página de registro de aplicaciones en el Portal de Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Página de registro de aplicaciones en el Portal de Azure AD.":::
 
 5. Seleccione el tipo de cuenta de usuario que puede acceder a la aplicación. Puede elegir entre opciones de un solo inquilino o multiinquilino, o una cuenta privada de Microsoft.
 
@@ -96,11 +96,11 @@ Registre una nueva aplicación en Azure AD y configure el inquilino y la platafo
 7. Seleccione **Registrar**.
     Aparece un mensaje en el explorador que indica que se creó la aplicación.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registre la aplicación en el Portal de Azure AD." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registre la aplicación en el Portal de Azure AD.":::
 
     Se muestra la página con el identificador de aplicación y otras configuraciones.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="El registro de aplicaciones se realiza correctamente." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="El registro de aplicaciones se realiza correctamente.":::
 
 8. Tenga en cuenta y guarde el identificador de aplicación del **identificador de aplicación (cliente).** Lo necesitará para actualizar el manifiesto de aplicación de Teams más adelante.
 
@@ -120,19 +120,19 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
 1. Seleccione **Administrar** > **Exponer una API** en el panel izquierdo.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Opción de menú Exponer una API." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Opción de menú Exponer una API.":::
 
     Aparece **la página Exponer una API** .
 
 1. Seleccione **Establecer** para generar el URI del identificador de aplicación en forma de `api://{AppID}`.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Establecimiento del URI del identificador de aplicación" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Establecimiento del URI del identificador de aplicación":::
 
     Aparece la sección para establecer el URI del identificador de aplicación.
 
 1. Escriba el URI del identificador de aplicación en el formato que se explica aquí.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="URI del identificador de aplicación" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="URI del identificador de aplicación":::
 
     - El **URI del identificador de aplicación** se rellena previamente con el identificador de aplicación (GUID) en el formato `api://{AppID}`.
     - El formato uri del identificador de aplicación debe ser: `api://fully-qualified-domain-name.com/{AppID}`.
@@ -163,11 +163,11 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
     Aparece un mensaje en el explorador que indica que se actualizó el URI del identificador de aplicación.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Mensaje uri del identificador de aplicación" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Mensaje uri del identificador de aplicación":::
 
     El URI del identificador de aplicación se muestra en la página.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="URI del identificador de aplicación actualizado" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="URI del identificador de aplicación actualizado":::
 
 1. Tenga en cuenta y guarde el URI del identificador de aplicación. Lo necesitará para actualizar el manifiesto de aplicación de Teams más adelante.
 
@@ -175,13 +175,13 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
 1. Seleccione **+ Agregar un ámbito** en la sección **Ámbitos definidos por esta API** .
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Seleccionar ámbito" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Seleccionar ámbito":::
 
     Aparece **la página Agregar un ámbito** .
 
 1. Escriba los detalles para configurar el ámbito.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Agregar detalles del ámbito" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Agregar detalles del ámbito":::
 
     1. Escriba el nombre del ámbito. Este campo es obligatorio.
     2. Seleccione el usuario que puede dar su consentimiento para este ámbito. La opción predeterminada es **Solo administradores**.
@@ -194,23 +194,23 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
     Aparece un mensaje en el explorador que indica que se agregó el ámbito.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Mensaje agregado de ámbito" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Mensaje agregado de ámbito":::
 
     El nuevo ámbito definido se muestra en la página.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Ámbito agregado y mostrado" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Ámbito agregado y mostrado":::
 
 ### <a name="to-configure-authorized-client-application"></a>Para configurar la aplicación cliente autorizada
 
 1. Vaya a la página **Exponer una API** a la sección **Aplicación cliente autorizada** y seleccione **+ Agregar una aplicación cliente**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Aplicación cliente autorizada" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Aplicación cliente autorizada":::
 
     Aparece **la página Agregar una aplicación cliente** .
 
 1. Escriba el identificador de cliente adecuado para el cliente de Teams para las aplicaciones que desea autorizar para la aplicación web de la aplicación.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Adición de una aplicación cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Adición de una aplicación cliente":::
 
     > [!NOTE]
     >
@@ -230,11 +230,11 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
     Aparece un mensaje en el explorador que indica que se agregó la aplicación cliente autorizada.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Mensaje agregado de la aplicación cliente" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Mensaje agregado de la aplicación cliente":::
 
     El identificador de cliente se muestra en la página.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Aplicación cliente agregada y mostrada" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Aplicación cliente agregada y mostrada":::
 
 > [!NOTE]
 > Puede autorizar más de una aplicación cliente. Repita los pasos de este procedimiento para configurar otra aplicación cliente autorizada.
@@ -247,13 +247,13 @@ Debe definir la versión del token de acceso que es aceptable para la aplicació
 
 1. Seleccione **Administrar** > **manifiesto** en el panel izquierdo.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Manifiesto del portal de Azure AD" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Manifiesto del portal de Azure AD":::
 
     Aparece el manifiesto de aplicación de Azure AD.
 
 1. Escriba **2** como valor de la `accessTokenAcceptedVersion` propiedad .
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Valor para la versión del token de acceso aceptado" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Valor para la versión del token de acceso aceptado":::
 
 1. Seleccione **Guardar**.
 
@@ -268,7 +268,7 @@ Debe definir la versión del token de acceso que es aceptable para la aplicació
 > [!div class="nextstepaction"]
 > [Configuración del código para habilitar el inicio de sesión único](tab-sso-code.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Arrendamiento en Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [Extensión de la aplicación de pestaña con permisos y ámbito de Microsoft Graph](tab-sso-graph-api.md)

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144337"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558327"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
 
@@ -35,13 +35,13 @@ Puede agregar una pestaña desde el almacén de Teams (AppSource) o en uno de lo
 
 Los usuarios pueden acceder a las pestañas seleccionando el botón **Más** en el canal (ejemplo a continuación) o en el chat en el que se han agregado.
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="El ejemplo muestra una pestaña móvil que se ha agregado en un canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="El ejemplo muestra una pestaña móvil que se ha agregado en un canal.":::
 
 ### <a name="desktop"></a>Escritorio
 
 En el ejemplo siguiente, se muestra cómo los usuarios pueden agregar una pestaña en un canal:
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="El ejemplo muestra una pestaña que se ha agregado en un canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="El ejemplo muestra una pestaña que se ha agregado en un canal.":::
 
 ## <a name="set-up-a-tab"></a>Configurar una pestaña
 
@@ -49,17 +49,17 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 
 ### <a name="tab-configuration-dialog"></a>Cuadro de diálogo de configuración de pestaña
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="El ejemplo muestra un modo de configuración de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="El ejemplo muestra un modo de configuración de pestaña.":::
 
 #### <a name="anatomy-tab-configuration-dialog"></a>Anatomía: cuadro de diálogo de configuración de pestaña
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un modal de configuración de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un modal de configuración de pestaña.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Logotipo de la aplicación**: logotipo de aplicación a todo color de la aplicación.|
-|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
-|3|**iframe**: espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
+|2 |**Nombre de la aplicación**: nombre completo de la aplicación.|
+|3 |**iframe**: espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
 |4 |**Acerca del vínculo**: abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
 |5 |**Botón Cerrar**: cierra el cuadro de diálogo.|
 |6 |**Opción Notificar a los miembros del equipo**: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.|
@@ -70,7 +70,7 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 
 Puede agregar un paso en el que los usuarios primero deben iniciar sesión con sus credenciales de Microsoft. Este método de autenticación se denomina inicio de sesión único (SSO).
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="El ejemplo muestra una pantalla de autenticación de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="El ejemplo muestra una pantalla de autenticación de pestaña.":::
 
 ### <a name="design-a-tab-setup-with-ui-templates"></a>Diseñar una configuración de pestaña con plantillas de interfaz de usuario
 
@@ -86,33 +86,33 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 
 ### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="El ejemplo muestra una pestaña móvil con un panel de tareas." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="El ejemplo muestra una pestaña móvil con un panel de tareas.":::
 
 ### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="El ejemplo muestra una pestaña con un panel de tareas." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="El ejemplo muestra una pestaña con un panel de tareas.":::
 
 ### <a name="anatomy-tab"></a>Anatomía: pestaña
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de una pestaña.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
-|2|**Chat de pestaña**: abre un chat que permite a los usuarios tener una conversación junto al contenido.|
-|3|**webview**: muestra el contenido de la aplicación.|
+|2 |**Chat de pestaña**: abre un chat que permite a los usuarios tener una conversación junto al contenido.|
+|3 |**webview**: muestra el contenido de la aplicación.|
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Esta ilustración muestra la anatomía de la interfaz de usuario de una pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Esta ilustración muestra la anatomía de la interfaz de usuario de una pestaña.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
-|2|**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
-|3|**Chat de pestaña**: abre un chat a la derecha que permite a los usuarios tener una conversación junto al contenido.|
+|2 |**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
+|3 |**Chat de pestaña**: abre un chat a la derecha que permite a los usuarios tener una conversación junto al contenido.|
 |4 |**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Diseñar una pestaña con plantillas de interfaz de usuario y componentes avanzados
@@ -136,11 +136,11 @@ Los usuarios pueden publicar automáticamente en un canal o chat una vez que han
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="El ejemplo muestra una pestaña móvil que se está analizando en un subproceso de canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="El ejemplo muestra una pestaña móvil que se está analizando en un subproceso de canal.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="El ejemplo muestra una pestaña que se está analizando en un subproceso de canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="El ejemplo muestra una pestaña que se está analizando en un subproceso de canal.":::
 
 ### <a name="tab-chat"></a>Chat de pestaña
 
@@ -148,11 +148,11 @@ Los usuarios pueden tener una conversación junto al contenido de la pestaña qu
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="El ejemplo muestra una pestaña móvil con un área de chat en contexto." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="El ejemplo muestra una pestaña móvil con un área de chat en contexto.":::
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="El ejemplo muestra una pestaña con un chat abierto en el lado derecho." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="El ejemplo muestra una pestaña con un chat abierto en el lado derecho.":::
 
 ### <a name="permissions-and-role-based-views"></a>Permisos y vistas basadas en roles
 
@@ -166,25 +166,25 @@ Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.
 
 #### <a name="mobile"></a>Móvil
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña móvil." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña móvil.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Abrir en el explorador**: abre la aplicación en el explorador predeterminado del dispositivo.|
-|2|**Copiar víncula**: los usuarios pueden copiar y compartir un vínculo a la pestaña.|
-|3|**Configuración**: (opcional) modificar la configuración de una pestaña después de agregarla.|
+|2 |**Copiar víncula**: los usuarios pueden copiar y compartir un vínculo a la pestaña.|
+|3 |**Configuración**: (opcional) modificar la configuración de una pestaña después de agregarla.|
 |4 |**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
 |5 |**Eliminar**: quita la pestaña del canal, chat o reunión.|
 
 #### <a name="desktop"></a>Escritorio
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Ilustración que muestra la anatomía de la interfaz de usuario de un menú de pestaña.":::
 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Configuración**: (opcional) permite a los usuarios modificar la configuración de una pestaña después de agregarla.|
-|2|**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
-|3|**Quitar**: quita la pestaña del canal, chat o reunión.|
+|2 |**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
+|3 |**Quitar**: quita la pestaña del canal, chat o reunión.|
 
 ## <a name="tab-notifications-and-deep-linking"></a>Notificaciones de pestaña y vinculación en profundidad
 
@@ -203,7 +203,7 @@ Use estas recomendaciones para crear una experiencia de aplicación de calidad:
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="La ilustración muestra qué hacer con el diseño de navegación de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="La ilustración muestra qué hacer con el diseño de navegación de pestaña.":::
 
 #### <a name="do-facilitate-conversation"></a>Qué hacer: facilitar la conversación
 
@@ -211,7 +211,7 @@ Incluir contenido y componentes de los que se puedan hablar. Si no cabe en el co
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="El ejemplo muestra lo que no se debe hacer con el diseño de navegación de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="El ejemplo muestra lo que no se debe hacer con el diseño de navegación de pestaña.":::
 
 #### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Qué no hacer: trate la pestaña como cualquier otra página web
 
@@ -224,7 +224,7 @@ Una pestaña no es una página web que alguien pueda ver una vez. Una pestaña d
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="El ejemplo muestra qué hacer con el diseño de navegación de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="El ejemplo muestra qué hacer con el diseño de navegación de pestaña.":::
 
 #### <a name="do-limit-tasks-and-data"></a>Qué hacer: limitar tareas y datos
 
@@ -232,7 +232,7 @@ Las pestañas funcionan mejor cuando se abordan necesidades específicas. Incluy
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Ilustración que muestra qué no hacer con el diseño de navegación de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Ilustración que muestra qué no hacer con el diseño de navegación de pestaña.":::
 
 #### <a name="dont-embed-your-entire-app"></a>Qué no hacer: insertar toda la aplicación
 
@@ -245,7 +245,7 @@ El uso de una pestaña para mostrar una aplicación completa con navegación mul
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Ilustración que muestra qué hacer con el diseño de diseño de configuración de pestaña." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Ilustración que muestra qué hacer con el diseño de diseño de configuración de pestaña.":::
 
 #### <a name="do-keep-it-simple"></a>Qué hacer: sea breve
 
@@ -253,7 +253,7 @@ Si la aplicación requiere autenticación, intente integrar el inicio de sesión
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Ilustración que muestra qué no hacer con el diseño de configuración de pestañas." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Ilustración que muestra qué no hacer con el diseño de configuración de pestañas.":::
 
 #### <a name="dont-have-too-many-steps"></a>No: tener demasiados pasos
 
@@ -266,7 +266,7 @@ Quite los pasos innecesarios para agregar una pestaña.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustración que muestra qué hacer con el tema de tabulación." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Ilustración que muestra qué hacer con el tema de tabulación.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Qué hacer: Aprovechar los tokens de color de Teams
 
@@ -274,7 +274,7 @@ Cada tema de Teams tiene su propia combinación de colores. Para controlar los c
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustración que muestra lo que no se debe hacer con el tema de tabulación." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Ilustración que muestra lo que no se debe hacer con el tema de tabulación.":::
 
 #### <a name="dont-hard-code-color-values"></a>Qué no hacer: Valores complicados de código de color
 

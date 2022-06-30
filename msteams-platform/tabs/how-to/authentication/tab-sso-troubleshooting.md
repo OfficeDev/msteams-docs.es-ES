@@ -4,12 +4,12 @@ description: Solución de problemas de autenticación de SSO en Teams y cómo us
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Preguntas sobre errores de inicio de sesión único en las pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: d738c992b008028456dc9318b2a0720178f6f66f
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 93365732ee284cd8cb903f7535d2770d0154d417
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503728"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558425"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Solución de problemas de autenticación de SSO en Teams
 
@@ -101,7 +101,7 @@ Puede aparecer un error genérico cuando una o varias configuraciones de aplicac
 
 En la imagen siguiente se muestra un ejemplo de los detalles de la aplicación configurados en Azure AD.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valores de configuración de la aplicación en Azure AD" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Valores de configuración de la aplicación en Azure AD":::
 
 Compruebe que los siguientes valores coinciden entre Azure AD, el código del lado cliente y el manifiesto de aplicación de Teams:
 
