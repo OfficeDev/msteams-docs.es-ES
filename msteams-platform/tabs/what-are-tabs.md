@@ -5,14 +5,14 @@ description: En este módulo, aprenderá a crear pestañas personalizadas en la 
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143651"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503896"
 ---
-# <a name="build-tabs-for-microsoft-teams"></a>Pestañas de compilación para Microsoft Teams
+# <a name="build-tabs-for-teams"></a>Pestañas de compilación para Teams
 
 Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Teams. Son simples etiquetas HTML `<iframe\>` que apuntan a los dominios declarados en el manifiesto de la aplicación y que pueden agregarse como parte de un canal dentro de un equipo, un chat de grupo o una aplicación personal para un usuario individual. Puede incluir pestañas personalizadas con la aplicación para insertar su propio contenido web en Teams o agregar una funcionalidad específica de Teams a su contenido web. Para obtener más información, vea [SDK de cliente de JavaScript de Teams](/javascript/api/overview/msteams-client).
 
@@ -25,11 +25,11 @@ Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Tea
 
 En la imagen siguiente se muestran las pestañas personales:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Pestaña personal" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Pestaña personal" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 En la imagen siguiente se muestran las pestañas de canal de Contoso:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Pestañas de canal o grupo" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Pestañas de canal o grupo" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 Hay algunos requisitos previos que debe cumplir antes de trabajar en pestañas.
 
