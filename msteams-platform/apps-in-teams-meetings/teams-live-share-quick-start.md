@@ -4,18 +4,18 @@ description: En este módulo, aprenderá a probar de forma rápida el ejemplo de
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668334"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484589"
 ---
 ---
 
 # <a name="quick-start-guide"></a>Guía de inicio rápido
 
-Comenzar con el SDK de Live Share mediante el ejemplo de Lanzamiento de dados. Esta introducción es una evolución del [inicio rápido del marco de Fluid](https://fluidframework.com/docs/start/quick-start/) y está diseñada para ejecutar de forma rápida un [ejemplo de Lanzamiento de dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) basado en el SDK de Live Share en el localhost del equipo.
+Introducción al SDK de Live Share mediante el ejemplo de lanzamiento de dados es una evolución del [Inicio rápido de Fluid Framework](https://fluidframework.com/docs/start/quick-start/) y está diseñado para ejecutar rápidamente una [muestra de lanzamiento de dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) basada en el SDK de Live Share en el host local del equipo.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Ejemplo de Lanzamiento de dados":::
 

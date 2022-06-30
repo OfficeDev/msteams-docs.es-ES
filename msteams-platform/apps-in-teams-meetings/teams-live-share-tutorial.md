@@ -4,12 +4,12 @@ description: En este módulo, obtendrá información sobre cómo empezar a traba
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143567"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484631"
 ---
 ---
 

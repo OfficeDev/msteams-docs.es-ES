@@ -18,7 +18,7 @@
 - name: Introducción
   expanded: false
   items:
-    - name: Información general sobre la introducción
+    - name: Información general
       href: get-started/get-started-overview.md
     - name: Cree su primera aplicación de pestaña con JavaScript
       href: sbs-gs-javascript.yml
@@ -110,7 +110,7 @@
           href: toolkit/provision.md
         - name: Implementar la aplicación de Teams en la nube
           href: toolkit/deploy.md
-        - name: Vista previa y personalización del manifiesto de la aplicación de Teams
+        - name: Editar el manifiesto de la aplicación de Teams
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Personalizar el manifiesto de Azure AD
           href: toolkit/AAD-manifest-customization.md
@@ -128,7 +128,7 @@
           href: toolkit/publish.md
         - name: Administrar varios entornos
           href: toolkit/TeamsFx-multi-env.md
-        - name: Colaborar con otros desarrolladores en el kit de herramientas de Teams
+        - name: Colaborar en un proyecto de Teams
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
@@ -164,7 +164,7 @@
               items:
                 - name: Conversaciones personales con bots
                   href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-                - name: Conversaciones en canales y grupos con bots
+                - name: Bot de conversación de chat de un canal y grupo
                   href: resources/bot-v3/bot-conversations/bots-conv-channel.md
                 - name: Inicio de una conversación
                   href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
@@ -176,7 +176,7 @@
               href: resources/bot-v3/bots-notifications.md
             - name: Contexto para bots
               href: resources/bot-v3/bots-context.md
-            - name: Enviar y recibir archivos
+            - name: Envío y recepción de archivos
               href: resources/bot-v3/bots-files.md
             - name: Bots de solo notificación
               href: resources/bot-v3/bots-notification-only.md
@@ -208,7 +208,7 @@
       href: tabs/how-to/create-channel-group-tab.md
     - name: Creación de una página de contenido
       href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Creación de una página de configuración
+    - name: Crear una página de configuración
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Crear una página de eliminación
       href: tabs/how-to/create-tab-pages/removal-page.md
@@ -241,9 +241,9 @@
           items:
             - name: Recibir todos los mensajes de canal con RSC
               href: bots/how-to/conversations/channel-messages-with-rsc.md
-        - name: Crear un menú de comandos para el bot
+        - name: Crear un menú de comandos
           href: bots/how-to/create-a-bot-commands-menu.md
-        - name: Conversaciones de canal y grupo
+        - name: Canal y conversaciones de chat de grupo con un bot
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Eventos de conversación en el bot de Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
@@ -251,13 +251,13 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Formatear los mensajes del bot
           href: bots/how-to/format-your-bot-messages.md
-        - name: Actualizar y eliminar mensajes de bot
+        - name: Actualización y eliminación de mensajes enviados desde el bot
           href: bots/how-to/update-and-delete-bot-messages.md
         - name: Solicitar encabezados del bot
           href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: Obtener contexto para un bot
+    - name: Obtención del contexto específico de Teams para un bot
       href: bots/how-to/get-teams-context.md
-    - name: Envío y recepción de archivos
+    - name: Envío y recepción de archivos mediante el bot
       href: bots/how-to/bots-filesv4.md
     - name: Optimizar un bot con la limitación de volumen en Teams
       href: bots/how-to/rate-limit.md
@@ -271,11 +271,11 @@
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notificaciones de llamadas entrantes
           href: bots/calls-and-meetings/call-notifications.md
-        - name: Elementos multimedia hospedados en la aplicación
+        - name: Requisiciones y consideraciones para bots multimedia hospedados en la aplicación
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-        - name: Formatos multimedia admitidos
+        - name: Formatos multimedia admitidos para bots
           href: resources/media-formats.md
-    - name: Cambios en la API de bot para los miembros del equipo o chat
+    - name: Cambios en la API del bot de Teams para capturar miembros del equipo o chat
       href: resources/team-chat-member-api-changes.md
 - name: Generar extensiones de mensaje
   items:
@@ -285,9 +285,9 @@
       items:
         - name: Definir comandos de acción
           href: messaging-extensions/how-to/action-commands/define-action-command.md
-        - name: Crear un módulo de tareas
+        - name: Crear y enviar el módulo de tareas
           href: messaging-extensions/how-to/action-commands/create-task-module.md
-        - name: Responder a comandos de acción
+        - name: Responder a la acción de envío del módulo de tareas
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
     - name: Comandos de búsqueda
       items:
@@ -313,7 +313,7 @@
           href: apps-in-teams-meetings/teams-live-share-overview.md
         - name: Introducción
           items:
-            - name: Inicio rápido
+            - name: Guía de inicio rápido
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Tutorial de Dice Roller
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
@@ -389,15 +389,15 @@
           items:
             - name: Información general
               href: tabs/how-to/authentication/tab-sso-overview.md
-            - name: "Registrar aplicación de pestaña en Azure\_AD"
+            - name: "Registrar la aplicación de pestaña en Azure\_AD"
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: Agregar código para habilitar el inicio de sesión único
               href: tabs/how-to/authentication/tab-sso-code.md
-            - name: Actualizar el manifiesto de la aplicación para el SSO y versión preliminar
+            - name: Actualizar el manifiesto de la aplicación para el SSO y versión preliminar de la aplicación
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: "Conceder permisos y ámbitos a Microsoft\_Graph"
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-            - name: Solución de problemas
+            - name: Solucionar problemas con la autenticación SSO
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
         - name: Uso de la autenticación de IdP de OAuth de terceros
           items:
@@ -425,7 +425,7 @@
   items:
     - name: Información general
       href: concepts/device-capabilities/device-capabilities-overview.md
-    - name: Solicitar permisos de dispositivo
+    - name: Solicitar permisos de dispositivos para la aplicación de Teams
       href: concepts/device-capabilities/native-device-permissions.md
     - name: Permisos de dispositivo para el explorador
       href: concepts/device-capabilities/browser-device-permissions.md
@@ -469,7 +469,7 @@
       href: concepts/build-and-test/test-app-overview.md
     - name: Preparar el espacio empresarial de Microsoft 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: Elegir una configuración de prueba
+    - name: Elegir una configuración de prueba y depurar la aplicación de Teams
       href: concepts/build-and-test/debug.md
     - name: Añadir datos de prueba al entorno
       href: concepts/build-and-test/test-data.md
@@ -479,7 +479,7 @@
           href: tabs/how-to/developer-tools.md
     - name: Bots
       items:
-        - name: Depurar el bot de forma local con un IDE
+        - name: Probar y depurar el bot localmente con el IDE
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: Depurar el bot con el middleware de inspección
           href: /azure/bot-service/bot-service-debug-inspection-middleware
@@ -497,11 +497,11 @@
   items:
     - name: Información general
       href: concepts/deploy-and-publish/apps-publish-overview.md
-    - name: Configurar las opciones de instalación predeterminadas
+    - name: Configurar las opciones de instalación predeterminadas para la aplicación de Teams
       href: concepts/deploy-and-publish/add-default-install-scope.md
-    - name: Crear el paquete de aplicación
+    - name: Crear un paquete de aplicación de Microsoft Teams
       href: concepts/build-and-test/apps-package.md
-    - name: Cargar la aplicación
+    - name: "Cargar la aplicación en Microsoft\_Teams"
       href: concepts/deploy-and-publish/apps-upload.md
     - name: Publicar en la organización
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -511,13 +511,13 @@
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: Revisar las instrucciones de validación de la tienda
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-        - name: Crear una cuenta del Centro de partners
+        - name: Crear una cuenta de desarrollador del Centro de partners
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-        - name: Preparar el envío de la tienda
+        - name: Preparar el envío de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
         - name: Enviar la aplicación
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-        - name: Resolver problemas si se produce un error en el envío de la tienda
+        - name: Resolver problemas si se produce un error en el envío de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Mantener la aplicación publicada
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
@@ -529,7 +529,7 @@
   items:
     - name: Información general
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: Incluir una oferta de SaaS con la aplicación
+    - name: Incluir una oferta de SaaS con la aplicación de Teams
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - name: Compras desde la aplicación
       href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
@@ -537,13 +537,13 @@
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifiesto de la aplicación
   items:
-    - name: Esquema del manifiesto de la aplicación
+    - name: Esquema del manifiesto de la aplicación de Teams
       href: resources/schema/manifest-schema.md
     - name: Versión preliminar pública para desarrolladores
       items:
         - name: Información general
           href: resources/dev-preview/developer-preview-intro.md
-        - name: Esquema del manifiesto
+        - name: Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integración con Teams
   items:
@@ -595,7 +595,7 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localizar la referencia de esquema JSON
           href: resources/schema/localization-schema.md
-    - name: Usar autenticación silenciosa
+    - name: Usar autenticación silenciosa en Azure AD
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
