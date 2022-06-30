@@ -4,12 +4,12 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de las reuniones de Teams y la experiencia de reunión de los usuarios en dispositivos móviles y de escritorio, tipos de usuario, integración de bots y extensión de mensajes en el ciclo de vida de las reuniones.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a75340e375bdc4eabd386f09b19110312de16538
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4c53567530f0d9d418a6b273200f921517341e7f
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484581"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561626"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -26,7 +26,10 @@ En este artículo se describe la información sobre el ciclo de vida de las reun
 El ciclo de vida de una reunión consiste en la experiencia de la aplicación previa a la reunión, durante la reunión y posterior a la reunión. Se pueden integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión.
 
 > [!NOTE]
-> Las extensiones de reunión, como bots, tarjetas, extensiones de mensaje y acciones de mensaje, se admiten en el cliente web. Sin embargo, actualmente no se admiten por completo experiencias hospedadas como pestañas, burbujas de contenido y uso compartido en fase.
+>
+> * Actualmente, las aplicaciones para reuniones instantáneas, llamadas uno a uno y llamadas grupales solo están disponibles en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Las extensiones de reunión, como bots, tarjetas, extensiones de mensaje y acciones de mensaje, se admiten en el cliente web. Sin embargo, actualmente no se admiten por completo experiencias hospedadas como pestañas, burbujas de contenido y uso compartido en fase.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrar pestañas en el ciclo de vida de la reunión
 
@@ -37,7 +40,6 @@ Las pestañas permiten a los miembros del equipo acceder a los servicios y el co
 
 > [!NOTE]
 >
-> * Las reuniones programadas privadas solo admiten aplicaciones.
 > * La opción Agregar aplicación para la aplicación de pestaña extensión de reunión de Teams no se admite en el cliente web de Teams.
 
 #### <a name="pre-meeting-app-experience"></a>Experiencia de la aplicación previa a la reunión
@@ -75,6 +77,8 @@ Después de agregar las pestañas a una reunión existente en el móvil, puede v
 Con la experiencia de la aplicación durante la reunión, puedes interactuar con los participantes durante la reunión mediante las aplicaciones y el cuadro de diálogo durante la reunión. Las aplicaciones de reunión se hospedan en la barra de herramientas de la ventana de reunión como una pestaña durante la reunión. Usa el cuadro de diálogo durante la reunión para mostrar el contenido que pueden usar los participantes de la reunión. Para obtener más información, consulte [Habilitación y configuración de aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md).
 
 Para dispositivos móviles, las aplicaciones de reuniones están disponibles en **Aplicaciones** > puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en la reunión. Seleccione **Aplicaciones** para ver todas las aplicaciones disponibles en la reunión.
+
+En el caso del escritorio, puede agregar aplicaciones durante una reunión mediante la opción **Agregar una aplicación** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: desde la ventana de la reunión.
 
 Para usar pestañas durante una reunión:
 
@@ -183,7 +187,7 @@ Después de diseñar la aplicación en función de los roles de participante en 
 
 ## <a name="user-types-in-a-meeting"></a>Tipos de usuario en una reunión
 
-Los tipos de usuario, como organizador, moderador o asistente en una reunión, pueden realizar uno de los [roles de participante en una reunión](#participant-roles-in-a-meeting).
+Los tipos de usuario, como en el inquilino, invitado, federado o usuario externo de una reunión, pueden realizar uno de los [roles participantes en una reunión](#participant-roles-in-a-meeting).
 
 > [!NOTE]
 > El tipo de usuario no se incluye en la API **getParticipantRole** .
@@ -205,22 +209,27 @@ En la lista siguiente se detallan los distintos tipos de usuario junto con su ac
     > [!NOTE]
     > Los usuarios anónimos heredan la directiva de permisos de aplicación de nivel de usuario predeterminada global. Para obtener más información, vea [Administrar aplicaciones](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-Un usuario anónimo o invitado no puede agregar, quitar ni desinstalar aplicaciones.
-
-En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las características a las que puede acceder cada usuario:
+En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las características a las que cada usuario puede acceder en las reuniones programadas:
 
 | Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | No disponible |
 | Invitado, parte del inquilino de Azure AD | Se permite la interacción. No se permiten crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en el cliente de escritorio de Teams. |
-| Para obtener más información, consulte [Usuarios no estándar](/microsoftteams/non-standard-users). | Se permite la interacción. No se permiten crear, actualizar y eliminar. | Se permite la interacción. No se permiten adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en el cliente de escritorio de Teams. |
+| Para obtener más información, consulte [Usuarios no estándar](/microsoftteams/non-standard-users). | La interacción se permite en las reuniones programadas. No se permiten crear, actualizar y eliminar. | Se permite la interacción. No se permiten adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en el cliente de escritorio de Teams. |
+
+> [!NOTE]
+>
+> El comportamiento de los distintos tipos de usuario de las aplicaciones de las llamadas es idéntico a su comportamiento en las reuniones programadas, a excepción de lo siguiente:
+>
+> * Los usuarios federados no pueden interactuar con las aplicaciones de pestaña en las llamadas.
+> * Si se agregan usuarios federados a una llamada existente con usuarios en el inquilino o invitados, todos los participantes perderán la capacidad de agregar, actualizar o quitar aplicaciones. Sin embargo, solo los usuarios locales o invitados existentes podrían interactuar con las aplicaciones que se agregaron antes de invitar a los usuarios federados a la llamada.
 
 ## <a name="next-step"></a>Paso siguiente
 
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

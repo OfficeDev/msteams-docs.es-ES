@@ -297,7 +297,7 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Añadir una extensión de enlace
       href: messaging-extensions/how-to/link-unfurling.md
-- name: Compilar aplicaciones para reuniones de Teams
+- name: Compilar aplicaciones para reuniones y llamadas de Teams
   items:
     - name: Información general
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
