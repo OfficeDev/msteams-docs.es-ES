@@ -3,12 +3,12 @@ title: Compatibilidad con inicio de sesión único para bots
 description: Obtenga información sobre cómo obtener un token de usuario y un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio bot de Azure con la compatibilidad con la tarjeta OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
+ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503658"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611502"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Uso de la autenticación de SSO para bots
 
@@ -19,7 +19,7 @@ La autenticación de inicio de sesión único en Microsoft Azure Active Director
 
 Consulte el siguiente vídeo para obtener información sobre la compatibilidad del inicio de sesión único (SSO) con bots:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>Bot SSO en tiempo de ejecución
