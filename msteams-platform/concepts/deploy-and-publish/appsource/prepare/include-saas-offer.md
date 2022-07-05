@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 366902d242ece8a60e601361d4e9257defd7a836
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: d920b4f90ac71f2b470dbda9e6ba863872f59f2a
+ms.sourcegitcommit: c98dececb706d235bfb306852a9f29a387f3858b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558194"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611873"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Incluir una oferta de SaaS con la aplicación de Teams
 
@@ -224,4 +224,5 @@ Si desvincula una oferta de SaaS incluida en la descripción de la tienda de Tea
 
 ## <a name="see-also"></a>Vea también
 
-[Mantenimiento y soporte técnico de su aplicación publicada](../post-publish/overview.md)
+* [Mantenimiento y soporte técnico de su aplicación publicada](../post-publish/overview.md)
+* [Directrices de validación para las aplicaciones vinculadas a la oferta de SaaS](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
