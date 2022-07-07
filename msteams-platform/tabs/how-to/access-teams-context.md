@@ -3,12 +3,12 @@ title: Obtener contexto para su pestaña
 description: En este módulo, aprenderá a obtener el contexto del usuario en las pestañas, el contexto de usuario y la información del contexto de acceso.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142314"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658926"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -27,7 +27,7 @@ El contexto sobre el usuario, el equipo o la empresa puede ser especialmente út
 * Crea o asocia recursos en la aplicación con el usuario o equipo especificados.
 * Se inicia un flujo de autenticación desde Microsoft Azure Active Directory (Azure AD) u otro proveedor de identidades y no es necesario que el usuario vuelva a escribir su nombre de usuario.
 
-Para obtener más información, consulte [autenticación de un usuario en el Microsoft Teams](~/concepts/authentication/authentication.md).
+Para obtener más información, consulte [Autenticación de un usuario en Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Aunque esta información de usuario puede ayudar a proporcionar una experiencia de usuario fluida, no debe usarla como prueba de identidad.  Por ejemplo, un atacante puede cargar la página en un explorador y representar información o solicitudes dañinas.
@@ -37,7 +37,7 @@ Para obtener más información, consulte [autenticación de un usuario en el Mic
 Puede acceder a la información contextual de dos formas:
 
 * Insertar valores de marcador de posición de dirección URL.
-* Use el [SDK de cliente de JavaScript Microsoft Teams](/javascript/api/overview/msteams-client).
+* Use el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client).
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obtener contexto insertando valores de marcador de posición de dirección URL
 
@@ -63,13 +63,13 @@ Por ejemplo, en el manifiesto de pestaña, establezca el `configURL` atributo `"
 * Son miembros del grupo de Office 365 con el identificador **00209384-etc**.
 * El usuario ha establecido su tema de Teams en **oscuro**.
 
-Al configurar la pestaña, Teams llama a la siguiente dirección URL:
+Cuando configuran la pestaña, Teams llama a la siguiente dirección URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obtener contexto mediante la biblioteca de JavaScript de Microsoft Teams
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obtener contexto mediante la biblioteca JavaScript de Microsoft Teams
 
-git-issue-clarify-the-full-set-of-values-any-context-object-property-can-take También puede recuperar la información enumerada anteriormente mediante el [SDK de cliente de JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) llamando a `microsoftTeams.getContext(function(context) { /* ... */ })`.
+También puede recuperar la información mencionada previamente usando el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client)llamando a `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 El código siguiente proporciona un ejemplo de variable de contexto:
 
@@ -114,7 +114,7 @@ El código siguiente proporciona un ejemplo de variable de contexto:
 }
 ```
 
-También puede recuperar la información enumerada anteriormente mediante el [SDK de cliente de JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) llamando a la `app.getContext()` función . Para obtener más información, vea las propiedades de la [interfaz Context](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
+También puede recuperar la información enumerada anteriormente mediante el [SDK de cliente javascript de Microsoft Teams](/javascript/api/overview/msteams-client) llamando a la `app.getContext()` función . Para obtener más información, vea las propiedades de la [interfaz Context](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
 
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto en canales privados
@@ -144,9 +144,9 @@ Los campos siguientes se cambian cuando la página de contenido está en un cana
 * `groupId`: no definido para canales compartidos.
 * `teamId`: se establece en el `threadId` del equipo, el canal se comparte para el usuario actual. Si el usuario tiene acceso a varios equipos, `teamId` se establece en el equipo que hospeda (crea) el canal compartido.
 * `teamName`: se establece en el nombre del equipo, el canal se comparte para el usuario actual. Si el usuario tiene acceso a varios equipos, `teamName` se establece en el equipo que hospeda (crea) el canal compartido.
-* `teamSiteUrl`: se establece en la dirección URL de un sitio SharePoint único y distinto para el canal compartido.
+* `teamSiteUrl`: se establece en la dirección URL de un sitio de SharePoint único y distinto para el canal compartido.
 * `teamSitePath`: se establece en la ruta de acceso de un sitio de SharePoint único y distinto para el canal compartido.
-* `teamSiteDomain`: se establece en el dominio de un dominio de sitio SharePoint único y distinto para el canal compartido.
+* `teamSiteDomain`: se establece en el dominio de un dominio de sitio de SharePoint único y distinto para el canal compartido.
 
 Además de estos cambios de campo, hay dos nuevos campos disponibles para los canales compartidos:
 
@@ -156,7 +156,7 @@ Además de estos cambios de campo, hay dos nuevos campos disponibles para los ca
 Si la página usa cualquiera de estos valores, el valor del `channelType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
 
 > [!NOTE]
-> Cada vez que un usuario reinicia o vuelve a cargar el Teams cliente de escritorio o web, se crea un nuevo sessionID, al que realiza un seguimiento Teams sesión, mientras que, cuando un usuario sale de las aplicaciones de Teams y lo vuelve a cargar en Teams plataforma, se crea un nuevo id. de sesión de aplicación, al que realiza un seguimiento la sesión de la aplicación.
+> Cada vez que un usuario reinicia o vuelve a cargar el cliente web o de escritorio de Teams, se crea un nuevo id. de sesión, al que realiza un seguimiento la sesión de Teams, mientras que, cuando un usuario sale de las aplicaciones de Teams y lo vuelve a cargar en la plataforma teams, se crea un nuevo id. de sesión de aplicación, al que realiza un seguimiento la sesión de la aplicación.
 
 ## <a name="handle-theme-change"></a>Controlar el cambio de tema
 
@@ -169,7 +169,7 @@ El `theme` argumento de la función es una cadena con un valor de `default`, `da
 > [!div class="nextstepaction"]
 > [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Recursos adicionales
 
 * [Directrices de diseño de pestañas](../../tabs/design/tabs.md)
 * [Pestañas de Teams](~/tabs/what-are-tabs.md)
