@@ -1,56 +1,56 @@
 ---
-title: Actualización del manifiesto para habilitar el inicio de sesión único para pestañas
-description: Describe la actualización del manifiesto para habilitar el inicio de sesión único para pestañas
+title: Actualización del manifiesto para habilitar el inicio de sesión único para las pestañas
+description: Describe la actualización del manifiesto para habilitar el inicio de sesión único para las pestañas
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: pestañas de autenticación de teams del Graph API de Microsoft Azure Active Directory (Azure AD)
+ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558740"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658965"
 ---
-# <a name="update-manifest-for-sso-and-preview-app"></a>Actualización del manifiesto para el inicio de sesión único y la aplicación en versión preliminar
+# <a name="update-manifest-for-sso-and-preview-app"></a>Actualizar el manifiesto para el SSO y versión preliminar de la aplicación
 
-Antes de actualizar el manifiesto de aplicación de Teams, asegúrese de que ha configurado el código para habilitar el inicio de sesión único en la aplicación de pestaña.
+Antes de actualizar el manifiesto de aplicación de Teams, asegúrese de que ha configurado el código para habilitar el inicio de sesión único en la aplicación de pestañas.
 
 > [!div class="nextstepaction"]
 > [Configuración del código](tab-sso-code.md)
 
-Ha registrado la aplicación de pestaña en Azure AD y ha obtenido un identificador de aplicación. También ha configurado el código para llamar `getAuthToken()` al token de acceso y controlarlo. Ahora, debe actualizar el manifiesto de aplicación de Teams para habilitar el inicio de sesión único para la aplicación de pestaña. El manifiesto de aplicación de Teams describe cómo se integra una aplicación en Teams.
+Ha registrado la aplicación de pestaña en Azure AD y ha obtenido un identificador de la aplicación. También ha configurado el código para llamar a `getAuthToken()` y controlar el token de acceso. Ahora debe actualizar el manifiesto de la aplicación de Teams para habilitar el inicio de sesión único de la aplicación de pestañas. El manifiesto de la aplicación de Teams describe cómo se integra la aplicación en Teams.
 
-## <a name="webapplicationinfo-property"></a>webApplicationInfo (propiedad)
+## <a name="webapplicationinfo-property"></a>propiedad webApplicationInfo
 
-Configure la `webApplicationInfo` propiedad en el archivo de manifiesto de aplicación de Teams. Esta propiedad permite que el inicio de sesión único de la aplicación ayude a los usuarios de la aplicación a acceder a la aplicación de pestaña sin problemas.
+Configure la propiedad `webApplicationInfo` en el archivo de manifiesto de la aplicación de Teams. Esta propiedad permite que el inicio de sesión único de la aplicación ayude a los usuarios de esta a acceder sin problemas a la aplicación de pestañas.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuración del manifiesto de aplicación de Teams":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Configuración del manifiesto de la aplicación de Teams":::
 
-`webApplicationInfo` tiene dos elementos, `id` y `resource`.
+`webApplicationInfo` tiene dos elementos: `id` y `resource`.
 
 | Elemento | Descripción |
 | --- | --- |
 | id | Escriba el identificador de aplicación (GUID) que creó en Azure AD. |
-| resource | Escriba el URI del subdominio de la aplicación y el URI del identificador de aplicación que creó en Azure AD al crear el ámbito. Puede copiarlo desde la sección **Exponer una API** de **Azure AD** > . |
+| resource | Escriba el URI del subdominio de la aplicación y el URI del identificador de aplicación que creó en Azure AD con el ámbito. Puede copiarlo desde la sección **Exponer una API** de **Azure AD** > . |
 
 > [!NOTE]
-> Use la versión de manifiesto 1.5 o posterior para implementar la `webApplicationInfo` propiedad .
+> Debe usar la versión 1.5 del manifiesto o una posterior para implementar la propiedad `webApplicationInfo`.
 
 El URI del identificador de aplicación que registró en Azure AD se configura con el ámbito de la API que ha expuesto. Configure el URI de subdominio de la aplicación en `resource` para asegurarse de que la solicitud de autenticación que usa `getAuthToken()` procede del dominio especificado en el manifiesto de aplicación de Teams.
 
-Para obtener más información, vea [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
+Para obtener más información, consulte [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
-## <a name="to-configure-teams-app-manifest"></a>Para configurar el manifiesto de aplicación de Teams
+## <a name="to-configure-teams-app-manifest"></a>Para configurar el manifiesto de la aplicación de Teams
 
-1. Abra el proyecto de aplicación de pestaña.
+1. Abra el proyecto de la aplicación de pestañas.
 2. Abra la carpeta del manifiesto.
 
   > [!NOTE]
   >
-  > - La carpeta de manifiesto debe estar en la raíz del proyecto. Para obtener más información, consulte [Creación de un paquete de aplicación de Microsoft Teams](../../../concepts/build-and-test/apps-package.md).
-  > - Para obtener más información sobre cómo crear un archivo manifest.json, consulte [Referencia: Esquema de manifiesto para Microsoft Teams](../../../resources/schema/manifest-schema.md).
+  > - La carpeta del manifiesto debe estar en la raíz del proyecto. Para obtener más información, consulte [Crear un paquete de la aplicación Microsoft Teams](../../../concepts/build-and-test/apps-package.md).
+  > - Para obtener más información sobre cómo crear un archivo manifest.json, consulte [Referencia: esquema de manifiesto para Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
-1. Abra el archivo manifest.json.
+1. Abrir el archivo manifest.json.
 1. Anexe el siguiente fragmento de código al archivo de manifiesto para agregar la nueva propiedad:
 
     ```json
@@ -60,20 +60,20 @@ Para obtener más información, vea [webApplicationInfo](../../../resources/sche
     }
     ```
 
-    Dónde
+    where,
     - {Azure AD AppId} es el identificador de aplicación que creó al registrar la aplicación en Azure AD. Es el GUID.
-    - {{Subdomain}.app ID URI} es el URI de identificador de aplicación que registró al crear el ámbito en Azure AD.
+    - {{Subdomain}.app ID URI} es el URI de identificador de la aplicación que registró al crear el ámbito en Azure AD.
 
-4. Actualice el identificador de aplicación de Azure AD en la propiedad **id** .
-5. Actualice la dirección URL del subdominio en las propiedades siguientes:
+4. Actualice el identificador de aplicación de Azure AD en la propiedad **id**.
+5. Actualice la URL del subdominio en las propiedades siguientes:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Guarde el archivo de manifiesto de aplicación de Teams.
+6. Guarde el archivo de manifiesto de la aplicación de Teams.
 
 <br>
 <details>
-<summary>Este es un ejemplo de manifiesto de aplicación después de actualizarlo</summary>
+<summary>Este es un ejemplo del manifiesto de aplicación después de actualizarlo</summary>
 
 ```json
 {
@@ -132,19 +132,19 @@ Para obtener más información, vea [webApplicationInfo](../../../resources/sche
 </details>
 
 > [!NOTE]
-> Durante la depuración, puede usar ngrok para probar la aplicación en Azure AD. En ese caso, debe reemplazar el subdominio en `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` por la dirección URL de ngrok. Tendrá que actualizar la dirección URL cada vez que cambie el subdominio ngrok Por ejemplo, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> Durante la depuración, puede usar ngrok para probar la aplicación en Azure AD. En ese caso, debe reemplazar el subdominio en `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` por la URL de ngrok. Tendrá que actualizar la URL cada vez que cambie el subdominio ngrok. Por ejemplo, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
-## <a name="sideload-and-preview-in-teams"></a>Instalación local y versión preliminar en Teams
+## <a name="sideload-and-preview-in-teams"></a>Transferir localmente y vista previa en Teams
 
-Ha configurado la aplicación de pestaña para habilitar el inicio de sesión único en Azure AD, en el código de la aplicación y en el archivo de manifiesto de Teams. Ahora puede transferir localmente la aplicación de pestaña en Teams y obtener una vista previa de ella en el entorno de Teams.
+Ha configurado la aplicación de pestañas para habilitar el inicio de sesión único en Azure AD, en el código de la aplicación y en el archivo de manifiesto de Teams. Ahora puede transferir localmente la aplicación de pestaña en Teams y obtener una vista previa de ella en el entorno de Teams.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Aplicación sso":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="Aplicación de inicio de sesión único":::
 
-Para obtener una vista previa de la aplicación de pestaña en Teams:
+Para obtener una vista previa de la aplicación de pestañas en Teams:
 
-1. Cree un paquete de aplicación.
+1. Cree un paquete de aplicación de Microsoft Teams
 
-   El paquete de la aplicación es un archivo ZIP que contiene el archivo de manifiesto de la aplicación y los iconos de la aplicación.
+   El paquete de aplicación es un archivo ZIP que contiene un archivo de manifiesto e iconos de aplicación.
 
 1. Abra Teams.
 
@@ -152,11 +152,11 @@ Para obtener una vista previa de la aplicación de pestaña en Teams:
 
     Aparecen las opciones para cargar una aplicación.
 
-1. Seleccione **Cargar una aplicación personalizada** para transferir localmente la aplicación de pestaña a Teams.
+1. Seleccione **Cargar una aplicación personalizada** para transferir localmente la aplicación de pestañas a Teams.
 
-1. Seleccione el archivo zip del paquete de aplicación y, a continuación, seleccione **Agregar**.
+1. Seleccione el archivo ZIP del paquete de aplicación y, a continuación, seleccione **Agregar**.
 
-    La aplicación de pestaña se carga de forma local y el cuadro de diálogo aparece para informarle de los permisos adicionales que pueden ser necesarios.
+    La aplicación de pestañas se carga de forma local y el cuadro de diálogo aparece para informarle de los permisos adicionales que pueden ser necesarios.
 
 1. Seleccione **Continuar**.
 
@@ -164,17 +164,17 @@ Para obtener una vista previa de la aplicación de pestaña en Teams:
 
     Aparece el cuadro de diálogo de consentimiento de Azure AD.
 
-1. Seleccione **Aceptar** para dar su consentimiento para los ámbitos de id. abierto.
+1. Seleccione **Aceptar** para dar su consentimiento para los ámbitos de open-id.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Cuadro de diálogo de consentimiento de Azure AD":::
 
-    Teams abre la aplicación de pestaña y puede usarla.
+    Teams abre la aplicación de pestañas y puede usarla.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Ejemplo de aplicación de pestaña de Teams con sso habilitado":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Ejemplo de aplicación de pestañas de Teams con SSO habilitado":::
 
-    ¡Enhorabuena! Ha habilitado el inicio de sesión único para la aplicación de pestaña.
+    ¡Enhorabuena! Ha habilitado el inicio de sesión único para la aplicación de pestañas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Recursos adicionales
 
 - [Esquema de manifiesto para Microsoft Teams](../../../resources/schema/manifest-schema.md)
 - [Formato de esquema de manifiesto](https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)
