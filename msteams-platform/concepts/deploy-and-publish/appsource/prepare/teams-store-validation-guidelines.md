@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558124"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659036"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
-Seguir estas directrices aumenta las posibilidades de que la aplicación pase el proceso de envío de la tienda de Microsoft Teams. Las directrices específicas de Teams complementan las [directivas de certificación de marketplace comercial](/legal/marketplace/certification-policies) de Microsoft y se actualizan con frecuencia para reflejar nuevas funcionalidades, comentarios de los usuarios y cambios en las reglas de operación.
+Seguir estas directrices aumenta las posibilidades de que la aplicación pase el proceso de envío de la tienda de Microsoft Teams. Las directrices específicas de Teams complementan las [directivas de certificación de marketplace comercial](/legal/marketplace/certification-policies#1140-teams) de Microsoft y se actualizan con frecuencia para reflejar nuevas funcionalidades, comentarios de los usuarios y cambios en las reglas de operación.
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ Si la aplicación autentica a los usuarios con un servicio externo, siga estas i
   * Las aplicaciones que requieren que el administrador de inquilinos complete una instalación única deben llamar a la dependencia del administrador de inquilinos para configurar la aplicación (antes de que cualquier otro usuario del inquilino pueda instalar y usar la aplicación).  
   Se debe destacar la dependencia en el manifiesto de la aplicación, la descripción larga de AppSource, todos los puntos de contacto de la experiencia de primera ejecución (mensaje de bienvenida del bot, configuración de pestañas o página de configuración), texto de ayuda según se considere necesario como parte de la respuesta del bot, la extensión de redacción o el contenido de pestañas estáticas.
   
-* **Contenido de experiencias de uso compartido**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o recursos similares) cómo desconectar o dejar de compartir contenido si esa característica es compatible con el servicio externo. Esto no significa que la capacidad de no compartir contenido deba estar presente en la aplicación de Teams.
+* **Experiencias de uso compartido de contenidos**: las aplicaciones que requieren autenticación con un servicio externo para compartir contenido en canales de Teams deben indicar claramente en la documentación de ayuda (o en recursos similares) cómo desconectar o dejar de compartir contenidos si esa característica se admite en el servicio externo. Esto no significa que la capacidad de no compartir contenido deba estar presente en la aplicación de Teams.
 
 </details>
 
