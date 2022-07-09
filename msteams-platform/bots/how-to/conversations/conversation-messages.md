@@ -1,15 +1,15 @@
 ---
 title: Mensajes en conversaciones de bot
-description: Obtenga información sobre las formas de tener una conversación con un bot de Teams y Teams datos de canal, notificación al mensaje, mensajes de imagen, tarjetas adaptables mediante ejemplos de código
+description: Obtenga información sobre las maneras de tener una conversación con un bot de Teams y los datos del canal de Teams, la notificación al mensaje, los mensajes de imagen, las tarjetas adaptables mediante ejemplos de código.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142454"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695302"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -192,19 +192,19 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Esta actividad se divide en actividades independientes por Microsoft Teams, una con solo un mensaje de texto y la otra con datos adjuntos. A medida que se divide la actividad, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
+> La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Microsoft Teams divide esta actividad en actividades independientes, una con solo un mensaje de texto y la otra con datos adjuntos. A medida que se divide la actividad, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
 
 Los mensajes enviados entre usuarios y bots incluyen datos de canal internos dentro del mensaje. Estos datos permiten que el bot se comunique correctamente en ese canal. El SDK de Bot Builder permite modificar la estructura del mensaje.
 
 ## <a name="teams-channel-data"></a>Datos del canal de Teams
 
-El `channelData` objeto contiene Teams información específica y es un origen definitivo para los identificadores de equipo y canal. Opcionalmente, puede almacenar en caché y usar estos identificadores como claves para el almacenamiento local. en `TeamsActivityHandler` el SDK extrae información importante del `channelData` objeto para que sea de fácil acceso. Sin embargo, siempre puede acceder a los datos originales desde el `turnContext` objeto .
+El `channelData` objeto contiene información específica de Teams y es un origen definitivo para los identificadores de equipo y canal. Opcionalmente, puede almacenar en caché y usar estos identificadores como claves para el almacenamiento local. en `TeamsActivityHandler` el SDK extrae información importante del `channelData` objeto para que sea de fácil acceso. Sin embargo, siempre puede acceder a los datos originales desde el `turnContext` objeto .
 
 El `channelData` objeto no se incluye en los mensajes de las conversaciones personales, ya que tienen lugar fuera de un canal.
 
 Un objeto típico `channelData` de una actividad enviada al bot contiene la siguiente información:
 
-* `eventType`: Teams tipo de evento pasado solo en los casos de [eventos de modificación del canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `eventType`: el tipo de evento de Teams solo se pasa en los casos de [eventos de modificación del canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `tenant.id`: Microsoft Azure Active Directory identificador de inquilino (Azure AD) pasado en todos los contextos.
 * `team`: solo se pasa en contextos de canal, no en chat personal.
   * `id`: GUID para el canal.
@@ -242,9 +242,9 @@ Los mensajes recibidos o enviados al bot pueden incluir diferentes tipos de cont
 | Formato    | De usuario a bot | De bot a usuario | Notas                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texto enriquecido  | ✔️                | ✔️                | El bot puede enviar texto enriquecido, imágenes y tarjetas. Los usuarios pueden enviar texto enriquecido e imágenes al bot.                                                                                        |
-| Imágenes  | ✔️                | ✔️                | Máximo 1024×1024 MB y 1 MB en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.  |
-| Tarjetas     | ❌                | ✔️                | Consulte la [referencia de tarjeta de Teams](~/task-modules-and-cards/cards/cards-reference.md) para obtener las tarjetas admitidas. |
-| Emojis    | ✔️                | ✔️                | Teams actualmente admite emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
+| Imágenes  | ✔️                | ✔️                | Máximo 1024 × 1024 píxeles y 1 MB en formato PNG, JPEG o GIF. No se admite el uso de un GIF animado.  |
+| Tarjetas     | ❌                | ✔️                | Consulte la [referencia de tarjetas de Teams](~/task-modules-and-cards/cards/cards-reference.md) para obtener las tarjetas admitidas. |
+| Emojis    | ✔️                | ✔️                | Teams admite actualmente emojis a través de UTF-16, como U+1F600 para la cara sonriente. |
 
 ## <a name="notifications-to-your-message"></a>Notificaciones al mensaje
 
@@ -434,7 +434,7 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 > [!div class="nextstepaction"]
 > [Menús de comandos del bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Enviar mensajes proactivos](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

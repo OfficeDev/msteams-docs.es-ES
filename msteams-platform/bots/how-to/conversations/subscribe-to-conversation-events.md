@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversación de reacción del mensaje del canal de eventos
-ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906275"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695330"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -409,7 +409,7 @@ Se envía un evento agregado de miembro al bot en los siguientes escenarios:
 
 1. Cuando el bot, en sí mismo, se instala y se agrega a una conversación
 
-   > En el contexto del equipo, el conversation.id de la actividad se establece en el `id` del canal seleccionado por el usuario durante la instalación de la aplicación o en el canal desde el que se instaló el bot (actualmente disponible en [public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
+   > En el contexto del equipo, el conversation.id de la actividad se establece en el `id` del canal seleccionado por el usuario durante la instalación de la aplicación o en el canal donde se instaló el bot.
 
 2. Cuando se agrega un usuario a una conversación en la que está instalado el bot
 
@@ -1335,7 +1335,7 @@ En este ejemplo, el `conversation.id` de las `conversationUpdate` actividades y 
 ![Creación de un canal seleccionado](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> El identificador de canal seleccionado solo se establece en `installationUpdate` *agregar* eventos que se envían cuando se instala una aplicación en un equipo (actualmente disponible en [public Developer Preview](../../../resources/dev-preview/developer-preview-intro.md)).
+> El identificador de canal seleccionado solo se establece en *agregar* `installationUpdate` eventos que se envían cuando se instala una aplicación en un equipo.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
