@@ -3,12 +3,12 @@ title: 'Introducción: Información general'
 description: En este módulo, aprenderá a empezar a trabajar con la documentación para desarrolladores de Microsoft Teams que le presenta las herramientas comunes, los conceptos fundamentales y las características avanzadas.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 050e4a7bbf078686fa400858c684c6500ca71c1c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: a7acb1b69d33a77c9ea35adfddcd76d4c83d8c62
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558705"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737401"
 ---
 # <a name="get-started"></a>Introducción
 
@@ -41,7 +41,7 @@ En función de las capacidades que quiera para la aplicación, elija un conjunto
 Si ya está familiarizado con el flujo de trabajo de Yeoman, puede que prefiera usar [Generador Yeoman YoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) para crear las aplicaciones.
 
 > [!WARNING]
-> Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams.<br> App Studio quedará obsoleto desde el 30 de junio de 2022.
+> Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams.<br> App Studio quedará en desuso el 1 de agosto de 2022.
 
 ## <a name="build-your-first-teams-app"></a>Crear la primera aplicación de Teams
 

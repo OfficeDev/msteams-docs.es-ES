@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 95d30f025856b7466fd66a71b3dcbba4b4738452
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: d37acc71ade61f23bbca32257ef7b30578948bcc
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611509"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737408"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -29,7 +29,7 @@ Antes de enviar la aplicación al [Centro de partners](/office/dev/store/use-par
 Aunque la aplicación puede estar funcionando en un entorno de prueba, debes comprobar el paquete de la aplicación para evitar que se presenten problemas durante el proceso de envío.
 
 > [!WARNING]
-> Si ha estado usando App Studio, le recomendamos que pruebe el [Portal para desarrolladores](https://dev.teams.microsoft.com/) para poder configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso a partir del 30 de junio de 2022.
+> Si ha estado usando App Studio, le recomendamos que pruebe el [Portal para desarrolladores](https://dev.teams.microsoft.com/) para poder configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso el 1 de agosto de 2022.
 
 La herramienta de validación de aplicaciones de Microsoft Teams ayuda a identificar y solucionar problemas antes de enviarlos al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
 
