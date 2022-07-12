@@ -3,12 +3,12 @@ title: Elegir una configuración para probar y depurar la aplicación
 description: En este módulo, aprenderá las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y hospedado en la nube.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503889"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737394"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Elección de una configuración de prueba y depuración de la aplicación de Teams
 
@@ -63,7 +63,7 @@ Para los bots registrados en Microsoft Bot Framework, actualice el punto de cone
 
 > [!WARNING]
 >
-> * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso a partir del 30 de junio de 2022.
+> * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio estará en desuso el 01 de agosto de 2022.
 
 ## <a name="cloud-hosted"></a>Hospedado en la nube
 
@@ -86,4 +86,4 @@ Para cargar y ejecutar su experiencia en Teams, debe crear un paquete y cargarlo
 
 ## <a name="see-also"></a>Consulte también
 
-[Prueba y depuración del bot localmente con IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+[Probar y depurar el bot localmente con el IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)

@@ -4,12 +4,12 @@ description: En este módulo, aprenderá a crear bots mediante el Microsoft Bot 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485289"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737415"
 ---
 # <a name="create-a-bot"></a>Creación de un bot
 
@@ -25,7 +25,7 @@ Para obtener más información, consulte [La documentación de Bot Framework](/a
 
 1. Cree el bot mediante [Bot Framework](https://dev.botframework.com/bots/new). **Asegúrese de agregar Microsoft Teams como canal de la lista de canales destacados después de crear el bot.** Puede volver a usar cualquier identificador de aplicación de Microsoft que haya generado si ya ha creado el manifiesto o el paquete de la aplicación.
 
-   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Página de registro de Bot Framework":::
+   ![Página de registro de Bot Framework](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
 > Si no desea crear el bot en Azure, **debe** usar este vínculo para crear un nuevo bot: [Bot Framework](https://dev.botframework.com/bots/new). Si en su lugar hace clic en **Crear un bot** en el portal de Bot Framework, creará [el bot en Microsoft Azure](#bots-and-microsoft-azure) .
@@ -52,7 +52,7 @@ Para obtener más información, consulte [La documentación de Bot Framework](/a
 
 > [!WARNING]
 >
->* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio estará en desuso el 01 de agosto de 2022.
+>* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio estará en desuso el 01 de agosto de 2022
 
 ## <a name="see-also"></a>Consulte también
 
