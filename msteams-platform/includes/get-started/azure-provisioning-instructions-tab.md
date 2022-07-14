@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>Implementar la aplicación en Azure
 
 La implementación consta de dos pasos.  En primer lugar, se crean los recursos en la nube necesarios (también conocidos como aprovisionamiento). A continuación, el código de la aplicación se copia en los recursos en la nube creados. En este tutorial, implementará la aplicación de pestaña.
-<br> 
+<br>
 <br>
 <details>
 <summary>¿Cuál es la diferencia entre Aprovisionar e Implementar?</summary>
@@ -33,7 +33,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
    El proceso de aprovisionamiento crea recursos en la nube de Azure. Puede tardar algún tiempo. Puede supervisar el progreso observando los diálogos en la esquina inferior derecha. Después de unos minutos, verá el siguiente aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de aprovisionamiento completo.":::
 
     Si lo desea, puede ver los recursos aprovisionados. En este tutorial, no es necesario ver los recursos.
 

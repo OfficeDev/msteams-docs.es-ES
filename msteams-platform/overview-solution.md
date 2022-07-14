@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 3f1caf4605766c16a51272a8d4c30436930c7100
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 10e35af5ec4993ea93579f70afc120ff0aa8b18a
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558677"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66793064"
 ---
 # <a name="the-teams-solution"></a>La solución de Teams
 
@@ -125,7 +125,7 @@ Desde el diseño hasta la creación y distribución de una aplicación de Teams,
         ¿Está buscando inspiración para el desarrollo de aplicaciones? Examine nuestra lista de escenarios reales y soluciones del sector conceptos ficticios de alta fidelidad para comprender las distintas formas en que una aplicación de Teams puede ayudar a los usuarios.
 
         > [!div class="nextstepaction"]
-        > [Ver escenarios de aplicaciones](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+        > [Ver escenarios de aplicaciones](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
     :::column-end:::
 :::row-end:::
 

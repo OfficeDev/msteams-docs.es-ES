@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: ca310712a8fc6912b68ba6538044d504e46e00a2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485611"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792833"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Agregar inicio de sesión único a la aplicación de Teams
 
@@ -33,7 +33,7 @@ Teams Toolkit le ayuda a agregar el inicio de sesión único a las siguientes fu
 Los pasos siguientes le ayudan a agregar el inicio de sesión único mediante el kit de herramientas de Teams en Visual Studio Code
 
 1. Abrir **Microsoft Visual Studio Code**.
-2. Seleccione La :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="barra lateral agregar sso"::: del kit de herramientas de Teams en la barra de navegación izquierda.
+2. Seleccione La :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="barra lateral agregar sso"::: del kit de herramientas de Teams en la barra de navegación izquierda.
 3. Seleccione **Agregar características** en **DESARROLLO**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::

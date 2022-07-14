@@ -5,12 +5,12 @@ description: Aprenda a agregar la autenticación de OAuth a un bot en Teams medi
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558859"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792973"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
@@ -123,7 +123,7 @@ Para crear el secreto de cliente:
 
 1. En la sección **Secretos de cliente**, seleccione **Nuevo secreto de cliente**. Aparece la ventana **Agregar un secreto de cliente**.
 
-    ![Nuevo secreto de cliente](~/assets/images/adaptive-cards/new-client-secret.png)
+    ![Nuevo secreto de cliente](~/assets/images/meetings-side-panel/newclientsecret.png)
 
 1. Escriba **Descripción** y seleccione **Agregar**.
 
@@ -143,7 +143,7 @@ Para agregar el canal de Microsoft Teams:
 
 1. Seleccione **Canales** en el panel izquierdo y seleccione **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Canal Teams":::
+    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Selección de Teams en canales":::
 
 1. Active la casilla para aceptar los términos de servicio y seleccione **Aceptar**.</br>
 
