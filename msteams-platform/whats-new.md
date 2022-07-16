@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: a358652f361dc080d916c4d548363776e7c092a4
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695295"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830809"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -269,15 +269,11 @@ La versión preliminar para desarrolladores es un programa público que proporci
 | -------- | --------- | ------------------ |
 | 06/30/2022 | Aplicaciones para reuniones instantáneas, llamadas uno a uno y llamadas grupales| Crear aplicaciones para reuniones y llamadas de Teams > [Información general](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16/06/2022 | Expansión de vínculos para compartir con equipos desde aplicaciones web| Integrar con Teams > Compartir en Teams > [Compartir en Teams desde aplicaciones web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-|24/5/2022| Colaboración mejorada con el SDK de Live Share |  Creación de aplicaciones para reuniones de Teams > Colaboración mejorada con Live Share > [Información general](apps-in-teams-meetings/teams-live-share-overview.md) |
+|24/5/2022| Colaboración mejorada con el SDK de Live Share | Creación de aplicaciones para reuniones de Teams > Colaboración mejorada con Live Share > [Información general](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022. | Compartir en Teams desde una aplicación personal o una pestaña | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
-| 07/02/2022 | Herramientas y SDK |Kit de herramientas de Teams para Visual Studio Code > </br> • Agregar funcionalidades a la aplicación de Teams> [Agregar funcionalidades a las aplicaciones de Teams](toolkit/add-capability.md) </br> • Agregar recursos en la nube a la aplicación de Teams> [Agregar recursos en la nube a la aplicación de Teams](toolkit/add-resource.md) |
-| 03/02/2022 | Se ha presentado la versión 1.12 del manifiesto de la aplicación | • Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación](resources/schema/manifest-schema.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
-|17/01/2022 | Selector de personas en tarjetas adaptables para móviles  | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
-|10/01/2022 | Kit de herramientas de Teams para Visual Studio Code | Herramientas y SDK > Kit de herramientas de Teams para Visual Studio Code > [Conceptos básicos sobre el kit de herramientas de Teams](toolkit/teams-toolkit-fundamentals.md) |
-| 24/12/2021 | Se ha introducido la guía paso a paso para conceder permisos para pestañas en dispositivos | Aspectos básicos de la aplicación > Funcionalidades del dispositivo > [Guía paso a paso para conceder permisos para pestañas en dispositivos](sbs-tab-device-permissions.yml) |
-| 15/11/2021 | Las pestañas personales y las extensiones de mensajería se ejecutan en Outlook y Office | [Ampliar las aplicaciones de Teams en Microsoft 365](~/m365-apps/overview.md) |
-| 28/10/2021 |Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico del recurso (RSC) | • Crear bots > Conversaciones de bots > Mensajes en conversaciones de bots > [Recibir todos los mensajes con RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Crear bots > Conversaciones de bots > [Información general sobre las conversaciones de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots > Conversaciones de bots > [Conversaciones de canal y de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto de vista preliminar para desarrolladores](~/resources/schema/manifest-schema-dev-preview.md) |
+| 03/02/2022 | Se ha presentado la versión 1.13 del manifiesto de la aplicación | • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |
+| 17/01/2022 | Selector de personas en tarjetas adaptables para móviles | Crear tarjetas y módulos de tareas > Crear tarjetas > [Selector de personas en Tarjetas adaptables](task-modules-and-cards/cards/people-picker.md)|
+| 28/10/2021 |Los bots se pueden habilitar para recibir todos los mensajes de canal mediante el consentimiento específico del recurso (RSC) | • Crear bots > Conversaciones de bots > [Información general sobre las conversaciones de bots](~/bots/how-to/conversations/conversation-basics.md) </br> • Crear bots > Conversaciones de bots > [Conversaciones de canal y de grupo](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 16/06/2021 | Consentimiento específico de recursos para chats. | •Uso de datos de Teams con Microsoft Graph > [Consentimiento específico del recurso](graph-api/rsc/resource-specific-consent.md) </br> • Probar la aplicación > Microsoft Graph > [Probar permisos de consentimiento específicos de recursos en Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 Si desea obtener más información, consulte la [versión preliminar pública para programadores para Teams](~/resources/dev-preview/developer-preview-intro.md).

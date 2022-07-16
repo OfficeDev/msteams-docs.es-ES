@@ -1,20 +1,20 @@
 ---
 title: Formatear los mensajes del bot
 author: surbhigupta
-description: En este módulo, aprenderá a agregar formato enriquecido a los mensajes del bot, como tachado, lista ordenada y desordenada, hipervínculo, vínculo de imagen, etc.
+description: En este módulo, aprenderá a agregar formato y estilos enriquecidos a los mensajes del bot, como tachado, lista ordenada y desordenada, hipervínculo, vínculo de imagen, etc.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150794"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830802"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
-El formato de mensajes le permite sacar lo mejor de los mensajes del bot. Puede dar formato a los mensajes del bot para incluir tarjetas enriquecidas que son datos adjuntos que contienen elementos interactivos, como botones, texto, imágenes, audio, vídeo, etc.
+El formato de mensajes le permite sacar lo mejor de los mensajes del bot. Puede dar formato a los mensajes del bot para incluir tarjetas enriquecidas como datos adjuntos que contienen elementos interactivos, como botones, texto, imágenes, audio, vídeo, etc.
 
 ## <a name="format-text-content"></a>Formato de contenido de texto
 
@@ -34,7 +34,7 @@ Actualmente, se aplican las siguientes limitaciones al formato:
 
 * Los mensajes de solo texto no admiten el formato de tabla.
 * Las tarjetas enriquecidas solo admiten el formato en la propiedad de texto, no en las propiedades de título o subtítulo.
-* Las tarjetas enriquecidas no admiten el formato markdown o de tabla.
+* Las tarjetas enriquecidas no admiten el formato markdown o table.
 
 Después de dar formato al contenido de texto, asegúrese de que el formato funciona en todas las plataformas compatibles con Teams.
 
@@ -54,7 +54,7 @@ Algunos estilos no se admiten actualmente en todas las plataformas. En la tabla 
 | Texto con formato previo         | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ |
-| Vínculo de imagen                | ✔️ | ❌ |
+| Vínculo de imagen                | ❌ | ❌ |
 
 Después de comprobar la compatibilidad multiplataforma, asegúrese de que la compatibilidad con plataformas individuales también está disponible.
 
@@ -78,7 +78,7 @@ En la tabla siguiente se proporciona una lista de estilos, que se admiten en el 
 | Texto con formato previo         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Vínculo de imagen                | ✔️ | ✔️ | ✔️ |
+| Vínculo de imagen                | ❌ | ❌ | ❌ |
 
 ### <a name="cards"></a>Tarjetas
 
