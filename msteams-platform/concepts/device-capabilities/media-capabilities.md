@@ -5,18 +5,18 @@ description: Obtenga información sobre cómo usar el SDK de cliente de JavaScri
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a2ee4843f5330ab9102540ea1c5dcb87bd8dc19c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: b4e552f77b181d005f4a2f3da7967a0fdb1f3ac5
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558712"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841781"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia
 
 Puede integrar funcionalidades de dispositivos nativos, como cámara y micrófono con la aplicación de Teams. Para la integración, puede usar el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) que proporciona las herramientas necesarias para que la aplicación acceda a [los permisos de dispositivo](native-device-permissions.md) de un usuario. Use las API de funcionalidad multimedia adecuadas para integrar las funcionalidades del dispositivo, como la cámara y el micrófono con la plataforma de Teams dentro de la aplicación de Microsoft Teams, y crear una experiencia más enriquecida. La funcionalidad multimedia está disponible para el cliente web, el escritorio y el móvil de Teams. Para integrar las funcionalidades multimedia, debe actualizar el archivo de manifiesto de la aplicación y llamar a las API de funcionalidad multimedia.
 
-Para una integración eficaz, debe tener un buen conocimiento de [code snippets](#code-snippets) para llamar a las API respectivas, lo que le permite usar funcionalidades multimedia nativas. Es importante familiarizarse con los [errores de respuesta de la API](#error-handling) para controlar los errores de la aplicación de Teams.
+Para una integración eficaz, debe tener un buen conocimiento de [code snippets](#code-snippets) para llamar a las API respectivas, lo que le permite usar funcionalidades multimedia nativas. Es importante familiarizarse con los [errores de respuesta de la API](#error-handling) para controlar los errores en la aplicación de Teams.
 
 ## <a name="advantages"></a>Ventajas
 
@@ -46,7 +46,7 @@ Actualice el archivo [manifest.json](../../resources/schema/manifest-schema.md#d
 
 ## <a name="media-capability-apis"></a>Funcionalidad multimedia
 
-La [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true) y [viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) API permiten usar funcionalidades multimedia nativas de la siguiente manera:
+La [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia) y [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) API permiten usar funcionalidades multimedia nativas de la siguiente manera:
 
 * Use el **micrófono** nativo para permitir que los usuarios **grabar audio** (grabar 10 minutos de conversación) desde el dispositivo.
 * Usa el **control nativo cámara** para permitir que los usuarios **capturar y adjuntar imágenes** sobre la marcha.
@@ -58,7 +58,7 @@ La [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?
   
 > [!IMPORTANT]
 >
-> * Las API `selectMedia`, `getMedia` y `viewImages` se pueden invocar desde varias superficies de Teams, como módulos de tareas, pestañas y aplicaciones personales. Para obtener más información, vea [Entrada de puntos para aplicaciones de Teams](../extensibility-points.md).</br>
+> * Las API `selectMedia`, `getMedia` y `viewImages` se pueden invocar desde varias superficies de Teams, como módulos de tareas, pestañas y aplicaciones personales. Para obtener más información, consulte [Puntos de entrada para aplicaciones de Teams](../extensibility-points.md).</br>
 > * `selectMedia` LA API admite funcionalidades de cámara y micrófono a través de diferentes configuraciones de entrada.
 > * La `selectMedia` API para acceder a la funcionalidad de micrófono solo admite clientes móviles.
 
@@ -66,10 +66,10 @@ En la tabla siguiente se muestra un conjunto de API para habilitar las funcional
 
 | API      | Descripción   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**cámara)**| Esta API permite a los usuarios **capture o seleccionar medios de la cámara del dispositivo** y devolverlos a la aplicación web. Los usuarios pueden editar, recortar, girar, anotar o dibujar imágenes antes del envío. En respuesta a `selectMedia`, la aplicación web recibe los identificadores multimedia de las imágenes seleccionadas y una miniatura del medio seleccionado. Esta API se puede configurar aún más a través de la configuración de [ImageProps](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageprops?view=msteams-client-js-latest&preserve-view=true). |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**micrófono**)| Establezca [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) `4` en en la `selectMedia` API para acceder a la funcionalidad de micrófono. Esta API también permite a los usuarios grabar audio desde el micrófono del dispositivo y devolver clips grabados a la aplicación web. Los usuarios pueden pausar, volver a grabar y reproducir la vista previa de grabación antes del envío. En respuesta a **selectMedia**, la aplicación web recibe los identificadores multimedia de la grabación de audio seleccionada. <br/> Use `maxDuration` si necesita configurar una duración en minutos para grabar la conversación. La duración actual de la grabación es de 10 minutos, tras lo cual finaliza la grabación.  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| Esta API recupera los medios capturados por `selectMedia` API en fragmentos, independientemente del tamaño del medio. Estos fragmentos se ensamblan y se devuelven a la aplicación web como un archivo o blob. Dividir los medios en fragmentos más pequeños facilita la transferencia de archivos grandes. |
-| [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| Esta API permite al usuario ver imágenes en modo de pantalla completa como una lista desplazable.|
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**cámara)**| Esta API permite a los usuarios **capture o seleccionar medios de la cámara del dispositivo** y devolverlos a la aplicación web. Los usuarios pueden editar, recortar, girar, anotar o dibujar imágenes antes del envío. En respuesta a `selectMedia`, la aplicación web recibe los identificadores multimedia de las imágenes seleccionadas y una miniatura del medio seleccionado. Esta API se puede configurar aún más a través de la configuración de [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops). |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**micrófono**)| Establezca [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) `4` en (Audio) en `selectMedia` la API para acceder a la funcionalidad de micrófono. Esta API también permite a los usuarios grabar audio desde el micrófono del dispositivo y devolver clips grabados a la aplicación web. Los usuarios pueden pausar, volver a grabar y reproducir la vista previa de grabación antes del envío. En respuesta a **selectMedia**, la aplicación web recibe los identificadores multimedia de la grabación de audio seleccionada. <br/> Use `maxDuration` si necesita configurar una duración en minutos para grabar la conversación. La duración actual de la grabación es de 10 minutos, tras lo cual finaliza la grabación.  |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| Esta API recupera los medios capturados por `selectMedia` API en fragmentos, independientemente del tamaño del medio. Estos fragmentos se ensamblan y se devuelven a la aplicación web como un archivo o blob. Dividir los medios en fragmentos más pequeños facilita la transferencia de archivos grandes. |
+| [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| Esta API permite al usuario ver imágenes en modo de pantalla completa como una lista desplazable.|
 
 # <a name="mobile"></a>[Móvil](#tab/mobile)
 

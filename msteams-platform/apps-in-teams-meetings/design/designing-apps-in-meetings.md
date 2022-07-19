@@ -5,12 +5,13 @@ description: Obtenga información sobre cómo diseñar extensiones de reunión p
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.date: 04/07/2022
+ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792840"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842041"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
@@ -103,9 +104,9 @@ Los usuarios pueden usar la pestaña en la reunión para:
 |1|**Icono de aplicación (seleccionado):** logotipo de aplicación transparente de 16 píxeles.|
 |2|**Nombre de la aplicación**|
 |3|**Encabezado**: incluye el nombre de la aplicación.|
-|4 |**Botón Cerrar**: descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
+|4|**Botón Cerrar**: descarta la pestaña. Use siempre el icono de cierre superior derecho en lugar de una acción en el pie de página.|
 |5|**Barra de notificaciones**: las alertas de error se muestran directamente debajo del encabezado e insertan el resto del contenido del iframe en 20 píxeles.|
-|6 |**iframe**: muestra el contenido de la aplicación.|
+|6|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="spacing"></a>Spacing
 
@@ -170,7 +171,7 @@ Hay dos variantes de encabezado. Cuando sea posible, use la variante con el avat
 |1|**Avatar**: persona que inicia el cuadro de diálogo en la reunión.|
 |2|**Icono de aplicación**|
 |3|**Nombre de la aplicación**|
-|4 |**Botón Cerrar**: descarta el cuadro de diálogo.|
+|4|**Botón Cerrar**: descarta el cuadro de diálogo.|
 |5|**Cadena de acción**: normalmente se describe quién inició el cuadro de diálogo.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportamiento dinámico: cuadros de diálogo en reunión
@@ -251,7 +252,7 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 |1|**Icono de aplicación**: el icono resaltado indica que la pestaña de la aplicación en la reunión está abierta.|
 |2|**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Muestra si configura la aplicación para que use la fase de reunión compartida.|
 |3|**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
-|4 |**iframe**: muestra el contenido de la aplicación.|
+|4|**iframe**: muestra el contenido de la aplicación.|
 |5|**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
 ### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomía: Compartir contenido específico de la aplicación en una reunión
@@ -263,7 +264,7 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 |1|**Icono de aplicación**: el icono resaltado indica que la pestaña de la aplicación en la reunión está abierta.|
 |2|**Botón Compartir con la reunión**: el punto de entrada para compartir la aplicación con la reunión. Para una experiencia coherente, use siempre el icono de recurso compartido estándar de Teams. **Compartir con reunión** es el texto predeterminado recomendado, pero también puede personalizarlo para los casos de uso. Por ejemplo, **Reproducir juntos** para una aplicación de juegos o **Ver juntos** para una aplicación de vídeo. En cualquier caso, dejar claro que la acción creará una experiencia interactiva compartida con todos los usuarios de la reunión.|
 |3|**Atribución del moderador**: muestra el nombre del participante que ha compartido la aplicación.|
-|4 |**iframe**: muestra el contenido de la aplicación.|
+|4|**iframe**: muestra el contenido de la aplicación.|
 |5|**Botón Detener uso compartido**: deja de compartir la aplicación en la fase de reunión. Solo se muestra para el participante que inició el recurso compartido.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportamiento dinámico: fase de reunión compartida

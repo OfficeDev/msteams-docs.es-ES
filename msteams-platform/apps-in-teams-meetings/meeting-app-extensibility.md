@@ -4,12 +4,14 @@ author: surbhigupta
 description: Obtenga información sobre el ciclo de vida de las reuniones de Teams y la experiencia de reunión de los usuarios en dispositivos móviles y de escritorio, tipos de usuario, integración de bots y extensión de mensajes en el ciclo de vida de las reuniones.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c53567530f0d9d418a6b273200f921517341e7f
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.author: surbhigupta
+ms.date: 04/07/2022
+ms.openlocfilehash: 760b108ac343e6805989c9dc1e709d8f15e3b684
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561626"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841907"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -211,7 +213,7 @@ En la lista siguiente se detallan los distintos tipos de usuario junto con su ac
 
 En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las características a las que cada usuario puede acceder en las reuniones programadas:
 
-| Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión |
+| Tipo de usuario | Pestañas | Bots | Extensiones de mensajes | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | No disponible |
 | Invitado, parte del inquilino de Azure AD | Se permite la interacción. No se permiten crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en el cliente de escritorio de Teams. |
@@ -229,7 +231,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)

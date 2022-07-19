@@ -5,14 +5,14 @@ description: En este módulo, aprenderá a crear una página de eliminación de 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485219"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841978"
 ---
-# <a name="tab-re-configuration-and-removal-page"></a>Página de re-configuración y eliminación de pestañas
+# <a name="create-a-removal-page"></a>Crear una página de eliminación
 
 Puedes ampliar y mejorar la experiencia del usuario admitiendo opciones de eliminación y modificación en la aplicación. Teams permite a los usuarios cambiar el nombre o quitar una pestaña de canal o grupo y puede permitir que los usuarios vuelvan a configurar la pestaña después de la instalación. Además, la experiencia de eliminación de pestañas proporciona a los usuarios opciones posteriores a la eliminación para eliminar o archivar contenido.
 
@@ -36,7 +36,7 @@ Cuando la pestaña se carga en un canal o chat de grupo, Teams agrega un menú d
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Crear una página de eliminación de pestañas para la aplicación
 
-La página de eliminación opcional es una página HTML que hospeda y se muestra cuando se quita la pestaña. La dirección URL de la página de eliminación se designa mediante el `setConfig()` método (anteriormente `setSettings()`) dentro de la página de configuración. Al igual que con todas las páginas de la aplicación, la página de eliminación debe cumplir los [requisitos previos de la pestaña Equipos](../../../tabs/how-to/tab-requirements.md).
+La página de eliminación opcional es una página HTML que hospeda y se muestra cuando se quita la pestaña. La dirección URL de la página de eliminación se designa mediante el `setConfig()` método (o `setSettings()` antes de TeamsJS v.2.0.0) dentro de la página de configuración. Al igual que con todas las páginas de la aplicación, la página de eliminación debe cumplir los [requisitos previos de la pestaña Equipos](../../../tabs/how-to/tab-requirements.md).
 
 ### <a name="register-a-remove-handler"></a>Registrar un controlador de eliminación
 
@@ -58,7 +58,7 @@ Puede usar `getContext()` para obtener el contexto actual en el que se ejecuta e
 
 #### <a name="include-authentication"></a>Incluir autenticación
 
-Se requiere autenticación antes de permitir que un usuario elimine el contenido de la pestaña. La información de contexto se puede usar para ayudar a construir solicitudes de autenticación y direcciones URL de página de autorización. Consultar [Flujo de autenticación de Microsoft Teams para pestañas](~/tabs/how-to/authentication/auth-flow-tab.md) Asegúrese de que todos los dominios usados en las páginas de pestañas aparecen en la matriz `manifest.json` y `validDomains`.
+Se requiere autenticación antes de permitir que un usuario elimine el contenido de la pestaña. La información de contexto se puede usar para ayudar a construir solicitudes de autenticación y direcciones URL de página de autorización. Consultar [Flujo de autenticación de Microsoft Teams para pestañas](~/tabs/how-to/authentication/auth-flow-tab.md) Asegúrese de que todos los dominios usados en las páginas de pestaña aparecen en la `validDomains` matriz del manifiesto de la aplicación.
 
 A continuación se muestra un bloque de código de eliminación de pestañas de ejemplo:
 
@@ -67,8 +67,9 @@ A continuación se muestra un bloque de código de eliminación de pestañas de 
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

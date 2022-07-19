@@ -6,16 +6,18 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558579"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841711"
 ---
 # <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
 Pestañas de canal o grupo entregar contenido a canales y chats grupales, y son una excelente manera de crear espacios de colaboración en torno a contenido dedicado basado en web.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -261,14 +263,15 @@ Este proyecto se creó a partir de una plantilla vacía de aplicación web ASP.N
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>carpeta wwwroot
@@ -333,17 +336,17 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > No copie ni pegue las direcciones URL `<script src="...">` de esta página, ya que no representan la versión más reciente. Para obtener la versión más reciente del SDK, vaya siempre a la [API de JavaScript de Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Inserte una llamada a `microsoftTeams.initialize();` en la etiqueta `script`.
+1. Inserte una llamada a `microsoftTeams.app.initialize();` en la etiqueta `script`.
 
 1. En el Explorador de soluciones de Visual Studio vaya a la carpeta **Pages** y abra **Tab.cshtml**.
 
-    En **Tab.cshtml**, la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir los desencadenadores de los botones **Seleccionar gris** o **Seleccionar rojo** `saveGray()`o `saveRed()`, respectivamente, establece `settings.setValidityState(true)`y habilita el botón **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado los requisitos de configuración y que la instalación puede continuar. Se establecen los parámetros de `settings.setSettings`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
+    En **Tab.cshtml** , la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 1. Actualice los valores `websiteUrl` y `contentUrl` en cada función con la dirección URL de ngrok HTTPS en la pestaña.
 
@@ -352,27 +355,29 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
     ```javascript
         
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
             });
         }
 
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
-        });
+            });
         }
     ```
 
@@ -481,14 +486,15 @@ Este proyecto fue creado a partir de una plantilla de aplicación web vacía de 
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>carpeta wwwroot
@@ -561,17 +567,17 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > No copie ni pegue las direcciones URL `<script src="...">` de esta página, ya que no representan la versión más reciente. Para obtener la versión más reciente del SDK, vaya siempre a la [API de JavaScript de Microsoft Teams](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Inserte una llamada a `microsoftTeams.initialize();` en la etiqueta `script`.
+1. Inserte una llamada a `microsoftTeams.app.initialize();` en la etiqueta `script`.
 
 1. En el Explorador de soluciones de Visual Studio vaya a la carpeta **Tab** y abra **Tab.cshtml**.
 
-    En **Tab.cshtml**, la aplicación presenta al usuario dos botones de opción para mostrar la pestaña con un icono rojo o gris. Al elegir los desencadenadores de los botones **Seleccionar gris** o **Seleccionar rojo** `saveGray()`o `saveRed()`, respectivamente, establece `settings.setValidityState(true)`y habilita el botón **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado los requisitos de configuración y que la instalación puede continuar. Se establecen los parámetros de `settings.setSettings`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
+    En **Tab.cshtml** , la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 1. Actualice los valores `websiteUrl` y `contentUrl` en cada función con la dirección URL de ngrok HTTPS en la pestaña.
 
@@ -580,24 +586,26 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
     ```javascript
 
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });
         }
     
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });

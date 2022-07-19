@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4889f4a9f97ff6606ebb283156d42963816cd269
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: ca310df0b1c9e1285e3cf6914105cedd1ecbcce2
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557865"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841676"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -351,6 +351,63 @@ dialogs.add(
   ])
 );
 ```
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Integración con Microsoft Graph Toolkit</b></summary>
+
+La biblioteca [de Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) es una colección de diversos proveedores de autenticación y componentes de interfaz de usuario con tecnología de Microsoft Graph. 
+
+El `@microsoft/mgt-teamsfx-provider` paquete expone la clase , que usa `TeamsFx` la `TeamsFxProvider` clase para iniciar sesión de los usuarios y adquirir tokens para usarlos con Graph.
+
+1. Instale los paquetes necesarios.
+
+    ```bash
+    npm install @microsoft/mgt-element @microsoft/mgt-teamsfx-provider @microsoft/teamsfx
+    ```
+
+2. Inicialice el proveedor dentro del componente.
+
+    ```ts
+    // Import the providers and credential at the top of the page
+    import {Providers} from '@microsoft/mgt-element';
+    import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
+    import {TeamsUserCredential} from "@microsoft/teamsfx";
+
+    const scope = ["User.Read"];
+    const teamsfx = new TeamsFx();
+    const provider = new TeamsFxProvider(teamsfx, scope);
+    Providers.globalProvider = provider;
+    ```
+
+3. Use el método para obtener el `teamsfx.login(scopes)` token de acceso necesario.
+
+    ```ts
+    // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
+    await teamsfx.login(this.scope);
+    Providers.globalProvider.setState(ProviderState.SignedIn);
+    ```
+
+4. Ahora, puede agregar cualquier componente en la página HTML o en el `render()` método con React para usar el `TeamsFx` contexto para acceder a Microsoft Graph.
+
+    ```html
+    <mgt-person query="me" view="threeLines"></mgt-person>
+    ```
+
+    ```ts
+    public render(): void {
+    return (
+        <div>
+            <Person personQuery="me" view={PersonViewType.threelines}></Person>
+        </div>
+    );
+    }
+    ```
+
+Para obtener más información sobre el ejemplo para inicializar el proveedor TeamsFx, vea el [ejemplo De exportador de contactos](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
 
 </details>
 

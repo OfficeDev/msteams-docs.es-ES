@@ -1,18 +1,18 @@
 ---
 title: Capacidades multimedia de Live Share
+author: surbhigupta
 description: En este módulo, obtendrá más información sobre la capacidades multimedia de Live Share, además de las suspensiones y puntos de espera, la atenuación de audio y la sincronización de vídeo y audio.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.date: 04/07/2022
+ms.openlocfilehash: bf9d7c071a337a56373a9c58879d23a8d2638af7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142482"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841879"
 ---
----
-
 # <a name="live-share-media-capabilities"></a>Capacidades multimedia de Live Share
 
 El vídeo y el audio forman parte fundamental del mundo moderno y de los lugares de trabajo. Hemos escuchado comentarios muy amplios sobre qué podemos hacer más para aumentar la calidad, la accesibilidad y proteger las licencias para ver vídeos juntos en reuniones.

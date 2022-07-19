@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear una página de configuración p
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143959"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841704"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -20,7 +20,7 @@ Una página de configuración es un tipo especial de [página de contenido](cont
 * Una [extensión de mensaje](~/messaging-extensions/what-are-messaging-extensions.md)
 * Un [Conector de Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar una pestaña de chat de canal o grupo
 
@@ -38,15 +38,15 @@ El código siguiente es un ejemplo de código correspondiente para la página de
 
 ```html
 <head>
-    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
-</head>
+    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script>
-        app.initialize();
+    <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
         let saveGray = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
@@ -214,7 +214,7 @@ Después de cargar la página, Teams actualiza los marcadores de posición de ca
 
 ```html
 <script>
-   app.initialize();
+   await app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -255,7 +255,8 @@ El código siguiente proporciona un ejemplo de cómo agregar esta función a la 
 
 <span id="user"></span>
 ...
-<script>
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
     const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
@@ -293,11 +294,12 @@ Autentíquese antes de permitir que un usuario configure la aplicación. De lo c
 
 Establezca la propiedad del `canUpdateConfiguration` manifiesto en `true`. Permite a los usuarios modificar, volver a configurar o cambiar el nombre de una pestaña de canal o grupo. Informe al usuario sobre el impacto en el contenido cuando se quita una pestaña. Para ello, incluya una página de opciones de eliminación en la aplicación y establezca un valor para la `removeUrl` propiedad en la `setConfig()` configuración (anteriormente `setSettings()`). El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, vea [crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (anteriormente `setSettings()`) configuración para la página de eliminación:
+Configuración de Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para la página de eliminación:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
+import { pages } from "@microsoft/teams-js";
 const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",

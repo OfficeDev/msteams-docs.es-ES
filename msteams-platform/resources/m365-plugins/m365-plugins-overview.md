@@ -1,15 +1,15 @@
 ---
 title: Complementos de Microsoft 365
 description: En este artículo, tendrá complementos de Microsoft 365, listas de complementos y etiquetas, Microsoft 365, interacción de One Note y mucho más.
-ms.topic: Microsoft 365 plugins
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: c09e2e15fd276c2007a989545cc5b5c0b23f2584
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 438093c5ffe9990c5aa7c8175131c654019c3120
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558593"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841753"
 ---
 # <a name="microsoft-365-plugins"></a>Complementos de Microsoft 365
 

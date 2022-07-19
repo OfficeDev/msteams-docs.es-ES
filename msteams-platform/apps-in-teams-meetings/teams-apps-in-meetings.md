@@ -5,12 +5,13 @@ description: En este artículo, aprenderá cómo funcionan las aplicaciones en l
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 07008b23ad9f5df32c61b417ab7f49be6dbfe6e9
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.date: 04/07/2022
+ms.openlocfilehash: 97dcb7076797531b510b323e5d7671a8afed0961
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561604"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841893"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 

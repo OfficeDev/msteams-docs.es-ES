@@ -1,18 +1,18 @@
 ---
 title: Inicio rápido de Live Share
+author: surbhigupta
 description: En este módulo, aprenderá a probar de forma rápida el ejemplo de Lanzamiento de dados
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 10bf4b3ce67322c25517d82af2d06a654a4d8668
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484589"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841788"
 ---
----
-
 # <a name="quick-start-guide"></a>Guía de inicio rápido
 
 Introducción al SDK de Live Share mediante el ejemplo de lanzamiento de dados es una evolución del [Inicio rápido de Fluid Framework](https://fluidframework.com/docs/start/quick-start/) y está diseñado para ejecutar rápidamente una [muestra de lanzamiento de dados](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) basada en el SDK de Live Share en el host local del equipo.
@@ -37,25 +37,25 @@ Para empezar, instale lo siguiente:
 1. Clone el repositorio del [SDK de Live Share](https://github.com/microsoft/live-share-sdk) para probar la aplicación de ejemplo:
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. Ejecute el siguiente comando para ir a la carpeta de la aplicación de ejemplo Lanzamiento de dados:
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. Ejecute el siguiente comando para instalar el paquete de dependencias:
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. Ejecute el comando siguiente para iniciar el cliente y el servidor local:
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      Una nueva pestaña del explorador abrirá una dirección URL `http://localhost:8080` y aparecerá el juego Lanzamiento de dados.
