@@ -571,6 +571,8 @@
           href: resources/m365-plugins/m365-plugins-overview.md
         - name: Aplicaciones de asociados para Moodle
           href: resources/partner-apps-for-moodle.md
+        - name: Instalar Moodle LMS
+          href: resources/moodleInstructions.md
         - name: Preguntas más frecuentes sobre Moodle
           href: resources/faqs.md
     - name: Compartir en Teams
