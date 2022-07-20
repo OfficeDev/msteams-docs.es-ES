@@ -3,13 +3,15 @@ title: Habilitar y configurar las aplicaciones para reuniones de Teams
 author: surbhigupta
 description: Aprenderá a habilitar y configurar las aplicaciones para reuniones de Teams y diferentes escenarios de reunión, actualice el manifiesto de la aplicación, configure características como, por ejemplo, el cuadro de diálogo en la reunión, la fase de reunión compartida, el panel lateral de la reunión, etc.
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.date: 04/07/2022
+ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557739"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841900"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
@@ -126,9 +128,9 @@ Durante una reunión, puede usar el `meetingSidePanel` o la notificación durant
 
 #### <a name="meeting-sidepanel"></a>Panel lateral de reunión
 
-El `meetingSidePanel` permite personalizar experiencias en una reunión que permiten a los organizadores y moderadores tener un conjunto diferente de vistas y acciones. En el manifiesto de la aplicación debe agregar `meetingSidePanel` a la matriz de contexto. En la reunión y en todos los escenarios, la aplicación se representa en una pestaña en la reunión que tiene un ancho de 320 píxeles. Para obtener más información, consulte [interfaz FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+El `meetingSidePanel` permite personalizar experiencias en una reunión que permiten a los organizadores y moderadores tener un conjunto diferente de vistas y acciones. En el manifiesto de la aplicación debe agregar `meetingSidePanel` a la matriz de contexto. En la reunión y en todos los escenarios, la aplicación se representa en una pestaña en la reunión que tiene un ancho de 320 píxeles. Para obtener más información, consulte la [interfaz de FrameInfo](/javascript/api/@microsoft/teams-js/frameinfo) (conocida como `FrameContext` antes de TeamsJS v.2.0.0).
 
-Para usar la `userContext` API para enrutar solicitudes, consulte [SDK de Teams](../tabs/how-to/access-teams-context.md#user-context). Para obtener más información, vea [flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación de las pestañas es similar al flujo de autenticación de los sitios web. Por lo tanto, las pestañas pueden usar OAuth 2.0 directamente. Para obtener más información, consulte [Plataforma de identidad de Microsoft y flujo del código de autorización de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Puede [usar el contexto de usuario para redirigir las solicitudes](../tabs/how-to/access-teams-context.md#user-context). Para obtener más información, vea [flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md). El flujo de autenticación de las pestañas es similar al flujo de autenticación de los sitios web. Las pestañas pueden usar OAuth 2.0 directamente. Para obtener más información, consulte [Plataforma de identidad de Microsoft y flujo del código de autorización de OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 La extensión de mensaje funciona según lo esperado cuando un usuario está en una vista en la reunión. El usuario puede publicar tarjetas de extensión de mensaje de redacción. AppName en la reunión es una información sobre herramientas que indica el nombre de la aplicación en la barra U de la reunión.
 
