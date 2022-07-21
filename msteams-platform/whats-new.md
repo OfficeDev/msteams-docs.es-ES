@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842034"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919840"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -36,6 +36,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+| 07/21/2022 | Guía paso a paso para enviar notificaciones de fuentes de actividades | Diseñar la aplicación > Componentes de la interfaz de usuario> Notificaciones de fuente de actividades > [Enviar notificación de fuente de actividades](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Actualizaciones para enviar el identificador de canal seleccionado por el usuario durante la instalación de la aplicación a los bots a través de eventos de actualización de conversación e instalación |  Compilar bots > Conversaciones de bot > Eventos de conversación en el bot de Teams > [Eventos de conversación en el bot de Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16/06/2022 | Funcionalidades multimedia actualizadas para admitir el escritorio y los dispositivos móviles| Integración de funcionalidades de dispositivos > [Integración de funcionalidades multimedia](concepts/device-capabilities/media-capabilities.md)|
 | 08/06/2022 | Comentarios de tarjeta opcionales para el mensaje de operación correcta| Compilar bots > Conversaciones de bot > [Mensajes en conversaciones de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
