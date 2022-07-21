@@ -5,12 +5,12 @@ description: En este módulo, comprenda cómo los administradores de Teams puede
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 0a7a98c5d981f35bc60a6099873a445b45caa071
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503448"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919826"
 ---
 # <a name="customize-your-teams-app"></a>Personalizar la aplicación de Teams
 
@@ -23,7 +23,7 @@ Algunos ejemplos posibles de esta función son:
 * Cambiar el color de énfasis de la aplicación para que coincida con la marca de una organización.
 * Actualizando el nombre de la aplicación de *Contoso* a *Agente de Contoso*, que es el nombre que verán los usuarios de la organización. (Nota: Los usuarios que agreguen un conector a un chat o un canal seguirán viendo el nombre de la aplicación original, *Contoso*).
 
-Puede habilitar esta función en el [Portal para desarrolladores para Teams](https://dev.teams.microsoft.com/home). Esto configura `configurableProperties`, que no está disponible en versiones anteriores a la 1.10 del manifiesto de aplicación de Teams.
+Para habilitar esta característica, defina las propiedades de la aplicación que los clientes pueden personalizar en la [`configurableProperties` sección del manifiesto de aplicación de Teams](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), a partir de la versión 1.11. Esto se puede hacer en el [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/home) si ha elegido usar el Portal para desarrolladores para editar el manifiesto de la aplicación.
 
 ### <a name="test-your-app"></a>Probar la aplicación
 

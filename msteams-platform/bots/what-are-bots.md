@@ -5,21 +5,24 @@ description: Con esta ruta de aprendizaje, empiece a trabajar con bots conversac
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
+ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558320"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912264"
 ---
 # <a name="build-bots-for-teams"></a>Crear bots para Teams
 
 Un bot también se conoce como bot de chat o bot de conversación. Es una aplicación que ejecuta tareas sencillas y repetitivas de usuarios como, por ejemplo, el servicio de atención al cliente o el personal de soporte técnico. Los bots se usan a diario para, por ejemplo, proporcionar información sobre el tiempo, reservar cenas o facilitar información sobre viajes. Las interacciones con bots pueden ser preguntas y respuestas rápidas o conversaciones complejas.
 
 > [!IMPORTANT]
-> Actualmente, los bots están disponibles en Government Community Cloud (GCC) y GCC-High, pero no en el Departamento de defensa (DOD).
 >
-> Las aplicaciones de bots en Microsoft Teams están disponibles en GCC-High a través de [Azure Bot Service](/azure/bot-service/channel-connect-teams).
+> * Actualmente, los bots están disponibles en Government Community Cloud (GCC) y GCC-High, pero no en el Departamento de defensa (DOD).
+>
+> * Las aplicaciones de bot de Microsoft Teams están disponibles en GCC-High a través de [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) y el registro del canal de bot debe realizarse en el portal de Azure Government.
+>
+> * Las aplicaciones de GCCH solo admiten hasta la versión 1.10 del manifiesto. Las direcciones URL de imagen en Tarjetas adaptables no se admiten en el entorno GCCH. Puede reemplazar una dirección URL de imagen por DataUri codificado en Base64.
 
 Los bots de conversación permiten que los usuarios interactúen con el servicio web mediante texto, tarjetas interactivas y módulos de tareas.
 

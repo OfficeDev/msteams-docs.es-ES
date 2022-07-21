@@ -5,12 +5,12 @@ description: 'Obtenga información sobre cómo diseñar notificaciones de fuente
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9a17027f7dd68993a118f24bb23cfff0a56651e1
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558012"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919770"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Diseño de notificaciones de fuente de actividad para la aplicación de Microsoft Teams
 
@@ -33,11 +33,11 @@ La fuente de actividad es una superficie para que los usuarios accedan a sus not
 |Contador|Descripción|
 |----------|-----------|
 |1|**Avatar**: muestra quién inició la actividad.|
-|2 |**Icono de tipo de actividad o aplicación**: representa el tipo de actividad. En el caso de las notificaciones de aplicación, el icono de línea se reemplaza por un icono de aplicación.|
-|3 |**Título (primera línea): Actor y motivo**: *Actor*: Nombre del usuario o la aplicación que inició la actividad. *Motivo*: describe la actividad.|
-|4 |**Marca de tiempo**: muestra cuándo se produjo la actividad.|
+|2|**Icono de tipo de actividad o aplicación**: representa el tipo de actividad. En el caso de las notificaciones de aplicación, el icono de línea se reemplaza por un icono de aplicación.|
+|3|**Título (primera línea): Actor y motivo**: *Actor*: Nombre del usuario o la aplicación que inició la actividad. *Motivo*: describe la actividad.|
+|4|**Marca de tiempo**: muestra cuándo se produjo la actividad.|
 |5|**Ubicación (segunda línea):** muestra dónde se produjo la actividad en Teams.|
-|6 |**Vista previa de texto (tercera línea):** muestra una línea truncada desde el inicio de la notificación.|
+|6|**Vista previa de texto (tercera línea):** muestra una línea truncada desde el inicio de la notificación.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Tipos de tarjetas de notificación de fuente de actividad
 
@@ -60,7 +60,7 @@ Cada actividad genera una notificación del sistema. Lo que se muestra depende d
 |Contador|Descripción|
 |----------|-----------|
 |1|Android|
-|2 |iOS|
+|2|iOS|
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
@@ -70,9 +70,13 @@ Cada actividad genera una notificación del sistema. Lo que se muestra depende d
 |----------|-----------|
 |1|Personalizado de Teams|
 |2|Windows|
-|3 |Mac|
+|3|Mac|
 
 ---
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso](../../sbs-graphactivity-feedbroadcast.yml) para enviar notificaciones de fuente de actividad en Teams.
 
 ## <a name="next-step"></a>Paso siguiente
 

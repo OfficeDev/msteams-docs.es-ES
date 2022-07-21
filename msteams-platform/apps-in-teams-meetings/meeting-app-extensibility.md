@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 760b108ac343e6805989c9dc1e709d8f15e3b684
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841907"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919854"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -41,8 +41,7 @@ Las pestañas permiten a los miembros del equipo acceder a los servicios y el co
 > Si ha integrado una pestaña con la reunión, la aplicación debe seguir el [flujo de autenticación de inicio de sesión único (SSO) de Teams para las pestañas](../tabs/how-to/authentication/tab-sso-overview.md).
 
 > [!NOTE]
->
-> * La opción Agregar aplicación para la aplicación de pestaña extensión de reunión de Teams no se admite en el cliente web de Teams.
+> La opción Agregar aplicación para la aplicación de pestaña extensión de reunión de Teams no se admite en el cliente web de Teams.
 
 #### <a name="pre-meeting-app-experience"></a>Experiencia de la aplicación previa a la reunión
 
@@ -231,7 +230,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 > [!div class="nextstepaction"]
 > [Habilitar y configurar las aplicaciones para reuniones de Teams](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
