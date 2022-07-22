@@ -1,16 +1,16 @@
 ---
 title: Ampliar una extensión de mensajería de Teams en Microsoft 365
-description: Obtenga información sobre cómo actualizar la extensión de mensajes de Teams basada en la búsqueda para que se ejecute en Outlook mediante la actualización del manifiesto de la aplicación, la adición de un canal de Outlook y la instalación de prueba de la aplicación actualizada.
+description: En este artículo, obtendrá información sobre cómo actualizar la extensión de mensajes de Teams basada en la búsqueda para que se ejecute en Outlook mediante la actualización del manifiesto de la aplicación, la adición de un canal de Outlook y la instalación de prueba de la aplicación actualizada.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190200"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919735"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Ampliar una extensión de mensajería de Teams en Microsoft 365
 
