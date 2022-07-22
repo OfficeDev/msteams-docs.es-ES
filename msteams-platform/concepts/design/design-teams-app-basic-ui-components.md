@@ -1,24 +1,24 @@
 ---
 title: Diseño de la aplicación con componentes básicos de la interfaz de usuario de Fluent
 author: heath-hamilton
-description: Obtenga información sobre los componentes de la interfaz de usuario que se usan para compilar aplicaciones de Microsoft Teams y obtener el kit de interfaz de usuario de Teams. Más información sobre la información sobre la información sobre herramientas de alternancia del selector de marcador de ruta de navegación del kit fluido
+description: Aprenda a diseñar aplicaciones de Microsoft Teams mediante los componentes de la interfaz de usuario de Fluent desde el kit de interfaz de usuario de Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4f3295036315819413f262e5a224dd2231eb431d
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557760"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962443"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes básicos de la interfaz de usuario de Fluent
 
-Puede compilar la aplicación de Teams desde cero con los siguientes componentes básicos de la interfaz de usuario de Fluent. Diseñados lo más plano posible, estos componentes pueden funcionar en diferentes casos de uso, temas y tamaños de pantalla.
+Puede diseñar y compilar la aplicación de Teams desde cero con los siguientes componentes básicos de la interfaz de usuario de Fluent. Diseñados lo más plano posible, estos componentes pueden funcionar en diferentes casos de uso, temas y tamaños de pantalla.
 
 En las ilustraciones de esta página se muestra cómo se ven los componentes en los temas predeterminados (claros) y oscuros de Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit de interfaz de usuario de Microsoft Teams
+## <a name="microsoft-teams-ui-kit"></a>Kit de UI de Microsoft Teams
 
 En función de la <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">interfaz de usuario de Fluent</a>, el kit de interfaz de usuario de Microsoft Teams incluye componentes y patrones diseñados específicamente para compilar aplicaciones de Teams. En el kit de interfaz de usuario, puede capturar e insertar los componentes enumerados aquí directamente en el diseño y ver más ejemplos de cómo usar cada componente.
 

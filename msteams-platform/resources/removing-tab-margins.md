@@ -5,12 +5,12 @@ description: En este módulo, obtenga información sobre cómo la eliminación d
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558285"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962429"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -38,9 +38,9 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 
 **¿Cuál es el tamaño de los márgenes de tabulación que Teams aplicó anteriormente?**
 
-* Izquierda y derecha: 20 px
-* Superior: 16 px
-* Inferior: 0 px
+* Izquierda y derecha: 20 píxeles
+* Superior: 16 píxeles
+* Inferior: 0 píxeles
 
 > [!IMPORTANT]
 >

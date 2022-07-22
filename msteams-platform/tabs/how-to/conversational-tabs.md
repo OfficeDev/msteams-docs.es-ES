@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear un chat de subentidad conversac
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841985"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962422"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -52,9 +52,12 @@ En la imagen siguiente se muestra el panel de conversación:
 Si el usuario inicia una conversación, es importante escuchar la devolución de llamada de ese evento para recuperar y guardar el **conversationId**:
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 El `conversationResponse` objeto contiene información relacionada con la conversación que se inició. Se recomienda guardar todas las propiedades de este objeto de respuesta para su uso posterior.
@@ -81,12 +84,15 @@ Puede cerrar manualmente la vista de conversación llamando a la `closeConversat
 microsoftTeams.conversations.closeConversation();
 ```
 
-También puede escuchar un evento cuando un usuario cierra la vista de conversación.
+También puede escuchar un evento cuando los usuarios **seleccionan Cerrar (X)** en la vista de conversación.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## <a name="code-sample"></a>Ejemplo de código
