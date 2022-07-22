@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503735"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895499"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
@@ -458,11 +458,11 @@ Se usa cuando la experiencia de la aplicación tiene una experiencia de pestaña
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔️|Dirección URL de https:// que se va a usar al configurar la pestaña.|
-|`scopes`|Matriz de enumeración|1 |✔️|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
+|`scopes`|Matriz de enumeración|1|✔️|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
 |`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. Valor predeterminado: **true**.|
-|`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |Matriz de enumeración|6||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -479,8 +479,8 @@ Este elemento es una matriz (con un máximo de 16 elementos) y todos los element
 |`contentUrl`|string||✔️|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`websiteUrl`|string|||La dirección URL de https:// a la que apuntar si un usuario opta por la vista en un explorador.|
 |`searchUrl`|string|||La dirección URL de https:// a la que apuntar para las consultas de búsqueda de un usuario.|
-|`scopes`|Matriz de enumeración|1 |✔️|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
-|`context` | Matriz de enumeración| 2 || El conjunto de ámbitos `contextItem` donde se admite una pestaña.|
+|`scopes`|Matriz de enumeración|1|✔️|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`context` | Matriz de enumeración| 2|| El conjunto de ámbitos `contextItem` donde se admite una pestaña.|
 
 > [!NOTE]
 > La característica searchUrl no está disponible para los desarrolladores de terceros. Si las pestañas requieren información dependiente del contexto para mostrar contenido relevante o para iniciar un flujo de autenticación, consulte [Obtener contexto para la pestaña de Microsoft Teams](../../tabs/how-to/access-teams-context.md).
@@ -496,7 +496,7 @@ El elemento es una matriz (un elemento como máximo&mdash;actualmente solo se pe
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64 caracteres|✔️|El ID. de aplicación de Microsoft único para el bot, registrado con Bot Framework. El id. puede ser el mismo que el [id. general de la aplicación](#id).|
-|`scopes`|Matriz de enumeración|3 |✔️|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
+|`scopes`|Matriz de enumeración|3|✔️|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
 |`needsChannelSelector`|Booleano|||Describe si el bot usa o no una sugerencia de usuario para agregar al bot a un canal específico. Valor predeterminado: **`false`**|
 |`isNotificationOnly`|Booleano|||Indica si un bot es un bot unidireccional de solo notificación, en lugar de un bot conversacional. Valor predeterminado: **`false`**|
 |`supportsFiles`|Booleano|||Indica si el bot admite la capacidad de cargar o descargar archivos en el chat personal. Valor predeterminado: **`false`**|
@@ -505,11 +505,11 @@ El elemento es una matriz (un elemento como máximo&mdash;actualmente solo se pe
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto es una matriz (máximo de dos elementos) con todos los elementos de tipo`object`; usted debe definir una lista de comandos independiente para cada ámbito que admita el bot. Para obtener más información, consulte [Menús de bot](~/bots/how-to/create-a-bot-commands-menu.md).
+Lista de comandos que el bot puede recomendar a los usuarios. El objeto es una matriz (máximo de dos elementos) con todos los elementos de tipo`object`; usted debe definir una lista de comandos independiente para cada ámbito que admita el bot. Para obtener más información, consulte [Menús de bot](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`items.scopes`|Matriz de enumeración|3 |✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
+|`items.scopes`|Matriz de enumeración|3|✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
 |`items.commands`|matriz de objetos|10 |✔️|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -530,7 +530,7 @@ El objeto es una matriz (con un máximo de un elemento) y todos los elementos de
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 caracteres|✔️|Dirección URL de https:// que se va a usar al configurar el conector.|
-|`scopes`|Matriz de enumeración|1 |✔️|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
+|`scopes`|Matriz de enumeración|1|✔️|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
 |`connectorId`|string|64 caracteres|✔️|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -549,7 +549,7 @@ El elemento es una matriz (máximo de un elemento) con todos los elementos de ti
 |`botId`|string|64|✔️|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. El id. puede ser el mismo que el id. de aplicación general.|
 |`commands`|matriz de objetos|10 |✔️|Matriz de comandos que admite la extensión de mensajería.|
 |`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **falso**.|
-|`messageHandlers`|Matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
+|`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|string|||Tipo de controlador de mensajes. Debe estar `"link"`.|
 |`messageHandlers.value.domains`|matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
 
@@ -566,7 +566,7 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`type`|string|64 caracteres||Tipo de comando. Uno de `query` o `action`. Valor predeterminado: **consulta**.|
 |`description`|string|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|Booleano|||Un valor booleano indica si el comando se ejecuta inicialmente sin parámetros. El valor predeterminado es **false**.|
-|`context`|matriz de cadenas|3 ||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose","commandBox"]`.|
+|`context`|matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose","commandBox"]`.|
 |`fetchTask`|Booleano|||Valor booleano que indica si debe capturar dinámicamente el módulo de tareas. El valor predeterminado es **false**.|
 |`taskInfo`|object|||Especifique el módulo de tareas que se va a cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|string|64 caracteres||Título del cuadro de diálogo inicial.|
@@ -660,7 +660,10 @@ Indica si se va a mostrar o no el indicador de carga cuando se carga una aplicac
 Indica si una aplicación personal se representa sin una barra de encabezado de pestaña (lo que significa el modo de pantalla completa). El valor predeterminado es **false**.
 
 > [!NOTE]
-> `isFullScreen` funciona solo para las aplicaciones publicadas en su organización.
+>
+> * `isFullScreen` solo funciona para las aplicaciones publicadas en su organización. Las aplicaciones de terceros publicadas y transferidas localmente no pueden usar esta propiedad (se omite).
+>
+> * `isFullScreen=true` quita la barra de encabezado y el título proporcionados por Teams de los cuadros de diálogo de módulos de tareas y aplicaciones personales.
 
 ## <a name="activities"></a>activities
 
