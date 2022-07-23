@@ -4,12 +4,12 @@ description: En este módulo, aprenderá qué es el formato de texto de tarjeta 
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144211"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962436"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -22,7 +22,7 @@ Las tarjetas solo admiten el formato en la propiedad de texto, no en las propied
 
 El soporte del formato difiere entre los tipos de tarjetas. La representación de la tarjeta puede diferir ligeramente entre los clientes de Microsoft Teams de escritorio y de móvil, así como de Teams en el explorador de escritorio.
 
-Puede incluir una imagen alineada en cualquier tarjeta de Teams. Los formatos de imagen admitidos son .png, .jpg o .gif. Mantenga las dimensiones dentro de 1024 x 1024 px y el tamaño del archivo menos de 1 MB. Las imágenes .gif animadas no son admitidas. Para obtener más información, consulte [tipos de tarjetas](./cards-reference.md#inline-card-images).
+Puede incluir una imagen alineada en cualquier tarjeta de Teams. Los formatos de imagen admitidos son .png, .jpg o .gif. Mantenga las dimensiones dentro de 1024 x 1024 píxeles y el tamaño del archivo menos de 1 MB. Las imágenes .gif animadas no son admitidas. Para obtener más información, consulte [tipos de tarjetas](./cards-reference.md#inline-card-images).
 
 Puede dar formato a Tarjetas adaptables y a tarjetas de conector de Office 365 mediante Markdown que incluye determinados estilos admitidos.
 
