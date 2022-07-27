@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737387"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035159"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -49,7 +49,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | --- | --- |
 | [Bot de llamada](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Un bot que participa en llamadas de audio o vídeo y reuniones en línea. <br> **Vea también**: [Bot de chat](#c); [Bot de reunión](#m) |
 | [Funcionalidad](../toolkit/add-capability.md) | Una característica de Teams que puede compilar en la aplicación para interactuar con los usuarios de la aplicación. Una funcionalidad de la aplicación se usa para ampliar Teams para adaptarse a las necesidades de la aplicación. Una aplicación puede tener una o varias funcionalidades principales, como la pestaña, el bot y la extensión de mensajería. <br>**Vea también**: [Funcionalidad del dispositivo](#d); [Funcionalidad multimedia](#m) |
-| [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas sencillas y repetitivas por parte de usuarios como el servicio de atención al cliente o el personal de soporte técnico. <br> **Vea también**: [Bot de conversación](#c) |
+| [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas sencillas y repetitivas para los usuarios como el servicio de atención al cliente o el personal de soporte técnico. <br> **Vea también**: [Bot de conversación](#c) |
 | Canal | Un único lugar para que un equipo comparta mensajes, herramientas y archivos. Puede usar un canal para el trabajo en equipo y la comunicación. <br>**Vea también**: [Conversación](#c) |
 | [Secreto de cliente](../bots/how-to/authentication/add-authentication.md) | El secreto de cliente o contraseña o un par de claves públicas o privadas que sean Certificadas. No es necesario para las aplicaciones nativas. <br> **Vea también**: [Bot](#b) |
 | [Recursos en la nube](../toolkit/add-resource.md) | Un servicio que está disponible en la nube a través de Internet que la aplicación de Teams puede usar. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |

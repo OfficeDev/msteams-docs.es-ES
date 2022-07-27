@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919840"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035180"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -36,6 +36,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+| 26/07/2022|Acciones sugeridas para bots| Compilar bots > Conversaciones de bot > [Mensajes en conversaciones de bot](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 07/21/2022 | Guía paso a paso para enviar notificaciones de fuentes de actividades | Diseñar la aplicación > Componentes de la interfaz de usuario> Notificaciones de fuente de actividades > [Enviar notificación de fuente de actividades](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Actualizaciones para enviar el identificador de canal seleccionado por el usuario durante la instalación de la aplicación a los bots a través de eventos de actualización de conversación e instalación |  Compilar bots > Conversaciones de bot > Eventos de conversación en el bot de Teams > [Eventos de conversación en el bot de Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16/06/2022 | Funcionalidades multimedia actualizadas para admitir el escritorio y los dispositivos móviles| Integración de funcionalidades de dispositivos > [Integración de funcionalidades multimedia](concepts/device-capabilities/media-capabilities.md)|
