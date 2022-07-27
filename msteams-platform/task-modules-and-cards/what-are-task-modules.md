@@ -1,16 +1,16 @@
 ---
 title: Módulos de tareas
 author: surbhigupta
-description: En este módulo, aprenderá a agregar experiencias emergentes modales para recopilar o mostrar información a los usuarios de las aplicaciones de Microsoft Teams
+description: En este módulo, aprenderá a agregar experiencias emergentes modales para recopilar o mostrar información a los usuarios desde las aplicaciones de Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23d6a0f1645fefe66544c755ddb617eba9ea8f3e
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143602"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035299"
 ---
 # <a name="task-modules"></a>Módulos de tareas
 
@@ -22,12 +22,12 @@ Los módulos de tareas le permiten crear experiencias emergentes modales en la a
 
 Los módulos de tareas son útiles para iniciar y completar tareas o mostrar información enriquecida, como vídeos o paneles de Power Business Intelligence (BI). Una experiencia emergente suele ser más natural para los usuarios que inician y completan tareas en comparación con una pestaña o una experiencia de bot basada en conversación.
 
-Los módulos de tareas se basan en Microsoft Teams pestañas. Básicamente son una pestaña dentro de una ventana emergente. Usan el mismo SDK, por lo que si ha creado una pestaña, ya está familiarizado con la creación de un módulo de tareas.
+Los módulos de tareas se basan en las pestañas de Microsoft Teams. Básicamente son una pestaña dentro de una ventana emergente. Usan el mismo SDK, por lo que si ha creado una pestaña, ya está familiarizado con la creación de un módulo de tareas.
 
 Los módulos de tarea pueden invocarse de tres maneras:
 
-* Pestañas personales o de canal: con el SDK de Microsoft Teams Pestañas, puede invocar módulos de tareas desde botones, vínculos o menús de la pestaña. Para obtener más información, consulte [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
-* Bots: usar botones en [las tarjetas enviadas](~/task-modules-and-cards/cards/cards-reference.md) desde el bot. Esto resulta útil cuando no se requiere que todos los usuarios de un canal vean lo que está haciendo con un bot. Por ejemplo, al hacer que los usuarios respondan a un sondeo en un canal, no resulta útil ver un registro de ese sondeo que se va a crear. Para obtener más información, consulte [Uso de módulos de tareas de Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+* Pestañas personales o de canal: con el SDK de pestañas de Microsoft Teams, puede invocar módulos de tareas desde botones, vínculos o menús de la pestaña. Para obtener más información, consulte [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* Bots: usar botones en [las tarjetas enviadas](~/task-modules-and-cards/cards/cards-reference.md) desde el bot. Esto resulta útil cuando no se requiere que todos los usuarios de un canal vean lo que está haciendo con un bot. Por ejemplo, al hacer que los usuarios respondan a un sondeo en un canal, no resulta útil ver un registro de ese sondeo que se va a crear. Para obtener más información, consulte [Uso de módulos de tareas de bots de Teams](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 * Fuera de Teams desde un vínculo profundo: también puede crear direcciones URL para invocar un módulo de tareas desde cualquier lugar. Para obtener más información, vea [Sintaxis de vínculo profundo del módulo de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
 ## <a name="components-of-a-task-module"></a>Componentes de un módulo de tareas
@@ -55,6 +55,6 @@ Un módulo de tareas incluye lo siguiente, como se muestra en la imagen anterior
 > [!div class="nextstepaction"]
 > [Invocar y descartar módulos de tareas](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Tarjetas](~/task-modules-and-cards/what-are-cards.md)

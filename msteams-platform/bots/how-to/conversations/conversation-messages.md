@@ -4,12 +4,12 @@ description: Obtenga información sobre las maneras de tener una conversación c
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695302"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035201"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -195,6 +195,38 @@ async def on_members_added_activity(
 > La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Microsoft Teams divide esta actividad en actividades independientes, una con solo un mensaje de texto y la otra con datos adjuntos. A medida que se divide la actividad, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
 
 Los mensajes enviados entre usuarios y bots incluyen datos de canal internos dentro del mensaje. Estos datos permiten que el bot se comunique correctamente en ese canal. El SDK de Bot Builder permite modificar la estructura del mensaje.
+
+## <a name="send-suggested-actions"></a>Envío de acciones sugeridas
+
+Las acciones sugeridas permiten al bot presentar botones que el usuario puede seleccionar para proporcionar entrada. Las acciones sugeridas mejoran la experiencia del usuario al permitir que el usuario responda a una pregunta o haga una elección con la selección de un botón, en lugar de escribir una respuesta con un teclado. Los botones permanecen visibles y accesibles para el usuario en las tarjetas enriquecidas incluso después de que el usuario realice una selección, mientras que para las acciones sugeridas, los botones no están disponibles. Esto impide que el usuario seleccione botones obsoletos dentro de una conversación.
+
+Para agregar acciones sugeridas a un mensaje, establezca la `suggestedActions` propiedad del objeto [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) para especificar la lista de objetos [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) que representan los botones que se van a presentar al usuario. Para obtener más información, consulte [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+A continuación se muestra un ejemplo de implementación y experiencia de acciones sugeridas:
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Acciones sugeridas por bot" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` solo se admiten para bots de chat uno a uno y mensajes basados en texto y no para tarjetas adaptables o datos adjuntos.
+> * Actualmente `imBack` es el único tipo de acción admitido y Teams muestra hasta tres acciones sugeridas.
 
 ## <a name="teams-channel-data"></a>Datos del canal de Teams
 

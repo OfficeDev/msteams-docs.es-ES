@@ -3,16 +3,16 @@ title: Permisos de dispositivo para el explorador
 description: Obtenga información sobre cómo devolver de forma segura los permisos del dispositivo, como el acceso de cámara o micrófono para aplicaciones en el cliente web.
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 72c185257097ec739380bc2cc8390320beb24134
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ac4695d119b04ee71334ccb2baa820c0e15bff88
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190176"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035082"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 
-Teams aplicación que requiere permisos de dispositivo, como el acceso a cámara o micrófono, ahora requieren que los usuarios concedan permiso manualmente en un nivel de aplicación en el explorador web. Anteriormente, el explorador se encargaba de conceder los permisos de acceso, pero ahora estos permisos se gestionan en Microsoft Teams. Esto tiene implicaciones en la forma de diseñar su aplicación y si requieren estos permisos en el explorador.
+La aplicación de Teams que requiere permisos de dispositivo, como el acceso a la cámara o al micrófono, ahora requiere que los usuarios concedan permiso manualmente en un nivel por aplicación en el explorador web. Anteriormente, el explorador se encargaba de conceder los permisos de acceso, pero ahora estos permisos se gestionan en Microsoft Teams. Esto tiene implicaciones en la forma de diseñar su aplicación y si requieren estos permisos en el explorador.
 
 ## <a name="enable-apps-device-permissions"></a>Habilitar los permisos del dispositivo de la aplicación
 
@@ -23,7 +23,7 @@ Si la aplicación de Teams se ha declarado en el [manifiesto de la aplicación](
 
 * **Pestañas de chats, canales o reuniones**: la opción **Permisos de aplicación** está disponible en la lista desplegable de la pestaña. ![Lista desplegable Permisos de aplicación](../../assets/images/tabs/drop-downapppermissions.png)
 
-Después de seleccionar la opción **Permisos de aplicación**, aparece un elemento emergente donde el usuario puede habilitar el botón de permisos.
+Una vez seleccionada la opción **Permisos** de aplicación, aparece un elemento emergente en el que el usuario puede habilitar el botón permisos.
 
 Un usuario tendrá que habilitar estos permisos en el explorador para que estos permisos surtan efecto. Después de que el usuario cambie los permisos del dispositivo de la aplicación en el explorador, se le pedirá que vuelva a cargar la aplicación en Teams.
 
@@ -32,7 +32,7 @@ Un usuario tendrá que habilitar estos permisos en el explorador para que estos 
 
 ## <a name="recommendation"></a>Recomendación
 
-Teams aplicación que requiere permisos de dispositivo en el explorador debe mostrar instrucciones a los usuarios sobre dónde buscar y habilitar estos permisos en la interfaz de usuario de Teams. En función del contexto en el que se ejecute la aplicación, debe asegurarse de que las instrucciones apunten al usuario a la ubicación correcta para acceder a estos permisos. Los permisos difieren para aplicaciones personales, cuadros de diálogo de módulos de tareas, pestañas en chats y canales o reuniones.
+La aplicación teams que requiere permisos de dispositivo en el explorador debe mostrar instrucciones a los usuarios sobre dónde buscar y habilitar estos permisos en la interfaz de usuario de Teams. En función del contexto en el que se ejecute la aplicación, debe asegurarse de que las instrucciones apunten al usuario a la ubicación correcta para acceder a estos permisos. Los permisos difieren para aplicaciones personales, cuadros de diálogo de módulos de tareas, pestañas en chats y canales o reuniones.
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>

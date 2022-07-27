@@ -3,12 +3,12 @@ title: Compartir en Teams desde aplicaciones web
 description: Obtenga información sobre cómo agregar el botón Compartir a Teams insertado en su sitio web, con una vista previa del sitio web, mediante ejemplos de código
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558481"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035320"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Compartir en Teams desde aplicaciones web
 
@@ -16,7 +16,7 @@ Los sitios web de terceros pueden usar el script del iniciador para insertar Com
 
 En la imagen siguiente se muestra la ventana emergente para la experiencia de vista previa de Share to Teams:
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Elemento emergente Compartir a Teams":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Elemento emergente Compartir en Teams":::
 
 > [!NOTE]
 >
@@ -38,7 +38,6 @@ Vea el siguiente vídeo para obtener información sobre cómo insertar el botón
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
-
 
 ## <a name="embed-a-share-to-teams-button"></a>Crear un botón Compartir en Teams
 
@@ -117,7 +116,7 @@ Puede usar las versiones predeterminadas de HTML o la versión de Open Graph.
 
 Para los profesores que usan el botón Compartir con Teams, hay una opción adicional que `Create an Assignment` le permite crear rápidamente una asignación en el equipo elegido, en función del vínculo compartido. En la imagen siguiente se muestra Compartir en Teams para el ámbito educativo:
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Compartir en la ventana emergente de educación de Teams":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Compartir con la educación emergente de Teams":::
 
 ## <a name="full-launcherjs-definition"></a>Definición completa de launcher.js
 

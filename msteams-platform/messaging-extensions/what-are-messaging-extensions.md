@@ -5,19 +5,19 @@ description: En este módulo, aprenderá las extensiones de mensajería y los es
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: af67eb36d89903f22a8479e04ed22134b7741c80
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189798"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035173"
 ---
 # <a name="message-extensions"></a>Extensiones de mensajes
 
-Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede devolver los resultados de esa interacción al cliente de Teams en forma de tarjeta con formato enriquecido.
+Las extensiones de mensajería permiten a los usuarios interactuar con su servicio web mediante botones y formularios en el cliente de Microsoft Teams. Pueden buscar o iniciar acciones en un sistema externo del área de redactar mensajes, el cuadro de comandos o directamente desde un mensaje. Puede devolver los resultados de esa interacción al cliente de Teams en forma de una tarjeta con formato enriquecido.
 
 > [!IMPORTANT]
-> Las extensiones de mensaje están disponibles en entornos de Government Community Cloud (GCC) y GCC-High, pero no en el entorno del Departamento de Defensa (DoD).
+> Las extensiones de mensaje están disponibles en los entornos de nube de la comunidad de Government (GCC) y GCC-High, pero no en el entorno del Departamento de Defensa (DoD).
 
 En este documento se proporciona información general sobre la extensión del mensaje, las tareas realizadas en diferentes escenarios, el trabajo de la extensión de mensaje, los comandos de acción y búsqueda, y la apertura de vínculos.
 
@@ -38,12 +38,12 @@ La siguiente imagen muestra las ubicaciones desde las que se invocan las extensi
 
 ## <a name="understand-how-message-extensions-work"></a>Descripción del funcionamiento de las extensiones de mensajería
 
-Una extensión de mensaje consta de un servicio web que se hospeda y un manifiesto de aplicación, que define desde dónde se invoca el servicio web en el cliente Teams. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación segura de modo que deberá registrar su servicio web como bot en Bot Framework.
+Una extensión de mensaje consta de un servicio web que hospeda y un manifiesto de aplicación, que define desde dónde se invoca el servicio web en el cliente de Teams. El servicio web aprovecha el esquema de mensajería de Bot Framework y el protocolo de comunicación segura de modo que deberá registrar su servicio web como bot en Bot Framework.
 
 > [!NOTE]
 > Aunque puede crear el servicio web manualmente, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) para trabajar con el protocolo.
 
-En el manifiesto de la aplicación para Teams aplicación, se define una única extensión de mensaje con hasta diez comandos diferentes. Cada comando define un tipo, como acción o búsqueda y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son el área de redacción de mensajes, la barra de comandos y el mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información pertinente. Responda con una carga JSON, lo que permite al cliente de Teams conocer la siguiente interacción que se va a habilitar.
+En el manifiesto de la aplicación para la aplicación Teams, se define una sola extensión de mensaje con hasta 10 comandos diferentes. Cada comando define un tipo, como acción o búsqueda y las ubicaciones del cliente desde donde se invoca. Las ubicaciones de invocación son el área de redacción de mensajes, la barra de comandos y el mensaje. Al invocar, el servicio web recibe un mensaje HTTPS con una carga JSON que incluye toda la información pertinente. Responda con una carga JSON, lo que permite al cliente de Teams conocer la siguiente interacción que se va a habilitar.
 
 ## <a name="types-of-message-extension-commands"></a>Tipos de comandos de extensión de mensajería
 
@@ -51,7 +51,7 @@ Hay dos tipos de comandos de extensión de mensajería: comando de acción y com
 
 ### <a name="action-commands"></a>Comandos de acción
 
-Los comandos de acción le permiten presentar a los usuarios un elemento emergente modal para recopilar o mostrar información. Cuando un usuario envía el formulario, su servicio web puede responder insertando un mensaje directamente en la conversación o insertando un mensaje en el área de redacción de mensajes. Después, el usuario puede enviar el mensaje. Puede encadenar varios formularios para flujos de trabajo más complejos.
+Los comandos de acción se usan para presentar a los usuarios un elemento emergente modal para recopilar o mostrar información. Cuando un usuario envía el formulario, su servicio web puede responder insertando un mensaje directamente en la conversación o insertando un mensaje en el área de redacción de mensajes. Después, el usuario puede enviar el mensaje. Puede encadenar varios formularios para flujos de trabajo más complejos.
 
 Los comandos de acción se pueden desencadenar desde el área de redacción de mensajes, el cuadro de comandos o desde un mensaje. Cuando el comando se invoca desde un mensaje, la carga inicial de JSON enviada a su servicio web incluirá el mensaje completo desde el cual se invocó. La siguiente imagen muestra el módulo de tareas de comandos de acción de extensión de mensajería:
 

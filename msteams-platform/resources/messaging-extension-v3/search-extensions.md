@@ -4,12 +4,12 @@ description: En este artículo, aprenderá a desarrollar extensiones de mensajes
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 20dbc7c5a65ee44f3b40eda29a20d6d37e8a81f0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190013"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035229"
 ---
 # <a name="search-with-message-extensions"></a>Búsqueda con extensiones de mensaje
 
@@ -110,9 +110,9 @@ El resto del controlador solicita `onQuery` información al usuario, muestra una
 
 ## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Controlar eventos onQuerySettingsUrl y onSettingsUpdate
 
-Los `onQuerySettingsUrl` eventos y `onSettingsUpdate` funcionan juntos para habilitar el elemento de menú **Configuración**.
+Los `onQuerySettingsUrl` eventos y `onSettingsUpdate` funcionan juntos para habilitar el elemento de menú **Configuración** .
 
-![Capturas de pantalla de las ubicaciones de Configuración elemento de menú](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![Capturas de pantalla de las ubicaciones del elemento de menú Configuración](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 El controlador de `onQuerySettingsUrl` devuelve la dirección URL de la página de configuración; una vez que se cierra la página de configuración, el controlador de `onSettingsUpdate` acepta y guarda el estado devuelto. Este es el único caso en el que `onQuery` *no* recibe la respuesta de la página de configuración.
 
@@ -122,7 +122,7 @@ Cada solicitud a la extensión de mensaje se realiza a través de un `Activity` 
 
 ### <a name="receive-user-requests"></a>Recepción de solicitudes de usuario
 
-Cuando un usuario realiza una consulta, Microsoft Teams envía al servicio un objeto estándar de Bot Framework`Activity`. El servicio debe realizar su lógica para un `Activity` que se haya `type` establecido `invoke` en y `name` establecido en un tipo admitido `composeExtension` , como se muestra en la tabla siguiente.
+Cuando un usuario realiza una consulta, Microsoft Teams envía al servicio un objeto estándar de Bot Framework `Activity` . El servicio debe realizar su lógica para un `Activity` que se haya `type` establecido `invoke` en y `name` establecido en un tipo admitido `composeExtension` , como se muestra en la tabla siguiente.
 
 Además de las propiedades de actividad de bot estándar, la carga contiene los siguientes metadatos de solicitud:
 
@@ -444,7 +444,7 @@ Cada solicitud a los servicios incluye el identificador ofuscado del usuario que
 },
 ```
 
-Se `id` garantiza que los valores y `aadObjectId` son los del usuario autenticado Teams. Se pueden usar como claves para buscar credenciales o cualquier estado almacenado en caché en el servicio. Además, cada solicitud contiene el identificador de inquilino de Microsoft Azure Active Directory (Azure AD) del usuario, que se puede usar para identificar la organización del usuario. Si procede, la solicitud también contiene los identificadores de equipo y canal desde los que se originó la solicitud.
+Se `id` garantiza que los valores y `aadObjectId` son los del usuario autenticado de Teams. Se pueden usar como claves para buscar credenciales o cualquier estado almacenado en caché en el servicio. Además, cada solicitud contiene el identificador de inquilino de Microsoft Azure Active Directory (Azure AD) del usuario, que se puede usar para identificar la organización del usuario. Si procede, la solicitud también contiene los identificadores de equipo y canal desde los que se originó la solicitud.
 
 ## <a name="authentication"></a>Autenticación
 
@@ -453,11 +453,11 @@ Si el servicio requiere autenticación de usuario, debe iniciar sesión en el us
 La secuencia es la siguiente:
 
 1. El usuario emite una consulta o la consulta predeterminada se envía automáticamente al servicio.
-2. El servicio comprueba si el usuario se ha autenticado primero mediante la inspección del identificador de usuario Teams.
+2. El servicio comprueba si el usuario se ha autenticado primero inspeccionando el identificador de usuario de Teams.
 3. Si el usuario no se ha autenticado, envíe una `auth` respuesta con una `openUrl` acción sugerida, incluida la dirección URL de autenticación.
-4. El cliente Microsoft Teams inicia una ventana emergente que hospeda la página web mediante la dirección URL de autenticación especificada.
-5. Una vez que el usuario inicia sesión, debe cerrar la ventana y enviar un "código de autenticación" al cliente de Teams.
-6. A continuación, el cliente Teams vuelve a emitir la consulta al servicio, lo que incluye el código de autenticación pasado en el paso 5.
+4. El cliente de Microsoft Teams inicia una ventana emergente que hospeda la página web mediante la dirección URL de autenticación especificada.
+5. Después de que el usuario inicie sesión, debe cerrar la ventana y enviar un "código de autenticación" al cliente de Teams.
+6. A continuación, el cliente de Teams vuelve a emitir la consulta al servicio, lo que incluye el código de autenticación pasado en el paso 5.
 
 El servicio debe comprobar que el código de autenticación recibido en el paso 6 coincide con el del paso 5, lo que garantiza que un usuario malintencionado no intente suplantar o poner en peligro el flujo de inicio de sesión. Así se “cierra el bucle” de forma eficaz para finalizar la secuencia de autenticación segura.
 
@@ -485,11 +485,11 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 ```
 
 > [!NOTE]
-> Para que la experiencia de inicio de sesión se hospede en un Teams elemento emergente, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
+> Para que la experiencia de inicio de sesión se hospede en un elemento emergente de Teams, la parte del dominio de la dirección URL debe estar en la lista de dominios válidos de la aplicación. Para obtener más información, consulte [validDomains](~/resources/schema/manifest-schema.md#validdomains) en el esquema de manifiesto.
 
 ### <a name="start-the-sign-in-flow"></a>Inicio del flujo de inicio de sesión
 
-La experiencia de inicio de sesión debe tener capacidad de respuesta y ajustarse a una ventana emergente. Debe integrarse con el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client), que usa el paso de mensajes.
+La experiencia de inicio de sesión debe responder y ajustarse a una ventana emergente. Debe integrarse con el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client), que usa el paso de mensajes.
 
 Al igual que con otras experiencias incrustadas que se ejecutan dentro de Teams, el código dentro de la ventana debe llamar `microsoftTeams.initialize()`primero a . Si el código realiza un flujo de OAuth, puede pasar el identificador de usuario de Teams a la ventana, que luego puede pasarlo a la dirección URL de inicio de sesión de OAuth.
 
@@ -500,7 +500,7 @@ Cuando la solicitud de inicio de sesión se complete y vuelva a redirigir a la p
 1. Generar un código de seguridad. (Puede ser un número aleatorio). Debe almacenar en caché este código en el servicio, junto con las credenciales obtenidas a través del flujo de inicio de sesión, como los tokens de OAuth 2.0.
 2. Llame a `microsoftTeams.authentication.notifySuccess` y pase el código de seguridad.
 
-En este momento, la ventana se cierra y el control se pasa al cliente Teams. El cliente ahora puede volver a emitir la consulta de usuario original, junto con el código de seguridad de la `state` propiedad . El código puede usar un código de seguridad para buscar las credenciales almacenadas anteriormente y completar la secuencia de autenticación, y así completar la solicitud del usuario.
+En este momento, la ventana se cierra y el control se pasa al cliente de Teams. El cliente ahora puede volver a emitir la consulta de usuario original, junto con el código de seguridad de la `state` propiedad . El código puede usar un código de seguridad para buscar las credenciales almacenadas anteriormente y completar la secuencia de autenticación, y así completar la solicitud del usuario.
 
 #### <a name="reissued-request-example"></a>Ejemplo de solicitud reemitido
 

@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a definir comandos de acción de extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919847"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035292"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -19,7 +19,7 @@ ms.locfileid: "66919847"
 > [!NOTE]
 > Cuando se inicia una acción de mensaje, los detalles de los datos adjuntos no se envían como parte de la `turncontext` actividad de invocación.
 
-Los comandos de acción le permiten presentar a los usuarios un elemento emergente modal denominado módulo de tareas en Teams. El módulo de tareas recopila o muestra información, procesa la interacción y envía la información de vuelta a Teams. Este documento le guía sobre cómo seleccionar ubicaciones de invocación de los comandos de acción, crear el módulo de tareas, enviar el mensaje final o tarjeta, crear un comando de acción mediante App Studio o crearlo manualmente.
+Los comandos de acción permiten presentar a los usuarios un elemento emergente modal denominado módulo de tareas en Teams. El módulo de tareas recopila o muestra información, procesa la interacción y envía la información de vuelta a Teams. Este documento le guía sobre cómo seleccionar ubicaciones de invocación de los comandos de acción, crear el módulo de tareas, enviar el mensaje final o tarjeta, crear un comando de acción mediante App Studio o crearlo manualmente.
 
 Antes de crear el comando de acción, debe decidir los siguientes factores:
 
