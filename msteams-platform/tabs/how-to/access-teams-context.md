@@ -3,12 +3,12 @@ title: Obtener contexto para su pestaña
 description: En este módulo, aprenderá a obtener el contexto del usuario en las pestañas, el contexto de usuario y la información del contexto de acceso.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 63bbc9c0e5f20e293f9230000597860e3f053274
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841725"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058119"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -17,8 +17,6 @@ La pestaña requiere información contextual para mostrar el contenido pertinent
 * Información básica sobre el usuario, el equipo o la empresa.
 * Configuración regional e información del tema.
 * `page.id` y `page.subPageId` que identifican lo que hay en esta pestaña (conocido como `entityId` y `subEntityId` antes de TeamsJS v.2.0.0).
-
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="user-context"></a>Contexto del usuario
 
@@ -41,7 +39,7 @@ Puede acceder a la información contextual de dos formas:
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obtener contexto insertando valores de marcador de posición de dirección URL
 
-Use marcadores de posición en la configuración o en las direcciones URL de contenido. Microsoft Teams reemplaza los marcadores de posición por valores pertinentes al determinar la configuración o la dirección URL real del contenido. Los marcadores de posición disponibles incluyen todos los campos del objeto [de contexto](/javascript/api/@microsoft/teams-js/app.context) . Los marcadores de posición comunes incluyen las siguientes listas:
+Use marcadores de posición en la configuración o en las direcciones URL de contenido. Microsoft Teams reemplaza los marcadores de posición por valores pertinentes al determinar la configuración o la dirección URL real del contenido. Los marcadores de posición disponibles incluyen todos los campos del objeto [de contexto](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) . Los marcadores de posición comunes incluyen las siguientes propiedades:
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): identificador único definido por el desarrollador para la página definida al [configurar la página](~/tabs/how-to/create-tab-pages/configuration-page.md) por primera vez. (Conocido como `{entityId}` anterior a TeamsJS v.2.0.0).
 * [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): el identificador único definido por el desarrollador para la subpágina que estos puntos de contenido definen al generar un [vínculo profundo](~/concepts/build-and-test/deep-links.md) para un elemento específico dentro de la página. (Conocido como `{subEntityId}` anterior a TeamsJS v.2.0.0).
@@ -70,6 +68,49 @@ Por ejemplo, en el manifiesto de la aplicación si establece el atributo `"https
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Obtener contexto mediante la biblioteca JavaScript de Microsoft Teams
 
 También puede recuperar la información mencionada previamente usando el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client)llamando a `microsoftTeams.getContext(function(context) { /* ... */ })`.
+
+El código siguiente proporciona un ejemplo de variable de contexto:
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
@@ -184,6 +225,9 @@ Para obtener más información, consulte [Novedades a la interfaz *context*](usi
 
 ## <a name="retrieve-context-in-private-channels"></a>Recuperar contexto en canales privados
 
+> [!NOTE]
+> Actualmente, los canales privados solo están en versión preliminar para desarrolladores privados.
+
 Cuando la página de contenido se carga en un canal privado, los datos que recibe de la `getContext` llamada se ofuscan para proteger la privacidad del canal.
 
 Los campos siguientes se cambian cuando la página de contenido está en un canal privado:
@@ -200,10 +244,9 @@ Si la página usa cualquiera de estos valores, el valor del `channel.membershipT
 ## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Recuperación del contexto en Microsoft Teams Connect canales compartidos
 
 > [!NOTE]
-> Actualmente, Microsoft Teams Connect canales compartidos solo están en [versión preliminar para desarrolladores](../../resources/dev-preview/developer-preview-intro.md).
+> Actualmente, Microsoft Teams Connect canales compartidos solo están en versión preliminar para desarrolladores.
 
 Cuando la página de contenido se carga en un canal compartido Microsoft Teams Connect, los datos que recibe de la `getContext` llamada se modifican debido a la lista única de usuarios en canales compartidos.
-
 Los campos siguientes se cambian cuando la página de contenido está en un canal compartido:
 
 * `team.groupId`: no definido para canales compartidos.
@@ -221,7 +264,37 @@ Además de estos cambios de campo, hay dos nuevos campos disponibles para los ca
 Si la página usa cualquiera de estos valores, el valor del `channel.membershipType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
 
 > [!NOTE]
-> Cada vez que un usuario reinicia o vuelve a cargar el cliente web o de escritorio de Teams, se crea un nuevo id. de sesión, al que realiza un seguimiento la sesión de Teams, mientras que, cuando un usuario sale de las aplicaciones de Teams y lo vuelve a cargar en la plataforma teams, se crea un nuevo id. de sesión de aplicación, al que realiza un seguimiento la sesión de la aplicación.
+> `teamSiteUrl` también funciona bien para los canales estándar.
+> Si la página usa cualquiera de estos valores, el valor del `channelType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
+
+## <a name="get-context-in-shared-channels"></a>Obtener contexto en canales compartidos
+
+Cuando la experiencia de usuario de contenido se cargue en un canal compartido, use los datos recibidos de `getContext` la llamada para los cambios de canal compartido. Si tab usa cualquiera de los valores siguientes, debe rellenar el `channelType` campo para determinar si la pestaña se carga en un canal compartido y responder correctamente.
+En el caso de los canales compartidos, el `groupId` valor es `null`, ya que el groupId del equipo host no refleja con precisión la pertenencia verdadera del canal compartido. Para solucionar este problema, las `hostTeamGroupID` propiedades y `hostTenantID` se agregan recientemente y son útiles para realizar llamadas de Microsoft Graph API para recuperar la pertenencia. `hostTeam` hace referencia al equipo que creó el canal compartido. `currentTeam` hace referencia al equipo desde el que el usuario actual tiene acceso al canal compartido.
+
+Para obtener más información sobre estos conceptos, vea [Canales compartidos](~/concepts/build-and-test/shared-channels.md).
+
+Use las siguientes `getContext` propiedades en canales compartidos:
+
+| Propiedad | Descripción |
+|----------|--------------|
+|`channelId`| La propiedad se establece en el identificador de subproceso del canal SC.|
+|`channelType`| La propiedad se establece en `sharedChannel` para canales compartidos.|
+|`groupId`|La propiedad es `null` para canales compartidos.|
+|`hostTenantId`| La propiedad se ha agregado recientemente y describe el identificador de inquilino del host, útil para compararla con la propiedad de identificador de inquilino del `tid` usuario actual. |
+|`hostTeamGroupId`| La propiedad se ha agregado recientemente y describe el identificador de grupo de Azure AD del equipo host, útil para realizar llamadas de Microsoft Graph API para recuperar la pertenencia a canales compartidos. |
+|`teamId`|La propiedad se agrega recientemente y se establece en el identificador de subproceso del equipo compartido actual. |
+|`teamName`|La propiedad se establece en el equipo `teamName`compartido actual. |
+|`teamType`|La propiedad se establece en el equipo `teamType`compartido actual.|
+|`teamSiteUrl`|La propiedad describe la propiedad del `channelSiteUrl`canal compartido.|
+|`teamSitePath`| La propiedad describe la propiedad del `channelSitePath`canal compartido.|
+|`teamSiteDomain`| La propiedad describe la propiedad del `channelSiteDomain`canal compartido.|
+|`tenantSKU`| La propiedad describe la propiedad del `tenantSKU`equipo host.|
+|`tid`|  La propiedad describe el identificador de inquilino del usuario actual.|
+|`userObjectId`|  La propiedad describe el identificador del usuario actual.|
+|`userPrincipalName`| La propiedad describe el UPN del usuario actual.|
+
+Para obtener más información sobre los canales compartidos, consulte [Canales compartidos](~/concepts/build-and-test/shared-channels.md).
 
 ## <a name="handle-theme-change"></a>Controlar el cambio de tema
 

@@ -3,16 +3,16 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895499"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058217"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
-El manifiesto de la aplicación de Microsoft Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto de la aplicación debe ajustarse al esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Se admiten las versiones anteriores 1.0, 1.1,...,1.12 y la versión 1.13 actual (vea la nota siguiente) (con "v1.x" en la dirección URL).
+El manifiesto de la aplicación de Microsoft Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto de la aplicación debe ajustarse al esquema hospedado en [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json). Se admiten las versiones anteriores 1.0, 1.1,...,1.13 y la versión  actual 1.14 (con "v1.x" en la dirección URL).
 Para obtener más información sobre los cambios realizados en cada versión, consulte [registro de cambios del manifiesto](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 En la tabla siguiente se enumeran las versiones de manifiesto de aplicación y versión de TeamsJS según diferentes escenarios de aplicación:
@@ -25,8 +25,8 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -777,9 +777,20 @@ Puede definir cualquiera de las siguientes propiedades:
 * `privacyUrl`: la dirección URL HTTPS de la directiva de privacidad del desarrollador.
 * `termsOfUseUrl`: la dirección URL HTTPS de los términos de uso del desarrollador.
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+Matriz **opcional**
+
+Habilita la aplicación en canales no estándar. Si la aplicación admite un ámbito de equipo y se define esta propiedad, Teams habilita la aplicación en cada tipo de canal en consecuencia. Actualmente, se admiten los tipos de canal privado y compartido.
+
+> [!NOTE]
+>
+> * Si la aplicación admite un ámbito de equipo, funciona en los canales estándar, independientemente de los valores definidos en esta propiedad.
+> * La aplicación puede tener en cuenta las propiedades únicas de cada uno de los tipos de canal para que funcione correctamente. Para habilitar la pestaña para canales privados y compartidos, consulte [Recuperar contexto en canales privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) y [Recuperar contexto en canales compartidos](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
-Booleano **opcional**
+**Opcional**: booleano
 
 Cuando la propiedad `defaultBlockUntilAdminAction` se establece en **true**, la aplicación se oculta a los usuarios de forma predeterminada hasta que el administrador la permita. Si se establece en **true**, la aplicación se oculta para todos los inquilinos y usuarios finales. Los administradores de inquilinos pueden ver la aplicación en el Centro de administración de Teams y tomar medidas para permitir o bloquear la aplicación. El valor predeterminado es **False**. Para obtener más información sobre el bloque de aplicaciones predeterminado, consulte [Ocultar aplicación de Teams hasta que el administrador lo apruebe](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
@@ -810,6 +821,7 @@ Especifique la definición de la extensión de reunión. Para obtener más infor
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`scenes`|matriz de objetos| 5 elementos||Escenas admitidas de la reunión.|
+|`supportsStreaming`|Boolean|||Valor que indica si una aplicación puede transmitir el contenido de audio y vídeo de la reunión a un punto de conexión del protocolo de reunión en tiempo real (RTMP). El valor predeterminado es **False**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035180"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058280"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -36,6 +36,9 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
+| 07/28/2022 | Agregar la imagen para mostrar de Teams y la tarjeta de contactos para la notificación durante la reunión| Crear aplicaciones para reuniones y llamadas de Teams > Habilitar y configurar aplicaciones para reuniones > [Notificación durante la reunión](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 07/28/2022 | Compilar canales compartidos en Teams | Compilar aplicaciones para reuniones y llamadas de Teams > [Canales compartidos](concepts/build-and-test/Shared-channels.md) |
+| 07/28/2022|Se ha presentado la versión 1.14 del manifiesto de la aplicación| Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación de Teams](resources/schema/manifest-schema.md)|
 | 26/07/2022|Acciones sugeridas para bots| Compilar bots > Conversaciones de bot > [Mensajes en conversaciones de bot](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 07/21/2022 | Guía paso a paso para enviar notificaciones de fuentes de actividades | Diseñar la aplicación > Componentes de la interfaz de usuario> Notificaciones de fuente de actividades > [Enviar notificación de fuente de actividades](sbs-graphactivity-feedbroadcast.yml) |
 | 08/07/2022| Actualizaciones para enviar el identificador de canal seleccionado por el usuario durante la instalación de la aplicación a los bots a través de eventos de actualización de conversación e instalación |  Compilar bots > Conversaciones de bot > Eventos de conversación en el bot de Teams > [Eventos de conversación en el bot de Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |

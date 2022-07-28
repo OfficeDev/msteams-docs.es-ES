@@ -4,14 +4,14 @@ description: Obtenga información sobre el archivo de manifiesto de ejemplo y la
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503476"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058210"
 ---
-# <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifiesto de versión preliminar del desarrollador público para Teams
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
 
 Para obtener información sobre cómo habilitar la versión preliminar para desarrolladores, consulte [versión preliminar para desarrolladores públicos para Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -395,10 +395,10 @@ El objeto es una matriz con todos los elementos del tipo `object`. Este bloque s
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔️|Dirección URL de https:// que se va a usar al configurar la pestaña.|
 |`canUpdateConfiguration`|Boolean|||El valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. Predeterminado: `true`.|
-|`scopes`|Matriz de enumeración|1 |✔️|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
-|`context` |Matriz de enumeración|6 ||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.|
+|`scopes`|Matriz de enumeración|1|✔️|Actualmente, las pestañas configurables solo admiten los ámbitos `team` y `groupchat`. |
+|`context` |Matriz de enumeración|6||Cojunto de ámbitos `contextItem` donde [se admite una pestaña](../../tabs/how-to/access-teams-context.md). Valor predeterminado: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.|
 |`sharePointPreviewImage`|Cadena|2048||Una ruta de acceso de archivo relativa a una imagen de vista previa de pestaña para su uso en SharePoint. Tamaño 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeración|1 ||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
+|`supportedSharePointHosts`|Matriz de enumeración|1||Define cómo está disponible la pestaña en SharePoint. Las opciones son `sharePointFullPage` y `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -417,7 +417,7 @@ El objeto es una matriz (con un máximo de 16 elementos) y todos los elementos d
 |`contentUrl`|Cadena|2048 caracteres|✔️|La https:// dirección URL que apunta a la interfaz de usuario de entidad que se mostrará en el lienzo de Teams.|
 |`contentBotId`|   | | | El identificador de la aplicación Microsoft Teams especificado para el bot en el portal de Bot Framework. |
 |`websiteUrl`|Cadena|2048 caracteres||La dirección URL https:// a la que apuntar si un usuario opta por la vista en un explorador.|
-|`scopes`|Matriz de enumeración|1 |✔️|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
+|`scopes`|Matriz de enumeración|1|✔️|Actualmente, las pestañas estáticas solo admiten el ámbito `personal`, lo que significa que solo se puede aprovisionar como parte de la experiencia personal.|
 
 ## <a name="bots"></a>bots
 
@@ -433,7 +433,7 @@ El elemento es una matriz (como máximo 1 elemento&mdash;actualmente solo se per
 |`needsChannelSelector`|Boolean|||Describe si el bot usa una sugerencia del usuario para agregar el bot a un canal específico. Predeterminado: `false`|
 |`isNotificationOnly`|Boolean|||Indica si un bot es un bot unidireccional de solo notificación, en lugar de un bot conversacional. Valor predeterminado: `false`|
 |`supportsFiles`|Boolean|||Indica si el bot admite la capacidad de cargar o descargar archivos en el chat personal. Valor predeterminado: `false`|
-|`scopes`|Matriz de enumeración|3 |✔️|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
+|`scopes`|Matriz de enumeración|3|✔️|Especifica si el bot ofrece una experiencia en el contexto de un canal en un `team`, en un chat de grupo (`groupchat`) o una experiencia con ámbito solo para un usuario individual (`personal`). Estas opciones no son exclusivas.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -441,8 +441,8 @@ Lista opcional de comandos que el bot puede recomendar a los usuarios. El objeto
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumeración|3 |✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔️|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32).<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.scopes`|matriz de enumeración|3|✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
+|`items.commands`|matriz de objetos|10|✔️|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32).<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
 
 ## <a name="connectors"></a>conectores
 
@@ -456,7 +456,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 |---|---|---|---|---|
 |`configurationUrl`|Cadena|2048 caracteres|✔️|Dirección URL de https:// que se va a usar al configurar el conector.|
 |`connectorId`|String|64 caracteres|✔️|Un identificador único del conector que coincide con su identificador en el [Panel de desarrolladores de conectores](https://aka.ms/connectorsdashboard).|
-|`scopes`|Matriz de enumeración|1 |✔️|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
+|`scopes`|Matriz de enumeración|1|✔️|Especifica si el conector ofrece una experiencia en el contexto de un canal en un `team` o una experiencia con ámbito solo para un usuario individual (`personal`). Actualmente, solo se admite el ámbito de `team`.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -473,7 +473,7 @@ El objeto es una matriz (con un máximo de 1 elemento) y todos los elementos de 
 |---|---|---|---|---|
 |`botId`|Cadena|64|✔️|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. Este puede ser el mismo que el [identificador de aplicación general](#id).|
 |`canUpdateConfiguration`|Boolean|||Un valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. El valor predeterminado es `false`.|
-|`commands`|Matriz de objeto|10 |✔️|Matriz de comandos que admite la extensión de mensajería.|
+|`commands`|Matriz de objeto|10|✔️|Matriz de comandos que admite la extensión de mensajería.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -488,22 +488,22 @@ Cada elemento de comando es un objeto con la estructura siguiente:
 |`title`|Cadena|32 caracteres|✔️|Nombre del comando fácil de usar.|
 |`description`|Cadena|128 caracteres||Descripción que aparece a los usuarios para indicar el propósito de este comando.|
 |`initialRun`|Booleano|||Un valor booleano que indica si el comando debe ejecutarse inicialmente sin parámetros. Predeterminado: `false`|
-|`context`|Matriz de cadenas|3 ||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose", "commandBox"]`|
+|`context`|Matriz de cadenas|3||Define desde dónde se puede invocar la extensión de mensaje. Cualquier combinación de `compose`,`commandBox`,`message`. El valor predeterminado es `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Un valor booleano que indica si debe capturar dinámicamente el módulo de tareas.|
 |`taskInfo`|Objeto|||Especifique el módulo de tareas que se va a cargar previamente al usar un comando de extensión de mensajería.|
 |`taskInfo.title`|Cadena|64||Título del cuadro de diálogo inicial.|
 |`taskInfo.width`|Cadena|||Ancho del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.height`|Cadena|||Alto del cuadro de diálogo: un número en píxeles o un diseño predeterminado como "grande", "mediano" o "pequeño".|
 |`taskInfo.url`|Cadena|||Dirección URL de la vista web inicial.|
-|`messageHandlers`|Matriz de objetos|5 ||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones. Los dominios también deben aparecer en `validDomains`.|
+|`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones. Los dominios también deben aparecer en `validDomains`.|
 |`messageHandlers.type`|Cadena|||Tipo de controlador de mensajes. Debe estar `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadenas|||Matriz de dominios para los que se puede registrar el controlador de mensajes de vínculo.|
-|`parameters`|Matriz de objeto|5 |✔️|Lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
+|`parameters`|Matriz de objeto|5|✔️|Lista de parámetros que toma el comando. Mínimo: 1; máximo: 5.|
 |`parameter.name`|String|64 caracteres|✔️|El nombre del parámetro tal como aparece en el cliente de Teams y se incluye en la solicitud del usuario|
 |`parameter.title`|Cadena|32 caracteres|✔️|Título fácil de usar para el parámetro.|
 |`parameter.description`|Cadena|128 caracteres||Cadena fácil de usar que describe el propósito de este parámetro.|
 |`parameter.inputType`|Cadena|128 caracteres||Define el tipo de control que se muestra en un módulo de tareas para `fetchTask: true`. Uno de `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
-|`parameter.choices`|Matriz de objetos|10 ||Las opciones de elección para el `choiceset`. Use solo cuando `parameter.inputType` sea `choiceset`.|
+|`parameter.choices`|Matriz de objetos|10||Las opciones de elección para el `choiceset`. Use solo cuando `parameter.inputType` sea `choiceset`.|
 |`parameter.choices.title`|Cadena|128||Título de la elección.|
 |`parameter.choices.value`|Cadena|512||Valor de la elección.|
 
@@ -667,6 +667,17 @@ Puede definir cualquiera de las siguientes propiedades:
 * `privacyUrl`: la dirección URL HTTPS de la directiva de privacidad del desarrollador.
 * `termsOfUseUrl`: la dirección URL HTTPS de los términos de uso del desarrollador.
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+Matriz **opcional**
+
+Habilita la aplicación en canales no estándar. Si la aplicación admite un ámbito de equipo y esta propiedad está definida, Teams habilita la aplicación en cada tipo de canal en consecuencia. Actualmente, se admiten los tipos de canal privado y compartido.
+
+> [!NOTE]
+>
+> * Si la aplicación admite un ámbito de equipo, funciona en los canales estándar independientemente de los valores definidos en esta propiedad.
+> * La aplicación puede tener en cuenta las propiedades únicas de cada uno de los tipos de canal para que funcionen correctamente. Para habilitar la pestaña para canales privados y compartidos, vea [Recuperar contexto en canales privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) y [recuperar contexto en canales compartidos](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
 Cadena **opcional**
@@ -713,6 +724,7 @@ Especifique la definición de la extensión de reunión. Para obtener más infor
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`scenes`|matriz de objetos| 5 elementos||Escenas admitidas de la reunión.|
+|`supportsStreaming`|Boolean|||Valor que indica si una aplicación puede transmitir contenido de audio y vídeo de la reunión a un punto de conexión de protocolo de reunión en tiempo real (RTMP). El valor predeterminado es **False**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
