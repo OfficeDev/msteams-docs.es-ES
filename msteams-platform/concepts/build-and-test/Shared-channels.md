@@ -5,28 +5,28 @@ description: Colaborar con canales compartidos.
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 044a5189a626acfcb26631d7d8ee843264401dfe
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 96cd3014fa1cee38832724e1b50cf29db372d711
+ms.sourcegitcommit: d40ea0d504db66d49bbe0955f7031db1cd210056
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058299"
+ms.locfileid: "67060044"
 ---
 # <a name="shared-channels"></a>Canales compartidos
 
-Los canales compartidos de Teams permiten a los miembros de un canal colaborar con usuarios de otros equipos y organizaciones. Puede crear y compartir un canal compartido con:
+Los canales compartidos de Microsoft Teams permiten a los miembros de un canal colaborar con usuarios de otros equipos y organizaciones. Puede crear y compartir un canal compartido con:
 
 * Miembros de otro equipo de la misma organización.
 * Personas de la misma organización.
 * Personas y otros equipos de otras organizaciones.
 
-Los canales compartidos facilitan la colaboración sin problemas. Permite a los usuarios externos de fuera de la organización colaborar con usuarios internos en Teams sin cambiar su contexto de usuario. Mejora la experiencia del usuario a diferencia del uso de cuentas de invitado, por ejemplo, los miembros deben cerrar la sesión de Teams e iniciar sesión de nuevo con una cuenta de invitado. Las aplicaciones de Teams ahora pueden ampliar el eficaz espacio de colaboración.
+Los canales compartidos facilitan la colaboración sin problemas. Permitir que usuarios externos fuera de su organización colaboren con usuarios internos en Teams sin cambiar su contexto de usuario. Mejore la experiencia del usuario a diferencia del uso de cuentas de invitado; por ejemplo, los miembros deben cerrar la sesión de Teams e iniciar sesión de nuevo con una cuenta de invitado. Las aplicaciones de Teams ahora pueden ampliar el eficaz espacio de colaboración.
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Imagen de canal compartido"border="true" :::
 
 ## <a name="manifest-update-in-shared-channels"></a>Actualización del manifiesto en canales compartidos
 
-Cuando la experiencia de usuario de contenido se cargue en un canal compartido, use los datos recibidos de `getContext` la llamada para los cambios de canal compartido. `getContext`call publica dos nuevas propiedades, `hostTeamGroupID` y `hostTenantID`, que se usan para recuperar la pertenencia al canal de microsoft Graph API. `hostTeam` es el equipo que creó el canal compartido.
+Cuando la experiencia de usuario de contenido se cargue en un canal compartido, use los datos recibidos de `getContext` la llamada para los cambios de canal compartido. `getContext` call publica dos propiedades nuevas, `hostTeamGroupID` y `hostTenantID`, que se usan para recuperar la pertenencia al canal mediante las API de Microsoft Graph. `hostTeam` es el equipo que crea el canal compartido.
 
 SupportedChannelTypes es una propiedad opcional que habilita la aplicación en canales no estándar. Si la aplicación admite el ámbito del equipo y la propiedad está definida, Teams habilitará la aplicación en cada tipo de canal en consecuencia. Actualmente se admiten canales privados y compartidos. Para obtener más información, vea [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
 
@@ -46,7 +46,7 @@ SupportedChannelTypes es una propiedad opcional que habilita la aplicación en c
 
 > [!NOTE]
 >
-> * Si la aplicación admite el ámbito de equipo, siempre funcionará en canales estándar, independientemente de los valores que se definan en esta propiedad.
+> * Si la aplicación admite el ámbito de equipo, funciona en canales estándar, independientemente de los valores que se definan en esta propiedad.
 > * Es posible que la aplicación tenga que tener en cuenta las propiedades únicas de cada uno de estos tipos de canal para poder funcionar correctamente.
 
 Para obtener más información sobre cómo habilitar la pestaña, consulte:
@@ -93,7 +93,7 @@ Puede clasificar los miembros como inquilinos o fuera del inquilino comparando `
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
-2. Con `getContext`, compare el `tenantID` elemento del miembro con la `hostTenantID` propiedad .
+2. Use `getContext`, compare el `tenantID` elemento del miembro con la `hostTenantID` propiedad .
 
 ## <a name="azure-ad-native-identity"></a>Identidad nativa de Azure AD
 
@@ -104,7 +104,7 @@ Las aplicaciones deben funcionar entre inquilinos en la instalación y el uso. E
 |Regular | Identificador de grupo de Team Azure AD | Identificador de grupo de Team Azure AD |
 |Compartido | En blanco | Identificador de grupo de Azure AD del equipo host |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Pestañas de compilación para Teams](../../tabs/what-are-tabs.md)
 * [Esquema del manifiesto de la aplicación de Teams](../../resources/schema/manifest-schema.md)

@@ -3,21 +3,21 @@ title: Crear vínculos profundos
 description: Obtenga información sobre cómo crear vínculos profundos y cómo usarlos y navegar por ellos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841964"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058224"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
 Los vínculos profundos son un mecanismo de navegación que puede usar para conectar a los usuarios con información y características dentro de Teams y las aplicaciones de Teams. Los escenarios en los que la creación de vínculos profundos es útil son los siguientes:
 
 * Llevar al usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la pestaña para que el usuario pueda ver más detalles sobre la actividad.
-* La aplicación automatiza o simplifica determinadas tareas de usuario, como crear un chat o programar una reunión, rellenando previamente los vínculos profundos con los parámetros necesarios. Esto evita la necesidad de que los usuarios escriban manualmente la información.
+* La aplicación automatiza o simplifica determinadas tareas de usuario, como crear un chat o programar una reunión, rellenando previamente los vínculos profundos con los parámetros necesarios. Evita la necesidad de que los usuarios escriban manualmente la información.
 
-El SDK de cliente de JavaScript de Microsoft Teams (TeamsJS) simplifica el proceso de navegación. En muchos escenarios, como cuando se navega a contenido e información dentro de la pestaña o se iniciar un cuadro de diálogo de chat, el SDK proporciona API fuertemente tipeadas que proporcionan una experiencia mejorada y pueden reemplazar el uso de vínculos profundos. Estas API se recomiendan para las aplicaciones de Teams que se pueden ejecutar en otros hosts (Outlook, Office), ya que también proporcionan una manera de comprobar que ese host admite la funcionalidad que se usa. En las secciones siguientes se muestra información sobre la vinculación profunda, pero también se resalta cómo han cambiado los escenarios que solían requerirla con la versión v2 de TeamsJS.
+El SDK de cliente de JavaScript de Microsoft Teams (TeamsJS) simplifica el proceso de navegación. En muchos escenarios, como cuando se navega a contenido e información dentro de la pestaña o se iniciar un cuadro de diálogo de chat, el SDK proporciona API tipeadas que proporcionan una experiencia mejorada y pueden reemplazar el uso de vínculos profundos. Estas API se recomiendan para las aplicaciones de Teams que se pueden ejecutar en otros hosts (Outlook, Office), ya que también proporcionan una manera de comprobar que ese host admite la funcionalidad que se usa. En las secciones siguientes se muestra información sobre la vinculación profunda, pero también se resalta cómo han cambiado los escenarios que solían requerirla con la versión v2 de TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -51,7 +51,7 @@ Puede crear vínculos profundos a entidades en las aplicaciones de Teams. Se usa
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-Para implementar esto, agregue una acción **copiar vínculo** a cada elemento, de la manera que mejor se adapte a su interfaz de usuario. Cuando el usuario realiza esta acción, se llama a [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) para mostrar un cuadro de diálogo que contiene un vínculo que el usuario puede copiar en el portapapeles. Al realizar esta llamada, también pasa un identificador para el elemento, que obtiene en el [contexto](~/tabs/how-to/access-teams-context.md) cuando se sigue el vínculo y se vuelve a cargar la pestaña.
+Para implementar, agregue una acción **copiar vínculo** a cada elemento, de la manera que mejor se adapte a su interfaz de usuario. Cuando el usuario realiza esta acción, se llama a [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) para mostrar un cuadro de diálogo que contiene un vínculo que el usuario puede copiar en el portapapeles. Cuando realice esta llamada, pase un id. para el elemento. Se devuelve en [contexto](~/tabs/how-to/access-teams-context.md) cuando se sigue el vínculo y se vuelve a cargar la pestaña.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -128,10 +128,10 @@ Los parámetros de consulta son:
 | Nombre del parámetro | Descripción | Ejemplo |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | Identificador del Centro de administración de Teams. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | Identificador del elemento de la pestaña, que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md).|Lista de tareas123|
+| `entityId`&emsp; | Id. del elemento en la pestaña, que proporcionó al [configurar la pestaña](~/tabs/how-to/create-tab-pages/configuration-page.md). Al generar una dirección URL para la vinculación en profundidad, siga usando entityID como nombre de parámetro en la dirección URL. Al configurar la pestaña, el objeto de contexto hace referencia al entityID como {page.id}. |Lista de tareas123|
 | `entityWebUrl` o `subEntityWebUrl`&emsp; | Un campo opcional con una dirección URL de reserva que se usará si el cliente no admite la representación de la pestaña. | `https://tasklist.example.com/123` o `https://tasklist.example.com/list123/task456` |
 | `entityLabel` o `subEntityLabel`&emsp; | Etiqueta del elemento de la pestaña que se va a usar al mostrar el vínculo profundo. | Lista de tareas 123 o "Tarea 456 |
-| `context.subEntityId`&emsp; | Identificador del elemento dentro de la pestaña. |Tarea 456 |
+| `context.subEntityId`&emsp; | Identificador del elemento dentro de la pestaña. Al generar una dirección URL para la vinculación en profundidad, siga usando subEntityId como nombre de parámetro en la dirección URL. Al configurar la pestaña, el objeto de contexto hace referencia a subEntityID como subPageID. |Tarea 456 |
 | `context.channelId`&emsp; | Id. de canal de Microsoft Teams que está disponible en la pestaña [contexto](~/tabs/how-to/access-teams-context.md). Esta propiedad solo está disponible en pestañas configurables con un ámbito de **equipo**. No está disponible en pestañas estáticas, que tienen un ámbito **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId que está disponible desde el [contexto](~/tabs/how-to/access-teams-context.md) de la pestaña para el chat de grupo y de reunión | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat es el único contextType admitido para reuniones | chat |
@@ -243,7 +243,7 @@ De forma alternativa, puede crear manualmente vínculos profundos al diálogo de
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Generar un vínculo profundo al cuadro de diálogo de programación
 
-Aunque se recomienda usar las API fuertemente tipadas de TeamsJS, es posible crear manualmente vínculos profundos al cuadro de diálogo de programación integrado Teams. Use el formato siguiente para un vínculo profundo que puede usar en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Aunque se recomienda usar las API tipadas de TeamsJS, es posible crear manualmente vínculos profundos al cuadro de diálogo de programación integrado Teams. Use el formato siguiente para un vínculo profundo que puede usar en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Ejemplo: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -307,7 +307,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Aunque se recomienda el uso de las API fuertemente tipeadas, también puede usar el siguiente formato para un vínculo profundo creado manualmente que puede usar en un bot, conector o tarjeta de extensión de mensaje:
+Aunque se recomienda el uso de las API tipeadas, también puede usar el siguiente formato para un vínculo profundo creado manualmente que puede usar en un bot, conector o tarjeta de extensión de mensaje:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -316,7 +316,7 @@ Ejemplo: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 Los parámetros de consulta son:
 
 * `users`: lista separada por comas de identificadores de usuario que representan a los participantes del chat. El usuario que realiza la acción siempre se incluye como participante. Actualmente, el campo Id. de usuario admite el UserPrincipalName de Microsoft Azure Active Directory (Azure AD), como solo una dirección de correo electrónico.
-* `topicName`: un campo opcional para el nombre para mostrar del chat, en el caso de un chat con 3 o más usuarios. Si no se especifica este campo, el nombre para mostrar del chat se basa en los nombres de los participantes.
+* `topicName`: un campo opcional para el nombre para mostrar del chat, si un chat tiene tres o más usuarios. Si no se especifica este campo, el nombre para mostrar del chat se basa en los nombres de los participantes.
 * `message`: un campo opcional para el texto del mensaje que quiere insertar en el cuadro de redacción del usuario actual mientras el chat está en un estado de borrador.
 
 Para usar este vínculo profundo con el bot, puede especificarlo como destino de la dirección URL en el botón de la tarjeta o pulsar la acción a través del tipo de acción `openUrl`.
@@ -408,7 +408,7 @@ Ejemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 ### <a name="navigate-to-an-audio-or-audio-video-call"></a>Vinculación profunda a una llamada de audio o de audio y vídeo
 
-Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un único usuario o grupo de usuarios, especificando el tipo de llamada y los participantes. Antes de realizar la llamada, el cliente de Teams solicita una confirmación para realizar la llamada. En el caso de una llamada grupal, puede llamar a un conjunto de usuarios de VoIP y a un conjunto de usuarios de RTC en la misma invocación de vínculo profundo.
+Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un único usuario o grupo de usuarios, especificando el tipo de llamada y los participantes. Antes de realizar la llamada, el cliente de Teams solicita una confirmación para realizar la llamada. Si hay una llamada grupal, puede llamar a un conjunto de usuarios de VoIP y a un conjunto de usuarios de RTC en la misma invocación de vínculo profundo.
 
 En el caso de una videollamada, el cliente pedirá confirmación y activará el vídeo del autor de la llamada para la llamada. El receptor de la llamada tiene la opción de responder solo a través de audio o con audio y vídeo, a través de la ventana de notificación de llamadas de Teams.
 
@@ -430,7 +430,7 @@ else { /* handle case where capability isn't supported */ }
 
 #### <a name="generate-a-deep-link-to-a-call"></a>Generar un vínculo profundo a una llamada
 
-Aunque se recomienda el uso de las API fuertemente tipeadas de TeamsJS, también puede usar un vínculo profundo creado manualmente para iniciar una llamada.
+Aunque se recomienda el uso de las API tipeadas de TeamsJS, también puede usar un vínculo profundo creado manualmente para iniciar una llamada.
 
 | Vínculo profundo | Formato | Ejemplo |
 |-----------|--------|---------|
