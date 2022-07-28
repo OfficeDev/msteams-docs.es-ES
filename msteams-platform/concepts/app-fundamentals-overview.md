@@ -5,12 +5,12 @@ description: Presente los elementos de la planificación de una aplicación, com
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558719"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058245"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -55,7 +55,7 @@ Entender a los usuarios y sus preocupaciones son los primeros indicadores de có
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Representación conceptual de la solución de Teams.":::
 
-    Las aplicaciones aparecen en Teams como pestañas, bots, extensiones de mensajería, conectores y webhooks, o bien como una aplicación de varias funcionalidades. Estas funcionalidades se basan en el back-end de Azure, Microsoft Graph, SharePoint y Power Apps que ayudan a automatizar tareas y procesos.
+    Las aplicaciones aparecen en Teams como pestañas, bots, extensiones de mensajería, conectores y webhooks, o como una aplicación de varias capacidades. Estas funcionalidades se basan en el back-end de Azure, Microsoft Graph, SharePoint y Power Apps que ayudan a automatizar tareas y procesos.
 
     Juntas, estas funcionalidades dan vida a la solución de la aplicación.
 
@@ -66,17 +66,9 @@ Entender a los usuarios y sus preocupaciones son los primeros indicadores de có
 * Integre su aplicación con Teams y otras aplicaciones, como Microsoft 365, Microsoft Graph y mucho más.
 * Use Portal para desarrolladores para configurar, administrar e implementar la aplicación.
 
-#### <a name="government-community-cloud"></a>Government Community Cloud
+### <a name="government-community-cloud"></a>Government Community Cloud
 
 Government Community Cloud (GCC) es una copia centrada en el gobierno del entorno comercial. El Departamento de Defensa (DOD) y los contratistas federales deben cumplir con los estrictos requisitos de ciberseguridad y cumplimiento. Para ello, se creó el GCC-High para satisfacer las necesidades del DOD y de los contratistas federales. GCC-High es una copia de la nube del DOD pero existe en su propio entorno soberano. La nube del DOD se crea solo para el Departamento de Defensa.
-
-Los puntos de conexión para la nube de administración pública son:
-
-| Tenant | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-|Cliente de Teams|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Administrador de Teams |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 En la tabla siguiente se incluyen las características y la disponibilidad de Teams para GCC, GCC-High y DOD:
 
@@ -85,13 +77,14 @@ En la tabla siguiente se incluyen las características y la disponibilidad de Te
 | Aplicaciones propiedad de Teams como en aplicaciones desarrolladas internamente | ✔️ La aplicación está habilitada si tiene GCC | ✔️ La aplicación está habilitada si tiene GCC-High | ✔️ La aplicación está habilitada si tiene DOD |
 | Aplicaciones de Microsoft | ✔️ Aplicaciones de Microsoft compatibles con GCC | ✔️ Aplicaciones de Microsoft compatibles con GCC-High | ✔️ Aplicaciones de Microsoft compatibles con DOD |
 | Aplicaciones de 3P o de terceros | ✔️ Hay aplicaciones de terceros disponibles. Deshabilitado de forma predeterminada y el administrador de inquilinos usa su discreción para habilitarlo. | ❌ | ❌ |
-| Aplicaciones de pestaña Personalizadas o Lob |  ✔️ | ✔️(****Interfaz de usuario de cumplimiento**_) | ✔️ (_ ***Interfaz de usuario de cumplimiento***) |
-| Bots personalizados o Lob | ✔️ | ✔️(****Interfaz de usuario de cumplimiento***) | ❌ |
-| Extensiones de mensaje personalizadas | ✔️ | ✔️ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Aplicaciones de pestaña Personalizadas o Lob |  ✔️ | ✔️ | ✔️ |
 | Aplicaciones de instalación de prueba:  | ✔️ | ❌ | ❌ |
+| Bots personalizados o Lob | ✔️ | ❌ | ❌ |
+| Extensiones de mensajería personalizadas | ❌ | ❌ | ❌ |
 | Conectores personalizados | ❌ | ❌ | ❌ |
 
-****Interfaz de usuario de cumplimiento***: Al habilitar las comunicaciones de terceros, los clientes aceptan que dicha comunicación se procesa a través de terceros y no de Microsoft. El cliente es el único responsable de mitigar los riesgos asociados a la conexión con bots de terceros en sus servicios. Microsoft no aprueba ni ofrece ninguna garantía, expresa o implícita, sobre la seguridad de los terceros a los que el cliente permite conectarse con su servicio. La habilitación de bots ampliará el límite del sistema más allá de esta cuenta empresarial en función del bot que elija aprovechar. Es su responsabilidad asegurarse de que cumple los requisitos de cumplimiento, incluidos FedRAMP, DFARS, ITAR, etc. Es su responsabilidad evaluar el riesgo y el cumplimiento de cualquier punto de conexión y dirección URL a los que se conecte.
+**Interfaz de usuario de cumplimiento**: Al habilitar las comunicaciones de terceros, los clientes aceptan que dicha comunicación se procesa a través de terceros y no de Microsoft. El cliente es el único responsable de mitigar los riesgos asociados a la conexión con bots de terceros en sus servicios. Microsoft no aprueba ni ofrece ninguna garantía, expresa o implícita, sobre la seguridad de los terceros a los que el cliente permite conectarse con su servicio. La habilitación de bots ampliará el límite del sistema más allá de esta cuenta empresarial en función del bot que elija aprovechar. Es su responsabilidad asegurarse de que cumple los requisitos de cumplimiento, incluidos FedRAMP, DFARS, ITAR, etc. Es su responsabilidad evaluar el riesgo y el cumplimiento de cualquier punto de conexión y dirección URL a los que se conecte.
 
 La lista siguiente ayuda a identificar la disponibilidad de GCC, GCC-High y DOD para las características:
 
