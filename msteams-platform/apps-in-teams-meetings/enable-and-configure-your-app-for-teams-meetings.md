@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: e374e53b7d34837cb0de28d6586b2417f9ae4652
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841900"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058267"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
@@ -144,6 +144,33 @@ La notificación en la reunión se usa para interactuar con los participantes du
 La notificación en la reunión no debe usar el módulo de tareas. El módulo de tareas no se invoca en un chat de reunión. Se usa una dirección URL de recurso externo para mostrar la notificación en la reunión. Puede usar el método `submitTask` para enviar datos en un chat de reunión.
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="En el ejemplo se muestra cómo puede usar un cuadro de diálogo en la reunión.":::
+
+Además, puede agregar la imagen de visualización de Teams y la tarjeta de contactos del usuario a la notificación de la reunión basada en el `onBehalfOf`token con el MRI del usuario y el nombre para mostrar pasado en la carga útil. A continuación se muestra una carga útil de ejemplo:
+
+```json
+    {
+       "type": "message",
+       "text": "John Phillips assigned you a weekly todo",
+       "summary": "Don't forget to meet with Marketing next week",
+       "channelData": {
+           onBehalfOf: [
+             { 
+               itemId: 0, 
+               mentionType: 'person', 
+               mri: context.activity.from.id, 
+               displayname: context.activity.from.name 
+             }
+            ],
+           "notification": {
+           "alertInMeeting": true,
+           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        },
+       "replyToId": "1493070356924"
+    }
+```
+
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="En el ejemplo se muestra cómo Teams muestra la imagen y la tarjeta de personas con el cuadro de diálogo en la reunión." border="true":::
 
 #### <a name="shared-meeting-stage"></a>Escena de reunión compartida
 
