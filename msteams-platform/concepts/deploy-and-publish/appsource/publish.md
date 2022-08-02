@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
+ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485737"
+ms.lasthandoff: 08/02/2022
+ms.locfileid: "67158069"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publique su aplicación en la tienda de Microsoft Teams
 
@@ -146,7 +146,7 @@ Si su aplicación está lista para producción, podrá comenzar el proceso para 
 
       1. Ha mencionado correctamente los detalles de `subscriptionOffer` en el manifiesto de la aplicación con el formato `publisherId.offerId`.
 
-      1. Debe asegurarse de que la oferta de SaaS vinculada está diseñada para admitir licencias asignadas en un [modelo por usuario con nombre](/azure/marketplace/create-new-saas-offer-plans). Las ofertas de SaaS vinculadas que admiten otros modelos de precios, como la tarifa plana, no se aceptan actualmente para su publicación en la tienda de Teams.
+      1. Debe cerciorarse de que la oferta de SaaS vinculada está diseñada para admitir licencias asignadas en un [modelo de precios de SaaS](/azure/marketplace/create-new-saas-offer-plans).
 
       1. Incluya instrucciones de prueba o instrucciones de configuración o vínculo a un vídeo de demostración en el que se detallen la funcionalidad de la aplicación y los escenarios admitidos y cualquier información adicional para permitir que nuestros evaluadores comprendan fácilmente los flujos de trabajo del portal de SaaS.
 
