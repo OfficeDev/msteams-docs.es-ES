@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 30f5929524e9ae7391fef556d353be6d2461c987
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058252"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232256"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
@@ -48,13 +48,11 @@ En la siguiente ilustración se ofrece una idea de las características de exten
 
 En este artículo se proporciona información general sobre la extensibilidad de aplicaciones de reunión, las referencias de API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del Modo conferencia en Teams.
 
-Mejore su experiencia de reunión mediante la característica de extensibilidad de la reunión. Esta característica permite integrar las aplicaciones en reuniones. También incluye diferentes fases del ciclo de vida de una reunión donde poder integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
-
-Para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para reuniones de Teams actualizando el manifiesto de la aplicación y configure las aplicaciones para escenarios de reuniones.
-
-Personalice el permiso de aplicación para miembros externos en el canal compartido, si la aplicación comparte información importante. Los permisos de aplicación en [canales compartidos](../concepts/build-and-test/Shared-channels.md) siguen la lista de aplicaciones del equipo host y la directiva de aplicación del inquilino del host.
-
-La nueva característica de escenas personalizadas en Modo conferencia permite a los usuarios colaborar en una reunión con el equipo desde un solo lugar.
+- **Ampliar la aplicación de reunión**: mejore la experiencia de reunión mediante la característica de extensibilidad de reuniones. Esta característica permite integrar las aplicaciones en reuniones. También incluye diferentes fases del ciclo de vida de una reunión donde poder integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
+- **Configurar aplicaciones para reuniones**: para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para reuniones de Teams actualizando el manifiesto de la aplicación y configurando también las aplicaciones para escenarios de reunión.
+- **Personalizar con escenas del modo junto**: la nueva característica de escenas de modo juntos personalizada permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
+- **Personalizar el permiso de aplicación en el canal compartido: si la aplicación comparte información importante en el canal compartido, puede personalizar el permiso de aplicación para miembros externos. Los permisos de aplicación en [canales compartidos](../concepts/build-and-test/Shared-channels.md) siguen la lista de aplicaciones del equipo host y la directiva de aplicación del inquilino del host.
+- **Recuperar transcripciones de reuniones**: puede acceder a las transcripciones de reuniones y recuperarla en un escenario posterior a la reunión. Configure la aplicación para obtener transcripciones automáticamente para una reunión programada y úselas para obtener conclusiones, análisis inteligentes y mucho más.
 
 ## <a name="next-step"></a>Paso siguiente
 

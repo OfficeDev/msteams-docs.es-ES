@@ -12,15 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 9082243fac980290303315aff363e3ead2542f61
-  ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+  ms.openlocfilehash: 31f9628bcc672a8b7689954e655a84dc1d75c566
+  ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
   ms.translationtype: MT
   ms.contentlocale: es-ES
   ms.lasthandoff: 08/03/2022
-  ms.locfileid: "67178642"
+  ms.locfileid: "67232277"
 landingContent:
 - title: Explore lo más reciente
   linkLists:
+  - linkListType: reference
+    links:
+    - text: Salón de chat de la comunidad para desarrolladores de aplicaciones de Microsoft Teams
+      url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
     - text: Controles de colaboración [versión preliminar para desarrolladores]
@@ -41,7 +45,7 @@ landingContent:
       url: toolkit/teams-toolkit-fundamentals.md
     - text: Bots y extensiones de mensaje para GCC y GCCH
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
-- title: Introducción
+- title: Comenzar
   linkLists:
   - linkListType: get-started
     links:
