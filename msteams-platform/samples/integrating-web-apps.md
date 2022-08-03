@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Consideraciones para la integración de Teams
-ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123804"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178614"
 ---
 # <a name="considerations-for-teams-integration"></a>Consideraciones para la integración de Teams
 
@@ -19,7 +19,7 @@ Puede hacer que las aplicaciones web se adecúen a las características sociales
   
 Los diferentes tipos de aplicaciones que puede integrar con Teams son los siguientes:
 
-* **Aplicaciones independientes**: una aplicación independiente es una aplicación de una sola página o de gran tamaño y compleja. El usuario puede usar algunos aspectos de él en Teams.
+* **Aplicaciones independientes**: una aplicación independiente es una aplicación de una sola página o grande y compleja. El usuario puede usar algunos aspectos de él en Teams.
 * **Aplicaciones de colaboración**: una aplicación ya creada para las características sociales y colaborativas inherentes a Teams.
 * **SharePoint**: una página de SharePoint que quiere que aparezca en Teams.
 
@@ -30,7 +30,7 @@ En este documento se proporciona información general sobre las funcionalidades 
 
 ***Escenarios de integración**: aplicaciones independientes, aplicaciones de colaboración, SharePoint*
 
-La aplicación de Teams debe incluir características de colaboración necesarias y que son de esperar. Para trabajar con la integración de aplicaciones, es importante familiarizarse con Teams terminología de desarrollo.
+La aplicación de Teams debe incluir características de colaboración necesarias y que son de esperar. Para trabajar con la integración de aplicaciones, es importante familiarizarse con la terminología de desarrollo de Teams.
 
 |Características comunes de la aplicación   |Funcionalidades de la plataforma de Teams   |
 |----------|-----------|
@@ -90,7 +90,7 @@ Teams tiene mecanismos de inicio de sesión único (SSO) con Azure AD para aplic
 > [!IMPORTANT]
 > En este momento, las aplicaciones de terceros están disponibles en Government Community Cloud (GCC), pero no están disponibles para GCC-High y el Departamento de Defensa (DOD). Las aplicaciones de terceros están desactivadas de forma predeterminada para GCC. Para activar aplicaciones de terceros en GCC, consulte [administrar directivas de permisos de aplicaciones](/microsoftteams/teams-app-permission-policies) y [administrar aplicaciones](/microsoftteams/manage-apps).
 
-En SharePoint páginas, solo puede usar sso y no puede agregar otro identificador de Azure AD si desea que el inicio de sesión único funcione para otra aplicación, ya que el identificador es la aplicación SharePoint.
+En las páginas de SharePoint, solo puede usar sso y no puede agregar otro identificador de Azure AD si desea que el inicio de sesión único funcione para otra aplicación, ya que el identificador es la aplicación de SharePoint.
 
 Obtenga más información sobre la [autenticación en Teams](../concepts/authentication/authentication.md).
 
@@ -98,7 +98,7 @@ Obtenga más información sobre la [autenticación en Teams](../concepts/authent
 
 ***Escenarios de integración**: aplicaciones independientes, aplicaciones de colaboración*
 
-Asegúrese de seguir las [directrices de diseño de Teams](../concepts/design/understand-use-cases.md) para que la aplicación sea nativa para Teams. No se puede migrar el contenido de una aplicación existente a una pestaña de Teams. Para obtener más información sobre el diseño de aplicaciones, consulte [Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
+Asegúrese de seguir las [directrices de diseño de Teams](../concepts/design/understand-use-cases.md) para que la aplicación sea nativa para Teams. No se puede migrar un contenido de aplicación existente a una pestaña de Teams. Para obtener más información sobre el diseño de aplicaciones, consulte [Sistema Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Maximizar la vinculación en profundidad
 

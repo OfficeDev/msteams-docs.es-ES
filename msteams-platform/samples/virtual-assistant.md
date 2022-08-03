@@ -1,14 +1,14 @@
 ---
 title: Crear un asistente virtual
-description: Obtenga información sobre cómo crear Virtual Assistant bot para Teams mediante ejemplos de código y fragmentos de código con características como tarjetas adaptables, control de interrupciones y mucho más.
+description: Obtenga información sobre cómo crear un bot de Virtual Assistant para Teams mediante ejemplos de código y fragmentos de código con características como tarjetas adaptables, control de interrupciones y mucho más.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 12339ed10f1c6a6e30ebb74320fbf69018a6d3f9
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189518"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178607"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual
 
@@ -34,14 +34,14 @@ En la imagen siguiente se muestran las funciones empresariales del asistente vir
 
 ## <a name="create-a-teams-focused-virtual-assistant"></a>Crear un asistente virtual centrado en Teams
 
-Microsoft ha publicado una [plantilla de Microsoft Visual Studio](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) para crear asistentes virtuales y aptitudes. Con la plantilla de Visual Studio, puede crear un asistente virtual, optimizado por una experiencia basada en texto con compatibilidad con tarjetas enriquecidas limitadas con acciones. Hemos mejorado la plantilla de base de Visual Studio para incluir funcionalidades de la plataforma Microsoft Teams y mejorar las excelentes experiencias de las aplicaciones Teams. Algunas de las funcionalidades incluyen la compatibilidad con las tarjetas adaptables enriquecidos, los módulos de tareas, los equipos o chats de grupo y las extensiones de mensajes. Para obtener más información sobre la extensión del asistente virtual a Microsoft Teams, vea [Tutorial: Ampliar su asistente virtual a Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft ha publicado una [plantilla de Microsoft Visual Studio](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) para crear asistentes virtuales y aptitudes. Con la plantilla de Visual Studio, puede crear un asistente virtual, optimizado por una experiencia basada en texto con compatibilidad con tarjetas enriquecidas limitadas con acciones. Hemos mejorado la plantilla base de Visual Studio para incluir funcionalidades de plataforma de Microsoft Teams y mejorar las experiencias de aplicaciones de Teams. Algunas de las funcionalidades incluyen la compatibilidad con las tarjetas adaptables enriquecidos, los módulos de tareas, los equipos o chats de grupo y las extensiones de mensajes. Para obtener más información sobre la extensión del asistente virtual a Microsoft Teams, vea [Tutorial: Ampliar su asistente virtual a Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 En la imagen siguiente se muestra el diagrama de alto nivel de una solución de asistente virtual:
 
 ![Diagrama de alto nivel de una solución de asistente virtual.](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>Agregar las tarjetas adaptables a su asistente virtual
 
-Para enviar las solicitudes correctamente, el asistente virtual debe identificar el modelo LUIS correcto y la aptitud correspondiente asociada a él. Sin embargo, el mecanismo de distribución no se puede usar para las actividades de acción de tarjeta, ya que el modelo LUIS asociado a una aptitud se entrena para los textos de acción de tarjeta. Los textos de acción de tarjeta son las palabras clave fijas predefinidas y no comentadas por un usuario.
+Para enviar las solicitudes correctamente, el asistente virtual debe identificar el modelo LUIS correcto y la aptitud correspondiente asociada a él. Sin embargo, el mecanismo de distribución no se puede usar para las actividades de acción de tarjeta, ya que el modelo de LUIS asociado a una aptitud se entrena para los textos de acción de tarjeta. Los textos de acción de tarjeta son las palabras clave fijas predefinidas y no comentadas por un usuario.
 
 Este inconveniente se resuelve mediante la inserción de información de aptitud en la carga de acción de la tarjeta. Cada aptitud debe insertar `skillId` en el campo `value` de acciones de tarjeta. Debe asegurarse de que cada actividad de acción de tarjeta lleva la información de aptitud pertinente y el asistente virtual puede utilizar esta información para el envío.
 
@@ -224,7 +224,7 @@ Además, debe incluir todos los dominios de aptitud en la sección `validDomains
 
 ### <a name="handle-collaborative-app-scopes"></a>Controlar los ámbitos de aplicaciones colaborativas
 
-Las aplicaciones Teams pueden existir en varios ámbitos, como chats individuales, chats grupales y canales. La plantilla del asistente virtual principal está diseñada para chats individuales. Como parte de la experiencia de incorporación, el asistente virtual solicita a los usuarios un nombre y mantiene el estado del usuario. Puesto que la experiencia de incorporación no es adecuada para los ámbitos de canal o chat de grupo, se ha quitado.
+Las aplicaciones Teams pueden existir en varios ámbitos, como chats individuales, chats grupales y canales. La plantilla del asistente virtual principal está diseñada para chats individuales. Como parte de la experiencia de incorporación, el asistente virtual solicita a los usuarios un nombre y mantiene el estado del usuario. Dado que la experiencia de incorporación no es adecuada para el chat en grupo o los ámbitos de canal, se ha quitado.
 
 Las aptitudes deben controlar las actividades en varios ámbitos, como el chat individual, el chat grupal y la conversación de canal. Si no se admite alguno de estos ámbitos, las aptitudes deben responder con un mensaje adecuado.
 
@@ -342,12 +342,12 @@ Algunas actividades de extensión de mensaje no incluyen el identificador de com
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo convertir la plantilla de aplicación Book-a-room en una aptitud Virtual Assistant: Book-a-room es un Teams que permite a los usuarios encontrar y reservar rápidamente una sala de reuniones durante 30, 60 o 90 minutos a partir de la hora actual. El valor predeterminado es 30 minutos. El bot de reserva de reuniones se limita a las conversaciones personales o individuales.
+En el ejemplo siguiente se muestra cómo convertir la plantilla de aplicación Book-a-room en una aptitud de Virtual Assistant: Reservar una sala es un equipo de Teams que permite a los usuarios encontrar y reservar rápidamente una sala de reuniones durante 30, 60 o 90 minutos a partir de la hora actual. El valor predeterminado es 30 minutos. El bot de reserva de reuniones se limita a las conversaciones personales o individuales.
 En la imagen siguiente se muestra un asistente virtual con una aptitud **reservar una sala**:
 
 ![Asistente virtual con una aptitud "reservar una sala"](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
-Los siguientes son los cambios diferenciales introducidos para convertirlos en una aptitud que se adjunta a un asistente virtual. Se siguen instrucciones similares para convertir cualquier bot v4 existente en una aptitud.
+A continuación se muestran los cambios diferenciales introducidos para convertirlo en una aptitud, que se adjunta a un asistente virtual. Se siguen instrucciones similares para convertir cualquier bot v4 existente en una aptitud.
 
 ### <a name="skill-manifest"></a>Manifiesto de aptitud
 
@@ -472,7 +472,7 @@ El archivo `.lu` correspondiente se muestra en la sección siguiente:
 ```
 
 Con este enfoque, cualquier comando emitido por un usuario al asistente virtual relacionado con `book room` o `manage favorites` se identifican como un comando asociado al `Book-a-room` bot y se reenvía a esta aptitud.
-Por otro lado, `Book-a-room room` el bot debe usar el modelo LUIS para comprender estos comandos si no están escritos completos. Por ejemplo: `I want to manage my favorite rooms`.
+Por otro lado, `Book-a-room room` el bot debe usar el modelo de LUIS para comprender estos comandos si no están escritos completos. Por ejemplo: `I want to manage my favorite rooms`.
 
 ### <a name="multi-language-support"></a>Compatibilidad con varios idiomas
 
@@ -510,17 +510,17 @@ En paralelo, agregue el archivo correspondiente `.lu` en la ruta de acceso luisF
                 | - book-a-meeting.lu
 ```
 
-Para modificar un `languages` parámetro, actualice el comando botskills de la siguiente manera:
+Para modificar el `languages` parámetro, actualice el comando de aptitudes del bot como se indica a continuación:
 
 ```json
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-El asistente virtual usa `SetLocaleMiddleware` para identificar la configuración regional actual e invocar el modelo de envío correspondiente. La actividad de Bot Framework tiene un campo de configuración regional que usa este middleware. También puede usar lo mismo para su aptitud. El bot de reserva de reuniones no usa este middleware y, en su lugar, obtiene la configuración regional de la [entidad clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo) de la actividad Bot Framework.
+El asistente virtual usa `SetLocaleMiddleware` para identificar la configuración regional actual e invocar el modelo de envío correspondiente. La actividad de Bot Framework tiene un campo de configuración regional que usa este middleware. También puede usar lo mismo para su aptitud. El bot book-a-room no usa este middleware y, en su lugar, obtiene la configuración regional de la [entidad clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo) de la actividad de Bot Framework.
 
 ### <a name="claim-validation"></a>Validación de notificaciones
 
-Hemos agregado [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) para restringir los llamadores a la aptitud. Para permitir que un asistente virtual llame a esta aptitud, rellene `AllowedCallers` la matriz a partir del identificador de aplicación `appsettings` de ese asistente virtual en particular.
+Hemos agregado [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) para restringir a los autores de llamadas a la aptitud. Para permitir que un asistente virtual llame a esta aptitud, rellene `AllowedCallers` la matriz a partir del identificador de aplicación `appsettings` de ese asistente virtual en particular.
 
 ```
 "AllowedCallers": [ "<caller_VA1_appId>", "<caller_VA2_appId>" ],
@@ -536,7 +536,7 @@ Para obtener más información sobre cómo agregar la validación de notificacio
 
 ### <a name="limitation-of-card-refresh"></a>Limitación de la actualización de tarjetas
 
-La actividad de actualización, como la actualización de tarjetas, aún no se admite a través del asistente virtual ([problema de GitHub](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Por lo tanto, hemos reemplazado todas las llamadas de actualización de tarjeta `UpdateActivityAsync` por la publicación de nuevas llamadas de tarjeta `SendActivityAsync`.
+La actividad de actualización, como la actualización de tarjetas, aún no se admite a través de Virtual Assistant ([problema de GitHub](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Por lo tanto, hemos reemplazado todas las llamadas de actualización de tarjetas `UpdateActivityAsync` por publicar nuevas llamadas de `SendActivityAsync`tarjeta .
 
 ### <a name="card-actions-and-task-module-flows"></a>Acciones de tarjeta y flujos de módulos de tareas
 
@@ -568,11 +568,11 @@ También puede aprovechar las aptitudes existentes del repositorio de [repositor
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitaciones del asistente virtual
 
-* **EndOfConversation**: una aptitud debe enviar una actividad `endOfConversation` cuando finaliza una conversación. En función de la actividad, un asistente virtual finaliza el contexto con esa aptitud determinada y vuelve al contexto raíz del asistente virtual. En el caso del bot de reserva de reuniones, no hay ningún estado claro en el que se termine la conversación. Por lo tanto, no hemos enviado `endOfConversation` de `Book-a-room` bot y, cuando el usuario quiere volver al contexto raíz, puede hacerlo simplemente mediante comando `start over`.  
-* **Actualización de tarjetas**: la actualización de tarjetas aún no se admite a través del asistente virtual.  
+* **EndOfConversation**: una aptitud debe enviar una actividad `endOfConversation` cuando finaliza una conversación. En función de la actividad, un asistente virtual finaliza el contexto con esa aptitud determinada y vuelve al contexto raíz del asistente virtual. En el caso del bot book-a-room, no hay un estado claro en el que se termine la conversación. Por lo tanto, no hemos enviado `endOfConversation` desde el `Book-a-room` bot y, cuando el usuario quiere volver al contexto raíz, simplemente puede hacerlo por `start over` comando.  
+* **Actualización de tarjetas**: la actualización de tarjetas aún no se admite a través de Virtual Assistant.  
 * **Extensiones de mensaje**:
   * Actualmente, un asistente virtual puede admitir un máximo de diez comandos para las extensiones de mensaje.
-  * La configuración de extensiones de mensaje no se limita a comandos individuales, sino a toda la extensión en sí. Esto limita la configuración de cada aptitud individual a través del asistente virtual.
+  * La configuración de las extensiones de mensaje no se limita a comandos individuales, sino a toda la propia extensión. Esto limita la configuración de cada aptitud individual a través del asistente virtual.
   * Los identificadores de comandos de extensiones de mensaje tienen una longitud máxima de [64 caracteres](../resources/schema/manifest-schema.md#composeextensions) y se usan 37 caracteres para insertar información de aptitudes. Por lo tanto, las restricciones actualizadas para el identificador de comando están limitadas a 27 caracteres.
 
 También puede aprovechar las aptitudes existentes del repositorio de [repositorio de Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) o crear una nueva aptitud completamente desde cero. Los tutoriales para más adelante se pueden encontrar [aquí](https://microsoft.github.io/botframework-solutions/overview/skills/). Consulte la [documentación](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) relativa al asistente virtual y la arquitectura de las aptitudes.
