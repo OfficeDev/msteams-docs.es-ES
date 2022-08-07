@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear y controlar un menú de comando
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6252531565693f318550398967db16297bfd40c0
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737422"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264179"
 ---
 # <a name="create-a-commands-menu"></a>Crear un menú de comandos
 
@@ -41,7 +41,7 @@ Un requisito previo para crear un menú de comandos para el bot es que debe edit
 1. Abra Teams y seleccione **Aplicaciones** en el panel izquierdo. En la página **Aplicaciones**, busque **App Studio** y seleccione **Abrir**.
 
    > [!WARNING]
-   > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio estará en desuso el 01 de agosto de 2022.
+   > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio está en desuso el 01 de agosto de 2022.
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 

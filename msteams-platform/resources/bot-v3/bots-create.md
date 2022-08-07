@@ -4,12 +4,12 @@ description: En este módulo, aprenderá a crear bots mediante el Microsoft Bot 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737415"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264172"
 ---
 # <a name="create-a-bot"></a>Creación de un bot
 
@@ -52,7 +52,7 @@ Para obtener más información, consulte [La documentación de Bot Framework](/a
 
 > [!WARNING]
 >
->* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio estará en desuso el 01 de agosto de 2022
+>* Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio está en desuso el 01 de agosto de 2022.
 
 ## <a name="see-also"></a>Consulte también
 

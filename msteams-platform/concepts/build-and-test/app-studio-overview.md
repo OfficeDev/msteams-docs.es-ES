@@ -3,17 +3,17 @@ title: Introducción a App Studio para Microsoft Teams
 description: En este artículo, aprenderá a compilar y administrar las aplicaciones con App Studio para Microsoft Teams e instalar App Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 6ec2e1dfc064302de096cb356641a773e7dceb35
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ac036e6f62741a2d7de52ec2498d75c152929141
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485709"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264158"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Administración de aplicaciones con App Studio para Microsoft Teams
 
 > [!WARNING]
-> **Pruebe el Portal para desarrolladores**: App Studio ha evolucionado. Configurar, distribuir y administrar las aplicaciones de Teams con el nuevo [Portal para desarrolladores](https://dev.teams.microsoft.com/). <br> App Studio estará en desuso el 01 de agosto de 2022.
+> **Pruebe el Portal para desarrolladores**: App Studio ha evolucionado. Configurar, distribuir y administrar las aplicaciones de Teams con el nuevo [Portal para desarrolladores](https://dev.teams.microsoft.com/). <br> App Studio está en desuso el 01 de agosto de 2022.
 
 Con App Studio, puede crear o integrar sus propias aplicaciones de Microsoft Teams, ya sea que desarrolle aplicaciones personalizadas para su empresa o aplicaciones SaaS para equipos de todo el mundo, mediante la simplificación del proceso de creación del manifiesto y del paquete de su aplicación y mediante herramientas útiles como el Editor de tarjetas y una biblioteca de control de React.
 
