@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 06bc6ae199700e56d31b967a2516845e013a6329
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035159"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264151"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -26,7 +26,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Paquete de la aplicación](../concepts/build-and-test/apps-package.md) | Un paquete de aplicación de Teams es un archivo ZIP que contiene el archivo de manifiesto de la aplicación, el icono de color y el icono de esquema. |
 | [Permiso de aplicación](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Una opción en una aplicación de Teams para habilitar los permisos del dispositivo. Solo está disponible cuando el archivo de manifiesto de la aplicación declara que la aplicación necesita permisos de dispositivo. <br> **Vea también**: Permisos de dispositivo |
 | [Ámbito de la aplicación](../concepts/design/app-structure.md) | Un área de Teams donde los usuarios pueden usar la aplicación. Las aplicaciones pueden tener uno o varios ámbitos, como personales, canales, chats y reuniones. Una aplicación de Teams puede existir entre ámbitos. |
-| [App Studio](../concepts/build-and-test/app-studio-overview.md) | Una aplicación para empezar a crear o integrar sus propias aplicaciones de Microsoft Teams. Ahora ha evolucionado a Portal para desarrolladores. <br> > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para poder configurar, distribuir y administrar las aplicaciones de Teams. App Studio quedará en desuso el 1 de agosto de 2022. <br> **Vea también**: [Portal para desarrolladores](#d) |
+| [App Studio](../concepts/build-and-test/app-studio-overview.md) | Una aplicación para empezar a crear o integrar sus propias aplicaciones de Microsoft Teams. Ahora ha evolucionado a Portal para desarrolladores. <br> > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para poder configurar, distribuir y administrar las aplicaciones de Teams. App Studio queda en desuso el 1 de agosto de 2022. <br> **Vea también**: [Portal para desarrolladores](#d) |
 | Bandeja de la aplicación | Una bandeja de aplicación ubicada en la barra inferior de una aplicación móvil de Teams. Recopila todas las aplicaciones que están abiertas, pero que no se usan actualmente ni están activas. <br>**Vea también**: [Teams para dispositivos móviles](#t) |
 | [Recurso de Azure](../toolkit/provision.md) | Un servicio que está disponible a través de Azure y que la aplicación de Teams puede usar para la implementación de Azure. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Servicio de administración de identidades y acceso basado en la nube de Microsoft. Ayuda a los usuarios autenticados a acceder a los recursos internos y externos de Azure. |
