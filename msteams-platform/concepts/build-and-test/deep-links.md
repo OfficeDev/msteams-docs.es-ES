@@ -1,14 +1,14 @@
 ---
 title: Crear vínculos profundos
-description: Obtenga información sobre cómo crear vínculos profundos y cómo usarlos y navegar por ellos en las aplicaciones de Microsoft Teams con pestañas.
+description: En este artículo, aprenderá a crear vínculos profundos y a navegar por dichos vínculos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
+ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058224"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "67302468"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -17,7 +17,7 @@ Los vínculos profundos son un mecanismo de navegación que puede usar para cone
 * Llevar al usuario al contenido dentro de una de las pestañas de la aplicación. Por ejemplo, la aplicación puede tener un bot que envía mensajes que notifican al usuario de una actividad importante. Cuando el usuario pulsa en la notificación, el vínculo profundo navega a la pestaña para que el usuario pueda ver más detalles sobre la actividad.
 * La aplicación automatiza o simplifica determinadas tareas de usuario, como crear un chat o programar una reunión, rellenando previamente los vínculos profundos con los parámetros necesarios. Evita la necesidad de que los usuarios escriban manualmente la información.
 
-El SDK de cliente de JavaScript de Microsoft Teams (TeamsJS) simplifica el proceso de navegación. En muchos escenarios, como cuando se navega a contenido e información dentro de la pestaña o se iniciar un cuadro de diálogo de chat, el SDK proporciona API tipeadas que proporcionan una experiencia mejorada y pueden reemplazar el uso de vínculos profundos. Estas API se recomiendan para las aplicaciones de Teams que se pueden ejecutar en otros hosts (Outlook, Office), ya que también proporcionan una manera de comprobar que ese host admite la funcionalidad que se usa. En las secciones siguientes se muestra información sobre la vinculación profunda, pero también se resalta cómo han cambiado los escenarios que solían requerirla con la versión v2 de TeamsJS.
+El SDK de cliente de JavaScript de Microsoft Teams (TeamsJS) simplifica el proceso de navegación. En muchos escenarios, como cuando se navega a contenido e información dentro de la pestaña o se iniciar un cuadro de diálogo de chat, el SDK proporciona API tipeadas que proporcionan una experiencia mejorada y pueden reemplazar el uso de vínculos profundos. Estas API se recomiendan para las aplicaciones de Teams que se pueden ejecutar en otros hosts (Outlook, Office), ya que también proporcionan una manera de comprobar que ese host admite la funcionalidad que se usa. En las secciones siguientes se muestra información sobre la vinculación en profundidad, pero también se resalta cómo han cambiado los escenarios que solían requerirla con la versión v2 de TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -387,8 +387,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ### <a name="deep-linking-to-an-app"></a>Vinculación profunda a una aplicación
 
 Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar la aplicación.
-  
-### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculación profunda para pestañas de SharePoint Framework
+
+> [!NOTE]
+> Actualmente, la vinculación en profundidad a una aplicación no se admite en la plataforma móvil.
+
+### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculación en profundidad para pestañas de SharePoint Framework
 
 El siguiente formato de vínculo profundo se puede usar en un bot, conector o tarjeta de extensión de mensajería: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
