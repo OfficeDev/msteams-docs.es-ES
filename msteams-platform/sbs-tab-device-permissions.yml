@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Obtenga más información sobre los permisos de dispositivo para el explorador.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: f1c1168cad71729e47eee3cdae8b0783423f8f97
-  ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+  ms.openlocfilehash: 2d78357348ef50c57439ebf8ca2bca7936c61260
+  ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/30/2022
-  ms.locfileid: "66558313"
+  ms.lasthandoff: 08/09/2022
+  ms.locfileid: "67285964"
 items:
 - durationInMinutes: 1
   content: >
@@ -63,7 +63,7 @@ items:
     1. Seleccione **Clonar**.
 - title: Configuración del túnel para el servidor web local
   durationInMinutes: 1
-  content: "Use ngrok o símbolo del sistema para crear un túnel a los puntos de conexión HTTPS disponibles públicamente del servidor web en ejecución local. Ejecute el siguiente comando en ngrok:\n\n```bash\nngrok http -host-header=localhost 3000\n``` \n  > [!TIP]\n  > Si encuentra **ERR_NGROK_4018**, siga los pasos que se muestran en el símbolo del sistema para registrarse y autenticar ngrok. A continuación, ejecute el comando `ngrok http -host-header=localhost 3000`.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" Tunelización de ngrok\":::\n"
+  content: "Use ngrok o símbolo del sistema para crear un túnel a los puntos de conexión HTTPS disponibles públicamente del servidor web en ejecución local. Ejecute el siguiente comando en ngrok:\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > Si encuentra **ERR_NGROK_4018**, siga los pasos que se muestran en el símbolo del sistema para registrarse y autenticar ngrok. A continuación, ejecute el comando `ngrok http --host-header=localhost 3000`.\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" Tunelización de ngrok\":::\n"
 - title: Configuración del archivo de manifiesto
   durationInMinutes: 1
   content: "1. Vaya a **manifest.json** en el repositorio clonado.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"archivo de manifiesto\":::\n\n1. Abra **manifest.json** en Visual Studio y realice los cambios siguientes:\n  \n   Reemplace por `<<BASE_URI_DOMAIN>>` el punto de conexión http de ngrok excluyendo la parte https:// en todos los lugares.\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"actualizar ngrok en Visual Studio\":::\n          \n"

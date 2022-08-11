@@ -5,14 +5,14 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: b7893b425618372085e8ef118beff7c12bd2eb15
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 229fa56331f9c8797d0511d77a86e418bbdb7103
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503595"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288202"
 ---
-# <a name="send-proactive-installation-messages"></a>Envío de mensajes de instalación proactiva 
+# <a name="send-proactive-installation-messages"></a>Envío de mensajes de instalación proactiva
 
 ## <a name="proactive-messaging-in-teams"></a>Mensajería proactiva en Teams
 
@@ -248,3 +248,4 @@ server.get('/api/notify', async (req, res) => {
 * [Administrar directivas de configuración de aplicación en Microsoft Teams](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Enviar notificaciones proactivas a los usuarios SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [Envío de notificaciones de fuente de actividad a usuarios de Microsoft Teams](/graph/teams-send-activityfeednotifications)
+* [Agregar aplicación al equipo: Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
