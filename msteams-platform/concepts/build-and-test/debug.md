@@ -3,12 +3,12 @@ title: Elegir una configuración para probar y depurar la aplicación
 description: En este módulo, aprenderá las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y hospedado en la nube.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264137"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312194"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Elección de una configuración de prueba y depuración de la aplicación de Teams
 
@@ -58,12 +58,7 @@ Para usar ngrok en el proyecto en función de las funcionalidades que esté usan
 Para los bots registrados en Microsoft Bot Framework, actualice el punto de conexión de mensajería del bot para usar este nuevo punto de conexión de ngrok. Por ejemplo, `https://2d1224fb.ngrok.io/api/messages`. Puede validar que ngrok funciona probando respuesta del bot en la ventana del chat de prueba del portal de Bot Framework. Una vez más, al igual que el emulador, esta prueba no le permite acceder a la funcionalidad específica de Teams.
 
 > [!NOTE]
->
-> * Para actualizar el punto de conexión de mensajería de un bot, debe usar Bot Framework. Seleccione el bot en [la lista de bots de Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puede actualizar el punto de conexión de mensajería a través de [App Studio](~/concepts/build-and-test/app-studio-overview.md).
-
-> [!WARNING]
->
-> * Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio está en desuso el 01 de agosto de 2022.
+> Para actualizar el punto de conexión de mensajería de un bot, debe usar Bot Framework. Seleccione el bot en [la lista de bots de Bot Framework](https://dev.botframework.com/bots). No es necesario migrar el bot a Microsoft Azure. También puede actualizar el punto de conexión de mensajería a través del [Portal para desarrolladores para Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 ## <a name="cloud-hosted"></a>Hospedado en la nube
 
@@ -87,3 +82,5 @@ Para cargar y ejecutar su experiencia en Teams, debe crear un paquete y cargarlo
 ## <a name="see-also"></a>Consulte también
 
 [Probar y depurar el bot localmente con el IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[DevTools para pestañas de Microsoft Teams](../../tabs/how-to/developer-tools.md)

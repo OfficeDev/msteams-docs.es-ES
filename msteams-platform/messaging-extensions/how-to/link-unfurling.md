@@ -5,18 +5,18 @@ description: En este módulo, aprenderá a agregar un vínculo que se desplegue 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503616"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312226"
 ---
 # <a name="add-link-unfurling"></a>Añadir una extensión de enlace
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento le guía sobre cómo agregar un vínculo que se desplegue al manifiesto de la aplicación mediante App Studio o manualmente. Con la apertura de vínculos su aplicación puede registrarse para recibir una actividad `invoke` cuando se pegan las direcciones URL con un dominio en particular en el área de redacción de mensajes. `invoke` contiene la dirección URL completa que se pegó en el área del mensaje de redacción. Puede responder con una tarjeta que el usuario puede desplegar para obtener información o acciones adicionales. Esto funciona como un comando de búsqueda con la dirección URL como término de búsqueda.
+Este documento le guía sobre cómo agregar un vínculo desplegándose al manifiesto de la aplicación mediante el Portal para desarrolladores o manualmente. Con la apertura de vínculos su aplicación puede registrarse para recibir una actividad `invoke` cuando se pegan las direcciones URL con un dominio en particular en el área de redacción de mensajes. `invoke` contiene la dirección URL completa que se pegó en el área del mensaje de redacción. Puede responder con una tarjeta que el usuario puede desplegar para obtener información o acciones adicionales. Esto funciona como un comando de búsqueda con la dirección URL como término de búsqueda.
 
 > [!NOTE]
 >
@@ -34,18 +34,21 @@ Consulte el siguiente vídeo para obtener más información sobre la desplegamie
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregue el enlace que se abre al manifiesto de su aplicación
 
-Para agregar una apertura de enlace al manifiesto de la aplicación, agregue una nueva matriz de `messageHandlers` a la sección `composeExtensions` del JSON del manifiesto de la aplicación. Puede agregar la matriz con la ayuda de App Studio o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo, `*.example.com`. Coincide exactamente con un segmento del dominio; si necesita coincidir con `a.b.example.com`, use `*.*.example.com`.
+Para agregar una apertura de enlace al manifiesto de la aplicación, agregue una nueva matriz de `messageHandlers` a la sección `composeExtensions` del JSON del manifiesto de la aplicación. Puede agregar la matriz con la ayuda del Portal para desarrolladores o manualmente. Las listas de dominios pueden incluir caracteres comodín, por ejemplo, `*.example.com`. Coincide exactamente con un segmento del dominio; si necesita coincidir con `a.b.example.com`, use `*.*.example.com`.
 
 > [!NOTE]
 > No agregue dominios que no estén en el control, ya sea directamente o a través de caracteres comodín. Por ejemplo, `yourapp.onmicrosoft.com` es válido, pero `*.onmicrosoft.com` no es válido. Los dominios de nivel superior están prohibidos, por ejemplo, `*.com`, `*.org`.
 
-### <a name="add-link-unfurling-using-app-studio"></a>Agregar apertura de vínculo mediante App Studio
+### <a name="add-link-unfurling-using-developer-portal"></a>Incorporación de la desurling de vínculos mediante el Portal para desarrolladores
 
-1. Abra **App Studio** en el cliente Microsoft Teams y seleccione la pestaña **Editor de manifiestos**.
+1. Abra **el Portal para desarrolladores** en el cliente de Microsoft Teams y, a continuación, seleccione la pestaña **Aplicaciones** .
 1. Cargue el manifiesto de la aplicación.
-1. En la página **Extensión de mensaje**, agregue el dominio que desea buscar en la sección **Controladores de mensajes**. En la imagen siguiente se explica el proceso:
+1. En la página **Extensión de mensajería** , en **Características de la aplicación**, seleccione el bot existente o cree un bot nuevo.
+1. Haga clic en **Guardar**.
+1. Seleccione **Agregar un dominio** en la sección **Vínculos de vista previa** y escriba dominio válido.
+1. Seleccione **Agregar**. En la imagen siguiente se explica el proceso:
 
-    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Sección Controladores de mensajes en App Studio":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Captura de pantalla de la sección controladores de mensajes en el Portal para desarrolladores." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### <a name="add-link-unfurling-manually"></a>Agregar la apertura de vínculos manualmente
 

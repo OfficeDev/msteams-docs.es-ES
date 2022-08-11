@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear y controlar un menú de comando
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264179"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312312"
 ---
 # <a name="create-a-commands-menu"></a>Crear un menú de comandos
 
@@ -30,36 +30,34 @@ Para definir un conjunto de comandos principales a los que el bot pueda responde
 
 ## <a name="create-a-command-menu-for-your-bot"></a>Crear un menú de comandos para el bot
 
-Los menús de comandos se definen en el manifiesto de la aplicación. Puede usar **App Studio** para crearlos o agregarlos manualmente al manifiesto de la aplicación.
+Los menús de comandos se definen en el manifiesto de la aplicación. Puede usar **el Portal para desarrolladores** para crearlos o agregarlos manualmente en el manifiesto de la aplicación.
 
-### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>Crear un menú de comandos para el bot mediante App Studio
+### <a name="create-a-command-menu-for-your-bot-using-developer-portal"></a>Creación de un menú de comandos para el bot mediante el Portal para desarrolladores
 
 Un requisito previo para crear un menú de comandos para el bot es que debe editar un manifiesto de aplicación existente. Los pasos para agregar un menú de comandos son los mismos, sin importar si crea un nuevo manifiesto o si edita uno existente.
 
-**Para crear un menú de comandos para el bot mediante App Studio**
+Para crear un menú de comandos para el bot mediante el Portal para desarrolladores:
 
-1. Abra Teams y seleccione **Aplicaciones** en el panel izquierdo. En la página **Aplicaciones**, busque **App Studio** y seleccione **Abrir**.
+1. Abra Teams y seleccione **Aplicaciones** en el panel izquierdo. En la página **Aplicaciones** , busque **Portal para desarrolladores** y, a continuación, seleccione **Abrir**.
 
-   > [!WARNING]
-   > Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams. App Studio está en desuso el 01 de agosto de 2022.
+   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="Captura de pantalla que muestra cómo agregar portal para desarrolladores en el cliente de Teams.":::
+  
+1. En **Portal para desarrolladores**, seleccione la pestaña **Aplicaciones** . Si no tiene un paquete de aplicación existente, puede crear o importar una aplicación existente. Para obtener más información, consulte [Portal para desarrolladores para Teams](../../concepts/build-and-test/teams-developer-portal.md).
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
+1. Seleccione **la pestaña Aplicaciones** , seleccione Características de la **aplicación** en el panel izquierdo y, a continuación, **bots**.
 
-2. En **App Studio**, seleccione la pestaña **Editor de manifiestos**. Si no tiene un paquete de aplicación, puede crear o importar una aplicación existente. Para obtener más información, consulte [Actualización del paquete de aplicaciones de C# en App Studio](../../get-started/deploy-csharp-app-studio.md).
+1. Seleccione **Agregar un comando** en la sección **Comandos** .
 
-3. En el panel izquierdo del **Editor de manifiestos**, en la sección **Funcionalidades**, seleccione **Bots**.
+   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="Captura de pantalla que muestra cómo agregar un comando para el bot en el Portal para desarrolladores.":::
 
-4. En el panel derecho del **Editor de manifiestos**, en la sección **Comandos**, seleccione **Agregar**. Aparecerá la pantalla **Nuevo comando**.
+1. Escriba el **comando** que aparece como el menú de comandos del bot.
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="Seleccione el paquete de la aplicación" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
+1. Escriba la **descripción** que aparece bajo el texto del comando en el menú. **Descripción** debe ser una breve explicación del propósito del comando.
 
-5. Escriba el **texto del comando** que debe aparecer como el menú de comandos del bot.
+1. Active la casilla **Ámbito** y, a continuación, seleccione **Agregar**.
+   Esto define dónde debe aparecer el menú de comandos.
 
-6. Escriba el **texto de ayuda** que debe aparecer bajo el texto del comando en el menú. **El texto de ayuda** debe ser una explicación breve del propósito del comando.
-
-7. Active las casillas **Ámbito** para seleccionar dónde debe aparecer este menú de comandos y seleccione **Guardar**.
-
-   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="Botón de menú nuevos comandos de App Studio "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Captura de pantalla que muestra cómo agregar un comando, una descripción y ámbitos para el bot.":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Edite Manifest.json para crear un menú de comandos para el bot
 

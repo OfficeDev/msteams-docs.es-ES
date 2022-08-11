@@ -1,17 +1,17 @@
 ---
 title: Referencias API de aplicaciones de reuniones
 author: surbhigupta
-description: Aprenda a identificar las referencias de api de aplicaciones de reunión con ejemplos y ejemplos de código, consultas de señal de notificación de contexto de usuario de las reuniones de las aplicaciones de Teams.
+description: En este artículo, aprenderá las referencias de API de aplicaciones de reunión que están disponibles para el cliente de Teams y el SDK de Bot Framework con ejemplos, ejemplos de código y códigos de respuesta.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232263"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311956"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -924,12 +924,12 @@ El código siguiente proporciona un ejemplo de carga del evento de finalización
 | **channelData.tenant.id** | Identificador del inquilino de Azure Active Directory |
 | **channelData.source** | Nombre de origen desde el que se desencadena o se invoca el evento. |
 | **channelData.meeting.id** | Identificador predeterminado asociado a la reunión. |
-| **valor. MeetingType** | Tipo de reunión. |
-| **valor. Título** | El tema de la reunión. |
-| **valor. Identificación** | Identificador predeterminado asociado a la reunión. |
-| **valor. JoinUrl** | Dirección URL de unión de la reunión. |
-| **valor. StartTime** | Hora de inicio de la reunión en UTC. |
-| **valor. EndTime** | Hora de finalización de la reunión en UTC. |
+| **Valor. MeetingType** | Tipo de reunión. |
+| **Valor. Título** | El tema de la reunión. |
+| **Valor. Id** | Identificador predeterminado asociado a la reunión. |
+| **Valor. JoinUrl** | Dirección URL de unión de la reunión. |
+| **Valor. Starttime** | Hora de inicio de la reunión en UTC. |
+| **Valor. Endtime** | Hora de finalización de la reunión en UTC. |
 | **locale**| Configuración regional del mensaje establecido por el cliente. |
 
 ## <a name="get-incoming-audio-speaker"></a>Obtener altavoz de audio entrante
@@ -937,7 +937,9 @@ El código siguiente proporciona un ejemplo de carga del evento de finalización
 La `getIncomingClientAudioState` API permite a una aplicación obtener la configuración de altavoz de audio entrante para el usuario de la reunión. La API está disponible a través del SDK de cliente de Teams.
 
 > [!NOTE]
-> Actualmente, la `getIncomingClientAudioState` API para dispositivos móviles solo está disponible en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+>
+> * La `getIncomingClientAudioState` API para dispositivos móviles está disponible actualmente en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+> * El consentimiento específico del recurso está disponible para la versión de manifiesto 1.12 y versiones posteriores, por lo que esta API no funciona para la versión de manifiesto 1.11 y versiones anteriores.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -977,7 +979,9 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 La `toggleIncomingClientAudio` API permite que una aplicación alterne la configuración del altavoz de audio entrante para el usuario de la reunión de silenciar a unmute o viceversa. La API está disponible a través del SDK de cliente de Teams.
 
 > [!NOTE]
-> Actualmente, la `toggleIncomingClientAudio` API para dispositivos móviles solo está disponible en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+>
+> * La `toggleIncomingClientAudio` API para dispositivos móviles está disponible actualmente en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+> * El consentimiento específico del recurso está disponible para la versión de manifiesto 1.12 y versiones posteriores, por lo que esta API no funciona para la versión de manifiesto 1.11 y versiones anteriores.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 

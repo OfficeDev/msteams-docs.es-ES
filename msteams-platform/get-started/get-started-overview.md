@@ -3,12 +3,12 @@ title: 'Introducción: Información general'
 description: En este módulo, aprenderá a empezar a trabajar con la documentación para desarrolladores de Microsoft Teams que le presenta las herramientas comunes, los conceptos fundamentales y las características avanzadas.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 900d07b581f752b5169681750f209a280902b68d
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264144"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312285"
 ---
 # <a name="get-started"></a>Introducción
 
@@ -40,9 +40,6 @@ En función de las capacidades que quiera para la aplicación, elija un conjunto
 
 Si ya está familiarizado con el flujo de trabajo de Yeoman, puede que prefiera usar [Generador Yeoman YoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) para crear las aplicaciones.
 
-> [!WARNING]
-> Si ha estado usando App Studio, le recomendamos que pruebe el Portal para desarrolladores para configurar, distribuir y administrar las aplicaciones de Teams.<br> App Studio queda en desuso el 1 de agosto de 2022.
-
 ## <a name="build-your-first-teams-app"></a>Crear la primera aplicación de Teams
 
 Ahora, vamos a crear su primera aplicación de Teams. Pero primero, elija su idioma (o marco de trabajo) y prepare su entorno de desarrollo.
@@ -69,5 +66,5 @@ Ahora, vamos a crear su primera aplicación de Teams. Pero primero, elija su idi
 
 ## <a name="see-also"></a>Vea también
 
-* [Ejemplos de Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Recursos de Git y GitHub](/contribute/additional-resources)
+- [Ejemplos de Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Recursos de Git y GitHub](/contribute/additional-resources)

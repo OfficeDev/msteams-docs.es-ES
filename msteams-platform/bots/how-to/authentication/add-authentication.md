@@ -5,12 +5,12 @@ description: Aprenda a agregar la autenticación de OAuth a un bot en Teams medi
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: 6cfd765ba467d2c8b03ae4f86b4ab8727c21b9b7
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792973"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312152"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
@@ -446,7 +446,7 @@ Se muestra el asistente siguiente:
 1. Seleccione el botón **Agregar a un equipo**.
 1. En la ventana siguiente, seleccione el equipo en el que desea usar el bot.
 1. Seleccione el botón **Configurar un bot**.
-1. Seleccione los tres puntos (&#x25cf;&#x25cf;&#x25cf;) en el panel izquierdo. A continuación, seleccione el icono de **App Studio**.
+1. Seleccione los tres puntos (&#x25cf;&#x25cf;&#x25cf;) en el panel izquierdo. A continuación, seleccione el icono **Portal para desarrolladores** .
 1. Seleccione la pestaña **Editor de manifiestos**. Debería ver el icono del bot que cargó.
 1. Además, debería poder ver que el bot aparece como un contacto en la lista de chats que puede usar para intercambiar mensajes con el bot.
 

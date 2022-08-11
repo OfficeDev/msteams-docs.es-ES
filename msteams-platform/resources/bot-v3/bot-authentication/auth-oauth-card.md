@@ -4,18 +4,18 @@ description: Describe azure Bot Service OAuthCard y cómo se usa para la autenti
 ms.topic: conceptual
 localization_priority: Normal
 keywords: autenticación de teams OAuthCard OAuth card Azure Bot Service
-ms.openlocfilehash: 7731e4d1148e50c748d9c5e1b55371628a78dea7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: efe05320fc6a0b03b530349b5498fa29d36b47b6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143168"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312236"
 ---
 # <a name="using-azure-bot-service-for-authentication-in-teams"></a>Uso de Azure Bot Service para la autenticación en Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Sin la OAuthCard de Azure Bot Service es complicado implementar la autenticación en un bot. Es un desafío de pila completa que implica la creación de una experiencia web, la integración con proveedores externos de OAuth, la administración de tokens y el control de las llamadas API de servidor a servidor adecuadas para completar el flujo de autenticación de forma segura. Esto puede dar lugar a experiencias torpes que requieren la entrada de "números mágicos".
+Sin la OAuthCard de Azure Bot Service, es complicado implementar la autenticación en un bot. Es un desafío de pila completa que implica la creación de una experiencia web, la integración con proveedores externos de OAuth, la administración de tokens y el control de las llamadas API de servidor a servidor adecuadas para completar el flujo de autenticación de forma segura. Esto puede dar lugar a experiencias torpes que requieren la entrada de "números mágicos".
 
 Con OAuthCard de Azure Bot Service, es más fácil que el bot de Teams inicie sesión en los usuarios y acceda a proveedores de datos externos. Tanto si ya ha implementado la autenticación como si desea cambiar a algo más sencillo o si quiere agregar autenticación al servicio bot por primera vez, OAuthCard puede facilitarla.
 
@@ -23,7 +23,7 @@ Otros temas de [Autenticación](~/resources/bot-v3/bot-authentication/auth-flow-
 
 ## <a name="support-for-the-oauthcard"></a>Compatibilidad con OAuthCard
 
-Actualmente hay algunas restricciones en las que puede usar OAuthCard. Incluyen:
+Actualmente hay algunas restricciones en las que puede usar OAuthCard. Entre las que se incluyen:
 
 * La tarjeta no funcionará con [el acceso de invitado](/MicrosoftTeams/guest-access).
 * No funcionará con [Microsoft Teams gratuito](https://products.office.com/microsoft-teams/free).
@@ -36,24 +36,24 @@ La documentación completa con OAuthCard está disponible en el tema: [Adición 
 
 En las secciones siguientes se indica cómo usar OAuthCard en Teams.
 
-## <a name="main-benefits-for-teams-developers"></a>Principales ventajas para desarrolladores de Teams
+## <a name="main-benefits-for-teams-developers"></a>Principales ventajas para los desarrolladores de Teams
 
 OAuthCard ayuda con la autenticación de las siguientes maneras:
 
 * Proporciona un flujo de autenticación basado en web integrado: ya no tiene que escribir ni hospedar una página web para dirigirse a experiencias de inicio de sesión externas o proporcionar una redirección.
-* Es perfecta para los usuarios finales: complete la experiencia de inicio de sesión completa justo dentro de Teams.
+* Es perfecta para los usuarios finales: complete la experiencia de inicio de sesión completa directamente en Teams.
 * Incluye una administración de tokens sencilla: ya no tiene que implementar un sistema de almacenamiento de tokens; en su lugar, el Bot Service se encarga del almacenamiento en caché de tokens y proporciona un mecanismo seguro para capturar esos tokens.
 * Es compatible con SDK completos: fácil de integrar y consumir desde el servicio de bot.
 * Tiene compatibilidad integrada con muchos proveedores de OAuth populares, como Azure AD/MSA, Facebook y Google.
 
 ## <a name="when-should-i-implement-my-own-solution"></a>¿Cuándo debo implementar mi propia solución?
 
-Dado que los tokens de acceso son información confidencial, es posible que no desee almacenarlos en un servicio externo. En este caso, puede optar por seguir implementando su propio sistema de administración de tokens y su experiencia de inicio de sesión dentro de Teams, como se describe en el resto de los temas de [autenticación](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) de Teams.
+Dado que los tokens de acceso son información confidencial, es posible que no desee almacenarlos en un servicio externo. En este caso, puede optar por seguir implementando su propio sistema de administración de tokens y su experiencia de inicio de sesión en Teams, como se describe en el resto de los temas [de autenticación](~/resources/bot-v3/bot-authentication/auth-flow-bot.md) de Teams.
 
 ## <a name="getting-started-with-oauthcard-in-teams"></a>Introducción a OAuthCard en Teams
 
 > [!NOTE]
-> En esta guía se usa el SDK de Bot Framework v3. Puede encontrar la implementación v4 [aquí](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). Tendrá que crear un manifiesto e incluir token.botframework.com en la `validDomains` sección, ya que de lo contrario, el botón Iniciar sesión no abrirá la ventana de autenticación. Use [App Studio](~/concepts/build-and-test/app-studio-overview.md) para generar el manifiesto.
+> En esta guía se usa el SDK de Bot Framework v3. Puede encontrar la implementación v4 [aquí](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). Tendrá que crear un manifiesto e incluir token.botframework.com en la `validDomains` sección, ya que de lo contrario, el botón Iniciar sesión no abrirá la ventana de autenticación. Use el [Portal para desarrolladores](~/concepts/build-and-test/teams-developer-portal.md) para generar el manifiesto.
 
 Primero tendrá que configurar el servicio bot de Azure para configurar proveedores de autenticación externos. Lea [Configuración de proveedores de identidades](~/concepts/authentication/configure-identity-provider.md) para obtener pasos detallados.
 

@@ -4,12 +4,12 @@ description: En este módulo, aprenderá a empezar a desarrollar bots en Microso
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: a1563d72ada21810393d7a0118b5a2b94463a27b
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558614"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312215"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Agregar bots a aplicaciones de Microsoft Teams
 
@@ -51,7 +51,7 @@ Las extensiones del SDK instalan dependencias, incluido el SDK de Bot Builder.
 > [!IMPORTANT]
 > Puede desarrollar aplicaciones de Teams en cualquier otra herramienta de programación web y llamar [a las API de REST de Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview) directamente, pero debe realizar usted mismo toda la gestión de los tokens.
 
-*Teams App Studio* le ayuda a crear y configurar el manifiesto de la aplicación. Además, puede crear su bot de Bot Framework por usted. También contiene una biblioteca de control de React y un generador de tarjetas interactivo.
+*El Portal para desarrolladores de Teams* le ayuda a crear y configurar el manifiesto de la aplicación, y puede crear el bot de Bot Framework automáticamente. También contiene una biblioteca de control de React y un generador de tarjetas interactivo.
 
 ## <a name="outgoing-webhooks"></a>Webhooks salientes
 
