@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d54d2ffaa6035778ba195c9e2eba44c2e096892e
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841795"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311970"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Escenas personalizadas en modo conjunto en Teams
 
@@ -37,7 +37,7 @@ Una aplicación solo de escena sigue siendo una aplicación en Teams. El Estudio
 Debe tener una comprensión básica de lo siguiente para usar escenas personalizadas del Modo conferencia:
 
 * Definir la escena y los puestos de una escena.
-* Tener una cuenta de Desarrollador de Microsoft y familiarizarse con el [Portal para desarrolladores](../concepts/build-and-test/teams-developer-portal.md) de Teams y App Studio.
+* Tener una cuenta de Desarrollador de Microsoft y familiarizarse con el [Portal para desarrolladores](../concepts/build-and-test/teams-developer-portal.md) de Teams.
 * Comprender el [concepto de instalación de prueba de aplicaciones](../concepts/deploy-and-publish/apps-upload.md).
 * Asegurarse de que el administrador haya concedido permiso para [**Cargar una aplicación personalizada**](../concepts/deploy-and-publish/apps-upload.md) y seleccionar todos los filtros como parte de las directivas de reunión y configuración de aplicación respectivamente.
 
@@ -53,7 +53,7 @@ Tenga en cuenta las siguientes prácticas al crear escenas:
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Crear una escena con Estudio de escenas
 
-Microsoft tiene un Estudio de escenas que le permite crear escenas. Está disponible en [Editor de escenas - Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/scenes). Este documento hace referencia a Estudio de escenas en el Portal para desarrolladores de Teams. La interfaz y las funcionalidades son exactamente las mismas que las del Diseñador de escenas en App Studio.
+Microsoft tiene un Estudio de escenas que le permite crear escenas. Está disponible en [Editor de escenas - Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/scenes). Este documento hace referencia a Estudio de escenas en el Portal para desarrolladores de Teams.
 
 Una escena en el contexto del Estudio de escenas es un artefacto que contiene los siguientes elementos:
 

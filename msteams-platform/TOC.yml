@@ -232,6 +232,8 @@
       href: tabs/design/tabs-mobile.md
     - name: Obtención del contexto de Teams para la pestaña
       href: tabs/how-to/access-teams-context.md
+    - name: Crear aplicaciones para canales compartidos
+      href: concepts/build-and-test/shared-channels.md
     - name: Compilar pestañas con tarjetas adaptables
       href: tabs/how-to/build-adaptive-card-tabs.md
     - name: Expansión del vínculo de la pestaña y vista de fases
@@ -323,8 +325,6 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Referencias API de aplicaciones de reuniones
       href: apps-in-teams-meetings/API-references.md
-    - name: Crear canal compartido
-      href: concepts/build-and-test/Shared-channels.md
     - name: Obtener transcripciones de reuniones mediante Graph API
       items:
         - name: Información general

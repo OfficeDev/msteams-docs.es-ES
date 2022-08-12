@@ -3,12 +3,12 @@ title: Versión preliminar para desarrolladores públicos para Microsoft Teams
 description: En este artículo, conocerá las características disponibles en la versión preliminar pública para desarrolladores de Microsoft Teams y el manifiesto de la aplicación de la versión preliminar para desarrolladores.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503917"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312201"
 ---
 # <a name="public-developer-preview-for-teams"></a>Versión preliminar pública para desarrolladores de Teams
 
@@ -19,9 +19,9 @@ La versión preliminar para desarrolladores es un programa público para desarro
 
 ## <a name="developer-preview-app-manifest"></a>Manifiesto de la aplicación de la versión preliminar para desarrolladores
 
-Muchas características habilitadas en la versión preliminar para desarrolladores requerirán modificaciones en el archivo JSON del manifiesto de la aplicación. Para hacerlo, deberá usar el [esquema de manifiesto de la versión preliminar para desarrolladores](~/resources/schema/manifest-schema-dev-preview.md). Si usa este esquema, no podrá usar [App Studio](~/concepts/build-and-test/app-studio-overview.md) para hacer estos cambios ni podrá usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrá que seleccionar el icono `More apps` de la barra de aplicaciones y, después, seleccionar `Upload a custom app link`. Con este método solo puede cargar una versión comprimida del paquete de la aplicación.
+Muchas características habilitadas en la versión preliminar para desarrolladores requerirán modificaciones en el archivo JSON del manifiesto de la aplicación. Para hacerlo, deberá usar el [esquema de manifiesto de la versión preliminar para desarrolladores](~/resources/schema/manifest-schema-dev-preview.md). Si usa este esquema, no podrá usar el [Portal para desarrolladores para Teams](~/concepts/build-and-test/teams-developer-portal.md) para hacer estos cambios, ni podrá usarlo para cargar la aplicación para realizar pruebas. Para cargar la aplicación, tendrá que seleccionar el icono `More apps` de la barra de aplicaciones y, después, seleccionar `Upload a custom app link`. Con este método solo puede cargar una versión comprimida del paquete de la aplicación.
 
-Es posible que le resulte útil usar App Studio para crear las partes de la versión preliminar que no sean para desarrolladores del paquete de la aplicación, exportar ese paquete y editar manualmente el archivo `manifest.json` para agregar las características de versión preliminar para desarrolladores que desea usar. Una vez que haya agregado las características de vist previa para desarrolladores al archivo `manifest.json`, no podrá volver a importar el paquete en App Studio.
+Es posible que le resulte útil usar Portal para desarrolladores de Teams para crear las partes de la versión preliminar que no sean para desarrolladores del paquete de la aplicación, exportar ese paquete y editar manualmente el archivo `manifest.json` para agregar las características de versión preliminar para desarrolladores que desea usar. Una vez que haya agregado las características de vista previa para desarrolladores al archivo `manifest.json`, no podrá volver a importar el paquete en el Portal para desarrolladores de Teams
 
 ## <a name="enable-developer-preview"></a>Habilitar la versión preliminar para desarrolladores
 

@@ -4,12 +4,12 @@ description: En este módulo, aprenderá a diseñar tarjetas adaptables para su 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 669c117ddd344b1ad77dc5983e89fd59e2405a47
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558159"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312095"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Diseño de Tarjetas adaptables para la aplicación de Microsoft Teams
 
@@ -61,7 +61,7 @@ Se usa para enviar un mensaje sencillo que requiere acción.
 
 ### <a name="list"></a>Lista
 
-Se usa en escenarios en los que desea que el usuario elija un elemento de una lista, pero los elementos no necesitan mucha explicación.
+Se usa en escenarios en los que desea que el usuario elija un elemento de una lista, pero los elementos no necesitan muchas explicaciones.
 
 #### <a name="mobile"></a>Móvil
 
@@ -157,7 +157,7 @@ Se usa para recopilar varias entradas del usuario.
 
 ## <a name="anatomy"></a>Anatomía
 
-Tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta.
+Las tarjetas adaptables tienen mucha flexibilidad. Pero, como mínimo, se recomienda incluir los siguientes componentes en cada tarjeta.
 
 #### <a name="mobile"></a>Móvil
 
@@ -192,7 +192,7 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) para dar for
   * **Hacer**: para cada `TextBlock`, establezca `"wrap": true` ya que el texto no se ajusta de forma predeterminada.
   * **No hacer**: establezca `"width": "auto"` para cada contenedor de columnas. Por ejemplo, si tiene una entrada y un botón en paralelo, es posible que el botón se corte en algunas pantallas. En su lugar, establezca `auto` para la columna con botones y otro contenido que siempre debe estar completamente visible.
 * `"width": "stretch"`: tamaño de las columnas según el `ColumnSet`width disponible. Cuando varias columnas usan el valor `"stretch"`, comparten igualmente el ancho disponible.
-  * **Hacer**: se usa con una columna si todas las demás columnas tienen un ancho estático. Por ejemplo, tiene imágenes en miniatura en una columna de 50 píxeles de ancho.
+  * **Hacer**: se usa con una columna si todas las demás columnas tienen un ancho estático. Por ejemplo, tiene imágenes en miniatura en una columna que son todas de 50 píxeles de ancho.
 * `"width": "<number>"`: Ajusta el tamaño de las columnas a partir de la proporción del `ColumnSet` ancho disponible. Por ejemplo, si establece tres columnas con `"width": "1"`, `"width": "4"` y `"width": "5"`, las columnas ocuparán un 10, 40, y un 50 por ciento del ancho disponible.
 * `"width": "<number>px"`: Ajusta tamaño de las columnas en un ancho de píxel específico. Este enfoque es útil al crear tablas.
   * **Hacer**: se usa cuando no es necesario cambiar el ancho de lo que se muestra (por ejemplo, números y porcentajes).
@@ -204,11 +204,11 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) para dar for
 
 **Hacer**: en esta pantalla, hay dos columnas en la parte inferior de la tarjeta. El ancho del componente de entrada se establece en `stretch`, mientras que el ancho del botón **Seleccionar** se establece en `auto`. Esto garantiza que el botón permanece completamente a la vista.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="La imagen muestra cómo establecer el ancho de columna en Tarjetas adaptables.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="En la captura de pantalla se muestra cómo establecer el ancho de columna de las tarjetas adaptables.":::
 
 **No hacer**: en esta pantalla, ambas columnas están`width`establecidas en `auto`. Esto hace que el botón **Seleccionar** de la derecha se corte ligeramente en comparación con la entrada.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="La imagen muestra cómo no establecer el ancho de columna en Tarjetas adaptables.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="En la captura de pantalla se muestra cómo no establecer el ancho de columna en las tarjetas adaptables.":::
 
 # <a name="code"></a>[Código](#tab/code)
 
@@ -388,11 +388,11 @@ Este es el código para implementar el ejemplo de diseño que debe seguir.
 
 **Hacer**: los diseños tienden a mostrarse mejor en dispositivos móviles con menos columnas.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="La imagen muestra la cantidad correcta de columnas en Tarjetas adaptables.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="En la captura de pantalla se muestra el número correcto de columnas en las tarjetas adaptables.":::
 
 **No hacer**: el uso de demasiadas columnas puede saturar el contenido de la tarjeta en dispositivos móviles.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="La imagen muestra cuántas columnas pueden afectar negativamente al diseño de tarjeta adaptable.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="En la captura de pantalla se muestra cómo muchas columnas pueden afectar negativamente al diseño de la tarjeta adaptable.":::
 
 #### <a name="example-fixed-width-has-its-place"></a>Ejemplo: el ancho fijo tiene su lugar
 
@@ -400,7 +400,7 @@ Este es el código para implementar el ejemplo de diseño que debe seguir.
 
 Cuando no sea necesario cambiar el tamaño de algo que se muestra, establezca las columnas en un ancho de píxel específico. En este ejemplo se muestra la columna izquierda con un tamaño de 50 píxeles, mientras que las descripciones situadas junto a las miniaturas amplían la longitud de la tarjeta.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="La imagen muestra cómo establecer el ancho de columna en Tarjetas adaptables.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="En la captura de pantalla se muestra cómo establecer el ancho de columna en las tarjetas adaptables.":::
 
 # <a name="code"></a>[Código](#tab/code)
 
@@ -548,17 +548,17 @@ Este es el código para implementar el ejemplo de diseño.
 
 Ya sea que este usando [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), o [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), establezca la `wrap` propiedad en `true` para que su texto de tarjeta no quede truncado en los dispositivos móviles.
 
-#### <a name="example-making-sure-text-doesnt-truncate"></a>Ejemplo: Asegurarse de que el texto no se trunca
+#### <a name="example-making-sure-text-dont-truncate"></a>Ejemplo: Asegurarse de que el texto no se trunca
 
 # <a name="design"></a>[Diseño](#tab/design)
 
 **Hacer**: en esta pantalla, la tarjeta tiene una propiedad `wrap` establecida en `true`. Esto permite que el texto se ajuste a cualquier tamaño de pantalla.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="Imagen muestra cómo ajustar texto en Tarjetas adaptables.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="En la captura de pantalla se muestra cómo ajustar el texto en las tarjetas adaptables.":::
 
 **No hacer**: en esta pantalla, la tarjeta no usa la propiedad `wrap`, por lo que el texto se corta en una pantalla móvil.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="La imagen muestra lo que puede ocurrir si no ajusta texto en Tarjetas adaptables.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="La captura de pantalla muestra lo que puede ocurrir si no ajusta el texto en las tarjetas adaptables.":::
 
 # <a name="code"></a>[Código](#tab/code)
 
@@ -655,7 +655,7 @@ Siga estas instrucciones al incluir imágenes en las tarjetas.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Procedimiento recomendado para incluir solo un pequeño conjunto de acciones en una tarjeta adaptable.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="En la captura de pantalla se muestra el procedimiento recomendado sobre cómo debe incluir solo un pequeño conjunto de acciones en una tarjeta adaptable.":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Hacer: Usar hasta seis acciones principales
 
@@ -663,7 +663,7 @@ Aunque Tarjetas adaptables puede admitir seis acciones principales, la mayoría 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Procedimiento recomendado para no sobrecargar a los usuarios con demasiadas acciones en una tarjeta adaptable.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="En la captura de pantalla se muestra el procedimiento recomendado para no sobrecargar a los usuarios con demasiadas acciones en una tarjeta adaptable.":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>No: Usar más de seis acciones principales
 
@@ -674,7 +674,7 @@ Tarjetas adaptables debe presentar contenido rápido y accionable. Demasiadas ac
 
 ### <a name="frequency"></a>Frecuencia
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Procedimiento recomendado sobre la frecuencia de la tarjeta adaptable.":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="En la captura de pantalla se muestra el procedimiento recomendado sobre la frecuencia de la tarjeta adaptable.":::
 
 #### <a name="do-be-concise"></a>Do: Sea conciso
 

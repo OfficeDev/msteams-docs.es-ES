@@ -3,12 +3,12 @@ title: Tipos de tarjetas
 description: En este módulo, aprenderá qué son las tarjetas y las acciones de tarjeta disponibles para los bots en Teams y creará un héroe, miniaturas y tarjetas adaptables.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558586"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311963"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -18,7 +18,7 @@ Antes de identificar los distintos tipos de tarjeta, comprenda cómo crear una t
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Crear una tarjeta de Elemento principal, una tarjeta en miniatura o una tarjeta adaptable
 
-Para crear una tarjeta de elemento principal, una tarjeta en miniatura o una tarjeta adaptable desde App Studio:
+Para crear una tarjeta de Elemento principal, una tarjeta en miniatura o una tarjeta adaptable desde el Portal para desarrolladores para Teams:
 
 1. Vaya al [Portal para desarrolladores para Teams](https://dev.teams.microsoft.com/home).
 1. Seleccione **Diseñar y compilar tarjetas adaptables**.
