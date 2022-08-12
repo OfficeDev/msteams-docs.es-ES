@@ -612,15 +612,15 @@
         - name: Controles de colaboración y API de configuración
           items:
             - name: Información general
-              href: samples/collaboration-api-reference.md
+              href: /rest/api/industry/collaboration-controls/
             - name: 'Colaboración: API personalizadas'
-              href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+              href: /rest/api/industry/collaboration-controls/collaboration-custom-ap-is
             - name: 'Colaboración: API estándar de OData'
-              href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+              href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-ap-is
             - name: 'Configuración: API personalizadas'
-              href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+              href: /rest/api/industry/collaboration-controls/settings-custom-ap-is
             - name: 'Configuración: API de OData estándar'
-              href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+              href: /rest/api/industry/collaboration-controls/settings-standard-o-data-ap-is
         - name: Limitaciones del Control de colaboración
           href: samples/collaboration-controls-limitations.md
     - name: Plantillas de aplicaciones para Microsoft Teams
