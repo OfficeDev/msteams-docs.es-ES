@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 96b80409697c9347fac82138d0e929c5c874725a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558103"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363455"
 ---
 # <a name="upload-your-app-in-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -24,7 +24,9 @@ Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publ
 > Al realizar la instalación de prueba de la aplicación varias veces se muestra más de una instancia para las extensiones de mensajería.
 
 > [!IMPORTANT]
-> En este momento, la transferencia local de aplicaciones está disponible en Government Community Cloud (GCC), pero no está disponible para GCC-High ni para el Departamento de Defensa (DOD).
+>
+> * Actualmente, la transferencia local de aplicaciones solo es posible en government Community Cloud (GCC) y no es posible en GCC-High ni en el Departamento de Defensa (DOD).
+> * La instalación de aplicaciones solo se admite en la aplicación de escritorio de Teams.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

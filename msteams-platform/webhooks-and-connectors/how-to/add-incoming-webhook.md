@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a agregar Webhook entrante a la aplicac
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5c826e3f8b041f1ef136fc8e7941c74ac35e7773
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: ade5d5f30261cfd77140ab3cc9332bba15c76be8
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659026"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337141"
 ---
 # <a name="create-incoming-webhooks"></a>Crear webhooks entrantes
 
@@ -107,3 +107,5 @@ Para eliminar un Webhook entrante de un canal de Teams, siga estos pasos:
 * [Compartir en Teams desde aplicaciones web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrar aplicaciones web](~/samples/integrate-web-apps-overview.md)
 * [Acceso y datos seguros en Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app)
+* [Crear un bot de notificaciones con JavaScript](../../sbs-gs-notificationbot.yml)
+* [Cree su primera aplicación de bot con JavaScript](../../sbs-gs-bot.yml)

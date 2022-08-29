@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058217"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363441"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
@@ -358,7 +358,7 @@ Si la aplicación solicita un cambio de permisos de acceso, se pide a los usuari
 
 La versión de esta cadena debe seguir el estándar de [SemVer](http://semver.org/) (MAJOR.MINOR.PATCH).
 
-## <a name="id"></a>id
+## <a name="id"></a>Id.
 
 Identificador de aplicación de Microsoft **necesario**
 
@@ -398,7 +398,7 @@ Objeto **necesario**
 
 Describe la aplicación a los usuarios. En el caso de las aplicaciones enviadas a AppSource, estos valores deben coincidir con la información de la entrada de AppSource.
 
-Asegúrese de que la descripción describe su experiencia y ayuda a los clientes potenciales a comprender lo que hace su experiencia. Debe anotar en la descripción completa si se requiere una cuenta externa para su uso. Los valores de `short` y `full` deben ser diferentes. La descripción breve no se puede repetir dentro de la descripción larga y no debe incluir ningún otro nombre de la aplicación.
+Asegúrese de que la descripción describe su experiencia y ayuda a los clientes potenciales a comprender lo que hace su experiencia. Debe anotar en la descripción completa si se requiere una cuenta externa para su uso. Los valores de `short` y `full` deben ser diferentes. La descripción breve no se puede repetir dentro de la descripción larga y no debe incluir ningún otro nombre de aplicación.
 
 |Nombre| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|
@@ -510,7 +510,7 @@ Lista de comandos que el bot puede recomendar a los usuarios. El objeto es una m
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`items.scopes`|Matriz de enumeración|3|✔️|Especifica el ámbito para el que la lista de comandos es válida. Las opciones son `team`, `personal`y `groupchat`.|
-|`items.commands`|matriz de objetos|10 |✔️|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
+|`items.commands`|matriz de objetos|10|✔️|Una matriz de comandos que el bot admite:<br>`title`: el nombre de comando del bot (cadena, 32)<br>`description`: una descripción o un ejemplo sencillos de la sintaxis del comando y su argumento (cadena, 128).|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -547,7 +547,7 @@ El elemento es una matriz (máximo de un elemento) con todos los elementos de ti
 |Nombre| Tipo | Tamaño máximo | Obligatorio | Descripción|
 |---|---|---|---|---|
 |`botId`|string|64|✔️|El id. único de la aplicación de Microsoft para el bot que respalda la extensión de mensajería, tal como está registrado con el Bot Framework. El id. puede ser el mismo que el id. de aplicación general.|
-|`commands`|matriz de objetos|10 |✔️|Matriz de comandos que admite la extensión de mensajería.|
+|`commands`|matriz de objetos|10|✔️|Matriz de comandos que admite la extensión de mensajería.|
 |`canUpdateConfiguration`|Boolean|||Valor que indica si el usuario puede actualizar la configuración de una extensión de mensajería. Valor predeterminado: **falso**.|
 |`messageHandlers`|Matriz de objetos|5||Una lista de controladores que permiten invocar aplicaciones cuando se cumplen determinadas condiciones.|
 |`messageHandlers.type`|string|||Tipo de controlador de mensajes. Debe estar `"link"`.|
@@ -615,7 +615,7 @@ Proporciona las características nativas en el dispositivo de un usuario al que 
 
 Una lista de dominios válidos para sitios web que la aplicación espera cargar en el cliente de Teams. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. El dominio válido coincide exactamente con un segmento del dominio; si necesita que coincida con `a.b.example.com` entonces use `*.*.example.com`. Si la configuración de pestañas o la interfaz de usuario de contenido navega a cualquier otro dominio que no sea la configuración de pestañas, ese dominio debe especificarse aquí.
 
-**No** incluya los dominios de proveedores de identidades que desea admitir en la aplicación. Por ejemplo, para autenticar con un id. de Google, es necesario redirigirse a accounts.google.com; sin embargo, no debe incluir accounts.google.com en `validDomains[]`.
+**No** incluya los dominios de proveedores de identidades que desea admitir en la aplicación. Por ejemplo, para autenticarse mediante un identificador de Google, es necesario redirigir a accounts.google.com, pero no debe incluir accounts.google.com en `validDomains[]`.
 
 Las aplicaciones de Teams que requieren sus propias direcciones URL de SharePoint para funcionar bien, incluyen " {teamsitedomain}" en su lista de dominios válidos.
 
@@ -633,13 +633,13 @@ Proporcione su identificador de aplicación de Azure Active Directory e informac
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔️|Azure AD identificador de aplicación de la aplicación. Este identificador debe ser un GUID.|
-|`resource`|string|2048 caracteres|✔️|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** si no usa SSO, asegúrese de introducir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, <https://notapplicable> para evitar una respuesta de error. |
+|`resource`|string|2048 caracteres|✔️|Dirección URL de recurso de la aplicación para adquirir el token de autenticación para SSO. </br> **NOTA:** Si no usa el inicio de sesión único, asegúrese de escribir un valor de cadena ficticio en este campo en el manifiesto de la aplicación, por ejemplo, <https://notapplicable> para evitar una respuesta de error. |
 
 ## <a name="graphconnector"></a>graphConnector
 
 Objeto **opcional**
 
-Especifique la configuración del conector de Graph de la aplicación. Si está presente, también se debe especificar [webApplicationInfo.id](#webapplicationinfo).
+Especifique la configuración del conector de Graph de la aplicación. Si está presente, también debe especificarse [webApplicationInfo.id](#webapplicationinfo) .
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
@@ -767,15 +767,15 @@ El bloque `configurableProperties` define las propiedades de la aplicación que 
 
 Puede definir cualquiera de las siguientes propiedades:
 
-* `name`: nombre para mostrar de la aplicación.
-* `shortDescription`: descripción breve de la aplicación.
-* `longDescription`: descripción larga de la aplicación.
-* `smallImageUrl`: icono de esquema de la aplicación.
-* `largeImageUrl`: icono de color de la aplicación.
-* `accentColor`: color que se usarán y que servirá como fondo para los iconos de esquema.
-* `developerUrl`: la dirección URL HTTPS del sitio web del desarrollador.
-* `privacyUrl`: la dirección URL HTTPS de la directiva de privacidad del desarrollador.
-* `termsOfUseUrl`: la dirección URL HTTPS de los términos de uso del desarrollador.
+* [name](#name): nombre para mostrar de la aplicación.
+* [shortDescription](#description): descripción breve de la aplicación.
+* [longDescription](#description): la descripción larga de la aplicación.
+* [smallImageUrl](#icons): icono de esquema de la aplicación.
+* [largeImageUrl](#icons): icono de color de la aplicación.
+* [accentColor](#accentcolor): el color que se va a usar y un fondo para los iconos de esquema.
+* [developerUrl](#developer): dirección URL HTTPS del sitio web del desarrollador.
+* [privacyUrl](#developer): dirección URL HTTPS de la directiva de privacidad del desarrollador.
+* [termsOfUseUrl](#developer): dirección URL HTTPS de los términos de uso del desarrollador.
 
 ## <a name="supportedchanneltypes"></a>supportedChannelTypes
 

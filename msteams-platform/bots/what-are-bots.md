@@ -1,20 +1,23 @@
 ---
 title: Bots en Microsoft Teams
 author: surbhigupta
-description: Con esta ruta de aprendizaje, empiece a trabajar con bots conversacionales en Microsoft Teams y sus ejemplos de código.
+description: En este artículo, use bots conversacionales en Microsoft Teams para compartir archivos, enviar notificaciones proactivas, tarjetas interactivas, realizar llamadas, invocar el comando de bot, IVR.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
-ms.translationtype: HT
+ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912264"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363517"
 ---
 # <a name="build-bots-for-teams"></a>Crear bots para Teams
 
-Un bot también se conoce como bot de chat o bot de conversación. Es una aplicación que ejecuta tareas sencillas y repetitivas de usuarios como, por ejemplo, el servicio de atención al cliente o el personal de soporte técnico. Los bots se usan a diario para, por ejemplo, proporcionar información sobre el tiempo, reservar cenas o facilitar información sobre viajes. Las interacciones con bots pueden ser preguntas y respuestas rápidas o conversaciones complejas.
+> [!NOTE]
+> Se recomienda crear su primera aplicación de bot o aplicación de bot de notificación mediante la herramienta de desarrollo de nueva generación para Teams. Para obtener más información, vea [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) y [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
+
+Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas sencillas y repetitivas por parte de usuarios como el servicio de atención al cliente o el personal de soporte técnico. Los bots se usan a diario para, por ejemplo, proporcionar información sobre el tiempo, reservar cenas o facilitar información sobre viajes. Las interacciones con bots pueden ser preguntas y respuestas rápidas o conversaciones complejas.
 
 > [!IMPORTANT]
 >
@@ -26,17 +29,17 @@ Un bot también se conoce como bot de chat o bot de conversación. Es una aplica
 
 Los bots de conversación permiten que los usuarios interactúen con el servicio web mediante texto, tarjetas interactivas y módulos de tareas.
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="Servicio web mediante texto"lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="La captura de pantalla es un ejemplo que muestra un servicio web con texto."lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="Servicio web mediante tarjetas interactivas"lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="La captura de pantalla es un ejemplo que muestra un servicio web con tarjetas interactivas."lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-:::image type="content" source="../assets/images/task-module-example.png" alt-text="Servicio web mediante módulo de tareas"lightbox="../assets/images/task-module-example.png"border="true":::
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="La captura de pantalla es un ejemplo que muestra un servicio web mediante el módulo de tareas." lightbox="../assets/images/task-module-example-expanded.png":::
 
 Los bots de conversación están dotados de gran flexibilidad. Los bots pueden controlar algunos comandos básicos y tareas más complejas que implican inteligencia artificial y procesamiento de lenguaje natural. Los bots pueden formar parte de una aplicación más grande o ser independientes.
 
 Use la combinación correcta de tarjetas, texto y módulos de tareas para crear un bot que sea útil. En la siguiente imagen se muestra a un usuario conversando con un bot en un chat individual con texto y tarjetas interactivas.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Bot de preguntas frecuentes de ejemplo":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="La captura de pantalla es un ejemplo que muestra un bot de preguntas más frecuentes de ejemplo.":::
 
 Cada interacción entre el usuario y el bot se representa como una actividad. Cuando un bot recibe una actividad, se la pasa a sus controladores de actividad. Vea los [controladores de actividad de bots](~/bots/bot-basics.md).
 
@@ -64,7 +67,10 @@ Puede usar las API de bot de Teams para obtener información de miembros de un c
 
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Recordatorio diario de tareas del bot| Demostrar cómo programar una tarea periódica y recibir un recordatorio a una hora programada. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Recordatorio diario de tareas del bot| Demostrar cómo programar una tarea periódica y recibir un recordatorio a una hora programada. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| bot de Hola mundo | Se trata de una sencilla aplicación hello world con funcionalidades de extensión Bot y Message. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Notificación de tarjeta adaptable | Este es un ejemplo que muestra cómo enviar notificaciones con diferentes tarjetas adaptables mediante bots. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Notificación de webhook entrante | Este es un ejemplo que muestra cómo enviar notificaciones a través de Webhook entrante en canales de Microsoft Teams. |  | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>Consulte también
 
@@ -74,3 +80,5 @@ Puede usar las API de bot de Teams para obtener información de miembros de un c
 * [Agregar autenticación al bot de Teams](~/bots/how-to/authentication/add-authentication.md)
 * [Controladores de actividad de bots](~/bots/bot-basics.md)
 * [Eventos de conversación en el bot de Teams](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Cree su primera aplicación de bot con JavaScript](../sbs-gs-bot.yml)
+* [Crear un bot de notificaciones con JavaScript](../sbs-gs-notificationbot.yml)
