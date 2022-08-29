@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear un webhook saliente en Microsof
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: e86f3825e39340cb228b24dccc770b2d302fb848
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503322"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337162"
 ---
 # <a name="create-outgoing-webhooks"></a>Crear webhooks salientes
 
@@ -249,3 +249,5 @@ Siga la [guía paso a paso](../../sbs-outgoing-webhooks.yml) para crear webhooks
 * [Creación de un webhook entrante](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Crear un Conector de Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Crear y enviar mensajes](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Crear un bot de notificaciones con JavaScript](../../sbs-gs-notificationbot.yml)
+* [Cree su primera aplicación de bot con JavaScript](../../sbs-gs-bot.yml)

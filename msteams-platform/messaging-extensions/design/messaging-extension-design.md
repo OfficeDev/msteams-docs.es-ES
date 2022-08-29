@@ -1,16 +1,16 @@
 ---
 title: Diseñe su extensión de mensajería
-description: Obtenga información sobre cómo diseñar una extensión de mensajería de Teams y obtener el kit de interfaz de usuario de Microsoft Teams. Describe el procedimiento recomendado de sugerencias para las extensiones de mensaje de referencia de las directrices de diseño de equipos
+description: Obtenga información sobre cómo diseñar una extensión de mensajería de Teams y obtener el kit de interfaz de usuario de Microsoft Teams. Describe las sugerencias y procedimientos recomendados sobre las extensiones de mensaje de referencia de las directrices de diseño de Teams.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558754"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338903"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Diseñe su extensión de mensajería de Microsoft Teams
 
@@ -57,7 +57,7 @@ Con el fin de mantener la coherencia entre las aplicaciones de Teams, no es posi
 
 ## <a name="types-of-message-extensions"></a>Tipos de extensiones de mensajería
 
-Las extensiones de mensajería pueden tener comandos de búsqueda, comandos de acción o ambos. Los comandos dependen de las características de su aplicación y de cómo encajan en los casos de uso de Teams.
+Las extensiones de mensajería pueden tener comandos de búsqueda, comandos de acción o ambos. Los comandos dependen de las características de la aplicación y de cómo se ajusten a los casos de uso de Teams.
 
 ### <a name="search-commands"></a>Comandos de búsqueda
 
@@ -188,11 +188,11 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la aplicación**: nombre completo de la aplicación.|
-|2 |**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
-|3 |**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
-|4 |**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
-|5 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
-|6 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
+|2|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
+|3|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
+|4|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
+|5|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
+|6|**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -201,11 +201,11 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Logotipo de la aplicación**: icono de color del logotipo de la aplicación.|
-|2 |**Nombre de la aplicación**: nombre completo de la aplicación.|
-|3 |**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
-|4 |**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
-|5 |**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
-|6 |**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
+|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
+|3|**Icono del menú de comandos de acción (opcional)**: abre una lista de comandos de acción para la extensión de mensajería (si especifica alguno).
+|4|**Cuadro de búsqueda**: permite que los usuarios busquen contenido de la aplicación que quieran insertar.|
+|5|**Menú de pestaña (opcional)**: proporciona varias categorías de contenido.|
+|6|**Menú de comandos de acción (opcional)**: muestra la lista de comandos de acción (si especifica alguno).|
 |7 |**Contenido de la aplicación**: principalmente para mostrar los resultados de la búsqueda. El ejemplo siguiente usa el diseño de lista (el diseño de cuadrícula es otra opción).|
 |8 |**Logotipo de la aplicación**: icono de esquema del logotipo de la aplicación.|
 
@@ -216,7 +216,7 @@ Los siguientes ejemplos muestran una extensión de mensajería abierta desde el 
 |Contador|Descripción|
 |----------|-----------|
 |1|**Desanclar**: disponible si el usuario ha anclado la aplicación.|
-|2 |**Quitar**: quita la extensión de mensajería del canal, chat o reunión.|
+|2|**Quitar**: quita la extensión de mensajería del canal, chat o reunión.|
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
@@ -234,7 +234,7 @@ SSO hace que el proceso de inicio de sesión sea más fácil, rápido y seguro. 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Ejemplo de integración con inicio de sesión único.":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Ejemplo de integración con el inicio de sesión único.":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Qué no hacer: Sacar a los usuarios de la conversación
 
@@ -259,7 +259,7 @@ Si es útil para sus casos de uso, considere la posibilidad de crear una extensi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Ejemplo sobre cómo controlar el trabajo de diseño.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Ejemplo de control del trabajo de diseño.":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Qué no hacer: Insertar toda la aplicación en un módulo de tareas
 
