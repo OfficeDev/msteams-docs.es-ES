@@ -1,14 +1,14 @@
 ---
 title: Obtener contexto para su pestaña
-description: En este módulo, aprenderá a obtener el contexto del usuario en las pestañas, el contexto de usuario y la información del contexto de acceso.
-ms.localizationpriority: medium
+description: Obtenga información sobre el contexto de la pestaña, el contexto del usuario, el equipo o la empresa, la información de acceso, la recuperación del contexto en canales privados o compartidos y el control del cambio de tema.
+ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058119"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450390"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 

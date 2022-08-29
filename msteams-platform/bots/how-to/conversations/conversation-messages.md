@@ -1,19 +1,19 @@
 ---
 title: Mensajes en conversaciones de bot
-description: Obtenga información sobre las maneras de tener una conversación con un bot de Teams y los datos del canal de Teams, la notificación al mensaje, los mensajes de imagen, las tarjetas adaptables mediante ejemplos de código.
+description: Obtenga información sobre cómo enviar un mensaje, acciones sugeridas, notificación, datos adjuntos, imágenes, tarjetas adaptables, respuestas de código de error de estado para Limitación.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035201"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363448"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
-Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Teams publica el mensaje en el bot. Teams envía un objeto JSON al punto de conexión de mensajería del bot. El bot examina el mensaje para determinar su tipo y responder correctamente.
+Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: message`. Cuando un usuario envía un mensaje, Microsoft Teams publica el mensaje en el bot. Teams envía un objeto JSON al punto de conexión de mensajería del bot y Teams solo permite un punto de conexión para la mensajería. El bot examina el mensaje para determinar su tipo y responder correctamente.
 
 Las conversaciones básicas se controlan a través del conector de Bot Framework, una única API REST. Esta API permite que el bot se comunique con Teams y otros canales. El SDK de Bot Builder proporciona las siguientes características:
 
@@ -198,7 +198,8 @@ Los mensajes enviados entre usuarios y bots incluyen datos de canal internos den
 
 ## <a name="send-suggested-actions"></a>Envío de acciones sugeridas
 
-Las acciones sugeridas permiten al bot presentar botones que el usuario puede seleccionar para proporcionar entrada. Las acciones sugeridas mejoran la experiencia del usuario al permitir que el usuario responda a una pregunta o haga una elección con la selección de un botón, en lugar de escribir una respuesta con un teclado. Los botones permanecen visibles y accesibles para el usuario en las tarjetas enriquecidas incluso después de que el usuario realice una selección, mientras que para las acciones sugeridas, los botones no están disponibles. Esto impide que el usuario seleccione botones obsoletos dentro de una conversación.
+Las acciones sugeridas permiten al bot presentar botones que el usuario puede seleccionar para proporcionar entrada. Las acciones sugeridas mejoran la experiencia del usuario al permitir que el usuario responda a una pregunta o haga una elección con la selección de un botón, en lugar de escribir una respuesta con un teclado.
+Los botones permanecen visibles y accesibles para el usuario en las tarjetas enriquecidas incluso después de que el usuario realice una selección, mientras que para las acciones sugeridas, los botones no están disponibles. Esto impide que el usuario seleccione botones obsoletos dentro de una conversación.
 
 Para agregar acciones sugeridas a un mensaje, establezca la `suggestedActions` propiedad del objeto [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) para especificar la lista de objetos [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) que representan los botones que se van a presentar al usuario. Para obtener más información, consulte [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
 
@@ -225,6 +226,7 @@ A continuación se muestra un ejemplo de implementación y experiencia de accion
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Acciones sugeridas por bot" border="true":::
 
 > [!NOTE]
+>
 > * `SuggestedActions` solo se admiten para bots de chat uno a uno y mensajes basados en texto y no para tarjetas adaptables o datos adjuntos.
 > * Actualmente `imBack` es el único tipo de acción admitido y Teams muestra hasta tres acciones sugeridas.
 

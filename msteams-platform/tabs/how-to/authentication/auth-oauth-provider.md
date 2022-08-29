@@ -3,38 +3,38 @@ title: Usar proveedores de OAuth externos
 description: En este módulo, aprenderá a realizar la autenticación mediante proveedores de OAuth externos y a agregarla al explorador externo.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 00b722b2b8fd61e3c8fd620ae7bd277da0e7a89b
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 62f056fd852eda320a180fa61cf5693ef0105b8b
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962415"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435072"
 ---
 # <a name="use-external-oauth-providers"></a>Usar proveedores de OAuth externos
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 Puede admitir proveedores de OAuth externos o de terceros (3P), como Google, GitHub, LinkedIn y Facebook mediante la API de `authenticate()` actualizada:
 
 ```JavaScript
-function authenticate(authenticateParameters?: AuthenticateParameters)
-``` 
+function authenticate(authenticateParameters: AuthenticatePopUpParameters): Promise<string>
+```
 
 Se agregan los siguientes elementos a la API de `authenticate()` para admitir proveedores de OAuth externos:
 
 * parámetro `isExternal`
 * Dos valores de marcador de posición en el parámetro `url` existente
 
-En la tabla siguiente se proporciona la lista de parámetros y funciones de la API`authenticate()` junto con sus descripciones:
+En la tabla siguiente se proporciona la lista de parámetros de `authenticate()` API (`AuthenticatePopUpParameters`) y funciones junto con sus descripciones:
 
 | Parámetro| Descripción|
 | --- | --- |
 |`isExternal` | El tipo de parámetro es booleano, que indica que la ventana de autenticación se abre en un explorador externo.|
-|`failureCallback`| Se llama a la función si se produce un error en la autenticación y la ventana emergente de autenticación especifica el motivo del error.|
 |`height` |Alto preferido para el elemento emergente. El valor se puede omitir si está fuera de los límites aceptables.|
-|`successCallback`| Se llama a la función si la autenticación se realiza correctamente, con el resultado devuelto desde el elemento emergente de autenticación. Authcode es el resultado.|
 |`url`  <br>|Dirección URL del servidor de aplicaciones 3P para el elemento emergente de autenticación, con los dos marcadores de posición de parámetro siguientes:</br> <br> - `oauthRedirectMethod`: Pasar marcador de posición en `{}`. Este marcador de posición se reemplaza por el vínculo profundo o la página web por la plataforma de Teams, que informa al servidor de aplicaciones si la llamada procede de la plataforma móvil.</br> <br> - `authId`: este marcador de posición se reemplaza por UUID. El servidor de aplicaciones lo usa para mantener la sesión.| 
 |`width`|Ancho preferido para el elemento emergente. El valor se puede omitir si está fuera de los límites aceptables.|
 
-Para obtener más información sobre los parámetros, consulte [autenticar la interfaz de parámetros](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
+Para obtener más información sobre los parámetros, vea la función [authenticate(AuthenticatePopUpParameters).](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate)
 
 ## <a name="add-authentication-to-external-browsers"></a>Agregar autenticación a exploradores externos
 
@@ -50,13 +50,14 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
 
 1. Inicie el proceso de inicio de sesión de autenticación externo.
 
-   La aplicación 3P llama a la función SDF `microsoftTeams.authentication.authenticate` con `isExternal` establecido como true para iniciar el proceso de inicio de sesión de autenticación externo. 
+   La aplicación 3P llama a la función SDF `authentication.authenticate` con `isExternal` establecido como true para iniciar el proceso de inicio de sesión de autenticación externo.
 
    El `url` pasado contiene marcadores de posición para `{authId}` y `{oauthRedirectMethod}`.  
 
 
     ```JavaScript
-    microsoftTeams.authentication.authenticate({
+    import { authentication } from "@microsoft/teams-js";
+    authentication.authenticate({
        url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
        isExternal: true,
        successCallback: function (result) {
@@ -69,7 +70,7 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
 
 2. El vínculo de Teams se abre en un explorador externo.
 
-   Los clientes de Teams abren la dirección URL en un explorador externo después de reemplazar los marcadores de posición para `oauthRedirectMethod` y `authId` por valores adecuados. 
+   Los clientes de Teams abren la dirección URL en un explorador externo después de reemplazar los marcadores de posición para `oauthRedirectMethod` y `authId` por valores adecuados.
 
    #### <a name="example"></a>Ejemplo
 
@@ -87,11 +88,11 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
    |`authId` | El id. de solicitud que Teams creó para esta solicitud de autenticación específica que debe enviarse de vuelta a Teams a través del vínculo profundo.|
 
     > [!TIP]
-    > La aplicación 3P puede serializar `authId`, `oauthRedirectMethod` en el parámetro de consulta de OAuth `state` al generar la dirección URL de inicio de sesión para OAuthProvider. El `state` contiene los `authId` pasados y `oauthRedirectMethod`, cuando OAuthProvider redirige de nuevo al servidor 3P y la aplicación 3P usa los valores para devolver la respuesta de autenticación a Teams, como se describe en **6. La respuesta del servidor de aplicaciones 3P a Teams**. 
+    > La aplicación 3P puede serializar `authId`, `oauthRedirectMethod` en el parámetro de consulta de OAuth `state` al generar la dirección URL de inicio de sesión para OAuthProvider. El `state` contiene los `authId` pasados y `oauthRedirectMethod`, cuando OAuthProvider redirige de nuevo al servidor 3P y la aplicación 3P usa los valores para devolver la respuesta de autenticación a Teams, como se describe en **6. La respuesta del servidor de aplicaciones 3P a Teams**.
 
 4. El servidor de aplicaciones 3P redirige a `url` que se ha especificado.
 
-   El servidor de aplicaciones 3P redirige a la página de autenticación de proveedores de OAuth en el explorador externo. `redirect_uri` es una ruta dedicada en el servidor de aplicaciones 3P. Puede registrar `redirect_uri` en la consola de desarrollo de proveedores de OAuth como estático; los parámetros deben enviarse a través del objeto de estado. 
+   El servidor de aplicaciones 3P redirige a la página de autenticación de proveedores de OAuth en el explorador externo. `redirect_uri` es una ruta dedicada en el servidor de aplicaciones 3P. Puede registrar `redirect_uri` en la consola de desarrollo de proveedores de OAuth como estático; los parámetros deben enviarse a través del objeto de estado.
 
    #### <a name="example"></a>Ejemplo
 

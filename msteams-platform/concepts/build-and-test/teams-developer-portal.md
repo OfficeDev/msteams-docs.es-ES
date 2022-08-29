@@ -4,23 +4,24 @@ description: En este artículo, obtenga más información sobre el Portal para d
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 57274333d37edd166c9c5e7bb9484131a31af904
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232328"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417503"
 ---
 # <a name="developer-portal-for-teams"></a>Portal para desarrolladores de Teams
 
 El <a href="https://dev.teams.microsoft.com" target="_blank">portal para desarrolladores para Teams</a> es la herramienta principal para configurar, distribuir y administrar las aplicaciones de Microsoft Teams. Con el portal para desarrolladores, puede colaborar con compañeros en la aplicación, configurar entornos en tiempo de ejecución y mucho más.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Captura de pantalla que muestra la página principal del portal para desarrolladores para Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="La captura de pantalla es un ejemplo que muestra la página principal del Portal para desarrolladores para Teams.":::
 
 > [!NOTE]
 >
 > * Actualmente, el portal para desarrolladores no está disponible para inquilinos de Government Community Cloud (GCC), GCC-High o el Departamento de Defensa (DOD).
 > * Sin embargo, puede usar un inquilino normal para compilar una aplicación en el portal para desarrolladores, descargar la aplicación y cargar la aplicación mediante [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) en una nube nacional. Para obtener más información, consulte [Implementaciones nacionales de nube](/graph/deployments).
+> * Actualmente, en algunos escenarios, el Portal para desarrolladores no se cargará en el explorador cuando AdBlocker esté habilitado. Para continuar con el Portal para desarrolladores en el explorador, deshabilite AdBlocker.
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 

@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a definir comandos de acción de extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312019"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363462"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -30,7 +30,7 @@ Antes de crear el comando de acción, debe decidir los siguientes factores:
 Vea el siguiente vídeo para obtener información sobre cómo definir comandos de acción de extensión de mensaje:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Seleccionar ubicaciones de invocación de comando de acción

@@ -5,19 +5,19 @@ description: En este módulo, aprenderá a agregar formato y estilos enriquecido
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 43a64a5ab7d44058831b643f2516839c248e9af1
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: 63c201e2126181793ce09a962b5352fb3418cff2
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895485"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363497"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
 El formato de mensajes le permite sacar lo mejor de los mensajes del bot. Puede dar formato a los mensajes del bot para incluir tarjetas enriquecidas como datos adjuntos que contienen elementos interactivos, como botones, texto, imágenes, audio, vídeo, etc.
 
 > [!NOTE]
-> El límite de tamaño del mensaje del bot es de 40 KB. Si el límite de tamaño del mensaje de bot supera los 40 KB, el bot recibe un `413` código de estado (RequestEntityTooLarge), que contiene el código `MessageSizeTooBig`de error . El límite de tamaño del mensaje del bot incluye toda la carga del mensaje codificada como UTF-16 y no incluye imágenes codificadas en base 64.
+> El límite de tamaño del mensaje del bot es de 40 KB. Si el límite de tamaño del mensaje de bot supera los 40 KB, el bot recibe un `413` código de estado (`RequestEntityTooLarge`), que contiene el código `MessageSizeTooBig`de error . El límite de tamaño del mensaje del bot incluye toda la carga del mensaje codificada como UTF-16 y no incluye imágenes codificadas en Base64.
 
 ## <a name="format-text-content"></a>Formato de contenido de texto
 

@@ -1,16 +1,16 @@
 ---
 title: Requisitos previos
 author: surbhigupta
-description: En este módulo, obtenga información sobre los requisitos de cada pestaña de Microsoft Teams debe cumplir y Herramientas para compilar pestañas.
-ms.localizationpriority: medium
+description: En este artículo, aprenderá los requisitos previos para crear la pestaña personal, de canal o de grupo de Microsoft Teams. Conozca las herramientas necesarias para compilar la pestaña.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142622"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450418"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -36,7 +36,7 @@ Asegúrese de cumplir los siguientes requisitos previos al crear la pestaña per
 
 * Si decide que la pestaña de canal o grupo aparezca en el cliente móvil de Teams, la configuración de `setConfig()` debe tener un valor para la propiedad `websiteUrl`.
 
-* Microsoft Teams pestaña no admite la capacidad de cargar sitios web de intranet que usan certificados autofirmados.
+* La pestaña Microsoft Teams no admite la capacidad de cargar sitios web de intranet que usan certificados autofirmados.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

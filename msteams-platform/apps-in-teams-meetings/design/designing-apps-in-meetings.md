@@ -1,17 +1,17 @@
 ---
 title: Diseño de la extensión de reunión
 author: heath-hamilton
-description: Obtenga información sobre cómo diseñar extensiones de reunión para sus aplicaciones en reuniones de Teams. Use las plantillas de interfaz de usuario del kit de interfaz de usuario de Microsoft Teams para ayudarle a diseñar la pestaña de la reunión.
+description: Obtenga información sobre cómo implementar las directrices de diseño y usar las plantillas de interfaz de usuario para diseñar una extensión de reunión para Teams.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842041"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338854"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
@@ -81,7 +81,7 @@ La pestaña en la reunión es un lienzo para aumentar la colaboración durante l
 
 ### <a name="use-cases"></a>Casos de uso
 
-Los usuarios pueden usar la pestaña en la reunión para:
+Personas podría usar la pestaña en la reunión para:
 
 * Proporcione comentarios detallados. Por ejemplo, evalúe un candidato de trabajo.
 * Cree un elemento de sondeo, encuesta o tarea para los participantes de la reunión.

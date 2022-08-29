@@ -1,14 +1,14 @@
 ---
 title: Tipos de tarjetas
-description: En este módulo, aprenderá qué son las tarjetas y las acciones de tarjeta disponibles para los bots en Teams y creará un héroe, miniaturas y tarjetas adaptables.
+description: En este módulo, obtenga información sobre qué son las tarjetas y las acciones de tarjeta disponibles para los bots de Teams y cree una tarjeta principal, en miniatura y adaptable.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311963"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435030"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -71,7 +71,10 @@ Puede identificar y usar diferentes tipos de tarjetas en función de los requisi
 | Tarjeta de inicio de sesión | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
-> Para las tarjetas adaptables en los webhook entrantes, todos los elementos de esquema nativos de tarjeta adaptable, excepto `Action.Submit`, son totalmente compatibles. Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) y [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * Para las tarjetas adaptables en los webhook entrantes, todos los elementos de esquema nativos de tarjeta adaptable, excepto `Action.Submit`, son totalmente compatibles. Las acciones compatibles son [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) y [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * La tarjeta adaptable solo admite el tipo de conector de webhook entrante O365 y no cualquier otro tipo de conector de O365.
 
 ## <a name="common-properties-for-all-cards"></a>Propiedades comunes para todas las tarjetas
 
@@ -638,9 +641,9 @@ La tarjeta de inicio de sesión en Teams es similar a la tarjeta de inicio de se
 
 La acción de inicio de sesión se puede usar desde cualquier tarjeta de Teams, no solo desde la tarjeta de inicio de sesión. Para obtener más información, vea [flujo de autenticación de Teams para bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### <a name="support-for-signin-cards"></a>Compatibilidad con tarjetas de inicio de sesión
+### <a name="support-for-log-in-cards"></a>Compatibilidad con tarjetas de inicio de sesión
 
-En la tabla siguiente, se proporcionan las características que admiten las tarjetas de inicio de sesión:
+En la tabla siguiente se proporcionan las características que admiten tarjetas de inicio de sesión:
 
 | Los bot en Teams | Extensiones de mensajería  | Conectores | Bot Framework |
 | --- | --- | --- | --- |
@@ -650,7 +653,7 @@ En la tabla siguiente, se proporcionan las características que admiten las tarj
 
 Referencia de Bot Framework:
 
-* [Node.js de tarjeta de inicio de sesión](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Node.jsde la tarjeta de inicio de sesión ](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [C# de tarjeta de inicio de sesión](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Tarjeta miniatura

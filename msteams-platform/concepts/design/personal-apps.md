@@ -1,16 +1,16 @@
 ---
 title: Diseño de su aplicación personal
-description: Obtenga información sobre cómo diseñar una aplicación personal de Teams y obtener el kit de interfaz de usuario de Microsoft Teams, y crear componentes como el panel, el formulario o el panel de tareas para la experiencia móvil y de escritorio.
+description: Obtenga información sobre cómo implementar las directrices de diseño, incluidos los elementos de la interfaz de usuario para diseñar una aplicación personal mediante el kit de interfaz de usuario de Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 7dda8dd7e68e7452da164c8ec45d3352909f45ed
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558341"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338826"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñe la aplicación personal para Microsoft Teams
 
@@ -55,7 +55,7 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 |Contador|Descripción|
 |----------|-----------|
 |A|**Pestañas**: navegación en la aplicación personal.|
-|1 |**webview**: muestra el contenido de la aplicación.|
+|1|**webview**: muestra el contenido de la aplicación.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -73,7 +73,7 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 |Contador|Descripción|
 |----------|-----------|
 |A|**Pestañas**: navegación en la aplicación personal.|
-|1 |**iframe**: muestra el contenido de la aplicación.|
+|1|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-with-ui-templates-and-advanced-components"></a>Diseñar una pestaña con plantillas de interfaz de usuario y componentes avanzados
 

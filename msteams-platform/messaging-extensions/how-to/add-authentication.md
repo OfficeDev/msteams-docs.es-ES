@@ -5,16 +5,19 @@ description: En este artículo, aprenderá a agregar autenticación a una extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190269"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435051"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Agregar autenticación a la extensión de mensaje
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> Después de agregar la autenticación a la extensión de mensaje, el usuario debe agregar "**token.botframework.com**" a la sección "**validDomains**" del manifiesto.
 
 ## <a name="identify-the-user"></a>Identificación del usuario
 
@@ -75,14 +78,14 @@ Para solicitar a un usuario no autenticado que inicie sesión, responda con una 
 
 La experiencia de inicio de sesión debe ser receptiva y ajustarse a una ventana emergente. Debe integrarse con el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client), que usa el paso de mensajes.
 
-Al igual que con otras experiencias incrustadas que se ejecutan dentro de Microsoft Teams, el código dentro de la ventana debe llamar primero a `microsoftTeams.initialize()`. Si el código realiza un flujo de OAuth, puede pasar al identificador de usuario de Teams a la ventana, que luego lo pasa a la dirección URL de inicio de sesión de OAuth.
+Al igual que con otras experiencias incrustadas que se ejecutan dentro de Microsoft Teams, el código dentro de la ventana debe llamar primero a `app.initialize()`. Si el código realiza un flujo de OAuth, puede pasar al identificador de usuario de Teams a la ventana, que luego lo pasa a la dirección URL de inicio de sesión de OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Completar el flujo de inicio de sesión
 
 Cuando la solicitud de inicio de sesión se complete y lo redirija de vuelta a la página, debe realizar los siguientes pasos:
 
 1. Genere un código de seguridad, un número aleatorio. Debe almacenar en caché este código en el servicio, con las credenciales obtenidas a través del flujo de inicio de sesión, como tokens de OAuth 2.0.
-1. Llame a `microsoftTeams.authentication.notifySuccess` y pase el código de seguridad.
+1. Llame a `authentication.notifySuccess` y pase el código de seguridad.
 
 En este momento, la ventana se cierra y el control se pasa al cliente de Teams. El cliente ahora vuelve a emitir la consulta de usuario original, junto con el código de seguridad de la propiedad `state`. El código puede usar un código de seguridad para buscar las credenciales almacenadas anteriormente y completar la secuencia de autenticación, y así completar la solicitud del usuario.
 

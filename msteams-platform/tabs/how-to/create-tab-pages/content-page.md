@@ -1,16 +1,16 @@
 ---
 title: Creación de una página de contenido
 author: surbhigupta
-description: En este módulo, aprenderá a crear una página de contenido para las directrices de diseño y contenido de pestaña y pestaña.
-ms.localizationpriority: medium
+description: Obtenga información sobre la página web dentro del cliente de Teams y forma parte de la pestaña personalizada personal, de canal o de grupo. Crear página de contenido e insertarla como vista web dentro del módulo de tareas.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841977"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450376"
 ---
 # <a name="create-a-content-page"></a>Creación de una página de contenido
 
@@ -33,6 +33,9 @@ Debe centrarse en hacer que el diseño de la pestaña sea limpio, intuitivo de n
 ## <a name="integrate-your-code-with-teams"></a>Integrar el código con Teams
 
 Para que la página se muestre en Teams, debe incluir el [SDK de cliente de JavaScript de Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e incluir una llamada a `app.initialize()` después de que se cargue la página.
+
+> [!NOTE]
+> Los cambios de contenido o interfaz de usuario tardan entre 24 y 48 horas en reflejarse en la aplicación de pestaña debido a la caché.
 
 El código siguiente proporciona un ejemplo de cómo se comunican la página y el cliente de Teams:
 

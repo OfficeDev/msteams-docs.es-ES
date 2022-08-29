@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
+ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962478"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417653"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 
@@ -430,7 +430,6 @@ Recuerde lo siguiente:
 [*Corrección sugerida*]
 
 * Mostrar dispositivos específicos, como teléfonos o portátiles.
-* Mostrar cromo o UI que no está en su aplicación.
 * Capture cualquier equipo o interfaz de usuario del navegador en sus capturas de pantalla.
 * Incluir maquetas que reflejen de forma imprecisa la interfaz de usuario real de la aplicación, por ejemplo, mostrando la aplicación fuera de Teams.
 

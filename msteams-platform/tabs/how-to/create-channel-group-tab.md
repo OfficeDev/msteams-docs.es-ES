@@ -1,21 +1,23 @@
 ---
 title: Crear una pestaña de canal
 author: laujan
-description: En este módulo, aprenderá a crear un canal y una pestaña de grupo con el generador de Yeoman para Microsoft Teams, incluida la revisión del código fuente con ejemplos de código.
-ms.localizationpriority: medium
+description: Cree un canal personalizado, una pestaña de grupo con Node.js, ASP.NET Core, ASP.NET Core MVC. Generación de una aplicación, creación de un paquete, compilación y ejecución de aplicaciones, túnel secreto, carga en Teams
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 1b668a0e89ba2f2c77a56623d25ed11c1caaf7ea
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841711"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450474"
 ---
 # <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
 Pestañas de canal o grupo entregar contenido a canales y chats grupales, y son una excelente manera de crear espacios de colaboración en torno a contenido dedicado basado en web.
+
+Asegúrese de que tiene todos los [requisitos previos](~/tabs/how-to/tab-requirements.md) para compilar el canal o la pestaña de grupo.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -259,7 +261,7 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este proyecto se creó a partir de una plantilla vacía de aplicación web ASP.NET Core 3.1 con la casilla de verificación **Avanzado * Configurar para HTTPS** seleccionada en la configuración. Los servicios MVC se registran mediante el método `ConfigureServices()` del marco de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método mediante el código siguiente:
+Este proyecto se creó a partir de una plantilla vacía de aplicación web ASP.NET Core 3.1 con la casilla de verificación **Avanzado * Configurar para HTTPS** seleccionada en la configuración. Los servicios de MVC se registran mediante el método `ConfigureServices()` del marco de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de los archivos estáticos se agrega al método `Configure()` mediante el código siguiente:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -482,7 +484,7 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 #### <a name="startupcs"></a>Startup.cs
 
-Este proyecto fue creado a partir de una plantilla de aplicación web vacía de ASP.NET Core 3.1 con la casilla **Avanzado - Configurar para HTTPS** seleccionada durante la configuración. Los servicios MVC se registran mediante el método `ConfigureServices()` del marco de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de archivos estáticos se agrega al `Configure()` método mediante el código siguiente:
+Este proyecto fue creado a partir de una plantilla de aplicación web vacía de ASP.NET Core 3.1 con la casilla **Avanzado - Configurar para HTTPS** seleccionada durante la configuración. Los servicios de MVC se registran mediante el método `ConfigureServices()` del marco de inserción de dependencias. Además, la plantilla vacía no habilita el servicio de contenido estático de forma predeterminada, por lo que el middleware de los archivos estáticos se agrega al método `Configure()` mediante el código siguiente:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)

@@ -3,12 +3,12 @@ title: Iniciar acciones con extensiones de mensajería
 description: En este módulo, aprenderá a crear extensiones de mensajes basadas en acciones para permitir que los usuarios desencadenen servicios externos.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143679"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337148"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Iniciar acciones con extensiones de mensajería
 
@@ -25,6 +25,9 @@ En las secciones siguientes se describe cómo hacerlo:
 ## <a name="action-type-message-extensions"></a>Extensiones de mensaje de tipo de acción
 
 Para iniciar acciones desde una extensión de mensaje, establezca el `type` parámetro en `action`. A continuación se muestra un ejemplo de un manifiesto con una búsqueda y un comando create. Una sola extensión de mensaje puede tener hasta 10 comandos diferentes. Esto puede incluir varios comandos de búsqueda y varios basados en acciones.
+
+ > [!NOTE]
+ >`justInTimeInstall` funciona cuando se carga una aplicación en el catálogo de aplicaciones, pero se produce un error al transferir localmente una aplicación.
 
 ### <a name="complete-app-manifest-example"></a>Ejemplo de manifiesto de aplicación completo
 
@@ -236,7 +239,7 @@ Hay tres maneras de recopilar información de un usuario final en Teams.
 
 ### <a name="static-parameter-list"></a>Lista de parámetros estáticos
 
-En este método, todo lo que necesita hacer es definir una lista estática de parámetros en el manifiesto como se muestra anteriormente en el comando "Crear To Do". Para usar este método, asegúrese de `fetchTask` que está establecido `false` en y que define los parámetros en el manifiesto.
+En este método, todo lo que necesita hacer es definir una lista estática de parámetros en el manifiesto como se muestra anteriormente en el comando "Crear que hacer". Para usar este método, asegúrese de `fetchTask` que está establecido `false` en y que define los parámetros en el manifiesto.
 
 Cuando un usuario elige un comando con parámetros estáticos, Teams generará un formulario en un módulo de tareas con los parámetros definidos en el manifiesto. Al presionar Enviar, se envía un `composeExtension/submitAction` al bot. Para obtener más información sobre el conjunto de respuestas esperado, vea [Responder al envío](#responding-to-submit).
 
@@ -445,8 +448,9 @@ Responda a la acción de envío insertando un mensaje con una tarjeta adaptable 
 
 Para habilitar este flujo, el módulo de tareas debe responder como en el ejemplo siguiente, que presentará el mensaje de vista previa al usuario.
 
->[!Note]
->`activityPreview` debe contener una `message` actividad con exactamente 1 archivo adjunto de tarjeta adaptable.
+> [!NOTE]
+> `activityPreview` debe contener una `message` actividad con exactamente 1 archivo adjunto de tarjeta adaptable.
+
 
 ```json
 {
@@ -560,7 +564,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-En este ejemplo se muestra este flujo mediante [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+En este ejemplo se muestra este flujo mediante el [SDK Microsoft.Bot.Connector.Teams (v3).](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 public class MessagesController : ApiController
@@ -712,6 +716,6 @@ public class MessagesController : ApiController
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Ejemplos de Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

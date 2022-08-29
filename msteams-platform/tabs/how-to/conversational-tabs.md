@@ -1,16 +1,16 @@
 ---
 title: Crear pestañas de conversación
 author: surbhigupta
-description: En este módulo, aprenderá a crear un chat de subentidad conversacional para las pestañas del canal, para administrar conversaciones mediante ejemplos de código.
+description: Aprenda a crear pestañas conversacionales en Microsoft Teams para iniciar, continuar, mejorar y cerrar una conversación.
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
-ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.localizationpriority: high
+ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962422"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450425"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 

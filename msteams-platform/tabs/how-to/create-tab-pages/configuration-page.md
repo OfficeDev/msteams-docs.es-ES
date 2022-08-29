@@ -1,16 +1,16 @@
 ---
 title: Creación de una página de configuración
 author: surbhigupta
-description: En este módulo, aprenderá a crear una página de configuración para configurar un chat de canal o grupo para la configuración, como obtener datos de contexto, etc.
-ms.localizationpriority: medium
+description: Crear página de configuración para recopilar información del usuario. Además, obtenga datos de contexto para las pestañas de Microsoft Teams, conozca la autenticación, modifique o quite pestañas.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841704"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450383"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -174,9 +174,10 @@ El código de la página de configuración informa a Teams de que se cumplen los
 
 >[!NOTE]
 >
->* Tiene 30 segundos para completar la operación de guardado (la devolución de llamada para registerOnSaveHandler) antes del tiempo de espera. Después del tiempo de espera, aparece un mensaje de error genérico.
+>* Tiene 30 segundos para completar la operación de guardado (la devolución de llamada a `registerOnSaveHandler`) antes del tiempo de espera. Después del tiempo de espera, aparece un mensaje de error genérico.
 >* Si registra un controlador de guardado mediante `registerOnSaveHandler()`, la devolución de llamada debe invocar `saveEvent.notifySuccess()` o `saveEvent.notifyFailure()` para indicar el resultado de la configuración.
 >* Si no registra un controlador de guardado, la llamada `saveEvent.notifySuccess()` se realiza automáticamente cuando el usuario selecciona **Guardar**.
+>* Asegúrese de tener un único `entityId`. Redirecciones duplicadas `entityId` a la primera instancia de la pestaña.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obtener datos de contexto para la configuración de la pestaña
 
@@ -292,7 +293,7 @@ Autentíquese antes de permitir que un usuario configure la aplicación. De lo c
 
 ## <a name="modify-or-remove-a-tab"></a>Modificar o quitar una pestaña
 
-Establezca la propiedad del `canUpdateConfiguration` manifiesto en `true`. Permite a los usuarios modificar, volver a configurar o cambiar el nombre de una pestaña de canal o grupo. Informe al usuario sobre el impacto en el contenido cuando se quita una pestaña. Para ello, incluya una página de opciones de eliminación en la aplicación y establezca un valor para la `removeUrl` propiedad en la `setConfig()` configuración (anteriormente `setSettings()`). El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, vea [crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
+Establezca la propiedad del `canUpdateConfiguration` manifiesto en `true`. Permite a los usuarios modificar o volver a configurar una pestaña de canal o grupo. Solo puede cambiar el nombre de la pestaña a través de la interfaz de usuario de Teams. Informe al usuario sobre el impacto en el contenido cuando se quita una pestaña. Para ello, incluya una página de opciones de eliminación en la aplicación y establezca un valor para la `removeUrl` propiedad en la `setConfig()` configuración (anteriormente `setSettings()`). El usuario puede desinstalar pestañas personales, pero no puede modificarlas. Para obtener más información, vea [crear una página de eliminación para la pestaña](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Configuración de Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para la página de eliminación:
 

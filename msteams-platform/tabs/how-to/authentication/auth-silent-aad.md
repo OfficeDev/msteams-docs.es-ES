@@ -3,12 +3,12 @@ title: Autenticación silenciosa
 description: En este módulo, aprenderá a realizar la autenticación silenciosa, el inicio de sesión único y Azure AD para pestañas y cómo funciona.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035313"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435044"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Usar autenticación silenciosa en Azure AD
 
@@ -57,7 +57,7 @@ Incluya la biblioteca de autenticación de Active Directory en las páginas de p
 
 ### <a name="get-the-user-context"></a>Obtener el contexto del usuario
 
-En la página de contenido de la pestaña, llame a `microsoftTeams.getContext()` para obtener una sugerencia de inicio de sesión para el usuario actual. La sugerencia se usa como `loginHint` en la llamada a Azure AD.
+En la página de contenido de la pestaña, llame a `app.getContext()` para obtener una sugerencia de inicio de sesión para el usuario actual. La sugerencia se usa como `loginHint` en la llamada a Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -109,16 +109,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 La biblioteca de autenticación de Active Directory analiza el resultado de Azure AD llamando a `AuthenticationContext.handleWindowCallback(hash)` en la página de devolución de llamada de inicio de sesión.
 
-Compruebe que tiene un usuario válido y llame a `microsoftTeams.authentication.notifySuccess()` o `microsoftTeams.authentication.notifyFailure()` para informar del estado a la página de contenido de la pestaña principal.
+Compruebe que tiene un usuario válido y llame a `authentication.notifySuccess()` o `authentication.notifyFailure()` para informar del estado a la página de contenido de la pestaña principal.
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }

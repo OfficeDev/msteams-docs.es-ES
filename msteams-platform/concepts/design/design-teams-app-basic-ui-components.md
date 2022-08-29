@@ -1,16 +1,16 @@
 ---
 title: Diseño de la aplicación con componentes básicos de la interfaz de usuario de Fluent
 author: heath-hamilton
-description: Aprenda a diseñar aplicaciones de Microsoft Teams mediante los componentes de la interfaz de usuario de Fluent desde el kit de interfaz de usuario de Teams.
+description: Obtenga información sobre cómo usar componentes de interfaz de usuario del kit de interfaz de usuario de Teams para compilar aplicaciones de Microsoft Teams. Aprenda a usar componentes de interfaz de usuario como un kit de Fluent, ruta de navegación, tarjeta de botón, carrusel, lista desplegable y alternancia.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: bf90f0979e8a7b8670af8f8295be9f913b15dc36
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962443"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338791"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Diseño de la aplicación de Microsoft Teams con componentes básicos de la interfaz de usuario de Fluent
 

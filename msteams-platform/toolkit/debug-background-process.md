@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 112b7da9a5b0926bde9ed1e88f9ad4a0d6dedb5b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: 9891e2b93133484d4bb8394100f4e628841517f7
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503602"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407570"
 ---
 # <a name="debug-background-process"></a>Depurar procesos en segundo plano
 
@@ -34,7 +34,7 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
   |Tipo de proyecto|Versión LTS de Node.js|
   |----------|--------------------------------|
   |Tab | 14, 16 (recomendado) |
-  |Pestaña SPFx | 12, 14 (recomendado)|
+  |Pestaña SPFx | 14, 16 (recomendado)|
   |Bot |  14, 16 (recomendado)|
   |Extensión de mensajería | 14, 16 (recomendado) |
 

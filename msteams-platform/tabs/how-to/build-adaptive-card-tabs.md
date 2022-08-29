@@ -1,22 +1,22 @@
 ---
 title: Crear pestañas de tarjeta adaptable
 author: KirtiPereira
-description: En este módulo, obtendrá información sobre cómo crear pestañas mediante Tarjetas adaptables con ejemplos de código, como la invocación de actividades, la comprensión del flujo de trabajo del módulo de tareas y la autenticación.
+description: Aprenda a crear pestañas con tarjetas adaptables donde el front-end se representa con tarjetas adaptables, el back-end funciona con un bot. Explore las actividades de invocación y control de envíos.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: c4b0db0f67af2cf28f5930d4ad0b09e51fb11815
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558180"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450467"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
 > [!IMPORTANT]
 >
-> * Actualmente, las pestañas con Tarjetas adaptables solo se admiten como aplicaciones personales.
+> Actualmente, las pestañas con Tarjetas adaptables solo se admiten como aplicaciones personales.
 
 Al desarrollar una pestaña con el método tradicional, podría encontrarse con estas incidencias:
 

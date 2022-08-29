@@ -3,12 +3,12 @@ title: Elegir una configuración para probar y depurar la aplicación
 description: En este módulo, aprenderá las opciones para probar y depurar aplicaciones de Microsoft Teams en el entorno local y hospedado en la nube.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: b064fb4ef06576251a91a4727a84bb4519d4d352
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312194"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452356"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Elección de una configuración de prueba y depuración de la aplicación de Teams
 
@@ -81,6 +81,5 @@ Para cargar y ejecutar su experiencia en Teams, debe crear un paquete y cargarlo
 
 ## <a name="see-also"></a>Consulte también
 
-[Probar y depurar el bot localmente con el IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
-
-[DevTools para pestañas de Microsoft Teams](../../tabs/how-to/developer-tools.md)
+* [Probar y depurar el bot localmente con el IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+* [DevTools para pestañas de Microsoft Teams](../../tabs/how-to/developer-tools.md)

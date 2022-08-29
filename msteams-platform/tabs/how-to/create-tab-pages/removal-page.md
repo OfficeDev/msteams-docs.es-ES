@@ -1,16 +1,16 @@
 ---
 title: Creación de una etiqueta de eliminación
 author: surbhigupta
-description: En este módulo, aprenderá a crear una página de eliminación de pestañas y a habilitar la pestaña para volver a configurarla después de la instalación.
-ms.localizationpriority: medium
+description: Aprenda a habilitar la pestaña para volver a configurarla después de la instalación. Amplíe la experiencia del usuario admitiendo las opciones de eliminación y modificación en la aplicación Microsoft Teams.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841978"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450411"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 

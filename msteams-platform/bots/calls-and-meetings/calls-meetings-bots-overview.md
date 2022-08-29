@@ -3,12 +3,12 @@ title: Bots para llamadas y reuniones en línea
 description: En este módulo, obtenga información sobre cómo las aplicaciones de Microsoft Teams pueden interactuar con los usuarios mediante voz y vídeo mediante las API de Microsoft Graph para llamadas y reuniones en línea, y obtenga información sobre los flujos multimedia en tiempo real.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: db50d0d8228cc4241e67b9bfb48f35559402fc9d
+ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150830"
+ms.lasthandoff: 08/26/2022
+ms.locfileid: "67442994"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots para llamadas y reuniones en línea
 
@@ -51,7 +51,7 @@ A continuación, se muestran los distintos tipos de llamada y permisos necesario
 * Un usuario podrá iniciar una llamada de punto a punto con el bot o invitar al bot a una llamada existente entre varias entidades. Las llamadas multiparte aún no están habilitadas en la interfaz de usuario de Teams.
 
     > [!NOTE]
-    > Actualmente, las llamadas iniciadas por el usuario a un bot no se admiten en Teams plataforma móvil.
+    > Actualmente, las llamadas iniciadas por el usuario a un bot no se admiten en la plataforma móvil de Teams.
 
 * Los permisos de Graph no son necesarios para que un usuario inicie una llamada punto a punto con los bot. Se necesitarán permisos adicionales para que los bot participen en llamadas multiparte o para que inicien llamadas punto a punto con un usuario.
 * Una llamada puede iniciarse como punto a punto y, finalmente, convertirse en una llamada multiparte. El bot podrá iniciar llamadas grupales invitando a otros usuarios, siempre que tenga permiso para iniciar llamadas de grupo. Si el bot no tiene permisos para participar en llamadas grupales y si un participante agrega otro participante a la llamada, el bot saldrá de la llamada.
@@ -111,3 +111,4 @@ Multimedia en tiempo real se refiere a escenarios en los que los medios deberán
 * [Configuración de la respuesta automática para las salas de Teams en dispositivos Android y de vídeo de teléfono Teams](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Directiva de grabación de Teams](/MicrosoftTeams/teams-recording-policy)
 * [Trabajar con la API de comunicaciones en Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Habilitación de un evento como reunión en línea en el calendario de Outlook](/graph/outlook-calendar-online-meetings?tabs=http)

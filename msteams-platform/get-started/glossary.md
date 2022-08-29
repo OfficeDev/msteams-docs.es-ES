@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 994a1956c14019562133f004517b5d060ee6c74c
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 742c2c940c5b3c39037b28eaf6ecc14fac3b0874
+ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312047"
+ms.lasthandoff: 08/19/2022
+ms.locfileid: "67382947"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -24,13 +24,13 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Catálogo de aplicaciones](../toolkit/publish.md) | Un sitio que almacena aplicaciones de SharePoint y Office para el uso interno de una organización. <br>**Vea también**: [SPFx](#s) |
 | [Manifiesto de la aplicación](../resources/schema/manifest-schema.md) | El manifiesto de la aplicación de Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe cumplir con el [esquema de manifiesto](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [Paquete de la aplicación](../concepts/build-and-test/apps-package.md) | Un paquete de aplicación de Teams es un archivo ZIP que contiene el archivo de manifiesto de la aplicación, el icono de color y el icono de esquema. |
-| [Permiso de aplicación](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Una opción en una aplicación de Teams para habilitar los permisos del dispositivo. Solo está disponible cuando el archivo de manifiesto de la aplicación declara que la aplicación necesita permisos de dispositivo. <br> **Vea también**: Permisos de dispositivo |
+| [Permiso de aplicación](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Una opción en una aplicación de Teams para habilitar los permisos del dispositivo. Solo está disponible cuando el archivo de manifiesto de la aplicación declara que la aplicación necesita permisos de dispositivo. <br> **Consulte también**: [Permisos de dispositivo](#d) |
 | [Ámbito de la aplicación](../concepts/design/app-structure.md) | Un área de Teams donde los usuarios pueden usar la aplicación. Las aplicaciones pueden tener uno o varios ámbitos, como personales, canales, chats y reuniones. Una aplicación de Teams puede existir entre ámbitos. |
 | Bandeja de la aplicación | Una bandeja de aplicación ubicada en la barra inferior de una aplicación móvil de Teams. Recopila todas las aplicaciones que están abiertas, pero que no se usan actualmente ni están activas. <br>**Vea también**: [Teams para dispositivos móviles](#t) |
 | [Recurso de Azure](../toolkit/provision.md) | Un servicio que está disponible a través de Azure y que la aplicación de Teams puede usar para la implementación de Azure. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |
-| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Servicio de administración de identidades y acceso basado en la nube de Microsoft. Ayuda a los usuarios autenticados a acceder a los recursos internos y externos de Azure. |
-| [Autenticación](../concepts/authentication/authentication.md) | Proceso para validar el acceso de usuario para el uso de la aplicación. Se puede realizar mediante la API de Microsoft Graph o la autenticación basada en web. <br> **Vea también**: [Proveedores de identidades](#i); [SSO](#s) |
-| [Flujo de autenticación](../concepts/authentication/authentication.md) | En Teams, hay dos flujos de autenticación para autenticar a un usuario para usar una aplicación: la autenticación basada en web y el flujo de OAuthPrompt. |
+| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Servicio de administración de identidades y acceso basado en la nube de Microsoft. Ayuda a los usuarios autenticados a acceder a los recursos internos y externos. |
+| [Autenticación](../concepts/authentication/authentication.md) | Proceso para validar la identidad de un usuario para acceder a la aplicación. <br> **Vea también**: [Proveedores de identidades](#i); [SSO](#s) |
+| [Flujo de autenticación](../concepts/authentication/authentication.md) | La forma en que un usuario se autentica en la aplicación. En el caso de las aplicaciones de Teams, se recomienda usar el inicio de sesión único (SSO) con Azure Active Directory (AAD), pero una alternativa es usar un proveedor de OAuth de terceros.|
 
 ## <a name="b"></a>N
 
@@ -50,7 +50,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Funcionalidad](../toolkit/add-capability.md) | Una característica de Teams que puede compilar en la aplicación para interactuar con los usuarios de la aplicación. Una funcionalidad de la aplicación se usa para ampliar Teams para adaptarse a las necesidades de la aplicación. Una aplicación puede tener una o varias funcionalidades principales, como la pestaña, el bot y la extensión de mensajería. <br>**Vea también**: [Funcionalidad del dispositivo](#d); [Funcionalidad multimedia](#m) |
 | [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas sencillas y repetitivas para los usuarios como el servicio de atención al cliente o el personal de soporte técnico. <br> **Vea también**: [Bot de conversación](#c) |
 | Canal | Un único lugar para que un equipo comparta mensajes, herramientas y archivos. Puede usar un canal para el trabajo en equipo y la comunicación. <br>**Vea también**: [Conversación](#c) |
-| [Secreto de cliente](../bots/how-to/authentication/add-authentication.md) | El secreto de cliente o contraseña o un par de claves públicas o privadas que sean Certificadas. No es necesario para las aplicaciones nativas. <br> **Vea también**: [Bot](#b) |
+| [Secreto de cliente](../bots/how-to/authentication/add-authentication.md) | Cadena secreta que la aplicación usa para demostrar su identidad al solicitar un token. Además, se puede denominar contraseña de aplicación.|
 | [Recursos en la nube](../toolkit/add-resource.md) | Un servicio que está disponible en la nube a través de Internet que la aplicación de Teams puede usar. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |
 | [Aplicación de colaboración](../concepts/extensibility-points.md) | Una aplicación con funcionalidades para que un usuario trabaje en un área de trabajo de colaboración con otros usuarios. <br> **Vea también**: [Aplicación independiente](#s) |
 | [Extensión de redacción](../resources/schema/manifest-schema.md#composeextensions) | Propiedad del manifiesto de la aplicación (`composeExtensions`) que hace referencia a la funcionalidad de extensión de mensajería. Se usa cuando la extensión necesita autenticarse o configurarse para continuar. <br>**Vea también**: [Manifiesto de la aplicación](#a); [Extensión de mensajería](#m) |
@@ -64,6 +64,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | Término | Definición |
 | --- | --- |
 | [Vinculación en profundidad](../concepts/build-and-test/deep-links.md) | En una aplicación de Teams, puede crear vínculos profundos a información y características dentro de Teams o para ayudar al usuario a navegar al contenido de la aplicación. |
+|[Departamento de Defensa (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Los entornos de DoD cumplen con las Directrices de Requisitos de Seguridad del Departamento de Defensa, el Suplemento de Regulaciones Federales de Adquisición de Defensa (DFARS) y las Regulaciones internacionales de tráfico de armas (ITAR).|
 | [Portal para desarrolladores de Teams](../concepts/build-and-test/teams-developer-portal.md) | La herramienta principal para configurar, distribuir y administrar las aplicaciones de Microsoft Teams. Con el Portal para desarrolladores, puede colaborar con compañeros en la aplicación, configurar entornos en tiempo de ejecución y mucho más. |
 | [Versión preliminar para desarrolladores](../resources/dev-preview/developer-preview-intro.md) | Un programa público para desarrolladores que proporciona acceso anticipado a características no publicadas en Microsoft Teams. Le permite explorar y probar las próximas características para su posible inclusión en la aplicación de Microsoft Teams. |
 | Implementar | Proceso para cargar el código de back-end y front-end de la aplicación. En la implementación, el código de la aplicación se copia en los recursos que creó durante el aprovisionamiento. <br>**Vea también**: [Aprovisionar](#p) |
@@ -86,11 +87,14 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | Término | Definición |
 | --- | --- |
 | [Usuario federado](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Un tipo de usuario en una reunión de aplicación de Teams que es externo y está invitado a la reunión. Este usuario tiene credenciales válidas federadas por asociados autorizados de Teams. También se denominan usuarios externos. <br>**Vea también**: [Usuario anónimo](#a) |
+| [Experiencia de primera ejecución](../concepts/design/design-teams-app-ui-templates.md)|Una experiencia de primera ejecución (FRE) es la introducción del usuario al producto. Fre ayuda a los usuarios a empezar a trabajar con las funciones, características y ventajas del producto e influye en que los usuarios vuelvan y continúen usando el producto.|
 
 ## <a name="g"></a>G
 
 | Término | Definición |
 | --- | --- |
+|[Nube de la comunidad gubernamental (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| El entorno de GCC proporciona cumplimiento con los requisitos federales para los servicios en la nube, incluidos FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS) y requisitos para la justicia penal y los sistemas de información fiscal federal (tipos de datos CJI y FTI).|
+|[Nube de la comunidad gubernamental (GCC) Alta](../concepts/app-fundamentals-overview.md#government-community-cloud)|Los entornos altos de GCC proporcionan cumplimiento con las directrices de requisitos de seguridad del Departamento de Defensa (DoD), el suplemento de regulaciones federales de adquisición de defensa (DFARS) y las regulaciones internacionales de tráfico de armas (ITAR).<br>**Vea también**: [Departamento de Defensa (DoD)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Una API web RESTful para Microsoft Graph que le permite acceder a los recursos del servicio en la nube de Microsoft. <br>**Vea también**: [Probador de Microsoft Graph](#m) |
 | [Chat de grupo](../resources/bot-v3/bot-conversations/bots-conversations.md) | Una característica de chat en la que un usuario puede chatear con un bot en una configuración de grupo mediante @mention para invocar el bot. <br>**Vea también**: [Chat uno a uno](#o); [Bot de chat](#c) |
 

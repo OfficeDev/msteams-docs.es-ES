@@ -4,14 +4,14 @@ description: En este artículo, aprenderá a configurar, distribuir y administra
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 12f1def758e4ef108f9670e0cc696c7ce197e485
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232444"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435079"
 ---
-# <a name="manage-your-apps-in-developer-portal"></a>Administración de aplicaciones en el Portal para desarrolladores
+# <a name="manage-your-apps-in-developer-portal"></a>Administre sus aplicaciones en el Portal para desarrolladores
 
 Después de crear o cargar la aplicación, puede administrar las aplicaciones en el Portal para desarrolladores con lo siguiente:
 
@@ -154,9 +154,9 @@ Para agregar un bot:
 1. En la página Administración de bots, seleccione **Nuevo bot**.
 1. Escriba el nombre y seleccione **Agregar**.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="La captura de pantalla es un ejemplo que muestra las herramientas del portal para desarrolladores, lo que le ayuda a crear características clave.":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="La captura de pantalla es un ejemplo que muestra las herramientas del portal para desarrolladores, lo que le ayuda a crear características clave.":::
 
-Desde el portal para desarrolladores, puede ir al portal de Bot Framework y configurar el bot para actualizar el icono y otras propiedades.
+Desde el Portal para desarrolladores, puede ir al Portal de Bot Framework y configurar el bot para actualizar el icono y otras propiedades.
 
 ## <a name="see-also"></a>Vea también
 

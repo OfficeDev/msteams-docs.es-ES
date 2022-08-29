@@ -1,14 +1,14 @@
 ---
 title: Registro de llamadas y bots de reuniones para Microsoft teams
-description: En este módulo, obtenga información sobre cómo registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams, crear un nuevo bot o agregar funcionalidad de llamada y agregar permisos de grafo.
+description: En este módulo, aprenderá a registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams, a crear un nuevo bot o a agregar funcionalidad de llamada y a agregar permisos de grafo.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143798"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407577"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -58,7 +58,7 @@ En la tabla siguiente se proporciona una lista de permisos de aplicación para l
 |Permiso    |Mostrar cadena   |Descripción |Se requiere el consentimiento del administrador |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Iniciar llamadas salientes de 1:1 desde la aplicación versión preliminar |Permite a la aplicación realizar llamadas a un único usuario y transferir las llamadas a usuarios en el directorio de su organización, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
-| Calls.InitiateGroupCall.All |Iniciar llamadas de grupo salientes desde la aplicación versión preliminar |Permite a la aplicación realizar llamadas a varios usuarios y agregar a participantes a las reuniones de su organización, sin que el usuario haya iniciado sesión en la aplicación.|Sí|
+| Calls.InitiateGroupCall.All |Inicie las llamadas salientes 1:1 y agrupar desde la versión preliminar de la aplicación. |Permite a la aplicación realizar llamadas salientes a un único usuario, varios usuarios, transferir llamadas y agregar participantes a reuniones de su organización, sin que un usuario haya iniciado sesión.|Sí|
 | Calls.JoinGroupCall.All |Unirse a llamadas y reuniones de grupo como una aplicación versión preliminar |Permite a la aplicación unirse a llamadas de grupo y reuniones programadas de la organización, sin que el usuario haya iniciado sesión en la aplicación. La aplicación se combinará con los privilegios de un usuario del directorio a las reuniones en su espacio empresarial.|Sí|
 | Calls.JoinGroupCallasGuest.All |Unirse a llamadas y reuniones de grupo como invitado versión preliminar |Permite a la aplicación unirse a llamadas de grupo y reuniones programadas de la organización de forma anónima, sin que el usuario haya iniciado sesión en la aplicación. La aplicación se unirá como invitado a las reuniones de su espacio empresarial.|Sí|
 | Calls.AccessMedia.All |Accede a los flujos de medios en una llamada como aplicación versión preliminar |Permite a la aplicación obtener acceso directo a los flujos de medios en una llamada, sin que el usuario haya iniciado sesión en la aplicación.|Sí|

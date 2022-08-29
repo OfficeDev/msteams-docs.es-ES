@@ -1,16 +1,16 @@
 ---
 title: Bots y SDK
 author: surbhigupta
-description: En este artículo, aprenderá herramientas y SDK para crear bots y bots de Microsoft Teams con el Microsoft Bot Framework.
+description: En este artículo, obtenga información sobre las herramientas y los SDK de Bot Framework (C#, Python, Java,JavaScript) para bots de Microsoft Teams y sus ventajas y desventajas.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
+ms.openlocfilehash: a3ba6c1ac32b24aefc8d751482bdb7bde53d1a73
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912257"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321190"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 

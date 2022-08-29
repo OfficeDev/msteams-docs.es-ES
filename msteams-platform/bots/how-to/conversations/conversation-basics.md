@@ -1,15 +1,15 @@
 ---
 title: Conceptos básicos de la conversación
-description: En este módulo, aprenderá las conversaciones del bot en un canal, el chat personal y un entorno de chat grupal en Teams.
+description: En este módulo, obtenga información sobre el tipo de conversación del bot en un canal, chat personal y ámbitos de chat de grupo en Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 682555cadaeca5f50a942de98b2dcdd85ce0f6b2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23a72486ffb76d207eeabbef23b5ec5238234dc4
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142923"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321218"
 ---
 # <a name="conversation-basics"></a>Conceptos básicos de la conversación
 

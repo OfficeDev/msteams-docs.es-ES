@@ -1,16 +1,16 @@
 ---
 title: Cambios del margen de pestaña
 author: surbhigupta
-description: En este módulo, obtenga información sobre cómo la eliminación de márgenes de tabulación mejora la experiencia de creación de aplicaciones.
+description: Obtenga información sobre cómo quitar márgenes alrededor de pestañas en Microsoft Teams con el kit de interfaz de usuario. Conozca el efecto de relleno adicional, el tamaño del margen para la izquierda, la derecha, la parte superior y la parte inferior.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: 715c6b735323e442490de8634384054be565e7a8
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962429"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450446"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 

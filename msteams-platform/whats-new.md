@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312243"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435009"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -40,6 +40,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 | 03/08/2022 | Compartir en Teams desde una aplicación personal o una pestaña | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde una pestaña o aplicación personal](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Se ha agregado una característica para recuperar transcripciones de reuniones posteriores a la reunión. | Crear aplicaciones para reuniones y llamadas de Teams > Obtener transcripciones de reuniones mediante las API de Graph > [Información general](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03/08/2022 | Expansión de vínculos para compartir con equipos desde aplicaciones web | Integrar con Teams > Compartir en Teams > [Compartir en Teams desde aplicaciones web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| Aviso: El Portal para desarrolladores ya está disponible para disponibilidad general y App Studio está en desuso a partir del 1 de agosto de 2022. | Herramientas y SDK > [Portal para desarrolladores para Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | Agregar la imagen para mostrar de Teams y la tarjeta de contactos para la notificación durante la reunión| Crear aplicaciones para reuniones y llamadas de Teams > Habilitar y configurar aplicaciones para reuniones > [Notificación durante la reunión](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | Compilar canales compartidos en Teams | Compilar aplicaciones para reuniones y llamadas de Teams > [Canales compartidos](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|Se ha presentado la versión 1.14 del manifiesto de la aplicación| Manifiesto de la aplicación > [Esquema del manifiesto de la aplicación de Teams](resources/schema/manifest-schema.md)|
@@ -263,6 +264,7 @@ La versión preliminar para desarrolladores es un programa público que proporci
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | Uso compartido de aplicaciones en la fase de reunión de Teams en dispositivos móviles | Creación de aplicaciones para reuniones y llamadas de Teams > [Habilitar y configurar aplicaciones para reuniones](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 03/08/2022 | Silenciar y reactivar el audio de las API para aplicaciones en la fase de reunión de Teams | Crear aplicaciones para reuniones y llamadas de Teams > [Referencias de API de aplicaciones de reuniones](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 02/08/2022| Controles de colaboración para Teams| Integrar con Teams > [Controles de colaboración](samples/collaboration-control.md)|
 | 06/30/2022 | Aplicaciones para reuniones instantáneas, llamadas uno a uno y llamadas grupales| Crear aplicaciones para reuniones y llamadas de Teams > [Información general](apps-in-teams-meetings/teams-apps-in-meetings.md)|

@@ -1,15 +1,15 @@
 ---
 title: Recibir todos los mensajes de canal con RSC
 author: surbhigupta12
-description: En este módulo, obtenga información sobre cómo recibir todos los mensajes de canal con permisos RSC y cómo permitir que los bots reciban todos los mensajes de canal.
+description: Permitir que los bots reciban todos los mensajes del canal sin @mentioned mediante permisos de RSC. Lea en webApplicationInfo o en la sección de autorización en el manifiesto.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d0a8c05136d4ab98270d3d837c008f0e46bcae33
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bd740c999139d9b5f98c10800646501dd55e87f5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143518"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363469"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recibir todos los mensajes de canal con RSC
 
@@ -33,8 +33,7 @@ El `ChannelMessage.Read.Group` permiso RSC se extiende a los bots. Con el consen
 
 Para que el bot reciba todos los mensajes del canal, RSC debe configurarse en el manifiesto de la aplicación de Teams con el permiso de `ChannelMessage.Read.Group` especificado en la propiedad `webApplicationInfo`.
 
-![Actualizar el manifiesto de la aplicación](~/bots/how-to/conversations/Media/appmanifest.png)
-
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Captura de pantalla de la actualización del manifiesto de la aplicación.":::
 
 A continuación se muestra un ejemplo del objeto `webApplicationInfo` :
 
@@ -46,12 +45,12 @@ El código siguiente proporciona un ejemplo del manifiesto de la aplicación:
 
 ```json
 "webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
-"ChannelMessage.Read.Group"
-    ]
-  }
+  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+  "resource": "https://AnyString",
+  "applicationPermissions": [
+    "ChannelMessage.Read.Group"
+  ]
+}
 ```
 
 ## <a name="sideload-in-a-team"></a>Transferir localmente en un equipo
@@ -62,29 +61,29 @@ Para transferir localmente en un equipo para probar si todos los mensajes de can
 1. Seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; en el panel izquierdo. Aparece el menú desplegable.
 1. Seleccione **Administrar el equipo** en el menú desplegable. Aparecen los detalles.
 
-   ![Administración de aplicaciones en el equipo](~/bots/how-to/conversations/Media/managingteam.png)
-
-      :::image type="content" source="Media/managingteam.png" alt-text="equipo de administración"border="true":::
+   :::image type="content" source="Media/managingteam.png" alt-text="Captura de pantalla de la opción Administrar equipo en la aplicación Teams.":::
 
 1. Seleccione **Aplicaciones**. Aparecen varias aplicaciones.
+
 1. Seleccione **Cargar una aplicación personalizada** en la esquina inferior derecha.
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="carga de una aplicación personalizada":::
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Captura de pantalla de la opción cargar una aplicación personalizada.":::
   
 1. Seleccione el paquete de la aplicación en el cuadro de diálogo **Abrir**.
+
 1. Seleccione **Abrir**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Seleccionar el paquete de la aplicación"lightbox="Media/selectapppackage.png"border="true":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="Captura de pantalla del cuadro de diálogo abierto para seleccionar el paquete de la aplicación." lightbox="Media/selectapppackage.png":::
 
 1. Seleccione **Agregar** en la ventana emergente de detalles de la aplicación para agregar el bot al equipo seleccionado.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Agregar bot"lightbox="Media/addingbot.png"border="true":::
+      :::image type="content" source="Media/addingbot.png" alt-text="Captura de pantalla del botón Agregar para agregar un bot a un equipo." lightbox="Media/addingbot.png":::
 
 1. Seleccione un canal y escriba un mensaje en el canal del bot.
 
     El bot recibe el mensaje sin ser @mentioned.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot recibiendo mensaje"lightbox="Media/botreceivingmessage.png"border="true":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Captura de pantalla de un bot que recibe un mensaje en un canal." lightbox="Media/botreceivingmessage.png":::
 
 ## <a name="code-snippets"></a>Fragmentos de código
 
@@ -128,3 +127,4 @@ this.onMessage(async (context, next) => {
 * [Consentimiento específico del recurso](/microsoftteams/resource-specific-consent)
 * [Probar el consentimiento específico del recurso](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Cargar aplicación personalizada en Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Enumerar las respuestas a los mensajes de un canal](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)
