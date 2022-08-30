@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 49c2b2e6ce8f173fcbc106f1cec8e0bb6d3bcb7b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
+ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919742"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67457294"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configure el entorno de desarrollo para ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -32,15 +32,25 @@ Necesita un inquilino de espacio aislado de suscripción de desarrollador de Mic
 
 También deberá habilitar la instalación de prueba para el inquilino:
 
-1. Inicie sesión en el centro de administración de Microsoft 365 (https://admin.microsoft.com) con las credenciales del inquilino de prueba y seleccione **Teams** desde el panel lateral para abrir el *centro de administración de Microsoft Teams*.
-1. Seleccione: Aplicaciones de Teams > Administrar aplicaciones > **Configuración de la aplicación para toda la organización**.
-1. En **Aplicaciones personalizadas**, active la opción *Interacción con aplicaciones personalizadas*.
+ 1. Inicie sesión en el [Centro de administración de Teams](https://admin.teams.microsoft.com/dashboard) con las credenciales del inquilino de prueba.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Habilitar la instalación de prueba para aplicaciones personalizadas desde el centro de administración de Teams":::
+ 1. Vaya a **Aplicaciones de Teams** > **Administrar aplicaciones**.
+
+ 1. En la parte superior derecha, seleccione **Configuración de la aplicación para toda la organización**.
+
+ 1. En Aplicaciones personalizadas, active la opción **Interacción con la aplicación personalizada** y guárdela.
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="La captura de pantalla es un ejemplo que permite la transferencia local para aplicaciones personalizadas desde el Centro de Administración de Teams":::
+
+ 1. Además de la configuración de aplicaciones de toda la organización, la configuración de directiva de aplicación personalizada también permite a los usuarios cargar aplicaciones personalizadas en Teams. Para obtener más información, consulte [Administración de directivas y configuraciones de aplicaciones personalizadas](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+ 1. En el Centro de administración de Teams, vaya a **Directivas** de **instalación** de aplicaciones  >  de Teams y, a continuación, seleccione **Directiva global (predeterminada para toda la organización).**
+
+ 1. Active **Cargar aplicaciones personalizadas** y seleccione **Guardar**.
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Inscribir su espacio empresarial para desarrolladores en versiones dirigidas de Office 365
 
-> [!Important]
+> [!IMPORTANT]
 > Puede tardar hasta cinco días después de crear un [espacio aislado de desarrollador de Microsoft 365](/office/developer-program/microsoft-365-developer-program-get-started) e inscribirse en [versiones de Office 365 dirigidas](#enroll-your-developer-tenant-for-office-365-targeted-releases) para que las aplicaciones de Teams transferidas localmente aparezcan en Outlook y Office.
 
 Para inscribir el inquilino de prueba para las versiones dirigidas de Office 365:
