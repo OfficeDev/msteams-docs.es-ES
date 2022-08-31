@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417510"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465389"
 ---
 # <a name="unified-meetings-apps"></a>Aplicaciones de reuniones unificadas
 
@@ -214,7 +214,7 @@ En la tabla siguiente se proporcionan los tipos de usuario y se enumeran las car
 
 | Tipo de usuario | Pestañas | Bots | Extensiones de mensajería | Tarjetas adaptables | Módulos de tareas | Diálogo en la reunión | Fase de reunión |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | No disponible |
+| Usuario anónimo | No disponible | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | No disponible | No disponible | No disponible |
 | Invitado, parte del inquilino de Azure AD | Se permite la interacción. No se permiten crear, actualizar y eliminar. | No disponible | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | Disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en el cliente de escritorio de Teams. |
 | Para obtener más información, consulte [Usuarios no estándar](/microsoftteams/non-standard-users). | La interacción se permite en las reuniones programadas. No se permiten crear, actualizar y eliminar. | Se permite la interacción. No se permiten adquirir, actualizar y eliminar. | No disponible | Se permiten interacciones en el chat de reunión. | Se permiten interacciones en el chat de reunión desde la tarjeta adaptable. | No disponible | Puede iniciar, ver e interactuar con la aplicación en la fase de reunión solo en el cliente de escritorio de Teams. |
 

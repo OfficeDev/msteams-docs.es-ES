@@ -3,19 +3,21 @@ title: Compatibilidad con inicio de sesión único para bots
 description: Obtenga información sobre cómo obtener un token de usuario y un desarrollador de bots puede usar una tarjeta de inicio de sesión o el servicio bot de Azure con la compatibilidad con la tarjeta OAuth.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611502"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465382"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Uso de la autenticación de SSO para bots
 
 La autenticación de inicio de sesión único en Microsoft Azure Active Directory (Azure AD) actualiza de forma silenciosa el token de autenticación para minimizar el número de veces que los usuarios necesitan escribir sus credenciales de inicio de sesión. Si un usuario otorga su consentimiento para usar la aplicación, no tiene que volver a otorgarlo en otro dispositivo, ya que inicia sesión automáticamente. Las pestañas y los bots tienen un flujo similar para la compatibilidad con SSO. Pero el bot [solicita tokens](#request-a-bot-token) y [recibe respuestas](#receive-the-bot-token) con un protocolo diferente.
 
 >[!NOTE]
-> OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Tener conocimientos básicos del flujo de concesión implícito de OAuth 2.0 es un requisito previo para trabajar con la autenticación en pestañas de Microsoft Teams.
+> * OAuth 2.0 es un estándar abierto para la autenticación y autorización usado por Azure Active Directory (Azure AD) y otros muchos proveedores de identidad. Tener conocimientos básicos del flujo de concesión implícito de OAuth 2.0 es un requisito previo para trabajar con la autenticación en pestañas de Microsoft Teams.
+>
+> * Bot SSO solo se admite en el chat uno a uno.
 
 Consulte el siguiente vídeo para obtener información sobre la compatibilidad del inicio de sesión único (SSO) con bots:
 <br>
