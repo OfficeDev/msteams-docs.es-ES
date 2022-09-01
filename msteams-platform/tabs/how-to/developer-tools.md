@@ -1,14 +1,14 @@
 ---
 title: DevTools para pestañas de Microsoft Teams
-description: En este módulo, obtenga información sobre cómo llegar a DevTools al usar el cliente de escritorio de Microsoft Teams y la depuración
+description: En este módulo, obtenga información sobre cómo llegar a DevTools cuando se usa el cliente de escritorio de Microsoft Teams y la depuración
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a0d5e3ea15fd796c2c426f1cf1457171f0abe7b2
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143014"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488274"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools para pestañas de Microsoft Teams
 
@@ -50,3 +50,7 @@ También puede habilitar DevTools desde el cliente Android de Teams. Para habili
 1. Seleccione **Inspeccionar** en la pestaña que desea depurar, como en la siguiente imagen:
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## <a name="see-also"></a>Vea también
+
+[Borrar la caché del cliente Teams](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)

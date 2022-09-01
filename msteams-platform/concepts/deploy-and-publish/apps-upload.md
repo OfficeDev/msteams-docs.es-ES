@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363455"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488288"
 ---
 # <a name="upload-your-app-in-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -127,3 +127,4 @@ Para quitar la aplicación de Teams, siga estos pasos:
 
 * [Configurar las opciones de instalación predeterminadas](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Mantener la aplicación publicada de Microsoft Teams](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+* [Agregar la aplicación al chat](/graph/api/chat-post-installedapps)

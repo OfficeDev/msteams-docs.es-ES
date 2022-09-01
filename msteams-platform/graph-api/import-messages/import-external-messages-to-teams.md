@@ -5,12 +5,12 @@ ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 853a3d28254a1d6a6f74da553c0047ae0803e6be
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: 3003f147d3861996fb17e3833144b6a6018f6550
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484855"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488260"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importar mensajes de plataformas de terceros a Teams con Microsoft Graph
 
@@ -387,3 +387,4 @@ En la tabla siguiente se proporciona el ámbito de contenido:
 
 * [Integración de Microsoft Graph y Teams integration](/graph/teams-concept-overview)
 * [Exportar contenido con la API para exportar de Microsoft Teams](/microsoftteams/export-teams-content)
+* [Requisitos de licencia y pago para la API de Microsoft Teams ](/graph/teams-licenses)
