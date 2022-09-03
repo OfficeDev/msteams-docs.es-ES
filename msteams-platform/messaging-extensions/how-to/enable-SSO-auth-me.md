@@ -1,16 +1,16 @@
 ---
 title: Compatibilidad del SSO con las extensiones de mensajes
 author: KirtiPereira
-description: En este artículo, aprenderá a habilitar la compatibilidad con el inicio de sesión único (SSO) para las extensiones de mensajería con ejemplos de código.
+description: Habilite el inicio de sesión único (SSO) en la aplicación de extensión de mensajes de Teams mediante Azure AD y el ejemplo de código.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 750b101a1a084d6ee409a663f9ee8ae2b4876dfe
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 999094e1649008e6d0528c8ac44c21a3f5f2f7a4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658918"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586850"
 ---
 # <a name="enable-sso-for-message-extensions"></a>Habilitar SSO para extensiones de mensaje
 
@@ -124,8 +124,8 @@ En esta sección se proporciona un ejemplo del SDK de Bot Authentication v3.
 | **Ejemplo de nombre** | **Descripción** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Autenticación del bot | En este ejemplo se muestra cómo empezar a usar la autenticación en un bot para Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Inicio de sesión único (SSO) de pestaña, bot y extensión de mensajes (ME) | En este ejemplo se muestra el inicio de sesión único para Tab, Bot y ME: búsqueda, acción, desenlazclar vínculo. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | N/D |
-|Extensión Tab, Bot y Message| En este ejemplo se muestra cómo comprobar la autenticación en la extensión Bot,Tab y Message con SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | ND |
+| Inicio de sesión único (SSO) de pestaña, bot y extensión de mensajes (ME) | En este ejemplo se muestra el inicio de sesión único para Tab, Bot y ME: búsqueda, acción, desenlazclar vínculo. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | ND |
+|Extensión Tab, Bot y Message| En este ejemplo se muestra cómo comprobar la autenticación en la extensión Bot,Tab y Message con SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | ND |
 
 ## <a name="see-also"></a>Consulte también
 

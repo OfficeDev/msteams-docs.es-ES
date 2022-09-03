@@ -1,15 +1,15 @@
 ---
 title: Registrar la aplicación de pestañas con Azure AD
-description: Describe el registro de la aplicación de pestañas con Azure AD
+description: Configure el inicio de sesión único (SSO) con Azure AD mediante la configuración del URI del identificador de aplicación, el ámbito del token de acceso y la autorización previa de clientes de confianza.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) ámbito de inquilino de SSO de token de acceso
-ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658997"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586801"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrar la aplicación de pestaña en Azure AD
 

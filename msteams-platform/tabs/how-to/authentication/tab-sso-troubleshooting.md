@@ -1,15 +1,15 @@
 ---
 title: Solución de problemas de autenticación para pestañas con SSO en Teams
-description: Solución de problemas de autenticación SSO en Teams y cómo usarla en pestañas
+description: Solución de problemas de autenticación de inicio de sesión único (SSO) en Teams y cómo usarlo en la aplicación de pestaña.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams autenticación pestañas Microsoft Azure Active Directory (Azure AD) SSO errores preguntas
-ms.openlocfilehash: fa17ffef08f85124a230f76419158f4216f55416
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 8396b42c217ea58a0a4709e1dbd8580da32da991
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658948"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586899"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Solución de problemas de autenticación SSO en Teams
 

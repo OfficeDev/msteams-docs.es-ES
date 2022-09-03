@@ -1,15 +1,15 @@
 ---
 title: Información general sobre la autenticación de pestañas mediante SSO en Teams con Azure AD
-description: Información general sobre la autenticación mediante SSO en Teams y cómo usarla en pestañas
+description: Obtenga información sobre la autenticación de inicio de sesión único (SSO) en Teams y cómo habilitarla en pestañas.
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: pestañas de autenticación de equipos Microsoft Azure Active Directory (Azure AD) manifiesto de aplicación de token de acceso sso
-ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 367a7f0f02d6b1b32af42316774bd171afdaf703
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659015"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586997"
 ---
 # <a name="enable-sso-for-tab-app"></a>Habilitación del inicio de sesión único para la aplicación de pestañas
 
@@ -64,12 +64,12 @@ En la imagen siguiente se muestra cómo funciona el SSO cuando un usuario de la 
 
 | # | Interacción | Qué sucede |
 | --- | --- | --- |
-| 1  | Aplicación de pestaña → Cliente de Teams | La aplicación de pestañas realiza una llamada de JavaScript a `getAuthToken()`, que indica a Teams que obtenga un token de acceso. |
+| 1 | Aplicación de pestaña → Cliente de Teams | La aplicación de pestañas realiza una llamada de JavaScript a `getAuthToken()`, que indica a Teams que obtenga un token de acceso. |
 | 2 | Cliente de Teams → Azure AD | Teams solicita Azure AD punto de conexión para el token de acceso para el usuario actual de la aplicación en función de la identidad de Teams. |
-| 3  | Azure AD → Formulario de consentimiento | Si el usuario de la aplicación actual usa la aplicación de pestaña por primera vez, Teams muestra la solicitud de consentimiento, si la aplicación necesita acceder a algunos datos protegidos. El usuario de la aplicación (o el administrador) debe dar su consentimiento a Teams para usar la identidad de Teams del usuario de la aplicación para obtener el token de acceso de Azure AD. <br> Como alternativa, hay un mensaje de solicitud para controlar la autenticación de paso a paso, como la autenticación en dos fases. |
-| 4  | Azure AD → Cliente de Teams | Azure AD envía el token de acceso al cliente de Teams. El token es un JSON Web Token (JWT) y su validación funciona igual que la validación de tokens en la mayoría de los flujos de OAuth estándar. Teams almacena en caché el token en su nombre para que las llamadas futuras a `getAuthToken()` devuelvan el token almacenado en caché. |
+| 3 | Azure AD → Formulario de consentimiento | Si el usuario de la aplicación actual usa la aplicación de pestaña por primera vez, Teams muestra la solicitud de consentimiento, si la aplicación necesita acceder a algunos datos protegidos. El usuario de la aplicación (o el administrador) debe dar su consentimiento a Teams para usar la identidad de Teams del usuario de la aplicación para obtener el token de acceso de Azure AD. <br> Como alternativa, hay un mensaje de solicitud para controlar la autenticación de paso a paso, como la autenticación en dos fases. |
+| 4 | Azure AD → Cliente de Teams | Azure AD envía el token de acceso al cliente de Teams. El token es un JSON Web Token (JWT) y su validación funciona igual que la validación de tokens en la mayoría de los flujos de OAuth estándar. Teams almacena en caché el token en su nombre para que las llamadas futuras a `getAuthToken()` devuelvan el token almacenado en caché. |
 | 5 | Cliente de Teams → Cliente de la aplicación de pestaña | Teams envía el token de acceso a la aplicación de pestaña como parte del objeto de resultado devuelto por la llamada `getAuthToken()`. |
-| 6  | Aplicación de pestaña (entre cliente y servidor) | La aplicación de pestañas analiza el token de acceso mediante JavaScript para extraer la información necesaria, como la dirección de correo electrónico del usuario de la aplicación. El token devuelto a la aplicación de pestañas es un token de acceso y un token de identidad. |
+| 6 | Aplicación de pestaña (entre cliente y servidor) | La aplicación de pestañas analiza el token de acceso mediante JavaScript para extraer la información necesaria, como la dirección de correo electrónico del usuario de la aplicación. El token devuelto a la aplicación de pestañas es un token de acceso y un token de identidad. |
 
 Para obtener más información, consulte [Actualizar código para habilitar SSO](tab-sso-code.md).
 

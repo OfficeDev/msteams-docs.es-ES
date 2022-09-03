@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695315"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586710"
 ---
 # <a name="resource-specific-consent"></a>Consentimiento específico del recurso
 
@@ -107,7 +107,7 @@ Puede habilitar o deshabilitar RSC para chats mediante Graph API. La propiedad `
 
    ![Configuración del equipo de Graph RSC](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  El valor predeterminado de la propiedad **esChatResourceSpecificConsentEnabled** en función de si la [configuración de consentimiento del usuario](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) está activada o desactivada en el inquilino cuando se usa RSC para chats por primera vez. Esta puede ser la primera vez que a) recuperar [**teamsAppSettings**](/graph/api/teamsappsettings-get) o b) instalar una aplicación de Teams con permisos específicos de recursos en un chat o reunión.
+> El valor predeterminado de la propiedad **esChatResourceSpecificConsentEnabled** en función de si la [configuración de consentimiento del usuario](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) está activada o desactivada en el inquilino cuando se usa RSC para chats por primera vez. Esta puede ser la primera vez que a) recuperar [**teamsAppSettings**](/graph/api/teamsappsettings-get) o b) instalar una aplicación de Teams con permisos específicos de recursos en un chat o reunión.
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Registro de la aplicación con la Plataforma de identidad de Microsoft mediante el portal de Azure AD
 

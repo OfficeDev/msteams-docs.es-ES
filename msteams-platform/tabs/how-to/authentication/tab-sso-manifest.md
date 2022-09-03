@@ -1,15 +1,15 @@
 ---
 title: Actualización del manifiesto para habilitar el inicio de sesión único para las pestañas
-description: Describe la actualización del manifiesto para habilitar el inicio de sesión único para las pestañas
+description: Actualice el manifiesto de Teams para habilitar el inicio de sesión único (SSO) para pestañas y transferirlo localmente al cliente de Teams para probar la autenticación sso.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams del Graph API de Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658965"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587004"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Actualizar el manifiesto para el SSO y versión preliminar de la aplicación
 

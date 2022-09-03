@@ -1,18 +1,18 @@
 ---
 title: Autenticación de usuarios de aplicaciones
-description: En este módulo, aprenderá la autenticación en Teams y cómo usarla en las aplicaciones, el flujo de autenticación basado en web y el flujo de OAuthPrompt para bots conversacionales.
+description: Obtenga información sobre los métodos de autenticación que puede habilitar en la aplicación Teams, como el inicio de sesión único (SSO) y el uso de proveedores de OAuth de terceros.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5a083d0bd52a2c9233adaf6164821042236f85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: b7ab4f007c0b7f9400e63d1654c5e0a930274468
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557872"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587011"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Autenticar usuarios en Microsoft Teams
 
-La autenticación consiste en validar a los usuarios de la aplicación y proteger a los usuarios de la aplicación y de la aplicación contra el acceso injustificado. Puede usar un método de autenticación adecuado para que la aplicación valide a los usuarios de la aplicación que quieran usar la aplicación de Teams.
+La autenticación consiste en validar a los usuarios de la aplicación y proteger a los usuarios de la aplicación y de la aplicación contra el acceso injustificado. Puede usar un método de autenticación adecuado para que la aplicación valide a los usuarios que quieran usar la aplicación de Teams.
 
 Elija agregar autenticación para la aplicación de una de las dos maneras siguientes:
 

@@ -1,14 +1,14 @@
 ---
 title: Autenticación silenciosa
-description: En este módulo, aprenderá a realizar la autenticación silenciosa, el inicio de sesión único y Azure AD para pestañas y cómo funciona.
+description: Configure la aplicación de pestaña con Azure AD para las pestañas y cómo funciona.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ef80c44e38e32666f68b13e42e1f815a4c351353
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435044"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586780"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Usar autenticación silenciosa en Azure AD
 

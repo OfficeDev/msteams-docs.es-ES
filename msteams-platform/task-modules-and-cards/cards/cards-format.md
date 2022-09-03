@@ -4,12 +4,12 @@ description: En este módulo, aprenderá qué es el formato de texto de tarjeta 
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962436"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586962"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -326,6 +326,9 @@ La siguiente imagen es un ejemplo de enmascaramiento de la información en Tarje
 ### <a name="full-width-adaptive-card"></a>Tarjeta adaptable de ancho completo
 
 Puede usar la propiedad `msteams` para expandir el ancho de una Tarjeta adaptable y usar espacio de lienzo adicional. En la siguiente sección se proporciona información sobre cómo usar la propiedad.
+
+> [!NOTE]
+> Pruebe la tarjeta adaptable de ancho completo en factores de forma estrechos, como paneles laterales móviles y de reuniones, para asegurarse de que el contenido no se trunca.
 
 #### <a name="construct-full-width-cards"></a>Crear tarjetas de ancho completo
 

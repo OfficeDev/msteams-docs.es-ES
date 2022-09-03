@@ -1,15 +1,15 @@
 ---
 title: Configuración de código para habilitar el inicio de sesión único para pestañas
-description: Describe la configuración de código para habilitar el inicio de sesión único para pestañas
+description: Actualice el código de la aplicación de pestaña para solicitar y recibir un token de acceso mediante la identidad de Teams del usuario de la aplicación para habilitar el inicio de sesión único (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658940"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586787"
 ---
 # <a name="add-code-to-enable-sso"></a>Agregar código para habilitar el inicio de sesión único
 

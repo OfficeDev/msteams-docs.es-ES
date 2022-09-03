@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo enviar mensajes proactivos con el 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41c7d1ecd4c57bda98bb72dd66546df21fe74754
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: adecf29766909fb9a8692aa135e09c41a307c867
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488267"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586906"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -87,7 +87,7 @@ Vea el siguiente vídeo para aprender a enviar mensajes proactivos desde bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>Descripción de quién ha bloqueado, silenciado o desinstalado un bot
@@ -327,8 +327,8 @@ En la tabla siguiente se proporciona un ejemplo de código sencillo que incorpor
 |---------------|--------------|--------|-------------|--------|
 | Conceptos básicos de conversación de Teams  | Muestra los conceptos básicos de las conversaciones de Teams, incluido el envío de mensajes proactivos individuales.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar nuevo hilo en un canal | Muestra cómo crear un nuevo hilo en un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo puede usar la instalación proactiva de la aplicación para usuarios y enviar notificaciones proactivas mediante una llamada a las API de Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
-| Mensajería proactiva | Este es un ejemplo que muestra cómo guardar la información de referencia de conversación del usuario para enviar un mensaje de recordatorio proactivo mediante bots. | Próximamente | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
+| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo puede usar la instalación proactiva de la aplicación para usuarios y enviar notificaciones proactivas mediante una llamada a las API de Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Mensajería proactiva | Este es un ejemplo que muestra cómo guardar la información de referencia de conversación del usuario para enviar un mensaje de recordatorio proactivo mediante bots. | Próximamente | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
 
 > [!div class="nextstepaction"]
 > [Más ejemplo de código de mensajería proactiva](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)

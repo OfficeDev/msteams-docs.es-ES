@@ -3,12 +3,12 @@ title: Tipos de tarjetas
 description: En este módulo, obtenga información sobre qué son las tarjetas y las acciones de tarjeta disponibles para los bots de Teams y cree una tarjeta principal, en miniatura y adaptable.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 20654804580c4e52f9355f32cd742458cccfc88c
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435030"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586794"
 ---
 # <a name="types-of-cards"></a>Tipos de tarjetas
 
@@ -131,6 +131,7 @@ En la tabla siguiente se proporcionan las características que admiten las tarje
 > * La plataforma Teams admite la versión 1.3 o las anteriores de características de tarjeta adaptable para otras funcionalidades, como tarjetas enviadas por el usuario (extensiones de mensajería basadas en búsquedas y apertura de vínculos), pestañas y módulos de tareas.
 > * El estilo de acción positiva o destructiva no se admite en tarjetas adaptables en la plataforma Teams.
 > * Actualmente, los elementos multimedia no se admiten en tarjetas adaptables en la plataforma Teams.
+> * Pruebe la tarjeta adaptable de ancho completo en factores de forma estrechos, como paneles laterales móviles y de reuniones, para asegurarse de que el contenido no se trunca.
 
 ### <a name="example-of-adaptive-card"></a>Ejemplo de tarjeta adaptable
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo enviar un mensaje, acciones sugeri
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363448"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586990"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -192,7 +192,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Microsoft Teams divide esta actividad en actividades independientes, una con solo un mensaje de texto y la otra con datos adjuntos. A medida que se divide la actividad, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
+>
+>* La división de mensajes se produce cuando se envían un mensaje de texto y datos adjuntos en la misma carga de actividad. Microsoft Teams divide esta actividad en actividades independientes, una con solo un mensaje de texto y la otra con datos adjuntos. A medida que se divide la actividad, no recibe el identificador de mensaje en respuesta, que se usa para [actualizar o eliminar](~/bots/how-to/update-and-delete-bot-messages.md) el mensaje de forma proactiva. Se recomienda enviar actividades independientes en lugar de depender de la división de mensajes.
+>* Los mensajes enviados se pueden localizar para proporcionar personalización. Para obtener más información, consulte [Localización de la aplicación](../../../concepts/build-and-test/apps-localization.md).
 
 Los mensajes enviados entre usuarios y bots incluyen datos de canal internos dentro del mensaje. Estos datos permiten que el bot se comunique correctamente en ese canal. El SDK de Bot Builder permite modificar la estructura del mensaje.
 
@@ -459,9 +461,10 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-|Ejemplo de nombre | Descripción | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
-| Bot de conversación de Teams | Control de eventos de mensajería y conversación. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Ejemplo de nombre | Descripción | Node.js | .NETCore | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
+| Bot de conversación de Teams | Control de eventos de mensajería y conversación. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Ver](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | ND |
+| Localización de aplicaciones de Teams | Localización de aplicaciones de Teams mediante bot y pestaña. | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | ND | ND | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -474,3 +477,4 @@ A continuación se muestran los códigos de estado y sus valores de código de e
 * [Suscribirse a eventos de conversación](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md)
 * [Envío del identificador de inquilino y el identificador de conversación a los encabezados de solicitud del bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Localizar la aplicación](../../../concepts/build-and-test/apps-localization.md)
