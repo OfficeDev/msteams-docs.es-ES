@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: bc38c6ed067a0d3884307e109d3033784ca2d4e8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363553"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605770"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -82,7 +82,7 @@ El nombre de la aplicación (específicamente, su *[nombre corto](~/resources/sc
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra el nombre corto de una aplicación en una descripción de la tienda.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra el nombre corto de una aplicación en una descripción de la tienda.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -102,7 +102,7 @@ Un resumen conciso de la aplicación que deberá ser original, atractivo y dirig
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="La captura de pantalla de ejemplo resalta dónde se muestra la descripción corta de una aplicación en una descripción de la tienda.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="La captura de pantalla de ejemplo resalta dónde se muestra la descripción corta de una aplicación en una descripción de la tienda.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -124,7 +124,7 @@ Aunque esta descripción puede tener hasta 4 000 caracteres, la mayoría de los 
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra la descripción larga de una aplicación en una descripción de la tienda.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestra la descripción larga de una aplicación en una descripción de la tienda.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -146,7 +146,7 @@ Las capturas de pantalla proporcionan una destacada vista previa de su aplicaci�
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestran las capturas de pantalla de la aplicación en una descripción de la tienda.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="La captura de pantalla de ejemplo destaca dónde se muestran las capturas de pantalla de la aplicación en una descripción de la tienda.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -189,14 +189,14 @@ Durante el envío, se le pedirá que clasifique la aplicación. En la siguiente 
 
 | Categorías de Teams       | Categorías del Centro de partners  |
 |:---------------------|:---------------|
-| Análisis y BI | Análisis, visualización de datos y BI |
-| Desarrollador y TI | Herramientas para desarrolladores, administrador de TI |
+| Visualización de datos y BI | Análisis, visualización de datos y BI |
+| Herramientas de desarrollo | Herramientas para desarrolladores, administrador de TI |
 | Educación | Educación |
-| Recursos humanos | Recursos humanos y contratación |
+| Recursos humanos & contratación| Recursos humanos y contratación |
 | Productividad | Administración de contenido, archivos y documentos, productividad, aprendizaje y tutoriales y utilidades |
 | Administración de proyectos | Comunicación, administración de proyectos, flujo de trabajo y administración empresarial |
 | Ventas y soporte | Administración de clientes y contactos, soporte al cliente, administración financiera y ventas y marketing |
-| Vida social y ocio | Galerías de imágenes y vídeo, estilo de vida, noticias y el tiempo, vida social, viajes y navegación |
+| Social | Galerías de imágenes y vídeo, estilo de vida, noticias y el tiempo, vida social, viajes y navegación |
 
 ### <a name="localize-your-store-listing"></a>Localización de la descripción de la tienda
 
