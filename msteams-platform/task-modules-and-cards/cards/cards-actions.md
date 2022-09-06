@@ -3,12 +3,12 @@ title: Agregar acciones de tarjeta en un bot
 description: En este módulo, obtenga información sobre qué son las acciones de tarjeta en Microsoft Teams, los tipos de acción y cómo usarlas en los bots.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035306"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605015"
 ---
 # <a name="card-actions"></a>Acciones de tarjeta
 
@@ -37,7 +37,9 @@ Las tarjetas que usan los bots y las extensiones de mensajería en Teams admiten
 `openUrl` El tipo de acción especifica una dirección URL para iniciar en el explorador predeterminado.
 
 > [!NOTE]
-> El bot no recibe ningún aviso sobre qué botón fue seleccionado.
+>
+> * El bot no recibe ningún aviso sobre qué botón se seleccionó.
+> * Los nombres de máquina con números no se admiten en la dirección URL.
 
 Con `openUrl`, puede crear una acción con las siguientes propiedades:
 

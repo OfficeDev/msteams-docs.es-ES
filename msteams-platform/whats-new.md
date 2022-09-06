@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435009"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605085"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -122,7 +122,7 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 |20/10/2021| API de Detalles de reuniones y eventos de reuniones de Teams en tiempo real | Crear aplicaciones para reuniones de Teams > [Obtener la API de detalles de la reunión](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Despliegue del vínculo de las pestañas y vista del escenario | Crear pestañas > [Expansión de vínculos de pestañas y vista de fases](tabs/tabs-link-unfurling.md) |
 |08/10/2021| Nuevos procedimientos recomendados para diseñar Tarjetas adaptables | Diseñar la aplicación > Componentes de la interfaz de usuario > [Diseñar Tarjetas adaptables para la aplicación de Teams](task-modules-and-cards/cards/design-effective-cards.md) |
-|05/10/2021| Ocultar la aplicación de Teams hasta que el administrador permita mostrar la aplicación. | Diseñar la aplicación > [Ocultar la aplicación de Teams hasta que el administrador la apruebe](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|05/10/2021| Ocultar la aplicación de Teams hasta que el administrador permita mostrar la aplicación. | Diseñar la aplicación > [Bloquear aplicaciones de forma predeterminada para los usuarios hasta que un administrador lo apruebe](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |05/10/2021| Planifique sus aplicaciones para la aplicación móvil de Teams | Conceptos básicos de la aplicación > [Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |04/10/2021| Nuevo portal para desarrolladores para Teams introducido a fin de administrar sus aplicaciones de Teams | Herramientas y SDK > [Portal para desarrolladores para Teams](concepts/build-and-test/teams-developer-portal.md) |
 |21/09/2021|Teams admite el identificador de objeto y el UPN de Azure AD en la mención de usuario para bots y webhooks entrantes | • Crear tarjetas y módulos de tareas > Crear tarjetas > Identificador de objeto y el UPN de Azure AD [en la mención del usuario](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Crear tarjetas y módulos de tareas > Crear tarjetas > [Tarjetas- Información general](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |

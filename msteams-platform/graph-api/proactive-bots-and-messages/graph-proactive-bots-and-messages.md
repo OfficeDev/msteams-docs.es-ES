@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 525f49de49312d91705bc3a14c4a5da12bd44fdf
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: cee1b0078c3a963f41d811b1fac9daa0fbe65f77
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488281"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604853"
 ---
 # <a name="send-proactive-installation-messages"></a>Envío de mensajes de instalación proactiva
 
@@ -249,4 +249,5 @@ server.get('/api/notify', async (req, res) => {
 * [Enviar notificaciones proactivas a los usuarios SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [Envío de notificaciones de fuente de actividad a usuarios de Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Agregar aplicación al equipo: Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Límites de servicios de Microsoft Teams](/graph/throttling-limits#microsoft-teams-service-limits)
 * [API protegidas en Microsoft Teams](/graph/teams-protected-apis)

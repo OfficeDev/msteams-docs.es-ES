@@ -3,12 +3,12 @@ title: Compartir en Teams desde una aplicación personal o una pestaña
 description: Obtenga información sobre cómo habilitar el botón Compartir con Teams en la aplicación o pestaña personal, las limitaciones y la experiencia del usuario final.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: cd4de40fdb557300ad957df03f463a0879f44b0e
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232200"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605064"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Compartir en Teams desde una aplicación personal o una pestaña
 
@@ -99,9 +99,6 @@ Después de habilitar el botón Compartir en teams en la pestaña o aplicación 
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
 
-    > [!NOTE]
-    > Puede agregar una nota en **decir algo al respecto**.
-
 3. Seleccione **Compartir**.
 
    :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::
@@ -110,7 +107,7 @@ Después de habilitar el botón Compartir en teams en la pestaña o aplicación 
 
    :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="share-to-teams-link-shared":::
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 * [Compartir en Teams desde aplicaciones web](share-to-teams-from-web-apps.md)
 * [Crear una pestaña personal](../../tabs/how-to/create-personal-tab.md)

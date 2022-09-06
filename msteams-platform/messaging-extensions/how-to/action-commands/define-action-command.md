@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a definir comandos de acción de extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363462"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604860"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -85,8 +85,6 @@ Para agregar el comando de acción al manifiesto de la aplicación, debe agregar
 ### <a name="create-an-action-command-using-developer-portal"></a>Creación de un comando de acción mediante el Portal para desarrolladores
 
 Puede crear un comando de acción mediante **el Portal para desarrolladores**.
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
 
 > [!NOTE]
 > El requisito previo para crear un comando de acción es que ya haya creado una extensión de mensaje. Para obtener información sobre cómo crear una extensión de mensaje, vea [crear una extensión de mensaje](~/messaging-extensions/how-to/create-messaging-extension.md).

@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo obtener el contexto específico de
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
-ms.translationtype: HT
+ms.openlocfilehash: 70079b1aa7db17c6fd76bc4c28832ea0b07d345d
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150697"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605078"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtención del contexto específico de Teams para un bot
 
@@ -374,3 +374,7 @@ Response body
 
 > [!div class="nextstepaction"]
 > [Enviar y recibir archivos a través del bot](~/bots/how-to/bots-filesv4.md)
+
+## <a name="see-also"></a>Consulte también
+
+[Localizar la aplicación](../../concepts/build-and-test/apps-localization.md)

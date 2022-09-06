@@ -1,15 +1,15 @@
 ---
 title: Extensión de la aplicación de pestañas con permisos de Microsoft Graph
-description: Describe la configuración de permisos de API con Microsoft Graph
+description: Configure permisos y ámbitos adicionales con Microsoft Graph para habilitar el inicio de sesión único (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API ámbito del token de acceso a permisos delegados
-ms.openlocfilehash: 4ca708847144e72d80557943edcc163297c85c48
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658993"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605092"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Extender la aplicación de pestañas con permisos y ámbito de Microsoft Graph
 

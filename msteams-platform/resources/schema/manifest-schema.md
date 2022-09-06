@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363441"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605029"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
@@ -792,7 +792,7 @@ Habilita la aplicación en canales no estándar. Si la aplicación admite un ám
 
 **Opcional**: booleano
 
-Cuando la propiedad `defaultBlockUntilAdminAction` se establece en **true**, la aplicación se oculta a los usuarios de forma predeterminada hasta que el administrador la permita. Si se establece en **true**, la aplicación se oculta para todos los inquilinos y usuarios finales. Los administradores de inquilinos pueden ver la aplicación en el Centro de administración de Teams y tomar medidas para permitir o bloquear la aplicación. El valor predeterminado es **False**. Para obtener más información sobre el bloque de aplicaciones predeterminado, consulte [Ocultar aplicación de Teams hasta que el administrador lo apruebe](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+Cuando la propiedad `defaultBlockUntilAdminAction` se establece en **true**, la aplicación se oculta a los usuarios de forma predeterminada hasta que el administrador la permita. Si se establece en **true**, la aplicación se oculta para todos los inquilinos y usuarios finales. Los administradores de inquilinos pueden ver la aplicación en el Centro de administración de Teams y tomar medidas para permitir o bloquear la aplicación. El valor predeterminado es **False**. Para obtener más información sobre el bloque de aplicaciones predeterminado, consulte [Bloquear aplicaciones de forma predeterminada para los usuarios hasta que un administrador lo apruebe](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

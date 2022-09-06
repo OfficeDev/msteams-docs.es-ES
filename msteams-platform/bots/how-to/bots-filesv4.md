@@ -1,17 +1,17 @@
 ---
-title: Envío y recepción de archivos mediante bot
+title: Envío y recepción de archivos mediante el bot
 description: Aprenda a enviar y recibir archivos a través del bot mediante Graph API para ámbitos personales, de canal y de chat grupal.
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 20dc421531864cf88f55932bc85ae7979f7992ff
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503882"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605050"
 ---
-# <a name="send-and-receive-files-using-bot"></a>Envío y recepción de archivos mediante bot
+# <a name="send-and-receive-files-using-bot"></a>Envío y recepción de archivos mediante el bot
 
 > [!IMPORTANT]
 > Los artículos de este documento se basan en el SDK de Bot Framework v4.
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>Ejemplo básico en C #
+### <a name="basic-example-in-c"></a>Ejemplo básico en C # #
 
 En el código siguiente se muestra un ejemplo de cómo controlar las cargas de archivos y enviar solicitudes de consentimiento de archivos en el cuadro de diálogo del bot:
 
@@ -333,6 +333,6 @@ Siga la [guía paso a paso](../../sbs-file-handling-in-bot.yml) para cargar arch
 > [!div class="nextstepaction"]
 > [Optimizar un bot con la limitación de volumen en Teams](~/bots/how-to/rate-limit.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [API protegidas en Microsoft Teams](/graph/teams-protected-apis)
