@@ -18,7 +18,11 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Captura de pantalla que muestra los comandos de aprovisionamiento":::
 
-1. Seleccione una suscripción que se usará para los recursos de Azure.
+1. Seleccione cualquiera de la suscripción existente.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Seleccionar suscripción":::
+
+1. Seleccione un grupo de recursos que se usará para los recursos de Azure.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de pantalla que muestra los recursos para el aprovisionamiento":::
 
@@ -29,7 +33,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
 
 1. Seleccione **Aprovisionar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Captura de pantalla del cuadro de diálogo de aprovisionamiento.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Seleccionar suscripción":::
 
    El proceso de aprovisionamiento crea recursos en la nube de Azure. Puede tardar algún tiempo. Puede supervisar el progreso observando los diálogos en la esquina inferior derecha. Después de unos minutos, verá el siguiente aviso:
 
@@ -89,4 +93,3 @@ Una vez completados los pasos de aprovisionamiento e implementación:
     Enhorabuena, la primera aplicación de pestaña se ejecuta en el entorno de Azure.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Captura de pantalla que muestra el mensaje para probar la aplicación ahora o posterior":::
- 
