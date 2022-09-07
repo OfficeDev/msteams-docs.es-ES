@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversación de reacción del mensaje del canal de eventos
-ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695330"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616999"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 
@@ -581,7 +581,6 @@ Se envía un evento quitado de miembro al bot en los siguientes escenarios:
 
 La actividad `eventType` quitada de miembro se establece en `teamMemberRemoved` cuando el evento se envía desde un contexto de equipo. Para determinar si el nuevo miembro eliminado era el propio bot o un usuario, compruebe el objeto `Activity` de `turnContext`. Si la `MembersRemoved` lista contiene un objeto donde `id` es el mismo que el `id` campo del `Recipient` objeto, el miembro agregado es el bot; de lo contrario, es un usuario. El identificador del bot tiene el formato `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > Cuando un usuario se elimina permanentemente de un inquilino, se desencadena el evento `membersRemoved conversationUpdate`.
 
@@ -673,7 +672,6 @@ El objeto `channelData` del siguiente ejemplo de carga se basa en agregar un mie
     }
 }
 ```
-
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -1340,24 +1338,27 @@ En este ejemplo, el `conversation.id` de las `conversationUpdate` actividades y 
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
-var activity = turnContext.Activity; if
-(string.Equals(activity.Action, "Add",
-StringComparison.InvariantCultureIgnoreCase)) {
-// TO:DO Installation workflow }
-else
-{ // TO:DO Uninstallation workflow
-} return; }
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var activity = turnContext.Activity;
+    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        // TO:DO Installation workflow
+    }
+    else
+    {
+        // TO:DO Uninstallation workflow
+    }
+    return;
+}
 ```
 
 También puede usar un controlador dedicado para *agregar* o *quitar* escenarios como método alternativo para capturar un evento.
 
 ```csharp
-protected override async Task
-OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken) {
-// TO:DO Installation workflow return;
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
 }
 ```
 

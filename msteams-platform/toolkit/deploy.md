@@ -6,33 +6,27 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 9ad2c9d16901990344ca521599b94b84b0e76217
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503336"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616929"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Implementar la aplicación de Teams en la nube
 
-El kit de herramientas de Teams le ayuda a implementar o cargar el código frontend y backend de su aplicación en sus recursos de nube aprovisionados en Azure.
+El kit de herramientas de Teams le ayuda a implementar o cargar el código frontend y backend de su aplicación en sus recursos de nube aprovisionados en Azure. Puede implementar lo siguiente en la nube:
 
 * La pestaña, como las aplicaciones de frontend se implementan en el almacenamiento de Azure y se configuran para el alojamiento web estático o un sitio de sharepoint.
 * Las API de backend se implementan en Azure Functions.
 * El bot o la extensión de mensajes se implementa en el servicio de aplicaciones de Azure.
 
-## <a name="prerequisite"></a>Requisito previo
-
-* [Instale el Kit de herramientas de Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) versión v3.0.0+.
-
-> [!NOTE]
->
-> * Asegúrese de que ha abierto un proyecto de aplicación de Teams en VS Code.
-> * Antes de implementar el código del proyecto en la nube, [aprovisione los recursos en la nube](provision.md).
+  > [!NOTE]
+  > Antes de implementar el código de la aplicación en la nube de Azure, debe completar correctamente el [aprovisionamiento de recursos en la nube](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Implementar aplicaciones de Teams con el kit de herramientas de Teams
 
-Las guías de introducción le ayudarán a implementar con el kit de herramientas de Teams. Puede usar lo siguiente para implementar su aplicación de Teams:
+Las guías de introducción le ayudan a implementar mediante el kit de herramientas de Teams. Puede usar lo siguiente para implementar su aplicación de Teams:
 
 * [Implementar la aplicación en Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Implementar la aplicación en SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
@@ -47,13 +41,10 @@ Las guías de introducción le ayudarán a implementar con el kit de herramienta
 |Bots y extensiones de mensaje </br> Carga de trabajo de back-end | `yourProjectFolder/bot` | No aplicable | Servicio de aplicaciones de Azure |
 
 > [!NOTE]
-> Cuando se incluye el recurso de administración de API en el proyecto y se desencadena la implementación. Puede publicar las API en Azure Functions en el servicio de administración de API.
+> Al incluir el recurso de Azure API Management en el proyecto y desencadenar la implementación, puede publicar las API en Azure Functions en el servicio Azure API Management.
 
 ## <a name="see-also"></a>Vea también
 
-* [Agregar más recursos en la nube](add-resource.md)
 * [Crear e implementar un servicio en la nube de Azure](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Agregar más funcionalidades de la aplicación de Teams](add-capability.md)
-* [Implementar código de proyecto con canalizaciones CI/CD](use-CICD-template.md)
-* [Administrar varios entornos](TeamsFx-multi-env.md)
-* [Colaborar con otros desarrolladores en proyectos de Teams](TeamsFx-collaboration.md)
+* [Creación de aplicaciones de Teams de varias funcionalidades](add-capability.md)
+* [Adición de recursos en la nube a la aplicación Microsoft Teams](add-resource.md)

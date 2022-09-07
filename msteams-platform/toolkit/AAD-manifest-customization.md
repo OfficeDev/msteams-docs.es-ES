@@ -1,23 +1,34 @@
 ---
-title: Administración de una aplicación de Azure Active Directory en Teams Toolkit
+title: Edición del manifiesto de Azure Active Directory en el kit de herramientas de Teams
 author: zyxiaoyuer
 description: Describe la administración de una aplicación de Azure Active Directory en el kit de herramientas de Teams
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 1f71d57e32bd6fb24cf75cc6027937337f29f972
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503791"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616656"
 ---
-# <a name="customize-azure-ad-manifest"></a>Personalizar el manifiesto de Azure AD
+# <a name="edit-azure-ad-manifest"></a>Edición del manifiesto de Azure AD
 
 El [manifiesto de Azure Active Directory (Azure AD)](/azure/active-directory/develop/reference-app-manifest) contiene definiciones de todos los atributos de un objeto de aplicación de Azure AD en el Plataforma de identidad de Microsoft.
 
-Teams Toolkit ahora administra la aplicación de Azure AD con el archivo de manifiesto como el origen de la verdad durante los ciclos de vida de desarrollo de aplicaciones de Teams.
+Teams Toolkit ahora administra la aplicación de Azure AD con el archivo de manifiesto como el origen de la verdad durante el ciclo de vida de desarrollo de aplicaciones de Teams.
+
+En esta sección se describen estos temas:
+
+* [Personalización de la plantilla de manifiesto de Azure AD](#customize-azure-ad-manifest-template)
+* [Marcadores de posición de plantilla de manifiesto de Azure AD](#azure-ad-manifest-template-placeholders)
+* [Creación y vista previa del manifiesto de Azure AD con la lente de código](#author-and-preview-azure-ad-manifest-with-code-lens)
+* [Implementación de cambios de la aplicación de Azure AD para el entorno local](#deploy-azure-ad-application-changes-for-local-environment)
+* [Implementación de cambios de aplicaciones de Azure AD para un entorno remoto](#deploy-azure-ad-application-changes-for-remote-environment)
+* [Visualización de la aplicación de Azure AD en el Azure Portal](#view-azure-ad-application-on-the-azure-portal)
+* [Uso de una aplicación de Azure AD existente](#use-an-existing-azure-ad-application)
+* [Ciclo de vida de desarrollo de aplicaciones de Azure AD en Teams](#azure-ad-application-in-teams-application-development-lifecycle)
 
 ## <a name="customize-azure-ad-manifest-template"></a>Personalización de la plantilla de manifiesto de Azure AD
 
@@ -29,15 +40,15 @@ Puede personalizar la plantilla de manifiesto de Azure AD para actualizar la apl
 
 2. Actualice la plantilla directamente o [haga referencia a los valores de otro archivo](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Puede ver varios escenarios de personalización aquí:
   
-   * [Agregar un permiso de aplicación](#customize-requiredresourceaccess)
-   * [Autenticación previa de una aplicación cliente](#customize-preauthorizedapplications)
-   * [Actualización de la dirección URL de redireccionamiento para la respuesta de autenticación](#customize-redirect-urls)
+   * [Agregar un permiso de aplicación](#add-an-application-permission)
+   * [Autenticación previa de una aplicación cliente](#preauthorize-a-client-application)
+   * [Actualización de la dirección URL de redireccionamiento para la respuesta de autenticación](#update-redirect-url-for-authentication-response)
 
 3. [Implemente los cambios de la aplicación de Azure AD para el entorno local](#deploy-azure-ad-application-changes-for-local-environment).
   
 4. [Implemente los cambios de la aplicación de Azure AD para el entorno remoto](#deploy-azure-ad-application-changes-for-remote-environment).
 
-### <a name="customize-requiredresourceaccess"></a>Personalización de requiredResourceAccess
+### <a name="add-an-application-permission"></a>Agregar un permiso de aplicación
 
 Si la aplicación de Teams requiere más permisos para llamar a la API con permisos adicionales, debe actualizar `requiredResourceAccess` la propiedad en la plantilla de manifiesto de Azure AD. Puede ver el ejemplo siguiente para esta propiedad:
 
@@ -69,15 +80,15 @@ Si la aplicación de Teams requiere más permisos para llamar a la API con permi
 ]
 ```
 
-* `resourceAppId` la propiedad es para distintas API, para `Microsoft Graph` y `Office 365` `SharePoint Online`, escriba el nombre directamente en lugar de UUID y, para otras API, use UUID.
+* `resourceAppId` se usa para distintas API. Para `Microsoft Graph` y `Office 365` `SharePoint Online`, escriba el nombre directamente en lugar de UUID y, para otras API, use UUID.
 
-* `resourceAccess.id` la propiedad es para permisos diferentes, para `Microsoft Graph` y `Office 365 SharePoint Online`, escriba el nombre del permiso directamente en lugar de UUID y, para otras API, use UUID.
+* `resourceAccess.id` se usa para permisos diferentes. Para `Microsoft Graph` y `Office 365 SharePoint Online`, escriba el nombre del permiso directamente en lugar de UUID y, para otras API, use UUID.
 
 * `resourceAccess.type` se usa para el permiso delegado o el permiso de aplicación. `Scope` significa permiso delegado y `Role` significa permiso de aplicación.
 
-### <a name="customize-preauthorizedapplications"></a>Personalización de preAuthorizedApplications
+### <a name="preauthorize-a-client-application"></a>Autenticación previa de una aplicación cliente
 
-Puede usar `preAuthorizedApplications` la propiedad para autorizar a una aplicación cliente para indicar que la API confía en la aplicación y los usuarios no dan su consentimiento cuando el cliente la llama a la API expuesta. Puede ver el ejemplo siguiente para esta propiedad:
+Puede usar `preAuthorizedApplications` la propiedad para autorizar a una aplicación cliente para indicar que la API confía en la aplicación. Los usuarios no dan su consentimiento cuando el cliente la llama a la API expuesta. Puede ver el ejemplo siguiente para esta propiedad:
 
 ```JSON
 
@@ -92,17 +103,17 @@ Puede usar `preAuthorizedApplications` la propiedad para autorizar a una aplicac
     ]
 ```
 
-`preAuthorizedApplications.appId` se usa para la aplicación que desea autorizar. Si no conoce el identificador de la aplicación, pero solo conoce el nombre de la aplicación, puede ir a Azure Portal y seguir los pasos para buscar en la aplicación el identificador :
+`preAuthorizedApplications.appId` se usa para la aplicación que desea autorizar. Si no conoce el identificador de la aplicación y solo conoce el nombre de la aplicación, siga estos pasos para buscar el identificador de la aplicación:
 
-1. Vaya a [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) y abra registros de aplicaciones.
+1. Vaya a [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) y abra **Registros de aplicaciones**.
 
 1. Seleccione **Todas las aplicaciones** y busque el nombre de la aplicación.
 
 1. Seleccione el nombre de la aplicación y obtenga el identificador de la aplicación en la página de información general.
 
-### <a name="customize-redirect-urls"></a>Personalización de direcciones URL de redireccionamiento
+### <a name="update-redirect-url-for-authentication-response"></a>Actualización de la dirección URL de redireccionamiento para la respuesta de autenticación
 
-  Las direcciones URL de redireccionamiento se usan al devolver respuestas de autenticación como tokens después de la autenticación correcta. Puede personalizar las direcciones URL de redireccionamiento mediante la propiedad `replyUrlsWithType`, por ejemplo, para agregar `https://www.examples.com/auth-end.html` como dirección URL de redireccionamiento, puede agregarla como el ejemplo siguiente:
+  Las direcciones URL de redireccionamiento se usan al devolver respuestas de autenticación como tokens después de la autenticación correcta. Puede personalizar las direcciones URL de redireccionamiento mediante la propiedad `replyUrlsWithType`. Por ejemplo, para agregar `https://www.examples.com/auth-end.html` como dirección URL de redireccionamiento, puede agregarla como el ejemplo siguiente:
 
 ``` JSON
 "replyUrlsWithType": [
@@ -136,7 +147,7 @@ El archivo de estado se encuentra en `.fx\states\state.xxx.json` (xxx representa
 }
 ```
 
-Puede usar este argumento de marcador de posición en el manifiesto de Azure AD: `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` para hacer referencia `applicationIdUris` al valor de la `fx-resource-aad-app-for-teams` propiedad .
+Puede usar este argumento de marcador de posición en el manifiesto de Azure AD: `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` para señalar `applicationIdUris` el valor de la `fx-resource-aad-app-for-teams` propiedad .
 
 ### <a name="reference-config-file-values-in-azure-ad-manifest-template"></a>Referencia de valores de archivo de configuración en la plantilla de manifiesto de Azure AD
 
@@ -169,7 +180,7 @@ El archivo de plantilla de manifiesto de Azure AD tiene la lente de código para
 
 ### <a name="azure-ad-manifest-template-file"></a>Archivo de plantilla de manifiesto de Azure AD
 
-Al principio del archivo de plantilla de manifiesto de Azure AD, hay una lente de código en versión preliminar. Seleccione la lente de código, genera el manifiesto de Azure AD en función del entorno seleccionado.
+Hay una lente de código de vista previa al principio del archivo de plantilla de manifiesto de Azure AD. Seleccione el objetivo de código para generar un manifiesto de Azure AD en función del entorno seleccionado.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add codelens.png" alt-text="addcodelens":::
 
@@ -181,13 +192,13 @@ La lente de código de argumento de marcador de posición le ayuda a examinar r�
 
 ### <a name="required-resource-access-code-lens"></a>Lente de código de acceso a recursos requerida
 
-Es diferente del esquema de manifiesto oficial de [Azure AD](/azure/active-directory/develop/reference-app-manifest) que `resourceAppId` y `resourceAccess` el identificador de `requiredResourceAccess` la propiedad solo admiten UUID, la plantilla de manifiesto de Azure AD en Teams Toolkit también admite cadenas legibles por el usuario para `Microsoft Graph` y `Office 365 SharePoint Online` permisos. Si escribe UUID, code lens muestra cadenas legibles por el usuario; de lo contrario, muestra UUID.
+Es diferente del esquema de manifiesto oficial de [Azure AD](/azure/active-directory/develop/reference-app-manifest) que `resourceAppId` y `resourceAccess` el identificador de `requiredResourceAccess` la propiedad solo admiten UUID. La plantilla de manifiesto de Azure AD en Teams Toolkit también admite cadenas legibles para el usuario y `Microsoft Graph` `Office 365 SharePoint Online` permisos. Si escribe UUID, code lens muestra cadenas legibles por el usuario; de lo contrario, muestra UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
 
 ### <a name="pre-authorized-applications-code-lens"></a>Lente de código de aplicaciones previamente autorizadas
 
-La lente de código muestra el nombre de la aplicación para el identificador de aplicación por autorización de la `preAuthorizedApplications` propiedad .
+La lente de código muestra el nombre de la aplicación para el identificador de aplicación previamente autorizado para la `preAuthorizedApplications` propiedad .
 
 ## <a name="deploy-azure-ad-application-changes-for-local-environment"></a>Implementación de cambios de la aplicación de Azure AD para el entorno local
 
@@ -195,7 +206,7 @@ La lente de código muestra el nombre de la aplicación para el identificador de
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
 
-2. Seleccione `local` entorno.
+2. Seleccione **entorno local** .
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
 
@@ -217,22 +228,25 @@ La lente de código muestra el nombre de la aplicación para el identificador de
 
 ## <a name="view-azure-ad-application-on-the-azure-portal"></a>Visualización de la aplicación de Azure AD en el Azure Portal
 
-1. Copie el identificador de cliente de la aplicación de Azure AD del `state.xxx.json` archivo (xxx es el nombre del entorno que ha implementado la aplicación de Azure AD) en la `fx-resource-aad-app-for-teams` propiedad .
+1. Copie el identificador de cliente de aplicación de Azure AD del `state.xxx.json` archivo () de la `fx-resource-aad-app-for-teams` propiedad .
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
+
+   > [!NOTE]
+   > xxx en el identificador de cliente indica el nombre del entorno donde ha implementado la aplicación de Azure AD.
 
 2. Vaya a [Azure Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) e inicie sesión en la cuenta de Microsoft 365.
   
    > [!NOTE]
    > Asegúrese de que las credenciales de inicio de sesión de la aplicación Teams y la cuenta de M365 son las mismas.
 
-3. Abra [la página Registros](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) de aplicaciones y busque la aplicación de Azure AD mediante el identificador de cliente que copió antes.
+3. Abra [la página Registros](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) de aplicaciones y busque en la aplicación de Azure AD el identificador de cliente que copió antes.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view2.png" alt-text="view2":::
 
 4. Seleccione la aplicación de Azure AD en el resultado de la búsqueda para ver la información detallada.
   
-5. En la página de información de la aplicación de Azure AD, seleccione `Manifest` el menú para ver el manifiesto de esta aplicación. El esquema del manifiesto es el mismo que el del `aad.template.json` archivo. Para obtener más información sobre el manifiesto, consulte [Manifiesto de aplicación de Azure Active Directory](/azure/active-directory/develop/reference-app-manifest).
+5. En la página de información de la aplicación de Azure AD, seleccione el menú para ver el `Manifest` manifiesto de esta aplicación. El esquema del manifiesto es el mismo que el del `aad.template.json` archivo. Para obtener más información sobre el manifiesto, consulte [Manifiesto de aplicación de Azure Active Directory](/azure/active-directory/develop/reference-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -248,21 +262,21 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
 1. **Para crear un proyecto**
 
-      Puede crear un proyecto con El kit de herramientas de Teams que incluye compatibilidad con SSO de forma predeterminada, como `SSO-enabled tab`. Para obtener más información para crear una nueva aplicación, consulte [Creación de una nueva aplicación de Teams mediante Teams Toolkit](create-new-project.md). Se crea automáticamente un archivo de manifiesto de Azure AD: `templates\appPackage\aad.template.json`. Teams Toolkit crea o actualiza la aplicación de Azure AD durante el desarrollo local o mientras mueve la aplicación a la nube.
+      Puede crear un proyecto con El kit de herramientas de Teams que incluye compatibilidad con SSO de forma predeterminada, como `SSO-enabled tab`. Para obtener más información sobre cómo crear una nueva aplicación, consulte [Creación de una nueva aplicación de Teams con Teams Toolkit](create-new-project.md). Se crea automáticamente un archivo de manifiesto de Azure AD en `templates\appPackage\aad.template.json`. Teams Toolkit crea o actualiza la aplicación de Azure AD durante el desarrollo local o mientras mueve la aplicación a la nube.
 
 2. **Para agregar el inicio de sesión único al bot o a la pestaña**
 
-      Después de crear una aplicación de Teams sin sso integrado, Teams Toolkit le ayuda incrementalmente a agregar sso para el proyecto. Como resultado, se crea automáticamente un archivo de manifiesto de Azure AD: `templates\appPackage\aad.template.json`.
+      Después de crear una aplicación de Teams sin sso integrado, Teams Toolkit le ayuda incrementalmente a agregar sso para el proyecto. Como resultado, se crea automáticamente un archivo de manifiesto de Azure AD en `templates\appPackage\aad.template.json`.
 
       Teams Toolkit crea o actualiza la aplicación de Azure AD durante la siguiente sesión de depuración local o mientras mueve la aplicación a la nube.
 
 3. **Para compilar localmente**
 
-    Teams Toolkit realiza las siguientes funciones durante el desarrollo local (conocido como F5):
+    Teams Toolkit realiza las siguientes funciones durante el desarrollo local o se conoce como F5:
 
-    * Lea el `state.local.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
+    * Lea el `state.local.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, Teams Toolkit reutiliza la aplicación de Azure AD existente. De lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
 
-    * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls que requiere un punto de conexión de depuración local) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
+    * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren más contexto (como la propiedad replyUrls que requiere un punto de conexión de depuración local) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
 
     * Una vez que el entorno de desarrollo local se inicia correctamente, el identificador de la aplicación de Azure ADUris, replyUrls y otras propiedades que no están disponibles durante la fase de creación se actualizan en consecuencia.
 
@@ -272,9 +286,9 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
 
       Debe aprovisionar recursos en la nube e implementar la aplicación mientras mueve la aplicación a la nube. En las fases, como el desarrollo local, teams Toolkit hará lo siguiente:
 
-      * Lea el `state.{env}.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, teams Toolkit vuelve a usar la aplicación de Azure AD existente; de lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
+      * Lea el `state.{env}.json` archivo para buscar una aplicación de Azure AD existente. Si ya existe una aplicación de Azure AD, teams Toolkit vuelve a usar la aplicación de Azure AD existente. De lo contrario, debe crear una nueva aplicación mediante el `aad.template.json` archivo .
 
-      * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren contexto adicional (como la propiedad replyUrls requiere un punto de conexión de bot o front-end) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
+      * Inicialmente omite algunas propiedades del archivo de manifiesto que requieren más contexto (como la propiedad replyUrls requiere un punto de conexión de bot o front-end) durante la creación de una nueva aplicación de Azure AD con el archivo de manifiesto.
 
       * Una vez completado el aprovisionamiento de otros recursos, los identificadores y replyUrls de la aplicación de Azure AD se actualizan según los puntos de conexión correctos.
 
@@ -311,6 +325,6 @@ Debe interactuar con la aplicación de Azure AD durante varias fases del ciclo d
     * Seleccione `add a permission` esta opción para agregar el permiso que desee.
     * Seleccione `Manifest`, en la `requiredResourceAccess` propiedad , puede encontrar los identificadores de API y permisos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Vista previa y personalización del manifiesto de la aplicación en el kit de herramientas](TeamsFx-preview-and-customize-app-manifest.md)
