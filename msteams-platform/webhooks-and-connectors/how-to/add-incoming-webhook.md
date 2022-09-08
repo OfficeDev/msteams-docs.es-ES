@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a agregar Webhook entrante a la aplicac
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ade5d5f30261cfd77140ab3cc9332bba15c76be8
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337141"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618281"
 ---
 # <a name="create-incoming-webhooks"></a>Crear webhooks entrantes
 
@@ -52,16 +52,16 @@ Para agregar un Webhook entrante a un canal de Teams, siga estos pasos:
 1. Abra el canal en el que desea agregar el webhook y seleccione &#8226;&#8226;&#8226; **Más opciones** en la barra de navegación superior.
 1. Seleccione **Conectores** en el menú desplegable:
 
-    ![Seleccionar conector](~/assets/images/connectors.png)
+   :::image type="content" source="../../assets/images/connectors.png" alt-text="En esta captura de pantalla se muestra cómo seleccionar el conector.":::
 
 1. Busque **Webhook entrante** y seleccione **Agregar**.
 1. Seleccione **Configurar**, proporcione un nombre y cargue una imagen para su webhook si es necesario:
 
-    ![Botón Configurar](~/assets/images/configure.png)
+   :::image type="content" source="../../assets/images/configure.png" alt-text="En esta captura de pantalla se muestra cómo configurar y cargar una imagen para los webhooks.":::
 
 1. Copie y guarde la URL única del webhook presente en la ventana de diálogo. La URL se asigna al canal y se puede utilizar para enviar información a los equipos. Seleccione **Listo**.
 
-    ![Dirección URL única](~/assets/images/url.png)
+   :::image type="content" source="../../assets/images/url.png" alt-text="En esta captura de pantalla se muestra la dirección URL de webhook única.":::
 
 El webhook está disponible en el canal de Teams.
 
@@ -79,19 +79,19 @@ Para eliminar un Webhook entrante de un canal de Teams, siga estos pasos:
 1. Seleccione **Configurado** en **Administrar**.
 1. Seleccione el **<*1*> Configurado** para ver una lista de los conectores actuales:
 
-    ![Webhook configurado](~/assets/images/configured.png)
+   :::image type="content" source="../../assets/images/configured.png" alt-text="En esta captura de pantalla se muestra cómo configurar para ver la lista de los conectores actuales.":::
 
 1. Seleccione **Administrar** para el conector que desea eliminar:
 
-    ![Administrar webhook](~/assets/images/manage.png)
+   :::image type="content" source="../../assets/images/manage.png" alt-text="En esta captura de pantalla se muestra cómo administrar el conector que desea quitar.":::
 
 1. Seleccione **Eliminar** para ver el cuadro de diálogo **Eliminar configuración**.
 
-    ![Quitar Configuración](~/assets/images/removeconfiguration.png)
+   :::image type="content" source="../../assets/images/removeconfiguration.png" alt-text="En esta captura de pantalla se muestra cómo ver el cuadro de diálogo quitar configuración.":::
 
 1. Complete los campos del cuadro de diálogo y las casillas de verificación y seleccione **Eliminar**.
 
-    ![Quitar final](~/assets/images/finalremove.png)
+   :::image type="content" source="../../assets/images/finalremove.png" alt-text="En esta captura de pantalla se muestra cómo quitar un webhook entrante del canal de Teams.":::
 
 ## <a name="code-sample"></a>Ejemplo de código
 

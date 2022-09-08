@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 3828c357307c5f7bfd94935a75dc9d6f5cedbc39
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616706"
+ms.locfileid: "67617792"
 ---
 # <a name="customize-teams-app-manifest"></a>Personalizar manifiesto de aplicación de Teams
 
@@ -20,7 +20,7 @@ El manifiesto de aplicación de Teams describe cómo se integra la aplicación e
 * [Vista previa del archivo de manifiesto en el entorno local](#preview-manifest-file-in-local-environment)
 * [Vista previa del archivo de manifiesto en un entorno remoto](#preview-manifest-file-in-remote-environment)
 * [Sincronización de cambios locales en el Portal de desarrollo](#sync-local-changes-to-dev-portal)
-* [Personalizar manifiesto de aplicación de Teams](#customize-teams-app-manifest)
+* [Personalización del manifiesto de aplicación de Teams](#customize-your-teams-app-manifest)
 * [Validar manifiesto](#validate-manifest)
 
 El archivo `manifest.template.json` de plantilla de manifiesto está disponible en la `templates/appPackage` carpeta después del scaffolding. El archivo de plantilla con marcadores de posición y los valores reales se resuelven mediante el kit de herramientas de Teams mediante archivos en `.fx/configs` y `.fx/states` para diferentes entornos.
@@ -188,7 +188,7 @@ Si el archivo de manifiesto no está actualizado debido al cambio de archivo de 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-## <a name="customize-teams-app-manifest"></a>Personalizar manifiesto de aplicación de Teams
+## <a name="customize-your-teams-app-manifest"></a>Personalización del manifiesto de aplicación de Teams
 
 El kit de herramientas de Teams consta de los siguientes archivos de plantilla de manifiesto en la carpeta `manifest.template.json` en entornos locales y remotos:
 

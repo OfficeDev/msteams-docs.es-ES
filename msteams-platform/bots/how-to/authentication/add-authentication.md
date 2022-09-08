@@ -5,12 +5,12 @@ description: Aprenda a habilitar la autenticación mediante un proveedor de OAut
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ed30f4600630b047ad410b88ed8e04e91989088c
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586857"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618444"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
@@ -91,67 +91,67 @@ El registro de recursos de Bot de Azure registra el servicio web como bot con Bo
 1. Seleccione el **Grupo de recursos** en la lista desplegable.
 1. Seleccione **Tipo de aplicación** como **Multiinquilino** para el **Identificador de aplicación de Microsoft**.
 
-    ![Multiinquilino](~/assets/images/adaptive-cards/multi-tenant.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="En esta captura de pantalla se muestra cómo seleccionar varios inquilinos para Microsoft AppID.":::
 
 1. Seleccione **Revisar y crear**.
 
-    ![Crear un bot de Azure](~/assets/images/adaptive-cards/create-azure-bot.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/create-azure-bot.png" alt-text="En esta captura de pantalla se muestra cómo crear un bot de Azure.":::
 
 1. Si se supera la validación, seleccione **Crear**.
 
     El servicio de bot tarda unos minutos en aprovisionarse.
 
-    ![Validación de bots de Azure](~/assets/images/adaptive-cards/validation-pane.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="En esta captura de pantalla se muestra cómo se supera la validación del bot de Azure.":::
 
 1. Seleccione **Ir a recursos**. El bot y los recursos relacionados aparecen en el grupo de recursos.
 
-    ![Ir al recurso](~/assets/images/adaptive-cards/go-to-resource-card.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/go-to-resource-card.png" alt-text="En esta captura de pantalla se muestra cómo seleccionar el grupo de recursos.":::
 
     Ahora se crea el bot de Azure.
 
-    ![Recurso de bot de Azure creado](~/assets/images/adaptive-cards/azure-bot-ui.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/azure-bot-ui.png" alt-text="En esta captura de pantalla se muestra cómo crear recursos de bot de Azure.":::
 
 Para crear el secreto de cliente:
 
 1. En **Configuración**, seleccione **Configuración**. Guarde el **identificador de aplicación de Microsoft** (id. de cliente) para futuras referencias.
 
-    ![Id. de aplicación de Microsoft](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="En esta captura de pantalla se muestra cómo agregar el identificador de aplicación de Microsoft para crear el secreto de cliente.":::
 
 1. Junto a **Id. de aplicación de Microsoft**, seleccione **Administrar**.
 
-   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="administrar bot":::
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="En esta captura de pantalla se muestra cómo crear un bot de administración.":::
 
 1. En la sección **Secretos de cliente**, seleccione **Nuevo secreto de cliente**. Aparece la ventana **Agregar un secreto de cliente**.
 
-    ![Nuevo secreto de cliente](~/assets/images/meetings-side-panel/newclientsecret.png)
+   :::image type="content" source="../../../assets/images/meetings-side-panel/newclientsecret.PNG" alt-text="En esta captura de pantalla se muestra cómo crear un nuevo secreto de cliente.":::
 
 1. Escriba **Descripción** y seleccione **Agregar**.
 
-    ![Secreto de cliente](~/assets/images/adaptive-cards/client-secret.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="En la captura de pantalla se muestra cómo escribir la descripción del secreto de cliente.":::
 
 1. En la columna **Valor**, seleccione **Copiar en el Portapapeles** y guarde el identificador de secreto de cliente para futuras referencias.
 
-    ![Valor del secreto de cliente](~/assets/images/adaptive-cards/client-secret-value.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/client-secret-value.png" alt-text="En la captura de pantalla se muestra cómo guardar el identificador de secreto de cliente para futuras referencias.":::
 
 Para agregar el canal de Microsoft Teams:
 
 1. Ve a **Inicio**.
 
-    ![Página principal del bot](~/assets/images/adaptive-cards/bot-home-page.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/bot-home-page.png" alt-text="En esta captura de pantalla se muestra la página principal del bot.":::
 
 1. Abra el bot, que aparece en la sección **Recursos recientes**.
 
 1. Seleccione **Canales** en el panel izquierdo y seleccione **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png":::.
 
-    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Selección de Teams en canales":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="En esta captura de pantalla se muestra cómo seleccionar Teams en canales.":::
 
 1. Active la casilla para aceptar los términos de servicio y seleccione **Aceptar**.</br>
 
-    ![Seleccionar términos de servicio](~/assets/images/adaptive-cards/select-terms-of-service.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/select-terms-of-service.png" alt-text="En esta captura de pantalla se muestra cómo establecer los términos si el servicio.":::
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
-    ![Seleccione Teams](~/assets/images/adaptive-cards/select-teams.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/select-teams.png" alt-text="En esta captura de pantalla se muestra cómo agregar el canal de Microsoft Teams.":::
 
 Para obtener más información, vea [Crear un bot para Teams](../create-a-bot-for-teams.md).
 
@@ -197,8 +197,10 @@ Nota: aquí hay dos opciones para los proveedores de servicios: Azure AD V1 y Az
 1. Seleccione el vínculo de registro del bot.
 1. Abra la página del recurso y seleccione **Configuración** en **Configuración**.
 1. Seleccione el botón **Agregar ajustes de conexión de OAuth** en la pantalla Configuración.
-En la imagen siguiente se muestra la selección correspondiente en la página de recursos:  
-![Configuración de SampleAppDemoBot](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+   En la imagen siguiente se muestra la selección correspondiente en la página de recursos:
+
+   ![Configuración de SampleAppDemoBot](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+
 1. Complete el formulario de la siguiente manera:
 
     1. **Nombre**. Escriba un nombre para la conexión. Usará este nombre en el bot en el archivo `appsettings.json`. Por ejemplo, *BotTeamsAuthADv1*.
@@ -216,7 +218,7 @@ En la imagen siguiente se muestra la selección correspondiente en la página de
     h. En **Dirección URL del recurso**, escriba `https://graph.microsoft.com/`. Esto no se usa en el ejemplo de código actual.  
     i. Deje **ámbitos** en blanco. La siguiente imagen es un ejemplo:
 
-    ![teams bots app auth connection string adv1 view](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="En esta captura de pantalla se muestra cómo agregar la conexión de identidad de bot de autenticación de bot de Teams adv1.":::
 
 1. Seleccione **Guardar**.
 
@@ -225,7 +227,9 @@ En la imagen siguiente se muestra la selección correspondiente en la página de
 1. En el [**Portal de Azure**][azure-portal], seleccione el bot de Azure en el panel.
 1. En la página del recurso, seleccione **Configuración** en **Configuración**.
 1. Seleccione el botón **Agregar ajustes de conexión de OAuth** en la pantalla Configuración.  
-En la imagen siguiente se muestra la selección correspondiente en la página de recursos: ![Configuración de SampleAppDemoBot](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+   En la imagen siguiente se muestra la selección correspondiente en la página de recursos:
+
+   :::image type="content" source="../../../assets/images/authentication/sample-app-demo-bot-configuration.png" alt-text="En esta captura de pantalla se muestra la selección correspondiente en la página de recursos.":::
 
 1. Complete el formulario de la siguiente manera:
 
@@ -251,12 +255,12 @@ En la imagen siguiente se muestra la selección correspondiente en la página de
 1. La primera vez que lo haga, se abrirá una nueva ventana del explorador en la que se le pedirá que seleccione una cuenta. Seleccione el que quiera usar.
 1. A continuación, se le pedirá que permita al proveedor de identidades usar los datos (credenciales). La siguiente imagen es un ejemplo:
 
-    ![teams bot auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-accept.PNG" alt-text="En la captura de pantalla se muestra cómo agregar la cadena de conexión de autenticación de bot de Teams adv1.":::
 
 1. Seleccione **Aceptar**.
 1. A continuación, debería redirigirle a una página **Probar conexión a \<your-connection-name> Correcto**. Actualice la página si recibe un error. La siguiente imagen es un ejemplo:
 
-    ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-token.PNG" alt-text="En la captura de pantalla se muestra cómo agregar la cadena de conexión de autenticación de aplicaciones de Teams adv1.":::
 
 El código de bot usa el nombre de conexión para recuperar los tokens de autenticación de usuario.
 
@@ -326,14 +330,14 @@ Como alternativa, mientras esté en Visual Studio, puede seguir estos pasos:
 1. Seleccione el botón **Publicar**.
 1. En la siguiente ventana de diálogo, escriba la información necesaria. A continuación puede ver un ejemplo:
 
-    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="En esta captura de pantalla se muestra cómo escribir la información necesaria para la autenticación de App Service.":::
 
 1. Seleccione **Crear**.
 1. Si la implementación se completa correctamente, debería verla reflejada en Visual Studio. Además, se muestra una página en el explorador predeterminado que indica *¡El bot está listo!*. La dirección URL será similar a la siguiente: `https://botteamsauth.azurewebsites.net/`. Guárdelo en un archivo.
 1. En el explorador, vaya a la [**Portal de Azure**][azure-portal].
 1. Compruebe el grupo de recursos; el bot debe aparecer junto con los demás recursos. La siguiente imagen es un ejemplo:
 
-    ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="En esta captura de pantalla se muestra cómo comprobar el grupo de recursos y el bot.":::
 
 1. En el grupo de recursos, seleccione el nombre de registro del bot (vínculo).
 1. En el panel izquierdo, seleccione **Configuración**.
@@ -387,11 +391,11 @@ Después de configurar el mecanismo de autenticación, puede realizar las prueba
 
     La imagen siguiente es un ejemplo de la interfaz de usuario del bot después de haber iniciado sesión:
 
-    ![emulador de inicio de sesión del bot de autenticación](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator.PNG" alt-text="En esta captura de pantalla se muestra un ejemplo de la interfaz de usuario del bot después de haber iniciado sesión.":::
 
 1. Si selecciona **Sí** cuando el bot pregunta *¿Desea ver el token?* obtendrá una respuesta similar a la siguiente:
 
-    ![Token del emulador de inicio de sesión del bot de autenticación](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator-token.png" alt-text="En esta captura de pantalla se muestra cómo seleccionar el consentimiento.":::
 
 1. Escriba **logout** en el cuadro de chat de entrada para cerrar la sesión. Esto libera el token de usuario y el bot no podrá actuar en su nombre hasta que vuelva a iniciar sesión.
 
@@ -414,15 +418,15 @@ and when for these, and just reference that from here, along with the set of ste
 1. Si se le pide, seleccione la cuenta del usuario aplicable.
     La imagen siguiente es un ejemplo de la interfaz de usuario del bot después de haber iniciado sesión:
 
-    ![Inicio de sesión del bot de autenticación implementado](../../../assets/images/authentication/auth-bot-login-deployed.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="En esta captura de pantalla se muestra un ejemplo de la interfaz de usuario del bot de Teams después de haber iniciado sesión.":::
 
 1. Seleccione el botón **Sí** para mostrar el token de autenticación. La siguiente imagen es un ejemplo:
 
-    ![Token implementado de inicio de sesión del bot de autenticación](../../../assets/images/authentication/auth-bot-login-deployed-token.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed-token.PNG" alt-text="En esta captura de pantalla se muestra cómo seleccionar el botón Sí para mostrar el token de autenticación.":::
 
 1. Escriba logout para cerrar la sesión.
 
-    ![Cierre de sesión implementado del bot de autenticación](../../../assets/images/authentication/auth-bot-deployed-logout.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-deployed-logout.PNG" alt-text="En esta captura de pantalla se muestra cómo escribir el cierre de sesión para cerrar la sesión.":::
 
 > [!NOTE]
 > Si tiene problemas para iniciar sesión, intente probar de nuevo la conexión como se describe en los pasos anteriores. Esto podría volver a crear el token de autenticación.
@@ -441,7 +445,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. Vaya a la carpeta `TeamsAppManifest` y cargue el manifiesto comprimido.
 Se muestra el asistente siguiente:
 
-    ![auth bot teams upload](../../../assets/images/authentication/auth-bot-teams-upload.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="En esta captura de pantalla se muestra un ejemplo del bot después de cargarlo en Teams.":::
 
 1. Seleccione el botón **Agregar a un equipo**.
 1. En la ventana siguiente, seleccione el equipo en el que desea usar el bot.
@@ -459,7 +463,7 @@ Para configurar ngrok como preparación para ejecutar la aplicación de Teams lo
 1. Ejecute, por ejemplo, `ngrok http 3978 --host-header=localhost:3978`. Reemplace el número de puerto según sea necesario.
 Esto inicia ngrok para escuchar en el puerto que especifique. A cambio, proporciona una dirección URL direccionable externamente, válida mientras se ejecute ngrok. La siguiente imagen es un ejemplo:
 
-    ![teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-ngrok-start.PNG" alt-text="En esta captura de pantalla se muestra la cadena de conexión de autenticación de la aplicación bot de Teams adv1":::
 
 1. Copie la dirección HTTPS de reenvío. Debe ser similar a lo siguiente: `https://dea822bf.ngrok.io/`.
 1. Anexar `/api/messages` para obtener `https://dea822bf.ngrok.io/api/messages`. Este es el **punto de conexión de mensajes** del bot que se ejecuta localmente en el equipo y al que se puede acceder a través de la web en un chat en Teams.
@@ -472,7 +476,7 @@ Esto inicia ngrok para escuchar en el puerto que especifique. A cambio, proporci
 1. Pruebe el bot mientras se ejecuta localmente mediante el **chat web de prueba** del portal de Bot Framework. Al igual que el emulador, esta prueba no le permite acceder a la funcionalidad específica de Teams.
 1. En la ventana de terminal donde se ejecuta `ngrok` puede ver el tráfico HTTP entre el bot y el cliente de chat en web. Si desea obtener una vista más detallada, en una ventana del explorador, escriba `http://127.0.0.1:4040` obtuvo de la ventana de terminal anterior. La siguiente imagen es un ejemplo:
 
-    ![auth bot teams ngrok testing](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png" alt-text="En esta captura de pantalla se muestran las pruebas de ngrok de los equipos de bot de autenticación.":::
 
 > [!NOTE]
 > Si detiene y reinicia ngrok, la dirección URL cambia. Para usar ngrok en el proyecto y, en función de las funcionalidades que use, debe actualizar todas las referencias de dirección URL.
@@ -656,6 +660,3 @@ En esta sección se proporciona un ejemplo del SDK de Bot Authentication v3.
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
 
 [teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
-
-[azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
-[aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
