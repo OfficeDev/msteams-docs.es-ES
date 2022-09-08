@@ -4,12 +4,12 @@ description: En este módulo, aprenderá qué es el formato de texto de tarjeta 
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 24ea264a1af4bbed94251f4d74602a17aa01e3e3
+ms.sourcegitcommit: a34a6c87ce756ef4f7a55e7f18fc72a446fbe913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586962"
+ms.lasthandoff: 09/08/2022
+ms.locfileid: "67627040"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Dar formato a tarjetas en Microsoft Teams
 
@@ -121,6 +121,9 @@ Las Tarjetas adaptables admiten emoji. El siguiente código muestra un ejemplo d
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
+
+> [!NOTE]
+> Si usa api rest, establezca `charset=UTF-8` en los encabezados de solicitud para agregar emojis en tarjetas adaptables.
 
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Tarjeta adaptable con un emoji":::
 
