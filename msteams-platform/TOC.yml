@@ -493,86 +493,115 @@
   items:
     - name: Información general
       href: concepts/authentication/authentication.md
+      displayName: Access
     - name: Pestañas
       items:
         - name: Habilitación del inicio de sesión único para la aplicación de pestañas
           items:
             - name: Información general
               href: tabs/how-to/authentication/tab-sso-overview.md
+              displayName: 'Cookies, channel, access, permissions'
             - name: "Registrar la aplicación de pestaña en Azure\_AD"
               href: tabs/how-to/authentication/tab-sso-register-aad.md
+              displayName: 'Access, permissions, configurations, browser, extension'
             - name: Agregar código para habilitar el inicio de sesión único
               href: tabs/how-to/authentication/tab-sso-code.md
+              displayName: 'Extension, access, permissions'
             - name: Actualizar el manifiesto de la aplicación para el SSO y versión preliminar de la aplicación
               href: tabs/how-to/authentication/tab-sso-manifest.md
+              displayName: 'Access, permissions'
             - name: "Conceder permisos y ámbitos a Microsoft\_Graph"
               href: tabs/how-to/authentication/tab-sso-graph-api.md
+              displayName: 'Access, permissions, channel, browser, configuration, delegated'
             - name: Solucionar problemas con la autenticación SSO
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+              displayName: 'Access, permissions, configurations'
         - name: Uso de la autenticación de IdP de OAuth de terceros
           items:
             - name: Información general
               href: tabs/how-to/authentication/auth-flow-tab.md
+              displayName: 'Access, configuration'
             - name: Configuración de la autenticación de IdP de OAuth de terceros
               href: tabs/how-to/authentication/auth-tab-aad.md
+              displayName: 'Access, configuration, cookies'
             - name: Utilizar proveedores OAuth externos
               href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flujo de autenticación en bots
           href: bots/how-to/authentication/auth-flow-bot.md
+          displayName: Access
         - name: Agregar autenticación a un bot
           href: bots/how-to/authentication/add-authentication.md
+          displayName: 'Configuration, delegate, emulator, tunneling, channels'
         - name: Usar autenticación SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+          displayName: 'Acces, permissions, configuration, settings'
     - name: Extensiones de mensajes
       items:
         - name: Agregar autenticación a la extensión de mensaje
           href: messaging-extensions/how-to/add-authentication.md
+          displayName: Configuration
         - name: Habilitar SSO para extensiones de mensaje
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+          displayName: 'Setting, extensions'
 - name: Integrar las funcionalidades del dispositivo
   items:
     - name: Información general
       href: concepts/device-capabilities/device-capabilities-overview.md
+      displayName: 'Access, premissions'
     - name: Solicitar permisos de dispositivos para la aplicación de Teams
       href: concepts/device-capabilities/native-device-permissions.md
     - name: Permisos de dispositivo para el explorador
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: Integrar capacidades multimedia
       href: concepts/device-capabilities/media-capabilities.md
+      displayName: 'Access, permissions, whiteboard, configuration'
     - name: Integrar la función de escáner de código QR o de códigos de barras
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+      displayName: 'Access, permissions, configuration'
     - name: Integrar capacidades de ubicación
       href: concepts/device-capabilities/location-capability.md
+      displayName: 'Access, permissions, configurations'
 - name: Usar los datos de Teams con Microsoft Graph
   items:
     - name: Información general
       href: /graph/teams-concept-overview
+      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Kit de herramientas de Microsoft Graph
       href: /graph/toolkit/overview
+      displayName: 'Access, routing'
     - name: Introducción
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+      displayName: 'Access, report, MSAL2'
     - name: Consentimiento específico del recurso
       href: graph-api/rsc/resource-specific-consent.md
+      displayName: 'Access, permissions, delegated, channel, organizer, notifications'
     - name: Instalación proactiva de aplicaciones con Graph API para enviar mensajes
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+      displayName: 'Permissions, delegated, channel, notifications'
     - name: Importar mensajes de terceros
       href: graph-api/import-messages/import-external-messages-to-teams.md
+      displayName: 'Permission, channel, communications, setting'
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: "Ampliar la aplicación en todo Microsoft\_365"
   items:
     - name: Información general
       href: m365-apps/overview.md
+      displayName: 'Access, permissions, channel, extensions'
     - name: Requisitos previos
       href: m365-apps/prerequisites.md
+      displayName: 'Channel, configuration, settings, extensions'
     - name: Habilitar una pestaña personal de Teams para Office y Outlook
       href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: 'Access, permissions, channel, report, browser'
     - name: Habilitar una extensión de mensaje de Teams para Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
+      displayName: 'Access, channel, report, communication'
     - name: Publicar aplicaciones de Teams para Microsoft 365
       href: m365-apps/publish.md
+      displayName: 'Access, permissions, channel, extensions'
 - name: Probar la aplicación
   items:
     - name: Información general
@@ -649,7 +678,7 @@
   items:
     - name: Información general
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-      displayName: 'Pricing model, SaaS offer, In-app purchases,'
+      displayName: 'Pricing model, SaaS offer, In-app purchases'
     - name: Incluir una oferta de SaaS con la aplicación de Teams
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       displayName: 'Transactable Software-as-a-Service, Recloud app'
@@ -658,15 +687,18 @@
     - name: Versión preliminar de prueba para aplicaciones monetizadas
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifiesto de la aplicación
-  items:
+  itesms:
     - name: Esquema del manifiesto de la aplicación de Teams
       href: resources/schema/manifest-schema.md
+      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: Versión preliminar pública para desarrolladores
       items:
         - name: Información general
           href: resources/dev-preview/developer-preview-intro.md
+          displayName: 'Access, setting'
         - name: Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
           href: resources/schema/manifest-schema-dev-preview.md
+          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: Integración con Teams
   items:
     - name: Información general
