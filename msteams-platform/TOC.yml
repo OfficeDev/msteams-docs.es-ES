@@ -606,24 +606,31 @@
   items:
     - name: Información general
       href: concepts/build-and-test/test-app-overview.md
+      displayName: 'Access, settings'
     - name: Preparar el espacio empresarial de Microsoft 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: Elegir una configuración de prueba y depurar la aplicación de Teams
       href: concepts/build-and-test/debug.md
+      displayName: 'Access, configuration, browser, channel'
     - name: Añadir datos de prueba al entorno
       href: concepts/build-and-test/test-data.md
+      displayName: 'Permissions, channel'
     - name: Pestañas
       items:
         - name: DevTools para pestañas de Microsoft Teams
           href: tabs/how-to/developer-tools.md
+          displayName: 'Access, cache, configuration, browser'
     - name: Bots
       items:
         - name: Probar y depurar el bot localmente con el IDE
+          displayName: 'Channel, extensions'
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: Depurar el bot con el middleware de inspección
           href: /azure/bot-service/bot-service-debug-inspection-middleware
+          displayName: Channels
         - name: Depurar el bot de llamadas y reuniones de forma local
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+          displayName: 'Configuration, setting, notification'
     - name: Microsoft Graph
       items:
         - name: Probar permisos de consentimientos específicos de recursos
