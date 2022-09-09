@@ -3,12 +3,12 @@ title: Obtener contexto para su pestaña
 description: Obtenga información sobre el contexto de la pestaña, el contexto del usuario, el equipo o la empresa, la información de acceso, la recuperación del contexto en canales privados o compartidos y el control del cambio de tema.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450390"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635311"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -241,31 +241,8 @@ Los campos siguientes se cambian cuando la página de contenido está en un cana
 
 Si la página usa cualquiera de estos valores, el valor del `channel.membershipType` campo debe ser `Private` determinar si la página se carga en un canal privado y puede responder correctamente.
 
-## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Recuperación del contexto en Microsoft Teams Connect canales compartidos
-
 > [!NOTE]
-> Actualmente, Microsoft Teams Connect canales compartidos solo están en versión preliminar para desarrolladores.
-
-Cuando la página de contenido se carga en un canal compartido Microsoft Teams Connect, los datos que recibe de la `getContext` llamada se modifican debido a la lista única de usuarios en canales compartidos.
-Los campos siguientes se cambian cuando la página de contenido está en un canal compartido:
-
-* `team.groupId`: no definido para canales compartidos.
-* `team.internalId`: se establece en el `threadId` del equipo, el canal se comparte para el usuario actual. Si el usuario tiene acceso a varios equipos, se establece en el equipo que hospeda (crea) el canal compartido.
-* `team.displayName`: se establece en el nombre del equipo, el canal se comparte para el usuario actual. Si el usuario tiene acceso a varios equipos, se establece en el equipo que hospeda (crea) el canal compartido.
-* `sharepointSite.url`: se establece en la dirección URL de un sitio de SharePoint único y distinto para el canal compartido.
-* `sharepointSite.path`: se establece en la ruta de acceso de un sitio de SharePoint único y distinto para el canal compartido.
-* `sharepointSite.domain`: se establece en el dominio de un dominio de sitio de SharePoint único y distinto para el canal compartido.
-
-Además de estos cambios de campo, hay dos nuevos campos disponibles para los canales compartidos:
-
-* `hostTeamGroupId`: se establece en el `team.groupId` asociado al equipo de hospedaje o al equipo que creó el canal compartido. La propiedad puede hacer que las llamadas de Microsoft Graph API recuperen la pertenencia del canal compartido.
-* `hostTeamTenantId`: se establece en el `channel.ownerTenantId` asociado al equipo de hospedaje o al equipo que creó el canal compartido. Se puede hacer referencia cruzada a la propiedad con el identificador de inquilino del usuario actual que se encuentra en el `user.tenant.id` campo del objeto de *contexto* para determinar si el usuario es interno o externo al inquilino del equipo de hospedaje.
-
-Si la página usa cualquiera de estos valores, el valor del `channel.membershipType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
-
-> [!NOTE]
-> `teamSiteUrl` también funciona bien para los canales estándar.
-> Si la página usa cualquiera de estos valores, el valor del `channelType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
+>`teamSiteUrl` también funciona bien para los canales estándar. Si la página usa cualquiera de estos valores, el valor del `channelType` campo debe ser `Shared` determinar si la página se carga en un canal compartido y puede responder correctamente.
 
 ## <a name="get-context-in-shared-channels"></a>Obtener contexto en canales compartidos
 
@@ -278,7 +255,7 @@ Use las siguientes `getContext` propiedades en canales compartidos:
 
 | Propiedad | Descripción |
 |----------|--------------|
-|`channelId`| La propiedad se establece en el identificador de subproceso del canal SC.|
+|`channelId`| La propiedad se establece en el identificador de subproceso de canales compartidos.|
 |`channelType`| La propiedad se establece en `sharedChannel` para canales compartidos.|
 |`groupId`|La propiedad es `null` para canales compartidos.|
 |`hostTenantId`| La propiedad se ha agregado recientemente y describe el identificador de inquilino del host, útil para compararla con la propiedad de identificador de inquilino del `tid` usuario actual. |

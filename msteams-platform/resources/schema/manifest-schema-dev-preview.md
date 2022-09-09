@@ -4,12 +4,12 @@ description: Obtenga información sobre el archivo de manifiesto de ejemplo y la
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058210"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635332"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
 
@@ -671,12 +671,12 @@ Puede definir cualquiera de las siguientes propiedades:
 
 Matriz **opcional**
 
-Habilita la aplicación en canales no estándar. Si la aplicación admite un ámbito de equipo y esta propiedad está definida, Teams habilita la aplicación en cada tipo de canal en consecuencia. Actualmente, se admiten los tipos de canal privado y compartido.
+Habilita la aplicación en canales no estándar. Si la aplicación admite un ámbito de equipo y se define esta propiedad, Teams habilita la aplicación en cada tipo de canal en consecuencia. Actualmente, se admiten los tipos de canal privado y compartido.
 
 > [!NOTE]
 >
-> * Si la aplicación admite un ámbito de equipo, funciona en los canales estándar independientemente de los valores definidos en esta propiedad.
-> * La aplicación puede tener en cuenta las propiedades únicas de cada uno de los tipos de canal para que funcionen correctamente. Para habilitar la pestaña para canales privados y compartidos, vea [Recuperar contexto en canales privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) y [recuperar contexto en canales compartidos](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Si la aplicación admite un ámbito de equipo, funciona en los canales estándar, independientemente de los valores definidos en esta propiedad.
+> * La aplicación puede tener en cuenta las propiedades únicas de cada uno de los tipos de canal para que funcione correctamente. Para habilitar la pestaña para canales privados y compartidos, consulte [recuperación del contexto en canales privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) y [obtención del contexto en canales compartidos](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels).
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -724,7 +724,7 @@ Especifique la definición de la extensión de reunión. Para obtener más infor
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
 |`scenes`|matriz de objetos| 5 elementos||Escenas admitidas de la reunión.|
-|`supportsStreaming`|Boolean|||Valor que indica si una aplicación puede transmitir contenido de audio y vídeo de la reunión a un punto de conexión de protocolo de reunión en tiempo real (RTMP). El valor predeterminado es **False**.|
+|`supportsStreaming`|Boolean|||Valor que indica si una aplicación puede transmitir el contenido de audio y vídeo de la reunión a un punto de conexión del protocolo de reunión en tiempo real (RTMP). El valor predeterminado es **False**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605029"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635339"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
@@ -786,7 +786,7 @@ Habilita la aplicación en canales no estándar. Si la aplicación admite un ám
 > [!NOTE]
 >
 > * Si la aplicación admite un ámbito de equipo, funciona en los canales estándar, independientemente de los valores definidos en esta propiedad.
-> * La aplicación puede tener en cuenta las propiedades únicas de cada uno de los tipos de canal para que funcione correctamente. Para habilitar la pestaña para canales privados y compartidos, consulte [Recuperar contexto en canales privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) y [Recuperar contexto en canales compartidos](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * La aplicación puede tener en cuenta las propiedades únicas de cada uno de los tipos de canal para que funcione correctamente. Para habilitar la pestaña para canales privados y compartidos, consulte [recuperación del contexto en canales privados](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) y [obtención del contexto en canales compartidos](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels).
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
