@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
-ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67418853"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636164"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
@@ -227,7 +227,7 @@ Para compartir partes específicas de la aplicación en fase debe invocar las AP
 > [!NOTE]
 >
 > * Para compartir partes específicas de la aplicación en fase use la versión de manifiesto 1.12 o posterior de Teams.
-> * Actualmente, puede compartir partes específicas de la aplicación en la fase de reunión solo en los clientes de escritorio de Teams.
+> * Puede compartir partes específicas de la aplicación en la fase de reunión solo en los clientes de escritorio de Teams. Los usuarios móviles pueden compartir partes específicas de la aplicación para almacenar provisionalmente el uso del [recurso compartido en la API de fase](API-references.md#share-app-content-to-stage-api).
 
 ### <a name="after-a-meeting"></a>Después de una reunión
 

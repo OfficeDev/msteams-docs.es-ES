@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338854"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636178"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
@@ -194,9 +194,6 @@ Puede permitir que los usuarios compartan e interactúen con parte o todo el con
 * Jugando un juego.
 
 Las aplicaciones compartidas en la fase de reunión ocupan el mismo espacio que una pantalla compartida. La fase también se orienta a todos los participantes de la reunión de la misma manera.
-
-> [!NOTE]
-> Actualmente, los usuarios móviles no pueden compartir contenido de la aplicación en la fase de reunión. Sin embargo, pueden ver el contenido compartido desde el escritorio.
 
 ### <a name="use-cases"></a>Casos de uso
 
