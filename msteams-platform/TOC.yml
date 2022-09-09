@@ -796,13 +796,18 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localizar la referencia de esquema JSON
           href: resources/schema/localization-schema.md
+          displayName: 'Notification, setting'
     - name: Usar autenticación silenciosa en Azure AD
       href: tabs/how-to/authentication/auth-silent-aad.md
+      displayName: 'Access, cache, report'
     - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
+      displayName: 'Cookies, configuration, browser, chat'
     - name: Contribuir a este contenido
       href: resources/teams-contributor-reference.md
     - name: Solucionar problemas de la aplicación de Microsoft Teams
       href: resources/troubleshoot.md
+      displayName: 'Channel, chat, settings, browser, domain'
 - name: Soporte técnico y comentarios
   href: feedback.md
+  displayName: 'Channel, chat, report, extensions'

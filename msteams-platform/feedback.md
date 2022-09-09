@@ -3,12 +3,12 @@ title: Soporte técnico y comentarios de la comunidad de desarrolladores de Micr
 description: El equipo de productos de Microsoft Teams responde a la comunidad de desarrolladores a través de diversos canales de comentarios y soporte técnico.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: bd24ee9f9706bdf845dd518db2735c843f2b46ca
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
+ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558152"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636055"
 ---
 # <a name="support-and-feedback"></a>Soporte técnico y comentarios
 
@@ -65,6 +65,7 @@ Sugiera una característica o vote las solicitudes de características existente
 |:----------------------|:------------|
 | **Sugerencias de funciones** | Publique sugerencias de características en el :::image type="icon" source="assets/icons/Teams-icon.png"::: [portal de comentarios de Microsoft Teams](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
 | **Preguntas generales** | Envíe preguntas generales sobre la plataforma para desarrolladores de Microsoft Teams a [Ayuda de la comunidad de Microsoft Teams](mailto:microsoftteamsdev@microsoft.com). Recomendamos publicar preguntas en los canales mencionados aquí y usar el correo electrónico solo si no es aplicable ningún otro modo de comunicación. |
+| **Entrevista de comentarios** | Su opinión es importante para nosotros. Si está interesado en hablar con nosotros sobre su experiencia de aprovechar la documentación de nuestra plataforma, las respuestas del foro de la comunidad y el proceso de publicación de la tienda Teams, no dude en [reservar una ranura](https://aka.ms/bookdevfeedback).|
 
 ## <a name="see-also"></a>Consulte también
 
