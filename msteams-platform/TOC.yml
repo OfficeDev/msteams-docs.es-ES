@@ -697,7 +697,6 @@
   itesms:
     - name: Esquema del manifiesto de la aplicación de Teams
       href: resources/schema/manifest-schema.md
-      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: Versión preliminar pública para desarrolladores
       items:
         - name: Información general
@@ -705,7 +704,6 @@
           displayName: 'Access, setting'
         - name: Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: Integración con Teams
   items:
     - name: Información general
