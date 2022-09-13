@@ -698,7 +698,7 @@
     - name: Versión preliminar de prueba para aplicaciones monetizadas
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifiesto de la aplicación
-  itesms:
+  items:
     - name: Esquema del manifiesto de la aplicación de Teams
       href: resources/schema/manifest-schema.md
     - name: Versión preliminar pública para desarrolladores
