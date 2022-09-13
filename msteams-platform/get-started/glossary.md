@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635325"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653164"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -25,7 +25,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Manifiesto de la aplicación](../resources/schema/manifest-schema.md) | El manifiesto de la aplicación de Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe cumplir con el [esquema de manifiesto](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [Paquete de la aplicación](../concepts/build-and-test/apps-package.md) | Un paquete de aplicación de Teams es un archivo ZIP que contiene el archivo de manifiesto de la aplicación, el icono de color y el icono de esquema. |
 | [Permiso de aplicación](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Una opción en una aplicación de Teams para habilitar los permisos del dispositivo. Solo está disponible cuando el archivo de manifiesto de la aplicación declara que la aplicación necesita permisos de dispositivo. <br> **Consulte también**: [Permisos de dispositivo](#d) |
-| [Ámbito de la aplicación](../concepts/design/app-structure.md) | Un área de Teams donde los usuarios pueden usar la aplicación. Las aplicaciones pueden tener uno o varios ámbitos, como personales, canales, chats y reuniones. Una aplicación de Teams puede existir entre ámbitos. |
+| [Ámbito de la aplicación](../concepts/design/understand-use-cases.md#app-scope) | Un área de Teams donde los usuarios pueden usar la aplicación. Las aplicaciones pueden tener uno o varios ámbitos, como personales, canales, chats y reuniones. Una aplicación de Teams puede existir entre ámbitos. |
 | Bandeja de la aplicación | Una bandeja de aplicación ubicada en la barra inferior de una aplicación móvil de Teams. Recopila todas las aplicaciones que están abiertas, pero que no se usan actualmente ni están activas. <br>**Vea también**: [Teams para dispositivos móviles](#t) |
 | [Recurso de Azure](../toolkit/provision.md) | Un servicio que está disponible a través de Azure y que la aplicación de Teams puede usar para la implementación de Azure. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Servicio de administración de identidades y acceso basado en la nube de Microsoft. Ayuda a los usuarios autenticados a acceder a los recursos internos y externos. |
@@ -54,7 +54,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Recursos en la nube](../toolkit/add-resource.md) | Un servicio que está disponible en la nube a través de Internet que la aplicación de Teams puede usar. Podrían ser cuentas de almacenamiento, aplicaciones web, bases de datos y mucho más. |
 | [Aplicación de colaboración](../concepts/extensibility-points.md) | Una aplicación con funcionalidades para que un usuario trabaje en un área de trabajo de colaboración con otros usuarios. <br> **Vea también**: [Aplicación independiente](#s) |
 | [Extensión de redacción](../resources/schema/manifest-schema.md#composeextensions) | Propiedad del manifiesto de la aplicación (`composeExtensions`) que hace referencia a la funcionalidad de extensión de mensajería. Se usa cuando la extensión necesita autenticarse o configurarse para continuar. <br>**Vea también**: [Manifiesto de la aplicación](#a); [Extensión de mensajería](#m) |
-| [Cuadro de comandos](../resources/schema/manifest-schema.md) | Tipo de contexto en el manifiesto de la aplicación (`commandBox`) que puede configurar para invocar una extensión de mensajería desde el cuadro de comandos de Teams. |
+| [CommandBox](../resources/schema/manifest-schema.md) | Tipo de contexto en el manifiesto de la aplicación (`commandBox`) que puede configurar para invocar una extensión de mensajería desde el cuadro de comandos de Teams. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | Permite a los usuarios suscribirse para recibir notificaciones y mensajes de los servicios web. Los conectores exponen el punto de conexión HTTPS para que el servicio publique mensajes en canales de Teams, normalmente en forma de tarjetas. <br> **Vea también**: [Webhook](#w) |
 | Conversación | Una serie de mensajes enviados entre la aplicación de Microsoft Teams (pestaña o bot) y uno o varios usuarios. Una conversación puede tener tres ámbitos: canal, chat personal y grupal. <br>**Vea también**: [Chat uno a uno](#o); [Chat en grupo](#g); [Canal](#c) |
 | [Bot de conversación](../bots/how-to/conversations/conversation-messages.md) |  Permite a un usuario interactuar con el servicio web mediante texto, tarjetas interactivas y módulos de tareas. <br>**Vea también**[Bot de chat](#c) |
@@ -102,6 +102,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
+| [Proveedor de identidad](../concepts/authentication/authentication.md) | Entidad que almacena y proporciona credenciales al usuario. También permite a los usuarios registrarse por sí mismos.  <br>**Vea también**: [Autenticación](#a) |
 | [Webhook entrante](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Permite que una aplicación externa comparta contenido en canales de Teams. Estos webhooks se usan como herramientas de seguimiento y notificación. <br>**Vea también**: [Webhook](#w); [Webhook saliente](#o) |
 | [Experiencia de la aplicación durante la reunión](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Una fase del ciclo de vida de una reunión de Teams. Con la experiencia de la aplicación durante la reunión, puedes interactuar con los participantes durante la reunión mediante las aplicaciones y el cuadro de diálogo durante la reunión.<br>**Vea también**: [Ciclo de vida de la reunión](#m) |
 
@@ -126,7 +127,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) | Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o realizar una acción en un mensaje. Puede usar una extensión de mensajería sin salir de la conversación. <br>**Vea también**: [Comandos de búsqueda](#s); [Comandos de acción](#a) |
 | [Extensión de reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Una aplicación diseñada para usarse durante el ciclo de vida de la reunión para que sea más productiva, como pizarra, panel y mucho más. |
 | [Cuenta de Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | La cuenta de Microsoft 365 incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo. |
-| [Programa de desarrolladores de Microsoft 365](../toolkit/accounts.md)| El programa para desarrolladores de Microsoft 365 le ayuda a crear aplicaciones que amplían Microsoft 365. |
+| [Programa de desarrolladores de Microsoft 365](../toolkit/tools-prerequisites.md)| El programa para desarrolladores de Microsoft 365 le ayuda a crear aplicaciones que amplían Microsoft 365. |
 | [Explorador de Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | La puerta de enlace a los datos y la inteligencia a Microsoft 365.Proporciona un modelo de programación unificado que puede usar para aprovechar la gran cantidad de datos en Microsoft 365, Enterprise Mobility + Security y Windows 10. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams es un software de colaboración en grupo que se puede usar para ayudar a los equipos a trabajar juntos de forma remota. |
 | [Plataforma de Microsoft Teams](../concepts/app-fundamentals-overview.md) | La plataforma para desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios con Teams. |

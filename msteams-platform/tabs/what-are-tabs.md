@@ -5,12 +5,12 @@ description: Aprenda a crear pestañas, páginas web incrustadas en Microsoft Te
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450397"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653192"
 ---
 # <a name="build-tabs-for-teams"></a>Pestañas de compilación para Teams
 
@@ -80,7 +80,7 @@ Puede tener varios canales o pestañas de grupo y hasta 16 pestañas personales 
 
 ### <a name="tools-to-build-tabs"></a>Herramientas para crear pestañas
 
-* [Kit de herramientas de Teams para Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Kit de herramientas de Teams para Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
 * [Kit de herramientas de Teams para Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Paso siguiente

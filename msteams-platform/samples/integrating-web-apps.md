@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Consideraciones para la integración de Teams
-ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 994747586610ac9301e1cc1a6d752ad77816af97
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178614"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653171"
 ---
 # <a name="considerations-for-teams-integration"></a>Consideraciones para la integración de Teams
 
@@ -75,7 +75,7 @@ Si varias organizaciones usan la aplicación, considere la posibilidad de hosped
 
 ***Escenarios de integración**: aplicaciones independientes, aplicaciones de colaboración*
 
-Las API y las estructuras de datos de la aplicación deben admitir la aplicación al integrarse con Teams. Para ampliar la compatibilidad, debe aumentar las API y las estructuras de datos con información contextual sobre Teams para la [asignación de identidades](../concepts/authentication/configure-identity-provider.md), la [compatibilidad con vínculos profundos](../concepts/build-and-test/deep-links.md) y [la incorporación de Microsoft Graph](/graph/teams-concept-overview).
+Las API y las estructuras de datos de la aplicación deben admitir la aplicación al integrarse con Teams. Para ampliar la compatibilidad, debe aumentar las API y las estructuras de datos con información contextual sobre Teams para la [asignación de identidades](../concepts/authentication/authentication.md), la [compatibilidad con vínculos profundos](../concepts/build-and-test/deep-links.md) y [la incorporación de Microsoft Graph](/graph/teams-concept-overview).
 
 Consulte cómo obtener contexto para una [pestaña](../tabs/how-to/access-teams-context.md) o [bot](../bots/how-to/get-teams-context.md) de Teams.
 

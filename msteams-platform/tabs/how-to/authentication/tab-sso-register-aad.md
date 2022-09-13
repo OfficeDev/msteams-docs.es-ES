@@ -4,12 +4,12 @@ description: Configure el inicio de sesión único (SSO) con Azure AD mediante l
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) ámbito de inquilino de SSO de token de acceso
-ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586801"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653202"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrar la aplicación de pestaña en Azure AD
 
@@ -21,7 +21,7 @@ El registro de la aplicación de pestañas en Azure AD y su habilitación para S
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configurar Azure AD para enviar el token de acceso a la aplicación cliente de Teams":::
 
-Cree un nuevo registro de aplicación en Azure AD y exponga su API (web) mediante ámbitos (permisos). Configure una relación de confianza entre la API expuesta en Azure AD y la aplicación. Esto permite a Teams Client obtener un token de acceso en nombre de la aplicación y del usuario que ha iniciado sesión. Puede agregar Id. de cliente para las aplicaciones móviles, de escritorio y web de confianza que desea autorizar previamente.
+Cree un nuevo registro de aplicación en Azure AD y exponga su API (web) mediante ámbitos (permisos). Configure una relación de confianza entre la API expuesta en Azure AD y la aplicación. Permite al cliente de Teams obtener un token de acceso en nombre de la aplicación y del usuario que ha iniciado sesión. Puede agregar Id. de cliente para las aplicaciones móviles, de escritorio y web de confianza que desea autorizar previamente.
 
 Es posible que también deba configurar detalles adicionales, como autenticar a los usuarios de la aplicación en la plataforma o el dispositivo al que desea dirigirse la aplicación de pestañas.
 
@@ -36,7 +36,7 @@ La configuración de Azure AD habilita el inicio de sesión único para la aplic
 
 Es útil si obtiene información previa sobre la configuración para registrar la aplicación en Azure AD. Asegúrese de que se ha preparado para configurar los siguientes detalles antes de registrar la aplicación:
 
-- **Opciones de inquilino único o multiinquilino**: ¿se usará la aplicación solo en el inquilino de Microsoft 365 donde está registrada o la usarán muchos inquilinos de Microsoft 365? Las aplicaciones escritas para una empresa suelen ser de un solo inquilino; las aplicaciones escritas por un proveedor de software independiente y utilizadas por muchos clientes deben ser multiinquilino para que el inquilino de cada cliente pueda acceder a la aplicación.
+- **Opciones de un solo inquilino o multiinquilino**: ¿se usará la aplicación solo en el inquilino de Microsoft 365 donde está registrada, o la usarán muchos inquilinos de Microsoft 365? Las aplicaciones escritas para una empresa suelen ser de un solo inquilino. Las aplicaciones escritas por un proveedor de software independiente y usadas por muchos clientes deben ser multiinquilino para que el inquilino de cada cliente pueda acceder a la aplicación.
 - **URI de id. de aplicación**: es un URI único mundial que identifica la API web que expone para el acceso de la aplicación a través de ámbitos. También se conoce como un URI de identificador. El URI del identificador de aplicación incluye el identificador de la aplicación y el subdominio donde se hospeda la aplicación. El nombre de dominio de la aplicación y el nombre de dominio que registre para la aplicación de Azure AD deben ser los mismos. Actualmente, no se admiten varios dominios por aplicación.
 - **Ámbito**: es el permiso que se puede conceder a un usuario de aplicación autorizado o a su aplicación para acceder a un recurso expuesto por la API.
 
@@ -84,7 +84,7 @@ Registre una nueva aplicación en Azure AD y configure el arrendamiento y la pla
     | Opción | Seleccione esta opción para... |
     | --- | --- |
     | Cuentas solo en este directorio de la organización (solo Microsoft - Inquilino único) | Compile una aplicación para que solo la usen los usuarios (o invitados) de su inquilino. <br> A menudo denominada aplicación LOB, esta aplicación es una aplicación de un solo inquilino en la Plataforma de identidad de Microsoft. |
-    | Cuentas en cualquier directorio de la organización (cualquier directorio Azure AD: multiinquilino) | Permitir que los usuarios de cualquier inquilino de Azure AD usen su aplicación. Esta opción es adecuada si, por ejemplo, está compilando una aplicación SaaS y pretende ponerla a disposición de varias organizaciones. <br> Este tipo de aplicación se conoce como aplicación multiinquilino en la Plataforma de identidad de Microsoft.|
+    | Cuentas en cualquier directorio de la organización (cualquier directorio Azure AD: multiinquilino) | Permitir que los usuarios de cualquier inquilino de Azure AD usen su aplicación. Esta opción es adecuada si, por ejemplo, está creando una aplicación SaaS y tiene la intención de que esté disponible para varias organizaciones. <br> Este tipo de aplicación se conoce como aplicación multiinquilino en la Plataforma de identidad de Microsoft.|
     | Cuentas de cualquier directorio de la organización (cualquier directorio Azure AD: multiinquilino) y cuentas personales de Microsoft | Dirigirse al conjunto más amplio de clientes. <br> Al seleccionar esta opción, está registrando una aplicación multiinquilino que puede admitir usuarios de aplicaciones que también tienen cuentas personales de Microsoft. |
     | Solo cuentas personales de Microsoft | Cree una aplicación solo para los usuarios que tengan cuentas personales de Microsoft. |
 
@@ -208,13 +208,13 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
 
     Aparece la página **Agregar una aplicación cliente**.
 
-1. Introduzca el Id. de cliente apropiado para el cliente de Teams para las aplicaciones que desea autorizar para la aplicación web de su app.
+1. Escriba el identificador de cliente de Microsoft 365 adecuado para el cliente de Teams para las aplicaciones que desea autorizar para la aplicación web de la aplicación.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Agregar una aplicación cliente":::
 
     > [!NOTE]
     >
-    > - Los id de cliente para la aplicación móvil, de escritorio y web de Teams son los identificadores reales que debe agregar.
+    > - Los identificadores de cliente de Microsoft 365 para aplicaciones móviles, de escritorio y web para Teams, Office y Outlook son los identificadores reales que debe agregar.
     > - Para una aplicación de pestañas de Teams, necesitará Web o SPA, ya que no puede tener una aplicación cliente móvil o de escritorio en Teams.
 
     1. Elija uno de los siguientes identificadores de cliente:
@@ -223,6 +223,10 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
        | --- | --- |
        | 1fec8e78-bli4-4aaf-ab1b-5451cc387264 | Aplicación móvil o de escritorio de Teams |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Aplicación web de Teams |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Aplicación web de Office |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Aplicación de escritorio de Office |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Escritorio de Outlook, aplicación móvil |
+       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Aplicación web de Outlook |
 
     1. Seleccione el URI de identificador de aplicación que creó para la aplicación en **Ámbitos autorizados** para agregar el ámbito a la API web que ha expuesto.
 

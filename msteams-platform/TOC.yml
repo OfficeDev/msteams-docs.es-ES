@@ -120,6 +120,8 @@
                   href: toolkit/add-resource.md
                 - name: Integración de API de terceros existentes
                   href: toolkit/add-API-connection.md
+                - name: Agregar inicio de sesión único a la aplicación de Teams
+                  href: toolkit/add-single-sign-on.md
             - name: Personalizar manifiesto
               items:
                 - name: Personalizar manifiesto de aplicación de Teams
@@ -146,6 +148,8 @@
               items:
                 - name: Integración y colaboración
                   href: toolkit/TeamsFx-collaboration.md
+                - name: Configuración de canalizaciones CI/CD
+                  href: toolkit/use-CICD-template.md
                 - name: Instalación local y prueba de la aplicación en el entorno de Teams
                   href: toolkit/sideload-and-test-app.md
                 - name: Prueba del comportamiento de la aplicación en un entorno diferente
