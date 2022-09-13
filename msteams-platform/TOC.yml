@@ -705,7 +705,6 @@
       items:
         - name: Información general
           href: resources/dev-preview/developer-preview-intro.md
-          displayName: 'Access, setting'
         - name: Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integración con Teams
