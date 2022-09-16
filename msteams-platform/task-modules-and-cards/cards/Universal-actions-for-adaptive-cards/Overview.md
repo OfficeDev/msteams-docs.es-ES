@@ -3,18 +3,18 @@ title: Introducción a las acciones universales para tarjetas adaptables
 description: Obtenga información sobre acciones universales para tarjetas adaptables, como vistas específicas del usuario, compatibilidad con flujos de trabajo secuenciales y mucho más para entornos de escritorio y móviles.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9c04ed4726840bd3d1637555d1bb021f31bf2e25
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142090"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786979"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
 Las acciones universales para tarjetas adaptables evolucionaron a partir de los comentarios de los desarrolladores que, aunque el diseño y la representación de tarjetas adaptables eran universales, el control de acciones no lo era. Incluso si un desarrollador quisiera enviar la misma tarjeta a diferentes lugares, tiene que controlar las acciones de forma diferente.
 
-Las acciones universales para tarjetas adaptables incluyen el bot como back-end común para controlar acciones e introduce un nuevo tipo de acción, `Action.Execute`, que funciona entre aplicaciones, como Teams y Outlook.
+Acciones universales para tarjetas adaptables trae el bot como back-end común para controlar acciones e introduce un nuevo tipo de acción, `Action.Execute`, que funciona entre aplicaciones, como Teams y Outlook.
 
 Este documento le ayuda a comprender cómo puede usar el modelo de Acciones universales para mejorar la experiencia del usuario al interactuar con tarjetas adaptables entre plataformas y aplicaciones.
 
@@ -34,20 +34,20 @@ Las acciones universales para tarjetas adaptables mejoran la experiencia del usu
 
 Antes de las acciones universales para tarjetas adaptables, diferentes hosts proporcionaba diferentes modelos de acción como se indica a continuación:
 
-* Teams o bots usados`Action.Submit`, un enfoque que aplaza el modelo de comunicación real al canal subyacente.
+* Teams o bots usan `Action.Submit`, un enfoque que aplaza el modelo de comunicación real al canal subyacente.
 * Outlook se usa `Action.Http` para comunicarse con el servicio back-end especificado explícitamente en la carga de la tarjeta adaptable.
 
 En la imagen siguiente se muestra el modelo de acción incoherente actual:
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Modelo de acción incoherente":::
 
-Con acciones universales para tarjetas adaptables, puede usar para el `Action.Execute` control de acciones en distintas plataformas. `Action.Execute`funciona entre centros, incluidos Teams y Outlook. Además, se puede devolver una tarjeta adaptable como respuesta para una `Action.Execute` solicitud de invocación desencadenada.
+Con acciones universales para tarjetas adaptables, puede usar para el `Action.Execute` control de acciones en distintas plataformas. `Action.Execute` funciona en centros de conectividad, incluidos Teams y Outlook. Además, se puede devolver una tarjeta adaptable como respuesta para una `Action.Execute` solicitud de invocación desencadenada.
 
 En la imagen siguiente se muestra el nuevo modelo de acción universal:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Nuevas acciones universales para tarjetas adaptables":::
 
-Ahora puede enviar la misma tarjeta a ambos, Teams y Outlook, y mantenerlos sincronizados entre sí mediante el bot subyacente. Cualquier acción realizada en cualquiera de las plataformas se refleja en la otra con esta *compilación una vez, implementar en cualquier lugar* (acciones universales para tarjetas adaptables).
+Ahora puede enviar la misma tarjeta a Ambos, Teams y Outlook, y mantenerlas sincronizadas entre sí mediante el bot subyacente. Cualquier acción realizada en cualquiera de las plataformas se refleja en la otra con esta *compilación una vez, implementar en cualquier lugar* (acciones universales para tarjetas adaptables).
 
 En la imagen siguiente se muestran las acciones universales para tarjetas adaptables para Teams y Outlook:
 
@@ -57,13 +57,13 @@ En la imagen siguiente se muestran las acciones universales para tarjetas adapta
 
 # <a name="desktop"></a>[Escritorio](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Misma tarjeta para Teams y Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Misma tarjeta a Teams y Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
 ### <a name="user-specific-views"></a>Vistas específicas de usuario
 
-Hoy en día, todos los usuarios del Teams chat o canal ven exactamente las mismas acciones de vista y botón en la tarjeta adaptable. Sin embargo, en determinados escenarios hay un requisito para que determinados usuarios actúen de manera diferente y tengan acceso a información diferente dentro del mismo chat o canal.
+En la actualidad, todos los usuarios del chat o canal de Teams ven exactamente las mismas acciones de vista y botón en la tarjeta adaptable. Sin embargo, en determinados escenarios hay un requisito para que determinados usuarios actúen de manera diferente y tengan acceso a información diferente dentro del mismo chat o canal.
 
 Por ejemplo, si envía una tarjeta de informes de incidentes en un chat o canal, solo el usuario al que se asigna el incidente debe ver un botón **Resolver** . Por otro lado, el creador de incidentes debe ver un botón **Editar** y todos los demás usuarios solo deben poder ver los detalles del incidente. Esto es posible gracias a las vistas específicas del usuario habilitadas por la `refresh` propiedad .
 
@@ -116,9 +116,10 @@ Puede empezar actualizando escenarios mediante la [guía de inicio rápido]. (Wo
 > [!div class="nextstepaction"]
 > [Trabajar con Acciones universales para tarjetas adaptables](Work-with-universal-actions-for-adaptive-cards.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [¿Qué son los bots?](~/bots/what-are-bots.md)
 * [Información general sobre tarjetas adaptables](~/task-modules-and-cards/what-are-cards.md)
 * [Tarjetas adaptables @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Tarjetas adaptables @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
+* [Acciones universales para extensiones de mensajería basadas en búsqueda](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

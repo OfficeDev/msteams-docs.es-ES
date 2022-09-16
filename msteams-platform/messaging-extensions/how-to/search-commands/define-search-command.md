@@ -1,16 +1,16 @@
 ---
 title: Definición de comandos de búsqueda de extensión de mensaje
 author: surbhigupta
-description: En este módulo, obtenga información sobre los comandos de búsqueda de extensión de mensaje para aplicaciones de Teams, para crear un comando de búsqueda a través del manifiesto de la aplicación y manualmente.
+description: En este módulo, obtenga información sobre las ubicaciones de invocación de comandos de búsqueda y cómo crear un comando de búsqueda para extensiones de mensajería.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363476"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786965"
 ---
 # <a name="define-message-extension-search-commands"></a>Definición de comandos de búsqueda de extensión de mensaje
 
@@ -34,11 +34,11 @@ El comando de búsqueda se invoca desde cualquiera de las siguientes ubicaciones
 * Área redactar mensaje: los botones de la parte inferior del área de redacción del mensaje.
 * Cuadro de comandos: por @mentioning en el cuadro de comandos.
 
-  Cuando se invoca el comando de búsqueda desde el área del mensaje de redacción, el usuario envía los resultados a la conversación. Cuando se invoca desde el cuadro de comandos, el usuario interactúa con la tarjeta resultante o la copia para usarla en otro lugar.
+  Cuando se invoca un comando de búsqueda desde el área del mensaje de redacción, el usuario envía los resultados a la conversación. Cuando se invoca desde el cuadro de comandos, el usuario interactúa con la tarjeta resultante o la copia para usarla en otro lugar.
 
 En la imagen siguiente se muestran las ubicaciones de invocación del comando de búsqueda:
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Ubicaciones de invocación de comandos de búsqueda":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Captura de pantalla que muestra las ubicaciones de invocación de un comando de búsqueda en un canal de Teams.":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Agregar el comando de búsqueda al manifiesto de la aplicación
 
@@ -54,28 +54,28 @@ El requisito previo para crear un comando de búsqueda es que ya debe haber crea
 1. Después de importar un paquete de aplicación, seleccione **Extensiones de mensaje** en **Características de la aplicación**.
 1. Para crear una extensión de mensaje, necesita un bot registrado de Microsoft. Puede usar un bot existente o crear uno nuevo. Seleccione **la opción Crear nuevo bot** , asigne un nombre al nuevo bot y, a continuación, seleccione **Crear**.
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="En la captura de pantalla se muestra cómo crear un bot en el Portal para desarrolladores.":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Captura de pantalla que muestra las opciones para configurar un bot para una aplicación en el Portal para desarrolladores de Teams.":::
 
 1. Para usar un bot existente, seleccione **Seleccionar un bot existente** y elija los bots existentes en la lista desplegable o escriba **un identificador de bot** si ya tiene un identificador de bot creado.
 
 1. Seleccione el ámbito de la extensión de mensajería y seleccione **Guardar**.
 
-1. Seleccione **Agregar un comando** en la sección **Comando** para incluir los comandos, que decide el comportamiento de la extensión de mensaje.
+1. Seleccione **Agregar un comando** en la sección **Comando** para incluir los comandos, que deciden el comportamiento de la extensión de mensaje.
 En la imagen siguiente se muestra la adición de comandos para la extensión de mensaje:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="En la captura de pantalla se muestra cómo agregar un comando para definir el comportamiento de la extensión de mensaje.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Captura de pantalla que muestra cómo agregar un comando en el Portal para desarrolladores de Teams para definir el comportamiento de la extensión de mensaje.":::
 
 1. Seleccione **Buscar** y escriba **Id. de comando**, **Título de comando** y **Descripción del comando**.
 
 1. Escriba todos los parámetros y seleccione el tipo de entrada en la lista desplegable.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="En la captura de pantalla se muestra cómo agregar un parámetro para definir el comando para la extensión de mensaje.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Captura de pantalla que muestra cómo agregar un parámetro para definir el comando en el Portal para desarrolladores de Teams para una extensión de mensaje.":::
 
 1. Seleccione **Agregar un dominio** en **Vínculos de vista previa**.
 
 1. Escriba dominio válido y, a continuación, seleccione **Agregar**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Captura de pantalla que muestra cómo agregar un dominio válido a la extensión de mensajería para las desplegadas de vínculos.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Captura de pantalla que muestra cómo agregar un dominio válido a la extensión de mensajería para la desplegamiento de vínculos.":::
 
 1. Haga clic en **Guardar**.
 
@@ -85,7 +85,7 @@ En la imagen siguiente se muestra la adición de comandos para la extensión de 
 
 1. Seleccione elipse en la sección de comandos y, a continuación, seleccione **Editar parámetro**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Capturas de pantalla que muestran cómo agregar parámetros adicionales para la extensión de mensaje.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Capturas de pantalla que muestran cómo editar parámetros para la extensión de mensaje.":::
 
 1. Seleccione **Agregar parámetros** y escriba todos los parámetros.
 
@@ -109,7 +109,7 @@ Debe agregar los detalles del parámetro de búsqueda que define el texto visibl
 | Nombre de propiedad | Objetivo | ¿Es obligatoria? | Versión mínima del manifiesto |
 |---|---|---|---|
 | `parameters` | Esta propiedad define una lista estática de parámetros para el comando. | No | 1.0 |
-| `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
+| `parameter.name` | Esta propiedad describe el nombre del parámetro. `parameter.name` se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
 | `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
 | `parameter.title` | Esta propiedad es un título o etiqueta de parámetro descriptivo corto. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada necesaria. Entre los valores posibles se incluyen , , , , , `toggle``time`. `date``number``textarea``text` El valor predeterminado está establecido en `text`. | No | 1.4 |
@@ -142,6 +142,7 @@ En la sección siguiente se muestra un ejemplo del manifiesto de aplicación sim
   ],
 ...
 }
+
 ```
 
 Para ver el manifiesto de aplicación completo, consulte [Esquema de manifiesto de aplicación](~/resources/schema/manifest-schema.md).
