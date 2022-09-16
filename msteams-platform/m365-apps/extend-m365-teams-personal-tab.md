@@ -1,16 +1,16 @@
 ---
 title: Ampliar una aplicación de pestaña personal de Teams en Microsoft 365
-description: En este artículo aprenderá a ampliar una aplicación de pestaña personal de Teams en Microsoft 365 actualizando la pestaña personal para que se ejecute tanto en Outlook como en Office.
+description: En este artículo, aprenderá a ampliar una aplicación de pestaña personal de Teams en Microsoft 365 actualizando la pestaña personal para que se ejecute tanto en Outlook como en Office.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337239"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781212"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
@@ -46,7 +46,7 @@ Si tiene una aplicación de pestaña personal existente, realice una copia o una
 
 Si desea usar código de ejemplo para completar este tutorial, siga los pasos de configuración del [ejemplo de lista de](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) tareas pendientes para compilar una aplicación de pestaña personal mediante la extensión Teams Toolkit para Visual Studio Code y, a continuación, vuelva a este artículo para actualizarla para Microsoft 365.
 
-Como alternativa, puede usar una aplicación básica de un solo Sign-On *hola mundo* ya habilitada para Microsoft 365 en la siguiente sección de inicio rápido y, a continuación, ir a [Transferir localmente la aplicación en Teams](#sideload-your-app-in-teams) .
+Como alternativa, puede usar una aplicación básica de inicio de sesión único *hola mundo* ya habilitada para Microsoft 365 en la siguiente sección de inicio rápido y, a continuación, ir a [Transferir localmente la aplicación en Teams](#sideload-your-app-in-teams) .
 
 ### <a name="quickstart"></a>Inicio rápido
 
@@ -190,7 +190,7 @@ Para obtener una vista previa de la aplicación ejecutándose en Outlook en el e
 Para ver la aplicación en Outlook en la Web:
 
 1. Vaya a [Outlook en la Web](https://outlook.office.com) e inicie sesión con su cuenta de inquilino de desarrollo.
-1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
+1. En la barra lateral, seleccione  **Más aplicaciones**. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar y obtener una vista previa de la aplicación que se ejecuta en Outlook en la Web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral de outlook.com para ver las pestañas personales instaladas":::
@@ -200,7 +200,7 @@ Para ver la aplicación en Outlook en la Web:
 Para ver la aplicación que se ejecuta en Office en el escritorio de Windows:
 
 1. Inicie Office e inicie sesión con su cuenta de inquilino de desarrollo.
-1. Seleccione los puntos suspensivos (**...**) en la barra lateral. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
+1. Seleccione el icono **Aplicaciones** en la barra lateral. El título de la aplicación de prueba aparece entre las aplicaciones instaladas.
 1. Seleccione el icono de la aplicación para iniciar la aplicación en Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Haga clic en la opción de puntos suspensivos (&quot;Más aplicaciones&quot;) de la barra lateral del cliente de escritorio de Office para ver las pestañas personales instaladas":::
@@ -217,7 +217,7 @@ Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la 
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Actualmente, se admite un subconjunto de tipos y funcionalidades de aplicaciones de Teams en clientes de Outlook y Office. Esta compatibilidad se expande con el tiempo.
+Actualmente, se admite un subconjunto de tipos y funcionalidades de aplicaciones de Teams en los clientes de Outlook y Office. Esta compatibilidad se expande con el tiempo.
 
 Consulte [compatibilidad con Microsoft 365](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) para comprobar la compatibilidad del host con varias funcionalidades de TeamsJS.
 
@@ -233,7 +233,7 @@ Desde El kit de herramientas de Teams, puede depurar (`F5`) la aplicación de pe
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Elija entre los destinos de depuración de Teams, Outlook y Office en el kit de herramientas de Teams.":::
 
-Tras la primera ejecución de depuración local en Office o Outlook, se le pedirá que inicie sesión en su cuenta de inquilino de Microsoft 365 e instale un certificado de prueba autofirmado. También se le pedirá que instale Teams manualmente. Seleccione **Instalar en Teams** para abrir una ventana del explorador e instalar manualmente la aplicación. A continuación, haga clic en **Continuar** para continuar con la depuración de la aplicación en Office/Outlook.
+Tras la primera ejecución de depuración local en Office o Outlook, se le pedirá que inicie sesión en su cuenta de inquilino de Microsoft 365 e instale un certificado de prueba autofirmado. También se le pedirá que instale Teams manualmente. Seleccione **Instalar en Teams** para abrir una ventana del explorador e instalar manualmente la aplicación. A continuación, seleccione **Continuar** para continuar con la depuración de la aplicación en Office/Outlook.
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Cuadro de diálogo del kit de herramientas Instalación de Teams":::
 
@@ -246,7 +246,7 @@ Proporcione comentarios e informe de cualquier problema con la experiencia de de
 | Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Página de inicio de ejemplo (Microsoft 365) | Mostrar la autenticación de SSO y aprovechar las funcionalidades del SDK de TeamsJS como disponibles en distintos hosts. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Página de inicio de ejemplo (Microsoft 365) | Muestra la autenticación sso y las funcionalidades del SDK de TeamsJS como disponibles en distintos hosts. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>Paso siguiente
 

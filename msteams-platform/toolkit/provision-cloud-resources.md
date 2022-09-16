@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7dfc5817fb8872a782b28c113c270a318e3d5078
-ms.sourcegitcommit: 52a11f7614c43172bc2d57401a60d569db5310a9
+ms.openlocfilehash: 00e021e3e42eed6eeb5881d258a9884a7e579377
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67291696"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781006"
 ---
 # <a name="provision-cloud-resources-using-visual-studio"></a>Aprovisionamiento de recursos en la nube mediante Visual Studio
 
@@ -87,7 +87,7 @@ Los pasos siguientes le ayudan a aprovisionar recursos en la nube mediante Visua
 5. Puede seleccionar o crear un nuevo **grupo de recursos**.
 6. Seleccione **Aprovisionar**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Seleccionar grupo de recursos":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Seleccionar grupo de recursos":::
 
 7. El cuadro de diálogo le advierte de que se pueden agregar cargos según el uso de Azure. Seleccione **Aprovisionar**.
 

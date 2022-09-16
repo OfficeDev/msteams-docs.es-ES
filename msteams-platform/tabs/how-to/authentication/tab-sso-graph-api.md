@@ -4,12 +4,12 @@ description: Configure permisos y ámbitos adicionales con Microsoft Graph para 
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API ámbito del token de acceso a permisos delegados
-ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605092"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780852"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Extender la aplicación de pestañas con permisos y ámbito de Microsoft Graph
 
@@ -220,8 +220,9 @@ Puede solicitar su consentimiento utilizando la API de autenticación. Otro enfo
 4. Al solicitar más consentimiento de Azure AD, debe incluir `prompt=consent` en el [parámetro de cadena de consulta](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) para Azure AD; de lo contrario, Azure AD no pediría otros ámbitos.
     - En lugar de `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Asegúrese de que `{scopes}` incluye todos los ámbitos que está solicitando al usuario, por ejemplo, `Mail.Read` o `User.Read`.
-5. Después de que el usuario de la aplicación haya concedido más permisos, vuelva a intentar el flujo de OBO para obtener acceso a estas otras API.
 
+    Para controlar el consentimiento incremental para la aplicación de pestaña, consulte [consentimiento de usuario incremental y dinámico](/azure/active-directory/develop/v2-permissions-and-consent).
+5. Después de que el usuario de la aplicación haya concedido más permisos, vuelva a intentar el flujo de OBO para obtener acceso a estas otras API.
     </details>
 
 ## <a name="see-also"></a>Recursos adicionales

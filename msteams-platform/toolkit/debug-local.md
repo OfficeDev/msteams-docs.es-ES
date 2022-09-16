@@ -6,16 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 68999351232deb60015259840147d2a1ab55681a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616565"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780868"
 ---
 # <a name="debug-your-microsoft-teams-app-locally"></a>Depuración local de la aplicación de Microsoft Teams
 
-Microsoft Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de Teams localmente. Durante el proceso de depuración, Teams Toolkit inicia automáticamente app services, inicia depuradores y carga de forma lateral la aplicación teams. Puede obtener una vista previa de la aplicación de Teams en el cliente web de Teams localmente después de la depuración. Debe configurar Teams Toolkit antes de depurar la aplicación.
+El kit de herramientas de Teams le ayuda a depurar y obtener una vista previa de la aplicación de Teams localmente. Durante el proceso de depuración, Teams Toolkit inicia automáticamente app services, inicia depuradores y carga de forma lateral la aplicación teams. Puede obtener una vista previa de la aplicación de Teams en el cliente web de Teams localmente después de la depuración.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Depuración local de la aplicación de Microsoft Teams para Visual Studio Code
+
+El kit de herramientas de Teams en Visual Studio Code proporciona las características para automatizar la depuración de la aplicación de Teams localmente. Visual Studio permite depurar la pestaña, el bot y la extensión de mensaje. Debe configurar Teams Toolkit antes de depurar la aplicación.
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Configuración del kit de herramientas de Teams para la depuración
 
@@ -140,9 +147,73 @@ La configuración **Asociar a Front-end** o **Iniciar bot** inicia una instancia
 > [!div class="nextstepaction"]
 > [Depurar procesos en segundo plano](debug-background-process.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Depuración local de la aplicación de Microsoft Teams mediante Visual Studio
+
+Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de Microsoft Teams localmente. Visual Studio permite depurar la pestaña, el bot y la extensión de mensaje. Puede depurar la aplicación localmente en Visual Studio mediante el kit de herramientas de Teams realizando lo siguiente:
+
+### <a name="set-up-ngrok-only-for-bot-and-message-extension-app"></a>Configuración de ngrok (solo para la aplicación bot y extensión de mensaje)
+
+Use un símbolo del sistema para ejecutar este comando:
+
+```
+ngrok http 5130
+```
+
+### <a name="set-up-your-teams-toolkit"></a>Configurar el kit de herramientas de Teams
+
+Realice los pasos siguientes mediante el kit de herramientas de Teams para depurar la aplicación después de crear un proyecto:
+
+1. Haga clic con el botón derecho en el **proyecto**.
+1. Seleccione **Kit de herramientas de** >  Teams **Preparar dependencias de aplicaciones de Teams**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Dependencias de aplicaciones de Teams para la depuración local" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
+
+   > [!NOTE]
+   > En este escenario, el nombre del proyecto es MyTeamsApp1.
+
+   La cuenta de Microsoft 365 debe tener el permiso de carga lateral antes de iniciar sesión.  Asegúrese de que la aplicación de Teams se puede cargar en el inquilino; de lo contrario, la aplicación de Teams puede no ejecutarse en el cliente de Teams.
+
+1. Inicie sesión en su **cuenta de Microsoft 365** y seleccione **Continuar**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Inicio de sesión en la cuenta de Microsoft 365":::
+
+   > [!Note]
+   > Para más información sobre la transferencia local de permisos, visite <https://aka.ms/teamsfx-sideloading-option>.
+
+1. Seleccione **Depurar** > **Iniciar depuración** o seleccione directamente **F5**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Iniciar depuración":::
+
+   Visual Studio inicia la aplicación de Teams dentro del cliente de Microsoft Teams en el explorador.
+
+   > [!Note]
+   > Para más información, visite <https://aka.ms/teamsfx-vs-debug>.
+
+1. Una vez cargado Microsoft Teams, seleccione **Agregar** para instalar la aplicación en Teams.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="Seleccione Agregar para cargar la aplicación.":::
+
+   > [!TIP]
+   > También puede usar la función de recarga activa de Visual Studio durante la depuración. Para más información, visite <https://aka.ms/teamsfx-vs-hotreload>.
+
+   > [!NOTE]
+   > Asegúrese de publicar la solicitud HTTP en "<http://localhost:5130/api/notification>" para desencadenar la notificación cuando esté depurando la aplicación del bot de notificación. Si ha seleccionado el desencadenador HTTP al crear el proyecto, puede usar cualquier herramienta de API, como curl (símbolo del sistema de Windows), Postman, etc.
+
+   > [!TIP]
+   > Si realiza algún cambio en el archivo de manifiesto de aplicación de Teams (/templates/appPackage/manifest.template.json), asegúrese de realizar el comando Preparar dependencias de aplicaciones de Teams. Antes de intentar ejecutar la aplicación de Teams de nuevo localmente.
+
+::: zone-end
+
 ## <a name="see-also"></a>Vea también
 
 * [usar el kit de herramientas de Teams para aprovisionar recursos en la nube](provision.md)
 * [Agregar funcionalidades a las aplicaciones de Teams](add-capability.md)
 * [Implementar en la nube](deploy.md)
 * [administrar varios entornos en el kit de herramientas de Teams](TeamsFx-multi-env.md)
+* [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Edición del manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

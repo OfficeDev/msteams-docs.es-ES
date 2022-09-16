@@ -1,15 +1,15 @@
 ---
 title: Obtener contexto para el bot de Microsoft Teams
-description: En este módulo, obtenga información sobre cómo obtener contexto para bots en Microsoft Teams, capturar la lista de equipos y el perfil de usuario o la lista en chat personal o grupal.
+description: En este módulo, aprenderá a obtener contexto para los bots en Microsoft Teams, capturar la lista de equipos y el perfil de usuario o la lista en chat personal o de grupo.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 3fd75e063f9b12c09bc4dded167bd8cdaead6b7a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fd43d9c4b3a3e4702b9bbd4955e58c0fc86caddf
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143119"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780929"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtener contexto para el bot de Microsoft Teams
 
@@ -19,13 +19,13 @@ El bot puede acceder a contextos adicionales sobre el equipo o el chat, como el 
 
 > [!NOTE]
 >
-> * Microsoft Teams API de bot específicas se accede mejor a través de nuestras extensiones del SDK de Bot Builder.
-> * Para C# o .NET, descargue nuestro paquete [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet.
-> * Para Node.js desarrollo, bot Builder para Teams funcionalidad se incorpora al [SDK de Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
+> * Se obtiene mejor acceso a las API de bot específicas de Microsoft Teams a través de nuestras extensiones del SDK de Bot Builder.
+> * Para C# o .NET, descargue nuestro paquete NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .
+> * Para Node.js desarrollo, la funcionalidad Bot Builder para Teams se incorpora al [SDK de Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
 
 ## <a name="fetch-the-team-roster"></a>Captura de la lista de equipos
 
-El bot puede consultar la lista de miembros del equipo y sus perfiles básicos. Los perfiles básicos incluyen Teams identificadores de usuario e información de Microsoft Azure Active Directory (Azure AD), como el nombre y el identificador de objeto. Puede usar esta información para correlacionar las identidades de usuario. Por ejemplo, compruebe si un usuario que ha iniciado sesión en una pestaña a través de las credenciales de Microsoft Azure Active Directory (Azure AD) es miembro del equipo.
+El bot puede consultar la lista de miembros del equipo y sus perfiles básicos. Los perfiles básicos incluyen identificadores de usuario de Teams e información de Microsoft Azure Active Directory (Azure AD), como el nombre y el identificador de objeto. Puede usar esta información para correlacionar las identidades de usuario. Por ejemplo, compruebe si un usuario que ha iniciado sesión en una pestaña a través de las credenciales de Microsoft Azure Active Directory (Azure AD) es miembro del equipo.
 
 ### <a name="rest-api-example"></a>Ejemplo de API REST
 
@@ -72,6 +72,7 @@ Response body
 ### <a name="net-example"></a>Ejemplo de .NET
 
 Llame a `GetConversationMembersAsync` using `Team.Id` para devolver una lista de identificadores de usuario.
+La llamada `GetConversationMembersAsync` a para obtener `userRole` la propiedad devuelve el valor como usuario.
 
 ```csharp
 // Fetch the members in the current conversation
@@ -164,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>Ejemplo de .NET
 
-En el ejemplo siguiente se usa la `FetchChannelList` llamada desde las [extensiones de Teams del SDK de Bot Builder para .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
+En el ejemplo siguiente se usa la `FetchChannelList` llamada desde las [extensiones de Teams para bot Builder SDK para .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -172,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Ejemplo de Node.js
 
-En el ejemplo siguiente se usa `fetchChannelList` la llamada desde las [extensiones de Teams del SDK de Bot Builder para Node.js](https://www.npmjs.com/package/botbuilder-teams):
+En el ejemplo siguiente se usa `fetchChannelList` la llamada de las [extensiones de Teams para el SDK de Bot Builder para Node.js](https://www.npmjs.com/package/botbuilder-teams):
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

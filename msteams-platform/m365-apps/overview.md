@@ -5,16 +5,16 @@ ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 208843d9d4c46d29b095ffaf7260f28889f8ed45
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288216"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781076"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Ampliar las aplicaciones de Teams en Microsoft 365
 
-Con las versiones más recientes del [SDK de cliente de JavaScript de Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md) (versión 2.0.0), [el manifiesto](../resources/schema/manifest-schema.md) de aplicación de Teams (versión 1.13) y [el kit](../toolkit/visual-studio-code-overview.md) de herramientas de Teams, puede compilar y actualizar aplicaciones de Teams para que se ejecuten en otros productos de Microsoft 365 de uso alto y publicarlas en el marketplace comercial de Microsoft ([marketplace comercial de Microsoft](https://appsource.microsoft.com/)).
+Con las versiones más recientes del [SDK de cliente de JavaScript de Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md) (versión 2.0.0 y posteriores), manifiesto de aplicación de [Teams](../resources/schema/manifest-schema.md) (versión 1.13 y posteriores) y [Kit de herramientas de Teams](../toolkit/visual-studio-code-overview.md), puede compilar y actualizar aplicaciones de Teams para que se ejecuten en otros productos de Microsoft 365 de uso alto y publicarlas en el marketplace comercial de Microsoft ([marketplace comercial de Microsoft](https://appsource.microsoft.com/)).
 
 La ampliación de la aplicación de Teams en Microsoft 365 proporciona una manera simplificada de ofrecer aplicaciones multiplataforma a un público de usuario expandido: desde un único código base, puede crear experiencias de aplicación adaptadas a los entornos de Teams, Outlook y Office. Los usuarios finales no tendrán que abandonar el contexto de su trabajo para usar la aplicación y los administradores se benefician de un flujo de trabajo consolidado de administración e implementación.
 
@@ -22,9 +22,8 @@ La plataforma de aplicaciones de Teams continúa evolucionando y expandiéndose 
 
 |          | Elemento de manifiesto de aplicación | Soporte técnico de Teams |Compatibilidad con Outlook* | Soporte técnico de Office* | Notas |
 |--|--|--|--|--|--|
-| [**Pestañas**](../tabs/what-are-tabs.md) (ámbito personal)    |`staticTabs`  | Web, Escritorio, Móvil | Web (versión dirigida), escritorio (canal beta) | Web (versión dirigida)| El ámbito de canal y grupo aún no se admite para Microsoft 365. Consulte [las notas](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Pestañas**](../tabs/what-are-tabs.md) (ámbito personal)    |`staticTabs`  | Web, Escritorio, Móvil | Web (versión dirigida), escritorio (canal beta) | Web (versión dirigida), escritorio (canal beta)| El ámbito de canal y grupo aún no se admite para Microsoft 365. Consulte [las notas](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Extensiones de mensaje**](../messaging-extensions/what-are-messaging-extensions.md) (basadas en búsqueda)| `composeExtensions` | Web, Escritorio, Móvil| Web (versión dirigida), escritorio (canal beta)| - |Todavía no se admite la acción basada en Microsoft 365. Consulte [las notas](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
-| [**Conectores de Graph**](/graph/connecting-external-content-connectors-overview)| `graphConnector` | Web, Escritorio, Móvil| Web, Escritorio | Web| Ver [notas](#graph-connectors)
 | [**Complementos de Office**](/office/dev/add-ins/develop/json-manifest-overview) (versión preliminar) | `extensions` | - | Web, Escritorio | - | Solo está disponible en [la versión del manifiesto devPreview](../resources/schema/manifest-schema-dev-preview.md) . Consulte [las notas](#office-add-ins-preview).|
 
 \*La opción de [versión de destino de Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365) y Aplicaciones Microsoft 365 inscripción del [canal de actualización](/deployoffice/change-update-channels) requieren la participación del administrador para toda la organización o los usuarios seleccionados. Los canales de actualización son específicos del dispositivo y solo se aplican a las instalaciones de Office que se ejecutan en Windows.
@@ -50,22 +49,15 @@ La creación de la aplicación con el [manifiesto de aplicación de Teams](../re
 
 Con el objetivo de simplificar y simplificar el ecosistema de desarrolladores de Microsoft 365, seguimos expandiendo el manifiesto de aplicación de Teams en otras áreas de Microsoft 365 con lo siguiente.
 
-### <a name="graph-connectors"></a>Conectores de Graph
-
-Con los conectores de Microsoft Graph, su organización puede indexar datos de terceros para que aparezcan como resultados de Búsqueda de Microsoft, expandiendo los tipos de orígenes de contenido que se pueden buscar en las aplicaciones de Teams.
-Para obtener más información, consulte [Introducción a los conectores de Microsoft Graph para Microsoft Search](/microsoftsearch/connectors-overview).
-
-Para empezar a trabajar con conectores de grafos en aplicaciones de Teams, consulte el [ejemplo de conectores de Graph del kit de herramientas de Teams](https://aka.ms/teamsfx-graph-connector-sample) y la referencia del esquema de [manifiesto de la versión preliminar del desarrollador de Microsoft Teams](../resources/schema/manifest-schema-dev-preview.md) .
-
 ### <a name="office-add-ins-preview"></a>Complementos de Office (versión preliminar)
 
 Ahora puede definir e implementar complementos de Office en la [versión preliminar para desarrolladores](../resources/schema/manifest-schema-dev-preview.md) del manifiesto de aplicación de Microsoft Teams. Actualmente esta versión preliminar está limitada a los complementos de Outlook que se ejecutan en la suscripción de Office para Windows.
 
 Para obtener más información, vea [Manifiesto de Teams para complementos de Office (versión preliminar)](/office/dev/add-ins/develop/json-manifest-overview).
 
-## <a name="microsoft-appsource-submission"></a>Envío de Microsoft AppSource
+## <a name="microsoft-commercial-marketplace-submission"></a>Envío de Marketplace comercial de Microsoft
 
-Únase al creciente número de aplicaciones de Teams de producción en la tienda [Microsoft AppSource](https://appsource.microsoft.com/) con compatibilidad ampliada con las audiencias de outlook y versión preliminar de Office (versión de destino). El proceso de envío de aplicaciones [para las aplicaciones de Teams habilitadas para Outlook y Office](../concepts/deploy-and-publish/appsource/publish.md) es el mismo que para las aplicaciones tradicionales de Teams. La única diferencia es que usará la [versión 1.13](../tabs/how-to/using-teams-client-sdk.md) del manifiesto de aplicación de Teams en el paquete de la aplicación, lo que introduce compatibilidad con las aplicaciones de Teams que se ejecutan en Microsoft 365.
+Únase al creciente número de aplicaciones de Teams de producción en la tienda de [Marketplace comercial de Microsoft](https://appsource.microsoft.com/) (Microsoft AppSource) con compatibilidad ampliada con las audiencias de outlook y versión preliminar de Office (versión de destino). El proceso de envío de aplicaciones [para las aplicaciones de Teams habilitadas para Outlook y Office](../concepts/deploy-and-publish/appsource/publish.md) es el mismo que para las aplicaciones tradicionales de Teams. La única diferencia es que usará la [versión 1.13](../tabs/how-to/using-teams-client-sdk.md) del manifiesto de aplicación de Teams en el paquete de la aplicación, lo que introduce compatibilidad con las aplicaciones de Teams que se ejecutan en Microsoft 365.
 
 Una vez publicada como una aplicación de Teams habilitada para Microsoft 365, la aplicación se podrá detectar como una aplicación instalable desde las tiendas de aplicaciones de Outlook y Office, además de la tienda de Teams. Cuando se ejecuta en Outlook y Office, la aplicación usa los mismos permisos concedidos en Teams. Los administradores de Teams pueden [administrar el acceso a las aplicaciones de Teams en Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) para los usuarios de su organización.
 

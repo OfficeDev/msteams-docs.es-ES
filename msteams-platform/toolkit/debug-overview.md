@@ -6,17 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 8545d4bbd97a6a4c5065c279368505f18dd5a14a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617270"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781022"
 ---
 # <a name="debug-your-microsoft-teams-app"></a>Depuración de la aplicación de Microsoft Teams
 
-Microsoft Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de Teams. La depuración es el proceso de comprobar, detectar y corregir problemas o errores para garantizar que el programa se ejecuta correctamente en Teams.
+Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de Teams. La depuración es el proceso de comprobar, detectar y corregir problemas o errores para garantizar que el programa se ejecuta correctamente en Teams.
 
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Depuración de la aplicación de Microsoft Teams para Visual Studio Code
+
+Teams Toolkit en Visual Studio Code automatiza el proceso de depuración. Puede detectar errores y corregirlos, así como obtener una vista previa de la aplicación teams. También puede personalizar la configuración de depuración para crear la pestaña o el bot.
 Durante el proceso de depuración:
 
 * El kit de herramientas de Teams inicia automáticamente los servicios de aplicaciones, inicia depuradores y descarga localmente la aplicación de Teams.
@@ -193,9 +199,119 @@ El kit de herramientas de Teams usa la depuración de varios destinos de Visual 
 > [!div class="nextstepaction"]
 > [Depurar la aplicación localmente](debug-local.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Depuración de la aplicación de Microsoft Teams mediante Visual Studio
+
+Teams Toolkit automatiza los servicios de inicio de aplicaciones, inicia la depuración y carga en paralelo la aplicación de Teams. Después de la depuración, puede obtener una vista previa de la aplicación de Teams en el cliente web de Teams. También puede personalizar la configuración de depuración para usar los puntos de conexión del bot o las variables de entorno para cargar la aplicación configurada. Visual Studio permite depurar la pestaña, el bot y la extensión de mensaje. Durante el proceso de depuración, Teams Toolkit admite las siguientes características de depuración:
+
+* Preparación de dependencias de aplicaciones de Teams
+* Iniciar depuración
+* Alternar puntos de interrupción
+* Recarga activa
+* Detener depuración
+
+## <a name="prerequisites"></a>Requisitos previos
+
+| &nbsp; | Instalar | Para usar... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio 2022, versión 17.3 | Puede instalar la edición enterprise de Visual Studio e instalar la carga de trabajo "ASP.NET" y las herramientas de desarrollo de Microsoft Teams. |
+| &nbsp; | Kit de herramientas de Teams | Extensión de Visual Studio que crea un scaffolding de proyecto para la aplicación. Use la versión más reciente. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams para colaborar con todos los usuarios con los que trabaja a través de aplicaciones de chat, reuniones, llamadas, todo en un solo lugar. |
+| &nbsp; | [Preparar el espacio empresarial de Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
+| &nbsp; | [Cuenta de desarrollador de Microsoft 365](/../concepts/build-and-test/prepare-your-o365-tenant) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
+| &nbsp; | Herramientas de Azure y [cli de Microsoft Azure](/cli/azure/install-azure-cli) | Herramientas de Azure para acceder a datos almacenados o para implementar un back-end basado en la nube para la aplicación de Teams en Azure. |
+|&nbsp;  | **Optional** | &nbsp; |
+|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok se usa para reenviar mensajes externos de Azure Bot Framework a la máquina local.|
+
+## <a name="key-features-of-teams-toolkit"></a>Características clave del kit de herramientas de Teams
+
+Puede ver las siguientes características clave del kit de herramientas de Teams, que automatizan el proceso de depuración local de la aplicación de Teams:
+
+### <a name="prepare-teams-app-dependencies"></a>Preparación de dependencias de aplicaciones de Teams
+
+Teams Toolkit prepara dependencias de depuración local y registra la aplicación de Teams en el inquilino de la cuenta. En el caso de las aplicaciones bot y extensión de mensajes, Teams Toolkit registrará y configurará el bot.
+
+### <a name="start-debugging"></a>Iniciar depuración
+
+Puede realizar la depuración con una sola operación, presione **F5** para iniciar la depuración. Teams Toolkit compila código, inicia servicios y la aplicación se inicia en el explorador.
+
+### <a name="toggle-breakpoints"></a>Alternar puntos de interrupción
+
+Puede alternar los puntos de interrupción en los códigos de origen de pestañas, bots, extensiones de mensaje y funciones de Azure. Los puntos de interrupción se ejecutan al interactuar con la aplicación Teams en el explorador web.
+En la imagen siguiente se muestran la alternancia de puntos de interrupción:
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Puntos de interrupción de alternancia de depuración local" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
+
+### <a name="hot-reload"></a>Recarga activa
+
+Seleccione **Recarga activa** para aplicar los cambios en la aplicación de Teams cuando quiera actualizar y guardar los códigos de origen simultáneamente durante la depuración.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Seleccionar icono de recarga activa":::
+
+Seleccione la opción **Recarga activa en Guardar** archivo en la lista desplegable para habilitar la recarga activa automática.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Seleccionar recarga activa al guardar archivos":::
+  
+   > [!Tip]
+   > Para obtener más información sobre Recarga activa función de Visual Studio durante la depuración, puede visitar <https://aka.ms/teamsfx-vs-hotreload>.
+
+### <a name="stop-debugging"></a>Detener depuración
+
+Seleccione **Detener depuración** cuando se complete la depuración local.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Seleccionar icono de detención de depuración":::
+
+## <a name="customize-debug-settings"></a>Personalizar la configuración de depuración
+
+Puede personalizar la configuración de depuración para que la aplicación de Teams use los puntos de conexión del bot y agregue variables de entorno:
+
+### <a name="use-your-bot-endpoint"></a>Use el punto de conexión del bot
+
+Puede establecer la configuración de siteEndpoint en **.fx/configs/config.local.json** en el punto de conexión.
+
+```
+"bot": {
+    "siteEndpoint": "https://baidu.com"
+}
+```
+
+### <a name="add-environment-variables"></a>Agregar variables de entorno
+
+Puede agregar **environmentVariables** al archivo **launchSettings.json** .
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Adición de variables de entorno personalizadas":::
+
+### <a name="launch-teams-app-as-a-web-app"></a>Inicio de una aplicación de Teams como una aplicación web
+
+Puede iniciar la aplicación de Teams como una aplicación web en lugar de ejecutarse en el cliente de Teams.
+
+1. Seleccione **Propiedades** > **launchSettings.json** en Explorador de soluciones panel del proyecto.
+1. Quite " **launchUrl"** del archivo.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Iniciar equipos como una aplicación web mediante la eliminación de launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
+
+1. Haga clic con el botón derecho en **Solución** y seleccione **Propiedades**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Haga clic con el botón derecho en la solución y seleccione las propiedades" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
+
+1. Seleccione **Configuración de propiedades** > **de** configuración en el cuadro de diálogo.
+1. Desactive la casilla **Implementar** .
+1. Seleccione **Aceptar**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Desactivar la implementación en las propiedades de configuración" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
+
+::: zone-end
+
 ## <a name="see-also"></a>Vea también
 
 * [Depurar procesos en segundo plano](debug-background-process.md)
 * [usar el kit de herramientas de Teams para aprovisionar recursos en la nube](provision.md)
 * [Implementar en la nube](deploy.md)
 * [Vista previa y personalización del manifiesto de la aplicación de Teams](TeamsFx-preview-and-customize-app-manifest.md)
+* [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Edición del manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

@@ -94,7 +94,7 @@
       href: concepts/design/enable-app-customization.md
 - name: Herramientas y SDK
   items:
-    - name: Kit de herramientas de Teams para Visual Studio Code
+    - name: Kit de herramientas de Teams
       items:
         - name: Introducción al kit de herramientas de Teams
           href: toolkit/teams-toolkit-fundamentals.md
@@ -162,20 +162,6 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: Preguntas más frecuentes
           href: toolkit/faq.md
-    - name: Kit de herramientas de Teams para Visual Studio
-      items:
-        - name: Introducción al kit de herramientas de Teams
-          href: toolkit/teams-toolkit-overview-visual-studio.md
-        - name: Crear una nueva aplicación de Teams
-          href: toolkit/create-new-teams-app-for-Visual-Studio.md
-        - name: Depurar la aplicación de Teams
-          href: toolkit/debug-teams-app-visual-studio.md
-        - name: Aprovisionar recursos en la nube
-          href: toolkit/provision-cloud-resources.md
-        - name: Implementar la aplicación de Teams en la nube
-          href: toolkit/deploy-teams-app.md
-        - name: Editar el manifiesto de la aplicación de Teams
-          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: CLI del kit de herramientas de Teams
       href: toolkit/TeamsFx-CLI.md
     - name: Generador de Yeoman para Teams (GitHub)
@@ -670,7 +656,7 @@
           displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: Crear una cuenta de desarrollador del Centro de partners
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: Update Apple app store
+          displayName: 'Update Apple app store,app acquisition on mobile'
         - name: Preparar el envío de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, publisher verification, attestation'

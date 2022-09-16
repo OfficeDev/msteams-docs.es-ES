@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: 511083fea77c40cec0134e6620c741c3c4da8829
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425620"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780817"
 ---
 # <a name="dice-roller-code-tutorial"></a>Tutorial de código de Dice Roller
 
@@ -351,7 +351,7 @@ Los usuarios invitados a la reunión pueden ver la aplicación en la escena cuan
 
 ## <a name="deployment"></a>Implementación
 
-Una vez que esté listo para implementar el código, puede usar [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit) o el [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/apps) para aprovisionar y cargar el archivo ZIP de la aplicación.
+Una vez que esté listo para implementar el código, puede usar [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio-code) o el [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/apps) para aprovisionar y cargar el archivo ZIP de la aplicación.
 
 > [!NOTE]
 > Debe agregar el appId aprovisionado a `manifest.json` antes de cargar o distribuir la aplicación.

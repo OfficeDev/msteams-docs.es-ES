@@ -6,16 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9ad2c9d16901990344ca521599b94b84b0e76217
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616929"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781119"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Implementar la aplicación de Teams en la nube
 
-El kit de herramientas de Teams le ayuda a implementar o cargar el código frontend y backend de su aplicación en sus recursos de nube aprovisionados en Azure. Puede implementar lo siguiente en la nube:
+El kit de herramientas de Teams le ayuda a implementar o cargar el código frontend y backend de su aplicación en sus recursos de nube aprovisionados en Azure.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="deploy-teams-app-to-the-cloud-using-visual-studio-code"></a>Implementación de una aplicación de Teams en la nube mediante Visual Studio Code
+
+Puede implementar lo siguiente en la nube:
 
 * La pestaña, como las aplicaciones de frontend se implementan en el almacenamiento de Azure y se configuran para el alojamiento web estático o un sitio de sharepoint.
 * Las API de backend se implementan en Azure Functions.
@@ -43,8 +50,80 @@ Las guías de introducción le ayudan a implementar mediante el kit de herramien
 > [!NOTE]
 > Al incluir el recurso de Azure API Management en el proyecto y desencadenar la implementación, puede publicar las API en Azure Functions en el servicio Azure API Management.
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="deploy-teams-app-to-the-cloud-using-visual-studio"></a>Implementación de una aplicación de Teams en la nube mediante Visual Studio
+
+Las siguientes aplicaciones se pueden implementar en Visual Studio:
+
+* La aplicación de pestaña, como las aplicaciones de front-end, se implementa en Azure Storage, configurada para el hospedaje web estático.
+* La aplicación de bot de notificación con desencadenadores de función de Azure se puede implementar en Azure Functions.
+* La aplicación de bot o la extensión de mensaje se pueden implementar en Azure App Services.
+
+Después de la implementación, puede obtener una vista previa de la aplicación en el cliente de Teams o en el explorador web antes de empezar a usar.
+
+## <a name="deploy-teams-app-using-teams-toolkit"></a>Implementación de una aplicación de Teams mediante el kit de herramientas de Teams
+
+1. Abra Visual Studio.
+1. Seleccione **Crear un nuevo proyecto** o abra un proyecto existente en la lista.
+1. Haga clic con el botón derecho en el proyecto **MyTeamsApp1** > **Teams Toolkit** > **Deploy to the cloud (Implementar en la nube**).
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="implementar en la nube":::
+
+   > [!NOTE]
+   > En este escenario, el nombre del proyecto es MyTeamsApp1.
+
+1. Seleccione **Implementar** en el cuadro de diálogo de confirmación.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Cuadro de diálogo de confirmación de implementación en la nube":::
+
+   Una vez completado el proceso de implementación, puede ver un elemento emergente con la confirmación de que se ha implementado correctamente. También puede comprobar el estado en la ventana de salida.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="elemento emergente deploy to cloud (implementar en la nube)":::
+
+### <a name="preview-your-app"></a>Vista previa de la aplicación
+
+Para obtener una vista previa de la aplicación, primero debe crear un paquete de aplicación Zip y transferir localmente en el cliente de Teams.
+
+1. Seleccione Paquete **de aplicación zip** **del kit de herramientas de** >  **Project** >  Teams.
+1. Seleccione **la opción Para local** o **Para Azure** para generar el paquete de aplicaciones de Teams.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="Generación de un paquete de aplicación de Teams":::
+
+**Para obtener una vista previa de la aplicación en el cliente de Teams**
+
+1. Seleccione Project Teams Toolkit **Preview (Versión preliminar** **del kit de herramientas de** >  **Project** >  Teams) en Teams.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams2.png" alt-text="Vista previa de la aplicación teams en el cliente de Teams":::
+
+   Ahora la aplicación se carga de forma local en Teams.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Transferir localmente la aplicación de Teams en el cliente de Teams":::
+
+La otra manera de obtener una vista previa de la aplicación:
+
+1. Haga clic con el botón derecho en el proyecto **MyTeamsApp1** en **Explorador de soluciones**.
+1. Seleccione **Versión preliminar del kit de herramientas de** >  Teams **en Teams** para iniciar la aplicación teams en el explorador web.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Vista previa de la aplicación teams en el explorador web":::
+
+   > [!NOTE]
+   > Las mismas opciones de menú están disponibles en el menú Proyecto.
+
+   Ahora la aplicación se carga de forma local en Teams.
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Transferir localmente la aplicación de Teams en el cliente de Teams":::
+
+::: zone-end
+
 ## <a name="see-also"></a>Vea también
 
 * [Crear e implementar un servicio en la nube de Azure](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Creación de aplicaciones de Teams de varias funcionalidades](add-capability.md)
 * [Adición de recursos en la nube a la aplicación Microsoft Teams](add-resource.md)
+* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
+* [Edición del manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
+* [Depuración local de la aplicación de Teams mediante Visual Studio](debug-teams-app-visual-studio.md)

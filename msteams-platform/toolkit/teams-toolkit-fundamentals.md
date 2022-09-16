@@ -6,14 +6,21 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: b614c73a9d15b058dcd01bb26b15bf35bd3030ce
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 95a42e4bd2064bc1ce4b775f13ba990890bc6776
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616898"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780733"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
+
+Teams Toolkit es una característica de funcionalidad que permite realizar varias funciones tanto en Microsoft Visual Studio Code como en Visual Studio. Con la ayuda del kit de herramientas de Teams, puede automatizar el proceso desde la creación hasta la implementación y personalización de la aplicación. Las distintas características y ventajas del kit de herramientas de Teams se describen en la documentación correspondiente para los entornos que elija.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="teams-toolkit-overview-for--visual-studio-code"></a>Introducción al kit de herramientas de Teams para Visual Studio Code
 
 Teams Toolkit le permite crear, depurar e implementar la aplicación de Teams directamente desde Visual Studio Code. El desarrollo de aplicaciones con el kit de herramientas tiene las siguientes ventajas:
 
@@ -70,9 +77,64 @@ A medida que Teams Toolkit se integra con el Portal para desarrolladores, puede 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-1.png" alt-text="Portal para desarrolladores":::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="teams-toolkit-overview-for-visual-studio"></a>Introducción al kit de herramientas de Teams para Visual Studio
+
+Teams Toolkit for Visual Studio le ayuda a crear, depurar e implementar aplicaciones de Microsoft Teams. Teams Toolkit for Visual Studio es disponibilidad general en Visual Studio 2022, versión 17.3. El desarrollo de aplicaciones con Teams Toolkit tiene las ventajas de:
+
+* Identidad integrada
+* Acceso al almacenamiento en la nube
+* Datos de Microsoft Graph
+* Servicios de Azure y Microsoft 365 con enfoque de configuración cero
+
+Para el desarrollo de aplicaciones de Teams, también puede usar [la herramienta de la CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), similar a Teams Toolkit for Microsoft Visual Studio code que incluye Toolkit `teamsfx`.
+
+Teams Toolkit ofrece todas las herramientas necesarias para crear una aplicación de Teams en un solo lugar.
+
+> [!NOTE]
+> Teams Toolkit no está disponible en otras versiones.
+
+## <a name="user-journey-of-teams-toolkit"></a>Recorrido del usuario del kit de herramientas de Teams
+
+Teams Toolkit automatiza el trabajo manual y le proporciona una excelente integración de los recursos de Teams y Azure. En la imagen siguiente se muestra el recorrido del usuario:
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Recorrido del usuario del kit de herramientas de Teams" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png":::
+
+Los principales hitos de este recorrido son:
+
+1. Para empezar, cree un nuevo proyecto o pruebe a crear una aplicación de Teams de ejemplo.
+1. A continuación, puede editar el código o el archivo de manifiesto según sea necesario.
+1. Para compilar y depurar la aplicación de Teams, puede usar su cuenta de Microsoft 365.
+1. Para aprovisionar e implementar la aplicación en la nube, puede usar su cuenta de Azure.
+1. Por último, puede publicar la aplicación en Teams.
+
+Las siguientes operaciones no se admiten en Teams Toolkit for Visual Studio todavía en comparación con Teams Toolkit for Microsoft Visual Studio Code, pero están planeadas en el futuro mapa de ruta del producto.
+
+* Agregue otras funcionalidades de Teams a la aplicación de Teams.
+* Incorporación de más recursos de Azure a la aplicación de Teams
+* Agregue el inicio de sesión único (SSO) a la aplicación de Teams.
+* Agregar conexión de API a la aplicación de Teams.
+* Personalice el manifiesto de Microsoft Azure Active Directory (Azure AD).
+* Agregue canalizaciones de CI/CD.
+* Administrar varios entornos de nube.
+* Colaborar en proyectos de Teams.
+* Publicar aplicación de Teams.
+
+### <a name="teamsfx-net-sdk-reference-docs"></a>Documentación de referencia del SDK de .NET de TeamsFx
+
+* [Espacio de nombres Microsoft.Extensions.DependencyInjection](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
+* [Espacio de nombres Microsoft.TeamsFx](/../dotnet/api/Microsoft.TeamsFx)
+* [Espacio de nombres Microsoft.TeamsFx.Configuration](/../dotnet/api/Microsoft.TeamsFx.Configuration)
+* [Espacio de nombres Microsoft.TeamsFx.Conversation](/../dotnet/api/Microsoft.TeamsFx.Conversation)
+* [Espacio de nombres Microsoft.TeamsFx.Helper](/../dotnet/api/Microsoft.TeamsFx.Helper)
+
 ## <a name="see-also"></a>Vea también
 
-* [Creación de un nuevo proyecto de Teams](create-new-project.md)
-* [Instalación del kit de herramientas de Teams](install-Teams-Toolkit.md)
-* [Exploración del kit de herramientas de Teams](explore-Teams-Toolkit.md)
-* [Preparación para compilar aplicaciones mediante el kit de herramientas de Microsoft Teams](build-environments.md)
+* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+
+::: zone-end
